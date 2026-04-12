@@ -67,7 +67,7 @@ Esegui sempre:
 - Cloudflare Pages con deploy automatico dal branch `main`
 - Regole headers/redirect gestite in Cloudflare (non via upload di `_headers` e `_redirects`)
 
-Guida completa: `docs/DEPLOY_CLOUDFLARE_PAGES.md`.
+Note deploy: vedi la wiki tecnica in `docs/wiki/`.
 
 ## Wiki
 
