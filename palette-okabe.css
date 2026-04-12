@@ -1,0 +1,232 @@
+/*
+  Palette accessibile basata su Okabe-Ito.
+  Si attiva quando <html data-palette="okabe-ito">.
+*/
+
+html[data-palette="okabe-ito"] {
+  --bg-1: #e6f4fc;
+  --bg-2: #e1f3ec;
+  --bg-3: #fff8da;
+  --accent-1: #0072B2;
+  --accent-2: #009E73;
+  --accent-3: #E69F00;
+  --text-main: #1f2d3d;
+  --card-bg: #fffdf7;
+  --pill-bg: #ffffff;
+
+  --sky1: #e2f4ff;
+  --sky2: #eaf1ff;
+  --ground: #e3f6ea;
+
+  --math-a: #005B90;
+  --math-b: #0072B2;
+  --eng-a: #007A59;
+  --eng-b: #009E73;
+  --prob-a: #B85000;
+  --prob-b: #D55E00;
+  --civ-a: #005B90;
+  --civ-b: #007A59;
+  --geo-a: #007A59;
+  --geo-b: #0072B2;
+  --sto-a: #9E5E85;
+  --sto-b: #CC79A7;
+  --sci-a: #005B90;
+  --sci-b: #009E73;
+  --ita-a: #9A4600;
+  --ita-b: #D55E00;
+  --vil-a: #005B90;
+  --vil-b: #007A59;
+  --sun: #F0E442;
+  --dark: #1f2d3d;
+}
+
+html[data-palette="okabe-ito"] :focus-visible {
+  outline-color: #E69F00;
+}
+
+/* ---------- Home ---------- */
+html[data-palette="okabe-ito"] .card-math {
+  box-shadow: 0 12px 40px rgba(0, 114, 178, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+html[data-palette="okabe-ito"] .card-english {
+  box-shadow: 0 12px 40px rgba(0, 158, 115, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+html[data-palette="okabe-ito"] .card-problems {
+  box-shadow: 0 12px 40px rgba(213, 94, 0, 0.42), 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+html[data-palette="okabe-ito"] .card-civica,
+html[data-palette="okabe-ito"] .card-geografia,
+html[data-palette="okabe-ito"] .card-scienze {
+  box-shadow: 0 12px 40px rgba(0, 122, 89, 0.42), 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+html[data-palette="okabe-ito"] .card-storia {
+  box-shadow: 0 12px 40px rgba(204, 121, 167, 0.42), 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+html[data-palette="okabe-ito"] .card-italiano {
+  box-shadow: 0 12px 40px rgba(213, 94, 0, 0.42), 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Quiz shared theme + English ---------- */
+html[data-palette="okabe-ito"] .class-btn:nth-child(1) {
+  background: linear-gradient(145deg, #e6f6ff, #ccecff);
+  color: #124a70;
+}
+
+html[data-palette="okabe-ito"] .class-btn:nth-child(2) {
+  background: linear-gradient(145deg, #e4fbf4, #c9f1e3);
+  color: #0f5a46;
+}
+
+html[data-palette="okabe-ito"] .class-btn:nth-child(3) {
+  background: linear-gradient(145deg, #f9edf5, #f0d9e8);
+  color: #5a3550;
+}
+
+html[data-palette="okabe-ito"] .class-btn:nth-child(4) {
+  background: linear-gradient(145deg, #fff4dc, #ffe8bf);
+  color: #6d4b00;
+}
+
+html[data-palette="okabe-ito"] .class-btn.selected {
+  border-color: var(--accent-1);
+  box-shadow: 0 9px 0 rgba(0, 0, 0, 0.15), 0 16px 24px rgba(0, 114, 178, 0.24);
+}
+
+html[data-palette="okabe-ito"] .area-btn:nth-child(n) {
+  background: linear-gradient(145deg, #edf7ff, #d7ebff);
+  color: #17496a;
+}
+
+html[data-palette="okabe-ito"] .area-btn:nth-child(3n) {
+  background: linear-gradient(145deg, #e8fbf3, #d0f1e4);
+  color: #145744;
+}
+
+html[data-palette="okabe-ito"] .area-btn:nth-child(4n) {
+  background: linear-gradient(145deg, #fff5df, #ffe8bc);
+  color: #704d00;
+}
+
+html[data-palette="okabe-ito"] .area-btn:nth-child(5n) {
+  background: linear-gradient(145deg, #f9edf5, #f0d9e8);
+  color: #5a3550;
+}
+
+html[data-palette="okabe-ito"] .area-btn.selected {
+  border-color: var(--accent-1);
+  box-shadow: 0 9px 0 rgba(0, 0, 0, 0.15), 0 16px 24px rgba(0, 114, 178, 0.24);
+}
+
+html[data-palette="okabe-ito"] .level-card:nth-child(1) {
+  background: linear-gradient(145deg, #e6f6ff, #ccecff);
+  color: #124a70;
+}
+
+html[data-palette="okabe-ito"] .level-card:nth-child(2) {
+  background: linear-gradient(145deg, #e4fbf4, #c9f1e3);
+  color: #0f5a46;
+}
+
+html[data-palette="okabe-ito"] .level-card:nth-child(3) {
+  background: linear-gradient(145deg, #f9edf5, #f0d9e8);
+  color: #5a3550;
+}
+
+html[data-palette="okabe-ito"] .start-btn {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  box-shadow: 0 7px 0 #00588a, 0 12px 18px rgba(0, 0, 0, 0.18);
+}
+
+html[data-palette="okabe-ito"] .start-btn:hover {
+  box-shadow: 0 9px 0 #00588a, 0 16px 22px rgba(0, 0, 0, 0.2);
+}
+
+html[data-palette="okabe-ito"] .start-btn:active {
+  box-shadow: 0 3px 0 #00588a;
+}
+
+html[data-palette="okabe-ito"] .score-pill.ko {
+  border-color: #D55E00;
+  color: #D55E00;
+}
+
+html[data-palette="okabe-ito"] .dot.current {
+  background: #F0E442;
+  border-color: #A89200;
+}
+
+html[data-palette="okabe-ito"] .dot.ok {
+  background: #009E73;
+  border-color: #007A59;
+}
+
+html[data-palette="okabe-ito"] .dot.ko {
+  background: #D55E00;
+  border-color: #A24700;
+}
+
+html[data-palette="okabe-ito"] .answer-btn:nth-child(1) {
+  background: linear-gradient(135deg, #0072B2, #56B4E9);
+  box-shadow: 0 6px 0 #00588a;
+  color: #ffffff;
+}
+
+html[data-palette="okabe-ito"] .answer-btn:nth-child(2) {
+  background: linear-gradient(135deg, #007A59, #009E73);
+  box-shadow: 0 6px 0 #005b43;
+  color: #ffffff;
+}
+
+html[data-palette="okabe-ito"] .answer-btn:nth-child(3) {
+  background: linear-gradient(135deg, #E69F00, #F0E442);
+  box-shadow: 0 6px 0 #A89200;
+  color: #3a2f00;
+}
+
+html[data-palette="okabe-ito"] .answer-btn:nth-child(4) {
+  background: linear-gradient(135deg, #CC79A7, #D55E00);
+  box-shadow: 0 6px 0 #8f5375;
+  color: #ffffff;
+}
+
+html[data-palette="okabe-ito"] .answer-btn.correct {
+  outline-color: #009E73;
+}
+
+html[data-palette="okabe-ito"] .feedback.ok {
+  color: #009E73;
+  text-shadow: 3px 3px 0 #006d50;
+}
+
+html[data-palette="okabe-ito"] .feedback.ko {
+  color: #D55E00;
+  text-shadow: 3px 3px 0 #a24700;
+}
+
+html[data-palette="okabe-ito"] .bonus-btn.easy {
+  background: linear-gradient(135deg, #009E73, #56B4E9);
+}
+
+html[data-palette="okabe-ito"] .bonus-btn.medium {
+  background: linear-gradient(135deg, #E69F00, #F0E442);
+  color: #3a2f00;
+}
+
+html[data-palette="okabe-ito"] .bonus-btn.hard {
+  background: linear-gradient(135deg, #CC79A7, #D55E00);
+}
+
+html[data-palette="okabe-ito"] .timer-bar {
+  background: linear-gradient(90deg, #D55E00, #E69F00);
+}
+
+html[data-palette="okabe-ito"] .footer-link:hover,
+html[data-palette="okabe-ito"] .flink:hover,
+html[data-palette="okabe-ito"] .faq-chip-link:hover {
+  color: #0072B2;
+}

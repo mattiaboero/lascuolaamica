@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Local temp
+*.log
+.tmp/
+
+# Export artifacts are source-controlled by choice in this project.
+# Keep this commented if you decide to version export.
+# export/

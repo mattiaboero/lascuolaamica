@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()">
+<title>Villaggio Educativo | La Scuola Amica</title>
+<meta name="description" content="Costruisci il tuo Villaggio Educativo con i crediti guadagnati nei giochi: casa, scuole, biblioteca, sport e università.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://lascuolaamica.it/villaggio.html">
+<meta property="og:url" content="https://lascuolaamica.it/villaggio.html">
+<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-home-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Villaggio educativo di La Scuola Amica">
+<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-home-1200x630.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="La Scuola Amica">
+<meta property="og:title" content="Villaggio Educativo | La Scuola Amica">
+<meta property="og:description" content="Guadagna crediti con i quiz e costruisci il tuo villaggio educativo.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Villaggio Educativo | La Scuola Amica">
+<meta name="twitter:description" content="Crea e fai crescere il villaggio con scuole, biblioteca, sport e servizi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2d8f5a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Scuola Amica">
+<link rel="stylesheet" href="villaggio.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Villaggio Educativo",
+  "description": "Pagina interattiva per costruire un villaggio educativo con i crediti guadagnati nei giochi didattici.",
+  "url": "https://lascuolaamica.it/villaggio.html",
+  "inLanguage": "it-IT",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "La Scuola Amica",
+    "url": "https://lascuolaamica.it/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lascuolaamica.it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Villaggio",
+      "item": "https://lascuolaamica.it/villaggio.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
+<div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<div class="wrapper">
+  <div class="top-nav">
+    <a class="back-btn" href="index.html" aria-label="Torna al menu principale">← Menu</a>
+    <div class="wallet-pill" aria-label="Crediti disponibili">💰 Crediti: <span data-wallet-balance>0</span></div>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Percorso di navigazione">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Villaggio</span>
+  </nav>
+
+  <header>
+    <h1 class="title"><span aria-hidden="true">🏡</span> Villaggio Educativo</h1>
+    <p class="subtitle">Gioca, guadagna crediti, costruisci e fai crescere la tua città della conoscenza</p>
+  </header>
+
+  <main id="contenuto-principale">
+    <section class="panel" aria-labelledby="introTitle">
+      <h2 id="introTitle">Come Funziona</h2>
+      <p class="intro">Ogni risposta corretta nei giochi vale crediti. Nel villaggio puoi acquistare edifici educativi e servizi utili: scuola, biblioteca, sport, cultura e università.</p>
+      <p class="intro">Per costruire edifici avanzati devi prima sbloccare quelli base. Crescita progressiva: veloce all inizio, strategica nel lungo periodo.</p>
+    </section>
+
+    <div class="layout">
+      <section class="panel" aria-labelledby="shopTitle">
+        <h2 id="shopTitle">Negozio Edifici</h2>
+        <div id="shopGrid" class="shop-grid" aria-label="Elenco edifici acquistabili"></div>
+      </section>
+
+      <section class="panel village-wrap" aria-labelledby="villageTitle">
+        <h2 id="villageTitle">Mappa del Villaggio (8x8)</h2>
+        <div id="selectionInfo" class="info-box" aria-live="polite">Scegli un edificio dal negozio oppure tocca un edificio già costruito.</div>
+        <div class="actions">
+          <button type="button" class="btn secondary" id="clearSelectionBtn">Annulla selezione</button>
+          <button type="button" class="btn secondary" id="removeBtn" disabled>Rimuovi edificio</button>
+          <button type="button" class="btn primary" id="resetVillageBtn">Azzera villaggio</button>
+        </div>
+        <div id="villageGrid" class="village-grid" aria-label="Griglia del villaggio"></div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <button type="button" class="footer-link" data-open-modal="modalPrivacy" aria-haspopup="dialog"><span aria-hidden="true">🔒</span> Privacy Policy</button>
+  <button type="button" class="footer-link" data-open-modal="modalCookie" aria-haspopup="dialog"><span aria-hidden="true">🍪</span> Cookie Policy</button>
+  <span class="footer-link footer-version" aria-hidden="true">v4.1</span>
+</footer>
+
+<div class="modal-overlay" id="modalPrivacy" role="dialog" aria-modal="true" aria-labelledby="titlePrivacy">
+  <div class="modal-box">
+    <button type="button" class="modal-close" data-close-modal="modalPrivacy" aria-label="Chiudi Privacy Policy">✕</button>
+    <h2 class="modal-title" id="titlePrivacy">🔒 Privacy Policy</h2>
+    <div class="modal-body">
+      <p>Il Villaggio Educativo salva solo dati di gioco nel browser: crediti, edifici costruiti e progressi. Non richiede registrazione e non raccoglie dati identificativi dei minori.</p>
+      <p>I dati restano sul dispositivo e possono essere cancellati in qualsiasi momento dal browser o dai comandi interni del gioco.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalCookie" role="dialog" aria-modal="true" aria-labelledby="titleCookie">
+  <div class="modal-box">
+    <button type="button" class="modal-close" data-close-modal="modalCookie" aria-label="Chiudi Cookie Policy">✕</button>
+    <h2 class="modal-title" id="titleCookie">🍪 Cookie Policy</h2>
+    <div class="modal-body">
+      <p>Non usiamo cookie di profilazione. Il funzionamento del villaggio utilizza solo memorie locali del browser (localStorage) per conservare i progressi.</p>
+    </div>
+  </div>
+</div>
+
+<script src="villaggio.js"></script>
+<script src="app-version.js"></script>
+<script src="shared.js"></script>
+</body>
+</html>

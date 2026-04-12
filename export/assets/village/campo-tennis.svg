@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" role="img" aria-label="Campo da tennis">
+  <ellipse cx="110" cy="178" rx="95" ry="14" fill="#c2e8bd"/>
+  <rect x="24" y="78" width="172" height="88" rx="10" fill="#66bb6a" stroke="#2d6b31" stroke-width="5"/>
+  <rect x="108" y="78" width="4" height="88" fill="#e8f5e9"/>
+  <rect x="106" y="108" width="8" height="6" fill="#ffffff"/>
+  <rect x="36" y="94" width="148" height="56" fill="none" stroke="#e8f5e9" stroke-width="3"/>
+  <line x1="36" y1="122" x2="184" y2="122" stroke="#e8f5e9" stroke-width="3"/>
+</svg>

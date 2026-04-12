@@ -1,0 +1,156 @@
+{
+  "name": "La Scuola Amica",
+  "short_name": "Scuola Amica",
+  "description": "Giochi educativi per la scuola primaria con villaggio educativo: matematica, inglese, problemi, civica, geografia, storia, scienze e lingua italiana",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#a8edea",
+  "theme_color": "#9B5DE5",
+  "lang": "it",
+  "categories": [
+    "education",
+    "kids",
+    "games"
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='32' fill='%239B5DE5'/><text y='130' x='96' text-anchor='middle' font-size='120'>🏫</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='80' fill='%239B5DE5'/><text y='360' x='256' text-anchor='middle' font-size='320'>🏫</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "Schermata principale mobile",
+      "sizes": "390x844",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "src": "/screenshots/home-390x844.webp"
+    },
+    {
+      "label": "Schermata principale desktop",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "src": "/screenshots/home-1280x720.webp"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Matematica",
+      "short_name": "Matematica",
+      "description": "Vai direttamente al gioco di matematica",
+      "url": "/matematica.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🔢</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Inglese",
+      "short_name": "Inglese",
+      "description": "Vai direttamente al gioco di inglese",
+      "url": "/inglese.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🌍</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Problemi",
+      "short_name": "Problemi",
+      "description": "Vai direttamente ai problemi di matematica",
+      "url": "/problemi.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🧠</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Civica",
+      "short_name": "Civica",
+      "description": "Vai direttamente al quiz di educazione civica",
+      "url": "/civica.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🏛️</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Geografia",
+      "short_name": "Geografia",
+      "description": "Vai direttamente al quiz di geografia",
+      "url": "/geografia.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🗺️</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Storia",
+      "short_name": "Storia",
+      "description": "Vai direttamente al quiz di storia",
+      "url": "/storia.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>📜</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Scienze",
+      "short_name": "Scienze",
+      "description": "Vai direttamente al quiz di scienze",
+      "url": "/scienze.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🔬</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Italiano",
+      "short_name": "Italiano",
+      "description": "Vai direttamente al quiz di lingua italiana",
+      "url": "/italiano.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>📖</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Villaggio",
+      "short_name": "Villaggio",
+      "description": "Apri il villaggio educativo e costruisci con i crediti",
+      "url": "/villaggio.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🏡</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

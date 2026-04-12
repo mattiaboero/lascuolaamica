@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Alberi">
+  <ellipse cx="100" cy="176" rx="76" ry="14" fill="#bde7b7"/>
+  <rect x="64" y="114" width="12" height="42" rx="3" fill="#8d6e63"/>
+  <rect x="124" y="118" width="10" height="38" rx="3" fill="#8d6e63"/>
+  <circle cx="70" cy="104" r="26" fill="#66bb6a" stroke="#2f7d32" stroke-width="5"/>
+  <circle cx="122" cy="108" r="24" fill="#81c784" stroke="#397a3d" stroke-width="5"/>
+  <circle cx="96" cy="84" r="20" fill="#4caf50" stroke="#2e7d32" stroke-width="5"/>
+</svg>

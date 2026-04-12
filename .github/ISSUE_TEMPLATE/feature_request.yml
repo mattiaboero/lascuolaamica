@@ -1,0 +1,29 @@
+name: Feature request
+about: Proponi una nuova funzionalità o miglioramento
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: obiettivo
+    attributes:
+      label: Obiettivo didattico/funzionale
+      placeholder: Quale bisogno risolve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta
+      placeholder: Come dovrebbe funzionare?
+    validations:
+      required: true
+
+  - type: textarea
+    id: impatto
+    attributes:
+      label: Impatto su UX, accessibilità, SEO, privacy
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative valutate
