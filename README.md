@@ -40,7 +40,7 @@ Sito: https://lascuolaamica.it
 - `subject-quiz-core.js` motore quiz materie
 - `questions-loader.js` loader dataset
 - `json/` dataset per materia
-- `export/` pacchetto pronto al deploy statico
+- `export/` cartella build locale (generata, non versionata)
 
 ## Avvio in locale
 
@@ -61,10 +61,26 @@ Esegui sempre:
 ./prepublish-check.sh
 ```
 
+## Build export locale
+
+Genera il pacchetto deploy locale in `export/`:
+
+```bash
+bash scripts/export_for_cloudflare.sh
+```
+
+Genera un backup deploy fuori repo (default: cartella sorella `../export-backup`):
+
+```bash
+bash scripts/export_backup_outside_repo.sh
+```
+
 ## Deploy consigliato
 
 - Repository GitHub
 - Cloudflare Pages con deploy automatico dal branch `main`
+  - Build command: `bash scripts/export_for_cloudflare.sh`
+  - Build output directory: `export`
 - Regole headers/redirect gestite in Cloudflare (non via upload di `_headers` e `_redirects`)
 
 Note deploy: vedi la wiki tecnica in `docs/wiki/`.

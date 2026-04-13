@@ -17,7 +17,23 @@ python3 -m http.server 8080
 
 - Repository GitHub collegata a Cloudflare Pages.
 - Deploy automatico dal branch `main`.
+- Build command Cloudflare Pages: `bash scripts/export_for_cloudflare.sh`
+- Build output directory Cloudflare Pages: `export`
 - Regole sicurezza/cache/redirect gestite in Cloudflare Rules.
+
+## Export manuale fuori repo (backup)
+
+Per creare un pacchetto deploy manuale fuori dalla repo:
+
+```bash
+bash scripts/export_backup_outside_repo.sh
+```
+
+Per indicare una destinazione specifica:
+
+```bash
+bash scripts/export_backup_outside_repo.sh "/percorso/assoluto/export-backup"
+```
 
 ## Nota importante
 

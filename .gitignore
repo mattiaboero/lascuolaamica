@@ -14,6 +14,5 @@ __pycache__/
 *.log
 .tmp/
 
-# Export artifacts are source-controlled by choice in this project.
-# Keep this commented if you decide to version export.
-# export/
+# Build/export artifacts (non versionati)
+export/

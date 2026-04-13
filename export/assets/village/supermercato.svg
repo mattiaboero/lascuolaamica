@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" role="img" aria-label="Supermercato">
-  <ellipse cx="110" cy="175" rx="92" ry="15" fill="#c1eab9"/>
-  <rect x="24" y="84" width="172" height="74" rx="10" fill="#e1f5fe" stroke="#2e6788" stroke-width="5"/>
-  <rect x="34" y="62" width="152" height="24" rx="8" fill="#4fc3f7" stroke="#1e6b92" stroke-width="4"/>
-  <rect x="86" y="112" width="48" height="46" rx="4" fill="#90caf9" stroke="#2e6788" stroke-width="4"/>
-  <rect x="44" y="98" width="28" height="20" rx="3" fill="#fff" stroke="#2e6788" stroke-width="3"/>
-  <rect x="148" y="98" width="28" height="20" rx="3" fill="#fff" stroke="#2e6788" stroke-width="3"/>
-  <text x="110" y="79" text-anchor="middle" font-family="Nunito, Arial" font-weight="800" font-size="12" fill="#0f4f73">MARKET</text>
-</svg>
