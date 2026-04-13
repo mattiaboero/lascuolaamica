@@ -6,8 +6,14 @@ SRC="$BASE_DIR/"
 DST="$BASE_DIR/export/"
 
 echo "[INFO] Sync source -> export"
-rsync -av --delete \
+rsync -av --delete --delete-excluded \
   --exclude 'export/' \
+  --exclude '.git/' \
+  --exclude '.github/' \
+  --exclude '.gitignore' \
+  --exclude 'docs/' \
+  --exclude 'scripts/' \
+  --exclude '.wrangler/' \
   --exclude '.DS_Store' \
   --exclude '*.md' \
   --exclude '*.sh' \
