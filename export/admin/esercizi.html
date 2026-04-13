@@ -21,7 +21,7 @@
 
     <section class="card" id="authPanel" aria-labelledby="authTitle">
       <h2 id="authTitle">Accesso con Token</h2>
-      <p>Questa pagina usa accesso privato con token. Puoi inserire il token nel campo sotto oppure nell'URL con <code>#token=...</code>.</p>
+      <p>Questa pagina usa accesso privato con token. Primo accesso con link <code>#k=...</code>, poi nello stesso browser puoi usare anche l'URL normale.</p>
       <div class="notice warning" id="configWarning" hidden>
         Configurazione token non valida. Aggiorna <code>admin/editor-config.js</code> con un hash SHA-256 prima dell'uso.
       </div>
@@ -32,7 +32,7 @@
           <button type="submit" class="btn primary">Sblocca editor</button>
         </div>
       </form>
-      <p class="hint">Suggerimento: usa il token nel frammento URL (hash) per ridurre l'esposizione nei log: <code>.../admin/esercizi#token=IL_TUO_TOKEN</code>.</p>
+      <p class="hint">Suggerimento: usa il token nel frammento URL (hash) per ridurre l'esposizione nei log: <code>.../admin/esercizi#k=IL_TUO_TOKEN</code>.</p>
       <p id="authMessage" class="status" role="status" aria-live="polite"></p>
     </section>
 

@@ -1,10 +1,10 @@
-# Setup Editor Esercizi Privato (Solo Token + URL)
+# Setup Editor Esercizi Privato (Token + URL, accesso persistente)
 
 Questa guida abilita la pagina privata:
 
 - URL: `https://lascuolaamica.it/admin/esercizi`
 - Protezione attiva: token interno verificato via hash SHA-256
-- Modalità consigliata: token nell'URL con hash fragment (`#token=`)
+- Modalità consigliata: token nell'URL con hash fragment (`#k=`)
 
 ## 1) Scegli un token segreto
 
@@ -58,19 +58,23 @@ Verifica che la pagina risponda:
 
 - `https://lascuolaamica.it/admin/esercizi`
 
-## 5) Crea il link privato per i collaboratori
+## 5) Crea il link privato per i collaboratori (primo accesso)
 
 Condividi il link nel formato:
 
-`https://lascuolaamica.it/admin/esercizi#token=IL_TUO_TOKEN`
+`https://lascuolaamica.it/admin/esercizi#k=IL_TUO_TOKEN`
 
 Nota pratica:
 
-- meglio `#token=` rispetto a `?token=` perché il frammento `#` non viene inviato al server.
+- meglio `#k=` rispetto a `?k=` perché il frammento `#` non viene inviato al server.
+
+Dopo il primo accesso riuscito nello stesso browser, il collaboratore può usare anche:
+
+`https://lascuolaamica.it/admin/esercizi`
 
 ## 6) Uso da parte dei collaboratori
 
-1. Aprono il link privato con `#token=`.
+1. Aprono il link privato con `#k=`.
 2. L'editor si sblocca automaticamente.
 3. Inseriscono gli esercizi.
 4. Cliccano `Genera e scarica JSON`.
@@ -88,7 +92,7 @@ Quando cambia collaboratore (o periodicamente):
 
 ## 8) Limiti e buone pratiche
 
-Questo modello è leggero e pratico, ma non è forte come un accesso con identità nominativa.
+Questo modello è leggero e pratico, ma meno forte di un accesso con identità nominativa.
 
 Per ridurre i rischi:
 

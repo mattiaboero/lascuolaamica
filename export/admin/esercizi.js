@@ -17,6 +17,7 @@
     return acc;
   }, {});
 
+  var STORAGE_AUTH_KEY = 'scuolaamica_editor_auth_v1';
   var STORAGE_DRAFT_KEY = 'scuolaamica_editor_draft_v1';
 
   var authPanel = document.getElementById('authPanel');
@@ -141,7 +142,7 @@
     }
 
     var params = new URLSearchParams(rawHash);
-    return params.get('token') || '';
+    return params.get('k') || params.get('token') || '';
   }
 
   function removeTokenFromUrl() {
@@ -152,12 +153,17 @@
       url.searchParams.delete('token');
       changed = true;
     }
+    if (url.searchParams.has('k')) {
+      url.searchParams.delete('k');
+      changed = true;
+    }
 
     var rawHash = String(url.hash || '').replace(/^#/, '');
     if (rawHash) {
       var params = new URLSearchParams(rawHash);
-      if (params.has('token')) {
+      if (params.has('token') || params.has('k')) {
         params.delete('token');
+        params.delete('k');
         url.hash = params.toString() ? ('#' + params.toString()) : '';
         changed = true;
       } else if (rawHash.indexOf('=') === -1) {
@@ -168,6 +174,22 @@
 
     if (changed) {
       history.replaceState({}, document.title, url.pathname + url.search + url.hash);
+    }
+  }
+
+  function isAuthenticated() {
+    return safeGetStorage(STORAGE_AUTH_KEY) === '1';
+  }
+
+  function setAuthenticated(value) {
+    if (value) {
+      safeSetStorage(STORAGE_AUTH_KEY, '1');
+      return;
+    }
+    try {
+      localStorage.removeItem(STORAGE_AUTH_KEY);
+    } catch (e) {
+      // ignore
     }
   }
 
@@ -660,6 +682,7 @@
           return;
         }
 
+        setAuthenticated(true);
         showEditor();
         removeTokenFromUrl();
         tokenInput.value = '';
@@ -688,6 +711,7 @@
     clearAllBtn.addEventListener('click', clearAllDrafts);
 
     logoutBtn.addEventListener('click', function () {
+      setAuthenticated(false);
       showAuthPanel();
       tokenInput.value = '';
       setStatus(authMessage, 'Editor bloccato.', false);
@@ -715,6 +739,7 @@
         setStatus(authMessage, 'Token URL non valido.', true);
         return;
       }
+      setAuthenticated(true);
       showEditor();
       removeTokenFromUrl();
       setStatus(authMessage, 'Accesso con token URL riuscito.', false);
@@ -737,8 +762,14 @@
       return;
     }
 
+    if (isAuthenticated()) {
+      showEditor();
+      setStatus(authMessage, '', false);
+      return;
+    }
+
     showAuthPanel();
-    setStatus(authMessage, 'Inserisci il token oppure apri l\'URL con #token=...', false);
+    setStatus(authMessage, 'Inserisci il token oppure apri l\'URL con #k=...', false);
     tryTokenFromUrl();
   }
 
