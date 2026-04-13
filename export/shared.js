@@ -12,7 +12,7 @@
   const PROJECT_MODAL_ID = 'modalProject';
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
-  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.1';
+  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.1.1';
   const PALETTE_KEY = 'scuolaAmica_palette_v1';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
   const PALETTE_STYLESHEET = 'palette-okabe.css';
@@ -25,6 +25,16 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '13 aprile 2026',
+      items: [
+        'Aggiornate canonical, URL Open Graph e JSON-LD sulle rotte senza estensione .html.',
+        'Allineati i link interni e la sitemap ai percorsi canonici (es. /matematica, /faq, /supporta).',
+        'Rimosso il Villaggio dalla sitemap e impostato noindex,nofollow per villaggio e supporto-satispay.',
+        'Aggiornato il copy della pagina Supporta con contatto diretto supporto@lascuolaamica.it.',
+        'Versione portale aggiornata alla 4.1.1.'
+      ]
+    },
     {
       date: '12 aprile 2026',
       items: [

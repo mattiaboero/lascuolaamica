@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  const APP_VERSION = '4.1';
+  const APP_VERSION = '4.1.1';
   const CACHE_NAME = `lascuolaamica-v${APP_VERSION.replace(/[^0-9]/g, '') || '1'}`;
 
   global.SCUOLA_AMICA_VERSION = {
