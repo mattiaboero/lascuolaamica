@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-11T18:39:47.671413+00:00",
-  "totalQuestions": 7100,
+  "generatedAt": "2026-04-13T17:00:17Z",
+  "totalQuestions": 7109,
   "subjects": {
     "matematica": {
       "path": "matematica.json",
@@ -194,18 +194,18 @@
     },
     "italiano": {
       "path": "italiano.json",
-      "rows": 800,
+      "rows": 809,
       "stats": {
         "file": "template_italiano_800.csv",
-        "rows": 800,
+        "rows": 809,
         "areas": {
-          "italiano_classe2": 200,
+          "italiano_classe2": 209,
           "italiano_classe3": 200,
           "italiano_classe4": 200,
           "italiano_classe5": 200
         },
         "classes": {
-          "2": 200,
+          "2": 209,
           "3": 200,
           "4": 200,
           "5": 200

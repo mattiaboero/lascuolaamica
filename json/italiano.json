@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-11T18:39:47.671413+00:00",
+  "generatedAt": "2026-04-13T17:00:17Z",
   "subject": "italiano",
-  "totalQuestions": 800,
+  "totalQuestions": 809,
   "questions": [
     {
       "id": "ita-2-ortografia-001",
@@ -24003,19 +24003,316 @@
       "teacherNote": "",
       "bonus": false,
       "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-051",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Quale gruppo di lettere contiene solo consonanti?",
+      "options": [
+        "S,E,O,U,L",
+        "Z,U,C,H,R",
+        "M,R,G,T",
+        "I,E,O,A,U"
+      ],
+      "answerIndex": 2,
+      "answer": "M,R,G,T",
+      "explanation": "'M,R,G,T' sono tutte consonanti",
+      "active": true,
+      "tag": "italiano; alfabeto; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "alfabeto"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_alfabeto",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-052",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "In quale parola ci sono due consonanti vicine?",
+      "options": [
+        "penna",
+        "moneta",
+        "biro",
+        "matita"
+      ],
+      "answerIndex": 0,
+      "answer": "penna",
+      "explanation": "'penna' ha due consonanti vicine: n, n",
+      "active": true,
+      "tag": "italiano; alfabeto; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "alfabeto"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_alfabeto",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-053",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Come si divide la parola 'imparo'?",
+      "options": [
+        "i-mpa-ro",
+        "imp-ar-o",
+        "im-pa-ro",
+        "matita"
+      ],
+      "answerIndex": 2,
+      "answer": "im-pa-ro",
+      "explanation": "'im-pa-ro' è divisa bene: m e p si separano sempre",
+      "active": true,
+      "tag": "italiano; divisione_in_sillabe; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "divisione_in_sillabe"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_divisione_in_sillabe",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-054",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Quale parola è divisa bene?",
+      "options": [
+        "ca-sa",
+        "c-asa",
+        "ca-s-a",
+        "cas-a"
+      ],
+      "answerIndex": 0,
+      "answer": "ca-sa",
+      "explanation": "'ca-sa' è divisa bene",
+      "active": true,
+      "tag": "italiano; divisione_in_sillabe; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "divisione_in_sillabe"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_divisione_in_sillabe",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-055",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Quale parola è divisa bene?",
+      "options": [
+        "l-ib-ro",
+        "li-bro",
+        "lib-ro",
+        "li-br-o"
+      ],
+      "answerIndex": 1,
+      "answer": "li-bro",
+      "explanation": "'li-bro' è divisa bene; br- rimangono unite alla vocale che le segue",
+      "active": true,
+      "tag": "italiano; divisione_in_sillabe; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "divisione_in_sillabe"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_divisione_in_sillabe",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-056",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Qual è la parola scritta bene?",
+      "options": [
+        "chesto",
+        "qesto",
+        "ciesto",
+        "cesto"
+      ],
+      "answerIndex": 3,
+      "answer": "cesto",
+      "explanation": "'cesto' è la parola scritta bene",
+      "active": true,
+      "tag": "italiano; suono_c; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "suono_c"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_suono_c",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-057",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Qual è la parola scritta bene?",
+      "options": [
+        "pakko",
+        "paco",
+        "pacho",
+        "pacco"
+      ],
+      "answerIndex": 3,
+      "answer": "pacco",
+      "explanation": "'pacco' è la parola scritta bene",
+      "active": true,
+      "tag": "italiano; suono_c; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "suono_c"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_suono_c",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-058",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Completa con suono g duro: _iaccio?",
+      "options": [
+        "ghiaccio",
+        "giaccio",
+        "kiaccio",
+        "qiaccio"
+      ],
+      "answerIndex": 0,
+      "answer": "ghiaccio",
+      "explanation": "gh- in 'ghiaccio' ha il suono g duro",
+      "active": true,
+      "tag": "italiano; suono_g; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "suono_g"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_suono_g",
+      "teacherNote": "",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "ita-2-ortografia-059",
+      "subject": "italiano",
+      "sourceSubject": "italiano",
+      "class": 2,
+      "area": "ortografia",
+      "subarea": "alfabeto",
+      "difficulty": 1,
+      "question": "Quale parola ha il suono g duro davanti a vocale?",
+      "options": [
+        "gelo",
+        "gelato",
+        "ghiro",
+        "gioco"
+      ],
+      "answerIndex": 2,
+      "answer": "ghiro",
+      "explanation": "gh- davanti alle vocali 'i' ed 'e' produce suono duro",
+      "active": true,
+      "tag": "italiano; suono_g; classe_2; primaria",
+      "tags": [
+        "italiano",
+        "ortografia",
+        "classe_2",
+        "primaria",
+        "suono_g"
+      ],
+      "language": "it",
+      "program": "italiano_primaria_classe_2_suono_g",
+      "teacherNote": "",
+      "bonus": true,
+      "bonusRaw": ""
     }
   ],
   "stats": {
     "file": "template_italiano_800.csv",
-    "rows": 800,
+    "rows": 809,
     "areas": {
-      "italiano_classe2": 200,
+      "italiano_classe2": 209,
       "italiano_classe3": 200,
       "italiano_classe4": 200,
       "italiano_classe5": 200
     },
     "classes": {
-      "2": 200,
+      "2": 209,
       "3": 200,
       "4": 200,
       "5": 200
