@@ -207,17 +207,16 @@ else
 
   declare -a expected_urls=(
     "https://lascuolaamica.it/"
-    "https://lascuolaamica.it/matematica.html"
-    "https://lascuolaamica.it/inglese.html"
-    "https://lascuolaamica.it/problemi.html"
-    "https://lascuolaamica.it/civica.html"
-    "https://lascuolaamica.it/geografia.html"
-    "https://lascuolaamica.it/storia.html"
-    "https://lascuolaamica.it/scienze.html"
-    "https://lascuolaamica.it/italiano.html"
-    "https://lascuolaamica.it/villaggio.html"
-    "https://lascuolaamica.it/supporta.html"
-    "https://lascuolaamica.it/faq.html"
+    "https://lascuolaamica.it/matematica"
+    "https://lascuolaamica.it/inglese"
+    "https://lascuolaamica.it/problemi"
+    "https://lascuolaamica.it/civica"
+    "https://lascuolaamica.it/geografia"
+    "https://lascuolaamica.it/storia"
+    "https://lascuolaamica.it/scienze"
+    "https://lascuolaamica.it/italiano"
+    "https://lascuolaamica.it/supporta"
+    "https://lascuolaamica.it/faq"
   )
 
   for url in "${expected_urls[@]}"; do

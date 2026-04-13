@@ -76,9 +76,10 @@ Dopo il primo accesso riuscito nello stesso browser, il collaboratore può usare
 
 1. Aprono il link privato con `#k=`.
 2. L'editor si sblocca automaticamente.
-3. Inseriscono gli esercizi.
-4. Cliccano `Genera e scarica JSON`.
-5. Ti inviano il file JSON via email.
+3. Inseriscono gli esercizi (non devono gestire manualmente il numero ID).
+4. Il sistema calcola automaticamente l'ID leggendo la materia selezionata e il dataset già pubblicato.
+5. Cliccano `Genera e scarica JSON`.
+6. Ti inviano il file JSON via email.
 
 ## 7) Rotazione token (consigliata)
 

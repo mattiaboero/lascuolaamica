@@ -17,6 +17,7 @@
     return acc;
   }, {});
 
+  var REMOTE_INDEX_PATH = '/json/index.json';
   var STORAGE_AUTH_KEY = 'scuolaamica_editor_auth_v1';
   var STORAGE_DRAFT_KEY = 'scuolaamica_editor_draft_v1';
 
@@ -72,6 +73,9 @@
 
   var drafts = [];
   var editingIndex = -1;
+  var remoteSubjectIndexPromise = null;
+  var remoteRowsBySubject = new Map();
+  var remoteMaxByPrefix = new Map();
 
   function safeSetStorage(key, value) {
     try {
@@ -271,38 +275,195 @@
     return text.slice(0, max - 1) + '…';
   }
 
+  function resolveRelativeJsonPath(basePath, relPath) {
+    var ref = String(relPath || '').trim();
+    if (!ref) return '';
+    if (/^[a-z]+:\/\//i.test(ref) || ref.charAt(0) === '/') return ref;
+
+    var base = String(basePath || '').split('#')[0].split('?')[0];
+    var slash = base.lastIndexOf('/');
+    var baseDir = slash >= 0 ? base.slice(0, slash + 1) : '/';
+    return baseDir + ref;
+  }
+
+  function getRemoteSubjectIndex() {
+    if (remoteSubjectIndexPromise) return remoteSubjectIndexPromise;
+
+    remoteSubjectIndexPromise = fetch(REMOTE_INDEX_PATH, { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Index non disponibile');
+        return res.json();
+      })
+      .then(function (data) {
+        var subjects = data && data.subjects ? data.subjects : {};
+        var map = {};
+
+        Object.keys(subjects).forEach(function (key) {
+          var entry = subjects[key];
+          var relPath = typeof entry === 'string'
+            ? entry
+            : (entry && typeof entry.path === 'string' ? entry.path : '');
+          if (!relPath) return;
+          map[key] = resolveRelativeJsonPath(REMOTE_INDEX_PATH, relPath);
+        });
+
+        return map;
+      })
+      .catch(function () {
+        remoteSubjectIndexPromise = null;
+        return {};
+      });
+
+    return remoteSubjectIndexPromise;
+  }
+
+  function loadRemoteRowsForSubject(subject) {
+    var key = String(subject || '').trim();
+    if (!key) return Promise.resolve([]);
+    if (remoteRowsBySubject.has(key)) {
+      return remoteRowsBySubject.get(key);
+    }
+
+    var promise = getRemoteSubjectIndex()
+      .then(function (indexMap) {
+        var pathFromIndex = indexMap[key];
+        var path = pathFromIndex || ('/json/' + key + '.json');
+        return fetch(path, { cache: 'no-store' });
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Dataset materia non disponibile');
+        return res.json();
+      })
+      .then(function (data) {
+        if (Array.isArray(data)) return data;
+        if (data && Array.isArray(data.questions)) return data.questions;
+        return [];
+      })
+      .catch(function () {
+        return [];
+      });
+
+    remoteRowsBySubject.set(key, promise);
+    return promise;
+  }
+
+  function buildIdPrefix(data) {
+    var cfg = SUBJECT_MAP[data.subject] || { prefix: 'q' };
+    var areaSlug = slugify(data.area || 'generale') || 'generale';
+    return cfg.prefix + '-' + String(data.class || 'x') + '-' + areaSlug + '-';
+  }
+
+  function maxSerialByPrefix(rows, prefix) {
+    var max = 0;
+    if (!Array.isArray(rows)) return max;
+
+    rows.forEach(function (q) {
+      if (!q || typeof q.id !== 'string' || q.id.indexOf(prefix) !== 0) return;
+      var serial = Number(q.id.slice(prefix.length));
+      if (Number.isFinite(serial) && serial > max) {
+        max = serial;
+      }
+    });
+
+    return max;
+  }
+
+  function nextIdFromLocalOnly(data) {
+    var prefix = buildIdPrefix(data);
+    var max = maxSerialByPrefix(drafts, prefix);
+    return prefix + String(max + 1).padStart(3, '0');
+  }
+
+  function getRemoteMaxByPrefix(data, prefix) {
+    if (remoteMaxByPrefix.has(prefix)) {
+      return remoteMaxByPrefix.get(prefix);
+    }
+
+    var promise = loadRemoteRowsForSubject(data.subject)
+      .then(function (rows) {
+        return maxSerialByPrefix(rows, prefix);
+      })
+      .catch(function () {
+        return 0;
+      });
+
+    remoteMaxByPrefix.set(prefix, promise);
+    return promise;
+  }
+
+  function warmupRemoteSubjectDataset() {
+    var subject = String(formFields.subject.value || '').trim();
+    if (!subject) return;
+    loadRemoteRowsForSubject(subject).catch(function () {});
+  }
+
   function updateDraftCount() {
     draftCount.textContent = drafts.length + (drafts.length === 1 ? ' esercizio' : ' esercizi');
     emptyDraftMessage.hidden = drafts.length > 0;
   }
 
+  function buildDraftRow(item, idx) {
+    var tr = document.createElement('tr');
+
+    var tdIndex = document.createElement('td');
+    tdIndex.textContent = String(idx + 1);
+    tr.appendChild(tdIndex);
+
+    var tdId = document.createElement('td');
+    var code = document.createElement('code');
+    code.textContent = String(item.id || '');
+    tdId.appendChild(code);
+    tr.appendChild(tdId);
+
+    var tdSubject = document.createElement('td');
+    tdSubject.textContent = String(item.subject || '');
+    tr.appendChild(tdSubject);
+
+    var tdClass = document.createElement('td');
+    tdClass.textContent = String(item.class || '');
+    tr.appendChild(tdClass);
+
+    var tdArea = document.createElement('td');
+    tdArea.textContent = String(item.area || '');
+    tr.appendChild(tdArea);
+
+    var tdQuestion = document.createElement('td');
+    tdQuestion.textContent = shortText(item.question, 80);
+    tr.appendChild(tdQuestion);
+
+    var tdActions = document.createElement('td');
+    var actions = document.createElement('span');
+    actions.className = 'mini-actions';
+
+    ['edit', 'clone', 'remove'].forEach(function (action) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.setAttribute('data-action', action);
+      btn.setAttribute('data-index', String(idx));
+      if (action === 'edit') btn.textContent = 'Modifica';
+      if (action === 'clone') btn.textContent = 'Duplica';
+      if (action === 'remove') btn.textContent = 'Elimina';
+      actions.appendChild(btn);
+    });
+
+    tdActions.appendChild(actions);
+    tr.appendChild(tdActions);
+    return tr;
+  }
+
   function renderDraftTable() {
     updateDraftCount();
+    draftTbody.replaceChildren();
 
     if (!drafts.length) {
-      draftTbody.innerHTML = '';
       return;
     }
 
-    var html = drafts.map(function (item, idx) {
-      return (
-        '<tr>' +
-          '<td>' + (idx + 1) + '</td>' +
-          '<td><code>' + escapeHtml(item.id) + '</code></td>' +
-          '<td>' + escapeHtml(item.subject) + '</td>' +
-          '<td>' + escapeHtml(item.class) + '</td>' +
-          '<td>' + escapeHtml(item.area || '') + '</td>' +
-          '<td>' + escapeHtml(shortText(item.question, 80)) + '</td>' +
-          '<td><span class="mini-actions">' +
-            '<button type="button" data-action="edit" data-index="' + idx + '">Modifica</button>' +
-            '<button type="button" data-action="clone" data-index="' + idx + '">Duplica</button>' +
-            '<button type="button" data-action="remove" data-index="' + idx + '">Elimina</button>' +
-          '</span></td>' +
-        '</tr>'
-      );
-    }).join('');
-
-    draftTbody.innerHTML = html;
+    var fragment = document.createDocumentFragment();
+    drafts.forEach(function (item, idx) {
+      fragment.appendChild(buildDraftRow(item, idx));
+    });
+    draftTbody.appendChild(fragment);
   }
 
   function resetForm(keepSubject) {
@@ -322,21 +483,12 @@
     setStatus(formMessage, '', false);
   }
 
-  function nextIdForQuestion(data) {
-    var cfg = SUBJECT_MAP[data.subject] || { prefix: 'q' };
-    var areaSlug = slugify(data.area || 'generale') || 'generale';
-    var prefix = cfg.prefix + '-' + String(data.class || 'x') + '-' + areaSlug + '-';
-    var max = 0;
-
-    drafts.forEach(function (q) {
-      if (!q || typeof q.id !== 'string' || q.id.indexOf(prefix) !== 0) return;
-      var serial = Number(q.id.slice(prefix.length));
-      if (Number.isFinite(serial) && serial > max) {
-        max = serial;
-      }
-    });
-
-    return prefix + String(max + 1).padStart(3, '0');
+  async function nextIdForQuestion(data) {
+    var prefix = buildIdPrefix(data);
+    var localMax = maxSerialByPrefix(drafts, prefix);
+    var remoteMax = await getRemoteMaxByPrefix(data, prefix);
+    var next = Math.max(localMax, remoteMax) + 1;
+    return prefix + String(next).padStart(3, '0');
   }
 
   function parseTags(value) {
@@ -478,7 +630,7 @@
     formFields.bonusRaw.value = question.bonusRaw || '';
   }
 
-  function onSubmitQuestion(event) {
+  async function onSubmitQuestion(event) {
     event.preventDefault();
     var result = collectQuestionFromForm();
 
@@ -494,7 +646,17 @@
       editingIndex = -1;
       saveBtn.textContent = 'Aggiungi esercizio';
     } else {
-      result.data.id = nextIdForQuestion(result.data);
+      var prevLabel = saveBtn.textContent;
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Calcolo ID...';
+      try {
+        result.data.id = await nextIdForQuestion(result.data);
+      } catch (e) {
+        result.data.id = nextIdFromLocalOnly(result.data);
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = prevLabel;
+      }
       drafts.push(result.data);
       setStatus(formMessage, 'Esercizio aggiunto alla bozza.', false);
     }
@@ -504,7 +666,7 @@
     resetForm(true);
   }
 
-  function onTableClick(event) {
+  async function onTableClick(event) {
     var btn = event.target.closest('button[data-action]');
     if (!btn) return;
 
@@ -522,7 +684,11 @@
 
     if (action === 'clone') {
       var clone = JSON.parse(JSON.stringify(drafts[index]));
-      clone.id = nextIdForQuestion(clone);
+      try {
+        clone.id = await nextIdForQuestion(clone);
+      } catch (e) {
+        clone.id = nextIdFromLocalOnly(clone);
+      }
       drafts.push(clone);
       saveDrafts();
       renderDraftTable();
@@ -608,7 +774,7 @@
       return true;
     }).map(function (item) {
       var copy = JSON.parse(JSON.stringify(item));
-      if (!copy.id) copy.id = nextIdForQuestion(copy);
+      if (!copy.id) copy.id = nextIdFromLocalOnly(copy);
       return copy;
     });
   }
@@ -692,7 +858,10 @@
       });
     });
 
-    formFields.subject.addEventListener('change', updateSubjectDefaults);
+    formFields.subject.addEventListener('change', function () {
+      updateSubjectDefaults();
+      warmupRemoteSubjectDataset();
+    });
 
     formFields.sourceSubject.addEventListener('input', function () {
       formFields.sourceSubject.dataset.locked = formFields.sourceSubject.value.trim() ? '1' : '';
