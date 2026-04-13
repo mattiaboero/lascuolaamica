@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-11T18:39:47.671413+00:00",
+  "generatedAt": "2026-04-13T17:28:49Z",
   "subject": "geografia",
-  "totalQuestions": 800,
+  "totalQuestions": 765,
   "questions": [
     {
       "id": "geo-2-orientamento-001",
@@ -3583,468 +3583,6 @@
       "sourceSubject": "geografia",
       "class": 2,
       "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "montagna",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "montagna",
-      "explanation": "Montagna è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;montagna",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "montagna"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-003",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "albero",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "albero",
-      "explanation": "Albero è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;albero",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "albero"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-004",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "lago",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "lago",
-      "explanation": "Lago è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;lago",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "lago"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-005",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "prato",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "prato",
-      "explanation": "Prato è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;prato",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "prato"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-006",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "spiaggia",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "spiaggia",
-      "explanation": "Spiaggia è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;spiaggia",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "spiaggia"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-007",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "bosco",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "bosco",
-      "explanation": "Bosco è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;bosco",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "bosco"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-008",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "collina",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "collina",
-      "explanation": "Collina è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;collina",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "collina"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-009",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "roccia",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "roccia",
-      "explanation": "Roccia è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;roccia",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "roccia"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-010",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "cascata",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "cascata",
-      "explanation": "Cascata è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;cascata",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "cascata"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-011",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "mare",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "mare",
-      "explanation": "Mare è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;mare",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "mare"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-012",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "isola",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "isola",
-      "explanation": "Isola è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;isola",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "isola"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-013",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "vulcano",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "vulcano",
-      "explanation": "Vulcano è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;vulcano",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "vulcano"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-014",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "ghiacciaio",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "ghiacciaio",
-      "explanation": "Ghiacciaio è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;ghiacciaio",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "ghiacciaio"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-015",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_naturali",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento naturale del paesaggio?",
-      "options": [
-        "sorgente",
-        "scuola",
-        "ponte",
-        "strada"
-      ],
-      "answerIndex": 0,
-      "answer": "sorgente",
-      "explanation": "Sorgente è un elemento naturale, non costruito dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_naturali;sorgente",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_naturali",
-        "sorgente"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-016",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
       "subarea": "elementi_antropici",
       "difficulty": 1,
       "question": "Quale tra questi è un elemento antropico del paesaggio?",
@@ -4073,469 +3611,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-017",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "scuola",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "scuola",
-      "explanation": "Scuola è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;scuola",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "scuola"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-018",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "strada",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "strada",
-      "explanation": "Strada è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;strada",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "strada"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-019",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "casa",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "casa",
-      "explanation": "Casa è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;casa",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "casa"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-020",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "fabbrica",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "fabbrica",
-      "explanation": "Fabbrica è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;fabbrica",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "fabbrica"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-021",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "ospedale",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "ospedale",
-      "explanation": "Ospedale è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;ospedale",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "ospedale"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-022",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "stazione",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "stazione",
-      "explanation": "Stazione è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;stazione",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "stazione"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-023",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "parco giochi",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "parco giochi",
-      "explanation": "Parco giochi è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;parco_giochi",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "parco_giochi"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-024",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "piazza",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "piazza",
-      "explanation": "Piazza è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;piazza",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "piazza"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-025",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "semaforo",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "semaforo",
-      "explanation": "Semaforo è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;semaforo",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "semaforo"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-026",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "marciapiede",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "marciapiede",
-      "explanation": "Marciapiede è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;marciapiede",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "marciapiede"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-027",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "porto",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "porto",
-      "explanation": "Porto è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;porto",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "porto"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-028",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "campo coltivato",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "campo coltivato",
-      "explanation": "Campo coltivato è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;campo_coltivato",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "campo_coltivato"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-029",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "negozio",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "negozio",
-      "explanation": "Negozio è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;negozio",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "negozio"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-030",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 2,
-      "area": "paesaggio",
-      "subarea": "elementi_antropici",
-      "difficulty": 1,
-      "question": "Quale tra questi è un elemento antropico del paesaggio?",
-      "options": [
-        "biblioteca",
-        "bosco",
-        "lago",
-        "montagna"
-      ],
-      "answerIndex": 0,
-      "answer": "biblioteca",
-      "explanation": "Biblioteca è un elemento antropico perché è realizzato o trasformato dall'uomo.",
-      "active": true,
-      "tag": "geografia;classe_2;paesaggio;elementi_antropici;biblioteca",
-      "tags": [
-        "geografia",
-        "classe_2",
-        "paesaggio",
-        "elementi_antropici",
-        "biblioteca"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_2_paesaggio",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-2-paesaggio-031",
+      "id": "geo-2-paesaggio-003",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4567,7 +3643,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-032",
+      "id": "geo-2-paesaggio-004",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4599,7 +3675,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-033",
+      "id": "geo-2-paesaggio-005",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4631,7 +3707,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-034",
+      "id": "geo-2-paesaggio-006",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4663,7 +3739,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-035",
+      "id": "geo-2-paesaggio-007",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4695,7 +3771,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-036",
+      "id": "geo-2-paesaggio-008",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4727,7 +3803,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-037",
+      "id": "geo-2-paesaggio-009",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4759,7 +3835,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-038",
+      "id": "geo-2-paesaggio-010",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4791,7 +3867,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-039",
+      "id": "geo-2-paesaggio-011",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4823,7 +3899,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-040",
+      "id": "geo-2-paesaggio-012",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4855,7 +3931,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-041",
+      "id": "geo-2-paesaggio-013",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4887,7 +3963,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-042",
+      "id": "geo-2-paesaggio-014",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4919,7 +3995,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-043",
+      "id": "geo-2-paesaggio-015",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4951,7 +4027,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-044",
+      "id": "geo-2-paesaggio-016",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -4983,7 +4059,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-045",
+      "id": "geo-2-paesaggio-017",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -5015,7 +4091,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-046",
+      "id": "geo-2-paesaggio-018",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -5047,7 +4123,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-047",
+      "id": "geo-2-paesaggio-019",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -5079,7 +4155,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-048",
+      "id": "geo-2-paesaggio-020",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -5111,7 +4187,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-049",
+      "id": "geo-2-paesaggio-021",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -5143,7 +4219,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-2-paesaggio-050",
+      "id": "geo-2-paesaggio-022",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 2,
@@ -13577,38 +12653,6 @@
       "area": "strumenti_orientamento",
       "subarea": "carte_legenda_scala_coordinate",
       "difficulty": 2,
-      "question": "I simboli cartografici servono a...",
-      "options": [
-        "semplificare la realtà sulla carta",
-        "rendere il territorio più grande",
-        "nascondere le informazioni",
-        "cambiare il clima"
-      ],
-      "answerIndex": 0,
-      "answer": "semplificare la realtà sulla carta",
-      "explanation": "La risposta corretta è 'semplificare la realtà sulla carta'.",
-      "active": true,
-      "tag": "geografia;classe_4;strumenti;orientamento",
-      "tags": [
-        "geografia",
-        "classe_4",
-        "strumenti",
-        "orientamento"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_4_strumenti_orientamento",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-4-strumenti_orientamento-027",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 4,
-      "area": "strumenti_orientamento",
-      "subarea": "carte_legenda_scala_coordinate",
-      "difficulty": 2,
       "question": "Se vuoi sapere dove sono i monti in Italia, consulti prima una carta...",
       "options": [
         "fisica",
@@ -13634,7 +12678,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-028",
+      "id": "geo-4-strumenti_orientamento-027",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13666,7 +12710,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-029",
+      "id": "geo-4-strumenti_orientamento-028",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13698,7 +12742,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-030",
+      "id": "geo-4-strumenti_orientamento-029",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13730,7 +12774,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-031",
+      "id": "geo-4-strumenti_orientamento-030",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13762,7 +12806,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-032",
+      "id": "geo-4-strumenti_orientamento-031",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13794,7 +12838,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-033",
+      "id": "geo-4-strumenti_orientamento-032",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13826,7 +12870,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-034",
+      "id": "geo-4-strumenti_orientamento-033",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13858,7 +12902,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-035",
+      "id": "geo-4-strumenti_orientamento-034",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13890,7 +12934,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-036",
+      "id": "geo-4-strumenti_orientamento-035",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13922,7 +12966,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-037",
+      "id": "geo-4-strumenti_orientamento-036",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13954,7 +12998,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-038",
+      "id": "geo-4-strumenti_orientamento-037",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -13986,7 +13030,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-039",
+      "id": "geo-4-strumenti_orientamento-038",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14018,7 +13062,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-040",
+      "id": "geo-4-strumenti_orientamento-039",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14050,7 +13094,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-041",
+      "id": "geo-4-strumenti_orientamento-040",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14082,7 +13126,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-042",
+      "id": "geo-4-strumenti_orientamento-041",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14114,7 +13158,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-043",
+      "id": "geo-4-strumenti_orientamento-042",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14146,7 +13190,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-044",
+      "id": "geo-4-strumenti_orientamento-043",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14178,7 +13222,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-045",
+      "id": "geo-4-strumenti_orientamento-044",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14210,7 +13254,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-046",
+      "id": "geo-4-strumenti_orientamento-045",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14242,7 +13286,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-047",
+      "id": "geo-4-strumenti_orientamento-046",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14274,7 +13318,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-048",
+      "id": "geo-4-strumenti_orientamento-047",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14306,7 +13350,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-049",
+      "id": "geo-4-strumenti_orientamento-048",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -14338,7 +13382,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-strumenti_orientamento-050",
+      "id": "geo-4-strumenti_orientamento-049",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18154,39 +17198,6 @@
       "class": 4,
       "area": "antropico_ambiente",
       "subarea": "attivita_economiche_e_amministrazione",
-      "difficulty": 1,
-      "question": "La raccolta differenziata aiuta a...",
-      "options": [
-        "tutelare l'ambiente",
-        "spostare le montagne",
-        "allungare i fiumi",
-        "modificare i confini"
-      ],
-      "answerIndex": 0,
-      "answer": "tutelare l'ambiente",
-      "explanation": "La risposta corretta è 'tutelare l'ambiente'.",
-      "active": true,
-      "tag": "geografia;classe_4;italia;attivita_economiche;ambiente",
-      "tags": [
-        "geografia",
-        "classe_4",
-        "italia",
-        "attivita_economiche",
-        "ambiente"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_4_antropico_ambiente",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-4-antropico_ambiente-018",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 4,
-      "area": "antropico_ambiente",
-      "subarea": "attivita_economiche_e_amministrazione",
       "difficulty": 2,
       "question": "Un'area protetta è un luogo...",
       "options": [
@@ -18214,7 +17225,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-019",
+      "id": "geo-4-antropico_ambiente-018",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18247,7 +17258,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-020",
+      "id": "geo-4-antropico_ambiente-019",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18280,7 +17291,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-021",
+      "id": "geo-4-antropico_ambiente-020",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18313,7 +17324,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-022",
+      "id": "geo-4-antropico_ambiente-021",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18346,7 +17357,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-023",
+      "id": "geo-4-antropico_ambiente-022",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18379,7 +17390,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-024",
+      "id": "geo-4-antropico_ambiente-023",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18412,7 +17423,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-025",
+      "id": "geo-4-antropico_ambiente-024",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18445,7 +17456,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-026",
+      "id": "geo-4-antropico_ambiente-025",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18478,7 +17489,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-027",
+      "id": "geo-4-antropico_ambiente-026",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18511,7 +17522,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-028",
+      "id": "geo-4-antropico_ambiente-027",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18544,7 +17555,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-029",
+      "id": "geo-4-antropico_ambiente-028",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18577,7 +17588,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-030",
+      "id": "geo-4-antropico_ambiente-029",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18610,7 +17621,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-031",
+      "id": "geo-4-antropico_ambiente-030",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18643,7 +17654,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-032",
+      "id": "geo-4-antropico_ambiente-031",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18676,7 +17687,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-033",
+      "id": "geo-4-antropico_ambiente-032",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18709,7 +17720,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-034",
+      "id": "geo-4-antropico_ambiente-033",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18742,7 +17753,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-035",
+      "id": "geo-4-antropico_ambiente-034",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18775,7 +17786,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-036",
+      "id": "geo-4-antropico_ambiente-035",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18808,7 +17819,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-037",
+      "id": "geo-4-antropico_ambiente-036",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18841,7 +17852,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-038",
+      "id": "geo-4-antropico_ambiente-037",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18874,7 +17885,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-039",
+      "id": "geo-4-antropico_ambiente-038",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18907,7 +17918,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-040",
+      "id": "geo-4-antropico_ambiente-039",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18940,7 +17951,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-041",
+      "id": "geo-4-antropico_ambiente-040",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -18973,7 +17984,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-042",
+      "id": "geo-4-antropico_ambiente-041",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19006,7 +18017,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-043",
+      "id": "geo-4-antropico_ambiente-042",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19039,7 +18050,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-044",
+      "id": "geo-4-antropico_ambiente-043",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19072,7 +18083,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-045",
+      "id": "geo-4-antropico_ambiente-044",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19105,7 +18116,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-046",
+      "id": "geo-4-antropico_ambiente-045",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19138,7 +18149,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-047",
+      "id": "geo-4-antropico_ambiente-046",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19171,7 +18182,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-048",
+      "id": "geo-4-antropico_ambiente-047",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19204,7 +18215,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-049",
+      "id": "geo-4-antropico_ambiente-048",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -19237,7 +18248,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-4-antropico_ambiente-050",
+      "id": "geo-4-antropico_ambiente-049",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 4,
@@ -21559,37 +20570,6 @@
       "area": "geografia_fisica_italia",
       "subarea": "morfologia_idrografia_coste",
       "difficulty": 2,
-      "question": "Le pianure costiere italiane si trovano vicino...",
-      "options": [
-        "al mare",
-        "alle vette alpine",
-        "alle sorgenti di alta montagna",
-        "ai ghiacciai"
-      ],
-      "answerIndex": 0,
-      "answer": "al mare",
-      "explanation": "La risposta corretta è 'al mare'.",
-      "active": true,
-      "tag": "geografia;classe_5;italia_fisica",
-      "tags": [
-        "geografia",
-        "classe_5",
-        "italia_fisica"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_5_geografia_fisica",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-5-geografia_fisica_italia-024",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 5,
-      "area": "geografia_fisica_italia",
-      "subarea": "morfologia_idrografia_coste",
-      "difficulty": 2,
       "question": "Un promontorio è...",
       "options": [
         "una sporgenza della terra nel mare",
@@ -21614,7 +20594,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-025",
+      "id": "geo-5-geografia_fisica_italia-024",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21645,7 +20625,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-026",
+      "id": "geo-5-geografia_fisica_italia-025",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21676,7 +20656,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-027",
+      "id": "geo-5-geografia_fisica_italia-026",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21707,7 +20687,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-028",
+      "id": "geo-5-geografia_fisica_italia-027",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21738,7 +20718,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-029",
+      "id": "geo-5-geografia_fisica_italia-028",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21769,7 +20749,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-030",
+      "id": "geo-5-geografia_fisica_italia-029",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21800,7 +20780,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-031",
+      "id": "geo-5-geografia_fisica_italia-030",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21831,7 +20811,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-032",
+      "id": "geo-5-geografia_fisica_italia-031",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21862,7 +20842,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-033",
+      "id": "geo-5-geografia_fisica_italia-032",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21893,7 +20873,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-034",
+      "id": "geo-5-geografia_fisica_italia-033",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21924,7 +20904,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-035",
+      "id": "geo-5-geografia_fisica_italia-034",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21955,7 +20935,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-036",
+      "id": "geo-5-geografia_fisica_italia-035",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -21986,7 +20966,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-037",
+      "id": "geo-5-geografia_fisica_italia-036",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22017,7 +20997,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-038",
+      "id": "geo-5-geografia_fisica_italia-037",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22048,7 +21028,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-039",
+      "id": "geo-5-geografia_fisica_italia-038",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22079,7 +21059,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-040",
+      "id": "geo-5-geografia_fisica_italia-039",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22110,7 +21090,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-041",
+      "id": "geo-5-geografia_fisica_italia-040",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22141,7 +21121,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-042",
+      "id": "geo-5-geografia_fisica_italia-041",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22172,7 +21152,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-043",
+      "id": "geo-5-geografia_fisica_italia-042",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22203,7 +21183,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-044",
+      "id": "geo-5-geografia_fisica_italia-043",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22234,7 +21214,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-045",
+      "id": "geo-5-geografia_fisica_italia-044",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22265,7 +21245,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-046",
+      "id": "geo-5-geografia_fisica_italia-045",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22296,7 +21276,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-047",
+      "id": "geo-5-geografia_fisica_italia-046",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22327,7 +21307,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-048",
+      "id": "geo-5-geografia_fisica_italia-047",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22358,7 +21338,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-049",
+      "id": "geo-5-geografia_fisica_italia-048",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22389,7 +21369,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-geografia_fisica_italia-050",
+      "id": "geo-5-geografia_fisica_italia-049",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22426,39 +21406,6 @@
       "class": 5,
       "area": "regioni_antropica",
       "subarea": "regioni_economia_popolazione_patrimonio",
-      "difficulty": 1,
-      "question": "L'Italia è divisa in...",
-      "options": [
-        "20 regioni",
-        "18 regioni",
-        "21 regioni",
-        "15 regioni"
-      ],
-      "answerIndex": 0,
-      "answer": "20 regioni",
-      "explanation": "La risposta corretta è '20 regioni'.",
-      "active": true,
-      "tag": "geografia;classe_5;regioni;economia;popolazione",
-      "tags": [
-        "geografia",
-        "classe_5",
-        "regioni",
-        "economia",
-        "popolazione"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_5_regioni_antropica",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-5-regioni_antropica-002",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 5,
-      "area": "regioni_antropica",
-      "subarea": "regioni_economia_popolazione_patrimonio",
       "difficulty": 2,
       "question": "Ogni regione ha un...",
       "options": [
@@ -22486,7 +21433,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-003",
+      "id": "geo-5-regioni_antropica-002",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22519,7 +21466,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-004",
+      "id": "geo-5-regioni_antropica-003",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22552,73 +21499,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-005",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 5,
-      "area": "regioni_antropica",
-      "subarea": "regioni_economia_popolazione_patrimonio",
-      "difficulty": 1,
-      "question": "L'agricoltura appartiene al settore...",
-      "options": [
-        "primario",
-        "secondario",
-        "terziario",
-        "digitale"
-      ],
-      "answerIndex": 0,
-      "answer": "primario",
-      "explanation": "La risposta corretta è 'primario'.",
-      "active": true,
-      "tag": "geografia;classe_5;regioni;economia;popolazione",
-      "tags": [
-        "geografia",
-        "classe_5",
-        "regioni",
-        "economia",
-        "popolazione"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_5_regioni_antropica",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-5-regioni_antropica-006",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 5,
-      "area": "regioni_antropica",
-      "subarea": "regioni_economia_popolazione_patrimonio",
-      "difficulty": 2,
-      "question": "L'industria appartiene al settore...",
-      "options": [
-        "secondario",
-        "primario",
-        "terziario",
-        "artistico"
-      ],
-      "answerIndex": 0,
-      "answer": "secondario",
-      "explanation": "La risposta corretta è 'secondario'.",
-      "active": true,
-      "tag": "geografia;classe_5;regioni;economia;popolazione",
-      "tags": [
-        "geografia",
-        "classe_5",
-        "regioni",
-        "economia",
-        "popolazione"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_5_regioni_antropica",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-5-regioni_antropica-007",
+      "id": "geo-5-regioni_antropica-004",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22651,7 +21532,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-008",
+      "id": "geo-5-regioni_antropica-005",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22684,7 +21565,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-009",
+      "id": "geo-5-regioni_antropica-006",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22717,7 +21598,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-010",
+      "id": "geo-5-regioni_antropica-007",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22750,7 +21631,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-011",
+      "id": "geo-5-regioni_antropica-008",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22783,7 +21664,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-012",
+      "id": "geo-5-regioni_antropica-009",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22816,7 +21697,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-013",
+      "id": "geo-5-regioni_antropica-010",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22849,7 +21730,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-014",
+      "id": "geo-5-regioni_antropica-011",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22882,7 +21763,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-015",
+      "id": "geo-5-regioni_antropica-012",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22915,7 +21796,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-016",
+      "id": "geo-5-regioni_antropica-013",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22948,7 +21829,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-017",
+      "id": "geo-5-regioni_antropica-014",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -22981,7 +21862,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-018",
+      "id": "geo-5-regioni_antropica-015",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23014,7 +21895,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-019",
+      "id": "geo-5-regioni_antropica-016",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23047,7 +21928,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-020",
+      "id": "geo-5-regioni_antropica-017",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23080,7 +21961,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-021",
+      "id": "geo-5-regioni_antropica-018",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23113,7 +21994,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-022",
+      "id": "geo-5-regioni_antropica-019",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23146,7 +22027,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-023",
+      "id": "geo-5-regioni_antropica-020",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23179,7 +22060,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-024",
+      "id": "geo-5-regioni_antropica-021",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23212,7 +22093,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-025",
+      "id": "geo-5-regioni_antropica-022",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23245,7 +22126,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-026",
+      "id": "geo-5-regioni_antropica-023",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23278,7 +22159,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-027",
+      "id": "geo-5-regioni_antropica-024",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23311,7 +22192,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-028",
+      "id": "geo-5-regioni_antropica-025",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23344,7 +22225,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-029",
+      "id": "geo-5-regioni_antropica-026",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23377,40 +22258,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-030",
-      "subject": "geografia",
-      "sourceSubject": "geografia",
-      "class": 5,
-      "area": "regioni_antropica",
-      "subarea": "regioni_economia_popolazione_patrimonio",
-      "difficulty": 2,
-      "question": "La tutela dell'ambiente riguarda anche...",
-      "options": [
-        "ridurre inquinamento e sprechi",
-        "costruire senza regole",
-        "abbandonare rifiuti",
-        "consumare più suolo possibile"
-      ],
-      "answerIndex": 0,
-      "answer": "ridurre inquinamento e sprechi",
-      "explanation": "La risposta corretta è 'ridurre inquinamento e sprechi'.",
-      "active": true,
-      "tag": "geografia;classe_5;regioni;economia;popolazione",
-      "tags": [
-        "geografia",
-        "classe_5",
-        "regioni",
-        "economia",
-        "popolazione"
-      ],
-      "language": "it",
-      "program": "geografia_primaria_classe_5_regioni_antropica",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "geo-5-regioni_antropica-031",
+      "id": "geo-5-regioni_antropica-027",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23443,7 +22291,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-032",
+      "id": "geo-5-regioni_antropica-028",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23476,7 +22324,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-033",
+      "id": "geo-5-regioni_antropica-029",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23509,7 +22357,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-034",
+      "id": "geo-5-regioni_antropica-030",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23542,7 +22390,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-035",
+      "id": "geo-5-regioni_antropica-031",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23575,7 +22423,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-036",
+      "id": "geo-5-regioni_antropica-032",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23608,7 +22456,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-037",
+      "id": "geo-5-regioni_antropica-033",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23641,7 +22489,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-038",
+      "id": "geo-5-regioni_antropica-034",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23674,7 +22522,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-039",
+      "id": "geo-5-regioni_antropica-035",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23707,7 +22555,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-040",
+      "id": "geo-5-regioni_antropica-036",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23740,7 +22588,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-041",
+      "id": "geo-5-regioni_antropica-037",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23773,7 +22621,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-042",
+      "id": "geo-5-regioni_antropica-038",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23806,7 +22654,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-043",
+      "id": "geo-5-regioni_antropica-039",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23839,7 +22687,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-044",
+      "id": "geo-5-regioni_antropica-040",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23872,7 +22720,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-045",
+      "id": "geo-5-regioni_antropica-041",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23905,7 +22753,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-046",
+      "id": "geo-5-regioni_antropica-042",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23938,7 +22786,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-047",
+      "id": "geo-5-regioni_antropica-043",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -23971,7 +22819,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-048",
+      "id": "geo-5-regioni_antropica-044",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -24004,7 +22852,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-049",
+      "id": "geo-5-regioni_antropica-045",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -24037,7 +22885,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "geo-5-regioni_antropica-050",
+      "id": "geo-5-regioni_antropica-046",
       "subject": "geografia",
       "sourceSubject": "geografia",
       "class": 5,
@@ -25672,30 +24520,30 @@
   ],
   "stats": {
     "file": "template_geografia_800.csv",
-    "rows": 800,
+    "rows": 765,
     "areas": {
       "orientamento": 60,
       "geo_graficita": 50,
-      "paesaggio": 50,
+      "paesaggio": 22,
       "sistema_territoriale": 40,
       "orientamento_mappe": 50,
       "paesaggi_terra": 50,
       "paesaggi_acqua": 50,
       "territorio_sicurezza": 50,
-      "strumenti_orientamento": 50,
+      "strumenti_orientamento": 49,
       "territorio_italiano": 50,
       "idrografia_clima_italia": 50,
-      "antropico_ambiente": 50,
+      "antropico_ambiente": 49,
       "orientamento_carte": 50,
-      "geografia_fisica_italia": 50,
-      "regioni_antropica": 50,
+      "geografia_fisica_italia": 49,
+      "regioni_antropica": 46,
       "italia_europa": 50
     },
     "classes": {
-      "2": 200,
+      "2": 172,
       "3": 200,
-      "4": 200,
-      "5": 200
+      "4": 198,
+      "5": 195
     }
   }
 }

@@ -18,6 +18,7 @@
   const LB_KEY = cfg.lbKey || 'subject_lb_v1';
   const CURSOR_KEY = cfg.cursorKey || 'subject_cursor_v1';
   const HISTORY_KEY = cfg.historyKey || `${CURSOR_KEY}_history_v2`;
+  const HISTORY_SIG_KEY = cfg.historySigKey || `${CURSOR_KEY}_history_sig_v1`;
   const STATS_KEY = cfg.statsKey || `${CURSOR_KEY}_stats_v1`;
   const CLASS_PREF_KEY = cfg.classPrefKey || `${CURSOR_KEY}_class_pref_v1`;
 
@@ -131,6 +132,22 @@
     return h.toString(36);
   }
 
+  function normalizeSignatureText(value) {
+    return String(value ?? '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, ' ')
+      .replace(/[^\w\s]/g, '')
+      .trim();
+  }
+
+  function buildQuestionSignature(q) {
+    const qq = normalizeSignatureText(q && q.q);
+    const aa = normalizeSignatureText(q && q.a);
+    return hashText(`${qq}|${aa}`);
+  }
+
   function normalizeGrade(value) {
     const n = Number(value);
     if (!Number.isFinite(n)) return null;
@@ -164,6 +181,7 @@
         ...q,
         area,
         _id: `${area}:${idx}:${hashText(String(q.q || '') + '|' + String(q.a || ''))}`,
+        _sig: buildQuestionSignature(q),
         _grade: inferGrade(q, idx, raw.length)
       }));
     });
@@ -236,9 +254,9 @@
     } catch (e) {}
   }
 
-  function loadHistoryStore() {
+  function loadHistoryStore(storageKey = HISTORY_KEY) {
     try {
-      const raw = JSON.parse(localStorage.getItem(HISTORY_KEY));
+      const raw = JSON.parse(localStorage.getItem(storageKey));
       if (!raw || typeof raw !== 'object') return {};
       const out = {};
       Object.keys(raw).forEach((k) => {
@@ -251,9 +269,9 @@
     }
   }
 
-  function saveHistoryStore(store) {
+  function saveHistoryStore(store, storageKey = HISTORY_KEY) {
     try {
-      localStorage.setItem(HISTORY_KEY, JSON.stringify(store));
+      localStorage.setItem(storageKey, JSON.stringify(store));
     } catch (e) {}
   }
 
@@ -582,18 +600,26 @@
     return base + weaknessBoost;
   }
 
-  function pickQuestion(area, pool, targetGrade, sessionUsed, historyStore, stats, classNum) {
+  function pickQuestion(area, pool, targetGrade, sessionUsed, historyStore, historySigStore, stats, classNum) {
     if (!pool.length) return null;
 
     const bucket = `${selectedClass}|${area}`;
     const rawSeen = Array.isArray(historyStore[bucket]) ? historyStore[bucket] : [];
+    const rawSeenSig = Array.isArray(historySigStore[bucket]) ? historySigStore[bucket] : [];
     let seenSet = new Set(rawSeen);
+    let seenSigSet = new Set(rawSeenSig);
 
-    let available = pool.filter((q) => !sessionUsed.has(q._id) && !seenSet.has(q._id));
+    let available = pool.filter((q) => !sessionUsed.has(q._id) && !seenSet.has(q._id) && !seenSigSet.has(q._sig));
 
     if (!available.length) {
       historyStore[bucket] = [];
       seenSet = new Set();
+      available = pool.filter((q) => !sessionUsed.has(q._id) && !seenSigSet.has(q._sig));
+    }
+
+    if (!available.length) {
+      historySigStore[bucket] = [];
+      seenSigSet = new Set();
       available = pool.filter((q) => !sessionUsed.has(q._id));
     }
 
@@ -612,12 +638,20 @@
       historyStore[bucket] = historyStore[bucket].slice(-maxSeen);
     }
 
+    if (!Array.isArray(historySigStore[bucket])) historySigStore[bucket] = [];
+    historySigStore[bucket].push(chosen._sig);
+    const maxSeenSig = Math.max(40, pool.length * 2);
+    if (historySigStore[bucket].length > maxSeenSig) {
+      historySigStore[bucket] = historySigStore[bucket].slice(-maxSeenSig);
+    }
+
     return chosen;
   }
 
   function buildSessionQuestions() {
     const cursor = loadCursor();
     const historyStore = loadHistoryStore();
+    const historySigStore = loadHistoryStore(HISTORY_SIG_KEY);
     const stats = loadStats();
     const sessionUsed = new Set();
     const plan = buildGradePlan(TOTAL_Q, selectedClass);
@@ -646,7 +680,7 @@
       const start = safeInt(cursor.mixed, 0) % orderedByNeed.length;
       for (let i = 0; i < TOTAL_Q; i++) {
         const area = orderedByNeed[(start + i) % orderedByNeed.length];
-        const q = pickQuestion(area, classPools[area] || [], plan[i % plan.length], sessionUsed, historyStore, stats, classNum);
+        const q = pickQuestion(area, classPools[area] || [], plan[i % plan.length], sessionUsed, historyStore, historySigStore, stats, classNum);
         if (q) out.push({ ...q });
       }
       cursor.mixed = (safeInt(cursor.mixed, 0) + 1) % Math.max(1, orderedByNeed.length);
@@ -654,7 +688,7 @@
       const areaPool = classPools[selectedArea] || [];
       if (!areaPool.length) return [];
       for (let i = 0; i < TOTAL_Q; i++) {
-        const q = pickQuestion(selectedArea, areaPool, plan[i % plan.length], sessionUsed, historyStore, stats, classNum);
+        const q = pickQuestion(selectedArea, areaPool, plan[i % plan.length], sessionUsed, historyStore, historySigStore, stats, classNum);
         if (q) out.push({ ...q });
       }
       cursor[selectedArea] = (safeInt(cursor[selectedArea], 0) + 1) % Math.max(1, areaPool.length);
@@ -699,6 +733,7 @@
 
     saveCursor(cursor);
     saveHistoryStore(historyStore);
+    saveHistoryStore(historySigStore, HISTORY_SIG_KEY);
     return out.slice(0, TOTAL_Q);
   }
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-11T18:39:47.671413+00:00",
+  "generatedAt": "2026-04-13T17:28:49Z",
   "subject": "inglese",
-  "totalQuestions": 300,
+  "totalQuestions": 275,
   "questions": [
     {
       "id": "eng-2-colori-001",
@@ -4620,134 +4620,6 @@
       "area": "have_got",
       "subarea": "frasi_semplici",
       "difficulty": 2,
-      "question": "Which sentence is correct?",
-      "options": [
-        "Have you got a pencil?",
-        "Has you got a pencil?",
-        "You have got pencil?",
-        "Got you a pencil?"
-      ],
-      "answerIndex": 0,
-      "answer": "Have you got a pencil?",
-      "explanation": "The correct answer is \"Have you got a pencil?\".",
-      "active": true,
-      "tag": "inglese;classe_3;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_3",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_3_have_got",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-3-have-got-005",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 3,
-      "area": "have_got",
-      "subarea": "frasi_semplici",
-      "difficulty": 2,
-      "question": "Which sentence is correct?",
-      "options": [
-        "He have got brown eyes.",
-        "He has got brown eyes.",
-        "He got brown eyes.",
-        "He is got brown eyes."
-      ],
-      "answerIndex": 1,
-      "answer": "He has got brown eyes.",
-      "explanation": "The correct answer is \"He has got brown eyes.\".",
-      "active": true,
-      "tag": "inglese;classe_3;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_3",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_3_have_got",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-3-to-be-006",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 3,
-      "area": "to_be",
-      "subarea": "frasi_semplici",
-      "difficulty": 2,
-      "question": "Which sentence is correct?",
-      "options": [
-        "They is happy.",
-        "They am happy.",
-        "They are happy.",
-        "They be happy."
-      ],
-      "answerIndex": 2,
-      "answer": "They are happy.",
-      "explanation": "The correct answer is \"They are happy.\".",
-      "active": true,
-      "tag": "inglese;classe_3;to_be;primaria",
-      "tags": [
-        "inglese",
-        "classe_3",
-        "to_be",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_3_to_be",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-3-to-be-007",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 3,
-      "area": "to_be",
-      "subarea": "frasi_semplici",
-      "difficulty": 2,
-      "question": "Which sentence is correct?",
-      "options": [
-        "I are hungry.",
-        "I am hungry.",
-        "I is hungry.",
-        "I be hungry."
-      ],
-      "answerIndex": 1,
-      "answer": "I am hungry.",
-      "explanation": "The correct answer is \"I am hungry.\".",
-      "active": true,
-      "tag": "inglese;classe_3;to_be;primaria",
-      "tags": [
-        "inglese",
-        "classe_3",
-        "to_be",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_3_to_be",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-3-have-got-006",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 3,
-      "area": "have_got",
-      "subarea": "frasi_semplici",
-      "difficulty": 2,
       "question": "Complete: My brother __ got a blue bag.",
       "options": [
         "have",
@@ -4773,7 +4645,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-3-have-got-007",
+      "id": "eng-3-have-got-005",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 3,
@@ -5157,38 +5029,6 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-4-mesi-003",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "mesi",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
-      "question": "Which sentence is correct?",
-      "options": [
-        "There are twelve months in a year.",
-        "There is twelve months in a year.",
-        "There am twelve months in a year.",
-        "There be twelve months in a year."
-      ],
-      "answerIndex": 0,
-      "answer": "There are twelve months in a year.",
-      "explanation": "The correct answer is \"There are twelve months in a year.\".",
-      "active": true,
-      "tag": "inglese;classe_4;mesi;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "mesi",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_mesi",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
       "id": "eng-4-to-be-001",
       "subject": "inglese",
       "sourceSubject": "inglese",
@@ -5536,70 +5376,6 @@
       ],
       "language": "en",
       "program": "inglese_primaria_classe_4_to_be",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-4-have-got-005",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "have_got",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
-      "question": "Which sentence is correct?",
-      "options": [
-        "I have got an apple and a banana.",
-        "I has got an apple and a banana.",
-        "I am got an apple and a banana.",
-        "I got an apple and a banana."
-      ],
-      "answerIndex": 0,
-      "answer": "I have got an apple and a banana.",
-      "explanation": "The correct answer is \"I have got an apple and a banana.\".",
-      "active": true,
-      "tag": "inglese;classe_4;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_have_got",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-4-have-got-006",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "have_got",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
-      "question": "Which sentence is correct?",
-      "options": [
-        "The dog have got a long tail.",
-        "The dog is got a long tail.",
-        "The dog has got a long tail.",
-        "The dog got a long tail."
-      ],
-      "answerIndex": 2,
-      "answer": "The dog has got a long tail.",
-      "explanation": "The correct answer is \"The dog has got a long tail.\".",
-      "active": true,
-      "tag": "inglese;classe_4;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_have_got",
       "teacherNote": "",
       "bonus": false,
       "bonusRaw": ""
@@ -6085,71 +5861,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-5-to-be-004",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "to_be",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "We are in the classroom.",
-        "We is in the classroom.",
-        "We am in the classroom.",
-        "We be in the classroom."
-      ],
-      "answerIndex": 0,
-      "answer": "We are in the classroom.",
-      "explanation": "The correct answer is \"We are in the classroom.\".",
-      "active": true,
-      "tag": "inglese;classe_5;to_be;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "to_be",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_to_be",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
       "id": "eng-5-have-got-003",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "have_got",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "Have they got a dog?",
-        "Has they got a dog?",
-        "They have got a dog?",
-        "Got they a dog?"
-      ],
-      "answerIndex": 0,
-      "answer": "Have they got a dog?",
-      "explanation": "The correct answer is \"Have they got a dog?\".",
-      "active": true,
-      "tag": "inglese;classe_5;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_have_got",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-have-got-004",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 5,
@@ -6181,7 +5893,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-5-to-be-005",
+      "id": "eng-5-to-be-004",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 5,
@@ -6213,7 +5925,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-5-to-be-006",
+      "id": "eng-5-to-be-005",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 5,
@@ -6240,166 +5952,6 @@
       ],
       "language": "en",
       "program": "inglese_primaria_classe_5_to_be",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-have-got-005",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "have_got",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "My teacher have got a laptop.",
-        "My teacher has got a laptop.",
-        "My teacher got a laptop.",
-        "My teacher is got a laptop."
-      ],
-      "answerIndex": 1,
-      "answer": "My teacher has got a laptop.",
-      "explanation": "The correct answer is \"My teacher has got a laptop.\".",
-      "active": true,
-      "tag": "inglese;classe_5;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_have_got",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-mesi-004",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "mesi",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "March comes before April.",
-        "March comes after April.",
-        "April comes before March and May.",
-        "March is after May."
-      ],
-      "answerIndex": 0,
-      "answer": "March comes before April.",
-      "explanation": "The correct answer is \"March comes before April.\".",
-      "active": true,
-      "tag": "inglese;classe_5;mesi;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "mesi",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_mesi",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-giorni-003",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "giorni",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "Monday is a month of the year.",
-        "Monday is a day of the week.",
-        "Monday is a season.",
-        "Monday is weather."
-      ],
-      "answerIndex": 1,
-      "answer": "Monday is a day of the week.",
-      "explanation": "The correct answer is \"Monday is a day of the week.\".",
-      "active": true,
-      "tag": "inglese;classe_5;giorni;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "giorni",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_giorni",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-cibo-004",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "cibo",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "Ice cream is hot.",
-        "Ice cream is cold.",
-        "Ice cream are cold.",
-        "Ice cream am cold."
-      ],
-      "answerIndex": 1,
-      "answer": "Ice cream is cold.",
-      "explanation": "The correct answer is \"Ice cream is cold.\".",
-      "active": true,
-      "tag": "inglese;classe_5;cibo;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "cibo",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_cibo",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-have-got-006",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "have_got",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "We has got lunch at school.",
-        "We are got lunch at school.",
-        "We have got lunch at school.",
-        "We got lunch at school."
-      ],
-      "answerIndex": 2,
-      "answer": "We have got lunch at school.",
-      "explanation": "The correct answer is \"We have got lunch at school.\".",
-      "active": true,
-      "tag": "inglese;classe_5;have_got;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "have_got",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_have_got",
       "teacherNote": "",
       "bonus": false,
       "bonusRaw": ""
@@ -7372,38 +6924,6 @@
       "area": "casa",
       "subarea": "frasi_semplici",
       "difficulty": 2,
-      "question": "Where do you sleep?",
-      "options": [
-        "bedroom",
-        "kitchen",
-        "garden",
-        "hall"
-      ],
-      "answerIndex": 0,
-      "answer": "bedroom",
-      "explanation": "The correct answer is \"bedroom\".",
-      "active": true,
-      "tag": "inglese;classe_3;casa;primaria",
-      "tags": [
-        "inglese",
-        "classe_3",
-        "casa",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_3_casa",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-3-casa-004",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 3,
-      "area": "casa",
-      "subarea": "frasi_semplici",
-      "difficulty": 2,
       "question": "Where do you wash your hands?",
       "options": [
         "bathroom",
@@ -7717,7 +7237,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-3-casa-005",
+      "id": "eng-3-casa-004",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 3,
@@ -7749,7 +7269,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-3-casa-006",
+      "id": "eng-3-casa-005",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 3,
@@ -8300,134 +7820,6 @@
       "area": "domande",
       "subarea": "uso_guidato",
       "difficulty": 3,
-      "question": "Which question is correct?",
-      "options": [
-        "Where are you from?",
-        "Where you are from?",
-        "From where are you?",
-        "You are from where?"
-      ],
-      "answerIndex": 0,
-      "answer": "Where are you from?",
-      "explanation": "The correct answer is \"Where are you from?\".",
-      "active": true,
-      "tag": "inglese;classe_4;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-4-domande-002",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "domande",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
-      "question": "Which question is correct?",
-      "options": [
-        "What time do you get up?",
-        "What time you get up?",
-        "When you get up what time?",
-        "Do what time you get up?"
-      ],
-      "answerIndex": 0,
-      "answer": "What time do you get up?",
-      "explanation": "The correct answer is \"What time do you get up?\".",
-      "active": true,
-      "tag": "inglese;classe_4;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-4-domande-003",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "domande",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
-      "question": "Which question is correct?",
-      "options": [
-        "Do you play football?",
-        "You do play football?",
-        "Play you football?",
-        "Are you play football?"
-      ],
-      "answerIndex": 0,
-      "answer": "Do you play football?",
-      "explanation": "The correct answer is \"Do you play football?\".",
-      "active": true,
-      "tag": "inglese;classe_4;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-4-domande-004",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "domande",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
-      "question": "Which question is correct?",
-      "options": [
-        "Have you got a bike?",
-        "You have got a bike?",
-        "Got you a bike?",
-        "Has you got a bike?"
-      ],
-      "answerIndex": 0,
-      "answer": "Have you got a bike?",
-      "explanation": "The correct answer is \"Have you got a bike?\".",
-      "active": true,
-      "tag": "inglese;classe_4;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_4",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_4_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-4-domande-005",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 4,
-      "area": "domande",
-      "subarea": "uso_guidato",
-      "difficulty": 3,
       "question": "Which answer is correct for “What do you do after dinner?”",
       "options": [
         "I watch TV.",
@@ -8453,7 +7845,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-4-domande-006",
+      "id": "eng-4-domande-002",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 4,
@@ -8485,7 +7877,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-4-domande-007",
+      "id": "eng-4-domande-003",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 4,
@@ -8517,7 +7909,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-4-domande-008",
+      "id": "eng-4-domande-004",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 4,
@@ -8741,7 +8133,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-4-domande-009",
+      "id": "eng-4-domande-005",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 4,
@@ -8773,7 +8165,7 @@
       "bonusRaw": ""
     },
     {
-      "id": "eng-4-domande-010",
+      "id": "eng-4-domande-006",
       "subject": "inglese",
       "sourceSubject": "inglese",
       "class": 4,
@@ -9411,203 +8803,11 @@
       "teacherNote": "",
       "bonus": false,
       "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-domande-008",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "domande",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which question is correct?",
-      "options": [
-        "What do you do on Saturdays?",
-        "What you do on Saturdays?",
-        "Do what you do on Saturdays?",
-        "Saturdays what do you do?"
-      ],
-      "answerIndex": 0,
-      "answer": "What do you do on Saturdays?",
-      "explanation": "The correct answer is \"What do you do on Saturdays?\".",
-      "active": true,
-      "tag": "inglese;classe_5;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-domande-009",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "domande",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which question is correct?",
-      "options": [
-        "Where do you usually play?",
-        "Where you usually play?",
-        "Play where do you usually?",
-        "Usually where play you?"
-      ],
-      "answerIndex": 0,
-      "answer": "Where do you usually play?",
-      "explanation": "The correct answer is \"Where do you usually play?\".",
-      "active": true,
-      "tag": "inglese;classe_5;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-domande-010",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "domande",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which question is correct?",
-      "options": [
-        "Why do you like swimming?",
-        "Why you like swimming?",
-        "Do why you like swimming?",
-        "Swimming why do like you?"
-      ],
-      "answerIndex": 0,
-      "answer": "Why do you like swimming?",
-      "explanation": "The correct answer is \"Why do you like swimming?\".",
-      "active": true,
-      "tag": "inglese;classe_5;domande;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "domande",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_domande",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-sport-003",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "sport",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "I play football in the park.",
-        "I plays football in the park.",
-        "I am play football in the park.",
-        "I playing football in the park."
-      ],
-      "answerIndex": 0,
-      "answer": "I play football in the park.",
-      "explanation": "The correct answer is \"I play football in the park.\".",
-      "active": true,
-      "tag": "inglese;classe_5;sport;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "sport",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_sport",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-hobby-004",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "hobby",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "My hobby is drawing comic strips.",
-        "My hobby are drawing comic strips.",
-        "My hobby drawing comic strips.",
-        "My hobby is draw comic strips."
-      ],
-      "answerIndex": 0,
-      "answer": "My hobby is drawing comic strips.",
-      "explanation": "The correct answer is \"My hobby is drawing comic strips.\".",
-      "active": true,
-      "tag": "inglese;classe_5;hobby;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "hobby",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_hobby",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
-    },
-    {
-      "id": "eng-5-routine-quotidiana-005",
-      "subject": "inglese",
-      "sourceSubject": "inglese",
-      "class": 5,
-      "area": "routine_quotidiana",
-      "subarea": "comprensione_in_contesto",
-      "difficulty": 4,
-      "question": "Which sentence is correct?",
-      "options": [
-        "We usually have breakfast in the kitchen.",
-        "We usually has breakfast in the kitchen.",
-        "We usually are breakfast in the kitchen.",
-        "We usually breakfasts in the kitchen."
-      ],
-      "answerIndex": 0,
-      "answer": "We usually have breakfast in the kitchen.",
-      "explanation": "The correct answer is \"We usually have breakfast in the kitchen.\".",
-      "active": true,
-      "tag": "inglese;classe_5;routine_quotidiana;primaria",
-      "tags": [
-        "inglese",
-        "classe_5",
-        "routine_quotidiana",
-        "primaria"
-      ],
-      "language": "en",
-      "program": "inglese_primaria_classe_5_routine_quotidiana",
-      "teacherNote": "",
-      "bonus": false,
-      "bonusRaw": ""
     }
   ],
   "stats": {
     "file": "template_domande_inglese_300.csv",
-    "rows": 300,
+    "rows": 275,
     "areas": {
       "colori": 17,
       "numeri": 16,
@@ -9615,23 +8815,23 @@
       "corpo_umano": 16,
       "famiglia": 14,
       "saluti": 18,
-      "giorni": 11,
+      "giorni": 10,
       "meteo": 12,
-      "cibo": 17,
-      "mesi": 15,
-      "to_be": 23,
-      "have_got": 22,
-      "routine_quotidiana": 19,
-      "casa": 20,
-      "sport": 15,
-      "hobby": 15,
-      "domande": 31
+      "cibo": 16,
+      "mesi": 13,
+      "to_be": 20,
+      "have_got": 15,
+      "routine_quotidiana": 18,
+      "casa": 19,
+      "sport": 14,
+      "hobby": 14,
+      "domande": 24
     },
     "classes": {
       "2": 70,
-      "3": 80,
-      "4": 80,
-      "5": 70
+      "3": 75,
+      "4": 73,
+      "5": 57
     }
   }
 }
