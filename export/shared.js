@@ -10,8 +10,8 @@
   const UPDATES_MODAL_ID = 'modalUpdates';
   const INFO_HUB_MODAL_ID = 'modalInfoHub';
   const PROJECT_MODAL_ID = 'modalProject';
-  const SUPPORT_URL = 'supporta.html';
-  const FAQ_URL = 'faq.html';
+  const SUPPORT_URL = 'supporta';
+  const FAQ_URL = 'faq';
   const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.1';
   const PALETTE_KEY = 'scuolaAmica_palette_v1';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
