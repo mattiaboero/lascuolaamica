@@ -13,7 +13,7 @@
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
   const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.1.1';
-  const PALETTE_KEY = 'scuolaAmica_palette_v1';
+  const PALETTE_KEY = 'scuolaAmica_palette_v2';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
   const PALETTE_STYLESHEET = 'palette-okabe.css';
   const PALETTE_MODE = {
@@ -201,9 +201,9 @@
 
   function updatePaletteToggleState(root) {
     const scope = root || document;
-    const mode = document.documentElement.getAttribute('data-palette') || PALETTE_MODE.OKABE;
+    const mode = document.documentElement.getAttribute('data-palette') || PALETTE_MODE.LEGACY;
     scope.querySelectorAll('.palette-toggle-btn').forEach((btn) => {
-      const btnMode = normalizePalette(btn.dataset.paletteMode) || PALETTE_MODE.OKABE;
+      const btnMode = normalizePalette(btn.dataset.paletteMode) || PALETTE_MODE.LEGACY;
       const active = btnMode === mode;
       btn.classList.toggle('is-active', active);
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
@@ -211,7 +211,7 @@
   }
 
   function setPaletteMode(mode) {
-    const normalized = normalizePalette(mode) || PALETTE_MODE.OKABE;
+    const normalized = normalizePalette(mode) || PALETTE_MODE.LEGACY;
     savePalettePreference(normalized);
     applyPaletteMode(normalized);
     updatePaletteToggleState(document);
@@ -223,7 +223,7 @@
 
     const queryMode = getQueryPalette();
     const storedMode = loadPalettePreference();
-    const activeMode = queryMode || storedMode || PALETTE_MODE.OKABE;
+    const activeMode = queryMode || storedMode || PALETTE_MODE.LEGACY;
 
     setPaletteMode(activeMode);
   }
@@ -1032,7 +1032,7 @@
   window.ScuolaEconomy = ScuolaEconomy;
   window.ScuolaPalette = {
     get mode() {
-      return document.documentElement.getAttribute('data-palette') || PALETTE_MODE.OKABE;
+      return document.documentElement.getAttribute('data-palette') || PALETTE_MODE.LEGACY;
     },
     set(mode) {
       return setPaletteMode(mode);
