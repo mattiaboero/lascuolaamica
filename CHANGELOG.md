@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.2 - 2026-04-18
+
+- Audit WCAG 2.1 AA automatico sulle pagine principali (rule set `wcag2a` e `wcag2aa`).
+- Corrette le criticità di contrasto nel tema standard per home, FAQ e Villaggio.
+- Impostata la palette standard come default e mantenuto il toggle Standard/Accessibile.
+- Rigenerati screenshot social home (`390x844`, `1280x720`, `1200x630`) senza footer.
+- Deduplicati i dataset domande con rinumerazione ID e allineamento JSON aggregati.
+- Aggiornata la versione applicativa e la sezione “Ultimi aggiornamenti” alla `4.2`.
+
 ## 4.1.1 - 2026-04-13
 
 - Uniformate canonical, Open Graph URL, JSON-LD e link interni alle rotte senza estensione `.html`.

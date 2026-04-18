@@ -12,7 +12,7 @@
   const PROJECT_MODAL_ID = 'modalProject';
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
-  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.1.1';
+  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.2';
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
   const PALETTE_STYLESHEET = 'palette-okabe.css';
@@ -25,6 +25,31 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '18 aprile 2026',
+      items: [
+        'Eseguito audit WCAG 2.1 AA automatico su tutte le pagine principali (tag wcag2a/wcag2aa).',
+        'Corrette tre criticità di contrasto nel tema standard: badge crediti home, score-pill FAQ e wallet-pill Villaggio.',
+        'Rilanciata la validazione: nessuna violazione automatica rilevata nelle pagine principali.',
+        'Versione portale aggiornata alla 4.2.'
+      ]
+    },
+    {
+      date: '16 aprile 2026',
+      items: [
+        'Impostata la palette standard come tema predefinito del sito.',
+        'Aggiornata la persistenza preferenze palette con nuova chiave di storage.',
+        'Rigenerati gli screenshot social della home (390x844, 1280x720, 1200x630) senza footer.'
+      ]
+    },
+    {
+      date: '14 aprile 2026',
+      items: [
+        'Deduplicati i dataset domande per tutte le materie con rinumerazione ID coerente.',
+        'Ridotto il rischio di ripetizione tra sessioni con filtro anti-repeat testuale nel motore quiz.',
+        'Allineati metadati e conteggi nei file json per materia, index aggregato e questions.json legacy.'
+      ]
+    },
     {
       date: '13 aprile 2026',
       items: [

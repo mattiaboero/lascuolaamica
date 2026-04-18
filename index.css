@@ -91,7 +91,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   display:inline-block;
   background:white;border-radius:50px;
   padding:6px 20px;
-  font-size:.85rem;font-weight:800;color:var(--math-a);
+  font-size:.85rem;font-weight:800;color:#7a3fc5;
   box-shadow:0 3px 12px rgba(0,0,0,.12);
   margin-bottom:12px;letter-spacing:1px;
 }
@@ -111,7 +111,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   padding:6px 14px;
   font-size:.85rem;
   font-weight:900;
-  color:var(--vil-a);
+  color:#1f6f45;
   border:2px solid #d8f0e2;
   box-shadow:0 3px 12px rgba(0,0,0,.12);
   margin-bottom:12px;

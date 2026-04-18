@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = (self.SCUOLA_AMICA_VERSION && self.SCUOLA_AMICA_VERSION.cacheName) || 'lascuolaamica-v40';
+const CACHE_NAME = (self.SCUOLA_AMICA_VERSION && self.SCUOLA_AMICA_VERSION.cacheName) || 'lascuolaamica-v42';
 
 // Tutte le risorse da pre-cachare all'installazione.
 // L'app funziona completamente offline una volta che
