@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.2.1 - 2026-04-18
+
+- Completata validazione WCAG 2.1 A/AA manuale su tastiera, modali, zoom/reflow, VoiceOver e riduzione movimento.
+- Corretto il reflow della home a zoom 200% (evitati tagli di card e testi).
+- Pubblicata la pagina `accessibilita` con dichiarazione, metodologia e canale segnalazioni.
+- Aggiunti link alla pagina Accessibilità in FAQ, Supporto e pannello Info.
+- Aggiornati `sitemap.xml` e precache service worker con la nuova pagina.
+- Versione portale aggiornata alla `4.2.1`.
+
 ## 4.2 - 2026-04-18
 
 - Audit WCAG 2.1 AA automatico sulle pagine principali (rule set `wcag2a` e `wcag2aa`).

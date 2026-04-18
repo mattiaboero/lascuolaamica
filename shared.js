@@ -12,7 +12,8 @@
   const PROJECT_MODAL_ID = 'modalProject';
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
-  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.2';
+  const ACCESSIBILITY_URL = 'accessibilita';
+  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.2.1';
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
   const PALETTE_STYLESHEET = 'palette-okabe.css';
@@ -30,8 +31,10 @@
       items: [
         'Eseguito audit WCAG 2.1 AA automatico su tutte le pagine principali (tag wcag2a/wcag2aa).',
         'Corrette tre criticità di contrasto nel tema standard: badge crediti home, score-pill FAQ e wallet-pill Villaggio.',
-        'Rilanciata la validazione: nessuna violazione automatica rilevata nelle pagine principali.',
-        'Versione portale aggiornata alla 4.2.'
+        'Completata la validazione manuale: tastiera, modali, zoom/reflow, VoiceOver e riduzione movimento.',
+        'Corretto il layout della home a zoom 200% per evitare tagli di testo nelle card.',
+        'Aggiunta la pagina pubblica Accessibilità con dichiarazione WCAG, metodologia di test e contatto diretto.',
+        'Versione portale aggiornata alla 4.2.1.'
       ]
     },
     {
@@ -751,6 +754,12 @@
     faq.className = 'info-hub-btn';
     faq.textContent = 'FAQ';
     actions.appendChild(faq);
+
+    const accessibility = document.createElement('a');
+    accessibility.href = ACCESSIBILITY_URL;
+    accessibility.className = 'info-hub-btn';
+    accessibility.textContent = 'Accessibilità';
+    actions.appendChild(accessibility);
 
     const updates = document.createElement('button');
     updates.type = 'button';

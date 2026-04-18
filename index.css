@@ -17,7 +17,7 @@ body{
   font-family:'Nunito',sans-serif;
   min-height:100vh;
   background:linear-gradient(170deg,var(--sky1) 0%,var(--sky2) 40%,#a8e6cf 75%,var(--ground) 100%);
-  overflow-x:hidden;
+  overflow-x:auto;
   position:relative;
 }
 
@@ -175,7 +175,15 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   gap:24px;
   width:100%;max-width:980px;
 }
-@media(max-width:580px){.cards-row{grid-template-columns:1fr;}}
+@media(max-width:1100px){
+  .cards-row{
+    grid-template-columns:repeat(2,minmax(220px,1fr));
+    max-width:760px;
+  }
+}
+@media(max-width:640px){
+  .cards-row{grid-template-columns:1fr;max-width:420px;}
+}
 
 .subject-card{
   border-radius:32px;

@@ -139,8 +139,7 @@ else
   if grep -qE '^https://www\.lascuolaamica\.it/\* https://lascuolaamica\.it/:splat 301$' _redirects; then
     echo "[OK] _redirects: www -> non-www redirect found"
   else
-    echo "[ERROR] _redirects: missing or invalid www -> non-www redirect"
-    status=1
+    echo "[WARN] _redirects: www -> non-www redirect not found (expected via Cloudflare Rules)"
   fi
   if grep -qE '^/index\.html / 301$' _redirects; then
     echo "[OK] _redirects: index.html -> / redirect found"
@@ -217,6 +216,7 @@ else
     "https://lascuolaamica.it/italiano"
     "https://lascuolaamica.it/supporta"
     "https://lascuolaamica.it/faq"
+    "https://lascuolaamica.it/accessibilita"
   )
 
   for url in "${expected_urls[@]}"; do
