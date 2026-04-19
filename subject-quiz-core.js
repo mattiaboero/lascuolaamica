@@ -50,6 +50,11 @@
   const HISTORY_SIG_KEY = cfg.historySigKey || `${CURSOR_KEY}_history_sig_v1`;
   const STATS_KEY = cfg.statsKey || `${CURSOR_KEY}_stats_v1`;
   const CLASS_PREF_KEY = cfg.classPrefKey || `${CURSOR_KEY}_class_pref_v1`;
+  const RECENT_ID_SESSIONS = Math.max(3, Number(cfg.recentIdSessions || 6));
+  const RECENT_SIG_SESSIONS = Math.max(4, Number(cfg.recentSigSessions || 8));
+  const SOFTMAX_TOP_K = Math.max(3, Number(cfg.softmaxTopK || 6));
+  const SOFTMAX_TEMPERATURE = Math.max(0.35, Number(cfg.softmaxTemperature || 1.25));
+  const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedAreaRepeatLimit || 2));
 
   const CLASS_DEFAULTS = {
     2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Consolidiamo le basi' },
@@ -634,6 +639,42 @@
       .map((row) => row.item);
   }
 
+  function pickWithSoftmax(candidates, scoreFn, topK = SOFTMAX_TOP_K, temperature = SOFTMAX_TEMPERATURE) {
+    if (!candidates.length) return null;
+    const scored = candidates
+      .map((item, idx) => ({
+        item,
+        idx,
+        score: Number(scoreFn(item)) || 0
+      }))
+      .sort((a, b) => {
+        if (a.score !== b.score) return a.score - b.score;
+        return a.idx - b.idx;
+      });
+
+    const narrowed = scored.slice(0, Math.min(topK, scored.length));
+    if (!narrowed.length) return scored[0].item;
+    const best = narrowed[0].score;
+    const tau = Math.max(0.25, temperature);
+    const weighted = narrowed.map((row) => ({
+      row,
+      w: Math.exp(-((row.score - best) / tau))
+    }));
+    const total = weighted.reduce((acc, x) => acc + x.w, 0);
+    if (!Number.isFinite(total) || total <= 0) return narrowed[0].item;
+    let r = Math.random() * total;
+    for (let i = 0; i < weighted.length; i++) {
+      r -= weighted[i].w;
+      if (r <= 0) return weighted[i].row.item;
+    }
+    return weighted[weighted.length - 1].row.item;
+  }
+
+  function buildRecentSet(list, count) {
+    if (!Array.isArray(list) || !list.length) return new Set();
+    return new Set(list.slice(-Math.max(0, count)));
+  }
+
   function candidateScore(q, targetGrade, areaWeakness, classNum) {
     const toPlan = Math.abs(Number(q._grade || targetGrade) - targetGrade);
     const toClass = questionClassDistance(q, classNum);
@@ -642,47 +683,85 @@
     return base + weaknessBoost;
   }
 
+  function pickMixedArea(areas, stats, recentAreas) {
+    if (!areas.length) return null;
+    const last = recentAreas.length ? recentAreas[recentAreas.length - 1] : null;
+    let sameRun = 0;
+    if (last) {
+      for (let i = recentAreas.length - 1; i >= 0; i--) {
+        if (recentAreas[i] !== last) break;
+        sameRun += 1;
+      }
+    }
+    const blocked = last && sameRun >= MIXED_AREA_REPEAT_LIMIT ? last : null;
+    const eligible = blocked ? areas.filter((a) => a !== blocked) : areas.slice();
+    const source = eligible.length ? eligible : areas.slice();
+
+    const rows = source.map((area) => {
+      const weakness = getAreaWeakness(stats, area);
+      let weight = 1 + weakness * 1.8 + Math.random() * 0.18;
+      if (last && area === last) weight *= 0.55;
+      return { area, weight };
+    });
+    const total = rows.reduce((acc, row) => acc + row.weight, 0);
+    if (!Number.isFinite(total) || total <= 0) return source[0];
+    let r = Math.random() * total;
+    for (let i = 0; i < rows.length; i++) {
+      r -= rows[i].weight;
+      if (r <= 0) return rows[i].area;
+    }
+    return rows[rows.length - 1].area;
+  }
+
   function pickQuestion(area, pool, targetGrade, sessionUsed, historyStore, historySigStore, stats, classNum) {
     if (!pool.length) return null;
 
     const bucket = `${selectedClass}|${area}`;
     const rawSeen = Array.isArray(historyStore[bucket]) ? historyStore[bucket] : [];
     const rawSeenSig = Array.isArray(historySigStore[bucket]) ? historySigStore[bucket] : [];
-    let seenSet = new Set(rawSeen);
-    let seenSigSet = new Set(rawSeenSig);
+    const recentIdCount = Math.max(TOTAL_Q * RECENT_ID_SESSIONS, Math.min(pool.length, TOTAL_Q * 2));
+    const recentSigCount = Math.max(TOTAL_Q * RECENT_SIG_SESSIONS, Math.min(pool.length, TOTAL_Q * 3));
+    const recentIdSet = buildRecentSet(rawSeen, recentIdCount);
+    const recentSigSet = buildRecentSet(rawSeenSig, recentSigCount);
 
-    let available = pool.filter((q) => !sessionUsed.has(q._id) && !seenSet.has(q._id) && !seenSigSet.has(q._sig));
-
+    let available = pool.filter((q) => !sessionUsed.has(q._id) && !recentIdSet.has(q._id) && !recentSigSet.has(q._sig));
     if (!available.length) {
-      historyStore[bucket] = [];
-      seenSet = new Set();
-      available = pool.filter((q) => !sessionUsed.has(q._id) && !seenSigSet.has(q._sig));
+      available = pool.filter((q) => !sessionUsed.has(q._id) && !recentSigSet.has(q._sig));
     }
-
     if (!available.length) {
-      historySigStore[bucket] = [];
-      seenSigSet = new Set();
+      available = pool.filter((q) => !sessionUsed.has(q._id) && !recentIdSet.has(q._id));
+    }
+    if (!available.length) {
       available = pool.filter((q) => !sessionUsed.has(q._id));
     }
-
-    if (!available.length) available = pool.slice();
+    if (!available.length) {
+      available = pool.slice();
+    }
 
     const areaWeakness = getAreaWeakness(stats, area);
-    const ranked = rankWithScoredMap(available, (q) => candidateScore(q, targetGrade, areaWeakness, classNum) + Math.random() * 0.5);
-
-    const chosen = ranked[0];
+    const chosen = pickWithSoftmax(
+      available,
+      (q) => {
+        const base = candidateScore(q, targetGrade, areaWeakness, classNum);
+        const idx = rawSeen.lastIndexOf(q._id);
+        const sigIdx = rawSeenSig.lastIndexOf(q._sig);
+        const idPenalty = idx >= 0 ? Math.max(0, 8 - (rawSeen.length - idx)) * 2.2 : 0;
+        const sigPenalty = sigIdx >= 0 ? Math.max(0, 10 - (rawSeenSig.length - sigIdx)) * 2.5 : 0;
+        return base + idPenalty + sigPenalty + Math.random() * 0.15;
+      }
+    ) || available[0];
     sessionUsed.add(chosen._id);
 
     if (!Array.isArray(historyStore[bucket])) historyStore[bucket] = [];
     historyStore[bucket].push(chosen._id);
-    const maxSeen = Math.max(24, pool.length * 3);
+    const maxSeen = Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, pool.length * 4, 60);
     if (historyStore[bucket].length > maxSeen) {
       historyStore[bucket] = historyStore[bucket].slice(-maxSeen);
     }
 
     if (!Array.isArray(historySigStore[bucket])) historySigStore[bucket] = [];
     historySigStore[bucket].push(chosen._sig);
-    const maxSeenSig = Math.max(40, pool.length * 2);
+    const maxSeenSig = Math.max(TOTAL_Q * RECENT_SIG_SESSIONS * 3, pool.length * 4, 90);
     if (historySigStore[bucket].length > maxSeenSig) {
       historySigStore[bucket] = historySigStore[bucket].slice(-maxSeenSig);
     }
@@ -720,10 +799,16 @@
     if (selectedArea === 'mixed') {
       const orderedByNeed = sortAreasByNeed(availableAreas, stats);
       const start = safeInt(cursor.mixed, 0) % orderedByNeed.length;
+      const rotatedByNeed = orderedByNeed.slice(start).concat(orderedByNeed.slice(0, start));
+      const mixedAreasRun = [];
       for (let i = 0; i < TOTAL_Q; i++) {
-        const area = orderedByNeed[(start + i) % orderedByNeed.length];
+        const area = pickMixedArea(rotatedByNeed, stats, mixedAreasRun);
+        if (!area) break;
         const q = pickQuestion(area, classPools[area] || [], plan[i % plan.length], sessionUsed, historyStore, historySigStore, stats, classNum);
-        if (q) out.push({ ...q });
+        if (q) {
+          out.push({ ...q });
+          mixedAreasRun.push(area);
+        }
       }
       cursor.mixed = (safeInt(cursor.mixed, 0) + 1) % Math.max(1, orderedByNeed.length);
     } else {

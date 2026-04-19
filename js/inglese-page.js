@@ -184,6 +184,9 @@ const CLASS_PROFILES = {
   5: { 4: 0.35, 5: 0.65 }
 };
 const MAX_CLASS_DISTANCE = 1;
+const RECENT_ID_SESSIONS = 6;
+const SOFTMAX_TOP_K = 6;
+const SOFTMAX_TEMPERATURE = 1.2;
 const BONUS_Q = {
   easy: [
     { q: 'Bonus easy: "gatto" in inglese?', a: 'cat', d: ['dog', 'fish', 'bird'] },
@@ -345,6 +348,41 @@ function buildGradePlan(total, classKey) {
     for (let i = 0; i < counts[g]; i++) out.push(g);
   });
   return shuffle(out).slice(0, total);
+}
+
+function buildRecentSet(list, count) {
+  if (!Array.isArray(list) || !list.length) return new Set();
+  return new Set(list.slice(-Math.max(0, count)));
+}
+
+function pickWithSoftmax(candidates, scoreFn) {
+  if (!candidates.length) return null;
+  const scored = candidates
+    .map((item, idx) => ({
+      item,
+      idx,
+      score: Number(scoreFn(item)) || 0
+    }))
+    .sort((a, b) => {
+      if (a.score !== b.score) return a.score - b.score;
+      return a.idx - b.idx;
+    });
+  const narrowed = scored.slice(0, Math.min(SOFTMAX_TOP_K, scored.length));
+  if (!narrowed.length) return scored[0].item;
+  const best = narrowed[0].score;
+  const tau = Math.max(0.25, SOFTMAX_TEMPERATURE);
+  const weighted = narrowed.map((row) => ({
+    row,
+    w: Math.exp(-((row.score - best) / tau))
+  }));
+  const total = weighted.reduce((acc, x) => acc + x.w, 0);
+  if (!Number.isFinite(total) || total <= 0) return narrowed[0].item;
+  let r = Math.random() * total;
+  for (let i = 0; i < weighted.length; i++) {
+    r -= weighted[i].w;
+    if (r <= 0) return weighted[i].row.item;
+  }
+  return weighted[weighted.length - 1].row.item;
 }
 
 function prefersReducedMotion() {
@@ -530,26 +568,25 @@ function buildSessionQuestions(lvl) {
 
   for (let i = 0; i < 10; i++) {
     const targetGrade = classPlan[i % classPlan.length];
-    let seen = new Set(historyStore[bucket]);
-    let candidates = pool.filter(q => !usedInSession.has(q._id) && !seen.has(q._id));
-    if (!candidates.length) {
-      historyStore[bucket] = [];
-      seen = new Set();
-      candidates = pool.filter(q => !usedInSession.has(q._id));
-    }
+    const recentIdCount = Math.max(10 * RECENT_ID_SESSIONS, Math.min(pool.length, 20));
+    const recentSet = buildRecentSet(historyStore[bucket], recentIdCount);
+    let candidates = pool.filter(q => !usedInSession.has(q._id) && !recentSet.has(q._id));
+    if (!candidates.length) candidates = pool.filter(q => !usedInSession.has(q._id));
     if (!candidates.length) candidates = pool.slice();
 
-    candidates.sort((a, b) => {
-      const sa = Math.abs(a._grade - targetGrade) + Math.abs(a._grade - cls) * 1.1 + Math.random() * 0.35;
-      const sb = Math.abs(b._grade - targetGrade) + Math.abs(b._grade - cls) * 1.1 + Math.random() * 0.35;
-      return sa - sb;
-    });
-
-    const chosen = candidates[0];
+    const chosen = pickWithSoftmax(
+      candidates,
+      (q) => {
+        const base = Math.abs(q._grade - targetGrade) + Math.abs(q._grade - cls) * 1.1;
+        const idx = historyStore[bucket].lastIndexOf(q._id);
+        const recencyPenalty = idx >= 0 ? Math.max(0, 8 - (historyStore[bucket].length - idx)) * 2 : 0;
+        return base + recencyPenalty + Math.random() * 0.12;
+      }
+    ) || candidates[0];
     usedInSession.add(chosen._id);
     historyStore[bucket].push(chosen._id);
-    if (historyStore[bucket].length > Math.max(60, pool.length * 3)) {
-      historyStore[bucket] = historyStore[bucket].slice(-Math.max(60, pool.length * 3));
+    if (historyStore[bucket].length > Math.max(10 * RECENT_ID_SESSIONS * 3, pool.length * 4, 70)) {
+      historyStore[bucket] = historyStore[bucket].slice(-Math.max(10 * RECENT_ID_SESSIONS * 3, pool.length * 4, 70));
     }
     out.push(chosen);
   }
