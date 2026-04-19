@@ -1,76 +1,76 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-19T11:21:43Z",
-  "totalQuestions": 5840,
+  "generatedAt": "2026-04-19T19:45:11Z",
+  "totalQuestions": 6139,
   "subjects": {
     "matematica": {
       "path": "matematica.json",
-      "rows": 1588,
+      "rows": 1716,
       "stats": {
         "file": "template_matematica_da_json.csv",
-        "rows": 1588,
+        "rows": 1716,
         "areas": {
           "tabelline": 164,
-          "aritmetica": 381,
+          "aritmetica": 469,
           "problemi": 396,
-          "geometria": 323,
-          "logica_e_dati": 324
+          "geometria": 339,
+          "logica_e_dati": 348
         },
         "classes": {
-          "2": 378,
-          "3": 369,
-          "4": 410,
-          "5": 431
+          "2": 410,
+          "3": 401,
+          "4": 442,
+          "5": 463
         }
       }
     },
     "problemi": {
       "path": "problemi.json",
-      "rows": 800,
+      "rows": 920,
       "stats": {
         "file": "matematica_problemi.csv",
-        "rows": 800,
+        "rows": 920,
         "areas": {
-          "problemi": 800
+          "problemi": 920
         },
         "classes": {
-          "2": 203,
-          "3": 199,
-          "4": 199,
-          "5": 199
+          "2": 233,
+          "3": 229,
+          "4": 229,
+          "5": 229
         }
       }
     },
     "inglese": {
       "path": "inglese.json",
-      "rows": 283,
+      "rows": 334,
       "stats": {
         "file": "template_domande_inglese_300.csv",
-        "rows": 283,
+        "rows": 334,
         "areas": {
           "colori": 17,
           "numeri": 16,
-          "animali": 19,
+          "animali": 20,
           "corpo_umano": 16,
           "famiglia": 14,
           "saluti": 18,
-          "giorni": 10,
-          "meteo": 12,
-          "cibo": 18,
+          "giorni": 11,
+          "meteo": 13,
+          "cibo": 23,
           "mesi": 13,
-          "to_be": 20,
-          "have_got": 15,
-          "routine_quotidiana": 18,
-          "casa": 23,
-          "sport": 15,
+          "to_be": 31,
+          "have_got": 25,
+          "routine_quotidiana": 31,
+          "casa": 26,
+          "sport": 20,
           "hobby": 14,
-          "domande": 25
+          "domande": 26
         },
         "classes": {
-          "2": 72,
-          "3": 77,
-          "4": 75,
-          "5": 59
+          "2": 91,
+          "3": 92,
+          "4": 85,
+          "5": 66
         }
       }
     },

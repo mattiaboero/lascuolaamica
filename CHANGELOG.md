@@ -8,6 +8,12 @@
 - Migliorata la resilienza errori: rimossi i `catch` vuoti nei moduli principali, con logging silenzioso in modalità debug (`?debug` / localhost).
 - Aggiunto fallback UX nel motore quiz: se il caricamento domande fallisce viene mostrato un messaggio chiaro all’utente.
 - Verifiche tecniche completate con `node --check` e `prepublish-check.sh` (esito OK).
+- Esteso il generatore parametrico `scripts/append_parametric_pilot.py` con profili `small`/`extended` e seed configurabile.
+- Eseguito il profilo `extended` sui dataset domande con controllo anti-duplicati e ID incrementali:
+  - `matematica`: +128 domande parametriche (`totalQuestions=1716`)
+  - `problemi`: +120 domande parametriche (`totalQuestions=920`)
+  - `inglese`: +51 domande parametriche (`totalQuestions=334`)
+- Aggiornati automaticamente `json/index.json`, `stats.rows`, `stats.areas`, `stats.classes` e timestamp `generatedAt`.
 
 ## 4.2.1 - 2026-04-18
 

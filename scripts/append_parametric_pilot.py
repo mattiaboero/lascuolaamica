@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 import random
 import re
@@ -8,7 +9,7 @@ import unicodedata
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Callable, Dict, List, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
 JSON_DIR = ROOT / "json"
@@ -57,7 +58,7 @@ def make_numeric_options(answer: int, spread: int = 6) -> List[str]:
     opts = {int(answer)}
     attempts = 0
     span = max(4, spread)
-    while len(opts) < 4 and attempts < 200:
+    while len(opts) < 4 and attempts < 300:
         attempts += 1
         delta = RNG.randint(-span, span)
         cand = int(answer + delta)
@@ -75,22 +76,25 @@ def ensure_answer_index(entry: Dict) -> Dict:
     answer = str(entry["answer"])
     if answer not in options:
         options[-1] = answer
-    # keep answer once
+
     seen = False
-    fixed = []
+    fixed: List[str] = []
     for opt in options:
         if opt == answer:
             if seen:
                 continue
             seen = True
         fixed.append(opt)
+
     while len(fixed) < 4:
         extra = str(int(answer) + len(fixed) + 1) if answer.isdigit() else f"{answer} {len(fixed)+1}"
         if extra != answer and extra not in fixed:
             fixed.append(extra)
+
     fixed = fixed[:4]
     if answer not in fixed:
         fixed[-1] = answer
+
     entry["options"] = fixed
     entry["answerIndex"] = fixed.index(answer)
     return entry
@@ -117,6 +121,7 @@ def base_entry(
     tag_text = ";".join(tags)
     if subject == "problemi":
         tag_text = ",".join(tags[:2])
+
     return ensure_answer_index(
         {
             "id": qid,
@@ -156,117 +161,269 @@ def refresh_subject_stats(data: Dict) -> None:
     data["generatedAt"] = now_iso()
 
 
-def append_matematica(data: Dict) -> int:
+def append_with_attempts(
+    *,
+    target: int,
+    make_entry: Callable[[], Dict],
+    get_question: Callable[[Dict], str],
+    existing_questions: set,
+    questions_out: List[Dict],
+    max_attempts_multiplier: int = 50,
+) -> int:
+    added = 0
+    attempts = 0
+    max_attempts = max(40, target * max_attempts_multiplier)
+    while added < target and attempts < max_attempts:
+        attempts += 1
+        entry = make_entry()
+        key = normalize_text(get_question(entry))
+        if key in existing_questions:
+            continue
+        questions_out.append(entry)
+        existing_questions.add(key)
+        added += 1
+    return added
+
+
+def math_profile_targets(profile: str) -> Dict[str, int]:
+    if profile == "extended":
+        return {
+            "missing_add": 4,
+            "missing_sub": 4,
+            "sequence": 3,
+            "missing_factor": 3,
+            "perimeter": 2,
+        }
+    return {
+        "missing_add": 1,
+        "missing_sub": 0,
+        "sequence": 1,
+        "missing_factor": 0,
+        "perimeter": 0,
+    }
+
+
+def append_matematica(data: Dict, profile: str) -> int:
     questions = data["questions"]
     existing = {normalize_text(q.get("question", "")) for q in questions}
     added = 0
+    targets = math_profile_targets(profile)
 
-    # Template 1: numero mancante in addizione
-    ranges = {
-        2: (8, 35),
-        3: (18, 85),
-        4: (55, 260),
-        5: (120, 850),
+    grade_ranges = {
+        2: (9, 45),
+        3: (18, 110),
+        4: (60, 320),
+        5: (130, 980),
     }
-    for cls in [2, 3, 4, 5]:
-        lo, hi = ranges[cls]
-        b = RNG.randint(max(4, lo // 3), max(8, hi // 3))
-        answer = RNG.randint(lo, hi)
-        c = answer + b
-        question = f"Trova il numero mancante: ___ + {b} = {c}."
-        key = normalize_text(question)
-        if key in existing:
-            continue
-        prefix = f"mat-{cls}-aritmetica-"
-        qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-        options = make_numeric_options(answer, spread=max(6, answer // 8))
-        entry = base_entry(
-            qid=qid,
-            subject="matematica",
-            source_subject="matematica",
-            cls=cls,
-            area="aritmetica",
-            subarea="",
-            difficulty=None,
-            question=question,
-            answer=str(answer),
-            options=options,
-            explanation=f"Il numero mancante è {c} - {b} = {answer}.",
-            language="it",
-            program=f"matematica_classe_{cls}_aritmetica",
-            tags=["matematica", "aritmetica", f"classe_{cls}", "primaria", "pilota_parametrico"],
-            teacher_note="parametric_pilot_v1",
-        )
-        questions.append(entry)
-        existing.add(key)
-        added += 1
 
-    # Template 2: sequenze con passo costante
-    seq_cfg = {
-        2: (1, 4, 20),
-        3: (2, 6, 40),
-        4: (3, 9, 90),
-        5: (4, 12, 140),
-    }
     for cls in [2, 3, 4, 5]:
-        min_step, max_step, max_start = seq_cfg[cls]
-        step = RNG.randint(min_step, max_step)
-        start = RNG.randint(2, max_start)
-        seq = [start + i * step for i in range(5)]
-        question = f"Completa la sequenza: {seq[0]}, {seq[1]}, {seq[2]}, {seq[3]}, ___."
-        key = normalize_text(question)
-        if key in existing:
-            continue
-        answer = seq[4]
-        prefix = f"mat-{cls}-logica_e_dati-"
-        qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-        options = make_numeric_options(answer, spread=max(6, step * 3))
-        entry = base_entry(
-            qid=qid,
-            subject="matematica",
-            source_subject="matematica",
-            cls=cls,
-            area="logica_e_dati",
-            subarea="",
-            difficulty=None,
-            question=question,
-            answer=str(answer),
-            options=options,
-            explanation=f"La regola è +{step}. Dopo {seq[3]} viene {answer}.",
-            language="it",
-            program=f"matematica_classe_{cls}_logica",
-            tags=["matematica", "logica_e_dati", f"classe_{cls}", "primaria", "pilota_parametrico"],
-            teacher_note="parametric_pilot_v1",
+        lo, hi = grade_ranges[cls]
+
+        def add_missing() -> Dict:
+            b = RNG.randint(max(4, lo // 4), max(9, hi // 4))
+            answer = RNG.randint(lo, hi)
+            c = answer + b
+            prefix = f"mat-{cls}-aritmetica-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="matematica",
+                source_subject="matematica",
+                cls=cls,
+                area="aritmetica",
+                subarea="",
+                difficulty=None,
+                question=f"Trova il numero mancante: ___ + {b} = {c}.",
+                answer=str(answer),
+                options=make_numeric_options(answer, spread=max(8, answer // 7)),
+                explanation=f"Il numero mancante è {c} - {b} = {answer}.",
+                language="it",
+                program=f"matematica_classe_{cls}_aritmetica",
+                tags=["matematica", "aritmetica", f"classe_{cls}", "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["missing_add"],
+            make_entry=add_missing,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
         )
-        questions.append(entry)
-        existing.add(key)
-        added += 1
+
+        def sub_missing() -> Dict:
+            b = RNG.randint(max(3, lo // 5), max(8, hi // 5))
+            c = RNG.randint(lo, hi)
+            answer = c + b
+            prefix = f"mat-{cls}-aritmetica-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="matematica",
+                source_subject="matematica",
+                cls=cls,
+                area="aritmetica",
+                subarea="",
+                difficulty=None,
+                question=f"Trova il numero mancante: ___ - {b} = {c}.",
+                answer=str(answer),
+                options=make_numeric_options(answer, spread=max(8, answer // 8)),
+                explanation=f"Sommiamo {c} + {b}: il numero è {answer}.",
+                language="it",
+                program=f"matematica_classe_{cls}_aritmetica",
+                tags=["matematica", "aritmetica", f"classe_{cls}", "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["missing_sub"],
+            make_entry=sub_missing,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def sequence() -> Dict:
+            step = RNG.randint(1 + cls // 2, 4 + cls * 2)
+            start = RNG.randint(3, 30 + cls * 40)
+            seq = [start + i * step for i in range(5)]
+            prefix = f"mat-{cls}-logica_e_dati-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="matematica",
+                source_subject="matematica",
+                cls=cls,
+                area="logica_e_dati",
+                subarea="",
+                difficulty=None,
+                question=f"Completa la sequenza: {seq[0]}, {seq[1]}, {seq[2]}, {seq[3]}, ___.",
+                answer=str(seq[4]),
+                options=make_numeric_options(seq[4], spread=max(6, step * 3)),
+                explanation=f"La regola è +{step}. Dopo {seq[3]} viene {seq[4]}.",
+                language="it",
+                program=f"matematica_classe_{cls}_logica",
+                tags=["matematica", "logica_e_dati", f"classe_{cls}", "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["sequence"],
+            make_entry=sequence,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def missing_factor() -> Dict:
+            a = RNG.randint(3, 7 + cls)
+            b = RNG.randint(2, 6 + cls)
+            prod = a * b
+            prefix = f"mat-{cls}-aritmetica-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="matematica",
+                source_subject="matematica",
+                cls=cls,
+                area="aritmetica",
+                subarea="",
+                difficulty=None,
+                question=f"Completa: {a} × ___ = {prod}.",
+                answer=str(b),
+                options=make_numeric_options(b, spread=max(5, cls + 3)),
+                explanation=f"{prod} diviso {a} fa {b}.",
+                language="it",
+                program=f"matematica_classe_{cls}_aritmetica",
+                tags=["matematica", "aritmetica", f"classe_{cls}", "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["missing_factor"],
+            make_entry=missing_factor,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def perimeter_rect() -> Dict:
+            l1 = RNG.randint(3 + cls, 8 + cls * 2)
+            l2 = RNG.randint(2 + cls, 7 + cls * 2)
+            per = 2 * (l1 + l2)
+            prefix = f"mat-{cls}-geometria-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="matematica",
+                source_subject="matematica",
+                cls=cls,
+                area="geometria",
+                subarea="",
+                difficulty=None,
+                question=f"Perimetro di un rettangolo con lati {l1} cm e {l2} cm?",
+                answer=str(per),
+                options=make_numeric_options(per, spread=max(6, per // 5)),
+                explanation=f"Perimetro = 2 × ({l1} + {l2}) = {per}.",
+                language="it",
+                program=f"matematica_classe_{cls}_geometria",
+                tags=["matematica", "geometria", f"classe_{cls}", "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["perimeter"],
+            make_entry=perimeter_rect,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
 
     refresh_subject_stats(data)
     return added
 
 
-def append_problemi(data: Dict) -> int:
+def problemi_profile_targets(profile: str) -> Dict[str, int]:
+    if profile == "extended":
+        return {
+            "add": 3,
+            "mul": 3,
+            "two_ops": 3,
+            "sub": 2,
+            "div": 2,
+            "money": 2,
+        }
+    return {
+        "add": 1,
+        "mul": 1,
+        "two_ops": 1,
+        "sub": 0,
+        "div": 0,
+        "money": 0,
+    }
+
+
+def append_problemi(data: Dict, profile: str) -> int:
     questions = data["questions"]
     existing = {normalize_text(q.get("question", "")) for q in questions}
     added = 0
-    names = ["Luca", "Sara", "Emma", "Matteo", "Giulia", "Tommaso", "Sofia", "Arianna"]
+    names = ["Luca", "Sara", "Emma", "Matteo", "Giulia", "Tommaso", "Sofia", "Arianna", "Elena", "Davide"]
+    places = ["biblioteca", "palestra", "aula", "laboratorio"]
 
     diff_by_class = {2: 1, 3: 2, 4: 3, 5: 4}
+    targets = problemi_profile_targets(profile)
 
     for cls in [2, 3, 4, 5]:
         diff = diff_by_class[cls]
-        # T1 addizione
-        a = RNG.randint(12 + cls * 3, 32 + cls * 10)
-        b = RNG.randint(4 + cls, 14 + cls * 2)
-        name = RNG.choice(names)
-        answer = a + b
-        question = f"{name} ha {a} figurine e ne riceve {b}. Quante figurine ha ora?"
-        key = normalize_text(question)
-        if key not in existing:
+
+        def t_add() -> Dict:
+            a = RNG.randint(12 + cls * 4, 45 + cls * 11)
+            b = RNG.randint(4 + cls, 14 + cls * 2)
+            name = RNG.choice(names)
+            answer = a + b
             prefix = f"pro-{cls}-problemi-"
             qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-            entry = base_entry(
+            return base_entry(
                 qid=qid,
                 subject="problemi",
                 source_subject="Matematica",
@@ -274,30 +431,32 @@ def append_problemi(data: Dict) -> int:
                 area="problemi",
                 subarea="addizione",
                 difficulty=diff,
-                question=question,
+                question=f"{name} ha {a} figurine e ne riceve {b}. Quante figurine ha ora?",
                 answer=str(answer),
                 options=make_numeric_options(answer, spread=max(8, answer // 7)),
                 explanation=f"Sommiamo: {a} + {b} = {answer}.",
                 language="it",
                 program=f"Matematica Classe {cls} - MIUR",
                 tags=["addizione", "figurine", "pilota_parametrico"],
-                teacher_note="parametric_pilot_v1",
+                teacher_note=f"parametric_pilot_{profile}_v1",
             )
-            questions.append(entry)
-            existing.add(key)
-            added += 1
 
-        # T2 moltiplicazione per gruppi
-        groups = RNG.randint(3 + cls // 2, 6 + cls)
-        each = RNG.randint(2 + cls // 2, 7 + cls)
-        answer = groups * each
-        place = RNG.choice(["biblioteca", "palestra", "aula"]) 
-        question = f"Nella {place} ci sono {groups} scaffali con {each} libri ciascuno. Quanti libri ci sono in tutto?"
-        key = normalize_text(question)
-        if key not in existing:
+        added += append_with_attempts(
+            target=targets["add"],
+            make_entry=t_add,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_mul() -> Dict:
+            groups = RNG.randint(3 + cls // 2, 6 + cls)
+            each = RNG.randint(2 + cls // 2, 8 + cls)
+            answer = groups * each
+            place = RNG.choice(places)
             prefix = f"pro-{cls}-problemi-"
             qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-            entry = base_entry(
+            return base_entry(
                 qid=qid,
                 subject="problemi",
                 source_subject="Matematica",
@@ -305,33 +464,32 @@ def append_problemi(data: Dict) -> int:
                 area="problemi",
                 subarea="moltiplicazione",
                 difficulty=diff,
-                question=question,
+                question=f"Nella {place} ci sono {groups} scaffali con {each} libri ciascuno. Quanti libri ci sono in tutto?",
                 answer=str(answer),
                 options=make_numeric_options(answer, spread=max(8, answer // 6)),
                 explanation=f"Moltiplichiamo: {groups} × {each} = {answer}.",
                 language="it",
                 program=f"Matematica Classe {cls} - MIUR",
                 tags=["moltiplicazione", "quantita", "pilota_parametrico"],
-                teacher_note="parametric_pilot_v1",
+                teacher_note=f"parametric_pilot_{profile}_v1",
             )
-            questions.append(entry)
-            existing.add(key)
-            added += 1
 
-        # T3 due operazioni
-        start = RNG.randint(25 + cls * 8, 60 + cls * 18)
-        leave = RNG.randint(4 + cls, 10 + cls * 2)
-        arrive = RNG.randint(3 + cls, 12 + cls * 2)
-        answer = start - leave + arrive
-        question = (
-            f"Al parco ci sono {start} bambini. {leave} vanno via e poi arrivano {arrive}. "
-            "Quanti bambini ci sono adesso?"
+        added += append_with_attempts(
+            target=targets["mul"],
+            make_entry=t_mul,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
         )
-        key = normalize_text(question)
-        if key not in existing:
+
+        def t_two_ops() -> Dict:
+            start = RNG.randint(25 + cls * 8, 70 + cls * 20)
+            leave = RNG.randint(4 + cls, 10 + cls * 2)
+            arrive = RNG.randint(3 + cls, 12 + cls * 2)
+            answer = start - leave + arrive
             prefix = f"pro-{cls}-problemi-"
             qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-            entry = base_entry(
+            return base_entry(
                 qid=qid,
                 subject="problemi",
                 source_subject="Matematica",
@@ -339,100 +497,412 @@ def append_problemi(data: Dict) -> int:
                 area="problemi",
                 subarea="due operazioni",
                 difficulty=diff,
-                question=question,
+                question=(
+                    f"Al parco ci sono {start} bambini. {leave} vanno via e poi arrivano {arrive}. "
+                    "Quanti bambini ci sono adesso?"
+                ),
                 answer=str(answer),
                 options=make_numeric_options(answer, spread=max(8, answer // 7)),
                 explanation=f"Prima {start} - {leave} = {start - leave}, poi + {arrive} = {answer}.",
                 language="it",
                 program=f"Matematica Classe {cls} - MIUR",
                 tags=["due operazioni", "parco", "pilota_parametrico"],
-                teacher_note="parametric_pilot_v1",
+                teacher_note=f"parametric_pilot_{profile}_v1",
             )
-            questions.append(entry)
-            existing.add(key)
-            added += 1
+
+        added += append_with_attempts(
+            target=targets["two_ops"],
+            make_entry=t_two_ops,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_sub() -> Dict:
+            total = RNG.randint(35 + cls * 8, 80 + cls * 20)
+            consumed = RNG.randint(6 + cls, 16 + cls * 2)
+            answer = total - consumed
+            item = RNG.choice(["matite", "quaderni", "figurine", "merendine"])
+            prefix = f"pro-{cls}-problemi-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="problemi",
+                source_subject="Matematica",
+                cls=cls,
+                area="problemi",
+                subarea="sottrazione",
+                difficulty=diff,
+                question=f"In scatola ci sono {total} {item}. Ne usi {consumed}. Quanti {item} restano?",
+                answer=str(answer),
+                options=make_numeric_options(answer, spread=max(8, answer // 8)),
+                explanation=f"Calcolo: {total} - {consumed} = {answer}.",
+                language="it",
+                program=f"Matematica Classe {cls} - MIUR",
+                tags=["sottrazione", "quantita", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["sub"],
+            make_entry=t_sub,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_div() -> Dict:
+            divisor = RNG.randint(2 + cls // 2, 5 + cls // 2)
+            quotient = RNG.randint(3 + cls, 8 + cls)
+            total = divisor * quotient
+            item = RNG.choice(["caramelle", "figurine", "biscotti", "pennarelli"])
+            prefix = f"pro-{cls}-problemi-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="problemi",
+                source_subject="Matematica",
+                cls=cls,
+                area="problemi",
+                subarea="divisione",
+                difficulty=diff,
+                question=f"{total} {item} vengono divisi in {divisor} sacchetti uguali. Quanti {item} in ogni sacchetto?",
+                answer=str(quotient),
+                options=make_numeric_options(quotient, spread=max(5, quotient + 2)),
+                explanation=f"Divisione: {total} : {divisor} = {quotient}.",
+                language="it",
+                program=f"Matematica Classe {cls} - MIUR",
+                tags=["divisione", "raggruppamento", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["div"],
+            make_entry=t_div,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_money() -> Dict:
+            wallet = RNG.randint(25 + cls * 6, 60 + cls * 18)
+            p1 = RNG.randint(4 + cls, 12 + cls * 2)
+            p2 = RNG.randint(3 + cls, 10 + cls * 2)
+            answer = wallet - p1 - p2
+            name = RNG.choice(names)
+            prefix = f"pro-{cls}-problemi-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            return base_entry(
+                qid=qid,
+                subject="problemi",
+                source_subject="Matematica",
+                cls=cls,
+                area="problemi",
+                subarea="multi-step",
+                difficulty=diff,
+                question=(
+                    f"{name} ha {wallet} euro. Compra un libro da {p1} euro e un quaderno da {p2} euro. "
+                    "Quanti euro restano?"
+                ),
+                answer=str(answer),
+                options=make_numeric_options(answer, spread=max(8, answer // 8)),
+                explanation=f"Prima {wallet} - {p1} = {wallet - p1}, poi - {p2} = {answer}.",
+                language="it",
+                program=f"Matematica Classe {cls} - MIUR",
+                tags=["multi-step", "denaro", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["money"],
+            make_entry=t_money,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
 
     refresh_subject_stats(data)
     return added
 
 
-def append_inglese(data: Dict) -> int:
+def english_profile_targets(profile: str) -> Dict[str, int]:
+    if profile == "extended":
+        return {
+            "where": 2,
+            "match": 2,
+            "to_be": 2,
+            "have_got": 2,
+            "routine": 2,
+        }
+    return {
+        "where": 1,
+        "match": 1,
+        "to_be": 0,
+        "have_got": 0,
+        "routine": 0,
+    }
+
+
+def english_subarea_and_diff(cls: int) -> Tuple[str, int]:
+    if cls == 2:
+        return "lessico_base", 1
+    if cls == 3:
+        return "frasi_semplici", 2
+    if cls == 4:
+        return "uso_guidato", 3
+    return "comprensione_in_contesto", 4
+
+
+def append_inglese(data: Dict, profile: str) -> int:
     questions = data["questions"]
     existing = {normalize_text(q.get("question", "")) for q in questions}
     added = 0
-
-    # Template 1: where do you ...?
-    where_sets = [
-        (2, "sleep at night", "in the bedroom", ["in the kitchen", "in the bathroom", "in the garden"], "casa", "lessico_base"),
-        (3, "cook dinner", "in the kitchen", ["in the bedroom", "in the garage", "in the classroom"], "casa", "frasi_semplici"),
-        (4, "take a shower", "in the bathroom", ["in the kitchen", "in the attic", "in the living room"], "casa", "uso_guidato"),
-        (5, "do homework", "in the study", ["in the shower", "in the fridge", "on the roof"], "casa", "comprensione_in_contesto"),
+    targets = english_profile_targets(profile)
+    where_actions = [
+        ("read books", "in the library", "casa"),
+        ("eat lunch", "in the kitchen", "cibo"),
+        ("play basketball", "in the gym", "sport"),
+        ("sleep", "in the bedroom", "casa"),
+        ("do homework", "in the study", "routine_quotidiana"),
+        ("have dinner", "in the kitchen", "cibo"),
+        ("play football", "in the playground", "sport"),
+        ("watch TV", "in the living room", "casa"),
     ]
-    for cls, action, answer, distractors, area, subarea in where_sets:
-        question = f"Where do you usually {action}?"
-        key = normalize_text(question)
-        if key in existing:
-            continue
-        prefix = f"eng-{cls}-{area}-"
-        qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-        opts = [answer] + distractors[:3]
-        RNG.shuffle(opts)
-        entry = base_entry(
-            qid=qid,
-            subject="inglese",
-            source_subject="inglese",
-            cls=cls,
-            area=area,
-            subarea=subarea,
-            difficulty=max(1, cls - 1),
-            question=question,
-            answer=answer,
-            options=opts,
-            explanation=f'The correct place is "{answer}".',
-            language="en",
-            program=f"inglese_primaria_classe_{cls}_{area}",
-            tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
-            teacher_note="parametric_pilot_v1",
-        )
-        questions.append(entry)
-        existing.add(key)
-        added += 1
-
-    # Template 2: choose the sentence that matches
-    sentence_sets = [
-        (2, "She likes apples.", "Lei ama le mele.", ["Lei corre veloce.", "Lei gioca a calcio.", "Lei va a scuola."], "cibo", "frasi_semplici"),
-        (3, "We drink water every day.", "Noi beviamo acqua ogni giorno.", ["Noi dormiamo tutto il giorno.", "Noi mangiamo pizza ogni mattina.", "Noi andiamo al mare in inverno."], "cibo", "frasi_semplici"),
-        (4, "He is wearing a blue jacket.", "Lui indossa una giacca blu.", ["Lui sta leggendo un libro verde.", "Lui mangia una giacca blu.", "Lui porta una bicicletta blu."], "domande", "uso_guidato"),
-        (5, "They are playing basketball after school.", "Loro giocano a basket dopo scuola.", ["Loro studiano matematica a colazione.", "Loro dormono in palestra ogni notte.", "Loro cucinano in classe dopo scuola."], "sport", "comprensione_in_contesto"),
+    place_pool = [
+        "in the bathroom",
+        "in the garage",
+        "in the garden",
+        "on the roof",
+        "in the classroom",
+        "in the office",
+        "in the attic",
+        "in the basement",
     ]
-    for cls, question, answer, distractors, area, subarea in sentence_sets:
-        key = normalize_text(question)
-        if key in existing:
-            continue
-        prefix = f"eng-{cls}-{area}-"
-        qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
-        opts = [answer] + distractors[:3]
-        RNG.shuffle(opts)
-        entry = base_entry(
-            qid=qid,
-            subject="inglese",
-            source_subject="inglese",
-            cls=cls,
-            area=area,
-            subarea=subarea,
-            difficulty=max(1, cls - 1),
-            question=question,
-            answer=answer,
-            options=opts,
-            explanation="Choose the Italian sentence with the same meaning.",
-            language="en",
-            program=f"inglese_primaria_classe_{cls}_{area}",
-            tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
-            teacher_note="parametric_pilot_v1",
+    where_starters = ["Where do you usually", "Where do you often", "Where do you"]
+    where_times = ["", "in the morning", "after school", "every day", "at home"]
+
+    en_it_pairs = [
+        ("She likes apples.", "Lei ama le mele.", "cibo"),
+        ("We drink water every day.", "Noi beviamo acqua ogni giorno.", "cibo"),
+        ("He is wearing a blue jacket.", "Lui indossa una giacca blu.", "domande"),
+        ("They are playing basketball after school.", "Loro giocano a basket dopo scuola.", "sport"),
+        ("I have breakfast at seven.", "Faccio colazione alle sette.", "routine_quotidiana"),
+        ("My brother has a red bike.", "Mio fratello ha una bici rossa.", "casa"),
+        ("Our teacher opens the classroom door.", "La nostra insegnante apre la porta della classe.", "domande"),
+        ("The cat is under the table.", "Il gatto è sotto il tavolo.", "animali"),
+        ("We study English on Monday.", "Studiamo inglese il lunedì.", "giorni"),
+        ("It is sunny today.", "Oggi c'è il sole.", "meteo"),
+        ("I can swim very well.", "So nuotare molto bene.", "sport"),
+        ("They have got two dogs.", "Loro hanno due cani.", "have_got"),
+    ]
+
+    be_subjects = [("I", "am"), ("You", "are"), ("He", "is"), ("She", "is"), ("It", "is"), ("We", "are"), ("They", "are")]
+    be_adjectives = ["happy", "ready", "late", "hungry", "quiet", "tired", "excited", "careful", "kind", "brave"]
+
+    animal_legs = [
+        ("spider", "eight"),
+        ("cat", "four"),
+        ("dog", "four"),
+        ("bird", "two"),
+        ("ant", "six"),
+        ("horse", "four"),
+        ("duck", "two"),
+        ("frog", "four"),
+    ]
+
+    routine_actions = [
+        ("wake up", "7:00"),
+        ("have breakfast", "7:30"),
+        ("go to school", "8:00"),
+        ("have lunch", "13:00"),
+        ("do homework", "16:00"),
+        ("play outside", "17:00"),
+        ("have dinner", "19:30"),
+        ("go to bed", "21:00"),
+    ]
+
+    for cls in [2, 3, 4, 5]:
+        subarea, difficulty = english_subarea_and_diff(cls)
+
+        def t_where() -> Dict:
+            action, answer, area = RNG.choice(where_actions)
+            starter = RNG.choice(where_starters)
+            time_hint = RNG.choice(where_times)
+            q_text = f"{starter} {action}{(' ' + time_hint) if time_hint else ''}?"
+            distractors = [p for p in place_pool if p != answer]
+            RNG.shuffle(distractors)
+            prefix = f"eng-{cls}-{area}-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            opts = [answer] + distractors[:3]
+            RNG.shuffle(opts)
+            return base_entry(
+                qid=qid,
+                subject="inglese",
+                source_subject="inglese",
+                cls=cls,
+                area=area,
+                subarea=subarea,
+                difficulty=difficulty,
+                question=q_text,
+                answer=answer,
+                options=opts,
+                explanation=f'The correct place is "{answer}".',
+                language="en",
+                program=f"inglese_primaria_classe_{cls}_{area}",
+                tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["where"],
+            make_entry=t_where,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
         )
-        questions.append(entry)
-        existing.add(key)
-        added += 1
+
+        def t_match() -> Dict:
+            q_en, answer, area = RNG.choice(en_it_pairs)
+            prefix = f"eng-{cls}-{area}-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            distractors = [it for en, it, ar in en_it_pairs if it != answer and ar != area]
+            RNG.shuffle(distractors)
+            opts = [answer] + distractors[:3]
+            RNG.shuffle(opts)
+            return base_entry(
+                qid=qid,
+                subject="inglese",
+                source_subject="inglese",
+                cls=cls,
+                area=area,
+                subarea=subarea,
+                difficulty=difficulty,
+                question=q_en,
+                answer=answer,
+                options=opts,
+                explanation="Choose the Italian sentence with the same meaning.",
+                language="en",
+                program=f"inglese_primaria_classe_{cls}_{area}",
+                tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["match"],
+            make_entry=t_match,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_to_be() -> Dict:
+            subj, answer = RNG.choice(be_subjects)
+            adjective = RNG.choice(be_adjectives)
+            question = f"Complete: {subj} ___ {adjective}."
+            distractors = [x for x in ["am", "is", "are", "be"] if x != answer]
+            area = "to_be"
+            prefix = f"eng-{cls}-{area}-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            opts = [answer] + distractors[:3]
+            RNG.shuffle(opts)
+            return base_entry(
+                qid=qid,
+                subject="inglese",
+                source_subject="inglese",
+                cls=cls,
+                area=area,
+                subarea=subarea,
+                difficulty=difficulty,
+                question=question,
+                answer=answer,
+                options=opts,
+                explanation="Use the correct form of the verb to be.",
+                language="en",
+                program=f"inglese_primaria_classe_{cls}_{area}",
+                tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["to_be"],
+            make_entry=t_to_be,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_have_got() -> Dict:
+            animal, answer = RNG.choice(animal_legs)
+            question = f"How many legs has a {animal} got?"
+            distractors = [x for x in ["two", "four", "six", "eight", "ten"] if x != answer]
+            RNG.shuffle(distractors)
+            area = "have_got"
+            prefix = f"eng-{cls}-{area}-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            opts = [answer] + distractors[:3]
+            RNG.shuffle(opts)
+            return base_entry(
+                qid=qid,
+                subject="inglese",
+                source_subject="inglese",
+                cls=cls,
+                area=area,
+                subarea=subarea,
+                difficulty=difficulty,
+                question=question,
+                answer=answer,
+                options=opts,
+                explanation="Choose the correct number word.",
+                language="en",
+                program=f"inglese_primaria_classe_{cls}_{area}",
+                tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["have_got"],
+            make_entry=t_have_got,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
+
+        def t_routine() -> Dict:
+            action, hour = RNG.choice(routine_actions)
+            question = f"I {action} at {hour}. What do I do at {hour}?"
+            answer = f"I {action}."
+            distractors = [f"I {a}." for a, h in routine_actions if a != action]
+            RNG.shuffle(distractors)
+            area = "routine_quotidiana"
+            prefix = f"eng-{cls}-{area}-"
+            qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
+            opts = [answer] + distractors[:3]
+            RNG.shuffle(opts)
+            return base_entry(
+                qid=qid,
+                subject="inglese",
+                source_subject="inglese",
+                cls=cls,
+                area=area,
+                subarea=subarea,
+                difficulty=difficulty,
+                question=question,
+                answer=answer,
+                options=opts,
+                explanation="Pick the sentence that matches the time clue.",
+                language="en",
+                program=f"inglese_primaria_classe_{cls}_{area}",
+                tags=["inglese", f"classe_{cls}", area, "primaria", "pilota_parametrico"],
+                teacher_note=f"parametric_pilot_{profile}_v1",
+            )
+
+        added += append_with_attempts(
+            target=targets["routine"],
+            make_entry=t_routine,
+            get_question=lambda e: e["question"],
+            existing_questions=existing,
+            questions_out=questions,
+        )
 
     refresh_subject_stats(data)
     return added
@@ -440,7 +910,9 @@ def append_inglese(data: Dict) -> int:
 
 def refresh_index(subjects: Dict[str, Dict]) -> None:
     idx_path = JSON_DIR / "index.json"
-    idx = json.load(idx_path.open("r", encoding="utf-8"))
+    with idx_path.open("r", encoding="utf-8") as fh:
+        idx = json.load(fh)
+
     idx["generatedAt"] = now_iso()
     total = 0
     for subject in ["matematica", "problemi", "inglese"]:
@@ -449,35 +921,51 @@ def refresh_index(subjects: Dict[str, Dict]) -> None:
         idx["subjects"][subject]["rows"] = rows
         idx["subjects"][subject]["stats"] = sub.get("stats", {})
         total += rows
-    # keep other subjects already present
+
     for subject, meta in idx.get("subjects", {}).items():
         if subject in {"matematica", "problemi", "inglese"}:
             continue
         total += int(meta.get("rows", 0) or 0)
+
     idx["totalQuestions"] = total
     with idx_path.open("w", encoding="utf-8") as fh:
         json.dump(idx, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
 
 
-def validate_subject(subject: str, data: Dict) -> Tuple[int, int]:
+def validate_subject(data: Dict) -> Tuple[int, int]:
     questions = data.get("questions", [])
     seen_ids = set()
     id_dups = 0
     option_errors = 0
     for q in questions:
-        qid = q.get("id")
+        qid = str(q.get("id", ""))
         if qid in seen_ids:
             id_dups += 1
         seen_ids.add(qid)
+
         options = [str(x) for x in q.get("options", [])]
         answer = str(q.get("answer", ""))
         if len(options) != 4 or answer not in options:
             option_errors += 1
+            continue
+        if int(q.get("answerIndex", -1)) != options.index(answer):
+            option_errors += 1
+
     return id_dups, option_errors
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Append parametric pilot questions to subject JSON files.")
+    parser.add_argument("--profile", choices=["small", "extended"], default="small", help="Generation profile")
+    parser.add_argument("--seed", type=int, default=20260419, help="Random seed")
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
+    RNG.seed(args.seed)
+
     subjects = {
         "matematica": load_subject("matematica"),
         "problemi": load_subject("problemi"),
@@ -485,9 +973,9 @@ def main() -> None:
     }
 
     added = {
-        "matematica": append_matematica(subjects["matematica"]),
-        "problemi": append_problemi(subjects["problemi"]),
-        "inglese": append_inglese(subjects["inglese"]),
+        "matematica": append_matematica(subjects["matematica"], args.profile),
+        "problemi": append_problemi(subjects["problemi"], args.profile),
+        "inglese": append_inglese(subjects["inglese"], args.profile),
     }
 
     for subject, data in subjects.items():
@@ -495,9 +983,9 @@ def main() -> None:
 
     refresh_index(subjects)
 
-    print("Parametric pilot append completed")
+    print(f"Parametric pilot append completed (profile={args.profile}, seed={args.seed})")
     for subject in ["matematica", "problemi", "inglese"]:
-        dups, opt_err = validate_subject(subject, subjects[subject])
+        dups, opt_err = validate_subject(subjects[subject])
         print(
             f"- {subject}: +{added[subject]} new | total={len(subjects[subject]['questions'])} | "
             f"id_dups={dups} | option_errors={opt_err}"
