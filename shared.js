@@ -793,7 +793,7 @@
 
     const projectBtn = document.createElement('button');
     projectBtn.type = 'button';
-    projectBtn.className = 'info-hub-btn info-hub-btn-full';
+    projectBtn.className = 'info-hub-btn';
     projectBtn.textContent = 'Il Progetto';
     projectBtn.setAttribute('aria-label', 'Apri la pagina Il Progetto Educativo');
     projectBtn.addEventListener('click', () => {
@@ -1001,9 +1001,6 @@
         cursor:pointer;
         text-align:center;
       }
-      .info-hub-btn-full{
-        grid-column:span 2;
-      }
       .info-hub-btn:hover{
         border-color:#2d6cdf;
         color:#2d6cdf;
@@ -1018,9 +1015,6 @@
         }
         .info-hub-actions{
           grid-template-columns:1fr;
-        }
-        .info-hub-btn-full{
-          grid-column:span 1;
         }
       }
     `;
