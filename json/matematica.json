@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-13T17:28:49Z",
+  "generatedAt": "2026-04-19T11:21:43Z",
   "subject": "matematica",
-  "totalQuestions": 1581,
+  "totalQuestions": 1588,
   "questions": [
     {
       "id": "mat-2-tabelline-001",
@@ -50595,23 +50595,254 @@
       "teacherNote": "id_originale_json=100",
       "bonus": false,
       "bonusRaw": ""
+    },
+    {
+      "id": "mat-2-aritmetica-094",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 2,
+      "area": "aritmetica",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Trova il numero mancante: ___ + 11 = 29.",
+      "options": [
+        "18",
+        "21",
+        "24",
+        "13"
+      ],
+      "answerIndex": 0,
+      "answer": "18",
+      "explanation": "Il numero mancante è 29 - 11 = 18.",
+      "active": true,
+      "tag": "matematica;aritmetica;classe_2;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "aritmetica",
+        "classe_2",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_2_aritmetica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "mat-3-aritmetica-089",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 3,
+      "area": "aritmetica",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Trova il numero mancante: ___ + 15 = 71.",
+      "options": [
+        "56",
+        "53",
+        "55",
+        "62"
+      ],
+      "answerIndex": 0,
+      "answer": "56",
+      "explanation": "Il numero mancante è 71 - 15 = 56.",
+      "active": true,
+      "tag": "matematica;aritmetica;classe_3;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "aritmetica",
+        "classe_3",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_3_aritmetica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "mat-4-aritmetica-100",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 4,
+      "area": "aritmetica",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Trova il numero mancante: ___ + 54 = 167.",
+      "options": [
+        "103",
+        "113",
+        "101",
+        "125"
+      ],
+      "answerIndex": 1,
+      "answer": "113",
+      "explanation": "Il numero mancante è 167 - 54 = 113.",
+      "active": true,
+      "tag": "matematica;aritmetica;classe_4;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "aritmetica",
+        "classe_4",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_4_aritmetica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "mat-5-aritmetica-098",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 5,
+      "area": "aritmetica",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Trova il numero mancante: ___ + 278 = 571.",
+      "options": [
+        "315",
+        "293",
+        "318",
+        "301"
+      ],
+      "answerIndex": 1,
+      "answer": "293",
+      "explanation": "Il numero mancante è 571 - 278 = 293.",
+      "active": true,
+      "tag": "matematica;aritmetica;classe_5;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "aritmetica",
+        "classe_5",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_5_aritmetica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "mat-3-logica_e_dati-071",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 3,
+      "area": "logica_e_dati",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Completa la sequenza: 34, 37, 40, 43, ___.",
+      "options": [
+        "50",
+        "46",
+        "45",
+        "44"
+      ],
+      "answerIndex": 1,
+      "answer": "46",
+      "explanation": "La regola è +3. Dopo 43 viene 46.",
+      "active": true,
+      "tag": "matematica;logica_e_dati;classe_3;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "logica_e_dati",
+        "classe_3",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_3_logica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "mat-4-logica_e_dati-101",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 4,
+      "area": "logica_e_dati",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Completa la sequenza: 7, 15, 23, 31, ___.",
+      "options": [
+        "42",
+        "39",
+        "15",
+        "44"
+      ],
+      "answerIndex": 1,
+      "answer": "39",
+      "explanation": "La regola è +8. Dopo 31 viene 39.",
+      "active": true,
+      "tag": "matematica;logica_e_dati;classe_4;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "logica_e_dati",
+        "classe_4",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_4_logica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "mat-5-logica_e_dati-100",
+      "subject": "matematica",
+      "sourceSubject": "matematica",
+      "class": 5,
+      "area": "logica_e_dati",
+      "subarea": "",
+      "difficulty": null,
+      "question": "Completa la sequenza: 88, 97, 106, 115, ___.",
+      "options": [
+        "136",
+        "125",
+        "124",
+        "105"
+      ],
+      "answerIndex": 2,
+      "answer": "124",
+      "explanation": "La regola è +9. Dopo 115 viene 124.",
+      "active": true,
+      "tag": "matematica;logica_e_dati;classe_5;primaria;pilota_parametrico",
+      "tags": [
+        "matematica",
+        "logica_e_dati",
+        "classe_5",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "matematica_classe_5_logica",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
     }
   ],
   "stats": {
     "file": "template_matematica_da_json.csv",
-    "rows": 1581,
+    "rows": 1588,
     "areas": {
       "tabelline": 164,
-      "aritmetica": 377,
+      "aritmetica": 381,
       "problemi": 396,
       "geometria": 323,
-      "logica_e_dati": 321
+      "logica_e_dati": 324
     },
     "classes": {
-      "2": 377,
-      "3": 367,
-      "4": 408,
-      "5": 429
+      "2": 378,
+      "3": 369,
+      "4": 410,
+      "5": 431
     }
   }
 }

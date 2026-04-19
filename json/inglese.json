@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-13T17:28:49Z",
+  "generatedAt": "2026-04-19T11:21:43Z",
   "subject": "inglese",
-  "totalQuestions": 275,
+  "totalQuestions": 283,
   "questions": [
     {
       "id": "eng-2-colori-001",
@@ -8803,11 +8803,275 @@
       "teacherNote": "",
       "bonus": false,
       "bonusRaw": ""
+    },
+    {
+      "id": "eng-2-casa-006",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 2,
+      "area": "casa",
+      "subarea": "lessico_base",
+      "difficulty": 1,
+      "question": "Where do you usually sleep at night?",
+      "options": [
+        "in the bedroom",
+        "in the bathroom",
+        "in the kitchen",
+        "in the garden"
+      ],
+      "answerIndex": 0,
+      "answer": "in the bedroom",
+      "explanation": "The correct place is \"in the bedroom\".",
+      "active": true,
+      "tag": "inglese;classe_2;casa;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_2",
+        "casa",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_2_casa",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-3-casa-006",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 3,
+      "area": "casa",
+      "subarea": "frasi_semplici",
+      "difficulty": 2,
+      "question": "Where do you usually cook dinner?",
+      "options": [
+        "in the garage",
+        "in the bedroom",
+        "in the classroom",
+        "in the kitchen"
+      ],
+      "answerIndex": 3,
+      "answer": "in the kitchen",
+      "explanation": "The correct place is \"in the kitchen\".",
+      "active": true,
+      "tag": "inglese;classe_3;casa;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_3",
+        "casa",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_3_casa",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-4-casa-007",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 4,
+      "area": "casa",
+      "subarea": "uso_guidato",
+      "difficulty": 3,
+      "question": "Where do you usually take a shower?",
+      "options": [
+        "in the kitchen",
+        "in the bathroom",
+        "in the attic",
+        "in the living room"
+      ],
+      "answerIndex": 1,
+      "answer": "in the bathroom",
+      "explanation": "The correct place is \"in the bathroom\".",
+      "active": true,
+      "tag": "inglese;classe_4;casa;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_4",
+        "casa",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_4_casa",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-5-casa-004",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 5,
+      "area": "casa",
+      "subarea": "comprensione_in_contesto",
+      "difficulty": 4,
+      "question": "Where do you usually do homework?",
+      "options": [
+        "in the study",
+        "on the roof",
+        "in the fridge",
+        "in the shower"
+      ],
+      "answerIndex": 0,
+      "answer": "in the study",
+      "explanation": "The correct place is \"in the study\".",
+      "active": true,
+      "tag": "inglese;classe_5;casa;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_5",
+        "casa",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_5_casa",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-2-cibo-005",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 2,
+      "area": "cibo",
+      "subarea": "frasi_semplici",
+      "difficulty": 1,
+      "question": "She likes apples.",
+      "options": [
+        "Lei ama le mele.",
+        "Lei corre veloce.",
+        "Lei va a scuola.",
+        "Lei gioca a calcio."
+      ],
+      "answerIndex": 0,
+      "answer": "Lei ama le mele.",
+      "explanation": "Choose the Italian sentence with the same meaning.",
+      "active": true,
+      "tag": "inglese;classe_2;cibo;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_2",
+        "cibo",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_2_cibo",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-3-cibo-006",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 3,
+      "area": "cibo",
+      "subarea": "frasi_semplici",
+      "difficulty": 2,
+      "question": "We drink water every day.",
+      "options": [
+        "Noi beviamo acqua ogni giorno.",
+        "Noi dormiamo tutto il giorno.",
+        "Noi mangiamo pizza ogni mattina.",
+        "Noi andiamo al mare in inverno."
+      ],
+      "answerIndex": 0,
+      "answer": "Noi beviamo acqua ogni giorno.",
+      "explanation": "Choose the Italian sentence with the same meaning.",
+      "active": true,
+      "tag": "inglese;classe_3;cibo;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_3",
+        "cibo",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_3_cibo",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-4-domande-007",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 4,
+      "area": "domande",
+      "subarea": "uso_guidato",
+      "difficulty": 3,
+      "question": "He is wearing a blue jacket.",
+      "options": [
+        "Lui porta una bicicletta blu.",
+        "Lui mangia una giacca blu.",
+        "Lui indossa una giacca blu.",
+        "Lui sta leggendo un libro verde."
+      ],
+      "answerIndex": 2,
+      "answer": "Lui indossa una giacca blu.",
+      "explanation": "Choose the Italian sentence with the same meaning.",
+      "active": true,
+      "tag": "inglese;classe_4;domande;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_4",
+        "domande",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_4_domande",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "eng-5-sport-003",
+      "subject": "inglese",
+      "sourceSubject": "inglese",
+      "class": 5,
+      "area": "sport",
+      "subarea": "comprensione_in_contesto",
+      "difficulty": 4,
+      "question": "They are playing basketball after school.",
+      "options": [
+        "Loro giocano a basket dopo scuola.",
+        "Loro studiano matematica a colazione.",
+        "Loro dormono in palestra ogni notte.",
+        "Loro cucinano in classe dopo scuola."
+      ],
+      "answerIndex": 0,
+      "answer": "Loro giocano a basket dopo scuola.",
+      "explanation": "Choose the Italian sentence with the same meaning.",
+      "active": true,
+      "tag": "inglese;classe_5;sport;primaria;pilota_parametrico",
+      "tags": [
+        "inglese",
+        "classe_5",
+        "sport",
+        "primaria",
+        "pilota_parametrico"
+      ],
+      "language": "en",
+      "program": "inglese_primaria_classe_5_sport",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
     }
   ],
   "stats": {
     "file": "template_domande_inglese_300.csv",
-    "rows": 275,
+    "rows": 283,
     "areas": {
       "colori": 17,
       "numeri": 16,
@@ -8817,21 +9081,21 @@
       "saluti": 18,
       "giorni": 10,
       "meteo": 12,
-      "cibo": 16,
+      "cibo": 18,
       "mesi": 13,
       "to_be": 20,
       "have_got": 15,
       "routine_quotidiana": 18,
-      "casa": 19,
-      "sport": 14,
+      "casa": 23,
+      "sport": 15,
       "hobby": 14,
-      "domande": 24
+      "domande": 25
     },
     "classes": {
-      "2": 70,
-      "3": 75,
-      "4": 73,
-      "5": 57
+      "2": 72,
+      "3": 77,
+      "4": 75,
+      "5": 59
     }
   }
 }

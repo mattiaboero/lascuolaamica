@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-13T17:28:49Z",
+  "generatedAt": "2026-04-19T11:21:43Z",
   "subject": "problemi",
-  "totalQuestions": 788,
+  "totalQuestions": 800,
   "questions": [
     {
       "id": "pro-2-problemi-001",
@@ -24022,19 +24022,391 @@
       "teacherNote": "",
       "bonus": false,
       "bonusRaw": "Qual è il costo di una singola maglia se ogni scatola contiene 12?"
+    },
+    {
+      "id": "pro-2-problemi-201",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 2,
+      "area": "problemi",
+      "subarea": "addizione",
+      "difficulty": 1,
+      "question": "Sara ha 22 figurine e ne riceve 6. Quante figurine ha ora?",
+      "options": [
+        "28",
+        "25",
+        "24",
+        "27"
+      ],
+      "answerIndex": 0,
+      "answer": "28",
+      "explanation": "Sommiamo: 22 + 6 = 28.",
+      "active": true,
+      "tag": "addizione,figurine",
+      "tags": [
+        "addizione",
+        "figurine",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 2 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-2-problemi-202",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 2,
+      "area": "problemi",
+      "subarea": "moltiplicazione",
+      "difficulty": 1,
+      "question": "Nella biblioteca ci sono 4 scaffali con 6 libri ciascuno. Quanti libri ci sono in tutto?",
+      "options": [
+        "24",
+        "16",
+        "31",
+        "25"
+      ],
+      "answerIndex": 0,
+      "answer": "24",
+      "explanation": "Moltiplichiamo: 4 × 6 = 24.",
+      "active": true,
+      "tag": "moltiplicazione,quantita",
+      "tags": [
+        "moltiplicazione",
+        "quantita",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 2 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-2-problemi-203",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 2,
+      "area": "problemi",
+      "subarea": "due operazioni",
+      "difficulty": 1,
+      "question": "Al parco ci sono 66 bambini. 10 vanno via e poi arrivano 7. Quanti bambini ci sono adesso?",
+      "options": [
+        "56",
+        "67",
+        "63",
+        "64"
+      ],
+      "answerIndex": 2,
+      "answer": "63",
+      "explanation": "Prima 66 - 10 = 56, poi + 7 = 63.",
+      "active": true,
+      "tag": "due operazioni,parco",
+      "tags": [
+        "due operazioni",
+        "parco",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 2 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-3-problemi-197",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 3,
+      "area": "problemi",
+      "subarea": "addizione",
+      "difficulty": 2,
+      "question": "Tommaso ha 32 figurine e ne riceve 14. Quante figurine ha ora?",
+      "options": [
+        "46",
+        "43",
+        "42",
+        "54"
+      ],
+      "answerIndex": 0,
+      "answer": "46",
+      "explanation": "Sommiamo: 32 + 14 = 46.",
+      "active": true,
+      "tag": "addizione,figurine",
+      "tags": [
+        "addizione",
+        "figurine",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 3 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-3-problemi-198",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 3,
+      "area": "problemi",
+      "subarea": "moltiplicazione",
+      "difficulty": 2,
+      "question": "Nella aula ci sono 6 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
+      "options": [
+        "64",
+        "68",
+        "53",
+        "60"
+      ],
+      "answerIndex": 3,
+      "answer": "60",
+      "explanation": "Moltiplichiamo: 6 × 10 = 60.",
+      "active": true,
+      "tag": "moltiplicazione,quantita",
+      "tags": [
+        "moltiplicazione",
+        "quantita",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 3 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-3-problemi-199",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 3,
+      "area": "problemi",
+      "subarea": "due operazioni",
+      "difficulty": 2,
+      "question": "Al parco ci sono 51 bambini. 14 vanno via e poi arrivano 13. Quanti bambini ci sono adesso?",
+      "options": [
+        "50",
+        "56",
+        "45",
+        "47"
+      ],
+      "answerIndex": 0,
+      "answer": "50",
+      "explanation": "Prima 51 - 14 = 37, poi + 13 = 50.",
+      "active": true,
+      "tag": "due operazioni,parco",
+      "tags": [
+        "due operazioni",
+        "parco",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 3 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-4-problemi-197",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 4,
+      "area": "problemi",
+      "subarea": "addizione",
+      "difficulty": 3,
+      "question": "Tommaso ha 36 figurine e ne riceve 8. Quante figurine ha ora?",
+      "options": [
+        "50",
+        "44",
+        "46",
+        "49"
+      ],
+      "answerIndex": 1,
+      "answer": "44",
+      "explanation": "Sommiamo: 36 + 8 = 44.",
+      "active": true,
+      "tag": "addizione,figurine",
+      "tags": [
+        "addizione",
+        "figurine",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 4 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-4-problemi-198",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 4,
+      "area": "problemi",
+      "subarea": "moltiplicazione",
+      "difficulty": 3,
+      "question": "Nella palestra ci sono 5 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
+      "options": [
+        "50",
+        "54",
+        "57",
+        "53"
+      ],
+      "answerIndex": 0,
+      "answer": "50",
+      "explanation": "Moltiplichiamo: 5 × 10 = 50.",
+      "active": true,
+      "tag": "moltiplicazione,quantita",
+      "tags": [
+        "moltiplicazione",
+        "quantita",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 4 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-4-problemi-199",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 4,
+      "area": "problemi",
+      "subarea": "due operazioni",
+      "difficulty": 3,
+      "question": "Al parco ci sono 115 bambini. 8 vanno via e poi arrivano 7. Quanti bambini ci sono adesso?",
+      "options": [
+        "105",
+        "116",
+        "114",
+        "130"
+      ],
+      "answerIndex": 2,
+      "answer": "114",
+      "explanation": "Prima 115 - 8 = 107, poi + 7 = 114.",
+      "active": true,
+      "tag": "due operazioni,parco",
+      "tags": [
+        "due operazioni",
+        "parco",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 4 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-5-problemi-197",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 5,
+      "area": "problemi",
+      "subarea": "addizione",
+      "difficulty": 4,
+      "question": "Sara ha 67 figurine e ne riceve 22. Quante figurine ha ora?",
+      "options": [
+        "93",
+        "100",
+        "89",
+        "83"
+      ],
+      "answerIndex": 2,
+      "answer": "89",
+      "explanation": "Sommiamo: 67 + 22 = 89.",
+      "active": true,
+      "tag": "addizione,figurine",
+      "tags": [
+        "addizione",
+        "figurine",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 5 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-5-problemi-198",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 5,
+      "area": "problemi",
+      "subarea": "moltiplicazione",
+      "difficulty": 4,
+      "question": "Nella palestra ci sono 10 scaffali con 9 libri ciascuno. Quanti libri ci sono in tutto?",
+      "options": [
+        "101",
+        "91",
+        "90",
+        "97"
+      ],
+      "answerIndex": 2,
+      "answer": "90",
+      "explanation": "Moltiplichiamo: 10 × 9 = 90.",
+      "active": true,
+      "tag": "moltiplicazione,quantita",
+      "tags": [
+        "moltiplicazione",
+        "quantita",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 5 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
+    },
+    {
+      "id": "pro-5-problemi-199",
+      "subject": "problemi",
+      "sourceSubject": "Matematica",
+      "class": 5,
+      "area": "problemi",
+      "subarea": "due operazioni",
+      "difficulty": 4,
+      "question": "Al parco ci sono 118 bambini. 20 vanno via e poi arrivano 21. Quanti bambini ci sono adesso?",
+      "options": [
+        "132",
+        "134",
+        "119",
+        "135"
+      ],
+      "answerIndex": 2,
+      "answer": "119",
+      "explanation": "Prima 118 - 20 = 98, poi + 21 = 119.",
+      "active": true,
+      "tag": "due operazioni,parco",
+      "tags": [
+        "due operazioni",
+        "parco",
+        "pilota_parametrico"
+      ],
+      "language": "it",
+      "program": "Matematica Classe 5 - MIUR",
+      "teacherNote": "parametric_pilot_v1",
+      "bonus": false,
+      "bonusRaw": ""
     }
   ],
   "stats": {
     "file": "matematica_problemi.csv",
-    "rows": 788,
+    "rows": 800,
     "areas": {
-      "problemi": 788
+      "problemi": 800
     },
     "classes": {
-      "2": 200,
-      "3": 196,
-      "4": 196,
-      "5": 196
+      "2": 203,
+      "3": 199,
+      "4": 199,
+      "5": 199
     }
   }
 }
