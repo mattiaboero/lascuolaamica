@@ -23,6 +23,9 @@ const BONUS_LABELS = { easy: 'Facile', medium: 'Media', hard: 'Difficile' };
 const LB_KEY = 'educazioneCivica_lb_v1';
 const CURSOR_KEY = 'educazioneCivica_cursor_v1';
 const HISTORY_KEY = 'educazioneCivica_history_v2';
+const METRICS_KEY = 'educazioneCivica_quality_v1';
+const METRICS_MAX_SESSIONS = 180;
+const METRICS_ROLLING_WINDOW = 30;
 const CLASS_PREF_KEY = 'educazioneCivica_class_pref_v1';
 const CLASS_PROFILES = {
   2: { 2: 1 },
@@ -270,20 +273,81 @@ function pickWithSoftmax(candidates, scoreFn) {
   return weighted[weighted.length - 1].row.item;
 }
 
-function pickMixedArea(areas, recentAreas) {
-  if (!areas.length) return null;
-  const last = recentAreas.length ? recentAreas[recentAreas.length - 1] : null;
-  let sameRun = 0;
-  if (last) {
-    for (let i = recentAreas.length - 1; i >= 0; i--) {
-      if (recentAreas[i] !== last) break;
-      sameRun += 1;
-    }
+function pickWeighted(rows, fallbackValue) {
+  if (!Array.isArray(rows) || !rows.length) return fallbackValue || null;
+  const normalized = rows
+    .map((row) => ({
+      value: row && row.value !== undefined ? row.value : null,
+      weight: Math.max(0, Number(row && row.weight))
+    }))
+    .filter((row) => row.value !== null && Number.isFinite(row.weight) && row.weight > 0);
+  if (!normalized.length) return fallbackValue || rows[0].value || null;
+  const total = normalized.reduce((acc, row) => acc + row.weight, 0);
+  if (!Number.isFinite(total) || total <= 0) return fallbackValue || normalized[0].value;
+  let r = Math.random() * total;
+  for (let i = 0; i < normalized.length; i++) {
+    r -= normalized[i].weight;
+    if (r <= 0) return normalized[i].value;
   }
-  const blocked = last && sameRun >= MIXED_AREA_REPEAT_LIMIT ? last : null;
-  const eligible = blocked ? areas.filter((a) => a !== blocked) : areas.slice();
-  const source = eligible.length ? eligible : areas.slice();
-  return source[Math.floor(Math.random() * source.length)];
+  return normalized[normalized.length - 1].value;
+}
+
+function buildSessionSlots(total, classPlan, areasOrder, cursorMixed) {
+  const slots = [];
+  if (!areasOrder.length || !total) return { slots, nextMixedCursor: cursorMixed };
+  if (selectedArea !== 'mixed') {
+    for (let i = 0; i < total; i++) {
+      slots.push({
+        area: selectedArea,
+        targetGrade: classPlan[i % classPlan.length]
+      });
+    }
+    return { slots, nextMixedCursor: cursorMixed };
+  }
+
+  const start = safeInt(cursorMixed, 0) % areasOrder.length;
+  const rotated = areasOrder.slice(start).concat(areasOrder.slice(0, start));
+  const areaCounts = {};
+  rotated.forEach((area) => {
+    areaCounts[area] = 0;
+  });
+  const run = [];
+
+  for (let i = 0; i < total; i++) {
+    const last = run.length ? run[run.length - 1] : null;
+    let sameRun = 0;
+    if (last) {
+      for (let j = run.length - 1; j >= 0; j--) {
+        if (run[j] !== last) break;
+        sameRun += 1;
+      }
+    }
+    const blocked = last && sameRun >= MIXED_AREA_REPEAT_LIMIT ? last : null;
+    const source = blocked ? rotated.filter((area) => area !== blocked) : rotated.slice();
+    const candidates = source.length ? source : rotated;
+    const weightedRows = candidates.map((area, idx) => {
+      const seenCount = areaCounts[area] || 0;
+      const fairnessPenalty = seenCount * 0.85;
+      const recencyPenalty = last && area === last ? 1.1 : 0;
+      const orderBias = (rotated.length - idx) * 0.03;
+      const base = 1 + orderBias + Math.random() * 0.08;
+      const weight = base / (1 + fairnessPenalty + recencyPenalty);
+      return { value: area, weight: Math.max(0.06, weight) };
+    });
+    const area = pickWeighted(weightedRows, candidates[0]);
+    if (!area) continue;
+    areaCounts[area] = (areaCounts[area] || 0) + 1;
+    run.push(area);
+    slots.push({
+      area,
+      targetGrade: classPlan[i % classPlan.length]
+    });
+  }
+
+  return {
+    slots,
+    nextMixedCursor: (safeInt(cursorMixed, 0) + 1) % areasOrder.length
+  };
 }
 
 function loadHistory() {
@@ -298,6 +362,93 @@ function loadHistory() {
 
 function saveHistory(store) {
   try { localStorage.setItem(HISTORY_KEY, JSON.stringify(store)); } catch (e) { debugWarn('runtime', e); }
+}
+
+function loadMetricsStore() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(METRICS_KEY));
+    if (!parsed || typeof parsed !== 'object') return { sessions: [] };
+    const sessions = Array.isArray(parsed.sessions) ? parsed.sessions : [];
+    return { sessions: sessions.slice(-METRICS_MAX_SESSIONS) };
+  } catch (e) {
+    debugWarn('runtime', e);
+    return { sessions: [] };
+  }
+}
+
+function saveMetricsStore(store) {
+  try { localStorage.setItem(METRICS_KEY, JSON.stringify(store)); } catch (e) { debugWarn('runtime', e); }
+}
+
+function clamp01(value) {
+  if (!Number.isFinite(value)) return 0;
+  return Math.max(0, Math.min(1, value));
+}
+
+function round3(value) {
+  return Math.round((Number(value) || 0) * 1000) / 1000;
+}
+
+function normalizedEntropyFromCounts(countsObj) {
+  if (!countsObj || typeof countsObj !== 'object') return 0;
+  const values = Object.values(countsObj).map(Number).filter((n) => Number.isFinite(n) && n > 0);
+  if (values.length <= 1) return 0;
+  const total = values.reduce((acc, n) => acc + n, 0);
+  if (!total) return 0;
+  let entropy = 0;
+  for (let i = 0; i < values.length; i++) {
+    const p = values[i] / total;
+    entropy -= p * Math.log2(p);
+  }
+  const maxEntropy = Math.log2(values.length);
+  if (!Number.isFinite(maxEntropy) || maxEntropy <= 0) return 0;
+  return clamp01(entropy / maxEntropy);
+}
+
+function average(entries, key) {
+  if (!Array.isArray(entries) || !entries.length) return 0;
+  const nums = entries.map((row) => Number(row && row[key])).filter((n) => Number.isFinite(n));
+  if (!nums.length) return 0;
+  return nums.reduce((acc, n) => acc + n, 0) / nums.length;
+}
+
+function recordSessionQuality(quality, availableAreasCount) {
+  if (!quality || !quality.total) return;
+  const total = Math.max(1, safeInt(quality.total, 1));
+  const uniqueAreas = Object.keys(quality.areaCounts || {}).length;
+  const areaCoverage = clamp01(uniqueAreas / Math.max(1, safeInt(availableAreasCount, 1)));
+  const repeatRateId = clamp01((quality.repeatedId || 0) / total);
+  const areaEntropy = normalizedEntropyFromCounts(quality.areaCounts);
+  const gradeEntropy = normalizedEntropyFromCounts(quality.gradeCounts);
+  const novelty = clamp01(1 - repeatRateId);
+
+  const entry = {
+    ts: Date.now(),
+    class: normalizeClassKey(quality.class || selectedClass),
+    mode: String(quality.mode || selectedArea).slice(0, 24),
+    total,
+    uniqueAreas,
+    repeatRateId: round3(repeatRateId),
+    areaCoverage: round3(areaCoverage),
+    areaEntropy: round3(areaEntropy),
+    gradeEntropy: round3(gradeEntropy),
+    novelty: round3(novelty)
+  };
+
+  const store = loadMetricsStore();
+  const nextSessions = (store.sessions || []).concat(entry).slice(-METRICS_MAX_SESSIONS);
+  const rolling = nextSessions.slice(-METRICS_ROLLING_WINDOW);
+  store.sessions = nextSessions;
+  store.latest = entry;
+  store.rolling = {
+    window: Math.min(METRICS_ROLLING_WINDOW, rolling.length),
+    repeatRateId: round3(average(rolling, 'repeatRateId')),
+    areaCoverage: round3(average(rolling, 'areaCoverage')),
+    areaEntropy: round3(average(rolling, 'areaEntropy')),
+    gradeEntropy: round3(average(rolling, 'gradeEntropy')),
+    novelty: round3(average(rolling, 'novelty'))
+  };
+  saveMetricsStore(store);
 }
 
 function prefersReducedMotion() {
@@ -502,35 +653,50 @@ function buildSessionQuestions() {
         return base + recencyPenalty + Math.random() * 0.12;
       }
     ) || candidates[0];
+    const wasRecentId = recentSet.has(chosen._id);
     usedInSession.add(chosen._id);
     historyStore[bucket].push(chosen._id);
     if (historyStore[bucket].length > Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, pool.length * 4, 60)) {
       historyStore[bucket] = historyStore[bucket].slice(-Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, pool.length * 4, 60));
     }
-    return chosen;
+    return { question: chosen, wasRecentId };
   }
+  const quality = {
+    class: selectedClass,
+    mode: selectedArea,
+    total: 0,
+    repeatedId: 0,
+    areaCounts: {},
+    gradeCounts: {}
+  };
+  const trackQuality = (area, grade, wasRecentId) => {
+    quality.total += 1;
+    if (wasRecentId) quality.repeatedId += 1;
+    const areaKey = String(area || 'mixed');
+    const gradeKey = String(safeInt(grade, clsNum));
+    quality.areaCounts[areaKey] = (quality.areaCounts[areaKey] || 0) + 1;
+    quality.gradeCounts[gradeKey] = (quality.gradeCounts[gradeKey] || 0) + 1;
+  };
 
+  const slotPlan = buildSessionSlots(TOTAL_Q, classPlan, areasOrder, cursor.mixed);
+  const slots = slotPlan.slots || [];
   if (selectedArea === 'mixed') {
-    const start = cursor.mixed % areasOrder.length;
-    const rotatedAreas = areasOrder.slice(start).concat(areasOrder.slice(0, start));
-    const mixedRun = [];
-    for (let i = 0; i < TOTAL_Q; i++) {
-      const area = pickMixedArea(rotatedAreas, mixedRun);
-      if (!area) break;
-      const q = pickOne(area, classPlan[i % classPlan.length]);
-      if (q) {
-        out.push({ ...q });
-        mixedRun.push(area);
-      }
-    }
-    cursor.mixed = (cursor.mixed + 1) % areasOrder.length;
+    cursor.mixed = safeInt(slotPlan.nextMixedCursor, cursor.mixed);
   } else {
     const areaPool = classPools[selectedArea] || [];
     if (!areaPool.length) return [];
-    for (let i = 0; i < TOTAL_Q; i++) {
-      const q = pickOne(selectedArea, classPlan[i % classPlan.length]);
-      if (q) out.push({ ...q });
-    }
+  }
+
+  for (let i = 0; i < slots.length && out.length < TOTAL_Q; i++) {
+    const slot = slots[i];
+    const pick = pickOne(slot.area, slot.targetGrade);
+    if (!pick || !pick.question) continue;
+    out.push({ ...pick.question });
+    trackQuality(slot.area, slot.targetGrade, pick.wasRecentId);
+  }
+
+  if (selectedArea !== 'mixed') {
+    const areaPool = classPools[selectedArea] || [];
     cursor[selectedArea] = (cursor[selectedArea] + 1) % Math.max(1, areaPool.length);
   }
 
@@ -550,16 +716,20 @@ function buildSessionQuestions() {
       const q = fallback[i];
       usedInSession.add(q._id);
       out.push({ ...q });
+      trackQuality(q.area, q._grade || clsNum, false);
     }
     if (out.length < TOTAL_Q && fallback.length) {
       while (out.length < TOTAL_Q) {
-        out.push({ ...fallback[out.length % fallback.length] });
+        const q = fallback[out.length % fallback.length];
+        out.push({ ...q });
+        trackQuality(q.area, q._grade || clsNum, false);
       }
     }
   }
 
   saveCursor(cursor);
   saveHistory(historyStore);
+  recordSessionQuality(quality, selectedArea === 'mixed' ? areasOrder.length : 1);
   return out.slice(0, TOTAL_Q);
 }
 

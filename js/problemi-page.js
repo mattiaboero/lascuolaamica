@@ -22,6 +22,9 @@ const BONUS_FACTORS = { easy: 5, medium: 10, hard: 25 };
 const BONUS_LABELS = { easy: 'Facile', medium: 'Media', hard: 'Difficile' };
 const LB_KEY = 'problemiMatematica_lb_v1';
 const HISTORY_KEY = 'problemiMatematica_history_v2';
+const METRICS_KEY = 'problemiMatematica_quality_v1';
+const METRICS_MAX_SESSIONS = 180;
+const METRICS_ROLLING_WINDOW = 30;
 const CLASS_PREF_KEY = 'problemiMatematica_class_pref_v1';
 const CLASS_PROFILES = {
   2: { 2: 1 },
@@ -232,6 +235,97 @@ function buildGradePlan(total, classKey) {
   return shuffle(out).slice(0, total);
 }
 
+function pickWeighted(rows, fallbackValue) {
+  if (!Array.isArray(rows) || !rows.length) return fallbackValue || null;
+  const normalized = rows
+    .map((row) => ({
+      value: row && row.value !== undefined ? row.value : null,
+      weight: Math.max(0, Number(row && row.weight))
+    }))
+    .filter((row) => row.value !== null && Number.isFinite(row.weight) && row.weight > 0);
+  if (!normalized.length) return fallbackValue || rows[0].value || null;
+  const total = normalized.reduce((acc, row) => acc + row.weight, 0);
+  if (!Number.isFinite(total) || total <= 0) return fallbackValue || normalized[0].value;
+  let r = Math.random() * total;
+  for (let i = 0; i < normalized.length; i++) {
+    r -= normalized[i].weight;
+    if (r <= 0) return normalized[i].value;
+  }
+  return normalized[normalized.length - 1].value;
+}
+
+function buildSessionSlots(total, classPlan, pool) {
+  const slots = [];
+  if (!total || !Array.isArray(pool) || !pool.length) return slots;
+
+  const areaKeys = Array.from(new Set(pool.map((q) => String(q._area || 'problem'))));
+  const areaSupply = {};
+  areaKeys.forEach((area) => {
+    areaSupply[area] = pool.filter((q) => String(q._area || 'problem') === area).length;
+  });
+
+  const remainingGrades = {};
+  classPlan.forEach((g) => {
+    const key = safeInt(g, 3);
+    remainingGrades[key] = (remainingGrades[key] || 0) + 1;
+  });
+
+  const areaCounts = {};
+  let lastGrade = null;
+  let lastArea = null;
+  let gradeRun = 0;
+  let areaRun = 0;
+
+  for (let i = 0; i < total; i++) {
+    const gradeKeys = Object.keys(remainingGrades)
+      .map(Number)
+      .filter((g) => remainingGrades[g] > 0);
+    if (!gradeKeys.length) break;
+    const gradeRows = gradeKeys.map((g) => {
+      const remaining = remainingGrades[g] || 0;
+      let weight = 1 + remaining * 0.12 + Math.random() * 0.07;
+      if (lastGrade !== null && g === lastGrade) {
+        weight *= gradeRun >= 2 ? 0.2 : 0.58;
+      }
+      return { value: g, weight: Math.max(0.05, weight) };
+    });
+    const targetGrade = pickWeighted(gradeRows, gradeKeys[0]);
+    remainingGrades[targetGrade] = Math.max(0, (remainingGrades[targetGrade] || 0) - 1);
+    if (targetGrade === lastGrade) gradeRun += 1;
+    else {
+      lastGrade = targetGrade;
+      gradeRun = 1;
+    }
+
+    const areaRows = areaKeys.map((area) => {
+      const used = areaCounts[area] || 0;
+      const supply = areaSupply[area] || 1;
+      let weight = (1 + supply * 0.08 + Math.random() * 0.05) / (1 + used * 0.9);
+      if (lastArea && area === lastArea) {
+        weight *= areaRun >= 2 ? 0.22 : 0.62;
+      }
+      return { value: area, weight: Math.max(0.05, weight) };
+    });
+    const preferredArea = pickWeighted(areaRows, areaKeys[0]);
+    areaCounts[preferredArea] = (areaCounts[preferredArea] || 0) + 1;
+    if (preferredArea === lastArea) areaRun += 1;
+    else {
+      lastArea = preferredArea;
+      areaRun = 1;
+    }
+
+    slots.push({ targetGrade, preferredArea });
+  }
+
+  while (slots.length < total) {
+    const fallbackGrade = safeInt(classPlan[slots.length % classPlan.length], 3);
+    const fallbackArea = areaKeys[slots.length % areaKeys.length] || 'problem';
+    slots.push({ targetGrade: fallbackGrade, preferredArea: fallbackArea });
+  }
+
+  return slots.slice(0, total);
+}
+
 function loadHistory() {
   try {
     const parsed = JSON.parse(localStorage.getItem(HISTORY_KEY));
@@ -244,6 +338,92 @@ function loadHistory() {
 
 function saveHistory(store) {
   try { localStorage.setItem(HISTORY_KEY, JSON.stringify(store)); } catch (e) { debugWarn('runtime', e); }
+}
+
+function loadMetricsStore() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(METRICS_KEY));
+    if (!parsed || typeof parsed !== 'object') return { sessions: [] };
+    const sessions = Array.isArray(parsed.sessions) ? parsed.sessions : [];
+    return { sessions: sessions.slice(-METRICS_MAX_SESSIONS) };
+  } catch (e) {
+    debugWarn('runtime', e);
+    return { sessions: [] };
+  }
+}
+
+function saveMetricsStore(store) {
+  try { localStorage.setItem(METRICS_KEY, JSON.stringify(store)); } catch (e) { debugWarn('runtime', e); }
+}
+
+function clamp01(value) {
+  if (!Number.isFinite(value)) return 0;
+  return Math.max(0, Math.min(1, value));
+}
+
+function round3(value) {
+  return Math.round((Number(value) || 0) * 1000) / 1000;
+}
+
+function normalizedEntropyFromCounts(countsObj) {
+  if (!countsObj || typeof countsObj !== 'object') return 0;
+  const values = Object.values(countsObj).map(Number).filter((n) => Number.isFinite(n) && n > 0);
+  if (values.length <= 1) return 0;
+  const total = values.reduce((acc, n) => acc + n, 0);
+  if (!total) return 0;
+  let entropy = 0;
+  for (let i = 0; i < values.length; i++) {
+    const p = values[i] / total;
+    entropy -= p * Math.log2(p);
+  }
+  const maxEntropy = Math.log2(values.length);
+  if (!Number.isFinite(maxEntropy) || maxEntropy <= 0) return 0;
+  return clamp01(entropy / maxEntropy);
+}
+
+function average(entries, key) {
+  if (!Array.isArray(entries) || !entries.length) return 0;
+  const nums = entries.map((row) => Number(row && row[key])).filter((n) => Number.isFinite(n));
+  if (!nums.length) return 0;
+  return nums.reduce((acc, n) => acc + n, 0) / nums.length;
+}
+
+function recordSessionQuality(quality, availableAreasCount) {
+  if (!quality || !quality.total) return;
+  const total = Math.max(1, safeInt(quality.total, 1));
+  const uniqueAreas = Object.keys(quality.areaCounts || {}).length;
+  const repeatRateId = clamp01((quality.repeatedId || 0) / total);
+  const areaCoverage = clamp01(uniqueAreas / Math.max(1, safeInt(availableAreasCount, 1)));
+  const areaEntropy = normalizedEntropyFromCounts(quality.areaCounts);
+  const gradeEntropy = normalizedEntropyFromCounts(quality.gradeCounts);
+  const novelty = clamp01(1 - repeatRateId);
+
+  const entry = {
+    ts: Date.now(),
+    class: normalizeClassKey(quality.class || selectedClass),
+    total,
+    uniqueAreas,
+    repeatRateId: round3(repeatRateId),
+    areaCoverage: round3(areaCoverage),
+    areaEntropy: round3(areaEntropy),
+    gradeEntropy: round3(gradeEntropy),
+    novelty: round3(novelty)
+  };
+
+  const store = loadMetricsStore();
+  const nextSessions = (store.sessions || []).concat(entry).slice(-METRICS_MAX_SESSIONS);
+  const rolling = nextSessions.slice(-METRICS_ROLLING_WINDOW);
+  store.sessions = nextSessions;
+  store.latest = entry;
+  store.rolling = {
+    window: Math.min(METRICS_ROLLING_WINDOW, rolling.length),
+    repeatRateId: round3(average(rolling, 'repeatRateId')),
+    areaCoverage: round3(average(rolling, 'areaCoverage')),
+    areaEntropy: round3(average(rolling, 'areaEntropy')),
+    gradeEntropy: round3(average(rolling, 'gradeEntropy')),
+    novelty: round3(average(rolling, 'novelty'))
+  };
+  saveMetricsStore(store);
 }
 
 function prefersReducedMotion() {
@@ -272,7 +452,8 @@ async function hydrateProblemsFromJson() {
           t: qText,
           a: answer,
           opts: finalOpts,
-          g: Number(row.class) || null
+          g: Number(row.class) || null,
+          area: String(row.area || '').trim().toLowerCase() || 'problem'
         };
       })
       .filter(Boolean);
@@ -373,7 +554,8 @@ function buildSessionQuestions() {
   const pool = PROBLEMS_POOL.map((q, idx) => ({
     ...q,
     _id: `p-${idx}`,
-    _grade: resolveQuestionGrade(q, idx, PROBLEMS_POOL.length)
+    _grade: resolveQuestionGrade(q, idx, PROBLEMS_POOL.length),
+    _area: String(q.area || 'problem').toLowerCase()
   }));
   const strictPool = pool.filter((q) => Math.abs(Number(q._grade || clsNum) - clsNum) <= MAX_GRADE_DISTANCE);
   const activePool = strictPool.length
@@ -381,12 +563,34 @@ function buildSessionQuestions() {
     : pool.slice().sort((a, b) => Math.abs(a._grade - clsNum) - Math.abs(b._grade - clsNum));
   if (!activePool.length) return [];
 
+  const slots = buildSessionSlots(TOTAL_Q, classPlan, activePool);
+  const availableAreasCount = Math.max(1, new Set(activePool.map((q) => q._area || 'problem')).size);
+  const quality = {
+    class: selectedClass,
+    total: 0,
+    repeatedId: 0,
+    areaCounts: {},
+    gradeCounts: {}
+  };
+  const trackQuality = (area, grade, wasRecentId) => {
+    quality.total += 1;
+    if (wasRecentId) quality.repeatedId += 1;
+    const areaKey = String(area || 'problem');
+    const gradeKey = String(safeInt(grade, clsNum));
+    quality.areaCounts[areaKey] = (quality.areaCounts[areaKey] || 0) + 1;
+    quality.gradeCounts[gradeKey] = (quality.gradeCounts[gradeKey] || 0) + 1;
+  };
+
   const out = [];
   for (let i = 0; i < TOTAL_Q; i++) {
-    const targetGrade = classPlan[i % classPlan.length];
+    const slot = slots[i] || {};
+    const targetGrade = safeInt(slot.targetGrade, classPlan[i % classPlan.length]);
+    const preferredArea = String(slot.preferredArea || 'problem');
     const recentIdCount = Math.max(TOTAL_Q * RECENT_ID_SESSIONS, Math.min(activePool.length, TOTAL_Q * 2));
     const recentSet = buildRecentSet(historyStore[bucket], recentIdCount);
     let candidates = activePool.filter(q => !usedInSession.has(q._id) && !recentSet.has(q._id));
+    const areaCandidates = candidates.filter((q) => q._area === preferredArea);
+    if (areaCandidates.length >= 2) candidates = areaCandidates;
     if (!candidates.length) candidates = activePool.filter(q => !usedInSession.has(q._id));
     if (!candidates.length) candidates = activePool.slice();
 
@@ -396,18 +600,22 @@ function buildSessionQuestions() {
         const base = Math.abs(q._grade - targetGrade) + Math.abs(q._grade - clsNum) * 1.1;
         const idx = historyStore[bucket].lastIndexOf(q._id);
         const recencyPenalty = idx >= 0 ? Math.max(0, 8 - (historyStore[bucket].length - idx)) * 2 : 0;
-        return base + recencyPenalty + Math.random() * 0.12;
+        const areaPenalty = q._area === preferredArea ? 0 : 0.55;
+        return base + recencyPenalty + areaPenalty + Math.random() * 0.12;
       }
     ) || candidates[0];
+    const wasRecentId = recentSet.has(chosen._id);
     usedInSession.add(chosen._id);
     historyStore[bucket].push(chosen._id);
     if (historyStore[bucket].length > Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, activePool.length * 4, 60)) {
       historyStore[bucket] = historyStore[bucket].slice(-Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, activePool.length * 4, 60));
     }
     out.push(chosen);
+    trackQuality(chosen._area, targetGrade, wasRecentId);
   }
 
   saveHistory(historyStore);
+  recordSessionQuality(quality, availableAreasCount);
   return out.slice(0, TOTAL_Q);
 }
 
