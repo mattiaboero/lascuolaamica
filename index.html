@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()">
 <title>La Scuola Amica | Giochi Educativi per la Scuola Primaria</title>
 <meta name="description" content="La Scuola Amica: giochi educativi gratuiti per la scuola primaria e villaggio educativo. Matematica, inglese, problemi, civica, geografia, storia, scienze e lingua italiana.">
@@ -249,38 +249,7 @@
   </div>
 </div>
 
-<script>
-// Floating elements (decorative – already aria-hidden on container)
-const items = ['✏️','📐','📚','🔬','🎨','⭐','🌟','📝','🔢','🎒','🔭','💡'];
-const cont  = document.getElementById('bgFloats');
-const reducedMotion = (() => {
-  try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
-  catch (e) { return false; }
-})();
-if (cont && !reducedMotion) {
-  const frag = document.createDocumentFragment();
-  for (let i = 0; i < 16; i++) {
-    const el = document.createElement('div');
-    el.className = 'float-el';
-    el.setAttribute('aria-hidden','true');
-    el.textContent = items[Math.floor(Math.random() * items.length)];
-    el.style.left = Math.random() * 100 + 'vw';
-    el.style.fontSize = (.9 + Math.random() * 1.3) + 'rem';
-    el.style.animationDuration = (10 + Math.random() * 14) + 's';
-    el.style.animationDelay = (Math.random() * 20) + 's';
-    frag.appendChild(el);
-  }
-  cont.appendChild(frag);
-}
-
-const villageDevBtn = document.getElementById('villageDevBtn');
-if (villageDevBtn) {
-  villageDevBtn.addEventListener('click', () => {
-    alert('Funzionalità in fase di sviluppo');
-  });
-}
-
-</script>
+<script src="js/index-page.js"></script>
 
 <script src="app-version.js"></script>
 <script src="shared.js"></script>

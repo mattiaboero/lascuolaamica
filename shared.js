@@ -21,6 +21,15 @@
     LEGACY: 'legacy',
     OKABE: 'okabe-ito'
   };
+  const DEBUG_MODE = (() => {
+    try {
+      const host = window.location.hostname;
+      if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local')) return true;
+      return new URLSearchParams(window.location.search).has('debug');
+    } catch (e) {
+      return false;
+    }
+  })();
   const memoryStorage = Object.create(null);
   const queryCache = {};
   let cachedThemeMeta = null;
@@ -137,10 +146,18 @@
     return Math.max(0, Math.floor(n));
   }
 
+  function debugWarn(context, error) {
+    if (!DEBUG_MODE) return;
+    try {
+      console.warn(`[La Scuola Amica][${context}]`, error);
+    } catch (_) {}
+  }
+
   function storageGet(key) {
     try {
       return localStorage.getItem(key);
     } catch (e) {
+      debugWarn(`storageGet:${key}`, e);
       return Object.prototype.hasOwnProperty.call(memoryStorage, key) ? memoryStorage[key] : null;
     }
   }
@@ -150,6 +167,7 @@
     try {
       localStorage.setItem(key, normalized);
     } catch (e) {
+      debugWarn(`storageSet:${key}`, e);
       memoryStorage[key] = normalized;
     }
   }
@@ -188,6 +206,7 @@
       const mode = new URLSearchParams(window.location.search).get('palette');
       return normalizePalette(mode);
     } catch (e) {
+      debugWarn('getQueryPalette', e);
       return null;
     }
   }
@@ -266,6 +285,7 @@
         updatedAt: typeof raw?.updatedAt === 'string' ? raw.updatedAt : null
       };
     } catch (e) {
+      debugWarn('loadWallet', e);
       return { balance: 0, lifetimeEarned: 0, lifetimeSpent: 0, updatedAt: null };
     }
   }
@@ -286,7 +306,9 @@
         note: String(entry.note || '').slice(0, 140)
       });
       storageSet(WALLET_LOG_KEY, JSON.stringify(list.slice(-200)));
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('appendWalletLog', e);
+    }
   }
 
   function dispatchWalletUpdated(wallet) {

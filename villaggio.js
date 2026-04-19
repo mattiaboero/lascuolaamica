@@ -4,6 +4,15 @@
   const GRID_SIZE = 8;
   const STATE_KEY = 'scuolaAmica_village_v1';
   const REFUND_RATE = 0.5;
+  const DEBUG_MODE = (() => {
+    try {
+      const host = window.location.hostname;
+      if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local')) return true;
+      return new URLSearchParams(window.location.search).has('debug');
+    } catch (e) {
+      return false;
+    }
+  })();
 
   const BUILDINGS = [
     { id: 'alberi', name: 'Alberi', cost: 20, w: 1, h: 1, asset: 'assets/village/alberi.svg', unlock: [] },
@@ -30,6 +39,13 @@
   let state = loadState();
   let selectedBuildingId = null;
   let selectedPlacementId = null;
+
+  function debugWarn(context, error) {
+    if (!DEBUG_MODE) return;
+    try {
+      console.warn(`[La Scuola Amica][${context}]`, error);
+    } catch (_) {}
+  }
 
   function $(id) {
     return document.getElementById(id);
@@ -109,6 +125,7 @@
         placements: cleaned
       };
     } catch (e) {
+      debugWarn('loadState', e);
       return { size: GRID_SIZE, nextPlacementId: 1, placements: [] };
     }
   }
@@ -117,7 +134,9 @@
     try {
       localStorage.setItem(STATE_KEY, JSON.stringify(state));
       return true;
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('saveState', e);
+    }
     return false;
   }
 

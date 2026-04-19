@@ -3,10 +3,39 @@
 
   const cfg = window.SUBJECT_CONFIG;
   if (!cfg) return;
+
+  const DEBUG_MODE = (() => {
+    try {
+      const host = window.location.hostname;
+      if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local')) return true;
+      return new URLSearchParams(window.location.search).has('debug');
+    } catch (e) {
+      return false;
+    }
+  })();
+
+  function debugWarn(context, error) {
+    if (!DEBUG_MODE) return;
+    try {
+      console.warn(`[La Scuola Amica][${context}]`, error);
+    } catch (_) {}
+  }
+
+  function notifyLoadError() {
+    const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
+    try {
+      window.alert(message);
+    } catch (e) {
+      debugWarn('notifyLoadError', e);
+    }
+  }
+
   if (cfg.questionsSource && window.QuestionsLoader && typeof window.QuestionsLoader.applySubjectConfig === 'function') {
     try {
       await window.QuestionsLoader.applySubjectConfig(cfg);
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('QuestionsLoader.applySubjectConfig', e);
+    }
   }
 
   const TOTAL_Q = Number(cfg.totalQ || 10);
@@ -87,6 +116,7 @@
     try {
       return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     } catch (e) {
+      debugWarn('prefersReducedMotion', e);
       return false;
     }
   }
@@ -100,6 +130,7 @@
     try {
       return normalizeClassKey(localStorage.getItem(CLASS_PREF_KEY));
     } catch (e) {
+      debugWarn('loadClassPref', e);
       return '3';
     }
   }
@@ -107,7 +138,9 @@
   function saveClassPref(cls) {
     try {
       localStorage.setItem(CLASS_PREF_KEY, normalizeClassKey(cls));
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('saveClassPref', e);
+    }
   }
 
   function buildClassMap() {
@@ -244,6 +277,7 @@
       });
       return out;
     } catch (e) {
+      debugWarn('loadCursor', e);
       return base;
     }
   }
@@ -251,7 +285,9 @@
   function saveCursor(c) {
     try {
       localStorage.setItem(CURSOR_KEY, JSON.stringify(c));
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('saveCursor', e);
+    }
   }
 
   function loadHistoryStore(storageKey = HISTORY_KEY) {
@@ -265,6 +301,7 @@
       });
       return out;
     } catch (e) {
+      debugWarn(`loadHistoryStore:${storageKey}`, e);
       return {};
     }
   }
@@ -272,7 +309,9 @@
   function saveHistoryStore(store, storageKey = HISTORY_KEY) {
     try {
       localStorage.setItem(storageKey, JSON.stringify(store));
-    } catch (e) {}
+    } catch (e) {
+      debugWarn(`saveHistoryStore:${storageKey}`, e);
+    }
   }
 
   function loadStats() {
@@ -284,6 +323,7 @@
         class: parsed.class && typeof parsed.class === 'object' ? parsed.class : {}
       };
     } catch (e) {
+      debugWarn('loadStats', e);
       return { area: {}, class: {} };
     }
   }
@@ -291,7 +331,9 @@
   function saveStats(stats) {
     try {
       localStorage.setItem(STATS_KEY, JSON.stringify(stats));
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('saveStats', e);
+    }
   }
 
   function updateStatsFromSession() {
@@ -738,8 +780,17 @@
   }
 
   function startGame() {
-    questions = buildSessionQuestions();
-    if (!questions.length) return;
+    try {
+      questions = buildSessionQuestions();
+    } catch (e) {
+      debugWarn('buildSessionQuestions', e);
+      notifyLoadError();
+      return;
+    }
+    if (!questions.length) {
+      notifyLoadError();
+      return;
+    }
 
     curQ = 0;
     points = 0;
@@ -998,7 +1049,9 @@
     const top = lb.slice(0, 15);
     try {
       localStorage.setItem(LB_KEY, JSON.stringify(top));
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('saveScore', e);
+    }
   }
 
   function loadLB() {
@@ -1016,6 +1069,7 @@
         date: safeText(entry && entry.date, 20)
       }));
     } catch (e) {
+      debugWarn('loadLB', e);
       return [];
     }
   }
@@ -1024,7 +1078,9 @@
     if (confirm('Cancellare tutta la classifica?')) {
       try {
         localStorage.removeItem(LB_KEY);
-      } catch (e) {}
+      } catch (e) {
+        debugWarn('clearLeaderboard', e);
+      }
       renderLB();
     }
   }
@@ -1138,7 +1194,9 @@
       g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t + dur);
       osc.start(ctx.currentTime + t);
       osc.stop(ctx.currentTime + t + dur + 0.05);
-    } catch (e) {}
+    } catch (e) {
+      debugWarn('note', e);
+    }
   }
 
   function playOk() {

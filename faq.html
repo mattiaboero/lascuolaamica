@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()">
 <title>FAQ La Scuola Amica | Giochi Educativi Scuola Primaria</title>
 <meta name="description" content="FAQ ufficiali di La Scuola Amica: risposte su quiz, materie, punteggi, bonus, crediti, privacy minori, uso senza registrazione e funzionamento offline.">
@@ -392,33 +392,7 @@
   </div>
 </div>
 
-<script>
-(function () {
-  const bg = document.getElementById('bgShapes');
-  if (!bg) return;
-  let reducedMotion = false;
-  try {
-    reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  } catch (e) {
-    reducedMotion = false;
-  }
-  if (reducedMotion) return;
-
-  const icons = ['❓', '📘', '💡', '🧠', '🔎', '📚', '✅', '🎯'];
-  const frag = document.createDocumentFragment();
-  for (let i = 0; i < 18; i++) {
-    const d = document.createElement('div');
-    d.className = 'shape';
-    d.textContent = icons[Math.floor(Math.random() * icons.length)];
-    d.style.left = Math.random() * 100 + 'vw';
-    d.style.fontSize = (0.9 + Math.random() * 1.2) + 'rem';
-    d.style.animationDuration = (10 + Math.random() * 12) + 's';
-    d.style.animationDelay = (Math.random() * 16) + 's';
-    frag.appendChild(d);
-  }
-  bg.appendChild(frag);
-})();
-</script>
+<script src="js/faq-page.js"></script>
 <script src="app-version.js"></script>
 <script src="shared.js"></script>
 </body>

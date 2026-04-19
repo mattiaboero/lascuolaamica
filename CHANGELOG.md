@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## Unreleased - 2026-04-19
+
+- Hardening CSP: rimossi gli script inline eseguibili dalle pagine pubbliche e spostati in `js/*.js`.
+- Aggiornata la policy CSP nelle pagine principali con `script-src 'self'` (senza `unsafe-inline`).
+- Aggiornato `sw.js` per includere in precache i nuovi script pagina.
+- Migliorata la resilienza errori: rimossi i `catch` vuoti nei moduli principali, con logging silenzioso in modalità debug (`?debug` / localhost).
+- Aggiunto fallback UX nel motore quiz: se il caricamento domande fallisce viene mostrato un messaggio chiaro all’utente.
+- Verifiche tecniche completate con `node --check` e `prepublish-check.sh` (esito OK).
+
 ## 4.2.1 - 2026-04-18
 
 - Completata validazione WCAG 2.1 A/AA manuale su tastiera, modali, zoom/reflow, VoiceOver e riduzione movimento.
