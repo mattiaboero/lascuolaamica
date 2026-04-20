@@ -16,3 +16,6 @@ __pycache__/
 
 # Build/export artifacts (non versionati)
 export/
+
+# Generated reports (track only latest snapshot)
+reports/questions_coverage_[0-9]*.csv

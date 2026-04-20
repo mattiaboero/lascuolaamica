@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import random
 import re
@@ -933,6 +934,131 @@ def refresh_index(subjects: Dict[str, Dict]) -> None:
         fh.write("\n")
 
 
+def normalize_csv_cell(value) -> str:
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
+def build_coverage_rows(subject: str, data: Dict, generated_at: str) -> List[Dict[str, str]]:
+    questions = data.get("questions", [])
+    total_subject = len(questions)
+    active_subject = sum(1 for q in questions if bool(q.get("active", True)))
+    by_key = Counter()
+    for q in questions:
+        key = (
+            normalize_csv_cell(q.get("class")),
+            normalize_csv_cell(q.get("area")),
+            normalize_csv_cell(q.get("subarea")),
+            normalize_csv_cell(q.get("difficulty")),
+            normalize_csv_cell(q.get("language")),
+            "1" if bool(q.get("active", True)) else "0",
+        )
+        by_key[key] += 1
+
+    rows: List[Dict[str, str]] = []
+    rows.append(
+        {
+            "row_type": "subject_summary",
+            "generated_at": generated_at,
+            "subject": subject,
+            "subject_total_questions": str(total_subject),
+            "subject_active_questions": str(active_subject),
+            "subject_active_ratio_pct": f"{(active_subject / total_subject * 100):.2f}" if total_subject else "0.00",
+            "class": "",
+            "area": "",
+            "subarea": "",
+            "difficulty": "",
+            "language": "",
+            "active": "",
+            "count": "",
+            "share_subject_pct": "",
+        }
+    )
+
+    for (cls, area, subarea, difficulty, language, active), count in sorted(
+        by_key.items(),
+        key=lambda kv: (
+            kv[0][0],
+            kv[0][1],
+            kv[0][2],
+            kv[0][3],
+            kv[0][4],
+            kv[0][5],
+        ),
+    ):
+        rows.append(
+            {
+                "row_type": "detail",
+                "generated_at": generated_at,
+                "subject": subject,
+                "subject_total_questions": str(total_subject),
+                "subject_active_questions": str(active_subject),
+                "subject_active_ratio_pct": f"{(active_subject / total_subject * 100):.2f}" if total_subject else "0.00",
+                "class": cls,
+                "area": area,
+                "subarea": subarea,
+                "difficulty": difficulty,
+                "language": language,
+                "active": active,
+                "count": str(count),
+                "share_subject_pct": f"{(count / total_subject * 100):.2f}" if total_subject else "0.00",
+            }
+        )
+    return rows
+
+
+def write_coverage_csv_report() -> Tuple[Path, Path, int]:
+    idx_path = JSON_DIR / "index.json"
+    with idx_path.open("r", encoding="utf-8") as fh:
+        idx = json.load(fh)
+
+    generated_at = now_iso()
+    rows: List[Dict[str, str]] = []
+    subjects_map = idx.get("subjects", {})
+    for subject in sorted(subjects_map.keys()):
+        rel = subjects_map.get(subject, {}).get("path")
+        if not rel:
+            continue
+        sub_path = JSON_DIR / rel
+        if not sub_path.exists():
+            continue
+        with sub_path.open("r", encoding="utf-8") as fh:
+            data = json.load(fh)
+        rows.extend(build_coverage_rows(subject, data, generated_at))
+
+    reports_dir = ROOT / "reports"
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    latest_path = reports_dir / "questions_coverage_latest.csv"
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    archive_path = reports_dir / f"questions_coverage_{timestamp}.csv"
+
+    fieldnames = [
+        "row_type",
+        "generated_at",
+        "subject",
+        "subject_total_questions",
+        "subject_active_questions",
+        "subject_active_ratio_pct",
+        "class",
+        "area",
+        "subarea",
+        "difficulty",
+        "language",
+        "active",
+        "count",
+        "share_subject_pct",
+    ]
+
+    for out_path in [latest_path, archive_path]:
+        with out_path.open("w", encoding="utf-8", newline="") as fh:
+            writer = csv.DictWriter(fh, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+
+    return latest_path, archive_path, len(rows)
+
+
 def validate_subject(data: Dict) -> Tuple[int, int]:
     questions = data.get("questions", [])
     seen_ids = set()
@@ -959,12 +1085,24 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Append parametric pilot questions to subject JSON files.")
     parser.add_argument("--profile", choices=["small", "extended"], default="small", help="Generation profile")
     parser.add_argument("--seed", type=int, default=20260419, help="Random seed")
+    parser.add_argument(
+        "--report-only",
+        action="store_true",
+        help="Generate coverage CSV report only, without appending new questions",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     RNG.seed(args.seed)
+
+    if args.report_only:
+        latest_path, archive_path, row_count = write_coverage_csv_report()
+        print(f"Coverage CSV generated: {latest_path}")
+        print(f"Coverage CSV archive: {archive_path}")
+        print(f"Rows written: {row_count}")
+        return
 
     subjects = {
         "matematica": load_subject("matematica"),
@@ -982,6 +1120,7 @@ def main() -> None:
         save_subject(subject, data)
 
     refresh_index(subjects)
+    latest_path, archive_path, row_count = write_coverage_csv_report()
 
     print(f"Parametric pilot append completed (profile={args.profile}, seed={args.seed})")
     for subject in ["matematica", "problemi", "inglese"]:
@@ -990,6 +1129,9 @@ def main() -> None:
             f"- {subject}: +{added[subject]} new | total={len(subjects[subject]['questions'])} | "
             f"id_dups={dups} | option_errors={opt_err}"
         )
+    print(f"Coverage CSV generated: {latest_path}")
+    print(f"Coverage CSV archive: {archive_path}")
+    print(f"Rows written: {row_count}")
 
 
 if __name__ == "__main__":
