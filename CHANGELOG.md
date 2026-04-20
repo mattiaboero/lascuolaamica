@@ -1,6 +1,6 @@
 # Changelog Repo
 
-## Unreleased - 2026-04-19
+## Unreleased - 2026-04-20
 
 - Hardening CSP: rimossi gli script inline eseguibili dalle pagine pubbliche e spostati in `js/*.js`.
 - Aggiornata la policy CSP nelle pagine principali con `script-src 'self'` (senza `unsafe-inline`).
@@ -8,6 +8,12 @@
 - Migliorata la resilienza errori: rimossi i `catch` vuoti nei moduli principali, con logging silenzioso in modalità debug (`?debug` / localhost).
 - Aggiunto fallback UX nel motore quiz: se il caricamento domande fallisce viene mostrato un messaggio chiaro all’utente.
 - Verifiche tecniche completate con `node --check` e `prepublish-check.sh` (esito OK).
+- Aggiornato il sistema di selezione domande con planner stocastico a slot (`area + difficoltà`) per ridurre pattern ripetitivi tra sessioni.
+- Potenziata la logica anti-ripetizione multi-sessione con cooldown su ID e firma domanda, più selezione `softmax` dei candidati.
+- Introdotte metriche locali di qualità sessione (`repeat rate`, `coverage`, `entropy`, `novelty`) salvate in `localStorage` con media rolling.
+- Allineata la nuova logica algoritmo su tutte le materie quiz:
+  - motore condiviso `subject-quiz-core.js` per matematica, italiano, geografia, storia, scienze
+  - motori dedicati `js/inglese-page.js`, `js/problemi-page.js`, `js/civica-page.js` con la stessa strategia avanzata
 - Esteso il generatore parametrico `scripts/append_parametric_pilot.py` con profili `small`/`extended` e seed configurabile.
 - Aggiunto report CSV automatico di copertura domande (`reports/questions_coverage_latest.csv` + archivio timestampato) generato a ogni run del generatore.
 - Aggiunto anche report CSV di sintesi (`reports/questions_coverage_summary_latest.csv` + archivio timestampato) con 1 riga per materia.
