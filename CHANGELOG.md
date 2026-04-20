@@ -10,6 +10,7 @@
 - Verifiche tecniche completate con `node --check` e `prepublish-check.sh` (esito OK).
 - Esteso il generatore parametrico `scripts/append_parametric_pilot.py` con profili `small`/`extended` e seed configurabile.
 - Aggiunto report CSV automatico di copertura domande (`reports/questions_coverage_latest.csv` + archivio timestampato) generato a ogni run del generatore.
+- Aggiunto anche report CSV di sintesi (`reports/questions_coverage_summary_latest.csv` + archivio timestampato) con 1 riga per materia.
 - Aggiunto flag `--report-only` per produrre solo il report CSV senza modificare i dataset.
 - Eseguito il profilo `extended` sui dataset domande con controllo anti-duplicati e ID incrementali:
   - `matematica`: +128 domande parametriche (`totalQuestions=1716`)

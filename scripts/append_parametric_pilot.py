@@ -1008,13 +1008,37 @@ def build_coverage_rows(subject: str, data: Dict, generated_at: str) -> List[Dic
     return rows
 
 
-def write_coverage_csv_report() -> Tuple[Path, Path, int]:
+def build_coverage_summary_row(subject: str, data: Dict, generated_at: str) -> Dict[str, str]:
+    questions = data.get("questions", [])
+    total = len(questions)
+    active = sum(1 for q in questions if bool(q.get("active", True)))
+    classes = {normalize_csv_cell(q.get("class")) for q in questions if normalize_csv_cell(q.get("class"))}
+    areas = {normalize_csv_cell(q.get("area")) for q in questions if normalize_csv_cell(q.get("area"))}
+    subareas = {normalize_csv_cell(q.get("subarea")) for q in questions if normalize_csv_cell(q.get("subarea"))}
+    difficulties = {normalize_csv_cell(q.get("difficulty")) for q in questions if normalize_csv_cell(q.get("difficulty"))}
+    languages = sorted({normalize_csv_cell(q.get("language")) for q in questions if normalize_csv_cell(q.get("language"))})
+    return {
+        "generated_at": generated_at,
+        "subject": subject,
+        "total_questions": str(total),
+        "active_questions": str(active),
+        "active_ratio_pct": f"{(active / total * 100):.2f}" if total else "0.00",
+        "classes_count": str(len(classes)),
+        "areas_count": str(len(areas)),
+        "subareas_count": str(len(subareas)),
+        "difficulty_levels_count": str(len(difficulties)),
+        "languages": "|".join(languages),
+    }
+
+
+def write_coverage_csv_report() -> Tuple[Path, Path, Path, Path, int, int]:
     idx_path = JSON_DIR / "index.json"
     with idx_path.open("r", encoding="utf-8") as fh:
         idx = json.load(fh)
 
     generated_at = now_iso()
     rows: List[Dict[str, str]] = []
+    summary_rows: List[Dict[str, str]] = []
     subjects_map = idx.get("subjects", {})
     for subject in sorted(subjects_map.keys()):
         rel = subjects_map.get(subject, {}).get("path")
@@ -1025,13 +1049,16 @@ def write_coverage_csv_report() -> Tuple[Path, Path, int]:
             continue
         with sub_path.open("r", encoding="utf-8") as fh:
             data = json.load(fh)
+        summary_rows.append(build_coverage_summary_row(subject, data, generated_at))
         rows.extend(build_coverage_rows(subject, data, generated_at))
 
     reports_dir = ROOT / "reports"
     reports_dir.mkdir(parents=True, exist_ok=True)
     latest_path = reports_dir / "questions_coverage_latest.csv"
+    summary_latest_path = reports_dir / "questions_coverage_summary_latest.csv"
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     archive_path = reports_dir / f"questions_coverage_{timestamp}.csv"
+    summary_archive_path = reports_dir / f"questions_coverage_summary_{timestamp}.csv"
 
     fieldnames = [
         "row_type",
@@ -1056,7 +1083,25 @@ def write_coverage_csv_report() -> Tuple[Path, Path, int]:
             writer.writeheader()
             writer.writerows(rows)
 
-    return latest_path, archive_path, len(rows)
+    summary_fieldnames = [
+        "generated_at",
+        "subject",
+        "total_questions",
+        "active_questions",
+        "active_ratio_pct",
+        "classes_count",
+        "areas_count",
+        "subareas_count",
+        "difficulty_levels_count",
+        "languages",
+    ]
+    for out_path in [summary_latest_path, summary_archive_path]:
+        with out_path.open("w", encoding="utf-8", newline="") as fh:
+            writer = csv.DictWriter(fh, fieldnames=summary_fieldnames)
+            writer.writeheader()
+            writer.writerows(summary_rows)
+
+    return latest_path, archive_path, summary_latest_path, summary_archive_path, len(rows), len(summary_rows)
 
 
 def validate_subject(data: Dict) -> Tuple[int, int]:
@@ -1098,10 +1143,13 @@ def main() -> None:
     RNG.seed(args.seed)
 
     if args.report_only:
-        latest_path, archive_path, row_count = write_coverage_csv_report()
+        latest_path, archive_path, summary_latest_path, summary_archive_path, row_count, summary_row_count = write_coverage_csv_report()
         print(f"Coverage CSV generated: {latest_path}")
         print(f"Coverage CSV archive: {archive_path}")
+        print(f"Coverage summary CSV generated: {summary_latest_path}")
+        print(f"Coverage summary CSV archive: {summary_archive_path}")
         print(f"Rows written: {row_count}")
+        print(f"Summary rows written: {summary_row_count}")
         return
 
     subjects = {
@@ -1120,7 +1168,7 @@ def main() -> None:
         save_subject(subject, data)
 
     refresh_index(subjects)
-    latest_path, archive_path, row_count = write_coverage_csv_report()
+    latest_path, archive_path, summary_latest_path, summary_archive_path, row_count, summary_row_count = write_coverage_csv_report()
 
     print(f"Parametric pilot append completed (profile={args.profile}, seed={args.seed})")
     for subject in ["matematica", "problemi", "inglese"]:
@@ -1131,7 +1179,10 @@ def main() -> None:
         )
     print(f"Coverage CSV generated: {latest_path}")
     print(f"Coverage CSV archive: {archive_path}")
+    print(f"Coverage summary CSV generated: {summary_latest_path}")
+    print(f"Coverage summary CSV archive: {summary_archive_path}")
     print(f"Rows written: {row_count}")
+    print(f"Summary rows written: {summary_row_count}")
 
 
 if __name__ == "__main__":

@@ -19,3 +19,4 @@ export/
 
 # Generated reports (track only latest snapshot)
 reports/questions_coverage_[0-9]*.csv
+reports/questions_coverage_summary_[0-9]*.csv
