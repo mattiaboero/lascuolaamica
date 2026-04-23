@@ -637,7 +637,15 @@
     inclusionTitle.textContent = 'Inclusività e Accessibilità';
 
     const inclusionText = document.createElement('p');
-    inclusionText.textContent = "La piattaforma integra una palette cromatica Okabe-Ito per l'eccellente visibilità anche in caso di daltonismo, adotta un design responsivo testato su smartphone, tablet (LIM comprese) e supporta la navigazione full-keyboard. Supporta pienamente il prefers-reduced-motion (riduzione animazioni) dei sistemi operativi.";
+    inclusionText.append('La piattaforma integra una palette cromatica ');
+    const okabeItoLink = document.createElement('a');
+    okabeItoLink.href = 'https://siegal.bio.nyu.edu/color-palette/';
+    okabeItoLink.target = '_blank';
+    okabeItoLink.rel = 'noopener noreferrer';
+    okabeItoLink.textContent = 'Okabe-Ito';
+    okabeItoLink.setAttribute('aria-label', 'Apri la palette Okabe-Ito (si apre in una nuova scheda)');
+    inclusionText.appendChild(okabeItoLink);
+    inclusionText.append(" per l'eccellente visibilità anche in caso di daltonismo, adotta un design responsivo testato su smartphone, tablet (LIM comprese) e supporta la navigazione full-keyboard. Supporta pienamente il prefers-reduced-motion (riduzione animazioni) dei sistemi operativi.");
 
     const privacyTitle = document.createElement('h3');
     privacyTitle.textContent = 'Privacy First by Design';
