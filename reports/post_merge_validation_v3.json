@@ -1,0 +1,58 @@
+{
+  "overall": "PASS",
+  "files": {
+    "civica.json": {
+      "subject": "civica",
+      "count": 960,
+      "status": "PASS",
+      "issues": []
+    },
+    "geografia.json": {
+      "subject": "geografia",
+      "count": 885,
+      "status": "PASS",
+      "issues": []
+    },
+    "inglese.json": {
+      "subject": "inglese",
+      "count": 454,
+      "status": "PASS",
+      "issues": []
+    },
+    "italiano.json": {
+      "subject": "italiano",
+      "count": 399,
+      "status": "PASS",
+      "issues": []
+    },
+    "matematica.json": {
+      "subject": "matematica",
+      "count": 1876,
+      "status": "PASS",
+      "issues": []
+    },
+    "problemi.json": {
+      "subject": "problemi",
+      "count": 1040,
+      "status": "PASS",
+      "issues": []
+    },
+    "scienze.json": {
+      "subject": "scienze",
+      "count": 843,
+      "status": "PASS",
+      "issues": []
+    },
+    "storia.json": {
+      "subject": "storia",
+      "count": 891,
+      "status": "PASS",
+      "issues": []
+    },
+    "index.json": {
+      "status": "PASS",
+      "issues": [],
+      "count_subjects": 8
+    }
+  }
+}

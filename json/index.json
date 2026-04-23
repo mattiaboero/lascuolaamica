@@ -1,215 +1,215 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-19T19:45:11Z",
-  "totalQuestions": 6139,
+  "generatedAt": "2026-04-23T17:29:37Z",
+  "totalQuestions": 7348,
   "subjects": {
     "matematica": {
       "path": "matematica.json",
-      "rows": 1716,
+      "rows": 1876,
       "stats": {
         "file": "template_matematica_da_json.csv",
-        "rows": 1716,
+        "rows": 1876,
         "areas": {
-          "tabelline": 164,
-          "aritmetica": 469,
-          "problemi": 396,
-          "geometria": 339,
-          "logica_e_dati": 348
+          "tabelline": 196,
+          "aritmetica": 501,
+          "problemi": 428,
+          "geometria": 371,
+          "logica_e_dati": 380
         },
         "classes": {
-          "2": 410,
-          "3": 401,
-          "4": 442,
-          "5": 463
+          "2": 450,
+          "3": 441,
+          "4": 482,
+          "5": 503
         }
       }
     },
     "problemi": {
       "path": "problemi.json",
-      "rows": 920,
+      "rows": 1040,
       "stats": {
         "file": "matematica_problemi.csv",
-        "rows": 920,
+        "rows": 1040,
         "areas": {
-          "problemi": 920
+          "problemi": 1040
         },
         "classes": {
-          "2": 233,
-          "3": 229,
-          "4": 229,
-          "5": 229
+          "2": 263,
+          "3": 259,
+          "4": 259,
+          "5": 259
         }
       }
     },
     "inglese": {
       "path": "inglese.json",
-      "rows": 334,
+      "rows": 454,
       "stats": {
         "file": "template_domande_inglese_300.csv",
-        "rows": 334,
+        "rows": 454,
         "areas": {
-          "colori": 17,
-          "numeri": 16,
-          "animali": 20,
-          "corpo_umano": 16,
-          "famiglia": 14,
-          "saluti": 18,
-          "giorni": 11,
-          "meteo": 13,
-          "cibo": 23,
-          "mesi": 13,
-          "to_be": 31,
-          "have_got": 25,
-          "routine_quotidiana": 31,
-          "casa": 26,
-          "sport": 20,
-          "hobby": 14,
-          "domande": 26
+          "colori": 23,
+          "numeri": 22,
+          "animali": 27,
+          "corpo_umano": 22,
+          "famiglia": 18,
+          "saluti": 23,
+          "giorni": 16,
+          "meteo": 18,
+          "cibo": 30,
+          "mesi": 18,
+          "to_be": 39,
+          "have_got": 33,
+          "routine_quotidiana": 40,
+          "casa": 35,
+          "sport": 30,
+          "hobby": 24,
+          "domande": 36
         },
         "classes": {
-          "2": 91,
-          "3": 92,
-          "4": 85,
-          "5": 66
+          "2": 111,
+          "3": 112,
+          "4": 115,
+          "5": 116
         }
       }
     },
     "civica": {
       "path": "civica.json",
-      "rows": 800,
+      "rows": 960,
       "stats": {
         "file": "template_educazione_civica_800.csv",
-        "rows": 800,
+        "rows": 960,
         "areas": {
-          "costituzione_regole_comunita": 200,
-          "ambiente_rispetto_terra": 200,
-          "cittadinanza_digitale_online": 200,
-          "strada_gentilezza_sicurezza": 200
+          "costituzione_regole_comunita": 240,
+          "ambiente_rispetto_terra": 240,
+          "cittadinanza_digitale_online": 240,
+          "strada_gentilezza_sicurezza": 240
         },
         "classes": {
-          "2": 200,
-          "3": 200,
-          "4": 200,
-          "5": 200
+          "2": 240,
+          "3": 240,
+          "4": 240,
+          "5": 240
         }
       }
     },
     "geografia": {
       "path": "geografia.json",
-      "rows": 765,
+      "rows": 885,
       "stats": {
         "file": "template_geografia_800.csv",
-        "rows": 765,
+        "rows": 885,
         "areas": {
-          "orientamento": 60,
-          "geo_graficita": 50,
-          "paesaggio": 22,
-          "sistema_territoriale": 40,
-          "orientamento_mappe": 50,
-          "paesaggi_terra": 50,
-          "paesaggi_acqua": 50,
-          "territorio_sicurezza": 50,
-          "strumenti_orientamento": 49,
-          "territorio_italiano": 50,
-          "idrografia_clima_italia": 50,
-          "antropico_ambiente": 49,
-          "orientamento_carte": 50,
-          "geografia_fisica_italia": 49,
-          "regioni_antropica": 46,
-          "italia_europa": 50
+          "orientamento": 72,
+          "geo_graficita": 59,
+          "paesaggio": 35,
+          "sistema_territoriale": 44,
+          "orientamento_mappe": 57,
+          "paesaggi_terra": 58,
+          "paesaggi_acqua": 58,
+          "territorio_sicurezza": 58,
+          "strumenti_orientamento": 55,
+          "territorio_italiano": 58,
+          "idrografia_clima_italia": 58,
+          "antropico_ambiente": 55,
+          "orientamento_carte": 56,
+          "geografia_fisica_italia": 54,
+          "regioni_antropica": 51,
+          "italia_europa": 57
         },
         "classes": {
-          "2": 172,
-          "3": 200,
-          "4": 198,
-          "5": 195
+          "2": 202,
+          "3": 230,
+          "4": 228,
+          "5": 225
         }
       }
     },
     "storia": {
       "path": "storia.json",
-      "rows": 771,
+      "rows": 891,
       "stats": {
         "file": "template_storia_800.csv",
-        "rows": 771,
+        "rows": 891,
         "areas": {
-          "tempo_strumenti": 41,
-          "successione_contemporaneita": 40,
-          "linea_del_tempo": 36,
-          "fonti_storiche": 40,
-          "storia_personale_familiare": 39,
-          "metodo_storico_fonti": 40,
-          "tempo_periodizzazione": 38,
-          "origine_terra_vita": 40,
-          "preistoria_paleolitico": 40,
-          "preistoria_neolitico_metalli": 40,
-          "fonti_linea_antiche_civilta": 40,
-          "mesopotamia": 40,
-          "egizi": 38,
-          "altre_civilta_ebrei": 40,
-          "civilta_mediterranee": 38,
-          "civilta_greca": 45,
-          "italia_antica_etruschi": 28,
-          "roma_monarchia": 27,
-          "roma_repubblica": 41,
-          "roma_impero_cristianesimo_fine": 40
+          "tempo_strumenti": 46,
+          "successione_contemporaneita": 45,
+          "linea_del_tempo": 41,
+          "fonti_storiche": 45,
+          "storia_personale_familiare": 44,
+          "metodo_storico_fonti": 50,
+          "tempo_periodizzazione": 43,
+          "origine_terra_vita": 45,
+          "preistoria_paleolitico": 45,
+          "preistoria_neolitico_metalli": 45,
+          "fonti_linea_antiche_civilta": 50,
+          "mesopotamia": 45,
+          "egizi": 43,
+          "altre_civilta_ebrei": 45,
+          "civilta_mediterranee": 48,
+          "civilta_greca": 55,
+          "italia_antica_etruschi": 33,
+          "roma_monarchia": 32,
+          "roma_repubblica": 46,
+          "roma_impero_cristianesimo_fine": 45
         },
         "classes": {
-          "2": 196,
-          "3": 198,
-          "4": 196,
-          "5": 181
+          "2": 226,
+          "3": 228,
+          "4": 226,
+          "5": 211
         }
       }
     },
     "scienze": {
       "path": "scienze.json",
-      "rows": 723,
+      "rows": 843,
       "stats": {
         "file": "template_scienze_800.csv",
-        "rows": 723,
+        "rows": 843,
         "areas": {
-          "viventi_non_viventi": 63,
-          "materia_materiali_trasformazioni": 42,
-          "terra_stagioni_ambiente": 38,
-          "corpo_umano_salute": 111,
-          "metodo_scientifico": 40,
-          "materia_materiali": 42,
-          "viventi_biologia": 45,
-          "ecosistemi_ambiente": 50,
-          "aria_acqua_suolo_materia": 49,
-          "viventi_ambiente": 78,
-          "scienza_tecnologia": 49,
-          "astronomia_terra": 36,
-          "materia_energia_fenomeni": 40,
-          "forze_luce_suono": 40
+          "viventi_non_viventi": 68,
+          "materia_materiali_trasformazioni": 50,
+          "terra_stagioni_ambiente": 44,
+          "corpo_umano_salute": 124,
+          "metodo_scientifico": 48,
+          "materia_materiali": 50,
+          "viventi_biologia": 57,
+          "ecosistemi_ambiente": 60,
+          "aria_acqua_suolo_materia": 57,
+          "viventi_ambiente": 86,
+          "scienza_tecnologia": 56,
+          "astronomia_terra": 45,
+          "materia_energia_fenomeni": 49,
+          "forze_luce_suono": 49
         },
         "classes": {
-          "2": 174,
-          "3": 177,
-          "4": 176,
-          "5": 196
+          "2": 204,
+          "3": 207,
+          "4": 206,
+          "5": 226
         }
       }
     },
     "italiano": {
       "path": "italiano.json",
-      "rows": 110,
+      "rows": 399,
       "stats": {
         "file": "template_italiano_800.csv",
-        "rows": 110,
+        "rows": 399,
         "areas": {
-          "italiano_classe2": 36,
-          "italiano_classe3": 18,
-          "italiano_classe4": 24,
-          "italiano_classe5": 25,
+          "italiano_classe2": 92,
+          "italiano_classe3": 100,
+          "italiano_classe4": 100,
+          "italiano_classe5": 100,
           "ortografia": 7
         },
         "classes": {
-          "2": 43,
-          "3": 18,
-          "4": 24,
-          "5": 25
+          "2": 99,
+          "3": 100,
+          "4": 100,
+          "5": 100
         }
       }
     }

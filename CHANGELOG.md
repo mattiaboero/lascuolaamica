@@ -2,6 +2,10 @@
 
 ## Unreleased - 2026-04-20
 
+- Merge completo dei nuovi dataset domande validati (`8` materie) nei file `json/*.json`.
+- Aggiornato `json/index.json` con nuove cardinalità per materia e totale complessivo (`7348` domande).
+- Verifica integrità post-merge completata su tutte le materie (`PASS`) con report tecnico `reports/post_merge_validation_v3.json`.
+- Corretto un refuso strutturale nel dataset italiano (`ita-2-ortografia-005`) per rimuovere un'opzione duplicata.
 - Hardening CSP: rimossi gli script inline eseguibili dalle pagine pubbliche e spostati in `js/*.js`.
 - Aggiornata la policy CSP nelle pagine principali con `script-src 'self'` (senza `unsafe-inline`).
 - Aggiornato `sw.js` per includere in precache i nuovi script pagina.
