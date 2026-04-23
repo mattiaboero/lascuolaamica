@@ -13,7 +13,7 @@
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
   const ACCESSIBILITY_URL = 'accessibilita';
-  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.2.1';
+  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.3';
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
   const PALETTE_STYLESHEET = 'palette-okabe.css';
@@ -35,6 +35,25 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '23 aprile 2026',
+      items: [
+        'Integrati nuovi pacchetti domande validati per tutte le 8 materie.',
+        'Aggiornato index aggregato con conteggi sincronizzati per materia e totale domande.',
+        'Eseguita validazione post-merge con esito PASS su struttura, coerenza e risposte.',
+        'Corretto un duplicato opzioni nel dataset di Italiano (voce ortografia).',
+        'Versione portale aggiornata alla 4.3.'
+      ]
+    },
+    {
+      date: '20 aprile 2026',
+      items: [
+        'Potenziato l’algoritmo di selezione domande con planner stocastico area+difficoltà.',
+        'Migliorata la logica anti-ripetizione multi-sessione con cooldown e softmax sui candidati.',
+        'Aggiunte metriche locali di qualità sessione (repeat rate, copertura, entropia, novità).',
+        'Esteso il generatore parametrico e introdotti report CSV automatici di copertura.'
+      ]
+    },
     {
       date: '18 aprile 2026',
       items: [
