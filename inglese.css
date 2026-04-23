@@ -308,6 +308,40 @@ header {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 }
 
+.seo-static {
+  background: linear-gradient(135deg, #ffffff, #f4fbff);
+  border: 2px solid rgba(33, 161, 230, 0.26);
+  border-radius: 18px;
+  padding: 12px 14px;
+  margin: 0 0 14px;
+  color: #2f4d68;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.seo-static h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  line-height: 1.32;
+  color: #1e6bc2;
+  margin-bottom: 8px;
+}
+
+.seo-static p {
+  margin: 0 0 8px;
+  line-height: 1.5;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.seo-static ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+
+.seo-static li + li {
+  margin-top: 4px;
+}
+
 .class-selector-label {
   font-family: 'Fredoka One', cursive;
   color: var(--accent-2);
