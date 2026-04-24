@@ -167,10 +167,12 @@ if [[ ! -f "_headers" ]]; then
   echo "[ERROR] Missing file: _headers"
   status=1
 else
-  if grep -qE '^/questions\.json$' _headers && grep -qE 'X-Robots-Tag:[[:space:]]+noindex, nofollow' _headers; then
-    echo "[OK] _headers: questions.json noindex rule found"
+  if grep -qE '^/json/\*$' _headers \
+    && grep -qE 'X-Robots-Tag:[[:space:]]+noindex, nofollow' _headers \
+    && grep -qE 'Cache-Control:[[:space:]]+public, max-age=0, must-revalidate' _headers; then
+    echo "[OK] _headers: split json noindex/cache rules found"
   else
-    echo "[ERROR] _headers: missing noindex rule for questions.json"
+    echo "[ERROR] _headers: missing /json/* noindex/cache rules"
     status=1
   fi
 

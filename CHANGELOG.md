@@ -8,6 +8,10 @@
 - Core quiz: rimosso fallback a `window.SUBJECT_CONFIG`, ora usa configurazione da `window.SA.subjectConfig`.
 - Config materie (matematica/geografia/scienze/storia/italiano): eliminate assegnazioni globali dirette, mantenuta sola scrittura su namespace `SA`.
 - Avviata migrazione ES modules: `index.html` e `faq.html` ora caricano `js/index-page.js` e `js/faq-page.js` con `type="module"`.
+- Estesa migrazione ES modules a tutte le pagine applicative: tutti gli script runtime `src` ora usano `type="module"`.
+- Rimossi alias globali legacy (`window.QuestionsLoader`, `window.ScuolaEconomy`, `window.ScuolaPalette`, `window.openModal/closeModal`) a favore di `window.SA.*`.
+- Deprecato e rimosso `questions.json` dal repo runtime; build aggiornata per generarlo solo su richiesta (`GENERATE_LEGACY_QUESTIONS_JSON=true`).
+- Aggiornati `_headers`, `README` e wiki architettura per allineamento definitivo a dataset split `json/index.json` + `json/*.json`.
 - Merge completo dei nuovi dataset domande validati (`8` materie) nei file `json/*.json`.
 - Aggiornato `json/index.json` con nuove cardinalità per materia e totale complessivo (`7348` domande).
 - Verifica integrità post-merge completata su tutte le materie (`PASS`) con report tecnico `reports/post_merge_validation_v3.json`.

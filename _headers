@@ -3,10 +3,6 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
 
-/questions.json
-  X-Robots-Tag: noindex, nofollow
-  Cache-Control: public, max-age=0, must-revalidate
-
 /json/*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=0, must-revalidate

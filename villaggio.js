@@ -51,7 +51,7 @@
   function getEconomy() {
     const sa = window.SA;
     if (sa && sa.economy) return sa.economy;
-    return window.ScuolaEconomy || null;
+    return null;
   }
 
   function $(id) {

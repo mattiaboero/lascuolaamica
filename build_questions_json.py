@@ -242,10 +242,11 @@ def main() -> int:
 
     data = build_questions(input_dir)
 
-    out_json = os.path.join(project_dir, "questions.json")
     out_report = os.path.join(project_dir, "questions-build-report.json")
-
-    write_json(out_json, data)
+    write_legacy_monolith = os.environ.get("GENERATE_LEGACY_QUESTIONS_JSON", "").strip().lower() in {"1", "true", "yes"}
+    out_json = os.path.join(project_dir, "questions.json")
+    if write_legacy_monolith:
+        write_json(out_json, data)
 
     report = {
         "generatedAt": data["generatedAt"],
@@ -257,7 +258,8 @@ def main() -> int:
     write_json(out_report, report)
     split_files = write_split_files(project_dir, data)
 
-    print(f"Created: {out_json}")
+    if write_legacy_monolith:
+        print(f"Created (legacy): {out_json}")
     print(f"Created: {out_report}")
     for path in split_files:
         print(f"Created: {path}")

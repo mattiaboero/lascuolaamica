@@ -29,7 +29,7 @@ Sito: https://lascuolaamica.it
 
 - HTML, CSS, JavaScript vanilla
 - Service Worker (`sw.js`)
-- Dataset domande in JSON (`questions.json` e `json/*.json`)
+- Dataset domande in JSON split per materia (`json/*.json` + `json/index.json`)
 - Script build domande: `build_questions_json.py`
 
 ## Struttura progetto (estratto)

@@ -308,7 +308,4 @@
 
   const SA = window.SA = window.SA || {};
   SA.questionsLoader = QuestionsLoaderApi;
-
-  // Alias legacy mantenuto per compatibilità.
-  window.QuestionsLoader = QuestionsLoaderApi;
 })();

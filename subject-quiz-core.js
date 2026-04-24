@@ -25,13 +25,13 @@
   function getQuestionsLoader() {
     const sa = window.SA;
     if (sa && sa.questionsLoader) return sa.questionsLoader;
-    return window.QuestionsLoader || null;
+    return null;
   }
 
   function getEconomy() {
     const sa = window.SA;
     if (sa && sa.economy) return sa.economy;
-    return window.ScuolaEconomy || null;
+    return null;
   }
 
   function notifyLoadError() {

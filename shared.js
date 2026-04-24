@@ -13,7 +13,7 @@
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
   const ACCESSIBILITY_URL = 'accessibilita';
-  const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.3';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.3';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -80,7 +80,7 @@
       items: [
         'Deduplicati i dataset domande per tutte le materie con rinumerazione ID coerente.',
         'Ridotto il rischio di ripetizione tra sessioni con filtro anti-repeat testuale nel motore quiz.',
-        'Allineati metadati e conteggi nei file json per materia, index aggregato e questions.json legacy.'
+        'Allineati metadati e conteggi nei file json per materia e index aggregato.'
       ]
     },
     {
@@ -492,7 +492,6 @@
         document.querySelectorAll('.modal-overlay.open').forEach((modal) => closeModal(modal.id));
       });
       SA_FLAGS.sharedEscHandlerBound = true;
-      window.__sharedEscHandlerBound = true;
     }
   }
 
@@ -1121,12 +1120,6 @@
     modes: { ...PALETTE_MODE }
   };
   SA.version = APP_VERSION;
-
-  // Alias legacy mantenuti per compatibilità con pagine esistenti.
-  window.openModal = openModal;
-  window.closeModal = closeModal;
-  window.ScuolaEconomy = SA.economy;
-  window.ScuolaPalette = SA.palette;
 
   initPaletteMode();
 

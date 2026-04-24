@@ -15,8 +15,8 @@
 
 ## Dati
 
-- Dataset unificato: `questions.json`.
 - Dataset per materia: `json/*.json`.
+- Indice dataset: `json/index.json`.
 - Report build: `questions-build-report.json`.
 
 ## Stato utente
