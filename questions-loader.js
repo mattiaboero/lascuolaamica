@@ -51,7 +51,7 @@
       return existing;
     }
 
-    const nextPromise = fetch(sourcePath, { cache: 'no-store' })
+    const nextPromise = fetch(sourcePath)
       .then((res) => {
         if (!res.ok) throw new Error(`Impossibile caricare ${sourcePath}`);
         return res.json();
