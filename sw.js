@@ -43,7 +43,6 @@ const PRECACHE_URLS = [
   '/js/italiano-page.js',
   '/js/faq-page.js',
   '/questions-loader.js',
-  '/questions.json',
   '/subject-quiz-core.js',
   '/subject-quiz-theme.css',
   '/palette-okabe.css',

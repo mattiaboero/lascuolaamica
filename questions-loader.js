@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  const DEFAULT_PATH = 'questions.json';
   const DEFAULT_INDEX_PATH = 'json/index.json';
   const dataPromiseByPath = new Map();
   const normalizeCache = new Map();
@@ -46,7 +45,7 @@
   }
 
   async function load(path) {
-    const sourcePath = String(path || DEFAULT_PATH).trim() || DEFAULT_PATH;
+    const sourcePath = String(path || DEFAULT_INDEX_PATH).trim() || DEFAULT_INDEX_PATH;
     const existing = dataPromiseByPath.get(sourcePath);
     if (existing) {
       return existing;
@@ -54,7 +53,7 @@
 
     const nextPromise = fetch(sourcePath, { cache: 'no-store' })
       .then((res) => {
-        if (!res.ok) throw new Error('Impossibile caricare questions.json');
+        if (!res.ok) throw new Error(`Impossibile caricare ${sourcePath}`);
         return res.json();
       })
       .catch((err) => {
@@ -190,17 +189,17 @@
     if (!key) return [];
 
     if (isMonolithicSubjects(subjects)) {
-      rows = Array.isArray(subjects[key]) ? subjects[key] : [];
-    } else {
-      const subjectRef = subjects[key];
-      const relPath = typeof subjectRef === 'string'
-        ? subjectRef
-        : (subjectRef && typeof subjectRef.path === 'string' ? subjectRef.path : '');
-      const subjectPath = resolveRelativePath(sourcePath, relPath);
-      if (!subjectPath) return [];
-      const subjectData = await load(subjectPath);
-      rows = extractRowsFromSubjectData(subjectData);
+      throw new Error('Formato monolitico non supportato: usa json/index.json con file separati per materia.');
     }
+
+    const subjectRef = subjects[key];
+    const relPath = typeof subjectRef === 'string'
+      ? subjectRef
+      : (subjectRef && typeof subjectRef.path === 'string' ? subjectRef.path : '');
+    const subjectPath = resolveRelativePath(sourcePath, relPath);
+    if (!subjectPath) return [];
+    const subjectData = await load(subjectPath);
+    rows = extractRowsFromSubjectData(subjectData);
 
     return rows.filter((row) => {
       if (!includeInactive && row.active === false) return false;
