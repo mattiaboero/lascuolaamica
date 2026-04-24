@@ -39,6 +39,7 @@
   let state = loadState();
   let selectedBuildingId = null;
   let selectedPlacementId = null;
+  let gridTileMap = new Map();
 
   function debugWarn(context, error) {
     if (!DEBUG_MODE) return;
@@ -183,11 +184,67 @@
     return true;
   }
 
+  function getGridTile(x, y) {
+    return gridTileMap.get(cellKey(x, y)) || null;
+  }
+
+  function paintTile(tile, x, y, lookup) {
+    if (!tile) return;
+
+    tile.classList.remove('occupied', 'selected-placement');
+    delete tile.dataset.placementId;
+    const oldAsset = tile.querySelector('.tile-asset');
+    if (oldAsset) oldAsset.remove();
+
+    const placement = getPlacementAt(x, y, lookup);
+    if (!placement) {
+      tile.setAttribute('aria-label', `Casella libera, riga ${y + 1} colonna ${x + 1}`);
+      return;
+    }
+
+    const b = BUILDING_MAP[placement.buildingId];
+    if (!b) {
+      tile.setAttribute('aria-label', `Casella libera, riga ${y + 1} colonna ${x + 1}`);
+      return;
+    }
+
+    tile.classList.add('occupied');
+    tile.dataset.placementId = String(placement.id);
+    if (selectedPlacementId === placement.id) tile.classList.add('selected-placement');
+    tile.setAttribute('aria-label', `${b.name}, posizione riga ${y + 1} colonna ${x + 1}`);
+
+    if (lookup.anchors.get(cellKey(x, y)) === placement) {
+      const img = document.createElement('img');
+      img.src = b.asset;
+      img.alt = '';
+      img.className = 'tile-asset';
+      img.style.width = `${b.w * 100}%`;
+      img.style.height = `${b.h * 100}%`;
+      tile.appendChild(img);
+    }
+  }
+
+  function updateGridArea(x, y, w, h) {
+    const grid = $('villageGrid');
+    if (!grid || !gridTileMap.size) return;
+    const startX = Math.max(0, safeInt(x, 0));
+    const startY = Math.max(0, safeInt(y, 0));
+    const endX = Math.min(GRID_SIZE, startX + Math.max(1, safeInt(w, 1)));
+    const endY = Math.min(GRID_SIZE, startY + Math.max(1, safeInt(h, 1)));
+    const lookup = buildPlacementLookup();
+
+    for (let yy = startY; yy < endY; yy++) {
+      for (let xx = startX; xx < endX; xx++) {
+        paintTile(getGridTile(xx, yy), xx, yy, lookup);
+      }
+    }
+  }
+
   function selectBuilding(id) {
     selectedBuildingId = id;
     selectedPlacementId = null;
     renderShop();
-    renderGrid();
+    updateGridSelectionStyles();
     renderInfo();
   }
 
@@ -195,7 +252,7 @@
     selectedBuildingId = null;
     selectedPlacementId = null;
     renderShop();
-    renderGrid();
+    updateGridSelectionStyles();
     renderInfo();
   }
 
@@ -248,7 +305,8 @@
 
     selectedPlacementId = placementId;
     renderShop();
-    renderGrid();
+    updateGridArea(x, y, building.w, building.h);
+    updateGridSelectionStyles();
     renderInfo();
   }
 
@@ -281,7 +339,8 @@
 
     selectedPlacementId = null;
     renderShop();
-    renderGrid();
+    updateGridArea(p.x, p.y, building.w, building.h);
+    updateGridSelectionStyles();
     renderInfo();
   }
 
@@ -347,6 +406,7 @@
     const grid = $('villageGrid');
     if (!grid) return;
     grid.textContent = '';
+    gridTileMap = new Map();
 
     const frag = document.createDocumentFragment();
     const lookup = buildPlacementLookup();
@@ -358,28 +418,8 @@
         tile.className = 'tile';
         tile.dataset.x = String(x);
         tile.dataset.y = String(y);
-
-        const placement = getPlacementAt(x, y, lookup);
-        if (placement) {
-          const b = BUILDING_MAP[placement.buildingId];
-          tile.classList.add('occupied');
-          tile.dataset.placementId = String(placement.id);
-          if (selectedPlacementId === placement.id) tile.classList.add('selected-placement');
-          tile.setAttribute('aria-label', `${b.name}, posizione riga ${y + 1} colonna ${x + 1}`);
-
-          if (lookup.anchors.get(cellKey(x, y)) === placement) {
-            const img = document.createElement('img');
-            img.src = b.asset;
-            img.alt = '';
-            img.className = 'tile-asset';
-            img.style.width = `${b.w * 100}%`;
-            img.style.height = `${b.h * 100}%`;
-            tile.appendChild(img);
-          }
-        } else {
-          delete tile.dataset.placementId;
-          tile.setAttribute('aria-label', `Casella libera, riga ${y + 1} colonna ${x + 1}`);
-        }
+        paintTile(tile, x, y, lookup);
+        gridTileMap.set(cellKey(x, y), tile);
 
         frag.appendChild(tile);
       }

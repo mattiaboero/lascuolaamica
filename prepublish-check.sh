@@ -120,6 +120,20 @@ for file in "${HTML_FILES[@]}"; do
   check_target_blank_rel "$file"
 done
 
+check_runtime_split_json_only() {
+  local findings=""
+  findings=$(grep -nE 'questions\.json' questions-loader.js sw.js js/*.js *.html 2>/dev/null || true)
+  if [[ -n "$findings" ]]; then
+    echo "[ERROR] runtime references to questions.json found (expected split json/index.json + json/*.json only)"
+    echo "$findings"
+    status=1
+  else
+    echo "[OK] runtime files: no direct questions.json references"
+  fi
+}
+
+check_runtime_split_json_only
+
 if [[ ! -f "robots.txt" ]]; then
   echo "[ERROR] Missing file: robots.txt"
   status=1

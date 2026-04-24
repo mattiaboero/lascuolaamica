@@ -2,6 +2,9 @@
 
 ## Unreleased - 2026-04-20
 
+- Villaggio: introdotto aggiornamento griglia mirato (`paintTile` + `updateGridArea`) per ridurre i rerender completi su piazzamento/rimozione/selezione.
+- Config materie: priorità a `window.SA.subjectConfig` con alias legacy mantenuto su `window.SUBJECT_CONFIG`.
+- Aggiunto controllo prepublish che blocca riferimenti runtime diretti a `questions.json` (architettura split JSON enforced).
 - Merge completo dei nuovi dataset domande validati (`8` materie) nei file `json/*.json`.
 - Aggiornato `json/index.json` con nuove cardinalità per materia e totale complessivo (`7348` domande).
 - Verifica integrità post-merge completata su tutte le materie (`PASS`) con report tecnico `reports/post_merge_validation_v3.json`.
