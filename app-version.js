@@ -8,4 +8,8 @@
     app: APP_VERSION,
     cacheName: CACHE_NAME
   };
+
+  const SA = global.SA = global.SA || {};
+  SA.version = APP_VERSION;
+  SA.cacheName = CACHE_NAME;
 })(typeof self !== 'undefined' ? self : window);

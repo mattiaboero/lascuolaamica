@@ -14,6 +14,8 @@
   const FAQ_URL = 'faq';
   const ACCESSIBILITY_URL = 'accessibilita';
   const APP_VERSION = (window.SCUOLA_AMICA_VERSION && window.SCUOLA_AMICA_VERSION.app) || '4.3';
+  const SA = window.SA = window.SA || {};
+  const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
   const PALETTE_STYLESHEET = 'palette-okabe.css';
@@ -484,11 +486,12 @@
       btn.dataset.sharedCloseBound = '1';
     });
 
-    if (!window.__sharedEscHandlerBound) {
+    if (!SA_FLAGS.sharedEscHandlerBound) {
       document.addEventListener('keydown', (e) => {
         if (e.key !== 'Escape') return;
         document.querySelectorAll('.modal-overlay.open').forEach((modal) => closeModal(modal.id));
       });
+      SA_FLAGS.sharedEscHandlerBound = true;
       window.__sharedEscHandlerBound = true;
     }
   }
@@ -1104,10 +1107,11 @@
     bindModalEvents();
   }
 
-  window.openModal = openModal;
-  window.closeModal = closeModal;
-  window.ScuolaEconomy = ScuolaEconomy;
-  window.ScuolaPalette = {
+  SA.modal = SA.modal || {};
+  SA.modal.open = openModal;
+  SA.modal.close = closeModal;
+  SA.economy = ScuolaEconomy;
+  SA.palette = {
     get mode() {
       return document.documentElement.getAttribute('data-palette') || PALETTE_MODE.LEGACY;
     },
@@ -1116,6 +1120,13 @@
     },
     modes: { ...PALETTE_MODE }
   };
+  SA.version = APP_VERSION;
+
+  // Alias legacy mantenuti per compatibilità con pagine esistenti.
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+  window.ScuolaEconomy = SA.economy;
+  window.ScuolaPalette = SA.palette;
 
   initPaletteMode();
 

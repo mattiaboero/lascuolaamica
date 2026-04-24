@@ -16,6 +16,18 @@ function debugWarn(context, error) {
   } catch (_) {}
 }
 
+function getQuestionsLoader() {
+  const sa = window.SA;
+  if (sa && sa.questionsLoader) return sa.questionsLoader;
+  return window.QuestionsLoader || null;
+}
+
+function getEconomy() {
+  const sa = window.SA;
+  if (sa && sa.economy) return sa.economy;
+  return window.ScuolaEconomy || null;
+}
+
 const TOTAL_Q = 10;
 const POINTS_PER_Q = 10;
 const BONUS_FACTORS = { easy: 5, medium: 10, hard: 25 };
@@ -479,9 +491,10 @@ function saveCursor(c) {
 }
 
 async function hydrateCivicaBankFromJson() {
-  if (!window.QuestionsLoader || typeof window.QuestionsLoader.getSubjectRows !== 'function') return;
+  const questionsLoader = getQuestionsLoader();
+  if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
   try {
-    const rows = await window.QuestionsLoader.getSubjectRows('civica', { path: 'json/index.json' });
+    const rows = await questionsLoader.getSubjectRows('civica', { path: 'json/index.json' });
     if (!Array.isArray(rows) || !rows.length) return;
 
     const next = { rules: [], env: [], digital: [], road: [] };
@@ -916,14 +929,15 @@ function finishGame(mode) {
   else if (finalScore >= 350) { emoji = '🌟'; title = 'Complimenti!'; msg = 'Ottimo risultato, continua così!'; }
   else if (finalScore >= 150) { emoji = '😊'; title = 'Benissimo!'; msg = 'Buona base di educazione civica.'; }
 
-  if (!creditsAwarded && window.ScuolaEconomy) {
-    const reward = window.ScuolaEconomy.calcSessionCredits({
+  const economy = getEconomy();
+  if (!creditsAwarded && economy) {
+    const reward = economy.calcSessionCredits({
       correct,
       bonusType,
       bonusApplied
     });
     if (reward.total > 0) {
-      window.ScuolaEconomy.addCredits(reward.total, {
+      economy.addCredits(reward.total, {
         source: 'quiz-civica',
         note: `${selectedArea} · classe ${selectedClass}`
       });

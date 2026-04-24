@@ -20,6 +20,18 @@ function debugWarn(context, error) {
   } catch (_) {}
 }
 
+function getQuestionsLoader() {
+  const sa = window.SA;
+  if (sa && sa.questionsLoader) return sa.questionsLoader;
+  return window.QuestionsLoader || null;
+}
+
+function getEconomy() {
+  const sa = window.SA;
+  if (sa && sa.economy) return sa.economy;
+  return window.ScuolaEconomy || null;
+}
+
 let QB = {
   1: [
     // Colors
@@ -574,9 +586,10 @@ function prefersReducedMotion() {
 }
 
 async function hydrateEnglishFromJson() {
-  if (!window.QuestionsLoader || typeof window.QuestionsLoader.getSubjectRows !== 'function') return;
+  const questionsLoader = getQuestionsLoader();
+  if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
   try {
-    const rows = await window.QuestionsLoader.getSubjectRows('inglese', { path: 'json/index.json' });
+    const rows = await questionsLoader.getSubjectRows('inglese', { path: 'json/index.json' });
     if (!Array.isArray(rows) || !rows.length) return;
 
     const next = { 1: [], 2: [], 3: [] };
@@ -1024,14 +1037,15 @@ function finishGame(mode) {
   else if(pct>=.4) {emoji='💪';title='BENE!';msg='Ancora pratica e vai alla grande!';stars=1;}
   else             {emoji='🌈';title='Try again!';msg='La prossima andrà meglio, promesso!';stars=1;}
 
-  if (!creditsAwarded && window.ScuolaEconomy) {
-    const reward = window.ScuolaEconomy.calcSessionCredits({
+  const economy = getEconomy();
+  if (!creditsAwarded && economy) {
+    const reward = economy.calcSessionCredits({
       correct: ok,
       bonusType,
       bonusApplied
     });
     if (reward.total > 0) {
-      window.ScuolaEconomy.addCredits(reward.total, {
+      economy.addCredits(reward.total, {
         source: 'quiz-inglese',
         note: `classe ${selectedClass} · livello ${level}`
       });

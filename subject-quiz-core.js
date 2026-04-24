@@ -1,7 +1,11 @@
 (async function () {
   'use strict';
 
-  const cfg = window.SUBJECT_CONFIG;
+  const SA = window.SA = window.SA || {};
+  const cfg = SA.subjectConfig || window.SUBJECT_CONFIG;
+  if (cfg && !SA.subjectConfig) {
+    SA.subjectConfig = cfg;
+  }
   if (!cfg) return;
 
   const DEBUG_MODE = (() => {
@@ -21,6 +25,18 @@
     } catch (_) {}
   }
 
+  function getQuestionsLoader() {
+    const sa = window.SA;
+    if (sa && sa.questionsLoader) return sa.questionsLoader;
+    return window.QuestionsLoader || null;
+  }
+
+  function getEconomy() {
+    const sa = window.SA;
+    if (sa && sa.economy) return sa.economy;
+    return window.ScuolaEconomy || null;
+  }
+
   function notifyLoadError() {
     const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
     try {
@@ -30,9 +46,10 @@
     }
   }
 
-  if (cfg.questionsSource && window.QuestionsLoader && typeof window.QuestionsLoader.applySubjectConfig === 'function') {
+  const questionsLoader = getQuestionsLoader();
+  if (cfg.questionsSource && questionsLoader && typeof questionsLoader.applySubjectConfig === 'function') {
     try {
-      await window.QuestionsLoader.applySubjectConfig(cfg);
+      await questionsLoader.applySubjectConfig(cfg);
     } catch (e) {
       debugWarn('QuestionsLoader.applySubjectConfig', e);
     }
@@ -1257,14 +1274,15 @@
       msg = 'Buona padronanza degli argomenti.';
     }
 
-    if (!creditsAwarded && window.ScuolaEconomy) {
-      const reward = window.ScuolaEconomy.calcSessionCredits({
+    const economy = getEconomy();
+    if (!creditsAwarded && economy) {
+      const reward = economy.calcSessionCredits({
         correct,
         bonusType,
         bonusApplied
       });
       if (reward.total > 0) {
-        window.ScuolaEconomy.addCredits(reward.total, {
+        economy.addCredits(reward.total, {
           source: 'quiz-materia',
           note: `${selectedArea === 'mixed' ? 'mista' : selectedArea} · classe ${selectedClass}`
         });

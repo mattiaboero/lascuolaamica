@@ -1,4 +1,4 @@
-// Auto-estratto da italiano.html per CSP hardening (no inline script).
+const __sa = window.SA = window.SA || {};
 window.SUBJECT_CONFIG = {
   totalQ: 10,
   pointsPerQ: 10,
@@ -105,3 +105,4 @@ window.SUBJECT_CONFIG = {
     ]
   }
 };
+__sa.subjectConfig = window.SUBJECT_CONFIG;

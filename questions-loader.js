@@ -297,7 +297,7 @@
     return cfg;
   }
 
-  window.QuestionsLoader = {
+  const QuestionsLoaderApi = {
     load,
     getSubjectRows,
     buildBanks,
@@ -305,4 +305,10 @@
     normalizeKey,
     clone
   };
+
+  const SA = window.SA = window.SA || {};
+  SA.questionsLoader = QuestionsLoaderApi;
+
+  // Alias legacy mantenuto per compatibilità.
+  window.QuestionsLoader = QuestionsLoaderApi;
 })();

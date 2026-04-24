@@ -47,6 +47,12 @@
     } catch (_) {}
   }
 
+  function getEconomy() {
+    const sa = window.SA;
+    if (sa && sa.economy) return sa.economy;
+    return window.ScuolaEconomy || null;
+  }
+
   function $(id) {
     return document.getElementById(id);
   }
@@ -194,7 +200,8 @@
   }
 
   function placeBuilding(building, x, y) {
-    if (!window.ScuolaEconomy) return;
+    const economy = getEconomy();
+    if (!economy) return;
     if (!building || !BUILDING_MAP[building.id]) return;
 
     const counts = getBuiltCounts();
@@ -203,7 +210,7 @@
       return;
     }
 
-    const wallet = window.ScuolaEconomy.getWallet();
+    const wallet = economy.getWallet();
     if (wallet.balance < building.cost) {
       toast('Crediti insufficienti. Continua a giocare!');
       return;
@@ -215,7 +222,7 @@
       return;
     }
 
-    const ok = window.ScuolaEconomy.spendCredits(building.cost, {
+    const ok = economy.spendCredits(building.cost, {
       source: 'villaggio-shop',
       note: building.id
     });
@@ -231,7 +238,7 @@
     if (!saveState()) {
       state.placements = state.placements.filter((p) => p.id !== placementId);
       state.nextPlacementId = Math.max(1, placementId);
-      window.ScuolaEconomy.addCredits(building.cost, {
+      economy.addCredits(building.cost, {
         source: 'villaggio-rollback',
         note: building.id
       });
@@ -246,7 +253,8 @@
   }
 
   function removeSelectedPlacement() {
-    if (!window.ScuolaEconomy || !selectedPlacementId) return;
+    const economy = getEconomy();
+    if (!economy || !selectedPlacementId) return;
     const idx = state.placements.findIndex((p) => p.id === selectedPlacementId);
     if (idx < 0) return;
 
@@ -265,7 +273,7 @@
     }
 
     if (refund > 0) {
-      window.ScuolaEconomy.addCredits(refund, {
+      economy.addCredits(refund, {
         source: 'villaggio-rimborso',
         note: building.id
       });
@@ -282,7 +290,8 @@
     if (!shop) return;
     shop.textContent = '';
 
-    const wallet = window.ScuolaEconomy ? window.ScuolaEconomy.getWallet() : { balance: 0 };
+    const economy = getEconomy();
+    const wallet = economy ? economy.getWallet() : { balance: 0 };
     const counts = getBuiltCounts();
     const frag = document.createDocumentFragment();
 

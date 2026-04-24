@@ -16,6 +16,18 @@ function debugWarn(context, error) {
   } catch (_) {}
 }
 
+function getQuestionsLoader() {
+  const sa = window.SA;
+  if (sa && sa.questionsLoader) return sa.questionsLoader;
+  return window.QuestionsLoader || null;
+}
+
+function getEconomy() {
+  const sa = window.SA;
+  if (sa && sa.economy) return sa.economy;
+  return window.ScuolaEconomy || null;
+}
+
 const TOTAL_Q = 10;
 const POINTS_PER_Q = 10;
 const BONUS_FACTORS = { easy: 5, medium: 10, hard: 25 };
@@ -435,9 +447,10 @@ function prefersReducedMotion() {
 }
 
 async function hydrateProblemsFromJson() {
-  if (!window.QuestionsLoader || typeof window.QuestionsLoader.getSubjectRows !== 'function') return;
+  const questionsLoader = getQuestionsLoader();
+  if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
   try {
-    const rows = await window.QuestionsLoader.getSubjectRows('problemi', { path: 'json/index.json' });
+    const rows = await questionsLoader.getSubjectRows('problemi', { path: 'json/index.json' });
     if (!Array.isArray(rows) || !rows.length) return;
     const next = rows
       .map((row) => {
@@ -831,15 +844,16 @@ function finishGame(mode) {
   else if (finalScore >= 300) { emoji = '🌟'; title = 'Complimenti!'; msg = 'Punteggio super, continua così!'; }
   else if (finalScore >= 100) { emoji = '😊'; title = 'Benissimo!'; msg = 'Ottima base sui problemi.'; }
 
-  if (!creditsAwarded && window.ScuolaEconomy) {
+  const economy = getEconomy();
+  if (!creditsAwarded && economy) {
     const correctCount = history.filter(Boolean).length;
-    const reward = window.ScuolaEconomy.calcSessionCredits({
+    const reward = economy.calcSessionCredits({
       correct: correctCount,
       bonusType,
       bonusApplied
     });
     if (reward.total > 0) {
-      window.ScuolaEconomy.addCredits(reward.total, {
+      economy.addCredits(reward.total, {
         source: 'quiz-problemi',
         note: `classe ${selectedClass} · corrette ${correctCount}/10`
       });
