@@ -292,6 +292,7 @@
       const card = document.createElement('button');
       card.type = 'button';
       card.className = 'shop-item';
+      card.dataset.buildingId = b.id;
       if (selectedBuildingId === b.id) card.classList.add('selected');
       if (!unlocked) card.classList.add('locked');
       if (unlocked && !affordable) card.classList.add('poor');
@@ -327,7 +328,6 @@
         card.appendChild(lock);
       }
 
-      card.addEventListener('click', () => selectBuilding(b.id));
       frag.appendChild(card);
     });
 
@@ -354,6 +354,7 @@
         if (placement) {
           const b = BUILDING_MAP[placement.buildingId];
           tile.classList.add('occupied');
+          tile.dataset.placementId = String(placement.id);
           if (selectedPlacementId === placement.id) tile.classList.add('selected-placement');
           tile.setAttribute('aria-label', `${b.name}, posizione riga ${y + 1} colonna ${x + 1}`);
 
@@ -367,30 +368,57 @@
             tile.appendChild(img);
           }
         } else {
+          delete tile.dataset.placementId;
           tile.setAttribute('aria-label', `Casella libera, riga ${y + 1} colonna ${x + 1}`);
         }
-
-        tile.addEventListener('click', () => {
-          if (selectedBuildingId) {
-            placeBuilding(BUILDING_MAP[selectedBuildingId], x, y);
-            return;
-          }
-
-          const here = getPlacementAt(x, y, lookup);
-          if (here) {
-            selectedPlacementId = here.id;
-          } else {
-            selectedPlacementId = null;
-          }
-          renderGrid();
-          renderInfo();
-        });
 
         frag.appendChild(tile);
       }
     }
 
     grid.appendChild(frag);
+  }
+
+  function updateGridSelectionStyles() {
+    const grid = $('villageGrid');
+    if (!grid) return;
+    const targetId = safeInt(selectedPlacementId, 0);
+    grid.querySelectorAll('.tile').forEach((tile) => {
+      const tilePlacementId = safeInt(tile.dataset.placementId, 0);
+      tile.classList.toggle('selected-placement', !!targetId && tilePlacementId === targetId);
+    });
+  }
+
+  function onShopGridClick(event) {
+    const shop = $('shopGrid');
+    if (!shop) return;
+    const card = event.target.closest('.shop-item');
+    if (!card || !shop.contains(card) || card.disabled) return;
+    const buildingId = String(card.dataset.buildingId || '');
+    if (!buildingId || !BUILDING_MAP[buildingId]) return;
+    selectBuilding(buildingId);
+  }
+
+  function onVillageGridClick(event) {
+    const grid = $('villageGrid');
+    if (!grid) return;
+    const tile = event.target.closest('.tile');
+    if (!tile || !grid.contains(tile)) return;
+
+    const x = safeInt(tile.dataset.x, -1);
+    const y = safeInt(tile.dataset.y, -1);
+    if (x < 0 || y < 0) return;
+
+    if (selectedBuildingId) {
+      const building = BUILDING_MAP[selectedBuildingId];
+      if (building) placeBuilding(building, x, y);
+      return;
+    }
+
+    const placementId = safeInt(tile.dataset.placementId, 0);
+    selectedPlacementId = placementId > 0 ? placementId : null;
+    updateGridSelectionStyles();
+    renderInfo();
   }
 
   function renderInfo() {
@@ -444,6 +472,8 @@
     $('clearSelectionBtn')?.addEventListener('click', clearSelection);
     $('removeBtn')?.addEventListener('click', removeSelectedPlacement);
     $('resetVillageBtn')?.addEventListener('click', resetVillage);
+    $('shopGrid')?.addEventListener('click', onShopGridClick);
+    $('villageGrid')?.addEventListener('click', onVillageGridClick);
 
     window.addEventListener('wallet-updated', () => {
       renderShop();
