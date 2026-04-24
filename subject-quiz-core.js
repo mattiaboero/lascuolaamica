@@ -2,10 +2,7 @@
   'use strict';
 
   const SA = window.SA = window.SA || {};
-  const cfg = SA.subjectConfig || window.SUBJECT_CONFIG;
-  if (cfg && !SA.subjectConfig) {
-    SA.subjectConfig = cfg;
-  }
+  const cfg = SA.subjectConfig;
   if (!cfg) return;
 
   const DEBUG_MODE = (() => {

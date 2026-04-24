@@ -105,4 +105,3 @@ __sa.subjectConfig = {
     ]
   }
 };
-window.SUBJECT_CONFIG = __sa.subjectConfig;
