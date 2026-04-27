@@ -92,4 +92,4 @@ Puoi copiarli nella Wiki GitHub o tenerli versionati nella repo.
 
 ## Licenza
 
-Aggiungere la licenza desiderata (`LICENSE`) prima di pubblicare open source.
+Questa repository usa licenza [MIT](LICENSE).

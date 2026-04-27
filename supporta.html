@@ -9,11 +9,11 @@
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://lascuolaamica.it/supporta">
 <meta property="og:url" content="https://lascuolaamica.it/supporta">
-<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-home-1200x630.jpg">
+<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-supporta-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Supporta il progetto La Scuola Amica">
-<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-home-1200x630.jpg">
+<meta property="og:image:alt" content="Supporta il progetto educativo La Scuola Amica">
+<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-supporta-1200x630.jpg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="La Scuola Amica">
@@ -193,12 +193,24 @@ body {
   background: rgba(255,255,255,.12);
   color: #fff;
 }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #fff;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+.skip-link:focus { top: 10px; }
 @media (max-width: 460px) {
   .card { padding: 18px 14px 20px; }
 }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
 <noscript>
   <style>
     .noscript-msg {
@@ -237,7 +249,7 @@ body {
     <span aria-current="page">Supporta il progetto</span>
   </nav>
 
-    <main class="card" aria-labelledby="supportTitle">
+    <main class="card" id="contenuto-principale" aria-labelledby="supportTitle">
       <h1 class="title" id="supportTitle">Supporta il progetto</h1>
 
       <p class="text">Per adesso, la cosa più utile è testare e segnalare. La piattaforma migliora con i riscontri di chi la usa davvero.</p>

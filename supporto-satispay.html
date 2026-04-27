@@ -176,6 +176,17 @@ body {
   font-weight: 800;
   color: rgba(255,255,255,.95);
 }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #fff;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+.skip-link:focus { top: 10px; }
 @media (max-width: 460px) {
   .card { padding: 18px 14px 20px; }
   .qr-wrap { width: min(82vw, 340px); }
@@ -183,6 +194,7 @@ body {
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
 <noscript>
   <style>
     .noscript-msg {
@@ -222,7 +234,7 @@ body {
     <span aria-current="page">Supporto con Satispay</span>
   </nav>
 
-    <main class="card" aria-labelledby="supportTitle">
+    <main class="card" id="contenuto-principale" aria-labelledby="supportTitle">
       <h1 class="title" id="supportTitle">Supporto con Satispay</h1>
 
       <p class="text">Se lascuolaamica.it ti ha aiutato, puoi offrirmi un caffè con Satispay. Inquadri il QR con lo smartphone e il gioco è fatto. Non serve registrarsi. Anche un euro va bene.</p>

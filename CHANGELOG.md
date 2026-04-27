@@ -1,6 +1,6 @@
 # Changelog Repo
 
-## Unreleased - 2026-04-20
+## Unreleased - 2026-04-27
 
 - SEO social: create e collegate 8 Open Graph image dedicate per le materie (`og-<materia>-1200x630.jpg`).
 - Nuova pagina pubblica `chi-siamo` con metadata SEO/OG/JSON-LD, breadcrumb e integrazione in sitemap.
@@ -11,6 +11,12 @@
 - Accessibilità/robustezza: aggiunto fallback `<noscript>` su tutte le pagine pubbliche.
 - README: rimosso percorso locale iCloud personale dalla sezione avvio in locale.
 - GEO: aggiunto file `llms.txt` alla radice progetto.
+- Nuove pagine informative pubbliche: `per-insegnanti`, `per-genitori`, `ai-info`.
+- FAQ: refactor semantico elenco domande (`ul/li` + `details`) per maggiore robustezza screen reader.
+- Accessibilità: aggiunti skip link e `id=\"contenuto-principale\"` alle pagine statiche mancanti.
+- SEO social: aggiunte Open Graph image dedicate per `faq`, `supporta`, `accessibilita`, `per-insegnanti`, `per-genitori`, `ai-info`.
+- Routing/sitemap: estese rotte pulite e sitemap alle nuove pagine informative.
+- Licenza repository: aggiunto file `LICENSE` (MIT) e aggiornato `README.md`.
 
 - Villaggio: introdotto aggiornamento griglia mirato (`paintTile` + `updateGridArea`) per ridurre i rerender completi su piazzamento/rimozione/selezione.
 - Config materie: priorità a `window.SA.subjectConfig` con alias legacy mantenuto su `window.SUBJECT_CONFIG`.

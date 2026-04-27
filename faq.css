@@ -23,9 +23,16 @@
 }
 
 .faq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+
+.faq-list-item {
+  list-style: none;
 }
 
 .faq-item {

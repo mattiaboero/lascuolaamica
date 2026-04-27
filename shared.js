@@ -14,6 +14,9 @@
   const FAQ_URL = 'faq';
   const ACCESSIBILITY_URL = 'accessibilita';
   const ABOUT_URL = 'chi-siamo';
+  const TEACHERS_URL = 'per-insegnanti';
+  const PARENTS_URL = 'per-genitori';
+  const AI_INFO_URL = 'ai-info';
   const APP_VERSION = (window.SA && window.SA.version) || '4.3';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
@@ -38,6 +41,17 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '27 aprile 2026',
+      items: [
+        'Aggiunte le pagine Per insegnanti, Per genitori e Informazioni AI con metadata SEO/JSON-LD dedicati.',
+        'Aggiornati sitemap e redirect con le nuove rotte pubbliche.',
+        'Migliorata la semantica FAQ usando struttura lista ul/li con details nativi.',
+        'Aggiunti skip link anche alle pagine statiche di supporto e accessibilità.',
+        'Introdotte Open Graph image dedicate per FAQ, Supporto, Accessibilità e nuove pagine informative.',
+        'Aggiunta licenza MIT nel repository.'
+      ]
+    },
     {
       date: '23 aprile 2026',
       items: [
@@ -818,6 +832,24 @@
     about.className = 'info-hub-btn';
     about.textContent = 'Chi siamo';
     actions.appendChild(about);
+
+    const teachers = document.createElement('a');
+    teachers.href = TEACHERS_URL;
+    teachers.className = 'info-hub-btn';
+    teachers.textContent = 'Per insegnanti';
+    actions.appendChild(teachers);
+
+    const parents = document.createElement('a');
+    parents.href = PARENTS_URL;
+    parents.className = 'info-hub-btn';
+    parents.textContent = 'Per genitori';
+    actions.appendChild(parents);
+
+    const aiInfo = document.createElement('a');
+    aiInfo.href = AI_INFO_URL;
+    aiInfo.className = 'info-hub-btn';
+    aiInfo.textContent = 'Info AI';
+    actions.appendChild(aiInfo);
 
     const updates = document.createElement('button');
     updates.type = 'button';
