@@ -37,7 +37,7 @@
   function notifyLoadError() {
     const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
     try {
-      window.alert(message);
+      showFeedback(false, message, 4200);
     } catch (e) {
       debugWarn('notifyLoadError', e);
     }
@@ -1436,14 +1436,16 @@
     }
   }
 
-  function showFeedback(ok, custom) {
+  function showFeedback(ok, custom, holdMs) {
     const el = $('feedback');
+    if (!el) return;
     el.textContent = custom || (ok ? FEEDBACK_OK[Math.floor(Math.random() * FEEDBACK_OK.length)] : FEEDBACK_KO[Math.floor(Math.random() * FEEDBACK_KO.length)]);
     el.className = 'feedback ' + (ok ? 'ok' : 'ko');
     el.classList.add('show');
+    const timeoutMs = Number.isFinite(Number(holdMs)) ? Math.max(900, Number(holdMs)) : 850;
     setTimeout(() => {
       el.className = 'feedback';
-    }, 850);
+    }, timeoutMs);
   }
 
   function shuffle(arr) {

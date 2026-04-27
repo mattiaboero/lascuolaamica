@@ -8,12 +8,25 @@ importScripts('/app-version.js');
 
 const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v430';
 
-// Tutte le risorse da pre-cachare all'installazione.
-// L'app funziona completamente offline una volta che
-// questi file sono stati scaricati almeno una volta.
-const PRECACHE_URLS = [
+// Shell minima: se queste risorse non sono disponibili
+// l'installazione deve fallire (app non consistente).
+const CORE_PRECACHE_URLS = [
   '/',
   '/index.html',
+  '/index.css',
+  '/shared.js',
+  '/app-version.js',
+  '/manifest.json',
+  '/questions-loader.js',
+  '/subject-quiz-core.js',
+  '/subject-quiz-theme.css',
+  '/js/index-page.js',
+  '/json/index.json'
+];
+
+// Risorse aggiuntive: se una manca, il SW resta installabile.
+// Questo evita failure atomiche di cache.addAll su un singolo 404.
+const OPTIONAL_PRECACHE_URLS = [
   '/matematica.html',
   '/inglese.html',
   '/problemi.html',
@@ -26,13 +39,10 @@ const PRECACHE_URLS = [
   '/accessibilita.html',
   '/supporta.html',
   '/faq.html',
-  '/index.css',
   '/inglese.css',
   '/faq.css',
   '/villaggio.css',
   '/villaggio.js',
-  '/shared.js',
-  '/js/index-page.js',
   '/js/matematica-page.js',
   '/js/inglese-page.js',
   '/js/problemi-page.js',
@@ -43,14 +53,9 @@ const PRECACHE_URLS = [
   '/js/italiano-page.js',
   '/js/faq-page.js',
   '/questions-loader.js',
-  '/subject-quiz-core.js',
-  '/subject-quiz-theme.css',
   '/palette-okabe.css',
-  '/app-version.js',
-  '/manifest.json',
   '/robots.txt',
   '/sitemap.xml',
-  '/json/index.json',
   '/json/matematica.json',
   '/json/problemi.json',
   '/json/inglese.json',
@@ -79,6 +84,7 @@ const PRECACHE_URLS = [
   '/assets/donazione/qrcode-donazione.jpeg'
 ];
 
+const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|ico|txt|xml|woff2?|ttf)$/i;
 
@@ -102,9 +108,19 @@ function canCacheResponse(response) {
 // INSTALL — pre-cacha tutte le risorse essenziali
 // ============================================================
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_URLS))
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_NAME);
+    await cache.addAll(CORE_PRECACHE_URLS);
+    await Promise.all(
+      OPTIONAL_PRECACHE_URLS.map(async (url) => {
+        try {
+          await cache.add(url);
+        } catch {
+          // Non bloccare install per risorse non critiche mancanti.
+        }
+      })
+    );
+  })());
 });
 
 // ============================================================

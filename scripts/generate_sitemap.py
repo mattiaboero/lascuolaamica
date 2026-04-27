@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Genera sitemap.xml con lastmod derivato dal timestamp reale dei file."""
+
+from __future__ import annotations
+
+from datetime import datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SITEMAP_PATH = ROOT / "sitemap.xml"
+
+PAGES = [
+    ("/", "index.html", "weekly", "1.0"),
+    ("/matematica", "matematica.html", "weekly", "0.9"),
+    ("/inglese", "inglese.html", "weekly", "0.9"),
+    ("/problemi", "problemi.html", "weekly", "0.9"),
+    ("/civica", "civica.html", "weekly", "0.9"),
+    ("/geografia", "geografia.html", "weekly", "0.85"),
+    ("/storia", "storia.html", "weekly", "0.85"),
+    ("/scienze", "scienze.html", "weekly", "0.85"),
+    ("/italiano", "italiano.html", "weekly", "0.85"),
+    ("/faq", "faq.html", "weekly", "0.8"),
+    ("/accessibilita", "accessibilita.html", "monthly", "0.7"),
+    ("/supporta", "supporta.html", "monthly", "0.6"),
+]
+
+
+def _lastmod_for(filename: str) -> str:
+    path = ROOT / filename
+    if not path.exists():
+        return datetime.now().date().isoformat()
+    return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
+
+
+def main() -> int:
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for route, source_file, changefreq, priority in PAGES:
+        loc = "https://lascuolaamica.it/" if route == "/" else f"https://lascuolaamica.it{route}"
+        lastmod = _lastmod_for(source_file)
+        lines.extend(
+            [
+                "  <url>",
+                f"    <loc>{loc}</loc>",
+                f"    <lastmod>{lastmod}</lastmod>",
+                f"    <changefreq>{changefreq}</changefreq>",
+                f"    <priority>{priority}</priority>",
+                "  </url>",
+            ]
+        )
+    lines.append("</urlset>")
+    SITEMAP_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"[OK] sitemap.xml aggiornato ({len(PAGES)} URL)")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

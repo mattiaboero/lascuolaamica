@@ -2,7 +2,7 @@
   "name": "La Scuola Amica",
   "short_name": "Scuola Amica",
   "description": "Giochi educativi per la scuola primaria con villaggio educativo: matematica, inglese, problemi, civica, geografia, storia, scienze e lingua italiana",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#a8edea",
@@ -48,7 +48,7 @@
       "name": "Matematica",
       "short_name": "Matematica",
       "description": "Vai direttamente al gioco di matematica",
-      "url": "/matematica.html",
+      "url": "/matematica",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🔢</text></svg>",
@@ -60,7 +60,7 @@
       "name": "Inglese",
       "short_name": "Inglese",
       "description": "Vai direttamente al gioco di inglese",
-      "url": "/inglese.html",
+      "url": "/inglese",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🌍</text></svg>",
@@ -72,7 +72,7 @@
       "name": "Problemi",
       "short_name": "Problemi",
       "description": "Vai direttamente ai problemi di matematica",
-      "url": "/problemi.html",
+      "url": "/problemi",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🧠</text></svg>",
@@ -84,7 +84,7 @@
       "name": "Civica",
       "short_name": "Civica",
       "description": "Vai direttamente al quiz di educazione civica",
-      "url": "/civica.html",
+      "url": "/civica",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🏛️</text></svg>",
@@ -96,7 +96,7 @@
       "name": "Geografia",
       "short_name": "Geografia",
       "description": "Vai direttamente al quiz di geografia",
-      "url": "/geografia.html",
+      "url": "/geografia",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🗺️</text></svg>",
@@ -108,7 +108,7 @@
       "name": "Storia",
       "short_name": "Storia",
       "description": "Vai direttamente al quiz di storia",
-      "url": "/storia.html",
+      "url": "/storia",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>📜</text></svg>",
@@ -120,7 +120,7 @@
       "name": "Scienze",
       "short_name": "Scienze",
       "description": "Vai direttamente al quiz di scienze",
-      "url": "/scienze.html",
+      "url": "/scienze",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🔬</text></svg>",
@@ -132,7 +132,7 @@
       "name": "Italiano",
       "short_name": "Italiano",
       "description": "Vai direttamente al quiz di lingua italiana",
-      "url": "/italiano.html",
+      "url": "/italiano",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>📖</text></svg>",
@@ -144,7 +144,7 @@
       "name": "Villaggio",
       "short_name": "Villaggio",
       "description": "Apri il villaggio educativo e costruisci con i crediti",
-      "url": "/villaggio.html",
+      "url": "/villaggio",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><text y='80' font-size='80'>🏡</text></svg>",
