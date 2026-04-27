@@ -26,6 +26,7 @@ HTML_FILES = [
     "storia.html",
     "scienze.html",
     "italiano.html",
+    "chi-siamo.html",
     "faq.html",
     "supporta.html",
     "accessibilita.html",
@@ -36,7 +37,8 @@ HTML_FILES = [
 ORG_ID = "https://lascuolaamica.it/#organization"
 WEBSITE_ID = "https://lascuolaamica.it/#website"
 ORG_URL = "https://lascuolaamica.it/"
-ORG_LOGO = "https://lascuolaamica.it/screenshots/og-home-1200x630.jpg"
+ORG_LOGO = "https://lascuolaamica.it/icons/icon-512.png"
+ORG_SAME_AS = ["https://github.com/mattiaboero/lascuolaamica"]
 
 DATE_TYPES = {
     "WebSite",
@@ -79,13 +81,13 @@ def _upgrade_organization(node: dict[str, Any]) -> None:
     node["@type"] = "EducationalOrganization"
     node.setdefault("name", "La Scuola Amica")
     node.setdefault("url", ORG_URL)
-    node.setdefault(
-        "logo",
-        {
-            "@type": "ImageObject",
-            "url": ORG_LOGO,
-        },
-    )
+    node["logo"] = {
+        "@type": "ImageObject",
+        "url": ORG_LOGO,
+        "width": 512,
+        "height": 512,
+    }
+    node.setdefault("sameAs", ORG_SAME_AS)
     node.setdefault("email", "mailto:supporto@lascuolaamica.it")
     node.setdefault(
         "contactPoint",

@@ -2,6 +2,16 @@
 
 ## Unreleased - 2026-04-20
 
+- SEO social: create e collegate 8 Open Graph image dedicate per le materie (`og-<materia>-1200x630.jpg`).
+- Nuova pagina pubblica `chi-siamo` con metadata SEO/OG/JSON-LD, breadcrumb e integrazione in sitemap.
+- Info Hub: aggiunto link rapido “Chi siamo” nel pannello Info condiviso (`shared.js`).
+- PWA hardening: introdotte favicon/icone fisiche (`favicon.svg`, `.ico`, `icons/*.png`) e manifest aggiornato senza data URI SVG.
+- Allineamento runtime script IIFE: rimossi `type=\"module\"` in favore di script `defer` classici.
+- Sicurezza policy: rimossi meta CSP/Permissions-Policy duplicati dalle pagine HTML (restano su `_headers`).
+- Accessibilità/robustezza: aggiunto fallback `<noscript>` su tutte le pagine pubbliche.
+- README: rimosso percorso locale iCloud personale dalla sezione avvio in locale.
+- GEO: aggiunto file `llms.txt` alla radice progetto.
+
 - Villaggio: introdotto aggiornamento griglia mirato (`paintTile` + `updateGridArea`) per ridurre i rerender completi su piazzamento/rimozione/selezione.
 - Config materie: priorità a `window.SA.subjectConfig` con alias legacy mantenuto su `window.SUBJECT_CONFIG`.
 - Aggiunto controllo prepublish che blocca riferimenti runtime diretti a `questions.json` (architettura split JSON enforced).

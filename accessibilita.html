@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()">
 <title>Accessibilità | La Scuola Amica</title>
 <meta name="description" content="Dichiarazione di accessibilità di La Scuola Amica: stato WCAG 2.1 A/AA, metodologia di test, perimetro e canale di segnalazione.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -28,6 +26,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 <meta name="theme-color" content="#1c6eb4">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -201,6 +203,31 @@ body {
 </style>
 </head>
 <body>
+<noscript>
+  <style>
+    .noscript-msg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem;
+      background: #f4f7ff;
+      color: #1f2440;
+    }
+    .noscript-msg p { max-width: 460px; line-height: 1.6; }
+    .noscript-msg a { color: #2f7dff; font-weight: 700; }
+  </style>
+  <div class="noscript-msg">
+    <p>
+      Per usare i giochi di <strong>La Scuola Amica</strong> è necessario abilitare JavaScript nel browser.<br><br>
+      <a href="/faq">Vai alle FAQ</a>
+    </p>
+  </div>
+</noscript>
+
   <div class="wrapper">
     <div class="top-links">
       <a class="back-btn" href="index" aria-label="Torna al menu principale">← Torna al menu</a>

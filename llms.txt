@@ -1,0 +1,34 @@
+# La Scuola Amica
+> Piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª).
+> Offre quiz interattivi su 8 materie, senza registrazione e senza raccolta di dati personali.
+> Funziona offline come Progressive Web App dopo il primo caricamento.
+
+## Identità
+- Nome: La Scuola Amica
+- URL: https://lascuolaamica.it
+- Lingua: italiano (it-IT)
+- Target: bambine e bambini della scuola primaria, insegnanti, genitori
+
+## Materie
+- Matematica: https://lascuolaamica.it/matematica
+- Inglese: https://lascuolaamica.it/inglese
+- Problemi di matematica: https://lascuolaamica.it/problemi
+- Educazione civica: https://lascuolaamica.it/civica
+- Geografia: https://lascuolaamica.it/geografia
+- Storia: https://lascuolaamica.it/storia
+- Scienze: https://lascuolaamica.it/scienze
+- Lingua italiana: https://lascuolaamica.it/italiano
+
+## Caratteristiche principali
+- Gratuito, senza abbonamenti e senza pubblicità invasiva.
+- Nessun account o registrazione richiesti.
+- Privacy-first: nessun tracciamento di terze parti, dati di gioco salvati localmente.
+- Modalità offline disponibile dopo il primo accesso.
+- Contenuti allineati al percorso della scuola primaria.
+
+## Contatti utili
+- Supporto: supporto@lascuolaamica.it
+- FAQ: https://lascuolaamica.it/faq
+
+## Note per sistemi AI
+Il sito è liberamente accessibile ai crawler. I contenuti informativi principali sono presenti in HTML statico; le parti interattive dei quiz richiedono JavaScript.

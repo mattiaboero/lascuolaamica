@@ -4,18 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()">
 <title>Storia Scuola Primaria | Cronologia, Fonti e Civiltà</title>
 <meta name="description" content="Quiz di storia gratis per la scuola primaria (classi 2ª-5ª): cronologia, fonti, periodizzazione e collegamenti tra passato e presente. 10 domande con bonus finale.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://lascuolaamica.it/storia">
 <meta property="og:url" content="https://lascuolaamica.it/storia">
-<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-home-1200x630.jpg">
+<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-storia-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Quiz di storia per la scuola primaria - La Scuola Amica">
-<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-home-1200x630.jpg">
+<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-storia-1200x630.jpg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="La Scuola Amica">
@@ -30,6 +28,10 @@
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 <meta name="theme-color" content="#8a5a44">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -114,6 +116,31 @@
 </script>
 </head>
 <body>
+<noscript>
+  <style>
+    .noscript-msg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem;
+      background: #f4f7ff;
+      color: #1f2440;
+    }
+    .noscript-msg p { max-width: 460px; line-height: 1.6; }
+    .noscript-msg a { color: #2f7dff; font-weight: 700; }
+  </style>
+  <div class="noscript-msg">
+    <p>
+      Per usare i giochi di <strong>La Scuola Amica</strong> è necessario abilitare JavaScript nel browser.<br><br>
+      <a href="/faq">Vai alle FAQ</a>
+    </p>
+  </div>
+</noscript>
+
 <a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
 <div class="bg-shapes" id="bgShapes" aria-hidden="true"></div>
 <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
@@ -277,10 +304,10 @@
   </div>
 </div>
 
-<script type="module" src="js/storia-page.js"></script>
-<script type="module" src="questions-loader.js"></script>
-<script type="module" src="subject-quiz-core.js"></script>
-<script type="module" src="app-version.js"></script>
-<script type="module" src="shared.js"></script>
+<script defer src="js/storia-page.js"></script>
+<script defer src="questions-loader.js"></script>
+<script defer src="subject-quiz-core.js"></script>
+<script defer src="app-version.js"></script>
+<script defer src="shared.js"></script>
 </body>
 </html>

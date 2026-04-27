@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v430';
+const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v43';
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -37,6 +37,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/italiano.html',
   '/villaggio.html',
   '/accessibilita.html',
+  '/chi-siamo.html',
   '/supporta.html',
   '/faq.html',
   '/inglese.css',
@@ -67,6 +68,24 @@ const OPTIONAL_PRECACHE_URLS = [
   '/screenshots/home-390x844.webp',
   '/screenshots/home-1280x720.webp',
   '/screenshots/og-home-1200x630.jpg',
+  '/screenshots/og-matematica-1200x630.jpg',
+  '/screenshots/og-inglese-1200x630.jpg',
+  '/screenshots/og-problemi-1200x630.jpg',
+  '/screenshots/og-civica-1200x630.jpg',
+  '/screenshots/og-geografia-1200x630.jpg',
+  '/screenshots/og-storia-1200x630.jpg',
+  '/screenshots/og-scienze-1200x630.jpg',
+  '/screenshots/og-italiano-1200x630.jpg',
+  '/screenshots/og-chi-siamo-1200x630.jpg',
+  '/favicon.svg',
+  '/favicon.ico',
+  '/icons/favicon-16x16.png',
+  '/icons/favicon-32x32.png',
+  '/icons/apple-touch-icon.png',
+  '/icons/icon-192.png',
+  '/icons/icon-192-maskable.png',
+  '/icons/icon-512.png',
+  '/icons/icon-512-maskable.png',
   '/assets/village/alberi.svg',
   '/assets/village/biblioteca.svg',
   '/assets/village/campo-basket.svg',

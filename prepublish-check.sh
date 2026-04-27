@@ -16,7 +16,10 @@ HTML_FILES=(
   "scienze.html"
   "italiano.html"
   "villaggio.html"
+  "chi-siamo.html"
+  "accessibilita.html"
   "supporta.html"
+  "supporto-satispay.html"
   "faq.html"
 )
 
@@ -62,17 +65,17 @@ check_html_integrity() {
     echo "[OK] $file: no inline onclick attributes"
   fi
 
-  if grep -qiE '<meta[^>]+http-equiv=["'"'"']Content-Security-Policy["'"'"']' "$file"; then
-    echo "[OK] $file: CSP meta found"
+  if grep -qiE '<link[^>]+rel=["'"'"']icon["'"'"']' "$file"; then
+    echo "[OK] $file: favicon links found"
   else
-    echo "[ERROR] $file: missing Content-Security-Policy meta"
+    echo "[ERROR] $file: missing favicon links"
     status=1
   fi
 
-  if grep -qiE '<meta[^>]+http-equiv=["'"'"']Permissions-Policy["'"'"']' "$file"; then
-    echo "[OK] $file: Permissions-Policy meta found"
+  if grep -qi '<noscript>' "$file"; then
+    echo "[OK] $file: noscript fallback found"
   else
-    echo "[ERROR] $file: missing Permissions-Policy meta"
+    echo "[ERROR] $file: missing <noscript> fallback"
     status=1
   fi
 }
@@ -186,11 +189,20 @@ else
     status=1
   fi
 
-  if grep -qE '^/assets/\*$' _headers && grep -qE '^/screenshots/\*$' _headers \
-    && grep -qE 'Cache-Control:[[:space:]]+public, max-age=31536000, immutable' _headers; then
-    echo "[OK] _headers: long cache rules found for assets/screenshots"
+  if grep -qE 'Content-Security-Policy:[[:space:]]+' _headers \
+    && grep -qE 'Permissions-Policy:[[:space:]]+' _headers; then
+    echo "[OK] _headers: CSP and Permissions-Policy found"
   else
-    echo "[ERROR] _headers: missing long cache rules for /assets/* or /screenshots/*"
+    echo "[ERROR] _headers: missing CSP and/or Permissions-Policy"
+    status=1
+  fi
+
+  if grep -qE '^/assets/\*$' _headers && grep -qE '^/screenshots/\*$' _headers \
+    && grep -qE '^/icons/\*$' _headers \
+    && grep -qE 'Cache-Control:[[:space:]]+public, max-age=31536000, immutable' _headers; then
+    echo "[OK] _headers: long cache rules found for assets/icons/screenshots"
+  else
+    echo "[ERROR] _headers: missing long cache rules for /assets/*, /icons/* or /screenshots/*"
     status=1
   fi
 fi
@@ -230,6 +242,7 @@ else
     "https://lascuolaamica.it/storia"
     "https://lascuolaamica.it/scienze"
     "https://lascuolaamica.it/italiano"
+    "https://lascuolaamica.it/chi-siamo"
     "https://lascuolaamica.it/supporta"
     "https://lascuolaamica.it/faq"
     "https://lascuolaamica.it/accessibilita"

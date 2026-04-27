@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()">
 <title>La Scuola Amica | Giochi Educativi per la Scuola Primaria</title>
 <meta name="description" content="La Scuola Amica: giochi educativi gratis per la scuola primaria (classi 2ª-5ª), anche offline. Matematica, inglese, problemi, civica, geografia, storia, scienze e italiano.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -31,6 +29,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#9B5DE5">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Scuola Amica">
@@ -138,7 +140,9 @@
       "url": "https://lascuolaamica.it/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://lascuolaamica.it/screenshots/og-home-1200x630.jpg"
+        "url": "https://lascuolaamica.it/icons/icon-512.png",
+        "width": 512,
+        "height": 512
       },
       "email": "mailto:supporto@lascuolaamica.it",
       "contactPoint": {
@@ -148,7 +152,10 @@
         "availableLanguage": [
           "it"
         ]
-      }
+      },
+      "sameAs": [
+        "https://github.com/mattiaboero/lascuolaamica"
+      ]
     }
   ]
 }
@@ -156,6 +163,31 @@
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<noscript>
+  <style>
+    .noscript-msg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem;
+      background: #f4f7ff;
+      color: #1f2440;
+    }
+    .noscript-msg p { max-width: 460px; line-height: 1.6; }
+    .noscript-msg a { color: #2f7dff; font-weight: 700; }
+  </style>
+  <div class="noscript-msg">
+    <p>
+      Per usare i giochi di <strong>La Scuola Amica</strong> è necessario abilitare JavaScript nel browser.<br><br>
+      <a href="/faq">Vai alle FAQ</a>
+    </p>
+  </div>
+</noscript>
+
 <a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
 
 <!-- Sky elements (decorative) -->
@@ -346,9 +378,9 @@
   </div>
 </div>
 
-<script type="module" src="js/index-page.js"></script>
+<script defer src="js/index-page.js"></script>
 
-<script type="module" src="app-version.js"></script>
-<script type="module" src="shared.js"></script>
+<script defer src="app-version.js"></script>
+<script defer src="shared.js"></script>
 </body>
 </html>

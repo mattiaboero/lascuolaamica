@@ -19,6 +19,7 @@ PAGES = [
     ("/storia", "storia.html", "weekly", "0.85"),
     ("/scienze", "scienze.html", "weekly", "0.85"),
     ("/italiano", "italiano.html", "weekly", "0.85"),
+    ("/chi-siamo", "chi-siamo.html", "monthly", "0.75"),
     ("/faq", "faq.html", "weekly", "0.8"),
     ("/accessibilita", "accessibilita.html", "monthly", "0.7"),
     ("/supporta", "supporta.html", "monthly", "0.6"),

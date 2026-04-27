@@ -13,6 +13,7 @@
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
   const ACCESSIBILITY_URL = 'accessibilita';
+  const ABOUT_URL = 'chi-siamo';
   const APP_VERSION = (window.SA && window.SA.version) || '4.3';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
@@ -811,6 +812,12 @@
     accessibility.className = 'info-hub-btn';
     accessibility.textContent = 'Accessibilità';
     actions.appendChild(accessibility);
+
+    const about = document.createElement('a');
+    about.href = ABOUT_URL;
+    about.className = 'info-hub-btn';
+    about.textContent = 'Chi siamo';
+    actions.appendChild(about);
 
     const updates = document.createElement('button');
     updates.type = 'button';
