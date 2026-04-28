@@ -54,6 +54,14 @@ body {
   color: var(--info-text) !important;
 }
 
+.text-link,
+.card a:not(.action-btn):not(.back-btn):not(.link-btn) {
+  color: var(--info-accent-strong) !important;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .section {
   border-top: 1px solid #e7eef8 !important;
 }
