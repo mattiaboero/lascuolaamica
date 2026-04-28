@@ -50,7 +50,7 @@
       date: '27 aprile 2026',
       items: [
         'Audit UX/UI completato: testi piccoli aumentati, contrasti migliorati e touch target principali allineati.',
-        'Aggiunta mascotte guida (🦉) nelle pagine quiz con reazioni durante le risposte.',
+        'Aggiunta mascotte "Gufo Cervellino" (🦉) nelle pagine quiz con reazioni durante le risposte.',
         'Introdotto toggle “Meno animazioni” nel pannello Info con preferenza salvata nel browser.',
         'Ridotte animazioni decorative per migliorare concentrazione durante il gioco.',
         'Spostate le sezioni SEO descrittive fuori dalla card interattiva principale nelle materie.',

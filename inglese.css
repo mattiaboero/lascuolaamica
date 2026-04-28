@@ -330,7 +330,7 @@ header {
   background: rgba(31, 127, 224, 0.12);
   color: #1f7fe0;
   font-weight: 900;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   letter-spacing: 0.2px;
 }
 
@@ -599,6 +599,14 @@ header {
   overflow: hidden;
 }
 
+.question-card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 22px 24px 18px;
+  overflow: visible;
+}
+
 .question-card::before {
   content: '';
   position: absolute;
@@ -611,16 +619,17 @@ header {
 }
 
 .mascot-q {
-  position: absolute;
-  top: 12px;
-  left: 14px;
-  width: 54px;
-  height: 78px;
+  position: static;
+  align-self: flex-start;
+  flex-shrink: 0;
+  width: 72px;
+  height: 104px;
   background: url('assets/mascotte/cervellino-neutral.png') center / contain no-repeat;
   pointer-events: none;
   transition: transform 0.2s ease, filter 0.2s ease;
   text-indent: -9999px;
   overflow: hidden;
+  margin-top: 2px;
 }
 
 .mascot-q[data-state="neutral"] {
@@ -630,6 +639,7 @@ header {
 .mascot-q[data-state="happy"] {
   background-image: url('assets/mascotte/cervellino-happy.png');
   transform: scale(1.08) rotate(-6deg);
+  transform-origin: bottom center;
 }
 
 .mascot-q[data-state="sad"] {
@@ -640,6 +650,12 @@ header {
 .mascot-q[data-state="celebrate"] {
   background-image: url('assets/mascotte/cervellino-celebrate.png');
   transform: scale(1.12);
+  transform-origin: bottom center;
+}
+
+.question-card-main .q-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .q-emoji {
@@ -1316,6 +1332,17 @@ footer {
   }
 }
 
+@media (max-width: 380px) {
+  .question-card-main {
+    gap: 10px;
+  }
+
+  .question-card-main .mascot-q {
+    width: 56px;
+    height: 80px;
+  }
+}
+
 @media (hover: none) {
   .back-btn:hover,
   .icon-btn:hover,
@@ -1330,6 +1357,15 @@ footer {
     transform: none;
     filter: none;
   }
+}
+
+html[data-motion="reduce"] *,
+html[data-motion="reduce"] *::before,
+html[data-motion="reduce"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

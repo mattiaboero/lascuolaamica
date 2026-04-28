@@ -203,11 +203,13 @@
   <div class="screen" id="screenGame">
     <div class="full-width">
       <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
-      <div class="q-card">
-        <div class="q-meta" id="qMeta">Domanda 1 di 10</div>
+      <div class="q-card q-card-main">
         <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
-        <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
-        <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
+        <div class="q-content">
+          <div class="q-meta" id="qMeta">Domanda 1 di 10</div>
+          <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
+          <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -250,6 +252,10 @@
         <div class="score-item"><div class="num" id="rCorrect">0</div><div class="lbl">Risposte esatte</div></div>
         <div class="score-item"><div class="num" id="rWrong">0</div><div class="lbl">Risposte errate</div></div>
         <div class="score-item"><div class="num" id="rArea">Mista</div><div class="lbl">Ambito</div></div>
+      </div>
+      <div class="result-credits" id="resultCredits" hidden aria-live="polite">
+        <span class="result-credits-label">Crediti guadagnati</span>
+        <strong class="result-credits-value" id="rCredits">+0</strong>
       </div>
       <div class="result-btns">
         <button type="button" class="btn-replay" data-action="restart-game">Gioca ancora</button>

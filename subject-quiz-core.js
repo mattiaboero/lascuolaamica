@@ -125,6 +125,7 @@
   let bonusType = null;
   let bonusApplied = false;
   let creditsAwarded = false;
+  let creditsEarned = 0;
   let showAllAreas = false;
 
   function $(id) {
@@ -1122,6 +1123,7 @@
     bonusType = null;
     bonusApplied = false;
     creditsAwarded = false;
+    creditsEarned = 0;
 
     buildDots();
     updateScoreBar();
@@ -1325,12 +1327,13 @@
         bonusType,
         bonusApplied
       });
-      if (reward.total > 0) {
-        economy.addCredits(reward.total, {
+      creditsEarned = Math.max(0, safeInt(reward.total, 0));
+      if (creditsEarned > 0) {
+        economy.addCredits(creditsEarned, {
           source: 'quiz-materia',
           note: `${selectedArea === 'mixed' ? 'mista' : selectedArea} · classe ${selectedClass}`
         });
-        msg += ` Hai guadagnato ${reward.total} crediti.`;
+        msg += ` Hai guadagnato ${creditsEarned} crediti.`;
       }
       creditsAwarded = true;
     }
@@ -1352,6 +1355,11 @@
     setText('rWrong', wrong);
     const areaText = selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea] || selectedArea;
     setText('rArea', `${areaText} · ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`}`);
+    const creditsWrap = $('resultCredits');
+    if (creditsWrap) {
+      creditsWrap.hidden = creditsEarned <= 0;
+    }
+    setText('rCredits', creditsEarned > 0 ? `+${creditsEarned}` : '+0');
 
     saveScore();
     showScreen('screenResult');

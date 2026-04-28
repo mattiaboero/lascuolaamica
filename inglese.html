@@ -245,11 +245,13 @@
         <div class="timer-bar" id="timerBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-label="Tempo rimasto"></div>
       </div>
       <div class="progress-dots" id="progDots" aria-hidden="true"></div>
-      <div class="question-card">
+      <div class="question-card question-card-main">
         <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
-        <span class="q-emoji" id="qEmoji" aria-hidden="true">🐱</span>
-        <div class="q-label" id="qLabel" aria-hidden="true">Come si dice in inglese?</div>
-        <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
+        <div class="q-content">
+          <span class="q-emoji" id="qEmoji" aria-hidden="true">🐱</span>
+          <div class="q-label" id="qLabel" aria-hidden="true">Come si dice in inglese?</div>
+          <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
+        </div>
       </div>
       <div class="answers-grid" id="ansArea" aria-label="Risposte disponibili"></div>
     </div>
