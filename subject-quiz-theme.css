@@ -589,8 +589,8 @@ header {
   position: static;
   align-self: flex-start;
   flex-shrink: 0;
-  width: 72px;
-  height: 104px;
+  width: 88px;
+  height: 128px;
   background: url('assets/mascotte/cervellino-neutral.png') center / contain no-repeat;
   opacity: 0.98;
   pointer-events: none;
@@ -624,6 +624,13 @@ header {
 .q-content {
   flex: 1;
   min-width: 0;
+}
+
+@media (min-width: 600px) {
+  .mascot-q {
+    width: 96px;
+    height: 138px;
+  }
 }
 
 .q-meta {
@@ -819,6 +826,33 @@ header {
 .result-card {
   text-align: center;
   animation: resultBoom 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mascot-result {
+  width: 130px;
+  height: 188px;
+  margin: 0 auto 4px;
+  background: center / contain no-repeat;
+  animation: mascotResultIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.mascot-result[data-state="neutral"] {
+  background-image: url('assets/mascotte/cervellino-neutral.png');
+}
+
+.mascot-result[data-state="happy"] {
+  background-image: url('assets/mascotte/cervellino-happy.png');
+}
+
+.mascot-result[data-state="sad"] {
+  background-image: url('assets/mascotte/cervellino-sad.png');
+}
+
+.mascot-result[data-state="celebrate"] {
+  background-image: url('assets/mascotte/cervellino-celebrate.png');
+  animation:
+    mascotResultIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
+    mascotResultCelebrate 0.6s ease 1s 2;
 }
 
 .result-emoji {
@@ -1074,6 +1108,36 @@ header {
   }
 }
 
+@keyframes mascotResultIn {
+  0% {
+    transform: scale(0.4) rotate(8deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.1) rotate(-3deg);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.96) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes mascotResultCelebrate {
+  0%, 100% {
+    transform: scale(1) rotate(0);
+  }
+  25% {
+    transform: scale(1.08) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.08) rotate(5deg);
+  }
+}
+
 @keyframes emojiWiggle {
   0%, 100% {
     transform: rotate(0);
@@ -1284,8 +1348,15 @@ header {
   }
 
   .q-card-main .mascot-q {
-    width: 56px;
-    height: 80px;
+    width: 72px;
+    height: 104px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mascot-result {
+    width: 108px;
+    height: 156px;
   }
 }
 

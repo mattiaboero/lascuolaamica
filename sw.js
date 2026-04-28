@@ -114,6 +114,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/assets/mascotte/cervellino-happy.png',
   '/assets/mascotte/cervellino-sad.png',
   '/assets/mascotte/cervellino-celebrate.png',
+  '/assets/mascotte/cervellino-waving-03.png',
   '/assets/donazione/qrcode-donazione.jpeg'
 ];
 

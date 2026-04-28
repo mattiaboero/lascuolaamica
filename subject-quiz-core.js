@@ -140,6 +140,13 @@
     el.setAttribute('data-state', key);
   }
 
+  function setMascotResult(state) {
+    const el = $('mascotResult');
+    if (!el) return;
+    const key = Object.prototype.hasOwnProperty.call(MASCOT_STATES, state) ? state : 'neutral';
+    el.setAttribute('data-state', key);
+  }
+
   function safeInt(value, fallback = 0) {
     const n = Number(value);
     if (!Number.isFinite(n)) return fallback;
@@ -1130,6 +1137,7 @@
     $('scoreBar').style.display = 'flex';
     showScreen('screenGame');
     setMascot('neutral');
+    setMascotResult('neutral');
     loadQuestion();
   }
 
@@ -1318,7 +1326,9 @@
       title = 'Benissimo!';
       msg = 'Buona padronanza degli argomenti.';
     }
-    setMascot(finalScore >= 350 ? 'celebrate' : finalScore >= 150 ? 'happy' : 'neutral');
+    const mascotState = finalScore >= 350 ? 'celebrate' : finalScore >= 150 ? 'happy' : 'neutral';
+    setMascot(mascotState);
+    setMascotResult(mascotState);
 
     const economy = getEconomy();
     if (!creditsAwarded && economy) {
@@ -1476,6 +1486,7 @@
     showScreen('screenStart');
     $('scoreBar').style.display = 'none';
     setMascot('neutral');
+    setMascotResult('neutral');
   }
 
   function showScreen(id) {

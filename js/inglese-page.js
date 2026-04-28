@@ -242,6 +242,13 @@ function setMascot(state) {
   el.setAttribute('data-state', key);
 }
 
+function setMascotResult(state) {
+  const el = document.getElementById('mascotResult');
+  if (!el) return;
+  const key = Object.prototype.hasOwnProperty.call(MASCOT_STATES, state) ? state : 'neutral';
+  el.setAttribute('data-state', key);
+}
+
 function safeInt(value, fallback = 0) {
   const n = Number(value);
   if (!Number.isFinite(n)) return fallback;
@@ -654,6 +661,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   refreshLevelButtonsForClass();
   bindStaticActions();
   setMascot('neutral');
+  setMascotResult('neutral');
   spawnBg();
 });
 
@@ -853,6 +861,7 @@ function startGame(lvl) {
   buildDots();
   updateBar();
   setMascot('neutral');
+  setMascotResult('neutral');
   loadQ();
 }
 
@@ -1092,7 +1101,9 @@ function finishGame(mode) {
     frag.appendChild(s);
   }
   sr.appendChild(frag);
-  setMascot(pct === 1 || bonusApplied ? 'celebrate' : pct >= 0.6 ? 'happy' : 'neutral');
+  const mascotState = pct === 1 || bonusApplied ? 'celebrate' : pct >= 0.6 ? 'happy' : 'neutral';
+  setMascot(mascotState);
+  setMascotResult(mascotState);
   saveLBEntry();
   showScreen('scrResult');
   if(pct>=.8 || bonusApplied) launchConfetti();
@@ -1276,6 +1287,7 @@ function goLevels() {
   creditsAwarded = false;
   refreshLevelButtonsForClass();
   setMascot('neutral');
+  setMascotResult('neutral');
   showScreen('scrLevel');
 }
 

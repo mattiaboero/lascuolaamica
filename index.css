@@ -87,6 +87,33 @@ body{
 /* HEADER */
 header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(.36,.07,.19,.97);}
 @keyframes bounceIn{0%{transform:scale(0) rotate(-8deg);opacity:0}60%{transform:scale(1.08) rotate(2deg)}80%{transform:scale(.97)}100%{transform:scale(1);opacity:1}}
+
+/* ===== MASCOTTE HOMEPAGE ===== */
+.mascot-home{
+  width:150px;
+  height:215px;
+  margin:0 auto 4px;
+  background:center/contain no-repeat;
+  pointer-events:none;
+  animation:mascotHomeIn .7s cubic-bezier(.22,1,.36,1) .15s both;
+}
+.mascot-home[data-state="wave"]{background-image:url('assets/mascotte/cervellino-waving-03.png');}
+.mascot-home[data-state="celebrate"]{background-image:url('assets/mascotte/cervellino-celebrate.png');}
+.mascot-home[data-state="neutral"]{background-image:url('assets/mascotte/cervellino-neutral.png');}
+.mascot-home[data-state="happy"]{background-image:url('assets/mascotte/cervellino-happy.png');}
+@keyframes mascotHomeIn{
+  0%{transform:translateY(24px) scale(.7);opacity:0}
+  60%{transform:translateY(-6px) scale(1.05);opacity:1}
+  80%{transform:translateY(2px) scale(.98)}
+  100%{transform:translateY(0) scale(1);opacity:1}
+}
+@keyframes mascotHomeIdle{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  30%{transform:translateY(-6px) rotate(-3deg)}
+  70%{transform:translateY(-4px) rotate(3deg)}
+}
+.mascot-home.idle{animation:mascotHomeIdle 3s ease-in-out infinite;}
+
 .badge{
   display:inline-block;
   background:white;border-radius:50px;
@@ -188,12 +215,21 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   width:100%;max-width:980px;
 }
 @media(max-width:1100px){
+  .mascot-home{
+    width:130px;
+    height:186px;
+  }
   .cards-row{
     grid-template-columns:repeat(2,minmax(220px,1fr));
     max-width:760px;
   }
 }
 @media(max-width:640px){
+  .mascot-home{
+    width:110px;
+    height:158px;
+    margin-bottom:2px;
+  }
   .cards-row{grid-template-columns:1fr;max-width:420px;}
 }
 

@@ -74,6 +74,10 @@
 - FAQ e `llms.txt` allineati con dati quantitativi progetto (oltre 7.300 domande, totale 7.348).
 - Esteso il supporto `data-motion="reduce"` a `faq.css` e `info-pages.css`.
 - Aggiornata la pagina Accessibilità con la nuova versione portale.
+- Aggiornati gli asset PNG della mascotte “Gufo Cervellino” (`neutral`, `happy`, `sad`, `celebrate`) e aggiunto il nuovo stato homepage `cervellino-waving-03.png`.
+- Homepage: introdotta la mascotte di benvenuto nell’header (`.mascot-home`) con animazione di entrata + idle, sincronizzata con il toggle “Meno animazioni”.
+- Quiz: mascotte domanda ridimensionata in modo responsive (88/128 base, 96/138 da tablet) e aggiunta mascotte grande nella schermata risultato con stato emotivo dinamico.
+- Service Worker: precache esteso al nuovo asset `assets/mascotte/cervellino-waving-03.png`.
 
 ## 4.2.1 - 2026-04-18
 

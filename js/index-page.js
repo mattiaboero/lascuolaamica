@@ -28,3 +28,26 @@ if (villageDevBtn) {
     alert('Funzionalità in fase di sviluppo');
   });
 }
+
+// Mascotte homepage — animazione idle dopo entrata
+(function () {
+  var mascotHome = document.getElementById('mascotHome');
+  if (!mascotHome) return;
+
+  var idleDelay = 900;
+
+  var idleTimer = setTimeout(function () {
+    mascotHome.classList.add('idle');
+  }, idleDelay);
+
+  var root = document.documentElement;
+  var observer = new MutationObserver(function () {
+    if (root.getAttribute('data-motion') === 'reduce') {
+      clearTimeout(idleTimer);
+      mascotHome.classList.remove('idle');
+    } else {
+      mascotHome.classList.add('idle');
+    }
+  });
+  observer.observe(root, { attributes: true, attributeFilter: ['data-motion'] });
+})();
