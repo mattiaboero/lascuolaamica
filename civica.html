@@ -184,17 +184,6 @@
         Ogni risposta corretta vale <strong>10 punti</strong>.<br>
         Alla fine puoi scegliere il bonus: <strong>x5 / x10 / x25</strong> oppure tenere il punteggio base.
       </div>
-      <section class="seo-static" aria-label="Argomenti educazione civica scuola primaria">
-        <h2>Educazione civica primaria: regole, ambiente, digitale e sicurezza stradale</h2>
-        <p>Questa pagina propone quiz di educazione civica per la scuola primaria, dalla classe seconda alla quinta, con percorsi adatti all'età e alle competenze attese.</p>
-        <ul>
-          <li>Costituzione e regole di convivenza: diritti, doveri e rispetto reciproco.</li>
-          <li>Ambiente e sostenibilità: raccolta differenziata, acqua, energia e cura del territorio.</li>
-          <li>Cittadinanza digitale: privacy, comportamento online e uso consapevole della rete.</li>
-          <li>Educazione stradale e gentilezza: segnali, sicurezza e comportamenti responsabili.</li>
-        </ul>
-        <p>Ogni partita ha 10 domande con 4 opzioni. Le domande ruotano automaticamente per evitare ripetizioni e mantenere alta l'attenzione.</p>
-      </section>
       <div class="section-label class-selector-label">Scegli la classe</div>
       <div class="class-grid" id="classGrid" aria-label="Selezione classe">
         <button type="button" class="class-btn" data-action="select-class" data-class="2" aria-pressed="false">
@@ -247,6 +236,18 @@
       </div>
       <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
     </main>
+
+    <section class="seo-static" aria-label="Argomenti educazione civica scuola primaria">
+              <h2>Educazione civica primaria: regole, ambiente, digitale e sicurezza stradale</h2>
+              <p>Questa pagina propone quiz di educazione civica per la scuola primaria, dalla classe seconda alla quinta, con percorsi adatti all'età e alle competenze attese.</p>
+              <ul>
+                <li>Costituzione e regole di convivenza: diritti, doveri e rispetto reciproco.</li>
+                <li>Ambiente e sostenibilità: raccolta differenziata, acqua, energia e cura del territorio.</li>
+                <li>Cittadinanza digitale: privacy, comportamento online e uso consapevole della rete.</li>
+                <li>Educazione stradale e gentilezza: segnali, sicurezza e comportamenti responsabili.</li>
+              </ul>
+              <p>Ogni partita ha 10 domande con 4 opzioni. Le domande ruotano automaticamente per evitare ripetizioni e mantenere alta l'attenzione.</p>
+            </section>
   </div>
 
   <div class="screen" id="screenGame">
@@ -254,6 +255,7 @@
       <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
       <div class="q-card">
         <div class="q-meta" id="qMeta">Domanda 1 di 10</div>
+        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
         <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
         <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
       </div>

@@ -169,17 +169,6 @@
         Ogni risposta corretta vale 1 punto.<br>
         Alla fine puoi scegliere il bonus: x5 / x10 / x25 oppure tenere il punteggio base.
       </div>
-      <section class="seo-static" aria-label="Argomenti inglese scuola primaria">
-        <h2>Esercizi di inglese primaria online gratis: lessico, frasi e comprensione</h2>
-        <p>Questa pagina è pensata per chi cerca esercizi di inglese per la scuola primaria, dalla classe seconda alla quinta, con livelli progressivi e attività guidate.</p>
-        <ul>
-          <li>Vocabolario di base: colori, numeri, animali, famiglia e oggetti quotidiani.</li>
-          <li>Frasi semplici e strutture fondamentali per comunicare.</li>
-          <li>Comprensione in contesto e scelta della risposta corretta.</li>
-          <li>Percorsi a livelli per consolidare gradualmente le competenze.</li>
-        </ul>
-        <p>Ogni partita propone 10 domande con 4 opzioni. Le domande ruotano tra le sessioni per limitare ripetizioni e favorire allenamento reale.</p>
-      </section>
       <div class="section-label class-selector-label">Scegli la classe</div>
       <div class="class-grid" id="classGrid" aria-label="Selezione classe">
         <button type="button" class="class-btn" data-action="select-class" data-class="2" aria-pressed="false">
@@ -234,7 +223,19 @@
         </button>
       </div>
     </div>
-  </main>
+    </main>
+
+    <section class="seo-static" aria-label="Argomenti inglese scuola primaria">
+      <h2>Esercizi di inglese primaria online gratis: lessico, frasi e comprensione</h2>
+      <p>Questa pagina è pensata per chi cerca esercizi di inglese per la scuola primaria, dalla classe seconda alla quinta, con livelli progressivi e attività guidate.</p>
+      <ul>
+        <li>Vocabolario di base: colori, numeri, animali, famiglia e oggetti quotidiani.</li>
+        <li>Frasi semplici e strutture fondamentali per comunicare.</li>
+        <li>Comprensione in contesto e scelta della risposta corretta.</li>
+        <li>Percorsi a livelli per consolidare gradualmente le competenze.</li>
+      </ul>
+      <p>Ogni partita propone 10 domande con 4 opzioni. Le domande ruotano tra le sessioni per limitare ripetizioni e favorire allenamento reale.</p>
+    </section>
   </div>
 
   <!-- SCREEN: Game -->
@@ -245,7 +246,7 @@
       </div>
       <div class="progress-dots" id="progDots" aria-hidden="true"></div>
       <div class="question-card">
-        <div class="mascot-q" id="mascot" aria-hidden="true">🐠</div>
+        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
         <span class="q-emoji" id="qEmoji" aria-hidden="true">🐱</span>
         <div class="q-label" id="qLabel" aria-hidden="true">Come si dice in inglese?</div>
         <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>

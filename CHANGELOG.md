@@ -2,6 +2,18 @@
 
 ## Unreleased - 2026-04-27
 
+- Mascotte “Cervellino” integrata in PNG trasparente con 4 stati (`neutral`, `happy`, `sad`, `celebrate`) su tutte le materie.
+- Allineati i motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) al nuovo stato mascotte con feedback dinamico durante partita/bonus/risultato.
+- Villaggio: aggiunta micro-celebrazione visiva all’acquisto (tile pop + flash card shop) con toast di conferma costruzione.
+- Pagine informative (`chi-siamo`, `per-insegnanti`, `per-genitori`, `ai-info`) rese più sobrie con stylesheet dedicato `info-pages.css`.
+- Service Worker: precache esteso ai nuovi asset mascotte PNG e al nuovo stylesheet informativo.
+- Audit UX/UI bambini: aumentata la leggibilità dei microtesti (classi/ambiti, score label, breadcrumb) e migliorato il contrasto dei tag/card in home.
+- Touch ergonomics: uniformati target minimi dei controlli principali (`back`, `skip bonus`, `icon button`, `close modal`, bottoni Villaggio).
+- Quiz feedback: progress dots più grandi, stato risposta corretto/sbagliato più evidente (non solo colore), animazione feedback estesa e celebrativa.
+- Mascotte estesa alle pagine quiz materie (🦉) con stato dinamico nei motori quiz condivisi e dedicati.
+- Riduzione distrazioni: diminuito il numero/opacity degli elementi decorativi animati nelle pagine principali.
+- Accessibilità movimento: aggiunto toggle “Animazioni: Automatiche / Meno animazioni” nel pannello Info con persistenza su `localStorage`.
+- Layout contenuti: spostate le sezioni `seo-static` fuori dalla card interattiva principale nelle pagine quiz.
 - SEO social: create e collegate 8 Open Graph image dedicate per le materie (`og-<materia>-1200x630.jpg`).
 - Nuova pagina pubblica `chi-siamo` con metadata SEO/OG/JSON-LD, breadcrumb e integrazione in sitemap.
 - Info Hub: aggiunto link rapido “Chi siamo” nel pannello Info condiviso (`shared.js`).

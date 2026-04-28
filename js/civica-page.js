@@ -73,6 +73,12 @@ const CIVICA_SOURCE_AREA_MAP = {
 
 const FEEDBACK_OK = ['Esatto! 🎉','Ottimo! ⭐','Wow! 🌟','Giusto! ✅','Continua così! 🚀'];
 const FEEDBACK_KO = ['Riprova! 💪','Quasi! ✨','Non mollare! 🌈'];
+const MASCOT_STATES = {
+  neutral: true,
+  happy: true,
+  sad: true,
+  celebrate: true
+};
 
 const BANK = {
   rules: [
@@ -162,6 +168,14 @@ let bonusApplied = false;
 let creditsAwarded = false;
 
 function $(id){ return document.getElementById(id); }
+
+function setMascot(state) {
+  const el = $('mascot');
+  if (!el) return;
+  const key = Object.prototype.hasOwnProperty.call(MASCOT_STATES, state) ? state : 'neutral';
+  el.textContent = '';
+  el.setAttribute('data-state', key);
+}
 
 function safeInt(value, fallback = 0) {
   const n = Number(value);
@@ -603,13 +617,13 @@ function spawnShapes() {
   if (!bg) return;
   if (prefersReducedMotion()) return;
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 4; i++) {
     const d = document.createElement('div');
     d.className = 'shape';
     d.textContent = icons[Math.floor(Math.random() * icons.length)];
     d.style.left = Math.random() * 100 + 'vw';
     d.style.fontSize = (0.9 + Math.random() * 1.3) + 'rem';
-    d.style.animationDuration = (10 + Math.random() * 14) + 's';
+    d.style.animationDuration = (16 + Math.random() * 18) + 's';
     d.style.animationDelay = (Math.random() * 20) + 's';
     frag.appendChild(d);
   }
@@ -766,6 +780,7 @@ function startGame() {
   updateScoreBar();
   $('scoreBar').style.display = 'flex';
   showScreen('screenGame');
+  setMascot('neutral');
   loadQuestion();
 }
 
@@ -799,6 +814,7 @@ function updateScoreBar() {
 
 function loadQuestion() {
   answered = false;
+  setMascot('neutral');
   const q = questions[curQ];
   const areaLabel = AREA_LABELS[q.area] || AREA_LABELS.mixed;
   const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
@@ -836,12 +852,14 @@ function checkAnswer(chosen, correctAnswer, btn) {
     points += POINTS_PER_Q;
     correct++;
     playOk();
+    setMascot('happy');
     showFeedback(true);
   } else {
     btn.classList.add('wrong');
     wrong++;
     buttons.forEach(b => { if (b.textContent === correctAnswer) b.classList.add('correct'); });
     playKo();
+    setMascot('sad');
     showFeedback(false);
   }
 
@@ -869,6 +887,7 @@ function openBonusQuestion(type) {
 
   $('bonusMeta').textContent = `Bonus ${BONUS_LABELS[type]} · Moltiplicatore x${bonusFactor}`;
   $('bonusText').textContent = q.q;
+  setMascot('neutral');
 
   const area = $('bonusAnswers');
   area.textContent = '';
@@ -896,12 +915,14 @@ function checkBonusAnswer(chosen, correctAnswer, btn) {
   if (ok) {
     btn.classList.add('correct');
     playPerfect();
+    setMascot('celebrate');
     showFeedback(true, 'Bonus corretto!');
     finishGame('bonus-ok');
   } else {
     btn.classList.add('wrong');
     buttons.forEach(b => { if (b.textContent === correctAnswer) b.classList.add('correct'); });
     playKo();
+    setMascot('sad');
     showFeedback(false, 'Bonus non riuscito');
     finishGame('bonus-ko');
   }
@@ -928,6 +949,7 @@ function finishGame(mode) {
   if (finalScore >= 750) { emoji = '🏆'; title = 'Fantastico!'; msg = 'Conoscenza civica super: punteggio altissimo!'; }
   else if (finalScore >= 350) { emoji = '🌟'; title = 'Complimenti!'; msg = 'Ottimo risultato, continua così!'; }
   else if (finalScore >= 150) { emoji = '😊'; title = 'Benissimo!'; msg = 'Buona base di educazione civica.'; }
+  setMascot(finalScore >= 350 ? 'celebrate' : finalScore >= 150 ? 'happy' : 'neutral');
 
   const economy = getEconomy();
   if (!creditsAwarded && economy) {
@@ -1059,6 +1081,7 @@ function renderLB() {
 function goStart() {
   showScreen('screenStart');
   $('scoreBar').style.display = 'none';
+  setMascot('neutral');
 }
 
 function showScreen(id) {

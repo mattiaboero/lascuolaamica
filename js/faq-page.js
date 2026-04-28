@@ -12,13 +12,13 @@
 
   const icons = ['❓', '📘', '💡', '🧠', '🔎', '📚', '✅', '🎯'];
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < 4; i++) {
     const d = document.createElement('div');
     d.className = 'shape';
     d.textContent = icons[Math.floor(Math.random() * icons.length)];
     d.style.left = Math.random() * 100 + 'vw';
     d.style.fontSize = (0.9 + Math.random() * 1.2) + 'rem';
-    d.style.animationDuration = (10 + Math.random() * 12) + 's';
+    d.style.animationDuration = (16 + Math.random() * 16) + 's';
     d.style.animationDelay = (Math.random() * 16) + 's';
     frag.appendChild(d);
   }

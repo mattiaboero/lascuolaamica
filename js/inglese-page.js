@@ -179,9 +179,14 @@ const ENGLISH_AREA_ICON = {
 };
 
 // ============================================================
-// MASCOTS PER LEVEL
+// MASCOT STATES
 // ============================================================
-const MASCOTS = { 1:['🐠','🐡','🦀','🐙'], 2:['🐬','🦈','🐳','🐟'], 3:['🦑','🦞','🦐','🐚'] };
+const MASCOT_STATES = {
+  neutral: true,
+  happy: true,
+  sad: true,
+  celebrate: true
+};
 const OK_MSGS  = ['Esatto! 🎉','Complimenti! ⭐','Wow! 🌟','Yes! 🎊','Super! 💪','Continua così! 🚀','Top! 🔥'];
 const KO_MSGS  = ['Quasi! 😅','Try again! 💪','Non mollare! 🌈','Keep going! ✨'];
 const BONUS_FACTORS = { easy: 5, medium: 10, hard: 25 };
@@ -225,9 +230,17 @@ const BONUS_Q = {
 // ============================================================
 let level=1, qs=[], curQ=0, ok=0, ko=0, streak=0, bestStreak=0;
 let hist=[], answered=false, timerIv=null, timerStart=null;
-let muted=false, audioCtx=null, curMascot='🐠';
+let muted=false, audioCtx=null;
 let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false, creditsAwarded=false;
 let selectedClass='3';
+
+function setMascot(state) {
+  const el = document.getElementById('mascot');
+  if (!el) return;
+  const key = Object.prototype.hasOwnProperty.call(MASCOT_STATES, state) ? state : 'neutral';
+  el.textContent = '';
+  el.setAttribute('data-state', key);
+}
 
 function safeInt(value, fallback = 0) {
   const n = Number(value);
@@ -640,6 +653,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await hydrateEnglishFromJson();
   refreshLevelButtonsForClass();
   bindStaticActions();
+  setMascot('neutral');
   spawnBg();
 });
 
@@ -692,14 +706,14 @@ function spawnBg() {
   if (prefersReducedMotion()) return;
   const icons = ['🔤', '📚', '✏️', '📝', '🌍', '🗣️', '🎯'];
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < 26; i++) {
+  for (let i = 0; i < 4; i++) {
     const s = document.createElement('div');
     s.className = 'shape';
     s.setAttribute('aria-hidden', 'true');
     s.textContent = icons[Math.floor(Math.random() * icons.length)];
     s.style.left = Math.random() * 100 + 'vw';
     s.style.fontSize = (22 + Math.random() * 24) + 'px';
-    s.style.animationDuration = (12 + Math.random() * 18) + 's';
+    s.style.animationDuration = (18 + Math.random() * 20) + 's';
     s.style.animationDelay = (Math.random() * 12) + 's';
     frag.appendChild(s);
   }
@@ -833,13 +847,12 @@ function startGame(lvl) {
   bonusType = null;
   bonusApplied = false;
   creditsAwarded = false;
-  const ms = MASCOTS[lvl];
-  curMascot = ms[Math.floor(Math.random()*ms.length)];
   playStart();
   showScreen('scrGame');
   document.getElementById('scoreBar').style.display='flex';
   buildDots();
   updateBar();
+  setMascot('neutral');
   loadQ();
 }
 
@@ -866,7 +879,7 @@ function loadQ() {
   answered=false;
   const q=qs[curQ];
   const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
-  document.getElementById('mascot').textContent=curMascot;
+  setMascot('neutral');
   document.getElementById('qEmoji').textContent=q.e;
   document.getElementById('qLabel').textContent = `${classLabel} · Come si dice in inglese?`;
   const qTextEl = document.getElementById('qText');
@@ -909,12 +922,14 @@ function checkAns(chosen, correct, btn) {
     btn.classList.add('correct');
     ok++; streak++;
     if(streak>bestStreak) bestStreak=streak;
+    setMascot('happy');
     streak>=3 ? playStreak() : playOk();
     showFb(true);
   } else {
     btn.classList.add('wrong');
     ko++; streak=0;
     document.querySelectorAll('.ans-btn').forEach(b=>{if(b.textContent===correct) b.classList.add('correct');});
+    setMascot('sad');
     playKo();
     showFb(false);
   }
@@ -962,6 +977,7 @@ function openBonusPick() {
   document.getElementById('scoreBar').style.display='none';
   baseScore = ok;
   document.getElementById('baseScoreLabel').textContent = baseScore;
+  setMascot('neutral');
   showScreen('scrBonusPick');
 }
 
@@ -999,12 +1015,14 @@ function checkBonusAns(chosen, correctAnswer, btn) {
   const okBonus = chosen === correctAnswer;
   if (okBonus) {
     btn.classList.add('correct');
+    setMascot('celebrate');
     playPerfect();
     showFb(true);
     finishGame('bonus-ok');
   } else {
     btn.classList.add('wrong');
     buttons.forEach(b => { if (b.textContent === correctAnswer) b.classList.add('correct'); });
+    setMascot('sad');
     playKo();
     showFb(false);
     finishGame('bonus-ko');
@@ -1074,6 +1092,7 @@ function finishGame(mode) {
     frag.appendChild(s);
   }
   sr.appendChild(frag);
+  setMascot(pct === 1 || bonusApplied ? 'celebrate' : pct >= 0.6 ? 'happy' : 'neutral');
   saveLBEntry();
   showScreen('scrResult');
   if(pct>=.8 || bonusApplied) launchConfetti();
@@ -1256,6 +1275,7 @@ function goLevels() {
   bonusApplied = false;
   creditsAwarded = false;
   refreshLevelButtonsForClass();
+  setMascot('neutral');
   showScreen('scrLevel');
 }
 

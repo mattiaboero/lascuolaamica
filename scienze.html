@@ -182,20 +182,21 @@
         Ogni risposta corretta vale <strong>10 punti</strong>.<br>
         Alla fine puoi scegliere il bonus: <strong>x5 / x10 / x25</strong> oppure tenere il punteggio base.
       </div>
-      <section class="seo-static" aria-label="Argomenti scienze scuola primaria">
-        <h2>Scienze scuola primaria: viventi, ambiente, corpo umano e fenomeni</h2>
-        <p>Questa pagina risponde a chi cerca esercizi di scienze per la scuola primaria, con quiz progressivi dalla classe seconda alla quinta e difficoltà adattata.</p>
-        <ul>
-          <li>Materia, energia, trasformazioni e fenomeni fisici.</li>
-          <li>Ciclo dell'acqua, ecosistemi, stagioni e ambiente.</li>
-          <li>Viventi e non viventi, corpo umano, salute e prevenzione.</li>
-          <li>Tecnologia, sostenibilità e comportamento responsabile.</li>
-        </ul>
-        <p>Ogni partita comprende 10 domande con 4 opzioni di risposta. Le domande ruotano tra le sessioni per evitare ripetizioni frequenti.</p>
-      </section>
       <div class="area-grid" id="areaGrid" aria-label="Selezione ambito"></div>
       <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
     </main>
+
+    <section class="seo-static" aria-label="Argomenti scienze scuola primaria">
+              <h2>Scienze scuola primaria: viventi, ambiente, corpo umano e fenomeni</h2>
+              <p>Questa pagina risponde a chi cerca esercizi di scienze per la scuola primaria, con quiz progressivi dalla classe seconda alla quinta e difficoltà adattata.</p>
+              <ul>
+                <li>Materia, energia, trasformazioni e fenomeni fisici.</li>
+                <li>Ciclo dell'acqua, ecosistemi, stagioni e ambiente.</li>
+                <li>Viventi e non viventi, corpo umano, salute e prevenzione.</li>
+                <li>Tecnologia, sostenibilità e comportamento responsabile.</li>
+              </ul>
+              <p>Ogni partita comprende 10 domande con 4 opzioni di risposta. Le domande ruotano tra le sessioni per evitare ripetizioni frequenti.</p>
+            </section>
   </div>
 
   <div class="screen" id="screenGame">
@@ -203,6 +204,7 @@
       <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
       <div class="q-card">
         <div class="q-meta" id="qMeta">Domanda 1 di 10</div>
+        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
         <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
         <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
       </div>

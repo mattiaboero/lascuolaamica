@@ -27,6 +27,11 @@
     LEGACY: 'legacy',
     OKABE: 'okabe-ito'
   };
+  const MOTION_KEY = 'scuolaAmica_motion_v1';
+  const MOTION_MODE = {
+    AUTO: 'auto',
+    REDUCE: 'reduce'
+  };
   const DEBUG_MODE = (() => {
     try {
       const host = window.location.hostname;
@@ -44,6 +49,11 @@
     {
       date: '27 aprile 2026',
       items: [
+        'Audit UX/UI completato: testi piccoli aumentati, contrasti migliorati e touch target principali allineati.',
+        'Aggiunta mascotte guida (🦉) nelle pagine quiz con reazioni durante le risposte.',
+        'Introdotto toggle “Meno animazioni” nel pannello Info con preferenza salvata nel browser.',
+        'Ridotte animazioni decorative per migliorare concentrazione durante il gioco.',
+        'Spostate le sezioni SEO descrittive fuori dalla card interattiva principale nelle materie.',
         'Aggiunte le pagine Per insegnanti, Per genitori e Informazioni AI con metadata SEO/JSON-LD dedicati.',
         'Aggiornati sitemap e redirect con le nuove rotte pubbliche.',
         'Migliorata la semantica FAQ usando struttura lista ul/li con details nativi.',
@@ -237,6 +247,13 @@
     return null;
   }
 
+  function normalizeMotion(mode) {
+    const value = String(mode || '').toLowerCase().trim();
+    if (value === 'reduce' || value === 'reduced' || value === 'less-motion') return MOTION_MODE.REDUCE;
+    if (value === 'auto' || value === 'system' || value === 'default') return MOTION_MODE.AUTO;
+    return null;
+  }
+
   function getQueryPalette() {
     try {
       const mode = new URLSearchParams(window.location.search).get('palette');
@@ -253,6 +270,14 @@
 
   function savePalettePreference(mode) {
     storageSet(PALETTE_KEY, mode);
+  }
+
+  function loadMotionPreference() {
+    return normalizeMotion(storageGet(MOTION_KEY));
+  }
+
+  function saveMotionPreference(mode) {
+    storageSet(MOTION_KEY, mode);
   }
 
   function ensurePaletteStylesheet() {
@@ -293,11 +318,34 @@
     });
   }
 
+  function applyMotionMode(mode) {
+    document.documentElement.setAttribute('data-motion', mode);
+  }
+
+  function updateMotionToggleState(root) {
+    const scope = root || document;
+    const mode = document.documentElement.getAttribute('data-motion') || MOTION_MODE.AUTO;
+    scope.querySelectorAll('.motion-toggle-btn').forEach((btn) => {
+      const btnMode = normalizeMotion(btn.dataset.motionMode) || MOTION_MODE.AUTO;
+      const active = btnMode === mode;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
   function setPaletteMode(mode) {
     const normalized = normalizePalette(mode) || PALETTE_MODE.LEGACY;
     savePalettePreference(normalized);
     applyPaletteMode(normalized);
     updatePaletteToggleState(document);
+    return normalized;
+  }
+
+  function setMotionMode(mode) {
+    const normalized = normalizeMotion(mode) || MOTION_MODE.AUTO;
+    saveMotionPreference(normalized);
+    applyMotionMode(normalized);
+    updateMotionToggleState(document);
     return normalized;
   }
 
@@ -309,6 +357,11 @@
     const activeMode = queryMode || storedMode || PALETTE_MODE.LEGACY;
 
     setPaletteMode(activeMode);
+  }
+
+  function initMotionMode() {
+    const activeMode = loadMotionPreference() || MOTION_MODE.AUTO;
+    setMotionMode(activeMode);
   }
 
   function loadWallet() {
@@ -899,9 +952,39 @@
     paletteRow.appendChild(standardBtn);
     paletteRow.appendChild(accessibleBtn);
 
+    const motionRow = document.createElement('div');
+    motionRow.className = 'motion-toggle info-hub-motion';
+    motionRow.setAttribute('role', 'group');
+    motionRow.setAttribute('aria-label', 'Preferenza animazioni');
+
+    const motionLabel = document.createElement('span');
+    motionLabel.className = 'motion-toggle-label';
+    motionLabel.textContent = 'Animazioni:';
+
+    const motionAutoBtn = document.createElement('button');
+    motionAutoBtn.type = 'button';
+    motionAutoBtn.className = 'motion-toggle-btn';
+    motionAutoBtn.dataset.motionMode = MOTION_MODE.AUTO;
+    motionAutoBtn.textContent = 'Automatiche';
+
+    const motionReduceBtn = document.createElement('button');
+    motionReduceBtn.type = 'button';
+    motionReduceBtn.className = 'motion-toggle-btn';
+    motionReduceBtn.dataset.motionMode = MOTION_MODE.REDUCE;
+    motionReduceBtn.textContent = 'Meno animazioni';
+
+    [motionAutoBtn, motionReduceBtn].forEach((btn) => {
+      btn.addEventListener('click', () => setMotionMode(btn.dataset.motionMode));
+    });
+
+    motionRow.appendChild(motionLabel);
+    motionRow.appendChild(motionAutoBtn);
+    motionRow.appendChild(motionReduceBtn);
+
     body.appendChild(intro);
     body.appendChild(actions);
     body.appendChild(paletteRow);
+    body.appendChild(motionRow);
 
     box.appendChild(closeBtn);
     box.appendChild(title);
@@ -910,6 +993,7 @@
     document.body.appendChild(overlay);
 
     updatePaletteToggleState(overlay);
+    updateMotionToggleState(overlay);
   }
 
   function ensureFooterInfoHub() {
@@ -999,6 +1083,37 @@
         border-color:#2d6cdf;
         color:#fff;
       }
+      .motion-toggle{
+        display:inline-flex;
+        align-items:center;
+        gap:6px;
+      }
+      .motion-toggle-label{
+        font-size:.78rem;
+        font-weight:900;
+        color:#5f6b7a;
+      }
+      .motion-toggle-btn{
+        border:1px solid rgba(95,107,122,.36);
+        background:#fff;
+        color:#5a6877;
+        border-radius:999px;
+        padding:4px 10px;
+        font-size:.76rem;
+        line-height:1.2;
+        font-weight:900;
+        cursor:pointer;
+        transition:background-color .15s,color .15s,border-color .15s;
+      }
+      .motion-toggle-btn:hover{
+        border-color:#2d6cdf;
+        color:#2d6cdf;
+      }
+      .motion-toggle-btn.is-active{
+        background:#2d6cdf;
+        border-color:#2d6cdf;
+        color:#fff;
+      }
       .footer-support-cta{
         width:auto;
         max-width:calc(100% - 8px);
@@ -1042,6 +1157,21 @@
       html[data-palette="okabe-ito"] .palette-toggle-label{
         color:#4f6174;
       }
+      html[data-palette="okabe-ito"] .motion-toggle-btn.is-active{
+        background:#0072B2;
+        border-color:#0072B2;
+      }
+      html[data-palette="okabe-ito"] .motion-toggle-label{
+        color:#4f6174;
+      }
+      html[data-motion="reduce"] *,
+      html[data-motion="reduce"] *::before,
+      html[data-motion="reduce"] *::after{
+        animation-duration:0.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:0.01ms !important;
+        scroll-behavior:auto !important;
+      }
       .info-hub-body{
         display:grid;
         gap:12px;
@@ -1076,8 +1206,15 @@
       .info-hub-palette{
         justify-content:center;
       }
+      .info-hub-motion{
+        justify-content:center;
+      }
       @media (max-width:620px){
         .palette-toggle{
+          width:100%;
+          justify-content:center;
+        }
+        .motion-toggle{
           width:100%;
           justify-content:center;
         }
@@ -1158,9 +1295,19 @@
     },
     modes: { ...PALETTE_MODE }
   };
+  SA.motion = {
+    get mode() {
+      return document.documentElement.getAttribute('data-motion') || MOTION_MODE.AUTO;
+    },
+    set(mode) {
+      return setMotionMode(mode);
+    },
+    modes: { ...MOTION_MODE }
+  };
   SA.version = APP_VERSION;
 
   initPaletteMode();
+  initMotionMode();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSharedUi, { once: true });

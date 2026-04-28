@@ -256,6 +256,24 @@
     renderInfo();
   }
 
+  function pulseElement(el, className, durationMs) {
+    if (!el) return;
+    el.classList.remove(className);
+    void el.offsetWidth;
+    el.classList.add(className);
+    setTimeout(() => el.classList.remove(className), durationMs);
+  }
+
+  function triggerPurchaseFeedback(buildingId, x, y) {
+    pulseElement(getGridTile(x, y), 'purchase-pop', 760);
+    const shopCards = document.querySelectorAll('.shop-item');
+    shopCards.forEach((card) => {
+      if (String(card.dataset.buildingId || '') === String(buildingId || '')) {
+        pulseElement(card, 'purchase-flash', 760);
+      }
+    });
+  }
+
   function placeBuilding(building, x, y) {
     const economy = getEconomy();
     if (!economy) return;
@@ -308,6 +326,8 @@
     updateGridArea(x, y, building.w, building.h);
     updateGridSelectionStyles();
     renderInfo();
+    triggerPurchaseFeedback(building.id, x, y);
+    toast(`${building.name} costruito!`);
   }
 
   function removeSelectedPlacement() {

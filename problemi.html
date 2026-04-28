@@ -211,17 +211,6 @@
         <div class="intro-pill">Bonus finale facoltativo</div>
         <div class="intro-pill">Moltiplicatore x5/x10/x25</div>
       </div>
-      <section class="seo-static" aria-label="Argomenti problemi matematica scuola primaria">
-        <h2>Problemi di matematica primaria: ragionamento e scelta dell'operazione</h2>
-        <p>Questa pagina aiuta chi cerca problemi di matematica per la scuola primaria con testi brevi, dati utili e 4 risposte possibili per ogni domanda.</p>
-        <ul>
-          <li>Comprensione del testo del problema e identificazione della richiesta.</li>
-          <li>Scelta dell'operazione corretta: addizione, sottrazione, moltiplicazione o divisione.</li>
-          <li>Problemi a uno o più passaggi, con difficoltà adattata alla classe.</li>
-          <li>Strategie di controllo del risultato e ragionamento logico.</li>
-        </ul>
-        <p>Ogni sessione contiene 10 problemi. Le domande cambiano tra le partite per mantenere allenamento vario e non ripetitivo.</p>
-      </section>
       <div class="section-label class-selector-label">Scegli la classe</div>
       <div class="class-grid" id="classGrid" aria-label="Selezione classe">
         <button type="button" class="class-btn" data-action="select-class" data-class="2" aria-pressed="false">
@@ -247,6 +236,18 @@
       </div>
       <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
     </main>
+
+    <section class="seo-static" aria-label="Argomenti problemi matematica scuola primaria">
+              <h2>Problemi di matematica primaria: ragionamento e scelta dell'operazione</h2>
+              <p>Questa pagina aiuta chi cerca problemi di matematica per la scuola primaria con testi brevi, dati utili e 4 risposte possibili per ogni domanda.</p>
+              <ul>
+                <li>Comprensione del testo del problema e identificazione della richiesta.</li>
+                <li>Scelta dell'operazione corretta: addizione, sottrazione, moltiplicazione o divisione.</li>
+                <li>Problemi a uno o più passaggi, con difficoltà adattata alla classe.</li>
+                <li>Strategie di controllo del risultato e ragionamento logico.</li>
+              </ul>
+              <p>Ogni sessione contiene 10 problemi. Le domande cambiano tra le partite per mantenere allenamento vario e non ripetitivo.</p>
+            </section>
   </div>
 
   <div class="screen" id="screenGame">
@@ -254,6 +255,7 @@
       <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
       <div class="q-card">
         <div class="q-meta" id="qMeta">Problema 1 di 10</div>
+        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
         <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
         <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
       </div>

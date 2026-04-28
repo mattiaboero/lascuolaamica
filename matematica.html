@@ -183,20 +183,21 @@
         Ogni risposta corretta vale <strong>10 punti</strong>.<br>
         Alla fine puoi scegliere il bonus: <strong>x5 / x10 / x25</strong> oppure tenere il punteggio base.
       </div>
-      <section class="seo-static" aria-label="Argomenti matematica scuola primaria">
-        <h2>Matematica primaria online: tabelline, calcolo, geometria e logica</h2>
-        <p>Questa pagina risponde a chi cerca esercizi di matematica per la scuola primaria dalla classe seconda alla quinta, con quiz progressivi e punteggio.</p>
-        <ul>
-          <li>Calcolo mentale, addizioni, sottrazioni, moltiplicazioni e divisioni.</li>
-          <li>Tabelline e automatizzazione dei fatti numerici.</li>
-          <li>Problemi, strategie risolutive e controllo del risultato.</li>
-          <li>Geometria, misure, dati, relazioni e logica.</li>
-        </ul>
-        <p>Ogni partita include 10 domande con 4 risposte possibili. Le domande ruotano tra le sessioni per ridurre la ripetizione meccanica.</p>
-      </section>
       <div class="area-grid" id="areaGrid" aria-label="Selezione ambito"></div>
       <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
     </main>
+
+    <section class="seo-static" aria-label="Argomenti matematica scuola primaria">
+              <h2>Matematica primaria online: tabelline, calcolo, geometria e logica</h2>
+              <p>Questa pagina risponde a chi cerca esercizi di matematica per la scuola primaria dalla classe seconda alla quinta, con quiz progressivi e punteggio.</p>
+              <ul>
+                <li>Calcolo mentale, addizioni, sottrazioni, moltiplicazioni e divisioni.</li>
+                <li>Tabelline e automatizzazione dei fatti numerici.</li>
+                <li>Problemi, strategie risolutive e controllo del risultato.</li>
+                <li>Geometria, misure, dati, relazioni e logica.</li>
+              </ul>
+              <p>Ogni partita include 10 domande con 4 risposte possibili. Le domande ruotano tra le sessioni per ridurre la ripetizione meccanica.</p>
+            </section>
   </div>
 
   <div class="screen" id="screenGame">
@@ -204,6 +205,7 @@
       <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
       <div class="q-card">
         <div class="q-meta" id="qMeta">Domanda 1 di 10</div>
+        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
         <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
         <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
       </div>

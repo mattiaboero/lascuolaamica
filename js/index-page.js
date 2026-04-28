@@ -8,14 +8,14 @@ const reducedMotion = (() => {
 })();
 if (cont && !reducedMotion) {
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 4; i++) {
     const el = document.createElement('div');
     el.className = 'float-el';
     el.setAttribute('aria-hidden','true');
     el.textContent = items[Math.floor(Math.random() * items.length)];
     el.style.left = Math.random() * 100 + 'vw';
     el.style.fontSize = (.9 + Math.random() * 1.3) + 'rem';
-    el.style.animationDuration = (10 + Math.random() * 14) + 's';
+    el.style.animationDuration = (16 + Math.random() * 18) + 's';
     el.style.animationDelay = (Math.random() * 20) + 's';
     frag.appendChild(el);
   }

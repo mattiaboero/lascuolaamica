@@ -1,0 +1,79 @@
+:root {
+  --info-bg-a: #f3f7fc;
+  --info-bg-b: #e9f1fb;
+  --info-card: #ffffff;
+  --info-border: #d8e4f4;
+  --info-text: #1f2a37;
+  --info-muted: #4a5b70;
+  --info-accent: #1f5faa;
+  --info-accent-strong: #154a86;
+  --info-accent-soft: #e7f0fb;
+}
+
+body {
+  background: linear-gradient(180deg, var(--info-bg-a) 0%, var(--info-bg-b) 100%) !important;
+  color: var(--info-text) !important;
+}
+
+.breadcrumbs {
+  color: var(--info-muted) !important;
+}
+
+.breadcrumbs a {
+  color: var(--info-accent) !important;
+  text-decoration: underline;
+}
+
+.back-btn {
+  color: var(--info-accent-strong) !important;
+  background: #ffffff !important;
+  border-color: #c8daef !important;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12) !important;
+}
+
+.link-btn {
+  color: var(--info-accent-strong) !important;
+  background: #ffffff !important;
+  border-color: #c8daef !important;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.1) !important;
+}
+
+.card {
+  background: var(--info-card) !important;
+  border: 1px solid var(--info-border) !important;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12) !important;
+}
+
+.title,
+.section h2 {
+  color: var(--info-accent-strong) !important;
+}
+
+.text,
+.list li {
+  color: var(--info-text) !important;
+}
+
+.section {
+  border-top: 1px solid #e7eef8 !important;
+}
+
+.action-btn {
+  border-color: #c8daef !important;
+  background: #ffffff !important;
+  color: var(--info-accent-strong) !important;
+}
+
+.action-btn.secondary {
+  background: var(--info-accent-soft) !important;
+  color: var(--info-accent-strong) !important;
+}
+
+@media (hover: none) {
+  .back-btn:hover,
+  .link-btn:hover,
+  .action-btn:hover {
+    transform: none !important;
+    filter: none !important;
+  }
+}

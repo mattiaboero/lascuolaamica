@@ -45,6 +45,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/faq.html',
   '/inglese.css',
   '/faq.css',
+  '/info-pages.css',
   '/villaggio.css',
   '/villaggio.js',
   '/js/matematica-page.js',
@@ -109,6 +110,10 @@ const OPTIONAL_PRECACHE_URLS = [
   '/assets/village/supermercato.svg',
   '/assets/village/uffici.svg',
   '/assets/village/universita.svg',
+  '/assets/mascotte/cervellino-neutral.png',
+  '/assets/mascotte/cervellino-happy.png',
+  '/assets/mascotte/cervellino-sad.png',
+  '/assets/mascotte/cervellino-celebrate.png',
   '/assets/donazione/qrcode-donazione.jpeg'
 ];
 

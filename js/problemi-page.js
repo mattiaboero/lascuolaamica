@@ -57,6 +57,12 @@ const SOFTMAX_TEMPERATURE = 1.2;
 
 const FEEDBACK_OK = ['Esatto! 🎉','Ottimo! ⭐','Wow! 🌟','Giusto! ✅','Continua così! 🚀'];
 const FEEDBACK_KO = ['Riprova! 💪','Quasi! ✨','Non mollare! 🌈'];
+const MASCOT_STATES = {
+  neutral: true,
+  happy: true,
+  sad: true,
+  celebrate: true
+};
 
 let PROBLEMS_POOL = [
   { t: 'Fabio entra a scuola alle 8 ed esce alle 13. Quante ore resta a scuola?', a: 5 },
@@ -120,6 +126,14 @@ let creditsAwarded = false;
 let selectedClass = '3';
 
 function $(id){ return document.getElementById(id); }
+
+function setMascot(state) {
+  const el = $('mascot');
+  if (!el) return;
+  const key = Object.prototype.hasOwnProperty.call(MASCOT_STATES, state) ? state : 'neutral';
+  el.textContent = '';
+  el.setAttribute('data-state', key);
+}
 
 function safeInt(value, fallback = 0) {
   const n = Number(value);
@@ -543,13 +557,13 @@ function spawnShapes() {
   if (!bg) return;
   if (prefersReducedMotion()) return;
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 4; i++) {
     const d = document.createElement('div');
     d.className = 'shape';
     d.textContent = icons[Math.floor(Math.random() * icons.length)];
     d.style.left = Math.random() * 100 + 'vw';
     d.style.fontSize = (.9 + Math.random() * 1.3) + 'rem';
-    d.style.animationDuration = (10 + Math.random() * 14) + 's';
+    d.style.animationDuration = (16 + Math.random() * 18) + 's';
     d.style.animationDelay = (Math.random() * 20) + 's';
     frag.appendChild(d);
   }
@@ -649,6 +663,7 @@ function startGame() {
   updateScoreBar();
   $('scoreBar').style.display = 'flex';
   showScreen('screenGame');
+  setMascot('neutral');
   loadQuestion();
 }
 
@@ -682,6 +697,7 @@ function updateScoreBar() {
 
 function loadQuestion() {
   answered = false;
+  setMascot('neutral');
   const q = questions[curQ];
   const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
   $('qMeta').textContent = `Problema ${curQ + 1} di ${TOTAL_Q} · ${classLabel}`;
@@ -746,6 +762,7 @@ function checkAnswer(chosen, correct, btn) {
     btn.classList.add('correct');
     points += POINTS_PER_Q;
     playOk();
+    setMascot('happy');
     showFeedback(true);
   } else {
     btn.classList.add('wrong');
@@ -753,6 +770,7 @@ function checkAnswer(chosen, correct, btn) {
       if (normalizeAnswerValue(b.textContent) === wanted) b.classList.add('correct');
     });
     playKo();
+    setMascot('sad');
     showFeedback(false);
   }
 
@@ -780,6 +798,7 @@ function openBonusQuestion(type) {
 
   $('bonusMeta').textContent = `Bonus ${BONUS_LABELS[type]} · Moltiplicatore x${factor}`;
   $('bonusText').textContent = q.t;
+  setMascot('neutral');
 
   const area = $('bonusAnswers');
   area.textContent = '';
@@ -808,6 +827,7 @@ function checkBonusAnswer(chosen, correct, btn) {
   if (ok) {
     btn.classList.add('correct');
     playPerfect();
+    setMascot('celebrate');
     showFeedback(true, 'Bonus corretto!');
     finishGame('bonus-ok');
   } else {
@@ -816,6 +836,7 @@ function checkBonusAnswer(chosen, correct, btn) {
       if (normalizeAnswerValue(b.textContent) === wanted) b.classList.add('correct');
     });
     playKo();
+    setMascot('sad');
     showFeedback(false, 'Bonus non riuscito');
     finishGame('bonus-ko');
   }
@@ -843,6 +864,7 @@ function finishGame(mode) {
   if (finalScore >= 750) { emoji = '🏆'; title = 'Fantastico!'; msg = 'Moltiplicatore centrato al massimo!'; }
   else if (finalScore >= 300) { emoji = '🌟'; title = 'Complimenti!'; msg = 'Punteggio super, continua così!'; }
   else if (finalScore >= 100) { emoji = '😊'; title = 'Benissimo!'; msg = 'Ottima base sui problemi.'; }
+  setMascot(finalScore >= 300 ? 'celebrate' : finalScore >= 100 ? 'happy' : 'neutral');
 
   const economy = getEconomy();
   if (!creditsAwarded && economy) {
@@ -965,6 +987,7 @@ function renderLB() {
 function goStart() {
   showScreen('screenStart');
   $('scoreBar').style.display = 'none';
+  setMascot('neutral');
 }
 
 function showScreen(id) {

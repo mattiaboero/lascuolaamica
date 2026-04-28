@@ -58,6 +58,12 @@
   const BONUS_LABELS = cfg.bonusLabels || { easy: 'Facile', medium: 'Media', hard: 'Difficile' };
   const FEEDBACK_OK = cfg.feedbackOk || ['Esatto!', 'Ottimo!', 'Complimenti!', 'Continua così!'];
   const FEEDBACK_KO = cfg.feedbackKo || ['Riprova!', 'Quasi!', 'Non mollare!'];
+  const MASCOT_STATES = {
+    neutral: true,
+    happy: true,
+    sad: true,
+    celebrate: true
+  };
   const LB_KEY = cfg.lbKey || 'subject_lb_v1';
   const CURSOR_KEY = cfg.cursorKey || 'subject_cursor_v1';
   const HISTORY_KEY = cfg.historyKey || `${CURSOR_KEY}_history_v2`;
@@ -72,6 +78,7 @@
   const SOFTMAX_TOP_K = Math.max(3, Number(cfg.softmaxTopK || 6));
   const SOFTMAX_TEMPERATURE = Math.max(0.35, Number(cfg.softmaxTemperature || 1.25));
   const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedAreaRepeatLimit || 2));
+  const AREA_VISIBLE_LIMIT = Math.max(6, Number(cfg.areaVisibleLimit || 8));
 
   const CLASS_DEFAULTS = {
     2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Consolidiamo le basi' },
@@ -118,9 +125,18 @@
   let bonusType = null;
   let bonusApplied = false;
   let creditsAwarded = false;
+  let showAllAreas = false;
 
   function $(id) {
     return document.getElementById(id);
+  }
+
+  function setMascot(state) {
+    const el = $('mascot');
+    if (!el) return;
+    const key = Object.prototype.hasOwnProperty.call(MASCOT_STATES, state) ? state : 'neutral';
+    el.textContent = '';
+    el.setAttribute('data-state', key);
   }
 
   function safeInt(value, fallback = 0) {
@@ -547,9 +563,13 @@
     const availableKeys = normalizeSelectedAreaForClass();
     grid.textContent = '';
     const frag = document.createDocumentFragment();
+    const availableAreas = (cfg.areas || []).filter((a) => a.key === 'mixed' || availableKeys.includes(a.key));
+    const hasOverflow = availableAreas.length > AREA_VISIBLE_LIMIT;
+    const areasToRender = hasOverflow && !showAllAreas
+      ? availableAreas.slice(0, AREA_VISIBLE_LIMIT)
+      : availableAreas;
 
-    (cfg.areas || []).forEach((a) => {
-      if (a.key !== 'mixed' && !availableKeys.includes(a.key)) return;
+    areasToRender.forEach((a) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'area-btn' + (a.key === selectedArea ? ' selected' : '');
@@ -577,6 +597,20 @@
     });
 
     grid.appendChild(frag);
+
+    const existingToggle = $('areaMoreBtn');
+    if (existingToggle) existingToggle.remove();
+    if (hasOverflow) {
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.id = 'areaMoreBtn';
+      toggle.className = 'area-more-btn';
+      toggle.dataset.action = 'toggle-areas';
+      toggle.textContent = showAllAreas
+        ? 'Mostra meno ambiti'
+        : `Mostra altri ${availableAreas.length - AREA_VISIBLE_LIMIT} ambiti`;
+      grid.insertAdjacentElement('afterend', toggle);
+    }
   }
 
   function bindActions() {
@@ -616,6 +650,10 @@
         case 'select-class':
           selectClass(target.dataset.class, target);
           break;
+        case 'toggle-areas':
+          showAllAreas = !showAllAreas;
+          buildAreaGrid();
+          break;
         default:
           break;
       }
@@ -637,6 +675,7 @@
       btn.setAttribute('aria-pressed', 'true');
     }
 
+    showAllAreas = false;
     buildAreaGrid();
   }
 
@@ -663,14 +702,14 @@
     if (prefersReducedMotion()) return;
     const icons = cfg.bgIcons || ['📘', '🧠', '⭐', '✏️'];
     const frag = document.createDocumentFragment();
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 4; i++) {
       const d = document.createElement('div');
       d.className = 'shape';
       d.textContent = icons[Math.floor(Math.random() * icons.length)];
       d.style.left = Math.random() * 100 + 'vw';
-      d.style.fontSize = 0.9 + Math.random() * 1.3 + 'rem';
-      d.style.animationDuration = 10 + Math.random() * 14 + 's';
-      d.style.animationDelay = Math.random() * 20 + 's';
+      d.style.fontSize = 0.9 + Math.random() * 0.9 + 'rem';
+      d.style.animationDuration = 18 + Math.random() * 18 + 's';
+      d.style.animationDelay = Math.random() * 10 + 's';
       frag.appendChild(d);
     }
     bg.appendChild(frag);
@@ -1088,6 +1127,7 @@
     updateScoreBar();
     $('scoreBar').style.display = 'flex';
     showScreen('screenGame');
+    setMascot('neutral');
     loadQuestion();
   }
 
@@ -1122,6 +1162,7 @@
 
   function loadQuestion() {
     answered = false;
+    setMascot('neutral');
     const q = questions[curQ];
     const areaLabel = AREA_LABELS[q.area] || AREA_LABELS.mixed || 'Sessione';
     const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
@@ -1161,6 +1202,7 @@
       points += POINTS_PER_Q;
       correct += 1;
       playOk();
+      setMascot('happy');
       showFeedback(true);
     } else {
       btn.classList.add('wrong');
@@ -1169,6 +1211,7 @@
         if (b.textContent === correctAnswer) b.classList.add('correct');
       });
       playKo();
+      setMascot('sad');
       showFeedback(false);
     }
 
@@ -1198,6 +1241,7 @@
 
     $('bonusMeta').textContent = `Bonus ${BONUS_LABELS[type] || type} · Moltiplicatore x${bonusFactor}`;
     $('bonusText').textContent = q.q;
+    setMascot('neutral');
 
     const area = $('bonusAnswers');
     area.textContent = '';
@@ -1227,6 +1271,7 @@
     if (ok) {
       btn.classList.add('correct');
       playPerfect();
+      setMascot('celebrate');
       showFeedback(true, 'Bonus corretto!');
       finishGame('bonus-ok');
     } else {
@@ -1235,6 +1280,7 @@
         if (b.textContent === correctAnswer) b.classList.add('correct');
       });
       playKo();
+      setMascot('sad');
       showFeedback(false, 'Bonus non riuscito');
       finishGame('bonus-ko');
     }
@@ -1270,6 +1316,7 @@
       title = 'Benissimo!';
       msg = 'Buona padronanza degli argomenti.';
     }
+    setMascot(finalScore >= 350 ? 'celebrate' : finalScore >= 150 ? 'happy' : 'neutral');
 
     const economy = getEconomy();
     if (!creditsAwarded && economy) {
@@ -1416,9 +1463,11 @@
   }
 
   function goStart() {
+    showAllAreas = false;
     buildAreaGrid();
     showScreen('screenStart');
     $('scoreBar').style.display = 'none';
+    setMascot('neutral');
   }
 
   function showScreen(id) {
