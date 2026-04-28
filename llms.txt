@@ -19,12 +19,22 @@
 - Scienze: https://lascuolaamica.it/scienze
 - Lingua italiana: https://lascuolaamica.it/italiano
 
+## Dati quantitativi
+- Domande totali: 7.348 (verificate ad aprile 2026).
+- Materie: 8.
+- Classi coperte: 2ª-5ª scuola primaria.
+- Versione corrente: 4.3.
+
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.
 - Nessun account o registrazione richiesti.
 - Privacy-first: nessun tracciamento di terze parti, dati di gioco salvati localmente.
 - Modalità offline disponibile dopo il primo accesso.
 - Contenuti allineati al percorso della scuola primaria.
+
+## Fondazione
+- Anno di lancio: 2026.
+- Ideato e sviluppato da: Mattia Boero (Torino, Italia).
 
 ## Contatti utili
 - Supporto: supporto@lascuolaamica.it

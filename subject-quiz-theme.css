@@ -851,6 +851,7 @@ header {
   border: 2px solid #f2c84a;
   color: #62461d;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+  animation: slideUp 0.4s ease 0.5s both;
 }
 
 .result-credits-label {

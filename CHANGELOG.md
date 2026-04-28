@@ -66,6 +66,15 @@
   - `inglese`: +51 domande parametriche (`totalQuestions=334`)
 - Aggiornati automaticamente `json/index.json`, `stats.rows`, `stats.areas`, `stats.classes` e timestamp `generatedAt`.
 
+## 4.5.1 - 2026-04-28
+
+- Aggiornata la versione applicativa a `4.5.1` (`app-version.js`, footer pagine e fallback runtime).
+- Rafforzata la parte GEO con `founder` + `foundingDate` nell’Organization JSON-LD.
+- Aggiunto `numberOfQuestions` nei JSON-LD delle 8 pagine materia.
+- FAQ e `llms.txt` allineati con dati quantitativi progetto (oltre 7.300 domande, totale 7.348).
+- Esteso il supporto `data-motion="reduce"` a `faq.css` e `info-pages.css`.
+- Aggiornata la pagina Accessibilità con la nuova versione portale.
+
 ## 4.2.1 - 2026-04-18
 
 - Completata validazione WCAG 2.1 A/AA manuale su tastiera, modali, zoom/reflow, VoiceOver e riduzione movimento.

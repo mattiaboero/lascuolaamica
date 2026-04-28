@@ -17,7 +17,7 @@
   const TEACHERS_URL = 'per-insegnanti';
   const PARENTS_URL = 'per-genitori';
   const AI_INFO_URL = 'ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.3';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.1';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -46,6 +46,16 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '28 aprile 2026',
+      items: [
+        'Aggiornato il profilo GEO/SEO: founder e foundingDate nell’Organization JSON-LD.',
+        'Aggiunto numberOfQuestions nei JSON-LD delle 8 materie con conteggi reali.',
+        'Aggiornate FAQ e llms.txt con dati quantitativi progetto (oltre 7.300 / totale 7.348 domande).',
+        'Esteso il supporto “Meno animazioni” a FAQ e pagine informative.',
+        'Versione portale aggiornata alla 4.5.1.'
+      ]
+    },
     {
       date: '27 aprile 2026',
       items: [
@@ -1022,9 +1032,7 @@
     });
 
     const version = footer.querySelector('.footer-version');
-    const versionText = String(version?.textContent || '')
-      .replace(/^[vV]\s*/, '')
-      .trim() || APP_VERSION;
+    const versionText = APP_VERSION;
     if (version) {
       version.hidden = true;
       version.setAttribute('aria-hidden', 'true');

@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v43';
+const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v451';
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
