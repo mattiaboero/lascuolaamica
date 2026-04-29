@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = 'lascuolaamica-v453';
+const CACHE_NAME = 'lascuolaamica-v454';
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -195,7 +195,7 @@ self.addEventListener('fetch', event => {
   // File HTML locali: Network First con fallback alla cache
   // Così l'utente vede sempre la versione più aggiornata se online,
   // ma il sito funziona comunque offline.
-  if (sameOrigin && (url.pathname.endsWith('.html') || url.pathname === '/')) {
+  if (request.mode === 'navigate') {
     event.respondWith(networkFirstWithFallback(request));
     return;
   }
@@ -241,7 +241,19 @@ async function networkFirstWithFallback(request) {
     }
     return response;
   } catch {
-    const cached = await caches.match(request);
+    // Prova prima la URL esatta richiesta (es. /storia)
+    let cached = await caches.match(request);
+    // Se non trovata, prova la variante .html (es. /storia.html)
+    if (!cached) {
+      const reqUrl = new URL(request.url);
+      let htmlPath = reqUrl.pathname;
+      if (htmlPath === '/') {
+        htmlPath = '/index.html';
+      } else if (!htmlPath.endsWith('.html')) {
+        htmlPath = htmlPath.replace(/\/$/, '') + '.html';
+      }
+      cached = await caches.match(new URL(htmlPath, self.location.origin).href);
+    }
     if (cached) return cached;
 
     // Fallback finale: pagina offline essenziale
