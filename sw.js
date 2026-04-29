@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = 'lascuolaamica-v455';
+const CACHE_NAME = 'lascuolaamica-v456';
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -22,6 +22,7 @@ const CORE_PRECACHE_URLS = [
   '/subject-quiz-core.js',
   '/subject-quiz-theme.css',
   '/js/index-page.js',
+  '/js/fonts-css-loader.js',
   '/json/index.json'
 ];
 
