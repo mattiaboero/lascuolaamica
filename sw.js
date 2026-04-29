@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v451';
+const CACHE_NAME = 'lascuolaamica-v452';
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -14,6 +14,7 @@ const CORE_PRECACHE_URLS = [
   '/',
   '/index.html',
   '/index.css',
+  '/fonts.css',
   '/shared.js',
   '/app-version.js',
   '/manifest.json',
@@ -96,6 +97,11 @@ const OPTIONAL_PRECACHE_URLS = [
   '/icons/icon-192-maskable.png',
   '/icons/icon-512.png',
   '/icons/icon-512-maskable.png',
+  '/assets/fonts/fredoka-v17-latin-regular.woff2',
+  '/assets/fonts/nunito-v32-latin-regular.woff2',
+  '/assets/fonts/nunito-v32-latin-700.woff2',
+  '/assets/fonts/nunito-v32-latin-800.woff2',
+  '/assets/fonts/nunito-v32-latin-900.woff2',
   '/assets/village/alberi.svg',
   '/assets/village/biblioteca.svg',
   '/assets/village/campo-basket.svg',
@@ -121,10 +127,6 @@ const OPTIONAL_PRECACHE_URLS = [
 const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|ico|txt|xml|woff2?|ttf)$/i;
-
-function isGoogleFontRequest(url) {
-  return url.hostname.includes('fonts.googleapis.com') || url.hostname.includes('fonts.gstatic.com');
-}
 
 function isSameOriginStaticAsset(url) {
   if (url.origin !== self.location.origin) return false;
@@ -178,7 +180,6 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
-  const fontRequest = isGoogleFontRequest(url);
   const sameOrigin = url.origin === self.location.origin;
 
   // Ignora richieste non GET (es. analytics, form POST)
@@ -189,13 +190,7 @@ self.addEventListener('fetch', event => {
 
   // Ignora richieste cross-origin non necessarie al funzionamento:
   // riduce il rischio di cache pollution e memorizzazioni indesiderate.
-  if (!sameOrigin && !fontRequest) return;
-
-  // Google Fonts: Cache First (cambiano raramente)
-  if (fontRequest) {
-    event.respondWith(cacheFirst(request));
-    return;
-  }
+  if (!sameOrigin) return;
 
   // File HTML locali: Network First con fallback alla cache
   // Così l'utente vede sempre la versione più aggiornata se online,
