@@ -228,6 +228,10 @@ header {
   align-items: center;
 }
 
+#contenuto-principale {
+  width: 100%;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(30px);
