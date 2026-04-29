@@ -6,7 +6,7 @@
 
 importScripts('/app-version.js');
 
-const CACHE_NAME = 'lascuolaamica-v452';
+const CACHE_NAME = 'lascuolaamica-v453';
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -97,7 +97,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/icons/icon-192-maskable.png',
   '/icons/icon-512.png',
   '/icons/icon-512-maskable.png',
-  '/assets/fonts/fredoka-v17-latin-regular.woff2',
+  '/assets/fonts/fredoka-v17-latin-700.woff2',
   '/assets/fonts/nunito-v32-latin-regular.woff2',
   '/assets/fonts/nunito-v32-latin-700.woff2',
   '/assets/fonts/nunito-v32-latin-800.woff2',
