@@ -66,6 +66,14 @@
   - `inglese`: +51 domande parametriche (`totalQuestions=334`)
 - Aggiornati automaticamente `json/index.json`, `stats.rows`, `stats.areas`, `stats.classes` e timestamp `generatedAt`.
 
+## 4.5.2 - 2026-04-29
+
+- Aggiornata la versione applicativa a `4.5.2` (`app-version.js`, fallback runtime e footer pagine).
+- Service Worker: corretta gestione offline delle clean URLs (`request.mode === 'navigate'`) con fallback cache su variante `.html`.
+- Service Worker: bump cache runtime a `lascuolaamica-v455` per forzare reinstallazione client con gli ultimi asset/fix.
+- Allineato il meta `mobile-web-app-capable` su tutte le pagine HTML pubbliche.
+- Font self-hosted consolidati su asset locali e documentazione tecnica sincronizzata (README + wiki).
+
 ## 4.5.1 - 2026-04-28
 
 - Aggiornata la versione applicativa a `4.5.1` (`app-version.js`, footer pagine e fallback runtime).

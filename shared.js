@@ -17,7 +17,7 @@
   const TEACHERS_URL = 'per-insegnanti';
   const PARENTS_URL = 'per-genitori';
   const AI_INFO_URL = 'ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.1';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.2';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -46,6 +46,16 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '29 aprile 2026',
+      items: [
+        'Risolto l’offline sulle URL pulite: il Service Worker intercetta ora tutte le navigazioni (`request.mode = navigate`) con fallback cache anche su variante `.html`.',
+        'Allineato il meta `mobile-web-app-capable` su tutte le pagine pubbliche.',
+        'Completato self-hosting font (Fredoka + Nunito) con precache dedicato per maggiore stabilità alla prima visita.',
+        'Aggiornata documentazione tecnica (README + wiki) con gli ultimi fix di runtime e deploy.',
+        'Versione portale aggiornata alla 4.5.2.'
+      ]
+    },
     {
       date: '28 aprile 2026',
       items: [
