@@ -3,7 +3,7 @@
 ## Locale
 
 ```bash
-cd "/Users/mattiaboero/Library/Mobile Documents/com~apple~CloudDocs/cervellino/files"
+cd /percorso/al/progetto
 python3 -m http.server 8080
 ```
 

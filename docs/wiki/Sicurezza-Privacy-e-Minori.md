@@ -8,8 +8,8 @@
 
 ## Hardening tecnico
 
-- CSP e Permissions-Policy nelle pagine.
-- Header sicurezza via Cloudflare Rules.
+- CSP e Permissions-Policy applicate via header HTTP (`_headers` / Cloudflare), non via meta tag HTML.
+- Header sicurezza gestiti centralmente su Cloudflare Rules.
 - JSON domande con `X-Robots-Tag: noindex, nofollow`.
 
 ## Conformità operativa

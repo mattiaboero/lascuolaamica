@@ -20,7 +20,7 @@ Sito: https://lascuolaamica.it
 - 10 domande per partita, 4 opzioni di risposta.
 - Bonus finale facoltativo con moltiplicatore punteggio.
 - Progressione per classi (2ª, 3ª, 4ª, 5ª) nelle materie supportate.
-- PWA con supporto offline dopo il primo caricamento.
+- PWA con supporto offline dopo il primo caricamento (anche con URL pulite tipo `/storia`, `/faq`).
 - Accessibilità migliorata (palette accessibile, focus management, supporto tastiera).
 - Privacy-first: nessuna registrazione, nessun tracciamento di terze parti.
 - Dati di gioco salvati localmente nel browser (`localStorage`).
@@ -29,6 +29,7 @@ Sito: https://lascuolaamica.it
 
 - HTML, CSS, JavaScript vanilla
 - Service Worker (`sw.js`)
+- Font self-hosted (`fonts.css` + `assets/fonts/*.woff2`)
 - Dataset domande in JSON split per materia (`json/*.json` + `json/index.json`)
 - Script build domande: `build_questions_json.py`
 
