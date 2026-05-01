@@ -19,7 +19,7 @@
   const TEACHERS_URL = 'per-insegnanti';
   const PARENTS_URL = 'per-genitori';
   const AI_INFO_URL = 'ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.2';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.5';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -48,6 +48,26 @@
   let cachedThemeMeta = null;
   let cachedFooter = null;
   const UPDATE_LOG = [
+    {
+      date: '1 maggio 2026',
+      items: [
+        'Rilasciata la versione 4.5.5 con allineamento completo della numerazione applicativa su tutte le pagine.',
+        'Aggiunto nel pannello Info il comando “Cancella dati locali” per rimuovere progressi, crediti, classifiche e preferenze dal dispositivo.',
+        'Migliorata l’ergonomia dei toggle Palette/Animazioni con target touch minimo 44px e testi più leggibili.',
+        'Allineati i testi Privacy e FAQ con il nuovo flusso di cancellazione dati locali.',
+        'Versione portale aggiornata alla 4.5.5.'
+      ]
+    },
+    {
+      date: '30 aprile 2026',
+      items: [
+        'Completata la Fase 2 runtime: dialog nativi sostituiti con modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) nei flussi principali.',
+        'Allineata la preferenza “Meno animazioni” anche lato JavaScript su home e motori quiz dedicati.',
+        'Disattivata l’esplosione confetti in inglese quando la riduzione movimento è attiva.',
+        'Automatizzato l’export Cloudflare con refresh JSON-LD e rigenerazione sitemap prima del sync.',
+        'Sincronizzata la documentazione tecnica repository/wiki con gli ultimi fix operativi.'
+      ]
+    },
     {
       date: '29 aprile 2026',
       items: [

@@ -73,6 +73,16 @@
   - `inglese`: +51 domande parametriche (`totalQuestions=334`)
 - Aggiornati automaticamente `json/index.json`, `stats.rows`, `stats.areas`, `stats.classes` e timestamp `generatedAt`.
 
+## 4.5.5 - 2026-05-01
+
+- Aggiornata la versione applicativa a `4.5.5` (`app-version.js`, fallback runtime, footer pagine e metadati operativi).
+- Aggiornata la sezione “Ultimi aggiornamenti” con lo storico dal 29 aprile al 1 maggio 2026.
+- Completata la Fase 2 runtime: modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) per dialog principali e update prompt.
+- Migliorata la coerenza “Meno animazioni” lato JavaScript su home e motori quiz dedicati, con confetti disattivati quando richiesto.
+- Pipeline export Cloudflare automatizzata con refresh JSON-LD + rigenerazione sitemap pre-sync.
+- Completata la Fase 3: aggiunto comando “Cancella dati locali” nel pannello Info e allineati i testi Privacy/FAQ.
+- Accessibilità/touch ergonomics: target minimi dei toggle Palette/Animazioni portati a 44px+.
+
 ## 4.5.2 - 2026-04-29
 
 - Aggiornata la versione applicativa a `4.5.2` (`app-version.js`, fallback runtime e footer pagine).
