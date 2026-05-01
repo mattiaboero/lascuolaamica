@@ -1,51 +1,97 @@
 # La Scuola Amica
 
-Piattaforma educativa web per la scuola primaria, progettata per allenare le competenze con quiz interattivi.
+[![Licenza MIT](https://img.shields.io/badge/licenza-MIT-blue.svg)](LICENSE)
+[![PWA](https://img.shields.io/badge/PWA-supportata-brightgreen.svg)](https://lascuolaamica.it)
+[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG%202.1-AA-success.svg)](https://lascuolaamica.it/accessibilita)
+[![Domande](https://img.shields.io/badge/domande-7.348-orange.svg)](https://lascuolaamica.it)
+[![Gratuito](https://img.shields.io/badge/accesso-gratuito%20%26%20senza%20registrazione-yellow.svg)](https://lascuolaamica.it)
 
-Sito: https://lascuolaamica.it
+Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 7.348 domande — senza registrazione, senza tracciamento, accessibile anche offline.
+
+🌐 **[lascuolaamica.it](https://lascuolaamica.it)**
+
+---
+
+## Perché esiste
+
+Le piattaforme di esercitazione per la primaria chiedono quasi sempre un account. Spesso raccolgono dati. Spesso non funzionano senza connessione.
+
+La Scuola Amica parte da un presupposto diverso: un bambino di 8 anni non dovrebbe dover creare un profilo per fare un quiz di matematica. Il sito funziona al primo caricamento, poi anche offline. Non sa chi sei. Non vuole saperlo.
+
+---
 
 ## Materie disponibili
 
-- Matematica
-- Inglese
-- Problemi di matematica
-- Educazione civica
-- Geografia
-- Storia
-- Scienze
-- Italiano
+| Materia | Classi supportate |
+|---|---|
+| Matematica | 2ª – 5ª |
+| Problemi di matematica | 2ª – 5ª |
+| Italiano | 2ª – 5ª |
+| Inglese | 2ª – 5ª |
+| Educazione civica | 2ª – 5ª |
+| Geografia | 2ª – 5ª |
+| Storia | 2ª – 5ª |
+| Scienze | 2ª – 5ª |
 
-## Caratteristiche principali
+---
 
-- 10 domande per partita, 4 opzioni di risposta.
-- Bonus finale facoltativo con moltiplicatore punteggio.
-- Progressione per classi (2ª, 3ª, 4ª, 5ª) nelle materie supportate.
-- PWA con supporto offline dopo il primo caricamento (anche con URL pulite tipo `/storia`, `/faq`).
-- Accessibilità migliorata (palette accessibile, focus management, supporto tastiera).
-- Privacy-first: nessuna registrazione, nessun tracciamento di terze parti.
-- Dati di gioco salvati localmente nel browser (`localStorage`).
+## Come funziona
+
+Ogni partita propone 10 domande a scelta multipla (4 opzioni). Al termine c'è un bonus facoltativo con moltiplicatore punteggio. Le domande vengono selezionate con un algoritmo stocastico per classe e ambito che riduce i pattern ripetitivi tra sessioni.
+
+I progressi vengono salvati localmente nel browser. Non c'è nessun server che li riceve.
+
+---
+
+## Caratteristiche tecniche
+
+- **PWA con supporto offline** — funziona dopo il primo caricamento, anche su URL pulite come `/storia` o `/faq`
+- **Accessibilità WCAG 2.1 AA** — validata manualmente con tastiera, VoiceOver, zoom 200% e riduzione movimento
+- **Privacy-first** — nessuna registrazione, nessun cookie di terze parti, localStorage per i dati di gioco
+- **7.348 domande** su 8 materie, coerenti con le Indicazioni Nazionali per la scuola primaria
+- **Font self-hosted** — nessuna richiesta esterna a Google Fonts o CDN
+- **CSP strict** — `script-src 'self'`, nessun inline script eseguibile
+
+---
 
 ## Stack tecnico
 
-- HTML, CSS, JavaScript vanilla
-- Service Worker (`sw.js`)
-- Font self-hosted (`fonts.css` + `assets/fonts/*.woff2`)
-- Dataset domande in JSON split per materia (`json/*.json` + `json/index.json`)
-- Script build domande: `build_questions_json.py`
+```
+HTML + CSS + JavaScript vanilla
+Service Worker (sw.js)
+Dataset domande: JSON split per materia (json/*.json + json/index.json)
+Build script: build_questions_json.py / scripts/append_parametric_pilot.py
+Deploy: GitHub → Cloudflare Pages
+```
 
-## Struttura progetto (estratto)
+Nessun framework frontend. Nessuna dipendenza NPM a runtime.
 
-- `index.html` home
-- `*.html` pagine materia
-- `shared.js` componenti e logica condivisa
-- `subject-quiz-core.js` motore quiz materie
-- `questions-loader.js` loader dataset
-- `json/` dataset per materia
-- `export/` cartella build locale (generata, non versionata)
+---
+
+## Struttura del progetto
+
+```
+├── index.html              # Home
+├── *.html                  # Pagine materia
+├── shared.js               # Componenti e logica condivisa
+├── subject-quiz-core.js    # Motore quiz (matematica, italiano, geo, storia, scienze)
+├── js/
+│   ├── inglese-page.js     # Motore quiz inglese
+│   ├── problemi-page.js    # Motore quiz problemi
+│   └── civica-page.js      # Motore quiz civica
+├── questions-loader.js     # Loader dataset JSON
+├── sw.js                   # Service Worker
+├── json/
+│   ├── index.json          # Indice con cardinalità per materia
+│   └── *.json              # Dataset per materia
+├── assets/                 # Immagini, mascotte, icone
+├── scripts/                # Script build e utilità
+└── docs/wiki/              # Documentazione tecnica
+```
+
+---
 
 ## Avvio in locale
-
-Usa un server statico, ad esempio:
 
 ```bash
 cd /percorso/al/progetto
@@ -54,43 +100,65 @@ python3 -m http.server 8080
 
 Poi apri [http://localhost:8080](http://localhost:8080).
 
-## Qualità prima del deploy
+**Nota:** il sito richiede un server HTTP — non funziona aprendo `index.html` direttamente nel browser (i Service Worker e le richieste JSON richiedono un'origine).
 
-Esegui sempre:
+---
+
+## Qualità prima del deploy
 
 ```bash
 ./prepublish-check.sh
 ```
 
-## Build export locale
+Lo script verifica integrità JSON, assenza di riferimenti a `questions.json` legacy, sitemap e robots.txt.
 
-Genera il pacchetto deploy locale in `export/`:
+---
+
+## Build e deploy
+
+**Export locale** (`export/`):
 
 ```bash
 bash scripts/export_for_cloudflare.sh
 ```
 
-Genera un backup deploy fuori repo (default: cartella sorella `../export-backup`):
+**Backup deploy fuori repo** (default: `../export-backup`):
 
 ```bash
 bash scripts/export_backup_outside_repo.sh
+# Oppure con path specifico:
+bash scripts/export_backup_outside_repo.sh "/percorso/assoluto/export-backup"
 ```
 
-## Deploy consigliato
+**Deploy consigliato:**
 
-- Repository GitHub
-- Cloudflare Pages con deploy automatico dal branch `main`
-  - Build command: `bash scripts/export_for_cloudflare.sh`
-  - Build output directory: `export`
-- Regole headers/redirect gestite in Cloudflare (non via upload di `_headers` e `_redirects`)
+- Repository GitHub collegata a Cloudflare Pages
+- Build command: `bash scripts/export_for_cloudflare.sh`
+- Build output directory: `export`
+- Sicurezza, header e redirect gestiti tramite Cloudflare Rules (non via `_headers`/`_redirects`)
 
-Note deploy: vedi la wiki tecnica in `docs/wiki/`.
+---
 
-## Wiki
+## Come contribuire
 
-I testi wiki pronti sono in `docs/wiki/`.
-Puoi copiarli nella Wiki GitHub o tenerli versionati nella repo.
+Le contribuzioni più utili sono nuove domande: vedi [CONTRIBUTING.md](CONTRIBUTING.md) per la pipeline completa, dalle convenzioni editoriali all'uso dell'editor privato per la generazione del JSON.
+
+Per bug report e segnalazioni tecniche, apri una issue. Per PR, segui il flusso in CONTRIBUTING.md.
+
+---
+
+## Wiki tecnica
+
+La documentazione tecnica dettagliata è in `docs/wiki/`:
+
+- [Architettura](docs/wiki/Architettura.md)
+- [Installazione e deploy](docs/wiki/Installazione-e-Deploy.md)
+- [Contenuti e domande](docs/wiki/Contenuti-e-Domande.md)
+- [Sicurezza, privacy e minori](docs/wiki/Sicurezza-Privacy-e-Minori.md)
+- [Runbook release](docs/wiki/Runbook-Release.md)
+
+---
 
 ## Licenza
 
-Questa repository usa licenza [MIT](LICENSE).
+[MIT](LICENSE) — software libero, riutilizzabile, modificabile.
