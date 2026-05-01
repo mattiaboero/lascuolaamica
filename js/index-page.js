@@ -2,11 +2,19 @@
 // Floating elements (decorative – already aria-hidden on container)
 const items = ['✏️','📐','📚','🔬','🎨','⭐','🌟','📝','🔢','🎒','🔭','💡'];
 const cont  = document.getElementById('bgFloats');
-const reducedMotion = (() => {
-  try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
-  catch (e) { return false; }
+const isMotionReduced = (() => {
+  return function () {
+    try {
+      if (window.SA && window.SA.motion && typeof window.SA.motion.isReduced === 'function') {
+        return window.SA.motion.isReduced();
+      }
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {
+      return false;
+    }
+  };
 })();
-if (cont && !reducedMotion) {
+if (cont && !isMotionReduced()) {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
     const el = document.createElement('div');
@@ -25,6 +33,13 @@ if (cont && !reducedMotion) {
 const villageDevBtn = document.getElementById('villageDevBtn');
 if (villageDevBtn) {
   villageDevBtn.addEventListener('click', () => {
+    if (window.SA && window.SA.ui && typeof window.SA.ui.alert === 'function') {
+      window.SA.ui.alert('Funzionalità in fase di sviluppo.', {
+        title: 'Villaggio Educativo',
+        okLabel: 'Va bene'
+      });
+      return;
+    }
     alert('Funzionalità in fase di sviluppo');
   });
 }

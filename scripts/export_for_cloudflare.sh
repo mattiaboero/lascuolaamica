@@ -15,6 +15,12 @@ fi
 DST="${DST%/}/"
 mkdir -p "$DST"
 
+echo "[INFO] Refresh structured data dates"
+python3 "$BASE_DIR/scripts/refresh_structured_data.py"
+
+echo "[INFO] Regenerate sitemap.xml"
+python3 "$BASE_DIR/scripts/generate_sitemap.py"
+
 echo "[INFO] Sync source -> $DST"
 rsync -av --delete --delete-excluded \
   --exclude 'export/' \

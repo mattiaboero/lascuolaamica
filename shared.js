@@ -2,6 +2,7 @@
   'use strict';
 
   let prevFocus = null;
+  let promptFinalize = null;
   const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
   const WALLET_KEY = 'scuolaAmica_wallet_v1';
   const WALLET_LOG_KEY = 'scuolaAmica_wallet_log_v1';
@@ -10,6 +11,7 @@
   const UPDATES_MODAL_ID = 'modalUpdates';
   const INFO_HUB_MODAL_ID = 'modalInfoHub';
   const PROJECT_MODAL_ID = 'modalProject';
+  const PROMPT_MODAL_ID = 'modalPromptShared';
   const SUPPORT_URL = 'supporta';
   const FAQ_URL = 'faq';
   const ACCESSIBILITY_URL = 'accessibilita';
@@ -369,6 +371,17 @@
     return normalized;
   }
 
+  function isMotionReduced() {
+    const mode = document.documentElement.getAttribute('data-motion') || MOTION_MODE.AUTO;
+    if (mode === MOTION_MODE.REDUCE) return true;
+    try {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {
+      debugWarn('isMotionReduced', e);
+      return false;
+    }
+  }
+
   function initPaletteMode() {
     ensurePaletteStylesheet();
 
@@ -548,6 +561,171 @@
     }
   }
 
+  function ensurePromptModal() {
+    if (document.getElementById(PROMPT_MODAL_ID)) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.id = PROMPT_MODAL_ID;
+    overlay.dataset.sharedModalBound = '1';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'sharedPromptTitle');
+    overlay.setAttribute('aria-hidden', 'true');
+
+    const box = document.createElement('div');
+    box.className = 'modal-box';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'modal-close';
+    closeBtn.id = 'sharedPromptClose';
+    closeBtn.setAttribute('aria-label', 'Chiudi messaggio');
+    closeBtn.textContent = '✕';
+
+    const title = document.createElement('h2');
+    title.className = 'modal-title';
+    title.id = 'sharedPromptTitle';
+    title.textContent = 'Conferma';
+
+    const body = document.createElement('div');
+    body.className = 'modal-body';
+
+    const message = document.createElement('p');
+    message.id = 'sharedPromptMessage';
+    body.appendChild(message);
+
+    const actions = document.createElement('div');
+    actions.className = 'sa-prompt-actions';
+
+    const confirmBtn = document.createElement('button');
+    confirmBtn.type = 'button';
+    confirmBtn.id = 'sharedPromptConfirm';
+    confirmBtn.className = 'sa-prompt-btn primary';
+
+    const cancelBtn = document.createElement('button');
+    cancelBtn.type = 'button';
+    cancelBtn.id = 'sharedPromptCancel';
+    cancelBtn.className = 'sa-prompt-btn secondary';
+
+    actions.appendChild(confirmBtn);
+    actions.appendChild(cancelBtn);
+    body.appendChild(actions);
+
+    box.appendChild(closeBtn);
+    box.appendChild(title);
+    box.appendChild(body);
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+  }
+
+  function showPromptDialog(options) {
+    ensurePromptModal();
+    const overlay = document.getElementById(PROMPT_MODAL_ID);
+    const titleEl = document.getElementById('sharedPromptTitle');
+    const messageEl = document.getElementById('sharedPromptMessage');
+    const confirmBtn = document.getElementById('sharedPromptConfirm');
+    const cancelBtn = document.getElementById('sharedPromptCancel');
+    const closeBtn = document.getElementById('sharedPromptClose');
+
+    const mode = options && options.mode === 'alert' ? 'alert' : 'confirm';
+    const message = String(options && options.message ? options.message : '');
+    const title = String(
+      options && options.title
+        ? options.title
+        : (mode === 'alert' ? 'Attenzione' : 'Conferma')
+    );
+    const confirmLabel = String(
+      options && options.confirmLabel
+        ? options.confirmLabel
+        : (mode === 'alert' ? 'Ho capito' : 'Conferma')
+    );
+    const cancelLabel = String(
+      options && options.cancelLabel
+        ? options.cancelLabel
+        : 'Annulla'
+    );
+
+    if (!overlay || !titleEl || !messageEl || !confirmBtn || !cancelBtn || !closeBtn) {
+      if (mode === 'alert') {
+        window.alert(message);
+        return Promise.resolve(true);
+      }
+      return Promise.resolve(window.confirm(message));
+    }
+
+    if (typeof promptFinalize === 'function') {
+      promptFinalize(false);
+    }
+
+    titleEl.textContent = title;
+    messageEl.textContent = message;
+    confirmBtn.textContent = confirmLabel;
+    cancelBtn.textContent = cancelLabel;
+    cancelBtn.hidden = mode === 'alert';
+    cancelBtn.setAttribute('aria-hidden', mode === 'alert' ? 'true' : 'false');
+
+    return new Promise((resolve) => {
+      let resolved = false;
+
+      const cleanup = () => {
+        confirmBtn.removeEventListener('click', onConfirm);
+        cancelBtn.removeEventListener('click', onCancel);
+        closeBtn.removeEventListener('click', onCancel);
+        overlay.removeEventListener('click', onOverlayClick);
+        document.removeEventListener('keydown', onEscCapture, true);
+      };
+
+      const finalize = (accepted) => {
+        if (resolved) return;
+        resolved = true;
+        promptFinalize = null;
+        cleanup();
+        closeModal(PROMPT_MODAL_ID);
+        resolve(Boolean(accepted));
+      };
+
+      const onConfirm = () => finalize(true);
+      const onCancel = () => finalize(false);
+      const onOverlayClick = (event) => {
+        if (event.target === overlay) onCancel();
+      };
+      const onEscCapture = (event) => {
+        if (event.key !== 'Escape') return;
+        event.preventDefault();
+        event.stopPropagation();
+        onCancel();
+      };
+
+      promptFinalize = finalize;
+      confirmBtn.addEventListener('click', onConfirm);
+      cancelBtn.addEventListener('click', onCancel);
+      closeBtn.addEventListener('click', onCancel);
+      overlay.addEventListener('click', onOverlayClick);
+      document.addEventListener('keydown', onEscCapture, true);
+      openModal(PROMPT_MODAL_ID);
+    });
+  }
+
+  function promptConfirm(message, options) {
+    return showPromptDialog({
+      mode: 'confirm',
+      message,
+      title: options && options.title,
+      confirmLabel: options && options.confirmLabel,
+      cancelLabel: options && options.cancelLabel
+    });
+  }
+
+  function promptAlert(message, options) {
+    return showPromptDialog({
+      mode: 'alert',
+      message,
+      title: options && options.title,
+      confirmLabel: options && options.okLabel
+    }).then(() => {});
+  }
+
   function bindModalEvents() {
     document.querySelectorAll('.modal-overlay').forEach((overlay) => {
       if (!overlay.classList.contains('open')) {
@@ -598,9 +776,18 @@
           window.location.reload();
         });
 
-        const askToUpdate = (worker) => {
+        const askToUpdate = async (worker) => {
           if (!worker || !navigator.serviceWorker.controller) return;
-          const shouldUpdate = confirm('È disponibile una nuova versione. Aggiornare ora?');
+          let shouldUpdate = false;
+          if (SA.ui && typeof SA.ui.confirm === 'function') {
+            shouldUpdate = await SA.ui.confirm('È disponibile una nuova versione. Vuoi aggiornare ora?', {
+              title: 'Nuova versione disponibile',
+              confirmLabel: 'Aggiorna ora',
+              cancelLabel: 'Più tardi'
+            });
+          } else {
+            shouldUpdate = confirm('È disponibile una nuova versione. Aggiornare ora?');
+          }
           if (shouldUpdate) {
             shouldRefresh = true;
             worker.postMessage('skipWaiting');
@@ -1132,6 +1319,39 @@
         border-color:#2d6cdf;
         color:#fff;
       }
+      .sa-prompt-actions{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        justify-content:center;
+        margin-top:16px;
+      }
+      .sa-prompt-btn{
+        border:1px solid rgba(95,107,122,.32);
+        border-radius:999px;
+        min-height:44px;
+        padding:10px 16px;
+        font-size:.92rem;
+        line-height:1.2;
+        font-weight:900;
+        cursor:pointer;
+      }
+      .sa-prompt-btn.primary{
+        background:#2d6cdf;
+        border-color:#2d6cdf;
+        color:#fff;
+      }
+      .sa-prompt-btn.secondary{
+        background:#fff;
+        color:#4f6072;
+      }
+      .sa-prompt-btn.primary:hover{
+        filter:brightness(1.05);
+      }
+      .sa-prompt-btn.secondary:hover{
+        border-color:#2d6cdf;
+        color:#2d6cdf;
+      }
       .footer-support-cta{
         width:auto;
         max-width:calc(100% - 8px);
@@ -1295,6 +1515,7 @@
 
   function initSharedUi() {
     ensureUpdatesModal();
+    ensurePromptModal();
     ensureFooterInfoHub();
     ensureSupportFooterLink();
     bindModalEvents();
@@ -1320,8 +1541,14 @@
     set(mode) {
       return setMotionMode(mode);
     },
+    isReduced() {
+      return isMotionReduced();
+    },
     modes: { ...MOTION_MODE }
   };
+  SA.ui = SA.ui || {};
+  SA.ui.confirm = promptConfirm;
+  SA.ui.alert = promptAlert;
   SA.version = APP_VERSION;
 
   initPaletteMode();

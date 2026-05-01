@@ -167,6 +167,24 @@
     }
   }
 
+  function isMotionReduced() {
+    try {
+      if (window.SA && window.SA.motion && typeof window.SA.motion.isReduced === 'function') {
+        return window.SA.motion.isReduced();
+      }
+    } catch (e) {
+      debugWarn('isMotionReduced', e);
+    }
+    return prefersReducedMotion();
+  }
+
+  function askConfirm(message, options) {
+    if (window.SA && window.SA.ui && typeof window.SA.ui.confirm === 'function') {
+      return window.SA.ui.confirm(message, options || {});
+    }
+    return Promise.resolve(window.confirm(message));
+  }
+
   function normalizeClassKey(value) {
     const parsed = String(value ?? '').replace(/[^0-9]/g, '');
     return CLASS_MAP[parsed] ? parsed : '3';
@@ -707,7 +725,7 @@
   function spawnShapes() {
     const bg = $('bgShapes');
     if (!bg) return;
-    if (prefersReducedMotion()) return;
+    if (isMotionReduced()) return;
     const icons = cfg.bgIcons || ['📘', '🧠', '⭐', '✏️'];
     const frag = document.createDocumentFragment();
     for (let i = 0; i < 4; i++) {
@@ -1419,15 +1437,20 @@
     }
   }
 
-  function clearLeaderboard() {
-    if (confirm('Cancellare tutta la classifica?')) {
-      try {
-        localStorage.removeItem(LB_KEY);
-      } catch (e) {
-        debugWarn('clearLeaderboard', e);
-      }
-      renderLB();
+  async function clearLeaderboard() {
+    const shouldClear = await askConfirm('Cancellare tutta la classifica?', {
+      title: 'Classifica',
+      confirmLabel: 'Cancella',
+      cancelLabel: 'Annulla'
+    });
+    if (!shouldClear) return;
+
+    try {
+      localStorage.removeItem(LB_KEY);
+    } catch (e) {
+      debugWarn('clearLeaderboard', e);
     }
+    renderLB();
   }
 
   function showLeaderboard() {

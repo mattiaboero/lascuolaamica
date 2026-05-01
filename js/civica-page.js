@@ -485,6 +485,24 @@ function prefersReducedMotion() {
   }
 }
 
+function isMotionReduced() {
+  try {
+    if (window.SA && window.SA.motion && typeof window.SA.motion.isReduced === 'function') {
+      return window.SA.motion.isReduced();
+    }
+  } catch (e) {
+    debugWarn('isMotionReduced', e);
+  }
+  return prefersReducedMotion();
+}
+
+function askConfirm(message, options) {
+  if (window.SA && window.SA.ui && typeof window.SA.ui.confirm === 'function') {
+    return window.SA.ui.confirm(message, options || {});
+  }
+  return Promise.resolve(window.confirm(message));
+}
+
 function loadCursor() {
   try {
     const raw = JSON.parse(localStorage.getItem(CURSOR_KEY));
@@ -615,7 +633,7 @@ function spawnShapes() {
   const icons = ['🏛️','📜','🌍','♻️','💻','🤝','🚸','🇮🇹','💡'];
   const bg = $('bgShapes');
   if (!bg) return;
-  if (prefersReducedMotion()) return;
+  if (isMotionReduced()) return;
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
     const d = document.createElement('div');
@@ -1021,11 +1039,15 @@ function loadLB() {
   catch (e) { return []; }
 }
 
-function clearLeaderboard() {
-  if (confirm('Cancellare tutta la classifica?')) {
-    try { localStorage.removeItem(LB_KEY); } catch (e) { debugWarn('runtime', e); }
-    renderLB();
-  }
+async function clearLeaderboard() {
+  const shouldClear = await askConfirm('Cancellare tutta la classifica?', {
+    title: 'Classifica Educazione Civica',
+    confirmLabel: 'Sì, cancella',
+    cancelLabel: 'Annulla'
+  });
+  if (!shouldClear) return;
+  try { localStorage.removeItem(LB_KEY); } catch (e) { debugWarn('runtime', e); }
+  renderLB();
 }
 
 function showLeaderboard() {

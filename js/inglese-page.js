@@ -605,6 +605,32 @@ function prefersReducedMotion() {
   }
 }
 
+function isMotionReduced() {
+  try {
+    if (window.SA && window.SA.motion && typeof window.SA.motion.isReduced === 'function') {
+      return window.SA.motion.isReduced();
+    }
+  } catch (e) {
+    debugWarn('isMotionReduced', e);
+  }
+  return prefersReducedMotion();
+}
+
+function askConfirm(message, options) {
+  if (window.SA && window.SA.ui && typeof window.SA.ui.confirm === 'function') {
+    return window.SA.ui.confirm(message, options || {});
+  }
+  return Promise.resolve(window.confirm(message));
+}
+
+function showAlert(message, options) {
+  if (window.SA && window.SA.ui && typeof window.SA.ui.alert === 'function') {
+    return window.SA.ui.alert(message, options || {});
+  }
+  window.alert(message);
+  return Promise.resolve();
+}
+
 async function hydrateEnglishFromJson() {
   const questionsLoader = getQuestionsLoader();
   if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
@@ -711,7 +737,7 @@ function selectClass(classKey, btn) {
 function spawnBg() {
   const bg = document.getElementById('bgShapes');
   if (!bg) return;
-  if (prefersReducedMotion()) return;
+  if (isMotionReduced()) return;
   const icons = ['🔤', '📚', '✏️', '📝', '🌍', '🗣️', '🎯'];
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
@@ -841,7 +867,10 @@ function buildSessionQuestions(lvl) {
 function startGame(lvl) {
   if (!isLevelAvailableForClass(lvl, selectedClass)) {
     const clsLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
-    alert(`Per ${clsLabel} scegli un livello compatibile.`);
+    showAlert(`Per ${clsLabel} scegli un livello compatibile.`, {
+      title: 'Livello non disponibile',
+      okLabel: 'Ho capito'
+    });
     return;
   }
   level = lvl;
@@ -1151,11 +1180,15 @@ function loadLBData() {
     return [];
   }
 }
-function clearLB() {
-  if(confirm('Cancellare tutta la classifica?')){
-    try { localStorage.removeItem(LB_KEY); } catch (e) { debugWarn('clearLB', e); }
-    renderLB();
-  }
+async function clearLB() {
+  const shouldClear = await askConfirm('Cancellare tutta la classifica?', {
+    title: 'Classifica Inglese',
+    confirmLabel: 'Sì, cancella',
+    cancelLabel: 'Annulla'
+  });
+  if (!shouldClear) return;
+  try { localStorage.removeItem(LB_KEY); } catch (e) { debugWarn('clearLB', e); }
+  renderLB();
 }
 function showLB() {
   renderLB();
@@ -1246,6 +1279,7 @@ function renderLB() {
 // CONFETTI
 // ============================================================
 function launchConfetti() {
+  if (isMotionReduced()) return;
   const cols=['#ffd166','#06d6a0','#118ab2','#ef476f','#48cae4','#f77f00'];
   for(let i=0;i<60;i++){
     setTimeout(()=>{
