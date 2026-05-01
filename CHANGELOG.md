@@ -2,6 +2,13 @@
 
 ## Unreleased - 2026-04-27
 
+- Fase 2 audit tecnico completata: sostituiti i dialog nativi principali con modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) nei motori quiz e nell’update prompt.
+- Migliorata la coerenza “Meno animazioni” anche lato runtime JS (`subject-quiz-core`, `inglese`, `problemi`, `civica`, `index-page`), inclusa la disattivazione confetti in inglese.
+- Pipeline export Cloudflare aggiornata: esecuzione automatica di `refresh_structured_data.py` e `generate_sitemap.py` prima del sync.
+- Fase 3 avviata: aggiunto nel pannello Info il comando “Cancella dati locali” per rimuovere progressi, crediti, classifiche e preferenze salvate sul dispositivo.
+- Accessibilità/touch ergonomics: aumentate dimensioni minime dei toggle Palette/Animazioni (target 44px+) nel pannello Info.
+- Testi privacy/FAQ allineati al nuovo comando “Cancella dati locali”.
+
 - Mascotte “Cervellino” integrata in PNG trasparente con 4 stati (`neutral`, `happy`, `sad`, `celebrate`) su tutte le materie.
 - Allineati i motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) al nuovo stato mascotte con feedback dinamico durante partita/bonus/risultato.
 - Villaggio: aggiunta micro-celebrazione visiva all’acquisto (tile pop + flash card shop) con toast di conferma costruzione.

@@ -240,6 +240,48 @@
     }
   }
 
+  function isProjectStorageKey(key) {
+    const value = String(key || '');
+    if (!value) return false;
+    return (
+      value.startsWith('scuolaAmica_') ||
+      value.startsWith('englishAdventure_') ||
+      value.startsWith('educazioneCivica_') ||
+      value.startsWith('problemiMatematica_') ||
+      value.startsWith('subject_') ||
+      value.startsWith('matematica_programma_') ||
+      value.startsWith('italiano_') ||
+      value.startsWith('storia_') ||
+      value.startsWith('scienze_') ||
+      value.startsWith('geografia_')
+    );
+  }
+
+  function clearAllProjectStorageData() {
+    let removed = 0;
+    try {
+      const keys = [];
+      for (let i = 0; i < localStorage.length; i += 1) {
+        const key = localStorage.key(i);
+        if (isProjectStorageKey(key)) keys.push(String(key));
+      }
+      keys.forEach((key) => {
+        localStorage.removeItem(key);
+        removed += 1;
+      });
+    } catch (e) {
+      debugWarn('clearAllProjectStorageData:localStorage', e);
+    }
+
+    Object.keys(memoryStorage).forEach((key) => {
+      if (!isProjectStorageKey(key)) return;
+      delete memoryStorage[key];
+      removed += 1;
+    });
+
+    return removed;
+  }
+
   function getThemeMeta() {
     if (cachedThemeMeta && cachedThemeMeta.isConnected) return cachedThemeMeta;
     cachedThemeMeta = document.querySelector('meta[name="theme-color"]');
@@ -1111,6 +1153,36 @@
     aiInfo.textContent = 'Info AI';
     actions.appendChild(aiInfo);
 
+    const clearDataBtn = document.createElement('button');
+    clearDataBtn.type = 'button';
+    clearDataBtn.className = 'info-hub-btn info-hub-btn-danger';
+    clearDataBtn.textContent = 'Cancella dati locali';
+    clearDataBtn.setAttribute('aria-label', 'Cancella tutti i dati locali salvati sul dispositivo');
+    clearDataBtn.addEventListener('click', async () => {
+      const shouldClear = await promptConfirm(
+        'Verranno cancellati progressi, crediti, classifiche e preferenze salvate su questo dispositivo. Continuare?',
+        {
+          title: 'Cancella dati locali',
+          confirmLabel: 'Sì, cancella tutto',
+          cancelLabel: 'Annulla'
+        }
+      );
+      if (!shouldClear) return;
+
+      const removed = clearAllProjectStorageData();
+      applyPaletteMode(PALETTE_MODE.LEGACY);
+      applyMotionMode(MOTION_MODE.AUTO);
+      updatePaletteToggleState();
+      updateMotionToggleState();
+      dispatchWalletUpdated(loadWallet());
+      closeModal(INFO_HUB_MODAL_ID);
+      await promptAlert(
+        `Operazione completata. Dati rimossi: ${removed}.`,
+        { title: 'Dati locali cancellati', okLabel: 'Va bene' }
+      );
+    });
+    actions.appendChild(clearDataBtn);
+
     const updates = document.createElement('button');
     updates.type = 'button';
     updates.className = 'info-hub-btn';
@@ -1263,7 +1335,7 @@
         gap:6px;
       }
       .palette-toggle-label{
-        font-size:.78rem;
+        font-size:.84rem;
         font-weight:900;
         color:#5f6b7a;
       }
@@ -1272,8 +1344,9 @@
         background:#fff;
         color:#5a6877;
         border-radius:999px;
-        padding:4px 10px;
-        font-size:.76rem;
+        min-height:44px;
+        padding:10px 14px;
+        font-size:.85rem;
         line-height:1.2;
         font-weight:900;
         cursor:pointer;
@@ -1294,7 +1367,7 @@
         gap:6px;
       }
       .motion-toggle-label{
-        font-size:.78rem;
+        font-size:.84rem;
         font-weight:900;
         color:#5f6b7a;
       }
@@ -1303,8 +1376,9 @@
         background:#fff;
         color:#5a6877;
         border-radius:999px;
-        padding:4px 10px;
-        font-size:.76rem;
+        min-height:44px;
+        padding:10px 14px;
+        font-size:.85rem;
         line-height:1.2;
         font-weight:900;
         cursor:pointer;
@@ -1440,6 +1514,15 @@
       .info-hub-btn:hover{
         border-color:#2d6cdf;
         color:#2d6cdf;
+      }
+      .info-hub-btn-danger{
+        border-color:rgba(166,30,30,.36);
+        color:#a61e1e;
+        background:#fff5f5;
+      }
+      .info-hub-btn-danger:hover{
+        border-color:#a61e1e;
+        color:#8c1d1d;
       }
       .info-hub-palette{
         justify-content:center;
