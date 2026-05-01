@@ -235,9 +235,10 @@ def build_questions(input_dir: str) -> Dict[str, Any]:
 
 def main() -> int:
     project_dir = os.path.dirname(os.path.abspath(__file__))
+    default_input_dir = os.path.abspath(os.path.join(project_dir, "..", "JSON"))
     input_dir = os.environ.get(
         "QUESTIONS_CSV_DIR",
-        "/Users/mattiaboero/Library/Mobile Documents/com~apple~CloudDocs/cervellino/JSON",
+        default_input_dir,
     )
 
     data = build_questions(input_dir)

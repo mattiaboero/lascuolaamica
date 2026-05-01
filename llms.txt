@@ -23,7 +23,7 @@
 - Domande totali: 7.348 (verificate ad aprile 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria.
-- Versione corrente: 4.3.
+- Versione corrente: 4.5.2.
 
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.

@@ -87,6 +87,37 @@ for file in "${HTML_FILES[@]}"; do
   check_html_integrity "$file"
 done
 
+check_version_alignment() {
+  if [[ ! -f "app-version.js" || ! -f "llms.txt" ]]; then
+    echo "[ERROR] missing app-version.js and/or llms.txt"
+    status=1
+    return
+  fi
+
+  local app_version llms_version
+  app_version=$(sed -nE "s/.*APP_VERSION = '([^']+)'.*/\\1/p" app-version.js | head -n1)
+  llms_version=$(sed -nE "s/^- Versione corrente: ([0-9]+(\\.[0-9]+)*)\\.?$/\\1/p" llms.txt | head -n1)
+
+  if [[ -z "$app_version" ]]; then
+    echo "[ERROR] app-version.js: unable to parse APP_VERSION"
+    status=1
+    return
+  fi
+
+  if [[ -z "$llms_version" ]]; then
+    echo "[ERROR] llms.txt: unable to parse 'Versione corrente'"
+    status=1
+    return
+  fi
+
+  if [[ "$app_version" != "$llms_version" ]]; then
+    echo "[ERROR] Version mismatch: app-version.js=$app_version llms.txt=$llms_version"
+    status=1
+  else
+    echo "[OK] Version alignment: app-version.js and llms.txt are both $app_version"
+  fi
+}
+
 check_security_patterns() {
   local findings=""
   findings=$(find . -type f \( -name '*.js' -o -name '*.html' \) -print0 | xargs -0 grep -nE 'eval\(|new Function\(|document\.write\(|innerHTML[[:space:]]*=|javascript:' || true)
@@ -121,6 +152,7 @@ check_target_blank_rel() {
   fi
 }
 
+check_version_alignment
 check_security_patterns
 for file in "${HTML_FILES[@]}"; do
   check_target_blank_rel "$file"
