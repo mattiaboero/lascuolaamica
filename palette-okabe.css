@@ -230,3 +230,28 @@ html[data-palette="okabe-ito"] .flink:hover,
 html[data-palette="okabe-ito"] .faq-chip-link:hover {
   color: #0072B2;
 }
+
+/* Header e breadcrumb: testo scuro su sfondo chiaro Okabe */
+html[data-palette="okabe-ito"] .title {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+html[data-palette="okabe-ito"] .subtitle {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+html[data-palette="okabe-ito"] .breadcrumbs {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+html[data-palette="okabe-ito"] .breadcrumbs a {
+  color: var(--accent-1);
+}
+
+html[data-palette="okabe-ito"] .breadcrumbs [aria-current='page'] {
+  color: var(--text-main);
+  opacity: 1;
+}
