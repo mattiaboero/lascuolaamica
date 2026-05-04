@@ -231,7 +231,18 @@ html[data-palette="okabe-ito"] .faq-chip-link:hover {
   color: #0072B2;
 }
 
-/* Header e breadcrumb: testo scuro su sfondo chiaro Okabe */
+/* Homepage: main-title e main-sub su sfondo chiaro Okabe */
+html[data-palette="okabe-ito"] .main-title {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+html[data-palette="okabe-ito"] .main-sub {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+/* Pagine materia: title, subtitle, breadcrumbs */
 html[data-palette="okabe-ito"] .title {
   color: var(--text-main);
   text-shadow: none;
@@ -251,7 +262,7 @@ html[data-palette="okabe-ito"] .breadcrumbs a {
   color: var(--accent-1);
 }
 
-html[data-palette="okabe-ito"] .breadcrumbs [aria-current='page'] {
+html[data-palette="okabe-ito"] .breadcrumbs [aria-current="page"] {
   color: var(--text-main);
   opacity: 1;
 }
