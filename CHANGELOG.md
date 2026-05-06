@@ -83,6 +83,13 @@
 - Completata la Fase 3: aggiunto comando “Cancella dati locali” nel pannello Info e allineati i testi Privacy/FAQ.
 - Accessibilità/touch ergonomics: target minimi dei toggle Palette/Animazioni portati a 44px+.
 
+## 4.5.6 - 2026-05-06
+
+- Service Worker: rimosso `/index.html` dalla core precache (usa `/` come shell canonica su Cloudflare Pages).
+- Service Worker: precache pagine informative/materie migrata da URL con `.html` a URL pulite (`/matematica`, `/faq`, ecc.) per evitare redirect 301 in install.
+- Service Worker: fallback offline aggiornato con priorità URL pulita e fallback finale su `/`.
+- Versione applicativa aggiornata a `4.5.6` per invalidare cache legacy client dopo la modifica strategia precache.
+
 ## 4.5.2 - 2026-04-29
 
 - Aggiornata la versione applicativa a `4.5.2` (`app-version.js`, fallback runtime e footer pagine).

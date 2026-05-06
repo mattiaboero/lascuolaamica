@@ -12,7 +12,6 @@ const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v1';
 // l'installazione deve fallire (app non consistente).
 const CORE_PRECACHE_URLS = [
   '/',
-  '/index.html',
   '/index.css',
   '/fonts.css',
   '/shared.js',
@@ -29,22 +28,22 @@ const CORE_PRECACHE_URLS = [
 // Risorse aggiuntive: se una manca, il SW resta installabile.
 // Questo evita failure atomiche di cache.addAll su un singolo 404.
 const OPTIONAL_PRECACHE_URLS = [
-  '/matematica.html',
-  '/inglese.html',
-  '/problemi.html',
-  '/civica.html',
-  '/geografia.html',
-  '/storia.html',
-  '/scienze.html',
-  '/italiano.html',
-  '/villaggio.html',
-  '/accessibilita.html',
-  '/chi-siamo.html',
-  '/per-insegnanti.html',
-  '/per-genitori.html',
-  '/ai-info.html',
-  '/supporta.html',
-  '/faq.html',
+  '/matematica',
+  '/inglese',
+  '/problemi',
+  '/civica',
+  '/geografia',
+  '/storia',
+  '/scienze',
+  '/italiano',
+  '/villaggio',
+  '/accessibilita',
+  '/chi-siamo',
+  '/per-insegnanti',
+  '/per-genitori',
+  '/ai-info',
+  '/supporta',
+  '/faq',
   '/inglese.css',
   '/faq.css',
   '/info-pages.css',
@@ -244,21 +243,21 @@ async function networkFirstWithFallback(request) {
   } catch {
     // Prova prima la URL esatta richiesta (es. /storia)
     let cached = await caches.match(request);
-    // Se non trovata, prova la variante .html (es. /storia.html)
+    // Se non trovata, prova la variante senza .html (es. /storia.html → /storia)
     if (!cached) {
       const reqUrl = new URL(request.url);
-      let htmlPath = reqUrl.pathname;
-      if (htmlPath === '/') {
-        htmlPath = '/index.html';
-      } else if (!htmlPath.endsWith('.html')) {
-        htmlPath = htmlPath.replace(/\/$/, '') + '.html';
+      let cleanPath = reqUrl.pathname;
+      if (cleanPath === '/index.html') {
+        cleanPath = '/';
+      } else if (cleanPath.endsWith('.html')) {
+        cleanPath = cleanPath.slice(0, -5);
       }
-      cached = await caches.match(new URL(htmlPath, self.location.origin).href);
+      cached = await caches.match(new URL(cleanPath, self.location.origin).href);
     }
     if (cached) return cached;
 
     // Fallback finale: pagina offline essenziale
-    return caches.match('/index.html');
+    return caches.match('/');
   }
 }
 
