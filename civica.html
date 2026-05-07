@@ -114,7 +114,11 @@
   font-family: 'Fredoka One', cursive;
 }
 </style>
-<link rel="stylesheet" href="fonts.css">
+<link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts.css" as="style" id="fontsCssPreload">
+<noscript><link rel="stylesheet" href="fonts.css"></noscript>
+<script defer src="js/fonts-css-loader.js"></script>
 </head>
 <body>
 <noscript>
@@ -328,7 +332,7 @@
 <footer class="site-footer" role="contentinfo">
   <button type="button" class="footer-link" data-open-modal="modalPrivacy" aria-haspopup="dialog">Privacy Policy</button>
   <button type="button" class="footer-link" data-open-modal="modalCookie" aria-haspopup="dialog">Cookie Policy</button>
-  <span class="footer-link footer-version" aria-hidden="true">v4.5.5</span>
+  <span class="footer-link footer-version" aria-hidden="true">v4.5.7</span>
 </footer>
 
 <div class="modal-overlay" id="modalPrivacy" role="dialog" aria-modal="true" aria-labelledby="civPrivTitle">

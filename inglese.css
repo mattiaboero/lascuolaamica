@@ -629,7 +629,13 @@ header {
   flex-shrink: 0;
   width: 88px;
   height: 128px;
-  background: url('assets/mascotte/cervellino-neutral.png') center / contain no-repeat;
+  background: center / contain no-repeat;
+  background-image: url('assets/mascotte/cervellino-neutral.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-neutral.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-neutral.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-neutral.png') type("image/png") 1x
+  );
   pointer-events: none;
   transition: transform 0.2s ease, filter 0.2s ease;
   text-indent: -9999px;
@@ -639,21 +645,41 @@ header {
 
 .mascot-q[data-state="neutral"] {
   background-image: url('assets/mascotte/cervellino-neutral.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-neutral.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-neutral.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-neutral.png') type("image/png") 1x
+  );
 }
 
 .mascot-q[data-state="happy"] {
   background-image: url('assets/mascotte/cervellino-happy.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-happy.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-happy.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-happy.png') type("image/png") 1x
+  );
   transform: scale(1.08) rotate(-6deg);
   transform-origin: bottom center;
 }
 
 .mascot-q[data-state="sad"] {
   background-image: url('assets/mascotte/cervellino-sad.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-sad.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-sad.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-sad.png') type("image/png") 1x
+  );
   filter: saturate(0.9);
 }
 
 .mascot-q[data-state="celebrate"] {
   background-image: url('assets/mascotte/cervellino-celebrate.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-celebrate.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-celebrate.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-celebrate.png') type("image/png") 1x
+  );
   transform: scale(1.12);
   transform-origin: bottom center;
 }
@@ -927,18 +953,38 @@ header {
 
 .mascot-result[data-state="neutral"] {
   background-image: url('assets/mascotte/cervellino-neutral.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-neutral.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-neutral.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-neutral.png') type("image/png") 1x
+  );
 }
 
 .mascot-result[data-state="happy"] {
   background-image: url('assets/mascotte/cervellino-happy.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-happy.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-happy.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-happy.png') type("image/png") 1x
+  );
 }
 
 .mascot-result[data-state="sad"] {
   background-image: url('assets/mascotte/cervellino-sad.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-sad.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-sad.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-sad.png') type("image/png") 1x
+  );
 }
 
 .mascot-result[data-state="celebrate"] {
   background-image: url('assets/mascotte/cervellino-celebrate.png');
+  background-image: image-set(
+    url('assets/mascotte/cervellino-celebrate.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-celebrate.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-celebrate.png') type("image/png") 1x
+  );
   animation:
     mascotResultIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
     mascotResultCelebrate 0.6s ease 1s 2;

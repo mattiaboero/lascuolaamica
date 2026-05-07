@@ -98,7 +98,11 @@
 }
 </script>
 <link rel="stylesheet" href="inglese.css">
-<link rel="stylesheet" href="fonts.css">
+<link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts.css" as="style" id="fontsCssPreload">
+<noscript><link rel="stylesheet" href="fonts.css"></noscript>
+<script defer src="js/fonts-css-loader.js"></script>
 </head>
 <body>
 <noscript>
@@ -322,7 +326,7 @@
 <footer role="contentinfo">
   <button type="button" class="flink" data-open-modal="mPrivacy" aria-haspopup="dialog">Privacy Policy</button>
   <button type="button" class="flink" data-open-modal="mCookie" aria-haspopup="dialog">Cookie Policy</button>
-  <span class="flink footer-version" aria-hidden="true">v4.5.5</span>
+  <span class="flink footer-version" aria-hidden="true">v4.5.7</span>
 </footer>
 
 <!-- Modal Privacy -->

@@ -98,10 +98,38 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   pointer-events:none;
   animation:mascotHomeIn .7s cubic-bezier(.22,1,.36,1) .15s both;
 }
-.mascot-home[data-state="wave"]{background-image:url('assets/mascotte/cervellino-waving-03.png');}
-.mascot-home[data-state="celebrate"]{background-image:url('assets/mascotte/cervellino-celebrate.png');}
-.mascot-home[data-state="neutral"]{background-image:url('assets/mascotte/cervellino-neutral.png');}
-.mascot-home[data-state="happy"]{background-image:url('assets/mascotte/cervellino-happy.png');}
+.mascot-home[data-state="wave"]{
+  background-image:url('assets/mascotte/cervellino-waving-03.png');
+  background-image:image-set(
+    url('assets/mascotte/cervellino-waving-03.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-waving-03.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-waving-03.png') type("image/png") 1x
+  );
+}
+.mascot-home[data-state="celebrate"]{
+  background-image:url('assets/mascotte/cervellino-celebrate.png');
+  background-image:image-set(
+    url('assets/mascotte/cervellino-celebrate.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-celebrate.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-celebrate.png') type("image/png") 1x
+  );
+}
+.mascot-home[data-state="neutral"]{
+  background-image:url('assets/mascotte/cervellino-neutral.png');
+  background-image:image-set(
+    url('assets/mascotte/cervellino-neutral.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-neutral.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-neutral.png') type("image/png") 1x
+  );
+}
+.mascot-home[data-state="happy"]{
+  background-image:url('assets/mascotte/cervellino-happy.png');
+  background-image:image-set(
+    url('assets/mascotte/cervellino-happy.avif') type("image/avif") 1x,
+    url('assets/mascotte/cervellino-happy.webp') type("image/webp") 1x,
+    url('assets/mascotte/cervellino-happy.png') type("image/png") 1x
+  );
+}
 @keyframes mascotHomeIn{
   0%{transform:translateY(24px) scale(.7);opacity:0}
   60%{transform:translateY(-6px) scale(1.05);opacity:1}

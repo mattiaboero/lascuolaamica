@@ -116,17 +116,27 @@ const OPTIONAL_PRECACHE_URLS = [
   '/assets/village/supermercato.svg',
   '/assets/village/uffici.svg',
   '/assets/village/universita.svg',
+  '/assets/mascotte/cervellino-neutral.avif',
+  '/assets/mascotte/cervellino-neutral.webp',
   '/assets/mascotte/cervellino-neutral.png',
+  '/assets/mascotte/cervellino-happy.avif',
+  '/assets/mascotte/cervellino-happy.webp',
   '/assets/mascotte/cervellino-happy.png',
+  '/assets/mascotte/cervellino-sad.avif',
+  '/assets/mascotte/cervellino-sad.webp',
   '/assets/mascotte/cervellino-sad.png',
+  '/assets/mascotte/cervellino-celebrate.avif',
+  '/assets/mascotte/cervellino-celebrate.webp',
   '/assets/mascotte/cervellino-celebrate.png',
+  '/assets/mascotte/cervellino-waving-03.avif',
+  '/assets/mascotte/cervellino-waving-03.webp',
   '/assets/mascotte/cervellino-waving-03.png',
   '/assets/donazione/qrcode-donazione.jpeg'
 ];
 
 const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
-const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|ico|txt|xml|woff2?|ttf)$/i;
+const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|avif|ico|txt|xml|woff2?|ttf)$/i;
 
 function isSameOriginStaticAsset(url) {
   if (url.origin !== self.location.origin) return false;

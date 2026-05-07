@@ -16,14 +16,14 @@
   const INFO_HUB_MODAL_ID = 'modalInfoHub';
   const PROJECT_MODAL_ID = 'modalProject';
   const PROMPT_MODAL_ID = 'modalPromptShared';
-  const SUPPORT_URL = 'supporta';
-  const FAQ_URL = 'faq';
-  const ACCESSIBILITY_URL = 'accessibilita';
-  const ABOUT_URL = 'chi-siamo';
-  const TEACHERS_URL = 'per-insegnanti';
-  const PARENTS_URL = 'per-genitori';
-  const AI_INFO_URL = 'ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.6';
+  const SUPPORT_URL = '/supporta';
+  const FAQ_URL = '/faq';
+  const ACCESSIBILITY_URL = '/accessibilita';
+  const ABOUT_URL = '/chi-siamo';
+  const TEACHERS_URL = '/per-insegnanti';
+  const PARENTS_URL = '/per-genitori';
+  const AI_INFO_URL = '/ai-info';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.7';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,16 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '7 maggio 2026 · Release 4.5.7',
+      items: [
+        'Rilasciata la versione 4.5.7 con versione portale riallineata automaticamente nel footer e nel pannello Info.',
+        'Esteso il caricamento font ottimizzato anche alle pagine materia, FAQ e pagine informative con preload dei file critici.',
+        'Attivato il runtime condiviso anche sulle pagine informative: service worker, pannello Info, palette accessibile e preferenza “Meno animazioni”.',
+        'Risolta la contraddizione AEO tra llms.txt e header globali: i segnali noai restano solo su aree tecniche non pubbliche.',
+        'Ottimizzati gli asset di Cervellino con versioni AVIF/WebP e fallback PNG alleggeriti per ridurre LCP e banda mobile.'
+      ]
+    },
     {
       date: '7 maggio 2026',
       items: [
@@ -1390,6 +1400,14 @@
     }
   }
 
+  function syncFooterVersion() {
+    const versionText = `v${APP_VERSION}`;
+    document.querySelectorAll('.footer-version').forEach((node) => {
+      node.textContent = versionText;
+      node.setAttribute('data-version', APP_VERSION);
+    });
+  }
+
   function ensureFaqFooterLink() {
     const footer = getFooterEl();
     if (!footer) return;
@@ -2148,6 +2166,7 @@
   }
 
   function initSharedUi() {
+    syncFooterVersion();
     ensureUpdatesModal();
     ensurePromptModal();
     ensureFooterInfoHub();

@@ -16,6 +16,14 @@
 - Accessibilità/touch ergonomics: aumentate dimensioni minime dei toggle Palette/Animazioni (target 44px+) nel pannello Info.
 - Testi privacy/FAQ allineati al nuovo comando “Cancella dati locali”.
 
+## 4.5.7 - 2026-05-07
+
+- Allineata la versione applicativa a `4.5.7` con sincronizzazione del footer dal runtime condiviso e aggiornamento dei riferimenti statici residui.
+- Esteso il pattern di caricamento font ottimizzato (preload WOFF2 + `fonts.css` asincrono) alle pagine materia, FAQ, Villaggio e pagine informative.
+- Aggiunto il runtime condiviso (`app-version.js` + `shared.js`) alle pagine informative per abilitare service worker, pannello Info, palette accessibile e preferenza “Meno animazioni”.
+- Risolta la contraddizione AEO tra `llms.txt` e gli header globali: rimossi `noai/noimageai` dal sito pubblico, mantenuti solo su endpoint tecnici non destinati alla consultazione.
+- Ottimizzati gli asset della mascotte “Cervellino” con fallback PNG alleggeriti e nuove varianti `AVIF`/`WebP`, includendole nella cache del service worker.
+
 - Mascotte “Cervellino” integrata in PNG trasparente con 4 stati (`neutral`, `happy`, `sad`, `celebrate`) su tutte le materie.
 - Allineati i motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) al nuovo stato mascotte con feedback dinamico durante partita/bonus/risultato.
 - Villaggio: aggiunta micro-celebrazione visiva all’acquisto (tile pop + flash card shop) con toast di conferma costruzione.
