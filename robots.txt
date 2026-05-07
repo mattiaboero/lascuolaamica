@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /json/
+Disallow: /reports/
+Disallow: /questions-build-report.json
 
 Sitemap: https://lascuolaamica.it/sitemap.xml

@@ -13,7 +13,9 @@ const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v1';
 const CORE_PRECACHE_URLS = [
   '/',
   '/index.css',
+  '/404.css',
   '/fonts.css',
+  '/noscript.css',
   '/shared.js',
   '/app-version.js',
   '/manifest.json',

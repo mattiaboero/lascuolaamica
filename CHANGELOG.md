@@ -16,6 +16,14 @@
 - Accessibilità/touch ergonomics: aumentate dimensioni minime dei toggle Palette/Animazioni (target 44px+) nel pannello Info.
 - Testi privacy/FAQ allineati al nuovo comando “Cancella dati locali”.
 
+## 4.5.8 - 2026-05-07
+
+- Aggiornato `robots.txt` per escludere dal crawl le aree tecniche `/json/`, `/reports/` e `questions-build-report.json`, lasciando invariata la gestione `/admin` demandata a Cloudflare.
+- Migliorato `scripts/generate_sitemap.py`: `lastmod` ora deriva in priorità dalla cronologia Git (`git log -1 --format=%cI`) con fallback al timestamp file.
+- Allineati gli script di build dataset (`build_questions_json.py`, `scripts/append_parametric_pilot.py`) alla serializzazione JSON compatta per ridurre il peso dei payload runtime.
+- Compattati i file `json/*.json` esistenti senza alterare i contenuti.
+- Estratti gli stili `noscript` in `noscript.css` condiviso e spostato il CSS della pagina `404.html` in `404.css`, riducendo l’uso di inline style ripetuti.
+
 ## 4.5.7 - 2026-05-07
 
 - Allineata la versione applicativa a `4.5.7` con sincronizzazione del footer dal runtime condiviso e aggiornamento dei riferimenti statici residui.

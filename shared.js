@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.7';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.8';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,15 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '7 maggio 2026 · Release 4.5.8',
+      items: [
+        'Aggiornato robots.txt per escludere dal crawl le sole aree tecniche (`/json`, `/reports`, report build) senza toccare l’area admin gestita via Cloudflare.',
+        'Migliorata la generazione della sitemap: `lastmod` ora deriva prima dalla cronologia Git e usa il timestamp file solo come fallback.',
+        'Compattati i dataset JSON runtime e allineati gli script di build per scrivere payload minificati invece che pretty-printed.',
+        'Estratti gli stili `noscript` in un foglio condiviso e spostato il CSS della 404 in un file esterno per ridurre l’uso di inline style.'
+      ]
+    },
     {
       date: '7 maggio 2026 · Release 4.5.7',
       items: [

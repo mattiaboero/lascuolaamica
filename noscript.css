@@ -1,0 +1,22 @@
+.noscript-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.05rem;
+  background: #f4f7ff;
+  color: #1f2440;
+}
+
+.noscript-msg p {
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+.noscript-msg a {
+  color: #2f7dff;
+  font-weight: 700;
+}

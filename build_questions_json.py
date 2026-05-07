@@ -62,7 +62,7 @@ def normalize_text(value: str) -> str:
 
 def write_json(path: str, payload: Dict[str, Any]) -> None:
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+        json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
 
 
 def write_split_files(project_dir: str, data: Dict[str, Any]) -> List[str]:

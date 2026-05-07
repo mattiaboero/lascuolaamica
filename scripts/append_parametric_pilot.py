@@ -38,7 +38,7 @@ def load_subject(subject: str) -> Dict:
 def save_subject(subject: str, data: Dict) -> None:
     path = JSON_DIR / f"{subject}.json"
     with path.open("w", encoding="utf-8") as fh:
-        json.dump(data, fh, ensure_ascii=False, indent=2)
+        json.dump(data, fh, ensure_ascii=False, separators=(",", ":"))
         fh.write("\n")
 
 
@@ -930,7 +930,7 @@ def refresh_index(subjects: Dict[str, Dict]) -> None:
 
     idx["totalQuestions"] = total
     with idx_path.open("w", encoding="utf-8") as fh:
-        json.dump(idx, fh, ensure_ascii=False, indent=2)
+        json.dump(idx, fh, ensure_ascii=False, separators=(",", ":"))
         fh.write("\n")
 
 

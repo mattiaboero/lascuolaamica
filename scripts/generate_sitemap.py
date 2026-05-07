@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
@@ -33,6 +34,19 @@ def _lastmod_for(filename: str) -> str:
     path = ROOT / filename
     if not path.exists():
         return datetime.now().date().isoformat()
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", str(path)],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        stamp = (result.stdout or "").strip()
+        if result.returncode == 0 and stamp:
+            return datetime.fromisoformat(stamp.replace("Z", "+00:00")).date().isoformat()
+    except Exception:
+        pass
     return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
 
 
