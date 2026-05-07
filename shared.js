@@ -8,6 +8,7 @@
   const WALLET_LOG_KEY = 'scuolaAmica_wallet_log_v1';
   const PLAY_WINDOW_KEY = 'scuolaAmica_play_window_v1';
   const PLAY_WINDOW_DURATION_MS = 30 * 60 * 1000;
+  const PLAY_WINDOW_COOLDOWN_MS = 60 * 60 * 1000;
   const PLAY_WINDOW_EVENT = 'sa:play-window-change';
   const SESSION_CREDIT_PER_CORRECT = 4;
   const BONUS_CREDITS = { easy: 10, medium: 22, hard: 45 };
@@ -285,7 +286,8 @@
       const startedAt = safeInt(parsed?.startedAt, 0);
       const expiresAt = safeInt(parsed?.expiresAt, 0);
       if (!startedAt || !expiresAt || expiresAt <= startedAt) return null;
-      return { startedAt, expiresAt };
+      const cooldownUntil = Math.max(expiresAt, safeInt(parsed?.cooldownUntil, expiresAt + PLAY_WINDOW_COOLDOWN_MS));
+      return { startedAt, expiresAt, cooldownUntil };
     } catch (e) {
       debugWarn('parsePlayWindowRecord', e);
       return null;
@@ -298,29 +300,40 @@
       return {
         active: false,
         expired: false,
+        coolingDown: false,
         startedAt: null,
         expiresAt: null,
+        cooldownUntil: null,
         durationMs: PLAY_WINDOW_DURATION_MS,
-        remainingMs: 0
+        cooldownMs: PLAY_WINDOW_COOLDOWN_MS,
+        remainingMs: 0,
+        cooldownRemainingMs: 0
       };
     }
 
     const remainingMs = Math.max(0, record.expiresAt - Date.now());
+    const cooldownRemainingMs = Math.max(0, record.cooldownUntil - Date.now());
     return {
       active: remainingMs > 0,
       expired: remainingMs <= 0,
+      coolingDown: remainingMs <= 0 && cooldownRemainingMs > 0,
       startedAt: record.startedAt,
       expiresAt: record.expiresAt,
+      cooldownUntil: record.cooldownUntil,
       durationMs: PLAY_WINDOW_DURATION_MS,
-      remainingMs
+      cooldownMs: PLAY_WINDOW_COOLDOWN_MS,
+      remainingMs,
+      cooldownRemainingMs
     };
   }
 
   function getPlayWindowStateKey(state) {
     return [
       state && state.active ? '1' : '0',
+      state && state.coolingDown ? '1' : '0',
       safeInt(state?.startedAt, 0),
-      safeInt(state?.expiresAt, 0)
+      safeInt(state?.expiresAt, 0),
+      safeInt(state?.cooldownUntil, 0)
     ].join('|');
   }
 
@@ -364,14 +377,19 @@
   function startPlayWindow() {
     const startedAt = Date.now();
     const expiresAt = startedAt + PLAY_WINDOW_DURATION_MS;
-    storageSet(PLAY_WINDOW_KEY, JSON.stringify({ startedAt, expiresAt }));
+    const cooldownUntil = expiresAt + PLAY_WINDOW_COOLDOWN_MS;
+    storageSet(PLAY_WINDOW_KEY, JSON.stringify({ startedAt, expiresAt, cooldownUntil }));
     return dispatchPlayWindowChange({
       active: true,
       expired: false,
+      coolingDown: false,
       startedAt,
       expiresAt,
+      cooldownUntil,
       durationMs: PLAY_WINDOW_DURATION_MS,
-      remainingMs: PLAY_WINDOW_DURATION_MS
+      cooldownMs: PLAY_WINDOW_COOLDOWN_MS,
+      remainingMs: PLAY_WINDOW_DURATION_MS,
+      cooldownRemainingMs: PLAY_WINDOW_COOLDOWN_MS
     }, true);
   }
 
@@ -380,16 +398,30 @@
     return dispatchPlayWindowChange({
       active: false,
       expired: false,
+      coolingDown: false,
       startedAt: null,
       expiresAt: null,
+      cooldownUntil: null,
       durationMs: PLAY_WINDOW_DURATION_MS,
-      remainingMs: 0
+      cooldownMs: PLAY_WINDOW_COOLDOWN_MS,
+      remainingMs: 0,
+      cooldownRemainingMs: 0
     }, true);
   }
 
   async function ensurePlayWindowActive(options) {
     const current = getPlayWindowState();
     if (current.active) return true;
+    if (current.coolingDown) {
+      await promptAlert(
+        `Il tempo di gioco è terminato. Potrai riattivarlo tra ${formatPlayWindowClock(current.cooldownRemainingMs)}.`,
+        {
+          title: 'Pausa tra una sessione e l’altra',
+          okLabel: 'Va bene'
+        }
+      );
+      return false;
+    }
     if (playWindowEnsurePromise) return playWindowEnsurePromise;
 
     const config = options || {};
@@ -999,6 +1031,7 @@
       const snapshot = state || getPlayWindowState();
       panel.classList.toggle('is-active', snapshot.active);
       panel.classList.toggle('is-expired', !snapshot.active && snapshot.expired);
+      panel.classList.toggle('is-cooldown', snapshot.coolingDown);
 
       if (snapshot.active) {
         status.textContent = 'Timer attivo: puoi giocare liberamente su tutte le materie finché il conto alla rovescia non finisce.';
@@ -1012,6 +1045,14 @@
       timer.textContent = '30:00';
       button.disabled = false;
       button.setAttribute('aria-disabled', 'false');
+      if (snapshot.coolingDown) {
+        status.textContent = 'I 30 minuti sono terminati. Il prossimo turno sarà disponibile tra un’ora.';
+        timer.textContent = formatPlayWindowClock(snapshot.cooldownRemainingMs);
+        button.textContent = 'Disponibile tra';
+        button.disabled = true;
+        button.setAttribute('aria-disabled', 'true');
+        return;
+      }
       if (snapshot.expired) {
         status.textContent = 'I 30 minuti sono terminati. Riattiva il timer per continuare a giocare.';
         button.textContent = 'Riattiva 30 minuti';
@@ -1872,6 +1913,35 @@
       .play-window-panel-home{
         max-width:620px;
         margin:14px auto 0;
+        padding:6px 0 0;
+        border:0;
+        background:transparent;
+        box-shadow:none;
+      }
+      .play-window-panel-home .play-window-kicker,
+      .play-window-panel-home .play-window-status,
+      .play-window-panel-home .play-window-note{
+        display:none;
+      }
+      .play-window-panel-home .play-window-actions{
+        justify-content:center;
+        gap:10px;
+      }
+      .play-window-panel-home .play-window-timer{
+        min-width:78px;
+        padding:8px 10px;
+        font-size:1rem;
+      }
+      .play-window-panel-home .play-window-btn{
+        min-height:42px;
+        padding:10px 16px;
+        font-size:.9rem;
+      }
+      .play-window-panel-home.is-active,
+      .play-window-panel-home.is-expired{
+        border:0;
+        background:transparent;
+        box-shadow:none;
       }
       .play-window-kicker{
         margin:0 0 6px;
@@ -1984,6 +2054,13 @@
       html[data-palette="okabe-ito"] .play-window-note{
         color:#405466;
       }
+      html[data-palette="okabe-ito"] .play-window-panel-home,
+      html[data-palette="okabe-ito"] .play-window-panel-home.is-active,
+      html[data-palette="okabe-ito"] .play-window-panel-home.is-expired{
+        border:0;
+        background:transparent;
+        box-shadow:none;
+      }
       @media (max-width:620px){
         .palette-toggle{
           width:100%;
@@ -2002,6 +2079,10 @@
         .play-window-timer,
         .play-window-btn{
           width:100%;
+        }
+        .play-window-panel-home .play-window-timer,
+        .play-window-panel-home .play-window-btn{
+          width:auto;
         }
       }
     `;
