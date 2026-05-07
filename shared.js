@@ -57,6 +57,15 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '7 maggio 2026',
+      items: [
+        'Introdotto il timer locale di gioco: per iniziare una partita bisogna attivare 30 minuti validi su tutte le materie.',
+        'Aggiunta una pausa automatica di 60 minuti dopo la scadenza del timer prima di poter riattivare un nuovo turno.',
+        'Ridisegnato il timer nella home in forma più discreta, lasciando più esplicite le schermate iniziali delle materie.',
+        'Aggiornate le FAQ pubbliche con spiegazione del nuovo flusso di gioco, del funzionamento offline e della pausa locale.'
+      ]
+    },
+    {
       date: '1 maggio 2026',
       items: [
         'Rilasciata la versione 4.5.5 con allineamento completo della numerazione applicativa su tutte le pagine.',

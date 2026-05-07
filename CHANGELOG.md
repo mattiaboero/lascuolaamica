@@ -3,6 +3,9 @@
 ## Unreleased - 2026-04-27
 
 - Introdotta finestra locale di gioco da 30 minuti: per avviare una partita il timer deve essere attivato sul dispositivo (`localStorage`, zero cookie, zero login, compatibile offline).
+- Aggiunto cooldown locale di 60 minuti dopo la scadenza del timer prima di poter riattivare una nuova sessione di gioco.
+- Resa più discreta la UI del timer nella home, mantenendo più evidente il pannello nelle schermate iniziali delle materie.
+- FAQ pubbliche aggiornate con spiegazione del flusso `30 minuti di gioco + 60 minuti di pausa`.
 - Aggiunti pannelli timer condivisi su home e schermate iniziali delle materie, con conto alla rovescia e attivazione esplicita del tempo di gioco.
 - Aggiunto indicatore compatto del tempo residuo nella score bar durante la partita.
 - I motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) bloccano l’avvio se il timer non è attivo e interrompono la sessione quando la finestra dei 30 minuti scade.
