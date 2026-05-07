@@ -166,6 +166,7 @@ let bonusFactor = 1;
 let bonusType = null;
 let bonusApplied = false;
 let creditsAwarded = false;
+let playWindowExpiryLock = false;
 
 function $(id){ return document.getElementById(id); }
 
@@ -503,6 +504,43 @@ function askConfirm(message, options) {
   return Promise.resolve(window.confirm(message));
 }
 
+function askAlert(message, options) {
+  if (window.SA && window.SA.ui && typeof window.SA.ui.alert === 'function') {
+    return window.SA.ui.alert(message, options || {});
+  }
+  window.alert(message);
+  return Promise.resolve();
+}
+
+function getPlayWindowApi() {
+  return window.SA && window.SA.playWindow ? window.SA.playWindow : null;
+}
+
+async function ensurePlayWindowForGame() {
+  const api = getPlayWindowApi();
+  if (!api || typeof api.ensureActive !== 'function') return true;
+  return api.ensureActive({
+    title: 'Attiva 30 minuti di gioco',
+    message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Nessun dato lascia il browser e il timer funziona anche offline.',
+    confirmLabel: 'Attiva 30 minuti',
+    cancelLabel: 'Non ora'
+  });
+}
+
+async function handlePlayWindowExpired() {
+  if (playWindowExpiryLock) return;
+  const activeScreen = document.querySelector('.screen.active');
+  if (!activeScreen) return;
+  if (!['screenGame', 'screenBonusPick', 'screenBonusQuestion'].includes(activeScreen.id)) return;
+  playWindowExpiryLock = true;
+  goStart();
+  await askAlert('I 30 minuti di gioco sono terminati. Riattiva il timer per iniziare una nuova partita.', {
+    title: 'Tempo di gioco terminato',
+    okLabel: 'Va bene'
+  });
+  playWindowExpiryLock = false;
+}
+
 function loadCursor() {
   try {
     const raw = JSON.parse(localStorage.getItem(CURSOR_KEY));
@@ -572,6 +610,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     bonusMeta.setAttribute('aria-live', 'polite');
     bonusMeta.setAttribute('aria-atomic', 'true');
   }
+  document.addEventListener((window.SA && window.SA.playWindow && window.SA.playWindow.eventName) || 'sa:play-window-change', (event) => {
+    if (event && event.detail && event.detail.active) return;
+    handlePlayWindowExpired();
+  });
 });
 
 function bindActions() {
@@ -778,7 +820,8 @@ function buildSessionQuestions() {
   return out.slice(0, TOTAL_Q);
 }
 
-function startGame() {
+async function startGame() {
+  if (!(await ensurePlayWindowForGame())) return;
   questions = buildSessionQuestions();
   if (!questions.length) return;
   curQ = 0;

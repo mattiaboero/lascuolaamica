@@ -2,6 +2,10 @@
 
 ## Unreleased - 2026-04-27
 
+- Introdotta finestra locale di gioco da 30 minuti: per avviare una partita il timer deve essere attivato sul dispositivo (`localStorage`, zero cookie, zero login, compatibile offline).
+- Aggiunti pannelli timer condivisi su home e schermate iniziali delle materie, con conto alla rovescia e attivazione esplicita del tempo di gioco.
+- Aggiunto indicatore compatto del tempo residuo nella score bar durante la partita.
+- I motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) bloccano l’avvio se il timer non è attivo e interrompono la sessione quando la finestra dei 30 minuti scade.
 - Fase 2 audit tecnico completata: sostituiti i dialog nativi principali con modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) nei motori quiz e nell’update prompt.
 - Migliorata la coerenza “Meno animazioni” anche lato runtime JS (`subject-quiz-core`, `inglese`, `problemi`, `civica`, `index-page`), inclusa la disattivazione confetti in inglese.
 - Pipeline export Cloudflare aggiornata: esecuzione automatica di `refresh_structured_data.py` e `generate_sitemap.py` prima del sync.

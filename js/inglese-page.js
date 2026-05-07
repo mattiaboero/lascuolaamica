@@ -233,6 +233,7 @@ let hist=[], answered=false, timerIv=null, timerStart=null;
 let muted=false, audioCtx=null;
 let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false, creditsAwarded=false;
 let selectedClass='3';
+let playWindowExpiryLock = false;
 
 function setMascot(state) {
   const el = document.getElementById('mascot');
@@ -631,6 +632,36 @@ function showAlert(message, options) {
   return Promise.resolve();
 }
 
+function getPlayWindowApi() {
+  return window.SA && window.SA.playWindow ? window.SA.playWindow : null;
+}
+
+async function ensurePlayWindowForGame() {
+  const api = getPlayWindowApi();
+  if (!api || typeof api.ensureActive !== 'function') return true;
+  return api.ensureActive({
+    title: 'Attiva 30 minuti di gioco',
+    message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Nessun dato lascia il browser e il timer funziona anche offline.',
+    confirmLabel: 'Attiva 30 minuti',
+    cancelLabel: 'Non ora'
+  });
+}
+
+async function handlePlayWindowExpired() {
+  if (playWindowExpiryLock) return;
+  const activeScreen = document.querySelector('.screen.active');
+  if (!activeScreen) return;
+  if (!['scrGame', 'scrBonusPick', 'scrBonusQ'].includes(activeScreen.id)) return;
+  playWindowExpiryLock = true;
+  stopTimer();
+  goLevels();
+  await showAlert('I 30 minuti di gioco sono terminati. Riattiva il timer per iniziare una nuova partita.', {
+    title: 'Tempo di gioco terminato',
+    okLabel: 'Va bene'
+  });
+  playWindowExpiryLock = false;
+}
+
 async function hydrateEnglishFromJson() {
   const questionsLoader = getQuestionsLoader();
   if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
@@ -689,6 +720,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   setMascot('neutral');
   setMascotResult('neutral');
   spawnBg();
+  document.addEventListener((window.SA && window.SA.playWindow && window.SA.playWindow.eventName) || 'sa:play-window-change', (event) => {
+    if (event && event.detail && event.detail.active) return;
+    handlePlayWindowExpired();
+  });
 });
 
 function bindStaticActions() {
@@ -864,7 +899,8 @@ function buildSessionQuestions(lvl) {
   return out.slice(0, 10);
 }
 
-function startGame(lvl) {
+async function startGame(lvl) {
+  if (!(await ensurePlayWindowForGame())) return;
   if (!isLevelAvailableForClass(lvl, selectedClass)) {
     const clsLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
     showAlert(`Per ${clsLabel} scegli un livello compatibile.`, {

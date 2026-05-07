@@ -6,6 +6,9 @@
   const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
   const WALLET_KEY = 'scuolaAmica_wallet_v1';
   const WALLET_LOG_KEY = 'scuolaAmica_wallet_log_v1';
+  const PLAY_WINDOW_KEY = 'scuolaAmica_play_window_v1';
+  const PLAY_WINDOW_DURATION_MS = 30 * 60 * 1000;
+  const PLAY_WINDOW_EVENT = 'sa:play-window-change';
   const SESSION_CREDIT_PER_CORRECT = 4;
   const BONUS_CREDITS = { easy: 10, medium: 22, hard: 45 };
   const UPDATES_MODAL_ID = 'modalUpdates';
@@ -19,7 +22,7 @@
   const TEACHERS_URL = 'per-insegnanti';
   const PARENTS_URL = 'per-genitori';
   const AI_INFO_URL = 'ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.5';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.6';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -47,6 +50,10 @@
   const queryCache = {};
   let cachedThemeMeta = null;
   let cachedFooter = null;
+  let playWindowTicker = null;
+  let lastPlayWindowBroadcastKey = '';
+  let playWindowEnsurePromise = null;
+  const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
       date: '1 maggio 2026',
@@ -257,6 +264,153 @@
     } catch (e) {
       debugWarn(`storageSet:${key}`, e);
       memoryStorage[key] = normalized;
+    }
+  }
+
+  function storageRemove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      debugWarn(`storageRemove:${key}`, e);
+    }
+    if (Object.prototype.hasOwnProperty.call(memoryStorage, key)) {
+      delete memoryStorage[key];
+    }
+  }
+
+  function parsePlayWindowRecord(rawValue) {
+    if (!rawValue) return null;
+    try {
+      const parsed = JSON.parse(rawValue);
+      const startedAt = safeInt(parsed?.startedAt, 0);
+      const expiresAt = safeInt(parsed?.expiresAt, 0);
+      if (!startedAt || !expiresAt || expiresAt <= startedAt) return null;
+      return { startedAt, expiresAt };
+    } catch (e) {
+      debugWarn('parsePlayWindowRecord', e);
+      return null;
+    }
+  }
+
+  function getPlayWindowState() {
+    const record = parsePlayWindowRecord(storageGet(PLAY_WINDOW_KEY));
+    if (!record) {
+      return {
+        active: false,
+        expired: false,
+        startedAt: null,
+        expiresAt: null,
+        durationMs: PLAY_WINDOW_DURATION_MS,
+        remainingMs: 0
+      };
+    }
+
+    const remainingMs = Math.max(0, record.expiresAt - Date.now());
+    return {
+      active: remainingMs > 0,
+      expired: remainingMs <= 0,
+      startedAt: record.startedAt,
+      expiresAt: record.expiresAt,
+      durationMs: PLAY_WINDOW_DURATION_MS,
+      remainingMs
+    };
+  }
+
+  function getPlayWindowStateKey(state) {
+    return [
+      state && state.active ? '1' : '0',
+      safeInt(state?.startedAt, 0),
+      safeInt(state?.expiresAt, 0)
+    ].join('|');
+  }
+
+  function formatPlayWindowClock(ms) {
+    const totalSeconds = Math.max(0, Math.ceil((Number(ms) || 0) / 1000));
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
+
+  function notifyPlayWindowSubscribers(state) {
+    playWindowSubscribers.forEach((renderFn) => {
+      try {
+        renderFn(state);
+      } catch (e) {
+        debugWarn('notifyPlayWindowSubscribers', e);
+      }
+    });
+  }
+
+  function dispatchPlayWindowChange(state, force) {
+    const snapshot = state || getPlayWindowState();
+    const stateKey = getPlayWindowStateKey(snapshot);
+    if (!force && stateKey === lastPlayWindowBroadcastKey) {
+      notifyPlayWindowSubscribers(snapshot);
+      return snapshot;
+    }
+    lastPlayWindowBroadcastKey = stateKey;
+    notifyPlayWindowSubscribers(snapshot);
+    document.dispatchEvent(new CustomEvent(PLAY_WINDOW_EVENT, { detail: snapshot }));
+    return snapshot;
+  }
+
+  function ensurePlayWindowTicker() {
+    if (playWindowTicker) return;
+    playWindowTicker = window.setInterval(() => {
+      dispatchPlayWindowChange(getPlayWindowState());
+    }, 1000);
+  }
+
+  function startPlayWindow() {
+    const startedAt = Date.now();
+    const expiresAt = startedAt + PLAY_WINDOW_DURATION_MS;
+    storageSet(PLAY_WINDOW_KEY, JSON.stringify({ startedAt, expiresAt }));
+    return dispatchPlayWindowChange({
+      active: true,
+      expired: false,
+      startedAt,
+      expiresAt,
+      durationMs: PLAY_WINDOW_DURATION_MS,
+      remainingMs: PLAY_WINDOW_DURATION_MS
+    }, true);
+  }
+
+  function clearPlayWindow() {
+    storageRemove(PLAY_WINDOW_KEY);
+    return dispatchPlayWindowChange({
+      active: false,
+      expired: false,
+      startedAt: null,
+      expiresAt: null,
+      durationMs: PLAY_WINDOW_DURATION_MS,
+      remainingMs: 0
+    }, true);
+  }
+
+  async function ensurePlayWindowActive(options) {
+    const current = getPlayWindowState();
+    if (current.active) return true;
+    if (playWindowEnsurePromise) return playWindowEnsurePromise;
+
+    const config = options || {};
+    playWindowEnsurePromise = (async () => {
+      const accepted = await promptConfirm(
+        config.message || 'Per iniziare devi attivare 30 minuti di gioco su questo dispositivo. Il timer non usa cookie, non richiede login e funziona anche offline.',
+        {
+          title: config.title || 'Attiva 30 minuti di gioco',
+          confirmLabel: config.confirmLabel || 'Attiva 30 minuti',
+          cancelLabel: config.cancelLabel || 'Non ora'
+        }
+      );
+      if (!accepted) return false;
+      startPlayWindow();
+      return true;
+    })();
+
+    try {
+      return await playWindowEnsurePromise;
+    } finally {
+      playWindowEnsurePromise = null;
     }
   }
 
@@ -788,6 +942,161 @@
     }).then(() => {});
   }
 
+  function insertNodeAfter(target, node) {
+    if (!target || !target.parentNode || !node) return;
+    if (target.nextSibling) {
+      target.parentNode.insertBefore(node, target.nextSibling);
+      return;
+    }
+    target.parentNode.appendChild(node);
+  }
+
+  function createPlayWindowPanel(options) {
+    const panel = document.createElement('section');
+    panel.className = 'play-window-panel';
+    panel.setAttribute('data-play-window-panel', '1');
+    if (options?.context) panel.dataset.context = options.context;
+    panel.setAttribute('aria-live', 'polite');
+    panel.setAttribute('aria-atomic', 'true');
+
+    const kicker = document.createElement('div');
+    kicker.className = 'play-window-kicker';
+    kicker.textContent = 'Tempo di gioco';
+
+    const status = document.createElement('p');
+    status.className = 'play-window-status';
+
+    const actions = document.createElement('div');
+    actions.className = 'play-window-actions';
+
+    const timer = document.createElement('strong');
+    timer.className = 'play-window-timer';
+    timer.textContent = '30:00';
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'play-window-btn';
+    button.textContent = 'Attiva 30 minuti';
+
+    const note = document.createElement('p');
+    note.className = 'play-window-note';
+    note.textContent = 'Solo sul dispositivo, nessun login, nessun cookie, funziona anche offline.';
+
+    button.addEventListener('click', () => {
+      const state = getPlayWindowState();
+      if (state.active) return;
+      startPlayWindow();
+    });
+
+    actions.appendChild(timer);
+    actions.appendChild(button);
+    panel.appendChild(kicker);
+    panel.appendChild(status);
+    panel.appendChild(actions);
+    panel.appendChild(note);
+
+    const render = (state) => {
+      const snapshot = state || getPlayWindowState();
+      panel.classList.toggle('is-active', snapshot.active);
+      panel.classList.toggle('is-expired', !snapshot.active && snapshot.expired);
+
+      if (snapshot.active) {
+        status.textContent = 'Timer attivo: puoi giocare liberamente su tutte le materie finché il conto alla rovescia non finisce.';
+        timer.textContent = formatPlayWindowClock(snapshot.remainingMs);
+        button.textContent = 'Timer attivo';
+        button.disabled = true;
+        button.setAttribute('aria-disabled', 'true');
+        return;
+      }
+
+      timer.textContent = '30:00';
+      button.disabled = false;
+      button.setAttribute('aria-disabled', 'false');
+      if (snapshot.expired) {
+        status.textContent = 'I 30 minuti sono terminati. Riattiva il timer per continuare a giocare.';
+        button.textContent = 'Riattiva 30 minuti';
+      } else {
+        status.textContent = 'Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo.';
+        button.textContent = 'Attiva 30 minuti';
+      }
+    };
+
+    playWindowSubscribers.add(render);
+    render(getPlayWindowState());
+    return panel;
+  }
+
+  function ensurePlayWindowPanelUi() {
+    const homeFacts = document.querySelector('.main-facts');
+    if (homeFacts && !document.querySelector('[data-play-window-panel][data-context="home"]')) {
+      const homePanel = createPlayWindowPanel({ context: 'home' });
+      homePanel.classList.add('play-window-panel-home');
+      insertNodeAfter(homeFacts, homePanel);
+    }
+
+    const startBtn = document.querySelector('#screenStart .start-btn');
+    if (startBtn && !document.querySelector('[data-play-window-panel][data-context="subject-start"]')) {
+      const subjectPanel = createPlayWindowPanel({ context: 'subject-start' });
+      subjectPanel.classList.add('play-window-panel-start');
+      startBtn.parentNode.insertBefore(subjectPanel, startBtn);
+    }
+
+    const levelCards = document.querySelector('#scrLevel .level-cards');
+    if (levelCards && !document.querySelector('[data-play-window-panel][data-context="english-start"]')) {
+      const englishPanel = createPlayWindowPanel({ context: 'english-start' });
+      englishPanel.classList.add('play-window-panel-start');
+      levelCards.parentNode.insertBefore(englishPanel, levelCards);
+    }
+  }
+
+  function ensurePlayWindowScorePill() {
+    const scoreBar = document.getElementById('scoreBar');
+    if (!scoreBar || scoreBar.querySelector('[data-play-window-pill="1"]')) return;
+
+    const pill = document.createElement('div');
+    pill.className = 'score-pill timer play-window-score-pill';
+    pill.setAttribute('data-play-window-pill', '1');
+
+    const icon = document.createElement('span');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = '⏳';
+
+    const value = document.createElement('span');
+    value.setAttribute('data-play-window-pill-value', '');
+    value.textContent = '30:00';
+
+    const srText = document.createElement('span');
+    srText.className = 'sr-only';
+    srText.textContent = ' tempo di gioco rimasto';
+
+    pill.appendChild(icon);
+    pill.appendChild(document.createTextNode(' '));
+    pill.appendChild(value);
+    pill.appendChild(srText);
+    scoreBar.appendChild(pill);
+
+    const valueEl = pill.querySelector('[data-play-window-pill-value]');
+    const render = (state) => {
+      const snapshot = state || getPlayWindowState();
+      const active = snapshot.active;
+      valueEl.textContent = active ? formatPlayWindowClock(snapshot.remainingMs) : '00:00';
+      pill.hidden = !active;
+      pill.setAttribute('aria-hidden', active ? 'false' : 'true');
+    };
+
+    playWindowSubscribers.add(render);
+    render(getPlayWindowState());
+  }
+
+  function bindPlayWindowStorageSync() {
+    if (SA_FLAGS.playWindowStorageSyncBound) return;
+    window.addEventListener('storage', (event) => {
+      if (event.key && event.key !== PLAY_WINDOW_KEY) return;
+      dispatchPlayWindowChange(getPlayWindowState(), true);
+    });
+    SA_FLAGS.playWindowStorageSyncBound = true;
+  }
+
   function bindModalEvents() {
     document.querySelectorAll('.modal-overlay').forEach((overlay) => {
       if (!overlay.classList.contains('open')) {
@@ -1192,6 +1501,7 @@
       const removed = clearAllProjectStorageData();
       applyPaletteMode(PALETTE_MODE.LEGACY);
       applyMotionMode(MOTION_MODE.AUTO);
+      clearPlayWindow();
       updatePaletteToggleState();
       updateMotionToggleState();
       dispatchWalletUpdated(loadWallet());
@@ -1550,6 +1860,130 @@
       .info-hub-motion{
         justify-content:center;
       }
+      .play-window-panel{
+        width:100%;
+        margin:14px 0 0;
+        padding:14px 16px;
+        border-radius:18px;
+        border:2px solid rgba(45,108,223,.18);
+        background:linear-gradient(135deg,#ffffff,#f4f8ff);
+        box-shadow:0 10px 24px rgba(45,108,223,.10);
+      }
+      .play-window-panel-home{
+        max-width:620px;
+        margin:14px auto 0;
+      }
+      .play-window-kicker{
+        margin:0 0 6px;
+        font-size:.82rem;
+        font-weight:900;
+        letter-spacing:.06em;
+        text-transform:uppercase;
+        color:#2d6cdf;
+      }
+      .play-window-status{
+        margin:0 0 10px;
+        color:#42586d;
+        font-size:.96rem;
+        font-weight:800;
+        line-height:1.45;
+      }
+      .play-window-actions{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+        flex-wrap:wrap;
+      }
+      .play-window-timer{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-width:88px;
+        padding:8px 12px;
+        border-radius:999px;
+        background:#eef4ff;
+        color:#1f3f73;
+        font-size:1.2rem;
+        line-height:1;
+        font-weight:900;
+      }
+      .play-window-btn{
+        border:0;
+        border-radius:999px;
+        min-height:46px;
+        padding:12px 18px;
+        background:linear-gradient(135deg,#2d6cdf,#4d8dff);
+        color:#fff;
+        font-size:.96rem;
+        line-height:1.2;
+        font-weight:900;
+        cursor:pointer;
+        box-shadow:0 6px 16px rgba(45,108,223,.24);
+      }
+      .play-window-btn:hover{
+        filter:brightness(1.04);
+      }
+      .play-window-btn[disabled]{
+        cursor:default;
+        background:linear-gradient(135deg,#2f9d62,#49bf7c);
+        box-shadow:none;
+      }
+      .play-window-note{
+        margin:10px 0 0;
+        color:#5d7082;
+        font-size:.82rem;
+        font-weight:700;
+        line-height:1.45;
+      }
+      .play-window-panel.is-active{
+        border-color:rgba(47,157,98,.28);
+        background:linear-gradient(135deg,#ffffff,#f2fff7);
+        box-shadow:0 10px 24px rgba(47,157,98,.12);
+      }
+      .play-window-panel.is-active .play-window-kicker{
+        color:#2f9d62;
+      }
+      .play-window-panel.is-expired{
+        border-color:rgba(214,40,40,.24);
+        background:linear-gradient(135deg,#ffffff,#fff5f5);
+        box-shadow:0 10px 24px rgba(214,40,40,.10);
+      }
+      .play-window-panel.is-expired .play-window-kicker{
+        color:#b43a3a;
+      }
+      .play-window-score-pill{
+        margin-left:auto;
+      }
+      .play-window-score-pill[hidden]{
+        display:none !important;
+      }
+      html[data-palette="okabe-ito"] .play-window-panel{
+        border-color:rgba(0,114,178,.22);
+        background:linear-gradient(135deg,#ffffff,#eef8ff);
+        box-shadow:0 10px 24px rgba(0,114,178,.12);
+      }
+      html[data-palette="okabe-ito"] .play-window-kicker{
+        color:#0072B2;
+      }
+      html[data-palette="okabe-ito"] .play-window-status{
+        color:#1f2d3d;
+      }
+      html[data-palette="okabe-ito"] .play-window-timer{
+        background:#e6f4fc;
+        color:#0b3a53;
+      }
+      html[data-palette="okabe-ito"] .play-window-btn{
+        background:linear-gradient(135deg,#0072B2,#009ad6);
+        box-shadow:0 6px 16px rgba(0,114,178,.22);
+      }
+      html[data-palette="okabe-ito"] .play-window-btn[disabled]{
+        background:linear-gradient(135deg,#2c7b5b,#3b9d74);
+        box-shadow:none;
+      }
+      html[data-palette="okabe-ito"] .play-window-note{
+        color:#405466;
+      }
       @media (max-width:620px){
         .palette-toggle{
           width:100%;
@@ -1561,6 +1995,13 @@
         }
         .info-hub-actions{
           grid-template-columns:1fr;
+        }
+        .play-window-actions{
+          align-items:stretch;
+        }
+        .play-window-timer,
+        .play-window-btn{
+          width:100%;
         }
       }
     `;
@@ -1621,6 +2062,10 @@
     ensurePromptModal();
     ensureFooterInfoHub();
     ensureSupportFooterLink();
+    ensurePlayWindowPanelUi();
+    ensurePlayWindowScorePill();
+    ensurePlayWindowTicker();
+    bindPlayWindowStorageSync();
     bindModalEvents();
   }
 
@@ -1652,6 +2097,18 @@
   SA.ui = SA.ui || {};
   SA.ui.confirm = promptConfirm;
   SA.ui.alert = promptAlert;
+  SA.playWindow = {
+    key: PLAY_WINDOW_KEY,
+    durationMs: PLAY_WINDOW_DURATION_MS,
+    getState: getPlayWindowState,
+    isActive() {
+      return getPlayWindowState().active;
+    },
+    start: startPlayWindow,
+    clear: clearPlayWindow,
+    ensureActive: ensurePlayWindowActive,
+    eventName: PLAY_WINDOW_EVENT
+  };
   SA.version = APP_VERSION;
 
   initPaletteMode();
@@ -1663,6 +2120,7 @@
     initSharedUi();
   }
 
+  dispatchPlayWindowChange(getPlayWindowState(), true);
   dispatchWalletUpdated(loadWallet());
   registerServiceWorker();
 })();
