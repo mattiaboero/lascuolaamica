@@ -11,7 +11,7 @@
 - `robots.txt`
 - `sw.js` (cache aggiornata per includere sitemap/robots)
 - `prepublish-check.sh` (validazione automatica di sitemap/robots)
-- `CLOUDFLARE_SECURITY_SETUP.md` (set consigliato Cloudflare: WAF, rate limit, bot, TLS, header)
+- `CLOUDFLARE_SECURITY_SETUP.md` (note pubbliche su hosting, protezione e controlli post-release)
 
 ## Prima di inviare a Google Search Console
 1. Verifica che il dominio reale del sito coincida con quello usato in:
@@ -28,3 +28,4 @@
 
 ## Note
 Se il dominio reale non è `https://lascuolaamica.it`, aggiorna gli URL in `robots.txt` e `sitemap.xml` prima della pubblicazione.
+Mantieni la documentazione pubblica focalizzata su struttura SEO, contenuti e percorsi canonici: i dettagli operativi dell'infrastruttura vanno gestiti in canali riservati del team.
