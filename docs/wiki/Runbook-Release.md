@@ -19,19 +19,9 @@ Checklist da seguire ad ogni release. L'ordine conta.
 ## Merge e deploy
 
 1. Merge su `main`
-2. Cloudflare Pages avvia il deploy automatico
+2. La piattaforma di hosting avvia il deploy automatico
 3. Attendi la fine del build (1–3 minuti tipicamente)
 4. Esegui lo smoke test:
-
-```bash
-# Header HTTP
-curl -I https://lascuolaamica.it
-curl -I https://lascuolaamica.it/json/index.json
-curl -I https://lascuolaamica.it/assets/mascotte/cervellino-neutral.png
-
-# Verifica CSP
-curl -I https://lascuolaamica.it | grep content-security-policy
-```
 
 5. Verifica manuale nel browser:
    - Home
@@ -39,13 +29,14 @@ curl -I https://lascuolaamica.it | grep content-security-policy
    - FAQ
    - Pagina supporto
    - Funzionamento offline (dopo primo caricamento, disconnetti e ricarica)
+6. Se necessario, verifica anche header, asset principali e comportamenti di sicurezza con gli strumenti del team.
 
 ---
 
 ## Rollback
 
-**Via Cloudflare Pages** (rapido): ripristina il deployment precedente dalla dashboard Pages → Deployments.
+**Via dashboard hosting** (rapido): ripristina il deployment precedente dalla schermata dei deploy.
 
 **Via Git** (completo): revert del commit su `main` → push → deploy automatico.
 
-Preferire il rollback Cloudflare per problemi urgenti in produzione. Il revert Git è preferibile se il problema è nei dati (JSON domande).
+Preferire il rollback dalla dashboard hosting per problemi urgenti in produzione. Il revert Git è preferibile se il problema è nei dati o nei contenuti versionati.

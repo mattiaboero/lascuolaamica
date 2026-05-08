@@ -1,103 +1,21 @@
-# Setup Editor Esercizi Privato (Token + URL, accesso persistente)
+# Accesso editoriale riservato
 
-Questa guida abilita la pagina privata:
+Questa guida pubblica non include link, token, credenziali o passaggi operativi per l’accesso all’editor riservato.
 
-- URL: `https://lascuolaamica.it/admin/esercizi`
-- Protezione attiva: token interno verificato via hash SHA-256
-- Modalità consigliata: token nell'URL con hash fragment (`#k=`)
+L’accesso all’ambiente editoriale viene gestito direttamente dal team del progetto attraverso canali privati.
 
-## 1) Scegli un token segreto
+## Per i collaboratori
 
-Scegli una stringa lunga e non banale (almeno 24 caratteri).
+Se collabori ai contenuti e hai bisogno dell’ambiente editoriale:
 
-Esempio formato (non usare questo):
+1. contatta il referente del progetto;
+2. ricevi le istruzioni tramite canale privato;
+3. usa il flusso riservato solo per le attività concordate.
 
-`scuolaamica-editor-2026-chiave-privata`
+## Per la repository pubblica
 
-## 2) Calcola hash SHA-256 del token
+Questa scelta serve a evitare la diffusione di:
 
-### 2.1 Metodo Python (macOS)
-
-```bash
-python3 - <<'PY'
-import hashlib
-token = "scuolaamica-editor-2026-chiave-privata"
-print(hashlib.sha256(token.encode()).hexdigest())
-PY
-```
-
-### 2.2 Metodo shasum (alternativo)
-
-```bash
-printf "%s" "scuolaamica-editor-2026-chiave-privata" | shasum -a 256
-```
-
-Prendi l'hash (64 caratteri esadecimali).
-
-## 3) Inserisci l'hash nel progetto
-
-Apri il file:
-
-`admin/editor-config.js`
-
-Sostituisci `INSERISCI_HASH_SHA256` con l'hash reale.
-
-Esempio:
-
-```js
-window.EDITOR_ACCESS_CONFIG = {
-  tokenHash: "c5a53cece13f20d1a757c53871a8da954f73bedcbbe249fa90b3a3b988b44bfe"
-};
-```
-
-## 4) Pubblica le modifiche
-
-Usa il tuo flusso standard (GitHub + Cloudflare Pages o export manuale).
-
-Verifica che la pagina risponda:
-
-- `https://lascuolaamica.it/admin/esercizi`
-
-## 5) Crea il link privato per i collaboratori (primo accesso)
-
-Condividi il link nel formato:
-
-`https://lascuolaamica.it/admin/esercizi#k=IL_TUO_TOKEN`
-
-Nota pratica:
-
-- meglio `#k=` rispetto a `?k=` perché il frammento `#` non viene inviato al server.
-
-Dopo il primo accesso riuscito nello stesso browser, il collaboratore può usare anche:
-
-`https://lascuolaamica.it/admin/esercizi`
-
-## 6) Uso da parte dei collaboratori
-
-1. Aprono il link privato con `#k=`.
-2. L'editor si sblocca automaticamente.
-3. Inseriscono gli esercizi (non devono gestire manualmente il numero ID).
-4. Il sistema calcola automaticamente l'ID leggendo la materia selezionata e il dataset già pubblicato.
-5. Cliccano `Genera e scarica JSON`.
-6. Ti inviano il file JSON via email.
-
-## 7) Rotazione token (consigliata)
-
-Quando cambia collaboratore (o periodicamente):
-
-1. Genera un nuovo token.
-2. Calcola il nuovo hash.
-3. Aggiorna `admin/editor-config.js`.
-4. Ripubblica.
-5. Invia il nuovo link privato.
-
-## 8) Limiti e buone pratiche
-
-Questo modello è leggero e pratico, ma meno forte di un accesso con identità nominativa.
-
-Per ridurre i rischi:
-
-- non pubblicare mai il link in pagine pubbliche;
-- condividi il link solo in canali privati;
-- ruota spesso il token;
-- mantieni la pagina fuori sitemap e con `noindex`.
+- URL riservati;
+- token o frammenti di accesso;
+- dettagli operativi che potrebbero facilitare usi impropri.

@@ -32,7 +32,7 @@ Ogni materia ha un file `json/<materia>.json` con questa struttura:
 }
 ```
 
-L'indice `json/index.json` tiene il conteggio aggiornato per materia e il timestamp di generazione.
+L’indice dati tiene il conteggio aggiornato per materia e il timestamp di generazione.
 
 ---
 
@@ -63,8 +63,8 @@ L'indice `json/index.json` tiene il conteggio aggiornato per materia e il timest
 3. Per domande parametriche: `python3 scripts/append_parametric_pilot.py --profile extended`
 4. Esegui i controlli: `./prepublish-check.sh`
 5. Verifica manuale su almeno 2 classi per materia toccata
-6. Aggiorna `json/index.json` con le nuove cardinalità
-7. Merge su `main` → deploy automatico
+6. Aggiorna l’indice dati con le nuove cardinalità
+7. Merge su `main` → pubblicazione automatica
 
 ---
 
@@ -78,18 +78,18 @@ Per verificare la copertura senza modificare i dataset:
 python3 scripts/append_parametric_pilot.py --report-only
 ```
 
-Il report CSV viene salvato in `reports/questions_coverage_latest.csv`.
+Il report CSV viene salvato nell’area report del progetto.
 
 ---
 
-## Aggiungere domande manualmente (editor privato)
+## Aggiungere domande manualmente (flusso riservato)
 
-Per collaboratori con accesso all'editor:
+Per collaboratori con accesso al flusso editoriale riservato:
 
-1. Apri il link privato `https://lascuolaamica.it/admin/esercizi#k=TOKEN`
+1. Apri l’ambiente editoriale condiviso dal team
 2. Seleziona materia e classe
-3. Inserisci la domanda — l'ID viene calcolato automaticamente
-4. Genera e scarica il JSON parziale
-5. Invia il file per l'integrazione nel dataset principale
+3. Inserisci la domanda — l’ID viene calcolato automaticamente
+4. Genera ed esporta il JSON parziale
+5. Invia il file per l’integrazione nel dataset principale
 
-Guida completa: [EDITOR_ACCESS_SETUP_CLICK_BY_CLICK.md](../EDITOR_ACCESS_SETUP_CLICK_BY_CLICK.md)
+I dettagli operativi dell’accesso non sono documentati nella wiki pubblica.

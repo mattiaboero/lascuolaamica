@@ -10,7 +10,7 @@ Il sito è progettato per bambini tra i 7 e i 10 anni. Questa pagina descrive le
 
 **Nessun tracciamento di terze parti.** Nessun pixel di analytics, nessun cookie pubblicitario, nessuna integrazione social che trasmette dati a server esterni.
 
-**Dati di gioco solo in locale.** Punteggi, progressi e preferenze sono in `localStorage` sul dispositivo. Non vengono mai inviati a nessun server.
+**Dati di gioco solo in locale.** Punteggi, progressi e preferenze restano nella memoria locale del browser sul dispositivo. Non vengono mai inviati a nessun server.
 
 **Zero dipendenze esterne a runtime.** Font self-hosted, nessuna richiesta a CDN di terze parti, nessun SDK esterno caricato lato client.
 
@@ -18,28 +18,21 @@ Il sito è progettato per bambini tra i 7 e i 10 anni. Questa pagina descrive le
 
 ## Hardening tecnico
 
-### Content Security Policy
+### Policy di sicurezza dei contenuti
 
-La CSP è impostata con `script-src 'self'`: nessun inline script eseguibile, nessuna risorsa JS da domini esterni. Applicata via header HTTP su Cloudflare, non via meta tag HTML (più robusta, non bypassabile da contenuti della pagina).
+Il sito usa policy restrittive per limitare l’esecuzione di script non previsti e per ridurre la superficie di attacco lato browser.
 
 ### Header di sicurezza
 
-Gestiti centralmente su Cloudflare Rules:
-
-| Header | Valore |
-|---|---|
-| `X-Content-Type-Options` | `nosniff` |
-| `X-Frame-Options` | `DENY` |
-| `Referrer-Policy` | `strict-origin-when-cross-origin` |
-| `Permissions-Policy` | camera, microfono, geolocalizzazione, pagamento, USB: tutti disabilitati |
+Vengono applicati header moderni per impedire embedding indesiderato, ridurre il rischio di interpretazioni errate dei contenuti e limitare l’accesso a funzioni del dispositivo non necessarie.
 
 ### JSON domande
 
-I file `json/*.json` vengono serviti con `X-Robots-Tag: noindex, nofollow` per non indicizzarli come contenuto standalone.
+I file dati tecnici non sono destinati all’indicizzazione come contenuto standalone.
 
-### TLS
+### Trasporto cifrato
 
-TLS 1.2 minimo, HSTS attivo, certificato in `Full (strict)` mode su Cloudflare.
+Il sito usa HTTPS e una configurazione conservativa del trasporto cifrato per proteggere la navigazione.
 
 ---
 
@@ -49,8 +42,8 @@ Il sito non raccoglie dati personali. Non ci sono form di contatto con dati iden
 
 Il trattamento dati è limitato a:
 
-- **Log di accesso Cloudflare** — IP e user-agent a livello infrastrutturale, non riconducibili a identità specifiche
-- **localStorage** — dati che restano sul dispositivo dell'utente, mai trasmessi
+- **Log tecnici dell’infrastruttura di hosting e protezione** — necessari al funzionamento e alla sicurezza del servizio
+- **Memoria locale del browser** — dati che restano sul dispositivo dell'utente, mai trasmessi
 
 Non è richiesto il consenso esplicito ai cookie perché non ci sono cookie di profilazione. La Cookie Policy e la Privacy Policy sono accessibili dal sito.
 
@@ -74,7 +67,7 @@ WCAG 2.1 livello AA, validata manualmente con:
 - Navigazione da tastiera completa
 - VoiceOver (macOS/iOS)
 - Zoom 200% e reflow
-- Riduzione movimento (con toggle persistente in localStorage)
+- Riduzione movimento (con preferenza persistente sul dispositivo)
 
 Dichiarazione di accessibilità disponibile su `/accessibilita`.
 

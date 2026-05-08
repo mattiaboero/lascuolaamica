@@ -9,9 +9,9 @@ Documentazione tecnica del progetto [lascuolaamica.it](https://lascuolaamica.it)
 | Pagina | Contenuto |
 |---|---|
 | [Architettura](Architettura) | Struttura frontend, moduli JS, gestione dati |
-| [Installazione e deploy](Installazione-e-Deploy) | Avvio locale, build, Cloudflare Pages |
+| [Installazione e deploy](Installazione-e-Deploy) | Avvio locale, build e pubblicazione |
 | [Contenuti e domande](Contenuti-e-Domande) | Pipeline editoriale, regole qualità, formato JSON |
-| [Sicurezza, privacy e minori](Sicurezza-Privacy-e-Minori) | CSP, GDPR, privacy-by-design |
+| [Sicurezza, privacy e minori](Sicurezza-Privacy-e-Minori) | Privacy-by-design, tutela minori e controlli di sicurezza |
 | [Runbook release](Runbook-Release) | Checklist pre-merge, deploy, rollback |
 
 ---
@@ -26,15 +26,15 @@ Principi tecnici fondamentali:
 
 - **Statico** — nessun server applicativo, nessun database. Solo HTML, CSS, JavaScript e JSON.
 - **PWA offline-first** — funziona dopo il primo caricamento, su qualsiasi dispositivo.
-- **Privacy-by-design** — nessuna registrazione, nessun cookie di terze parti, dati di gioco solo in localStorage.
+- **Privacy-by-design** — nessuna registrazione, nessun cookie di terze parti, dati di gioco salvati solo nella memoria locale del browser.
 - **WCAG 2.1 AA** — validata manualmente con tastiera, screen reader e riduzione movimento.
 - **Zero dipendenze runtime** — JavaScript vanilla, font self-hosted.
 
 ---
 
-## Repository e deploy
+## Repository e pubblicazione
 
 - **Repo:** GitHub (branch `main`)
-- **Hosting:** Cloudflare Pages, deploy automatico da `main`
+- **Hosting:** piattaforma statica con pubblicazione automatica da `main`
 - **Build:** `bash scripts/export_for_cloudflare.sh` → directory `export/`
-- **Sicurezza:** gestita tramite Cloudflare Rules (WAF, header, rate limiting)
+- **Sicurezza:** gestita a livello infrastrutturale con regole e controlli dedicati

@@ -10,19 +10,19 @@ Grazie per l'interesse. Le contribuzioni più frequenti e utili sono nuove doman
 
 Il dataset conta oggi 7.348 domande su 8 materie. Le aree meno coperte sono inglese, civica e problemi di matematica.
 
-**Se hai accesso all'editor privato:**
+**Se hai accesso all'ambiente editoriale riservato:**
 
-1. Apri il link privato ricevuto (`https://lascuolaamica.it/admin/esercizi#k=...`)
+1. Apri l’ambiente editoriale riservato condiviso dal team
 2. Seleziona materia e classe
 3. Inserisci domanda, risposta corretta e 3 distrattori
 4. Clicca `Genera e scarica JSON`
 5. Invia il file JSON via email o come allegato alla PR
 
-**Se non hai accesso all'editor:**
+**Se non hai accesso all'ambiente editoriale:**
 
 Apri una issue con la proposta di domande in formato libero — valutiamo noi la conversione.
 
-Vedi [EDITOR_ACCESS_SETUP_CLICK_BY_CLICK.md](docs/EDITOR_ACCESS_SETUP_CLICK_BY_CLICK.md) per la guida completa all'editor.
+Le istruzioni di accesso operativo all’editor non sono riportate nella documentazione pubblica.
 
 ### Bug report
 

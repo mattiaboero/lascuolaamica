@@ -47,10 +47,10 @@ I progressi vengono salvati localmente nel browser. Non c'è nessun server che l
 
 - **PWA con supporto offline** — funziona dopo il primo caricamento, anche su URL pulite come `/storia` o `/faq`
 - **Accessibilità WCAG 2.1 AA** — validata manualmente con tastiera, VoiceOver, zoom 200% e riduzione movimento
-- **Privacy-first** — nessuna registrazione, nessun cookie di terze parti, localStorage per i dati di gioco
+- **Privacy-first** — nessuna registrazione, nessun cookie di terze parti, dati di gioco salvati solo nella memoria locale del browser
 - **7.348 domande** su 8 materie, coerenti con le Indicazioni Nazionali per la scuola primaria
 - **Font self-hosted** — nessuna richiesta esterna a Google Fonts o CDN
-- **CSP strict** — `script-src 'self'`, nessun inline script eseguibile
+- **Politiche di sicurezza restrittive** — contenuti pubblici e aree tecniche separati con controlli dedicati
 
 ---
 
@@ -58,10 +58,10 @@ I progressi vengono salvati localmente nel browser. Non c'è nessun server che l
 
 ```
 HTML + CSS + JavaScript vanilla
-Service Worker (sw.js)
-Dataset domande: JSON split per materia (json/*.json + json/index.json)
-Build script: build_questions_json.py / scripts/append_parametric_pilot.py
-Deploy: GitHub → Cloudflare Pages
+Supporto offline progressivo
+Dataset domande in JSON per materia
+Script di build e verifica dedicati
+Hosting statico con pubblicazione automatica
 ```
 
 Nessun framework frontend. Nessuna dipendenza NPM a runtime.
@@ -130,18 +130,18 @@ bash scripts/export_backup_outside_repo.sh
 bash scripts/export_backup_outside_repo.sh "/percorso/assoluto/export-backup"
 ```
 
-**Deploy consigliato:**
+**Pubblicazione consigliata:**
 
-- Repository GitHub collegata a Cloudflare Pages
+- Repository GitHub collegata a una piattaforma di hosting statico
 - Build command: `bash scripts/export_for_cloudflare.sh`
 - Build output directory: `export`
-- Sicurezza, header e redirect gestiti tramite Cloudflare Rules (non via `_headers`/`_redirects`)
+- Regole di sicurezza e instradamento gestite nella configurazione di hosting del progetto
 
 ---
 
 ## Come contribuire
 
-Le contribuzioni più utili sono nuove domande: vedi [CONTRIBUTING.md](CONTRIBUTING.md) per la pipeline completa, dalle convenzioni editoriali all'uso dell'editor privato per la generazione del JSON.
+Le contribuzioni più utili sono nuove domande: vedi [CONTRIBUTING.md](CONTRIBUTING.md) per la pipeline completa, dalle convenzioni editoriali al flusso di integrazione dei contenuti.
 
 Per bug report e segnalazioni tecniche, apri una issue. Per PR, segui il flusso in CONTRIBUTING.md.
 
