@@ -256,9 +256,16 @@
 
   function pulseElement(el, className, durationMs) {
     if (!el) return;
-    el.classList.remove(className);
-    void el.offsetWidth;
-    el.classList.add(className);
+    if (window.SADom && typeof window.SADom.restartAnimation === 'function') {
+      window.SADom.restartAnimation(el, className);
+    } else {
+      el.classList.remove(className);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.classList.add(className);
+        });
+      });
+    }
     setTimeout(() => el.classList.remove(className), durationMs);
   }
 

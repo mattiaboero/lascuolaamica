@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.9';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.10';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -57,7 +57,7 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
-      date: '8 maggio 2026 · Release 4.5.9',
+      date: '8 maggio 2026 · Release 4.5.10',
       items: [
         'Rimossi gli ultimi stili runtime applicati via attributo, con refactor verso classi CSS condivise.',
         'Reso più severo il Content Security Policy sul fronte degli style attribute per ridurre ulteriormente la superficie di attacco.',

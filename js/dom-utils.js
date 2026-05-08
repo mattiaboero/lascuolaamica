@@ -24,8 +24,11 @@
   api.restartAnimation = function (el, cls) {
     if (!el || !cls) return;
     el.classList.remove(cls);
-    void el.offsetWidth;
-    el.classList.add(cls);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        el.classList.add(cls);
+      });
+    });
   };
 
   api.randomVariant = function (prefix, count) {

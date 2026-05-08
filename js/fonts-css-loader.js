@@ -1,10 +1,15 @@
-// Load fonts stylesheet asynchronously without inline handlers (CSP-safe).
+// Load preloaded stylesheets asynchronously without inline handlers (CSP-safe).
 (function () {
-  var preload = document.getElementById('fontsCssPreload');
-  if (!preload || !preload.href) return;
+  var preloads = document.querySelectorAll('link[rel="preload"][as="style"][data-async-css]');
+  if (!preloads.length) return;
 
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = preload.href;
-  document.head.appendChild(link);
+  preloads.forEach(function (preload) {
+    if (!preload.href) return;
+    if (document.querySelector('link[rel="stylesheet"][href="' + preload.href + '"]')) return;
+
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = preload.href;
+    document.head.appendChild(link);
+  });
 })();
