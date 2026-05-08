@@ -10,6 +10,83 @@
   --pill-bg: #ffffff;
 }
 
+body.subject-matematica {
+  --bg-1: #c6a6ff;
+  --bg-2: #9fd2ff;
+  --bg-3: #ffd891;
+  --accent-1: #7b43ff;
+  --accent-2: #2f7dff;
+  --accent-3: #ffb347;
+  --text-main: #261a44;
+  --card-bg: #fff7ef;
+}
+
+body.subject-geografia {
+  --bg-1: #aaf2c8;
+  --bg-2: #9fcdff;
+  --bg-3: #ffe29f;
+  --accent-1: #1f9d5d;
+  --accent-2: #2b67d8;
+  --accent-3: #f0b63f;
+  --text-main: #1a3442;
+  --card-bg: #fffaf0;
+}
+
+body.subject-storia {
+  --bg-1: #ffd6ad;
+  --bg-2: #cfc3ff;
+  --bg-3: #ffdcb8;
+  --accent-1: #8b4e2e;
+  --accent-2: #6a45d1;
+  --accent-3: #df9d45;
+  --text-main: #362319;
+  --card-bg: #fff7ee;
+}
+
+body.subject-scienze {
+  --bg-1: #a9f4e2;
+  --bg-2: #9fceff;
+  --bg-3: #ffe3a3;
+  --accent-1: #159883;
+  --accent-2: #2863d6;
+  --accent-3: #f2b23f;
+  --text-main: #16323d;
+  --card-bg: #fffaf1;
+}
+
+body.subject-italiano {
+  --bg-1: #ffc0cf;
+  --bg-2: #b9cbff;
+  --bg-3: #ffe5ad;
+  --accent-1: #cc3550;
+  --accent-2: #3d67d8;
+  --accent-3: #f2b950;
+  --text-main: #3a2532;
+  --card-bg: #fff9f2;
+}
+
+body.subject-civica {
+  --bg-1: #aef3dd;
+  --bg-2: #a6d3ff;
+  --bg-3: #ffe8ad;
+  --accent-1: #1f9f8f;
+  --accent-2: #2a67d8;
+  --accent-3: #ff9f3d;
+  --text-main: #183a44;
+  --card-bg: #fffaf1;
+}
+
+body.subject-problemi {
+  --bg-1: #ffd48e;
+  --bg-2: #ffb2a3;
+  --bg-3: #adf5c8;
+  --accent-1: #ff7b54;
+  --accent-2: #2a9d8f;
+  --accent-3: #f9c74f;
+  --text-main: #2e2a2a;
+  --card-bg: #fff8f0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -682,6 +759,33 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+
+body.subject-civica .answer-btn {
+  font-family: 'Fredoka One', cursive;
+}
+
+body.subject-problemi .intro-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+body.subject-problemi .intro-pill {
+  background: linear-gradient(145deg, #ffffff, #f8fbff);
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 800;
+  color: #555;
+  text-align: center;
+  border: 2px dashed rgba(255, 123, 84, 0.35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+body.subject-problemi .answer-btn {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.3rem;
 }
 
 .answer-btn {
@@ -1385,6 +1489,10 @@ header {
   .score-extra,
   .class-grid,
   .area-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.subject-problemi .intro-list {
     grid-template-columns: 1fr;
   }
 }

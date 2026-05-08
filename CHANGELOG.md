@@ -2,7 +2,7 @@
 
 ## Unreleased - 2026-04-27
 
-- Introdotta finestra locale di gioco da 30 minuti: per avviare una partita il timer deve essere attivato sul dispositivo (`localStorage`, zero cookie, zero login, compatibile offline).
+- Introdotta finestra locale di gioco da 30 minuti: per avviare una partita il timer deve essere attivato sul dispositivo, senza account o cookie e con supporto offline.
 - Aggiunto cooldown locale di 60 minuti dopo la scadenza del timer prima di poter riattivare una nuova sessione di gioco.
 - Resa più discreta la UI del timer nella home, mantenendo più evidente il pannello nelle schermate iniziali delle materie.
 - FAQ pubbliche aggiornate con spiegazione del flusso `30 minuti di gioco + 60 minuti di pausa`.
@@ -11,26 +11,25 @@
 - I motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) bloccano l’avvio se il timer non è attivo e interrompono la sessione quando la finestra dei 30 minuti scade.
 - Fase 2 audit tecnico completata: sostituiti i dialog nativi principali con modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) nei motori quiz e nell’update prompt.
 - Migliorata la coerenza “Meno animazioni” anche lato runtime JS (`subject-quiz-core`, `inglese`, `problemi`, `civica`, `index-page`), inclusa la disattivazione confetti in inglese.
-- Pipeline export Cloudflare aggiornata: esecuzione automatica di `refresh_structured_data.py` e `generate_sitemap.py` prima del sync.
+- Automatizzato l’aggiornamento dei contenuti strutturati e della sitemap prima della pubblicazione.
 - Fase 3 avviata: aggiunto nel pannello Info il comando “Cancella dati locali” per rimuovere progressi, crediti, classifiche e preferenze salvate sul dispositivo.
 - Accessibilità/touch ergonomics: aumentate dimensioni minime dei toggle Palette/Animazioni (target 44px+) nel pannello Info.
 - Testi privacy/FAQ allineati al nuovo comando “Cancella dati locali”.
 
 ## 4.5.8 - 2026-05-07
 
-- Aggiornato `robots.txt` per escludere dal crawl le aree tecniche `/json/`, `/reports/` e `questions-build-report.json`, lasciando invariata la gestione `/admin` demandata a Cloudflare.
-- Migliorato `scripts/generate_sitemap.py`: `lastmod` ora deriva in priorità dalla cronologia Git (`git log -1 --format=%cI`) con fallback al timestamp file.
-- Allineati gli script di build dataset (`build_questions_json.py`, `scripts/append_parametric_pilot.py`) alla serializzazione JSON compatta per ridurre il peso dei payload runtime.
-- Compattati i file `json/*.json` esistenti senza alterare i contenuti.
-- Estratti gli stili `noscript` in `noscript.css` condiviso e spostato il CSS della pagina `404.html` in `404.css`, riducendo l’uso di inline style ripetuti.
+- Migliorati i segnali per i crawler per separare meglio i contenuti pubblici dalle aree tecniche.
+- Aggiornata la sitemap con date di modifica più affidabili per riflettere meglio gli ultimi cambiamenti.
+- Ottimizzati i contenuti dati del sito per ridurre il peso dei caricamenti e migliorare la rapidità d’uso.
+- Ridotto ulteriormente l’uso di stili inline con una struttura CSS più ordinata e sicura.
 
 ## 4.5.7 - 2026-05-07
 
 - Allineata la versione applicativa a `4.5.7` con sincronizzazione del footer dal runtime condiviso e aggiornamento dei riferimenti statici residui.
-- Esteso il pattern di caricamento font ottimizzato (preload WOFF2 + `fonts.css` asincrono) alle pagine materia, FAQ, Villaggio e pagine informative.
-- Aggiunto il runtime condiviso (`app-version.js` + `shared.js`) alle pagine informative per abilitare service worker, pannello Info, palette accessibile e preferenza “Meno animazioni”.
-- Risolta la contraddizione AEO tra `llms.txt` e gli header globali: rimossi `noai/noimageai` dal sito pubblico, mantenuti solo su endpoint tecnici non destinati alla consultazione.
-- Ottimizzati gli asset della mascotte “Cervellino” con fallback PNG alleggeriti e nuove varianti `AVIF`/`WebP`, includendole nella cache del service worker.
+- Esteso il caricamento tipografico ottimizzato alle pagine materia, FAQ, Villaggio e pagine informative.
+- Aggiunte alle pagine informative le funzioni condivise principali: pannello Info, palette accessibile e preferenza “Meno animazioni”.
+- Allineati i segnali per motori di ricerca e sistemi di risposta con una comunicazione pubblica più coerente.
+- Ottimizzati gli asset della mascotte “Cervellino” per ridurre il peso delle immagini e migliorare la velocità su mobile.
 
 - Mascotte “Cervellino” integrata in PNG trasparente con 4 stati (`neutral`, `happy`, `sad`, `celebrate`) su tutte le materie.
 - Allineati i motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) al nuovo stato mascotte con feedback dinamico durante partita/bonus/risultato.
@@ -42,14 +41,14 @@
 - Quiz feedback: progress dots più grandi, stato risposta corretto/sbagliato più evidente (non solo colore), animazione feedback estesa e celebrativa.
 - Mascotte estesa alle pagine quiz materie (🦉) con stato dinamico nei motori quiz condivisi e dedicati.
 - Riduzione distrazioni: diminuito il numero/opacity degli elementi decorativi animati nelle pagine principali.
-- Accessibilità movimento: aggiunto toggle “Animazioni: Automatiche / Meno animazioni” nel pannello Info con persistenza su `localStorage`.
+- Accessibilità movimento: aggiunto toggle “Animazioni: Automatiche / Meno animazioni” nel pannello Info con preferenza persistente sul dispositivo.
 - Layout contenuti: spostate le sezioni `seo-static` fuori dalla card interattiva principale nelle pagine quiz.
 - SEO social: create e collegate 8 Open Graph image dedicate per le materie (`og-<materia>-1200x630.jpg`).
 - Nuova pagina pubblica `chi-siamo` con metadata SEO/OG/JSON-LD, breadcrumb e integrazione in sitemap.
 - Info Hub: aggiunto link rapido “Chi siamo” nel pannello Info condiviso (`shared.js`).
 - PWA hardening: introdotte favicon/icone fisiche (`favicon.svg`, `.ico`, `icons/*.png`) e manifest aggiornato senza data URI SVG.
 - Allineamento runtime script IIFE: rimossi `type=\"module\"` in favore di script `defer` classici.
-- Sicurezza policy: rimossi meta CSP/Permissions-Policy duplicati dalle pagine HTML (restano su `_headers`).
+- Sicurezza policy: rimossi meta CSP/Permissions-Policy duplicati dalle pagine HTML e centralizzata la gestione degli header di sicurezza.
 - Accessibilità/robustezza: aggiunto fallback `<noscript>` su tutte le pagine pubbliche.
 - README: rimosso percorso locale iCloud personale dalla sezione avvio in locale.
 - GEO: aggiunto file `llms.txt` alla radice progetto.
@@ -69,10 +68,10 @@
 - Estesa migrazione ES modules a tutte le pagine applicative: tutti gli script runtime `src` ora usano `type="module"`.
 - Rimossi alias globali legacy (`window.QuestionsLoader`, `window.ScuolaEconomy`, `window.ScuolaPalette`, `window.openModal/closeModal`) a favore di `window.SA.*`.
 - Deprecato e rimosso `questions.json` dal repo runtime; build aggiornata per generarlo solo su richiesta (`GENERATE_LEGACY_QUESTIONS_JSON=true`).
-- Aggiornati `_headers`, `README` e wiki architettura per allineamento definitivo a dataset split `json/index.json` + `json/*.json`.
+- Aggiornata la documentazione tecnica per allineare l’architettura dati a una struttura più modulare.
 - Merge completo dei nuovi dataset domande validati (`8` materie) nei file `json/*.json`.
 - Aggiornato `json/index.json` con nuove cardinalità per materia e totale complessivo (`7348` domande).
-- Verifica integrità post-merge completata su tutte le materie (`PASS`) con report tecnico `reports/post_merge_validation_v3.json`.
+- Verifica integrità post-merge completata su tutte le materie con esito `PASS`.
 - Corretto un refuso strutturale nel dataset italiano (`ita-2-ortografia-005`) per rimuovere un'opzione duplicata.
 - Hardening CSP: rimossi gli script inline eseguibili dalle pagine pubbliche e spostati in `js/*.js`.
 - Aggiornata la policy CSP nelle pagine principali con `script-src 'self'` (senza `unsafe-inline`).
@@ -82,13 +81,13 @@
 - Verifiche tecniche completate con `node --check` e `prepublish-check.sh` (esito OK).
 - Aggiornato il sistema di selezione domande con planner stocastico a slot (`area + difficoltà`) per ridurre pattern ripetitivi tra sessioni.
 - Potenziata la logica anti-ripetizione multi-sessione con cooldown su ID e firma domanda, più selezione `softmax` dei candidati.
-- Introdotte metriche locali di qualità sessione (`repeat rate`, `coverage`, `entropy`, `novelty`) salvate in `localStorage` con media rolling.
+- Introdotte metriche locali di qualità sessione (`repeat rate`, `coverage`, `entropy`, `novelty`) salvate sul dispositivo con media rolling.
 - Allineata la nuova logica algoritmo su tutte le materie quiz:
   - motore condiviso `subject-quiz-core.js` per matematica, italiano, geografia, storia, scienze
   - motori dedicati `js/inglese-page.js`, `js/problemi-page.js`, `js/civica-page.js` con la stessa strategia avanzata
-- Esteso il generatore parametrico `scripts/append_parametric_pilot.py` con profili `small`/`extended` e seed configurabile.
-- Aggiunto report CSV automatico di copertura domande (`reports/questions_coverage_latest.csv` + archivio timestampato) generato a ogni run del generatore.
-- Aggiunto anche report CSV di sintesi (`reports/questions_coverage_summary_latest.csv` + archivio timestampato) con 1 riga per materia.
+- Esteso il generatore parametrico con profili `small`/`extended` e seed configurabile.
+- Aggiunto un report CSV automatico di copertura domande generato a ogni esecuzione del generatore.
+- Aggiunto anche un report CSV di sintesi con una riga per materia.
 - Aggiunto flag `--report-only` per produrre solo il report CSV senza modificare i dataset.
 - Eseguito il profilo `extended` sui dataset domande con controllo anti-duplicati e ID incrementali:
   - `matematica`: +128 domande parametriche (`totalQuestions=1716`)
@@ -102,21 +101,20 @@
 - Aggiornata la sezione “Ultimi aggiornamenti” con lo storico dal 29 aprile al 1 maggio 2026.
 - Completata la Fase 2 runtime: modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) per dialog principali e update prompt.
 - Migliorata la coerenza “Meno animazioni” lato JavaScript su home e motori quiz dedicati, con confetti disattivati quando richiesto.
-- Pipeline export Cloudflare automatizzata con refresh JSON-LD + rigenerazione sitemap pre-sync.
+- Automatizzati gli aggiornamenti dei contenuti strutturati e della sitemap prima della pubblicazione.
 - Completata la Fase 3: aggiunto comando “Cancella dati locali” nel pannello Info e allineati i testi Privacy/FAQ.
 - Accessibilità/touch ergonomics: target minimi dei toggle Palette/Animazioni portati a 44px+.
 
 ## 4.5.6 - 2026-05-06
 
-- Service Worker: rimosso `/index.html` dalla core precache (usa `/` come shell canonica su Cloudflare Pages).
-- Service Worker: precache pagine informative/materie migrata da URL con `.html` a URL pulite (`/matematica`, `/faq`, ecc.) per evitare redirect 301 in install.
-- Service Worker: fallback offline aggiornato con priorità URL pulita e fallback finale su `/`.
-- Versione applicativa aggiornata a `4.5.6` per invalidare cache legacy client dopo la modifica strategia precache.
+- Migliorata la stabilità offline delle pagine principali e ridotti i redirect non necessari durante l’uso del sito.
+- Rafforzata la continuità di navigazione sulle URL canoniche anche senza connessione.
+- Versione applicativa aggiornata a `4.5.6` per riallineare la cache locale dei client.
 
 ## 4.5.2 - 2026-04-29
 
 - Aggiornata la versione applicativa a `4.5.2` (`app-version.js`, fallback runtime e footer pagine).
-- Service Worker: corretta gestione offline delle clean URLs (`request.mode === 'navigate'`) con fallback cache su variante `.html`.
+- Service Worker: corretta gestione offline delle URL pulite con fallback cache più robusto.
 - Service Worker: bump cache runtime a `lascuolaamica-v455` per forzare reinstallazione client con gli ultimi asset/fix.
 - Allineato il meta `mobile-web-app-capable` su tutte le pagine HTML pubbliche.
 - Font self-hosted consolidati su asset locali e documentazione tecnica sincronizzata (README + wiki).

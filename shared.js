@@ -59,20 +59,20 @@
     {
       date: '7 maggio 2026 · Release 4.5.8',
       items: [
-        'Aggiornato robots.txt per escludere dal crawl le sole aree tecniche (`/json`, `/reports`, report build) senza toccare l’area admin gestita via Cloudflare.',
-        'Migliorata la generazione della sitemap: `lastmod` ora deriva prima dalla cronologia Git e usa il timestamp file solo come fallback.',
-        'Compattati i dataset JSON runtime e allineati gli script di build per scrivere payload minificati invece che pretty-printed.',
-        'Estratti gli stili `noscript` in un foglio condiviso e spostato il CSS della 404 in un file esterno per ridurre l’uso di inline style.'
+        'Migliorati i segnali per i crawler per separare meglio i contenuti pubblici dalle aree tecniche.',
+        'Aggiornata la sitemap con date di modifica più affidabili per riflettere meglio gli ultimi cambiamenti.',
+        'Ottimizzati i contenuti dati del sito per ridurre il peso dei caricamenti e migliorare la rapidità d’uso.',
+        'Ridotto ulteriormente l’uso di stili inline con una struttura CSS più ordinata e sicura.'
       ]
     },
     {
       date: '7 maggio 2026 · Release 4.5.7',
       items: [
         'Rilasciata la versione 4.5.7 con versione portale riallineata automaticamente nel footer e nel pannello Info.',
-        'Esteso il caricamento font ottimizzato anche alle pagine materia, FAQ e pagine informative con preload dei file critici.',
-        'Attivato il runtime condiviso anche sulle pagine informative: service worker, pannello Info, palette accessibile e preferenza “Meno animazioni”.',
-        'Risolta la contraddizione AEO tra llms.txt e header globali: i segnali noai restano solo su aree tecniche non pubbliche.',
-        'Ottimizzati gli asset di Cervellino con versioni AVIF/WebP e fallback PNG alleggeriti per ridurre LCP e banda mobile.'
+        'Esteso il caricamento tipografico ottimizzato anche alle pagine materia, FAQ e pagine informative.',
+        'Attivate le funzioni condivise anche nelle pagine informative: pannello Info, palette accessibile e preferenza “Meno animazioni”.',
+        'Allineati i segnali per motori di ricerca e sistemi di risposta con una comunicazione pubblica più coerente.',
+        'Ottimizzati gli asset di Cervellino per ridurre il peso delle immagini e migliorare la velocità su mobile.'
       ]
     },
     {
@@ -97,19 +97,19 @@
     {
       date: '30 aprile 2026',
       items: [
-        'Completata la Fase 2 runtime: dialog nativi sostituiti con modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) nei flussi principali.',
+        'Completata la sostituzione dei dialog nativi con finestre integrate più coerenti nei flussi principali.',
         'Allineata la preferenza “Meno animazioni” anche lato JavaScript su home e motori quiz dedicati.',
         'Disattivata l’esplosione confetti in inglese quando la riduzione movimento è attiva.',
-        'Automatizzato l’export Cloudflare con refresh JSON-LD e rigenerazione sitemap prima del sync.',
+        'Automatizzati gli aggiornamenti dei contenuti strutturati e della sitemap prima della pubblicazione.',
         'Sincronizzata la documentazione tecnica repository/wiki con gli ultimi fix operativi.'
       ]
     },
     {
       date: '29 aprile 2026',
       items: [
-        'Risolto l’offline sulle URL pulite: il Service Worker intercetta ora tutte le navigazioni (`request.mode = navigate`) con fallback cache anche su variante `.html`.',
+        'Migliorata la stabilità offline delle pagine con URL puliti e continuità d’uso anche senza connessione.',
         'Allineato il meta `mobile-web-app-capable` su tutte le pagine pubbliche.',
-        'Completato self-hosting font (Fredoka + Nunito) con precache dedicato per maggiore stabilità alla prima visita.',
+        'Completato il caricamento locale dei font principali per rendere più stabile la prima visita.',
         'Aggiornata documentazione tecnica (README + wiki) con gli ultimi fix di runtime e deploy.',
         'Versione portale aggiornata alla 4.5.2.'
       ]
