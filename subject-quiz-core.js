@@ -768,12 +768,11 @@
     const frag = document.createDocumentFragment();
     for (let i = 0; i < 4; i++) {
       const d = document.createElement('div');
-      d.className = 'shape';
+      const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
+        ? window.SADom.randomVariant('float-v', 20)
+        : 'float-v1';
+      d.className = `shape ${variant}`;
       d.textContent = icons[Math.floor(Math.random() * icons.length)];
-      d.style.left = Math.random() * 100 + 'vw';
-      d.style.fontSize = 0.9 + Math.random() * 0.9 + 'rem';
-      d.style.animationDuration = 18 + Math.random() * 18 + 's';
-      d.style.animationDelay = Math.random() * 10 + 's';
       frag.appendChild(d);
     }
     bg.appendChild(frag);
@@ -1191,7 +1190,7 @@
 
     buildDots();
     updateScoreBar();
-    $('scoreBar').style.display = 'flex';
+    $('scoreBar')?.classList.add('is-visible');
     showScreen('screenGame');
     setMascot('neutral');
     setMascotResult('neutral');
@@ -1430,7 +1429,7 @@
 
     saveScore();
     showScreen('screenResult');
-    $('scoreBar').style.display = 'none';
+    $('scoreBar')?.classList.remove('is-visible');
   }
 
   function saveScore() {
@@ -1494,7 +1493,7 @@
 
   function showLeaderboard() {
     renderLB();
-    $('scoreBar').style.display = 'none';
+    $('scoreBar')?.classList.remove('is-visible');
     showScreen('screenLeaderboard');
   }
 
@@ -1546,7 +1545,7 @@
     showAllAreas = false;
     buildAreaGrid();
     showScreen('screenStart');
-    $('scoreBar').style.display = 'none';
+    $('scoreBar')?.classList.remove('is-visible');
     setMascot('neutral');
     setMascotResult('neutral');
   }

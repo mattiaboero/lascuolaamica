@@ -18,13 +18,12 @@ if (cont && !isMotionReduced()) {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
     const el = document.createElement('div');
-    el.className = 'float-el';
+    const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
+      ? window.SADom.randomVariant('float-v', 20)
+      : 'float-v1';
+    el.className = `float-el ${variant}`;
     el.setAttribute('aria-hidden','true');
     el.textContent = items[Math.floor(Math.random() * items.length)];
-    el.style.left = Math.random() * 100 + 'vw';
-    el.style.fontSize = (.9 + Math.random() * 1.3) + 'rem';
-    el.style.animationDuration = (16 + Math.random() * 18) + 's';
-    el.style.animationDelay = (Math.random() * 20) + 's';
     frag.appendChild(el);
   }
   cont.appendChild(frag);

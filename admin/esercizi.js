@@ -105,11 +105,8 @@
 
   function setStatus(el, message, isError) {
     el.textContent = message || '';
-    if (isError) {
-      el.style.color = '#fecaca';
-    } else {
-      el.style.color = '#c7d2fe';
-    }
+    el.classList.toggle('status-error', !!isError);
+    el.classList.toggle('status-info', !isError);
   }
 
   function escapeHtml(value) {

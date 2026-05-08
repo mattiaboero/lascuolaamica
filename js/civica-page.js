@@ -679,12 +679,11 @@ function spawnShapes() {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
     const d = document.createElement('div');
-    d.className = 'shape';
+    const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
+      ? window.SADom.randomVariant('float-v', 20)
+      : 'float-v1';
+    d.className = `shape ${variant}`;
     d.textContent = icons[Math.floor(Math.random() * icons.length)];
-    d.style.left = Math.random() * 100 + 'vw';
-    d.style.fontSize = (0.9 + Math.random() * 1.3) + 'rem';
-    d.style.animationDuration = (16 + Math.random() * 18) + 's';
-    d.style.animationDelay = (Math.random() * 20) + 's';
     frag.appendChild(d);
   }
   bg.appendChild(frag);
@@ -839,7 +838,7 @@ async function startGame() {
 
   buildDots();
   updateScoreBar();
-  $('scoreBar').style.display = 'flex';
+  $('scoreBar')?.classList.add('is-visible');
   showScreen('screenGame');
   setMascot('neutral');
   loadQuestion();
@@ -1042,7 +1041,7 @@ function finishGame(mode) {
 
   saveScore();
   showScreen('screenResult');
-  $('scoreBar').style.display = 'none';
+  $('scoreBar')?.classList.remove('is-visible');
 }
 
 function saveScore() {
@@ -1095,7 +1094,7 @@ async function clearLeaderboard() {
 
 function showLeaderboard() {
   renderLB();
-  $('scoreBar').style.display = 'none';
+  $('scoreBar')?.classList.remove('is-visible');
   showScreen('screenLeaderboard');
 }
 
@@ -1145,7 +1144,7 @@ function renderLB() {
 
 function goStart() {
   showScreen('screenStart');
-  $('scoreBar').style.display = 'none';
+  $('scoreBar')?.classList.remove('is-visible');
   setMascot('neutral');
 }
 

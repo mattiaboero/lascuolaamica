@@ -718,6 +718,21 @@ header {
   color: #3f4b53;
 }
 
+.replay-pop {
+  animation: replayPop 0.32s ease both;
+}
+
+@keyframes replayPop {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .answers-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

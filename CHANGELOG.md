@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.5.9 - 2026-05-08
+
+- Rimossi gli ultimi stili applicati via attributo nel runtime pubblico e nell’editor interno, convertendoli in classi CSS condivise.
+- Introdotti `utilities.css` e `js/dom-utils.js` come layer comune per visibilità, lock dello scroll, varianti decorative e replay animazioni.
+- Convertiti i decorativi random di home, FAQ e motori quiz in varianti CSS precalcolate compatibili con una CSP più rigida.
+- Convertiti score bar, scroll lock modali, confetti inglese e dimensioni sprite del Villaggio per non dipendere più da `style.*`.
+- Stretta la CSP in `_headers` sostituendo `style-src-attr 'unsafe-inline'` con `style-src-attr 'none'`.
+- Aggiornato il service worker per precaricare le nuove utility condivise e forzare il refresh client con la versione `4.5.9`.
+
 ## Unreleased - 2026-04-27
 
 - Introdotta finestra locale di gioco da 30 minuti: per avviare una partita il timer deve essere attivato sul dispositivo, senza account o cookie e con supporto offline.

@@ -777,13 +777,12 @@ function spawnBg() {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
     const s = document.createElement('div');
-    s.className = 'shape';
+    const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
+      ? window.SADom.randomVariant('float-v', 20)
+      : 'float-v1';
+    s.className = `shape ${variant}`;
     s.setAttribute('aria-hidden', 'true');
     s.textContent = icons[Math.floor(Math.random() * icons.length)];
-    s.style.left = Math.random() * 100 + 'vw';
-    s.style.fontSize = (22 + Math.random() * 24) + 'px';
-    s.style.animationDuration = (18 + Math.random() * 20) + 's';
-    s.style.animationDelay = (Math.random() * 12) + 's';
     frag.appendChild(s);
   }
   bg.appendChild(frag);
@@ -922,7 +921,7 @@ async function startGame(lvl) {
   creditsAwarded = false;
   playStart();
   showScreen('scrGame');
-  document.getElementById('scoreBar').style.display='flex';
+  document.getElementById('scoreBar')?.classList.add('is-visible');
   buildDots();
   updateBar();
   setMascot('neutral');
@@ -964,7 +963,9 @@ function loadQ() {
   // Re-trigger animations
   ['qEmoji','qText'].forEach(id=>{
     const el=document.getElementById(id);
-    el.style.animation='none'; el.offsetHeight; el.style.animation='';
+    if (window.SADom && typeof window.SADom.restartAnimation === 'function') {
+      window.SADom.restartAnimation(el, 'replay-pop');
+    }
   });
 
   // Answer buttons
@@ -1048,7 +1049,7 @@ function showFb(isOk) {
 // ============================================================
 function openBonusPick() {
   stopTimer();
-  document.getElementById('scoreBar').style.display='none';
+  document.getElementById('scoreBar')?.classList.remove('is-visible');
   baseScore = ok;
   document.getElementById('baseScoreLabel').textContent = baseScore;
   setMascot('neutral');
@@ -1105,7 +1106,7 @@ function checkBonusAns(chosen, correctAnswer, btn) {
 
 function finishGame(mode) {
   stopTimer();
-  document.getElementById('scoreBar').style.display='none';
+  document.getElementById('scoreBar')?.classList.remove('is-visible');
   if (mode === 'skip') {
     bonusType = null;
     bonusFactor = 1;
@@ -1228,7 +1229,7 @@ async function clearLB() {
 }
 function showLB() {
   renderLB();
-  document.getElementById('scoreBar').style.display='none';
+  document.getElementById('scoreBar')?.classList.remove('is-visible');
   stopTimer();
   showScreen('scrLB');
 }
@@ -1316,15 +1317,13 @@ function renderLB() {
 // ============================================================
 function launchConfetti() {
   if (isMotionReduced()) return;
-  const cols=['#ffd166','#06d6a0','#118ab2','#ef476f','#48cae4','#f77f00'];
   for(let i=0;i<60;i++){
     setTimeout(()=>{
-      const p=document.createElement('div'); p.className='cp';
-      p.style.left=Math.random()*100+'vw';
-      p.style.background=cols[Math.floor(Math.random()*cols.length)];
-      p.style.width=(8+Math.random()*10)+'px'; p.style.height=(8+Math.random()*10)+'px';
-      p.style.borderRadius=Math.random()>.5?'50%':'2px';
-      p.style.animationDuration=(1.5+Math.random()*2)+'s';
+      const p=document.createElement('div');
+      const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
+        ? window.SADom.randomVariant('confetti-v', 12)
+        : 'confetti-v1';
+      p.className=`cp ${variant}`;
       document.body.appendChild(p); setTimeout(()=>p.remove(),4000);
     },i*30);
   }
@@ -1348,7 +1347,7 @@ function showScreen(id) {
 
 function goLevels() {
   stopTimer();
-  document.getElementById('scoreBar').style.display='none';
+  document.getElementById('scoreBar')?.classList.remove('is-visible');
   baseScore = 0;
   finalScore = 0;
   bonusFactor = 1;

@@ -279,6 +279,13 @@ header {
   z-index: 3;
 }
 
+.tile-asset.tile-asset-w-1 { width: 100%; }
+.tile-asset.tile-asset-w-2 { width: 200%; }
+.tile-asset.tile-asset-w-3 { width: 300%; }
+.tile-asset.tile-asset-h-1 { height: 100%; }
+.tile-asset.tile-asset-h-2 { height: 200%; }
+.tile-asset.tile-asset-h-3 { height: 300%; }
+
 .info-box {
   background: #fff;
   border: 2px dashed #b5d8c0;

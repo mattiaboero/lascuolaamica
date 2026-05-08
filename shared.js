@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.8';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.9';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,15 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '8 maggio 2026 · Release 4.5.9',
+      items: [
+        'Rimossi gli ultimi stili runtime applicati via attributo, con refactor verso classi CSS condivise.',
+        'Reso più severo il Content Security Policy sul fronte degli style attribute per ridurre ulteriormente la superficie di attacco.',
+        'Uniformati decorativi, confetti, modali e stato score-bar a utility comuni riutilizzabili tra home, FAQ, quiz e villaggio.',
+        'Aggiornata la cache applicativa per distribuire in sicurezza il nuovo runtime compatibile con la CSP più stretta.'
+      ]
+    },
     {
       date: '7 maggio 2026 · Release 4.5.8',
       items: [
@@ -811,7 +820,11 @@
     prevFocus = document.activeElement;
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    if (window.SADom && typeof window.SADom.lockScroll === 'function') {
+      window.SADom.lockScroll(true);
+    } else {
+      document.body.classList.add('modal-open');
+    }
 
     const closeBtn = overlay.querySelector('.modal-close');
     if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
@@ -828,7 +841,11 @@
     overlay.setAttribute('aria-hidden', 'true');
 
     if (!document.querySelector('.modal-overlay.open')) {
-      document.body.style.overflow = '';
+      if (window.SADom && typeof window.SADom.lockScroll === 'function') {
+        window.SADom.lockScroll(false);
+      } else {
+        document.body.classList.remove('modal-open');
+      }
     }
 
     if (prevFocus && typeof prevFocus.focus === 'function') {

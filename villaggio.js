@@ -217,9 +217,7 @@
       const img = document.createElement('img');
       img.src = b.asset;
       img.alt = '';
-      img.className = 'tile-asset';
-      img.style.width = `${b.w * 100}%`;
-      img.style.height = `${b.h * 100}%`;
+      img.className = `tile-asset tile-asset-w-${b.w} tile-asset-h-${b.h}`;
       tile.appendChild(img);
     }
   }

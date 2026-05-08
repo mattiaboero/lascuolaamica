@@ -14,12 +14,11 @@
   const frag = document.createDocumentFragment();
   for (let i = 0; i < 4; i++) {
     const d = document.createElement('div');
-    d.className = 'shape';
+    const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
+      ? window.SADom.randomVariant('float-v', 20)
+      : 'float-v1';
+    d.className = `shape ${variant}`;
     d.textContent = icons[Math.floor(Math.random() * icons.length)];
-    d.style.left = Math.random() * 100 + 'vw';
-    d.style.fontSize = (0.9 + Math.random() * 1.2) + 'rem';
-    d.style.animationDuration = (16 + Math.random() * 16) + 's';
-    d.style.animationDelay = (Math.random() * 16) + 's';
     frag.appendChild(d);
   }
   bg.appendChild(frag);
