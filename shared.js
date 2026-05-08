@@ -1028,55 +1028,76 @@
     target.parentNode.appendChild(node);
   }
 
-  function createPlayWindowPanel(options) {
-    const panel = document.createElement('section');
-    panel.className = 'play-window-panel';
-    panel.setAttribute('data-play-window-panel', '1');
-    if (options?.context) panel.dataset.context = options.context;
-    panel.setAttribute('aria-live', 'polite');
-    panel.setAttribute('aria-atomic', 'true');
+  function ensurePlayWindowPanel(panel, options) {
+    const target = panel || document.createElement('section');
+    target.classList.add('play-window-panel');
+    target.setAttribute('data-play-window-panel', '1');
+    if (options?.context) target.dataset.context = options.context;
+    target.setAttribute('aria-live', 'polite');
+    target.setAttribute('aria-atomic', 'true');
 
-    const kicker = document.createElement('div');
-    kicker.className = 'play-window-kicker';
+    let kicker = target.querySelector('.play-window-kicker');
+    if (!kicker) {
+      kicker = document.createElement('div');
+      kicker.className = 'play-window-kicker';
+      target.appendChild(kicker);
+    }
     kicker.textContent = 'Tempo di gioco';
 
-    const status = document.createElement('p');
-    status.className = 'play-window-status';
+    let status = target.querySelector('.play-window-status');
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'play-window-status';
+      target.appendChild(status);
+    }
 
-    const actions = document.createElement('div');
-    actions.className = 'play-window-actions';
+    let actions = target.querySelector('.play-window-actions');
+    if (!actions) {
+      actions = document.createElement('div');
+      actions.className = 'play-window-actions';
+      target.appendChild(actions);
+    }
 
-    const timer = document.createElement('strong');
-    timer.className = 'play-window-timer';
+    let timer = actions.querySelector('.play-window-timer');
+    if (!timer) {
+      timer = document.createElement('strong');
+      timer.className = 'play-window-timer';
+      actions.appendChild(timer);
+    }
     timer.textContent = '30:00';
 
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'play-window-btn';
+    let button = actions.querySelector('.play-window-btn');
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'play-window-btn';
+      actions.appendChild(button);
+    }
+    if (!button.hasAttribute('type')) button.type = 'button';
     button.textContent = 'Attiva 30 minuti';
 
-    const note = document.createElement('p');
-    note.className = 'play-window-note';
+    let note = target.querySelector('.play-window-note');
+    if (!note) {
+      note = document.createElement('p');
+      note.className = 'play-window-note';
+      target.appendChild(note);
+    }
     note.textContent = 'Solo sul dispositivo, nessun login, nessun cookie, funziona anche offline.';
 
-    button.addEventListener('click', () => {
-      const state = getPlayWindowState();
-      if (state.active) return;
-      startPlayWindow();
-    });
-
-    actions.appendChild(timer);
-    actions.appendChild(button);
-    panel.appendChild(kicker);
-    panel.appendChild(status);
-    panel.appendChild(actions);
-    panel.appendChild(note);
+    if (button.dataset.playWindowBound !== '1') {
+      button.addEventListener('click', () => {
+        const state = getPlayWindowState();
+        if (state.active) return;
+        startPlayWindow();
+      });
+      button.dataset.playWindowBound = '1';
+    }
 
     const render = (state) => {
       const snapshot = state || getPlayWindowState();
-      panel.classList.toggle('is-active', snapshot.active);
-      panel.classList.toggle('is-expired', !snapshot.active && snapshot.expired);
-      panel.classList.toggle('is-cooldown', snapshot.coolingDown);
+      target.classList.toggle('is-active', snapshot.active);
+      target.classList.toggle('is-expired', !snapshot.active && snapshot.expired);
+      target.classList.toggle('is-cooldown', snapshot.coolingDown);
 
       if (snapshot.active) {
         status.textContent = 'Timer attivo: puoi giocare liberamente su tutte le materie finché il conto alla rovescia non finisce.';
@@ -1107,29 +1128,44 @@
       }
     };
 
-    playWindowSubscribers.add(render);
+    if (target.dataset.playWindowReady !== '1') {
+      playWindowSubscribers.add(render);
+      target.dataset.playWindowReady = '1';
+    }
     render(getPlayWindowState());
-    return panel;
+    return target;
   }
 
   function ensurePlayWindowPanelUi() {
     const homeFacts = document.querySelector('.main-facts');
-    if (homeFacts && !document.querySelector('[data-play-window-panel][data-context="home"]')) {
-      const homePanel = createPlayWindowPanel({ context: 'home' });
+    let homePanel = document.querySelector('[data-play-window-panel][data-context="home"]');
+    if (homeFacts && !homePanel) {
+      homePanel = ensurePlayWindowPanel(null, { context: 'home' });
       homePanel.classList.add('play-window-panel-home');
       insertNodeAfter(homeFacts, homePanel);
+    } else if (homePanel) {
+      homePanel.classList.add('play-window-panel-home');
+      ensurePlayWindowPanel(homePanel, { context: 'home' });
     }
 
     const startBtn = document.querySelector('#screenStart .start-btn');
-    if (startBtn && !document.querySelector('[data-play-window-panel][data-context="subject-start"]')) {
-      const subjectPanel = createPlayWindowPanel({ context: 'subject-start' });
+    let subjectPanel = document.querySelector('[data-play-window-panel][data-context="subject-start"]');
+    if (subjectPanel) {
+      subjectPanel.classList.add('play-window-panel-start');
+      ensurePlayWindowPanel(subjectPanel, { context: 'subject-start' });
+    } else if (startBtn) {
+      subjectPanel = ensurePlayWindowPanel(null, { context: 'subject-start' });
       subjectPanel.classList.add('play-window-panel-start');
       startBtn.parentNode.insertBefore(subjectPanel, startBtn);
     }
 
     const levelCards = document.querySelector('#scrLevel .level-cards');
-    if (levelCards && !document.querySelector('[data-play-window-panel][data-context="english-start"]')) {
-      const englishPanel = createPlayWindowPanel({ context: 'english-start' });
+    let englishPanel = document.querySelector('[data-play-window-panel][data-context="english-start"]');
+    if (englishPanel) {
+      englishPanel.classList.add('play-window-panel-start');
+      ensurePlayWindowPanel(englishPanel, { context: 'english-start' });
+    } else if (levelCards) {
+      englishPanel = ensurePlayWindowPanel(null, { context: 'english-start' });
       englishPanel.classList.add('play-window-panel-start');
       levelCards.parentNode.insertBefore(englishPanel, levelCards);
     }

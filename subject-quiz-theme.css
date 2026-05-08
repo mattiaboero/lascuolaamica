@@ -459,6 +459,10 @@ header {
   margin: 16px 0;
 }
 
+.area-grid:empty {
+  min-height: 260px;
+}
+
 .area-more-btn {
   border: 2px dashed rgba(46, 78, 112, 0.45);
   background: #f8fcff;
