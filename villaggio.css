@@ -345,37 +345,36 @@ header {
   border-radius: inherit;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.12;
+  opacity: 0.26;
   background:
     repeating-linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.06) 0,
-      rgba(255, 255, 255, 0.06) 1px,
+      rgba(255, 255, 255, 0.14) 0,
+      rgba(255, 255, 255, 0.14) 1px,
       transparent 1px,
-      transparent 18px
+      transparent 16px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.06) 0,
-      rgba(255, 255, 255, 0.06) 1px,
+      rgba(255, 255, 255, 0.14) 0,
+      rgba(255, 255, 255, 0.14) 1px,
       transparent 1px,
-      transparent 18px
+      transparent 16px
     ),
     repeating-linear-gradient(
       0deg,
-      rgba(36, 102, 56, 0.08) 0,
-      rgba(36, 102, 56, 0.08) 1px,
+      rgba(52, 112, 61, 0.16) 0,
+      rgba(52, 112, 61, 0.16) 1px,
       transparent 1px,
-      transparent 72px
+      transparent 64px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(36, 102, 56, 0.08) 0,
-      rgba(36, 102, 56, 0.08) 1px,
+      rgba(52, 112, 61, 0.16) 0,
+      rgba(52, 112, 61, 0.16) 1px,
       transparent 1px,
-      transparent 72px
+      transparent 64px
     );
-  mix-blend-mode: soft-light;
 }
 
 .iso-ground,
