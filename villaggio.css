@@ -373,37 +373,33 @@ header {
   top: calc(var(--iso-top-pad) + var(--iso-top));
   width: var(--iso-tile-w);
   height: var(--iso-tile-h);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 0;
   border-radius: 4px;
-  background: linear-gradient(160deg, #9cde90, #8adf9a);
+  background: transparent;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   overflow: hidden;
   min-width: 0;
   z-index: calc(10 + var(--iso-col) + var(--iso-row));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.42),
-    0 6px 10px rgba(24, 96, 45, 0.1);
+  box-shadow: none;
 }
 
 .tile::after {
-  content: '';
-  position: absolute;
-  inset: 8% 13%;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
-  opacity: 0.9;
-  pointer-events: none;
+  content: none;
 }
 
 .tile.occupied {
-  background: linear-gradient(160deg, #8bd082, #79c87f);
+  background: transparent;
 }
 
 .tile.selected-placement {
-  border-color: #ffd54f;
-  box-shadow:
-    0 0 0 3px rgba(255, 213, 79, 0.45),
-    0 10px 16px rgba(255, 213, 79, 0.26);
+  background: radial-gradient(circle, rgba(255, 213, 79, 0.24), rgba(255, 213, 79, 0));
+  box-shadow: none;
+}
+
+.tile:hover,
+.tile:focus-visible {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  outline: none;
 }
 
 .tile.purchase-pop {
