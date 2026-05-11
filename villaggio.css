@@ -418,13 +418,19 @@ header {
   position: absolute;
   left: calc(50% + (((var(--iso-col) - var(--iso-row)) + (var(--footprint-w) - var(--footprint-h) + 1)) * var(--iso-half-w)));
   top: calc(var(--iso-top-pad) + ((var(--iso-col) + var(--iso-row)) + var(--footprint-w) + var(--footprint-h)) * var(--iso-half-h));
-  transform: translate(-50%, -100%);
+  --iso-scale: 1;
+  --iso-shift-x: 0px;
+  --iso-shift-y: 0px;
+  --iso-shadow-scale: 1;
+  --iso-filter: drop-shadow(0 12px 16px rgba(27, 67, 40, 0.22));
+  transform: translate(-50%, -100%) translate(var(--iso-shift-x), var(--iso-shift-y)) scale(var(--iso-scale));
+  transform-origin: center bottom;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   pointer-events: none;
   z-index: calc(120 + var(--iso-col) + var(--iso-row) + var(--footprint-w) + var(--footprint-h));
-  filter: drop-shadow(0 12px 16px rgba(27, 67, 40, 0.22));
+  filter: var(--iso-filter);
 }
 
 .iso-building::before {
@@ -433,8 +439,8 @@ header {
   left: 50%;
   bottom: calc(var(--iso-tile-h) * 0.1);
   transform: translateX(-50%);
-  width: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-w) * 0.9);
-  height: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-h) * 0.62);
+  width: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-w) * 0.9 * var(--iso-scale) * var(--iso-shadow-scale));
+  height: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-h) * 0.62 * var(--iso-scale) * var(--iso-shadow-scale));
   background: radial-gradient(circle, rgba(38, 91, 49, 0.28), rgba(38, 91, 49, 0));
   border-radius: 999px;
   z-index: -1;
@@ -494,6 +500,66 @@ header {
   --footprint-h: 3;
   width: calc(var(--iso-tile-w) * 3.25);
   height: calc(var(--iso-tile-w) * 2.75);
+}
+
+.iso-building--stadio {
+  --iso-scale: 0.9;
+  --iso-shift-x: -10px;
+  --iso-shift-y: 6px;
+}
+
+.iso-building--universita {
+  --iso-scale: 0.95;
+  --iso-shift-x: 6px;
+  --iso-shift-y: -10px;
+  --iso-shadow-scale: 1.08;
+  --iso-filter:
+    drop-shadow(0 14px 18px rgba(27, 67, 40, 0.24))
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.12));
+}
+
+.iso-building--castello {
+  --iso-scale: 0.87;
+  --iso-shift-x: 6px;
+  --iso-shift-y: -12px;
+  --iso-shadow-scale: 1.18;
+  --iso-filter:
+    drop-shadow(0 16px 22px rgba(27, 67, 40, 0.27))
+    drop-shadow(0 0 14px rgba(202, 160, 102, 0.2));
+}
+
+.iso-building--uffici {
+  --iso-scale: 0.92;
+  --iso-shift-x: 4px;
+  --iso-shift-y: -6px;
+}
+
+.iso-building--ospedale {
+  --iso-scale: 0.94;
+  --iso-shift-x: 4px;
+  --iso-shift-y: -4px;
+}
+
+.iso-building--liceo {
+  --iso-scale: 0.95;
+  --iso-shift-x: -2px;
+  --iso-shift-y: -2px;
+}
+
+.iso-building--pompieri {
+  --iso-scale: 0.94;
+}
+
+.iso-building--scuola-media,
+.iso-building--scuola-elementare {
+  --iso-scale: 0.96;
+}
+
+.iso-building--farmacia,
+.iso-building--negozio-di-torte,
+.iso-building--chiesa,
+.iso-building--moschea {
+  --iso-scale: 0.94;
 }
 
 .info-box {

@@ -575,7 +575,7 @@
       if (!building) return;
 
       const sprite = document.createElement('div');
-      sprite.className = `iso-building ${getIsoPositionClass(placement.x, placement.y)} iso-sprite--${building.w}x${building.h}`;
+      sprite.className = `iso-building iso-building--${building.id} ${getIsoPositionClass(placement.x, placement.y)} iso-sprite--${building.w}x${building.h}`;
       sprite.dataset.placementId = String(placement.id);
       if (selectedPlacementId === placement.id) sprite.classList.add('selected-placement');
       sprite.setAttribute('aria-hidden', 'true');

@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.12';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.13';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '11 maggio 2026 · Release 4.5.13',
+      items: [
+        'Sostituiti gli asset del Villaggio con una versione grafica più curata e leggibile, mantenendo gli stessi nomi file per non toccare il renderer.',
+        'Normalizzati i nuovi PNG del Villaggio per ottenere più dettaglio visivo senza caricare immagini eccessivamente pesanti sul dispositivo.',
+        'Aggiornata la versione applicativa per distribuire correttamente il nuovo set grafico anche ai client con cache offline attiva.'
+      ]
+    },
     {
       date: '11 maggio 2026 · Release 4.5.12',
       items: [

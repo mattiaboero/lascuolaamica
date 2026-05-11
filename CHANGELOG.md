@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.13 - 2026-05-11
+
+- Sostituiti gli asset del Villaggio con una nuova versione grafica più definita e coerente con la resa isometrica.
+- Normalizzati i nuovi PNG per mantenere una buona qualità visiva senza lasciare immagini eccessivamente pesanti nel runtime.
+- Aggiornata la versione applicativa per forzare il refresh delle cache client e distribuire correttamente i nuovi asset offline.
+
 ## 4.5.12 - 2026-05-11
 
 - Convertita la mappa del Villaggio in un renderer isometrico con tile a rombo e layering visivo dedicato per gli edifici.
