@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.10';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.11';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,15 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '11 maggio 2026 · Release 4.5.11',
+      items: [
+        'Rinnovato il Villaggio Educativo con 17 edifici reali in PNG, nuovi costi e progressione a 4 tier.',
+        'Portata la mappa del Villaggio a 10x10 per renderla davvero completabile senza sacrificare i grandi edifici finali.',
+        'Aggiunti limiti per tipo di edificio, rimborso al 40% e regola speciale per sbloccare il Castello dopo 10 edifici diversi.',
+        'Sostituiti nel Villaggio i vecchi asset placeholder con immagini reali e conferme integrate più coerenti con il resto del sito.'
+      ]
+    },
     {
       date: '8 maggio 2026 · Release 4.5.10',
       items: [
@@ -2002,7 +2011,7 @@
       .play-window-panel-home{
         max-width:620px;
         margin:14px auto 0;
-        padding:6px 0 0;
+        padding:6px 0 6px;
         border:0;
         background:transparent;
         box-shadow:none;
@@ -2013,6 +2022,7 @@
         display:none;
       }
       .play-window-panel-home .play-window-actions{
+        align-items:center;
         justify-content:center;
         gap:10px;
       }
@@ -2022,8 +2032,12 @@
         font-size:1rem;
       }
       .play-window-panel-home .play-window-btn{
-        min-height:42px;
-        padding:10px 16px;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-height:44px;
+        padding:0 16px;
+        line-height:1;
         font-size:.9rem;
       }
       .play-window-panel-home.is-active,

@@ -1,9 +1,11 @@
 (function () {
   'use strict';
 
-  const GRID_SIZE = 8;
-  const STATE_KEY = 'scuolaAmica_village_v1';
-  const REFUND_RATE = 0.5;
+  const GRID_SIZE = 10;
+  const STATE_KEY = 'scuolaAmica_village_v2';
+  const LEGACY_STATE_KEYS = ['scuolaAmica_village_v1'];
+  const REFUND_RATE = 0.4;
+  const CASTLE_UNIQUE_TYPES_REQUIRED = 10;
   const DEBUG_MODE = (() => {
     try {
       const host = window.location.hostname;
@@ -15,20 +17,37 @@
   })();
 
   const BUILDINGS = [
-    { id: 'alberi', name: 'Alberi', cost: 20, w: 1, h: 1, asset: 'assets/village/alberi.svg', unlock: [] },
-    { id: 'casa', name: 'Casa', cost: 70, w: 1, h: 1, asset: 'assets/village/casa.svg', unlock: [] },
-    { id: 'parco-giochi', name: 'Parco Giochi', cost: 95, w: 2, h: 2, asset: 'assets/village/parco-giochi.svg', unlock: [] },
-    { id: 'scuola-elementare', name: 'Scuola Elementare', cost: 130, w: 2, h: 2, asset: 'assets/village/scuola-elementare.svg', unlock: [] },
-    { id: 'supermercato', name: 'Supermercato', cost: 145, w: 2, h: 2, asset: 'assets/village/supermercato.svg', unlock: [] },
-    { id: 'campo-basket', name: 'Campo da Basket', cost: 165, w: 2, h: 2, asset: 'assets/village/campo-basket.svg', unlock: [] },
-    { id: 'biblioteca', name: 'Biblioteca', cost: 190, w: 2, h: 2, asset: 'assets/village/biblioteca.svg', unlock: [] },
-    { id: 'cinema', name: 'Cinema', cost: 220, w: 2, h: 2, asset: 'assets/village/cinema.svg', unlock: ['parco-giochi'] },
-    { id: 'campo-tennis', name: 'Campo da Tennis', cost: 250, w: 2, h: 2, asset: 'assets/village/campo-tennis.svg', unlock: ['campo-basket'] },
-    { id: 'ristorante', name: 'Ristorante', cost: 280, w: 2, h: 2, asset: 'assets/village/ristorante.svg', unlock: ['supermercato'] },
-    { id: 'uffici', name: 'Uffici', cost: 330, w: 2, h: 2, asset: 'assets/village/uffici.svg', unlock: ['ristorante'] },
-    { id: 'scuola-media', name: 'Scuola Media', cost: 360, w: 2, h: 2, asset: 'assets/village/scuola-media.svg', unlock: ['scuola-elementare', 'biblioteca'] },
-    { id: 'liceo', name: 'Liceo', cost: 500, w: 3, h: 2, asset: 'assets/village/liceo.svg', unlock: ['scuola-media'] },
-    { id: 'universita', name: 'Università', cost: 720, w: 3, h: 3, asset: 'assets/village/universita.svg', unlock: ['liceo', 'uffici'] }
+    { id: 'casa', name: 'Casa', cost: 50, w: 1, h: 1, max: 3, asset: 'assets/villaggio/casa.png', unlock: [] },
+    { id: 'fattoria', name: 'Fattoria', cost: 80, w: 2, h: 2, max: 2, asset: 'assets/villaggio/fattoria.png', unlock: [] },
+
+    { id: 'mucche', name: 'Mucche', cost: 100, w: 2, h: 1, max: 1, asset: 'assets/villaggio/mucche.png', unlock: ['fattoria'] },
+    { id: 'parco-giochi', name: 'Parco Giochi', cost: 120, w: 2, h: 2, max: 1, asset: 'assets/villaggio/parco-giochi.png', unlock: ['casa'] },
+    { id: 'scuola-elementare', name: 'Scuola Elementare', cost: 150, w: 2, h: 2, max: 1, asset: 'assets/villaggio/scuola-elementare.png', unlock: ['casa'] },
+    { id: 'farmacia', name: 'Farmacia', cost: 140, w: 1, h: 2, max: 1, asset: 'assets/villaggio/farmacia.png', unlock: ['casa'] },
+    { id: 'pompieri', name: 'Pompieri', cost: 150, w: 2, h: 2, max: 1, asset: 'assets/villaggio/pompieri.png', unlock: ['casa'] },
+    { id: 'chiesa', name: 'Chiesa', cost: 130, w: 1, h: 2, max: 1, asset: 'assets/villaggio/chiesa.png', unlock: ['casa'] },
+    { id: 'moschea', name: 'Moschea', cost: 130, w: 1, h: 2, max: 1, asset: 'assets/villaggio/moschea.png', unlock: ['casa'] },
+
+    { id: 'negozio-di-torte', name: 'Pasticceria', cost: 200, w: 1, h: 2, max: 1, asset: 'assets/villaggio/negozio-di-torte.png', unlock: ['fattoria', 'mucche'] },
+    { id: 'scuola-media', name: 'Scuola Media', cost: 260, w: 2, h: 2, max: 1, asset: 'assets/villaggio/scuola-media.png', unlock: ['scuola-elementare'] },
+    { id: 'ospedale', name: 'Ospedale', cost: 420, w: 3, h: 2, max: 1, asset: 'assets/villaggio/ospedale.png', unlock: ['farmacia'] },
+    { id: 'stadio', name: 'Stadio', cost: 380, w: 3, h: 3, max: 1, asset: 'assets/villaggio/stadio.png', unlock: ['parco-giochi', 'fattoria'] },
+
+    { id: 'liceo', name: 'Liceo', cost: 480, w: 3, h: 2, max: 1, asset: 'assets/villaggio/liceo.png', unlock: ['scuola-media'] },
+    { id: 'uffici', name: 'Uffici', cost: 350, w: 2, h: 2, max: 1, asset: 'assets/villaggio/uffici.png', unlock: ['scuola-media', 'negozio-di-torte'] },
+
+    { id: 'universita', name: 'Università', cost: 750, w: 3, h: 3, max: 1, asset: 'assets/villaggio/universita.png', unlock: ['liceo', 'ospedale'] },
+    {
+      id: 'castello',
+      name: 'Castello',
+      cost: 1100,
+      w: 3,
+      h: 3,
+      max: 1,
+      asset: 'assets/villaggio/castello.png',
+      unlock: ['universita', 'uffici', 'stadio'],
+      minUniqueTypes: CASTLE_UNIQUE_TYPES_REQUIRED
+    }
   ];
 
   const BUILDING_MAP = {};
@@ -58,14 +77,63 @@
     return document.getElementById(id);
   }
 
-  function safeInt(value, fallback) {
+  function toInt(value, fallback) {
     const n = Number(value);
     if (!Number.isFinite(n)) return fallback;
-    return Math.max(0, Math.floor(n));
+    return Math.floor(n);
   }
 
   function cellKey(x, y) {
     return `${x}:${y}`;
+  }
+
+  function createDefaultState() {
+    return { size: GRID_SIZE, nextPlacementId: 1, placements: [] };
+  }
+
+  function getBuildingLimit(building) {
+    return Math.max(1, toInt(building && building.max, 1));
+  }
+
+  function getBuiltCounts() {
+    const counts = {};
+    state.placements.forEach((p) => {
+      counts[p.buildingId] = (counts[p.buildingId] || 0) + 1;
+    });
+    return counts;
+  }
+
+  function getBuiltUniqueTypes(counts) {
+    return Object.keys(counts || {}).filter((id) => (counts[id] || 0) > 0).length;
+  }
+
+  function canBuildMore(building, counts) {
+    return (counts[building.id] || 0) < getBuildingLimit(building);
+  }
+
+  function getUnlockStatus(building, counts) {
+    const missing = (building.unlock || []).filter((req) => (counts[req] || 0) <= 0);
+    const parts = [];
+
+    if (missing.length) {
+      parts.push(`Costruisci prima: ${missing.map((id) => BUILDING_MAP[id]?.name || id).join(' + ')}.`);
+    }
+
+    if (building.minUniqueTypes) {
+      const uniqueBuilt = getBuiltUniqueTypes(counts);
+      if (uniqueBuilt < building.minUniqueTypes) {
+        parts.push(`Servono almeno ${building.minUniqueTypes} edifici diversi (${uniqueBuilt}/${building.minUniqueTypes}).`);
+      }
+    }
+
+    return {
+      ok: parts.length === 0,
+      reason: parts.join(' ')
+    };
+  }
+
+  function getLimitReason(building, counts) {
+    return `Hai già costruito il massimo per ${building.name} (${getBuildingLimit(building)}).`;
   }
 
   function buildPlacementLookup(placements) {
@@ -88,76 +156,76 @@
     return { occupancy, anchors };
   }
 
-  function loadState() {
-    try {
-      const raw = JSON.parse(localStorage.getItem(STATE_KEY));
-      const placements = Array.isArray(raw?.placements) ? raw.placements : [];
-      const occupied = new Set();
-      const cleaned = [];
+  function sanitizeState(raw) {
+    const placements = Array.isArray(raw && raw.placements) ? raw.placements : [];
+    const occupied = new Set();
+    const cleaned = [];
 
-      placements.forEach((p) => {
-        const candidate = {
-          id: safeInt(p?.id, 0),
-          buildingId: String(p?.buildingId || ''),
-          x: safeInt(p?.x, -1),
-          y: safeInt(p?.y, -1)
-        };
-
-        const b = BUILDING_MAP[candidate.buildingId];
-        if (!candidate.id || !b) return;
-        if (candidate.x < 0 || candidate.y < 0) return;
-        if (candidate.x + b.w > GRID_SIZE || candidate.y + b.h > GRID_SIZE) return;
-
-        for (let yy = candidate.y; yy < candidate.y + b.h; yy++) {
-          for (let xx = candidate.x; xx < candidate.x + b.w; xx++) {
-            const key = cellKey(xx, yy);
-            if (occupied.has(key)) return;
-          }
-        }
-
-        for (let yy = candidate.y; yy < candidate.y + b.h; yy++) {
-          for (let xx = candidate.x; xx < candidate.x + b.w; xx++) {
-            occupied.add(cellKey(xx, yy));
-          }
-        }
-        cleaned.push(candidate);
-      });
-
-      const maxPlacementId = cleaned.reduce((maxId, p) => Math.max(maxId, p.id), 0);
-      const nextPlacementId = Math.max(maxPlacementId + 1, safeInt(raw?.nextPlacementId, 1), 1);
-
-      return {
-        size: GRID_SIZE,
-        nextPlacementId,
-        placements: cleaned
+    placements.forEach((p) => {
+      const candidate = {
+        id: toInt(p && p.id, 0),
+        buildingId: String((p && p.buildingId) || ''),
+        x: toInt(p && p.x, -1),
+        y: toInt(p && p.y, -1)
       };
-    } catch (e) {
-      debugWarn('loadState', e);
-      return { size: GRID_SIZE, nextPlacementId: 1, placements: [] };
+
+      const b = BUILDING_MAP[candidate.buildingId];
+      if (!candidate.id || !b) return;
+      if (candidate.x < 0 || candidate.y < 0) return;
+      if (candidate.x + b.w > GRID_SIZE || candidate.y + b.h > GRID_SIZE) return;
+
+      for (let yy = candidate.y; yy < candidate.y + b.h; yy++) {
+        for (let xx = candidate.x; xx < candidate.x + b.w; xx++) {
+          const key = cellKey(xx, yy);
+          if (occupied.has(key)) return;
+        }
+      }
+
+      for (let yy = candidate.y; yy < candidate.y + b.h; yy++) {
+        for (let xx = candidate.x; xx < candidate.x + b.w; xx++) {
+          occupied.add(cellKey(xx, yy));
+        }
+      }
+
+      cleaned.push(candidate);
+    });
+
+    const maxPlacementId = cleaned.reduce((maxId, p) => Math.max(maxId, p.id), 0);
+    const nextPlacementId = Math.max(maxPlacementId + 1, toInt(raw && raw.nextPlacementId, 1), 1);
+
+    return {
+      size: GRID_SIZE,
+      nextPlacementId,
+      placements: cleaned
+    };
+  }
+
+  function loadState() {
+    const keys = [STATE_KEY].concat(LEGACY_STATE_KEYS);
+    for (const key of keys) {
+      try {
+        const rawValue = localStorage.getItem(key);
+        if (!rawValue) continue;
+        const parsed = JSON.parse(rawValue);
+        return sanitizeState(parsed);
+      } catch (e) {
+        debugWarn(`loadState:${key}`, e);
+      }
     }
+    return createDefaultState();
   }
 
   function saveState() {
     try {
       localStorage.setItem(STATE_KEY, JSON.stringify(state));
+      LEGACY_STATE_KEYS.forEach((key) => {
+        if (key !== STATE_KEY) localStorage.removeItem(key);
+      });
       return true;
     } catch (e) {
       debugWarn('saveState', e);
     }
     return false;
-  }
-
-  function getBuiltCounts() {
-    const counts = {};
-    state.placements.forEach((p) => {
-      counts[p.buildingId] = (counts[p.buildingId] || 0) + 1;
-    });
-    return counts;
-  }
-
-  function getUnlocked(building, counts) {
-    if (!building.unlock.length) return true;
-    return building.unlock.every((req) => (counts[req] || 0) > 0);
   }
 
   function getPlacementAt(x, y, lookup) {
@@ -217,6 +285,8 @@
       const img = document.createElement('img');
       img.src = b.asset;
       img.alt = '';
+      img.decoding = 'async';
+      img.draggable = false;
       img.className = `tile-asset tile-asset-w-${b.w} tile-asset-h-${b.h}`;
       tile.appendChild(img);
     }
@@ -225,10 +295,10 @@
   function updateGridArea(x, y, w, h) {
     const grid = $('villageGrid');
     if (!grid || !gridTileMap.size) return;
-    const startX = Math.max(0, safeInt(x, 0));
-    const startY = Math.max(0, safeInt(y, 0));
-    const endX = Math.min(GRID_SIZE, startX + Math.max(1, safeInt(w, 1)));
-    const endY = Math.min(GRID_SIZE, startY + Math.max(1, safeInt(h, 1)));
+    const startX = Math.max(0, toInt(x, 0));
+    const startY = Math.max(0, toInt(y, 0));
+    const endX = Math.min(GRID_SIZE, startX + Math.max(1, toInt(w, 1)));
+    const endY = Math.min(GRID_SIZE, startY + Math.max(1, toInt(h, 1)));
     const lookup = buildPlacementLookup();
 
     for (let yy = startY; yy < endY; yy++) {
@@ -271,12 +341,31 @@
 
   function triggerPurchaseFeedback(buildingId, x, y) {
     pulseElement(getGridTile(x, y), 'purchase-pop', 760);
-    const shopCards = document.querySelectorAll('.shop-item');
-    shopCards.forEach((card) => {
+    document.querySelectorAll('.shop-item').forEach((card) => {
       if (String(card.dataset.buildingId || '') === String(buildingId || '')) {
         pulseElement(card, 'purchase-flash', 760);
       }
     });
+  }
+
+  function estimateSessionsForMissingCredits(missingCredits) {
+    return Math.max(1, Math.ceil(Math.max(0, missingCredits) / 28));
+  }
+
+  function toast(text) {
+    const el = $('feedback');
+    if (!el) return;
+    el.textContent = text;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 1550);
+  }
+
+  async function confirmAction(message, options) {
+    const sa = window.SA;
+    if (sa && sa.ui && typeof sa.ui.confirm === 'function') {
+      return sa.ui.confirm(message, options || {});
+    }
+    return Promise.resolve(window.confirm(message));
   }
 
   function placeBuilding(building, x, y) {
@@ -285,14 +374,22 @@
     if (!building || !BUILDING_MAP[building.id]) return;
 
     const counts = getBuiltCounts();
-    if (!getUnlocked(building, counts)) {
-      toast("Questo edificio è ancora bloccato.");
+    const unlockStatus = getUnlockStatus(building, counts);
+    if (!unlockStatus.ok) {
+      toast(unlockStatus.reason || 'Questo edificio è ancora bloccato.');
+      return;
+    }
+
+    if (!canBuildMore(building, counts)) {
+      toast(getLimitReason(building, counts));
       return;
     }
 
     const wallet = economy.getWallet();
     if (wallet.balance < building.cost) {
-      toast('Crediti insufficienti. Continua a giocare!');
+      const missing = building.cost - wallet.balance;
+      const sessions = estimateSessionsForMissingCredits(missing);
+      toast(`Ti mancano ${missing} crediti. Ancora circa ${sessions} sessioni.`);
       return;
     }
 
@@ -326,7 +423,12 @@
       return;
     }
 
-    selectedPlacementId = placementId;
+    const countsAfter = getBuiltCounts();
+    if (!canBuildMore(building, countsAfter)) {
+      selectedBuildingId = null;
+      selectedPlacementId = placementId;
+    }
+
     renderShop();
     updateGridArea(x, y, building.w, building.h);
     updateGridSelectionStyles();
@@ -335,22 +437,30 @@
     toast(`${building.name} costruito!`);
   }
 
-  function removeSelectedPlacement() {
+  async function removeSelectedPlacement() {
     const economy = getEconomy();
     if (!economy || !selectedPlacementId) return;
     const idx = state.placements.findIndex((p) => p.id === selectedPlacementId);
     if (idx < 0) return;
 
-    const p = state.placements[idx];
-    const building = BUILDING_MAP[p.buildingId];
+    const placement = state.placements[idx];
+    const building = BUILDING_MAP[placement.buildingId];
     if (!building) return;
 
     const refund = Math.floor(building.cost * REFUND_RATE);
-    if (!confirm(`Rimuovere ${building.name}?\nRiceverai ${refund} crediti di rimborso.`)) return;
+    const accepted = await confirmAction(
+      `Riceverai ${refund} crediti di rimborso se rimuovi ${building.name}.`,
+      {
+        title: `Rimuovere ${building.name}?`,
+        confirmLabel: 'Sì, rimuovi',
+        cancelLabel: 'Annulla'
+      }
+    );
+    if (!accepted) return;
 
     state.placements.splice(idx, 1);
     if (!saveState()) {
-      state.placements.splice(idx, 0, p);
+      state.placements.splice(idx, 0, placement);
       toast('Salvataggio non riuscito. Nessuna modifica applicata.');
       return;
     }
@@ -364,9 +474,10 @@
 
     selectedPlacementId = null;
     renderShop();
-    updateGridArea(p.x, p.y, building.w, building.h);
+    updateGridArea(placement.x, placement.y, building.w, building.h);
     updateGridSelectionStyles();
     renderInfo();
+    toast(`${building.name} rimosso. Rimborso: ${refund} crediti.`);
   }
 
   function renderShop() {
@@ -379,46 +490,59 @@
     const counts = getBuiltCounts();
     const frag = document.createDocumentFragment();
 
-    BUILDINGS.forEach((b) => {
-      const unlocked = getUnlocked(b, counts);
-      const affordable = wallet.balance >= b.cost;
+    BUILDINGS.forEach((building) => {
+      const builtCount = counts[building.id] || 0;
+      const unlocked = getUnlockStatus(building, counts);
+      const affordable = wallet.balance >= building.cost;
+      const underLimit = canBuildMore(building, counts);
+      const limit = getBuildingLimit(building);
+      const missingCredits = Math.max(0, building.cost - wallet.balance);
+
       const card = document.createElement('button');
       card.type = 'button';
       card.className = 'shop-item';
-      card.dataset.buildingId = b.id;
-      if (selectedBuildingId === b.id) card.classList.add('selected');
-      if (!unlocked) card.classList.add('locked');
-      if (unlocked && !affordable) card.classList.add('poor');
-      card.disabled = !unlocked;
-      card.setAttribute('aria-label', `${b.name}, costo ${b.cost} crediti`);
+      card.dataset.buildingId = building.id;
+      if (selectedBuildingId === building.id) card.classList.add('selected');
+      if (!unlocked.ok) card.classList.add('locked');
+      if (unlocked.ok && !affordable) card.classList.add('poor');
+      if (!underLimit) card.classList.add('maxed');
+      card.setAttribute('aria-disabled', (!unlocked.ok || !underLimit) ? 'true' : 'false');
+      card.setAttribute('aria-label', `${building.name}, costo ${building.cost} crediti, dimensione ${building.w}x${building.h}`);
 
       const img = document.createElement('img');
-      img.src = b.asset;
+      img.src = building.asset;
       img.alt = '';
       img.loading = 'lazy';
+      img.decoding = 'async';
 
       const title = document.createElement('div');
       title.className = 'shop-name';
-      title.textContent = b.name;
+      title.textContent = building.name;
 
       const meta = document.createElement('div');
       meta.className = 'shop-meta';
-      meta.textContent = `${b.w}x${b.h} · ${b.cost} crediti`;
+      meta.textContent = `${building.w}x${building.h} · ${building.cost} crediti`;
 
       const built = document.createElement('div');
       built.className = 'shop-built';
-      built.textContent = `Nel villaggio: ${counts[b.id] || 0}`;
+      built.textContent = `Nel villaggio: ${builtCount} / ${limit}`;
 
       card.appendChild(img);
       card.appendChild(title);
       card.appendChild(meta);
       card.appendChild(built);
 
-      if (!unlocked && b.unlock.length) {
-        const lock = document.createElement('div');
-        lock.className = 'shop-lock';
-        lock.textContent = `Sblocca: ${b.unlock.map((id) => BUILDING_MAP[id]?.name || id).join(' + ')}`;
-        card.appendChild(lock);
+      const status = document.createElement('div');
+      status.className = 'shop-lock';
+      if (!unlocked.ok) {
+        status.textContent = unlocked.reason;
+        card.appendChild(status);
+      } else if (!underLimit) {
+        status.textContent = getLimitReason(building, counts);
+        card.appendChild(status);
+      } else if (!affordable) {
+        status.textContent = `Ti mancano ${missingCredits} crediti.`;
+        card.appendChild(status);
       }
 
       frag.appendChild(card);
@@ -429,9 +553,12 @@
 
   function renderGrid() {
     const grid = $('villageGrid');
+    const title = $('villageTitle');
     if (!grid) return;
     grid.textContent = '';
     gridTileMap = new Map();
+    if (title) title.textContent = `Mappa del Villaggio (${GRID_SIZE}x${GRID_SIZE})`;
+    grid.setAttribute('aria-label', `Griglia del villaggio ${GRID_SIZE}x${GRID_SIZE}`);
 
     const frag = document.createDocumentFragment();
     const lookup = buildPlacementLookup();
@@ -445,7 +572,6 @@
         tile.dataset.y = String(y);
         paintTile(tile, x, y, lookup);
         gridTileMap.set(cellKey(x, y), tile);
-
         frag.appendChild(tile);
       }
     }
@@ -456,9 +582,9 @@
   function updateGridSelectionStyles() {
     const grid = $('villageGrid');
     if (!grid) return;
-    const targetId = safeInt(selectedPlacementId, 0);
+    const targetId = Math.max(0, toInt(selectedPlacementId, 0));
     grid.querySelectorAll('.tile').forEach((tile) => {
-      const tilePlacementId = safeInt(tile.dataset.placementId, 0);
+      const tilePlacementId = Math.max(0, toInt(tile.dataset.placementId, 0));
       tile.classList.toggle('selected-placement', !!targetId && tilePlacementId === targetId);
     });
   }
@@ -467,9 +593,30 @@
     const shop = $('shopGrid');
     if (!shop) return;
     const card = event.target.closest('.shop-item');
-    if (!card || !shop.contains(card) || card.disabled) return;
+    if (!card || !shop.contains(card)) return;
     const buildingId = String(card.dataset.buildingId || '');
-    if (!buildingId || !BUILDING_MAP[buildingId]) return;
+    const building = BUILDING_MAP[buildingId];
+    if (!building) return;
+
+    const counts = getBuiltCounts();
+    const unlockStatus = getUnlockStatus(building, counts);
+    if (!unlockStatus.ok) {
+      toast(unlockStatus.reason || 'Questo edificio è ancora bloccato.');
+      return;
+    }
+
+    if (!canBuildMore(building, counts)) {
+      toast(getLimitReason(building, counts));
+      return;
+    }
+
+    const economy = getEconomy();
+    const wallet = economy ? economy.getWallet() : { balance: 0 };
+    if (wallet.balance < building.cost) {
+      const missing = building.cost - wallet.balance;
+      toast(`Puoi selezionarlo, ma ti mancano ancora ${missing} crediti.`);
+    }
+
     selectBuilding(buildingId);
   }
 
@@ -479,8 +626,8 @@
     const tile = event.target.closest('.tile');
     if (!tile || !grid.contains(tile)) return;
 
-    const x = safeInt(tile.dataset.x, -1);
-    const y = safeInt(tile.dataset.y, -1);
+    const x = toInt(tile.dataset.x, -1);
+    const y = toInt(tile.dataset.y, -1);
     if (x < 0 || y < 0) return;
 
     if (selectedBuildingId) {
@@ -489,7 +636,7 @@
       return;
     }
 
-    const placementId = safeInt(tile.dataset.placementId, 0);
+    const placementId = Math.max(0, toInt(tile.dataset.placementId, 0));
     selectedPlacementId = placementId > 0 ? placementId : null;
     updateGridSelectionStyles();
     renderInfo();
@@ -500,38 +647,45 @@
     const removeBtn = $('removeBtn');
     if (!info || !removeBtn) return;
 
+    const counts = getBuiltCounts();
+    const uniqueBuilt = getBuiltUniqueTypes(counts);
+
     if (selectedBuildingId) {
-      const b = BUILDING_MAP[selectedBuildingId];
-      info.textContent = `Selezionato: ${b.name}. Clicca una casella libera per costruire.`;
+      const building = BUILDING_MAP[selectedBuildingId];
+      if (!building) return;
+      const limit = getBuildingLimit(building);
+      const remaining = Math.max(0, limit - (counts[building.id] || 0));
+      info.textContent = `Selezionato: ${building.name} (${building.w}x${building.h}, ${building.cost} crediti). Tocca una zona libera per costruire. Disponibili ancora: ${remaining}.`;
       removeBtn.disabled = true;
       return;
     }
 
     if (selectedPlacementId) {
-      const p = state.placements.find((it) => it.id === selectedPlacementId);
-      const b = p ? BUILDING_MAP[p.buildingId] : null;
-      if (b) {
-        info.textContent = `${b.name} selezionato. Puoi rimuoverlo con rimborso del ${Math.round(REFUND_RATE * 100)}%.`;
+      const placement = state.placements.find((it) => it.id === selectedPlacementId);
+      const building = placement ? BUILDING_MAP[placement.buildingId] : null;
+      if (building) {
+        info.textContent = `${building.name} selezionato. Puoi rimuoverlo con rimborso del ${Math.round(REFUND_RATE * 100)}%.`;
         removeBtn.disabled = false;
         return;
       }
     }
 
-    info.textContent = "Scegli un edificio dal negozio oppure tocca un edificio già costruito.";
+    info.textContent = `Scegli un edificio dal negozio oppure tocca un edificio già costruito. Edifici diversi: ${uniqueBuilt}/${CASTLE_UNIQUE_TYPES_REQUIRED} per il Castello.`;
     removeBtn.disabled = true;
   }
 
-  function toast(text) {
-    const el = $('feedback');
-    if (!el) return;
-    el.textContent = text;
-    el.classList.add('show');
-    setTimeout(() => el.classList.remove('show'), 1100);
-  }
+  async function resetVillage() {
+    const accepted = await confirmAction(
+      'I crediti resteranno salvati, ma tutti gli edifici costruiti verranno rimossi.',
+      {
+        title: 'Azzera il villaggio?',
+        confirmLabel: 'Sì, azzera',
+        cancelLabel: 'Annulla'
+      }
+    );
+    if (!accepted) return;
 
-  function resetVillage() {
-    if (!confirm('Vuoi azzerare completamente il villaggio?\nI crediti non verranno cancellati.')) return;
-    state = { size: GRID_SIZE, nextPlacementId: 1, placements: [] };
+    state = createDefaultState();
     if (!saveState()) {
       toast('Salvataggio non riuscito. Riprova.');
       return;
@@ -540,17 +694,23 @@
     renderShop();
     renderGrid();
     renderInfo();
+    toast('Villaggio azzerato. I crediti sono rimasti disponibili.');
   }
 
   function bindEvents() {
     $('clearSelectionBtn')?.addEventListener('click', clearSelection);
-    $('removeBtn')?.addEventListener('click', removeSelectedPlacement);
-    $('resetVillageBtn')?.addEventListener('click', resetVillage);
+    $('removeBtn')?.addEventListener('click', () => {
+      void removeSelectedPlacement();
+    });
+    $('resetVillageBtn')?.addEventListener('click', () => {
+      void resetVillage();
+    });
     $('shopGrid')?.addEventListener('click', onShopGridClick);
     $('villageGrid')?.addEventListener('click', onVillageGridClick);
 
     window.addEventListener('wallet-updated', () => {
       renderShop();
+      renderInfo();
     });
   }
 

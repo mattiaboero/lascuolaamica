@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.5.11 - 2026-05-11
+
+- Rinnovato il Villaggio Educativo con 17 edifici basati su PNG reali, nuova progressione a 4 tier e catalogo coerente con i crediti guadagnati nei quiz.
+- Portata la mappa del Villaggio a `10x10` per renderla completabile anche con i grandi edifici finali.
+- Introdotti limiti per tipo di edificio, rimborso ridotto al `40%` e sblocco speciale del Castello dopo almeno `10` edifici diversi.
+- Sostituiti i `confirm()` nativi del Villaggio con conferme integrate coerenti con il resto del runtime condiviso.
+- Allineato il service worker ai nuovi asset del Villaggio e aggiornata la versione applicativa a `4.5.11`.
+
 ## 4.5.10 - 2026-05-08
 
 - Rimossi gli ultimi stili applicati via attributo nel runtime pubblico e nell’editor interno, convertendoli in classi CSS condivise.

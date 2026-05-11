@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Villaggio Educativo | La Scuola Amica</title>
-<meta name="description" content="Costruisci il tuo Villaggio Educativo con i crediti guadagnati nei giochi: casa, scuole, biblioteca, sport e università.">
+<meta name="description" content="Costruisci il tuo Villaggio Educativo con 17 edifici, servizi, scuole e luoghi simbolici usando i crediti guadagnati nei quiz.">
 <meta name="robots" content="noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://lascuolaamica.it/villaggio">
 <meta property="og:url" content="https://lascuolaamica.it/villaggio">
@@ -21,7 +21,7 @@
 <meta property="og:description" content="Guadagna crediti con i quiz e costruisci il tuo villaggio educativo.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Villaggio Educativo | La Scuola Amica">
-<meta name="twitter:description" content="Crea e fai crescere il villaggio con scuole, biblioteca, sport e servizi.">
+<meta name="twitter:description" content="Crea e fai crescere il villaggio con scuole, salute, sport, lavoro e edifici speciali.">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -46,7 +46,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-04-27",
-  "dateModified": "2026-05-08"
+  "dateModified": "2026-05-11"
 }
 </script>
 <script type="application/ld+json">
@@ -109,12 +109,6 @@
   </header>
 
   <main id="contenuto-principale">
-    <section class="panel" aria-labelledby="introTitle">
-      <h2 id="introTitle">Come Funziona</h2>
-      <p class="intro">Ogni risposta corretta nei giochi vale crediti. Nel villaggio puoi acquistare edifici educativi e servizi utili: scuola, biblioteca, sport, cultura e università.</p>
-      <p class="intro">Per costruire edifici avanzati devi prima sbloccare quelli base. Crescita progressiva: veloce all inizio, strategica nel lungo periodo.</p>
-    </section>
-
     <div class="layout">
       <section class="panel" aria-labelledby="shopTitle">
         <h2 id="shopTitle">Negozio Edifici</h2>
@@ -122,14 +116,21 @@
       </section>
 
       <section class="panel village-wrap" aria-labelledby="villageTitle">
-        <h2 id="villageTitle">Mappa del Villaggio (8x8)</h2>
+        <h2 id="villageTitle">Mappa del Villaggio (10x10)</h2>
         <div id="selectionInfo" class="info-box" aria-live="polite">Scegli un edificio dal negozio oppure tocca un edificio già costruito.</div>
         <div class="actions">
           <button type="button" class="btn secondary" id="clearSelectionBtn">Annulla selezione</button>
           <button type="button" class="btn secondary" id="removeBtn" disabled>Rimuovi edificio</button>
-          <button type="button" class="btn primary" id="resetVillageBtn">Azzera villaggio</button>
+          <button type="button" class="btn danger" id="resetVillageBtn">Azzera villaggio</button>
         </div>
-        <div id="villageGrid" class="village-grid" aria-label="Griglia del villaggio"></div>
+        <div class="village-grid-scroll"><div id="villageGrid" class="village-grid" aria-label="Griglia del villaggio"></div></div>
+        <details class="village-accordion">
+          <summary>Come funziona</summary>
+          <div class="village-accordion-body">
+            <p class="intro">Ogni risposta corretta nei giochi vale crediti. Nel villaggio puoi acquistare 17 edifici tra case, scuole, fattorie, salute, sport, luoghi di cultura e grandi obiettivi finali.</p>
+            <p class="intro">Gli edifici avanzati si sbloccano passo dopo passo: si parte da Casa e Fattoria, poi servizi e scuole, fino a Università e Castello. Il Castello richiede anche almeno 10 edifici diversi.</p>
+          </div>
+        </details>
       </section>
     </div>
   </main>
@@ -138,7 +139,7 @@
 <footer role="contentinfo">
   <button type="button" class="footer-link" data-open-modal="modalPrivacy" aria-haspopup="dialog"><span aria-hidden="true">🔒</span> Privacy Policy</button>
   <button type="button" class="footer-link" data-open-modal="modalCookie" aria-haspopup="dialog"><span aria-hidden="true">🍪</span> Cookie Policy</button>
-  <span class="footer-link footer-version" aria-hidden="true">v4.5.8</span>
+  <span class="footer-link footer-version" aria-hidden="true">v4.5.11</span>
 </footer>
 
 <div class="modal-overlay" id="modalPrivacy" role="dialog" aria-modal="true" aria-labelledby="titlePrivacy">

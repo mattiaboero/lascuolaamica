@@ -31,7 +31,7 @@ body.modal-open {
 .play-window-panel-home {
   max-width: 620px;
   margin: 14px auto 0;
-  padding: 6px 0 0;
+  padding: 6px 0 6px;
   border: 0;
   background: transparent;
   box-shadow: none;
@@ -44,6 +44,7 @@ body.modal-open {
 }
 
 .play-window-panel-home .play-window-actions {
+  align-items: center;
   justify-content: center;
   gap: 10px;
 }
@@ -55,8 +56,12 @@ body.modal-open {
 }
 
 .play-window-panel-home .play-window-btn {
-  min-height: 42px;
-  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  line-height: 1;
   font-size: .9rem;
 }
 
