@@ -338,6 +338,46 @@ header {
   z-index: 0;
 }
 
+.village-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.06) 0,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 0,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(36, 102, 56, 0.08) 0,
+      rgba(36, 102, 56, 0.08) 1px,
+      transparent 1px,
+      transparent 72px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(36, 102, 56, 0.08) 0,
+      rgba(36, 102, 56, 0.08) 1px,
+      transparent 1px,
+      transparent 72px
+    );
+  mix-blend-mode: soft-light;
+}
+
 .iso-ground,
 .iso-building-layer {
   position: absolute;
@@ -418,7 +458,7 @@ header {
   --iso-shift-x: 0px;
   --iso-shift-y: 0px;
   --iso-shadow-scale: 1;
-  --iso-filter: drop-shadow(0 12px 16px rgba(27, 67, 40, 0.22));
+  --iso-filter: none;
   transform: translate(-50%, -100%) translate(var(--iso-shift-x), var(--iso-shift-y)) scale(var(--iso-scale));
   transform-origin: center bottom;
   display: flex;
@@ -430,22 +470,11 @@ header {
 }
 
 .iso-building::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: calc(var(--iso-tile-h) * 0.1);
-  transform: translateX(-50%);
-  width: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-w) * 0.9 * var(--iso-scale) * var(--iso-shadow-scale));
-  height: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-h) * 0.62 * var(--iso-scale) * var(--iso-shadow-scale));
-  background: radial-gradient(circle, rgba(38, 91, 49, 0.28), rgba(38, 91, 49, 0));
-  border-radius: 999px;
-  z-index: -1;
+  content: none;
 }
 
 .iso-building.selected-placement {
-  filter:
-    drop-shadow(0 12px 16px rgba(27, 67, 40, 0.22))
-    drop-shadow(0 0 0.55rem rgba(255, 213, 79, 0.72));
+  filter: none;
 }
 
 .iso-building-asset {
@@ -508,20 +537,12 @@ header {
   --iso-scale: 0.95;
   --iso-shift-x: 6px;
   --iso-shift-y: -10px;
-  --iso-shadow-scale: 1.08;
-  --iso-filter:
-    drop-shadow(0 14px 18px rgba(27, 67, 40, 0.24))
-    drop-shadow(0 0 12px rgba(255, 255, 255, 0.12));
 }
 
 .iso-building--castello {
   --iso-scale: 0.87;
   --iso-shift-x: 6px;
   --iso-shift-y: -12px;
-  --iso-shadow-scale: 1.18;
-  --iso-filter:
-    drop-shadow(0 16px 22px rgba(27, 67, 40, 0.27))
-    drop-shadow(0 0 14px rgba(202, 160, 102, 0.2));
 }
 
 .iso-building--uffici {
