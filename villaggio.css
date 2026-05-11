@@ -279,8 +279,13 @@ header {
 }
 
 .village-wrap {
-  --tile-size: clamp(42px, 4.2vw, 52px);
-  --village-grid-width: calc((var(--tile-size) * 10) + (6px * 9) + 22px);
+  --iso-tile-w: clamp(50px, 5.5vw, 64px);
+  --iso-tile-h: calc(var(--iso-tile-w) * 0.52);
+  --iso-half-w: calc(var(--iso-tile-w) / 2);
+  --iso-half-h: calc(var(--iso-tile-h) / 2);
+  --iso-top-pad: calc(var(--iso-tile-w) * 1.7);
+  --village-grid-width: calc((var(--iso-tile-w) * 10) + 26px);
+  --village-grid-height: calc((var(--iso-tile-h) * 10) + var(--iso-top-pad) + (var(--iso-tile-w) * 1.55));
   display: grid;
   gap: 10px;
   min-width: 0;
@@ -308,18 +313,49 @@ header {
 }
 
 .village-grid {
-  display: grid;
-  grid-template-columns: repeat(10, var(--tile-size));
-  gap: 6px;
+  position: relative;
+  box-sizing: border-box;
+  width: var(--village-grid-width);
+  height: var(--village-grid-height);
   background: linear-gradient(160deg, #d7f6cf, #b9ebd0);
   border: 3px solid #8ec8a3;
-  border-radius: 16px;
-  padding: 8px;
+  border-radius: 22px;
+  padding: 0;
   min-height: 0;
-  width: max-content;
   max-width: none;
-  overflow: visible;
-  align-content: start;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.village-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top center, rgba(255, 255, 255, 0.45), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0) 28%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.iso-ground,
+.iso-building-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.iso-ground {
+  z-index: 1;
+}
+
+.iso-building-layer {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.iso-pos {
+  --iso-left: calc((var(--iso-col) - var(--iso-row)) * var(--iso-half-w));
+  --iso-top: calc((var(--iso-col) + var(--iso-row)) * var(--iso-half-h));
 }
 
 .village-grid-scroll::-webkit-scrollbar {
@@ -332,13 +368,31 @@ header {
 }
 
 .tile {
-  position: relative;
+  position: absolute;
+  left: calc(50% - var(--iso-half-w) + var(--iso-left));
+  top: calc(var(--iso-top-pad) + var(--iso-top));
+  width: var(--iso-tile-w);
+  height: var(--iso-tile-h);
   border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
+  border-radius: 4px;
   background: linear-gradient(160deg, #9cde90, #8adf9a);
-  aspect-ratio: 1 / 1;
-  overflow: visible;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  overflow: hidden;
   min-width: 0;
+  z-index: calc(10 + var(--iso-col) + var(--iso-row));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 6px 10px rgba(24, 96, 45, 0.1);
+}
+
+.tile::after {
+  content: '';
+  position: absolute;
+  inset: 8% 13%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .tile.occupied {
@@ -347,32 +401,100 @@ header {
 
 .tile.selected-placement {
   border-color: #ffd54f;
-  box-shadow: 0 0 0 3px rgba(255, 213, 79, 0.45);
+  box-shadow:
+    0 0 0 3px rgba(255, 213, 79, 0.45),
+    0 10px 16px rgba(255, 213, 79, 0.26);
 }
 
 .tile.purchase-pop {
   animation: tilePurchasePop 0.72s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.tile.purchase-pop .tile-asset {
+.iso-building.purchase-pop .iso-building-asset {
   animation: tileAssetBounce 0.72s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.tile-asset {
+.iso-building {
   position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: contain;
+  left: calc(50% + (((var(--iso-col) - var(--iso-row)) + (var(--footprint-w) - var(--footprint-h) + 1)) * var(--iso-half-w)));
+  top: calc(var(--iso-top-pad) + ((var(--iso-col) + var(--iso-row)) + var(--footprint-w) + var(--footprint-h)) * var(--iso-half-h));
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   pointer-events: none;
-  z-index: 3;
+  z-index: calc(120 + var(--iso-col) + var(--iso-row) + var(--footprint-w) + var(--footprint-h));
+  filter: drop-shadow(0 12px 16px rgba(27, 67, 40, 0.22));
 }
 
-.tile-asset.tile-asset-w-1 { width: 100%; }
-.tile-asset.tile-asset-w-2 { width: 200%; }
-.tile-asset.tile-asset-w-3 { width: 300%; }
-.tile-asset.tile-asset-h-1 { height: 100%; }
-.tile-asset.tile-asset-h-2 { height: 200%; }
-.tile-asset.tile-asset-h-3 { height: 300%; }
+.iso-building::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--iso-tile-h) * 0.1);
+  transform: translateX(-50%);
+  width: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-w) * 0.9);
+  height: calc((var(--footprint-w) + var(--footprint-h)) * var(--iso-half-h) * 0.62);
+  background: radial-gradient(circle, rgba(38, 91, 49, 0.28), rgba(38, 91, 49, 0));
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.iso-building.selected-placement {
+  filter:
+    drop-shadow(0 12px 16px rgba(27, 67, 40, 0.22))
+    drop-shadow(0 0 0.55rem rgba(255, 213, 79, 0.72));
+}
+
+.iso-building-asset {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  pointer-events: none;
+}
+
+.iso-sprite--1x1 {
+  --footprint-w: 1;
+  --footprint-h: 1;
+  width: calc(var(--iso-tile-w) * 1.25);
+  height: calc(var(--iso-tile-w) * 1.5);
+}
+
+.iso-sprite--2x1 {
+  --footprint-w: 2;
+  --footprint-h: 1;
+  width: calc(var(--iso-tile-w) * 1.95);
+  height: calc(var(--iso-tile-w) * 1.65);
+}
+
+.iso-sprite--1x2 {
+  --footprint-w: 1;
+  --footprint-h: 2;
+  width: calc(var(--iso-tile-w) * 1.7);
+  height: calc(var(--iso-tile-w) * 2.05);
+}
+
+.iso-sprite--2x2 {
+  --footprint-w: 2;
+  --footprint-h: 2;
+  width: calc(var(--iso-tile-w) * 2.35);
+  height: calc(var(--iso-tile-w) * 2.05);
+}
+
+.iso-sprite--3x2 {
+  --footprint-w: 3;
+  --footprint-h: 2;
+  width: calc(var(--iso-tile-w) * 2.95);
+  height: calc(var(--iso-tile-w) * 2.35);
+}
+
+.iso-sprite--3x3 {
+  --footprint-w: 3;
+  --footprint-h: 3;
+  width: calc(var(--iso-tile-w) * 3.25);
+  height: calc(var(--iso-tile-w) * 2.75);
+}
 
 .info-box {
   background: #fff;
@@ -458,6 +580,107 @@ header {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
+
+.iso-r0-c0 { --iso-row: 0; --iso-col: 0; }
+.iso-r0-c1 { --iso-row: 0; --iso-col: 1; }
+.iso-r0-c2 { --iso-row: 0; --iso-col: 2; }
+.iso-r0-c3 { --iso-row: 0; --iso-col: 3; }
+.iso-r0-c4 { --iso-row: 0; --iso-col: 4; }
+.iso-r0-c5 { --iso-row: 0; --iso-col: 5; }
+.iso-r0-c6 { --iso-row: 0; --iso-col: 6; }
+.iso-r0-c7 { --iso-row: 0; --iso-col: 7; }
+.iso-r0-c8 { --iso-row: 0; --iso-col: 8; }
+.iso-r0-c9 { --iso-row: 0; --iso-col: 9; }
+.iso-r1-c0 { --iso-row: 1; --iso-col: 0; }
+.iso-r1-c1 { --iso-row: 1; --iso-col: 1; }
+.iso-r1-c2 { --iso-row: 1; --iso-col: 2; }
+.iso-r1-c3 { --iso-row: 1; --iso-col: 3; }
+.iso-r1-c4 { --iso-row: 1; --iso-col: 4; }
+.iso-r1-c5 { --iso-row: 1; --iso-col: 5; }
+.iso-r1-c6 { --iso-row: 1; --iso-col: 6; }
+.iso-r1-c7 { --iso-row: 1; --iso-col: 7; }
+.iso-r1-c8 { --iso-row: 1; --iso-col: 8; }
+.iso-r1-c9 { --iso-row: 1; --iso-col: 9; }
+.iso-r2-c0 { --iso-row: 2; --iso-col: 0; }
+.iso-r2-c1 { --iso-row: 2; --iso-col: 1; }
+.iso-r2-c2 { --iso-row: 2; --iso-col: 2; }
+.iso-r2-c3 { --iso-row: 2; --iso-col: 3; }
+.iso-r2-c4 { --iso-row: 2; --iso-col: 4; }
+.iso-r2-c5 { --iso-row: 2; --iso-col: 5; }
+.iso-r2-c6 { --iso-row: 2; --iso-col: 6; }
+.iso-r2-c7 { --iso-row: 2; --iso-col: 7; }
+.iso-r2-c8 { --iso-row: 2; --iso-col: 8; }
+.iso-r2-c9 { --iso-row: 2; --iso-col: 9; }
+.iso-r3-c0 { --iso-row: 3; --iso-col: 0; }
+.iso-r3-c1 { --iso-row: 3; --iso-col: 1; }
+.iso-r3-c2 { --iso-row: 3; --iso-col: 2; }
+.iso-r3-c3 { --iso-row: 3; --iso-col: 3; }
+.iso-r3-c4 { --iso-row: 3; --iso-col: 4; }
+.iso-r3-c5 { --iso-row: 3; --iso-col: 5; }
+.iso-r3-c6 { --iso-row: 3; --iso-col: 6; }
+.iso-r3-c7 { --iso-row: 3; --iso-col: 7; }
+.iso-r3-c8 { --iso-row: 3; --iso-col: 8; }
+.iso-r3-c9 { --iso-row: 3; --iso-col: 9; }
+.iso-r4-c0 { --iso-row: 4; --iso-col: 0; }
+.iso-r4-c1 { --iso-row: 4; --iso-col: 1; }
+.iso-r4-c2 { --iso-row: 4; --iso-col: 2; }
+.iso-r4-c3 { --iso-row: 4; --iso-col: 3; }
+.iso-r4-c4 { --iso-row: 4; --iso-col: 4; }
+.iso-r4-c5 { --iso-row: 4; --iso-col: 5; }
+.iso-r4-c6 { --iso-row: 4; --iso-col: 6; }
+.iso-r4-c7 { --iso-row: 4; --iso-col: 7; }
+.iso-r4-c8 { --iso-row: 4; --iso-col: 8; }
+.iso-r4-c9 { --iso-row: 4; --iso-col: 9; }
+.iso-r5-c0 { --iso-row: 5; --iso-col: 0; }
+.iso-r5-c1 { --iso-row: 5; --iso-col: 1; }
+.iso-r5-c2 { --iso-row: 5; --iso-col: 2; }
+.iso-r5-c3 { --iso-row: 5; --iso-col: 3; }
+.iso-r5-c4 { --iso-row: 5; --iso-col: 4; }
+.iso-r5-c5 { --iso-row: 5; --iso-col: 5; }
+.iso-r5-c6 { --iso-row: 5; --iso-col: 6; }
+.iso-r5-c7 { --iso-row: 5; --iso-col: 7; }
+.iso-r5-c8 { --iso-row: 5; --iso-col: 8; }
+.iso-r5-c9 { --iso-row: 5; --iso-col: 9; }
+.iso-r6-c0 { --iso-row: 6; --iso-col: 0; }
+.iso-r6-c1 { --iso-row: 6; --iso-col: 1; }
+.iso-r6-c2 { --iso-row: 6; --iso-col: 2; }
+.iso-r6-c3 { --iso-row: 6; --iso-col: 3; }
+.iso-r6-c4 { --iso-row: 6; --iso-col: 4; }
+.iso-r6-c5 { --iso-row: 6; --iso-col: 5; }
+.iso-r6-c6 { --iso-row: 6; --iso-col: 6; }
+.iso-r6-c7 { --iso-row: 6; --iso-col: 7; }
+.iso-r6-c8 { --iso-row: 6; --iso-col: 8; }
+.iso-r6-c9 { --iso-row: 6; --iso-col: 9; }
+.iso-r7-c0 { --iso-row: 7; --iso-col: 0; }
+.iso-r7-c1 { --iso-row: 7; --iso-col: 1; }
+.iso-r7-c2 { --iso-row: 7; --iso-col: 2; }
+.iso-r7-c3 { --iso-row: 7; --iso-col: 3; }
+.iso-r7-c4 { --iso-row: 7; --iso-col: 4; }
+.iso-r7-c5 { --iso-row: 7; --iso-col: 5; }
+.iso-r7-c6 { --iso-row: 7; --iso-col: 6; }
+.iso-r7-c7 { --iso-row: 7; --iso-col: 7; }
+.iso-r7-c8 { --iso-row: 7; --iso-col: 8; }
+.iso-r7-c9 { --iso-row: 7; --iso-col: 9; }
+.iso-r8-c0 { --iso-row: 8; --iso-col: 0; }
+.iso-r8-c1 { --iso-row: 8; --iso-col: 1; }
+.iso-r8-c2 { --iso-row: 8; --iso-col: 2; }
+.iso-r8-c3 { --iso-row: 8; --iso-col: 3; }
+.iso-r8-c4 { --iso-row: 8; --iso-col: 4; }
+.iso-r8-c5 { --iso-row: 8; --iso-col: 5; }
+.iso-r8-c6 { --iso-row: 8; --iso-col: 6; }
+.iso-r8-c7 { --iso-row: 8; --iso-col: 7; }
+.iso-r8-c8 { --iso-row: 8; --iso-col: 8; }
+.iso-r8-c9 { --iso-row: 8; --iso-col: 9; }
+.iso-r9-c0 { --iso-row: 9; --iso-col: 0; }
+.iso-r9-c1 { --iso-row: 9; --iso-col: 1; }
+.iso-r9-c2 { --iso-row: 9; --iso-col: 2; }
+.iso-r9-c3 { --iso-row: 9; --iso-col: 3; }
+.iso-r9-c4 { --iso-row: 9; --iso-col: 4; }
+.iso-r9-c5 { --iso-row: 9; --iso-col: 5; }
+.iso-r9-c6 { --iso-row: 9; --iso-col: 6; }
+.iso-r9-c7 { --iso-row: 9; --iso-col: 7; }
+.iso-r9-c8 { --iso-row: 9; --iso-col: 8; }
+.iso-r9-c9 { --iso-row: 9; --iso-col: 9; }
 
 @keyframes tilePurchasePop {
   0% {
@@ -639,8 +862,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .village-grid {
-    --tile-size: 42px;
+  .village-wrap {
+    --iso-tile-w: 48px;
   }
 
   .actions {

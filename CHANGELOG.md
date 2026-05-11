@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.5.12 - 2026-05-11
+
+- Convertita la mappa del Villaggio in un renderer isometrico con tile a rombo e layering visivo dedicato per gli edifici.
+- Separati il layer cliccabile della griglia e il layer grafico degli sprite per preservare piazzamento, selezione e accessibilità.
+- Calibrate le proporzioni dei 17 edifici PNG nella nuova vista isometrica con ombre e ingombri coerenti alle dimensioni di griglia.
+- Verificato il nuovo rendering con mappa vuota, seed di villaggio popolato e piazzamento reale di un edificio.
+
 ## 4.5.11 - 2026-05-11
 
 - Rinnovato il Villaggio Educativo con 17 edifici basati su PNG reali, nuova progressione a 4 tier e catalogo coerente con i crediti guadagnati nei quiz.

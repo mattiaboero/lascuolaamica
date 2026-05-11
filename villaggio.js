@@ -256,13 +256,15 @@
     return gridTileMap.get(cellKey(x, y)) || null;
   }
 
+  function getIsoPositionClass(x, y) {
+    return `iso-pos iso-r${y}-c${x}`;
+  }
+
   function paintTile(tile, x, y, lookup) {
     if (!tile) return;
 
     tile.classList.remove('occupied', 'selected-placement');
     delete tile.dataset.placementId;
-    const oldAsset = tile.querySelector('.tile-asset');
-    if (oldAsset) oldAsset.remove();
 
     const placement = getPlacementAt(x, y, lookup);
     if (!placement) {
@@ -280,32 +282,10 @@
     tile.dataset.placementId = String(placement.id);
     if (selectedPlacementId === placement.id) tile.classList.add('selected-placement');
     tile.setAttribute('aria-label', `${b.name}, posizione riga ${y + 1} colonna ${x + 1}`);
-
-    if (lookup.anchors.get(cellKey(x, y)) === placement) {
-      const img = document.createElement('img');
-      img.src = b.asset;
-      img.alt = '';
-      img.decoding = 'async';
-      img.draggable = false;
-      img.className = `tile-asset tile-asset-w-${b.w} tile-asset-h-${b.h}`;
-      tile.appendChild(img);
-    }
   }
 
   function updateGridArea(x, y, w, h) {
-    const grid = $('villageGrid');
-    if (!grid || !gridTileMap.size) return;
-    const startX = Math.max(0, toInt(x, 0));
-    const startY = Math.max(0, toInt(y, 0));
-    const endX = Math.min(GRID_SIZE, startX + Math.max(1, toInt(w, 1)));
-    const endY = Math.min(GRID_SIZE, startY + Math.max(1, toInt(h, 1)));
-    const lookup = buildPlacementLookup();
-
-    for (let yy = startY; yy < endY; yy++) {
-      for (let xx = startX; xx < endX; xx++) {
-        paintTile(getGridTile(xx, yy), xx, yy, lookup);
-      }
-    }
+    renderGrid();
   }
 
   function selectBuilding(id) {
@@ -339,8 +319,12 @@
     setTimeout(() => el.classList.remove(className), durationMs);
   }
 
-  function triggerPurchaseFeedback(buildingId, x, y) {
+  function triggerPurchaseFeedback(buildingId, placementId, x, y) {
     pulseElement(getGridTile(x, y), 'purchase-pop', 760);
+    if (placementId) {
+      const sprite = document.querySelector(`.iso-building[data-placement-id="${placementId}"]`);
+      pulseElement(sprite, 'purchase-pop', 760);
+    }
     document.querySelectorAll('.shop-item').forEach((card) => {
       if (String(card.dataset.buildingId || '') === String(buildingId || '')) {
         pulseElement(card, 'purchase-flash', 760);
@@ -430,10 +414,9 @@
     }
 
     renderShop();
-    updateGridArea(x, y, building.w, building.h);
-    updateGridSelectionStyles();
+    renderGrid();
     renderInfo();
-    triggerPurchaseFeedback(building.id, x, y);
+    triggerPurchaseFeedback(building.id, placementId, x, y);
     toast(`${building.name} costruito!`);
   }
 
@@ -474,8 +457,7 @@
 
     selectedPlacementId = null;
     renderShop();
-    updateGridArea(placement.x, placement.y, building.w, building.h);
-    updateGridSelectionStyles();
+    renderGrid();
     renderInfo();
     toast(`${building.name} rimosso. Rimborso: ${refund} crediti.`);
   }
@@ -560,33 +542,61 @@
     if (title) title.textContent = `Mappa del Villaggio (${GRID_SIZE}x${GRID_SIZE})`;
     grid.setAttribute('aria-label', `Griglia del villaggio ${GRID_SIZE}x${GRID_SIZE}`);
 
-    const frag = document.createDocumentFragment();
+    const groundLayer = document.createElement('div');
+    groundLayer.className = 'iso-ground';
+    const groundFrag = document.createDocumentFragment();
     const lookup = buildPlacementLookup();
 
     for (let y = 0; y < GRID_SIZE; y++) {
       for (let x = 0; x < GRID_SIZE; x++) {
         const tile = document.createElement('button');
         tile.type = 'button';
-        tile.className = 'tile';
+        tile.className = `tile iso-tile ${getIsoPositionClass(x, y)}`;
         tile.dataset.x = String(x);
         tile.dataset.y = String(y);
         paintTile(tile, x, y, lookup);
         gridTileMap.set(cellKey(x, y), tile);
-        frag.appendChild(tile);
+        groundFrag.appendChild(tile);
       }
     }
 
-    grid.appendChild(frag);
+    groundLayer.appendChild(groundFrag);
+    grid.appendChild(groundLayer);
+
+    const buildingLayer = document.createElement('div');
+    buildingLayer.className = 'iso-building-layer';
+    const buildingFrag = document.createDocumentFragment();
+    const sortedPlacements = state.placements
+      .slice()
+      .sort((a, b) => (a.x + a.y) - (b.x + b.y) || a.y - b.y || a.x - b.x);
+
+    sortedPlacements.forEach((placement) => {
+      const building = BUILDING_MAP[placement.buildingId];
+      if (!building) return;
+
+      const sprite = document.createElement('div');
+      sprite.className = `iso-building ${getIsoPositionClass(placement.x, placement.y)} iso-sprite--${building.w}x${building.h}`;
+      sprite.dataset.placementId = String(placement.id);
+      if (selectedPlacementId === placement.id) sprite.classList.add('selected-placement');
+      sprite.setAttribute('aria-hidden', 'true');
+
+      const img = document.createElement('img');
+      img.src = building.asset;
+      img.alt = '';
+      img.decoding = 'async';
+      img.draggable = false;
+      img.className = 'iso-building-asset';
+
+      sprite.appendChild(img);
+      buildingFrag.appendChild(sprite);
+    });
+
+    buildingLayer.appendChild(buildingFrag);
+    grid.appendChild(buildingLayer);
   }
 
   function updateGridSelectionStyles() {
-    const grid = $('villageGrid');
-    if (!grid) return;
-    const targetId = Math.max(0, toInt(selectedPlacementId, 0));
-    grid.querySelectorAll('.tile').forEach((tile) => {
-      const tilePlacementId = Math.max(0, toInt(tile.dataset.placementId, 0));
-      tile.classList.toggle('selected-placement', !!targetId && tilePlacementId === targetId);
-    });
+    renderGrid();
   }
 
   function onShopGridClick(event) {

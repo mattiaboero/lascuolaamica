@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.11';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.12';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,15 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '11 maggio 2026 · Release 4.5.12',
+      items: [
+        'Trasformata la mappa del Villaggio in una vista isometrica con griglia a rombi e profondità visiva più leggibile.',
+        'Separati il layer cliccabile dei tile e il layer grafico degli edifici per mantenere piazzamento e selezione stabili anche con i nuovi sprite.',
+        'Calibrate proporzioni, ombre e dimensioni dei 17 edifici reali per far convivere meglio case, scuole, servizi e grandi edifici finali.',
+        'Rifinita la base del Villaggio con test visuali su mappa vuota, mappa popolata e piazzamento reale di un edificio.'
+      ]
+    },
     {
       date: '11 maggio 2026 · Release 4.5.11',
       items: [
