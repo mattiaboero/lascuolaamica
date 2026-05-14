@@ -1256,7 +1256,7 @@ function renderLB() {
 
   const thead = document.createElement('thead');
   const htr = document.createElement('tr');
-  ['#', 'Punteggio', 'Bonus', 'Classe', 'Livello', 'Data'].forEach(label => {
+  ['#', 'Punteggio', 'Livello', 'Data'].forEach(label => {
     const th = document.createElement('th');
     th.scope = 'col';
     th.textContent = label;
@@ -1286,16 +1286,9 @@ function renderLB() {
     const finalValue = Number(entry.final ?? entry.score ?? 0);
     const baseValue = Number(entry.base ?? entry.score ?? 0);
     const scoreTd = document.createElement('td');
-    scoreTd.textContent = `${finalValue} (base ${baseValue})`;
+    scoreTd.textContent = String(finalValue);
+    scoreTd.title = `Base ${baseValue} · Bonus ${String(entry.bonus ?? 'Nessuno')} · ${String(entry.cls ?? '-')}`;
     tr.appendChild(scoreTd);
-
-    const bonusTd = document.createElement('td');
-    bonusTd.textContent = String(entry.bonus ?? 'Nessuno');
-    tr.appendChild(bonusTd);
-
-    const classTd = document.createElement('td');
-    classTd.textContent = String(entry.cls ?? '-');
-    tr.appendChild(classTd);
 
     const levelTd = document.createElement('td');
     levelTd.textContent = String(entry.level ?? '');

@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.14';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.15';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '14 maggio 2026 · Release 4.5.15',
+      items: [
+        'Reso il negozio del Villaggio più guidato: all’inizio mostra soprattutto gli edifici disponibili o quasi sbloccabili, con un pulsante per vedere tutto il catalogo.',
+        'Compattate le classifiche dei quiz e di inglese, così su smartphone restano più leggibili senza colonne superflue.',
+        'Mantenuti i dettagli utili di punteggio in modo discreto, senza appesantire la lettura principale per bambini e genitori.'
+      ]
+    },
     {
       date: '14 maggio 2026 · Release 4.5.14',
       items: [

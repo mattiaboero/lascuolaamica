@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.15 - 2026-05-14
+
+- Reso il negozio del Villaggio più guidato: inizialmente mostra gli edifici disponibili o quasi sbloccabili, con un comando esplicito per vedere tutto il catalogo.
+- Compattate le classifiche dei quiz e di inglese riducendo le colonne principali, così risultano più leggibili anche su smartphone.
+- Mantenuti i dettagli completi di punteggio in forma discreta tramite tooltip, evitando di appesantire la tabella per bambini e genitori.
+
 ## 4.5.14 - 2026-05-14
 
 - Allineata la home al comportamento reale del sito: il pulsante Villaggio apre direttamente l'area pubblica invece di mostrare un messaggio di sviluppo.

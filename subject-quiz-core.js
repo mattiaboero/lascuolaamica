@@ -1519,7 +1519,7 @@
 
     const thead = document.createElement('thead');
     const hr = document.createElement('tr');
-    ['#', 'Finale', 'Base', 'Bonus', 'Classe', 'Ambito', 'Data'].forEach((label) => {
+    ['#', 'Punteggio', 'Ambito', 'Data'].forEach((label) => {
       const th = document.createElement('th');
       th.scope = 'col';
       th.textContent = label;
@@ -1530,9 +1530,18 @@
     const tbody = document.createElement('tbody');
     lb.forEach((e, i) => {
       const tr = document.createElement('tr');
-      [i + 1, e.final, e.base, e.bonus, e.cls || '-', e.area, e.date].forEach((v) => {
+      const cells = [
+        i + 1,
+        e.final,
+        e.area,
+        e.date
+      ];
+      cells.forEach((v, idx) => {
         const td = document.createElement('td');
         td.textContent = String(v);
+        if (idx === 1) {
+          td.title = `Base ${e.base} · Bonus ${e.bonus} · ${e.cls || '-'}`;
+        }
         tr.appendChild(td);
       });
       tbody.appendChild(tr);

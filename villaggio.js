@@ -58,6 +58,7 @@
   let state = loadState();
   let selectedBuildingId = null;
   let selectedPlacementId = null;
+  let showAllShopItems = false;
   let gridTileMap = new Map();
 
   function debugWarn(context, error) {
@@ -134,6 +135,21 @@
 
   function getLimitReason(building, counts) {
     return `Hai già costruito il massimo per ${building.name} (${getBuildingLimit(building)}).`;
+  }
+
+  function getMissingUnlockIds(building, counts) {
+    return (building.unlock || []).filter((req) => (counts[req] || 0) <= 0);
+  }
+
+  function isShopFeatured(building, counts) {
+    if (!building) return false;
+    if ((counts[building.id] || 0) > 0) return true;
+    if (selectedBuildingId === building.id) return true;
+
+    const missingUnlocks = getMissingUnlockIds(building, counts);
+    const needsUniqueTypes = Boolean(building.minUniqueTypes && getBuiltUniqueTypes(counts) < building.minUniqueTypes);
+    const blockers = missingUnlocks.length + (needsUniqueTypes ? 1 : 0);
+    return blockers <= 1;
   }
 
   function buildPlacementLookup(placements) {
@@ -460,15 +476,33 @@
 
   function renderShop() {
     const shop = $('shopGrid');
+    const summary = $('shopSummary');
+    const toggleBtn = $('shopToggleBtn');
     if (!shop) return;
     shop.textContent = '';
 
     const economy = getEconomy();
     const wallet = economy ? economy.getWallet() : { balance: 0 };
     const counts = getBuiltCounts();
+    const visibleBuildings = showAllShopItems ? BUILDINGS : BUILDINGS.filter((building) => isShopFeatured(building, counts));
+    const hiddenCount = Math.max(0, BUILDINGS.length - visibleBuildings.length);
     const frag = document.createDocumentFragment();
 
-    BUILDINGS.forEach((building) => {
+    if (summary) {
+      summary.textContent = showAllShopItems
+        ? `Stai vedendo tutti i ${BUILDINGS.length} edifici del villaggio.`
+        : hiddenCount > 0
+          ? `Ti mostro prima gli edifici disponibili o quasi sbloccabili. Gli altri ${hiddenCount} compariranno quando serviranno.`
+          : `Tutti gli edifici utili in questo momento sono già visibili.`;
+    }
+
+    if (toggleBtn) {
+      toggleBtn.textContent = showAllShopItems ? 'Mostra essenziali' : 'Mostra tutti';
+      toggleBtn.setAttribute('aria-pressed', showAllShopItems ? 'true' : 'false');
+      toggleBtn.setAttribute('aria-label', showAllShopItems ? 'Mostra solo gli edifici essenziali in questo momento' : 'Mostra tutti gli edifici del villaggio');
+    }
+
+    visibleBuildings.forEach((building) => {
       const builtCount = counts[building.id] || 0;
       const unlocked = getUnlockStatus(building, counts);
       const affordable = wallet.balance >= building.cost;
@@ -712,6 +746,10 @@
 
   function bindEvents() {
     $('clearSelectionBtn')?.addEventListener('click', clearSelection);
+    $('shopToggleBtn')?.addEventListener('click', () => {
+      showAllShopItems = !showAllShopItems;
+      renderShop();
+    });
     $('removeBtn')?.addEventListener('click', () => {
       void removeSelectedPlacement();
     });
