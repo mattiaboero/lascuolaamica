@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.16 - 2026-05-14
+
+- Ottimizzati titoli, meta description e contenuti SEO statici di inglese, educazione civica e matematica.
+- Allineati anche Open Graph, Twitter card e descrizioni JSON-LD delle tre pagine con miglior ROI organico.
+- Aggiornati i `dateModified` delle pagine coinvolte per riflettere il refresh editoriale.
+
 ## 4.5.15 - 2026-05-14
 
 - Reso il negozio del Villaggio più guidato: inizialmente mostra gli edifici disponibili o quasi sbloccabili, con un comando esplicito per vedere tutto il catalogo.

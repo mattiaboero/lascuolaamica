@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.15';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.16';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '14 maggio 2026 · Release 4.5.16',
+      items: [
+        'Ottimizzati snippet e testi SEO di inglese, educazione civica e matematica per allinearli meglio alle query già emerse in Search Console.',
+        'Rafforzati titoli, descrizioni e contenuti statici delle tre pagine più promettenti per migliorare pertinenza e tasso di clic.',
+        'Aggiornati anche i metadati strutturati per rendere coerenti contenuto visibile, meta tag e descrizioni semantiche.'
+      ]
+    },
     {
       date: '14 maggio 2026 · Release 4.5.15',
       items: [
