@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.17';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.18';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '14 maggio 2026 · Release 4.5.18',
+      items: [
+        'Applicato un pass SEO leggero su scienze e italiano per rendere più chiaro l’intento didattico delle due pagine senza appesantire il copy.',
+        'Allineati titoli, descrizioni, card social e dati strutturati a ricerche più naturali su esercizi di scienze e di italiano per la scuola primaria.',
+        'Rifiniti anche i blocchi statici visibili per migliorare pertinenza semantica e coerenza tra snippet e contenuto reale.'
+      ]
+    },
     {
       date: '14 maggio 2026 · Release 4.5.17',
       items: [

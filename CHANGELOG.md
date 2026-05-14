@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.18 - 2026-05-14
+
+- Applicato un pass SEO leggero su `scienze` e `italiano`.
+- Aggiornati titoli, meta description, Open Graph, Twitter card e descrizioni JSON-LD delle due pagine.
+- Rifiniti anche i testi statici visibili per rendere più chiaro il focus su esercizi e quiz per la scuola primaria.
+
 ## 4.5.17 - 2026-05-14
 
 - Rafforzato il secondo cluster SEO con ottimizzazioni mirate su `geografia`, `storia` e `faq`.
