@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.16';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.17';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '14 maggio 2026 · Release 4.5.17',
+      items: [
+        'Ottimizzati snippet e contenuti SEO di geografia, storia e FAQ per rafforzare rilevanza, chiarezza e tasso di clic dalle ricerche informative.',
+        'Allineati titoli, descrizioni e dati strutturati delle tre pagine con i bisogni reali emersi in Search Console: esercizi, quiz, privacy e uso offline.',
+        'Resi più espliciti nei testi visibili i riferimenti a esercizi di geografia, quiz di storia e domande frequenti su registrazione, timer e funzionamento offline.'
+      ]
+    },
     {
       date: '14 maggio 2026 · Release 4.5.16',
       items: [

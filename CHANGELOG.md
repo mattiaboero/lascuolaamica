@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.17 - 2026-05-14
+
+- Rafforzato il secondo cluster SEO con ottimizzazioni mirate su `geografia`, `storia` e `faq`.
+- Aggiornati titoli, meta description, Open Graph e Twitter card per rendere gli snippet più chiari e coerenti con gli intenti di ricerca.
+- Allineati anche i dati strutturati e i testi visibili delle tre pagine per consolidare rilevanza semantica e CTR potenziale.
+
 ## 4.5.16 - 2026-05-14
 
 - Ottimizzati titoli, meta description e contenuti SEO statici di inglese, educazione civica e matematica.
