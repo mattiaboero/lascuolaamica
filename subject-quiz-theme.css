@@ -413,6 +413,7 @@ header {
   cursor: pointer;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.14), 0 12px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  min-height: 44px;
 }
 
 .class-btn:nth-child(1) { background: linear-gradient(145deg, #dff4ff, #b8e5ff); color: #17496a; }
@@ -493,6 +494,7 @@ header {
   cursor: pointer;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.14), 0 12px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  min-height: 44px;
 }
 
 .area-btn:nth-child(1) { background: linear-gradient(145deg, #fff8d6, #ffe890); color: #6a5600; }
@@ -1158,6 +1160,11 @@ body.subject-problemi .answer-btn {
 .lb-table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.lb-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .lb-table th {

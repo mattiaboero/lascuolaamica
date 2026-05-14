@@ -229,11 +229,12 @@ const BONUS_Q = {
 // STATE
 // ============================================================
 let level=1, qs=[], curQ=0, ok=0, ko=0, streak=0, bestStreak=0;
-let hist=[], answered=false, timerIv=null, timerStart=null;
+let hist=[], answered=false;
 let muted=false, audioCtx=null;
 let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false, creditsAwarded=false;
 let selectedClass='3';
 let playWindowExpiryLock = false;
+let confettiTimeouts = [];
 
 function setMascot(state) {
   const el = document.getElementById('mascot');
@@ -425,11 +426,14 @@ function refreshLevelButtonsForClass() {
   document.querySelectorAll('.level-card[data-action=\"start-level\"]').forEach((btn) => {
     const lvl = Number(btn.dataset.level || 0);
     const ok = isLevelAvailableForClass(lvl, cls);
+    const classLabel = CLASS_LABELS[cls] || `Classe ${cls}ª`;
+    const lockReason = `Livello non disponibile per ${classLabel}`;
     btn.disabled = !ok;
     btn.classList.toggle('locked', !ok);
     btn.setAttribute('aria-disabled', ok ? 'false' : 'true');
+    btn.setAttribute('aria-label', ok ? `Livello ${lvl}, disponibile per ${classLabel}` : `Livello ${lvl}, bloccato. ${lockReason}`);
     if (!ok) {
-      btn.setAttribute('title', `Livello non disponibile per ${CLASS_LABELS[cls] || `Classe ${cls}ª`}`);
+      btn.setAttribute('title', lockReason);
     } else {
       btn.removeAttribute('title');
     }
@@ -641,7 +645,7 @@ async function ensurePlayWindowForGame() {
   if (!api || typeof api.ensureActive !== 'function') return true;
   return api.ensureActive({
     title: 'Attiva 30 minuti di gioco',
-    message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Nessun dato lascia il browser e il timer funziona anche offline.',
+    message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
     confirmLabel: 'Attiva 30 minuti',
     cancelLabel: 'Non ora'
   });
@@ -653,9 +657,9 @@ async function handlePlayWindowExpired() {
   if (!activeScreen) return;
   if (!['scrGame', 'scrBonusPick', 'scrBonusQ'].includes(activeScreen.id)) return;
   playWindowExpiryLock = true;
-  stopTimer();
+  clearPendingConfetti();
   goLevels();
-  await showAlert('I 30 minuti di gioco sono terminati. Riattiva il timer per iniziare una nuova partita.', {
+  await showAlert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
     title: 'Tempo di gioco terminato',
     okLabel: 'Va bene'
   });
@@ -990,7 +994,6 @@ function loadQ() {
 function checkAns(chosen, correct, btn) {
   if(answered) return;
   answered=true;
-  stopTimer();
   const isOk = chosen===correct;
   document.querySelectorAll('.ans-btn').forEach(b=>b.disabled=true);
   if(isOk){
@@ -1048,7 +1051,6 @@ function showFb(isOk) {
 // END GAME
 // ============================================================
 function openBonusPick() {
-  stopTimer();
   document.getElementById('scoreBar')?.classList.remove('is-visible');
   baseScore = ok;
   document.getElementById('baseScoreLabel').textContent = baseScore;
@@ -1105,7 +1107,6 @@ function checkBonusAns(chosen, correctAnswer, btn) {
 }
 
 function finishGame(mode) {
-  stopTimer();
   document.getElementById('scoreBar')?.classList.remove('is-visible');
   if (mode === 'skip') {
     bonusType = null;
@@ -1230,7 +1231,7 @@ async function clearLB() {
 function showLB() {
   renderLB();
   document.getElementById('scoreBar')?.classList.remove('is-visible');
-  stopTimer();
+  clearPendingConfetti();
   showScreen('scrLB');
 }
 function renderLB() {
@@ -1309,23 +1310,39 @@ function renderLB() {
 
   table.appendChild(thead);
   table.appendChild(tbody);
-  cont.appendChild(table);
+  const wrap = document.createElement('div');
+  wrap.className = 'lb-table-wrap';
+  wrap.appendChild(table);
+  cont.appendChild(wrap);
 }
 
 // ============================================================
 // CONFETTI
 // ============================================================
+function clearPendingConfetti() {
+  confettiTimeouts.forEach((id) => clearTimeout(id));
+  confettiTimeouts = [];
+  document.querySelectorAll('.cp').forEach((node) => node.remove());
+}
+
 function launchConfetti() {
   if (isMotionReduced()) return;
+  clearPendingConfetti();
   for(let i=0;i<60;i++){
-    setTimeout(()=>{
+    const timeoutId = setTimeout(()=>{
       const p=document.createElement('div');
       const variant = window.SADom && typeof window.SADom.randomVariant === 'function'
         ? window.SADom.randomVariant('confetti-v', 12)
         : 'confetti-v1';
       p.className=`cp ${variant}`;
-      document.body.appendChild(p); setTimeout(()=>p.remove(),4000);
+      document.body.appendChild(p);
+      const cleanupId = setTimeout(() => {
+        p.remove();
+        confettiTimeouts = confettiTimeouts.filter((id) => id !== cleanupId);
+      }, 4000);
+      confettiTimeouts.push(cleanupId);
     },i*30);
+    confettiTimeouts.push(timeoutId);
   }
 }
 
@@ -1346,7 +1363,7 @@ function showScreen(id) {
 }
 
 function goLevels() {
-  stopTimer();
+  clearPendingConfetti();
   document.getElementById('scoreBar')?.classList.remove('is-visible');
   baseScore = 0;
   finalScore = 0;
@@ -1360,9 +1377,10 @@ function goLevels() {
   showScreen('scrLevel');
 }
 
-function replayGame() { startGame(level); }
-
-function stopTimer() { clearInterval(timerIv); }
+function replayGame() {
+  clearPendingConfetti();
+  startGame(level);
+}
 
 // ============================================================
 // UTILS

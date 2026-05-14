@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.13';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.14';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,15 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '14 maggio 2026 · Release 4.5.14',
+      items: [
+        'Allineata la home al comportamento reale del sito: il pulsante Villaggio ora apre direttamente l’area pubblica già disponibile.',
+        'Corrette alcune segnalazioni di qualità sul runtime: footer versione coerente, precache del Service Worker ripulita e score-bar più robusta in assenza di elementi DOM.',
+        'Snellito il Villaggio evitando il re-render completo della griglia quando cambia solo la selezione visiva di un edificio.',
+        'Ripulito il motore inglese rimuovendo codice timer inattivo, migliorando l’accessibilità dei livelli bloccati e impedendo confetti residui dopo la navigazione.'
+      ]
+    },
     {
       date: '11 maggio 2026 · Release 4.5.13',
       items: [
@@ -419,6 +428,7 @@
 
   function dispatchPlayWindowChange(state, force) {
     const snapshot = state || getPlayWindowState();
+    syncPlayWindowTicker(snapshot);
     const stateKey = getPlayWindowStateKey(snapshot);
     if (!force && stateKey === lastPlayWindowBroadcastKey) {
       notifyPlayWindowSubscribers(snapshot);
@@ -430,11 +440,24 @@
     return snapshot;
   }
 
+  function syncPlayWindowTicker(state) {
+    const snapshot = state || getPlayWindowState();
+    const shouldTick = snapshot.active || snapshot.coolingDown;
+    if (shouldTick) {
+      if (playWindowTicker) return;
+      playWindowTicker = window.setInterval(() => {
+        dispatchPlayWindowChange(getPlayWindowState());
+      }, 1000);
+      return;
+    }
+    if (playWindowTicker) {
+      clearInterval(playWindowTicker);
+      playWindowTicker = null;
+    }
+  }
+
   function ensurePlayWindowTicker() {
-    if (playWindowTicker) return;
-    playWindowTicker = window.setInterval(() => {
-      dispatchPlayWindowChange(getPlayWindowState());
-    }, 1000);
+    syncPlayWindowTicker(getPlayWindowState());
   }
 
   function startPlayWindow() {
@@ -477,7 +500,7 @@
     if (current.active) return true;
     if (current.coolingDown) {
       await promptAlert(
-        `Il tempo di gioco è terminato. Potrai riattivarlo tra ${formatPlayWindowClock(current.cooldownRemainingMs)}.`,
+        `I 30 minuti di gioco sono finiti. Prima di tornare a giocare bisogna aspettare 60 minuti. Potrai riattivare il timer tra ${formatPlayWindowClock(current.cooldownRemainingMs)}.`,
         {
           title: 'Pausa tra una sessione e l’altra',
           okLabel: 'Va bene'
@@ -490,7 +513,7 @@
     const config = options || {};
     playWindowEnsurePromise = (async () => {
       const accepted = await promptConfirm(
-        config.message || 'Per iniziare devi attivare 30 minuti di gioco su questo dispositivo. Il timer non usa cookie, non richiede login e funziona anche offline.',
+        config.message || 'Per iniziare devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Il timer non usa cookie, non richiede login e funziona anche offline.',
         {
           title: config.title || 'Attiva 30 minuti di gioco',
           confirmLabel: config.confirmLabel || 'Attiva 30 minuti',
@@ -1126,7 +1149,7 @@
       target.classList.toggle('is-cooldown', snapshot.coolingDown);
 
       if (snapshot.active) {
-        status.textContent = 'Timer attivo: puoi giocare liberamente su tutte le materie finché il conto alla rovescia non finisce.';
+        status.textContent = 'Timer attivo: puoi giocare liberamente su tutte le materie per 30 minuti. Quando il tempo finisce, bisogna aspettare 60 minuti prima di poter tornare a giocare.';
         timer.textContent = formatPlayWindowClock(snapshot.remainingMs);
         button.textContent = 'Timer attivo';
         button.disabled = true;
@@ -1138,7 +1161,7 @@
       button.disabled = false;
       button.setAttribute('aria-disabled', 'false');
       if (snapshot.coolingDown) {
-        status.textContent = 'I 30 minuti sono terminati. Il prossimo turno sarà disponibile tra un’ora.';
+        status.textContent = 'I 30 minuti sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.';
         timer.textContent = formatPlayWindowClock(snapshot.cooldownRemainingMs);
         button.textContent = 'Disponibile tra';
         button.disabled = true;
@@ -1146,10 +1169,10 @@
         return;
       }
       if (snapshot.expired) {
-        status.textContent = 'I 30 minuti sono terminati. Riattiva il timer per continuare a giocare.';
+        status.textContent = 'I 30 minuti sono terminati. Per continuare a giocare bisogna prima aspettare 60 minuti.';
         button.textContent = 'Riattiva 30 minuti';
       } else {
-        status.textContent = 'Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo.';
+        status.textContent = 'Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo. Dopo i 30 minuti bisogna aspettare 60 minuti prima di poter tornare a giocare.';
         button.textContent = 'Attiva 30 minuti';
       }
     };

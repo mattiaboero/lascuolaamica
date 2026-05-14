@@ -167,7 +167,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--sky1:#74b9ff;--sky2:#a29bfe;--ground:#55efc4;--math-a:#9B5DE5;--math-b:#c77dff;--eng-a:#0096c7;--eng-b:#48cae4;--prob-a:#ff7b54;--prob-b:#ffb347;--civ-a:#2a9d8f;--civ-b:#2d6cdf;--geo-a:#2d8f5a;--geo-b:#2f6fdb;--sto-a:#8a5a44;--sto-b:#6d4cc9;--sci-a:#2a9d8f;--sci-b:#2b66d9;--ita-a:#d1495b;--ita-b:#3f6dd8;--vil-a:#2d8f5a;--vil-b:#34c27a;--sun:#ffd60a}
-body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient(170deg,var(--sky1) 0%,var(--sky2) 40%,#a8e6cf 75%,var(--ground) 100%);overflow-x:auto;position:relative}
+body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient(170deg,var(--sky1) 0%,var(--sky2) 40%,#a8e6cf 75%,var(--ground) 100%);overflow-x:hidden;position:relative}
 .sun{position:fixed;top:-30px;right:60px;width:130px;height:130px;background:var(--sun);border-radius:50%;box-shadow:0 0 60px 20px rgba(255,214,10,.45);will-change:transform;z-index:0;animation:sunPulse 4s ease-in-out infinite}
 @keyframes sunPulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.06);opacity:1}}
 .cloud{position:fixed;background:#fff;border-radius:50px;opacity:.85;z-index:0;animation:cloudDrift linear infinite}.cloud::before,.cloud::after{content:'';position:absolute;background:#fff;border-radius:50%}.cloud.c1{width:140px;height:45px;top:60px;left:-160px;animation-duration:28s;animation-delay:0s}.cloud.c1::before{width:70px;height:70px;top:-32px;left:20px}.cloud.c1::after{width:50px;height:50px;top:-22px;left:60px}.cloud.c2{width:100px;height:35px;top:100px;left:-120px;animation-duration:22s;animation-delay:-10s}.cloud.c2::before{width:55px;height:55px;top:-26px;left:12px}.cloud.c2::after{width:40px;height:40px;top:-18px;left:45px}.cloud.c3{width:120px;height:40px;top:140px;left:-140px;animation-duration:32s;animation-delay:-5s}.cloud.c3::before{width:60px;height:60px;top:-28px;left:18px}.cloud.c3::after{width:45px;height:45px;top:-20px;left:55px}
@@ -229,12 +229,11 @@ footer{position:fixed;bottom:0;left:0;width:100%;background:rgba(255,255,255,.82
       <div class="badge" aria-hidden="true">✨ Piattaforma Educativa</div>
       <a class="faq-mini-link" href="/faq" aria-label="Apri la pagina FAQ">FAQ</a>
       <div class="wallet-mini" aria-label="Crediti disponibili">💰 <span data-wallet-balance>0</span> crediti</div>
-      <button
-        type="button"
-        class="village-mini-link village-mini-disabled"
-        id="villageDevBtn"
-        aria-label="Villaggio educativo: funzionalità in fase di sviluppo"
-      >🏡 Villaggio</button>
+      <a
+        class="village-mini-link"
+        href="/villaggio"
+        aria-label="Apri il Villaggio educativo"
+      >🏡 Villaggio</a>
     </div>
     <div
       class="mascot-home"
@@ -371,7 +370,7 @@ footer{position:fixed;bottom:0;left:0;width:100%;background:rgba(255,255,255,.82
 <footer role="contentinfo">
   <button type="button" class="footer-link" data-open-modal="modalPrivacy" aria-haspopup="dialog"><span aria-hidden="true">🔒</span> Privacy Policy</button>
   <button type="button" class="footer-link" data-open-modal="modalCookie" aria-haspopup="dialog"><span aria-hidden="true">🍪</span> Cookie Policy</button>
-  <span class="footer-link footer-version" aria-hidden="true">v4.5.8</span>
+  <span class="footer-link footer-version" aria-hidden="true">v4.5.14</span>
 </footer>
 
 <!-- Modal Privacy -->

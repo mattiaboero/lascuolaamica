@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.5.14 - 2026-05-14
+
+- Allineata la home al comportamento reale del sito: il pulsante Villaggio apre direttamente l'area pubblica invece di mostrare un messaggio di sviluppo.
+- Corrette alcune segnalazioni di qualità sul runtime: footer versione coerente, precache del Service Worker ripulita e score-bar più robusta in assenza di elementi DOM.
+- Snellito il Villaggio evitando il re-render completo della griglia quando cambia solo la selezione visiva di un edificio.
+- Ripulito il motore inglese rimuovendo codice timer inattivo, migliorando l'accessibilità dei livelli bloccati e impedendo confetti residui dopo la navigazione.
+- Migliorata la leggibilità mobile delle classifiche con contenitore a scorrimento orizzontale e target touch espliciti per classi e ambiti.
+
 ## 4.5.13 - 2026-05-11
 
 - Sostituiti gli asset del Villaggio con una nuova versione grafica più definita e coerente con la resa isometrica.

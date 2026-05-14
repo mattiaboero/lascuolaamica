@@ -203,7 +203,7 @@
     if (!api || typeof api.ensureActive !== 'function') return true;
     return api.ensureActive({
       title: 'Attiva 30 minuti di gioco',
-      message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Nessun dato lascia il browser e il timer funziona anche offline.',
+      message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
       confirmLabel: 'Attiva 30 minuti',
       cancelLabel: 'Non ora'
     });
@@ -216,7 +216,7 @@
     if (!['screenGame', 'screenBonusPick', 'screenBonusQuestion'].includes(activeScreen.id)) return;
     playWindowExpiryLock = true;
     goStart();
-    await askAlert('I 30 minuti di gioco sono terminati. Riattiva il timer per iniziare una nuova partita.', {
+    await askAlert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
       title: 'Tempo di gioco terminato',
       okLabel: 'Va bene'
     });
@@ -1222,8 +1222,10 @@
   }
 
   function updateScoreBar() {
-    $('scorePoints').textContent = points;
-    $('scoreQn').textContent = Math.min(curQ, TOTAL_Q);
+    const pointsEl = $('scorePoints');
+    const qnEl = $('scoreQn');
+    if (pointsEl) pointsEl.textContent = points;
+    if (qnEl) qnEl.textContent = Math.min(curQ, TOTAL_Q);
   }
 
   function loadQuestion() {
@@ -1538,7 +1540,10 @@
 
     table.appendChild(thead);
     table.appendChild(tbody);
-    cont.appendChild(table);
+    const wrap = document.createElement('div');
+    wrap.className = 'lb-table-wrap';
+    wrap.appendChild(table);
+    cont.appendChild(wrap);
   }
 
   function goStart() {

@@ -1206,6 +1206,11 @@ header {
   border-collapse: collapse;
 }
 
+.lb-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .lb-table th {
   font-family: 'Fredoka One', cursive;
   font-size: 0.95rem;

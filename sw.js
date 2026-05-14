@@ -62,7 +62,6 @@ const OPTIONAL_PRECACHE_URLS = [
   '/js/scienze-page.js',
   '/js/italiano-page.js',
   '/js/faq-page.js',
-  '/questions-loader.js',
   '/palette-okabe.css',
   '/robots.txt',
   '/sitemap.xml',

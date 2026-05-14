@@ -47,20 +47,6 @@ if (cont && !isMotionReduced()) {
   }
 }
 
-const villageDevBtn = document.getElementById('villageDevBtn');
-if (villageDevBtn) {
-  villageDevBtn.addEventListener('click', () => {
-    if (window.SA && window.SA.ui && typeof window.SA.ui.alert === 'function') {
-      window.SA.ui.alert('Funzionalità in fase di sviluppo.', {
-        title: 'Villaggio Educativo',
-        okLabel: 'Va bene'
-      });
-      return;
-    }
-    alert('Funzionalità in fase di sviluppo');
-  });
-}
-
 // Mascotte homepage — animazione idle dopo entrata
 (function () {
   var mascotHome = document.getElementById('mascotHome');

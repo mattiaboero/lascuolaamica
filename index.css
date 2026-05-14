@@ -17,7 +17,7 @@ body{
   font-family:'Nunito',sans-serif;
   min-height:100vh;
   background:linear-gradient(170deg,var(--sky1) 0%,var(--sky2) 40%,#a8e6cf 75%,var(--ground) 100%);
-  overflow-x:auto;
+  overflow-x:hidden;
   position:relative;
 }
 

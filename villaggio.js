@@ -284,10 +284,6 @@
     tile.setAttribute('aria-label', `${b.name}, posizione riga ${y + 1} colonna ${x + 1}`);
   }
 
-  function updateGridArea(x, y, w, h) {
-    renderGrid();
-  }
-
   function selectBuilding(id) {
     selectedBuildingId = id;
     selectedPlacementId = null;
@@ -596,7 +592,14 @@
   }
 
   function updateGridSelectionStyles() {
-    renderGrid();
+    gridTileMap.forEach((tile) => {
+      const placementId = toInt(tile.dataset.placementId, 0);
+      tile.classList.toggle('selected-placement', placementId > 0 && placementId === selectedPlacementId);
+    });
+    document.querySelectorAll('.iso-building[data-placement-id]').forEach((sprite) => {
+      const placementId = toInt(sprite.dataset.placementId, 0);
+      sprite.classList.toggle('selected-placement', placementId > 0 && placementId === selectedPlacementId);
+    });
   }
 
   function onShopGridClick(event) {

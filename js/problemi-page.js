@@ -496,7 +496,7 @@ async function ensurePlayWindowForGame() {
   if (!api || typeof api.ensureActive !== 'function') return true;
   return api.ensureActive({
     title: 'Attiva 30 minuti di gioco',
-    message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Nessun dato lascia il browser e il timer funziona anche offline.',
+    message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
     confirmLabel: 'Attiva 30 minuti',
     cancelLabel: 'Non ora'
   });
@@ -509,7 +509,7 @@ async function handlePlayWindowExpired() {
   if (!['screenGame', 'screenBonusPick', 'screenBonusQuestion'].includes(activeScreen.id)) return;
   playWindowExpiryLock = true;
   goStart();
-  await askAlert('I 30 minuti di gioco sono terminati. Riattiva il timer per iniziare una nuova partita.', {
+  await askAlert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
     title: 'Tempo di gioco terminato',
     okLabel: 'Va bene'
   });
