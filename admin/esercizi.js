@@ -45,6 +45,7 @@
   var exportBtn = document.getElementById('exportBtn');
   var exportMessage = document.getElementById('exportMessage');
   var jsonPreview = document.getElementById('jsonPreview');
+  var importBtn = document.getElementById('importBtn');
   var importInput = document.getElementById('importInput');
 
   var formFields = {
@@ -76,6 +77,9 @@
   var remoteSubjectIndexPromise = null;
   var remoteRowsBySubject = new Map();
   var remoteMaxByPrefix = new Map();
+  var fieldErrorIds = Object.create(null);
+  var questionFieldOrder = ['subject', 'classLevel', 'area', 'question', 'opt0', 'opt1', 'opt2', 'opt3', 'answerIndex'];
+  var authFieldOrder = ['tokenInput'];
 
   function safeSetStorage(key, value) {
     try {
@@ -105,8 +109,118 @@
 
   function setStatus(el, message, isError) {
     el.textContent = message || '';
+    el.setAttribute('role', isError ? 'alert' : 'status');
+    el.setAttribute('aria-live', isError ? 'assertive' : 'polite');
     el.classList.toggle('status-error', !!isError);
     el.classList.toggle('status-info', !isError);
+  }
+
+  function getFieldControl(name) {
+    if (name === 'tokenInput') return tokenInput;
+    return formFields[name] || null;
+  }
+
+  function ensureFieldClasses() {
+    Object.keys(formFields).forEach(function (key) {
+      var field = formFields[key];
+      if (field) {
+        field.classList.add('field-control');
+      }
+    });
+    tokenInput.classList.add('field-control');
+  }
+
+  function getFieldErrorId(name) {
+    if (!fieldErrorIds[name]) {
+      fieldErrorIds[name] = 'fieldError-' + name;
+    }
+    return fieldErrorIds[name];
+  }
+
+  function getFieldErrorContainer(field) {
+    var label = field.closest('label');
+    if (label) return label;
+    var inlineRow = field.closest('.inline-row');
+    if (inlineRow) return inlineRow.parentNode || inlineRow;
+    return field.parentNode;
+  }
+
+  function getBaseDescribedBy(field) {
+    var raw = field.getAttribute('data-base-described-by');
+    if (raw !== null) return raw;
+    var current = field.getAttribute('aria-describedby') || '';
+    field.setAttribute('data-base-described-by', current);
+    return current;
+  }
+
+  function applyFieldDescribedBy(field, errorId) {
+    var parts = getBaseDescribedBy(field).split(/\s+/).filter(Boolean);
+    if (errorId && parts.indexOf(errorId) === -1) {
+      parts.push(errorId);
+    }
+    if (parts.length) {
+      field.setAttribute('aria-describedby', parts.join(' '));
+    } else {
+      field.removeAttribute('aria-describedby');
+    }
+  }
+
+  function clearFieldError(name) {
+    var field = getFieldControl(name);
+    if (!field) return;
+
+    field.removeAttribute('aria-invalid');
+    field.classList.remove('field-error');
+
+    var errorId = getFieldErrorId(name);
+    var errorNode = document.getElementById(errorId);
+    if (errorNode) {
+      errorNode.remove();
+    }
+    applyFieldDescribedBy(field, '');
+  }
+
+  function clearFieldErrors(names) {
+    (names || Object.keys(formFields).concat(authFieldOrder)).forEach(function (name) {
+      clearFieldError(name);
+    });
+  }
+
+  function setFieldError(name, message) {
+    var field = getFieldControl(name);
+    if (!field) return;
+
+    clearFieldError(name);
+    field.setAttribute('aria-invalid', 'true');
+    field.classList.add('field-error');
+
+    var errorNode = document.createElement('span');
+    var errorId = getFieldErrorId(name);
+    errorNode.id = errorId;
+    errorNode.className = 'field-error-text';
+    errorNode.textContent = message;
+
+    var container = getFieldErrorContainer(field);
+    container.appendChild(errorNode);
+    applyFieldDescribedBy(field, errorId);
+  }
+
+  function focusFirstInvalidField(order, errors) {
+    for (var i = 0; i < order.length; i += 1) {
+      if (!errors[order[i]]) continue;
+      var field = getFieldControl(order[i]);
+      if (!field) continue;
+      field.focus();
+      return;
+    }
+  }
+
+  function clearFieldErrorOnInteraction(name, eventType) {
+    var field = getFieldControl(name);
+    if (!field) return;
+    field.addEventListener(eventType, function () {
+      clearFieldError(name);
+    });
   }
 
   function escapeHtml(value) {
@@ -211,6 +325,7 @@
     editorPanel.hidden = false;
     draftPanel.hidden = false;
     exportPanel.hidden = false;
+    clearFieldErrors(authFieldOrder);
   }
 
   function showAuthPanel() {
@@ -466,6 +581,7 @@
   function resetForm(keepSubject) {
     questionForm.reset();
     formFields.active.checked = true;
+    clearFieldErrors(questionFieldOrder);
 
     if (keepSubject) {
       var subject = formFields.subject.value;
@@ -535,22 +651,26 @@
     var isActive = !!formFields.active.checked;
     var isBonus = !!formFields.bonus.checked;
 
-    var errors = [];
-    if (!subject) errors.push('Seleziona una materia.');
-    if (!Number.isInteger(classLevel) || classLevel < 2 || classLevel > 5) errors.push('Seleziona una classe valida (2-5).');
-    if (!area) errors.push('Compila il campo Area.');
-    if (!question || question.length < 8) errors.push('La domanda deve contenere almeno 8 caratteri.');
+    var errorMap = {};
+    if (!subject) errorMap.subject = 'Seleziona una materia.';
+    if (!Number.isInteger(classLevel) || classLevel < 2 || classLevel > 5) errorMap.classLevel = 'Seleziona una classe valida (2-5).';
+    if (!area) errorMap.area = 'Compila il campo Area.';
+    if (!question || question.length < 8) errorMap.question = 'La domanda deve contenere almeno 8 caratteri.';
 
     options.forEach(function (option, idx) {
-      if (!option) errors.push('Compila l\'opzione ' + String.fromCharCode(65 + idx) + '.');
+      if (!option) errorMap['opt' + idx] = 'Compila l\'opzione ' + String.fromCharCode(65 + idx) + '.';
     });
 
     if (!Number.isInteger(answerIndex) || answerIndex < 0 || answerIndex > 3) {
-      errors.push('Seleziona la risposta corretta.');
+      errorMap.answerIndex = 'Seleziona la risposta corretta.';
     }
 
+    var errors = questionFieldOrder
+      .filter(function (name) { return !!errorMap[name]; })
+      .map(function (name) { return errorMap[name]; });
+
     if (errors.length) {
-      return { ok: false, errors: errors };
+      return { ok: false, errors: errors, fieldErrors: errorMap };
     }
 
     var areaSlug = slugify(area || 'generale') || 'generale';
@@ -630,9 +750,14 @@
   async function onSubmitQuestion(event) {
     event.preventDefault();
     var result = collectQuestionFromForm();
+    clearFieldErrors(questionFieldOrder);
 
     if (!result.ok) {
+      Object.keys(result.fieldErrors || {}).forEach(function (name) {
+        setFieldError(name, result.fieldErrors[name]);
+      });
       setStatus(formMessage, result.errors.join(' '), true);
+      focusFirstInvalidField(questionFieldOrder, result.fieldErrors || {});
       return;
     }
 
@@ -827,6 +952,7 @@
   function bindEvents() {
     authForm.addEventListener('submit', function (event) {
       event.preventDefault();
+      clearFieldErrors(authFieldOrder);
 
       if (!hasValidTokenConfig()) {
         setStatus(authMessage, 'Configurazione token non valida: contatta l\'amministratore.', true);
@@ -835,13 +961,17 @@
 
       var token = tokenInput.value.trim();
       if (!token) {
+        setFieldError('tokenInput', 'Inserisci un token.');
         setStatus(authMessage, 'Inserisci un token.', true);
+        tokenInput.focus();
         return;
       }
 
       hashToken(token).then(function (hash) {
         if (hash !== getTokenHashFromConfig()) {
+          setFieldError('tokenInput', 'Token non valido.');
           setStatus(authMessage, 'Token non valido.', true);
+          tokenInput.focus();
           return;
         }
 
@@ -849,9 +979,12 @@
         showEditor();
         removeTokenFromUrl();
         tokenInput.value = '';
+        clearFieldErrors(authFieldOrder);
         setStatus(authMessage, 'Accesso riuscito.', false);
       }).catch(function () {
+        setFieldError('tokenInput', 'Errore di validazione token.');
         setStatus(authMessage, 'Errore di validazione token.', true);
+        tokenInput.focus();
       });
     });
 
@@ -880,6 +1013,7 @@
       setAuthenticated(false);
       showAuthPanel();
       tokenInput.value = '';
+      clearFieldErrors(authFieldOrder);
       setStatus(authMessage, 'Editor bloccato.', false);
     });
 
@@ -887,12 +1021,24 @@
 
     exportBtn.addEventListener('click', exportDrafts);
 
+    importBtn.addEventListener('click', function () {
+      importInput.click();
+    });
+
     importInput.addEventListener('change', function () {
       var file = importInput.files && importInput.files[0];
       if (!file) return;
       importDraftFile(file);
       importInput.value = '';
     });
+
+    questionFieldOrder.forEach(function (name) {
+      var field = getFieldControl(name);
+      if (!field) return;
+      clearFieldErrorOnInteraction(name, field.tagName === 'SELECT' ? 'change' : 'input');
+    });
+
+    clearFieldErrorOnInteraction('tokenInput', 'input');
   }
 
   function tryTokenFromUrl() {
@@ -915,6 +1061,7 @@
   }
 
   function init() {
+    ensureFieldClasses();
     populateSubjectSelect();
     bindEvents();
     loadDrafts();
@@ -924,6 +1071,7 @@
     if (!hasValidTokenConfig()) {
       configWarning.hidden = false;
       showAuthPanel();
+      clearFieldErrors(authFieldOrder);
       setStatus(authMessage, 'Configura prima editor-config.js con un hash token valido.', true);
       return;
     }

@@ -21,14 +21,14 @@
 
     <section class="card" id="authPanel" aria-labelledby="authTitle">
       <h2 id="authTitle">Accesso con Token</h2>
-      <p>Questa pagina usa accesso privato con token. Primo accesso con link <code>#k=...</code>, poi nello stesso browser puoi usare anche l'URL normale.</p>
+      <p id="authHint">Questa pagina usa accesso privato con token. Primo accesso con link <code>#k=...</code>, poi nello stesso browser puoi usare anche l'URL normale.</p>
       <div class="notice warning" id="configWarning" hidden>
         Configurazione token non valida. Aggiorna <code>admin/editor-config.js</code> con un hash SHA-256 prima dell'uso.
       </div>
       <form id="authForm" novalidate>
         <label for="tokenInput">Token di accesso</label>
         <div class="inline-row">
-          <input id="tokenInput" name="tokenInput" type="password" autocomplete="off" required placeholder="Inserisci token">
+          <input id="tokenInput" name="tokenInput" type="password" autocomplete="off" required placeholder="Inserisci token" aria-describedby="authHint authMessage">
           <button type="submit" class="btn primary">Sblocca editor</button>
         </div>
       </form>
@@ -189,10 +189,8 @@
       <h2 id="exportTitle">Export JSON</h2>
       <p>Quando il set è pronto, genera e scarica il file JSON da inviare via email.</p>
       <div class="actions">
-        <label class="btn ghost file-btn">
-          Importa bozza JSON
-          <input id="importInput" type="file" accept="application/json" hidden>
-        </label>
+        <button type="button" class="btn ghost file-btn" id="importBtn" aria-describedby="exportMessage">Importa bozza JSON</button>
+        <input id="importInput" type="file" accept="application/json" class="sr-only-input" tabindex="-1">
         <button type="button" class="btn primary" id="exportBtn">Genera e scarica JSON</button>
       </div>
       <label>
