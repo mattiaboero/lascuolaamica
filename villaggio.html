@@ -121,13 +121,14 @@
 
       <section class="panel village-wrap" aria-labelledby="villageTitle">
         <h2 id="villageTitle">Mappa del Villaggio (10x10)</h2>
+        <p id="villageKeyboardHint" class="sr-only">Usa il tasto tab per muoverti tra le caselle della mappa. Premi invio o barra spaziatrice per posizionare l'edificio selezionato oppure per selezionare un edificio già costruito.</p>
         <div id="selectionInfo" class="info-box" aria-live="polite">Scegli un edificio dal negozio oppure tocca un edificio già costruito.</div>
         <div class="actions">
           <button type="button" class="btn secondary" id="clearSelectionBtn">Annulla selezione</button>
           <button type="button" class="btn secondary" id="removeBtn" disabled>Rimuovi edificio</button>
           <button type="button" class="btn danger" id="resetVillageBtn">Azzera villaggio</button>
         </div>
-        <div class="village-grid-scroll"><div id="villageGrid" class="village-grid" aria-label="Griglia del villaggio"></div></div>
+        <div class="village-grid-scroll"><div id="villageGrid" class="village-grid" aria-label="Griglia del villaggio" aria-describedby="villageKeyboardHint selectionInfo"></div></div>
         <details class="village-accordion">
           <summary>Come funziona</summary>
           <div class="village-accordion-body">

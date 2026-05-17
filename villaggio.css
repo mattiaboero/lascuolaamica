@@ -44,8 +44,21 @@ body {
   transition: top 0.2s;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   top: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .top-nav {
@@ -471,10 +484,16 @@ header {
   box-shadow: none;
 }
 
-.tile:hover,
-.tile:focus-visible {
+.tile:hover {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  outline: none;
+}
+
+.tile:focus-visible {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.32), rgba(45, 108, 223, 0.12));
+  outline: 3px solid #0b4fd7;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.92), 0 0 0 10px rgba(11, 79, 215, 0.34);
+  z-index: calc(260 + var(--iso-col) + var(--iso-row));
 }
 
 .tile.purchase-pop {
