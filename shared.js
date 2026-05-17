@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.19';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.20';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '17 maggio 2026 · Release 4.5.20',
+      items: [
+        'Spostata la mascotte Cervellino nel titolo della homepage al posto dell’emoji, con dimensione allineata al testo.',
+        'Rimossa la mascotte grande sopra la scritta “La Scuola Amica” per rendere la hero più compatta e pulita.',
+        'Aggiornata la cache applicativa per distribuire correttamente il ritocco grafico anche in modalità offline.'
+      ]
+    },
     {
       date: '17 maggio 2026 · Release 4.5.19',
       items: [

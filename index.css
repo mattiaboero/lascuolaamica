@@ -91,11 +91,15 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 
 /* ===== MASCOTTE HOMEPAGE ===== */
 .mascot-home{
-  width:210px;
-  height:300px;
-  margin:0 auto 4px;
-  background:center/contain no-repeat;
+  display:inline-block;
+  width:1.35em;
+  height:1em;
+  margin:0 .08em 0 0;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:auto 1.84em;
   pointer-events:none;
+  vertical-align:-.12em;
   animation:mascotHomeIn .7s cubic-bezier(.22,1,.36,1) .15s both;
 }
 .mascot-home[data-state="wave"]{
@@ -211,11 +215,20 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   opacity:.95;
 }
 .main-title{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.08em;
+  flex-wrap:wrap;
   font-family:'Fredoka One',cursive;
   font-size:clamp(2.8rem,8vw,4.5rem);
   color:white;
   text-shadow:3px 3px 0 rgba(0,0,0,.18),6px 6px 20px rgba(0,0,0,.12);
   line-height:1.1;letter-spacing:2px;
+}
+.main-title-text{
+  display:inline-block;
+  min-width:0;
 }
 .main-sub{
   margin-top:8px;
@@ -244,20 +257,21 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   width:100%;max-width:980px;
 }
 @media(max-width:900px){
-  .mascot-home{
-    width:180px;
-    height:258px;
-  }
   .cards-row{
     grid-template-columns:repeat(2,minmax(220px,1fr));
     max-width:760px;
   }
 }
 @media(max-width:640px){
+  .main-title{
+    font-size:clamp(2.3rem,10vw,2.8rem);
+  }
   .mascot-home{
-    width:150px;
-    height:215px;
-    margin-bottom:2px;
+    width:1em;
+    background-size:auto 1.55em;
+  }
+  .main-title-text{
+    max-width:calc(100% - 1.2em);
   }
   .cards-row{grid-template-columns:1fr;max-width:420px;}
 }

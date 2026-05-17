@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.20 - 2026-05-17
+
+- Spostata la mascotte Cervellino dentro il titolo della homepage, al posto dell’emoji scuola.
+- Ridimensionata la mascotte alla scala del testo del titolo, circa 70 px da desktop.
+- Rimossa la mascotte grande sopra “La Scuola Amica” per rendere la hero più compatta.
+
 ## 4.5.19 - 2026-05-17
 
 - Migliorato il contrasto di score bar e pulsanti principali nei flussi quiz, evitando testo piccolo in colori accento troppo chiari.
