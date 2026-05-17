@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.24 - 2026-05-17
+
+- Rimossi i pulsanti Audio dalle pagine materia.
+- Rimossa la generazione audio Web Audio API dai motori quiz, inclusi beep di risposta, streak, avvio e completamento.
+- Mantenuti feedback visivi, mascotte, stati corretta/sbagliata e schermate finali senza dipendenze audio.
+
 ## 4.5.23 - 2026-05-17
 
 - Ingrandita la mascotte nel titolo della homepage al doppio della dimensione precedente.

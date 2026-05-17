@@ -230,7 +230,6 @@ const BONUS_Q = {
 // ============================================================
 let level=1, qs=[], curQ=0, ok=0, ko=0, streak=0, bestStreak=0;
 let hist=[], answered=false;
-let muted=false, audioCtx=null;
 let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false, creditsAwarded=false;
 let selectedClass='3';
 let playWindowExpiryLock = false;
@@ -786,7 +785,6 @@ function bindStaticActions() {
   document.querySelectorAll('[data-action]').forEach(btn => {
     btn.addEventListener('click', () => {
       switch (btn.dataset.action) {
-        case 'toggle-mute': toggleMute(); break;
         case 'show-lb': showLB(); break;
         case 'replay-game': replayGame(); break;
         case 'go-levels': goLevels(); break;
@@ -843,40 +841,6 @@ function spawnBg() {
   }
   bg.appendChild(frag);
 }
-
-// ============================================================
-// AUDIO
-// ============================================================
-function getCtx() { if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)(); return audioCtx; }
-function note(freq,t,dur,vol=.25,type='sine') {
-  if(muted) return;
-  try{
-    const ctx=getCtx(), osc=ctx.createOscillator(), g=ctx.createGain();
-    osc.connect(g); g.connect(ctx.destination);
-    osc.frequency.value=freq; osc.type=type;
-    g.gain.setValueAtTime(vol,ctx.currentTime+t);
-    g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+t+dur);
-    osc.start(ctx.currentTime+t); osc.stop(ctx.currentTime+t+dur+.05);
-  } catch (e) {
-    debugWarn('note', e);
-  }
-}
-function playOk()      { note(523,.0,.1); note(659,.1,.1); note(784,.2,.25); }
-function playKo()      { note(330,.0,.15,.2); note(262,.16,.25,.2); }
-function playStreak()  { note(523,.0,.08); note(659,.08,.08); note(784,.16,.08); note(1047,.24,.3); }
-function playPerfect() { [523,587,659,784,880,1047].forEach((f,i)=>note(f,i*.07,.18)); }
-function playStart()   { note(392,.0,.1); note(523,.1,.1); note(659,.2,.15); }
-
-function toggleMute() {
-  muted=!muted;
-  const btn = document.getElementById('muteBtn');
-  const icon = document.createElement('span');
-  icon.setAttribute('aria-hidden', 'true');
-  icon.textContent = muted ? '🔇' : '🔊';
-  btn.replaceChildren(icon, document.createTextNode(' Audio'));
-  btn.setAttribute('aria-label', muted ? 'Riattiva audio' : 'Disattiva audio');
-}
-
 // ============================================================
 // GAME
 // ============================================================
@@ -975,7 +939,6 @@ async function startGame(lvl) {
   bonusType = null;
   bonusApplied = false;
   creditsAwarded = false;
-  playStart();
   showScreen('scrGame');
   document.getElementById('scoreBar')?.classList.add('is-visible');
   buildDots();
@@ -1052,14 +1015,12 @@ function checkAns(chosen, correct, btn) {
     ok++; streak++;
     if(streak>bestStreak) bestStreak=streak;
     setMascot('happy');
-    streak>=3 ? playStreak() : playOk();
     showFb(true);
   } else {
     btn.classList.add('wrong');
     ko++; streak=0;
     document.querySelectorAll('.ans-btn').forEach(b=>{if(b.textContent===correct) b.classList.add('correct');});
     setMascot('sad');
-    playKo();
     showFb(false);
   }
   hist.push(isOk);
@@ -1143,14 +1104,12 @@ function checkBonusAns(chosen, correctAnswer, btn) {
   if (okBonus) {
     btn.classList.add('correct');
     setMascot('celebrate');
-    playPerfect();
     showFb(true);
     finishGame('bonus-ok');
   } else {
     btn.classList.add('wrong');
     buttons.forEach(b => { if (b.textContent === correctAnswer) b.classList.add('correct'); });
     setMascot('sad');
-    playKo();
     showFb(false);
     finishGame('bonus-ko');
   }
@@ -1175,7 +1134,7 @@ function finishGame(mode) {
   }
   const pct=ok/10;
   let emoji,title,msg,stars;
-  if(pct===1)      {emoji='🏆';title='COMPLIMENTI!';msg='Risposte tutte corrette! Wow!';stars=3;playPerfect();}
+  if(pct===1)      {emoji='🏆';title='COMPLIMENTI!';msg='Risposte tutte corrette! Wow!';stars=3;}
   else if(pct>=.8) {emoji='🌟';title='WOW!';msg='Quasi tutte corrette. Continua così!';stars=3;}
   else if(pct>=.6) {emoji='😊';title='CONTINUA COSÌ!';msg='Stai migliorando a ogni partita!';stars=2;}
   else if(pct>=.4) {emoji='💪';title='BENE!';msg='Ancora pratica e vai alla grande!';stars=1;}
