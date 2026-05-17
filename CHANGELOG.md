@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.19 - 2026-05-17
+
+- Migliorato il contrasto di score bar e pulsanti principali nei flussi quiz, evitando testo piccolo in colori accento troppo chiari.
+- Verificato il comportamento responsive su home, quiz, Villaggio e FAQ a viewport smartphone, tablet, desktop e LIM.
+- Aggiornata la versione applicativa per distribuire correttamente i CSS modificati anche ai client con cache offline.
+
 ## 4.5.18 - 2026-05-14
 
 - Applicato un pass SEO leggero su `scienze` e `italiano`.

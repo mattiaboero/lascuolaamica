@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.18';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.19';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '17 maggio 2026 · Release 4.5.19',
+      items: [
+        'Migliorato il contrasto di score bar e pulsanti principali nelle pagine quiz, mantenendo colori e icone come supporto visivo.',
+        'Verificato il layout su smartphone, tablet, desktop e schermo ampio tipo LIM, senza overflow orizzontale nelle pagine campione.',
+        'Aggiornata la cache applicativa per distribuire correttamente i ritocchi visivi anche in modalità offline.'
+      ]
+    },
     {
       date: '14 maggio 2026 · Release 4.5.18',
       items: [

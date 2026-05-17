@@ -203,17 +203,17 @@ header {
 
 .score-pill.ok {
   border-color: var(--accent-2);
-  color: var(--accent-2);
+  color: var(--text-main);
 }
 
 .score-pill.ko {
   border-color: #e76f51;
-  color: #e76f51;
+  color: var(--text-main);
 }
 
 .score-pill.str {
   border-color: var(--accent-1);
-  color: var(--accent-1);
+  color: var(--text-main);
 }
 
 .screen {
@@ -1150,7 +1150,7 @@ header {
 }
 
 .btn-replay {
-  background: linear-gradient(135deg, var(--accent-1), #6ea0ff);
+  background: linear-gradient(135deg, var(--accent-1), #2f68d8);
   color: #fff;
   border: none;
   border-radius: 50px;

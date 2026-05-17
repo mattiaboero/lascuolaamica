@@ -553,7 +553,7 @@ header {
 .start-btn {
   display: block;
   margin: 18px auto 0;
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-1) 78%, #000 22%), color-mix(in srgb, var(--accent-2) 78%, #000 22%));
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -599,12 +599,12 @@ header {
 
 .score-pill.points {
   border-color: var(--accent-1);
-  color: var(--accent-1);
+  color: var(--text-main);
 }
 
 .score-pill.qn {
   border-color: var(--accent-2);
-  color: var(--accent-2);
+  color: var(--text-main);
 }
 
 .progress-dots {
@@ -1098,7 +1098,7 @@ body.subject-problemi .answer-btn {
 }
 
 .btn-replay {
-  background: linear-gradient(135deg, var(--accent-2), #6ea0ff);
+  background: linear-gradient(135deg, var(--accent-2), #2f68d8);
   color: #fff;
   border: none;
   border-radius: 50px;
