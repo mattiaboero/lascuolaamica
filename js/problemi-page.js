@@ -115,6 +115,8 @@ let curQ = 0;
 let points = 0;
 let history = [];
 let answered = false;
+let muted = false;
+let audioCtx = null;
 let baseScore = 0;
 let finalScore = 0;
 let bonusFactor = 1;
@@ -571,6 +573,7 @@ function bindActions() {
     btn.addEventListener('click', () => {
       const action = btn.dataset.action;
       switch (action) {
+        case 'toggle-mute': toggleMute(); break;
         case 'start-game': startGame(); break;
         case 'show-leaderboard': showLeaderboard(); break;
         case 'clear-leaderboard': clearLeaderboard(); break;
@@ -818,6 +821,7 @@ function checkAnswer(chosen, correct, btn) {
   if (isOk) {
     btn.classList.add('correct');
     points += POINTS_PER_Q;
+    playOk();
     setMascot('happy');
     showFeedback(true);
   } else {
@@ -825,6 +829,7 @@ function checkAnswer(chosen, correct, btn) {
     buttons.forEach(b => {
       if (normalizeAnswerValue(b.textContent) === wanted) b.classList.add('correct');
     });
+    playKo();
     setMascot('sad');
     showFeedback(false);
   }
@@ -881,6 +886,7 @@ function checkBonusAnswer(chosen, correct, btn) {
   const ok = normalizeAnswerValue(chosen) === wanted;
   if (ok) {
     btn.classList.add('correct');
+    playPerfect();
     setMascot('celebrate');
     showFeedback(true, 'Bonus corretto!');
     finishGame('bonus-ok');
@@ -889,6 +895,7 @@ function checkBonusAnswer(chosen, correct, btn) {
     buttons.forEach(b => {
       if (normalizeAnswerValue(b.textContent) === wanted) b.classList.add('correct');
     });
+    playKo();
     setMascot('sad');
     showFeedback(false, 'Bonus non riuscito');
     finishGame('bonus-ko');
@@ -1076,4 +1083,33 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+function getCtx() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return audioCtx;
+}
+function note(freq, t, dur, vol = 0.24) {
+  if (muted) return;
+  try {
+    const ctx = getCtx();
+    const osc = ctx.createOscillator();
+    const g = ctx.createGain();
+    osc.connect(g); g.connect(ctx.destination);
+    osc.frequency.value = freq;
+    g.gain.setValueAtTime(vol, ctx.currentTime + t);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t + dur);
+    osc.start(ctx.currentTime + t);
+    osc.stop(ctx.currentTime + t + dur + 0.05);
+  } catch (e) { debugWarn('runtime', e); }
+}
+function playOk(){ note(523,0,.1); note(659,.1,.1); note(784,.2,.2); }
+function playKo(){ note(330,0,.15,.2); note(262,.16,.25,.2); }
+function playPerfect(){ [523,587,659,784,880,1047].forEach((f,i)=>note(f,i*.07,.18)); }
+
+function toggleMute() {
+  muted = !muted;
+  const btn = $('muteBtn');
+  btn.textContent = muted ? '🔇 Audio' : '🔊 Audio';
+  btn.setAttribute('aria-label', muted ? 'Riattiva audio' : 'Disattiva audio');
 }

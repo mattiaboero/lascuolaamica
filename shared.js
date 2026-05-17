@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.24';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.25';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -57,15 +57,7 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
-      date: '17 maggio 2026 · Release 4.5.24',
-      items: [
-        'Rimosse le funzioni audio dai quiz e i pulsanti Audio dalle pagine materia.',
-        'Mantenuti feedback visivi, mascotte e schermate di completamento senza suoni generati dal browser.',
-        'Aggiornata la cache applicativa per distribuire il runtime senza Web Audio API.'
-      ]
-    },
-    {
-      date: '17 maggio 2026 · Release 4.5.23',
+      date: '17 maggio 2026 · Release 4.5.25',
       items: [
         'Ingrandita la mascotte nel titolo della homepage mantenendo il nome del sito centrato rispetto alla pagina.',
         'Conservato il sottotitolo più vicino al titolo per una hero compatta.',

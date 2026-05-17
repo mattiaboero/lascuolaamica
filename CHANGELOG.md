@@ -1,10 +1,10 @@
 # Changelog Repo
 
-## 4.5.24 - 2026-05-17
+## 4.5.25 - 2026-05-17
 
-- Rimossi i pulsanti Audio dalle pagine materia.
-- Rimossa la generazione audio Web Audio API dai motori quiz, inclusi beep di risposta, streak, avvio e completamento.
-- Mantenuti feedback visivi, mascotte, stati corretta/sbagliata e schermate finali senza dipendenze audio.
+- Ripristinati gli effetti audio generati dal browser per risposta corretta/sbagliata, streak, avvio, bonus e completamento.
+- Confermato che il progetto non usa file audio, TTS o esercizi basati su ascolto da ripensare senza audio.
+- Aggiornata la versione applicativa per distribuire correttamente il ripristino degli FX anche ai client PWA.
 
 ## 4.5.23 - 2026-05-17
 
