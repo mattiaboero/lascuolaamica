@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.21 - 2026-05-17
+
+- Ridotta del 50% la mascotte nel titolo della homepage.
+- Mantenuta la mascotte al posto dell’emoji, con resa più discreta e senza overflow mobile.
+- Aggiornata la versione applicativa per distribuire il nuovo CSS ai client PWA.
+
 ## 4.5.20 - 2026-05-17
 
 - Spostata la mascotte Cervellino dentro il titolo della homepage, al posto dell’emoji scuola.

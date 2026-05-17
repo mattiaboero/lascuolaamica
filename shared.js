@@ -23,7 +23,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.20';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.21';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -56,6 +56,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '17 maggio 2026 · Release 4.5.21',
+      items: [
+        'Ridotta la mascotte nel titolo della homepage a una dimensione più discreta.',
+        'Mantenuta la stessa posizione accanto al nome del sito, senza alterare navigazione o accessibilità.',
+        'Aggiornata la cache applicativa per distribuire subito il ritocco grafico.'
+      ]
+    },
     {
       date: '17 maggio 2026 · Release 4.5.20',
       items: [

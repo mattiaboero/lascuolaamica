@@ -92,14 +92,14 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 /* ===== MASCOTTE HOMEPAGE ===== */
 .mascot-home{
   display:inline-block;
-  width:1.35em;
-  height:1em;
-  margin:0 .08em 0 0;
+  width:.675em;
+  height:.5em;
+  margin:0 .04em 0 0;
   background-position:center;
   background-repeat:no-repeat;
-  background-size:auto 1.84em;
+  background-size:auto .92em;
   pointer-events:none;
-  vertical-align:-.12em;
+  vertical-align:-.06em;
   animation:mascotHomeIn .7s cubic-bezier(.22,1,.36,1) .15s both;
 }
 .mascot-home[data-state="wave"]{
@@ -215,11 +215,11 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   opacity:.95;
 }
 .main-title{
-  display:inline-flex;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
   align-items:center;
-  justify-content:center;
-  gap:.08em;
-  flex-wrap:wrap;
+  gap:.04em;
+  width:100%;
   font-family:'Fredoka One',cursive;
   font-size:clamp(2.8rem,8vw,4.5rem);
   color:white;
@@ -227,8 +227,15 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   line-height:1.1;letter-spacing:2px;
 }
 .main-title-text{
+  grid-column:2;
   display:inline-block;
   min-width:0;
+  text-align:center;
+}
+.main-title .mascot-home{
+  grid-column:1;
+  justify-self:end;
+  align-self:center;
 }
 .main-sub{
   margin-top:8px;
@@ -267,11 +274,11 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
     font-size:clamp(2.3rem,10vw,2.8rem);
   }
   .mascot-home{
-    width:1em;
-    background-size:auto 1.55em;
+    width:.5em;
+    background-size:auto .775em;
   }
   .main-title-text{
-    max-width:calc(100% - 1.2em);
+    max-width:100%;
   }
   .cards-row{grid-template-columns:1fr;max-width:420px;}
 }
