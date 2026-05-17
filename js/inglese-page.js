@@ -262,6 +262,58 @@ function safeText(value, maxLen) {
   return txt.slice(0, maxLen);
 }
 
+function appendEnglishText(parent, text) {
+  const span = document.createElement('span');
+  span.lang = 'en';
+  span.textContent = text;
+  parent.appendChild(span);
+}
+
+function promptHasEnglishQuote(text) {
+  return /^(Cosa significa|Completa:)/i.test(text)
+    || /Scegli la risposta/i.test(text)
+    || /^Bonus (medium|hard):/i.test(text);
+}
+
+function renderPromptText(el, text) {
+  const value = String(text || '');
+  el.textContent = '';
+
+  if (!promptHasEnglishQuote(value)) {
+    el.textContent = value;
+    return;
+  }
+
+  const parts = value.split(/("[^"]+")/g);
+  parts.forEach((part) => {
+    if (!part) return;
+    if (part.length >= 2 && part[0] === '"' && part[part.length - 1] === '"') {
+      appendEnglishText(el, part);
+      return;
+    }
+    el.appendChild(document.createTextNode(part));
+  });
+}
+
+function answerOptionsUseEnglish(prompt) {
+  return !/^Cosa significa/i.test(String(prompt || ''));
+}
+
+function setAnswerButtonText(btn, text, useEnglish) {
+  btn.textContent = '';
+  btn.removeAttribute('lang');
+  btn.removeAttribute('aria-label');
+
+  if (useEnglish) {
+    btn.lang = 'en';
+    appendEnglishText(btn, text);
+    return;
+  }
+
+  btn.textContent = text;
+  btn.setAttribute('aria-label', `Risposta: ${text}`);
+}
+
 function normalizeClassKey(value) {
   const parsed = String(value ?? '').replace(/[^0-9]/g, '');
   return CLASS_LABELS[parsed] ? parsed : '3';
@@ -960,9 +1012,8 @@ function loadQ() {
   document.getElementById('qEmoji').textContent=q.e;
   document.getElementById('qLabel').textContent = `${classLabel} · Come si dice in inglese?`;
   const qTextEl = document.getElementById('qText');
-  qTextEl.textContent=q.p;
-  // aria-label repeats the question without the emoji for screen readers
-  qTextEl.setAttribute('aria-label', q.p);
+  renderPromptText(qTextEl, q.p);
+  qTextEl.removeAttribute('aria-label');
 
   // Re-trigger animations
   ['qEmoji','qText'].forEach(id=>{
@@ -977,12 +1028,12 @@ function loadQ() {
   area.textContent = '';
   const frag = document.createDocumentFragment();
   const opts=generateOptions(q.a,q.d);
+  const useEnglishOptions = answerOptionsUseEnglish(q.p);
   opts.forEach(opt=>{
     const btn=document.createElement('button');
     btn.type='button';
     btn.className='ans-btn';
-    btn.textContent=opt;
-    btn.setAttribute('aria-label', `Risposta: ${opt}`);
+    setAnswerButtonText(btn, opt, useEnglishOptions);
     btn.addEventListener('click', () => checkAns(opt, q.a, btn));
     frag.appendChild(btn);
   });
@@ -1065,7 +1116,7 @@ function openBonusQuestion(type) {
   const q = BONUS_Q[type][Math.floor(Math.random() * BONUS_Q[type].length)];
 
   document.getElementById('bonusMeta').textContent = `Bonus ${BONUS_LABELS[type]} · x${bonusFactor}`;
-  document.getElementById('bonusText').textContent = q.q;
+  renderPromptText(document.getElementById('bonusText'), q.q);
 
   const area = document.getElementById('bonusAnsArea');
   area.textContent = '';
@@ -1074,8 +1125,7 @@ function openBonusQuestion(type) {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'ans-btn';
-    btn.textContent = opt;
-    btn.setAttribute('aria-label', `Risposta bonus: ${opt}`);
+    setAnswerButtonText(btn, opt, type !== 'hard');
     btn.addEventListener('click', () => checkBonusAns(opt, q.a, btn));
     frag.appendChild(btn);
   });
@@ -1328,6 +1378,7 @@ function launchConfetti() {
         ? window.SADom.randomVariant('confetti-v', 12)
         : 'confetti-v1';
       p.className=`cp ${variant}`;
+      p.setAttribute('aria-hidden', 'true');
       document.body.appendChild(p);
       const cleanupId = setTimeout(() => {
         p.remove();
