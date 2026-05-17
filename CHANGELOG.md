@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.23 - 2026-05-17
+
+- Ingrandita la mascotte nel titolo della homepage al doppio della dimensione precedente.
+- Mantenuto il testo “La Scuola Amica” centrato rispetto al centro della pagina.
+- Aggiornata la versione applicativa per evitare residui di cache nelle PWA già installate.
+
 ## 4.5.22 - 2026-05-17
 
 - Avvicinato il sottotitolo “Scegli la tua materia e inizia a giocare!” al titolo della homepage.
