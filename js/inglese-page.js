@@ -26,11 +26,6 @@ function getQuestionsLoader() {
   return null;
 }
 
-function getEconomy() {
-  const sa = window.SA;
-  if (sa && sa.economy) return sa.economy;
-  return null;
-}
 
 let QB = {
   1: [
@@ -231,7 +226,7 @@ const BONUS_Q = {
 let level=1, qs=[], curQ=0, ok=0, ko=0, streak=0, bestStreak=0;
 let hist=[], answered=false;
 let muted=false, audioCtx=null;
-let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false, creditsAwarded=false;
+let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false;
 let selectedClass='3';
 let playWindowExpiryLock = false;
 let confettiTimeouts = [];
@@ -974,7 +969,6 @@ async function startGame(lvl) {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
-  creditsAwarded = false;
   playStart();
   showScreen('scrGame');
   document.getElementById('scoreBar')?.classList.add('is-visible');
@@ -1181,22 +1175,6 @@ function finishGame(mode) {
   else if(pct>=.4) {emoji='💪';title='BENE!';msg='Ancora pratica e vai alla grande!';stars=1;}
   else             {emoji='🌈';title='Try again!';msg='La prossima andrà meglio, promesso!';stars=1;}
 
-  const economy = getEconomy();
-  if (!creditsAwarded && economy) {
-    const reward = economy.calcSessionCredits({
-      correct: ok,
-      bonusType,
-      bonusApplied
-    });
-    if (reward.total > 0) {
-      economy.addCredits(reward.total, {
-        source: 'quiz-inglese',
-        note: `classe ${selectedClass} · livello ${level}`
-      });
-      msg += ` Hai guadagnato ${reward.total} crediti.`;
-    }
-    creditsAwarded = true;
-  }
   document.getElementById('rEmoji').textContent=emoji;
   document.getElementById('rTitle').textContent=title;
   document.getElementById('rMsg').textContent=msg;
@@ -1414,7 +1392,6 @@ function goLevels() {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
-  creditsAwarded = false;
   refreshLevelButtonsForClass();
   setMascot('neutral');
   setMascotResult('neutral');

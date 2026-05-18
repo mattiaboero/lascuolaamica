@@ -1030,32 +1030,6 @@ body.subject-problemi .answer-btn {
   margin-bottom: 18px;
 }
 
-.result-credits {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0 auto 16px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: linear-gradient(140deg, #fff4d2, #ffe8a4);
-  border: 2px solid #f2c84a;
-  color: #62461d;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
-  animation: slideUp 0.4s ease 0.5s both;
-}
-
-.result-credits-label {
-  font-size: 0.88rem;
-  font-weight: 900;
-  letter-spacing: 0.2px;
-}
-
-.result-credits-value {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.35rem;
-  line-height: 1;
-}
 
 .score-final {
   display: grid;

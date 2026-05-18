@@ -28,11 +28,6 @@
     return null;
   }
 
-  function getEconomy() {
-    const sa = window.SA;
-    if (sa && sa.economy) return sa.economy;
-    return null;
-  }
 
   function notifyLoadError() {
     const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
@@ -124,8 +119,6 @@
   let bonusFactor = 1;
   let bonusType = null;
   let bonusApplied = false;
-  let creditsAwarded = false;
-  let creditsEarned = 0;
   let showAllAreas = false;
   let playWindowExpiryLock = false;
 
@@ -1185,8 +1178,6 @@
     bonusFactor = 1;
     bonusType = null;
     bonusApplied = false;
-    creditsAwarded = false;
-    creditsEarned = 0;
 
     buildDots();
     updateScoreBar();
@@ -1388,23 +1379,6 @@
     setMascot(mascotState);
     setMascotResult(mascotState);
 
-    const economy = getEconomy();
-    if (!creditsAwarded && economy) {
-      const reward = economy.calcSessionCredits({
-        correct,
-        bonusType,
-        bonusApplied
-      });
-      creditsEarned = Math.max(0, safeInt(reward.total, 0));
-      if (creditsEarned > 0) {
-        economy.addCredits(creditsEarned, {
-          source: 'quiz-materia',
-          note: `${selectedArea === 'mixed' ? 'mista' : selectedArea} · classe ${selectedClass}`
-        });
-        msg += ` Hai guadagnato ${creditsEarned} crediti.`;
-      }
-      creditsAwarded = true;
-    }
 
     updateStatsFromSession();
 
@@ -1423,11 +1397,6 @@
     setText('rWrong', wrong);
     const areaText = selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea] || selectedArea;
     setText('rArea', `${areaText} · ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`}`);
-    const creditsWrap = $('resultCredits');
-    if (creditsWrap) {
-      creditsWrap.hidden = creditsEarned <= 0;
-    }
-    setText('rCredits', creditsEarned > 0 ? `+${creditsEarned}` : '+0');
 
     saveScore();
     showScreen('screenResult');

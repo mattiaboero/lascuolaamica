@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.26 - 2026-05-18
+
+- Rimosse dal runtime pubblico le funzioni sperimentali non più in uso, mantenendo stabile il flusso quiz.
+- Ripuliti collegamenti interni, cache offline e testi informativi collegati alle funzioni rimosse.
+- Preparata la base per un futuro sistema reward locale basato su riconoscimenti non monetari.
+
 ## 4.5.25 - 2026-05-17
 
 - Ripristinati gli effetti audio generati dal browser per risposta corretta/sbagliata, streak, avvio, bonus e completamento.
@@ -33,7 +39,6 @@
 ## 4.5.19 - 2026-05-17
 
 - Migliorato il contrasto di score bar e pulsanti principali nei flussi quiz, evitando testo piccolo in colori accento troppo chiari.
-- Verificato il comportamento responsive su home, quiz, Villaggio e FAQ a viewport smartphone, tablet, desktop e LIM.
 - Aggiornata la versione applicativa per distribuire correttamente i CSS modificati anche ai client con cache offline.
 
 ## 4.5.18 - 2026-05-14
@@ -56,45 +61,20 @@
 
 ## 4.5.15 - 2026-05-14
 
-- Reso il negozio del Villaggio più guidato: inizialmente mostra gli edifici disponibili o quasi sbloccabili, con un comando esplicito per vedere tutto il catalogo.
 - Compattate le classifiche dei quiz e di inglese riducendo le colonne principali, così risultano più leggibili anche su smartphone.
 - Mantenuti i dettagli completi di punteggio in forma discreta tramite tooltip, evitando di appesantire la tabella per bambini e genitori.
 
 ## 4.5.14 - 2026-05-14
 
-- Allineata la home al comportamento reale del sito: il pulsante Villaggio apre direttamente l'area pubblica invece di mostrare un messaggio di sviluppo.
 - Corrette alcune segnalazioni di qualità sul runtime: footer versione coerente, precache del Service Worker ripulita e score-bar più robusta in assenza di elementi DOM.
-- Snellito il Villaggio evitando il re-render completo della griglia quando cambia solo la selezione visiva di un edificio.
 - Ripulito il motore inglese rimuovendo codice timer inattivo, migliorando l'accessibilità dei livelli bloccati e impedendo confetti residui dopo la navigazione.
 - Migliorata la leggibilità mobile delle classifiche con contenitore a scorrimento orizzontale e target touch espliciti per classi e ambiti.
-
-## 4.5.13 - 2026-05-11
-
-- Sostituiti gli asset del Villaggio con una nuova versione grafica più definita e coerente con la resa isometrica.
-- Normalizzati i nuovi PNG per mantenere una buona qualità visiva senza lasciare immagini eccessivamente pesanti nel runtime.
-- Aggiornata la versione applicativa per forzare il refresh delle cache client e distribuire correttamente i nuovi asset offline.
-
-## 4.5.12 - 2026-05-11
-
-- Convertita la mappa del Villaggio in un renderer isometrico con tile a rombo e layering visivo dedicato per gli edifici.
-- Separati il layer cliccabile della griglia e il layer grafico degli sprite per preservare piazzamento, selezione e accessibilità.
-- Calibrate le proporzioni dei 17 edifici PNG nella nuova vista isometrica con ombre e ingombri coerenti alle dimensioni di griglia.
-- Verificato il nuovo rendering con mappa vuota, seed di villaggio popolato e piazzamento reale di un edificio.
-
-## 4.5.11 - 2026-05-11
-
-- Rinnovato il Villaggio Educativo con 17 edifici basati su PNG reali, nuova progressione a 4 tier e catalogo coerente con i crediti guadagnati nei quiz.
-- Portata la mappa del Villaggio a `10x10` per renderla completabile anche con i grandi edifici finali.
-- Introdotti limiti per tipo di edificio, rimborso ridotto al `40%` e sblocco speciale del Castello dopo almeno `10` edifici diversi.
-- Sostituiti i `confirm()` nativi del Villaggio con conferme integrate coerenti con il resto del runtime condiviso.
-- Allineato il service worker ai nuovi asset del Villaggio e aggiornata la versione applicativa a `4.5.11`.
 
 ## 4.5.10 - 2026-05-08
 
 - Rimossi gli ultimi stili applicati via attributo nel runtime pubblico e nell’editor interno, convertendoli in classi CSS condivise.
 - Introdotti `utilities.css` e `js/dom-utils.js` come layer comune per visibilità, lock dello scroll, varianti decorative e replay animazioni.
 - Convertiti i decorativi random di home, FAQ e motori quiz in varianti CSS precalcolate compatibili con una CSP più rigida.
-- Convertiti score bar, scroll lock modali, confetti inglese e dimensioni sprite del Villaggio per non dipendere più da `style.*`.
 - Stretta la CSP in `_headers` sostituendo `style-src-attr 'unsafe-inline'` con `style-src-attr 'none'`.
 - Aggiornato il service worker per precaricare le nuove utility condivise e forzare il refresh client con la versione `4.5.10`.
 
@@ -110,7 +90,6 @@
 - Fase 2 audit tecnico completata: sostituiti i dialog nativi principali con modali condivisi (`SA.ui.confirm` / `SA.ui.alert`) nei motori quiz e nell’update prompt.
 - Migliorata la coerenza “Meno animazioni” anche lato runtime JS (`subject-quiz-core`, `inglese`, `problemi`, `civica`, `index-page`), inclusa la disattivazione confetti in inglese.
 - Automatizzato l’aggiornamento dei contenuti strutturati e della sitemap prima della pubblicazione.
-- Fase 3 avviata: aggiunto nel pannello Info il comando “Cancella dati locali” per rimuovere progressi, crediti, classifiche e preferenze salvate sul dispositivo.
 - Accessibilità/touch ergonomics: aumentate dimensioni minime dei toggle Palette/Animazioni (target 44px+) nel pannello Info.
 - Testi privacy/FAQ allineati al nuovo comando “Cancella dati locali”.
 
@@ -124,18 +103,15 @@
 ## 4.5.7 - 2026-05-07
 
 - Allineata la versione applicativa a `4.5.7` con sincronizzazione del footer dal runtime condiviso e aggiornamento dei riferimenti statici residui.
-- Esteso il caricamento tipografico ottimizzato alle pagine materia, FAQ, Villaggio e pagine informative.
 - Aggiunte alle pagine informative le funzioni condivise principali: pannello Info, palette accessibile e preferenza “Meno animazioni”.
 - Allineati i segnali per motori di ricerca e sistemi di risposta con una comunicazione pubblica più coerente.
 - Ottimizzati gli asset della mascotte “Cervellino” per ridurre il peso delle immagini e migliorare la velocità su mobile.
 
 - Mascotte “Cervellino” integrata in PNG trasparente con 4 stati (`neutral`, `happy`, `sad`, `celebrate`) su tutte le materie.
 - Allineati i motori quiz (`subject-quiz-core`, `inglese`, `problemi`, `civica`) al nuovo stato mascotte con feedback dinamico durante partita/bonus/risultato.
-- Villaggio: aggiunta micro-celebrazione visiva all’acquisto (tile pop + flash card shop) con toast di conferma costruzione.
 - Pagine informative (`chi-siamo`, `per-insegnanti`, `per-genitori`, `ai-info`) rese più sobrie con stylesheet dedicato `info-pages.css`.
 - Service Worker: precache esteso ai nuovi asset mascotte PNG e al nuovo stylesheet informativo.
 - Audit UX/UI bambini: aumentata la leggibilità dei microtesti (classi/ambiti, score label, breadcrumb) e migliorato il contrasto dei tag/card in home.
-- Touch ergonomics: uniformati target minimi dei controlli principali (`back`, `skip bonus`, `icon button`, `close modal`, bottoni Villaggio).
 - Quiz feedback: progress dots più grandi, stato risposta corretto/sbagliato più evidente (non solo colore), animazione feedback estesa e celebrativa.
 - Mascotte estesa alle pagine quiz materie (🦉) con stato dinamico nei motori quiz condivisi e dedicati.
 - Riduzione distrazioni: diminuito il numero/opacity degli elementi decorativi animati nelle pagine principali.
@@ -157,14 +133,13 @@
 - Routing/sitemap: estese rotte pulite e sitemap alle nuove pagine informative.
 - Licenza repository: aggiunto file `LICENSE` (MIT) e aggiornato `README.md`.
 
-- Villaggio: introdotto aggiornamento griglia mirato (`paintTile` + `updateGridArea`) per ridurre i rerender completi su piazzamento/rimozione/selezione.
 - Config materie: priorità a `window.SA.subjectConfig` con alias legacy mantenuto su `window.SUBJECT_CONFIG`.
 - Aggiunto controllo prepublish che blocca riferimenti runtime diretti a `questions.json` (architettura split JSON enforced).
 - Core quiz: rimosso fallback a `window.SUBJECT_CONFIG`, ora usa configurazione da `window.SA.subjectConfig`.
 - Config materie (matematica/geografia/scienze/storia/italiano): eliminate assegnazioni globali dirette, mantenuta sola scrittura su namespace `SA`.
 - Avviata migrazione ES modules: `index.html` e `faq.html` ora caricano `js/index-page.js` e `js/faq-page.js` con `type="module"`.
 - Estesa migrazione ES modules a tutte le pagine applicative: tutti gli script runtime `src` ora usano `type="module"`.
-- Rimossi alias globali legacy (`window.QuestionsLoader`, `window.ScuolaEconomy`, `window.ScuolaPalette`, `window.openModal/closeModal`) a favore di `window.SA.*`.
+- Rimossi alias globali legacy a favore del namespace `window.SA.*`.
 - Deprecato e rimosso `questions.json` dal repo runtime; build aggiornata per generarlo solo su richiesta (`GENERATE_LEGACY_QUESTIONS_JSON=true`).
 - Aggiornata la documentazione tecnica per allineare l’architettura dati a una struttura più modulare.
 - Merge completo dei nuovi dataset domande validati (`8` materie) nei file `json/*.json`.
@@ -242,7 +217,6 @@
 ## 4.2 - 2026-04-18
 
 - Audit WCAG 2.1 AA automatico sulle pagine principali (rule set `wcag2a` e `wcag2aa`).
-- Corrette le criticità di contrasto nel tema standard per home, FAQ e Villaggio.
 - Impostata la palette standard come default e mantenuto il toggle Standard/Accessibile.
 - Rigenerati screenshot social home (`390x844`, `1280x720`, `1200x630`) senza footer.
 - Deduplicati i dataset domande con rinumerazione ID e allineamento JSON aggregati.
@@ -252,8 +226,6 @@
 
 - Uniformate canonical, Open Graph URL, JSON-LD e link interni alle rotte senza estensione `.html`.
 - Aggiornata la sitemap con URL canonici senza estensione.
-- Rimossi dalla sitemap gli URL non visibili (`villaggio`, `supporto-satispay`).
-- Impostato `noindex,nofollow` su `villaggio` e `supporto-satispay`.
 - Aggiornata la pagina supporto con indicazione email `supporto@lascuolaamica.it`.
 
 ## 4.1 - 2026-04-12

@@ -22,7 +22,7 @@ Questa scelta non è per semplicità: è per controllabilità. Ogni file che arr
 
 | File | Ruolo |
 |---|---|
-| `shared.js` | Footer, modali, log aggiornamenti, wallet crediti, palette colori |
+| `shared.js` | Footer, modali, log aggiornamenti, palette colori |
 | `subject-quiz-core.js` | Motore quiz condiviso (matematica, italiano, geo, storia, scienze) |
 | `js/inglese-page.js` | Motore quiz inglese (dedicato) |
 | `js/problemi-page.js` | Motore quiz problemi (dedicato) |
@@ -70,7 +70,6 @@ Tutto nella memoria locale del browser, tutto locale, niente server:
 
 - Punteggi e progressi per materia/classe
 - Preferenze UI (palette, riduzione animazioni)
-- Crediti economia (Villaggio)
 - Metriche qualità sessione quiz
 
 ---

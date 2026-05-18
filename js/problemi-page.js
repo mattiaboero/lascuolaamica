@@ -22,11 +22,6 @@ function getQuestionsLoader() {
   return null;
 }
 
-function getEconomy() {
-  const sa = window.SA;
-  if (sa && sa.economy) return sa.economy;
-  return null;
-}
 
 const TOTAL_Q = 10;
 const POINTS_PER_Q = 10;
@@ -122,7 +117,6 @@ let finalScore = 0;
 let bonusFactor = 1;
 let bonusType = null;
 let bonusApplied = false;
-let creditsAwarded = false;
 let selectedClass = '3';
 let playWindowExpiryLock = false;
 
@@ -718,7 +712,6 @@ async function startGame() {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
-  creditsAwarded = false;
   buildDots();
   updateScoreBar();
   $('scoreBar')?.classList.add('is-visible');
@@ -926,23 +919,6 @@ function finishGame(mode) {
   else if (finalScore >= 100) { emoji = '😊'; title = 'Benissimo!'; msg = 'Ottima base sui problemi.'; }
   setMascot(finalScore >= 300 ? 'celebrate' : finalScore >= 100 ? 'happy' : 'neutral');
 
-  const economy = getEconomy();
-  if (!creditsAwarded && economy) {
-    const correctCount = history.filter(Boolean).length;
-    const reward = economy.calcSessionCredits({
-      correct: correctCount,
-      bonusType,
-      bonusApplied
-    });
-    if (reward.total > 0) {
-      economy.addCredits(reward.total, {
-        source: 'quiz-problemi',
-        note: `classe ${selectedClass} · corrette ${correctCount}/10`
-      });
-      msg += ` Hai guadagnato ${reward.total} crediti.`;
-    }
-    creditsAwarded = true;
-  }
 
   $('resultEmoji').textContent = emoji;
   $('resultTitle').textContent = title;

@@ -1,7 +1,7 @@
 {
   "name": "La Scuola Amica",
   "short_name": "Scuola Amica",
-  "description": "Giochi educativi per la scuola primaria con villaggio educativo: matematica, inglese, problemi, civica, geografia, storia, scienze e lingua italiana",
+  "description": "Giochi educativi gratuiti per la scuola primaria: matematica, inglese, problemi, civica, geografia, storia, scienze e lingua italiana",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -152,19 +152,6 @@
       "short_name": "Italiano",
       "description": "Vai direttamente al quiz di lingua italiana",
       "url": "/italiano",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Villaggio",
-      "short_name": "Villaggio",
-      "description": "Apri il villaggio educativo e costruisci con i crediti",
-      "url": "/villaggio",
       "icons": [
         {
           "src": "/icons/icon-192.png",

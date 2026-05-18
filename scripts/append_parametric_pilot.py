@@ -586,10 +586,10 @@ def append_problemi(data: Dict, profile: str) -> int:
         )
 
         def t_money() -> Dict:
-            wallet = RNG.randint(25 + cls * 6, 60 + cls * 18)
+            budget = RNG.randint(25 + cls * 6, 60 + cls * 18)
             p1 = RNG.randint(4 + cls, 12 + cls * 2)
             p2 = RNG.randint(3 + cls, 10 + cls * 2)
-            answer = wallet - p1 - p2
+            answer = budget - p1 - p2
             name = RNG.choice(names)
             prefix = f"pro-{cls}-problemi-"
             qid = f"{prefix}{existing_prefix_max(questions, prefix) + 1:03d}"
@@ -602,12 +602,12 @@ def append_problemi(data: Dict, profile: str) -> int:
                 subarea="multi-step",
                 difficulty=diff,
                 question=(
-                    f"{name} ha {wallet} euro. Compra un libro da {p1} euro e un quaderno da {p2} euro. "
+                    f"{name} ha {budget} euro. Compra un libro da {p1} euro e un quaderno da {p2} euro. "
                     "Quanti euro restano?"
                 ),
                 answer=str(answer),
                 options=make_numeric_options(answer, spread=max(8, answer // 8)),
-                explanation=f"Prima {wallet} - {p1} = {wallet - p1}, poi - {p2} = {answer}.",
+                explanation=f"Prima {budget} - {p1} = {budget - p1}, poi - {p2} = {answer}.",
                 language="it",
                 program=f"Matematica Classe {cls} - MIUR",
                 tags=["multi-step", "denaro", "pilota_parametrico"],

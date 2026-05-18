@@ -22,11 +22,6 @@ function getQuestionsLoader() {
   return null;
 }
 
-function getEconomy() {
-  const sa = window.SA;
-  if (sa && sa.economy) return sa.economy;
-  return null;
-}
 
 const TOTAL_Q = 10;
 const POINTS_PER_Q = 10;
@@ -165,7 +160,6 @@ let finalScore = 0;
 let bonusFactor = 1;
 let bonusType = null;
 let bonusApplied = false;
-let creditsAwarded = false;
 let playWindowExpiryLock = false;
 
 function $(id){ return document.getElementById(id); }
@@ -834,7 +828,6 @@ async function startGame() {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
-  creditsAwarded = false;
 
   buildDots();
   updateScoreBar();
@@ -1011,22 +1004,6 @@ function finishGame(mode) {
   else if (finalScore >= 150) { emoji = '😊'; title = 'Benissimo!'; msg = 'Buona base di educazione civica.'; }
   setMascot(finalScore >= 350 ? 'celebrate' : finalScore >= 150 ? 'happy' : 'neutral');
 
-  const economy = getEconomy();
-  if (!creditsAwarded && economy) {
-    const reward = economy.calcSessionCredits({
-      correct,
-      bonusType,
-      bonusApplied
-    });
-    if (reward.total > 0) {
-      economy.addCredits(reward.total, {
-        source: 'quiz-civica',
-        note: `${selectedArea} · classe ${selectedClass}`
-      });
-      msg += ` Hai guadagnato ${reward.total} crediti.`;
-    }
-    creditsAwarded = true;
-  }
 
   $('resultEmoji').textContent = emoji;
   $('resultTitle').textContent = title;

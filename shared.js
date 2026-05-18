@@ -4,14 +4,10 @@
   let prevFocus = null;
   let promptFinalize = null;
   const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
-  const WALLET_KEY = 'scuolaAmica_wallet_v1';
-  const WALLET_LOG_KEY = 'scuolaAmica_wallet_log_v1';
   const PLAY_WINDOW_KEY = 'scuolaAmica_play_window_v1';
   const PLAY_WINDOW_DURATION_MS = 30 * 60 * 1000;
   const PLAY_WINDOW_COOLDOWN_MS = 60 * 60 * 1000;
   const PLAY_WINDOW_EVENT = 'sa:play-window-change';
-  const SESSION_CREDIT_PER_CORRECT = 4;
-  const BONUS_CREDITS = { easy: 10, medium: 22, hard: 45 };
   const UPDATES_MODAL_ID = 'modalUpdates';
   const INFO_HUB_MODAL_ID = 'modalInfoHub';
   const PROJECT_MODAL_ID = 'modalProject';
@@ -23,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.25';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.26';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -57,11 +53,11 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
-      date: '17 maggio 2026 · Release 4.5.25',
+      date: '18 maggio 2026 · Release 4.5.26',
       items: [
-        'Ingrandita la mascotte nel titolo della homepage mantenendo il nome del sito centrato rispetto alla pagina.',
-        'Conservato il sottotitolo più vicino al titolo per una hero compatta.',
-        'Aggiornata la cache applicativa per evitare visualizzazioni obsolete.'
+        'Rimosse dal runtime pubblico le funzioni sperimentali non più in uso, mantenendo stabile il flusso quiz.',
+        'Ripuliti collegamenti interni, cache offline e testi informativi collegati alle funzioni rimosse.',
+        'Preparata la base per un futuro sistema di riconoscimenti locali, senza account, cookie o servizi esterni.'
       ]
     },
     {
@@ -123,7 +119,6 @@
     {
       date: '14 maggio 2026 · Release 4.5.15',
       items: [
-        'Reso il negozio del Villaggio più guidato: all’inizio mostra soprattutto gli edifici disponibili o quasi sbloccabili, con un pulsante per vedere tutto il catalogo.',
         'Compattate le classifiche dei quiz e di inglese, così su smartphone restano più leggibili senza colonne superflue.',
         'Mantenuti i dettagli utili di punteggio in modo discreto, senza appesantire la lettura principale per bambini e genitori.'
       ]
@@ -131,36 +126,8 @@
     {
       date: '14 maggio 2026 · Release 4.5.14',
       items: [
-        'Allineata la home al comportamento reale del sito: il pulsante Villaggio ora apre direttamente l’area pubblica già disponibile.',
         'Corrette alcune segnalazioni di qualità sul runtime: footer versione coerente, precache del Service Worker ripulita e score-bar più robusta in assenza di elementi DOM.',
-        'Snellito il Villaggio evitando il re-render completo della griglia quando cambia solo la selezione visiva di un edificio.',
         'Ripulito il motore inglese rimuovendo codice timer inattivo, migliorando l’accessibilità dei livelli bloccati e impedendo confetti residui dopo la navigazione.'
-      ]
-    },
-    {
-      date: '11 maggio 2026 · Release 4.5.13',
-      items: [
-        'Sostituiti gli asset del Villaggio con una versione grafica più curata e leggibile, mantenendo gli stessi nomi file per non toccare il renderer.',
-        'Normalizzati i nuovi PNG del Villaggio per ottenere più dettaglio visivo senza caricare immagini eccessivamente pesanti sul dispositivo.',
-        'Aggiornata la versione applicativa per distribuire correttamente il nuovo set grafico anche ai client con cache offline attiva.'
-      ]
-    },
-    {
-      date: '11 maggio 2026 · Release 4.5.12',
-      items: [
-        'Trasformata la mappa del Villaggio in una vista isometrica con griglia a rombi e profondità visiva più leggibile.',
-        'Separati il layer cliccabile dei tile e il layer grafico degli edifici per mantenere piazzamento e selezione stabili anche con i nuovi sprite.',
-        'Calibrate proporzioni, ombre e dimensioni dei 17 edifici reali per far convivere meglio case, scuole, servizi e grandi edifici finali.',
-        'Rifinita la base del Villaggio con test visuali su mappa vuota, mappa popolata e piazzamento reale di un edificio.'
-      ]
-    },
-    {
-      date: '11 maggio 2026 · Release 4.5.11',
-      items: [
-        'Rinnovato il Villaggio Educativo con 17 edifici reali in PNG, nuovi costi e progressione a 4 tier.',
-        'Portata la mappa del Villaggio a 10x10 per renderla davvero completabile senza sacrificare i grandi edifici finali.',
-        'Aggiunti limiti per tipo di edificio, rimborso al 40% e regola speciale per sbloccare il Castello dopo 10 edifici diversi.',
-        'Sostituiti nel Villaggio i vecchi asset placeholder con immagini reali e conferme integrate più coerenti con il resto del sito.'
       ]
     },
     {
@@ -168,7 +135,6 @@
       items: [
         'Rimossi gli ultimi stili runtime applicati via attributo, con refactor verso classi CSS condivise.',
         'Reso più severo il Content Security Policy sul fronte degli style attribute per ridurre ulteriormente la superficie di attacco.',
-        'Uniformati decorativi, confetti, modali e stato score-bar a utility comuni riutilizzabili tra home, FAQ, quiz e villaggio.',
         'Aggiornata la cache applicativa per distribuire in sicurezza il nuovo runtime compatibile con la CSP più stretta.'
       ]
     },
@@ -204,7 +170,6 @@
       date: '1 maggio 2026',
       items: [
         'Rilasciata la versione 4.5.5 con allineamento completo della numerazione applicativa su tutte le pagine.',
-        'Aggiunto nel pannello Info il comando “Cancella dati locali” per rimuovere progressi, crediti, classifiche e preferenze dal dispositivo.',
         'Migliorata l’ergonomia dei toggle Palette/Animazioni con target touch minimo 44px e testi più leggibili.',
         'Allineati i testi Privacy e FAQ con il nuovo flusso di cancellazione dati locali.',
         'Versione portale aggiornata alla 4.5.5.'
@@ -279,7 +244,6 @@
       date: '18 aprile 2026',
       items: [
         'Eseguito audit WCAG 2.1 AA automatico su tutte le pagine principali (tag wcag2a/wcag2aa).',
-        'Corrette tre criticità di contrasto nel tema standard: badge crediti home, score-pill FAQ e wallet-pill Villaggio.',
         'Completata la validazione manuale: tastiera, modali, zoom/reflow, VoiceOver e riduzione movimento.',
         'Corretto il layout della home a zoom 200% per evitare tagli di testo nelle card.',
         'Aggiunta la pagina pubblica Accessibilità con dichiarazione WCAG, metodologia di test e contatto diretto.',
@@ -307,7 +271,6 @@
       items: [
         'Aggiornate canonical, URL Open Graph e JSON-LD sulle rotte senza estensione .html.',
         'Allineati i link interni e la sitemap ai percorsi canonici (es. /matematica, /faq, /supporta).',
-        'Rimosso il Villaggio dalla sitemap e impostato noindex,nofollow per villaggio e supporto-satispay.',
         'Aggiornato il copy della pagina Supporta con contatto diretto supporto@lascuolaamica.it.',
         'Versione portale aggiornata alla 4.1.1.'
       ]
@@ -343,7 +306,6 @@
         'Implementati gli step 1-4 su tutte le materie: classi 2ª-5ª, progressione, anti-ripetizione e maggiore varietà.',
         'Aggiornato il motore condiviso delle materie con selezione classe e classifica estesa con la classe.',
         'Allineate anche le pagine dedicate (inglese, problemi, civica) alla logica per classe.',
-        'Disattivato l’accesso al Villaggio dalla home con messaggio “Funzionalità in fase di sviluppo”.',
         'Rimossa la dicitura “Aggiornata: …” da Privacy Policy e Cookie Policy in tutte le pagine.',
         'Aggiunta CTA footer “Supporta il progetto” con pagina dedicata e placeholder QR Satispay.'
       ]
@@ -361,10 +323,6 @@
     {
       date: '8 aprile 2026',
       items: [
-        'Introdotto il sistema crediti condiviso tra giochi e preparata l’integrazione con il Villaggio.',
-        'Creata la pagina Villaggio con mappa 8x8, negozio edifici e asset grafici dedicati.',
-        'Aggiunto il collegamento rapido al Villaggio vicino al badge crediti in home.',
-        'Corretti problemi grafici del Villaggio (overflow mappa, pulsanti e layout).',
         'Aggiornati dati e nomi nei problemi (es. Luciana, Emma).'
       ]
     },
@@ -803,106 +761,6 @@
     setMotionMode(activeMode);
   }
 
-  function loadWallet() {
-    try {
-      const raw = JSON.parse(storageGet(WALLET_KEY));
-      return {
-        balance: safeInt(raw && raw.balance, 0),
-        lifetimeEarned: safeInt(raw && raw.lifetimeEarned, 0),
-        lifetimeSpent: safeInt(raw && raw.lifetimeSpent, 0),
-        updatedAt: typeof raw?.updatedAt === 'string' ? raw.updatedAt : null
-      };
-    } catch (e) {
-      debugWarn('loadWallet', e);
-      return { balance: 0, lifetimeEarned: 0, lifetimeSpent: 0, updatedAt: null };
-    }
-  }
-
-  function saveWallet(wallet) {
-    storageSet(WALLET_KEY, JSON.stringify(wallet));
-  }
-
-  function appendWalletLog(entry) {
-    try {
-      const parsed = JSON.parse(storageGet(WALLET_LOG_KEY));
-      const list = Array.isArray(parsed) ? parsed : [];
-      list.push({
-        ts: new Date().toISOString(),
-        type: entry.type,
-        amount: safeInt(entry.amount, 0),
-        source: String(entry.source || 'app').slice(0, 64),
-        note: String(entry.note || '').slice(0, 140)
-      });
-      storageSet(WALLET_LOG_KEY, JSON.stringify(list.slice(-200)));
-    } catch (e) {
-      debugWarn('appendWalletLog', e);
-    }
-  }
-
-  function dispatchWalletUpdated(wallet) {
-    getCachedNodes('wallet-balance', '[data-wallet-balance]').forEach((el) => {
-      el.textContent = String(wallet.balance);
-    });
-    getCachedNodes('wallet-earned', '[data-wallet-earned]').forEach((el) => {
-      el.textContent = String(wallet.lifetimeEarned);
-    });
-    getCachedNodes('wallet-spent', '[data-wallet-spent]').forEach((el) => {
-      el.textContent = String(wallet.lifetimeSpent);
-    });
-    window.dispatchEvent(new CustomEvent('wallet-updated', { detail: { ...wallet } }));
-  }
-
-  function getWallet() {
-    const wallet = loadWallet();
-    return { ...wallet };
-  }
-
-  function addCredits(amount, meta) {
-    const qty = safeInt(amount, 0);
-    if (!qty) return getWallet();
-    const wallet = loadWallet();
-    wallet.balance += qty;
-    wallet.lifetimeEarned += qty;
-    wallet.updatedAt = new Date().toISOString();
-    saveWallet(wallet);
-    appendWalletLog({ type: 'credit', amount: qty, source: meta?.source, note: meta?.note });
-    dispatchWalletUpdated(wallet);
-    return { ...wallet };
-  }
-
-  function spendCredits(amount, meta) {
-    const qty = safeInt(amount, 0);
-    if (!qty) return true;
-    const wallet = loadWallet();
-    if (wallet.balance < qty) return false;
-    wallet.balance -= qty;
-    wallet.lifetimeSpent += qty;
-    wallet.updatedAt = new Date().toISOString();
-    saveWallet(wallet);
-    appendWalletLog({ type: 'debit', amount: qty, source: meta?.source, note: meta?.note });
-    dispatchWalletUpdated(wallet);
-    return true;
-  }
-
-  function calcSessionCredits(params) {
-    const correct = safeInt(params?.correct, 0);
-    const bonusType = typeof params?.bonusType === 'string' ? params.bonusType : null;
-    const bonusApplied = Boolean(params?.bonusApplied);
-    const base = correct * SESSION_CREDIT_PER_CORRECT;
-    const bonus = bonusApplied && bonusType && BONUS_CREDITS[bonusType] ? BONUS_CREDITS[bonusType] : 0;
-    return { base, bonus, total: base + bonus };
-  }
-
-  const ScuolaEconomy = {
-    getWallet,
-    addCredits,
-    spendCredits,
-    calcSessionCredits,
-    constants: {
-      perCorrect: SESSION_CREDIT_PER_CORRECT,
-      bonusCredits: { ...BONUS_CREDITS }
-    }
-  };
 
   function trapFocus(el) {
     const nodes = Array.from(el.querySelectorAll(FOCUSABLE));
@@ -1522,7 +1380,7 @@
     methodText1.textContent = 'Tutti i test, i giochi e i quiz interattivi proposti (Matematica, Italiano, Inglese, Problemi, Geografia, Storia, Scienze, Educazione Civica) sono allineati al programma ministeriale (Indicazioni Nazionali per il curricolo della scuola primaria).';
 
     const methodText2 = document.createElement('p');
-    methodText2.textContent = "L'approccio prevede una progressione graduale, meccaniche di gamification positiva (crediti ed elementi sbloccabili nel Villaggio) prive di vincoli frustranti, finalizzate a consolidare il sapere senza generare ansia. Il sistema disincentiva la ripetizione cieca introducendo variabilità nelle sessioni (anti-ripetizione guidata dalle AI).";
+    methodText2.textContent = "L'approccio prevede una progressione graduale, feedback positivi e classifiche locali prive di vincoli frustranti, finalizzati a consolidare il sapere senza generare ansia. Il sistema disincentiva la ripetizione cieca introducendo variabilità nelle sessioni (anti-ripetizione guidata dalle AI).";
 
     const inclusionTitle = document.createElement('h3');
     inclusionTitle.textContent = 'Inclusività e Accessibilità';
@@ -1740,7 +1598,7 @@
     clearDataBtn.setAttribute('aria-label', 'Cancella tutti i dati locali salvati sul dispositivo');
     clearDataBtn.addEventListener('click', async () => {
       const shouldClear = await promptConfirm(
-        'Verranno cancellati progressi, crediti, classifiche e preferenze salvate su questo dispositivo. Continuare?',
+        'Verranno cancellati progressi, classifiche e preferenze salvate su questo dispositivo. Continuare?',
         {
           title: 'Cancella dati locali',
           confirmLabel: 'Sì, cancella tutto',
@@ -1755,7 +1613,6 @@
       clearPlayWindow();
       updatePaletteToggleState();
       updateMotionToggleState();
-      dispatchWalletUpdated(loadWallet());
       closeModal(INFO_HUB_MODAL_ID);
       await promptAlert(
         `Operazione completata. Dati rimossi: ${removed}.`,
@@ -2369,7 +2226,6 @@
   SA.modal = SA.modal || {};
   SA.modal.open = openModal;
   SA.modal.close = closeModal;
-  SA.economy = ScuolaEconomy;
   SA.palette = {
     get mode() {
       return document.documentElement.getAttribute('data-palette') || PALETTE_MODE.LEGACY;
@@ -2418,6 +2274,5 @@
   }
 
   dispatchPlayWindowChange(getPlayWindowState(), true);
-  dispatchWalletUpdated(loadWallet());
   registerServiceWorker();
 })();

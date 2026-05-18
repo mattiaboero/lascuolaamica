@@ -33,7 +33,6 @@ HTML_FILES = [
     "faq.html",
     "supporta.html",
     "accessibilita.html",
-    "villaggio.html",
     "supporto-satispay.html",
 ]
 

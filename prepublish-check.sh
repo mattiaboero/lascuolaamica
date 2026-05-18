@@ -15,7 +15,6 @@ HTML_FILES=(
   "storia.html"
   "scienze.html"
   "italiano.html"
-  "villaggio.html"
   "chi-siamo.html"
   "per-insegnanti.html"
   "per-genitori.html"
