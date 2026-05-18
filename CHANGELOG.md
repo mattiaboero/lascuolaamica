@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.5.27 - 2026-05-18
+
+- Corrette domande generate con etichette tecniche residue nei dataset di Italiano, Inglese e Matematica.
+- Rifinite concordanze e formulazioni in Problemi, Scienze e Geografia per rendere più naturale il testo mostrato ai bambini.
+- Aggiunto un audit automatico sui JSON delle materie per bloccare errori strutturali e pattern testuali non adatti alla pubblicazione.
+- Aggiornata la versione applicativa per invalidare la cache PWA e distribuire subito i dataset corretti.
+
 ## 4.5.26 - 2026-05-18
 
 - Rimosse dal runtime pubblico le funzioni sperimentali non più in uso, mantenendo stabile il flusso quiz.

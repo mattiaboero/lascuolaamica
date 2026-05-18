@@ -171,6 +171,12 @@ check_runtime_split_json_only() {
 
 check_runtime_split_json_only
 
+if node scripts/audit_questions_json.js; then
+  echo "[OK] question JSON audit passed"
+else
+  status=1
+fi
+
 if [[ ! -f "robots.txt" ]]; then
   echo "[ERROR] Missing file: robots.txt"
   status=1

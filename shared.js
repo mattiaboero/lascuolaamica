@@ -19,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.26';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.27';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -52,6 +52,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '18 maggio 2026 · Release 4.5.27',
+      items: [
+        'Corrette domande generate con etichette tecniche residue nei dataset di Italiano, Inglese e Matematica.',
+        'Rifinite concordanze e formulazioni in Problemi, Scienze e Geografia per rendere più naturale il testo mostrato ai bambini.',
+        'Aggiunto un audit automatico sui JSON delle materie per bloccare errori strutturali e pattern testuali non adatti alla pubblicazione.'
+      ]
+    },
     {
       date: '18 maggio 2026 · Release 4.5.26',
       items: [
