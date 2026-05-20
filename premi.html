@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Bacheca Premi | La Scuola Amica</title>
+<meta name="description" content="Bacheca premi locale di La Scuola Amica: badge, coppe e trofei sbloccati giocando, senza registrazione e senza cookie.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://lascuolaamica.it/premi">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#9B5DE5">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="utilities.css">
+<link rel="stylesheet" href="rewards.css">
+</head>
+<body class="rewards-page">
+<noscript>
+  <link rel="stylesheet" href="noscript.css">
+  <div class="noscript-msg"><p>Per usare la bacheca premi è necessario abilitare JavaScript.</p></div>
+</noscript>
+<a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
+<div class="sun" aria-hidden="true"></div>
+<div class="cloud c1" aria-hidden="true"></div>
+<div class="cloud c2" aria-hidden="true"></div>
+<div class="cloud c3" aria-hidden="true"></div>
+<div class="hills2" aria-hidden="true"></div>
+<div class="hills" aria-hidden="true"></div>
+
+<div class="rewards-shell">
+  <header class="rewards-hero">
+    <div class="rewards-kicker">Premi locali</div>
+    <h1 class="rewards-title">Bacheca Trofei</h1>
+    <p class="rewards-subtitle">Badge, coccarde, coppe e corone si sbloccano giocando. Tutto resta solo su questo dispositivo: niente login, niente cookie, nessun invio di dati.</p>
+    <div class="rewards-actions" aria-label="Azioni bacheca premi">
+      <a class="reward-action" href="/">Torna alla home</a>
+      <button type="button" class="reward-action primary" data-export-rewards="png">Scarica PNG</button>
+      <button type="button" class="reward-action" data-export-rewards="jpeg">Scarica JPEG</button>
+      <button type="button" class="reward-action" data-unlock-all-rewards>Sblocca tutto</button>
+      <button type="button" class="reward-action danger" data-reset-rewards>Azzera premi</button>
+    </div>
+  </header>
+
+  <main id="contenuto-principale">
+    <section class="reward-summary" aria-label="Riepilogo premi">
+      <div class="reward-summary-card"><span class="reward-summary-num" data-reward-count>0</span><span class="reward-summary-label">Premi sbloccati</span></div>
+      <div class="reward-summary-card"><span class="reward-summary-num" data-reward-total>0</span><span class="reward-summary-label">Premi totali</span></div>
+      <div class="reward-summary-card"><span class="reward-summary-num" data-reward-games>0</span><span class="reward-summary-label">Partite completate</span></div>
+    </section>
+
+    <section class="trophy-board" aria-label="Bacheca premi">
+      <div class="trophy-board-inner">
+        <div class="reward-grid" data-rewards-board aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <a class="footer-link" href="/faq">FAQ</a>
+  <a class="footer-link" href="/accessibilita">Accessibilità</a>
+  <span class="footer-link footer-version" aria-hidden="true">v4.5.28</span>
+</footer>
+
+<script defer src="app-version.js"></script>
+<script defer src="js/rewards.js"></script>
+<script defer src="shared.js"></script>
+</body>
+</html>

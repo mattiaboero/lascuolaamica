@@ -230,6 +230,7 @@ let baseScore=0, finalScore=0, bonusFactor=1, bonusType=null, bonusApplied=false
 let selectedClass='3';
 let playWindowExpiryLock = false;
 let confettiTimeouts = [];
+let gameStartedAt = 0;
 
 function setMascot(state) {
   const el = document.getElementById('mascot');
@@ -969,6 +970,7 @@ async function startGame(lvl) {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
+  gameStartedAt = Date.now();
   playStart();
   showScreen('scrGame');
   document.getElementById('scoreBar')?.classList.add('is-visible');
@@ -1199,9 +1201,33 @@ function finishGame(mode) {
   const mascotState = pct === 1 || bonusApplied ? 'celebrate' : pct >= 0.6 ? 'happy' : 'neutral';
   setMascot(mascotState);
   setMascotResult(mascotState);
+  recordRewards();
   saveLBEntry();
   showScreen('scrResult');
   if(pct>=.8 || bonusApplied) launchConfetti();
+}
+
+function recordRewards() {
+  try {
+    if (!window.SA || !window.SA.rewards || typeof window.SA.rewards.recordGame !== 'function') return;
+    window.SA.rewards.recordGame({
+      subject: 'inglese',
+      classKey: selectedClass,
+      areaKey: `level-${level}`,
+      areas: Array.from(new Set(qs.map((q) => q && (q._area || q.area || `level-${level}`)).filter(Boolean))),
+      grades: Array.from(new Set(qs.map((q) => q && q._grade).filter(Boolean))),
+      correct: ok,
+      wrong: ko,
+      total: 10,
+      baseScore,
+      finalScore,
+      bonusAttempted: !!bonusType,
+      bonusApplied,
+      durationMs: gameStartedAt ? Date.now() - gameStartedAt : 0
+    });
+  } catch (e) {
+    debugWarn('rewards', e);
+  }
 }
 
 // ============================================================

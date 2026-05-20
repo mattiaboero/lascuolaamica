@@ -27,6 +27,7 @@ Principi tecnici fondamentali:
 - **Statico** — nessun server applicativo, nessun database. Solo HTML, CSS, JavaScript e JSON.
 - **PWA offline-first** — funziona dopo il primo caricamento, su qualsiasi dispositivo.
 - **Privacy-by-design** — nessuna registrazione, nessun cookie di terze parti, dati di gioco salvati solo nella memoria locale del browser.
+- **Bacheca premi locale** — badge, coccarde, coppe e trofei sbloccati sul dispositivo, esportabili come immagine.
 - **WCAG 2.1 AA** — validata manualmente con tastiera, screen reader e riduzione movimento.
 - **Zero dipendenze runtime** — JavaScript vanilla, font self-hosted.
 

@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.5.28 - 2026-05-20
+
+- Aggiunta la pagina Premi con bacheca locale per badge, coccarde, coppe, corone e trofei.
+- Collegato il sistema premi ai completamenti dei quiz su tutte le materie, con progressi salvati solo in localStorage.
+- Aggiunta esportazione della bacheca in PNG/JPEG e comando per sbloccare tutti i premi sul dispositivo.
+- Aggiornati Service Worker, redirect, documentazione e versione applicativa per distribuire la nuova funzione.
+
 ## 4.5.27 - 2026-05-18
 
 - Corrette domande generate con etichette tecniche residue nei dataset di Italiano, Inglese e Matematica.

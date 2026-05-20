@@ -19,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.27';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.28';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -52,6 +52,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '20 maggio 2026 · Release 4.5.28',
+      items: [
+        'Aggiunta la bacheca premi locale con badge, coppe, coccarde e trofei sbloccabili giocando.',
+        'Collegato il sistema premi ai risultati delle partite su tutte le materie, mantenendo salvataggio solo nel browser.',
+        'Introdotta l’esportazione della bacheca in PNG o JPEG e il comando per sbloccare tutti i premi sul dispositivo.'
+      ]
+    },
     {
       date: '18 maggio 2026 · Release 4.5.27',
       items: [

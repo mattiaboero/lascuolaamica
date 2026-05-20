@@ -35,6 +35,12 @@
 /questions-build-report.json
   X-Robots-Tag: noindex, nofollow, noai, noimageai
 
+/premi
+  X-Robots-Tag: noindex, follow
+
+/premi.html
+  X-Robots-Tag: noindex, follow
+
 /404.html
   X-Robots-Tag: noindex, nofollow
 

@@ -161,6 +161,7 @@ let bonusFactor = 1;
 let bonusType = null;
 let bonusApplied = false;
 let playWindowExpiryLock = false;
+let gameStartedAt = 0;
 
 function $(id){ return document.getElementById(id); }
 
@@ -828,6 +829,7 @@ async function startGame() {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
+  gameStartedAt = Date.now();
 
   buildDots();
   updateScoreBar();
@@ -1016,9 +1018,33 @@ function finishGame(mode) {
   const areaText = selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea];
   $('rArea').textContent = `${areaText} · ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`}`;
 
+  recordRewards();
   saveScore();
   showScreen('screenResult');
   $('scoreBar')?.classList.remove('is-visible');
+}
+
+function recordRewards() {
+  try {
+    if (!window.SA || !window.SA.rewards || typeof window.SA.rewards.recordGame !== 'function') return;
+    window.SA.rewards.recordGame({
+      subject: 'civica',
+      classKey: selectedClass,
+      areaKey: selectedArea,
+      areas: Array.from(new Set(questions.map((q) => q && (q.area || q._area)).filter(Boolean))),
+      grades: Array.from(new Set(questions.map((q) => q && q._grade).filter(Boolean))),
+      correct,
+      wrong,
+      total: TOTAL_Q,
+      baseScore,
+      finalScore,
+      bonusAttempted: !!bonusType,
+      bonusApplied,
+      durationMs: gameStartedAt ? Date.now() - gameStartedAt : 0
+    });
+  } catch (e) {
+    debugWarn('runtime', e);
+  }
 }
 
 function saveScore() {

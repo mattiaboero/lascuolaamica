@@ -119,6 +119,7 @@ let bonusType = null;
 let bonusApplied = false;
 let selectedClass = '3';
 let playWindowExpiryLock = false;
+let gameStartedAt = 0;
 
 function $(id){ return document.getElementById(id); }
 
@@ -712,6 +713,7 @@ async function startGame() {
   bonusFactor = 1;
   bonusType = null;
   bonusApplied = false;
+  gameStartedAt = Date.now();
   buildDots();
   updateScoreBar();
   $('scoreBar')?.classList.add('is-visible');
@@ -927,9 +929,35 @@ function finishGame(mode) {
   $('rBonus').textContent = bonusApplied ? `x${bonusFactor}` : 'x1';
   $('rFinal').textContent = finalScore;
 
+  recordRewards();
   saveScore();
   showScreen('screenResult');
   $('scoreBar')?.classList.remove('is-visible');
+}
+
+function recordRewards() {
+  try {
+    if (!window.SA || !window.SA.rewards || typeof window.SA.rewards.recordGame !== 'function') return;
+    const correct = history.filter(Boolean).length;
+    const wrong = Math.max(0, TOTAL_Q - correct);
+    window.SA.rewards.recordGame({
+      subject: 'problemi',
+      classKey: selectedClass,
+      areaKey: 'problemi',
+      areas: Array.from(new Set(questions.map((q) => q && (q._area || q.area)).filter(Boolean))),
+      grades: Array.from(new Set(questions.map((q) => q && q._grade).filter(Boolean))),
+      correct,
+      wrong,
+      total: TOTAL_Q,
+      baseScore,
+      finalScore,
+      bonusAttempted: !!bonusType,
+      bonusApplied,
+      durationMs: gameStartedAt ? Date.now() - gameStartedAt : 0
+    });
+  } catch (e) {
+    debugWarn('runtime', e);
+  }
 }
 
 function saveScore() {

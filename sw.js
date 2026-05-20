@@ -17,6 +17,7 @@ const CORE_PRECACHE_URLS = [
   '/fonts.css',
   '/noscript.css',
   '/utilities.css',
+  '/rewards.css',
   '/shared.js',
   '/app-version.js',
   '/manifest.json',
@@ -25,6 +26,7 @@ const CORE_PRECACHE_URLS = [
   '/subject-quiz-theme.css',
   '/js/dom-utils.js',
   '/js/index-page.js',
+  '/js/rewards.js',
   '/js/fonts-css-loader.js',
   '/json/index.json'
 ];
@@ -47,6 +49,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/ai-info',
   '/supporta',
   '/faq',
+  '/premi',
   '/inglese.css',
   '/faq.css',
   '/info-pages.css',
@@ -117,6 +120,9 @@ const OPTIONAL_PRECACHE_URLS = [
   '/assets/mascotte/cervellino-waving-03.avif',
   '/assets/mascotte/cervellino-waving-03.webp',
   '/assets/mascotte/cervellino-waving-03.png',
+  '/assets/reward/bacheca-trofei-bg.png',
+  '/assets/reward/bacheca-slot-vuoto.png',
+  '/assets/reward/bacheca-premio-bloccato.png',
   '/assets/donazione/qrcode-donazione.jpeg'
 ];
 

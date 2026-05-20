@@ -39,6 +39,8 @@ La Scuola Amica parte da un presupposto diverso: un bambino di 8 anni non dovreb
 
 Ogni partita propone 10 domande a scelta multipla (4 opzioni). Al termine c'è un bonus facoltativo con moltiplicatore punteggio. Le domande vengono selezionate con un algoritmo stocastico per classe e ambito che riduce i pattern ripetitivi tra sessioni.
 
+I risultati possono sbloccare una bacheca premi locale con badge, coccarde, coppe e trofei. La bacheca può essere esportata come immagine PNG/JPEG.
+
 I progressi vengono salvati localmente nel browser. Non c'è nessun server che li riceve.
 
 ---
@@ -73,9 +75,12 @@ Nessun framework frontend. Nessuna dipendenza NPM a runtime.
 ```
 ├── index.html              # Home
 ├── *.html                  # Pagine materia
+├── premi.html              # Bacheca premi locale
+├── rewards.css             # Stili bacheca premi
 ├── shared.js               # Componenti e logica condivisa
 ├── subject-quiz-core.js    # Motore quiz (matematica, italiano, geo, storia, scienze)
 ├── js/
+│   ├── rewards.js          # Motore premi locale
 │   ├── inglese-page.js     # Motore quiz inglese
 │   ├── problemi-page.js    # Motore quiz problemi
 │   └── civica-page.js      # Motore quiz civica
