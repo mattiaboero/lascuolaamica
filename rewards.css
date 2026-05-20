@@ -63,8 +63,7 @@
   margin-top: 6px;
 }
 
-.reward-action,
-.reward-link-pill {
+.reward-action {
   min-height: 44px;
   border: 0;
   border-radius: 999px;
@@ -75,6 +74,23 @@
   text-decoration: none;
   box-shadow: 0 6px 0 rgba(0, 0, 0, .13), 0 12px 20px rgba(0, 0, 0, .12);
   cursor: pointer;
+}
+
+.reward-link-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border: 2px solid rgba(45, 108, 223, .2);
+  border-radius: 50px;
+  padding: 6px 14px;
+  background: #fff;
+  color: #2d6cdf;
+  font-size: .85rem;
+  font-weight: 900;
+  line-height: normal;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .12);
 }
 
 .reward-action.primary {
