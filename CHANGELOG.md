@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.30 - 2026-05-20
+
+- Riallineata la homepage centrando il contenitore principale e la griglia delle materie.
+- Uniformato il link Premi della testata allo stile compatto del link FAQ.
+- Aggiornata la versione applicativa per invalidare la cache PWA del CSS home.
+
 ## 4.5.29 - 2026-05-20
 
 - Resa pubblica e indicizzabile la pagina Premi, con link visibile dalla homepage.

@@ -19,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.29';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.30';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -52,6 +52,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '20 maggio 2026 · Release 4.5.30',
+      items: [
+        'Riallineata la homepage centrando il contenitore principale e la griglia delle materie.',
+        'Reso il pulsante Premi della testata coerente con il pulsante FAQ.',
+        'Aggiornata la cache applicativa per distribuire subito il ritocco grafico.'
+      ]
+    },
     {
       date: '20 maggio 2026 · Release 4.5.29',
       items: [
