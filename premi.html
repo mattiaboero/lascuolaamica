@@ -6,7 +6,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Bacheca Premi | La Scuola Amica</title>
 <meta name="description" content="Bacheca premi locale di La Scuola Amica: badge, coppe e trofei sbloccati giocando, senza registrazione e senza cookie.">
-<meta name="robots" content="noindex,follow">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://lascuolaamica.it/premi">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#9B5DE5">
@@ -40,12 +40,23 @@
       <a class="reward-action" href="/">Torna alla home</a>
       <button type="button" class="reward-action primary" data-export-rewards="png">Scarica PNG</button>
       <button type="button" class="reward-action" data-export-rewards="jpeg">Scarica JPEG</button>
-      <button type="button" class="reward-action" data-unlock-all-rewards>Sblocca tutto</button>
       <button type="button" class="reward-action danger" data-reset-rewards>Azzera premi</button>
     </div>
   </header>
 
   <main id="contenuto-principale">
+
+    <section class="reward-guide" aria-labelledby="rewardGuideTitle">
+      <h2 id="rewardGuideTitle">Come si sbloccano i premi?</h2>
+      <p>Gioca una partita in una materia, completa le 10 domande e torna qui per vedere i riconoscimenti conquistati. I premi restano salvati solo su questo dispositivo.</p>
+      <ul>
+        <li><strong>Partite completate:</strong> premi per 5, 10, 25, 50 e 100 partite.</li>
+        <li><strong>Precisione:</strong> premi per tante risposte corrette, zero errori e super punteggi.</li>
+        <li><strong>Materie e classi:</strong> premi quando giochi classi e materie diverse.</li>
+        <li><strong>Costanza:</strong> premi speciali se torni ad allenarti in giorni diversi.</li>
+      </ul>
+    </section>
+
     <section class="reward-summary" aria-label="Riepilogo premi">
       <div class="reward-summary-card"><span class="reward-summary-num" data-reward-count>0</span><span class="reward-summary-label">Premi sbloccati</span></div>
       <div class="reward-summary-card"><span class="reward-summary-num" data-reward-total>0</span><span class="reward-summary-label">Premi totali</span></div>
@@ -63,7 +74,7 @@
 <footer role="contentinfo">
   <a class="footer-link" href="/faq">FAQ</a>
   <a class="footer-link" href="/accessibilita">Accessibilità</a>
-  <span class="footer-link footer-version" aria-hidden="true">v4.5.28</span>
+  <span class="footer-link footer-version" aria-hidden="true">v4.5.29</span>
 </footer>
 
 <script defer src="app-version.js"></script>

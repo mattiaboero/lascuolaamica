@@ -25,6 +25,7 @@ PAGES = [
     ("/per-genitori", "per-genitori.html", "monthly", "0.72"),
     ("/ai-info", "ai-info.html", "monthly", "0.68"),
     ("/faq", "faq.html", "weekly", "0.8"),
+    ("/premi", "premi.html", "weekly", "0.76"),
     ("/accessibilita", "accessibilita.html", "monthly", "0.7"),
     ("/supporta", "supporta.html", "monthly", "0.6"),
 ]

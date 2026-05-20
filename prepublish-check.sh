@@ -288,6 +288,7 @@ else
     "https://lascuolaamica.it/ai-info"
     "https://lascuolaamica.it/supporta"
     "https://lascuolaamica.it/faq"
+    "https://lascuolaamica.it/premi"
     "https://lascuolaamica.it/accessibilita"
   )
 

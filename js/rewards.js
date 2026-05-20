@@ -268,29 +268,6 @@
     return { state, rewards: REWARDS.slice(), unlockedCount, total: REWARDS.length };
   }
 
-  function unlockAllForTesting() {
-    const state = loadState();
-    const now = new Date().toISOString();
-    REWARDS.forEach((reward) => {
-      if (!state.unlocked[reward.id]) state.unlocked[reward.id] = now;
-    });
-    state.games = Math.max(safeInt(state.games, 0), 100);
-    state.bestFinal = Math.max(safeInt(state.bestFinal, 0), 1000);
-    state.bestCorrect = Math.max(safeInt(state.bestCorrect, 0), 10);
-    SUBJECTS.forEach((subject) => {
-      const row = subjectState(state, subject);
-      row.games = Math.max(safeInt(row.games, 0), 1);
-      CLASSES.forEach((cls) => {
-        row.classes[cls] = true;
-        state.classes[cls] = true;
-      });
-    });
-    state.days[todayKey()] = true;
-    saveState(state);
-    document.dispatchEvent(new CustomEvent('sa:rewards-updated', { detail: { unlocked: REWARDS.map((reward) => reward.id), state } }));
-    return state;
-  }
-
   function renderBoard(root) {
     if (!root) return;
     const { state, rewards, unlockedCount, total } = getProgress();
@@ -507,12 +484,6 @@
     document.addEventListener('sa:rewards-updated', () => renderBoard(board));
     document.querySelector('[data-export-rewards="png"]')?.addEventListener('click', () => exportBoard('png'));
     document.querySelector('[data-export-rewards="jpeg"]')?.addEventListener('click', () => exportBoard('jpeg'));
-    document.querySelector('[data-unlock-all-rewards]')?.addEventListener('click', () => {
-      const ok = window.confirm('Vuoi sbloccare tutti i premi su questo dispositivo di test?');
-      if (!ok) return;
-      unlockAllForTesting();
-      renderBoard(board);
-    });
     document.querySelector('[data-reset-rewards]')?.addEventListener('click', async () => {
       const ok = window.confirm('Vuoi cancellare tutti i premi salvati su questo dispositivo?');
       if (!ok) return;
@@ -527,8 +498,7 @@
     loadState,
     getProgress,
     renderBoard,
-    exportBoard,
-    unlockAllForTesting
+    exportBoard
   };
 
   if (document.readyState === 'loading') {

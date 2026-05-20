@@ -1,10 +1,17 @@
 # Changelog Repo
 
+## 4.5.29 - 2026-05-20
+
+- Resa pubblica e indicizzabile la pagina Premi, con link visibile dalla homepage.
+- Aggiunta una guida nella bacheca per spiegare ai bambini come sbloccare badge, coppe, coccarde e trofei.
+- Aggiornata la sitemap includendo `/premi` e rimossi gli header `noindex` dalla pagina.
+- Confermato che i premi si conquistano solo completando le partite.
+
 ## 4.5.28 - 2026-05-20
 
 - Aggiunta la pagina Premi con bacheca locale per badge, coccarde, coppe, corone e trofei.
 - Collegato il sistema premi ai completamenti dei quiz su tutte le materie, con progressi salvati solo in localStorage.
-- Aggiunta esportazione della bacheca in PNG/JPEG e comando per sbloccare tutti i premi sul dispositivo.
+- Aggiunta esportazione della bacheca in PNG/JPEG.
 - Aggiornati Service Worker, redirect, documentazione e versione applicativa per distribuire la nuova funzione.
 
 ## 4.5.27 - 2026-05-18
