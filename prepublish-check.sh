@@ -23,6 +23,7 @@ HTML_FILES=(
   "supporta.html"
   "supporto-satispay.html"
   "faq.html"
+  "premi.html"
 )
 
 check_html_integrity() {
@@ -129,6 +130,39 @@ check_security_patterns() {
   fi
 }
 
+check_csp_hashes() {
+  if python3 scripts/sync_csp_hashes.py --check; then
+    echo "[OK] _headers: inline script CSP hashes are aligned"
+  else
+    echo "[ERROR] _headers: inline script CSP hashes are not aligned"
+    status=1
+  fi
+}
+
+check_rewards_page_metadata() {
+  if grep -q 'property="og:title"' premi.html \
+    && grep -q 'name="twitter:card"' premi.html \
+    && grep -q '"@type": "WebPage"' premi.html \
+    && grep -q '"@type": "BreadcrumbList"' premi.html \
+    && grep -q 'data-open-modal="modalPrivacy"' premi.html \
+    && grep -q 'data-open-modal="modalCookie"' premi.html; then
+    echo "[OK] premi.html: social metadata, JSON-LD and policy links found"
+  else
+    echo "[ERROR] premi.html: missing social metadata, JSON-LD or policy links"
+    status=1
+  fi
+}
+
+check_css_hygiene() {
+  if grep -R -n 'font-weight:[[:space:]]*1000' . --include='*.css' >/tmp/lascuolaamica-css-hygiene.txt; then
+    echo "[ERROR] non-standard font-weight:1000 found"
+    cat /tmp/lascuolaamica-css-hygiene.txt
+    status=1
+  else
+    echo "[OK] CSS: no font-weight:1000 declarations"
+  fi
+}
+
 check_target_blank_rel() {
   local file="$1"
   local line_num=0
@@ -152,6 +186,9 @@ check_target_blank_rel() {
 }
 
 check_version_alignment
+check_csp_hashes
+check_rewards_page_metadata
+check_css_hygiene
 check_security_patterns
 for file in "${HTML_FILES[@]}"; do
   check_target_blank_rel "$file"

@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.5.31 - 2026-05-20
+
+- Completata la pagina Premi con metadati social, JSON-LD e footer Privacy/Cookie coerente con il resto del sito.
+- Aggiornata la FAQ con domande dedicate alla bacheca premi e al download PNG/JPEG.
+- Riallineati i dati strutturati `dateModified` e la sitemap per le pagine pubbliche aggiornate.
+- Puliti stili CSS non standard e permessi locali dei file pubblici.
+
 ## 4.5.30 - 2026-05-20
 
 - Riallineata la homepage centrando il contenitore principale e la griglia delle materie.

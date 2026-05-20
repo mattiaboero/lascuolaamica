@@ -36,6 +36,16 @@ def _lastmod_for(filename: str) -> str:
     if not path.exists():
         return datetime.now().date().isoformat()
     try:
+        status = subprocess.run(
+            ["git", "status", "--porcelain", "--", filename],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if status.returncode == 0 and (status.stdout or "").strip():
+            return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
+
         result = subprocess.run(
             ["git", "log", "-1", "--format=%cI", "--", str(path)],
             cwd=ROOT,

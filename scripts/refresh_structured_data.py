@@ -31,6 +31,7 @@ HTML_FILES = [
     "per-genitori.html",
     "ai-info.html",
     "faq.html",
+    "premi.html",
     "supporta.html",
     "accessibilita.html",
     "supporto-satispay.html",
@@ -45,6 +46,7 @@ ORG_SAME_AS = ["https://github.com/mattiaboero/lascuolaamica"]
 DATE_TYPES = {
     "WebSite",
     "WebPage",
+    "AboutPage",
     "CollectionPage",
     "FAQPage",
     "EducationalApplication",
