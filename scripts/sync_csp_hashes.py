@@ -33,14 +33,13 @@ def _inline_script_hashes() -> list[str]:
     return sorted(hashes)
 
 
-def _updated_headers() -> str:
-    text = HEADERS.read_text(encoding="utf-8")
-    hashes = " " + " ".join(_inline_script_hashes())
+def _build_headers(current: str, hashes: list[str]) -> str:
+    hashes_str = " " + " ".join(hashes)
 
     def repl(match: re.Match[str]) -> str:
-        return f"{match.group(1)}{hashes}{match.group('rest')}"
+        return f"{match.group(1)}{hashes_str}{match.group('rest')}"
 
-    new_text, count = CSP_RE.subn(repl, text, count=1)
+    new_text, count = CSP_RE.subn(repl, current, count=1)
     if count != 1:
         raise RuntimeError("Impossibile trovare la direttiva script-src CSP in _headers")
     return new_text
@@ -52,7 +51,8 @@ def main() -> int:
     args = parser.parse_args()
 
     current = HEADERS.read_text(encoding="utf-8")
-    updated = _updated_headers()
+    hashes = _inline_script_hashes()
+    updated = _build_headers(current, hashes)
     if args.check:
         if current != updated:
             print("[ERROR] CSP script hashes non allineati. Esegui scripts/sync_csp_hashes.py.")
@@ -62,7 +62,7 @@ def main() -> int:
 
     if current != updated:
         HEADERS.write_text(updated, encoding="utf-8")
-        print(f"[OK] _headers aggiornato con {len(_inline_script_hashes())} hash script")
+        print(f"[OK] _headers aggiornato con {len(hashes)} hash script")
     else:
         print("[OK] _headers già allineato")
     return 0

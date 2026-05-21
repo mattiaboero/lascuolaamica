@@ -31,19 +31,29 @@ PAGES = [
 ]
 
 
-def _lastmod_for(filename: str) -> str:
+def _dirty_files() -> frozenset[str]:
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        return frozenset()
+    dirty = set()
+    for line in result.stdout.splitlines():
+        if line.strip():
+            dirty.add(line[3:].strip())
+    return frozenset(dirty)
+
+
+def _lastmod_for(filename: str, dirty: frozenset[str]) -> str:
     path = ROOT / filename
     if not path.exists():
         return datetime.now().date().isoformat()
     try:
-        status = subprocess.run(
-            ["git", "status", "--porcelain", "--", filename],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        if status.returncode == 0 and (status.stdout or "").strip():
+        if filename in dirty:
             return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
 
         result = subprocess.run(
@@ -63,9 +73,10 @@ def _lastmod_for(filename: str) -> str:
 
 def main() -> int:
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    dirty = _dirty_files()
     for route, source_file, changefreq, priority in PAGES:
         loc = "https://lascuolaamica.it/" if route == "/" else f"https://lascuolaamica.it{route}"
-        lastmod = _lastmod_for(source_file)
+        lastmod = _lastmod_for(source_file, dirty)
         lines.extend(
             [
                 "  <url>",

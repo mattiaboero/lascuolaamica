@@ -154,9 +154,11 @@ check_rewards_page_metadata() {
 }
 
 check_css_hygiene() {
-  if grep -R -n 'font-weight:[[:space:]]*1000' . --include='*.css' >/tmp/lascuolaamica-css-hygiene.txt; then
+  local findings
+  findings=$(grep -R -n 'font-weight:[[:space:]]*1000' . --include='*.css' || true)
+  if [[ -n "$findings" ]]; then
     echo "[ERROR] non-standard font-weight:1000 found"
-    cat /tmp/lascuolaamica-css-hygiene.txt
+    echo "$findings"
     status=1
   else
     echo "[OK] CSS: no font-weight:1000 declarations"
