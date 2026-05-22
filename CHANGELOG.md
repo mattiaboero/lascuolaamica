@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.5.32 - 2026-05-22
+
+- Rafforzato il generatore sitemap usando `git status --porcelain -z` per gestire correttamente rename, copie e percorsi con spazi.
+- Mantenuta stabile la generazione di `lastmod` senza modifiche spurie a `sitemap.xml`.
+- Aggiornata la versione applicativa per distribuire il ritocco agli script di pubblicazione.
+
 ## 4.5.31 - 2026-05-20
 
 - Completata la pagina Premi con metadati social, JSON-LD e footer Privacy/Cookie coerente con il resto del sito.

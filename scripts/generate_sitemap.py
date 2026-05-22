@@ -33,7 +33,7 @@ PAGES = [
 
 def _dirty_files() -> frozenset[str]:
     result = subprocess.run(
-        ["git", "status", "--porcelain"],
+        ["git", "status", "--porcelain", "-z"],
         cwd=ROOT,
         capture_output=True,
         text=True,
@@ -41,10 +41,18 @@ def _dirty_files() -> frozenset[str]:
     )
     if result.returncode != 0:
         return frozenset()
-    dirty = set()
-    for line in result.stdout.splitlines():
-        if line.strip():
-            dirty.add(line[3:].strip())
+    dirty: set[str] = set()
+    tokens = result.stdout.split("\0")
+    i = 0
+    while i < len(tokens):
+        token = tokens[i]
+        if len(token) < 3:
+            i += 1
+            continue
+        status = token[:2]
+        dirty.add(token[3:])
+        # Renames/copies emit two NUL-separated paths: new first, then old.
+        i += 2 if any(code in status for code in ("R", "C")) else 1
     return frozenset(dirty)
 
 

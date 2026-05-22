@@ -19,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.31';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.32';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -52,6 +52,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '22 maggio 2026 · Release 4.5.32',
+      items: [
+        'Rafforzato il generatore sitemap per gestire rename, copie e percorsi con spazi senza errori di lastmod.',
+        'Mantenuta stabile la procedura di pre-pubblicazione con controlli su sitemap, CSP e contenuti pubblici.',
+        'Aggiornata la cache applicativa per distribuire il ritocco agli script di pubblicazione.'
+      ]
+    },
     {
       date: '20 maggio 2026 · Release 4.5.31',
       items: [
