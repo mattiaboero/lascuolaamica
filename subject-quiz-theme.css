@@ -87,6 +87,16 @@ body.subject-problemi {
   --card-bg: #fff8f0;
 }
 
+body.subject-inglese {
+  --bg-1: #b8e6ff;
+  --bg-2: #c9d0ff;
+  --bg-3: #ffe3a8;
+  --accent-1: #1f7fe0;
+  --accent-2: #17a388;
+  --text-main: #20344d;
+  --card-bg: #fff9f1;
+}
+
 * {
   margin: 0;
   padding: 0;

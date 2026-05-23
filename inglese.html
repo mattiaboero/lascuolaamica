@@ -111,7 +111,7 @@
 }
 </script>
 </head>
-<body>
+<body class="subject-inglese">
 <noscript>
   <link rel="stylesheet" href="noscript.css">
   <div class="noscript-msg">
@@ -325,47 +325,12 @@
 </div>
 
 <footer role="contentinfo">
-  <button type="button" class="flink" data-open-modal="mPrivacy" aria-haspopup="dialog">Privacy Policy</button>
-  <button type="button" class="flink" data-open-modal="mCookie" aria-haspopup="dialog">Cookie Policy</button>
-  <span class="flink footer-version" aria-hidden="true">v4.5.33</span>
+  <a class="footer-link" href="/privacy">Privacy Policy</a>
+  <a class="footer-link" href="/cookie">Cookie Policy</a>
+  <span class="footer-link footer-version" aria-hidden="true">v4.6.0</span>
 </footer>
 
-<!-- Modal Privacy -->
-<div class="modal-overlay" id="mPrivacy" role="dialog" aria-modal="true" aria-labelledby="engPrivTitle">
-  <div class="modal-box">
-    <button type="button" class="modal-close" data-close-modal="mPrivacy" aria-label="Chiudi Privacy Policy">✕</button>
-    <h2 class="modal-title" id="engPrivTitle">Privacy Policy</h2>
-    <div class="modal-body">
-      <p>Questo gioco è un progetto educativo gratuito per bambini delle scuole elementari. Non raccogliamo dati personali.</p>
-      <h3>Cosa non raccogliamo</h3>
-      <p>Non chiediamo nome, email o qualsiasi informazione identificativa. Non esistono account o registrazioni.</p>
-      <h3>Cosa salviamo sul tuo dispositivo</h3>
-      <p>La classifica viene salvata tramite <strong>localStorage</strong> — una memoria locale del browser. I dati non lasciano mai il tuo dispositivo e contengono solo punteggi e date, niente di personale. Puoi cancellarli dal pulsante "Cancella classifica".</p>
-      <h3>Font locali</h3>
-      <p>I caratteri tipografici sono ospitati localmente su questo dominio e non richiedono connessioni a provider esterni per il caricamento dei font.</p>
-      <h3>Minori</h3>
-      <p>Il gioco è destinato a bambini. Non raccogliamo dati di minori in nessuna forma.</p>
-    </div>
-  </div>
-</div>
 
-<!-- Modal Cookie -->
-<div class="modal-overlay" id="mCookie" role="dialog" aria-modal="true" aria-labelledby="engCookTitle">
-  <div class="modal-box">
-    <button type="button" class="modal-close" data-close-modal="mCookie" aria-label="Chiudi Cookie Policy">✕</button>
-    <h2 class="modal-title" id="engCookTitle">Cookie Policy</h2>
-    <div class="modal-body">
-      <p>Questo gioco <strong>non usa cookie</strong> di tracciamento o profilazione.</p>
-      <h3>localStorage</h3>
-      <p>Per la classifica usiamo localStorage: resta sul tuo dispositivo, non trasmette nulla a server esterni.</p>
-      <p>I dati salvati: punteggio, livello giocato, data. Nessun dato personale.</p>
-      <h3>Come cancellare</h3>
-      <p>Usa "Cancella classifica" in app, oppure svuota i dati di navigazione dal browser.</p>
-      <h3>Cookie di terze parti</h3>
-      <p>I caratteri tipografici sono serviti localmente e non impostano cookie di terze parti.</p>
-    </div>
-  </div>
-</div>
 
 <script defer src="questions-loader.js"></script>
 <script defer src="js/rewards.js"></script>

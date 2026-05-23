@@ -14,13 +14,23 @@
 <script defer src="js/fonts-css-loader.js"></script>
 <link rel="stylesheet" href="404.css">
 </head>
-<body>
+<body class="info-page page-404">
   <a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
-  <main class="card" id="contenuto-principale">
+  <main class="card" id="contenuto-principale" aria-labelledby="notFoundTitle">
     <span class="emoji" aria-hidden="true">🔎</span>
-    <h1>Pagina non trovata</h1>
+    <h1 id="notFoundTitle">Pagina non trovata</h1>
     <p>Il link potrebbe essere cambiato oppure non è più disponibile. Torna al menu principale per scegliere una materia e continuare a giocare.</p>
     <a class="cta" href="/" aria-label="Torna alla home di La Scuola Amica">🏫 Torna alla home</a>
+    <nav class="help-links" aria-label="Link utili">
+      <a href="/faq" aria-label="Apri le domande frequenti">FAQ</a>
+      <a href="/accessibilita" aria-label="Apri la pagina Accessibilità">Accessibilità</a>
+      <a href="/supporta" aria-label="Apri la pagina Supporta il progetto">Supporta il progetto</a>
+    </nav>
   </main>
+  <footer class="site-footer" role="contentinfo">
+    <a class="footer-link" href="/privacy" aria-label="Apri Privacy Policy">Privacy Policy</a>
+    <a class="footer-link" href="/cookie" aria-label="Apri Cookie Policy">Cookie Policy</a>
+    <span class="footer-link footer-version" aria-hidden="true">v4.6.0</span>
+  </footer>
 </body>
 </html>

@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.6.0 - 2026-05-23
+
+- Migrazione footer completata su tutte le pagine pubbliche: Privacy e Cookie ora sono link diretti a `/privacy` e `/cookie` senza dipendere da JavaScript.
+- Corretto `inglese.html` allineando la classe versione footer da `flink` a `footer-link`.
+- Mantenuti temporaneamente i modali Privacy/Cookie nel markup come fallback non attivo per una release conservativa.
+- Aggiornata la versione applicativa a `4.6.0` per propagare il cambio strutturale del footer anche ai client con cache offline.
+
+## 4.5.34 - 2026-05-23
+
+- Aggiunte le pagine standalone `privacy` e `cookie` con URL indicizzabili e raggiungibili anche senza JavaScript.
+- Aggiornata la pagina 404: link footer Privacy/Cookie puntano ora a `/privacy` e `/cookie`.
+- Aggiornati routing Cloudflare (`_redirects`) e sitemap con le nuove URL pubbliche.
+- Aggiornata la versione applicativa a `4.5.34` per allineare cache e release metadata.
+
 ## 4.5.33 - 2026-05-23
 
 - Corretto il layout responsive della bacheca premi: 7 colonne su desktop/LIM, 4 su tablet e 2 su smartphone.
