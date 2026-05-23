@@ -19,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.32';
+  const APP_VERSION = (window.SA && window.SA.version) || '4.5.33';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -53,11 +53,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
-      date: '22 maggio 2026 · Release 4.5.32',
+      date: '23 maggio 2026 · Release 4.5.33',
       items: [
-        'Rafforzato il generatore sitemap per gestire rename, copie e percorsi con spazi senza errori di lastmod.',
-        'Mantenuta stabile la procedura di pre-pubblicazione con controlli su sitemap, CSP e contenuti pubblici.',
-        'Aggiornata la cache applicativa per distribuire il ritocco agli script di pubblicazione.'
+        'Rifinita la UI mobile e desktop per bambini con target touch più affidabili su footer, breadcrumb, FAQ e comandi della bacheca premi.',
+        'Ripristinata la bacheca premi a 7 colonne su desktop e LIM, mantenendo una griglia compatta su tablet e smartphone.',
+        'Corretto il footer condiviso per evitare duplicazioni visive di Privacy, Cookie e versione fuori dal pannello Info.',
+        'Stabilizzati gli sfondi decorativi della pagina Premi, che restano dietro ai contenuti senza coprire testi o comandi.'
       ]
     },
     {

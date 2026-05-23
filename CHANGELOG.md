@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.5.33 - 2026-05-23
+
+- Corretto il layout responsive della bacheca premi: 7 colonne su desktop/LIM, 4 su tablet e 2 su smartphone.
+- Ripristinata la coerenza del footer: Privacy, Cookie e versione restano nel pannello Info senza duplicazioni visive.
+- Migliorata l'ergonomia mobile con target touch più affidabili per footer, breadcrumb, FAQ e comandi premi.
+- Stabilizzata la sovrapposizione degli sfondi decorativi della pagina Premi rispetto al contenuto.
+
 ## 4.5.32 - 2026-05-22
 
 - Rafforzato il generatore sitemap usando `git status --porcelain -z` per gestire correttamente rename, copie e percorsi con spazi.

@@ -96,8 +96,10 @@
 }
 
 .faq-chip-link {
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   text-decoration: none;
   font-weight: 900;

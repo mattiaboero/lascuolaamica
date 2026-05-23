@@ -87,6 +87,10 @@ body {
 }
 
 .breadcrumbs a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -1273,6 +1277,14 @@ footer {
 }
 
 .flink {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
   font-size: 0.8rem;
   font-weight: 800;
   color: #5f6b7a;
@@ -1306,6 +1318,7 @@ footer {
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
+  min-height: 44px;
   font-size: 0.95rem;
   font-weight: 900;
   text-decoration: none;
@@ -1402,7 +1415,10 @@ footer {
   left: 8px;
   background: #fff;
   color: #000;
+  min-height: 44px;
   padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 6px;
   font-weight: 800;
   font-size: 1rem;

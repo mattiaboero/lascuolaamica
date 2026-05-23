@@ -2,6 +2,10 @@
   display: none !important;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .score-bar.is-visible {
   display: flex !important;
 }

@@ -162,6 +162,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   flex-wrap:wrap;
 }
 .faq-mini-link{
+  min-height:44px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -246,9 +247,8 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   .main-title{
     font-size:clamp(2.3rem,10vw,2.8rem);
   }
-  .mascot-home{
-    width:.75em;
-    background-size:auto 1.16em;
+  .main-title .mascot-home{
+    display:none;
   }
   .main-title-text{
     max-width:100%;
@@ -455,7 +455,7 @@ footer{
   flex-wrap:wrap;align-items:center;row-gap:8px;
   z-index:200;
 }
-.footer-link{font-size:.8rem;font-weight:800;color:#5f6b7a;cursor:pointer;transition:color .2s;text-decoration:none;border:none;background:none;}
+.footer-link{min-width:44px;min-height:44px;padding:8px 4px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;font-size:.8rem;font-weight:800;color:#5f6b7a;cursor:pointer;transition:color .2s;text-decoration:none;border:none;background:none;}
 .footer-link:hover{color:var(--math-a);}
 .footer-version{cursor:default;color:inherit;opacity:.95;}
 .footer-support-cta{
@@ -472,6 +472,7 @@ footer{
   border:none;
   border-radius:12px;
   padding:10px 20px;
+  min-height:44px;
   font-size:.95rem;
   font-weight:900;
   text-decoration:none;
@@ -501,7 +502,9 @@ footer{
 .skip-link{
   position:absolute;top:-100%;left:8px;
   background:#fff;color:#000;
+  min-height:44px;
   padding:10px 18px;border-radius:6px;
+  display:inline-flex;align-items:center;
   font-weight:800;font-size:1rem;z-index:9999;
   text-decoration:none;border:3px solid #000;
   transition:top .2s;

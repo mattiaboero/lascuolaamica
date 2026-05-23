@@ -170,6 +170,10 @@ body.info-page .breadcrumbs {
 }
 
 body.info-page .breadcrumbs a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   color: var(--page-link);
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -325,11 +329,14 @@ body.info-page .qr-note {
 
 body.info-page .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 10px;
   background: #fff;
   color: #111;
+  min-height: 44px;
   padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 8px;
   z-index: 9999;
 }
@@ -357,6 +364,14 @@ body.info-page .skip-link:focus {
 }
 
 .footer-link {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
   font-size: 0.8rem;
   font-weight: 800;
   color: var(--page-muted, var(--info-light-muted));
@@ -390,6 +405,7 @@ body.info-page .skip-link:focus {
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
+  min-height: 44px;
   font-size: 0.95rem;
   font-weight: 900;
   text-decoration: none;
