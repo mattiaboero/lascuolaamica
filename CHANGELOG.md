@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.6.1 - 2026-05-23
+
+- Service Worker: aggiunte al precache opzionale le route `/privacy`, `/cookie` e `/supporto-satispay` per supportare la navigazione offline dai link footer.
+- Service Worker: confermata la versione cache derivata da `app-version.js` via `importScripts('/app-version.js')` e aggiornato `APP_VERSION` a `4.6.1`.
+- Service Worker: rimosso `'/js/fonts-css-loader.js'` dal precache core perché non più parte del runtime caricato dalle pagine.
+
 ## 4.6.0 - 2026-05-23
 
 - Migrazione footer completata su tutte le pagine pubbliche: Privacy e Cookie ora sono link diretti a `/privacy` e `/cookie` senza dipendere da JavaScript.

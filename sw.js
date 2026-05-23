@@ -27,7 +27,6 @@ const CORE_PRECACHE_URLS = [
   '/js/dom-utils.js',
   '/js/index-page.js',
   '/js/rewards.js',
-  '/js/fonts-css-loader.js',
   '/json/index.json'
 ];
 
@@ -48,8 +47,11 @@ const OPTIONAL_PRECACHE_URLS = [
   '/per-genitori',
   '/ai-info',
   '/supporta',
+  '/supporto-satispay',
   '/faq',
   '/premi',
+  '/privacy',
+  '/cookie',
   '/inglese.css',
   '/faq.css',
   '/info-pages.css',
