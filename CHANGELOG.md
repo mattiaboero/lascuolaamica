@@ -4,7 +4,11 @@
 
 - Service Worker: aggiunte al precache opzionale le route `/privacy`, `/cookie` e `/supporto-satispay` per supportare la navigazione offline dai link footer.
 - Service Worker: confermata la versione cache derivata da `app-version.js` via `importScripts('/app-version.js')` e aggiornato `APP_VERSION` a `4.6.1`.
-- Service Worker: rimosso `'/js/fonts-css-loader.js'` dal precache core perché non più parte del runtime caricato dalle pagine.
+- Service Worker: rimosso dal precache core il loader CSS legacy non più parte del runtime caricato dalle pagine.
+- Cleanup tecnico: eliminato il file orfano del loader CSS legacy e azzerati i riferimenti residui nel repository.
+- CSS inglese: rimossi i duplicati base (`:root`, `body`, `.bg-shapes`, `.shape`, `@keyframes drift`) già coperti da `subject-quiz-theme.css`.
+- CTA supporta: applicata l'opzione conservativa di rimozione del marker `cta-supporta` non standardizzato.
+- Footer privacy/cookie: introdotto `aria-current=\"page\"` sulle pagine omonime per evitare self-link ridondanti.
 
 ## 4.6.0 - 2026-05-23
 

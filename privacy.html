@@ -71,9 +71,7 @@
 <link rel="stylesheet" href="info-pages.css">
 <link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts.css" as="style" id="fontsCssPreload" data-async-css>
-<noscript><link rel="stylesheet" href="fonts.css"></noscript>
-<script defer src="js/fonts-css-loader.js"></script>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="utilities.css">
 <link rel="stylesheet" href="rewards.css">
 <script defer src="js/dom-utils.js"></script>
@@ -120,9 +118,9 @@
 </div>
 
 <footer class="site-footer" role="contentinfo">
-  <a class="footer-link" href="/privacy">Privacy Policy</a>
+  <span class="footer-link" aria-current="page">Privacy Policy</span>
   <a class="footer-link" href="/cookie">Cookie Policy</a>
-  <span class="footer-link footer-version" aria-hidden="true">v4.6.0</span>
+  <span class="footer-link footer-version" data-app-version data-app-version-format="compact"></span>
 </footer>
 
 <script defer src="js/rewards.js"></script>

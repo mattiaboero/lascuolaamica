@@ -366,7 +366,7 @@ body.info-page .skip-link:focus {
 .footer-link {
   min-width: 44px;
   min-height: 44px;
-  padding: 8px 4px;
+  padding: 10px 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -379,6 +379,12 @@ body.info-page .skip-link:focus {
   background: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+.footer-link:focus-visible {
+  outline: 3px solid var(--page-link-strong, var(--info-light-link-strong));
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
 .footer-link:hover {

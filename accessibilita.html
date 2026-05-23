@@ -71,9 +71,7 @@
 </script>
 <link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts.css" as="style" id="fontsCssPreload" data-async-css>
-<noscript><link rel="stylesheet" href="fonts.css"></noscript>
-<script defer src="js/fonts-css-loader.js"></script>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="utilities.css">
 <link rel="stylesheet" href="rewards.css">
 <script defer src="js/dom-utils.js"></script>
@@ -128,7 +126,7 @@
 
       <h2 class="section-title">Segnalazioni</h2>
       <p class="text contact-mail">Se incontri barriere di accessibilità, scrivi a <a href="mailto:supporto@lascuolaamica.it">supporto@lascuolaamica.it</a> indicando pagina, dispositivo/browser e passaggi per riprodurre il problema.</p>
-      <p class="text">Ultimo aggiornamento verifica: 18 aprile 2026. Versione portale: 4.6.0.</p>
+      <p class="text">Ultimo aggiornamento verifica: 18 aprile 2026. Versione portale: <span data-app-version></span>.</p>
 
       <div class="actions" aria-label="Azioni rapide">
         <a class="action-btn" href="/" aria-label="Apri il menu principale">Vai alle materie</a>
@@ -140,7 +138,7 @@
 <footer class="site-footer" role="contentinfo">
   <a class="footer-link" href="/privacy">Privacy Policy</a>
   <a class="footer-link" href="/cookie">Cookie Policy</a>
-  <span class="footer-link footer-version" aria-hidden="true">v4.6.0</span>
+  <span class="footer-link footer-version" data-app-version data-app-version-format="compact"></span>
 </footer>
 
 
