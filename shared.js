@@ -19,7 +19,7 @@
   const TEACHERS_URL = '/per-insegnanti';
   const PARENTS_URL = '/per-genitori';
   const AI_INFO_URL = '/ai-info';
-  const APP_VERSION = (window.SA && window.SA.version) || '4.5.33';
+  const APP_VERSION = (window.SA && window.SA.version) || '';
   const SA = window.SA = window.SA || {};
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
@@ -1491,10 +1491,16 @@
   }
 
   function syncFooterVersion() {
+    if (SA && typeof SA.applyVersionToDom === 'function') {
+      SA.applyVersionToDom(document);
+      return;
+    }
+    if (!APP_VERSION) return;
     const versionText = `v${APP_VERSION}`;
     document.querySelectorAll('.footer-version').forEach((node) => {
       node.textContent = versionText;
       node.setAttribute('data-version', APP_VERSION);
+      node.setAttribute('aria-label', `Versione applicazione ${APP_VERSION}`);
     });
   }
 
@@ -1503,7 +1509,7 @@
     if (!footer) return;
     if (footer.querySelector('[data-faq-link="1"]')) return;
 
-    const modelBtn = footer.querySelector('button[data-open-modal], button, .footer-link, .flink');
+    const modelBtn = footer.querySelector('button[data-open-modal], button, .footer-link');
     const version = footer.querySelector('.footer-version');
     const link = document.createElement('a');
     link.href = FAQ_URL;
@@ -1523,7 +1529,7 @@
     if (!footer) return;
     if (footer.querySelector('[data-support-cta="1"]')) return;
 
-    const modelBtn = footer.querySelector('button[data-open-modal], button, .footer-link, .flink');
+    const modelBtn = footer.querySelector('button[data-open-modal], button, .footer-link');
     const link = document.createElement('a');
     link.href = SUPPORT_URL;
     link.className = `${modelBtn ? modelBtn.className : 'footer-link'} footer-support-cta`;
@@ -1796,7 +1802,7 @@
 
     ensureInfoHubModal({ privacyId, cookieId, version: versionText });
 
-    const modelBtn = footer.querySelector('.footer-link, .flink, button');
+    const modelBtn = footer.querySelector('.footer-link, button');
     const infoBtn = document.createElement('button');
     infoBtn.type = 'button';
     infoBtn.className = modelBtn ? modelBtn.className : 'footer-link';

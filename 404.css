@@ -131,9 +131,12 @@ p {
 }
 
 .footer-link {
+  min-width: 44px;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
   color: #4a5568;
   font-size: 0.86rem;
   font-weight: 800;

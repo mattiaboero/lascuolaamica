@@ -85,7 +85,7 @@
 <div class="rewards-shell">
   <header class="rewards-hero">
     <div class="rewards-kicker">Premi locali</div>
-    <h1 class="rewards-title">Bacheca Trofei</h1>
+    <h1 class="rewards-title" id="mainTitle">Bacheca Trofei</h1>
     <p class="rewards-subtitle">Badge, coccarde, coppe e corone si sbloccano giocando. Tutto resta solo su questo dispositivo: niente login, niente cookie, nessun invio di dati.</p>
     <div class="rewards-actions" aria-label="Azioni bacheca premi">
       <a class="reward-action" href="/">Torna alla home</a>
@@ -95,7 +95,7 @@
     </div>
   </header>
 
-  <main id="contenuto-principale">
+  <main id="contenuto-principale" aria-labelledby="mainTitle">
 
     <section class="reward-guide" aria-labelledby="rewardGuideTitle">
       <h2 id="rewardGuideTitle">Come si sbloccano i premi?</h2>
@@ -125,7 +125,7 @@
 <footer role="contentinfo">
   <a class="footer-link" href="/privacy">Privacy Policy</a>
   <a class="footer-link" href="/cookie">Cookie Policy</a>
-  <span class="footer-link footer-version" aria-hidden="true">v4.6.0</span>
+  <span class="footer-link footer-version" data-app-version data-app-version-format="compact"></span>
 </footer>
 
 

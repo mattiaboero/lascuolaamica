@@ -110,6 +110,11 @@
   border: 2px solid rgba(45, 108, 223, 0.2);
 }
 
+.faq-chip-link:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
 .faq-chip-link:hover {
   transform: translateY(-1px);
 }

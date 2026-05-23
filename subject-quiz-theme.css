@@ -144,13 +144,19 @@ body {
   padding: 18px 16px 122px;
 }
 
-.top-nav {
+.top-nav,
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 940px;
   margin-bottom: 10px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 10px;
 }
 
 .breadcrumbs {
@@ -279,6 +285,10 @@ header {
   align-items: center;
 }
 
+#contenuto-principale {
+  width: 100%;
+}
+
 .card {
   background: linear-gradient(165deg, #fffefb 0%, var(--card-bg) 100%);
   border: 3px solid rgba(255, 255, 255, 0.82);
@@ -289,6 +299,16 @@ header {
   animation: slideUp 0.45s ease;
   position: relative;
   overflow: hidden;
+}
+
+.levels-wrap {
+  width: 100%;
+  background: linear-gradient(165deg, #fffefb 0%, var(--card-bg) 100%);
+  border: 3px solid rgba(255, 255, 255, 0.82);
+  border-radius: 30px;
+  padding: 28px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16), 0 0 0 4px rgba(255, 255, 255, 0.22);
+  position: relative;
 }
 
 .card::before {
@@ -337,6 +357,15 @@ header {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
   font-size: 1rem;
   margin-bottom: 12px;
+  text-align: center;
+}
+
+.class-selector-label,
+.levels-title {
+  font-family: 'Fredoka One', cursive;
+  color: var(--accent-2);
+  font-size: 1rem;
+  margin: 4px 0 12px;
   text-align: center;
 }
 
@@ -476,6 +505,138 @@ header {
 
 .area-grid:empty {
   min-height: 260px;
+}
+
+.level-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.level-card {
+  width: 100%;
+  text-align: left;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 14px 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.14), 0 12px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(145deg, #fff, #f4fbff);
+  color: #38556e;
+}
+
+.level-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.level-info {
+  min-width: 0;
+}
+
+.level-name {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.level-classes,
+.level-topics {
+  display: block;
+  font-size: 0.85rem;
+  color: #2d4256;
+  margin-top: 2px;
+}
+
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 74px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #264f91;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.play-window-panel {
+  width: 100%;
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 2px solid rgba(45, 108, 223, 0.18);
+  background: linear-gradient(135deg, #fff, #f4f8ff);
+  box-shadow: 0 10px 24px rgba(45, 108, 223, 0.1);
+}
+
+.play-window-kicker {
+  margin: 0 0 6px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2d6cdf;
+}
+
+.play-window-status {
+  margin: 0 0 10px;
+  color: #42586d;
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.play-window-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.play-window-timer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #1f3f73;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.play-window-btn {
+  border: 0;
+  border-radius: 999px;
+  min-height: 46px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #2d6cdf, #4d8dff);
+  color: #fff;
+  font-size: 0.96rem;
+  line-height: 1.2;
+  font-weight: 900;
+  box-shadow: 0 6px 16px rgba(45, 108, 223, 0.24);
+}
+
+.play-window-note {
+  margin: 10px 0 0;
+  color: #5d7082;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .area-more-btn {
@@ -1321,7 +1482,7 @@ body.subject-problemi .answer-btn {
 .footer-link {
   min-width: 44px;
   min-height: 44px;
-  padding: 8px 4px;
+  padding: 10px 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1334,6 +1495,12 @@ body.subject-problemi .answer-btn {
   background: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+.footer-link:focus-visible {
+  outline: 3px solid var(--accent-1);
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
 .footer-link:hover {
@@ -1501,6 +1668,15 @@ body.subject-problemi .answer-btn {
   .class-grid,
   .area-grid {
     grid-template-columns: 1fr;
+  }
+
+  .play-window-actions {
+    align-items: stretch;
+  }
+
+  .play-window-timer,
+  .play-window-btn {
+    width: 100%;
   }
 
   body.subject-problemi .intro-list {

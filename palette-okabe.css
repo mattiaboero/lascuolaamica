@@ -226,7 +226,6 @@ html[data-palette="okabe-ito"] .timer-bar {
 }
 
 html[data-palette="okabe-ito"] .footer-link:hover,
-html[data-palette="okabe-ito"] .flink:hover,
 html[data-palette="okabe-ito"] .faq-chip-link:hover {
   color: #0072B2;
 }
