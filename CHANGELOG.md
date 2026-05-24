@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.6.5 - 2026-05-24
+
+- Pulizia conservativa: rimosse funzioni morte confermate in `shared.js` (`getCachedNodes`, `ensureUpdatesFooterLink`, `ensureFaqFooterLink`, `ensurePaletteFooterToggle`) e in `admin/esercizi.js` (`escapeHtml`) senza impatti sul runtime.
+- Hardening operativo: rimossi artefatti obsoleti (`.DS_Store`, `__pycache__`, `*.pyc`) dal repository.
+- Documentazione: aggiunte note esplicite su area `admin/` non come boundary di sicurezza, esclusione dall'export pubblico, source of truth quiz su JSON e stato di `supporto-satispay.html` come pagina non promossa.
+- Aggiornata la versione applicativa per distribuire i ritocchi di runtime e documentazione ai client con cache.
+
 ## 4.6.4 - 2026-05-24
 
 - PWA branding: aggiornate anche le icone del manifest (`icons/icon-192.png`, `icons/icon-192-maskable.png`, `icons/icon-512.png`, `icons/icon-512-maskable.png`) usando la nuova sorgente favicon consegnata nel progetto.

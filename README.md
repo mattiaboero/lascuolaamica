@@ -106,6 +106,26 @@ Nessun framework frontend. Nessuna dipendenza NPM a runtime.
 
 ---
 
+## Nota area admin
+
+La cartella `admin/` contiene uno strumento interno (editor esercizi), non una superficie pubblica da esporre su Internet.
+
+- L'autenticazione attuale e client-side (token hash in file pubblico + stato in `localStorage`), quindi **non e un boundary di sicurezza**.
+- Non pubblicare `admin/` senza protezione infrastrutturale (access policy, basic auth, VPN o equivalente).
+- L'export di deploy pubblico esclude `admin/` per impostazione predefinita.
+
+---
+
+## Source of truth domande quiz
+
+Il runtime usa i JSON in `json/*.json` come fonte dati reale tramite `questions-loader.js`.
+
+- I banchi inline nei file pagina restano come fallback controllato.
+- In questa fase non vengono rimossi fallback o refattorizzati i motori quiz dedicati (`inglese`, `problemi`, `civica`).
+- Refactor consigliato futuro: estrarre persistenza locale e helper UI comuni dai motori dedicati, lasciando specifiche materia nei rispettivi file.
+
+---
+
 ## Avvio in locale
 
 ```bash

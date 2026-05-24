@@ -44,7 +44,6 @@
     }
   })();
   const memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
-  const queryCache = {};
   let cachedThemeMeta = null;
   let cachedFooter = null;
   let playWindowTicker = null;
@@ -52,6 +51,14 @@
   let playWindowEnsurePromise = null;
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
+    {
+      date: '24 maggio 2026 · Release 4.6.5',
+      items: [
+        'Rimossi frammenti di codice non più utilizzati nel runtime condiviso e nell’editor interno.',
+        'Confermata l’area admin come tool interno: autenticazione client-side non considerata protezione reale.',
+        'Aggiornata la documentazione tecnica su export pubblico, source of truth dei dataset quiz e stato pagina supporto secondaria.'
+      ]
+    },
     {
       date: '24 maggio 2026 · Release 4.6.4',
       items: [
@@ -687,16 +694,6 @@
     if (cachedFooter && cachedFooter.isConnected) return cachedFooter;
     cachedFooter = document.querySelector('.site-footer, footer');
     return cachedFooter;
-  }
-
-  function getCachedNodes(key, selector) {
-    const cached = queryCache[key];
-    if (Array.isArray(cached) && cached.length && cached.every((node) => node.isConnected)) {
-      return cached;
-    }
-    const nodes = Array.from(document.querySelectorAll(selector));
-    if (nodes.length) queryCache[key] = nodes;
-    return nodes;
   }
 
   function normalizePalette(mode) {
@@ -1495,27 +1492,6 @@
     bindModalEvents();
   }
 
-  function ensureUpdatesFooterLink() {
-    const footer = getFooterEl();
-    if (!footer) return;
-    if (footer.querySelector(`[data-open-modal="${UPDATES_MODAL_ID}"]`)) return;
-
-    const version = footer.querySelector('.footer-version');
-    const modelBtn = footer.querySelector('button[data-open-modal], button');
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = modelBtn ? modelBtn.className : 'footer-link';
-    btn.setAttribute('data-open-modal', UPDATES_MODAL_ID);
-    btn.setAttribute('aria-haspopup', 'dialog');
-    btn.textContent = 'Ultimi aggiornamenti';
-
-    if (version && version.parentNode) {
-      version.parentNode.insertBefore(btn, version);
-    } else {
-      footer.appendChild(btn);
-    }
-  }
-
   function syncFooterVersion() {
     if (SA && typeof SA.applyVersionToDom === 'function') {
       SA.applyVersionToDom(document);
@@ -1528,26 +1504,6 @@
       node.setAttribute('data-version', APP_VERSION);
       node.setAttribute('aria-label', `Versione applicazione ${APP_VERSION}`);
     });
-  }
-
-  function ensureFaqFooterLink() {
-    const footer = getFooterEl();
-    if (!footer) return;
-    if (footer.querySelector('[data-faq-link="1"]')) return;
-
-    const modelBtn = footer.querySelector('button[data-open-modal], button, .footer-link');
-    const version = footer.querySelector('.footer-version');
-    const link = document.createElement('a');
-    link.href = FAQ_URL;
-    link.className = modelBtn ? modelBtn.className : 'footer-link';
-    link.setAttribute('data-faq-link', '1');
-    link.textContent = 'FAQ';
-
-    if (version && version.parentNode) {
-      version.parentNode.insertBefore(link, version);
-    } else {
-      footer.appendChild(link);
-    }
   }
 
   function ensureSupportFooterLink() {
@@ -2240,55 +2196,6 @@
       }
     `;
     document.head.appendChild(style);
-  }
-
-  function ensurePaletteFooterToggle() {
-    const footer = getFooterEl();
-    if (!footer) return;
-    if (footer.querySelector('[data-palette-toggle="1"]')) return;
-
-    ensurePaletteToggleStyles();
-
-    const wrap = document.createElement('div');
-    wrap.className = 'palette-toggle';
-    wrap.setAttribute('data-palette-toggle', '1');
-    wrap.setAttribute('role', 'group');
-    wrap.setAttribute('aria-label', 'Selezione palette colori');
-
-    const label = document.createElement('span');
-    label.className = 'palette-toggle-label';
-    label.textContent = 'Palette:';
-
-    const standardBtn = document.createElement('button');
-    standardBtn.type = 'button';
-    standardBtn.className = 'palette-toggle-btn';
-    standardBtn.dataset.paletteMode = PALETTE_MODE.LEGACY;
-    standardBtn.textContent = 'Standard';
-
-    const accessibleBtn = document.createElement('button');
-    accessibleBtn.type = 'button';
-    accessibleBtn.className = 'palette-toggle-btn';
-    accessibleBtn.dataset.paletteMode = PALETTE_MODE.OKABE;
-    accessibleBtn.textContent = 'Accessibile';
-
-    [standardBtn, accessibleBtn].forEach((btn) => {
-      btn.addEventListener('click', () => {
-        setPaletteMode(btn.dataset.paletteMode);
-      });
-    });
-
-    wrap.appendChild(label);
-    wrap.appendChild(standardBtn);
-    wrap.appendChild(accessibleBtn);
-
-    const version = footer.querySelector('.footer-version');
-    if (version && version.parentNode) {
-      version.parentNode.insertBefore(wrap, version);
-    } else {
-      footer.appendChild(wrap);
-    }
-
-    updatePaletteToggleState(wrap);
   }
 
   function initSharedUi() {

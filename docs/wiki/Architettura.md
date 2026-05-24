@@ -32,6 +32,17 @@ Questa scelta non è per semplicità: è per controllabilità. Ogni file che arr
 
 ---
 
+## Area admin (tool interno)
+
+La cartella `admin/` e uno strumento interno, non una boundary di sicurezza.
+
+- L'autenticazione attuale e client-side (`localStorage` + verifica token nel browser).
+- L'hash token pubblicato in `admin/editor-config.js` non equivale a protezione reale.
+- Se `admin/` deve essere online, serve protezione infrastrutturale (access policy, basic auth, VPN o equivalente).
+- L'export pubblico esclude `admin/` per default.
+
+---
+
 ## Algoritmo di selezione domande
 
 Il sistema usa un **planner stocastico a slot** per ridurre i pattern ripetitivi tra sessioni. Per ogni partita:
@@ -42,6 +53,11 @@ Il sistema usa un **planner stocastico a slot** per ridurre i pattern ripetitivi
 4. Le metriche di qualità sessione (`repeat rate`, `coverage`, `entropy`, `novelty`) vengono salvate nella memoria locale del browser con media rolling
 
 Tutti i motori quiz (condiviso e dedicati) usano la stessa strategia.
+
+### Raccomandazione tecnica (rinviata)
+
+La duplicazione tra `subject-quiz-core.js` e i motori dedicati (`js/inglese-page.js`, `js/problemi-page.js`, `js/civica-page.js`) resta nota.
+Refactor consigliato in una fase separata: estrarre persistenza locale e helper comuni, lasciando nei motori dedicati solo regole e dataset specifici.
 
 ---
 
@@ -61,6 +77,11 @@ json/
 ```
 
 Il riferimento legacy a `questions.json` (file aggregato) non è usato nel runtime pubblico. I controlli pre-pubblicazione bloccano riferimenti diretti non desiderati.
+
+### Doppia sorgente controllata (stato attuale)
+
+I banchi inline nei file pagina restano come fallback controllato, mentre la source of truth runtime e il caricamento JSON tramite `questions-loader.js` quando disponibile.
+In questa fase i fallback inline non vengono rimossi.
 
 ---
 
@@ -105,3 +126,13 @@ Per le navigazioni HTML la strategia e **Network First con fallback alla home**.
 - **Header di protezione** applicati a livello infrastrutturale
 - **Dati tecnici** esclusi dall’indicizzazione diretta
 - Dettagli completi: [Sicurezza, privacy e minori](Sicurezza-Privacy-e-Minori)
+
+---
+
+## Pagine non promosse
+
+`supporto-satispay.html` e mantenuta come pagina secondaria non promossa:
+
+- meta robots `noindex,nofollow`;
+- esclusa dalla sitemap;
+- raggiungibile tramite link discreto da `supporta.html`.
