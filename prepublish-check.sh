@@ -144,8 +144,8 @@ check_rewards_page_metadata() {
     && grep -q 'name="twitter:card"' premi.html \
     && grep -q '"@type": "WebPage"' premi.html \
     && grep -q '"@type": "BreadcrumbList"' premi.html \
-    && grep -q 'data-open-modal="modalPrivacy"' premi.html \
-    && grep -q 'data-open-modal="modalCookie"' premi.html; then
+    && grep -q 'href="/privacy"' premi.html \
+    && grep -q 'href="/cookie"' premi.html; then
     echo "[OK] premi.html: social metadata, JSON-LD and policy links found"
   else
     echo "[ERROR] premi.html: missing social metadata, JSON-LD or policy links"

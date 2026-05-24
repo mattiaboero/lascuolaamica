@@ -55,14 +55,19 @@ python3 "$BASE_DIR/scripts/generate_sitemap.py"
 echo "[INFO] Sync source -> $DST"
 rsync -av --delete --delete-excluded \
   --exclude 'export/' \
+  --exclude '.claude/' \
   --exclude '.git/' \
   --exclude '.github/' \
   --exclude '.gitignore' \
+  --exclude '__pycache__/' \
+  --exclude 'admin/' \
   --exclude 'docs/' \
+  --exclude 'reports/' \
   --exclude 'scripts/' \
   --exclude '.wrangler/' \
   --exclude '.DS_Store' \
   --exclude '*.md' \
+  --exclude '*.pyc' \
   --exclude '*.sh' \
   --exclude '*.py' \
   --exclude '_headers' \

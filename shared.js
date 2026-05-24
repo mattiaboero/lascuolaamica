@@ -53,12 +53,11 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
-      date: '23 maggio 2026 · Release 4.5.33',
+      date: '23 maggio 2026 · Release 4.6.1',
       items: [
-        'Rifinita la UI mobile e desktop per bambini con target touch più affidabili su footer, breadcrumb, FAQ e comandi della bacheca premi.',
-        'Ripristinata la bacheca premi a 7 colonne su desktop e LIM, mantenendo una griglia compatta su tablet e smartphone.',
-        'Corretto il footer condiviso per evitare duplicazioni visive di Privacy, Cookie e versione fuori dal pannello Info.',
-        'Stabilizzati gli sfondi decorativi della pagina Premi, che restano dietro ai contenuti senza coprire testi o comandi.'
+        'Migliorata la navigazione offline anche per Privacy, Cookie e Supporto con Satispay dopo il primo caricamento.',
+        'Resi più coerenti i footer delle pagine Privacy e Cookie, evidenziando la pagina corrente senza link ridondanti.',
+        'Ripuliti cache e stili legacy per distribuire gli aggiornamenti in modo più stabile.'
       ]
     },
     {
