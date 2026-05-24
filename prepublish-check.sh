@@ -263,6 +263,8 @@ check_pwa_version_bump_for_precache_changes() {
         status=1
         return
       fi
+      echo "[OK] PWA: APP_VERSION bump check passed (HEAD^..HEAD)"
+      return
     fi
 
     if [[ -n "$changed_relevant" ]] && git diff --quiet -- app-version.js; then
