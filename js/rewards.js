@@ -16,6 +16,53 @@
     scienze: 'Scienze',
     italiano: 'Italiano'
   };
+  const DEBUG_MODE = (() => {
+    try {
+      const host = window.location.hostname;
+      if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local')) return true;
+      return new URLSearchParams(window.location.search).has('debug');
+    } catch (e) {
+      return false;
+    }
+  })();
+  const memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
+
+  function debugWarn(context, error) {
+    if (!DEBUG_MODE) return;
+    try {
+      console.warn(`[La Scuola Amica][${context}]`, error);
+    } catch (_) {}
+  }
+
+  function storageGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      debugWarn(`storageGet:${key}`, e);
+      return Object.prototype.hasOwnProperty.call(memoryStorage, key) ? memoryStorage[key] : null;
+    }
+  }
+
+  function storageSet(key, value) {
+    const normalized = String(value);
+    try {
+      localStorage.setItem(key, normalized);
+    } catch (e) {
+      debugWarn(`storageSet:${key}`, e);
+      memoryStorage[key] = normalized;
+    }
+  }
+
+  function storageRemove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      debugWarn(`storageRemove:${key}`, e);
+    }
+    if (Object.prototype.hasOwnProperty.call(memoryStorage, key)) {
+      delete memoryStorage[key];
+    }
+  }
 
   const REWARDS = [
     ['primo-passo', 'Primo Passo', 'reward-primo-passo.png', 'Completa la prima partita.'],
@@ -108,7 +155,7 @@
 
   function loadState() {
     try {
-      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      const parsed = JSON.parse(storageGet(STORAGE_KEY));
       if (!parsed || typeof parsed !== 'object') return createDefaultState();
       return Object.assign(createDefaultState(), parsed, {
         unlocked: parsed.unlocked && typeof parsed.unlocked === 'object' ? parsed.unlocked : {},
@@ -118,6 +165,7 @@
         days: parsed.days && typeof parsed.days === 'object' ? parsed.days : {}
       });
     } catch (e) {
+      debugWarn('loadState', e);
       return createDefaultState();
     }
   }
@@ -125,8 +173,10 @@
   function saveState(state) {
     try {
       state.lastUpdated = new Date().toISOString();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch (e) {}
+      storageSet(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {
+      debugWarn('saveState', e);
+    }
   }
 
   function unlock(state, id, unlockedNow) {
@@ -487,7 +537,7 @@
     document.querySelector('[data-reset-rewards]')?.addEventListener('click', async () => {
       const ok = window.confirm('Vuoi cancellare tutti i premi salvati su questo dispositivo?');
       if (!ok) return;
-      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+      storageRemove(STORAGE_KEY);
       renderBoard(board);
     });
   }

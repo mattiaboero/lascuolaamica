@@ -16,6 +16,39 @@ function debugWarn(context, error) {
   } catch (_) {}
 }
 
+const sharedSA = window.SA = window.SA || {};
+const memoryStorage = sharedSA.memoryStorage = sharedSA.memoryStorage || Object.create(null);
+
+function storageGet(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch (e) {
+    debugWarn(`storageGet:${key}`, e);
+    return Object.prototype.hasOwnProperty.call(memoryStorage, key) ? memoryStorage[key] : null;
+  }
+}
+
+function storageSet(key, value) {
+  const normalized = String(value);
+  try {
+    localStorage.setItem(key, normalized);
+  } catch (e) {
+    debugWarn(`storageSet:${key}`, e);
+    memoryStorage[key] = normalized;
+  }
+}
+
+function storageRemove(key) {
+  try {
+    localStorage.removeItem(key);
+  } catch (e) {
+    debugWarn(`storageRemove:${key}`, e);
+  }
+  if (Object.prototype.hasOwnProperty.call(memoryStorage, key)) {
+    delete memoryStorage[key];
+  }
+}
+
 function getQuestionsLoader() {
   const sa = window.SA;
   if (sa && sa.questionsLoader) return sa.questionsLoader;
@@ -149,14 +182,15 @@ function normalizeClassKey(value) {
 
 function loadClassPref() {
   try {
-    return normalizeClassKey(localStorage.getItem(CLASS_PREF_KEY));
+    return normalizeClassKey(storageGet(CLASS_PREF_KEY));
   } catch (e) {
+    debugWarn('loadClassPref', e);
     return '3';
   }
 }
 
 function saveClassPref(classKey) {
-  try { localStorage.setItem(CLASS_PREF_KEY, normalizeClassKey(classKey)); } catch (e) { debugWarn('runtime', e); }
+  try { storageSet(CLASS_PREF_KEY, normalizeClassKey(classKey)); } catch (e) { debugWarn('saveClassPref', e); }
 }
 
 function inferGrade(index, total) {
@@ -350,32 +384,33 @@ function buildSessionSlots(total, classPlan, pool) {
 
 function loadHistory() {
   try {
-    const parsed = JSON.parse(localStorage.getItem(HISTORY_KEY));
+    const parsed = JSON.parse(storageGet(HISTORY_KEY));
     if (!parsed || typeof parsed !== 'object') return {};
     return parsed;
   } catch (e) {
+    debugWarn('loadHistory', e);
     return {};
   }
 }
 
 function saveHistory(store) {
-  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(store)); } catch (e) { debugWarn('runtime', e); }
+  try { storageSet(HISTORY_KEY, JSON.stringify(store)); } catch (e) { debugWarn('saveHistory', e); }
 }
 
 function loadMetricsStore() {
   try {
-    const parsed = JSON.parse(localStorage.getItem(METRICS_KEY));
+    const parsed = JSON.parse(storageGet(METRICS_KEY));
     if (!parsed || typeof parsed !== 'object') return { sessions: [] };
     const sessions = Array.isArray(parsed.sessions) ? parsed.sessions : [];
     return { sessions: sessions.slice(-METRICS_MAX_SESSIONS) };
   } catch (e) {
-    debugWarn('runtime', e);
+    debugWarn('loadMetricsStore', e);
     return { sessions: [] };
   }
 }
 
 function saveMetricsStore(store) {
-  try { localStorage.setItem(METRICS_KEY, JSON.stringify(store)); } catch (e) { debugWarn('runtime', e); }
+  try { storageSet(METRICS_KEY, JSON.stringify(store)); } catch (e) { debugWarn('saveMetricsStore', e); }
 }
 
 function clamp01(value) {
@@ -972,12 +1007,12 @@ function saveScore() {
   lb.push(entry);
   lb.sort((a, b) => b.final - a.final);
   const top = lb.slice(0, 15);
-  try { localStorage.setItem(LB_KEY, JSON.stringify(top)); } catch (e) { debugWarn('runtime', e); }
+  try { storageSet(LB_KEY, JSON.stringify(top)); } catch (e) { debugWarn('saveLB', e); }
 }
 
 function loadLB() {
   try {
-    const parsed = JSON.parse(localStorage.getItem(LB_KEY));
+    const parsed = JSON.parse(storageGet(LB_KEY));
     if (!Array.isArray(parsed)) return [];
     return parsed.slice(0, 50).map((entry) => ({
       cls: safeText(entry && entry.cls, 24),
@@ -987,7 +1022,7 @@ function loadLB() {
       date: safeText(entry && entry.date, 20)
     }));
   }
-  catch (e) { return []; }
+  catch (e) { debugWarn('loadLB', e); return []; }
 }
 
 async function clearLeaderboard() {
@@ -997,7 +1032,7 @@ async function clearLeaderboard() {
     cancelLabel: 'Annulla'
   });
   if (!shouldClear) return;
-  try { localStorage.removeItem(LB_KEY); } catch (e) { debugWarn('runtime', e); }
+  try { storageRemove(LB_KEY); } catch (e) { debugWarn('clearLeaderboard', e); }
   renderLB();
 }
 

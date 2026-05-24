@@ -43,7 +43,7 @@
       return false;
     }
   })();
-  const memoryStorage = Object.create(null);
+  const memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
   const queryCache = {};
   let cachedThemeMeta = null;
   let cachedFooter = null;
@@ -623,7 +623,8 @@
       value.startsWith('italiano_') ||
       value.startsWith('storia_') ||
       value.startsWith('scienze_') ||
-      value.startsWith('geografia_')
+      value.startsWith('geografia_') ||
+      value === 'lascuolaamica_rewards_v1'
     );
   }
 

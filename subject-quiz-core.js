@@ -22,6 +22,38 @@
     } catch (_) {}
   }
 
+  const memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
+
+  function storageGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      debugWarn(`storageGet:${key}`, e);
+      return Object.prototype.hasOwnProperty.call(memoryStorage, key) ? memoryStorage[key] : null;
+    }
+  }
+
+  function storageSet(key, value) {
+    const normalized = String(value);
+    try {
+      localStorage.setItem(key, normalized);
+    } catch (e) {
+      debugWarn(`storageSet:${key}`, e);
+      memoryStorage[key] = normalized;
+    }
+  }
+
+  function storageRemove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      debugWarn(`storageRemove:${key}`, e);
+    }
+    if (Object.prototype.hasOwnProperty.call(memoryStorage, key)) {
+      delete memoryStorage[key];
+    }
+  }
+
   function getQuestionsLoader() {
     const sa = window.SA;
     if (sa && sa.questionsLoader) return sa.questionsLoader;
@@ -224,7 +256,7 @@
 
   function loadClassPref() {
     try {
-      return normalizeClassKey(localStorage.getItem(CLASS_PREF_KEY));
+      return normalizeClassKey(storageGet(CLASS_PREF_KEY));
     } catch (e) {
       debugWarn('loadClassPref', e);
       return '3';
@@ -233,7 +265,7 @@
 
   function saveClassPref(cls) {
     try {
-      localStorage.setItem(CLASS_PREF_KEY, normalizeClassKey(cls));
+      storageSet(CLASS_PREF_KEY, normalizeClassKey(cls));
     } catch (e) {
       debugWarn('saveClassPref', e);
     }
@@ -366,7 +398,7 @@
       base[k] = 0;
     });
     try {
-      const raw = JSON.parse(localStorage.getItem(CURSOR_KEY));
+      const raw = JSON.parse(storageGet(CURSOR_KEY));
       const out = { ...base };
       Object.keys(out).forEach((k) => {
         out[k] = safeInt(raw && raw[k] !== undefined ? raw[k] : 0, 0);
@@ -380,7 +412,7 @@
 
   function saveCursor(c) {
     try {
-      localStorage.setItem(CURSOR_KEY, JSON.stringify(c));
+      storageSet(CURSOR_KEY, JSON.stringify(c));
     } catch (e) {
       debugWarn('saveCursor', e);
     }
@@ -388,7 +420,7 @@
 
   function loadHistoryStore(storageKey = HISTORY_KEY) {
     try {
-      const raw = JSON.parse(localStorage.getItem(storageKey));
+      const raw = JSON.parse(storageGet(storageKey));
       if (!raw || typeof raw !== 'object') return {};
       const out = {};
       Object.keys(raw).forEach((k) => {
@@ -404,7 +436,7 @@
 
   function saveHistoryStore(store, storageKey = HISTORY_KEY) {
     try {
-      localStorage.setItem(storageKey, JSON.stringify(store));
+      storageSet(storageKey, JSON.stringify(store));
     } catch (e) {
       debugWarn(`saveHistoryStore:${storageKey}`, e);
     }
@@ -412,7 +444,7 @@
 
   function loadStats() {
     try {
-      const parsed = JSON.parse(localStorage.getItem(STATS_KEY));
+      const parsed = JSON.parse(storageGet(STATS_KEY));
       if (!parsed || typeof parsed !== 'object') return { area: {}, class: {} };
       return {
         area: parsed.area && typeof parsed.area === 'object' ? parsed.area : {},
@@ -426,7 +458,7 @@
 
   function saveStats(stats) {
     try {
-      localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+      storageSet(STATS_KEY, JSON.stringify(stats));
     } catch (e) {
       debugWarn('saveStats', e);
     }
@@ -434,7 +466,7 @@
 
   function loadMetricsStore() {
     try {
-      const parsed = JSON.parse(localStorage.getItem(METRICS_KEY));
+      const parsed = JSON.parse(storageGet(METRICS_KEY));
       if (!parsed || typeof parsed !== 'object') return { sessions: [] };
       const sessions = Array.isArray(parsed.sessions) ? parsed.sessions : [];
       return { sessions: sessions.slice(-METRICS_MAX_SESSIONS) };
@@ -446,7 +478,7 @@
 
   function saveMetricsStore(store) {
     try {
-      localStorage.setItem(METRICS_KEY, JSON.stringify(store));
+      storageSet(METRICS_KEY, JSON.stringify(store));
     } catch (e) {
       debugWarn('saveMetricsStore', e);
     }
@@ -1446,7 +1478,7 @@
     lb.sort((a, b) => Number(b.final) - Number(a.final));
     const top = lb.slice(0, 15);
     try {
-      localStorage.setItem(LB_KEY, JSON.stringify(top));
+      storageSet(LB_KEY, JSON.stringify(top));
     } catch (e) {
       debugWarn('saveScore', e);
     }
@@ -1454,7 +1486,7 @@
 
   function loadLB() {
     try {
-      const parsed = JSON.parse(localStorage.getItem(LB_KEY));
+      const parsed = JSON.parse(storageGet(LB_KEY));
       if (!Array.isArray(parsed)) return [];
       return parsed.slice(0, 50).map((entry) => ({
         area: safeText(entry && entry.area, 64),
@@ -1481,7 +1513,7 @@
     if (!shouldClear) return;
 
     try {
-      localStorage.removeItem(LB_KEY);
+      storageRemove(LB_KEY);
     } catch (e) {
       debugWarn('clearLeaderboard', e);
     }

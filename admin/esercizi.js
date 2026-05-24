@@ -20,6 +20,17 @@
   var REMOTE_INDEX_PATH = '/json/index.json';
   var STORAGE_AUTH_KEY = 'scuolaamica_editor_auth_v1';
   var STORAGE_DRAFT_KEY = 'scuolaamica_editor_draft_v1';
+  var SA = window.SA = window.SA || {};
+  var DEBUG_MODE = (function () {
+    try {
+      var host = window.location.hostname;
+      if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local')) return true;
+      return new URLSearchParams(window.location.search).has('debug');
+    } catch (e) {
+      return false;
+    }
+  })();
+  var memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
 
   var authPanel = document.getElementById('authPanel');
   var editorPanel = document.getElementById('editorPanel');
@@ -81,11 +92,20 @@
   var questionFieldOrder = ['subject', 'classLevel', 'area', 'question', 'opt0', 'opt1', 'opt2', 'opt3', 'answerIndex'];
   var authFieldOrder = ['tokenInput'];
 
-  function safeSetStorage(key, value) {
+  function debugWarn(context, error) {
+    if (!DEBUG_MODE) return;
     try {
-      localStorage.setItem(key, value);
+      console.warn('[La Scuola Amica][' + context + ']', error);
+    } catch (_) {}
+  }
+
+  function safeSetStorage(key, value) {
+    var normalized = String(value);
+    try {
+      localStorage.setItem(key, normalized);
     } catch (e) {
-      // ignore storage errors (private mode/full storage)
+      debugWarn('safeSetStorage:' + key, e);
+      memoryStorage[key] = normalized;
     }
   }
 
@@ -93,7 +113,19 @@
     try {
       return localStorage.getItem(key);
     } catch (e) {
-      return null;
+      debugWarn('safeGetStorage:' + key, e);
+      return Object.prototype.hasOwnProperty.call(memoryStorage, key) ? memoryStorage[key] : null;
+    }
+  }
+
+  function safeRemoveStorage(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      debugWarn('safeRemoveStorage:' + key, e);
+    }
+    if (Object.prototype.hasOwnProperty.call(memoryStorage, key)) {
+      delete memoryStorage[key];
     }
   }
 
@@ -301,11 +333,7 @@
       safeSetStorage(STORAGE_AUTH_KEY, '1');
       return;
     }
-    try {
-      localStorage.removeItem(STORAGE_AUTH_KEY);
-    } catch (e) {
-      // ignore
-    }
+    safeRemoveStorage(STORAGE_AUTH_KEY);
   }
 
   function toHex(buffer) {
@@ -377,6 +405,7 @@
       var parsed = JSON.parse(raw);
       drafts = Array.isArray(parsed) ? parsed : [];
     } catch (e) {
+      debugWarn('loadDrafts', e);
       drafts = [];
     }
   }
