@@ -1,6 +1,33 @@
 (async function () {
   'use strict';
 
+  // =========================================================================
+  // Subject Quiz Core — Extension Contract
+  // =========================================================================
+  // Hook funzione: max 3 totali, riusabili da più materie.
+  //   Hook autorizzati (slot riservati, non implementati finché D > 0):
+  //     - onBuildSession(ctx) → Question[]
+  //     - onPickBonus(ctx)    → Question
+  //     - onScore(ctx, answer)→ number
+  //   Aggiungere un 4° hook richiede ADR scritto in docs/refactor/.
+  //
+  // Config field passivi: illimitati, shape condivisa fra materie.
+  //   Materie che non usano un campo lo lasciano undefined → core
+  //   interpreta come feature disabilitata.
+  //
+  // Vietato in questo file:
+  //   - if (config.subject === 'X') o equivalenti per-materia.
+  //   - Branch hardcoded su lbKey/cursorKey/path materia.
+  //
+  // Decision tree per ogni nuova esigenza:
+  //   1. Esprimibile come dato? → config field. Stop.
+  //   2. Variante di logic core? → flag config + branch esistente.
+  //   3. Flow completamente diverso? → uno dei 3 hook autorizzati.
+  //   4. Nessuna di sopra? → resta in page-side (pre/post processing).
+  //
+  // Riferimento completo: docs/refactor/extension-contract.md
+  // =========================================================================
+
   const SA = window.SA = window.SA || {};
   const cfg = SA.subjectConfig;
   if (!cfg) return;
