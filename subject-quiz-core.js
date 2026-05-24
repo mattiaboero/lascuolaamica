@@ -87,6 +87,60 @@
     return null;
   }
 
+  function hasConfiguredBonusQuestions() {
+    if (!cfg || !cfg.bonusQuestions || typeof cfg.bonusQuestions !== 'object') return false;
+    return Object.values(cfg.bonusQuestions).some((rows) => Array.isArray(rows) && rows.length > 0);
+  }
+
+  function resolveBonusType(row) {
+    const raw = String(row && row.bonusRaw ? row.bonusRaw : '').trim().toLowerCase();
+    if (raw === 'easy' || raw === 'medium' || raw === 'hard') return raw;
+    const diff = Number(row && row.difficulty);
+    if (Number.isFinite(diff) && diff >= 3) return 'hard';
+    if (Number.isFinite(diff) && diff === 2) return 'medium';
+    return 'easy';
+  }
+
+  function toBonusQuestion(row) {
+    const question = String(row && row.question ? row.question : '').trim();
+    const answer = String(row && row.answer ? row.answer : '').trim();
+    const options = Array.isArray(row && row.options) ? row.options : [];
+    const distractors = options
+      .map((opt) => String(opt ?? '').trim())
+      .filter((opt) => opt && opt !== answer)
+      .slice(0, 3);
+    if (!question || !answer || distractors.length < 3) return null;
+    return {
+      q: question,
+      a: answer,
+      d: distractors
+    };
+  }
+
+  async function hydrateBonusQuestionsFromSource(loader, source) {
+    if (!loader || typeof loader.getSubjectRows !== 'function' || !source || !source.subject) return;
+    if (hasConfiguredBonusQuestions()) return;
+
+    const rows = await loader.getSubjectRows(source.subject, {
+      path: source.path || 'json/index.json',
+      includeInactive: source.includeInactive,
+      includeBonusRows: true
+    });
+    if (!Array.isArray(rows) || !rows.length) return;
+
+    const bonusQuestions = { easy: [], medium: [], hard: [] };
+    rows.forEach((row) => {
+      if (!row || row.bonus !== true) return;
+      const question = toBonusQuestion(row);
+      if (!question) return;
+      bonusQuestions[resolveBonusType(row)].push(question);
+    });
+
+    if (Object.values(bonusQuestions).some((items) => items.length > 0)) {
+      cfg.bonusQuestions = bonusQuestions;
+    }
+  }
+
 
   function notifyLoadError() {
     const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
@@ -101,6 +155,10 @@
   if (cfg.questionsSource && questionsLoader && typeof questionsLoader.applySubjectConfig === 'function') {
     try {
       await questionsLoader.applySubjectConfig(cfg);
+      const source = typeof cfg.questionsSource === 'string'
+        ? { subject: cfg.questionsSource }
+        : cfg.questionsSource;
+      await hydrateBonusQuestionsFromSource(questionsLoader, source);
     } catch (e) {
       debugWarn('QuestionsLoader.applySubjectConfig', e);
     }
@@ -131,7 +189,9 @@
   const RECENT_SIG_SESSIONS = Math.max(4, Number(cfg.recentSigSessions || 8));
   const SOFTMAX_TOP_K = Math.max(3, Number(cfg.softmaxTopK || 6));
   const SOFTMAX_TEMPERATURE = Math.max(0.35, Number(cfg.softmaxTemperature || 1.25));
-  const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedAreaRepeatLimit || 2));
+  const TARGET_GRADE_WEIGHT = Math.max(1, Number(cfg.targetGradeWeight || 7));
+  const CLASS_DISTANCE_WEIGHT = Math.max(0, Number(cfg.classDistanceWeight || 10));
+  const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedRepeatLimit || cfg.mixedAreaRepeatLimit || 2));
   const AREA_VISIBLE_LIMIT = Math.max(6, Number(cfg.areaVisibleLimit || 8));
 
   const CLASS_DEFAULTS = {
@@ -946,7 +1006,7 @@
   function candidateScore(q, targetGrade, areaWeakness, classNum) {
     const toPlan = Math.abs(Number(q._grade || targetGrade) - targetGrade);
     const toClass = questionClassDistance(q, classNum);
-    const base = toPlan * 7 + toClass * 10;
+    const base = toPlan * TARGET_GRADE_WEIGHT + toClass * CLASS_DISTANCE_WEIGHT;
     const weaknessBoost = areaWeakness > 0 ? -Math.min(2.5, areaWeakness * 3) : 0;
     return base + weaknessBoost;
   }

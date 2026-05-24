@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.6.9 - 2026-05-24
+### Changed
+- refactor(civica): migrato `js/civica-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 81 righe di sola config.
+- core quiz: aggiunta idratazione generica delle bonus questions dai bonus rows JSON e supporto al config field `mixedRepeatLimit`.
+- core quiz: introdotti i pesi config-driven `targetGradeWeight` e `classDistanceWeight` per rispettare il profilo classe di civica senza branch per materia.
+- Storage keys utenti preservate (`educazioneCivica_lb_v1`, `educazioneCivica_cursor_v1`, `educazioneCivica_history_v2`, `educazioneCivica_quality_v1`, `educazioneCivica_class_pref_v1`).
+
 ## 4.6.8 - 2026-05-24
 ### Changed
 - refactor: migrazione civica/inglese/problemi a JSON-only con bonus rows da dataset
