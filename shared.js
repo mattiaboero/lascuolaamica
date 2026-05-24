@@ -53,6 +53,22 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '24 maggio 2026 · Release 4.6.4',
+      items: [
+        'Aggiornate anche le icone PWA del manifest con il nuovo branding consegnato per la favicon.',
+        'Mantenuti invariati nomi e percorsi pubblici delle icone per evitare cambi strutturali nel manifest.',
+        'Allineata la versione cache per distribuire il nuovo set grafico anche alle installazioni già attive.'
+      ]
+    },
+    {
+      date: '24 maggio 2026 · Release 4.6.3',
+      items: [
+        'Aggiornata l’icona del sito con nuova favicon per tab browser e scorciatoie supportate.',
+        'Rigenerate le varianti favicon e apple-touch per distribuire il branding in modo coerente.',
+        'Allineata la versione cache per far arrivare le nuove icone anche ai client già attivi.'
+      ]
+    },
+    {
       date: '24 maggio 2026 · Release 4.6.2',
       items: [
         'Rafforzato l’aggiornamento della PWA con controllo più stabile della cache applicativa.',

@@ -1,5 +1,17 @@
 # Changelog Repo
 
+## 4.6.4 - 2026-05-24
+
+- PWA branding: aggiornate anche le icone del manifest (`icons/icon-192.png`, `icons/icon-192-maskable.png`, `icons/icon-512.png`, `icons/icon-512-maskable.png`) usando la nuova sorgente favicon consegnata nel progetto.
+- Mantenuta la stessa mappa file del manifest, senza cambiare nomi o percorsi pubblici.
+- Aggiornata la versione applicativa per distribuire il nuovo set di icone anche ai client con cache e installazioni già esistenti.
+
+## 4.6.3 - 2026-05-24
+
+- Branding: aggiornata la favicon del sito partendo dalla nuova sorgente SVG fornita nel progetto.
+- Rigenerate le varianti browser `favicon.ico`, `icons/favicon-16x16.png`, `icons/favicon-32x32.png` e `icons/apple-touch-icon.png`.
+- Aggiornata la versione applicativa per invalidare correttamente la cache dei client che avevano già le vecchie icone.
+
 ## 4.6.2 - 2026-05-24
 
 - PWA: registrazione del Service Worker aggiornata con `updateViaCache: "none"` per evitare update incompleti quando cambia `app-version.js`.
