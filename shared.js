@@ -53,6 +53,14 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '24 maggio 2026 · Release 4.6.2',
+      items: [
+        'Rafforzato l’aggiornamento della PWA con controllo più stabile della cache applicativa.',
+        'Documentato il vincolo di pubblicazione in root del dominio con rewrite compatibili.',
+        'Reso più leggero il precache iniziale spostando gli asset più pesanti della bacheca premi al caricamento on-demand.'
+      ]
+    },
+    {
       date: '23 maggio 2026 · Release 4.6.1',
       items: [
         'Migliorata la navigazione offline anche per Privacy, Cookie e Supporto con Satispay dopo il primo caricamento.',
@@ -1316,7 +1324,9 @@
         };
 
         try {
-          const reg = await navigator.serviceWorker.register('/sw.js');
+          const reg = await navigator.serviceWorker.register('/sw.js', {
+            updateViaCache: 'none'
+          });
 
           if (reg.waiting) askToUpdate(reg.waiting);
 

@@ -210,6 +210,76 @@ check_runtime_split_json_only() {
 
 check_runtime_split_json_only
 
+check_pwa_root_only_contract() {
+  if grep -q "navigator.serviceWorker.register('/sw.js', {" shared.js \
+    && grep -q "updateViaCache: 'none'" shared.js \
+    && grep -q 'importScripts('\''/app-version.js'\'')' sw.js \
+    && grep -q '"start_url": "/"' manifest.json \
+    && grep -q '"scope": "/"' manifest.json; then
+    echo "[OK] PWA: root-only contract, scope and updateViaCache are aligned"
+  else
+    echo "[ERROR] PWA: root-only contract, scope or updateViaCache not aligned"
+    status=1
+  fi
+}
+
+check_pwa_cache_headers() {
+  if grep -qE '^/sw\.js$' _headers \
+    && grep -A1 '^/sw\.js$' _headers | grep -q 'Cache-Control: no-cache' \
+    && grep -qE '^/app-version\.js$' _headers \
+    && grep -A1 '^/app-version\.js$' _headers | grep -q 'Cache-Control: no-cache'; then
+    echo "[OK] PWA: no-cache headers found for sw.js and app-version.js"
+  else
+    echo "[ERROR] PWA: missing no-cache header for sw.js and/or app-version.js"
+    status=1
+  fi
+}
+
+check_pwa_version_bump_for_precache_changes() {
+  local relevant_paths=(
+    '*.html'
+    '*.css'
+    '*.js'
+    'js/*.js'
+    'json/*.json'
+    'assets/*'
+    'assets/**/*'
+    'icons/*'
+    'screenshots/*'
+    'manifest.json'
+    'robots.txt'
+    'sitemap.xml'
+  )
+  local changed_relevant=""
+
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    changed_relevant=$(git diff --name-only -- "${relevant_paths[@]}" || true)
+
+    if [[ -z "$changed_relevant" ]] && git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+      changed_relevant=$(git diff --name-only HEAD^ HEAD -- "${relevant_paths[@]}" || true)
+      if [[ -n "$changed_relevant" ]] && git diff --quiet HEAD^ HEAD -- app-version.js; then
+        echo "[ERROR] PWA: asset precache/cache-first changes detected without APP_VERSION bump"
+        echo "$changed_relevant"
+        status=1
+        return
+      fi
+    fi
+
+    if [[ -n "$changed_relevant" ]] && git diff --quiet -- app-version.js; then
+      echo "[ERROR] PWA: asset precache/cache-first changes detected without local APP_VERSION bump"
+      echo "$changed_relevant"
+      status=1
+      return
+    fi
+  fi
+
+  echo "[OK] PWA: APP_VERSION bump check passed for cache-relevant files"
+}
+
+check_pwa_root_only_contract
+check_pwa_cache_headers
+check_pwa_version_bump_for_precache_changes
+
 if node scripts/audit_questions_json.js; then
   echo "[OK] question JSON audit passed"
 else

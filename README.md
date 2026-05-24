@@ -56,6 +56,16 @@ I progressi vengono salvati localmente nel browser. Non c'è nessun server che l
 
 ---
 
+## Vincoli PWA e deploy
+
+- **Deploy target: root del dominio** — la PWA e pensata per essere pubblicata in root (`https://dominio.tld/`), non in sottocartella.
+- **Service Worker root-only** — la registrazione usa `/sw.js` e il manifest usa `start_url` e `scope` su `/`.
+- **Rewrite richiesti** — le clean URL (`/matematica`, `/faq`, `/premi`) richiedono regole compatibili con [_redirects](_redirects). GitHub Pages non copre questo scenario senza adattamenti esterni.
+- **Fallback offline attuale** — se una navigazione offline non trova la pagina richiesta, il Service Worker torna alla home. Non esiste ancora una pagina offline dedicata.
+- **Version bump obbligatorio** — quando cambiano asset precache o cache-first, va aggiornato `APP_VERSION` in [app-version.js](app-version.js) per invalidare la cache offline.
+
+---
+
 ## Stack tecnico
 
 ```
@@ -106,6 +116,8 @@ python3 -m http.server 8080
 Poi apri [http://localhost:8080](http://localhost:8080).
 
 **Nota:** il sito richiede un server HTTP — non funziona aprendo `index.html` direttamente nel browser (i Service Worker e le richieste JSON richiedono un'origine).
+
+**Nota PWA:** per riprodurre il comportamento reale offline/installabile serve anche un deploy in root con rewrite compatibili con [_redirects](_redirects).
 
 ---
 

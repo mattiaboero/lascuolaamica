@@ -82,6 +82,21 @@ Tutto nella memoria locale del browser, tutto locale, niente server:
 - **Fallback offline** sulle rotte pubbliche principali
 - Strategie differenziate per contenuti statici e dati quiz
 
+### Vincolo di deploy
+
+La PWA e progettata per un **deploy in root del dominio**. Questo vincolo e intenzionale oggi:
+
+- `shared.js` registra il Service Worker su `/sw.js`
+- `sw.js` importa `/app-version.js`
+- il manifest usa `start_url: "/"` e `scope: "/"`
+- le clean URL dipendono da rewrite lato hosting compatibili con [`_redirects`](../../_redirects)
+
+Di conseguenza, un deploy in sottocartella o su GitHub Pages non e considerato supportato senza adattamenti infrastrutturali o refactor dedicato.
+
+### Scelta offline attuale
+
+Per le navigazioni HTML la strategia e **Network First con fallback alla home**. Questo significa che offline, se una rotta non e disponibile in cache, il fallback finale torna a `/` invece di mostrare una pagina offline dedicata.
+
 ---
 
 ## Sicurezza

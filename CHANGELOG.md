@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.6.2 - 2026-05-24
+
+- PWA: registrazione del Service Worker aggiornata con `updateViaCache: "none"` per evitare update incompleti quando cambia `app-version.js`.
+- PWA: aggiunto `scope: "/"` al manifest e documentato esplicitamente il vincolo di deploy root-only con rewrite compatibili.
+- PWA: aggiunto `Cache-Control: no-cache` anche per `app-version.js` e rafforzati i controlli prepublish su contratto root-only, header cache e bump `APP_VERSION`.
+- Service Worker: rimossi dal precache iniziale gli asset reward più pesanti della bacheca, che restano caricati on-demand dalla pagina Premi.
+- Premi: allineati i meta Apple/A2HS di `premi.html` alla baseline delle altre pagine pubbliche.
+
 ## 4.6.1 - 2026-05-23
 
 - Service Worker: aggiunte al precache opzionale le route `/privacy`, `/cookie` e `/supporto-satispay` per supportare la navigazione offline dai link footer.

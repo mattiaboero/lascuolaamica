@@ -3,6 +3,7 @@
   "short_name": "Scuola Amica",
   "description": "Giochi educativi gratuiti per la scuola primaria: matematica, inglese, problemi, civica, geografia, storia, scienze e lingua italiana",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#a8edea",

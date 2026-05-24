@@ -42,6 +42,20 @@ bash scripts/export_for_cloudflare.sh
 
 Produce la directory `export/` con tutti i file pronti al deploy. `export/` è generata — non va versionata.
 
+### Vincolo PWA: deploy in root
+
+La configurazione PWA attuale e supportata con affidabilita solo quando il sito e pubblicato **in root del dominio**:
+
+- Service Worker registrato su `/sw.js`
+- manifest con `start_url: "/"` e `scope: "/"`
+- clean URL dipendenti da rewrite host compatibili con [`_redirects`](../../_redirects)
+
+Questo significa che un deploy in sottocartella o su GitHub Pages non e un target supportato al momento.
+
+### Aggiornamenti cache offline
+
+Quando cambiano risorse servite in precache o cache-first, bisogna aggiornare `APP_VERSION` in [`app-version.js`](../../app-version.js). Il controllo prepublish blocca le modifiche rilevanti se la versione non viene incrementata.
+
 **Backup manuale fuori repo:**
 
 ```bash
@@ -68,3 +82,5 @@ Parametri essenziali della build automatica:
 ## Aggiornamento Service Worker
 
 Dopo ogni release, la versione della cache offline va riallineata per forzare l’aggiornamento nei client già attivi. Questo controllo è incluso nel Runbook release.
+
+Il runtime registra il Service Worker con `updateViaCache: "none"` e sia [`sw.js`](../../sw.js) sia [`app-version.js`](../../app-version.js) devono essere serviti con `Cache-Control: no-cache`.
