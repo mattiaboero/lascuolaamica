@@ -92,51 +92,14 @@ const MASCOT_STATES = {
   celebrate: true
 };
 
-let PROBLEMS_POOL = [
-  { t: 'Fabio entra a scuola alle 8 ed esce alle 13. Quante ore resta a scuola?', a: 5 },
-  { t: 'Aurora ha 12 conchiglie rosa e 11 bianche. Quante conchiglie ha in tutto?', a: 23 },
-  { t: 'Un grappolo ha 22 acini. Lorenzo ne mangia 10. Quanti acini restano?', a: 12 },
-  { t: 'Italo ha vinto 8 medaglie quest\'anno e 13 negli anni precedenti. Quante medaglie ha in tutto?', a: 21 },
-  { t: 'Nel mazzo di Angelica ci sono 12 fiori gialli, 3 rossi e 2 arancioni. Quanti fiori ci sono in tutto?', a: 17 },
-  { t: 'Sofia perde 12 figurine e gliene restano 42. Quante figurine aveva all\'inizio?', a: 54 },
-  { t: 'Carla ha 13 rose e 3 appassiscono. Quante rose restano?', a: 10 },
-  { t: 'Greta ha il numero 27 al supermercato. Quale numero viene subito dopo?', a: 28 },
-  { t: 'Ginevra ha 31 anni e Christian 22. Quanti anni di differenza ci sono?', a: 9 },
-  { t: 'Nel reparto giocattoli ci sono 22 macchinine e 15 bambole. Quanti giocattoli in tutto?', a: 37 },
-  { t: 'Beppe ha 22 palline e ne regala 8. Quante palline ha ora?', a: 14 },
-  { t: 'Alessia aveva 13 euro, ne spende 7 e poi riceve 11 euro. Quanti euro ha ora?', a: 17 },
-  { t: 'Diego ha 36 figurine e ne regala la metà a Gaia. Quante figurine regala?', a: 18 },
-  { t: 'Paolo ha 24 euro, Elena ne ha la metà. Quanti euro ha in più Paolo?', a: 12 },
-  { t: 'Greta invita 19 bambini, ma 4 non possono venire. Quanti bambini andranno?', a: 15 },
-  { t: 'Davide ha 6 libri di fiabe, 2 di fantascienza e 7 di fumetti. Poi riceve 3 fumetti e 2 fiabe. Quanti libri ha in tutto?', a: 20 },
-  { t: 'Sara usa due confezioni da 6 uova ciascuna. Quante uova usa?', a: 12 },
-  { t: 'Luciano compra 12 mele, 4 pere e 6 arance. Quanta frutta compra in tutto?', a: 22 },
-  { t: 'A scuola ci sono 16 maestre e 7 vanno in pensione. Quante maestre restano?', a: 9 },
-  { t: 'Luciana ha una merendina per 6 amiche e 1 compagno. 2 si schiacciano. Quante merendine può usare?', a: 5 },
-  { t: 'Il casco costa 37 euro e Martina ha 25 euro. Quanti euro le mancano?', a: 12 },
-  { t: 'Emma ha 15 peluche e Giada 26. Quanti peluche di differenza ci sono?', a: 11 },
-  { t: 'Al corso di nuoto ci sono 32 bambini, 9 si sono già tuffati. Quanti si devono ancora tuffare?', a: 23 },
-  { t: 'Il libro di Elisa ha 184 pagine. È arrivata a pagina 112. Quante pagine restano?', a: 72 },
-  { t: 'Aldo ha 16 macchinine e Beppe 7. Quante macchinine hanno in tutto?', a: 23 }
-];
+let PROBLEMS_POOL = [];
 
 const BONUS_QUESTIONS = {
-  easy: [
-    { t: 'Bonus facile: 7 + 5 = ?', a: 12 },
-    { t: 'Bonus facile: 18 - 9 = ?', a: 9 },
-    { t: 'Bonus facile: 4 + 8 = ?', a: 12 }
-  ],
-  medium: [
-    { t: 'Bonus medio: 36 ÷ 6 = ?', a: 6 },
-    { t: 'Bonus medio: 9 × 7 = ?', a: 63 },
-    { t: 'Bonus medio: 45 - 17 = ?', a: 28 }
-  ],
-  hard: [
-    { t: 'Bonus difficile: (18 × 3) - 17 = ?', a: 37 },
-    { t: 'Bonus difficile: 144 ÷ 12 + 19 = ?', a: 31 },
-    { t: 'Bonus difficile: (25 + 35) ÷ 2 = ?', a: 30 }
-  ]
+  easy: [],
+  medium: [],
+  hard: []
 };
+const BONUS_TYPES = new Set(['easy', 'medium', 'hard']);
 
 let questions = [];
 let curQ = 0;
@@ -173,6 +136,15 @@ function safeInt(value, fallback = 0) {
 function safeText(value, maxLen) {
   const txt = String(value ?? '').replace(/\s+/g, ' ').trim();
   return txt.slice(0, maxLen);
+}
+
+function resolveBonusType(row) {
+  const raw = String(row?.bonusRaw || '').trim().toLowerCase();
+  if (BONUS_TYPES.has(raw)) return raw;
+  const diff = Number(row?.difficulty) || 1;
+  if (diff >= 3) return 'hard';
+  if (diff === 2) return 'medium';
+  return 'easy';
 }
 
 function normalizeClassKey(value) {
@@ -550,10 +522,25 @@ async function hydrateProblemsFromJson() {
   const questionsLoader = getQuestionsLoader();
   if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
   try {
-    const rows = await questionsLoader.getSubjectRows('problemi', { path: 'json/index.json' });
+    const rows = await questionsLoader.getSubjectRows('problemi', {
+      path: 'json/index.json',
+      includeBonusRows: true
+    });
     if (!Array.isArray(rows) || !rows.length) return;
-    const next = rows
-      .map((row) => {
+    const next = [];
+    const nextBonus = { easy: [], medium: [], hard: [] };
+    rows.forEach((row) => {
+      if (row && row.bonus === true) {
+        const answer = String(row.answer || '').trim();
+        if (!answer) return;
+        const bonusType = resolveBonusType(row);
+        nextBonus[bonusType].push({
+          t: String(row.question || '').trim(),
+          a: answer
+        });
+        return;
+      }
+      const mapped = (() => {
         const qText = String(row.question || '').trim();
         const answer = String(row.answer || '').trim();
         const opts = Array.isArray(row.options)
@@ -568,9 +555,13 @@ async function hydrateProblemsFromJson() {
           g: Number(row.class) || null,
           area: String(row.area || '').trim().toLowerCase() || 'problem'
         };
-      })
-      .filter(Boolean);
-    if (next.length) PROBLEMS_POOL = next;
+      })();
+      if (mapped) next.push(mapped);
+    });
+    PROBLEMS_POOL = next;
+    Object.keys(nextBonus).forEach((type) => {
+      BONUS_QUESTIONS[type] = nextBonus[type];
+    });
   } catch (e) { debugWarn('runtime', e); }
 }
 
@@ -881,6 +872,7 @@ function openBonusPick() {
 }
 
 function openBonusQuestion(type) {
+  if (!BONUS_QUESTIONS[type] || !BONUS_QUESTIONS[type].length) return;
   bonusType = type;
   const factor = BONUS_FACTORS[type];
   bonusFactor = factor;

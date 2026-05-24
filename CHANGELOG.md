@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## 4.6.8 - 2026-05-24
+### Changed
+- refactor: migrazione civica/inglese/problemi a JSON-only con bonus rows da dataset
+- dataset totale: 7.348 -> 7.375 domande
+
 ## 4.6.7 - 2026-05-24
 
 - docs: aggiunta sezione header HTTP critici per i dataset

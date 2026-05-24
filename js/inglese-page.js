@@ -61,122 +61,9 @@ function getQuestionsLoader() {
 
 
 let QB = {
-  1: [
-    // Colors
-    {e:'🔴',p:'Come si dice "rosso" in inglese?',a:'red',d:['blue','green','yellow']},
-    {e:'🔵',p:'Come si dice "blu" in inglese?',a:'blue',d:['red','green','purple']},
-    {e:'🟢',p:'Come si dice "verde" in inglese?',a:'green',d:['blue','yellow','red']},
-    {e:'🟡',p:'Come si dice "giallo" in inglese?',a:'yellow',d:['orange','green','blue']},
-    {e:'🟠',p:'Come si dice "arancione" in inglese?',a:'orange',d:['yellow','red','pink']},
-    {e:'🟣',p:'Come si dice "viola" in inglese?',a:'purple',d:['pink','blue','orange']},
-    {e:'🩷',p:'Come si dice "rosa" in inglese?',a:'pink',d:['red','purple','orange']},
-    {e:'⚫',p:'Come si dice "nero" in inglese?',a:'black',d:['white','grey','brown']},
-    {e:'⚪',p:'Come si dice "bianco" in inglese?',a:'white',d:['black','grey','yellow']},
-    // Animals
-    {e:'🐱',p:'Come si dice "gatto" in inglese?',a:'cat',d:['dog','bird','fish']},
-    {e:'🐶',p:'Come si dice "cane" in inglese?',a:'dog',d:['cat','pig','cow']},
-    {e:'🐦',p:'Come si dice "uccello" in inglese?',a:'bird',d:['fish','frog','cat']},
-    {e:'🐟',p:'Come si dice "pesce" in inglese?',a:'fish',d:['bird','frog','duck']},
-    {e:'🐰',p:'Come si dice "coniglio" in inglese?',a:'rabbit',d:['mouse','cat','hamster']},
-    {e:'🐄',p:'Come si dice "mucca" in inglese?',a:'cow',d:['pig','horse','sheep']},
-    {e:'🐷',p:'Come si dice "maiale" in inglese?',a:'pig',d:['cow','duck','rabbit']},
-    {e:'🦆',p:'Come si dice "papera" in inglese?',a:'duck',d:['bird','frog','fish']},
-    {e:'🐴',p:'Come si dice "cavallo" in inglese?',a:'horse',d:['cow','pig','rabbit']},
-    // Body parts
-    {e:'👁️',p:'Come si dice "occhio" in inglese?',a:'eye',d:['ear','nose','mouth']},
-    {e:'👃',p:'Come si dice "naso" in inglese?',a:'nose',d:['eye','ear','mouth']},
-    {e:'👄',p:'Come si dice "bocca" in inglese?',a:'mouth',d:['nose','eye','ear']},
-    {e:'👂',p:'Come si dice "orecchio" in inglese?',a:'ear',d:['eye','nose','mouth']},
-    {e:'✋',p:'Come si dice "mano" in inglese?',a:'hand',d:['foot','arm','leg']},
-    {e:'🦶',p:'Come si dice "piede" in inglese?',a:'foot',d:['hand','arm','leg']},
-    {e:'💪',p:'Come si dice "braccio" in inglese?',a:'arm',d:['leg','foot','hand']},
-    // Family
-    {e:'👩',p:'Come si dice "mamma" in inglese?',a:'mum',d:['dad','sister','aunt']},
-    {e:'👨',p:'Come si dice "papà" in inglese?',a:'dad',d:['mum','uncle','grandpa']},
-    {e:'👧',p:'Come si dice "sorella" in inglese?',a:'sister',d:['brother','cousin','friend']},
-    {e:'👦',p:'Come si dice "fratello" in inglese?',a:'brother',d:['sister','cousin','friend']},
-    // Greetings & numbers
-    {e:'👋',p:'Come si dice "ciao" in inglese?',a:'hello',d:['goodbye','thanks','please']},
-    {e:'🙏',p:'Come si dice "grazie" in inglese?',a:'thank you',d:['please','sorry','hello']},
-    {e:'1️⃣',p:'Come si dice "uno" in inglese?',a:'one',d:['two','three','four']},
-    {e:'2️⃣',p:'Come si dice "due" in inglese?',a:'two',d:['one','three','five']},
-    {e:'5️⃣',p:'Come si dice "cinque" in inglese?',a:'five',d:['four','six','three']},
-    {e:'🔟',p:'Come si dice "dieci" in inglese?',a:'ten',d:['eight','nine','seven']}
-  ],
-  2: [
-    // Days
-    {e:'📅',p:'Come si dice "lunedì" in inglese?',a:'Monday',d:['Tuesday','Wednesday','Sunday']},
-    {e:'📅',p:'Come si dice "martedì" in inglese?',a:'Tuesday',d:['Monday','Wednesday','Thursday']},
-    {e:'📅',p:'Come si dice "mercoledì" in inglese?',a:'Wednesday',d:['Tuesday','Thursday','Friday']},
-    {e:'📅',p:'Come si dice "giovedì" in inglese?',a:'Thursday',d:['Wednesday','Friday','Monday']},
-    {e:'📅',p:'Come si dice "venerdì" in inglese?',a:'Friday',d:['Thursday','Saturday','Monday']},
-    {e:'📅',p:'Come si dice "sabato" in inglese?',a:'Saturday',d:['Friday','Sunday','Monday']},
-    {e:'📅',p:'Come si dice "domenica" in inglese?',a:'Sunday',d:['Saturday','Monday','Friday']},
-    // Weather
-    {e:'☀️',p:'Che tempo fa? Scegli la risposta: "It is..."',a:'sunny',d:['rainy','cloudy','snowy']},
-    {e:'🌧️',p:'Che tempo fa? Scegli la risposta: "It is..."',a:'rainy',d:['sunny','cloudy','windy']},
-    {e:'❄️',p:'Che tempo fa? Scegli la risposta: "It is..."',a:'snowy',d:['rainy','cloudy','foggy']},
-    {e:'☁️',p:'Che tempo fa? Scegli la risposta: "It is..."',a:'cloudy',d:['sunny','windy','snowy']},
-    {e:'💨',p:'Che tempo fa? Scegli la risposta: "It is..."',a:'windy',d:['cloudy','sunny','rainy']},
-    // Food
-    {e:'🍎',p:'Come si dice "mela" in inglese?',a:'apple',d:['banana','orange','pear']},
-    {e:'🍌',p:'Come si dice "banana" in inglese?',a:'banana',d:['apple','orange','pear']},
-    {e:'🍕',p:'Come si dice "pizza" in inglese?',a:'pizza',d:['pasta','sandwich','cake']},
-    {e:'🥛',p:'Come si dice "latte" in inglese?',a:'milk',d:['water','juice','tea']},
-    {e:'🍞',p:'Come si dice "pane" in inglese?',a:'bread',d:['pasta','rice','cake']},
-    {e:'💧',p:'Come si dice "acqua" in inglese?',a:'water',d:['milk','juice','tea']},
-    {e:'🎂',p:'Come si dice "torta" in inglese?',a:'cake',d:['bread','pie','cookie']},
-    {e:'🥚',p:'Come si dice "uovo" in inglese?',a:'egg',d:['cheese','butter','milk']},
-    // Months
-    {e:'🗓️',p:'Come si dice "gennaio" in inglese?',a:'January',d:['February','March','June']},
-    {e:'🗓️',p:'Come si dice "giugno" in inglese?',a:'June',d:['July','January','March']},
-    {e:'🗓️',p:'Come si dice "settembre" in inglese?',a:'September',d:['October','August','November']},
-    {e:'🗓️',p:'Come si dice "dicembre" in inglese?',a:'December',d:['November','January','October']},
-    // Grammar
-    {e:'👤',p:'Completa: "I ___ eight years old."',a:'am',d:['is','are','be']},
-    {e:'👤👤',p:'Completa: "You ___ my best friend."',a:'are',d:['am','is','be']},
-    {e:'👦',p:'Completa: "He ___ very tall."',a:'is',d:['am','are','be']},
-    {e:'👧',p:'Completa: "She ___ a little sister."',a:'has got',d:['have got','is got','are got']},
-    {e:'🌡️',p:'Come si dice "caldo" in inglese?',a:'hot',d:['cold','warm','cool']},
-    {e:'🌡️',p:'Come si dice "freddo" in inglese?',a:'cold',d:['hot','warm','cool']}
-  ],
-  3: [
-    // Daily routine
-    {e:'🌅',p:'Come si traduce "mi sveglio"?',a:'I wake up',d:['I go to bed','I have breakfast','I go to school']},
-    {e:'🥣',p:'Come si traduce "faccio colazione"?',a:'I have breakfast',d:['I have lunch','I have dinner','I wake up']},
-    {e:'🏫',p:'Come si traduce "vado a scuola"?',a:'I go to school',d:['I go to bed','I go home','I stay home']},
-    {e:'📚',p:'Come si traduce "faccio i compiti"?',a:'I do my homework',d:['I read a book','I play games','I do sport']},
-    {e:'🍽️',p:'Come si traduce "ceno"?',a:'I have dinner',d:['I have lunch','I have breakfast','I cook']},
-    {e:'🌙',p:'Come si traduce "vado a letto"?',a:'I go to bed',d:['I wake up','I go to school','I have dinner']},
-    // Sports
-    {e:'⚽',p:'Come si traduce "gioco a calcio"?',a:'I play football',d:['I play basketball','I play tennis','I swim']},
-    {e:'🏊',p:'Come si traduce "nuoto"?',a:'I swim',d:['I run','I cycle','I jump']},
-    {e:'🏀',p:'Come si traduce "gioco a basket"?',a:'I play basketball',d:['I play football','I play tennis','I run']},
-    {e:'🚴',p:'Come si traduce "vado in bicicletta"?',a:'I cycle',d:['I run','I swim','I skate']},
-    {e:'🎾',p:'Come si traduce "gioco a tennis"?',a:'I play tennis',d:['I play football','I play golf','I swim']},
-    {e:'🏃',p:'Come si traduce "corro"?',a:'I run',d:['I swim','I jump','I cycle']},
-    // Home
-    {e:'🍳',p:'Come si traduce "la cucina"?',a:'kitchen',d:['bedroom','bathroom','living room']},
-    {e:'🛏️',p:'Come si traduce "la camera da letto"?',a:'bedroom',d:['kitchen','bathroom','living room']},
-    {e:'🚿',p:'Come si traduce "il bagno"?',a:'bathroom',d:['kitchen','bedroom','garden']},
-    {e:'🌿',p:'Come si traduce "il giardino"?',a:'garden',d:['kitchen','living room','bedroom']},
-    {e:'🛋️',p:'Come si traduce "il salotto"?',a:'living room',d:['bedroom','kitchen','bathroom']},
-    // Hobbies
-    {e:'📖',p:'Come si traduce "mi piace leggere"?',a:'I like reading',d:['I like drawing','I like dancing','I like cooking']},
-    {e:'✏️',p:'Come si traduce "mi piace disegnare"?',a:'I like drawing',d:['I like reading','I like dancing','I like singing']},
-    {e:'🍳',p:'Come si traduce "mi piace cucinare"?',a:'I like cooking',d:['I like eating','I like baking','I like cleaning']},
-    // Questions & phrases
-    {e:'❓',p:'Cosa significa "What\'s your name?"',a:'Come ti chiami?',d:['Quanti anni hai?','Come stai?','Dove abiti?']},
-    {e:'🎂',p:'Cosa significa "How old are you?"',a:'Quanti anni hai?',d:['Come ti chiami?','Come stai?','Dove vivi?']},
-    {e:'🏠',p:'Cosa significa "Where do you live?"',a:'Dove abiti?',d:['Come ti chiami?','Quanti anni hai?','Cosa ti piace?']},
-    {e:'🍕',p:'Cosa significa "Do you like pizza?"',a:'Ti piace la pizza?',d:['Mangi la pizza?','Hai la pizza?','Vuoi la pizza?']},
-    {e:'⏰',p:'Cosa significa "What time is it?"',a:'Che ore sono?',d:['Che giorno è?','Che tempo fa?','Dove sei?']},
-    {e:'⚽',p:'Cosa significa "She plays football"?',a:'Lei gioca a calcio',d:['Lei nuota','Lei corre','Lei balla']},
-    {e:'🌅',p:'Cosa significa "I wake up at seven"?',a:'Mi sveglio alle sette',d:['Vado a letto alle sette','Faccio colazione alle sette','Vado a scuola alle sette']},
-    {e:'📅',p:'Cosa significa "Every day"?',a:'Ogni giorno',d:['Ieri','Domani','Oggi']},
-    {e:'🏫',p:'Cosa significa "I go to school by bus"?',a:'Vado a scuola in autobus',d:['Vado a casa in autobus','Torno da scuola','Aspetto l\'autobus']},
-    {e:'💪',p:'Cosa significa "I can swim"?',a:'So nuotare',d:['Mi piace nuotare','Voglio nuotare','Ho nuotato']}
-  ]
+  1: [],
+  2: [],
+  3: []
 };
 
 const ENGLISH_LEVEL_FROM_SUBAREA = {
@@ -236,22 +123,11 @@ const METRICS_KEY = 'englishAdventure_quality_v1';
 const METRICS_MAX_SESSIONS = 180;
 const METRICS_ROLLING_WINDOW = 30;
 const BONUS_Q = {
-  easy: [
-    { q: 'Bonus easy: "gatto" in inglese?', a: 'cat', d: ['dog', 'fish', 'bird'] },
-    { q: 'Bonus easy: "rosso" in inglese?', a: 'red', d: ['blue', 'green', 'yellow'] },
-    { q: 'Bonus easy: "ciao" in inglese?', a: 'hello', d: ['goodbye', 'thanks', 'please'] }
-  ],
-  medium: [
-    { q: 'Bonus medium: completa "She ___ happy."', a: 'is', d: ['am', 'are', 'be'] },
-    { q: 'Bonus medium: "venerdì" in inglese?', a: 'Friday', d: ['Thursday', 'Saturday', 'Monday'] },
-    { q: 'Bonus medium: "acqua" in inglese?', a: 'water', d: ['milk', 'juice', 'tea'] }
-  ],
-  hard: [
-    { q: 'Bonus hard: traduci "I wake up at seven".', a: 'Mi sveglio alle sette', d: ['Vado a letto alle sette', 'Faccio colazione alle sette', 'Vado a scuola alle sette'] },
-    { q: 'Bonus hard: traduci "Where do you live?"', a: 'Dove abiti?', d: ['Come ti chiami?', 'Quanti anni hai?', 'Come stai?'] },
-    { q: 'Bonus hard: traduci "I can swim".', a: 'So nuotare', d: ['Voglio nuotare', 'Mi piace nuotare', 'Ho nuotato'] }
-  ]
+  easy: [],
+  medium: [],
+  hard: []
 };
+const BONUS_TYPES = new Set(['easy', 'medium', 'hard']);
 
 // ============================================================
 // STATE
@@ -264,6 +140,15 @@ let selectedClass='3';
 let playWindowExpiryLock = false;
 let confettiTimeouts = [];
 let gameStartedAt = 0;
+
+function resolveBonusType(row) {
+  const raw = String(row?.bonusRaw || '').trim().toLowerCase();
+  if (BONUS_TYPES.has(raw)) return raw;
+  const diff = Number(row?.difficulty) || 1;
+  if (diff >= 3) return 'hard';
+  if (diff === 2) return 'medium';
+  return 'easy';
+}
 
 function setMascot(state) {
   const el = document.getElementById('mascot');
@@ -753,15 +638,31 @@ async function hydrateEnglishFromJson() {
   const questionsLoader = getQuestionsLoader();
   if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
   try {
-    const rows = await questionsLoader.getSubjectRows('inglese', { path: 'json/index.json' });
+    const rows = await questionsLoader.getSubjectRows('inglese', {
+      path: 'json/index.json',
+      includeBonusRows: true
+    });
     if (!Array.isArray(rows) || !rows.length) return;
 
     const next = { 1: [], 2: [], 3: [] };
+    const nextBonus = { easy: [], medium: [], hard: [] };
     rows.forEach((row) => {
       const question = String(row.question || '').trim();
       const answer = String(row.answer || '').trim();
       const opts = Array.isArray(row.options) ? row.options.map((opt) => String(opt || '').trim()) : [];
       if (!question || !answer || opts.length < 4) return;
+
+      if (row && row.bonus === true) {
+        const bonusType = resolveBonusType(row);
+        const distractors = opts.filter((opt) => opt && opt !== answer).slice(0, 3);
+        if (distractors.length < 3) return;
+        nextBonus[bonusType].push({
+          q: question,
+          a: answer,
+          d: distractors
+        });
+        return;
+      }
 
       const sub = String(row.subarea || '').trim().toLowerCase();
       let lvl = ENGLISH_LEVEL_FROM_SUBAREA[sub];
@@ -785,13 +686,14 @@ async function hydrateEnglishFromJson() {
       });
     });
 
-    if (next[1].length || next[2].length || next[3].length) {
-      QB = {
-        1: next[1].length ? next[1] : QB[1],
-        2: next[2].length ? next[2] : QB[2],
-        3: next[3].length ? next[3] : QB[3]
-      };
-    }
+    QB = {
+      1: next[1],
+      2: next[2],
+      3: next[3]
+    };
+    Object.keys(nextBonus).forEach((type) => {
+      BONUS_Q[type] = nextBonus[type];
+    });
   } catch (e) { debugWarn('runtime', e); }
 }
 
@@ -1141,7 +1043,7 @@ function openBonusPick() {
 }
 
 function openBonusQuestion(type) {
-  if (!type || !BONUS_Q[type]) return;
+  if (!type || !BONUS_Q[type] || !BONUS_Q[type].length) return;
   bonusType = type;
   bonusFactor = BONUS_FACTORS[type];
   const q = BONUS_Q[type][Math.floor(Math.random() * BONUS_Q[type].length)];

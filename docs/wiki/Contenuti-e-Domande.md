@@ -1,6 +1,6 @@
 # Contenuti e domande
 
-Il dataset conta **7.348 domande** su 8 materie, per classi dalla 2ª alla 5ª. Questa pagina descrive come sono strutturate, come vengono generate e come mantenerle.
+Il dataset conta **7.375 domande** su 8 materie, per classi dalla 2ª alla 5ª. Questa pagina descrive come sono strutturate, come vengono generate e come mantenerle.
 
 ---
 
@@ -33,6 +33,8 @@ Ogni materia ha un file `json/<materia>.json` con questa struttura:
 ```
 
 L’indice dati tiene il conteggio aggiornato per materia e il timestamp di generazione.
+
+Le bonus questions non vivono più inline nei file pagina: stanno negli stessi JSON materia, con `bonus: true` e `bonusRaw` impostato su `easy`, `medium` o `hard`.
 
 ---
 

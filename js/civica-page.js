@@ -109,73 +109,18 @@ const MASCOT_STATES = {
 };
 
 const BANK = {
-  rules: [
-    { q: 'Perché sono importanti le regole a scuola e a casa?', a: 'Per vivere bene insieme e rispettarsi', d: ['Per perdere tempo', 'Per fare confusione', 'Perché lo decide internet'] },
-    { q: 'Chi è il Capo dello Stato in Italia?', a: 'Il Presidente della Repubblica', d: ['Il Sindaco del paese', 'Il Preside della scuola', 'Il Presidente della classe'] },
-    { q: 'Quali sono i colori della bandiera italiana?', a: 'Verde, bianco e rosso', d: ['Blu, bianco e rosso', 'Verde, giallo e rosso', 'Rosso, nero e bianco'] },
-    { q: 'Cosa significa “diritto”?', a: 'Una possibilità importante da rispettare per tutti', d: ['Una punizione', 'Un gioco di squadra', 'Una regola solo per adulti'] },
-    { q: 'Cosa significa “dovere”?', a: 'Un impegno da rispettare verso gli altri', d: ['Una scelta sempre facoltativa', 'Una gara sportiva', 'Un premio a sorpresa'] },
-    { q: 'Qual è un diritto fondamentale dei bambini?', a: 'Andare a scuola', d: ['Saltare sempre i compiti', 'Guidare l’auto', 'Comprare qualsiasi cosa'] },
-    { q: 'Dove sono raccolte le regole più importanti dell’Italia?', a: 'Nella Costituzione', d: ['Nel diario scolastico', 'Nel menù della mensa', 'In un cartone animato'] },
-    { q: 'Chi deve rispettare le regole comuni?', a: 'Tutte le persone', d: ['Solo i bambini', 'Solo gli insegnanti', 'Solo chi vuole'] },
-    { q: 'Cosa significa rispettare il turno di parola?', a: 'Ascoltare e aspettare il proprio momento', d: ['Parlare sopra gli altri', 'Gridare più forte', 'Non ascoltare nessuno'] },
-    { q: 'Perché è utile decidere regole di classe insieme?', a: 'Per collaborare meglio e stare bene tutti', d: ['Per litigare di più', 'Per non fare mai attività', 'Per scegliere solo per un gruppo'] }
-  ],
-  env: [
-    { q: 'Dove si buttano le bottiglie di plastica?', a: 'Nel cassonetto della plastica', d: ['Nel vetro', 'Nell’indifferenziata sempre', 'Per strada'] },
-    { q: 'Come possiamo evitare lo spreco di acqua?', a: 'Chiudendo il rubinetto quando ci laviamo i denti', d: ['Lasciandolo sempre aperto', 'Usando due rubinetti insieme', 'Aspettando che qualcuno lo chiuda'] },
-    { q: 'Cosa significa riciclare un oggetto?', a: 'Dare una seconda vita ai materiali', d: ['Buttarlo subito', 'Nasconderlo', 'Colorarlo e basta'] },
-    { q: 'Perché è importante non gettare rifiuti per strada?', a: 'Per rispettare ambiente e animali', d: ['Perché i rifiuti spariscono da soli', 'Per fare prima', 'Perché non ci sono cestini'] },
-    { q: 'Cosa fai quando esci da una stanza illuminata?', a: 'Spengo la luce se non serve', d: ['Lascio tutto acceso', 'Accendo altre luci', 'Apro solo il frigorifero'] },
-    { q: 'Quale scelta riduce la plastica monouso?', a: 'Usare una borraccia riutilizzabile', d: ['Comprare più bottigliette', 'Usare sempre bicchieri usa e getta', 'Buttare la borraccia'] },
-    { q: 'Dove si conferiscono quaderni e fogli di carta?', a: 'Nel contenitore carta e cartone', d: ['Nel contenitore organico', 'Nel vetro', 'Nel contenitore della plastica'] },
-    { q: 'Cos’è la raccolta differenziata?', a: 'Separare i rifiuti per materiale', d: ['Mescolare tutti i rifiuti', 'Lavare il cestino', 'Buttare solo la domenica'] },
-    { q: 'In un parco naturale, quale comportamento è corretto?', a: 'Non lasciare rifiuti e rispettare gli animali', d: ['Dare da mangiare a caso a tutti gli animali', 'Strappare piante', 'Gridare vicino ai nidi'] },
-    { q: 'Per un tragitto breve, quale scelta è più sostenibile?', a: 'Andare a piedi o in bicicletta', d: ['Prendere sempre l’auto', 'Accendere il motore in sosta', 'Usare due mezzi insieme senza motivo'] }
-  ],
-  digital: [
-    { q: 'È giusto condividere le foto dei compagni senza permesso?', a: 'No, bisogna rispettare la privacy', d: ['Sì, sempre', 'Solo se la foto è divertente', 'Sì, se lo chiede un amico online'] },
-    { q: 'Come ci si comporta online secondo la netiquette?', a: 'Con gentilezza e rispetto', d: ['Con offese e prese in giro', 'Scrivendo sempre in maiuscolo', 'Rispondendo in modo aggressivo'] },
-    { q: 'Cosa devi fare se vedi qualcosa che ti spaventa su internet?', a: 'Dirlo subito a un adulto', d: ['Tenere tutto segreto', 'Condividerlo con tutti', 'Continuare a guardare'] },
-    { q: "Cos'è importante fare con la password?", a: 'Tenerla segreta e difficile da indovinare', d: ['Scriverla ovunque', 'Dirla a chiunque', 'Usare sempre 1234'] },
-    { q: 'Se ricevi richiesta di amicizia da uno sconosciuto?', a: 'Non accetto e avviso un adulto', d: ['Accetto subito', 'Invio foto personali', 'Do il mio indirizzo'] },
-    { q: 'Prima di cliccare un link strano, cosa fai?', a: 'Chiedo a un adulto o insegnante', d: ['Clicco senza leggere', 'Lo inoltro a tutti', 'Disattivo il dispositivo'] },
-    { q: 'Se ricevi un messaggio offensivo online?', a: 'Non rispondo e lo segnalo a un adulto', d: ['Rispondo con un insulto', 'Lo pubblico ovunque', 'Cancello tutto e non dico niente'] },
-    { q: 'Cosa aiuta a usare bene il tempo davanti allo schermo?', a: 'Fare pause e alternare attività', d: ['Restare online senza fermarsi', 'Saltare il sonno', 'Usare dispositivi mentre si mangia sempre'] },
-    { q: 'È corretto pubblicare nome, indirizzo e telefono online?', a: 'No, i dati personali vanno protetti', d: ['Sì, così tutti ti trovano', 'Solo nei commenti pubblici', 'Sì, se lo fanno gli altri'] },
-    { q: 'Cosa significa “privacy”?', a: 'Proteggere le proprie informazioni personali', d: ['Nascondere i compiti', 'Avere sempre il telefono acceso', 'Usare solo emoji'] }
-  ],
-  road: [
-    { q: 'Cosa significa il semaforo pedonale rosso?', a: 'Bisogna fermarsi e aspettare', d: ['Si attraversa correndo', 'Si può passare se non ci sono auto', 'Si attraversa in gruppo senza guardare'] },
-    { q: 'Quali sono le tre parole magiche della gentilezza?', a: 'Grazie, per favore, scusa', d: ['Ciao, pronto, ok', 'Vai, corri, salta', 'Sì, no, forse'] },
-    { q: 'Dove è più sicuro attraversare la strada?', a: 'Sulle strisce pedonali', d: ['In mezzo alla strada', 'Dietro un autobus fermo', 'Dove capita'] },
-    { q: 'In bicicletta, quale protezione è importante?', a: 'Il casco', d: ['Gli occhiali da sole soltanto', 'Nessuna protezione', 'Solo uno zaino'] },
-    { q: 'Prima di attraversare la strada cosa fai?', a: 'Guardo a sinistra, a destra e ancora a sinistra', d: ['Corro subito', 'Guardo solo il cellulare', 'Ascolto musica ad alto volume'] },
-    { q: 'In auto, per i bambini qual è il comportamento corretto?', a: 'Usare seggiolino e cintura', d: ['Stare in piedi', 'Sedersi davanti senza cintura', 'Cambiare posto durante il viaggio'] },
-    { q: 'Se senti un’ambulanza con sirena, cosa si deve fare?', a: 'Lasciare il passaggio ai mezzi di soccorso', d: ['Ignorarla', 'Andare più veloce', 'Fermarsi in mezzo alla strada'] },
-    { q: 'Un compagno è in difficoltà: come ti comporti?', a: 'Lo aiuto con gentilezza', d: ['Lo prendo in giro', 'Faccio finta di niente', 'Lo allontano'] },
-    { q: 'Su autobus o tram, con persone anziane o fragili?', a: 'Cedo il posto se serve', d: ['Resto seduto senza guardare', 'Spingo per passare', 'Metto lo zaino sul sedile libero'] },
-    { q: 'Quando usi monopattino o bici vicino ai pedoni?', a: 'Rallento e rispetto le regole', d: ['Corro al massimo', 'Zigzago tra le persone', 'Uso il telefono mentre guido'] }
-  ]
+  rules: [],
+  env: [],
+  digital: [],
+  road: []
 };
 
 const BONUS_QUESTIONS = {
-  easy: [
-    { q: 'Bonus facile: quali sono i colori della bandiera italiana?', a: 'Verde, bianco e rosso', d: ['Blu, bianco e rosso', 'Verde, giallo e rosso', 'Rosso, nero e bianco'] },
-    { q: 'Bonus facile: semaforo pedonale rosso?', a: 'Mi fermo e aspetto', d: ['Corro', 'Passo se ho fretta', 'Guardo il telefono e passo'] },
-    { q: 'Bonus facile: dove butto una bottiglia di plastica?', a: 'Nel contenitore della plastica', d: ['Nel vetro', 'Nell’organico', 'Per strada'] }
-  ],
-  medium: [
-    { q: 'Bonus medio: se online qualcuno ti chiede una foto privata?', a: 'Non la invio e avviso un adulto', d: ['La invio subito', 'La pubblico per tutti', 'La mando a uno sconosciuto'] },
-    { q: 'Bonus medio: quale scelta evita spreco d’acqua?', a: 'Chiudo il rubinetto mentre mi lavo i denti', d: ['Lascio scorrere sempre', 'Apro due rubinetti', 'Uso più acqua possibile'] },
-    { q: 'Bonus medio: cosa significa diritto allo studio?', a: 'Tutti i bambini possono andare a scuola', d: ['Solo alcuni bambini', 'Solo quando piove', 'Solo se lo decide un amico'] }
-  ],
-  hard: [
-    { q: 'Bonus difficile: trovi un commento offensivo in chat di classe. Cosa fai?', a: 'Resto gentile, non rispondo male e avviso un adulto', d: ['Insulto di più', 'Condivido il messaggio ovunque', 'Fingo di essere un altro utente'] },
-    { q: 'Bonus difficile: al parco vedi rifiuti vicino a un cestino pieno. Cosa fai?', a: 'Li raccolgo se posso in sicurezza o avviso un adulto', d: ['Li lascio lì', 'Li sposto in mezzo al prato', 'Li nascondo sotto una panchina'] },
-    { q: 'Bonus difficile: in uscita da scuola gruppo attraversa sulle strisce con il semaforo pedonale rosso. Cosa scegli?', a: 'Aspetto il verde e attraverso con attenzione', d: ['Seguo il gruppo senza guardare', 'Attraverso correndo col telefono in mano', 'Passo in diagonale dove non ci sono strisce'] }
-  ]
+  easy: [],
+  medium: [],
+  hard: []
 };
+const BONUS_TYPES = new Set(['easy', 'medium', 'hard']);
 
 let selectedArea = 'mixed';
 let selectedClass = '3';
@@ -215,6 +160,15 @@ function safeInt(value, fallback = 0) {
 function safeText(value, maxLen) {
   const txt = String(value ?? '').replace(/\s+/g, ' ').trim();
   return txt.slice(0, maxLen);
+}
+
+function resolveBonusType(row) {
+  const raw = String(row?.bonusRaw || '').trim().toLowerCase();
+  if (BONUS_TYPES.has(raw)) return raw;
+  const diff = Number(row?.difficulty) || 1;
+  if (diff >= 3) return 'hard';
+  if (diff === 2) return 'medium';
+  return 'easy';
 }
 
 function normalizeClassKey(value) {
@@ -595,11 +549,29 @@ async function hydrateCivicaBankFromJson() {
   const questionsLoader = getQuestionsLoader();
   if (!questionsLoader || typeof questionsLoader.getSubjectRows !== 'function') return;
   try {
-    const rows = await questionsLoader.getSubjectRows('civica', { path: 'json/index.json' });
+    const rows = await questionsLoader.getSubjectRows('civica', {
+      path: 'json/index.json',
+      includeBonusRows: true
+    });
     if (!Array.isArray(rows) || !rows.length) return;
 
     const next = { rules: [], env: [], digital: [], road: [] };
+    const nextBonus = { easy: [], medium: [], hard: [] };
     rows.forEach((row) => {
+      if (row && row.bonus === true) {
+        const bonusType = resolveBonusType(row);
+        const answer = String(row.answer || '').trim();
+        const distractors = Array.isArray(row.options)
+          ? row.options.map((opt) => String(opt || '').trim()).filter((opt) => opt && opt !== answer).slice(0, 3)
+          : [];
+        if (!answer || distractors.length < 3) return;
+        nextBonus[bonusType].push({
+          q: String(row.question || '').trim(),
+          a: answer,
+          d: distractors
+        });
+        return;
+      }
       const targetArea = CIVICA_SOURCE_AREA_MAP[String(row.area || '').trim().toLowerCase()];
       if (!targetArea || !Array.isArray(row.options) || row.options.length < 4) return;
       const answer = String(row.answer || '').trim();
@@ -618,7 +590,10 @@ async function hydrateCivicaBankFromJson() {
     });
 
     Object.keys(next).forEach((area) => {
-      if (next[area].length) BANK[area] = next[area];
+      BANK[area] = next[area];
+    });
+    Object.keys(nextBonus).forEach((type) => {
+      BONUS_QUESTIONS[type] = nextBonus[type];
     });
   } catch (e) { debugWarn('runtime', e); }
 }
@@ -971,7 +946,7 @@ function openBonusPick() {
 }
 
 function openBonusQuestion(type) {
-  if (!BONUS_QUESTIONS[type]) return;
+  if (!BONUS_QUESTIONS[type] || !BONUS_QUESTIONS[type].length) return;
   bonusType = type;
   bonusFactor = BONUS_FACTORS[type];
   const q = shuffle([...BONUS_QUESTIONS[type]])[0];
