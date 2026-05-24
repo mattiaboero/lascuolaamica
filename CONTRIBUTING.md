@@ -8,7 +8,7 @@ Grazie per l'interesse. Le contribuzioni più frequenti e utili sono nuove doman
 
 ### Nuove domande (contributo più utile)
 
-Il dataset conta oggi 7.348 domande su 8 materie. Le aree meno coperte sono inglese, civica e problemi di matematica.
+Il dataset conta oggi 7.375 domande su 8 materie. Le aree meno coperte sono inglese, civica e problemi di matematica.
 
 **Se hai accesso all'ambiente editoriale riservato:**
 
@@ -17,6 +17,10 @@ Il dataset conta oggi 7.348 domande su 8 materie. Le aree meno coperte sono ingl
 3. Inserisci domanda, risposta corretta e 3 distrattori
 4. Clicca `Genera e scarica JSON`
 5. Invia il file JSON via email o come allegato alla PR
+
+Quando modifichi i file in `json/`, ricorda che `_headers` impone
+Cache-Control no-aggressive per garantire upgrade puliti. Non modificare
+quella riga. Vedi `docs/wiki/Architettura.md` -> "Header HTTP critici".
 
 **Se non hai accesso all'ambiente editoriale:**
 

@@ -52,6 +52,21 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '24 maggio 2026 · Release 4.6.7',
+      items: [
+        'Aggiunto il contatore totale domande nel footer di home e chi-siamo, calcolato da json/index.json e aggiornato automaticamente a ogni release dati.',
+        'Documentato il vincolo cache dei dataset JSON: /json/* deve restare con Cache-Control public, max-age=0, must-revalidate per evitare drift dati lato utente.'
+      ]
+    },
+    {
+      date: '24 maggio 2026 · Release 4.6.6',
+      items: [
+        'Completata la migrazione JSON-only per civica, inglese e problemi, eliminando il doppio binario dati tra runtime e file materia.',
+        'Spostate anche le bonus questions nei JSON con bucket dedicati, così entrano nella stessa pipeline di audit dei dataset principali.',
+        'Riallineati conteggi progetto e documentazione tecnica al nuovo totale di 7.375 domande.'
+      ]
+    },
+    {
       date: '24 maggio 2026 · Release 4.6.5',
       items: [
         'Rimossi frammenti di codice non più utilizzati nel runtime condiviso e nell’editor interno.',
@@ -1506,6 +1521,53 @@
     });
   }
 
+  async function fetchQuestionsIndex() {
+    if (SA.questionsLoader && typeof SA.questionsLoader.loadIndex === 'function') {
+      return SA.questionsLoader.loadIndex();
+    }
+    const response = await fetch('/json/index.json', { credentials: 'same-origin' });
+    if (!response.ok) {
+      throw new Error(`index fetch failed: ${response.status}`);
+    }
+    return response.json();
+  }
+
+  function getTotalQuestionsCount(indexPayload) {
+    if (!indexPayload || typeof indexPayload !== 'object') return 0;
+    if (Number.isFinite(indexPayload.totalQuestions)) return indexPayload.totalQuestions;
+    const subjects = indexPayload.subjects && typeof indexPayload.subjects === 'object'
+      ? Object.values(indexPayload.subjects)
+      : [];
+    return subjects.reduce((sum, subject) => {
+      const count = Number(subject && subject.count);
+      const rows = Number(subject && subject.rows);
+      const statsRows = Number(subject && subject.stats && subject.stats.rows);
+      if (Number.isFinite(count) && count > 0) return sum + count;
+      if (Number.isFinite(rows) && rows > 0) return sum + rows;
+      if (Number.isFinite(statsRows) && statsRows > 0) return sum + statsRows;
+      return sum;
+    }, 0);
+  }
+
+  async function renderQuestionsTotal(elementId = 'questionsTotalCount') {
+    const el = document.getElementById(elementId);
+    if (!el) return null;
+    try {
+      const indexPayload = await fetchQuestionsIndex();
+      const total = getTotalQuestionsCount(indexPayload);
+      if (!Number.isFinite(total) || total <= 0) {
+        el.hidden = true;
+        return null;
+      }
+      el.textContent = `${new Intl.NumberFormat('it-IT').format(total)} domande disponibili`;
+      el.hidden = false;
+      return total;
+    } catch (err) {
+      el.hidden = true;
+      return null;
+    }
+  }
+
   function ensureSupportFooterLink() {
     const footer = getFooterEl();
     if (!footer) return;
@@ -2200,6 +2262,7 @@
 
   function initSharedUi() {
     syncFooterVersion();
+    renderQuestionsTotal();
     ensureUpdatesModal();
     ensurePromptModal();
     ensureFooterInfoHub();
@@ -2238,6 +2301,7 @@
   SA.ui = SA.ui || {};
   SA.ui.confirm = promptConfirm;
   SA.ui.alert = promptAlert;
+  SA.renderQuestionsTotal = renderQuestionsTotal;
   SA.playWindow = {
     key: PLAY_WINDOW_KEY,
     durationMs: PLAY_WINDOW_DURATION_MS,

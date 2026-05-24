@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.6.7 - 2026-05-24
+
+- docs: aggiunta sezione header HTTP critici per i dataset
+- Runtime home/info: aggiunto contatore totale domande nel footer di `index` e `chi-siamo`, alimentato da `json/index.json` con formato locale `it-IT`.
+- Hardening dati PWA: documentato il vincolo operativo su `/json/*` con `Cache-Control: public, max-age=0, must-revalidate` per evitare JSON stale dopo upgrade.
+
+## 4.6.6 - 2026-05-24
+
+- Dataset quiz: completata la migrazione JSON-only per `civica`, `inglese` e `problemi`, rimuovendo il doppio binario tra dataset inline e dati caricati a runtime.
+- Bonus questions: spostate nei rispettivi `json/*.json` con metadati `bonus: true` e `bonusRaw`, così entrano nella stessa pipeline di audit dei dataset principali.
+- Runtime dedicati: aggiornati i tre motori pagina per idratare da JSON anche i bucket bonus e non dipendere più da `BANK`/`BONUS_QUESTIONS` hardcoded.
+- Conteggi e documentazione: riallineato il totale progetto a `7.375` domande e aggiornata la documentazione tecnica sulla source of truth dei contenuti.
+
 ## 4.6.5 - 2026-05-24
 
 - Pulizia conservativa: rimosse funzioni morte confermate in `shared.js` (`getCachedNodes`, `ensureUpdatesFooterLink`, `ensureFaqFooterLink`, `ensurePaletteFooterToggle`) e in `admin/esercizi.js` (`escapeHtml`) senza impatti sul runtime.

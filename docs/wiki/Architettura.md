@@ -78,10 +78,13 @@ json/
 
 Il riferimento legacy a `questions.json` (file aggregato) non è usato nel runtime pubblico. I controlli pre-pubblicazione bloccano riferimenti diretti non desiderati.
 
-### Doppia sorgente controllata (stato attuale)
+### Source of truth JSON-only
 
-I banchi inline nei file pagina restano come fallback controllato, mentre la source of truth runtime e il caricamento JSON tramite `questions-loader.js` quando disponibile.
-In questa fase i fallback inline non vengono rimossi.
+La source of truth runtime e il caricamento JSON tramite `questions-loader.js`.
+
+- `subject-quiz-core.js` legge i dataset materia da `json/index.json`
+- `js/civica-page.js`, `js/inglese-page.js` e `js/problemi-page.js` idratano da JSON sia il bank principale sia le bonus questions
+- le righe bonus sono marcate con `bonus: true` e bucket `bonusRaw`
 
 ---
 
@@ -117,6 +120,48 @@ Di conseguenza, un deploy in sottocartella o su GitHub Pages non e considerato s
 ### Scelta offline attuale
 
 Per le navigazioni HTML la strategia e **Network First con fallback alla home**. Questo significa che offline, se una rotta non e disponibile in cache, il fallback finale torna a `/` invece di mostrare una pagina offline dedicata.
+
+### Header HTTP critici per i dataset
+
+I file in `/json/*` (dataset domande per materia + `index.json`) richiedono
+un header specifico in `_headers`:
+
+```
+/json/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Robots-Tag: noindex, nofollow
+```
+
+Senza `max-age=0, must-revalidate` il browser potrebbe servire una copia
+stale dei JSON anche dopo un upgrade della PWA. Sintomi tipici:
+
+- conteggio domande non aggiornato dopo release dati
+- bonus mancanti se un nuovo bucket e stato aggiunto al JSON
+- materie con cardinalita incoerente tra index.json e UI
+
+Il flusso atteso ad ogni release dati:
+
+1. APP_VERSION viene bumpato in `app-version.js`
+2. `sw.js` ricostruisce la cache con nuovo `CACHE_NAME`
+3. al primo accesso post-upgrade il browser rivalida i JSON contro
+   l'origine grazie a `must-revalidate`
+4. la nuova cache contiene i dataset aggiornati
+
+Il check `check_pwa_cache_headers` in `prepublish-check.sh` verifica
+la presenza dell'header `/sw.js` e `/app-version.js` ma non gli header
+`/json/*`. La presenza degli header `/json/*` e invece controllata da
+`prepublish-check.sh` nella sezione `_headers: split json noindex/cache rules`.
+
+**Regola operativa**: non rimuovere o ammorbidire la riga
+`Cache-Control: public, max-age=0, must-revalidate` su `/json/*` senza
+una revisione architetturale. Una cache piu aggressiva su questi file
+causa drift dati invisibile lato utente.
+
+Riferimenti:
+- [_headers](../../_headers) sezione `/json/*`
+- [prepublish-check.sh](../../prepublish-check.sh) check
+  `_headers: split json noindex/cache rules`
+- [sw.js](../../sw.js) per la strategia di cache runtime
 
 ---
 
