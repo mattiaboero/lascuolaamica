@@ -82,7 +82,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-04-27",
-  "dateModified": "2026-05-23",
+  "dateModified": "2026-05-25",
   "publisher": {
     "@id": "https://lascuolaamica.it/#organization"
   }
@@ -122,16 +122,12 @@
 
 <a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
 <div class="bg-shapes" id="bgShapes" aria-hidden="true"></div>
-
 <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
 
 <div class="wrapper">
-  <div class="nav-bar">
+  <div class="top-nav">
     <a class="back-btn" href="/" aria-label="Torna al menu principale">← Menu</a>
-    <div class="nav-icons">
-      <button type="button" class="icon-btn" data-action="toggle-mute" id="muteBtn" aria-label="Disattiva audio"><span aria-hidden="true">🔊</span> Audio</button>
-      <button type="button" class="icon-btn" data-action="show-lb" aria-label="Apri classifica"><span aria-hidden="true">🏆</span> Classifica</button>
-    </div>
+    <div></div>
   </div>
 
   <nav class="breadcrumbs" aria-label="Percorso di navigazione">
@@ -145,20 +141,23 @@
     <p class="subtitle">La Scuola Amica · Inglese</p>
   </header>
 
-  <div class="score-bar" id="scoreBar" aria-live="off" aria-atomic="false">
-    <div class="score-pill ok"><span aria-hidden="true">✅</span> <span id="sOk">0</span><span class="sr-only"> corrette</span></div>
-    <div class="score-pill ko"><span aria-hidden="true">❌</span> <span id="sKo">0</span><span class="sr-only"> sbagliate</span></div>
-    <div class="score-pill str"><span aria-hidden="true">🔥</span> <span id="sStr">0</span><span class="sr-only"> di fila</span></div>
+  <div class="header-row">
+    <button type="button" class="icon-btn" id="muteBtn" data-action="toggle-mute" aria-label="Attiva o disattiva audio">🔊 Audio</button>
+    <button type="button" class="icon-btn" data-action="show-leaderboard" aria-label="Apri classifica">🏆 Classifica</button>
   </div>
 
-  <!-- SCREEN: Level Select -->
-  <div class="screen active" id="scrLevel">
-  <main id="contenuto-principale" aria-labelledby="mainTitle">
-    <div class="levels-wrap">
+  <div class="score-bar" id="scoreBar" aria-live="off" aria-atomic="false">
+    <div class="score-pill points"><span aria-hidden="true">⭐</span> <span id="scorePoints">0</span><span class="sr-only"> punti</span></div>
+    <div class="score-pill qn"><span aria-hidden="true">🧩</span> <span id="scoreQn">0</span>/10<span class="sr-only"> domande completate</span></div>
+  </div>
+
+  <div class="screen active" id="screenStart">
+    <main id="contenuto-principale" class="card" aria-labelledby="mainTitle">
+      <div class="section-label">Allenati con l'inglese</div>
       <div class="intro-note">
         10 domande per partita, 4 risposte possibili per ogni domanda.<br>
-        Ogni risposta corretta vale 1 punto.<br>
-        Alla fine puoi scegliere il bonus: x5 / x10 / x25 oppure tenere il punteggio base.
+        Ogni risposta corretta vale <strong>10 punti</strong>.<br>
+        Alla fine puoi scegliere il bonus: <strong>x5 / x10 / x25</strong> oppure tenere il punteggio base.
       </div>
       <div class="section-label class-selector-label">Scegli la classe</div>
       <div class="class-grid" id="classGrid" aria-label="Selezione classe">
@@ -183,7 +182,6 @@
           <span class="a-sub">Comprensione avanzata</span>
         </button>
       </div>
-      <h2 class="levels-title"><span aria-hidden="true">🤿</span> Scegli il tuo livello!</h2>
       <section class="play-window-panel play-window-panel-start" data-play-window-panel="1" data-context="english-start" aria-live="polite" aria-atomic="true">
         <div class="play-window-kicker">Tempo di gioco</div>
         <p class="play-window-status">Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo.</p>
@@ -193,36 +191,7 @@
         </div>
         <p class="play-window-note">Solo sul dispositivo, nessun login, nessun cookie, funziona anche offline.</p>
       </section>
-      <div class="level-cards">
-        <button type="button" class="level-card" data-action="start-level" data-level="1" aria-label="Percorso base: Colori, Numeri, Animali, Corpo umano, Famiglia, Saluti">
-          <span class="level-icon" aria-hidden="true">🌊</span>
-          <div class="level-info">
-            <div class="level-name">Principiante</div>
-            <div class="level-classes">Percorso base</div>
-            <div class="level-topics">Colori · Numeri · Animali · Corpo umano · Famiglia · Saluti</div>
-          </div>
-          <span class="level-badge" aria-hidden="true">Livello 1</span>
-        </button>
-        <button type="button" class="level-card" data-action="start-level" data-level="2" aria-label="Percorso intermedio: Giorni, Meteo, Cibo, Mesi, verbo to be e have got">
-          <span class="level-icon" aria-hidden="true">🤿</span>
-          <div class="level-info">
-            <div class="level-name">Esploratore</div>
-            <div class="level-classes">Percorso intermedio</div>
-            <div class="level-topics">Giorni · Meteo · Cibo · Mesi · Verbo "to be" e "have got"</div>
-          </div>
-          <span class="level-badge" aria-hidden="true">Livello 2</span>
-        </button>
-        <button type="button" class="level-card" data-action="start-level" data-level="3" aria-label="Percorso avanzato: Routine quotidiana, Sport, Casa, Domande, Hobby">
-          <span class="level-icon" aria-hidden="true">🦈</span>
-          <div class="level-info">
-            <div class="level-name">Campione</div>
-            <div class="level-classes">Percorso avanzato</div>
-            <div class="level-topics">Routine quotidiana · Sport · Casa · Domande · Hobby</div>
-          </div>
-          <span class="level-badge" aria-hidden="true">Livello 3</span>
-        </button>
-      </div>
-    </div>
+      <button type="button" class="start-btn" data-action="start-game">Scegli il livello</button>
     </main>
 
     <section class="seo-static" aria-label="Argomenti inglese scuola primaria">
@@ -234,89 +203,92 @@
         <li>Comprensione in contesto e scelta della risposta corretta tra quattro opzioni.</li>
         <li>Percorsi a livelli per allenare gradualmente bambine e bambini della primaria.</li>
       </ul>
-      <p>Ogni partita propone 10 domande con 4 opzioni. Le domande semplici in inglese per bambini ruotano tra le sessioni per limitare ripetizioni e favorire allenamento reale.</p>
+      <p>Ogni partita propone 10 domande con 4 opzioni. Le domande di inglese ruotano tra le sessioni per limitare ripetizioni e favorire allenamento reale.</p>
     </section>
   </div>
 
-  <!-- SCREEN: Game -->
-  <div class="screen" id="scrGame">
-    <div class="game-container">
-      <div class="timer-wrap" id="timerWrap">
-        <div class="timer-bar" id="timerBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-label="Tempo rimasto"></div>
+  <div class="screen" id="screenLevels">
+    <div class="levels-wrap" aria-labelledby="levelsTitle">
+      <h2 class="levels-title" id="levelsTitle"><span aria-hidden="true">🤿</span> Scegli il tuo livello</h2>
+      <p class="intro-note">Classe selezionata: <strong id="levelsClassLabel">Classe 3ª</strong>. I livelli non disponibili per questa classe vengono disattivati automaticamente.</p>
+      <div class="level-cards" id="levelsRoot" aria-label="Selezione livello"></div>
+      <div class="lb-empty" id="levelsEmptyState" hidden></div>
+      <div class="center-actions">
+        <button type="button" class="btn-home" data-action="go-start">Torna alla classe</button>
       </div>
-      <div class="progress-dots" id="progDots" aria-hidden="true"></div>
-      <div class="question-card question-card-main">
-        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
-        <div class="q-content">
-          <span class="q-emoji" id="qEmoji" aria-hidden="true">🐱</span>
-          <div class="q-label" id="qLabel" aria-hidden="true">Come si dice in inglese?</div>
-          <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
-        </div>
-      </div>
-      <div class="answers-grid" id="ansArea" aria-label="Risposte disponibili"></div>
     </div>
   </div>
 
-  <!-- SCREEN: Bonus Pick -->
-  <div class="screen" id="scrBonusPick">
-    <div class="bonus-card">
-      <h2 class="levels-title"><span aria-hidden="true">🎁</span> Bonus finale</h2>
+  <div class="screen" id="screenGame">
+    <div class="full-width">
+      <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
+      <div class="q-card q-card-main">
+        <div class="mascot-q" id="mascot" data-state="neutral" aria-hidden="true"></div>
+        <div class="q-content">
+          <div class="q-meta" id="qMeta">Domanda 1 di 10</div>
+          <div class="q-text" id="qText" aria-live="polite" aria-atomic="true"></div>
+          <div class="answers-grid" id="answers" aria-label="Risposte disponibili"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screenBonusPick">
+    <div class="card">
+      <div class="section-label">Domanda Bonus Finale</div>
       <p class="bonus-base-note">Hai completato le 10 domande.<br>Punteggio base: <strong><span id="baseScoreLabel">0</span></strong> punti.</p>
       <div class="bonus-grid">
         <button type="button" class="bonus-btn easy" data-action="bonus-pick" data-bonus="easy">Easy · x5</button>
         <button type="button" class="bonus-btn medium" data-action="bonus-pick" data-bonus="medium">Medium · x10</button>
         <button type="button" class="bonus-btn hard" data-action="bonus-pick" data-bonus="hard">Hard · x25</button>
       </div>
-      <button type="button" class="skip-bonus-btn" data-action="skip-bonus">Tieni il punteggio e salta bonus</button>
+      <button type="button" class="skip-btn" data-action="skip-bonus">Tieni il punteggio e salta bonus</button>
       <p class="bonus-note">Se sbagli il bonus, il punteggio resta invariato.</p>
     </div>
   </div>
 
-  <!-- SCREEN: Bonus Question -->
-  <div class="screen" id="scrBonusQ">
-    <div class="game-container">
-      <div class="question-card">
-        <div class="q-label" id="bonusMeta">Bonus question</div>
+  <div class="screen" id="screenBonusQuestion">
+    <div class="full-width">
+      <div class="q-card">
+        <div class="q-meta" id="bonusMeta">Bonus</div>
         <div class="q-text" id="bonusText" aria-live="polite" aria-atomic="true"></div>
+        <div class="answers-grid" id="bonusAnswers" aria-label="Risposte bonus"></div>
       </div>
-      <div class="answers-grid" id="bonusAnsArea" aria-label="Risposte bonus disponibili"></div>
     </div>
   </div>
 
-  <!-- SCREEN: Result -->
-  <div class="screen" id="scrResult">
-    <div class="result-card" role="region" aria-label="Risultato della partita">
+  <div class="screen" id="screenResult">
+    <div class="card result-card">
       <div class="mascot-result" id="mascotResult" data-state="neutral" aria-hidden="true"></div>
-      <div class="r-emoji" id="rEmoji" aria-hidden="true">🏆</div>
-      <h2 class="r-title" id="rTitle">Complimenti!</h2>
-      <p class="r-msg" id="rMsg"></p>
-      <div class="score-final bonus-summary" aria-label="Riepilogo punti bonus">
-        <div class="si"><div class="n" id="rBase">0</div><div class="l"><span aria-hidden="true">⭐</span> Base</div></div>
-        <div class="si"><div class="n" id="rBonus">x1</div><div class="l"><span aria-hidden="true">🎁</span> Bonus</div></div>
-        <div class="si"><div class="n" id="rFinal">0</div><div class="l"><span aria-hidden="true">🏁</span> Finale</div></div>
+      <div class="result-emoji" id="resultEmoji" aria-hidden="true">🏁</div>
+      <h2 class="result-title" id="resultTitle">Sessione completata!</h2>
+      <p class="result-msg" id="resultMsg"></p>
+      <div class="score-final" aria-label="Riepilogo punti">
+        <div class="score-item"><div class="num" id="rBase">0</div><div class="lbl">Punteggio base</div></div>
+        <div class="score-item"><div class="num" id="rBonus">x1</div><div class="lbl">Bonus</div></div>
+        <div class="score-item"><div class="num" id="rFinal">0</div><div class="lbl">Punteggio finale</div></div>
       </div>
-      <div class="stars-row" id="starsRow" aria-label="Valutazione"></div>
-      <div class="score-final" aria-label="Riepilogo punteggio">
-        <div class="si"><div class="n" id="rOk">0</div><div class="l"><span aria-hidden="true">✅</span> Giuste</div></div>
-        <div class="si"><div class="n" id="rKo">0</div><div class="l"><span aria-hidden="true">❌</span> Sbagliate</div></div>
-        <div class="si"><div class="n" id="rSt">0</div><div class="l"><span aria-hidden="true">🔥</span> Serie max</div></div>
+      <div class="score-final" aria-label="Riepilogo risposte">
+        <div class="score-item"><div class="num" id="rCorrect">0</div><div class="lbl">Corrette</div></div>
+        <div class="score-item"><div class="num" id="rWrong">0</div><div class="lbl">Sbagliate</div></div>
+        <div class="score-item"><div class="num" id="rArea">-</div><div class="lbl">Livello</div></div>
       </div>
       <div class="result-btns">
-        <button type="button" class="btn-replay" data-action="replay-game">Ancora!</button>
-        <button type="button" class="btn-home" data-action="go-levels">Livelli</button>
+        <button type="button" class="btn-replay" data-action="restart-game">Ancora!</button>
+        <button type="button" class="btn-home" data-action="go-levels">Cambia livello</button>
+        <button type="button" class="btn-home" data-action="go-start">Inizio</button>
       </div>
     </div>
   </div>
 
-  <!-- SCREEN: Leaderboard -->
-  <div class="screen" id="scrLB">
-    <div class="lb-card" role="region" aria-label="Classifica">
-      <h2 class="lb-title">Classifica</h2>
-      <p class="lb-sub">Le tue migliori partite salvate su questo dispositivo</p>
+  <div class="screen" id="screenLeaderboard">
+    <div class="lb-card" role="region" aria-label="Classifica inglese">
+      <h2 class="lb-title"><span aria-hidden="true">🏆</span> Classifica Inglese</h2>
+      <p class="lb-sub">Le migliori sessioni salvate su questo dispositivo</p>
       <div id="lbContent"></div>
-      <button type="button" class="btn-clear" data-action="clear-lb">Cancella classifica</button>
+      <button type="button" class="btn-clear" data-action="clear-leaderboard">Cancella classifica</button>
       <div class="center-actions">
-        <button type="button" class="btn-home" data-action="go-levels">Livelli</button>
+        <button type="button" class="btn-home" data-action="go-start">Inizio</button>
       </div>
     </div>
   </div>
@@ -328,12 +300,10 @@
   <span class="footer-link footer-version" data-app-version data-app-version-format="compact"></span>
 </footer>
 
-
-
+<script defer src="js/inglese-page.js"></script>
 <script defer src="questions-loader.js"></script>
 <script defer src="js/rewards.js"></script>
-<script defer src="js/inglese-page.js"></script>
-
+<script defer src="subject-quiz-core.js"></script>
 <script defer src="app-version.js"></script>
 <script defer src="shared.js"></script>
 </body>

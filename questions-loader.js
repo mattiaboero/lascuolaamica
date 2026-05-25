@@ -171,6 +171,9 @@
       grade: Number(row.class) || null,
       sourceId: String(row.id || '').trim(),
       sourceArea: String(row.area || '').trim(),
+      subarea: row && row.subarea ? String(row.subarea).trim() : null,
+      answerLang: row && row.answerLang ? String(row.answerLang).trim().toLowerCase() : null,
+      language: row && row.language ? String(row.language).trim().toLowerCase() : null,
       difficulty: Number(row.difficulty) || null,
       explanation: String(row.explanation || '').trim()
     };
@@ -217,6 +220,7 @@
     const banks = {};
 
     rows.forEach((row) => {
+      if (row && row.bonus === true) return;
       const sourceArea = getRowAreaValue(row, areaField);
       const areaKey = mapArea(sourceArea, normalizedAreaMap);
       if (!areaKey) return;

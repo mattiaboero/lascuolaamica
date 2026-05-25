@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-05-24T21:20:39Z",
+  "appVersion": "4.6.8",
+  "subject": "civica",
+  "captureMethod": "Automated clean browser session on production",
+  "storage": {
+    "educazioneCivica_lb_v1": "[{\"area\":\"🎯 Sessione Mista\",\"cls\":\"Classe 3ª\",\"base\":100,\"bonus\":\"Nessuno\",\"final\":100,\"correct\":10,\"wrong\":0,\"date\":\"24/05/2026\"},{\"area\":\"📜 Costituzione e Regole\",\"cls\":\"Classe 4ª\",\"base\":100,\"bonus\":\"Nessuno\",\"final\":100,\"correct\":10,\"wrong\":0,\"date\":\"24/05/2026\"},{\"area\":\"🎯 Sessione Mista\",\"cls\":\"Classe 5ª\",\"base\":100,\"bonus\":\"Nessuno\",\"final\":100,\"correct\":10,\"wrong\":0,\"date\":\"24/05/2026\"}]",
+    "educazioneCivica_cursor_v1": "{\"mixed\":2,\"rules\":1,\"env\":0,\"digital\":0,\"road\":0}",
+    "educazioneCivica_history_v2": "{\"3|rules\":[\"rules:73\",\"rules:72\",\"rules:67\",\"rules:216\"],\"3|digital\":[\"digital:211\",\"digital:96\",\"digital:98\"],\"3|road\":[\"road:95\",\"road:70\"],\"3|env\":[\"env:51\"],\"4|rules\":[\"rules:138\",\"rules:132\",\"rules:114\",\"rules:101\",\"rules:115\",\"rules:123\",\"rules:134\",\"rules:127\",\"rules:149\",\"rules:228\"],\"5|env\":[\"env:190\",\"env:160\",\"env:196\",\"env:176\"],\"5|road\":[\"road:150\",\"road:231\"],\"5|digital\":[\"digital:185\",\"digital:165\",\"digital:157\"],\"5|rules\":[\"rules:239\"]}",
+    "educazioneCivica_quality_v1": "{\"sessions\":[{\"ts\":1779657581452,\"class\":\"3\",\"mode\":\"mixed\",\"total\":10,\"uniqueAreas\":4,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0.923,\"gradeEntropy\":0.971,\"novelty\":1},{\"ts\":1779657597509,\"class\":\"4\",\"mode\":\"rules\",\"total\":10,\"uniqueAreas\":1,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0,\"gradeEntropy\":0.96,\"novelty\":1},{\"ts\":1779657613324,\"class\":\"5\",\"mode\":\"mixed\",\"total\":10,\"uniqueAreas\":4,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0.923,\"gradeEntropy\":0.96,\"novelty\":1}],\"latest\":{\"ts\":1779657613324,\"class\":\"5\",\"mode\":\"mixed\",\"total\":10,\"uniqueAreas\":4,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0.923,\"gradeEntropy\":0.96,\"novelty\":1},\"rolling\":{\"window\":3,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0.615,\"gradeEntropy\":0.964,\"novelty\":1}}",
+    "educazioneCivica_class_pref_v1": "5"
+  }
+}

@@ -1,6 +1,33 @@
 (async function () {
   'use strict';
 
+  // =========================================================================
+  // Subject Quiz Core — Extension Contract
+  // =========================================================================
+  // Hook funzione: max 3 totali, riusabili da più materie.
+  //   Hook autorizzati (slot riservati, non implementati finché D > 0):
+  //     - onBuildSession(ctx) → Question[]
+  //     - onPickBonus(ctx)    → Question
+  //     - onScore(ctx, answer)→ number
+  //   Aggiungere un 4° hook richiede ADR scritto in docs/refactor/.
+  //
+  // Config field passivi: illimitati, shape condivisa fra materie.
+  //   Materie che non usano un campo lo lasciano undefined → core
+  //   interpreta come feature disabilitata.
+  //
+  // Vietato in questo file:
+  //   - if (config.subject === 'X') o equivalenti per-materia.
+  //   - Branch hardcoded su lbKey/cursorKey/path materia.
+  //
+  // Decision tree per ogni nuova esigenza:
+  //   1. Esprimibile come dato? → config field. Stop.
+  //   2. Variante di logic core? → flag config + branch esistente.
+  //   3. Flow completamente diverso? → uno dei 3 hook autorizzati.
+  //   4. Nessuna di sopra? → resta in page-side (pre/post processing).
+  //
+  // Riferimento completo: docs/refactor/extension-contract.md
+  // =========================================================================
+
   const SA = window.SA = window.SA || {};
   const cfg = SA.subjectConfig;
   if (!cfg) return;
@@ -60,6 +87,61 @@
     return null;
   }
 
+  function hasConfiguredBonusQuestions() {
+    if (!cfg || !cfg.bonusQuestions || typeof cfg.bonusQuestions !== 'object') return false;
+    return Object.values(cfg.bonusQuestions).some((rows) => Array.isArray(rows) && rows.length > 0);
+  }
+
+  function resolveBonusType(row) {
+    const raw = String(row && row.bonusRaw ? row.bonusRaw : '').trim().toLowerCase();
+    if (raw === 'easy' || raw === 'medium' || raw === 'hard') return raw;
+    const diff = Number(row && row.difficulty);
+    if (Number.isFinite(diff) && diff >= 3) return 'hard';
+    if (Number.isFinite(diff) && diff === 2) return 'medium';
+    return 'easy';
+  }
+
+  function toBonusQuestion(row) {
+    const question = String(row && row.question ? row.question : '').trim();
+    const answer = String(row && row.answer ? row.answer : '').trim();
+    const options = Array.isArray(row && row.options) ? row.options : [];
+    const distractors = options
+      .map((opt) => String(opt ?? '').trim())
+      .filter((opt) => opt && opt !== answer)
+      .slice(0, 3);
+    if (!question || !answer || distractors.length < 3) return null;
+    return {
+      q: question,
+      a: answer,
+      d: distractors,
+      answerLang: row && row.answerLang ? String(row.answerLang).trim().toLowerCase() : null
+    };
+  }
+
+  async function hydrateBonusQuestionsFromSource(loader, source) {
+    if (!loader || typeof loader.getSubjectRows !== 'function' || !source || !source.subject) return;
+    if (hasConfiguredBonusQuestions()) return;
+
+    const rows = await loader.getSubjectRows(source.subject, {
+      path: source.path || 'json/index.json',
+      includeInactive: source.includeInactive,
+      includeBonusRows: true
+    });
+    if (!Array.isArray(rows) || !rows.length) return;
+
+    const bonusQuestions = { easy: [], medium: [], hard: [] };
+    rows.forEach((row) => {
+      if (!row || row.bonus !== true) return;
+      const question = toBonusQuestion(row);
+      if (!question) return;
+      bonusQuestions[resolveBonusType(row)].push(question);
+    });
+
+    if (Object.values(bonusQuestions).some((items) => items.length > 0)) {
+      cfg.bonusQuestions = bonusQuestions;
+    }
+  }
+
 
   function notifyLoadError() {
     const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
@@ -74,6 +156,10 @@
   if (cfg.questionsSource && questionsLoader && typeof questionsLoader.applySubjectConfig === 'function') {
     try {
       await questionsLoader.applySubjectConfig(cfg);
+      const source = typeof cfg.questionsSource === 'string'
+        ? { subject: cfg.questionsSource }
+        : cfg.questionsSource;
+      await hydrateBonusQuestionsFromSource(questionsLoader, source);
     } catch (e) {
       debugWarn('QuestionsLoader.applySubjectConfig', e);
     }
@@ -100,12 +186,19 @@
   const METRICS_MAX_SESSIONS = Math.max(40, Number(cfg.metricsMaxSessions || 180));
   const METRICS_ROLLING_WINDOW = Math.max(10, Number(cfg.metricsRollingWindow || 30));
   const CLASS_PREF_KEY = cfg.classPrefKey || `${CURSOR_KEY}_class_pref_v1`;
+  const LEADERBOARD_AREA_FALLBACK = safeText(cfg.leaderboardAreaFallback || '', 64);
   const RECENT_ID_SESSIONS = Math.max(3, Number(cfg.recentIdSessions || 6));
   const RECENT_SIG_SESSIONS = Math.max(4, Number(cfg.recentSigSessions || 8));
+  const ANSWER_MODE = cfg.answerMode === 'numeric' ? 'numeric' : 'mcq';
+  const RENDER_MODE = cfg.renderMode === 'bilingual' ? 'bilingual' : 'mcq';
+  const OPTIONS_GENERATOR = typeof cfg.optionsGenerator === 'string' ? cfg.optionsGenerator : '';
   const SOFTMAX_TOP_K = Math.max(3, Number(cfg.softmaxTopK || 6));
   const SOFTMAX_TEMPERATURE = Math.max(0.35, Number(cfg.softmaxTemperature || 1.25));
-  const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedAreaRepeatLimit || 2));
+  const TARGET_GRADE_WEIGHT = Math.max(1, Number(cfg.targetGradeWeight || 7));
+  const CLASS_DISTANCE_WEIGHT = Math.max(0, Number(cfg.classDistanceWeight || 10));
+  const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedRepeatLimit || cfg.mixedAreaRepeatLimit || 2));
   const AREA_VISIBLE_LIMIT = Math.max(6, Number(cfg.areaVisibleLimit || 8));
+  const MAX_LEVEL_DISTANCE = Math.max(0, Number.isFinite(Number(cfg.maxLevelDistance)) ? Number(cfg.maxLevelDistance) : 2);
 
   const CLASS_DEFAULTS = {
     2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Consolidiamo le basi' },
@@ -120,6 +213,73 @@
     5: { 3: 0.15, 4: 0.35, 5: 0.5 }
   };
   const MAX_GRADE_DISTANCE = Math.max(0, Number.isFinite(Number(cfg.maxGradeDistance)) ? Number(cfg.maxGradeDistance) : 1);
+
+  function normalizeLevelKey(value) {
+    const raw = String(value ?? '').trim();
+    return raw || '';
+  }
+
+  function normalizeLevelFilters(filters) {
+    if (!filters || typeof filters !== 'object') return null;
+    const next = {};
+    if (Array.isArray(filters.subareas)) {
+      next.subareas = filters.subareas.map((item) => safeText(item, 48).toLowerCase()).filter(Boolean);
+    }
+    if (Array.isArray(filters.areas)) {
+      next.areas = filters.areas.map((item) => safeText(item, 48)).filter(Boolean);
+    }
+    if (Array.isArray(filters.fallbackDifficulty)) {
+      next.fallbackDifficulty = filters.fallbackDifficulty
+        .map((item) => Number(item))
+        .filter((item) => Number.isFinite(item))
+        .map((item) => Math.round(item));
+    }
+    if ((!next.subareas || !next.subareas.length)
+      && (!next.areas || !next.areas.length)
+      && (!next.fallbackDifficulty || !next.fallbackDifficulty.length)) {
+      return null;
+    }
+    return next;
+  }
+
+  function normalizeLevelsConfig(levels) {
+    if (levels === undefined) return [];
+    if (!Array.isArray(levels) || !levels.length) {
+      throw new Error('cfg.levels deve essere un array non vuoto quando presente');
+    }
+
+    const seen = new Set();
+    return levels.map((level, index) => {
+      if (!level || typeof level !== 'object') {
+        throw new Error(`cfg.levels[${index}] non valido`);
+      }
+      const key = normalizeLevelKey(level.key);
+      if (!key) {
+        throw new Error(`cfg.levels[${index}] richiede key`);
+      }
+      if (seen.has(key)) {
+        throw new Error(`cfg.levels contiene key duplicata: ${key}`);
+      }
+      seen.add(key);
+
+      const filters = normalizeLevelFilters(level.filters);
+      if (!filters) {
+        throw new Error(`cfg.levels[${index}] richiede filters non vuoto`);
+      }
+
+      return {
+        key,
+        label: safeText(level.label || `Livello ${key}`, 48),
+        icon: safeText(level.icon || '🎯', 8),
+        subtitle: safeText(level.subtitle || '', 80),
+        topics: safeText(level.topics || '', 160),
+        filters
+      };
+    });
+  }
+
+  const LEVELS = normalizeLevelsConfig(cfg.levels);
+  const HAS_LEVELS = LEVELS.length > 0;
 
   const AREA_LABELS = {};
   (cfg.areas || []).forEach((a) => {
@@ -154,6 +314,7 @@
   let showAllAreas = false;
   let playWindowExpiryLock = false;
   let gameStartedAt = 0;
+  let selectedLevel = null;
 
   function $(id) {
     return document.getElementById(id);
@@ -183,6 +344,170 @@
   function safeText(value, maxLen) {
     const txt = String(value ?? '').replace(/\s+/g, ' ').trim();
     return txt.slice(0, maxLen);
+  }
+
+  function parseNumericAnswer(value) {
+    const raw = String(value ?? '')
+      .replace(/\u00a0/g, ' ')
+      .replace(/\s+/g, '')
+      .trim();
+    if (!raw) return null;
+
+    const fractionMatch = raw.match(/^([+-]?\d+(?:[.,]\d+)?)\/([+-]?\d+(?:[.,]\d+)?)$/);
+    if (fractionMatch) {
+      const numerator = Number(fractionMatch[1].replace(',', '.'));
+      const denominator = Number(fractionMatch[2].replace(',', '.'));
+      if (Number.isFinite(numerator) && Number.isFinite(denominator) && denominator !== 0) {
+        return numerator / denominator;
+      }
+      return null;
+    }
+
+    if (!/^[+-]?\d+(?:[.,]\d+)?$/.test(raw)) return null;
+    const parsed = Number(raw.replace(',', '.'));
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+
+  function normalizeComparableAnswer(value) {
+    if (ANSWER_MODE === 'numeric') {
+      const parsed = parseNumericAnswer(value);
+      if (parsed !== null) {
+        const stable = Math.abs(parsed) < 1e-12 ? 0 : parsed;
+        return `n:${String(Number(stable.toFixed(12)))}`;
+      }
+    }
+    return `t:${safeText(value, 160).toLowerCase()}`;
+  }
+
+  function answersMatch(left, right) {
+    return normalizeComparableAnswer(left) === normalizeComparableAnswer(right);
+  }
+
+  function inferNumericStep(rawAnswer, baseValue) {
+    const raw = String(rawAnswer ?? '').trim();
+    if (raw.includes('/')) return 0.5;
+    const decimalMatch = raw.match(/[.,](\d+)$/);
+    if (decimalMatch) {
+      return Math.pow(10, -decimalMatch[1].length);
+    }
+    const abs = Math.abs(baseValue);
+    if (abs >= 1000) return 100;
+    if (abs >= 100) return 10;
+    if (abs >= 20) return 5;
+    return 1;
+  }
+
+  function formatNumericLike(value, rawAnswer) {
+    const raw = String(rawAnswer ?? '').trim();
+    const decimalMatch = raw.match(/[.,](\d+)$/);
+    if (decimalMatch) {
+      const decimals = decimalMatch[1].length;
+      const fixed = Number(value).toFixed(decimals);
+      return raw.includes(',') ? fixed.replace('.', ',') : fixed;
+    }
+    if (raw.includes('/')) {
+      return String(Number(value.toFixed(3)));
+    }
+    return String(Math.round(Number(value)));
+  }
+
+  function fillGeneratedOptions(correctAnswer, options) {
+    if (OPTIONS_GENERATOR !== 'numeric-close') return options;
+    const parsed = parseNumericAnswer(correctAnswer);
+    if (parsed === null) return options;
+
+    const next = options.slice();
+    const step = inferNumericStep(correctAnswer, parsed);
+    const offsets = [step, -step, step * 2, -(step * 2), step * 10, -(step * 10), step * 3, -(step * 3)];
+    for (let i = 0; i < offsets.length && next.length < 4; i++) {
+      const candidate = formatNumericLike(parsed + offsets[i], correctAnswer);
+      if (!next.some((opt) => answersMatch(opt, candidate))) {
+        next.push(candidate);
+      }
+    }
+    return next;
+  }
+
+  function buildAnswerOptions(question) {
+    const rawOptions = [question && question.a, ...((question && question.d) || []).slice(0, 6)]
+      .map((opt) => String(opt ?? '').trim())
+      .filter(Boolean);
+    const deduped = [];
+    rawOptions.forEach((opt) => {
+      if (!deduped.some((seen) => answersMatch(seen, opt))) {
+        deduped.push(opt);
+      }
+    });
+    const filled = fillGeneratedOptions(question && question.a, deduped);
+    return shuffle(filled.slice(0, 4));
+  }
+
+  function renderPromptBilingual(target, text) {
+    if (!target) return;
+    const value = String(text || '').trim();
+    target.textContent = '';
+    target.removeAttribute('lang');
+    if (!value) return;
+
+    const quotedParts = value.split(/("[^"]+"|“[^”]+”)/g).filter(Boolean);
+    const wrapWhole = quotedParts.length <= 1;
+
+    if (wrapWhole) {
+      const span = document.createElement('span');
+      span.lang = 'en';
+      span.textContent = value;
+      target.appendChild(span);
+      return;
+    }
+
+    quotedParts.forEach((part) => {
+      const isAsciiQuote = part.length >= 2 && part.startsWith('"') && part.endsWith('"');
+      const isCurlyQuote = part.length >= 2 && part.startsWith('“') && part.endsWith('”');
+      if (isAsciiQuote || isCurlyQuote) {
+        const span = document.createElement('span');
+        span.lang = 'en';
+        span.textContent = part;
+        target.appendChild(span);
+      } else {
+        target.appendChild(document.createTextNode(part));
+      }
+    });
+  }
+
+  function renderPrompt(target, question) {
+    if (!target) return;
+    const text = question && question.q ? question.q : '';
+    if (RENDER_MODE === 'bilingual') {
+      renderPromptBilingual(target, text);
+      return;
+    }
+    target.textContent = text;
+    target.removeAttribute('lang');
+  }
+
+  function renderAnswerButtonText(button, text, answerLang) {
+    if (!button) return;
+    const value = String(text || '').trim();
+    button.textContent = '';
+    button.removeAttribute('lang');
+    button.removeAttribute('aria-label');
+
+    if (RENDER_MODE === 'bilingual' && answerLang === 'en') {
+      const span = document.createElement('span');
+      span.lang = 'en';
+      span.textContent = value;
+      button.appendChild(span);
+      button.lang = 'en';
+      button.setAttribute('aria-label', `Risposta in inglese: ${value}`);
+      return;
+    }
+
+    button.textContent = value;
+    if (RENDER_MODE === 'bilingual' && answerLang === 'it') {
+      button.setAttribute('aria-label', `Risposta in italiano: ${value}`);
+    } else {
+      button.setAttribute('aria-label', `Risposta: ${value}`);
+    }
   }
 
   function prefersReducedMotion() {
@@ -241,7 +566,8 @@
     if (!activeScreen) return;
     if (!['screenGame', 'screenBonusPick', 'screenBonusQuestion'].includes(activeScreen.id)) return;
     playWindowExpiryLock = true;
-    goStart();
+    if (HAS_LEVELS) showLevelsScreen();
+    else goStart();
     await askAlert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
       title: 'Tempo di gioco terminato',
       okLabel: 'Va bene'
@@ -349,6 +675,65 @@
     return out;
   }
 
+  function getLevelMeta(levelKey) {
+    const wanted = normalizeLevelKey(levelKey);
+    return LEVELS.find((level) => level.key === wanted) || null;
+  }
+
+  function questionMatchesLevel(question, levelMeta) {
+    if (!levelMeta) return true;
+    const filters = levelMeta.filters || {};
+    const questionSubarea = safeText(question && question.subarea, 48).toLowerCase();
+    const questionArea = safeText(question && question.area, 48);
+    const questionDifficulty = Number(question && question.difficulty);
+
+    const hasSubareas = Array.isArray(filters.subareas) && filters.subareas.length;
+    const hasAreas = Array.isArray(filters.areas) && filters.areas.length;
+    const hasDifficulty = Array.isArray(filters.fallbackDifficulty) && filters.fallbackDifficulty.length;
+
+    if (!hasSubareas && !hasAreas && !hasDifficulty) return false;
+    if (hasSubareas && (!questionSubarea || !filters.subareas.includes(questionSubarea))) return false;
+    if (hasAreas && (!questionArea || !filters.areas.includes(questionArea))) return false;
+    if (hasDifficulty && (!Number.isFinite(questionDifficulty) || !filters.fallbackDifficulty.includes(Math.round(questionDifficulty)))) {
+      return false;
+    }
+    return true;
+  }
+
+  function getLevelScopedPool(area, levelKey) {
+    const base = BANKS[area] || [];
+    const levelMeta = getLevelMeta(levelKey);
+    if (!levelMeta) return base;
+    return base.filter((question) => questionMatchesLevel(question, levelMeta));
+  }
+
+  function getAvailableLevelsForClass(classKey) {
+    const classNum = classToNum(classKey);
+    return LEVELS.map((level) => {
+      const pool = AREA_KEYS.flatMap((area) => getLevelScopedPool(area, level.key));
+      if (!pool.length) {
+        return { ...level, available: false, minDistance: 99, poolSize: 0 };
+      }
+      const minDistance = pool.reduce((best, question) => Math.min(best, questionClassDistance(question, classNum)), 99);
+      return {
+        ...level,
+        available: minDistance <= MAX_LEVEL_DISTANCE,
+        minDistance,
+        poolSize: pool.length
+      };
+    });
+  }
+
+  function getCurrentLevelMeta() {
+    return HAS_LEVELS ? getLevelMeta(selectedLevel) : null;
+  }
+
+  function getFirstAvailableLevelKey(classKey) {
+    const firstAvailable = getAvailableLevelsForClass(classKey).find((level) => level.available);
+    if (firstAvailable) return firstAvailable.key;
+    return LEVELS[0] ? LEVELS[0].key : '';
+  }
+
   function classToNum(classKey) {
     const n = Number(normalizeClassKey(classKey));
     return Number.isFinite(n) ? n : 3;
@@ -360,8 +745,8 @@
     return Math.abs(grade - classNum);
   }
 
-  function getClassAwarePool(area, classKey, allowLoose) {
-    const pool = BANKS[area] || [];
+  function getClassAwarePool(area, classKey, allowLoose, levelKey = null) {
+    const pool = getLevelScopedPool(area, levelKey);
     const classNum = classToNum(classKey);
     if (!pool.length) return { pool: [], mode: 'none', minDistance: 99 };
 
@@ -379,12 +764,12 @@
     return { pool: loose, mode: 'loose', minDistance };
   }
 
-  function getAvailableAreaKeysForClass(classKey) {
-    return AREA_KEYS.filter((area) => getClassAwarePool(area, classKey, false).pool.length > 0);
+  function getAvailableAreaKeysForClass(classKey, levelKey = null) {
+    return AREA_KEYS.filter((area) => getClassAwarePool(area, classKey, false, levelKey).pool.length > 0);
   }
 
   function normalizeSelectedAreaForClass() {
-    const available = getAvailableAreaKeysForClass(selectedClass);
+    const available = getAvailableAreaKeysForClass(selectedClass, selectedLevel);
     if (selectedArea === 'mixed') return available;
     if (!available.includes(selectedArea)) {
       selectedArea = 'mixed';
@@ -393,7 +778,7 @@
   }
 
   function loadCursor() {
-    const base = { mixed: 0 };
+    const base = { mixed: 0, __level: HAS_LEVELS ? getFirstAvailableLevelKey(selectedClass) : '' };
     AREA_KEYS.forEach((k) => {
       base[k] = 0;
     });
@@ -401,6 +786,10 @@
       const raw = JSON.parse(storageGet(CURSOR_KEY));
       const out = { ...base };
       Object.keys(out).forEach((k) => {
+        if (k === '__level') {
+          out[k] = normalizeLevelKey(raw && raw[k] !== undefined ? raw[k] : base.__level);
+          return;
+        }
         out[k] = safeInt(raw && raw[k] !== undefined ? raw[k] : 0, 0);
       });
       return out;
@@ -416,6 +805,15 @@
     } catch (e) {
       debugWarn('saveCursor', e);
     }
+  }
+
+  function persistSelectedLevel(levelKey) {
+    if (!HAS_LEVELS) return;
+    const normalized = normalizeLevelKey(levelKey);
+    if (!normalized) return;
+    const cursor = loadCursor();
+    cursor.__level = normalized;
+    saveCursor(cursor);
   }
 
   function loadHistoryStore(storageKey = HISTORY_KEY) {
@@ -542,6 +940,9 @@
       gradeEntropy: round3(gradeEntropy),
       novelty: round3(novelty)
     };
+    if (quality.level !== undefined && quality.level !== null) {
+      entry.level = safeInt(quality.level, 0);
+    }
 
     const store = loadMetricsStore();
     const nextSessions = (store.sessions || []).concat(entry).slice(-METRICS_MAX_SESSIONS);
@@ -585,11 +986,14 @@
 
   function ensureClassSelector() {
     const card = document.querySelector('#screenStart .card');
+    if (!card) return;
+
     const areaGrid = $('areaGrid');
-    if (!card || !areaGrid) return;
+    let grid = $('classGrid');
+    if (!areaGrid && !grid) return;
 
     let label = $('classSectionLabel');
-    if (!label) {
+    if (!label && areaGrid) {
       label = document.createElement('div');
       label.id = 'classSectionLabel';
       label.className = 'section-label class-selector-label';
@@ -597,13 +1001,13 @@
       card.insertBefore(label, areaGrid);
     }
 
-    let grid = $('classGrid');
     if (!grid) {
       grid = document.createElement('div');
       grid.id = 'classGrid';
       grid.className = 'class-grid';
       grid.setAttribute('aria-label', 'Selezione classe');
-      card.insertBefore(grid, areaGrid);
+      if (areaGrid) card.insertBefore(grid, areaGrid);
+      else card.appendChild(grid);
     }
 
     buildClassGrid();
@@ -645,6 +1049,99 @@
     });
 
     grid.appendChild(frag);
+  }
+
+  function buildLevelsGrid() {
+    const root = $('levelsRoot');
+    if (!root || !HAS_LEVELS) return;
+
+    const classLabel = $('levelsClassLabel');
+    if (classLabel) {
+      classLabel.textContent = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
+    }
+
+    root.textContent = '';
+    const frag = document.createDocumentFragment();
+    const availability = getAvailableLevelsForClass(selectedClass);
+    availability.forEach((level) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'level-card' + (level.key === selectedLevel ? ' selected' : '') + (level.available ? '' : ' locked');
+      btn.dataset.action = 'start-level';
+      btn.dataset.level = level.key;
+      btn.disabled = !level.available;
+      btn.setAttribute('aria-disabled', level.available ? 'false' : 'true');
+
+      const icon = document.createElement('span');
+      icon.className = 'level-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = level.icon || '🎯';
+
+      const info = document.createElement('div');
+      info.className = 'level-info';
+
+      const name = document.createElement('div');
+      name.className = 'level-name';
+      name.textContent = level.label;
+
+      const subtitle = document.createElement('div');
+      subtitle.className = 'level-classes';
+      subtitle.textContent = level.subtitle || `Livello ${level.key}`;
+
+      const topics = document.createElement('div');
+      topics.className = 'level-topics';
+      topics.textContent = level.topics || 'Domande selezionate per livello';
+
+      info.appendChild(name);
+      info.appendChild(subtitle);
+      info.appendChild(topics);
+
+      const badge = document.createElement('span');
+      badge.className = 'level-badge';
+      badge.setAttribute('aria-hidden', 'true');
+      badge.textContent = `Livello ${level.key}`;
+
+      btn.appendChild(icon);
+      btn.appendChild(info);
+      btn.appendChild(badge);
+
+      const classLabelText = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
+      if (!level.available) {
+        const reason = `Livello non disponibile per ${classLabelText}`;
+        btn.title = reason;
+        btn.setAttribute('aria-label', `${level.label}, bloccato. ${reason}`);
+      } else {
+        btn.setAttribute('aria-label', `${level.label}, disponibile per ${classLabelText}`);
+      }
+
+      frag.appendChild(btn);
+    });
+
+    root.appendChild(frag);
+
+    const empty = $('levelsEmptyState');
+    if (empty) {
+      const availableCount = availability.filter((level) => level.available).length;
+      empty.hidden = availableCount > 0;
+      if (!empty.hidden) {
+        empty.textContent = `Nessun livello disponibile per ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`}.`;
+      }
+    }
+  }
+
+  function showLevelsScreen() {
+    if (!HAS_LEVELS) {
+      startGame();
+      return;
+    }
+    if (!selectedLevel) {
+      selectedLevel = getFirstAvailableLevelKey(selectedClass);
+    }
+    buildLevelsGrid();
+    $('scoreBar')?.classList.remove('is-visible');
+    showScreen('screenLevels');
+    setMascot('neutral');
+    setMascotResult('neutral');
   }
 
   function buildAreaGrid() {
@@ -714,7 +1211,11 @@
           toggleMute();
           break;
         case 'start-game':
-          startGame();
+          if (HAS_LEVELS) showLevelsScreen();
+          else startGame();
+          break;
+        case 'start-level':
+          startGame(target.dataset.level);
           break;
         case 'show-leaderboard':
           showLeaderboard();
@@ -723,7 +1224,11 @@
           clearLeaderboard();
           break;
         case 'restart-game':
-          startGame();
+          if (HAS_LEVELS) startGame(selectedLevel || getFirstAvailableLevelKey(selectedClass));
+          else startGame();
+          break;
+        case 'go-levels':
+          showLevelsScreen();
           break;
         case 'go-start':
           goStart();
@@ -767,12 +1272,19 @@
 
     showAllAreas = false;
     buildAreaGrid();
+    if (HAS_LEVELS) {
+      const availability = getAvailableLevelsForClass(selectedClass);
+      if (!availability.some((level) => level.key === selectedLevel && level.available)) {
+        selectedLevel = getFirstAvailableLevelKey(selectedClass);
+      }
+      buildLevelsGrid();
+    }
   }
 
   function selectArea(area, btn) {
     if (!AREA_LABELS[area]) return;
     if (area !== 'mixed') {
-      const available = getAvailableAreaKeysForClass(selectedClass);
+      const available = getAvailableAreaKeysForClass(selectedClass, selectedLevel);
       if (!available.includes(area)) return;
     }
     selectedArea = area;
@@ -919,7 +1431,7 @@
   function candidateScore(q, targetGrade, areaWeakness, classNum) {
     const toPlan = Math.abs(Number(q._grade || targetGrade) - targetGrade);
     const toClass = questionClassDistance(q, classNum);
-    const base = toPlan * 7 + toClass * 10;
+    const base = toPlan * TARGET_GRADE_WEIGHT + toClass * CLASS_DISTANCE_WEIGHT;
     const weaknessBoost = areaWeakness > 0 ? -Math.min(2.5, areaWeakness * 3) : 0;
     return base + weaknessBoost;
   }
@@ -1004,10 +1516,10 @@
     return slots;
   }
 
-  function pickQuestion(area, pool, targetGrade, sessionUsed, historyStore, historySigStore, stats, classNum) {
+  function pickQuestion(area, pool, targetGrade, sessionUsed, historyStore, historySigStore, stats, classNum, historyBucketKey = '') {
     if (!pool.length) return null;
 
-    const bucket = `${selectedClass}|${area}`;
+    const bucket = historyBucketKey || `${selectedClass}|${area}`;
     const rawSeen = Array.isArray(historyStore[bucket]) ? historyStore[bucket] : [];
     const rawSeenSig = Array.isArray(historySigStore[bucket]) ? historySigStore[bucket] : [];
     const recentIdCount = Math.max(TOTAL_Q * RECENT_ID_SESSIONS, Math.min(pool.length, TOTAL_Q * 2));
@@ -1074,19 +1586,25 @@
     const sessionUsed = new Set();
     const plan = buildGradePlan(TOTAL_Q, selectedClass);
     const out = [];
+    const currentLevel = getCurrentLevelMeta();
 
     if (!AREA_KEYS.length) return out;
     const classNum = classToNum(selectedClass);
 
-    let availableAreas = getAvailableAreaKeysForClass(selectedClass);
+    let availableAreas = getAvailableAreaKeysForClass(selectedClass, currentLevel && currentLevel.key);
+    if (!availableAreas.length) {
+      availableAreas = AREA_KEYS.filter((area) => getLevelScopedPool(area, currentLevel && currentLevel.key).length);
+    }
     if (!availableAreas.length) {
       availableAreas = AREA_KEYS.slice();
     }
 
     const classPools = {};
     availableAreas.forEach((area) => {
-      const strictPool = getClassAwarePool(area, selectedClass, false).pool;
-      classPools[area] = strictPool.length ? strictPool : getClassAwarePool(area, selectedClass, true).pool;
+      const strictPool = getClassAwarePool(area, selectedClass, false, currentLevel && currentLevel.key).pool;
+      classPools[area] = strictPool.length
+        ? strictPool
+        : getClassAwarePool(area, selectedClass, true, currentLevel && currentLevel.key).pool;
     });
 
     if (selectedArea !== 'mixed' && !availableAreas.includes(selectedArea)) {
@@ -1095,7 +1613,8 @@
 
     const quality = {
       class: selectedClass,
-      mode: selectedArea,
+      mode: currentLevel ? `level-${currentLevel.key}` : selectedArea,
+      level: currentLevel ? currentLevel.key : null,
       total: 0,
       repeatedId: 0,
       repeatedSig: 0,
@@ -1113,6 +1632,7 @@
     };
 
     const areaMode = selectedArea === 'mixed' ? 'mixed' : selectedArea;
+    const historyBucketKey = currentLevel ? `${selectedClass}|lvl-${currentLevel.key}` : '';
     const slots = buildSessionSlots(TOTAL_Q, plan, areaMode, availableAreas, stats, cursor);
     for (let i = 0; i < slots.length && out.length < TOTAL_Q; i++) {
       const slot = slots[i];
@@ -1125,7 +1645,8 @@
         historyStore,
         historySigStore,
         stats,
-        classNum
+        classNum,
+        historyBucketKey
       );
       if (!pick || !pick.question) continue;
       out.push({ ...pick.question });
@@ -1157,7 +1678,7 @@
     if (out.length < TOTAL_Q) {
       const loose = [];
       AREA_KEYS.forEach((area) => {
-        const pool = getClassAwarePool(area, selectedClass, true).pool;
+        const pool = getClassAwarePool(area, selectedClass, true, currentLevel && currentLevel.key).pool;
         pool.forEach((q) => {
           if (!sessionUsed.has(q._id)) loose.push(q);
         });
@@ -1186,8 +1707,40 @@
     return out.slice(0, TOTAL_Q);
   }
 
-  async function startGame() {
+  function getSessionAreaLabel() {
+    const currentLevel = getCurrentLevelMeta();
+    if (currentLevel) return currentLevel.label;
+    return selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea] || selectedArea;
+  }
+
+  function getSessionAreaKey() {
+    const currentLevel = getCurrentLevelMeta();
+    if (currentLevel) return `level-${currentLevel.key}`;
+    return selectedArea;
+  }
+
+  async function startGame(levelKey) {
     if (!(await ensurePlayWindowForGame())) return;
+
+    if (HAS_LEVELS) {
+      const nextLevel = normalizeLevelKey(levelKey ?? selectedLevel ?? '');
+      if (!nextLevel) {
+        showLevelsScreen();
+        return;
+      }
+      const available = getAvailableLevelsForClass(selectedClass).find((level) => level.key === nextLevel);
+      if (!available || !available.available) {
+        await askAlert(`Per ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`} scegli un livello disponibile.`, {
+          title: 'Livello non disponibile',
+          okLabel: 'Ho capito'
+        });
+        showLevelsScreen();
+        return;
+      }
+      selectedLevel = nextLevel;
+      persistSelectedLevel(nextLevel);
+    }
+
     try {
       questions = buildSessionQuestions();
     } catch (e) {
@@ -1259,19 +1812,21 @@
     const q = questions[curQ];
     const areaLabel = AREA_LABELS[q.area] || AREA_LABELS.mixed || 'Sessione';
     const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
-    $('qMeta').textContent = `Domanda ${curQ + 1} di ${TOTAL_Q} · ${areaLabel} · ${classLabel}`;
-    $('qText').textContent = q.q;
+    const levelMeta = getCurrentLevelMeta();
+    $('qMeta').textContent = levelMeta
+      ? `Domanda ${curQ + 1} di ${TOTAL_Q} · ${levelMeta.label} · ${areaLabel} · ${classLabel}`
+      : `Domanda ${curQ + 1} di ${TOTAL_Q} · ${areaLabel} · ${classLabel}`;
+    renderPrompt($('qText'), q);
 
     const answers = $('answers');
     answers.textContent = '';
     const frag = document.createDocumentFragment();
-    const options = shuffle([q.a, ...(q.d || []).slice(0, 3)]);
+    const options = buildAnswerOptions(q);
     options.forEach((opt) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'answer-btn';
-      btn.textContent = opt;
-      btn.setAttribute('aria-label', `Risposta: ${opt}`);
+      renderAnswerButtonText(btn, opt, q.answerLang || null);
       btn.addEventListener('click', () => checkAnswer(opt, q.a, btn));
       frag.appendChild(btn);
     });
@@ -1284,7 +1839,7 @@
     if (answered) return;
     answered = true;
 
-    const isOk = chosen === correctAnswer;
+    const isOk = answersMatch(chosen, correctAnswer);
     const buttons = Array.from(document.querySelectorAll('#answers .answer-btn'));
     buttons.forEach((b) => {
       b.disabled = true;
@@ -1301,7 +1856,7 @@
       btn.classList.add('wrong');
       wrong += 1;
       buttons.forEach((b) => {
-        if (b.textContent === correctAnswer) b.classList.add('correct');
+        if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
       });
       playKo();
       setMascot('sad');
@@ -1333,18 +1888,17 @@
     const q = shuffle(pool.slice())[0];
 
     $('bonusMeta').textContent = `Bonus ${BONUS_LABELS[type] || type} · Moltiplicatore x${bonusFactor}`;
-    $('bonusText').textContent = q.q;
+    renderPrompt($('bonusText'), q);
     setMascot('neutral');
 
     const area = $('bonusAnswers');
     area.textContent = '';
     const frag = document.createDocumentFragment();
-    shuffle([q.a, ...(q.d || []).slice(0, 3)]).forEach((opt) => {
+    buildAnswerOptions(q).forEach((opt) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'answer-btn';
-      btn.textContent = opt;
-      btn.setAttribute('aria-label', `Risposta bonus: ${opt}`);
+      renderAnswerButtonText(btn, opt, q.answerLang || null);
       btn.addEventListener('click', () => checkBonusAnswer(opt, q.a, btn));
       frag.appendChild(btn);
     });
@@ -1360,7 +1914,7 @@
       b.disabled = true;
     });
 
-    const ok = chosen === correctAnswer;
+    const ok = answersMatch(chosen, correctAnswer);
     if (ok) {
       btn.classList.add('correct');
       playPerfect();
@@ -1370,7 +1924,7 @@
     } else {
       btn.classList.add('wrong');
       buttons.forEach((b) => {
-        if (b.textContent === correctAnswer) b.classList.add('correct');
+        if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
       });
       playKo();
       setMascot('sad');
@@ -1429,7 +1983,7 @@
     setText('rFinal', finalScore);
     setText('rCorrect', correct);
     setText('rWrong', wrong);
-    const areaText = selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea] || selectedArea;
+    const areaText = getSessionAreaLabel();
     setText('rArea', `${areaText} · ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`}`);
 
     recordRewards();
@@ -1444,7 +1998,7 @@
       window.SA.rewards.recordGame({
         subject: cfg.questionsSource && cfg.questionsSource.subject ? cfg.questionsSource.subject : cfg.subject || 'generale',
         classKey: selectedClass,
-        areaKey: selectedArea,
+        areaKey: getSessionAreaKey(),
         areas: Array.from(new Set(questions.map((q) => q && q.area).filter(Boolean))),
         grades: Array.from(new Set(questions.map((q) => q && q._grade).filter(Boolean))),
         correct,
@@ -1462,12 +2016,16 @@
   }
 
   function saveScore() {
+    const levelMeta = getCurrentLevelMeta();
     const entry = {
-      area: AREA_LABELS[selectedArea] || selectedArea,
+      area: getSessionAreaLabel(),
+      level: levelMeta ? levelMeta.label : '',
+      score: finalScore,
       cls: CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`,
       base: baseScore,
       bonus: bonusType ? `${BONUS_LABELS[bonusType] || bonusType} ${bonusApplied ? `x${bonusFactor}` : 'x1'}` : 'Nessuno',
       final: finalScore,
+      total: TOTAL_Q,
       correct: correct,
       wrong: wrong,
       date: new Date().toLocaleDateString('it-IT')
@@ -1489,7 +2047,7 @@
       const parsed = JSON.parse(storageGet(LB_KEY));
       if (!Array.isArray(parsed)) return [];
       return parsed.slice(0, 50).map((entry) => ({
-        area: safeText(entry && entry.area, 64),
+        area: safeText(entry && entry.area, 64) || safeText(entry && entry.level, 64) || LEADERBOARD_AREA_FALLBACK || AREA_LABELS[selectedArea] || selectedArea,
         cls: safeText(entry && entry.cls, 24),
         base: safeInt(entry && entry.base, 0),
         bonus: safeText(entry && entry.bonus, 48),
@@ -1585,6 +2143,7 @@
   function goStart() {
     showAllAreas = false;
     buildAreaGrid();
+    if (HAS_LEVELS) buildLevelsGrid();
     showScreen('screenStart');
     $('scoreBar')?.classList.remove('is-visible');
     setMascot('neutral');
@@ -1676,8 +2235,13 @@
   function initSubjectPage() {
     if (_initDone) return;
     _initDone = true;
+    if (HAS_LEVELS) {
+      const storedLevel = normalizeLevelKey(loadCursor().__level);
+      selectedLevel = getLevelMeta(storedLevel) ? storedLevel : getFirstAvailableLevelKey(selectedClass);
+    }
     ensureClassSelector();
     buildAreaGrid();
+    if (HAS_LEVELS) buildLevelsGrid();
     bindActions();
     spawnShapes();
     updateScoreBar();

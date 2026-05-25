@@ -8,7 +8,7 @@ Documentazione tecnica del progetto [lascuolaamica.it](https://lascuolaamica.it)
 
 | Pagina | Contenuto |
 |---|---|
-| [Architettura](Architettura) | Struttura frontend, moduli JS, gestione dati |
+| [Architettura](Architettura) | Struttura frontend, quiz engine unificato, gestione dati |
 | [Installazione e deploy](Installazione-e-Deploy) | Avvio locale, build e pubblicazione |
 | [Contenuti e domande](Contenuti-e-Domande) | Pipeline editoriale, regole qualità, formato JSON |
 | [Sicurezza, privacy e minori](Sicurezza-Privacy-e-Minori) | Privacy-by-design, tutela minori e controlli di sicurezza |

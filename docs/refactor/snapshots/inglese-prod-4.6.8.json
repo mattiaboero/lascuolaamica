@@ -1,0 +1,31 @@
+{
+  "capturedAt": "2026-05-25T08:26:15.905Z",
+  "appVersion": "4.6.8",
+  "subject": "inglese",
+  "captureMethod": "Automated clean browser session on production",
+  "storage": {
+    "englishAdventure_history_v2": "{\"3|lvl-1\":[\"1:0\",\"1:25\",\"1:18\",\"1:97\",\"1:86\",\"1:36\",\"1:16\",\"1:115\",\"1:67\",\"1:95\"],\"4|lvl-2\":[\"2:11\",\"2:30\",\"2:6\",\"2:23\",\"2:111\",\"2:19\",\"2:49\",\"2:79\",\"2:24\",\"2:38\"],\"5|lvl-3\":[\"3:118\",\"3:81\",\"3:72\",\"3:147\",\"3:75\",\"3:42\",\"3:68\",\"3:176\",\"3:212\",\"3:84\"]}",
+    "englishAdventure_quality_v1": "{\"sessions\":[{\"ts\":1779697528340,\"class\":\"3\",\"level\":1,\"total\":10,\"uniqueAreas\":9,\"repeatRateId\":0,\"areaCoverage\":0.529,\"areaEntropy\":0.985,\"gradeEntropy\":0.971,\"novelty\":1},{\"ts\":1779697545181,\"class\":\"4\",\"level\":2,\"total\":10,\"uniqueAreas\":9,\"repeatRateId\":0,\"areaCoverage\":0.529,\"areaEntropy\":0.985,\"gradeEntropy\":0.971,\"novelty\":1},{\"ts\":1779697560288,\"class\":\"5\",\"level\":3,\"total\":10,\"uniqueAreas\":8,\"repeatRateId\":0,\"areaCoverage\":0.471,\"areaEntropy\":0.974,\"gradeEntropy\":0.971,\"novelty\":1}],\"latest\":{\"ts\":1779697560288,\"class\":\"5\",\"level\":3,\"total\":10,\"uniqueAreas\":8,\"repeatRateId\":0,\"areaCoverage\":0.471,\"areaEntropy\":0.974,\"gradeEntropy\":0.971,\"novelty\":1},\"rolling\":{\"window\":3,\"repeatRateId\":0,\"areaCoverage\":0.51,\"areaEntropy\":0.981,\"gradeEntropy\":0.971,\"novelty\":1}}",
+    "englishAdventure_lb_v2": "[{\"score\":10,\"base\":10,\"bonus\":\"Nessuno\",\"final\":10,\"total\":10,\"cls\":\"Classe 3ª\",\"level\":\"🌊 Principiante\",\"date\":\"25/05/2026\"},{\"score\":10,\"base\":10,\"bonus\":\"Nessuno\",\"final\":10,\"total\":10,\"cls\":\"Classe 4ª\",\"level\":\"🤿 Esploratore\",\"date\":\"25/05/2026\"},{\"score\":10,\"base\":10,\"bonus\":\"Nessuno\",\"final\":10,\"total\":10,\"cls\":\"Classe 5ª\",\"level\":\"🦈 Campione\",\"date\":\"25/05/2026\"}]",
+    "englishAdventure_class_pref_v1": "5"
+  },
+  "notes": {
+    "hasCursorKey": false,
+    "sessions": [
+      {
+        "classKey": "3",
+        "level": 1
+      },
+      {
+        "classKey": "4",
+        "level": 2
+      },
+      {
+        "classKey": "5",
+        "level": 3
+      }
+    ],
+    "pageErrors": [],
+    "consoleErrors": []
+  }
+}

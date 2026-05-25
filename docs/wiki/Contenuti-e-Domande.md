@@ -36,6 +36,11 @@ L’indice dati tiene il conteggio aggiornato per materia e il timestamp di gene
 
 Le bonus questions non vivono più inline nei file pagina: stanno negli stessi JSON materia, con `bonus: true` e `bonusRaw` impostato su `easy`, `medium` o `hard`.
 
+Per inglese il dataset include anche metadata opzionali usati dal core:
+
+- `subarea` per il filtraggio dei livelli
+- `answerLang` per il rendering bilingue delle opzioni (`en` oppure `it`)
+
 ---
 
 ## Regole editoriali

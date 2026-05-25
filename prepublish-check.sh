@@ -252,11 +252,39 @@ check_pwa_version_bump_for_precache_changes() {
   )
   local changed_relevant=""
 
+  subject_quiz_core_comment_only_diff() {
+    local diff_text="$1"
+    local non_comment=""
+    non_comment=$(printf '%s\n' "$diff_text" \
+      | grep -E '^[+-]' \
+      | grep -vE '^\+\+\+|^---' \
+      | grep -vE '^[+-][[:space:]]*$|^[+-][[:space:]]*//' || true)
+    [[ -z "$non_comment" ]]
+  }
+
+  exempt_comment_only_subject_quiz_core() {
+    local changed_list="$1"
+    local diff_text="$2"
+    local normalized=""
+    normalized=$(printf '%s\n' "$changed_list" | sed '/^[[:space:]]*$/d')
+    if [[ "$normalized" == "subject-quiz-core.js" ]] && subject_quiz_core_comment_only_diff "$diff_text"; then
+      return 0
+    fi
+    return 1
+  }
+
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     changed_relevant=$(git diff --name-only -- "${relevant_paths[@]}" || true)
 
     if [[ -z "$changed_relevant" ]] && git rev-parse --verify HEAD^ >/dev/null 2>&1; then
       changed_relevant=$(git diff --name-only HEAD^ HEAD -- "${relevant_paths[@]}" || true)
+      if [[ -n "$changed_relevant" ]]; then
+        local committed_core_diff=""
+        committed_core_diff=$(git diff --unified=0 --no-color HEAD^ HEAD -- subject-quiz-core.js || true)
+        if exempt_comment_only_subject_quiz_core "$changed_relevant" "$committed_core_diff"; then
+          changed_relevant=""
+        fi
+      fi
       if [[ -n "$changed_relevant" ]] && git diff --quiet HEAD^ HEAD -- app-version.js; then
         echo "[ERROR] PWA: asset precache/cache-first changes detected without APP_VERSION bump"
         echo "$changed_relevant"
@@ -265,6 +293,14 @@ check_pwa_version_bump_for_precache_changes() {
       fi
       echo "[OK] PWA: APP_VERSION bump check passed (HEAD^..HEAD)"
       return
+    fi
+
+    if [[ -n "$changed_relevant" ]]; then
+      local working_core_diff=""
+      working_core_diff=$(git diff --unified=0 --no-color -- subject-quiz-core.js || true)
+      if exempt_comment_only_subject_quiz_core "$changed_relevant" "$working_core_diff"; then
+        changed_relevant=""
+      fi
     fi
 
     if [[ -n "$changed_relevant" ]] && git diff --quiet -- app-version.js; then
@@ -276,6 +312,92 @@ check_pwa_version_bump_for_precache_changes() {
   fi
 
   echo "[OK] PWA: APP_VERSION bump check passed for cache-relevant files"
+}
+
+check_core_no_subject_branch() {
+  local findings
+  findings=$(grep -nE 'config\.subject[[:space:]]*===|cfg\.subject[[:space:]]*===' subject-quiz-core.js \
+    | grep -vE '^[0-9]+:[[:space:]]*//' || true)
+  if [[ -n "$findings" ]]; then
+    echo "[ERROR] subject-quiz-core.js: subject-specific branch detected"
+    echo "$findings"
+    status=1
+  else
+    echo "[OK] subject-quiz-core.js: no subject-specific branches"
+  fi
+}
+
+check_cursor_key_explicit() {
+  local missing=""
+  local files=(
+    "js/matematica-page.js"
+    "js/geografia-page.js"
+    "js/italiano-page.js"
+    "js/scienze-page.js"
+    "js/storia-page.js"
+    "js/civica-page.js"
+    "js/problemi-page.js"
+    "js/inglese-page.js"
+  )
+
+  local f
+  for f in "${files[@]}"; do
+    if [[ -f "$f" ]] && ! grep -q "cursorKey:" "$f"; then
+      missing+="$f "
+    fi
+  done
+
+  if [[ -n "$missing" ]]; then
+    echo "[ERROR] missing explicit cursorKey in: $missing"
+    status=1
+  else
+    echo "[OK] all subject pages declare cursorKey explicitly"
+  fi
+}
+
+check_subject_pages_size() {
+  local oversized=""
+  local files=(
+    "js/matematica-page.js"
+    "js/geografia-page.js"
+    "js/italiano-page.js"
+    "js/scienze-page.js"
+    "js/storia-page.js"
+    "js/civica-page.js"
+    "js/problemi-page.js"
+    "js/inglese-page.js"
+  )
+
+  local f
+  for f in "${files[@]}"; do
+    if [[ ! -f "$f" ]]; then
+      oversized+="$f(missing) "
+      continue
+    fi
+    local lines
+    lines=$(wc -l < "$f")
+    if [[ "$lines" -ge 250 ]]; then
+      oversized+="$f(${lines}) "
+    fi
+  done
+
+  if [[ -n "$oversized" ]]; then
+    echo "[ERROR] subject page size limit exceeded: $oversized"
+    status=1
+  else
+    echo "[OK] all subject pages are under 250 lines"
+  fi
+}
+
+check_extension_contract_present() {
+  local count
+  count=$(grep -c "Extension Contract" subject-quiz-core.js || true)
+  if [[ "$count" != "1" ]]; then
+    echo "[ERROR] subject-quiz-core.js: Extension Contract marker expected once, found $count"
+    status=1
+  else
+    echo "[OK] subject-quiz-core.js: Extension Contract marker present"
+  fi
 }
 
 check_pwa_root_only_contract
@@ -428,6 +550,11 @@ if command -v ruby >/dev/null 2>&1; then
 else
   echo "[WARN] ruby not available, manifest screenshot check skipped"
 fi
+
+check_core_no_subject_branch
+check_cursor_key_explicit
+check_subject_pages_size
+check_extension_contract_present
 
 if [[ $status -ne 0 ]]; then
   echo

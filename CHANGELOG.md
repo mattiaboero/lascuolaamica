@@ -1,5 +1,55 @@
 # Changelog Repo
 
+## 4.9.0 - 2026-05-25
+
+### Changed
+- refactor(quiz-engine): chiusura consolidation. 8/8 materie ora config-driven via `subject-quiz-core.js`. Codebase ridotta di ~3.500 righe nette di duplicazione (civica, problemi, inglese migrate definitivamente al pattern config).
+- core: Extension Contract attivo con 0/3 hook funzione consumati (margine 100% per future estensioni). 4 guard rail in `prepublish-check.sh` (no-subject-branch, cursorKey-explicit, pages-size, extension-contract-present).
+- docs/wiki/Architettura.md: aggiornata sezione Quiz engine con guida "aggiungere nuova materia" (~120 righe vs ~1500 pre-refactor).
+
+### Validation
+- 8/8 materie verificate smoke multi-device (desktop + tablet + smartphone).
+- PWA install + offline + update flow verificati su device reale.
+- Rewards + reset dati locali verificati.
+- Soak branch refactor 7 giorni, 0 regressioni.
+- Audit dead code: 0 helper duplicati, 0 const legacy, 0 commenti obsoleti residui.
+
+## 4.8.0 - 2026-05-25
+
+### Changed
+- refactor(inglese): migrato `js/inglese-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 104 righe di sola config.
+- core quiz: aggiunti `cfg.levels`, `cfg.renderMode='bilingual'` e `cfg.maxLevelDistance` come config field passivi. Nessun hook funzione consumato (`D=0` invariato).
+- questions-loader: aggiunti `subarea` e `answerLang` come metadata opzionali in `rowToQuestion`, usati solo dalle materie che li dichiarano.
+- json inglese: arricchito `json/inglese.json` con `answerLang` su tutte le domande, con builder dataset aggiornato.
+- 8/8 materie quiz ora sono config-driven.
+
+### Fixed
+- prepublish-check.sh: `check_cursor_key_explicit` ora copre tutte le 8 page subject, incluso inglese post-migrazione.
+
+## 4.7.1 - 2026-05-25
+### Changed
+- refactor(problemi): confermata e formalizzata `cfg.cursorKey = 'problemiMatematica_cursor_v1'` esplicita in config per allinearsi alla politica unica "cursorKey sempre esplicita". Nessuna migrazione dati richiesta.
+- core quiz: politica unica documentata in `docs/refactor/core-capabilities.md`. Nessun fallback derivato implementato nel core: ogni materia migrata deve dichiarare esplicitamente la propria `cursorKey`.
+
+### Fixed
+- prepublish-check.sh: aggiunto il guard `check_cursor_key_explicit` per prevenire omissioni future nelle materie gia` migrate/config-driven.
+
+## 4.7.0 - 2026-05-25
+### Changed
+- refactor(problemi): migrato `js/problemi-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 39 righe di sola config.
+- core quiz: aggiunti `cfg.answerMode` (default `mcq`, nuovo `numeric`) e `cfg.leaderboardAreaFallback`; `cfg.optionsGenerator` e` disponibile come strategy passiva di fallback senza hook funzione.
+- Storage keys utenti problemi preservate (`problemiMatematica_lb_v1`, `problemiMatematica_history_v2`, `problemiMatematica_quality_v1`, `problemiMatematica_class_pref_v1`).
+
+### Fixed
+- questions-loader: bonus rows non piu` incluse nella banca principale delle 10 domande standard. Regressione pregressa introdotta in `v4.6.6` con la migrazione JSON-only (`civica`, `inglese`, `problemi`): alcune sessioni potevano contenere bonus rows tra le domande normali. Verifica retroattiva civica post-fix documentata in `docs/refactor/test-report-civica.md`.
+
+## 4.6.9 - 2026-05-24
+### Changed
+- refactor(civica): migrato `js/civica-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 81 righe di sola config.
+- core quiz: aggiunta idratazione generica delle bonus questions dai bonus rows JSON e supporto al config field `mixedRepeatLimit`.
+- core quiz: introdotti i pesi config-driven `targetGradeWeight` e `classDistanceWeight` per rispettare il profilo classe di civica senza branch per materia.
+- Storage keys utenti preservate (`educazioneCivica_lb_v1`, `educazioneCivica_cursor_v1`, `educazioneCivica_history_v2`, `educazioneCivica_quality_v1`, `educazioneCivica_class_pref_v1`).
+
 ## 4.6.8 - 2026-05-24
 ### Changed
 - refactor: migrazione civica/inglese/problemi a JSON-only con bonus rows da dataset

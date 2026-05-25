@@ -22,6 +22,14 @@ Quando modifichi i file in `json/`, ricorda che `_headers` impone
 Cache-Control no-aggressive per garantire upgrade puliti. Non modificare
 quella riga. Vedi `docs/wiki/Architettura.md` -> "Header HTTP critici".
 
+Per le domande di `inglese`, ogni riga deve valorizzare anche
+`answerLang` nel JSON finale:
+- `en` quando i pulsanti risposta sono in inglese
+- `it` quando i pulsanti risposta sono in italiano
+
+Il campo viene popolato dal build dataset, ma va verificato quando
+si aggiungono nuovi pattern di domanda o nuove traduzioni.
+
 **Se non hai accesso all'ambiente editoriale:**
 
 Apri una issue con la proposta di domande in formato libero — valutiamo noi la conversione.
@@ -40,6 +48,31 @@ Apri una issue descrivendo:
 ### Contributi tecnici (codice)
 
 Utili per bug fix, miglioramenti di accessibilità e performance. Non è il canale prioritario per aggiungere contenuti.
+
+### Aggiungere una nuova materia
+
+La codebase quiz usa un motore unificato. Per aggiungere una nuova materia:
+
+1. crea `json/<subject>.json` con shape compatibile con `questions-loader.js`
+2. aggiorna `json/index.json`
+3. crea `js/<subject>-page.js` con `window.SA.subjectConfig`
+4. crea la pagina HTML seguendo lo scaffold di `civica.html` o `inglese.html`
+5. aggiorna `sitemap.xml` e i metadati pagina
+6. esegui `./prepublish-check.sh`
+
+Campi config obbligatori:
+- `subject`
+- `totalQ`
+- `lbKey`
+- `cursorKey`
+- `historyKey`
+- `metricsKey`
+- `classPrefKey`
+- `defaultArea`
+- `areas`
+- `questionsSource`
+
+Per dettagli architetturali: [docs/wiki/Architettura.md](docs/wiki/Architettura.md).
 
 ---
 

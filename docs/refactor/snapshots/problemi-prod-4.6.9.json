@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-05-25T07:29:51.640Z",
+  "appVersion": "4.6.9",
+  "subject": "problemi",
+  "captureMethod": "Automated clean browser session on production",
+  "storage": {
+    "problemiMatematica_lb_v1": "[{\"cls\":\"Classe 3ª\",\"base\":100,\"bonus\":\"Nessuno\",\"final\":100,\"date\":\"25/05/2026\"},{\"cls\":\"Classe 4ª\",\"base\":100,\"bonus\":\"Nessuno\",\"final\":100,\"date\":\"25/05/2026\"},{\"cls\":\"Classe 5ª\",\"base\":100,\"bonus\":\"Nessuno\",\"final\":100,\"date\":\"25/05/2026\"}]",
+    "problemiMatematica_history_v2": "{\"class-3\":[\"p-326\",\"p-953\",\"p-284\",\"p-328\",\"p-213\",\"p-204\",\"p-278\",\"p-245\",\"p-270\",\"p-375\"],\"class-4\":[\"p-417\",\"p-551\",\"p-416\",\"p-429\",\"p-533\",\"p-991\",\"p-557\",\"p-511\",\"p-987\",\"p-408\"],\"class-5\":[\"p-730\",\"p-638\",\"p-665\",\"p-714\",\"p-1037\",\"p-736\",\"p-732\",\"p-658\",\"p-1016\",\"p-646\"]}",
+    "problemiMatematica_quality_v1": "{\"sessions\":[{\"ts\":1779694151010,\"class\":\"3\",\"total\":10,\"uniqueAreas\":1,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0,\"gradeEntropy\":0.971,\"novelty\":1},{\"ts\":1779694164900,\"class\":\"4\",\"total\":10,\"uniqueAreas\":1,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0,\"gradeEntropy\":0.96,\"novelty\":1},{\"ts\":1779694178546,\"class\":\"5\",\"total\":10,\"uniqueAreas\":1,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0,\"gradeEntropy\":0.96,\"novelty\":1}],\"latest\":{\"ts\":1779694178546,\"class\":\"5\",\"total\":10,\"uniqueAreas\":1,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0,\"gradeEntropy\":0.96,\"novelty\":1},\"rolling\":{\"window\":3,\"repeatRateId\":0,\"areaCoverage\":1,\"areaEntropy\":0,\"gradeEntropy\":0.964,\"novelty\":1}}",
+    "problemiMatematica_class_pref_v1": "5"
+  },
+  "notes": {
+    "hasCursorKey": false,
+    "errors": []
+  }
+}
