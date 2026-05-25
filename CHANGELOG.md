@@ -29,7 +29,7 @@
 ## 4.7.1 - 2026-05-25
 ### Changed
 - refactor(problemi): confermata e formalizzata `cfg.cursorKey = 'problemiMatematica_cursor_v1'` esplicita in config per allinearsi alla politica unica "cursorKey sempre esplicita". Nessuna migrazione dati richiesta.
-- core quiz: politica unica documentata in `docs/refactor/core-capabilities.md`. Nessun fallback derivato implementato nel core: ogni materia migrata deve dichiarare esplicitamente la propria `cursorKey`.
+- core quiz: politica unica documentata in `docs/archive/refactor-quiz-engine-2026/core-capabilities.md`. Nessun fallback derivato implementato nel core: ogni materia migrata deve dichiarare esplicitamente la propria `cursorKey`.
 
 ### Fixed
 - prepublish-check.sh: aggiunto il guard `check_cursor_key_explicit` per prevenire omissioni future nelle materie gia` migrate/config-driven.
@@ -41,7 +41,7 @@
 - Storage keys utenti problemi preservate (`problemiMatematica_lb_v1`, `problemiMatematica_history_v2`, `problemiMatematica_quality_v1`, `problemiMatematica_class_pref_v1`).
 
 ### Fixed
-- questions-loader: bonus rows non piu` incluse nella banca principale delle 10 domande standard. Regressione pregressa introdotta in `v4.6.6` con la migrazione JSON-only (`civica`, `inglese`, `problemi`): alcune sessioni potevano contenere bonus rows tra le domande normali. Verifica retroattiva civica post-fix documentata in `docs/refactor/test-report-civica.md`.
+- questions-loader: bonus rows non piu` incluse nella banca principale delle 10 domande standard. Regressione pregressa introdotta in `v4.6.6` con la migrazione JSON-only (`civica`, `inglese`, `problemi`): alcune sessioni potevano contenere bonus rows tra le domande normali. Verifica retroattiva civica post-fix documentata in `docs/archive/refactor-quiz-engine-2026/test-report-civica.md`.
 
 ## 4.6.9 - 2026-05-24
 ### Changed

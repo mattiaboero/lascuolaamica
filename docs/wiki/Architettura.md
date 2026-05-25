@@ -82,7 +82,7 @@ La cartella `admin/` e uno strumento interno, non una boundary di sicurezza.
 - Stato attuale: `0/3` consumati
 - Config field passivi: illimitati
 - Vietato nel core: `if (cfg.subject === ...)`
-- Riferimento: [docs/refactor/extension-contract.md](../refactor/extension-contract.md)
+- Riferimento: [docs/archive/refactor-quiz-engine-2026/extension-contract.md](../archive/refactor-quiz-engine-2026/extension-contract.md)
 
 ## Algoritmo di selezione domande
 

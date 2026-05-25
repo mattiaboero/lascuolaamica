@@ -9,7 +9,7 @@
   //     - onBuildSession(ctx) → Question[]
   //     - onPickBonus(ctx)    → Question
   //     - onScore(ctx, answer)→ number
-  //   Aggiungere un 4° hook richiede ADR scritto in docs/refactor/.
+  //   Aggiungere un 4° hook richiede ADR scritto in docs/archive/refactor-quiz-engine-2026/.
   //
   // Config field passivi: illimitati, shape condivisa fra materie.
   //   Materie che non usano un campo lo lasciano undefined → core
@@ -25,7 +25,7 @@
   //   3. Flow completamente diverso? → uno dei 3 hook autorizzati.
   //   4. Nessuna di sopra? → resta in page-side (pre/post processing).
   //
-  // Riferimento completo: docs/refactor/extension-contract.md
+  // Riferimento completo: docs/archive/refactor-quiz-engine-2026/extension-contract.md
   // =========================================================================
 
   const SA = window.SA = window.SA || {};
