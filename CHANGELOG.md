@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## 4.9.1 - 2026-05-25
+
+### Fixed
+- shared.js: aggiornato `UPDATE_LOG` con le 6 release mancanti (`4.6.8` -> `4.9.0`). Il popup info mostrava ancora `4.6.7` come ultima voce mentre il footer riportava `4.9.0`.
+
 ## 4.9.0 - 2026-05-25
 
 ### Changed

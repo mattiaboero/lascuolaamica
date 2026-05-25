@@ -52,6 +52,53 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '25 maggio 2026 · Release 4.9.0',
+      items: [
+        'Completata la riorganizzazione del motore quiz: tutte le 8 materie ora usano lo stesso runtime condiviso, eliminando 3.500 righe di codice duplicato.',
+        'Sistema più semplice da mantenere e arricchire: aggiungere una nuova materia richiede ora circa 120 righe di configurazione invece di un motore dedicato.',
+        'Verificato funzionamento su desktop, tablet e smartphone con installazione PWA, modalità offline e flusso di aggiornamento.'
+      ]
+    },
+    {
+      date: '25 maggio 2026 · Release 4.8.0',
+      items: [
+        'Inglese migrato al motore condiviso: livelli 1/2/3 con disponibilità basata sulla classe selezionata.',
+        'Rendering bilingue dedicato: porzioni inglesi marcate per lettori di schermo e opzioni in italiano o inglese a seconda del tipo di domanda.',
+        'Tutti i 463 quesiti inglese ora hanno la lingua delle risposte esplicita nel dataset.'
+      ]
+    },
+    {
+      date: '25 maggio 2026 · Release 4.7.1',
+      items: [
+        'Formalizzata la politica unica delle chiavi di stato runtime: ogni materia dichiara esplicitamente il proprio namespace senza fallback magici.',
+        'Aggiunto un controllo di pubblicazione che blocca rilasci con configurazioni incoerenti.'
+      ]
+    },
+    {
+      date: '25 maggio 2026 · Release 4.7.0',
+      items: [
+        'Problemi migrato al motore condiviso con confronto numerico delle risposte (12 equivalente a 12,0 o 12.0).',
+        'Corretto un comportamento residuo del caricamento dati: le domande bonus restano nel flow finale dedicato e non entrano più nella sessione standard di 10 domande.',
+        'Storage progressi utenti preservato byte per byte durante la migrazione.'
+      ]
+    },
+    {
+      date: '24 maggio 2026 · Release 4.6.9',
+      items: [
+        'Educazione civica migrata al motore condiviso: distribuzione delle aree per classe gestita dichiarativamente con pesi configurabili.',
+        'Storage progressi utenti civica preservato senza migrazione dati.',
+        'Verifiche di regressione sulle altre materie già migrate: nessun impatto.'
+      ]
+    },
+    {
+      date: '24 maggio 2026 · Release 4.6.8',
+      items: [
+        'Migrazione JSON-only completata per civica, inglese e problemi: rimossi i dataset duplicati inline dalle pagine.',
+        'Bonus questions ora idratate direttamente dai dataset JSON con bucket dedicati per facilità/media/difficile.',
+        'Dataset totale aggiornato a 7.375 domande con audit automatico.'
+      ]
+    },
+    {
       date: '24 maggio 2026 · Release 4.6.7',
       items: [
         'Aggiunto il contatore totale domande nel footer di home e chi-siamo, calcolato da json/index.json e aggiornato automaticamente a ogni release dati.',
