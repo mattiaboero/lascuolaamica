@@ -18,7 +18,7 @@ Documentazione tecnica del progetto [lascuolaamica.it](https://lascuolaamica.it)
 
 ## Il progetto in sintesi
 
-La Scuola Amica è una piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie (matematica, italiano, inglese, problemi, civica, geografia, storia, scienze), per le classi dalla 2ª alla 5ª.
+La Scuola Amica è una piattaforma educativa gratuita per la scuola primaria italiana (elementare). Quiz a risposta multipla su 8 materie (matematica, italiano, inglese, problemi, civica, geografia, storia, scienze), per le classi dalla 2ª alla 5ª.
 
 **7.375 domande** validate, coerenti con le Indicazioni Nazionali.
 
@@ -39,3 +39,4 @@ Principi tecnici fondamentali:
 - **Hosting:** piattaforma statica con pubblicazione automatica da `main`
 - **Build:** `bash scripts/export_for_cloudflare.sh` → directory `export/`
 - **Sicurezza:** gestita a livello infrastrutturale con regole e controlli dedicati
+
