@@ -89,9 +89,10 @@ Tabella allineata al codice runtime attuale di `subject-quiz-core.js`.
 | `answerMode` | string | `mcq` | confronto testuale normalizzato; `numeric` attiva confronto numerico con supporto a `,`, `.`, frazioni e spazi |
 | `optionsGenerator` | string | `undefined` | nessuna generazione runtime; se valorizzato attiva una strategy core predefinita |
 | `leaderboardAreaFallback` | string | `''` | se una entry storica non ha `area`, il core usa il fallback configurato prima del default area corrente |
-| `classPrefKey` | string | `${CURSOR_KEY}_class_pref_v1` | la preferenza classe viene comunque persistita con chiave derivata dal cursor |
-| `historyKey` | string | `${CURSOR_KEY}_history_v2` | lo storico multi-sessione viene comunque persistito con chiave derivata dal cursor |
-| `metricsKey` | string | `${CURSOR_KEY}_quality_v1` | le metriche rolling vengono comunque persistite con chiave derivata dal cursor |
+| `cursorKey` | string | `subject_cursor_v1` | namespace runtime di fallback per cursor/stats/historySig; per materie migrate e` raccomandato impostarlo esplicitamente |
+| `classPrefKey` | string | `${cursorKey}_class_pref_v1` | la preferenza classe viene persistita usando `cfg.classPrefKey` oppure il namespace derivato da `cursorKey` |
+| `historyKey` | string | `${cursorKey}_history_v2` | lo storico multi-sessione viene persistito usando `cfg.historyKey` oppure il namespace derivato da `cursorKey` |
+| `metricsKey` | string | `${cursorKey}_quality_v1` | le metriche rolling usano `cfg.metricsKey` oppure il namespace derivato da `cursorKey` |
 
 ## Garanzia compatibilità retroattiva
 
@@ -101,3 +102,16 @@ Verifica pratica:
 - il test T4 di ogni fase di migrazione deve coprire le materie già consolidate proprio per validare questa garanzia
 - Fase 3 ha verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia` senza `pageerror` né `console.error` ([test-report-civica.md](./test-report-civica.md))
 - Fase 4 ha ri-verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia`, `civica` in `perfect/mixed/worst` dopo l'introduzione di `answerMode` senza regressioni runtime ([test-report-problemi.md](./test-report-problemi.md))
+
+### Nota su cursorKey omesso
+
+Nel codice attuale il core usa `subject_cursor_v1` come fallback statico
+quando `cfg.cursorKey` e` omesso. Non deriva automaticamente il namespace
+da `cfg.subject`.
+
+Conseguenza operativa:
+- per materie migrate con storage storico da preservare, `cursorKey`,
+  `historyKey`, `metricsKey` e `classPrefKey` vanno dichiarati in config
+  in modo esplicito
+- per materie nuove senza storico, e` comunque consigliato impostare un
+  `cursorKey` dedicato per evitare collisioni future su namespace runtime

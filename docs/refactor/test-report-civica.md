@@ -89,3 +89,36 @@ Check eseguiti:
 - `node scripts/audit_questions_json.js` → `Question JSON audit passed for 8 subject files.`
 - `grep -n "Extension Contract" subject-quiz-core.js` → `1` match
 - `grep "educazioneCivica" subject-quiz-core.js` → `0` match
+
+## Verifica retroattiva post fix loader (v4.7.0)
+
+Eseguita in pre-Fase 5 per validare che il fix `questions-loader.js`
+(bonus rows escluse dalla banca principale, introdotto in v4.7.0) non
+abbia rotto in retroattivo il comportamento civica.
+
+### Run harness
+- 6 sessioni civica classe 3 area `mixed` mode=`mixed` bonus=`easy`
+- Totale `60` domande
+- `0` bonus rows tra le domande normali (atteso)
+
+### Distribuzione gradi osservata post-fix
+- grado 2: `24` domande (`40%`)
+- grado 3: `36` domande (`60%`)
+- altri: `0`
+
+### Confronto pre/post fix
+- pre-fix (Fase 3 T2): `24g2 + 36g3` (`40%/60%`)
+- post-fix: `24g2 + 36g3` (`40%/60%`)
+- `0` bonus rows confermato tra le domande standard
+- distribuzione invariata rispetto a Fase 3 e compatibile con `classProfiles[3] = {2: 0.35, 3: 0.65}` entro il margine statistico gia` accettato su `N=60`
+- run massimo consecutivo stessa area in mixed: `2`
+
+### Leaderboard byte-per-byte
+- snapshot [civica-prod-4.6.8.json](./snapshots/civica-prod-4.6.8.json) ricaricato
+- `3` entry leaderboard intatte
+- class pref `5` ripristinata
+- `0` `pageerror`
+- `0` `console.error`
+
+### Esito
+`PASS`. Nessuna regressione introdotta dal fix loader su civica.

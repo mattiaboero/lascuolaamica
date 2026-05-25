@@ -13,10 +13,12 @@ File di riferimento:
 - `mode=worst`: risponde sempre sbagliato scegliendo il primo distrattore disponibile. Valida feedback KO, punteggio minimo e rendering UI in scenario negativo.
 
 ## Politica per T4 regressione
-Per ogni materia migrata eseguire almeno 3 run:
-- 1 run `perfect`
-- 1 run `mixed`
-- 1 run `worst`
+Per ogni materia eseguire run minimi:
+- 1 run `perfect` (`N=10`)
+- 1 o 2 run `mixed`
+  - `N=10` per materie semplici (`matematica`, `geografia`, `italiano`, `scienze`, `storia`, `civica`, `problemi`)
+  - `N=20` per materie complesse (es. `inglese` a livelli multipli) o quando serve ridurre rumore statistico
+- 1 run `worst` (`N=10`)
 
 Bonus:
 - alternare `easy`, `medium`, `hard`, `skip` in modo ciclico tra i run della stessa materia
@@ -24,6 +26,17 @@ Bonus:
 Obiettivo:
 - non limitarsi a confermare che la pagina si avvia
 - coprire anche score parziale, score nullo, feedback KO e ramificazioni bonus/skip
+
+### Razionale `N=20`
+
+Con `mode=mixed` (`p=0.7` corretto), la deviazione standard binomiale
+per `N=10` e` circa `0.14`, quindi il range osservato realistico puo`
+muoversi tra `50-90%` corrette.
+
+Con `N=20` la deviazione scende a circa `0.10`, restringendo il range
+tipico verso `60-80%`. Questo aiuta a identificare regressioni
+inferiori a `15` punti percentuali su materie con piu` estensioni
+config-driven.
 
 ## CLI minima
 
