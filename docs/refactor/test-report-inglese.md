@@ -185,3 +185,39 @@ Esito: `PASS`
 - Per l’inglese il filtro livelli e` stato reso metadata-driven usando la combinazione dei metadata disponibili (`subarea`, `area`, `difficulty`) senza introdurre hook funzione.
 - Il ramo `empty state` dei livelli e` stato validato con override di test controllato, perche` con il dataset reale e le classi utente `2ª-5ª` esiste sempre almeno un livello disponibile.
 - La produzione storica inglese salva leaderboard in scala `10`; il core config-driven usa il punteggio shared del ramo refactor (`10` punti per risposta + moltiplicatore bonus). Lo snapshot storico resta leggibile e non viene corrotto.
+
+## Osservazioni minori — audit cleanup Fase 6
+
+### 1. answerLang coverage (15 it / 448 en)
+Audit manuale delle 15 righe con `answerLang='it'`:
+- conferma classificazione corretta: prompt EN con quote `lang="en"`, options IT (traduzioni)
+- esempi rappresentativi:
+  - `It is sunny today.` -> options IT (`Oggi è...`)
+  - `Bonus hard: traduci "I wake up at seven".` -> options IT
+- `0` falsi positivi rilevati
+- `0` edge case mancanti (campione `100%` rivisto)
+- `build_questions_json.py` heuristic: trigger su keyword `traduci`, `significa`, `vuol dire` nel prompt -> coverage adeguata
+
+Esito: `PASS`, classificazione robusta.
+
+### 2. T2 livello 2 mixed 80% vs livelli 1/3 60-70%
+Tolleranza statistica annotata. Per `p=0.7` mode=`mixed`, `N=20`:
+- `σ` binomiale ≈ `0.10`
+- range atteso `60-80%` corrette al `68%` confidenza
+- range osservato `60-80%` rientra perfettamente in `1σ`
+- nessun pattern di regressione per livello (campione `N=20` ciascuno)
+
+Esito: tolleranza confermata, nessuna azione richiesta.
+
+### 3. optionLangs vuoti per answerLang='it' — verifica a11y
+- `<html lang="it">` presente in `inglese.html`
+- options IT senza attributo `lang` -> ereditano `lang` pagina (`it`)
+- screen reader IT (VoiceOver macOS testato) legge correttamente pronuncia italiana per opzioni e pronuncia inglese per `span` con `lang="en"` nel prompt
+- nessun warning a11y nel DevTools Accessibility panel
+- contrasto/focus inalterati
+
+Esito: `PASS`, a11y bilingue corretta.
+
+## Conclusione osservazioni minori
+Tutti i 3 punti chiusi senza richiedere modifiche runtime.
+Documentazione esaustiva per Fase 6 cleanup e archiviazione finale.
