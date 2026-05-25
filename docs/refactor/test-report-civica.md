@@ -43,6 +43,7 @@ Risultati confermati:
 
 Nota:
 - il primo run dopo la migrazione mostrava un drift verso il solo grado 3; corretto introducendo pesi config-driven `targetGradeWeight` e `classDistanceWeight` in `subject-quiz-core.js`, applicati a civica senza branch per materia.
+- nota statistica: distribuzione osservata `0.40` vs attesa `0.35` entro tolleranza per `N=60`. Per validazione stretta con deviazione `< 0.02` servirebbe `N >= 200`, non eseguito in questa fase perché non rappresentativo di una sessione utente reale da 10 domande.
 
 ## T3 — Edge cases
 
@@ -74,6 +75,9 @@ Per ciascuna materia:
 - run massimo consecutivo stessa area: `2`
 - nessun `pageerror`
 - nessun `console.error`
+
+Debito noto chiuso per le fasi successive:
+- da Fase 4 in poi T4 non deve limitarsi al solo bot `perfect`; il harness condiviso in [test-harness.md](./test-harness.md) introduce anche `mode=mixed` e `mode=worst`
 
 ## T5 — Prepublish + audit
 

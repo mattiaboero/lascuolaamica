@@ -73,3 +73,35 @@
   - inglese `levelStrategy` -> non hook funzione; preferenza per metadata/config `levels` con logica standard nel core.
   - inglese `effects` -> trattare come variante lifecycle opzionale o fase successiva; non necessaria per consolidare il motore decisionale.
 - Conseguenza pratica: i delta di Fase 1 ricadono soprattutto in categorie `B` e `C`; non serve pianificare nuovi hook funzione `D` per avviare la Fase 2.
+
+## Config field passivi — comportamento di default
+
+Tabella allineata al codice runtime attuale di `subject-quiz-core.js`.
+
+| Field | Tipo | Default runtime | Comportamento se undefined |
+|---|---|---:|---|
+| `classProfiles` | object | profilo shared `{2:{2:1},3:{2:0.35,3:0.65},4:{2:0.15,3:0.35,4:0.5},5:{3:0.15,4:0.35,5:0.5}}` | il core continua a pianificare le classi usando il profilo built-in |
+| `mixedRepeatLimit` | number | `2` | il core limita comunque a 2 le ripetizioni consecutive della stessa area in mixed |
+| `targetGradeWeight` | number | `7` | il target grade resta pesato con coefficiente 7 nel candidate scoring |
+| `classDistanceWeight` | number | `10` | la distanza dalla classe selezionata resta penalizzata con coefficiente 10 |
+| `softmaxTemperature` | number | `1.25` | il pick probabilistico usa temperatura 1.25 |
+| `softmaxTopK` | number | `6` | il softmax considera i migliori 6 candidati |
+| `classPrefKey` | string | `${CURSOR_KEY}_class_pref_v1` | la preferenza classe viene comunque persistita con chiave derivata dal cursor |
+| `historyKey` | string | `${CURSOR_KEY}_history_v2` | lo storico multi-sessione viene comunque persistito con chiave derivata dal cursor |
+| `metricsKey` | string | `${CURSOR_KEY}_quality_v1` | le metriche rolling vengono comunque persistite con chiave derivata dal cursor |
+
+Campi citati in Fase 1 ma non ancora parte del contratto runtime attivo:
+- `answerMode`
+- `optionsGenerator`
+
+Stato attuale:
+- non sono implementati nel core pubblico
+- restano materiale di design per fasi successive, non vanno documentati come feature disponibili finché il codice non li accetta davvero
+
+## Garanzia compatibilità retroattiva
+
+Una materia esistente che non specifica i field nuovi deve continuare a comportarsi in modo compatibile con il comportamento storico del core. Se l'introduzione di un nuovo field rompe una materia che non lo usa, il bug è del core e non della materia.
+
+Verifica pratica:
+- il test T4 di ogni fase di migrazione deve coprire le materie già consolidate proprio per validare questa garanzia
+- Fase 3 ha verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia` senza `pageerror` né `console.error` ([test-report-civica.md](./test-report-civica.md))

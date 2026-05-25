@@ -1,0 +1,321 @@
+#!/usr/bin/env node
+'use strict';
+
+const { createRequire } = require('module');
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  if (options.help) {
+    printHelp();
+    return;
+  }
+
+  let playwright;
+  try {
+    const requireFromCwd = createRequire(`${process.cwd()}/`);
+    playwright = requireFromCwd('playwright');
+  } catch (error) {
+    console.error('Playwright non disponibile. Esegui lo script con NODE_PATH che punti a un node_modules contenente "playwright".');
+    console.error(String(error));
+    process.exit(1);
+  }
+
+  const { chromium } = playwright;
+  const browser = await chromium.launch({ headless: options.headless });
+  try {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    const trackers = { pageErrors: [], consoleErrors: [] };
+
+    page.on('pageerror', (error) => trackers.pageErrors.push(String(error)));
+    page.on('console', (msg) => {
+      if (msg.type() === 'error') trackers.consoleErrors.push(msg.text());
+    });
+
+    await page.addInitScript(({ playWindowKey, playWindowValue }) => {
+      window.SA = window.SA || {};
+      window.SA.memoryStorage = window.SA.memoryStorage || Object.create(null);
+      window.SA.memoryStorage[playWindowKey] = playWindowValue;
+      try {
+        window.localStorage.setItem(playWindowKey, playWindowValue);
+      } catch (_) {}
+    }, {
+      playWindowKey: 'scuolaAmica_play_window_v1',
+      playWindowValue: buildPlayWindowValue()
+    });
+
+    await page.goto(buildPageUrl(options.baseUrl, options.page), { waitUntil: 'networkidle' });
+    await waitForCfg(page);
+    const maps = await getConfigMaps(page);
+
+    if (options.classKey) {
+      const classButton = page.locator(`[data-action="select-class"][data-class="${options.classKey}"]`).first();
+      if (await classButton.count()) {
+        await classButton.click();
+      }
+    }
+
+    if (options.area) {
+      const areaButton = page.locator(`[data-action="select-area"][data-area="${options.area}"]`).first();
+      if (await areaButton.count()) {
+        await areaButton.click();
+      }
+    }
+
+    await page.locator('[data-action="start-game"]').click();
+    await page.waitForSelector('#screenGame.active', { timeout: 15000 });
+
+    const questions = [];
+    for (let index = 0; index < 10; index++) {
+      const questionText = normalize(await page.locator('#qText').textContent());
+      const meta = maps.questions[questionText];
+      if (!meta) {
+        throw new Error(`Question not found in config map: ${questionText}`);
+      }
+
+      const answerPlan = pickAnswer(meta, options.mode);
+      await clickAnswer(page, '#answers', answerPlan.chosen);
+      questions.push({
+        question: questionText,
+        expected: meta.correct,
+        chosen: answerPlan.chosen,
+        correct: answerPlan.correct,
+        area: meta.area,
+        grade: meta.grade
+      });
+    }
+
+    await page.waitForSelector('#screenBonusPick.active');
+    let bonus = { mode: options.bonus, attempted: false };
+    if (options.bonus === 'skip') {
+      await page.locator('[data-action="skip-bonus"]').click();
+    } else {
+      await page.locator(`[data-action="bonus-pick"][data-bonus="${options.bonus}"]`).click();
+      await page.waitForSelector('#screenBonusQuestion.active');
+      const bonusText = normalize(await page.locator('#bonusText').textContent());
+      const meta = maps.bonus[bonusText];
+      if (!meta) {
+        throw new Error(`Bonus question not found in config map: ${bonusText}`);
+      }
+      const answerPlan = pickAnswer(meta, options.mode);
+      await clickAnswer(page, '#bonusAnswers', answerPlan.chosen);
+      bonus = {
+        mode: options.bonus,
+        attempted: true,
+        type: meta.type,
+        question: bonusText,
+        expected: meta.correct,
+        chosen: answerPlan.chosen,
+        correct: answerPlan.correct
+      };
+    }
+
+    await page.waitForSelector('#screenResult.active');
+    const result = await page.evaluate(() => {
+      const normalizeValue = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+      return {
+        final: normalizeValue(document.getElementById('rFinal')?.textContent),
+        correct: normalizeValue(document.getElementById('rCorrect')?.textContent),
+        wrong: normalizeValue(document.getElementById('rWrong')?.textContent),
+        area: normalizeValue(document.getElementById('rArea')?.textContent)
+      };
+    });
+
+    const payload = {
+      page: options.page,
+      mode: options.mode,
+      bonusMode: options.bonus,
+      classKey: options.classKey,
+      areaKey: options.area,
+      result,
+      questions,
+      bonus,
+      pageErrors: trackers.pageErrors,
+      consoleErrors: trackers.consoleErrors
+    };
+    process.stdout.write(`${JSON.stringify(payload, null, 2)}\n`);
+    await context.close();
+  } finally {
+    await browser.close();
+  }
+}
+
+function parseArgs(argv) {
+  const options = {
+    baseUrl: 'http://127.0.0.1:4173',
+    page: 'civica',
+    mode: 'perfect',
+    bonus: 'skip',
+    classKey: '3',
+    area: 'mixed',
+    headless: true,
+    help: false
+  };
+
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i];
+    switch (arg) {
+      case '--base-url':
+        options.baseUrl = String(argv[++i] || options.baseUrl);
+        break;
+      case '--page':
+        options.page = String(argv[++i] || options.page);
+        break;
+      case '--mode':
+        options.mode = String(argv[++i] || options.mode);
+        break;
+      case '--bonus':
+        options.bonus = String(argv[++i] || options.bonus);
+        break;
+      case '--class':
+        options.classKey = String(argv[++i] || options.classKey);
+        break;
+      case '--area':
+        options.area = String(argv[++i] || options.area);
+        break;
+      case '--headed':
+        options.headless = false;
+        break;
+      case '--help':
+      case '-h':
+        options.help = true;
+        break;
+      default:
+        throw new Error(`Argomento non riconosciuto: ${arg}`);
+    }
+  }
+
+  if (!['perfect', 'mixed', 'worst'].includes(options.mode)) {
+    throw new Error(`mode non supportato: ${options.mode}`);
+  }
+  if (!['easy', 'medium', 'hard', 'skip'].includes(options.bonus)) {
+    throw new Error(`bonus non supportato: ${options.bonus}`);
+  }
+  return options;
+}
+
+function printHelp() {
+  process.stdout.write([
+    'Uso:',
+    '  NODE_PATH=/path/to/node_modules node scripts/subject_quiz_test_harness.js \\',
+    '    --base-url http://127.0.0.1:4173 --page civica --mode mixed --bonus skip',
+    '',
+    'Opzioni:',
+    '  --page <slug>        materia/page html senza estensione (default: civica)',
+    '  --mode <mode>        perfect | mixed | worst',
+    '  --bonus <mode>       easy | medium | hard | skip',
+    '  --class <n>          classe iniziale (default: 3)',
+    '  --area <key>         area iniziale (default: mixed)',
+    '  --base-url <url>     host locale del test server',
+    '  --headed             avvia il browser non-headless',
+    '  --help               mostra questo messaggio'
+  ].join('\n') + '\n');
+}
+
+function buildPageUrl(baseUrl, page) {
+  return `${String(baseUrl).replace(/\/+$/, '')}/${String(page).replace(/^\//, '')}.html`;
+}
+
+function buildPlayWindowValue() {
+  const startedAt = Date.now();
+  const expiresAt = startedAt + (30 * 60 * 1000);
+  const cooldownUntil = expiresAt + (60 * 60 * 1000);
+  return JSON.stringify({ startedAt, expiresAt, cooldownUntil });
+}
+
+async function waitForCfg(page) {
+  await page.waitForFunction(() => {
+    const cfg = window.SA && window.SA.subjectConfig;
+    return !!(cfg && cfg.banks && Object.keys(cfg.banks).length);
+  }, { timeout: 15000 });
+}
+
+async function getConfigMaps(page) {
+  return page.evaluate(() => {
+    const normalizeValue = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+    const cfg = window.SA && window.SA.subjectConfig;
+    const questions = {};
+    const bonus = {};
+
+    Object.entries((cfg && cfg.banks) || {}).forEach(([area, rows]) => {
+      (rows || []).forEach((row) => {
+        questions[normalizeValue(row.q)] = {
+          correct: normalizeValue(row.a),
+          distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
+          area,
+          grade: row.grade ?? row.g ?? null
+        };
+      });
+    });
+
+    Object.entries((cfg && cfg.bonusQuestions) || {}).forEach(([type, rows]) => {
+      (rows || []).forEach((row) => {
+        bonus[normalizeValue(row.q)] = {
+          correct: normalizeValue(row.a),
+          distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
+          type
+        };
+      });
+    });
+
+    return { questions, bonus };
+  });
+}
+
+function pickAnswer(question, mode) {
+  const correct = normalize(question.correct);
+  const distractors = Array.isArray(question.distractors) ? question.distractors.map(normalize).filter(Boolean) : [];
+  const wrong = distractors[0] || correct;
+
+  if (mode === 'perfect') {
+    return { chosen: correct, correct: true };
+  }
+  if (mode === 'worst') {
+    return { chosen: wrong, correct: wrong === correct };
+  }
+
+  const hashBase = `${question.area || ''}|${question.grade || ''}|${question.correct || ''}|${distractors.join('|')}`;
+  const shouldBeCorrect = hashString(hashBase) % 10 < 7;
+  return {
+    chosen: shouldBeCorrect ? correct : wrong,
+    correct: shouldBeCorrect || wrong === correct
+  };
+}
+
+function hashString(text) {
+  let value = 0;
+  const source = String(text || '');
+  for (let index = 0; index < source.length; index++) {
+    value = ((value * 31) + source.charCodeAt(index)) >>> 0;
+  }
+  return value;
+}
+
+async function clickAnswer(page, rootSelector, answerText) {
+  const expected = normalize(answerText);
+  const buttons = page.locator(`${rootSelector} .answer-btn`);
+  const count = await buttons.count();
+  for (let index = 0; index < count; index++) {
+    const button = buttons.nth(index);
+    const value = normalize(await button.textContent());
+    if (value === expected) {
+      await button.click();
+      await page.waitForTimeout(1100);
+      return;
+    }
+  }
+  throw new Error(`Risposta non trovata nel DOM: ${expected}`);
+}
+
+function normalize(value) {
+  return String(value || '').replace(/\s+/g, ' ').trim();
+}
+
+function normalizeText(value) {
+  return String(value || '').replace(/\s+/g, ' ').trim();
+}
+
+main().catch((error) => {
+  console.error(String(error));
+  process.exit(1);
+});
