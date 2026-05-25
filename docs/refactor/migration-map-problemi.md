@@ -20,7 +20,7 @@
 | `HISTORY_KEY` (`problemiMatematica_history_v2`) | `cfg.historyKey` |
 | `METRICS_KEY` (`problemiMatematica_quality_v1`) | `cfg.metricsKey` |
 | `CLASS_PREF_KEY` (`problemiMatematica_class_pref_v1`) | `cfg.classPrefKey` |
-| nessun `cursorKey` storico | `cfg.cursorKey` namespaced per stato core non storico |
+| `cursorKey` (esplicito) | `cfg.cursorKey = 'problemiMatematica_cursor_v1'` |
 | `CLASS_PROFILES` | default core condiviso |
 | `SOFTMAX_TOP_K = 6` | default core storico |
 | `SOFTMAX_TEMPERATURE = 1.2` | `cfg.softmaxTemperature = 1.2` |
@@ -37,3 +37,4 @@
 - L'unica area reale e` `problemi`, quindi `defaultArea` puo` essere fissata a `problemi` senza UI area selector.
 - La pagina mantiene il `classGrid` statico presente in `problemi.html`.
 - La leaderboard storica non contiene il campo `area`; il core deve leggere quelle entry senza romperne il rendering.
+- `problemiMatematica_cursor_v1` resta una chiave runtime esplicita e separata dalle chiavi storiche utenti; la politica unica "cursorKey sempre esplicita" e` documentata in `core-capabilities.md`.

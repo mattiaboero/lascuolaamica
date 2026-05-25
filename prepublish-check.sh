@@ -327,6 +327,33 @@ check_core_no_subject_branch() {
   fi
 }
 
+check_cursor_key_explicit() {
+  local missing=""
+  local files=(
+    "js/matematica-page.js"
+    "js/geografia-page.js"
+    "js/italiano-page.js"
+    "js/scienze-page.js"
+    "js/storia-page.js"
+    "js/civica-page.js"
+    "js/problemi-page.js"
+  )
+
+  local f
+  for f in "${files[@]}"; do
+    if [[ -f "$f" ]] && ! grep -q "cursorKey:" "$f"; then
+      missing+="$f "
+    fi
+  done
+
+  if [[ -n "$missing" ]]; then
+    echo "[ERROR] missing explicit cursorKey in: $missing"
+    status=1
+  else
+    echo "[OK] all migrated subject pages declare cursorKey explicitly"
+  fi
+}
+
 check_pwa_root_only_contract
 check_pwa_cache_headers
 check_pwa_version_bump_for_precache_changes
@@ -479,6 +506,7 @@ else
 fi
 
 check_core_no_subject_branch
+check_cursor_key_explicit
 
 if [[ $status -ne 0 ]]; then
   echo

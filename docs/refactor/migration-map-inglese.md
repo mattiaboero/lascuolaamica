@@ -195,12 +195,11 @@ Nessun `cursorKey` storico presente in produzione.
 Storage prod `4.6.8` non ha `cursorKey` storica.
 
 Decisione per Fase 5:
-- **non** lasciare `cfg.cursorKey` implicito
 - dichiarare esplicitamente `cfg.cursorKey = 'englishAdventure_cursor_v1'`
 
 Razionale:
-- il core oggi non costruisce un fallback subject-prefixed; se omesso usa il namespace statico `subject_cursor_v1`
-- documentare un fallback "magico" derivato da subject sarebbe falso rispetto al codice attuale
+- applicazione della politica unica "cursorKey sempre esplicita" documentata in `core-capabilities.md`
+- il core oggi non implementa alcun fallback derivato da subject
 - esplicitare la chiave evita collisioni future e mantiene leggibile la config inglese
 
 Conseguenze:

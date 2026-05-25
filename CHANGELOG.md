@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.7.1 - 2026-05-25
+### Changed
+- refactor(problemi): confermata e formalizzata `cfg.cursorKey = 'problemiMatematica_cursor_v1'` esplicita in config per allinearsi alla politica unica "cursorKey sempre esplicita". Nessuna migrazione dati richiesta.
+- core quiz: politica unica documentata in `docs/refactor/core-capabilities.md`. Nessun fallback derivato implementato nel core: ogni materia migrata deve dichiarare esplicitamente la propria `cursorKey`.
+
+### Fixed
+- prepublish-check.sh: aggiunto il guard `check_cursor_key_explicit` per prevenire omissioni future nelle materie gia` migrate/config-driven.
+
 ## 4.7.0 - 2026-05-25
 ### Changed
 - refactor(problemi): migrato `js/problemi-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 39 righe di sola config.

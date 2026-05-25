@@ -92,10 +92,10 @@ Tabella allineata al codice runtime attuale di `subject-quiz-core.js`.
 | `levels` | array | `undefined` | se assente il core non mostra levels UI e mantiene il flow standard; se presente abilita il flusso per livelli |
 | `maxLevelDistance` | number | `2` | distanza massima tra classe selezionata e gradi presenti nel livello per considerarlo disponibile; usato solo con `cfg.levels` |
 | `leaderboardAreaFallback` | string | `''` | se una entry storica non ha `area`, il core usa il fallback configurato prima del default area corrente |
-| `cursorKey` | string | `subject_cursor_v1` | namespace runtime di fallback per cursor/stats/historySig; per materie migrate e` raccomandato impostarlo esplicitamente |
-| `classPrefKey` | string | `${cursorKey}_class_pref_v1` | la preferenza classe viene persistita usando `cfg.classPrefKey` oppure il namespace derivato da `cursorKey` |
-| `historyKey` | string | `${cursorKey}_history_v2` | lo storico multi-sessione viene persistito usando `cfg.historyKey` oppure il namespace derivato da `cursorKey` |
-| `metricsKey` | string | `${cursorKey}_quality_v1` | le metriche rolling usano `cfg.metricsKey` oppure il namespace derivato da `cursorKey` |
+| `cursorKey` | string | **obbligatoria** | namespace dedicato alle chiavi runtime; politica unica: sempre dichiarata esplicitamente in config, anche per materie senza cursor storico in prod |
+| `classPrefKey` | string | `${cursorKey}_class_pref_v1` | la preferenza classe viene persistita usando `cfg.classPrefKey`; se omessa il core usa il namespace esplicito di `cursorKey` |
+| `historyKey` | string | `${cursorKey}_history_v2` | lo storico multi-sessione viene persistito usando `cfg.historyKey`; se omessa il core usa il namespace esplicito di `cursorKey` |
+| `metricsKey` | string | `${cursorKey}_quality_v1` | le metriche rolling usano `cfg.metricsKey`; se omessa il core usa il namespace esplicito di `cursorKey` |
 
 ## Garanzia compatibilità retroattiva
 
@@ -121,15 +121,37 @@ Una materia che definisce `cfg.levels`:
 Verifica target per Fase 5:
 - `matematica`, `geografia`, `italiano`, `scienze`, `storia`, `civica`, `problemi` senza `cfg.levels` devono mantenere flow invariato
 
-### Nota su cursorKey omesso
+### Politica cursorKey (unica)
 
-Nel codice attuale il core usa `subject_cursor_v1` come fallback statico
-quando `cfg.cursorKey` e` omesso. Non deriva automaticamente il namespace
-da `cfg.subject`.
+**Regola**: ogni materia deve dichiarare esplicitamente `cfg.cursorKey`
+in config. Niente omissioni, niente fallback derivati nel core.
 
-Conseguenza operativa:
-- per materie migrate con storage storico da preservare, `cursorKey`,
-  `historyKey`, `metricsKey` e `classPrefKey` vanno dichiarati in config
-  in modo esplicito
-- per materie nuove senza storico, e` comunque consigliato impostare un
-  `cursorKey` dedicato per evitare collisioni future su namespace runtime
+Motivazione:
+- predictable: nessuna ambiguita` su comportamento `undefined`
+- onesta vs codice: il core attuale non implementa alcun fallback
+  derivato da `cfg.subject`
+- future-proof: storage namespace allocato anche per materie senza
+  cursor storico, in caso di estensioni future
+
+Naming convention:
+- materie con cursor storico in prod -> usare la chiave storica esatta
+- materie senza cursor storico -> usare prefix coerente con le altre
+  chiavi della materia + suffix `_cursor_v1`
+
+Verifica operativa:
+- `grep "cursorKey:" js/*.js` deve restituire 7 match sulle materie gia`
+  migrate/config-driven
+- `inglese` si allineera` in Fase 5 con `englishAdventure_cursor_v1`
+
+Lista chiavi attuali (post `v4.7.1`):
+
+| Materia | cursorKey |
+|---|---|
+| matematica | `matematica_programma_cursor_v3` |
+| geografia | `geografia_cursor_v3` |
+| italiano | `italiano_cursor_v3` |
+| scienze | `scienze_cursor_v3` |
+| storia | `storia_cursor_v3` |
+| civica | `educazioneCivica_cursor_v1` |
+| problemi | `problemiMatematica_cursor_v1` |
+| inglese | `englishAdventure_cursor_v1` (target Fase 5) |
