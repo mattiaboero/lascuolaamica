@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.9.0 - 2026-05-25
+
+### Changed
+- refactor(quiz-engine): chiusura consolidation. 8/8 materie ora config-driven via `subject-quiz-core.js`. Codebase ridotta di ~3.500 righe nette di duplicazione (civica, problemi, inglese migrate definitivamente al pattern config).
+- core: Extension Contract attivo con 0/3 hook funzione consumati (margine 100% per future estensioni). 4 guard rail in `prepublish-check.sh` (no-subject-branch, cursorKey-explicit, pages-size, extension-contract-present).
+- docs/wiki/Architettura.md: aggiornata sezione Quiz engine con guida "aggiungere nuova materia" (~120 righe vs ~1500 pre-refactor).
+
+### Validation
+- 8/8 materie verificate smoke multi-device (desktop + tablet + smartphone).
+- PWA install + offline + update flow verificati su device reale.
+- Rewards + reset dati locali verificati.
+- Soak branch refactor 7 giorni, 0 regressioni.
+- Audit dead code: 0 helper duplicati, 0 const legacy, 0 commenti obsoleti residui.
+
 ## 4.8.0 - 2026-05-25
 
 ### Changed
