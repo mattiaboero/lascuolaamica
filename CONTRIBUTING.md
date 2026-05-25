@@ -49,6 +49,31 @@ Apri una issue descrivendo:
 
 Utili per bug fix, miglioramenti di accessibilità e performance. Non è il canale prioritario per aggiungere contenuti.
 
+### Aggiungere una nuova materia
+
+La codebase quiz usa un motore unificato. Per aggiungere una nuova materia:
+
+1. crea `json/<subject>.json` con shape compatibile con `questions-loader.js`
+2. aggiorna `json/index.json`
+3. crea `js/<subject>-page.js` con `window.SA.subjectConfig`
+4. crea la pagina HTML seguendo lo scaffold di `civica.html` o `inglese.html`
+5. aggiorna `sitemap.xml` e i metadati pagina
+6. esegui `./prepublish-check.sh`
+
+Campi config obbligatori:
+- `subject`
+- `totalQ`
+- `lbKey`
+- `cursorKey`
+- `historyKey`
+- `metricsKey`
+- `classPrefKey`
+- `defaultArea`
+- `areas`
+- `questionsSource`
+
+Per dettagli architetturali: [docs/wiki/Architettura.md](docs/wiki/Architettura.md).
+
 ---
 
 ## Regole editoriali per le domande

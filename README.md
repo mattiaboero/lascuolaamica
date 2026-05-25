@@ -54,6 +54,14 @@ I progressi vengono salvati localmente nel browser. Non c'è nessun server che l
 - **Font self-hosted** — nessuna richiesta esterna a Google Fonts o CDN
 - **Politiche di sicurezza restrittive** — contenuti pubblici e aree tecniche separati con controlli dedicati
 
+## Architettura quiz unificata
+
+Il sito usa un solo motore runtime, [subject-quiz-core.js](subject-quiz-core.js), condiviso da tutte le 8 materie. Ogni materia espone soltanto una config dichiarativa in `js/<subject>-page.js`, mentre i dataset vivono in `json/<subject>.json` e `json/index.json`.
+
+La panoramica tecnica e la guida per aggiungere una nuova materia sono documentate nella wiki:
+- [Architettura](docs/wiki/Architettura.md)
+- [Contenuti e domande](docs/wiki/Contenuti-e-Domande.md)
+
 ---
 
 ## Vincoli PWA e deploy
@@ -88,12 +96,10 @@ Nessun framework frontend. Nessuna dipendenza NPM a runtime.
 ├── premi.html              # Bacheca premi locale
 ├── rewards.css             # Stili bacheca premi
 ├── shared.js               # Componenti e logica condivisa
-├── subject-quiz-core.js    # Motore quiz (matematica, italiano, geo, storia, scienze)
+├── subject-quiz-core.js    # Motore quiz condiviso per tutte le 8 materie
 ├── js/
 │   ├── rewards.js          # Motore premi locale
-│   ├── inglese-page.js     # Motore quiz inglese
-│   ├── problemi-page.js    # Motore quiz problemi
-│   └── civica-page.js      # Motore quiz civica
+│   └── <subject>-page.js   # Config materia dichiarativa
 ├── questions-loader.js     # Loader dataset JSON
 ├── sw.js                   # Service Worker
 ├── json/
@@ -120,9 +126,8 @@ La cartella `admin/` contiene uno strumento interno (editor esercizi), non una s
 
 Il runtime usa i JSON in `json/*.json` come unica fonte dati reale tramite `questions-loader.js`.
 
-- I motori dedicati (`inglese`, `problemi`, `civica`) idratano sia le domande standard sia le bonus questions da JSON.
+- Il core condiviso idrata sia le domande standard sia le bonus questions da JSON.
 - Le righe bonus vivono nei rispettivi file materia con `bonus: true` e bucket `bonusRaw` (`easy`, `medium`, `hard`).
-- Refactor consigliato futuro: estrarre persistenza locale e helper UI comuni dai motori dedicati, lasciando specifiche materia nei rispettivi file.
 
 ---
 

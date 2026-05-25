@@ -23,10 +23,8 @@ Questa scelta non è per semplicità: è per controllabilità. Ogni file che arr
 | File | Ruolo |
 |---|---|
 | `shared.js` | Footer, modali, log aggiornamenti, palette colori |
-| `subject-quiz-core.js` | Motore quiz condiviso (matematica, italiano, geo, storia, scienze) |
-| `js/inglese-page.js` | Motore quiz inglese (dedicato) |
-| `js/problemi-page.js` | Motore quiz problemi (dedicato) |
-| `js/civica-page.js` | Motore quiz civica (dedicato) |
+| `subject-quiz-core.js` | Motore quiz runtime condiviso per tutte le 8 materie |
+| `js/<subject>-page.js` | Config materia dichiarativa (`window.SA.subjectConfig`) |
 | `questions-loader.js` | Caricamento e parsing dataset JSON |
 | `sw.js` | Service Worker: cache PWA, fallback offline, clean URLs |
 
@@ -43,6 +41,49 @@ La cartella `admin/` e uno strumento interno, non una boundary di sicurezza.
 
 ---
 
+## Quiz engine
+
+- Un solo motore runtime: `subject-quiz-core.js`
+- Un file config per materia: `js/<subject>-page.js`
+- Dataset domande: `json/<subject>.json` + `json/index.json`
+- Materie supportate: matematica, geografia, italiano, scienze, storia, civica, problemi, inglese
+
+### Aggiungere una nuova materia
+
+1. Creare `json/<subject>.json` con shape compatibile con `questions-loader.js`
+2. Aggiornare `json/index.json` con path e cardinalita`
+3. Creare `js/<subject>-page.js` con `window.SA.subjectConfig = { ... }`
+   Campi obbligatori:
+   - `subject`
+   - `totalQ`
+   - `lbKey`
+   - `cursorKey`
+   - `historyKey`
+   - `metricsKey`
+   - `classPrefKey`
+   - `defaultArea`
+   - `areas`
+   - `questionsSource`
+   Campi opzionali:
+   - `classProfiles`
+   - `levels`
+   - `renderMode`
+   - `answerMode`
+   - `classMeta`
+   - `mixedRepeatLimit`
+   - `leaderboardAreaFallback`
+4. Creare la pagina HTML seguendo lo scaffold di `civica.html` o `inglese.html`
+5. Aggiornare `sitemap.xml` e gli eventuali metadati pagina necessari
+6. Eseguire `bash prepublish-check.sh`
+
+### Extension contract
+
+- Hook funzione: 3 slot riservati (`onBuildSession`, `onPickBonus`, `onScore`)
+- Stato attuale: `0/3` consumati
+- Config field passivi: illimitati
+- Vietato nel core: `if (cfg.subject === ...)`
+- Riferimento: [docs/refactor/extension-contract.md](../refactor/extension-contract.md)
+
 ## Algoritmo di selezione domande
 
 Il sistema usa un **planner stocastico a slot** per ridurre i pattern ripetitivi tra sessioni. Per ogni partita:
@@ -52,12 +93,7 @@ Il sistema usa un **planner stocastico a slot** per ridurre i pattern ripetitivi
 3. Un sistema di cooldown su ID e firma domanda riduce le ripetizioni multi-sessione
 4. Le metriche di qualità sessione (`repeat rate`, `coverage`, `entropy`, `novelty`) vengono salvate nella memoria locale del browser con media rolling
 
-Tutti i motori quiz (condiviso e dedicati) usano la stessa strategia.
-
-### Raccomandazione tecnica (rinviata)
-
-La duplicazione tra `subject-quiz-core.js` e i motori dedicati (`js/inglese-page.js`, `js/problemi-page.js`, `js/civica-page.js`) resta nota.
-Refactor consigliato in una fase separata: estrarre persistenza locale e helper comuni, lasciando nei motori dedicati solo regole e dataset specifici.
+Tutte le 8 materie usano oggi la stessa pipeline di selezione nel core condiviso, con variazioni espresse solo tramite config field e metadata dei dataset.
 
 ---
 
@@ -83,7 +119,7 @@ Il riferimento legacy a `questions.json` (file aggregato) non è usato nel runti
 La source of truth runtime e il caricamento JSON tramite `questions-loader.js`.
 
 - `subject-quiz-core.js` legge i dataset materia da `json/index.json`
-- `js/civica-page.js`, `js/inglese-page.js` e `js/problemi-page.js` idratano da JSON sia il bank principale sia le bonus questions
+- `questions-loader.js` costruisce bank e bonus questions a partire dai JSON materia
 - le righe bonus sono marcate con `bonus: true` e bucket `bonusRaw`
 
 ---

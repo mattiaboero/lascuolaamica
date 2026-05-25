@@ -355,6 +355,51 @@ check_cursor_key_explicit() {
   fi
 }
 
+check_subject_pages_size() {
+  local oversized=""
+  local files=(
+    "js/matematica-page.js"
+    "js/geografia-page.js"
+    "js/italiano-page.js"
+    "js/scienze-page.js"
+    "js/storia-page.js"
+    "js/civica-page.js"
+    "js/problemi-page.js"
+    "js/inglese-page.js"
+  )
+
+  local f
+  for f in "${files[@]}"; do
+    if [[ ! -f "$f" ]]; then
+      oversized+="$f(missing) "
+      continue
+    fi
+    local lines
+    lines=$(wc -l < "$f")
+    if [[ "$lines" -ge 250 ]]; then
+      oversized+="$f(${lines}) "
+    fi
+  done
+
+  if [[ -n "$oversized" ]]; then
+    echo "[ERROR] subject page size limit exceeded: $oversized"
+    status=1
+  else
+    echo "[OK] all subject pages are under 250 lines"
+  fi
+}
+
+check_extension_contract_present() {
+  local count
+  count=$(grep -c "Extension Contract" subject-quiz-core.js || true)
+  if [[ "$count" != "1" ]]; then
+    echo "[ERROR] subject-quiz-core.js: Extension Contract marker expected once, found $count"
+    status=1
+  else
+    echo "[OK] subject-quiz-core.js: Extension Contract marker present"
+  fi
+}
+
 check_pwa_root_only_contract
 check_pwa_cache_headers
 check_pwa_version_bump_for_precache_changes
@@ -508,6 +553,8 @@ fi
 
 check_core_no_subject_branch
 check_cursor_key_explicit
+check_subject_pages_size
+check_extension_contract_present
 
 if [[ $status -ne 0 ]]; then
   echo
