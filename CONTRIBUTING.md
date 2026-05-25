@@ -22,6 +22,14 @@ Quando modifichi i file in `json/`, ricorda che `_headers` impone
 Cache-Control no-aggressive per garantire upgrade puliti. Non modificare
 quella riga. Vedi `docs/wiki/Architettura.md` -> "Header HTTP critici".
 
+Per le domande di `inglese`, ogni riga deve valorizzare anche
+`answerLang` nel JSON finale:
+- `en` quando i pulsanti risposta sono in inglese
+- `it` quando i pulsanti risposta sono in italiano
+
+Il campo viene popolato dal build dataset, ma va verificato quando
+si aggiungono nuovi pattern di domanda o nuove traduzioni.
+
 **Se non hai accesso all'ambiente editoriale:**
 
 Apri una issue con la proposta di domande in formato libero — valutiamo noi la conversione.

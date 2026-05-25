@@ -63,12 +63,27 @@ async function main() {
     }
 
     await page.locator('[data-action="start-game"]').click();
+    try {
+      await page.waitForSelector('#screenLevels.active', { timeout: 3000 });
+      let levelKey = options.level;
+      if (!levelKey) {
+        levelKey = await page.locator('#screenLevels [data-action="start-level"]:not([disabled])').first().getAttribute('data-level') || '';
+      }
+      if (!levelKey) {
+        throw new Error('No available level found for current class');
+      }
+      await page.locator(`#screenLevels [data-action="start-level"][data-level="${levelKey}"]`).click();
+    } catch (_) {
+      // Non-level subject or levels screen skipped by current flow.
+    }
     await page.waitForSelector('#screenGame.active', { timeout: 15000 });
 
     const questions = [];
     for (let index = 0; index < 10; index++) {
       const questionText = normalize(await page.locator('#qText').textContent());
+      const promptMeta = await readPromptMeta(page, '#qText');
       const domOptions = await readDomOptions(page, '#answers');
+      const domOptionMeta = await readDomOptionMeta(page, '#answers');
       const meta = resolveQuestionMeta(maps.questions[questionText], domOptions);
       if (!meta) {
         throw new Error(`Question not found in config map: ${questionText}`);
@@ -77,11 +92,16 @@ async function main() {
       const answerPlan = await clickPlannedAnswer(page, '#answers', meta, options.mode, domOptions);
       questions.push({
         question: questionText,
+        promptHtml: promptMeta.html,
+        promptLang: promptMeta.lang,
         expected: meta.correct,
         chosen: answerPlan.chosen,
         correct: answerPlan.correct,
         area: meta.area,
-        grade: meta.grade
+        grade: meta.grade,
+        subarea: meta.subarea,
+        answerLang: meta.answerLang,
+        optionLangs: domOptionMeta.map((item) => item.lang || '')
       });
     }
 
@@ -93,7 +113,9 @@ async function main() {
       await page.locator(`[data-action="bonus-pick"][data-bonus="${options.bonus}"]`).click();
       await page.waitForSelector('#screenBonusQuestion.active');
       const bonusText = normalize(await page.locator('#bonusText').textContent());
+      const promptMeta = await readPromptMeta(page, '#bonusText');
       const domOptions = await readDomOptions(page, '#bonusAnswers');
+      const domOptionMeta = await readDomOptionMeta(page, '#bonusAnswers');
       const meta = resolveQuestionMeta(maps.bonus[bonusText], domOptions);
       if (!meta) {
         throw new Error(`Bonus question not found in config map: ${bonusText}`);
@@ -104,9 +126,12 @@ async function main() {
         attempted: true,
         type: meta.type,
         question: bonusText,
+        promptHtml: promptMeta.html,
+        promptLang: promptMeta.lang,
         expected: meta.correct,
         chosen: answerPlan.chosen,
-        correct: answerPlan.correct
+        correct: answerPlan.correct,
+        optionLangs: domOptionMeta.map((item) => item.lang || '')
       };
     }
 
@@ -148,6 +173,7 @@ function parseArgs(argv) {
     bonus: 'skip',
     classKey: '3',
     area: 'mixed',
+    level: '',
     headless: true,
     help: false
   };
@@ -172,6 +198,9 @@ function parseArgs(argv) {
         break;
       case '--area':
         options.area = String(argv[++i] || options.area);
+        break;
+      case '--level':
+        options.level = String(argv[++i] || options.level);
         break;
       case '--headed':
         options.headless = false;
@@ -206,6 +235,7 @@ function printHelp() {
     '  --bonus <mode>       easy | medium | hard | skip',
     '  --class <n>          classe iniziale (default: 3)',
     '  --area <key>         area iniziale (default: mixed)',
+    '  --level <key>        livello da selezionare se la materia usa screenLevels',
     '  --base-url <url>     host locale del test server',
     '  --headed             avvia il browser non-headless',
     '  --help               mostra questo messaggio'
@@ -244,7 +274,9 @@ async function getConfigMaps(page) {
           correct: normalizeValue(row.a),
           distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
           area,
-          grade: row.grade ?? row.g ?? null
+          grade: row.grade ?? row.g ?? null,
+          subarea: row.subarea || null,
+          answerLang: row.answerLang || null
         };
         if (!questions[key]) questions[key] = [];
         questions[key].push(entry);
@@ -257,7 +289,8 @@ async function getConfigMaps(page) {
         const entry = {
           correct: normalizeValue(row.a),
           distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
-          type
+          type,
+          answerLang: row.answerLang || null
         };
         if (!bonus[key]) bonus[key] = [];
         bonus[key].push(entry);
@@ -336,6 +369,29 @@ async function readDomOptions(page, rootSelector) {
     out.push(normalize(await buttons.nth(index).textContent()));
   }
   return out;
+}
+
+async function readDomOptionMeta(page, rootSelector) {
+  const buttons = page.locator(`${rootSelector} .answer-btn`);
+  const count = await buttons.count();
+  const out = [];
+  for (let index = 0; index < count; index++) {
+    const button = buttons.nth(index);
+    out.push({
+      text: normalize(await button.textContent()),
+      lang: normalize(await button.getAttribute('lang'))
+    });
+  }
+  return out;
+}
+
+async function readPromptMeta(page, selector) {
+  const target = page.locator(selector).first();
+  return {
+    text: normalize(await target.textContent()),
+    html: normalize(await target.evaluate((node) => node.innerHTML)),
+    lang: normalize(await target.getAttribute('lang'))
+  };
 }
 
 function resolveQuestionMeta(candidates, domOptions) {

@@ -62,7 +62,8 @@ Queste estensioni:
 Esempio deciso per Fase 5:
 - `subarea` serve a supportare `cfg.levels[*].filters.subareas`
 - `answerLang` serve a supportare `renderMode='bilingual'`
-- l'implementazione runtime resta rimandata a Fase 5 step 1
+- applicato in `v4.8.0` come estensione passiva del loader: le materie
+  che non leggono questi metadata continuano a comportarsi come prima
 
 ## Esempi di reframing applicato (Fase 1)
 | Proposta iniziale | Categoria iniziale | Reframing | Categoria finale |

@@ -1,5 +1,17 @@
 # Changelog Repo
 
+## 4.8.0 - 2026-05-25
+
+### Changed
+- refactor(inglese): migrato `js/inglese-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 104 righe di sola config.
+- core quiz: aggiunti `cfg.levels`, `cfg.renderMode='bilingual'` e `cfg.maxLevelDistance` come config field passivi. Nessun hook funzione consumato (`D=0` invariato).
+- questions-loader: aggiunti `subarea` e `answerLang` come metadata opzionali in `rowToQuestion`, usati solo dalle materie che li dichiarano.
+- json inglese: arricchito `json/inglese.json` con `answerLang` su tutte le domande, con builder dataset aggiornato.
+- 8/8 materie quiz ora sono config-driven.
+
+### Fixed
+- prepublish-check.sh: `check_cursor_key_explicit` ora copre tutte le 8 page subject, incluso inglese post-migrazione.
+
 ## 4.7.1 - 2026-05-25
 ### Changed
 - refactor(problemi): confermata e formalizzata `cfg.cursorKey = 'problemiMatematica_cursor_v1'` esplicita in config per allinearsi alla politica unica "cursorKey sempre esplicita". Nessuna migrazione dati richiesta.

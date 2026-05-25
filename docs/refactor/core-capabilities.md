@@ -89,7 +89,7 @@ Tabella allineata al codice runtime attuale di `subject-quiz-core.js`.
 | `answerMode` | string | `mcq` | confronto testuale normalizzato; `numeric` attiva confronto numerico con supporto a `,`, `.`, frazioni e spazi |
 | `optionsGenerator` | string | `undefined` | nessuna generazione runtime; se valorizzato attiva una strategy core predefinita |
 | `renderMode` | string | `mcq` | rendering standard; `'bilingual'` attiva helper EN/IT su prompt e options, con supporto a metadata domanda come `answerLang` |
-| `levels` | array | `undefined` | se assente il core non mostra levels UI e mantiene il flow standard; se presente abilita il flusso per livelli |
+| `levels` | array | `undefined` | se assente il core non mostra levels UI e mantiene il flow standard; se presente abilita il flusso per livelli e filtra le domande usando i metadata dichiarati nel level |
 | `maxLevelDistance` | number | `2` | distanza massima tra classe selezionata e gradi presenti nel livello per considerarlo disponibile; usato solo con `cfg.levels` |
 | `leaderboardAreaFallback` | string | `''` | se una entry storica non ha `area`, il core usa il fallback configurato prima del default area corrente |
 | `cursorKey` | string | **obbligatoria** | namespace dedicato alle chiavi runtime; politica unica: sempre dichiarata esplicitamente in config, anche per materie senza cursor storico in prod |
@@ -139,9 +139,8 @@ Naming convention:
   chiavi della materia + suffix `_cursor_v1`
 
 Verifica operativa:
-- `grep "cursorKey:" js/*.js` deve restituire 7 match sulle materie gia`
-  migrate/config-driven
-- `inglese` si allineera` in Fase 5 con `englishAdventure_cursor_v1`
+- `grep "cursorKey:" js/*.js` deve restituire 8 match, uno per materia
+  quiz config-driven
 
 Lista chiavi attuali (post `v4.7.1`):
 
@@ -154,4 +153,4 @@ Lista chiavi attuali (post `v4.7.1`):
 | storia | `storia_cursor_v3` |
 | civica | `educazioneCivica_cursor_v1` |
 | problemi | `problemiMatematica_cursor_v1` |
-| inglese | `englishAdventure_cursor_v1` (target Fase 5) |
+| inglese | `englishAdventure_cursor_v1` |

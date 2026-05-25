@@ -31,7 +31,7 @@
 
 #### Levels
 
-Shape proposta:
+Shape adottata in `v4.8.0`:
 
 ```js
 levels: [
@@ -40,9 +40,10 @@ levels: [
     label: 'Principiante',
     icon: '🌊',
     subtitle: 'Percorso base',
-    topics: 'Colori · Numeri · Animali · Corpo umano · Famiglia · Saluti',
+    topics: 'Colori · Numeri · Animali · Famiglia · Saluti',
     filters: {
       subareas: ['lessico_base'],
+      areas: ['colori', 'numeri', 'animali', 'famiglia', 'saluti'],
       fallbackDifficulty: [1]
     }
   },
@@ -54,6 +55,7 @@ levels: [
     topics: 'Giorni · Meteo · Cibo · Mesi · Verbo to be e have got',
     filters: {
       subareas: ['frasi_semplici'],
+      areas: ['giorni', 'meteo', 'cibo', 'mesi', 'have_got', 'to_be', 'routine_quotidiana'],
       fallbackDifficulty: [2]
     }
   },
@@ -65,7 +67,8 @@ levels: [
     topics: 'Routine quotidiana · Sport · Casa · Domande · Hobby',
     filters: {
       subareas: ['uso_guidato', 'comprensione_in_contesto'],
-      fallbackDifficulty: [3]
+      areas: ['routine_quotidiana', 'sport', 'casa', 'domande', 'hobby'],
+      fallbackDifficulty: [4]
     }
   }
 ]
@@ -97,8 +100,9 @@ levels: [
 
 Comportamento core atteso:
 - `cfg.levels` `undefined` -> il core skippa la levels UI e mantiene il flow standard della materia
-- `cfg.levels` valorizzato -> il core abilita levels screen e filtra le domande usando `filters.subareas` come trigger primario
-- se `subareas` non basta o il metadata manca in alcune domande, il fallback usa `filters.fallbackDifficulty`
+- `cfg.levels` valorizzato -> il core abilita levels screen e filtra le domande usando i metadata dichiarati nel level
+- se nello stesso level sono presenti `subareas`, `areas` e `fallbackDifficulty`, i filtri si combinano in AND
+- se e` presente solo un tipo di filtro, il core usa quello
 
 Vincoli:
 - almeno 1 livello richiesto se `cfg.levels` e` presente
@@ -107,8 +111,8 @@ Vincoli:
 - validazione shape al boot: se il contratto e` invalido il core deve fallire in modo esplicito
 
 Decisione implementativa:
-- il loader dovra` preservare `subarea` nel runtime Question
-- questa estensione resta passiva e verra` implementata in Fase 5 step 1, non in questo pre-step
+- il loader preserva `subarea` e `answerLang` nel runtime Question
+- l’estensione e` passiva: le materie che non dichiarano `levels` o `renderMode='bilingual'` non cambiano comportamento
 
 #### Render mode
 
@@ -137,9 +141,8 @@ Fallback:
 - se `renderMode='mcq'`, il metadata `answerLang` viene ignorato
 
 Decisione:
-- nel dataset `json/inglese.json` oggi non esiste un campo `answerLang`
-- per Fase 5 si adotta come target il campo esplicito `answerLang` nel JSON, preferito rispetto a euristiche runtime fragili
-- il build dei dataset dovra` essere aggiornato in Fase 5 se serve popolare questo campo in modo sistematico
+- il dataset `json/inglese.json` in `v4.8.0` include `answerLang` su ogni domanda
+- il build dataset e` stato aggiornato per popolare `answerLang` in modo sistematico, con fallback esplicito sui prompt di traduzione
 
 Questa resta una variante `B/C`, non hook.
 
@@ -230,6 +233,6 @@ Conseguenze:
 ### Delta critici da tenere d'occhio in Fase 5
 
 - il core oggi non ha concetto di `levels`
-- `questions-loader.rowToQuestion()` non conserva `subarea`, quindi la Fase 5 dovra` decidere dove tenere il metadata livello senza ricadere in adapter locale monouso
+- `questions-loader.rowToQuestion()` ora conserva `subarea` e `answerLang` come metadata passivi
 - il rendering bilingue non e` solo “testo inglese”: dipende anche dal tipo di prompt e dalla lingua delle risposte
 - `answerLang` oggi non e` presente nel JSON: decisione presa, target esplicito di metadata in Fase 5

@@ -337,6 +337,7 @@ check_cursor_key_explicit() {
     "js/storia-page.js"
     "js/civica-page.js"
     "js/problemi-page.js"
+    "js/inglese-page.js"
   )
 
   local f
@@ -350,7 +351,7 @@ check_cursor_key_explicit() {
     echo "[ERROR] missing explicit cursorKey in: $missing"
     status=1
   else
-    echo "[OK] all migrated subject pages declare cursorKey explicitly"
+    echo "[OK] all subject pages declare cursorKey explicitly"
   fi
 }
 

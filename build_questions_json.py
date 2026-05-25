@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import re
 from datetime import datetime, timezone
 from collections import Counter
 from typing import Any, Dict, List, Optional
@@ -25,6 +26,32 @@ EXPECTED_HEADERS: List[str] = [
     "bonus", "attiva", "tag", "lingua", "programma_riferimento", "note_docente"
 ]
 SPLIT_DIR_NAME = "json"
+ITALIAN_ANSWER_MARKERS = {
+    "il", "lo", "la", "gli", "le", "un", "uno", "una",
+    "lui", "lei", "noi", "voi", "loro",
+    "mio", "mia", "tuo", "tua", "suo", "sua", "nostro", "nostra",
+    "vostro", "vostra", "questo", "questa", "quello", "quella",
+    "ogni", "sempre", "molto", "bene", "giorno", "giorni",
+    "sono", "sei", "ha", "hai", "ho", "abbiamo", "avete", "hanno",
+    "beviamo", "studiamo", "mangiamo", "faccio", "compiti", "vado",
+    "letto", "esco", "sera", "colazione", "pranzo", "cena", "sveglio",
+    "rosso", "verde", "giallo", "azzurro", "bianco", "nero",
+    "marrone", "arancione", "viola", "rosa", "grigio",
+    "sole", "gatto", "tavolo", "bicicletta", "porta", "classe",
+    "fratello", "sorella", "nonna", "nonno", "maestra", "insegnante",
+    "nuotare", "voglio", "piace", "abiti", "chiami", "quanti",
+    "anni", "stai", "indossa", "lunedi", "lunedì", "oggi"
+}
+ENGLISH_ANSWER_MARKERS = {
+    "the", "a", "an", "is", "are", "am", "my", "your", "his", "her",
+    "their", "our", "on", "in", "under", "behind", "next", "to",
+    "what", "which", "where", "when", "who", "how", "have", "has",
+    "got", "do", "does", "can", "like", "likes", "play", "plays",
+    "read", "reads", "drink", "drinks", "monday", "tuesday",
+    "wednesday", "thursday", "friday", "saturday", "sunday",
+    "blue", "white", "black", "green", "yellow", "red", "orange",
+    "pink", "grey", "brown", "purple",
+}
 
 
 def to_bool(value: str) -> Optional[bool]:
@@ -58,6 +85,30 @@ def parse_tags(raw: str) -> List[str]:
 
 def normalize_text(value: str) -> str:
     return " ".join((value or "").strip().split())
+
+
+def detect_answer_lang(subject_key: str, question: str, options: List[str]) -> Optional[str]:
+    if subject_key != "inglese":
+        return None
+
+    question_lower = (question or "").strip().lower()
+    if "traduci" in question_lower or "significa" in question_lower or "vuol dire" in question_lower:
+        return "it"
+
+    joined = " ".join(options).lower()
+    tokens = re.findall(r"[a-zàèéìòù']+", joined)
+    it_score = sum(token in ITALIAN_ANSWER_MARKERS for token in tokens)
+    en_score = sum(token in ENGLISH_ANSWER_MARKERS for token in tokens)
+
+    if any(ch in joined for ch in "àèéìòù"):
+        it_score += 2
+    if any(opt.strip().endswith(".") for opt in options):
+        if en_score >= it_score:
+            en_score += 1
+        else:
+            it_score += 1
+
+    return "it" if it_score > en_score else "en"
 
 
 def write_json(path: str, payload: Dict[str, Any]) -> None:
@@ -199,6 +250,9 @@ def build_questions(input_dir: str) -> Dict[str, Any]:
                         "bonus": bonus_bool if bonus_bool is not None else False,
                         "bonusRaw": bonus_raw if bonus_bool is None else "",
                     }
+                    answer_lang = detect_answer_lang(subject_key, question, options)
+                    if answer_lang:
+                        rec["answerLang"] = answer_lang
 
                     rows.append(rec)
                     area_counter[area] += 1
