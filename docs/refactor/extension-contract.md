@@ -49,6 +49,21 @@ R5. Vietato in core: `if (config.subject === 'X')`.
   Cap separato: max 2 lifecycle event.
 - Utility esportate (`shuffle`, `pickWeighted`, `softmaxPick`).
 
+### Loader extension passive
+
+`questions-loader.js` puo` estendere la shape runtime delle domande con
+metadata opzionali come `subarea`, `difficulty`, `grade`, `answerLang`.
+
+Queste estensioni:
+- non consumano slot hook, perche` il cap riguarda solo `subject-quiz-core.js`
+- devono essere opzionali (`null`/assenza se il JSON non le fornisce)
+- devono restare passive: nessuna materia che non le usa deve cambiare comportamento
+
+Esempio deciso per Fase 5:
+- `subarea` serve a supportare `cfg.levels[*].filters.subareas`
+- `answerLang` serve a supportare `renderMode='bilingual'`
+- l'implementazione runtime resta rimandata a Fase 5 step 1
+
 ## Esempi di reframing applicato (Fase 1)
 | Proposta iniziale | Categoria iniziale | Reframing | Categoria finale |
 |------------------------------|--------------------|-----------------|------------------|
@@ -63,6 +78,22 @@ R5. Vietato in core: `if (config.subject === 'X')`.
 - Problemi: 0 hook. `answerMode` config; `optionsGenerator` disponibile ma non richiesto dal dataset JSON attuale.
 - Inglese: 0 hook. `levels + renderMode` config.
 - Totale D usato: 0/3. Margine 3.
+
+### Fuori scope Fase 5 (confermato)
+
+I seguenti aspetti di `js/inglese-page.js` restano fuori dalla
+migrazione motore-core di Fase 5:
+
+| Feature | Trattamento Fase 5 | Razionale |
+|---|---|---|
+| Confetti animazione | rimosso o page-side minimale | polish UI, non motore decisionale |
+| Streak FX audio | rimosso o page-side minimale | polish UI, il core ha gia` feedback audio base |
+| `playStart` sound | rimosso o page-side minimale | dettaglio UX non strutturale |
+| Polish animazioni | rimosso o page-side minimale | non cambia il flow quiz |
+
+Regola:
+- se durante Fase 5 emerge la tentazione di portarli nel core, serve ADR
+- default operativo: rimuovere o lasciare un page-legacy molto piccolo, senza espandere il contratto del core
 
 ## Enforcement
 - Code review: PR che aggiunge hook -> richiede ADR scritto.

@@ -88,6 +88,9 @@ Tabella allineata al codice runtime attuale di `subject-quiz-core.js`.
 | `softmaxTopK` | number | `6` | il softmax considera i migliori 6 candidati |
 | `answerMode` | string | `mcq` | confronto testuale normalizzato; `numeric` attiva confronto numerico con supporto a `,`, `.`, frazioni e spazi |
 | `optionsGenerator` | string | `undefined` | nessuna generazione runtime; se valorizzato attiva una strategy core predefinita |
+| `renderMode` | string | `mcq` | rendering standard; `'bilingual'` attiva helper EN/IT su prompt e options, con supporto a metadata domanda come `answerLang` |
+| `levels` | array | `undefined` | se assente il core non mostra levels UI e mantiene il flow standard; se presente abilita il flusso per livelli |
+| `maxLevelDistance` | number | `2` | distanza massima tra classe selezionata e gradi presenti nel livello per considerarlo disponibile; usato solo con `cfg.levels` |
 | `leaderboardAreaFallback` | string | `''` | se una entry storica non ha `area`, il core usa il fallback configurato prima del default area corrente |
 | `cursorKey` | string | `subject_cursor_v1` | namespace runtime di fallback per cursor/stats/historySig; per materie migrate e` raccomandato impostarlo esplicitamente |
 | `classPrefKey` | string | `${cursorKey}_class_pref_v1` | la preferenza classe viene persistita usando `cfg.classPrefKey` oppure il namespace derivato da `cursorKey` |
@@ -102,6 +105,21 @@ Verifica pratica:
 - il test T4 di ogni fase di migrazione deve coprire le materie già consolidate proprio per validare questa garanzia
 - Fase 3 ha verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia` senza `pageerror` né `console.error` ([test-report-civica.md](./test-report-civica.md))
 - Fase 4 ha ri-verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia`, `civica` in `perfect/mixed/worst` dopo l'introduzione di `answerMode` senza regressioni runtime ([test-report-problemi.md](./test-report-problemi.md))
+
+### cfg.levels e retrocompatibilità UI
+
+Una materia che **non** definisce `cfg.levels`:
+- non vede il levels screen
+- il core mantiene il flow standard della materia
+- nessun riferimento ai livelli in storage, leaderboard o history
+
+Una materia che definisce `cfg.levels`:
+- vede un livello intermedio tra scelta iniziale e game
+- ogni sessione e` associata a un livello
+- la leaderboard puo` esporre il livello per entry se la materia lo richiede
+
+Verifica target per Fase 5:
+- `matematica`, `geografia`, `italiano`, `scienze`, `storia`, `civica`, `problemi` senza `cfg.levels` devono mantenere flow invariato
 
 ### Nota su cursorKey omesso
 

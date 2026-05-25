@@ -76,14 +76,100 @@ Nota:
 - e` calcolata sulla distanza minima tra i gradi reali presenti nel livello e la classe selezionata
 - la Fase 5 dovra` mantenere questa semantica nel core
 
+### Contratto cfg.levels (formale)
+
+```js
+levels: [
+  {
+    key: number,
+    label: string,
+    icon?: string,
+    subtitle?: string,
+    topics?: string,
+    filters: {
+      subareas?: string[],
+      areas?: string[],
+      fallbackDifficulty?: number[]
+    }
+  }
+]
+```
+
+Comportamento core atteso:
+- `cfg.levels` `undefined` -> il core skippa la levels UI e mantiene il flow standard della materia
+- `cfg.levels` valorizzato -> il core abilita levels screen e filtra le domande usando `filters.subareas` come trigger primario
+- se `subareas` non basta o il metadata manca in alcune domande, il fallback usa `filters.fallbackDifficulty`
+
+Vincoli:
+- almeno 1 livello richiesto se `cfg.levels` e` presente
+- ogni livello deve avere `key` univoco
+- ogni livello deve avere `filters` non vuoto
+- validazione shape al boot: se il contratto e` invalido il core deve fallire in modo esplicito
+
+Decisione implementativa:
+- il loader dovra` preservare `subarea` nel runtime Question
+- questa estensione resta passiva e verra` implementata in Fase 5 step 1, non in questo pre-step
+
 #### Render mode
 
-`renderMode: 'bilingual'` deve coprire:
-- prompt con parti in italiano e quote inglesi
-- option buttons in inglese quando la domanda chiede “Come si dice in inglese?”
-- option buttons in italiano quando la domanda chiede “Cosa significa ...?”
+### Contratto cfg.renderMode (formale)
 
-Questa e` una variante di rendering condivisibile e quindi resta categoria `B/C`, non hook.
+Valori validi:
+- `'mcq'` (default) -> rendering standard testuale
+- `'bilingual'` -> rendering EN/IT con helper dedicati
+
+#### Comportamenti renderMode='bilingual'
+
+1. **Prompt con quote `lang="en"`**
+   - trigger: presenza di porzioni inglesi nel testo prompt
+   - rendering core: helper `renderPromptBilingual(text)` che wrappa i segmenti EN in `<span lang="en">...</span>`
+
+2. **Options in EN per domande “Come si dice in inglese?”**
+   - trigger atteso: metadata domanda `answerLang: 'en'`
+   - rendering core: buttons con `lang="en"` e testo EN
+
+3. **Options in IT per domande “Cosa significa...?”**
+   - trigger atteso: metadata domanda `answerLang: 'it'`
+   - rendering core: buttons standard senza `lang`
+
+Fallback:
+- se `renderMode='bilingual'` ma `answerLang` manca, il core usa un fallback safe basato sul tipo domanda o sul contenuto testuale, senza crash
+- se `renderMode='mcq'`, il metadata `answerLang` viene ignorato
+
+Decisione:
+- nel dataset `json/inglese.json` oggi non esiste un campo `answerLang`
+- per Fase 5 si adotta come target il campo esplicito `answerLang` nel JSON, preferito rispetto a euristiche runtime fragili
+- il build dei dataset dovra` essere aggiornato in Fase 5 se serve popolare questo campo in modo sistematico
+
+Questa resta una variante `B/C`, non hook.
+
+### Availability livelli per classe — algoritmo
+
+Input:
+- `cfg.levels[*]`
+- classe selezionata
+- bank runtime con metadata `grade` / `class` e `subarea`
+
+Algoritmo target:
+
+```text
+for each level in cfg.levels:
+  pool = filter(bank, level.filters)
+  if pool empty: level.available = false; continue
+  minDistance = min(|grade(q) - selectedClass| for q in pool)
+  level.available = minDistance <= MAX_LEVEL_DISTANCE
+```
+
+Default:
+- `MAX_LEVEL_DISTANCE = 2`
+- config opzionale: `cfg.maxLevelDistance`
+
+Output UI:
+- livello disponibile -> bottone abilitato
+- livello non disponibile -> bottone disabilitato + messaggio "non disponibile per questa classe"
+- `0` livelli disponibili -> empty state esplicito, nessun crash
+
+Questa logic vive nel core solo quando `cfg.levels` e` presente. Le materie senza levels non eseguono questo ramo.
 
 #### Fuori scope Fase 5
 
@@ -104,6 +190,24 @@ Chiavi confermate in produzione live (`https://lascuolaamica.it/inglese`, versio
 
 Nessun `cursorKey` storico presente in produzione.
 
+### Decisione cursorKey inglese
+
+Storage prod `4.6.8` non ha `cursorKey` storica.
+
+Decisione per Fase 5:
+- **non** lasciare `cfg.cursorKey` implicito
+- dichiarare esplicitamente `cfg.cursorKey = 'englishAdventure_cursor_v1'`
+
+Razionale:
+- il core oggi non costruisce un fallback subject-prefixed; se omesso usa il namespace statico `subject_cursor_v1`
+- documentare un fallback "magico" derivato da subject sarebbe falso rispetto al codice attuale
+- esplicitare la chiave evita collisioni future e mantiene leggibile la config inglese
+
+Conseguenze:
+- nessuna migrazione storage storica richiesta, perche` `cursorKey` non esisteva in prod
+- nuova chiave runtime isolata e coerente con il naming della materia
+- T1 Fase 5 dovra` verificare che lo snapshot prod `4.6.8` continui a ripristinare leaderboard, history, metrics e class preference senza dipendere dal cursor
+
 ### Tabella mapping
 
 | Inglese oggi | Core dopo |
@@ -119,7 +223,7 @@ Nessun `cursorKey` storico presente in produzione.
 | `goLevels()` | core navigation livelli |
 | `buildSessionQuestions(lvl)` | core pipeline con filtro per livello |
 | `englishAdventure_lb_v2` | `cfg.lbKey` |
-| nessun cursor storico | `cfg.cursorKey` esplicito nuovo namespace runtime |
+| nessun cursor storico | `cfg.cursorKey = 'englishAdventure_cursor_v1'` |
 | `englishAdventure_history_v2` | `cfg.historyKey` |
 | `englishAdventure_quality_v1` | `cfg.metricsKey` |
 | `englishAdventure_class_pref_v1` | `cfg.classPrefKey` |
@@ -129,3 +233,4 @@ Nessun `cursorKey` storico presente in produzione.
 - il core oggi non ha concetto di `levels`
 - `questions-loader.rowToQuestion()` non conserva `subarea`, quindi la Fase 5 dovra` decidere dove tenere il metadata livello senza ricadere in adapter locale monouso
 - il rendering bilingue non e` solo “testo inglese”: dipende anche dal tipo di prompt e dalla lingua delle risposte
+- `answerLang` oggi non e` presente nel JSON: decisione presa, target esplicito di metadata in Fase 5
