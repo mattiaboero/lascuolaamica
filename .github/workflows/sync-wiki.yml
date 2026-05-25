@@ -1,0 +1,40 @@
+name: Sync Wiki
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/wiki/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to wiki repo
+        env:
+          GH_TOKEN: ${{ secrets.WIKI_SYNC_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/mattiaboero/lascuolaamica.wiki.git" wiki
+          cp docs/wiki/*.md wiki/
+
+          if grep -l "/Users/" wiki/*.md; then
+            echo "::error::path leak detected"
+            exit 1
+          fi
+
+          cd wiki
+          git add .
+
+          if ! git diff --staged --quiet; then
+            git commit -m "docs(wiki): auto-sync from main"
+            git push origin master
+          fi
