@@ -68,13 +68,13 @@ async function main() {
     const questions = [];
     for (let index = 0; index < 10; index++) {
       const questionText = normalize(await page.locator('#qText').textContent());
-      const meta = maps.questions[questionText];
+      const domOptions = await readDomOptions(page, '#answers');
+      const meta = resolveQuestionMeta(maps.questions[questionText], domOptions);
       if (!meta) {
         throw new Error(`Question not found in config map: ${questionText}`);
       }
 
-      const answerPlan = pickAnswer(meta, options.mode);
-      await clickAnswer(page, '#answers', answerPlan.chosen);
+      const answerPlan = await clickPlannedAnswer(page, '#answers', meta, options.mode, domOptions);
       questions.push({
         question: questionText,
         expected: meta.correct,
@@ -93,12 +93,12 @@ async function main() {
       await page.locator(`[data-action="bonus-pick"][data-bonus="${options.bonus}"]`).click();
       await page.waitForSelector('#screenBonusQuestion.active');
       const bonusText = normalize(await page.locator('#bonusText').textContent());
-      const meta = maps.bonus[bonusText];
+      const domOptions = await readDomOptions(page, '#bonusAnswers');
+      const meta = resolveQuestionMeta(maps.bonus[bonusText], domOptions);
       if (!meta) {
         throw new Error(`Bonus question not found in config map: ${bonusText}`);
       }
-      const answerPlan = pickAnswer(meta, options.mode);
-      await clickAnswer(page, '#bonusAnswers', answerPlan.chosen);
+      const answerPlan = await clickPlannedAnswer(page, '#bonusAnswers', meta, options.mode, domOptions);
       bonus = {
         mode: options.bonus,
         attempted: true,
@@ -239,22 +239,28 @@ async function getConfigMaps(page) {
 
     Object.entries((cfg && cfg.banks) || {}).forEach(([area, rows]) => {
       (rows || []).forEach((row) => {
-        questions[normalizeValue(row.q)] = {
+        const key = normalizeValue(row.q);
+        const entry = {
           correct: normalizeValue(row.a),
           distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
           area,
           grade: row.grade ?? row.g ?? null
         };
+        if (!questions[key]) questions[key] = [];
+        questions[key].push(entry);
       });
     });
 
     Object.entries((cfg && cfg.bonusQuestions) || {}).forEach(([type, rows]) => {
       (rows || []).forEach((row) => {
-        bonus[normalizeValue(row.q)] = {
+        const key = normalizeValue(row.q);
+        const entry = {
           correct: normalizeValue(row.a),
           distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
           type
         };
+        if (!bonus[key]) bonus[key] = [];
+        bonus[key].push(entry);
       });
     });
 
@@ -262,10 +268,12 @@ async function getConfigMaps(page) {
   });
 }
 
-function pickAnswer(question, mode) {
+function pickAnswer(question, mode, domOptions) {
   const correct = normalize(question.correct);
   const distractors = Array.isArray(question.distractors) ? question.distractors.map(normalize).filter(Boolean) : [];
-  const wrong = distractors[0] || correct;
+  const visible = Array.isArray(domOptions) ? domOptions.map(normalize).filter(Boolean) : [];
+  const wrongVisible = visible.find((value) => value !== correct);
+  const wrong = wrongVisible || distractors.find((value) => value !== correct) || correct;
 
   if (mode === 'perfect') {
     return { chosen: correct, correct: true };
@@ -305,6 +313,52 @@ async function clickAnswer(page, rootSelector, answerText) {
     }
   }
   throw new Error(`Risposta non trovata nel DOM: ${expected}`);
+}
+
+async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions) {
+  const buttons = page.locator(`${rootSelector} .answer-btn`);
+  const answerPlan = pickAnswer(question, mode, domOptions);
+  const targetIndex = domOptions.findIndex((value) => value === normalize(answerPlan.chosen));
+  if (targetIndex === -1) {
+    throw new Error(`Risposta non trovata nel DOM: ${normalize(answerPlan.chosen)}`);
+  }
+
+  await buttons.nth(targetIndex).click();
+  await page.waitForTimeout(1100);
+  return answerPlan;
+}
+
+async function readDomOptions(page, rootSelector) {
+  const buttons = page.locator(`${rootSelector} .answer-btn`);
+  const count = await buttons.count();
+  const out = [];
+  for (let index = 0; index < count; index++) {
+    out.push(normalize(await buttons.nth(index).textContent()));
+  }
+  return out;
+}
+
+function resolveQuestionMeta(candidates, domOptions) {
+  if (!Array.isArray(candidates) || !candidates.length) return null;
+  if (candidates.length === 1) return candidates[0];
+
+  const visible = Array.isArray(domOptions) ? domOptions.map(normalize).filter(Boolean) : [];
+  let best = candidates[0];
+  let bestScore = -1;
+
+  for (const candidate of candidates) {
+    const optionSet = new Set([normalize(candidate.correct), ...(candidate.distractors || []).map(normalize)]);
+    let score = 0;
+    visible.forEach((value) => {
+      if (optionSet.has(value)) score += 1;
+    });
+    if (score > bestScore) {
+      best = candidate;
+      bestScore = score;
+    }
+  }
+
+  return best;
 }
 
 function normalize(value) {

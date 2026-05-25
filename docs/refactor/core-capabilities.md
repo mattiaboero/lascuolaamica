@@ -86,17 +86,12 @@ Tabella allineata al codice runtime attuale di `subject-quiz-core.js`.
 | `classDistanceWeight` | number | `10` | la distanza dalla classe selezionata resta penalizzata con coefficiente 10 |
 | `softmaxTemperature` | number | `1.25` | il pick probabilistico usa temperatura 1.25 |
 | `softmaxTopK` | number | `6` | il softmax considera i migliori 6 candidati |
+| `answerMode` | string | `mcq` | confronto testuale normalizzato; `numeric` attiva confronto numerico con supporto a `,`, `.`, frazioni e spazi |
+| `optionsGenerator` | string | `undefined` | nessuna generazione runtime; se valorizzato attiva una strategy core predefinita |
+| `leaderboardAreaFallback` | string | `''` | se una entry storica non ha `area`, il core usa il fallback configurato prima del default area corrente |
 | `classPrefKey` | string | `${CURSOR_KEY}_class_pref_v1` | la preferenza classe viene comunque persistita con chiave derivata dal cursor |
 | `historyKey` | string | `${CURSOR_KEY}_history_v2` | lo storico multi-sessione viene comunque persistito con chiave derivata dal cursor |
 | `metricsKey` | string | `${CURSOR_KEY}_quality_v1` | le metriche rolling vengono comunque persistite con chiave derivata dal cursor |
-
-Campi citati in Fase 1 ma non ancora parte del contratto runtime attivo:
-- `answerMode`
-- `optionsGenerator`
-
-Stato attuale:
-- non sono implementati nel core pubblico
-- restano materiale di design per fasi successive, non vanno documentati come feature disponibili finché il codice non li accetta davvero
 
 ## Garanzia compatibilità retroattiva
 
@@ -105,3 +100,4 @@ Una materia esistente che non specifica i field nuovi deve continuare a comporta
 Verifica pratica:
 - il test T4 di ogni fase di migrazione deve coprire le materie già consolidate proprio per validare questa garanzia
 - Fase 3 ha verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia` senza `pageerror` né `console.error` ([test-report-civica.md](./test-report-civica.md))
+- Fase 4 ha ri-verificato `matematica`, `geografia`, `italiano`, `scienze`, `storia`, `civica` in `perfect/mixed/worst` dopo l'introduzione di `answerMode` senza regressioni runtime ([test-report-problemi.md](./test-report-problemi.md))

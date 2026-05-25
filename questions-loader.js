@@ -217,6 +217,7 @@
     const banks = {};
 
     rows.forEach((row) => {
+      if (row && row.bonus === true) return;
       const sourceArea = getRowAreaValue(row, areaField);
       const areaKey = mapArea(sourceArea, normalizedAreaMap);
       if (!areaKey) return;

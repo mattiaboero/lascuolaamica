@@ -5,6 +5,7 @@ Spec operativa del bot Playwright usato nei test runtime delle materie migrate a
 
 File di riferimento:
 - [scripts/subject_quiz_test_harness.js](../../scripts/subject_quiz_test_harness.js)
+- Snapshot storage per i test T1: [docs/refactor/snapshots/](./snapshots/)
 
 ## Test bot — modalità
 - `mode=perfect`: risponde sempre giusto. Smoke test e validazione UI base.
@@ -45,3 +46,5 @@ Output:
 - Il harness attiva il play window via storage locale per non bloccare i test sul modal dei 30 minuti.
 - Le route locali vengono aperte come `*.html`, perché `python3 -m http.server` non replica i rewrite production-style.
 - `mode=mixed` è deterministico: evita test flakey e mantiene ripetibile il rapporto corrette/sbagliate a parità di dataset.
+- Prima di ogni nuova fase di migrazione creare o aggiornare uno snapshot storage della materia target in `docs/refactor/snapshots/`.
+- Rigenerare lo snapshot quando cambia lo schema storage della materia o quando una release modifica la migrazione da engine dedicato a core condiviso.

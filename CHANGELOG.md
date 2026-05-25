@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.7.0 - 2026-05-25
+### Changed
+- refactor(problemi): migrato `js/problemi-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 39 righe di sola config.
+- core quiz: aggiunti `cfg.answerMode` (default `mcq`, nuovo `numeric`) e `cfg.leaderboardAreaFallback`; `cfg.optionsGenerator` e` disponibile come strategy passiva di fallback senza hook funzione.
+- questions loader: le bonus rows restano idratabili dai dataset JSON ma non entrano piu` nella banca principale delle 10 domande.
+- Storage keys utenti problemi preservate (`problemiMatematica_lb_v1`, `problemiMatematica_history_v2`, `problemiMatematica_quality_v1`, `problemiMatematica_class_pref_v1`).
+
 ## 4.6.9 - 2026-05-24
 ### Changed
 - refactor(civica): migrato `js/civica-page.js` a configurazione dichiarativa via `subject-quiz-core`, riducendo il file runtime a 81 righe di sola config.

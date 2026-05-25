@@ -53,13 +53,14 @@ R5. Vietato in core: `if (config.subject === 'X')`.
 | Proposta iniziale | Categoria iniziale | Reframing | Categoria finale |
 |------------------------------|--------------------|-----------------|------------------|
 | normalizeAnswerValue | D (hook) | answerMode | B (config) |
+| generateOptions numerico | D (hook) | optionsGenerator strategy | B (config) |
 | questionRenderer bilingue | D (hook) | renderMode | B (config) |
 | levelStrategy inglese | D (hook) | levels metadata | B (config) + C |
 | effects confetti/streak | D (hook) | rinviato | fuori scope F2-5 |
 
 ## Bilancio atteso post-migrazione
 - Civica: 0 hook. Solo config.
-- Problemi: 0 hook. `answerMode` config.
+- Problemi: 0 hook. `answerMode` config; `optionsGenerator` disponibile ma non richiesto dal dataset JSON attuale.
 - Inglese: 0 hook. `levels + renderMode` config.
 - Totale D usato: 0/3. Margine 3.
 

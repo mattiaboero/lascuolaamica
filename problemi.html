@@ -257,6 +257,11 @@
         <div class="score-item"><div class="num" id="rBonus">x1</div><div class="lbl">Bonus</div></div>
         <div class="score-item"><div class="num" id="rFinal">0</div><div class="lbl">Punteggio finale</div></div>
       </div>
+      <div class="score-final" aria-label="Riepilogo risposte">
+        <div class="score-item"><div class="num" id="rCorrect">0</div><div class="lbl">Corrette</div></div>
+        <div class="score-item"><div class="num" id="rWrong">0</div><div class="lbl">Sbagliate</div></div>
+        <div class="score-item"><div class="num" id="rArea">-</div><div class="lbl">Ambito</div></div>
+      </div>
       <div class="result-btns">
         <button type="button" class="btn-replay" data-action="restart-game">Ancora!</button>
         <button type="button" class="btn-home" data-action="go-start">Inizio</button>
@@ -285,9 +290,10 @@
 
 
 
+<script defer src="js/problemi-page.js"></script>
 <script defer src="questions-loader.js"></script>
 <script defer src="js/rewards.js"></script>
-<script defer src="js/problemi-page.js"></script>
+<script defer src="subject-quiz-core.js"></script>
 <script defer src="app-version.js"></script>
 <script defer src="shared.js"></script>
 </body>

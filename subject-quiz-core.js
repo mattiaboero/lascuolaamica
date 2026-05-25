@@ -185,8 +185,11 @@
   const METRICS_MAX_SESSIONS = Math.max(40, Number(cfg.metricsMaxSessions || 180));
   const METRICS_ROLLING_WINDOW = Math.max(10, Number(cfg.metricsRollingWindow || 30));
   const CLASS_PREF_KEY = cfg.classPrefKey || `${CURSOR_KEY}_class_pref_v1`;
+  const LEADERBOARD_AREA_FALLBACK = safeText(cfg.leaderboardAreaFallback || '', 64);
   const RECENT_ID_SESSIONS = Math.max(3, Number(cfg.recentIdSessions || 6));
   const RECENT_SIG_SESSIONS = Math.max(4, Number(cfg.recentSigSessions || 8));
+  const ANSWER_MODE = cfg.answerMode === 'numeric' ? 'numeric' : 'mcq';
+  const OPTIONS_GENERATOR = typeof cfg.optionsGenerator === 'string' ? cfg.optionsGenerator : '';
   const SOFTMAX_TOP_K = Math.max(3, Number(cfg.softmaxTopK || 6));
   const SOFTMAX_TEMPERATURE = Math.max(0.35, Number(cfg.softmaxTemperature || 1.25));
   const TARGET_GRADE_WEIGHT = Math.max(1, Number(cfg.targetGradeWeight || 7));
@@ -270,6 +273,102 @@
   function safeText(value, maxLen) {
     const txt = String(value ?? '').replace(/\s+/g, ' ').trim();
     return txt.slice(0, maxLen);
+  }
+
+  function parseNumericAnswer(value) {
+    const raw = String(value ?? '')
+      .replace(/\u00a0/g, ' ')
+      .replace(/\s+/g, '')
+      .trim();
+    if (!raw) return null;
+
+    const fractionMatch = raw.match(/^([+-]?\d+(?:[.,]\d+)?)\/([+-]?\d+(?:[.,]\d+)?)$/);
+    if (fractionMatch) {
+      const numerator = Number(fractionMatch[1].replace(',', '.'));
+      const denominator = Number(fractionMatch[2].replace(',', '.'));
+      if (Number.isFinite(numerator) && Number.isFinite(denominator) && denominator !== 0) {
+        return numerator / denominator;
+      }
+      return null;
+    }
+
+    if (!/^[+-]?\d+(?:[.,]\d+)?$/.test(raw)) return null;
+    const parsed = Number(raw.replace(',', '.'));
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+
+  function normalizeComparableAnswer(value) {
+    if (ANSWER_MODE === 'numeric') {
+      const parsed = parseNumericAnswer(value);
+      if (parsed !== null) {
+        const stable = Math.abs(parsed) < 1e-12 ? 0 : parsed;
+        return `n:${String(Number(stable.toFixed(12)))}`;
+      }
+    }
+    return `t:${safeText(value, 160).toLowerCase()}`;
+  }
+
+  function answersMatch(left, right) {
+    return normalizeComparableAnswer(left) === normalizeComparableAnswer(right);
+  }
+
+  function inferNumericStep(rawAnswer, baseValue) {
+    const raw = String(rawAnswer ?? '').trim();
+    if (raw.includes('/')) return 0.5;
+    const decimalMatch = raw.match(/[.,](\d+)$/);
+    if (decimalMatch) {
+      return Math.pow(10, -decimalMatch[1].length);
+    }
+    const abs = Math.abs(baseValue);
+    if (abs >= 1000) return 100;
+    if (abs >= 100) return 10;
+    if (abs >= 20) return 5;
+    return 1;
+  }
+
+  function formatNumericLike(value, rawAnswer) {
+    const raw = String(rawAnswer ?? '').trim();
+    const decimalMatch = raw.match(/[.,](\d+)$/);
+    if (decimalMatch) {
+      const decimals = decimalMatch[1].length;
+      const fixed = Number(value).toFixed(decimals);
+      return raw.includes(',') ? fixed.replace('.', ',') : fixed;
+    }
+    if (raw.includes('/')) {
+      return String(Number(value.toFixed(3)));
+    }
+    return String(Math.round(Number(value)));
+  }
+
+  function fillGeneratedOptions(correctAnswer, options) {
+    if (OPTIONS_GENERATOR !== 'numeric-close') return options;
+    const parsed = parseNumericAnswer(correctAnswer);
+    if (parsed === null) return options;
+
+    const next = options.slice();
+    const step = inferNumericStep(correctAnswer, parsed);
+    const offsets = [step, -step, step * 2, -(step * 2), step * 10, -(step * 10), step * 3, -(step * 3)];
+    for (let i = 0; i < offsets.length && next.length < 4; i++) {
+      const candidate = formatNumericLike(parsed + offsets[i], correctAnswer);
+      if (!next.some((opt) => answersMatch(opt, candidate))) {
+        next.push(candidate);
+      }
+    }
+    return next;
+  }
+
+  function buildAnswerOptions(question) {
+    const rawOptions = [question && question.a, ...((question && question.d) || []).slice(0, 6)]
+      .map((opt) => String(opt ?? '').trim())
+      .filter(Boolean);
+    const deduped = [];
+    rawOptions.forEach((opt) => {
+      if (!deduped.some((seen) => answersMatch(seen, opt))) {
+        deduped.push(opt);
+      }
+    });
+    const filled = fillGeneratedOptions(question && question.a, deduped);
+    return shuffle(filled.slice(0, 4));
   }
 
   function prefersReducedMotion() {
@@ -672,11 +771,14 @@
 
   function ensureClassSelector() {
     const card = document.querySelector('#screenStart .card');
+    if (!card) return;
+
     const areaGrid = $('areaGrid');
-    if (!card || !areaGrid) return;
+    let grid = $('classGrid');
+    if (!areaGrid && !grid) return;
 
     let label = $('classSectionLabel');
-    if (!label) {
+    if (!label && areaGrid) {
       label = document.createElement('div');
       label.id = 'classSectionLabel';
       label.className = 'section-label class-selector-label';
@@ -684,13 +786,13 @@
       card.insertBefore(label, areaGrid);
     }
 
-    let grid = $('classGrid');
     if (!grid) {
       grid = document.createElement('div');
       grid.id = 'classGrid';
       grid.className = 'class-grid';
       grid.setAttribute('aria-label', 'Selezione classe');
-      card.insertBefore(grid, areaGrid);
+      if (areaGrid) card.insertBefore(grid, areaGrid);
+      else card.appendChild(grid);
     }
 
     buildClassGrid();
@@ -1352,7 +1454,7 @@
     const answers = $('answers');
     answers.textContent = '';
     const frag = document.createDocumentFragment();
-    const options = shuffle([q.a, ...(q.d || []).slice(0, 3)]);
+    const options = buildAnswerOptions(q);
     options.forEach((opt) => {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -1371,7 +1473,7 @@
     if (answered) return;
     answered = true;
 
-    const isOk = chosen === correctAnswer;
+    const isOk = answersMatch(chosen, correctAnswer);
     const buttons = Array.from(document.querySelectorAll('#answers .answer-btn'));
     buttons.forEach((b) => {
       b.disabled = true;
@@ -1388,7 +1490,7 @@
       btn.classList.add('wrong');
       wrong += 1;
       buttons.forEach((b) => {
-        if (b.textContent === correctAnswer) b.classList.add('correct');
+        if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
       });
       playKo();
       setMascot('sad');
@@ -1426,7 +1528,7 @@
     const area = $('bonusAnswers');
     area.textContent = '';
     const frag = document.createDocumentFragment();
-    shuffle([q.a, ...(q.d || []).slice(0, 3)]).forEach((opt) => {
+    buildAnswerOptions(q).forEach((opt) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'answer-btn';
@@ -1447,7 +1549,7 @@
       b.disabled = true;
     });
 
-    const ok = chosen === correctAnswer;
+    const ok = answersMatch(chosen, correctAnswer);
     if (ok) {
       btn.classList.add('correct');
       playPerfect();
@@ -1457,7 +1559,7 @@
     } else {
       btn.classList.add('wrong');
       buttons.forEach((b) => {
-        if (b.textContent === correctAnswer) b.classList.add('correct');
+        if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
       });
       playKo();
       setMascot('sad');
@@ -1576,7 +1678,7 @@
       const parsed = JSON.parse(storageGet(LB_KEY));
       if (!Array.isArray(parsed)) return [];
       return parsed.slice(0, 50).map((entry) => ({
-        area: safeText(entry && entry.area, 64),
+        area: safeText(entry && entry.area, 64) || LEADERBOARD_AREA_FALLBACK || AREA_LABELS[selectedArea] || selectedArea,
         cls: safeText(entry && entry.cls, 24),
         base: safeInt(entry && entry.base, 0),
         bonus: safeText(entry && entry.bonus, 48),
