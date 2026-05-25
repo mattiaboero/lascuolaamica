@@ -16,6 +16,17 @@ Checklist da seguire ad ogni release. L'ordine conta.
 
 ---
 
+## Guard rail prepublish-check.sh
+
+1. `check_core_no_subject_branch` — vieta `if (cfg.subject === ...)` nel core condiviso.
+2. `check_cursor_key_explicit` — verifica che tutte le page subject dichiarino `cursorKey` in modo esplicito.
+3. `check_subject_pages_size` — verifica che ogni file `js/<subject>-page.js` resti sotto la soglia massima prevista.
+4. `check_extension_contract_present` — verifica che il commento "Extension Contract" sia presente in `subject-quiz-core.js`.
+
+Questi controlli servono a bloccare regressioni architetturali prima del merge.
+
+---
+
 ## Merge e deploy
 
 1. Merge su `main`
