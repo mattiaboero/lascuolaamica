@@ -52,6 +52,21 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '26 maggio 2026 · Release 4.9.2',
+      items: [
+        'Ottimizzati gli asset della bacheca premi: 46 immagini PNG compresse mantenendo qualità visiva stabile e riducendo il peso totale di circa 10 MB.',
+        'Aggiunto il formato WebP per lo sfondo principale della bacheca trofei con fallback PNG per compatibilità browser.',
+        'I file reward restano caricati solo quando servono e disponibili offline dopo la prima visita alla pagina Premi.'
+      ]
+    },
+    {
+      date: '25 maggio 2026 · Release 4.9.1',
+      items: [
+        'Allineato il popup "Ultimi aggiornamenti" alla versione reale dell’applicazione.',
+        'Aggiunte nel log info le release mancanti dalla 4.6.8 alla 4.9.0 per mantenere coerenza con footer e changelog.'
+      ]
+    },
+    {
       date: '25 maggio 2026 · Release 4.9.0',
       items: [
         'Completata la riorganizzazione del motore quiz: tutte le 8 materie ora usano lo stesso runtime condiviso, eliminando 3.500 righe di codice duplicato.',

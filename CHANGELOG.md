@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.9.2 - 2026-05-26
+
+### Changed
+- perf(rewards): ottimizzati in batch i 46 PNG in `assets/reward/` mantenendo i path originali e riducendo il peso totale della cartella da ~15MB a ~3.5MB.
+- perf(rewards): aggiunto `assets/reward/bacheca-trofei-bg.webp` con fallback PNG tramite `<picture>` in `premi.html`.
+
+### Fixed
+- pwa(rewards): `sw.js` ora gestisce esplicitamente `assets/reward/*` in runtime cache dedicata (`cache-first` on-demand), evitando precaricamenti non necessari e mantenendo offline dopo la prima visita a `/premi`.
+- ui(rewards): immagini reward non critiche renderizzate con `decoding=\"async\"` e lazy loading.
+
 ## 4.9.1 - 2026-05-25
 
 ### Fixed

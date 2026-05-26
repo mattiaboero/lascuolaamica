@@ -337,6 +337,7 @@
       img.alt = '';
       img.setAttribute('aria-hidden', 'true');
       img.loading = 'lazy';
+      img.decoding = 'async';
       imgWrap.appendChild(img);
 
       const name = document.createElement('h2');
@@ -380,6 +381,8 @@
     img.src = ASSET_BASE + reward.file;
     img.alt = '';
     img.setAttribute('aria-hidden', 'true');
+    img.loading = 'lazy';
+    img.decoding = 'async';
     const text = document.createElement('div');
     const strong = document.createElement('strong');
     strong.textContent = `Nuovo premio: ${reward.name}`;

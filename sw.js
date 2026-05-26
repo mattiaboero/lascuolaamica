@@ -7,6 +7,7 @@
 importScripts('/app-version.js');
 
 const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v1';
+const REWARDS_CACHE_NAME = `${CACHE_NAME}-rewards`;
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -128,6 +129,7 @@ const OPTIONAL_PRECACHE_URLS = [
 const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|avif|ico|txt|xml|woff2?|ttf)$/i;
+const REWARD_ASSET_RE = /^\/assets\/reward\/.+\.(png|webp)$/i;
 
 function isSameOriginStaticAsset(url) {
   if (url.origin !== self.location.origin) return false;
@@ -168,7 +170,7 @@ self.addEventListener('activate', event => {
     caches.keys().then(keys =>
       Promise.all(
         keys
-          .filter(key => key !== CACHE_NAME)
+          .filter(key => key !== CACHE_NAME && key !== REWARDS_CACHE_NAME)
           .map(key => caches.delete(key))
       )
     ).then(() => self.clients.claim())
@@ -201,6 +203,13 @@ self.addEventListener('fetch', event => {
     return;
   }
 
+  // Reward assets: niente precache, solo runtime cache on-demand.
+  // Dopo la prima visita a /premi restano disponibili offline.
+  if (REWARD_ASSET_RE.test(url.pathname)) {
+    event.respondWith(cacheFirst(request, REWARDS_CACHE_NAME));
+    return;
+  }
+
   // Asset statici della stessa origine: Cache First.
   if (isSameOriginStaticAsset(url)) {
     event.respondWith(cacheFirst(request));
@@ -212,14 +221,14 @@ self.addEventListener('fetch', event => {
 // ============================================================
 
 // Cache First: serve dalla cache, se non c'è va in rete e salva
-async function cacheFirst(request) {
+async function cacheFirst(request, cacheName = CACHE_NAME) {
   const cached = await caches.match(request);
   if (cached) return cached;
 
   try {
     const response = await fetch(request);
     if (canCacheResponse(response)) {
-      const cache = await caches.open(CACHE_NAME);
+      const cache = await caches.open(cacheName);
       cache.put(request, response.clone());
     }
     return response;
