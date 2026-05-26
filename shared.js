@@ -52,6 +52,14 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '26 maggio 2026 · Release 4.9.4',
+      items: [
+        'ESLint è stato migrato al nuovo formato flat config, compatibile nativamente con ESLint 9 senza workaround legacy.',
+        'Rimosso il vecchio file `.eslintrc.json`: il controllo JavaScript usa ora una configurazione unica `eslint.config.mjs`.',
+        'I comandi npm di verifica restano invariati, ma senza più warning di deprecazione durante il lint JavaScript.'
+      ]
+    },
+    {
       date: '26 maggio 2026 · Release 4.9.3',
       items: [
         'Aggiunti script npm unificati per lint, audit e verifiche locali del progetto.',

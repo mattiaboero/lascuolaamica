@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.9.4 - 2026-05-26
+
+### Changed
+- chore(dx): migrato ESLint da legacy `.eslintrc.json` a flat config `eslint.config.mjs`, compatibile con ESLint 9 senza workaround `ESLINT_USE_FLAT_CONFIG=false`.
+- chore(dx): rimosso `.eslintrc.json` obsoleto e semplificato lo script `lint:js` in `package.json`.
+
 ## 4.9.3 - 2026-05-26
 
 ### Changed

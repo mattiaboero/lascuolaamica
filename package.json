@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.9.3",
+  "version": "4.9.4",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -9,7 +9,7 @@
     "test:harness": "node scripts/subject_quiz_test_harness.js",
     "sync:wiki": "bash scripts/sync_github_wiki.sh",
     "prepublish": "bash prepublish-check.sh",
-    "lint:js": "ESLINT_USE_FLAT_CONFIG=false eslint *.js js/ scripts/ --ext .js",
+    "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
     "verify": "npm run lint && npm run audit:json && npm run prepublish"
