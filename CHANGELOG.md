@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.9.3 - 2026-05-26
+
+### Changed
+- chore(dx): aggiunti `package.json` e `package-lock.json` con script unificati per `lint`, `audit:json`, `prepublish`, `verify`, `sync:wiki` e harness test.
+- tooling: configurati `ESLint` e `Stylelint` in assetto minimale compatibile con il codebase vanilla JS/CSS esistente, senza dipendenze runtime.
+
+### Fixed
+- prepublish-check.sh: esclusi `.git` e `node_modules` dai controlli di sicurezza e igiene CSS, evitando falsi positivi durante `npm install`.
+
 ## 4.9.2 - 2026-05-26
 
 ### Changed

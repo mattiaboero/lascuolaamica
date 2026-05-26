@@ -6,16 +6,6 @@
   const ASSET_BASE = 'assets/reward/';
   const SUBJECTS = ['matematica', 'inglese', 'problemi', 'civica', 'geografia', 'storia', 'scienze', 'italiano'];
   const CLASSES = ['2', '3', '4', '5'];
-  const SUBJECT_LABELS = {
-    matematica: 'Matematica',
-    inglese: 'Inglese',
-    problemi: 'Problemi',
-    civica: 'Educazione civica',
-    geografia: 'Geografia',
-    storia: 'Storia',
-    scienze: 'Scienze',
-    italiano: 'Italiano'
-  };
   const DEBUG_MODE = (() => {
     try {
       const host = window.location.hostname;
@@ -219,7 +209,6 @@
     const wrong = safeInt(event.wrong, 0);
     const total = Math.max(1, safeInt(event.total, 10));
     const finalScore = safeInt(event.finalScore ?? event.final, 0);
-    const baseScore = safeInt(event.baseScore ?? event.base, 0);
     const bonusAttempted = !!event.bonusAttempted;
     const bonusApplied = !!event.bonusApplied;
     const durationMs = safeInt(event.durationMs, 0);

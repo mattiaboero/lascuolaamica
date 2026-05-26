@@ -332,22 +332,6 @@ function hashString(text) {
   return value;
 }
 
-async function clickAnswer(page, rootSelector, answerText) {
-  const expected = normalize(answerText);
-  const buttons = page.locator(`${rootSelector} .answer-btn`);
-  const count = await buttons.count();
-  for (let index = 0; index < count; index++) {
-    const button = buttons.nth(index);
-    const value = normalize(await button.textContent());
-    if (value === expected) {
-      await button.click();
-      await page.waitForTimeout(1100);
-      return;
-    }
-  }
-  throw new Error(`Risposta non trovata nel DOM: ${expected}`);
-}
-
 async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions) {
   const buttons = page.locator(`${rootSelector} .answer-btn`);
   const answerPlan = pickAnswer(question, mode, domOptions);
@@ -418,10 +402,6 @@ function resolveQuestionMeta(candidates, domOptions) {
 }
 
 function normalize(value) {
-  return String(value || '').replace(/\s+/g, ' ').trim();
-}
-
-function normalizeText(value) {
   return String(value || '').replace(/\s+/g, ' ').trim();
 }
 

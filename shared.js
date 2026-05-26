@@ -52,6 +52,14 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '26 maggio 2026 · Release 4.9.3',
+      items: [
+        'Aggiunti script npm unificati per lint, audit e verifiche locali del progetto.',
+        'Configurati ESLint e Stylelint in assetto minimale per il codebase vanilla JavaScript/CSS, senza dipendenze runtime aggiuntive.',
+        'Introdotto package-lock.json per rendere riproducibile il setup degli strumenti di sviluppo.'
+      ]
+    },
+    {
       date: '26 maggio 2026 · Release 4.9.2',
       items: [
         'Ottimizzati gli asset della bacheca premi: 46 immagini PNG compresse mantenendo qualità visiva stabile e riducendo il peso totale di circa 10 MB.',

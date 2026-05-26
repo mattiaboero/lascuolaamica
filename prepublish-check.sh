@@ -120,7 +120,11 @@ check_version_alignment() {
 
 check_security_patterns() {
   local findings=""
-  findings=$(find . -type f \( -name '*.js' -o -name '*.html' \) -print0 | xargs -0 grep -nE 'eval\(|new Function\(|document\.write\(|innerHTML[[:space:]]*=|javascript:' || true)
+  findings=$(find . \
+    -path './node_modules' -prune -o \
+    -path './.git' -prune -o \
+    -type f \( -name '*.js' -o -name '*.html' \) -print0 \
+    | xargs -0 grep -nE 'eval\(|new Function\(|document\.write\(|innerHTML[[:space:]]*=|javascript:' || true)
   if [[ -n "$findings" ]]; then
     echo "[ERROR] dangerous patterns detected (eval/document.write/innerHTML/javascript:)"
     echo "$findings"
@@ -155,7 +159,11 @@ check_rewards_page_metadata() {
 
 check_css_hygiene() {
   local findings
-  findings=$(grep -R -n 'font-weight:[[:space:]]*1000' . --include='*.css' || true)
+  findings=$(find . \
+    -path './node_modules' -prune -o \
+    -path './.git' -prune -o \
+    -type f -name '*.css' -print0 \
+    | xargs -0 grep -n 'font-weight:[[:space:]]*1000' || true)
   if [[ -n "$findings" ]]; then
     echo "[ERROR] non-standard font-weight:1000 found"
     echo "$findings"

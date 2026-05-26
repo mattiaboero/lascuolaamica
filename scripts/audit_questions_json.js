@@ -111,4 +111,4 @@ if (issues.length) {
   process.exit(1);
 }
 
-console.log(`Question JSON audit passed for ${files.length} subject files.`);
+process.stdout.write(`Question JSON audit passed for ${files.length} subject files.\n`);
