@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## 4.9.5 - 2026-05-26
+
+### Changed
+- perf(html): aggiunti `dns-prefetch` + `preconnect` self-origin e `preload` per `/json/index.json` su pagine materia. Riduce latency iniziale primo paint su mobile.
+
 ## 4.9.4 - 2026-05-26
 
 ### Changed
