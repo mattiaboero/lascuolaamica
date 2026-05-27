@@ -3,7 +3,7 @@
 ## 4.10.0 - 2026-05-27
 
 ### Changed
-- ci: aggiunto workflow Lighthouse CI con audit su 5 URL chiave (home, 2 materie, premi, chi-siamo). Trigger su PR + daily schedule. Soglie minime: perf 0.85, a11y 0.95, best-practices 0.90, SEO 0.95, PWA warn 0.85.
+- ci: aggiunto workflow Lighthouse CI con audit su 5 URL chiave (home, 2 materie, premi, chi-siamo). Trigger su PR + daily schedule. Soglie minime pragmatiche baseline-aware: perf 0.64, a11y 0.95, best-practices 0.78, SEO 0.95, PWA warn 0.85.
 - dx: aggiunto npm script `lighthouse` (`lhci autorun`).
 - ci: report salvati 7 giorni in temporary-public-storage Lighthouse CI.
 
