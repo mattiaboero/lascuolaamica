@@ -1,3 +1,16 @@
+# Block vault paths erroneously deployed in v4.10.0 (BUG-FIX-008 cleanup)
+/00-Dashboard.md /404.html 404!
+/01-Progetto/* /404.html 404!
+/02-Release/* /404.html 404!
+/03-Task/* /404.html 404!
+/04-Reference/* /404.html 404!
+/05-Workflow/* /404.html 404!
+/06-Materie/* /404.html 404!
+/07-Dataset/* /404.html 404!
+/08-Bug-tracking/* /404.html 404!
+/09-Note-volanti/* /404.html 404!
+/templates/* /404.html 404!
+
 /index.html / 301
 /matematica.html /matematica 301
 /inglese.html /inglese 301
