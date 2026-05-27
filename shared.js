@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '27 maggio 2026 · Release 4.10.1',
+      items: [
+        'Pulizia interna: rimossi file di gestione progetto erroneamente pubblicati. Nessun impatto sulle funzionalita del sito.'
+      ]
+    },
+    {
       date: '27 maggio 2026 · Release 4.10.0',
       items: [
         'Aggiunto audit automatico Lighthouse sulle pull request e ogni giorno per controllare performance, accessibilita e SEO del sito.',

@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## 4.10.1 - 2026-05-27
+
+### Fixed
+- repo: rimossi 4 file vault Obsidian erroneamente committati in v4.10.0 (`00-Dashboard.md`, `01-Progetto/Stato attuale.md`, `02-Release/4.10.0.md`, `03-Task/Completati.md`). Erano accessibili pubblicamente via `https://lascuolaamica.it/<file>.md`. Nessuna PII sensibile esposta. Aggiunto `.gitignore` per prevenire ricorrenze.
+
 ## 4.10.0 - 2026-05-27
 
 ### Changed

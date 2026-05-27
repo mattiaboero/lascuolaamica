@@ -21,3 +21,17 @@ export/
 # Generated reports (track only latest snapshot)
 reports/questions_coverage_[0-9]*.csv
 reports/questions_coverage_summary_[0-9]*.csv
+
+# Vault Obsidian - NON committare
+00-Dashboard.md
+01-Progetto/
+02-Release/
+03-Task/
+04-Reference/
+05-Workflow/
+06-Materie/
+07-Dataset/
+08-Bug-tracking/
+09-Note-volanti/
+templates/
+.obsidian/
