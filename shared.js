@@ -52,6 +52,13 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '27 maggio 2026 · Release 4.10.0',
+      items: [
+        'Aggiunto audit automatico Lighthouse sulle pull request e ogni giorno per controllare performance, accessibilita e SEO del sito.',
+        'Soglie minime applicate: nessuna release puo abbassare la qualita misurata sotto i valori attuali.'
+      ]
+    },
+    {
       date: '26 maggio 2026 · Release 4.9.5',
       items: [
         'Migliorata velocita iniziale caricamento aggiungendo hint DNS prefetch e preload dataset.',
