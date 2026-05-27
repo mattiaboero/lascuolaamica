@@ -12,9 +12,11 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run lint && npm run audit:json && npm run prepublish"
+    "verify": "npm run lint && npm run audit:json && npm run prepublish",
+    "lighthouse": "lhci autorun"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "eslint": "^9.0.0",
     "stylelint": "^16.0.0",
     "stylelint-config-standard": "^36.0.0"
