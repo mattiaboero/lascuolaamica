@@ -383,16 +383,6 @@
   line-height: 1.3;
 }
 
-.reward-export-stage {
-  position: fixed;
-  left: -99999px;
-  top: 0;
-  width: 1600px;
-  height: 1000px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
 @media (max-width: 720px) {
   .rewards-page .sun {
     animation: none;
@@ -415,20 +405,6 @@
   .rewards-title,
   .rewards-subtitle {
     text-shadow: 0 2px 10px rgba(32, 52, 77, .34);
-  }
-
-  .nav-bar {
-    align-items: flex-start;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .nav-bar .nav-icons {
-    flex: 1 1 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    min-width: 0;
   }
 
   .nav-icons .reward-link-pill {

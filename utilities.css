@@ -14,14 +14,6 @@ body.modal-open {
   overflow: hidden;
 }
 
-.status.status-error {
-  color: #fecaca !important;
-}
-
-.status.status-info {
-  color: #c7d2fe !important;
-}
-
 .play-window-panel {
   width: 100%;
   margin: 14px 0 0;
@@ -252,19 +244,6 @@ html[data-palette="okabe-ito"] .play-window-panel-home.is-expired {
 .float-v18 { left: 54vw; font-size: 1.25rem; animation-duration: 17.5s; animation-delay: 2.5s; }
 .float-v19 { left: 68vw; font-size: 2.55rem; animation-duration: 31s; animation-delay: 14s; }
 .float-v20 { left: 91vw; font-size: 1.5rem; animation-duration: 26.5s; animation-delay: 9.5s; }
-
-.confetti-v1  { left: 4vw;  background: #ffd166; width: 8px;  height: 8px;  border-radius: 50%; animation-duration: 1.6s; }
-.confetti-v2  { left: 12vw; background: #06d6a0; width: 10px; height: 14px; border-radius: 2px; animation-duration: 1.9s; }
-.confetti-v3  { left: 20vw; background: #118ab2; width: 12px; height: 12px; border-radius: 50%; animation-duration: 2.1s; }
-.confetti-v4  { left: 28vw; background: #ef476f; width: 14px; height: 9px;  border-radius: 2px; animation-duration: 1.7s; }
-.confetti-v5  { left: 36vw; background: #48cae4; width: 9px;  height: 16px; border-radius: 50%; animation-duration: 2.3s; }
-.confetti-v6  { left: 44vw; background: #f77f00; width: 15px; height: 15px; border-radius: 2px; animation-duration: 2s; }
-.confetti-v7  { left: 52vw; background: #ffd166; width: 11px; height: 11px; border-radius: 50%; animation-duration: 1.8s; }
-.confetti-v8  { left: 60vw; background: #06d6a0; width: 16px; height: 10px; border-radius: 2px; animation-duration: 2.4s; }
-.confetti-v9  { left: 68vw; background: #118ab2; width: 13px; height: 13px; border-radius: 50%; animation-duration: 1.95s; }
-.confetti-v10 { left: 76vw; background: #ef476f; width: 8px;  height: 15px; border-radius: 2px; animation-duration: 2.2s; }
-.confetti-v11 { left: 84vw; background: #48cae4; width: 12px; height: 12px; border-radius: 50%; animation-duration: 1.75s; }
-.confetti-v12 { left: 92vw; background: #f77f00; width: 14px; height: 14px; border-radius: 2px; animation-duration: 2.5s; }
 
 .footer-meta {
   cursor: default;

@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.10.2 - 2026-05-28
+
+### Changed
+- refactor(css): rimossi 389 righe di CSS morto post-refactor quiz engine, con pulizia concentrata su `inglese.css` e su selettori legacy non più referenziati nei fogli condivisi e informativi.
+- css(audit): confermato il mantenimento dei soli selettori runtime/dinamici ancora necessari (`float-v*`, `:focus-visible`, classi `sa-/is-/has-/js-`), evitando regressioni visive e di accessibilità.
+
 ## 4.10.1 - 2026-05-27
 
 ### Fixed

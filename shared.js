@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '28 maggio 2026 · Release 4.10.2',
+      items: [
+        'Rimosso CSS legacy residuo dal post-refactor del motore quiz, con pulizia concentrata su inglese e fogli condivisi senza impatti visivi sulle pagine pubbliche.'
+      ]
+    },
+    {
       date: '27 maggio 2026 · Release 4.10.1',
       items: [
         'Pulizia interna: rimossi file di gestione progetto erroneamente pubblicati. Nessun impatto sulle funzionalita del sito.'
