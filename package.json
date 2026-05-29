@@ -13,13 +13,17 @@
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
     "verify": "npm run lint && npm run audit:json && npm run prepublish",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
+    "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
+    "test:e2e:install": "playwright install --with-deps chromium"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
     "eslint": "^9.0.0",
     "stylelint": "^16.0.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.0",
+    "playwright": "^1.48.0"
   },
   "engines": {
     "node": ">=20"

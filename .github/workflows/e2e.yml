@@ -1,0 +1,48 @@
+name: E2E
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  smoke:
+    # PR + push: solo mode perfect (smoke veloce)
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Start local server
+        run: |
+          python3 -m http.server 4173 &
+          sleep 2
+      - name: E2E smoke (perfect, 8 subjects)
+        run: npm run test:e2e:perfect
+
+  full:
+    # Daily schedule: perfect + mixed + worst
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Start local server
+        run: |
+          python3 -m http.server 4173 &
+          sleep 2
+      - name: E2E full (perfect + mixed + worst, 8 subjects)
+        run: npm run test:e2e:full
