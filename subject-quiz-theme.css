@@ -144,8 +144,7 @@ body {
   padding: 18px 16px 122px;
 }
 
-.top-nav,
-.nav-bar {
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1586,13 +1585,6 @@ body.subject-problemi .answer-btn {
   font-family: 'Fredoka One', cursive;
   font-size: 1.7rem;
   margin-bottom: 4px;
-}
-
-.modal-date {
-  font-size: 0.8rem;
-  color: #667487;
-  font-weight: 700;
-  margin-bottom: 16px;
 }
 
 .modal-body {

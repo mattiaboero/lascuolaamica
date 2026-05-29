@@ -221,10 +221,6 @@ html[data-palette="okabe-ito"] .bonus-btn.hard {
   background: linear-gradient(135deg, #CC79A7, #D55E00);
 }
 
-html[data-palette="okabe-ito"] .timer-bar {
-  background: linear-gradient(90deg, #D55E00, #E69F00);
-}
-
 html[data-palette="okabe-ito"] .footer-link:hover,
 html[data-palette="okabe-ito"] .faq-chip-link:hover {
   color: #0072B2;

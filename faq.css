@@ -14,14 +14,6 @@
   max-width: 940px;
 }
 
-.faq-intro {
-  font-size: 1rem;
-  font-weight: 800;
-  line-height: 1.55;
-  color: #33445a;
-  margin-bottom: 16px;
-}
-
 .faq-list {
   list-style: none;
   margin: 0;

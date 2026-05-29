@@ -486,13 +486,6 @@ body.info-page .skip-link:focus {
   color: var(--page-link-strong, var(--info-light-link-strong));
 }
 
-.modal-date {
-  font-size: 0.8rem;
-  color: #667487;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
 .modal-body {
   font-size: 0.93rem;
   line-height: 1.7;
