@@ -433,6 +433,82 @@ header {
   margin-top: 4px;
 }
 
+.seo-faq::before {
+  content: 'Domande frequenti';
+}
+
+.seo-faq-item {
+  border-top: 1px solid rgba(45, 108, 223, 0.16);
+  padding: 8px 0;
+}
+
+.seo-faq-item summary {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--accent-2);
+  line-height: 1.3;
+}
+
+.seo-faq-item summary:hover {
+  text-decoration: underline;
+}
+
+.seo-faq-item p {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #35506b;
+}
+
+.related-subjects {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 2px solid rgba(45, 108, 223, 0.18);
+  background: linear-gradient(140deg, #ffffff, #f7fbff);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+}
+
+.related-subjects h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: var(--accent-2);
+  margin: 0 0 8px;
+}
+
+.related-subjects ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.related-subjects li {
+  margin: 0;
+}
+
+.related-subjects a {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(45, 108, 223, 0.1);
+  color: var(--accent-2);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.related-subjects a:hover,
+.related-subjects a:focus {
+  background: rgba(45, 108, 223, 0.2);
+  text-decoration: underline;
+}
+
 .class-selector-label {
   margin-top: 4px;
 }
