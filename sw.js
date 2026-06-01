@@ -13,6 +13,7 @@ const REWARDS_CACHE_NAME = `${CACHE_NAME}-rewards`;
 // l'installazione deve fallire (app non consistente).
 const CORE_PRECACHE_URLS = [
   '/',
+  '/tokens.css',
   '/index.css',
   '/404.css',
   '/fonts.css',
