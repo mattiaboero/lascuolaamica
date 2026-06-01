@@ -539,3 +539,22 @@ html[data-motion='reduce'] *::after {
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
+
+/* =========================================================================
+   FASE 4 — Info pages: restyle Wada Sanzo. SOLO modalita standard.
+   Guardia html:not([data-palette="okabe-ito"]).
+   Preservati intatti: body.page-accessibilita (gradiente blu intenzionale)
+   e body.page-supporta (gradiente azzurro intenzionale). Entrambi
+   ridefiniscono --page-* direttamente, non usano --info-light-*.
+   ========================================================================= */
+
+html:not([data-palette="okabe-ito"]) {
+  --info-light-bg: linear-gradient(180deg, var(--ws-cartridge-buff) 0%, var(--ws-olive-buff) 100%);
+  --info-light-text: var(--ws-slate-black);
+  --info-light-muted: var(--ws-hays-russet);
+  --info-light-link: var(--ws-hortense-blue);
+  --info-light-link-strong: #2a5a8a;
+  --info-light-soft: var(--ws-olive-buff);
+  --info-light-border: var(--ws-cinnamon-border);
+  --info-light-button-border: var(--ws-cinnamon-border);
+}

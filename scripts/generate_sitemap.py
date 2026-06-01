@@ -28,6 +28,8 @@ PAGES = [
     ("/premi", "premi.html", "weekly", "0.76"),
     ("/accessibilita", "accessibilita.html", "monthly", "0.7"),
     ("/supporta", "supporta.html", "monthly", "0.6"),
+    ("/privacy", "privacy.html", "monthly", "0.5"),
+    ("/cookie", "cookie.html", "monthly", "0.5"),
 ]
 
 

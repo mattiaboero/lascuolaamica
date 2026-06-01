@@ -325,6 +325,8 @@
       img.src = getImageSrc(reward.id, !unlocked);
       img.alt = '';
       img.setAttribute('aria-hidden', 'true');
+      img.width = 512;
+      img.height = 512;
       img.loading = 'lazy';
       img.decoding = 'async';
       imgWrap.appendChild(img);
@@ -370,6 +372,8 @@
     img.src = ASSET_BASE + reward.file;
     img.alt = '';
     img.setAttribute('aria-hidden', 'true');
+    img.width = 72;
+    img.height = 72;
     img.loading = 'lazy';
     img.decoding = 'async';
     const text = document.createElement('div');

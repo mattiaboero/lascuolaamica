@@ -1806,3 +1806,231 @@ html[data-motion="reduce"] *::after {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================================================================
+   FASE 2 — Restyle Wada Sanzo. SOLO modalita standard.
+   Guardia html:not([data-palette="okabe-ito"]) su ogni regola.
+   I blocchi body.subject-* originali restano intatti come fallback Okabe.
+   ========================================================================= */
+
+/* --- Titolo / sottotitolo / breadcrumb: scuri su sfondo crema --- */
+html:not([data-palette="okabe-ito"]) .title {
+  color: var(--accent-1);
+  text-shadow: 0 2px 0 rgba(255,255,255,.45), 0 4px 12px rgba(44,42,40,.12);
+}
+html:not([data-palette="okabe-ito"]) .subtitle {
+  color: var(--ws-hays-russet);
+  text-shadow: none;
+}
+html:not([data-palette="okabe-ito"]) .breadcrumbs {
+  color: var(--ws-slate-black);
+  text-shadow: none;
+}
+html:not([data-palette="okabe-ito"]) .breadcrumbs a {
+  color: var(--accent-1);
+}
+html:not([data-palette="okabe-ito"]) .breadcrumbs [aria-current='page'] {
+  color: var(--ws-hays-russet);
+  opacity: 1;
+}
+
+/* --- Override body.subject-* (sfondo + token accento, scoped) ---
+   Lascia intatti i blocchi .subject-* originali: Okabe li usa ancora. */
+html:not([data-palette="okabe-ito"]) body.subject-matematica {
+  --accent-1: var(--subj-math-a);
+  --accent-2: var(--subj-math-b);
+  --accent-3: var(--subj-math-dec);
+  --bg-1: #ede7f6;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-italiano {
+  --accent-1: var(--subj-ita-a);
+  --accent-2: var(--subj-ita-b);
+  --accent-3: var(--subj-ita-dec);
+  --bg-1: #fbe7ea;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-geografia {
+  --accent-1: var(--subj-geo-a);
+  --accent-2: var(--subj-geo-b);
+  --accent-3: var(--subj-geo-dec);
+  --bg-1: #e6f3e9;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-storia {
+  --accent-1: var(--subj-sto-a);
+  --accent-2: var(--subj-sto-b);
+  --accent-3: var(--subj-sto-dec);
+  --bg-1: #f3e8da;
+  --bg-2: var(--ws-cartridge-buff);
+  --bg-3: var(--ws-ivory);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-scienze {
+  --accent-1: var(--subj-sci-a);
+  --accent-2: var(--subj-sci-b);
+  --accent-3: var(--subj-sci-dec);
+  --bg-1: #e0f2f0;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-inglese {
+  --accent-1: var(--subj-eng-a);
+  --accent-2: var(--subj-eng-b);
+  --accent-3: var(--subj-eng-dec);
+  --bg-1: #e4eef7;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-problemi {
+  --accent-1: var(--subj-prob-a);
+  --accent-2: var(--subj-prob-b);
+  --accent-3: var(--subj-prob-dec);
+  --bg-1: #fbeadd;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) body.subject-civica {
+  --accent-1: var(--subj-civ-a);
+  --accent-2: var(--subj-civ-b);
+  --accent-3: var(--subj-civ-dec);
+  --bg-1: #e2f0ea;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+}
+
+/* --- Bottoni risposta: 4 toni Wada armonici (tutti i quiz) ---
+   Fallback hex prima di color-mix per browser meno recenti. */
+html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(1) {
+  background: linear-gradient(135deg, #2e6fa6, #4e8fc4);
+  box-shadow: 0 6px 0 #1e4c78;
+  color: #fff;
+}
+html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(2) {
+  background: linear-gradient(135deg, #2e8455, #4da870);
+  box-shadow: 0 6px 0 #1f5c3a;
+  color: #fff;
+}
+html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(3) {
+  background: linear-gradient(135deg, #c8881a, #e0a526);
+  box-shadow: 0 6px 0 #8f6010;
+  color: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(4) {
+  background: linear-gradient(135deg, #c4452f, #d9673e);
+  box-shadow: 0 6px 0 #8a2f1f;
+  color: #fff;
+}
+
+/* --- Class btn: 4 toni Wada ciclici --- */
+html:not([data-palette="okabe-ito"]) .class-btn:nth-child(4n+1) {
+  background: linear-gradient(145deg, #e0f2f0, #c5e8e4);
+  color: #1a5a54;
+}
+html:not([data-palette="okabe-ito"]) .class-btn:nth-child(4n+2) {
+  background: linear-gradient(145deg, #e4eef7, #cfdcef);
+  color: #1e4a6e;
+}
+html:not([data-palette="okabe-ito"]) .class-btn:nth-child(4n+3) {
+  background: linear-gradient(145deg, #ede7f6, #dac8f0);
+  color: #4a2878;
+}
+html:not([data-palette="okabe-ito"]) .class-btn:nth-child(4n) {
+  background: linear-gradient(145deg, #fbe7ea, #f5c8d0);
+  color: #762840;
+}
+
+/* --- Area btn: 5 toni Wada ciclici (rimpiazza 21 gradienti hardcoded) --- */
+html:not([data-palette="okabe-ito"]) .area-btn:nth-child(5n+1) {
+  background: linear-gradient(145deg, #fdf4d0, #f5e497);
+  color: #6a5400;
+}
+html:not([data-palette="okabe-ito"]) .area-btn:nth-child(5n+2) {
+  background: linear-gradient(145deg, #e4eef7, #cfdcef);
+  color: #1e4a6e;
+}
+html:not([data-palette="okabe-ito"]) .area-btn:nth-child(5n+3) {
+  background: linear-gradient(145deg, #e6f3e9, #cce6d2);
+  color: #1e5a34;
+}
+html:not([data-palette="okabe-ito"]) .area-btn:nth-child(5n+4) {
+  background: linear-gradient(145deg, #fbe7ea, #f5c8d0);
+  color: #762840;
+}
+html:not([data-palette="okabe-ito"]) .area-btn:nth-child(5n) {
+  background: linear-gradient(145deg, #f3e8da, #e5d1ba);
+  color: #6b4220;
+}
+
+/* a-sub eredita colore parent a opacita ridotta */
+html:not([data-palette="okabe-ito"]) .area-btn .a-sub,
+html:not([data-palette="okabe-ito"]) .class-btn .a-sub {
+  color: inherit;
+  opacity: .7;
+}
+
+/* --- Dot progress: colori Wada --- */
+html:not([data-palette="okabe-ito"]) .dot.current {
+  background: var(--ws-maize);
+  border-color: var(--ws-yellow-ocher);
+}
+html:not([data-palette="okabe-ito"]) .dot.ok {
+  background: var(--ws-cossack-green);
+  border-color: #1f5c3a;
+}
+html:not([data-palette="okabe-ito"]) .dot.ko {
+  background: var(--ws-jasper-red);
+  border-color: #8a2f1f;
+}
+
+/* --- Feedback testo quiz --- */
+html:not([data-palette="okabe-ito"]) .feedback.ok {
+  color: var(--ws-cossack-green);
+  text-shadow: 3px 3px 0 #1f5c3a;
+}
+html:not([data-palette="okabe-ito"]) .feedback.ko {
+  color: var(--ws-jasper-red);
+  text-shadow: 3px 3px 0 #8a2f1f;
+}
+
+/* --- Start btn: ombra tematizzata (color-mix con fallback) --- */
+html:not([data-palette="okabe-ito"]) .start-btn {
+  box-shadow: 0 7px 0 color-mix(in srgb, var(--accent-1) 60%, #000),
+              0 12px 18px rgba(44,42,40,.18);
+}
+html:not([data-palette="okabe-ito"]) .start-btn:hover {
+  box-shadow: 0 9px 0 color-mix(in srgb, var(--accent-1) 60%, #000),
+              0 16px 22px rgba(44,42,40,.2);
+}
+html:not([data-palette="okabe-ito"]) .start-btn:active {
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent-1) 60%, #000);
+}
+
+/* --- Btn replay: ombra tematizzata --- */
+html:not([data-palette="okabe-ito"]) .btn-replay {
+  box-shadow: 0 5px 0 color-mix(in srgb, var(--accent-2) 65%, #000);
+}
+
+/* --- Fix contrasto: titolo Problemi su sfondo pesca (#d9743f su #fbeadd = 2.74:1 FAIL).
+   Usa variante scura #a04f20 che porta a 4.91:1 (AA per testo normale). --- */
+html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
+  color: #a04f20;
+}

@@ -1,0 +1,79 @@
+/*
+  tokens.css — Sistema token Wada Sanzo (modalita standard).
+  Direzione cromatica ispirata a Sanzo Wada / "A Dictionary of Color Combinations".
+
+  FASE 0 (questo file): definisce SOLO i token grezzi e le scale.
+  Nessuna regola li consuma ancora -> nessun impatto visivo. Il sito resta identico.
+
+  La mappatura sui token di sistema (--bg-1, --accent-1, ...) e gli override per
+  materia arriveranno nelle fasi successive, sempre sotto il selettore di guardia
+  html:not([data-palette="okabe-ito"]) per NON toccare la modalita accessibile.
+
+  REGOLA OKABE: questi token sono "inerti" anche in modalita accessibile perche
+  nessuna regola Okabe li consuma. Non modificare mai palette-okabe.css.
+  HEX calibrati sul registro Wada Sanzo: confrontare con wscolors.com/colors.
+*/
+
+:root {
+  /* ---- Palette sorgente Wada Sanzo (grezza, namespaced, inerte) ---- */
+  --ws-cartridge-buff: #fbf4e6;   /* sfondo base, crema caldo */
+  --ws-olive-buff: #f1e6cf;       /* sfondo 2 (gradiente) */
+  --ws-ivory: #fffdf7;            /* superficie / card */
+  --ws-cinnamon-border: #e7d8be;  /* bordo caldo */
+  --ws-slate-black: #2c2a28;      /* testo principale (nero caldo) */
+  --ws-hays-russet: #6e6357;      /* testo secondario / muted */
+  --ws-verdigris: #2f8e86;        /* dominante (brand) */
+  --ws-hortense-blue: #3c6e9f;    /* secondario */
+  --ws-terracotta: #dd6347;       /* accento / CTA */
+  --ws-terracotta-ink: #c8553d;   /* variante CTA scura (contrasto AA) */
+  --ws-cossack-green: #2e8455;    /* feedback positivo */
+  --ws-jasper-red: #c4452f;       /* feedback negativo */
+  --ws-yellow-ocher: #c8881a;     /* warning (testo scuro sopra) */
+  --ws-maize: #f2c14e;            /* highlight / "sole" */
+  --ws-shadow-warm: 44 42 40;     /* RGB per ombre tinteggiate: rgba(var(--ws-shadow-warm) / .16) */
+
+  /* ---- Hue canoniche per materia (a = primario, b = stop gradiente, dec = decorativo) ---- */
+  --subj-math-a: #6e57a6;  --subj-math-b: #8a74c0;  --subj-math-dec: #f2c14e;  /* Pansy Purple */
+  --subj-ita-a: #c24a5b;   --subj-ita-b: #d86a78;   --subj-ita-dec: #e0a526;   /* Rose / Pompeian Red */
+  --subj-geo-a: #3e8e5a;   --subj-geo-b: #5ba876;   --subj-geo-dec: #3c6e9f;   /* Cosse / Cedar Green */
+  --subj-sto-a: #9a6a43;   --subj-sto-b: #b5895e;   --subj-sto-dec: #c4452f;   /* Sepia / Hay's Russet */
+  --subj-sci-a: #2c8c86;   --subj-sci-b: #4fb0a6;   --subj-sci-dec: #f2c14e;   /* Verdigris / Nile Blue */
+  --subj-eng-a: #2e6fa6;   --subj-eng-b: #4e8fc4;   --subj-eng-dec: #dd6347;   /* Hortense Blue */
+  --subj-prob-a: #d9743f;  --subj-prob-b: #ec9a5e;  --subj-prob-dec: #2c8c86;  /* Terra Cotta / Mikado */
+  --subj-civ-a: #1f7a5e;   --subj-civ-b: #3e9c7b;   --subj-civ-dec: #c8881a;   /* Cossack Green (pine) */
+
+  /* ---- Scala raggi ---- */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Scala spaziature ---- */
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 36px;
+
+  /* ---- Scala tipografica fluida ---- */
+  --fs-h1: clamp(2.4rem, 7vw, 4rem);
+  --fs-h2: clamp(1.5rem, 4vw, 2.1rem);
+  --fs-body: 1.05rem;
+  --fs-q: 1.18rem;
+  --fs-small: 0.85rem;
+  --lh-tight: 1.25;
+  --lh-body: 1.6;
+
+  /* ---- Pesi ---- */
+  --fw-body: 700;
+  --fw-strong: 800;
+  --fw-btn: 800;
+
+  /* ---- Ombre (tinta calda) ---- */
+  --shadow-card: 0 14px 34px rgba(44 42 40 / 0.16);
+  --shadow-btn: 0 6px 0 rgba(44 42 40 / 0.18);
+
+  /* ---- Transizioni ---- */
+  --t-fast: 0.15s;
+  --t-base: 0.2s;
+}

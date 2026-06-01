@@ -3,8 +3,8 @@
 :root{
   --sky1:#74b9ff; --sky2:#a29bfe; --ground:#55efc4;
   --math-a:#9B5DE5; --math-b:#c77dff;
-  --eng-a:#0096c7; --eng-b:#48cae4;
-  --prob-a:#ff7b54; --prob-b:#ffb347;
+  --eng-a:#006a95; --eng-b:#0077a3;
+  --prob-a:#b55914; --prob-b:#c0581a;
   --civ-a:#2a9d8f; --civ-b:#2d6cdf;
   --geo-a:#2d8f5a; --geo-b:#2f6fdb;
   --sto-a:#8a5a44; --sto-b:#6d4cc9;
@@ -300,8 +300,8 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 }
 /* English card */
 .card-english{
-  background:linear-gradient(145deg,#0096c7,#48cae4);
-  box-shadow:0 12px 40px rgba(0,150,199,.5),0 0 0 4px rgba(255,255,255,.3);
+  background:linear-gradient(145deg,#005f85,#0077a3);
+  box-shadow:0 12px 40px rgba(0,106,149,.5),0 0 0 4px rgba(255,255,255,.3);
 }
 /* Problems card */
 .card-problems{
@@ -359,6 +359,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   display:flex;
   align-items:center;
   justify-content:center;
+  text-shadow:0 1px 4px rgba(0,0,0,.4);
 }
 .card-tags{
   display:flex;
@@ -549,3 +550,121 @@ html[data-motion="reduce"] *::after{
     scroll-behavior:auto!important;
   }
 }
+
+/* =========================================================================
+   FASE 1 — Restyle Wada Sanzo. SOLO modalita standard, SOLO home.
+   Guardia html:not([data-palette="okabe-ito"]) -> esclusa la modalita
+   accessibile. Esclude .rewards-page (premi -> Fase 3) e le subject card
+   (-> Fase 2). Consuma i token di tokens.css.
+   ========================================================================= */
+
+/* Sfondo home: carta crema calda (al posto del cielo azzurro) */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page){
+  background:linear-gradient(180deg,var(--ws-cartridge-buff) 0%,var(--ws-olive-buff) 100%);
+}
+
+/* Hero come pannello colorato: il titolo bianco resta leggibile su crema */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) header{
+  max-width:780px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:26px 26px 28px;
+  border-radius:var(--radius-lg);
+  background:linear-gradient(135deg,var(--ws-verdigris),var(--ws-hortense-blue));
+  box-shadow:var(--shadow-card),inset 0 0 0 3px rgba(255,255,255,.18);
+}
+
+/* Sole: giallo grano caldo */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .sun{
+  background:var(--ws-maize);
+  box-shadow:0 0 60px 20px rgba(242,193,78,.42);
+}
+
+/* Colline: verdi Wada desaturati (stessa famiglia di Geografia) */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .hills{
+  background:linear-gradient(180deg,transparent 0%,var(--subj-geo-b) 40%,var(--subj-geo-a) 100%);
+}
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .hills2{
+  background:linear-gradient(180deg,transparent 0%,#79b58f 40%,#4f9b6f 100%);
+}
+
+/* Nuvole: bianco avorio caldo, un filo piu tenui sul fondo crema */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .cloud{opacity:.7;}
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .cloud,
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .cloud::before,
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .cloud::after{
+  background:var(--ws-ivory);
+}
+
+/* Box SEO: superficie avorio + bordo cannella + ombra calda */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .seo-home{
+  background:var(--ws-ivory);
+  border-color:var(--ws-cinnamon-border);
+  box-shadow:var(--shadow-card);
+}
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .seo-home h2{
+  color:var(--ws-slate-black);
+}
+
+/* Modale: superficie avorio + ombra calda */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .modal-box{
+  background:var(--ws-ivory);
+  box-shadow:0 12px 40px rgba(44,42,40,.22);
+}
+
+/* Mobile: pannello hero piu compatto */
+@media(max-width:640px){
+  html:not([data-palette="okabe-ito"]) body:not(.rewards-page) header{
+    max-width:100%;
+    padding:20px 16px 22px;
+    border-radius:var(--radius-md);
+  }
+}
+
+/* =========================================================================
+   FASE 2 — Home: card materie -> palette Wada Sanzo (solo standard).
+   Le .card-btn usano i token --subj-*-a dal file tokens.css.
+   Le shadow sono rgba dei valori hex corrispondenti.
+   ========================================================================= */
+
+html:not([data-palette="okabe-ito"]) .card-math{
+  background:linear-gradient(145deg,var(--subj-math-a),var(--subj-math-b));
+  box-shadow:0 12px 40px rgba(110,87,166,.45),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-english{
+  background:linear-gradient(145deg,var(--subj-eng-a),var(--subj-eng-b));
+  box-shadow:0 12px 40px rgba(46,111,166,.45),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-problems{
+  background:linear-gradient(145deg,var(--subj-prob-a),var(--subj-prob-b));
+  box-shadow:0 12px 40px rgba(217,116,63,.45),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-civica{
+  background:linear-gradient(145deg,var(--subj-civ-a),var(--subj-civ-b));
+  box-shadow:0 12px 40px rgba(31,122,94,.42),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-geografia{
+  background:linear-gradient(145deg,var(--subj-geo-a),var(--subj-geo-b));
+  box-shadow:0 12px 40px rgba(62,142,90,.42),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-storia{
+  background:linear-gradient(145deg,var(--subj-sto-a),var(--subj-sto-b));
+  box-shadow:0 12px 40px rgba(154,106,67,.42),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-scienze{
+  background:linear-gradient(145deg,var(--subj-sci-a),var(--subj-sci-b));
+  box-shadow:0 12px 40px rgba(44,140,134,.42),0 0 0 4px rgba(255,255,255,.3);
+}
+html:not([data-palette="okabe-ito"]) .card-italiano{
+  background:linear-gradient(145deg,var(--subj-ita-a),var(--subj-ita-b));
+  box-shadow:0 12px 40px rgba(194,74,91,.42),0 0 0 4px rgba(255,255,255,.3);
+}
+
+html:not([data-palette="okabe-ito"]) .card-math     .card-btn{color:var(--subj-math-a);}
+html:not([data-palette="okabe-ito"]) .card-english  .card-btn{color:var(--subj-eng-a);}
+html:not([data-palette="okabe-ito"]) .card-problems .card-btn{color:var(--subj-prob-a);}
+html:not([data-palette="okabe-ito"]) .card-civica   .card-btn{color:var(--subj-civ-a);}
+html:not([data-palette="okabe-ito"]) .card-geografia .card-btn{color:var(--subj-geo-a);}
+html:not([data-palette="okabe-ito"]) .card-storia   .card-btn{color:var(--subj-sto-a);}
+html:not([data-palette="okabe-ito"]) .card-scienze  .card-btn{color:var(--subj-sci-a);}
+html:not([data-palette="okabe-ito"]) .card-italiano .card-btn{color:var(--subj-ita-a);}

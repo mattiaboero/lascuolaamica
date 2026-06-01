@@ -136,3 +136,47 @@ html[data-motion="reduce"] *::after {
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
+
+/* =========================================================================
+   FASE 4 — FAQ: restyle Wada Sanzo. SOLO modalita standard.
+   Guardia html:not([data-palette="okabe-ito"]).
+   faq.html non ha body class -> override tramite html element + selettori
+   specifici di faq (.faq-item, .faq-chip-link). Sicuro: faq.css caricato
+   solo da faq.html.
+   ========================================================================= */
+
+/* Sfondo + token base (usati anche da subject-quiz-theme.css come fallback) */
+html:not([data-palette="okabe-ito"]) {
+  --bg-1: var(--ws-cartridge-buff);
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-ivory);
+  --accent-1: var(--ws-verdigris);
+  --accent-2: var(--ws-hortense-blue);
+  --accent-3: var(--ws-terracotta);
+  --text-main: var(--ws-slate-black);
+  --card-bg: var(--ws-ivory);
+}
+
+/* Componenti FAQ: rimpiazza blu hardcoded con Wada */
+html:not([data-palette="okabe-ito"]) .faq-item {
+  background: var(--ws-ivory);
+  border-color: rgba(60,110,159,.22);
+  box-shadow: 0 6px 14px rgba(44,42,40,.07);
+}
+html:not([data-palette="okabe-ito"]) .faq-item[open] {
+  border-color: rgba(60,110,159,.42);
+}
+html:not([data-palette="okabe-ito"]) .faq-question {
+  color: var(--ws-slate-black);
+}
+html:not([data-palette="okabe-ito"]) .faq-answer {
+  color: var(--ws-hays-russet);
+}
+html:not([data-palette="okabe-ito"]) .faq-chip-link {
+  background: var(--ws-ivory);
+  border-color: rgba(60,110,159,.2);
+  color: var(--ws-hortense-blue);
+}
+html:not([data-palette="okabe-ito"]) .faq-note {
+  color: var(--ws-hays-russet);
+}

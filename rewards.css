@@ -228,26 +228,8 @@
   width: 100%;
   border-radius: 32px;
   padding: clamp(18px, 3vw, 34px);
-  background:
-    radial-gradient(circle at 14% 12%, rgba(255, 209, 102, .2), transparent 24%),
-    radial-gradient(circle at 88% 18%, rgba(85, 239, 196, .18), transparent 26%),
-    linear-gradient(145deg, #fff3d6 0%, #fff8e9 48%, #f9edcf 100%);
+  background: #f2e4c4;
   box-shadow: 0 18px 44px rgba(32, 52, 77, .2), inset 0 0 0 3px rgba(255, 255, 255, .74);
-}
-
-.trophy-board-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.trophy-board-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .2;
-  display: block;
 }
 
 .trophy-board::before {
@@ -256,10 +238,9 @@
   inset: 0;
   z-index: 1;
   background-image:
-    linear-gradient(rgba(154, 112, 46, .07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(154, 112, 46, .07) 1px, transparent 1px);
-  background-size: 34px 34px;
-  opacity: .75;
+    linear-gradient(#ead9b6 1px, transparent 1px),
+    linear-gradient(90deg, #ead9b6 1px, transparent 1px);
+  background-size: 70px 70px;
   pointer-events: none;
 }
 
@@ -446,5 +427,180 @@
   .reward-action,
   .reward-link-pill {
     transition: none;
+  }
+}
+
+/* =========================================================================
+   FASE 3 — Restyle Wada Sanzo. SOLO modalita standard.
+   Guardia html:not([data-palette="okabe-ito"]) su ogni regola.
+   palette-okabe.css non ha regole rewards -> nessun rischio interferenza.
+   ========================================================================= */
+
+/* --- Sfondo + token alias pagina premi (Fase 1 escludeva .rewards-page) --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page {
+  background: linear-gradient(180deg, var(--ws-cartridge-buff) 0%, var(--ws-olive-buff) 100%);
+  --reward-blue:  var(--ws-hortense-blue);
+  --reward-ink:   var(--ws-slate-black);
+  --reward-cream: var(--ws-cartridge-buff);
+  --reward-gold:  var(--ws-maize);
+  --reward-coral: var(--ws-terracotta);
+  --reward-card:  rgba(255, 253, 247, .94);
+}
+
+/* Sole/nuvole/colline: stesso trattamento Wada della home */
+html:not([data-palette="okabe-ito"]) body.rewards-page .sun {
+  background: var(--ws-maize);
+  box-shadow: 0 0 60px 20px rgba(242,193,78,.42);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .hills {
+  background: linear-gradient(180deg, transparent 0%, var(--subj-geo-b) 40%, var(--subj-geo-a) 100%);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .hills2 {
+  background: linear-gradient(180deg, transparent 0%, #79b58f 40%, #4f9b6f 100%);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .cloud { opacity: .65; }
+html:not([data-palette="okabe-ito"]) body.rewards-page .cloud,
+html:not([data-palette="okabe-ito"]) body.rewards-page .cloud::before,
+html:not([data-palette="okabe-ito"]) body.rewards-page .cloud::after {
+  background: var(--ws-ivory);
+}
+
+/* --- Hero come pannello colorato (coerente con home) --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page header.rewards-hero {
+  background: linear-gradient(135deg, var(--ws-verdigris), var(--ws-hortense-blue));
+  border-radius: var(--radius-lg);
+  padding: 22px 26px 26px;
+  box-shadow: var(--shadow-card), inset 0 0 0 3px rgba(255,255,255,.18);
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html:not([data-palette="okabe-ito"]) body.rewards-page .rewards-title {
+  color: #fff;
+  text-shadow: 3px 3px 0 rgba(0,0,0,.18), 8px 8px 24px rgba(0,0,0,.12);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .rewards-subtitle {
+  color: rgba(255,255,255,.92);
+  text-shadow: 1px 1px 5px rgba(0,0,0,.2);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .rewards-kicker {
+  background: rgba(255,255,255,.22);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* --- Pulsanti azione hero --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-action {
+  background: linear-gradient(135deg, var(--ws-ivory), var(--ws-cartridge-buff));
+  color: var(--ws-hortense-blue);
+  box-shadow: 0 6px 0 rgba(44,42,40,.14), 0 12px 20px rgba(44,42,40,.1);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-action.primary {
+  background: linear-gradient(135deg, var(--ws-terracotta), var(--ws-terracotta-ink));
+  color: #fff;
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-action.danger {
+  background: linear-gradient(135deg, var(--ws-jasper-red), #d9673e);
+  color: #fff;
+}
+
+/* --- Home reward teaser (su home, non su premi) --- */
+html:not([data-palette="okabe-ito"]) .home-reward-teaser,
+html:not([data-palette="okabe-ito"]) .reward-guide {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(242,193,78,.2), transparent 28%),
+    linear-gradient(145deg, var(--ws-ivory), rgba(251,244,230,.96));
+  border: 3px solid var(--ws-cinnamon-border);
+  box-shadow: var(--shadow-card);
+}
+html:not([data-palette="okabe-ito"]) .home-reward-kicker {
+  color: var(--ws-yellow-ocher);
+}
+html:not([data-palette="okabe-ito"]) .home-reward-teaser h2,
+html:not([data-palette="okabe-ito"]) .reward-guide h2 {
+  color: var(--ws-hortense-blue);
+}
+html:not([data-palette="okabe-ito"]) .home-reward-btn {
+  background: linear-gradient(135deg, var(--ws-terracotta), var(--ws-terracotta-ink));
+  box-shadow: 0 7px 0 rgba(44,42,40,.22), 0 14px 24px rgba(196,69,47,.2);
+}
+
+/* --- Summary cards --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-summary-card {
+  background: var(--ws-ivory);
+  border-color: var(--ws-cinnamon-border);
+  box-shadow: var(--shadow-card);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-summary-num {
+  color: var(--ws-hortense-blue);
+}
+
+/* --- Trophy board: allineamento tono Wada --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page .trophy-board {
+  background: #f2e4c4;
+  box-shadow: 0 18px 44px rgba(44,42,40,.18), inset 0 0 0 3px rgba(255,255,255,.74);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .trophy-board::before {
+  background-image:
+    linear-gradient(#e8d7b2 1px, transparent 1px),
+    linear-gradient(90deg, #e8d7b2 1px, transparent 1px);
+}
+
+/* --- Reward cards --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-card {
+  background: var(--ws-ivory);
+  box-shadow: 0 10px 22px rgba(44,42,40,.11);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-img-wrap {
+  background: linear-gradient(145deg, var(--ws-cartridge-buff), var(--ws-ivory));
+  border-color: var(--ws-cinnamon-border);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-status {
+  background: #e6f0ea;
+  color: var(--ws-cossack-green);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-card.is-locked .reward-status {
+  background: #eeeae5;
+  color: var(--ws-hays-russet);
+}
+
+/* --- Toast --- */
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-toast {
+  background: var(--ws-ivory);
+  box-shadow: 0 18px 38px rgba(44,42,40,.2);
+}
+html:not([data-palette="okabe-ito"]) body.rewards-page .reward-toast strong {
+  color: var(--ws-hortense-blue);
+}
+
+/* --- reward-link-pill (nav header) --- */
+html:not([data-palette="okabe-ito"]) .reward-link-pill {
+  border-color: rgba(60,110,159,.2);
+  color: var(--ws-hortense-blue);
+}
+
+/* --- Leaderboard (lb-card, lb-table) su pagine quiz --- */
+html:not([data-palette="okabe-ito"]) .lb-card {
+  background: var(--ws-ivory);
+  box-shadow: 0 9px 26px rgba(44,42,40,.12);
+}
+html:not([data-palette="okabe-ito"]) .lb-table th {
+  color: var(--ws-hays-russet);
+  border-bottom-color: var(--ws-cinnamon-border);
+}
+html:not([data-palette="okabe-ito"]) .lb-table td {
+  color: var(--ws-slate-black);
+  border-bottom-color: #efe6d8;
+}
+
+/* Mobile adjustments */
+@media (max-width: 720px) {
+  html:not([data-palette="okabe-ito"]) body.rewards-page header.rewards-hero {
+    padding: 18px 16px 20px;
+    border-radius: var(--radius-md);
+  }
+  html:not([data-palette="okabe-ito"]) body.rewards-page .reward-guide {
+    background: linear-gradient(145deg, var(--ws-ivory), var(--ws-cartridge-buff));
   }
 }

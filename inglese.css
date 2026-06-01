@@ -1169,3 +1169,26 @@ html[data-motion="reduce"] *::after {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================================================================
+   FASE 4 — Inglese: fix colori hardcoded -> token Wada. SOLO standard.
+   Guardia html:not([data-palette="okabe-ito"]) body.subject-inglese.
+   ========================================================================= */
+html:not([data-palette="okabe-ito"]) body.subject-inglese .seo-static {
+  background: linear-gradient(135deg, var(--ws-ivory), var(--ws-cartridge-buff));
+  border-color: rgba(60,110,159,.22);
+  color: var(--ws-hays-russet);
+}
+html:not([data-palette="okabe-ito"]) body.subject-inglese .seo-static::before {
+  background: rgba(60,110,159,.1);
+  color: var(--ws-hortense-blue);
+}
+html:not([data-palette="okabe-ito"]) body.subject-inglese .seo-static h2 {
+  color: var(--subj-eng-a);
+}
+html:not([data-palette="okabe-ito"]) body.subject-inglese .seo-faq-item {
+  border-top-color: rgba(60,110,159,.18);
+}
+html:not([data-palette="okabe-ito"]) body.subject-inglese .seo-faq-item summary {
+  color: var(--subj-eng-a);
+}
