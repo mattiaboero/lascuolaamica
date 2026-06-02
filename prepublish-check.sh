@@ -136,9 +136,9 @@ check_security_patterns() {
 
 check_csp_hashes() {
   if python3 scripts/sync_csp_hashes.py --check; then
-    echo "[OK] _headers: inline script CSP hashes are aligned"
+    echo "[OK] _headers: inline script+style CSP hashes are aligned"
   else
-    echo "[ERROR] _headers: inline script CSP hashes are not aligned"
+    echo "[ERROR] _headers: inline script+style CSP hashes are not aligned"
     status=1
   fi
 }

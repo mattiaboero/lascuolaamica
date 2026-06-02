@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""Sincronizza gli hash CSP degli script inline presenti negli HTML pubblici."""
+"""Sincronizza gli hash CSP degli script e degli stili inline.
+
+Copre tre fonti di contenuto inline soggette a CSP:
+  - script inline negli HTML pubblici  -> script-src
+  - <style> inline negli HTML pubblici -> style-src / style-src-elem
+  - <style> iniettati a runtime dai JS  -> style-src / style-src-elem
+    (es. shared.js: createElement('style') + style.textContent = `...`)
+
+Senza questa sincronizzazione, modificare un blocco <style> inline o uno
+stile iniettato rompe la CSP in modo silenzioso (il browser blocca lo
+stile, non c'e' errore di build).
+"""
 
 from __future__ import annotations
 
@@ -11,10 +22,29 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 HEADERS = ROOT / "_headers"
+
 SCRIPT_RE = re.compile(r"<script(?P<attrs>[^>]*)>(?P<body>.*?)</script>", re.S | re.I)
-CSP_RE = re.compile(
-    r"(Content-Security-Policy:[^\n]*?script-src 'self')(?P<hashes>(?:\s+'sha256-[^']+')*)(?P<rest>\s*; style-src)",
+STYLE_TAG_RE = re.compile(r"<style(?P<attrs>[^>]*)>(?P<body>.*?)</style>", re.S | re.I)
+# <style> iniettato via JS: createElement('style') ... .textContent = `...`;
+INJECTED_STYLE_RE = re.compile(
+    r"createElement\(\s*['\"]style['\"]\s*\).*?\.textContent\s*=\s*`(?P<body>.*?)`",
+    re.S,
 )
+
+SCRIPT_SRC_RE = re.compile(
+    r"(script-src 'self')(?P<hashes>(?:\s+'sha256-[^']+')*)(?P<rest>\s*; style-src 'self')",
+)
+STYLE_SRC_RE = re.compile(
+    r"(; style-src 'self')(?P<hashes>(?:\s+'sha256-[^']+')*)(?P<rest>\s*; style-src-elem 'self')",
+)
+STYLE_SRC_ELEM_RE = re.compile(
+    r"(; style-src-elem 'self')(?P<hashes>(?:\s+'sha256-[^']+')*)(?P<rest>\s*; style-src-attr)",
+)
+
+
+def _hash(body: str) -> str:
+    digest = hashlib.sha256(body.encode("utf-8")).digest()
+    return "'sha256-" + base64.b64encode(digest).decode("ascii") + "'"
 
 
 def _inline_script_hashes() -> list[str]:
@@ -22,27 +52,56 @@ def _inline_script_hashes() -> list[str]:
     for path in sorted(ROOT.glob("*.html")):
         html = path.read_text(encoding="utf-8")
         for match in SCRIPT_RE.finditer(html):
-            attrs = match.group("attrs")
-            if re.search(r"\bsrc\s*=", attrs, re.I):
+            if re.search(r"\bsrc\s*=", match.group("attrs"), re.I):
                 continue
             body = match.group("body")
             if not body.strip():
                 continue
-            digest = hashlib.sha256(body.encode("utf-8")).digest()
-            hashes.add("'sha256-" + base64.b64encode(digest).decode("ascii") + "'")
+            hashes.add(_hash(body))
     return sorted(hashes)
 
 
-def _build_headers(current: str, hashes: list[str]) -> str:
-    hashes_str = " " + " ".join(hashes)
+def _style_hashes() -> list[str]:
+    hashes: set[str] = set()
+    # <style> inline negli HTML
+    for path in sorted(ROOT.glob("*.html")):
+        html = path.read_text(encoding="utf-8")
+        for match in STYLE_TAG_RE.finditer(html):
+            body = match.group("body")
+            if not body.strip():
+                continue
+            hashes.add(_hash(body))
+    # <style> iniettati dai JS (root + js/)
+    js_files = sorted(ROOT.glob("*.js")) + sorted((ROOT / "js").glob("*.js"))
+    for path in js_files:
+        src = path.read_text(encoding="utf-8")
+        for match in INJECTED_STYLE_RE.finditer(src):
+            body = match.group("body")
+            if not body.strip():
+                continue
+            hashes.add(_hash(body))
+    return sorted(hashes)
+
+
+def _replace(regex: re.Pattern[str], text: str, hashes: list[str], label: str) -> str:
+    hashes_str = (" " + " ".join(hashes)) if hashes else ""
 
     def repl(match: re.Match[str]) -> str:
         return f"{match.group(1)}{hashes_str}{match.group('rest')}"
 
-    new_text, count = CSP_RE.subn(repl, current, count=1)
+    new_text, count = regex.subn(repl, text, count=1)
     if count != 1:
-        raise RuntimeError("Impossibile trovare la direttiva script-src CSP in _headers")
+        raise RuntimeError(f"Impossibile trovare la direttiva {label} in _headers")
     return new_text
+
+
+def _build_headers(current: str) -> str:
+    script_hashes = _inline_script_hashes()
+    style_hashes = _style_hashes()
+    text = _replace(SCRIPT_SRC_RE, current, script_hashes, "script-src")
+    text = _replace(STYLE_SRC_RE, text, style_hashes, "style-src")
+    text = _replace(STYLE_SRC_ELEM_RE, text, style_hashes, "style-src-elem")
+    return text
 
 
 def main() -> int:
@@ -51,20 +110,20 @@ def main() -> int:
     args = parser.parse_args()
 
     current = HEADERS.read_text(encoding="utf-8")
-    hashes = _inline_script_hashes()
-    updated = _build_headers(current, hashes)
+    updated = _build_headers(current)
+
     if args.check:
         if current != updated:
-            print("[ERROR] CSP script hashes non allineati. Esegui scripts/sync_csp_hashes.py.")
+            print("[ERROR] CSP hashes (script/style) non allineati. Esegui scripts/sync_csp_hashes.py.")
             return 1
-        print("[OK] CSP script hashes allineati")
+        print("[OK] CSP script+style hashes allineati")
         return 0
 
     if current != updated:
         HEADERS.write_text(updated, encoding="utf-8")
-        print(f"[OK] _headers aggiornato con {len(hashes)} hash script")
+        print("[OK] _headers aggiornato (script + style hashes)")
     else:
-        print("[OK] _headers già allineato")
+        print("[OK] _headers gia allineato")
     return 0
 
 
