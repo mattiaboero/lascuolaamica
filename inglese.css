@@ -271,6 +271,10 @@ header {
   content: 'Domande frequenti';
 }
 
+.seo-100-domande::before {
+  content: '100 domande in inglese';
+}
+
 .seo-faq-item {
   border-top: 1px solid rgba(33, 161, 230, 0.2);
   padding: 8px 0;
