@@ -445,6 +445,10 @@ header {
   content: 'Argomenti per classe';
 }
 
+.seo-periodi::before {
+  content: 'Periodi storici';
+}
+
 .seo-faq-item {
   border-top: 1px solid rgba(45, 108, 223, 0.16);
   padding: 8px 0;
