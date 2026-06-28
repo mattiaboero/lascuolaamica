@@ -453,6 +453,10 @@ header {
   content: 'Tabelline e calcolo';
 }
 
+.seo-esempi::before {
+  content: 'Esempi risolti';
+}
+
 .seo-faq-item {
   border-top: 1px solid rgba(45, 108, 223, 0.16);
   padding: 8px 0;
