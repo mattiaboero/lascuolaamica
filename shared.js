@@ -1327,16 +1327,6 @@
       startBtn.parentNode.insertBefore(subjectPanel, startBtn);
     }
 
-    const levelCards = document.querySelector('#scrLevel .level-cards');
-    let englishPanel = document.querySelector('[data-play-window-panel][data-context="english-start"]');
-    if (englishPanel) {
-      englishPanel.classList.add('play-window-panel-start');
-      ensurePlayWindowPanel(englishPanel, { context: 'english-start' });
-    } else if (levelCards) {
-      englishPanel = ensurePlayWindowPanel(null, { context: 'english-start' });
-      englishPanel.classList.add('play-window-panel-start');
-      levelCards.parentNode.insertBefore(englishPanel, levelCards);
-    }
   }
 
   function ensurePlayWindowScorePill() {
