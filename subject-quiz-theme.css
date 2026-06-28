@@ -457,6 +457,10 @@ header {
   content: 'Esempi risolti';
 }
 
+.seo-grammatica::before {
+  content: 'Grammatica ed esempi';
+}
+
 .seo-faq-item {
   border-top: 1px solid rgba(45, 108, 223, 0.16);
   padding: 8px 0;
