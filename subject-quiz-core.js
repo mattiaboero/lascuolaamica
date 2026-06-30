@@ -179,6 +179,8 @@
   };
   const LB_KEY = cfg.lbKey || 'subject_lb_v1';
   const CURSOR_KEY = cfg.cursorKey || 'subject_cursor_v1';
+  const WRONG_Q_KEY = `${CURSOR_KEY}_wrong_q_v1`;
+  const ADAPT_KEY = `${CURSOR_KEY}_adapt_v1`;
   const HISTORY_KEY = cfg.historyKey || `${CURSOR_KEY}_history_v2`;
   const HISTORY_SIG_KEY = cfg.historySigKey || `${CURSOR_KEY}_history_sig_v1`;
   const STATS_KEY = cfg.statsKey || `${CURSOR_KEY}_stats_v1`;
@@ -196,6 +198,12 @@
   const SOFTMAX_TEMPERATURE = Math.max(0.35, Number(cfg.softmaxTemperature || 1.25));
   const TARGET_GRADE_WEIGHT = Math.max(1, Number(cfg.targetGradeWeight || 7));
   const CLASS_DISTANCE_WEIGHT = Math.max(0, Number(cfg.classDistanceWeight || 10));
+  // A2 — adaptive difficulty (cross-session EMA, opt-out via cfg.adaptiveDifficulty:false)
+  const ADAPTIVE_ENABLED = cfg.adaptiveDifficulty !== false;
+  const DIFFICULTY_WEIGHT = Math.max(0, Number.isFinite(Number(cfg.difficultyWeight)) ? Number(cfg.difficultyWeight) : 2.6);
+  const ADAPT_ALPHA = Math.min(0.8, Math.max(0.1, Number(cfg.adaptAlpha) || 0.4));
+  const ADAPT_MIN = 1;
+  const ADAPT_MAX = 3;
   const MIXED_AREA_REPEAT_LIMIT = Math.max(1, Number(cfg.mixedRepeatLimit || cfg.mixedAreaRepeatLimit || 2));
   const AREA_VISIBLE_LIMIT = Math.max(6, Number(cfg.areaVisibleLimit || 8));
   const MAX_LEVEL_DISTANCE = Math.max(0, Number.isFinite(Number(cfg.maxLevelDistance)) ? Number(cfg.maxLevelDistance) : 2);
@@ -315,6 +323,9 @@
   let playWindowExpiryLock = false;
   let gameStartedAt = 0;
   let selectedLevel = null;
+  let selectedSubarea = null;
+  let isRipassaSession = false;
+  let adaptiveTarget = 2;
 
   function $(id) {
     return document.getElementById(id);
@@ -862,6 +873,47 @@
     }
   }
 
+  // ---- A2: adaptive difficulty target (per class, persisted EMA) ----
+
+  function loadAdaptStore() {
+    try {
+      const parsed = JSON.parse(storageGet(ADAPT_KEY));
+      if (!parsed || typeof parsed !== 'object') return {};
+      return parsed;
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveAdaptStore(store) {
+    try {
+      storageSet(ADAPT_KEY, JSON.stringify(store));
+    } catch (e) {
+      debugWarn('saveAdaptStore', e);
+    }
+  }
+
+  function getAdaptTarget(classKey) {
+    const store = loadAdaptStore();
+    const row = store[classKey];
+    const t = row && Number(row.target);
+    if (Number.isFinite(t)) return Math.min(ADAPT_MAX, Math.max(ADAPT_MIN, t));
+    return 2;
+  }
+
+  function updateAdaptTarget(classKey, accuracy) {
+    if (!ADAPTIVE_ENABLED) return;
+    const acc = Math.min(1, Math.max(0, Number(accuracy) || 0));
+    // Map accuracy → desired difficulty: 0%→1, 50%→2, 100%→3.
+    const desired = 1 + 2 * acc;
+    const store = loadAdaptStore();
+    const prev = getAdaptTarget(classKey);
+    const next = Math.min(ADAPT_MAX, Math.max(ADAPT_MIN, prev * (1 - ADAPT_ALPHA) + desired * ADAPT_ALPHA));
+    const n = store[classKey] && Number(store[classKey].n) ? Number(store[classKey].n) : 0;
+    store[classKey] = { target: Math.round(next * 1000) / 1000, n: n + 1 };
+    saveAdaptStore(store);
+  }
+
   function loadMetricsStore() {
     try {
       const parsed = JSON.parse(storageGet(METRICS_KEY));
@@ -1248,6 +1300,16 @@
         case 'toggle-areas':
           showAllAreas = !showAllAreas;
           buildAreaGrid();
+          buildSubareaGrid();
+          break;
+        case 'select-subarea':
+          selectSubarea(target.dataset.subarea || '');
+          break;
+        case 'start-ripassa':
+          startRipassa();
+          break;
+        case 'show-progress':
+          showProgressSummary();
           break;
         default:
           break;
@@ -1271,7 +1333,9 @@
     }
 
     showAllAreas = false;
+    selectedSubarea = null;
     buildAreaGrid();
+    buildSubareaGrid();
     if (HAS_LEVELS) {
       const availability = getAvailableLevelsForClass(selectedClass);
       if (!availability.some((level) => level.key === selectedLevel && level.available)) {
@@ -1288,6 +1352,7 @@
       if (!available.includes(area)) return;
     }
     selectedArea = area;
+    selectedSubarea = null;
     document.querySelectorAll('.area-btn').forEach((b) => {
       b.classList.remove('selected');
       b.setAttribute('aria-pressed', 'false');
@@ -1296,6 +1361,7 @@
       btn.classList.add('selected');
       btn.setAttribute('aria-pressed', 'true');
     }
+    buildSubareaGrid();
   }
 
   function spawnShapes() {
@@ -1433,7 +1499,14 @@
     const toClass = questionClassDistance(q, classNum);
     const base = toPlan * TARGET_GRADE_WEIGHT + toClass * CLASS_DISTANCE_WEIGHT;
     const weaknessBoost = areaWeakness > 0 ? -Math.min(2.5, areaWeakness * 3) : 0;
-    return base + weaknessBoost;
+    let difficultyCost = 0;
+    if (ADAPTIVE_ENABLED) {
+      const qDiff = Number(q.difficulty);
+      if (Number.isFinite(qDiff)) {
+        difficultyCost = Math.abs(qDiff - adaptiveTarget) * DIFFICULTY_WEIGHT;
+      }
+    }
+    return base + weaknessBoost + difficultyCost;
   }
 
   function pickWeighted(rows, fallbackValue) {
@@ -1607,6 +1680,17 @@
         : getClassAwarePool(area, selectedClass, true, currentLevel && currentLevel.key).pool;
     });
 
+    if (selectedSubarea) {
+      const sub = selectedSubarea.toLowerCase();
+      availableAreas.forEach((area) => {
+        if (classPools[area]) {
+          classPools[area] = classPools[area].filter(
+            (q) => q.subarea && q.subarea.toLowerCase() === sub
+          );
+        }
+      });
+    }
+
     if (selectedArea !== 'mixed' && !availableAreas.includes(selectedArea)) {
       selectedArea = 'mixed';
     }
@@ -1710,7 +1794,8 @@
   function getSessionAreaLabel() {
     const currentLevel = getCurrentLevelMeta();
     if (currentLevel) return currentLevel.label;
-    return selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea] || selectedArea;
+    const areaLabel = selectedArea === 'mixed' ? 'Mista' : AREA_LABELS[selectedArea] || selectedArea;
+    return selectedSubarea ? `${areaLabel} · ${selectedSubarea.replace(/_/g, ' ')}` : areaLabel;
   }
 
   function getSessionAreaKey() {
@@ -1741,6 +1826,8 @@
       persistSelectedLevel(nextLevel);
     }
 
+    isRipassaSession = false;
+    adaptiveTarget = ADAPTIVE_ENABLED ? getAdaptTarget(selectedClass) : 2;
     try {
       questions = buildSessionQuestions();
     } catch (e) {
@@ -1808,6 +1895,7 @@
 
   function loadQuestion() {
     answered = false;
+    clearExplanation();
     setMascot('neutral');
     const q = questions[curQ];
     const areaLabel = AREA_LABELS[q.area] || AREA_LABELS.mixed || 'Sessione';
@@ -1839,6 +1927,7 @@
     if (answered) return;
     answered = true;
 
+    const q = questions[curQ];
     const isOk = answersMatch(chosen, correctAnswer);
     const buttons = Array.from(document.querySelectorAll('#answers .answer-btn'));
     buttons.forEach((b) => {
@@ -1861,8 +1950,10 @@
       playKo();
       setMascot('sad');
       showFeedback(false);
+      pushWrongQ(q);
     }
 
+    showExplanation(q && q.explanation || '', isOk);
     history.push(isOk);
     curQ += 1;
     updateScoreBar();
@@ -1870,7 +1961,7 @@
     setTimeout(() => {
       if (curQ >= TOTAL_Q) openBonusPick();
       else loadQuestion();
-    }, 1000);
+    }, 2200);
   }
 
   function openBonusPick() {
@@ -1968,7 +2059,13 @@
     setMascotResult(mascotState);
 
 
+    const wasRipassa = isRipassaSession;
     updateStatsFromSession();
+    updateWrongQAfterSession();
+    ensureRipassaBtn();
+    if (ADAPTIVE_ENABLED && !wasRipassa && history.length) {
+      updateAdaptTarget(selectedClass, correct / Math.max(1, history.length));
+    }
 
     const setText = (id, value) => {
       const el = $(id);
@@ -1988,6 +2085,7 @@
 
     recordRewards();
     saveScore();
+    ensureProgressBtn();
     showScreen('screenResult');
     $('scoreBar')?.classList.remove('is-visible');
   }
@@ -2143,6 +2241,8 @@
   function goStart() {
     showAllAreas = false;
     buildAreaGrid();
+    buildSubareaGrid();
+    ensureRipassaBtn();
     if (HAS_LEVELS) buildLevelsGrid();
     showScreen('screenStart');
     $('scoreBar')?.classList.remove('is-visible');
@@ -2175,6 +2275,350 @@
     setTimeout(() => {
       el.className = 'feedback';
     }, timeoutMs);
+  }
+
+  // ---- A1: Explanation display ----
+
+  function ensureExplanationEl() {
+    if ($('qExplanation')) return;
+    const answersEl = $('answers');
+    if (!answersEl) return;
+    const el = document.createElement('div');
+    el.id = 'qExplanation';
+    el.className = 'q-explanation';
+    el.setAttribute('aria-live', 'polite');
+    el.setAttribute('aria-atomic', 'true');
+    answersEl.insertAdjacentElement('afterend', el);
+  }
+
+  function clearExplanation() {
+    const el = $('qExplanation');
+    if (!el) return;
+    el.textContent = '';
+    el.className = 'q-explanation';
+  }
+
+  function showExplanation(text, isOk) {
+    ensureExplanationEl();
+    const el = $('qExplanation');
+    if (!el || !text) return;
+    el.textContent = text;
+    el.className = `q-explanation show ${isOk ? 'ok' : 'ko'}`;
+  }
+
+  // ---- A3: Wrong-answer queue (Ripassa errori) ----
+
+  function loadWrongQ() {
+    try {
+      const parsed = JSON.parse(storageGet(WRONG_Q_KEY));
+      if (!Array.isArray(parsed)) return [];
+      return parsed.slice(0, 50);
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveWrongQ(arr) {
+    try {
+      storageSet(WRONG_Q_KEY, JSON.stringify(arr));
+    } catch (e) {
+      debugWarn('saveWrongQ', e);
+    }
+  }
+
+  function pushWrongQ(q) {
+    if (!q || !q.sourceId) return;
+    const arr = loadWrongQ();
+    if (arr.some((w) => w.sid === q.sourceId)) return;
+    arr.push({
+      sid: q.sourceId,
+      q: q.q,
+      a: q.a,
+      d: Array.isArray(q.d) ? q.d : [],
+      expl: q.explanation || '',
+      area: q.sourceArea || q.area || '',
+      sub: q.subarea || '',
+      cls: q.grade || selectedClass
+    });
+    saveWrongQ(arr.slice(-30));
+  }
+
+  function updateWrongQAfterSession() {
+    if (!isRipassaSession && !history.length) return;
+    const arr = loadWrongQ();
+    const correctedIds = new Set();
+    for (let i = 0; i < Math.min(questions.length, history.length); i++) {
+      if (history[i] && questions[i] && questions[i].sourceId) {
+        correctedIds.add(questions[i].sourceId);
+      }
+    }
+    if (!correctedIds.size) {
+      isRipassaSession = false;
+      return;
+    }
+    saveWrongQ(arr.filter((w) => !correctedIds.has(w.sid)));
+    isRipassaSession = false;
+  }
+
+  function ensureRipassaBtn() {
+    const count = loadWrongQ().length;
+    const existing = $('ripassaBtn');
+    if (existing) {
+      if (count === 0) { existing.remove(); return; }
+      existing.textContent = `Ripassa i tuoi errori (${count})`;
+      return;
+    }
+    if (count === 0) return;
+    const startBtn = document.querySelector('[data-action="start-game"]');
+    if (!startBtn) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'ripassaBtn';
+    btn.className = 'ripassa-btn';
+    btn.dataset.action = 'start-ripassa';
+    btn.textContent = `Ripassa i tuoi errori (${count})`;
+    startBtn.insertAdjacentElement('afterend', btn);
+  }
+
+  async function startRipassa() {
+    if (!(await ensurePlayWindowForGame())) return;
+    const wrongQ = loadWrongQ();
+    if (!wrongQ.length) return;
+    questions = shuffle(wrongQ.map((w) => ({
+      q: w.q,
+      a: w.a,
+      d: w.d,
+      grade: w.cls,
+      sourceId: w.sid,
+      sourceArea: w.area,
+      area: w.area || selectedArea,
+      subarea: w.sub || null,
+      answerLang: null,
+      language: 'it',
+      difficulty: 2,
+      explanation: w.expl || ''
+    }))).slice(0, TOTAL_Q);
+
+    if (!questions.length) { notifyLoadError(); return; }
+
+    isRipassaSession = true;
+    curQ = 0;
+    points = 0;
+    correct = 0;
+    wrong = 0;
+    history = [];
+    answered = false;
+    baseScore = 0;
+    finalScore = 0;
+    bonusFactor = 1;
+    bonusType = null;
+    bonusApplied = false;
+    gameStartedAt = Date.now();
+
+    buildDots();
+    updateScoreBar();
+    $('scoreBar')?.classList.add('is-visible');
+    showScreen('screenGame');
+    setMascot('neutral');
+    setMascotResult('neutral');
+    loadQuestion();
+  }
+
+  // ---- A4: Subarea selector ----
+
+  function getAvailableSubareasForArea(area, cls) {
+    const classNum = classToNum(cls);
+    const pool = BANKS[area] || [];
+    const subs = new Set();
+    pool.forEach((q) => {
+      if (!q.subarea) return;
+      if (Math.abs((q._grade || classNum) - classNum) <= MAX_GRADE_DISTANCE + 1) {
+        subs.add(q.subarea);
+      }
+    });
+    return Array.from(subs).sort();
+  }
+
+  function buildSubareaGrid() {
+    const existing = $('subareaGrid');
+    if (existing) existing.remove();
+
+    if (selectedArea === 'mixed' || !selectedArea) {
+      selectedSubarea = null;
+      return;
+    }
+
+    const subs = getAvailableSubareasForArea(selectedArea, selectedClass);
+    if (subs.length < 2) {
+      selectedSubarea = null;
+      return;
+    }
+
+    const areaGrid = $('areaGrid');
+    if (!areaGrid) return;
+
+    const grid = document.createElement('div');
+    grid.id = 'subareaGrid';
+    grid.className = 'subarea-grid';
+    grid.setAttribute('aria-label', 'Selezione sotto-ambito');
+
+    const allBtn = document.createElement('button');
+    allBtn.type = 'button';
+    allBtn.className = 'subarea-btn' + (!selectedSubarea ? ' selected' : '');
+    allBtn.setAttribute('aria-pressed', !selectedSubarea ? 'true' : 'false');
+    allBtn.dataset.action = 'select-subarea';
+    allBtn.dataset.subarea = '';
+    allBtn.textContent = 'Tutti';
+    grid.appendChild(allBtn);
+
+    subs.forEach((sub) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'subarea-btn' + (sub === selectedSubarea ? ' selected' : '');
+      btn.setAttribute('aria-pressed', sub === selectedSubarea ? 'true' : 'false');
+      btn.dataset.action = 'select-subarea';
+      btn.dataset.subarea = sub;
+      btn.textContent = sub.replace(/_/g, ' ');
+      grid.appendChild(btn);
+    });
+
+    areaGrid.insertAdjacentElement('afterend', grid);
+  }
+
+  function selectSubarea(sub) {
+    selectedSubarea = sub || null;
+    document.querySelectorAll('.subarea-btn').forEach((b) => {
+      const isSelected = (b.dataset.subarea || '') === (sub || '');
+      b.classList.toggle('selected', isSelected);
+      b.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    });
+  }
+
+  // ---- C1: Progress summary ----
+
+  function showProgressSummary() {
+    const stats = loadStats();
+    const lb = loadLB();
+    const subjectLabel = cfg.subject
+      || (cfg.questionsSource && (typeof cfg.questionsSource === 'string' ? cfg.questionsSource : cfg.questionsSource.subject))
+      || 'Materia';
+
+    const overlay = document.createElement('div');
+    overlay.id = 'progressOverlay';
+    overlay.className = 'progress-overlay';
+
+    const inner = document.createElement('div');
+    inner.className = 'progress-modal-inner';
+
+    const h2 = document.createElement('h2');
+    h2.textContent = `Riepilogo progressi — ${safeText(subjectLabel, 32)}`;
+    inner.appendChild(h2);
+
+    const dateP = document.createElement('p');
+    dateP.className = 'progress-date';
+    dateP.textContent = `Generato il ${new Date().toLocaleDateString('it-IT')}`;
+    inner.appendChild(dateP);
+
+    const classKeys = Object.keys(stats.class || {}).sort();
+    if (classKeys.length) {
+      const h3c = document.createElement('h3');
+      h3c.textContent = 'Per classe';
+      inner.appendChild(h3c);
+      const ul = document.createElement('ul');
+      classKeys.forEach((cls) => {
+        const s = stats.class[cls];
+        const pct = s.asked ? Math.round(100 * s.correct / s.asked) : 0;
+        const li = document.createElement('li');
+        li.textContent = `Classe ${cls}ª — ${s.correct}/${s.asked} corrette (${pct}%)`;
+        ul.appendChild(li);
+      });
+      inner.appendChild(ul);
+    }
+
+    const areaEntries = Object.entries(stats.area || {}).sort(([, a], [, b]) => b.asked - a.asked);
+    if (areaEntries.length) {
+      const h3a = document.createElement('h3');
+      h3a.textContent = 'Per ambito';
+      inner.appendChild(h3a);
+      const ul = document.createElement('ul');
+      areaEntries.forEach(([area, s]) => {
+        const label = AREA_LABELS[area] || area;
+        const pct = s.asked ? Math.round(100 * s.correct / s.asked) : 0;
+        const li = document.createElement('li');
+        li.textContent = `${safeText(label, 48)} — ${s.correct}/${s.asked} corrette (${pct}%)`;
+        ul.appendChild(li);
+      });
+      inner.appendChild(ul);
+    }
+
+    if (lb.length) {
+      const h3g = document.createElement('h3');
+      h3g.textContent = 'Ultime partite';
+      inner.appendChild(h3g);
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+      ['Data', 'Ambito', 'Classe', 'Punti', 'Esatte', 'Errate'].forEach((col) => {
+        const th = document.createElement('th');
+        th.textContent = col;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      lb.slice(0, 10).forEach((e) => {
+        const tr = document.createElement('tr');
+        [safeText(e.date, 16), safeText(e.area, 32), safeText(e.cls, 12), e.final, e.correct, e.wrong].forEach((val) => {
+          const td = document.createElement('td');
+          td.textContent = val;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      inner.appendChild(table);
+    }
+
+    if (!classKeys.length && !areaEntries.length && !lb.length) {
+      const p = document.createElement('p');
+      p.textContent = 'Nessun dato registrato ancora. Gioca qualche partita!';
+      inner.appendChild(p);
+    }
+
+    const actions = document.createElement('div');
+    actions.className = 'progress-actions';
+    const printBtn = document.createElement('button');
+    printBtn.type = 'button';
+    printBtn.className = 'progress-print-btn';
+    printBtn.textContent = 'Stampa';
+    printBtn.addEventListener('click', () => window.print());
+    actions.appendChild(printBtn);
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'progress-close-btn';
+    closeBtn.id = 'progressCloseBtn';
+    closeBtn.textContent = 'Chiudi';
+    actions.appendChild(closeBtn);
+    inner.appendChild(actions);
+
+    overlay.appendChild(inner);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay || e.target.id === 'progressCloseBtn') overlay.remove();
+    });
+    document.body.appendChild(overlay);
+  }
+
+  function ensureProgressBtn() {
+    if ($('progressBtn')) return;
+    const btns = document.querySelector('#screenResult .result-btns');
+    if (!btns) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'progressBtn';
+    btn.className = 'btn-progress';
+    btn.dataset.action = 'show-progress';
+    btn.textContent = 'Progressi';
+    btns.appendChild(btn);
   }
 
   function shuffle(arr) {
@@ -2241,6 +2685,8 @@
     }
     ensureClassSelector();
     buildAreaGrid();
+    buildSubareaGrid();
+    ensureRipassaBtn();
     if (HAS_LEVELS) buildLevelsGrid();
     bindActions();
     spawnShapes();

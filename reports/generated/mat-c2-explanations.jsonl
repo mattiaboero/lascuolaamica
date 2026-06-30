@@ -1,0 +1,371 @@
+{"id": "mat-2-tabelline-001", "explanation": "2 × 4 significa 2 preso 4 volte: 2+2+2+2 = 8. Contiamo i gruppi di 2 fino ad arrivare a 4 gruppi."}
+{"id": "mat-2-tabelline-002", "explanation": "5 × 2 significa 5 preso 2 volte: 5+5 = 10. Due gruppi da 5 fanno sempre 10."}
+{"id": "mat-2-tabelline-003", "explanation": "10 × 4 significa 10 preso 4 volte: 10+10+10+10 = 40. Ogni volta che moltiplichiamo per 10, aggiungiamo uno zero al numero."}
+{"id": "mat-2-tabelline-004", "explanation": "3 × 9 significa 3 preso 9 volte: 3+3+3+3+3+3+3+3+3 = 27. Possiamo contare di 3 in 3 per 9 volte: 3, 6, 9, 12, 15, 18, 21, 24, 27."}
+{"id": "mat-2-tabelline-005", "explanation": "10 × 10 significa 10 preso 10 volte: quando moltiplichiamo 10 × 10 aggiungiamo uno zero a 10 e otteniamo 100."}
+{"id": "mat-2-tabelline-006", "explanation": "1 × 8 significa 1 preso 8 volte: qualsiasi numero moltiplicato per 1 rimane uguale a se stesso, quindi 1 × 8 = 8."}
+{"id": "mat-2-tabelline-007", "explanation": "1 × 3 significa 1 preso 3 volte: 1+1+1 = 3. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-008", "explanation": "5 × 1 significa 5 preso 1 volta sola: qualsiasi numero moltiplicato per 1 è uguale a se stesso, quindi 5 × 1 = 5."}
+{"id": "mat-2-tabelline-009", "explanation": "5 × 3 significa 5 preso 3 volte: 5+5+5 = 15. Contiamo di 5 in 5 per tre volte: 5, 10, 15."}
+{"id": "mat-2-tabelline-010", "explanation": "4 × 5 significa 4 preso 5 volte: 4+4+4+4+4 = 20. Oppure contiamo di 4 in 4: 4, 8, 12, 16, 20."}
+{"id": "mat-2-tabelline-011", "explanation": "4 × 1 significa 4 preso 1 volta sola: qualsiasi numero moltiplicato per 1 rimane uguale, quindi 4 × 1 = 4."}
+{"id": "mat-2-tabelline-012", "explanation": "1 × 9 significa 1 preso 9 volte: 1+1+1+1+1+1+1+1+1 = 9. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-013", "explanation": "4 × 9 significa 4 preso 9 volte: contiamo di 4 in 4 per nove volte: 4, 8, 12, 16, 20, 24, 28, 32, 36."}
+{"id": "mat-2-tabelline-014", "explanation": "1 × 5 significa 1 preso 5 volte: 1+1+1+1+1 = 5. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-016", "explanation": "3 × 1 significa 3 preso 1 volta sola: qualsiasi numero moltiplicato per 1 è uguale a se stesso, quindi 3 × 1 = 3."}
+{"id": "mat-2-tabelline-017", "explanation": "5 × 8 significa 5 preso 8 volte: contiamo di 5 in 5 per otto volte: 5, 10, 15, 20, 25, 30, 35, 40."}
+{"id": "mat-2-tabelline-018", "explanation": "2 × 6 significa 2 preso 6 volte: 2+2+2+2+2+2 = 12. Contiamo di 2 in 2 per sei volte: 2, 4, 6, 8, 10, 12."}
+{"id": "mat-2-tabelline-019", "explanation": "4 × 6 significa 4 preso 6 volte: contiamo di 4 in 4 per sei volte: 4, 8, 12, 16, 20, 24."}
+{"id": "mat-2-tabelline-020", "explanation": "2 × 8 significa 2 preso 8 volte: contiamo di 2 in 2 per otto volte: 2, 4, 6, 8, 10, 12, 14, 16."}
+{"id": "mat-2-tabelline-021", "explanation": "2 × 3 significa 2 preso 3 volte: 2+2+2 = 6. Tre gruppi di 2 fanno 6."}
+{"id": "mat-2-tabelline-022", "explanation": "1 × 6 significa 1 preso 6 volte: 1+1+1+1+1+1 = 6. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-023", "explanation": "5 × 9 significa 5 preso 9 volte: contiamo di 5 in 5 per nove volte: 5, 10, 15, 20, 25, 30, 35, 40, 45."}
+{"id": "mat-2-tabelline-024", "explanation": "3 × 4 significa 3 preso 4 volte: 3+3+3+3 = 12. Contiamo di 3 in 3 per quattro volte: 3, 6, 9, 12."}
+{"id": "mat-2-tabelline-025", "explanation": "10 × 2 significa 10 preso 2 volte: 10+10 = 20. Quando moltiplichiamo per 10, aggiungiamo uno zero."}
+{"id": "mat-2-tabelline-026", "explanation": "1 × 4 significa 1 preso 4 volte: 1+1+1+1 = 4. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-029", "explanation": "4 × 10 significa 4 preso 10 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 4 × 10 = 40."}
+{"id": "mat-2-tabelline-030", "explanation": "10 × 6 significa 10 preso 6 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 10 × 6 = 60."}
+{"id": "mat-2-tabelline-031", "explanation": "1 × 2 significa 1 preso 2 volte: 1+1 = 2. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-032", "explanation": "2 × 7 significa 2 preso 7 volte: contiamo di 2 in 2 per sette volte: 2, 4, 6, 8, 10, 12, 14."}
+{"id": "mat-2-tabelline-033", "explanation": "10 × 3 significa 10 preso 3 volte: 10+10+10 = 30. Quando moltiplichiamo per 10, aggiungiamo uno zero."}
+{"id": "mat-2-tabelline-034", "explanation": "2 × 2 significa 2 preso 2 volte: 2+2 = 4. Due gruppi di 2 fanno sempre 4."}
+{"id": "mat-2-tabelline-035", "explanation": "2 × 5 significa 2 preso 5 volte: 2+2+2+2+2 = 10. Cinque gruppi di 2 fanno 10."}
+{"id": "mat-2-tabelline-036", "explanation": "4 × 2 significa 4 preso 2 volte: 4+4 = 8. Due gruppi di 4 fanno 8."}
+{"id": "mat-2-tabelline-037", "explanation": "3 × 10 significa 3 preso 10 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 3 × 10 = 30."}
+{"id": "mat-2-tabelline-038", "explanation": "3 × 5 significa 3 preso 5 volte: 3+3+3+3+3 = 15. Contiamo di 3 in 3 per cinque volte: 3, 6, 9, 12, 15."}
+{"id": "mat-2-tabelline-039", "explanation": "3 × 8 significa 3 preso 8 volte: contiamo di 3 in 3 per otto volte: 3, 6, 9, 12, 15, 18, 21, 24."}
+{"id": "mat-2-tabelline-040", "explanation": "5 × 5 significa 5 preso 5 volte: 5+5+5+5+5 = 25. Contiamo di 5 in 5 per cinque volte: 5, 10, 15, 20, 25."}
+{"id": "mat-2-tabelline-041", "explanation": "5 × 6 significa 5 preso 6 volte: contiamo di 5 in 5 per sei volte: 5, 10, 15, 20, 25, 30."}
+{"id": "mat-2-tabelline-042", "explanation": "3 × 6 significa 3 preso 6 volte: contiamo di 3 in 3 per sei volte: 3, 6, 9, 12, 15, 18."}
+{"id": "mat-2-tabelline-043", "explanation": "10 × 5 significa 10 preso 5 volte: quando moltiplichiamo per 10, aggiungiamo uno zero, quindi 10 × 5 = 50."}
+{"id": "mat-2-tabelline-044", "explanation": "1 × 10 significa 1 preso 10 volte: 1+1+1+1+1+1+1+1+1+1 = 10. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-045", "explanation": "5 × 7 significa 5 preso 7 volte: contiamo di 5 in 5 per sette volte: 5, 10, 15, 20, 25, 30, 35."}
+{"id": "mat-2-tabelline-046", "explanation": "10 × 8 significa 10 preso 8 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 10 × 8 = 80."}
+{"id": "mat-2-tabelline-047", "explanation": "2 × 1 significa 2 preso 1 volta sola: qualsiasi numero moltiplicato per 1 è uguale a se stesso, quindi 2 × 1 = 2."}
+{"id": "mat-2-tabelline-048", "explanation": "2 × 9 significa 2 preso 9 volte: contiamo di 2 in 2 per nove volte: 2, 4, 6, 8, 10, 12, 14, 16, 18."}
+{"id": "mat-2-tabelline-049", "explanation": "3 × 2 significa 3 preso 2 volte: 3+3 = 6. Due gruppi di 3 fanno 6."}
+{"id": "mat-2-tabelline-050", "explanation": "4 × 7 significa 4 preso 7 volte: contiamo di 4 in 4 per sette volte: 4, 8, 12, 16, 20, 24, 28."}
+{"id": "mat-2-tabelline-051", "explanation": "5 × 10 significa 5 preso 10 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 5 × 10 = 50."}
+{"id": "mat-2-tabelline-052", "explanation": "4 × 4 significa 4 preso 4 volte: 4+4+4+4 = 16. Quattro gruppi di 4 fanno 16."}
+{"id": "mat-2-tabelline-053", "explanation": "2 × 10 significa 2 preso 10 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 2 × 10 = 20."}
+{"id": "mat-2-tabelline-054", "explanation": "1 × 1 significa 1 preso 1 volta: qualsiasi numero moltiplicato per 1 rimane uguale, quindi 1 × 1 = 1."}
+{"id": "mat-2-tabelline-055", "explanation": "1 × 7 significa 1 preso 7 volte: 1+1+1+1+1+1+1 = 7. Moltiplicare per 1 lascia sempre il numero invariato."}
+{"id": "mat-2-tabelline-056", "explanation": "10 × 1 significa 10 preso 1 volta: qualsiasi numero moltiplicato per 1 rimane uguale, quindi 10 × 1 = 10."}
+{"id": "mat-2-tabelline-057", "explanation": "10 × 9 significa 10 preso 9 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 10 × 9 = 90."}
+{"id": "mat-2-tabelline-058", "explanation": "3 × 3 significa 3 preso 3 volte: 3+3+3 = 9. Tre gruppi di 3 fanno 9."}
+{"id": "mat-2-tabelline-059", "explanation": "4 × 8 significa 4 preso 8 volte: contiamo di 4 in 4 per otto volte: 4, 8, 12, 16, 20, 24, 28, 32."}
+{"id": "mat-2-tabelline-060", "explanation": "10 × 7 significa 10 preso 7 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 10 × 7 = 70."}
+{"id": "mat-2-aritmetica-001", "explanation": "27 + 10: aggiungo le decine prima, 27 + 10 = 37. Quando aggiungo 10, le decine aumentano di 1 e le unità restano uguali."}
+{"id": "mat-2-aritmetica-002", "explanation": "3 + 20: prima prendo le decine, poi le unità: 20 + 3 = 23. Aggiungere le decine è facile perché le unità non cambiano."}
+{"id": "mat-2-aritmetica-003", "explanation": "16 + 29: aggiungo prima le unità (6+9=15, scrivo 5 e tengo 1), poi le decine (1+2+1=4): risultato 45."}
+{"id": "mat-2-aritmetica-004", "explanation": "11 + 43: aggiungo le unità (1+3=4) e le decine (1+4=5): risultato 54."}
+{"id": "mat-2-aritmetica-005", "explanation": "40 + 35: aggiungo le decine (4+3=7) e poi le unità (0+5=5): risultato 75."}
+{"id": "mat-2-aritmetica-006", "explanation": "13 + 45: aggiungo le unità (3+5=8) e le decine (1+4=5): risultato 58."}
+{"id": "mat-2-aritmetica-007", "explanation": "39 + 23: aggiungo le unità (9+3=12, scrivo 2 tengo 1) e le decine (3+2+1=6): risultato 62."}
+{"id": "mat-2-aritmetica-008", "explanation": "23 + 5: le decine rimangono 2, aggiungo solo le unità: 3+5=8, quindi 23+5=28."}
+{"id": "mat-2-aritmetica-009", "explanation": "9 + 41: 9 + 41 = 41 + 9; aggiungo le unità (1+9=10, scrivo 0 tengo 1) e le decine (4+1=5): risultato 50."}
+{"id": "mat-2-aritmetica-010", "explanation": "15 + 50: aggiungo prima le decine (1+5=6) e poi le unità (5+0=5): risultato 65."}
+{"id": "mat-2-aritmetica-011", "explanation": "13 + 38: aggiungo le unità (3+8=11, scrivo 1 tengo 1) e le decine (1+3+1=5): risultato 51."}
+{"id": "mat-2-aritmetica-012", "explanation": "25 + 5: le decine rimangono 2, le unità 5+5=10: scrivo 0 e aggiungo 1 alle decine, risultato 30."}
+{"id": "mat-2-aritmetica-013", "explanation": "43 + 39: aggiungo le unità (3+9=12, scrivo 2 tengo 1) e le decine (4+3+1=8): risultato 82."}
+{"id": "mat-2-aritmetica-014", "explanation": "50 + 9: le decine rimangono 5, aggiungo solo le unità: 0+9=9, quindi 50+9=59."}
+{"id": "mat-2-aritmetica-015", "explanation": "14 + 9: conto 9 passi in più da 14: 15, 16, 17, 18, 19, 20, 21, 22, 23. Oppure: 14+9=14+10-1=23."}
+{"id": "mat-2-aritmetica-016", "explanation": "27 + 40: aggiungo le decine (2+4=6) e le unità rimangono 7: risultato 67."}
+{"id": "mat-2-aritmetica-017", "explanation": "48 + 42: aggiungo le unità (8+2=10, scrivo 0 tengo 1) e le decine (4+4+1=9): risultato 90."}
+{"id": "mat-2-aritmetica-018", "explanation": "30 + 35: aggiungo le decine (3+3=6) e le unità (0+5=5): risultato 65."}
+{"id": "mat-2-aritmetica-019", "explanation": "48 + 44: aggiungo le unità (8+4=12, scrivo 2 tengo 1) e le decine (4+4+1=9): risultato 92."}
+{"id": "mat-2-aritmetica-020", "explanation": "32 + 25: aggiungo le unità (2+5=7) e le decine (3+2=5): risultato 57."}
+{"id": "mat-2-aritmetica-021", "explanation": "31 + 14: aggiungo le unità (1+4=5) e le decine (3+1=4): risultato 45."}
+{"id": "mat-2-aritmetica-022", "explanation": "11 + 11: aggiungo le unità (1+1=2) e le decine (1+1=2): risultato 22."}
+{"id": "mat-2-aritmetica-023", "explanation": "47 + 47: aggiungo le unità (7+7=14, scrivo 4 tengo 1) e le decine (4+4+1=9): risultato 94."}
+{"id": "mat-2-aritmetica-024", "explanation": "35 + 3: le decine rimangono 3, aggiungo solo le unità: 5+3=8, quindi 35+3=38."}
+{"id": "mat-2-aritmetica-025", "explanation": "40 + 46: aggiungo le decine (4+4=8) e le unità (0+6=6): risultato 86."}
+{"id": "mat-2-aritmetica-026", "explanation": "43 + 42: aggiungo le unità (3+2=5) e le decine (4+4=8): risultato 85."}
+{"id": "mat-2-aritmetica-027", "explanation": "33 + 34: aggiungo le unità (3+4=7) e le decine (3+3=6): risultato 67."}
+{"id": "mat-2-aritmetica-028", "explanation": "7 + 17: conto 7 passi in più da 17: 18, 19, 20, 21, 22, 23, 24. Oppure 7+17=17+7=24."}
+{"id": "mat-2-aritmetica-029", "explanation": "22 + 11: aggiungo le unità (2+1=3) e le decine (2+1=3): risultato 33."}
+{"id": "mat-2-aritmetica-030", "explanation": "46 + 7: aggiungo le unità (6+7=13, scrivo 3 tengo 1) e le decine (4+1=5): risultato 53."}
+{"id": "mat-2-aritmetica-031", "explanation": "35 + 27: aggiungo le unità (5+7=12, scrivo 2 tengo 1) e le decine (3+2+1=6): risultato 62."}
+{"id": "mat-2-aritmetica-032", "explanation": "44 + 6: le unità 4+6=10, scrivo 0 e aggiungo 1 alle decine: 4+1=5, risultato 50."}
+{"id": "mat-2-aritmetica-033", "explanation": "50 + 16: aggiungo le decine (5+1=6) e le unità (0+6=6): risultato 66."}
+{"id": "mat-2-aritmetica-034", "explanation": "3 + 6: conto 6 passi in più da 3: 4, 5, 6, 7, 8, 9. Oppure 3+6=9."}
+{"id": "mat-2-aritmetica-035", "explanation": "14 + 4: le decine rimangono 1, aggiungo solo le unità: 4+4=8, quindi 14+4=18."}
+{"id": "mat-2-aritmetica-036", "explanation": "14 + 29: aggiungo le unità (4+9=13, scrivo 3 tengo 1) e le decine (1+2+1=4): risultato 43."}
+{"id": "mat-2-aritmetica-037", "explanation": "25 + 17: aggiungo le unità (5+7=12, scrivo 2 tengo 1) e le decine (2+1+1=4): risultato 42."}
+{"id": "mat-2-aritmetica-038", "explanation": "47 + 45: aggiungo le unità (7+5=12, scrivo 2 tengo 1) e le decine (4+4+1=9): risultato 92."}
+{"id": "mat-2-aritmetica-039", "explanation": "10 + 30: aggiungo le decine (1+3=4) e le unità restano 0: risultato 40."}
+{"id": "mat-2-aritmetica-040", "explanation": "36 + 15: aggiungo le unità (6+5=11, scrivo 1 tengo 1) e le decine (3+1+1=5): risultato 51."}
+{"id": "mat-2-aritmetica-041", "explanation": "35 - 5: tolgo le unità (5-5=0) e le decine rimangono 3: risultato 30."}
+{"id": "mat-2-aritmetica-042", "explanation": "66 - 52: tolgo le unità (6-2=4) e le decine (6-5=1): risultato 14."}
+{"id": "mat-2-aritmetica-043", "explanation": "39 - 36: tolgo le unità (9-6=3) e le decine (3-3=0): risultato 3."}
+{"id": "mat-2-aritmetica-044", "explanation": "27 - 8: non posso togliere 8 da 7, prendo una decina: divento 17-8=9, le decine diventano 1; risultato 19."}
+{"id": "mat-2-aritmetica-045", "explanation": "80 - 2: le decine rimangono 7 (devo prestare una decina), le unità diventano 10-2=8: risultato 78."}
+{"id": "mat-2-aritmetica-046", "explanation": "22 - 4: non posso togliere 4 da 2, prendo una decina: divento 12-4=8, le decine diventano 1; risultato 18."}
+{"id": "mat-2-aritmetica-047", "explanation": "92 - 5: non posso togliere 5 da 2, prendo una decina: 12-5=7, le decine diventano 8; risultato 87."}
+{"id": "mat-2-aritmetica-048", "explanation": "43 - 38: tolgo prima le unità (3-8 non va, prendo una decina: 13-8=5) e poi le decine (3-3-1=0 rimasta): risultato 5."}
+{"id": "mat-2-aritmetica-049", "explanation": "30 - 7: non posso togliere 7 da 0, prendo una decina: 10-7=3, le decine diventano 2; risultato 23."}
+{"id": "mat-2-aritmetica-050", "explanation": "70 - 53: tolgo le unità (0-3 non va, prendo una decina: 10-3=7) e le decine (6-5=1): risultato 17."}
+{"id": "mat-2-aritmetica-051", "explanation": "18 - 16: tolgo le unità (8-6=2) e le decine (1-1=0): risultato 2."}
+{"id": "mat-2-aritmetica-052", "explanation": "77 - 5: le decine rimangono 7, tolgo solo le unità: 7-5=2; risultato 72."}
+{"id": "mat-2-aritmetica-053", "explanation": "16 - 10: tolgo 10 significa che le decine diminuiscono di 1: 1-1=0, le unità restano 6; risultato 6."}
+{"id": "mat-2-aritmetica-054", "explanation": "73 - 8: non posso togliere 8 da 3, prendo una decina: 13-8=5, le decine diventano 6; risultato 65."}
+{"id": "mat-2-aritmetica-055", "explanation": "50 - 5: non posso togliere 5 da 0, prendo una decina: 10-5=5, le decine diventano 4; risultato 45."}
+{"id": "mat-2-aritmetica-056", "explanation": "51 - 14: tolgo le unità (1-4 non va, prendo una decina: 11-4=7) e le decine (4-1-1=3): risultato 37."}
+{"id": "mat-2-aritmetica-057", "explanation": "33 - 22: tolgo le unità (3-2=1) e le decine (3-2=1): risultato 11."}
+{"id": "mat-2-aritmetica-058", "explanation": "55 - 31: tolgo le unità (5-1=4) e le decine (5-3=2): risultato 24."}
+{"id": "mat-2-aritmetica-059", "explanation": "55 - 53: tolgo le unità (5-3=2) e le decine (5-5=0): risultato 2."}
+{"id": "mat-2-aritmetica-060", "explanation": "96 - 68: tolgo le unità (6-8 non va, prendo una decina: 16-8=8) e le decine (8-6-1=2 rimaste): risultato 28."}
+{"id": "mat-2-aritmetica-061", "explanation": "38 - 2: le decine rimangono 3, tolgo solo le unità: 8-2=6; risultato 36."}
+{"id": "mat-2-aritmetica-062", "explanation": "89 - 63: tolgo le unità (9-3=6) e le decine (8-6=2): risultato 26."}
+{"id": "mat-2-aritmetica-063", "explanation": "55 - 20: tolgo 20 significa che le decine diminuiscono di 2: 5-2=3, le unità restano 5; risultato 35."}
+{"id": "mat-2-aritmetica-064", "explanation": "47 - 35: tolgo le unità (7-5=2) e le decine (4-3=1): risultato 12."}
+{"id": "mat-2-aritmetica-065", "explanation": "80 - 45: tolgo le unità (0-5 non va, prendo una decina: 10-5=5) e le decine (7-4=3 rimaste): risultato 35."}
+{"id": "mat-2-aritmetica-066", "explanation": "11 - 8: non posso togliere 8 da 1, prendo una decina: 11-8=3, le decine diventano 0; risultato 3."}
+{"id": "mat-2-aritmetica-067", "explanation": "65 - 28: tolgo le unità (5-8 non va, prendo una decina: 15-8=7) e le decine (5-2-1=2 rimaste): risultato 37."}
+{"id": "mat-2-aritmetica-068", "explanation": "79 - 28: tolgo le unità (9-8=1) e le decine (7-2=5): risultato 51."}
+{"id": "mat-2-aritmetica-069", "explanation": "77 - 39: tolgo le unità (7-9 non va, prendo una decina: 17-9=8) e le decine (6-3=3 rimaste): risultato 38."}
+{"id": "mat-2-aritmetica-070", "explanation": "15 - 10: tolgo 10 significa che le decine diminuiscono di 1: 1-1=0, le unità restano 5; risultato 5."}
+{"id": "mat-2-aritmetica-071", "explanation": "73 - 22: tolgo le unità (3-2=1) e le decine (7-2=5): risultato 51."}
+{"id": "mat-2-aritmetica-072", "explanation": "47 - 39: tolgo le unità (7-9 non va, prendo una decina: 17-9=8) e le decine (3-3=0 rimaste): risultato 8."}
+{"id": "mat-2-aritmetica-073", "explanation": "74 - 60: tolgo 60 significa che le decine diminuiscono di 6: 7-6=1, le unità restano 4; risultato 14."}
+{"id": "mat-2-aritmetica-074", "explanation": "83 - 33: tolgo le unità (3-3=0) e le decine (8-3=5): risultato 50."}
+{"id": "mat-2-aritmetica-075", "explanation": "79 - 63: tolgo le unità (9-3=6) e le decine (7-6=1): risultato 16."}
+{"id": "mat-2-aritmetica-076", "explanation": "3 × 7 significa 3 preso 7 volte: contiamo di 3 in 3 per sette volte: 3, 6, 9, 12, 15, 18, 21."}
+{"id": "mat-2-aritmetica-077", "explanation": "5 × 9 significa 5 preso 9 volte: contiamo di 5 in 5 per nove volte: 5, 10, 15, 20, 25, 30, 35, 40, 45."}
+{"id": "mat-2-aritmetica-078", "explanation": "5 × 2 significa 5 preso 2 volte: 5+5 = 10. Due gruppi di 5 fanno sempre 10."}
+{"id": "mat-2-aritmetica-079", "explanation": "2 × 1 significa 2 preso 1 volta: qualsiasi numero moltiplicato per 1 rimane uguale, quindi 2 × 1 = 2."}
+{"id": "mat-2-aritmetica-080", "explanation": "3 × 2 significa 3 preso 2 volte: 3+3 = 6. Due gruppi di 3 fanno 6."}
+{"id": "mat-2-aritmetica-081", "explanation": "10 × 10 significa 10 preso 10 volte: quando moltiplichiamo 10 per 10 aggiungiamo uno zero a 10 e otteniamo 100."}
+{"id": "mat-2-aritmetica-082", "explanation": "2 × 5 significa 2 preso 5 volte: 2+2+2+2+2 = 10. Cinque gruppi di 2 fanno 10."}
+{"id": "mat-2-aritmetica-083", "explanation": "10 × 9 significa 10 preso 9 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 10 × 9 = 90."}
+{"id": "mat-2-aritmetica-084", "explanation": "3 × 1 significa 3 preso 1 volta: qualsiasi numero moltiplicato per 1 rimane uguale, quindi 3 × 1 = 3."}
+{"id": "mat-2-aritmetica-085", "explanation": "3 × 3 significa 3 preso 3 volte: 3+3+3 = 9. Tre gruppi di 3 fanno 9."}
+{"id": "mat-2-aritmetica-086", "explanation": "4 × 10 significa 4 preso 10 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 4 × 10 = 40."}
+{"id": "mat-2-aritmetica-087", "explanation": "4 × 9 significa 4 preso 9 volte: contiamo di 4 in 4 per nove volte: 4, 8, 12, 16, 20, 24, 28, 32, 36."}
+{"id": "mat-2-aritmetica-088", "explanation": "2 × 10 significa 2 preso 10 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 2 × 10 = 20."}
+{"id": "mat-2-aritmetica-089", "explanation": "4 × 5 significa 4 preso 5 volte: 4+4+4+4+4 = 20. Contiamo di 4 in 4 per cinque volte: 4, 8, 12, 16, 20."}
+{"id": "mat-2-aritmetica-090", "explanation": "4 × 1 significa 4 preso 1 volta: qualsiasi numero moltiplicato per 1 rimane uguale, quindi 4 × 1 = 4."}
+{"id": "mat-2-aritmetica-091", "explanation": "4 × 4 significa 4 preso 4 volte: 4+4+4+4 = 16. Quattro gruppi di 4 fanno 16."}
+{"id": "mat-2-aritmetica-092", "explanation": "3 × 9 significa 3 preso 9 volte: contiamo di 3 in 3 per nove volte: 3, 6, 9, 12, 15, 18, 21, 24, 27."}
+{"id": "mat-2-aritmetica-093", "explanation": "10 × 8 significa 10 preso 8 volte: quando moltiplichiamo per 10, aggiungiamo uno zero al numero, quindi 10 × 8 = 80."}
+{"id": "mat-2-problemi-001", "explanation": "Marco aveva 27 figurine e ne riceve altre 20: dobbiamo sommare 27 + 20. Aggiungo le decine (2+2=4) e le unità restano 7: risultato 47."}
+{"id": "mat-2-problemi-002", "explanation": "In palestra ci sono 15 bambini e ne arrivano altri 25: dobbiamo sommare 15 + 25 = 40. Aggiungo le unità (5+5=10, tengo 1) e le decine (1+2+1=4): risultato 40."}
+{"id": "mat-2-problemi-003", "explanation": "Il nonno aveva 30 galline e ne compra altre 9: dobbiamo sommare 30 + 9. Le decine rimangono 3, aggiungo solo le unità: 0+9=9; risultato 39."}
+{"id": "mat-2-problemi-004", "explanation": "Giulia ha raccolto 9 conchiglie al mattino e 11 nel pomeriggio: dobbiamo sommare 9 + 11 = 20. Aggiungo le unità (9+1=10, tengo 1) e le decine (0+1+1=2): risultato 20."}
+{"id": "mat-2-problemi-005", "explanation": "Sofia ha 22 caramelle al cioccolato e 12 alla fragola: dobbiamo sommare 22 + 12. Aggiungo le unità (2+2=4) e le decine (2+1=3): risultato 34."}
+{"id": "mat-2-problemi-006", "explanation": "In palestra ci sono 5 bambini e ne arriva 1 in più: dobbiamo sommare 5 + 1 = 6. Bastano le dita di una mano!"}
+{"id": "mat-2-problemi-007", "explanation": "Luca ha letto 23 pagine ieri e 17 oggi: dobbiamo sommare 23 + 17. Aggiungo le unità (3+7=10, tengo 1) e le decine (2+1+1=4): risultato 40."}
+{"id": "mat-2-problemi-008", "explanation": "Il nonno aveva 18 galline e ne compra altre 24: dobbiamo sommare 18 + 24. Aggiungo le unità (8+4=12, tengo 1) e le decine (1+2+1=4): risultato 42."}
+{"id": "mat-2-problemi-009", "explanation": "Il nonno aveva 5 galline e ne compra altre 10: dobbiamo sommare 5 + 10 = 15. Aggiungere 10 significa aumentare le decine di 1."}
+{"id": "mat-2-problemi-010", "explanation": "Luca ha letto 7 pagine ieri e 10 oggi: dobbiamo sommare 7 + 10 = 17. Aggiungere 10 significa aumentare le decine di 1."}
+{"id": "mat-2-problemi-011", "explanation": "Ci sono 27 matite rosse e 16 blu: dobbiamo sommare 27 + 16. Aggiungo le unità (7+6=13, tengo 1) e le decine (2+1+1=4): risultato 43."}
+{"id": "mat-2-problemi-012", "explanation": "Luca ha letto 7 pagine ieri e 7 oggi: dobbiamo sommare 7 + 7 = 14. Sette più sette è come il doppio di 7."}
+{"id": "mat-2-problemi-013", "explanation": "Luca ha letto 19 pagine ieri e 12 oggi: dobbiamo sommare 19 + 12. Aggiungo le unità (9+2=11, tengo 1) e le decine (1+1+1=3): risultato 31."}
+{"id": "mat-2-problemi-014", "explanation": "Nel cestino ci sono 25 fragole e 18 ciliegie: dobbiamo sommare 25 + 18. Aggiungo le unità (5+8=13, tengo 1) e le decine (2+1+1=4): risultato 43."}
+{"id": "mat-2-problemi-015", "explanation": "In palestra ci sono 14 bambini e ne arrivano altri 22: dobbiamo sommare 14 + 22. Aggiungo le unità (4+2=6) e le decine (1+2=3): risultato 36."}
+{"id": "mat-2-problemi-016", "explanation": "Luca ha letto 12 pagine ieri e 9 oggi: dobbiamo sommare 12 + 9. Aggiungo le unità (2+9=11, tengo 1) e le decine (1+1=2): risultato 21."}
+{"id": "mat-2-problemi-017", "explanation": "In un cortile ci sono 15 bambine e 24 bambini: dobbiamo sommare 15 + 24. Aggiungo le unità (5+4=9) e le decine (1+2=3): risultato 39."}
+{"id": "mat-2-problemi-018", "explanation": "Marco aveva 12 figurine e ne riceve altre 8: dobbiamo sommare 12 + 8. Le unità 2+8=10, scrivo 0 e aggiungo 1 alle decine: risultato 20."}
+{"id": "mat-2-problemi-019", "explanation": "In un cortile ci sono 7 bambine e 6 bambini: dobbiamo sommare 7 + 6 = 13. Conto 6 passi in più da 7: 8, 9, 10, 11, 12, 13."}
+{"id": "mat-2-problemi-020", "explanation": "In un cortile ci sono 20 bambine e 16 bambini: dobbiamo sommare 20 + 16. Aggiungo le decine (2+1=3) e le unità (0+6=6): risultato 36."}
+{"id": "mat-2-problemi-021", "explanation": "Giulia aveva 25 conchiglie al mattino e 6 nel pomeriggio: dobbiamo sommare 25 + 6. Aggiungo le unità (5+6=11, tengo 1) e le decine (2+1=3): risultato 31."}
+{"id": "mat-2-problemi-022", "explanation": "Luca ha letto 24 pagine ieri e 18 oggi: dobbiamo sommare 24 + 18. Aggiungo le unità (4+8=12, tengo 1) e le decine (2+1+1=4): risultato 42."}
+{"id": "mat-2-problemi-023", "explanation": "Ci sono 27 matite rosse e 23 blu: dobbiamo sommare 27 + 23. Aggiungo le unità (7+3=10, tengo 1) e le decine (2+2+1=5): risultato 50."}
+{"id": "mat-2-problemi-024", "explanation": "Sul tavolo ci sono 7 mele e 23 pere: dobbiamo sommare 7 + 23. Aggiungo le unità (7+3=10, tengo 1) e le decine (0+2+1=3): risultato 30."}
+{"id": "mat-2-problemi-025", "explanation": "Giulia aveva 16 conchiglie al mattino e 11 nel pomeriggio: dobbiamo sommare 16 + 11. Aggiungo le unità (6+1=7) e le decine (1+1=2): risultato 27."}
+{"id": "mat-2-problemi-026", "explanation": "Il nonno aveva 9 galline e ne compra altre 25: dobbiamo sommare 9 + 25. Aggiungo le unità (9+5=14, tengo 1) e le decine (0+2+1=3): risultato 34."}
+{"id": "mat-2-problemi-027", "explanation": "Il nonno aveva 30 galline e ne compra altre 8: dobbiamo sommare 30 + 8. Le decine rimangono 3, aggiungo le unità: 0+8=8; risultato 38."}
+{"id": "mat-2-problemi-028", "explanation": "Luca ha letto 23 pagine ieri e 21 oggi: dobbiamo sommare 23 + 21. Aggiungo le unità (3+1=4) e le decine (2+2=4): risultato 44."}
+{"id": "mat-2-problemi-029", "explanation": "Sul tavolo ci sono 6 mele e 22 pere: dobbiamo sommare 6 + 22. Aggiungo le unità (6+2=8) e le decine (0+2=2): risultato 28."}
+{"id": "mat-2-problemi-030", "explanation": "Luca ha letto 8 pagine ieri e 2 oggi: dobbiamo sommare 8 + 2 = 10. Otto più due fa sempre 10!"}
+{"id": "mat-2-problemi-031", "explanation": "Marco aveva 14 figurine e ne riceve altre 15: dobbiamo sommare 14 + 15. Aggiungo le unità (4+5=9) e le decine (1+1=2): risultato 29."}
+{"id": "mat-2-problemi-032", "explanation": "Giulia aveva 8 conchiglie al mattino e 20 nel pomeriggio: dobbiamo sommare 8 + 20. Aggiungo le decine (0+2=2) e le unità (8+0=8): risultato 28."}
+{"id": "mat-2-problemi-033", "explanation": "In un cortile ci sono 11 bambine e 3 bambini: dobbiamo sommare 11 + 3. Le decine rimangono 1, aggiungo le unità: 1+3=4; risultato 14."}
+{"id": "mat-2-problemi-034", "explanation": "In un cortile ci sono 17 bambine e 18 bambini: dobbiamo sommare 17 + 18. Aggiungo le unità (7+8=15, tengo 1) e le decine (1+1+1=3): risultato 35."}
+{"id": "mat-2-problemi-035", "explanation": "Luca ha letto 5 pagine ieri e 23 oggi: dobbiamo sommare 5 + 23. Aggiungo le unità (5+3=8) e le decine (0+2=2): risultato 28."}
+{"id": "mat-2-problemi-036", "explanation": "In palestra ci sono 30 bambini e ne arrivano altri 4: dobbiamo sommare 30 + 4. Le decine rimangono 3, aggiungo le unità: 0+4=4; risultato 34."}
+{"id": "mat-2-problemi-037", "explanation": "In un cortile ci sono 6 bambine e 3 bambini: dobbiamo sommare 6 + 3 = 9. Conto 3 passi in più da 6: 7, 8, 9."}
+{"id": "mat-2-problemi-038", "explanation": "Ci sono 28 matite rosse e 14 blu: dobbiamo sommare 28 + 14. Aggiungo le unità (8+4=12, tengo 1) e le decine (2+1+1=4): risultato 42."}
+{"id": "mat-2-problemi-039", "explanation": "Luca ha letto 14 pagine ieri e 24 oggi: dobbiamo sommare 14 + 24. Aggiungo le unità (4+4=8) e le decine (1+2=3): risultato 38."}
+{"id": "mat-2-problemi-040", "explanation": "Sul tavolo ci sono 24 mele e 14 pere: dobbiamo sommare 24 + 14. Aggiungo le unità (4+4=8) e le decine (2+1=3): risultato 38."}
+{"id": "mat-2-problemi-041", "explanation": "Sofia ha 8 caramelle al cioccolato e 24 alla fragola: dobbiamo sommare 8 + 24. Aggiungo le unità (8+4=12, tengo 1) e le decine (0+2+1=3): risultato 32."}
+{"id": "mat-2-problemi-042", "explanation": "In palestra ci sono 30 bambini e ne arrivano altri 13: dobbiamo sommare 30 + 13. Aggiungo le decine (3+1=4) e le unità (0+3=3): risultato 43."}
+{"id": "mat-2-problemi-043", "explanation": "Marco aveva 12 figurine e ne riceve altre 21: dobbiamo sommare 12 + 21. Aggiungo le unità (2+1=3) e le decine (1+2=3): risultato 33."}
+{"id": "mat-2-problemi-044", "explanation": "In palestra ci sono 24 bambini e ne arrivano altri 25: dobbiamo sommare 24 + 25. Aggiungo le unità (4+5=9) e le decine (2+2=4): risultato 49."}
+{"id": "mat-2-problemi-045", "explanation": "Sul tavolo ci sono 13 mele e 15 pere: dobbiamo sommare 13 + 15. Aggiungo le unità (3+5=8) e le decine (1+1=2): risultato 28."}
+{"id": "mat-2-problemi-046", "explanation": "Sofia ha 9 caramelle al cioccolato e 24 alla fragola: dobbiamo sommare 9 + 24. Aggiungo le unità (9+4=13, tengo 1) e le decine (0+2+1=3): risultato 33."}
+{"id": "mat-2-problemi-047", "explanation": "Nel cestino ci sono 30 fragole e 9 ciliegie: dobbiamo sommare 30 + 9. Le decine rimangono 3, aggiungo le unità: 0+9=9; risultato 39."}
+{"id": "mat-2-problemi-048", "explanation": "Giulia aveva 15 conchiglie al mattino e 9 nel pomeriggio: dobbiamo sommare 15 + 9. Aggiungo le unità (5+9=14, tengo 1) e le decine (1+1=2): risultato 24."}
+{"id": "mat-2-problemi-049", "explanation": "Marco aveva 30 figurine e ne riceve altre 4: dobbiamo sommare 30 + 4. Le decine rimangono 3, aggiungo le unità: 0+4=4; risultato 34."}
+{"id": "mat-2-problemi-050", "explanation": "Marco aveva 23 figurine e ne riceve altre 7: dobbiamo sommare 23 + 7. Le unità 3+7=10, scrivo 0 e aggiungo 1 alle decine: risultato 30."}
+{"id": "mat-2-problemi-051", "explanation": "Pietro aveva 9 palloncini e ne scoppiano 7: dobbiamo sottrarre 9 - 7 = 2. Quanti palloncini rimangono? Conto a ritroso da 9 per 7 passi: 8, 7, 6, 5, 4, 3, 2."}
+{"id": "mat-2-problemi-052", "explanation": "Sul ramo ci sono 25 uccelli e ne volano via 11: dobbiamo sottrarre 25 - 11. Tolgo le unità (5-1=4) e le decine (2-1=1): risultato 14."}
+{"id": "mat-2-problemi-053", "explanation": "Mario aveva 16 monete e ne spende 3: dobbiamo sottrarre 16 - 3. Le decine rimangono 1, tolgo le unità: 6-3=3; risultato 13."}
+{"id": "mat-2-problemi-054", "explanation": "Il negozio aveva 27 scarpe e ne vende 14: dobbiamo sottrarre 27 - 14. Tolgo le unità (7-4=3) e le decine (2-1=1): risultato 13."}
+{"id": "mat-2-problemi-055", "explanation": "In classe ci sono 20 alunni e ne sono assenti 7: dobbiamo sottrarre 20 - 7. Non posso togliere 7 da 0, prendo una decina: 10-7=3, le decine diventano 1; risultato 13."}
+{"id": "mat-2-problemi-056", "explanation": "Anna aveva 23 biscotti e ne mangia 4: dobbiamo sottrarre 23 - 4. Non posso togliere 4 da 3, prendo una decina: 13-4=9, le decine diventano 1; risultato 19."}
+{"id": "mat-2-problemi-057", "explanation": "Claudia aveva 7 uova e ne usa 6: dobbiamo sottrarre 7 - 6 = 1. Le parole chiave 'usa' o 'mangia' ci dicono che dobbiamo togliere."}
+{"id": "mat-2-problemi-058", "explanation": "Mario aveva 26 monete e ne spende 4: dobbiamo sottrarre 26 - 4. Le decine rimangono 2, tolgo le unità: 6-4=2; risultato 22."}
+{"id": "mat-2-problemi-059", "explanation": "Anna aveva 27 biscotti e ne mangia 11: dobbiamo sottrarre 27 - 11. Tolgo le unità (7-1=6) e le decine (2-1=1): risultato 16."}
+{"id": "mat-2-problemi-060", "explanation": "La nonna aveva 8 biscotti e ne regala 5: dobbiamo sottrarre 8 - 5 = 3. Le parole 'ne ha regalati' ci dicono che dobbiamo togliere."}
+{"id": "mat-2-problemi-061", "explanation": "Il libro ha 27 pagine e ne ho lette 10: dobbiamo sottrarre 27 - 10 = 17. Togliere 10 significa diminuire le decine di 1."}
+{"id": "mat-2-problemi-062", "explanation": "Nel cesto ci sono 19 arance e se ne mangiano 9: dobbiamo sottrarre 19 - 9. Le decine rimangono 1, tolgo le unità: 9-9=0; risultato 10."}
+{"id": "mat-2-problemi-063", "explanation": "Anna aveva 20 biscotti e ne mangia 11: dobbiamo sottrarre 20 - 11. Tolgo le unità (0-1 non va, prendo una decina: 10-1=9) e le decine (1-1=0 rimaste): risultato 9."}
+{"id": "mat-2-problemi-064", "explanation": "Nel cesto ci sono 26 arance e se ne mangiano 11: dobbiamo sottrarre 26 - 11. Tolgo le unità (6-1=5) e le decine (2-1=1): risultato 15."}
+{"id": "mat-2-problemi-065", "explanation": "La nonna aveva 26 biscotti e ne regala 12: dobbiamo sottrarre 26 - 12. Tolgo le unità (6-2=4) e le decine (2-1=1): risultato 14."}
+{"id": "mat-2-problemi-066", "explanation": "La nonna aveva 17 biscotti e ne regala 13: dobbiamo sottrarre 17 - 13. Tolgo le unità (7-3=4) e le decine (1-1=0): risultato 4."}
+{"id": "mat-2-problemi-067", "explanation": "Claudia aveva 31 uova e ne usa 7: dobbiamo sottrarre 31 - 7. Non posso togliere 7 da 1, prendo una decina: 11-7=4, le decine diventano 2; risultato 24."}
+{"id": "mat-2-problemi-068", "explanation": "Sul ramo ci sono 3 uccelli e ne volano via 2: dobbiamo sottrarre 3 - 2 = 1. Rimane solo 1 uccello sul ramo."}
+{"id": "mat-2-problemi-069", "explanation": "La nonna aveva 6 biscotti e ne regala 5: dobbiamo sottrarre 6 - 5 = 1. Le parole 'ne ha regalati' ci dicono che dobbiamo togliere."}
+{"id": "mat-2-problemi-070", "explanation": "In classe ci sono 19 alunni e ne sono assenti 6: dobbiamo sottrarre 19 - 6. Le decine rimangono 1, tolgo le unità: 9-6=3; risultato 13."}
+{"id": "mat-2-problemi-071", "explanation": "Claudia aveva 18 uova e ne usa 1: dobbiamo sottrarre 18 - 1. Le decine rimangono 1, tolgo le unità: 8-1=7; risultato 17."}
+{"id": "mat-2-problemi-072", "explanation": "Il negozio aveva 12 scarpe e ne vende 11: dobbiamo sottrarre 12 - 11. Tolgo le unità (2-1=1) e le decine (1-1=0): risultato 1."}
+{"id": "mat-2-problemi-073", "explanation": "Il libro ha 17 pagine e ne ho lette 6: dobbiamo sottrarre 17 - 6. Le decine rimangono 1, tolgo le unità: 7-6=1; risultato 11."}
+{"id": "mat-2-problemi-074", "explanation": "La nonna aveva 15 biscotti e ne regala 5: dobbiamo sottrarre 15 - 5. Le decine rimangono 1, tolgo le unità: 5-5=0; risultato 10."}
+{"id": "mat-2-problemi-075", "explanation": "Il libro ha 26 pagine e ne ho letta 1: dobbiamo sottrarre 26 - 1. Le decine rimangono 2, tolgo le unità: 6-1=5; risultato 25."}
+{"id": "mat-2-problemi-076", "explanation": "Claudia aveva 28 uova e ne usa 6: dobbiamo sottrarre 28 - 6. Le decine rimangono 2, tolgo le unità: 8-6=2; risultato 22."}
+{"id": "mat-2-problemi-077", "explanation": "Il libro ha 22 pagine e ne ho lette 10: dobbiamo sottrarre 22 - 10 = 12. Togliere 10 significa diminuire le decine di 1."}
+{"id": "mat-2-problemi-078", "explanation": "Claudia aveva 13 uova e ne usa 3: dobbiamo sottrarre 13 - 3. Le decine rimangono 1, tolgo le unità: 3-3=0; risultato 10."}
+{"id": "mat-2-problemi-079", "explanation": "In classe ci sono 17 alunni e ne sono assenti 5: dobbiamo sottrarre 17 - 5. Le decine rimangono 1, tolgo le unità: 7-5=2; risultato 12."}
+{"id": "mat-2-problemi-080", "explanation": "Il libro ha 22 pagine e ne ho lette 11: dobbiamo sottrarre 22 - 11. Tolgo le unità (2-1=1) e le decine (2-1=1): risultato 11."}
+{"id": "mat-2-problemi-081", "explanation": "Sul ramo ci sono 12 uccelli e ne volano via 2: dobbiamo sottrarre 12 - 2. Le decine rimangono 1, tolgo le unità: 2-2=0; risultato 10."}
+{"id": "mat-2-problemi-082", "explanation": "Il libro ha 24 pagine e ne ho lette 12: dobbiamo sottrarre 24 - 12. Tolgo le unità (4-2=2) e le decine (2-1=1): risultato 12."}
+{"id": "mat-2-problemi-083", "explanation": "Il libro ha 26 pagine e ne ho lette 7: dobbiamo sottrarre 26 - 7. Non posso togliere 7 da 6, prendo una decina: 16-7=9, le decine diventano 1; risultato 19."}
+{"id": "mat-2-problemi-084", "explanation": "Nel cesto ci sono 16 arance e se ne mangiano 14: dobbiamo sottrarre 16 - 14. Tolgo le unità (6-4=2) e le decine (1-1=0): risultato 2."}
+{"id": "mat-2-problemi-085", "explanation": "Mario aveva 38 monete e ne spende 13: dobbiamo sottrarre 38 - 13. Tolgo le unità (8-3=5) e le decine (3-1=2): risultato 25."}
+{"id": "mat-2-problemi-086", "explanation": "Mario aveva 20 monete e ne spende 2: dobbiamo sottrarre 20 - 2. Non posso togliere 2 da 0, prendo una decina: 10-2=8, le decine diventano 1; risultato 18."}
+{"id": "mat-2-problemi-087", "explanation": "Il libro ha 11 pagine e ne ho letta 1: dobbiamo sottrarre 11 - 1. Le decine rimangono 1, tolgo le unità: 1-1=0; risultato 10."}
+{"id": "mat-2-problemi-088", "explanation": "Anna aveva 30 biscotti e ne mangia 7: dobbiamo sottrarre 30 - 7. Non posso togliere 7 da 0, prendo una decina: 10-7=3, le decine diventano 2; risultato 23."}
+{"id": "mat-2-problemi-089", "explanation": "Claudia aveva 32 uova e ne usa 11: dobbiamo sottrarre 32 - 11. Tolgo le unità (2-1=1) e le decine (3-1=2): risultato 21."}
+{"id": "mat-2-problemi-090", "explanation": "Nel cesto ci sono 9 arance e se ne mangiano 7: dobbiamo sottrarre 9 - 7 = 2. Conto a ritroso da 9 per 7 passi: 8, 7, 6, 5, 4, 3, 2."}
+{"id": "mat-2-problemi-091", "explanation": "La nonna aveva 22 biscotti e ne regala 14: dobbiamo sottrarre 22 - 14. Tolgo le unità (2-4 non va, prendo una decina: 12-4=8) e le decine (1-1=0 rimaste): risultato 8."}
+{"id": "mat-2-problemi-092", "explanation": "Nel cesto ci sono 19 arance e se ne mangiano 12: dobbiamo sottrarre 19 - 12. Tolgo le unità (9-2=7) e le decine (1-1=0): risultato 7."}
+{"id": "mat-2-problemi-093", "explanation": "In classe ci sono 24 alunni e ne sono assenti 7: dobbiamo sottrarre 24 - 7. Non posso togliere 7 da 4, prendo una decina: 14-7=7, le decine diventano 1; risultato 17."}
+{"id": "mat-2-problemi-094", "explanation": "Sul ramo ci sono 23 uccelli e ne volano via 10: dobbiamo sottrarre 23 - 10 = 13. Togliere 10 significa diminuire le decine di 1."}
+{"id": "mat-2-problemi-095", "explanation": "Il libro ha 33 pagine e ne ho lette 8: dobbiamo sottrarre 33 - 8. Non posso togliere 8 da 3, prendo una decina: 13-8=5, le decine diventano 2; risultato 25."}
+{"id": "mat-2-problemi-096", "explanation": "La nonna aveva 21 biscotti e ne regala 3: dobbiamo sottrarre 21 - 3. Non posso togliere 3 da 1, prendo una decina: 11-3=8, le decine diventano 1; risultato 18."}
+{"id": "mat-2-problemi-097", "explanation": "La nonna aveva 22 biscotti e ne regala 15: dobbiamo sottrarre 22 - 15. Tolgo le unità (2-5 non va, prendo una decina: 12-5=7) e le decine (1-1=0 rimaste): risultato 7."}
+{"id": "mat-2-problemi-098", "explanation": "Nel cesto ci sono 11 arance e se ne mangiano 6: dobbiamo sottrarre 11 - 6. Non posso togliere 6 da 1, prendo una decina: 11-6=5, le decine diventano 0; risultato 5."}
+{"id": "mat-2-problemi-099", "explanation": "In classe ci sono 28 alunni e ne sono assenti 11: dobbiamo sottrarre 28 - 11. Tolgo le unità (8-1=7) e le decine (2-1=1): risultato 17."}
+{"id": "mat-2-problemi-100", "explanation": "Sul ramo ci sono 17 uccelli e ne volano via 14: dobbiamo sottrarre 17 - 14. Tolgo le unità (7-4=3) e le decine (1-1=0): risultato 3."}
+{"id": "mat-2-geometria-001", "explanation": "Il triangolo ha 3 lati e 3 angoli: la parola 'triangolo' contiene 'tri' che in latino significa tre!"}
+{"id": "mat-2-geometria-002", "explanation": "Il quadrato ha 4 lati tutti uguali e 4 angoli retti: la parola 'quadrato' viene da 'quadrus' che significa quattro."}
+{"id": "mat-2-geometria-005", "explanation": "Il quadrato ha 4 vertici, cioè 4 angoli: ogni angolo è un vertice, e siccome il quadrato ha 4 angoli, ha anche 4 vertici."}
+{"id": "mat-2-geometria-006", "explanation": "La figura con 5 lati si chiama pentagono: 'penta' in greco significa cinque, come nel numero 5."}
+{"id": "mat-2-geometria-007", "explanation": "La figura con 6 lati si chiama esagono: 'esa' in greco significa sei, e possiamo contare i 6 lati dell'esagono."}
+{"id": "mat-2-geometria-008", "explanation": "Il quadrato ha 4 angoli retti e tutti i 4 lati uguali: se i lati non fossero tutti uguali sarebbe un rettangolo."}
+{"id": "mat-2-geometria-009", "explanation": "Nel rettangolo i lati opposti (quelli che si fronteggiano) sono uguali: i due lati lunghi sono uguali tra loro e i due lati corti sono uguali tra loro."}
+{"id": "mat-2-geometria-010", "explanation": "Il pentagono ha 5 angoli: in ogni poligono il numero di angoli è uguale al numero di lati, e il pentagono ha 5 lati."}
+{"id": "mat-2-geometria-011", "explanation": "Il cerchio non ha lati né angoli: è una figura tonda e continua, senza spigoli o punti dove la linea cambia direzione."}
+{"id": "mat-2-geometria-012", "explanation": "Il triangolo equilatero ha tutti e 3 i lati uguali: la parola 'equilatero' significa proprio 'lati uguali'."}
+{"id": "mat-2-geometria-013", "explanation": "La figura con 8 lati si chiama ottagono: 'octo' in latino significa otto, come nel numero 8."}
+{"id": "mat-2-geometria-014", "explanation": "L'esagono ha 6 vertici: in ogni poligono il numero di vertici è uguale al numero di lati, e l'esagono ha 6 lati."}
+{"id": "mat-2-geometria-015", "explanation": "Il quadrato ha tutti e 4 gli angoli retti: un angolo retto è quello che fa un angolo perfetto di 90 gradi, come l'angolo di un foglio."}
+{"id": "mat-2-geometria-017", "explanation": "Il rombo ha 4 lati tutti uguali: è simile al quadrato, ma gli angoli non sono retti; tutti i lati però hanno la stessa misura."}
+{"id": "mat-2-geometria-018", "explanation": "Il triangolo scaleno ha tutti i lati diversi: 'scaleno' vuol dire che nessun lato è uguale agli altri due."}
+{"id": "mat-2-geometria-019", "explanation": "Il triangolo isoscele ha due lati uguali: 'isoscele' significa 'due lati uguali', il terzo lato ha una misura diversa."}
+{"id": "mat-2-geometria-020", "explanation": "Il cerchio ha infiniti assi di simmetria: possiamo piegare un cerchio in due parti uguali in qualsiasi direzione passiamo per il centro."}
+{"id": "mat-2-geometria-021", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 19 × 4 = 76 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-022", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 11 × 3 = 33 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-023", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 3 × 3 = 9 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-024", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 15 × 4 = 60 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-025", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (18+15) × 2 = 33 × 2 = 66 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-026", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 14 × 3 = 42 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-027", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (7+18) × 2 = 25 × 2 = 50 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-028", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 17 × 4 = 68 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-029", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (3+8) × 2 = 11 × 2 = 22 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-030", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (4+8) × 2 = 12 × 2 = 24 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-031", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 5 × 4 = 20 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-032", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (5+13) × 2 = 18 × 2 = 36 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-033", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 1 × 4 = 4 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-034", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 9 × 3 = 27 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-035", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (10+3) × 2 = 13 × 2 = 26 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-036", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (18+19) × 2 = 37 × 2 = 74 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-037", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (3+5) × 2 = 8 × 2 = 16 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-038", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (5+16) × 2 = 21 × 2 = 42 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-039", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 8 × 3 = 24 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-040", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (16+16) × 2 = 32 × 2 = 64 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-041", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (12+13) × 2 = 25 × 2 = 50 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-042", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 6 × 4 = 24 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-043", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 7 × 3 = 21 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-044", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (2+16) × 2 = 18 × 2 = 36 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-045", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (4+6) × 2 = 10 × 2 = 20 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-046", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (18+11) × 2 = 29 × 2 = 58 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-047", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 10 × 3 = 30 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-048", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (16+14) × 2 = 30 × 2 = 60 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-049", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (3+15) × 2 = 18 × 2 = 36 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-050", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (16+17) × 2 = 33 × 2 = 66 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-051", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 18 × 4 = 72 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-052", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (14+7) × 2 = 21 × 2 = 42 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-053", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (6+12) × 2 = 18 × 2 = 36 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-054", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 7 × 4 = 28 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-055", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (11+15) × 2 = 26 × 2 = 52 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-056", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (8+11) × 2 = 19 × 2 = 38 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-057", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 4 × 3 = 12 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-058", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (10+10) × 2 = 20 × 2 = 40 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-059", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 15 × 3 = 45 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-060", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (12+12) × 2 = 24 × 2 = 48 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-061", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 8 × 4 = 32 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-062", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 5 × 3 = 15 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-063", "explanation": "Il perimetro del triangolo equilatero si calcola moltiplicando il lato per 3: 2 × 3 = 6 cm, perché tutti e 3 i lati sono uguali."}
+{"id": "mat-2-geometria-064", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (13+4) × 2 = 17 × 2 = 34 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-065", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (18+20) × 2 = 38 × 2 = 76 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-066", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (12+14) × 2 = 26 × 2 = 52 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-067", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 10 × 4 = 40 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-068", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (6+19) × 2 = 25 × 2 = 50 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-069", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (13+8) × 2 = 21 × 2 = 42 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-070", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (9+7) × 2 = 16 × 2 = 32 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-geometria-071", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4: 9 × 4 = 36 cm, perché tutti e 4 i lati sono uguali."}
+{"id": "mat-2-geometria-072", "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (17+5) × 2 = 22 × 2 = 44 cm, perché i lati opposti sono uguali."}
+{"id": "mat-2-logica_e_dati-001", "explanation": "Il numero che viene dopo 15 è 16: quando contiamo, ogni numero è uno in più di quello prima, quindi 15 + 1 = 16."}
+{"id": "mat-2-logica_e_dati-002", "explanation": "Il numero che viene prima di 10 è 9: quando contiamo all'indietro, ogni numero è uno in meno, quindi 10 - 1 = 9."}
+{"id": "mat-2-logica_e_dati-003", "explanation": "I numeri pari finiscono sempre in 0, 2, 4, 6 o 8: tra 3, 5, 7 e 8 solo l'8 finisce con una cifra pari."}
+{"id": "mat-2-logica_e_dati-004", "explanation": "I numeri dispari finiscono sempre in 1, 3, 5, 7 o 9: tra 4, 6, 9 e 10 solo il 9 finisce con una cifra dispari."}
+{"id": "mat-2-logica_e_dati-005", "explanation": "Per trovare il numero più grande confrontiamo le decine prima: 22 ha 2 decine mentre 15 ne ha 1, 11 ne ha 1 e 7 ne ha 0; quindi 22 è il più grande."}
+{"id": "mat-2-logica_e_dati-006", "explanation": "Per trovare il numero più piccolo confrontiamo le decine: 8 e 6 hanno 0 decine, 15 ne ha 1; tra 8, 3, 15 e 6, il 3 è il più piccolo perché ha meno unità."}
+{"id": "mat-2-logica_e_dati-007", "explanation": "Se oggi è lunedì, domani è martedì e dopodomani è mercoledì: contiamo due giorni in avanti nella settimana."}
+{"id": "mat-2-logica_e_dati-008", "explanation": "La settimana ha 7 giorni: lunedì, martedì, mercoledì, giovedì, venerdì, sabato e domenica — contiamoli sulle dita!"}
+{"id": "mat-2-logica_e_dati-009", "explanation": "L'anno ha 12 mesi: gennaio, febbraio, marzo, aprile, maggio, giugno, luglio, agosto, settembre, ottobre, novembre, dicembre."}
+{"id": "mat-2-logica_e_dati-010", "explanation": "Un giorno ha 24 ore: 12 ore di mattina e pomeriggio, più altre 12 ore di sera e notte, fanno insieme 24 ore."}
+{"id": "mat-2-logica_e_dati-011", "explanation": "Un'ora ha 60 minuti: se guardi l'orologio, la lancetta dei minuti fa un giro completo in 60 passi per completare un'ora."}
+{"id": "mat-2-logica_e_dati-012", "explanation": "Il doppio di 9 significa 9 preso 2 volte: 9 + 9 = 18. 'Doppio' vuol dire moltiplicare per 2."}
+{"id": "mat-2-logica_e_dati-013", "explanation": "La metà di 20 significa dividere 20 in due parti uguali: 20 ÷ 2 = 10. Se hai 20 caramelle e le dividi con un amico, ne tocca 10 a testa."}
+{"id": "mat-2-logica_e_dati-014", "explanation": "Il doppio di 6 significa 6 preso 2 volte: 6 + 6 = 12. 'Doppio' vuol dire moltiplicare per 2."}
+{"id": "mat-2-logica_e_dati-015", "explanation": "La metà di 14 significa dividere 14 in due parti uguali: 7 + 7 = 14, quindi la metà è 7. Se hai 14 figurine e le dividi con un amico, ne tocca 7 a testa."}
+{"id": "mat-2-logica_e_dati-016", "explanation": "L'anno non bisestile ha 365 giorni: sono 12 mesi con 30 o 31 giorni ciascuno, tranne febbraio che ne ha 28."}
+{"id": "mat-2-logica_e_dati-017", "explanation": "Il numero che viene dopo 99 è 100: quando le unità arrivano a 9 e aggiungiamo 1, otteniamo una nuova decina; dopo le 9 decine (90) arriva 100."}
+{"id": "mat-2-logica_e_dati-018", "explanation": "Un mese ha in media 4 settimane: ogni settimana dura 7 giorni e un mese dura circa 28-31 giorni, quindi 28 ÷ 7 = 4 settimane."}
+{"id": "mat-2-logica_e_dati-019", "explanation": "I numeri dispari finiscono in 1, 3, 5, 7 o 9: tra 12, 15, 18 e 20 solo il 15 finisce con 5, che è una cifra dispari."}
+{"id": "mat-2-logica_e_dati-020", "explanation": "I numeri pari finiscono in 0, 2, 4, 6 o 8: tra 11, 13, 16 e 17 solo il 16 finisce con 6, che è una cifra pari."}
+{"id": "mat-2-logica_e_dati-021", "explanation": "Nella sequenza 8, 9, 10, 11... ogni numero aumenta di 1: quindi dopo 11 viene 11+1=12."}
+{"id": "mat-2-logica_e_dati-022", "explanation": "Nella sequenza 7, 8, 9, 10... ogni numero aumenta di 1: quindi dopo 10 viene 10+1=11."}
+{"id": "mat-2-logica_e_dati-023", "explanation": "Nella sequenza 8, 10, 12, 14... ogni numero aumenta di 2: contiamo di 2 in 2, quindi dopo 14 viene 14+2=16."}
+{"id": "mat-2-logica_e_dati-024", "explanation": "Nella sequenza 4, 9, 14, 19... ogni numero aumenta di 5: contiamo di 5 in 5, quindi dopo 19 viene 19+5=24."}
+{"id": "mat-2-logica_e_dati-025", "explanation": "Nella sequenza 9, 14, 19, 24... ogni numero aumenta di 5: contiamo di 5 in 5, quindi dopo 24 viene 24+5=29."}
+{"id": "mat-2-logica_e_dati-026", "explanation": "Nella sequenza 10, 20, 30, 40... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 40 viene 40+10=50."}
+{"id": "mat-2-logica_e_dati-027", "explanation": "Nella sequenza 10, 12, 14, 16... ogni numero aumenta di 2: contiamo i numeri pari, quindi dopo 16 viene 16+2=18."}
+{"id": "mat-2-logica_e_dati-028", "explanation": "Nella sequenza 5, 7, 9, 11... ogni numero aumenta di 2: contiamo i numeri dispari, quindi dopo 11 viene 11+2=13."}
+{"id": "mat-2-logica_e_dati-029", "explanation": "Nella sequenza 9, 19, 29, 39... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 39 viene 39+10=49."}
+{"id": "mat-2-logica_e_dati-030", "explanation": "Nella sequenza 3, 5, 7, 9... ogni numero aumenta di 2: contiamo i numeri dispari, quindi dopo 9 viene 9+2=11."}
+{"id": "mat-2-logica_e_dati-031", "explanation": "Nella sequenza 3, 13, 23, 33... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 33 viene 33+10=43."}
+{"id": "mat-2-logica_e_dati-032", "explanation": "Nella sequenza 10, 11, 12, 13... ogni numero aumenta di 1: quindi dopo 13 viene 13+1=14."}
+{"id": "mat-2-logica_e_dati-033", "explanation": "Nella sequenza 1, 6, 11, 16... ogni numero aumenta di 5: contiamo di 5 in 5, quindi dopo 16 viene 16+5=21."}
+{"id": "mat-2-logica_e_dati-034", "explanation": "Nella sequenza 9, 11, 13, 15... ogni numero aumenta di 2: contiamo i numeri dispari, quindi dopo 15 viene 15+2=17."}
+{"id": "mat-2-logica_e_dati-035", "explanation": "Nella sequenza 2, 12, 22, 32... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 32 viene 32+10=42."}
+{"id": "mat-2-logica_e_dati-036", "explanation": "Nella sequenza 1, 11, 21, 31... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 31 viene 31+10=41."}
+{"id": "mat-2-logica_e_dati-037", "explanation": "Nella sequenza 1, 3, 5, 7... ogni numero aumenta di 2: contiamo i numeri dispari, quindi dopo 7 viene 7+2=9."}
+{"id": "mat-2-logica_e_dati-038", "explanation": "Nella sequenza 6, 11, 16, 21... ogni numero aumenta di 5: contiamo di 5 in 5, quindi dopo 21 viene 21+5=26."}
+{"id": "mat-2-logica_e_dati-039", "explanation": "Nella sequenza 9, 10, 11, 12... ogni numero aumenta di 1: quindi dopo 12 viene 12+1=13."}
+{"id": "mat-2-logica_e_dati-040", "explanation": "Nella sequenza 7, 9, 11, 13... ogni numero aumenta di 2: contiamo i numeri dispari, quindi dopo 13 viene 13+2=15."}
+{"id": "mat-2-logica_e_dati-041", "explanation": "Nella sequenza 5, 10, 15, 20... ogni numero aumenta di 5: contiamo di 5 in 5 (la tabellina del 5), quindi dopo 20 viene 20+5=25."}
+{"id": "mat-2-logica_e_dati-042", "explanation": "Nella sequenza 2, 4, 6, 8... ogni numero aumenta di 2: contiamo i numeri pari, quindi dopo 8 viene 8+2=10."}
+{"id": "mat-2-logica_e_dati-043", "explanation": "Nella sequenza 4, 14, 24, 34... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 34 viene 34+10=44."}
+{"id": "mat-2-logica_e_dati-044", "explanation": "Nella sequenza 6, 7, 8, 9... ogni numero aumenta di 1: quindi dopo 9 viene 9+1=10."}
+{"id": "mat-2-logica_e_dati-045", "explanation": "Nella sequenza 2, 3, 4, 5... ogni numero aumenta di 1: quindi dopo 5 viene 5+1=6."}
+{"id": "mat-2-logica_e_dati-046", "explanation": "Nella sequenza 1, 2, 3, 4... ogni numero aumenta di 1: è la sequenza dei numeri naturali, dopo 4 viene 4+1=5."}
+{"id": "mat-2-logica_e_dati-047", "explanation": "Nella sequenza 3, 8, 13, 18... ogni numero aumenta di 5: contiamo di 5 in 5, quindi dopo 18 viene 18+5=23."}
+{"id": "mat-2-logica_e_dati-048", "explanation": "Nella sequenza 5, 6, 7, 8... ogni numero aumenta di 1: quindi dopo 8 viene 8+1=9."}
+{"id": "mat-2-logica_e_dati-049", "explanation": "Nella sequenza 7, 12, 17, 22... ogni numero aumenta di 5: contiamo di 5 in 5, quindi dopo 22 viene 22+5=27."}
+{"id": "mat-2-logica_e_dati-050", "explanation": "Nella sequenza 7, 17, 27, 37... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 37 viene 37+10=47."}
+{"id": "mat-2-logica_e_dati-051", "explanation": "Nella sequenza 5, 15, 25, 35... ogni numero aumenta di 10: contiamo di 10 in 10, quindi dopo 35 viene 35+10=45."}
+{"id": "mat-2-logica_e_dati-052", "explanation": "Nella sequenza 6, 8, 10, 12... ogni numero aumenta di 2: contiamo i numeri pari, quindi dopo 12 viene 12+2=14."}

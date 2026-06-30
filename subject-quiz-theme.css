@@ -2053,6 +2053,237 @@ html:not([data-palette="okabe-ito"]) .btn-replay {
   box-shadow: 0 5px 0 color-mix(in srgb, var(--accent-2) 65%, #000);
 }
 
+/* ==========================================================================
+   F4 — A1: Spiegazione risposta
+   ========================================================================== */
+.q-explanation {
+  margin-top: 0.9rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  border: 2px solid #ccc;
+  background: #f5f5f5;
+  color: #333;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, max-height 0.3s ease;
+}
+
+.q-explanation.show {
+  opacity: 1;
+  max-height: 260px;
+}
+
+html:not([data-palette="okabe-ito"]) .q-explanation.ok {
+  background: #f0fff5;
+  border-color: var(--ws-cossack-green, #2e8455);
+  color: #1a5c38;
+}
+
+html:not([data-palette="okabe-ito"]) .q-explanation.ko {
+  background: #fff5f5;
+  border-color: var(--ws-jasper-red, #c4452f);
+  color: #7a2020;
+}
+
+/* ==========================================================================
+   F4 — A3: Ripassa errori button
+   ========================================================================== */
+.ripassa-btn {
+  display: block;
+  width: 100%;
+  margin: 0.65rem 0 0;
+  padding: 0.6rem 1rem;
+  background: #fffbe6;
+  border: 2px solid #d97706;
+  border-radius: 0.75rem;
+  color: #7c3a00;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.ripassa-btn:hover:not(:disabled) {
+  background: #fef3c7;
+}
+
+html:not([data-palette="okabe-ito"]) .ripassa-btn {
+  border-color: var(--ws-yellow-ocher, #c8881a);
+  color: var(--ws-slate-black, #2c2a28);
+}
+
+/* ==========================================================================
+   F4 — A4: Subarea selector
+   ========================================================================== */
+.subarea-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.subarea-btn {
+  padding: 0.35rem 0.8rem;
+  border-radius: 1rem;
+  border: 2px solid #bbb;
+  background: #fff;
+  color: #444;
+  font-size: 0.82rem;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+}
+
+.subarea-btn:hover:not(:disabled) {
+  border-color: #888;
+}
+
+.subarea-btn.selected {
+  border-color: #4361ee;
+  background: #4361ee;
+  color: #fff;
+}
+
+html:not([data-palette="okabe-ito"]) .subarea-btn.selected {
+  border-color: var(--accent-2, #4361ee);
+  background: var(--accent-2, #4361ee);
+  color: #fff;
+}
+
+/* ==========================================================================
+   F4 — C1: Progress overlay
+   ========================================================================== */
+.progress-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.progress-modal-inner {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,.18);
+}
+
+.progress-modal-inner h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.progress-modal-inner h3 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.25rem;
+}
+
+.progress-date {
+  color: #777;
+  font-size: 0.85rem;
+  margin-top: -0.25rem;
+}
+
+.progress-modal-inner ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.progress-modal-inner table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+}
+
+.progress-modal-inner th,
+.progress-modal-inner td {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.progress-modal-inner th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.progress-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.progress-print-btn,
+.progress-close-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #ccc;
+  background: #f8f8f8;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.progress-print-btn:hover,
+.progress-close-btn:hover {
+  background: #efefef;
+}
+
+.btn-progress {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: #f0f4ff;
+  border: 2px solid #4361ee;
+  border-radius: 0.75rem;
+  color: #2c44cc;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-progress:hover {
+  background: #e0e8ff;
+}
+
+html:not([data-palette="okabe-ito"]) .btn-progress {
+  border-color: var(--accent-2, #4361ee);
+  color: var(--accent-2, #2c44cc);
+}
+
+@media print {
+  .progress-overlay {
+    position: static;
+    background: none;
+    padding: 0;
+  }
+  .progress-modal-inner {
+    box-shadow: none;
+  }
+  .progress-actions {
+    display: none;
+  }
+}
+
 /* --- Fix contrasto: titolo Problemi su sfondo pesca (#d9743f su #fbeadd = 2.74:1 FAIL).
    Usa variante scura #a04f20 che porta a 4.91:1 (AA per testo normale). --- */
 html:not([data-palette="okabe-ito"]) body.subject-problemi .title {

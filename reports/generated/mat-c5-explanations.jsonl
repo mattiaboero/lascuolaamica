@@ -1,0 +1,427 @@
+{"id": "mat-5-tabelline-001", "explanation": "Scomponi 19 in 20-1: 7×20=140, poi sottrai 7×1=7, quindi 140-7=133."}
+{"id": "mat-5-tabelline-002", "explanation": "Scomponi 14 in 10+4: 7×10=70, 7×4=28, poi 70+28=98."}
+{"id": "mat-5-tabelline-003", "explanation": "Scomponi 16 in 10+6: 4×10=40, 4×6=24, poi 40+24=64."}
+{"id": "mat-5-tabelline-004", "explanation": "Scomponi 16 in 10+6: 5×10=50, 5×6=30, poi 50+30=80."}
+{"id": "mat-5-tabelline-005", "explanation": "Scomponi 13 in 10+3: 4×10=40, 4×3=12, poi 40+12=52."}
+{"id": "mat-5-tabelline-006", "explanation": "Moltiplicare per 1 lascia invariato il numero: 1×17=17."}
+{"id": "mat-5-tabelline-007", "explanation": "Scomponi 20 in 2×10: 7×2=14, poi moltiplica per 10 → 140."}
+{"id": "mat-5-tabelline-008", "explanation": "Moltiplicare per 10 aggiunge uno zero: 10×13=130."}
+{"id": "mat-5-tabelline-009", "explanation": "Scomponi 14 in 10+4: 3×10=30, 3×4=12, poi 30+12=42."}
+{"id": "mat-5-tabelline-010", "explanation": "Scomponi 14 in 10+4: 4×10=40, 4×4=16, poi 40+16=56."}
+{"id": "mat-5-tabelline-011", "explanation": "Scomponi 17 in 10+7: 2×10=20, 2×7=14, poi 20+14=34."}
+{"id": "mat-5-tabelline-012", "explanation": "Scomponi 14 in 10+4: 6×10=60, 6×4=24, poi 60+24=84."}
+{"id": "mat-5-tabelline-013", "explanation": "Moltiplicare due decine: 10×20=200 (aggiunge due zeri a 2)."}
+{"id": "mat-5-tabelline-014", "explanation": "Scomponi 20 in 2×10: 4×2=8, poi moltiplica per 10 → 80."}
+{"id": "mat-5-tabelline-015", "explanation": "Scomponi 13 in 10+3: 3×10=30, 3×3=9, poi 30+9=39."}
+{"id": "mat-5-tabelline-016", "explanation": "Scomponi 14 in 10+4: 9×10=90, 9×4=36, poi 90+36=126."}
+{"id": "mat-5-tabelline-017", "explanation": "Scomponi 13 in 10+3: 7×10=70, 7×3=21, poi 70+21=91."}
+{"id": "mat-5-tabelline-018", "explanation": "Scomponi 13 in 10+3: 8×10=80, 8×3=24, poi 80+24=104."}
+{"id": "mat-5-tabelline-019", "explanation": "Scomponi 14 in 10+4: 8×10=80, 8×4=32, poi 80+32=112."}
+{"id": "mat-5-tabelline-020", "explanation": "Scomponi 13 in 10+3: 2×10=20, 2×3=6, poi 20+6=26."}
+{"id": "mat-5-tabelline-021", "explanation": "Scomponi 17 in 10+7: 3×10=30, 3×7=21, poi 30+21=51."}
+{"id": "mat-5-tabelline-022", "explanation": "Scomponi 19 in 20-1: 4×20=80, poi sottrai 4×1=4, quindi 80-4=76."}
+{"id": "mat-5-tabelline-023", "explanation": "Scomponi 18 in 20-2: 7×20=140, poi sottrai 7×2=14, quindi 140-14=126."}
+{"id": "mat-5-tabelline-024", "explanation": "Scomponi 17 in 10+7: 6×10=60, 6×7=42, poi 60+42=102."}
+{"id": "mat-5-tabelline-025", "explanation": "Scomponi 15 in 10+5: 7×10=70, 7×5=35, poi 70+35=105."}
+{"id": "mat-5-tabelline-026", "explanation": "Scomponi 18 in 20-2: 9×20=180, poi sottrai 9×2=18, quindi 180-18=162."}
+{"id": "mat-5-tabelline-027", "explanation": "Scomponi 20 in 2×10: 9×2=18, poi moltiplica per 10 → 180."}
+{"id": "mat-5-tabelline-028", "explanation": "Moltiplicare per 20 significa moltiplicare per 2 e poi per 10: 2×2=4, ×10=40."}
+{"id": "mat-5-tabelline-029", "explanation": "Moltiplicare per 1 lascia invariato il numero: 1×13=13."}
+{"id": "mat-5-tabelline-030", "explanation": "Scomponi 16 in 10+6: 3×10=30, 3×6=18, poi 30+18=48."}
+{"id": "mat-5-tabelline-031", "explanation": "Scomponi 19 in 20-1: 8×20=160, poi sottrai 8×1=8, quindi 160-8=152."}
+{"id": "mat-5-tabelline-032", "explanation": "Scomponi 19 in 20-1: 9×20=180, poi sottrai 9×1=9, quindi 180-9=171."}
+{"id": "mat-5-tabelline-033", "explanation": "Scomponi 18 in 20-2: 4×20=80, poi sottrai 4×2=8, quindi 80-8=72."}
+{"id": "mat-5-tabelline-034", "explanation": "Scomponi 18 in 20-2: 5×20=100, poi sottrai 5×2=10, quindi 100-10=90."}
+{"id": "mat-5-tabelline-035", "explanation": "Moltiplicare per 1 lascia invariato il numero: 1×14=14."}
+{"id": "mat-5-tabelline-036", "explanation": "Scomponi 20 in 2×10: 6×2=12, poi moltiplica per 10 → 120."}
+{"id": "mat-5-tabelline-037", "explanation": "Scomponi 16 in 10+6: 7×10=70, 7×6=42, poi 70+42=112."}
+{"id": "mat-5-tabelline-038", "explanation": "Moltiplicare per 10 aggiunge uno zero: 10×14=140."}
+{"id": "mat-5-tabelline-039", "explanation": "Scomponi 18 in 20-2: 6×20=120, poi sottrai 6×2=12, quindi 120-12=108."}
+{"id": "mat-5-tabelline-040", "explanation": "Scomponi 15 in 10+5: 9×10=90, 9×5=45, poi 90+45=135."}
+{"id": "mat-5-tabelline-041", "explanation": "Scomponi 17 in 10+7: 9×10=90, 9×7=63, poi 90+63=153."}
+{"id": "mat-5-tabelline-042", "explanation": "Scomponi 16 in 10+6: 6×10=60, 6×6=36, poi 60+36=96."}
+{"id": "mat-5-tabelline-043", "explanation": "Moltiplicare per 1 lascia invariato il numero: 1×20=20."}
+{"id": "mat-5-tabelline-044", "explanation": "Scomponi 15 in 10+5: 4×10=40, 4×5=20, poi 40+20=60."}
+{"id": "mat-5-aritmetica-001", "explanation": "Allinea le cifre per colonne e somma da destra: unità, decine, centinaia, migliaia, decine di migliaia."}
+{"id": "mat-5-aritmetica-002", "explanation": "Somma colonna per colonna da destra; ricorda di riportare l'1 dove la somma supera 9."}
+{"id": "mat-5-aritmetica-003", "explanation": "Somma colonna per colonna; le unità 2+5=7, le decine 6+8=14 (scrivi 4 e riporti 1)."}
+{"id": "mat-5-aritmetica-004", "explanation": "Allinea i numeri e somma colonna per colonna partendo dalle unità verso sinistra."}
+{"id": "mat-5-aritmetica-005", "explanation": "Somma colonna per colonna da destra; gestisci i riporti dove la somma supera 9."}
+{"id": "mat-5-aritmetica-006", "explanation": "Allinea le cifre per valore posizionale e somma colonna per colonna da destra."}
+{"id": "mat-5-aritmetica-007", "explanation": "Somma colonna per colonna; il risultato supera 100 000, quindi aggiungi la sesta cifra."}
+{"id": "mat-5-aritmetica-008", "explanation": "Allinea i numeri e somma colonna per colonna; 0+1=1 alle unità, 9+5=14 alle decine."}
+{"id": "mat-5-aritmetica-009", "explanation": "Somma colonna per colonna da destra e riporta quando la somma supera 9."}
+{"id": "mat-5-aritmetica-010", "explanation": "Somma colonna per colonna; attento ai riporti nelle decine e nelle centinaia."}
+{"id": "mat-5-aritmetica-011", "explanation": "Somma colonna per colonna; il risultato supera 100 000, conta la sesta cifra."}
+{"id": "mat-5-aritmetica-012", "explanation": "Somma colonna per colonna da destra gestendo i riporti a ogni passaggio."}
+{"id": "mat-5-aritmetica-013", "explanation": "Allinea le cifre e somma colonna per colonna da destra verso sinistra."}
+{"id": "mat-5-aritmetica-014", "explanation": "Somma colonna per colonna; il risultato è nel range 180 000, gestisci tutti i riporti."}
+{"id": "mat-5-aritmetica-015", "explanation": "Somma colonna per colonna da destra; 8+5=13 alle unità, scrivi 3 e riporti 1."}
+{"id": "mat-5-aritmetica-016", "explanation": "Sottrai colonna per colonna da destra; se la cifra superiore è minore, prendi in prestito dalla colonna successiva."}
+{"id": "mat-5-aritmetica-017", "explanation": "Sottrai colonna per colonna; dove necessario prendi in prestito dalla cifra a sinistra."}
+{"id": "mat-5-aritmetica-018", "explanation": "Sottrai colonna per colonna da destra; gestisci i prestiti dove la cifra da sottrarre è maggiore."}
+{"id": "mat-5-aritmetica-019", "explanation": "Sottrai colonna per colonna; attento ai prestiti nelle decine e centinaia."}
+{"id": "mat-5-aritmetica-020", "explanation": "Sottrai colonna per colonna da destra prendendo in prestito quando necessario."}
+{"id": "mat-5-aritmetica-021", "explanation": "Sottrai colonna per colonna; dove la cifra superiore è minore prendi in prestito dalla colonna successiva."}
+{"id": "mat-5-aritmetica-022", "explanation": "Sottrai colonna per colonna da destra; completa i prestiti necessari per ogni posizione."}
+{"id": "mat-5-aritmetica-023", "explanation": "Sottrai colonna per colonna; gli zeri richiedono prestiti da cifre più a sinistra."}
+{"id": "mat-5-aritmetica-024", "explanation": "Sottrai colonna per colonna da destra prendendo in prestito quando necessario."}
+{"id": "mat-5-aritmetica-025", "explanation": "Sottrai colonna per colonna da destra; gestisci i prestiti a ogni passaggio."}
+{"id": "mat-5-aritmetica-026", "explanation": "Allinea le cifre e sottrai colonna per colonna; 1230 ha solo 4 cifre, allinealo a destra."}
+{"id": "mat-5-aritmetica-027", "explanation": "Sottrai colonna per colonna; diversi prestiti sono necessari nelle decine e centinaia."}
+{"id": "mat-5-aritmetica-028", "explanation": "Sottrai colonna per colonna da destra; alcune colonne danno 0 come risultato."}
+{"id": "mat-5-aritmetica-029", "explanation": "Sottrai colonna per colonna da destra; il risultato è piccolo perché i numeri sono vicini."}
+{"id": "mat-5-aritmetica-030", "explanation": "Sottrai colonna per colonna da destra prendendo in prestito quando la cifra è minore."}
+{"id": "mat-5-aritmetica-031", "explanation": "Moltiplica 43×9=387, poi aggiungi uno zero perché moltiplichi per 90: 3870."}
+{"id": "mat-5-aritmetica-032", "explanation": "Moltiplica 3×53=159, poi aggiungi uno zero perché moltiplichi per 30: 1590."}
+{"id": "mat-5-aritmetica-033", "explanation": "Moltiplica 78×7=546, poi aggiungi uno zero perché moltiplichi per 70: 5460."}
+{"id": "mat-5-aritmetica-034", "explanation": "Moltiplica 35×5=175, poi aggiungi uno zero perché moltiplichi per 50: 1750."}
+{"id": "mat-5-aritmetica-035", "explanation": "Moltiplica in colonna: 67×2=134, 67×40=2680, poi 134+2680=2814."}
+{"id": "mat-5-aritmetica-036", "explanation": "Moltiplica in colonna: 34×3=102, 34×30=1020, poi 102+1020=1122."}
+{"id": "mat-5-aritmetica-037", "explanation": "Moltiplica in colonna: 93×6=558, 93×50=4650, poi 558+4650=5208."}
+{"id": "mat-5-aritmetica-038", "explanation": "Moltiplica in colonna: 65×4=260, 65×70=4550, poi 260+4550=4810."}
+{"id": "mat-5-aritmetica-039", "explanation": "Moltiplica in colonna: 79×3=237, 79×40=3160, poi 237+3160=3397."}
+{"id": "mat-5-aritmetica-040", "explanation": "Moltiplica in colonna: 28×8=224, 28×30=840, poi 224+840=1064."}
+{"id": "mat-5-aritmetica-041", "explanation": "Scomponi 99=100-1: 78×100=7800, 78×1=78, poi 7800-78=7722."}
+{"id": "mat-5-aritmetica-042", "explanation": "Moltiplica 6×57=342, poi aggiungi uno zero perché moltiplichi per 60: 3420."}
+{"id": "mat-5-aritmetica-043", "explanation": "Moltiplica in colonna: 68×2=136, 68×70=4760, poi 136+4760=4896."}
+{"id": "mat-5-aritmetica-044", "explanation": "Per moltiplicare per 11: somma le cifre 5+4=9 e mettila in mezzo → 594."}
+{"id": "mat-5-aritmetica-045", "explanation": "Moltiplica in colonna: 14×1=14, 14×60=840, poi 14+840=854."}
+{"id": "mat-5-aritmetica-046", "explanation": "Scomponi 93=90+3: 43×90=3870, 43×3=129, poi 3870+129=3999."}
+{"id": "mat-5-aritmetica-047", "explanation": "Moltiplica in colonna: 75×8=600, 75×50=3750, poi 600+3750=4350."}
+{"id": "mat-5-aritmetica-048", "explanation": "Moltiplicare per 10 aggiunge uno zero: 45×10=450."}
+{"id": "mat-5-aritmetica-049", "explanation": "Moltiplica in colonna: 58×8=464, 58×10=580, poi 464+580=1044."}
+{"id": "mat-5-aritmetica-050", "explanation": "Scomponi 92=90+2: 88×90=7920, 88×2=176, poi 7920+176=8096."}
+{"id": "mat-5-aritmetica-051", "explanation": "Dividi 588÷7: 7×80=560, resto 28; 28÷7=4, quindi il quoziente è 84."}
+{"id": "mat-5-aritmetica-052", "explanation": "Dividi 74÷2: 7÷2=3 (resto 1), scendi 4 → 14÷2=7; risultato 37."}
+{"id": "mat-5-aritmetica-053", "explanation": "Dividi 215÷5: 5×40=200, resto 15; 15÷5=3, quindi il quoziente è 43."}
+{"id": "mat-5-aritmetica-054", "explanation": "Dividi 368÷16: 16×20=320, resto 48; 48÷16=3, quindi il quoziente è 23."}
+{"id": "mat-5-aritmetica-055", "explanation": "Dividi 176÷16: 16×10=160, resto 16; 16÷16=1, quindi il quoziente è 11."}
+{"id": "mat-5-aritmetica-056", "explanation": "Dividi 1290÷15: 15×80=1200, resto 90; 90÷15=6, quindi il quoziente è 86."}
+{"id": "mat-5-aritmetica-057", "explanation": "Dividi 276÷12: 12×20=240, resto 36; 36÷12=3, quindi il quoziente è 23."}
+{"id": "mat-5-aritmetica-058", "explanation": "Dividi 552÷6: 6×90=540, resto 12; 12÷6=2, quindi il quoziente è 92."}
+{"id": "mat-5-aritmetica-059", "explanation": "Dividi 1422÷18: 18×70=1260, resto 162; 162÷18=9, quindi il quoziente è 79."}
+{"id": "mat-5-aritmetica-060", "explanation": "Dividi 520÷13: 13×40=520, quindi il quoziente è 40 esatto."}
+{"id": "mat-5-aritmetica-061", "explanation": "Dividi 220÷5: 5×40=200, resto 20; 20÷5=4, quindi il quoziente è 44."}
+{"id": "mat-5-aritmetica-062", "explanation": "Dividi 1040÷13: 13×80=1040, quindi il quoziente è 80 esatto."}
+{"id": "mat-5-aritmetica-063", "explanation": "Dividi 1036÷14: 14×70=980, resto 56; 56÷14=4, quindi il quoziente è 74."}
+{"id": "mat-5-aritmetica-064", "explanation": "Dividi 759÷23: 23×30=690, resto 69; 69÷23=3, quindi il quoziente è 33."}
+{"id": "mat-5-aritmetica-065", "explanation": "Dividi 511÷7: 7×70=490, resto 21; 21÷7=3, quindi il quoziente è 73."}
+{"id": "mat-5-aritmetica-066", "explanation": "Dividi 1328÷16: 16×80=1280, resto 48; 48÷16=3, quindi il quoziente è 83."}
+{"id": "mat-5-aritmetica-067", "explanation": "Dividi 1118÷13: 13×80=1040, resto 78; 78÷13=6, quindi il quoziente è 86."}
+{"id": "mat-5-aritmetica-068", "explanation": "Dividi 684÷9: 9×70=630, resto 54; 54÷9=6, quindi il quoziente è 76."}
+{"id": "mat-5-aritmetica-069", "explanation": "Dividi 594÷18: 18×30=540, resto 54; 54÷18=3, quindi il quoziente è 33."}
+{"id": "mat-5-aritmetica-070", "explanation": "Per trovare 1/2 di 40 dividi per 2: 40÷2=20."}
+{"id": "mat-5-aritmetica-071", "explanation": "Per trovare 6/10 di 180: prima calcola 1/10 = 180÷10=18, poi moltiplica per 6: 18×6=108."}
+{"id": "mat-5-aritmetica-072", "explanation": "Per trovare 1/8 di 64 dividi per 8: 64÷8=8."}
+{"id": "mat-5-aritmetica-073", "explanation": "Per trovare 2/10 di 100: 1/10 = 100÷10=10, poi moltiplica per 2: 10×2=20."}
+{"id": "mat-5-aritmetica-074", "explanation": "Per trovare 7/8 di 80: 1/8 = 80÷8=10, poi moltiplica per 7: 10×7=70."}
+{"id": "mat-5-aritmetica-075", "explanation": "Per trovare 1/3 di 60 dividi per 3: 60÷3=20."}
+{"id": "mat-5-aritmetica-076", "explanation": "Per trovare 3/8 di 144: 1/8 = 144÷8=18, poi moltiplica per 3: 18×3=54."}
+{"id": "mat-5-aritmetica-077", "explanation": "Per trovare 2/3 di 15: 1/3 = 15÷3=5, poi moltiplica per 2: 5×2=10."}
+{"id": "mat-5-aritmetica-078", "explanation": "Per trovare 1/2 di 12 dividi per 2: 12÷2=6."}
+{"id": "mat-5-aritmetica-079", "explanation": "Per trovare 1/3 di 54 dividi per 3: 54÷3=18."}
+{"id": "mat-5-aritmetica-080", "explanation": "Per trovare 1/2 di 24 dividi per 2: 24÷2=12."}
+{"id": "mat-5-aritmetica-081", "explanation": "La frazione 2/4 equivale a 1/2, quindi 1/2 di 72 = 72÷2=36."}
+{"id": "mat-5-aritmetica-082", "explanation": "Per trovare 3/4 di 56: 1/4 = 56÷4=14, poi moltiplica per 3: 14×3=42."}
+{"id": "mat-5-aritmetica-083", "explanation": "Per trovare 2/5 di 70: 1/5 = 70÷5=14, poi moltiplica per 2: 14×2=28."}
+{"id": "mat-5-aritmetica-084", "explanation": "Per trovare 5/8 di 136: 1/8 = 136÷8=17, poi moltiplica per 5: 17×5=85."}
+{"id": "mat-5-aritmetica-085", "explanation": "Per trovare 2/5 di 95: 1/5 = 95÷5=19, poi moltiplica per 2: 19×2=38."}
+{"id": "mat-5-aritmetica-086", "explanation": "Per trovare 1/2 di 22 dividi per 2: 22÷2=11."}
+{"id": "mat-5-aritmetica-087", "explanation": "La frazione 2/4 equivale a 1/2, quindi 1/2 di 60 = 60÷2=30."}
+{"id": "mat-5-aritmetica-088", "explanation": "La frazione 5/10 equivale a 1/2, quindi 1/2 di 170 = 170÷2=85."}
+{"id": "mat-5-aritmetica-089", "explanation": "Per trovare 6/8 di 104: 1/8 = 104÷8=13, poi moltiplica per 6: 13×6=78."}
+{"id": "mat-5-aritmetica-090", "explanation": "Per trovare 1/4 di 28 dividi per 4: 28÷4=7."}
+{"id": "mat-5-aritmetica-091", "explanation": "Per trovare 2/10 di 190: 1/10 = 190÷10=19, poi moltiplica per 2: 19×2=38."}
+{"id": "mat-5-aritmetica-092", "explanation": "Per trovare 1/3 di 57 dividi per 3: 57÷3=19."}
+{"id": "mat-5-aritmetica-093", "explanation": "Per trovare 1/8 di 96 dividi per 8: 96÷8=12."}
+{"id": "mat-5-aritmetica-094", "explanation": "Per trovare 1/10 di 150 dividi per 10: 150÷10=15."}
+{"id": "mat-5-aritmetica-095", "explanation": "La frazione 4/8 equivale a 1/2, quindi 1/2 di 88 = 88÷2=44."}
+{"id": "mat-5-aritmetica-096", "explanation": "Per trovare 3/8 di 104: 1/8 = 104÷8=13, poi moltiplica per 3: 13×3=39."}
+{"id": "mat-5-aritmetica-097", "explanation": "Per trovare 2/3 di 42: 1/3 = 42÷3=14, poi moltiplica per 2: 14×2=28."}
+{"id": "mat-5-problemi-001", "explanation": "Moltiplica 187×18: scomponi 18=10+8, 187×10=1870, 187×8=1496, poi 1870+1496=3366."}
+{"id": "mat-5-problemi-002", "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 101×11=1111 m."}
+{"id": "mat-5-problemi-003", "explanation": "Moltiplica il numero di classi per gli alunni per classe: 156×20=3120 alunni."}
+{"id": "mat-5-problemi-004", "explanation": "Moltiplica il numero di piani per gli appartamenti per piano: 73×6=438 appartamenti."}
+{"id": "mat-5-problemi-005", "explanation": "Moltiplica velocità per ore: 26×18=468 km. Scomponi 18=20-2: 26×20=520, 26×2=52, 520-52=468."}
+{"id": "mat-5-problemi-006", "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 11×17=187 posti."}
+{"id": "mat-5-problemi-007", "explanation": "Moltiplica il numero di piani per gli appartamenti per piano: 38×12=456 appartamenti."}
+{"id": "mat-5-problemi-008", "explanation": "Moltiplica velocità per ore: 15×10=150 km (moltiplicare per 10 aggiunge uno zero)."}
+{"id": "mat-5-problemi-009", "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 24×8=192 m."}
+{"id": "mat-5-problemi-010", "explanation": "Moltiplica il numero di classi per gli alunni per classe: 15×9=135 alunni."}
+{"id": "mat-5-problemi-011", "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 165×4=660 posti."}
+{"id": "mat-5-problemi-012", "explanation": "Moltiplica il numero di classi per gli alunni per classe: 42×5=210 alunni."}
+{"id": "mat-5-problemi-013", "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 140×8=1120 m."}
+{"id": "mat-5-problemi-014", "explanation": "Moltiplica 153×16: 153×10=1530, 153×6=918, poi 1530+918=2448."}
+{"id": "mat-5-problemi-015", "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 135×4=540 m."}
+{"id": "mat-5-problemi-016", "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 20×7=140 posti."}
+{"id": "mat-5-problemi-017", "explanation": "Moltiplica 142×19: 142×20=2840, 142×1=142, poi 2840-142=2698."}
+{"id": "mat-5-problemi-018", "explanation": "Moltiplica 154×18: 154×10=1540, 154×8=1232, poi 1540+1232=2772."}
+{"id": "mat-5-problemi-019", "explanation": "Moltiplica velocità per ore: 183×13. Scomponi: 183×10=1830, 183×3=549, 1830+549=2379."}
+{"id": "mat-5-problemi-020", "explanation": "Moltiplica 191×11: 191×10=1910, 191×1=191, poi 1910+191=2101."}
+{"id": "mat-5-problemi-021", "explanation": "Moltiplica il numero di classi per gli alunni per classe: 184×5=920 alunni."}
+{"id": "mat-5-problemi-022", "explanation": "Moltiplica 83×18: 83×20=1660, 83×2=166, poi 1660-166=1494."}
+{"id": "mat-5-problemi-023", "explanation": "Moltiplica 116×17: 116×10=1160, 116×7=812, poi 1160+812=1972."}
+{"id": "mat-5-problemi-024", "explanation": "Moltiplica il numero di classi per gli alunni per classe: 45×11=495 alunni."}
+{"id": "mat-5-problemi-025", "explanation": "Moltiplica il numero di giri per la lunghezza: 106×15=1590 m (106×10=1060, 106×5=530, somma 1590)."}
+{"id": "mat-5-problemi-026", "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 175×10=1750 posti."}
+{"id": "mat-5-problemi-027", "explanation": "Moltiplica 197×19: 197×20=3940, 197×1=197, poi 3940-197=3743."}
+{"id": "mat-5-problemi-028", "explanation": "Moltiplica velocità per ore: 200×14=2800 km (200 = 2×100, quindi 2×14=28, ×100=2800)."}
+{"id": "mat-5-problemi-029", "explanation": "Moltiplica 163×19: 163×20=3260, 163×1=163, poi 3260-163=3097."}
+{"id": "mat-5-problemi-030", "explanation": "Moltiplica 192×17: 192×10=1920, 192×7=1344, poi 1920+1344=3264."}
+{"id": "mat-5-problemi-031", "explanation": "Moltiplica il numero di giri per la lunghezza: 77×16=1232 m (77×10=770, 77×6=462, somma 1232)."}
+{"id": "mat-5-problemi-032", "explanation": "Moltiplica il numero di giri per la lunghezza: 143×20=2860 m (moltiplica per 2 e aggiungi uno zero)."}
+{"id": "mat-5-problemi-033", "explanation": "Moltiplica il numero di classi per gli alunni per classe: 47×12=564 alunni."}
+{"id": "mat-5-problemi-034", "explanation": "Moltiplica 108×10=1080 appartamenti (moltiplicare per 10 aggiunge uno zero)."}
+{"id": "mat-5-problemi-035", "explanation": "Moltiplica il numero di piani per gli appartamenti per piano: 79×8=632."}
+{"id": "mat-5-problemi-036", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 44625-42262=2363."}
+{"id": "mat-5-problemi-037", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 31878-23766=8112."}
+{"id": "mat-5-problemi-038", "explanation": "Sottrai i posti occupati dal totale: 11398-1802=9596 posti liberi."}
+{"id": "mat-5-problemi-039", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 47870-39376=8494."}
+{"id": "mat-5-problemi-040", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 13164-6789=6375."}
+{"id": "mat-5-problemi-041", "explanation": "Sottrai i posti occupati dal totale: 20956-4854=16102 posti liberi."}
+{"id": "mat-5-problemi-042", "explanation": "Sottrai i posti occupati dal totale: 21701-12316=9385 posti liberi."}
+{"id": "mat-5-problemi-043", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 48798-33147=15651."}
+{"id": "mat-5-problemi-044", "explanation": "Sottrai i posti occupati dal totale: 22677-5869=16808 posti liberi."}
+{"id": "mat-5-problemi-045", "explanation": "Sottrai i posti occupati dal totale: 30939-18092=12847 posti liberi."}
+{"id": "mat-5-problemi-046", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 40507-14616=25891."}
+{"id": "mat-5-problemi-047", "explanation": "Sottrai i posti occupati dal totale: 48033-42450=5583 posti liberi."}
+{"id": "mat-5-problemi-048", "explanation": "Sottrai i posti occupati dal totale: 7445-1243=6202 posti liberi."}
+{"id": "mat-5-problemi-049", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 30949-1529=29420."}
+{"id": "mat-5-problemi-050", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 16152-11079=5073."}
+{"id": "mat-5-problemi-051", "explanation": "Sottrai i posti occupati dal totale: 15609-9335=6274 posti liberi."}
+{"id": "mat-5-problemi-052", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 11091-9721=1370."}
+{"id": "mat-5-problemi-053", "explanation": "Sottrai i pezzi spediti da quelli iniziali: 16588-5268=11320."}
+{"id": "mat-5-problemi-054", "explanation": "Sottrai i posti occupati dal totale: 29501-1324=28177 posti liberi."}
+{"id": "mat-5-problemi-055", "explanation": "Sottrai i posti occupati dal totale: 23127-14084=9043 posti liberi."}
+{"id": "mat-5-problemi-056", "explanation": "Per trovare km per litro dividi i km totali per i litri: 174÷6=29 km/litro."}
+{"id": "mat-5-problemi-057", "explanation": "Per trovare km per litro dividi i km totali per i litri: 550÷22=25 km/litro."}
+{"id": "mat-5-problemi-058", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 145÷5=29 sacchi."}
+{"id": "mat-5-problemi-059", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 1001÷11=91 sacchi."}
+{"id": "mat-5-problemi-060", "explanation": "Per trovare km per litro dividi i km totali per i litri: 207÷9=23 km/litro."}
+{"id": "mat-5-problemi-061", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 408÷6=68 sacchi."}
+{"id": "mat-5-problemi-062", "explanation": "Per trovare km per litro dividi i km totali per i litri: 630÷15=42 km/litro."}
+{"id": "mat-5-problemi-063", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 1780÷20=89 sacchi."}
+{"id": "mat-5-problemi-064", "explanation": "Per trovare km per litro dividi i km totali per i litri: 148÷4=37 km/litro."}
+{"id": "mat-5-problemi-065", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 30÷2=15 sacchi."}
+{"id": "mat-5-problemi-066", "explanation": "Per trovare km per litro dividi i km totali per i litri: 864÷12=72 km/litro."}
+{"id": "mat-5-problemi-067", "explanation": "Per trovare km per litro dividi i km totali per i litri: 460÷23=20 km/litro."}
+{"id": "mat-5-problemi-068", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 375÷25=15 sacchi."}
+{"id": "mat-5-problemi-069", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 2112÷24=88 sacchi."}
+{"id": "mat-5-problemi-070", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 315÷5=63 sacchi."}
+{"id": "mat-5-problemi-071", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 270÷3=90 sacchi."}
+{"id": "mat-5-problemi-072", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 228÷6=38 sacchi."}
+{"id": "mat-5-problemi-073", "explanation": "Per sapere quanti sacchi si riempiono dividi il peso totale per il peso del sacco: 1748÷23=76 sacchi."}
+{"id": "mat-5-problemi-074", "explanation": "Per trovare km per litro dividi i km totali per i litri: 891÷9=99 km/litro."}
+{"id": "mat-5-problemi-075", "explanation": "Per trovare km per litro dividi i km totali per i litri: 234÷18=13 km/litro."}
+{"id": "mat-5-problemi-076", "explanation": "Calcola i libri venduti in 5 giorni: 41×5=205; poi sottrai: 323-205=118 libri rimanenti."}
+{"id": "mat-5-problemi-077", "explanation": "Calcola i libri venduti in 2 giorni: 40×2=80; poi sottrai: 174-80=94 libri rimanenti."}
+{"id": "mat-5-problemi-078", "explanation": "Calcola i libri venduti in 2 giorni: 10×2=20; poi sottrai: 101-20=81 libri rimanenti."}
+{"id": "mat-5-problemi-079", "explanation": "Calcola i libri venduti in 5 giorni: 38×5=190; poi sottrai: 272-190=82 libri rimanenti."}
+{"id": "mat-5-problemi-080", "explanation": "Calcola i libri venduti in 4 giorni: 43×4=172; poi sottrai: 277-172=105 libri rimanenti."}
+{"id": "mat-5-problemi-081", "explanation": "Calcola i libri venduti in 4 giorni: 34×4=136; poi sottrai: 376-136=240 libri rimanenti."}
+{"id": "mat-5-problemi-082", "explanation": "Calcola i libri venduti in 3 giorni: 36×3=108; poi sottrai: 515-108=407 libri rimanenti."}
+{"id": "mat-5-problemi-083", "explanation": "Calcola i libri venduti in 3 giorni: 16×3=48; poi sottrai: 458-48=410 libri rimanenti."}
+{"id": "mat-5-problemi-084", "explanation": "Calcola i libri venduti in 4 giorni: 21×4=84; poi sottrai: 487-84=403 libri rimanenti."}
+{"id": "mat-5-problemi-085", "explanation": "Calcola i libri venduti in 3 giorni: 25×3=75; poi sottrai: 226-75=151 libri rimanenti."}
+{"id": "mat-5-problemi-086", "explanation": "Calcola i libri venduti in 4 giorni: 44×4=176; poi sottrai: 596-176=420 libri rimanenti."}
+{"id": "mat-5-problemi-087", "explanation": "Calcola i libri venduti in 4 giorni: 38×4=152; poi sottrai: 486-152=334 libri rimanenti."}
+{"id": "mat-5-problemi-088", "explanation": "Calcola i libri venduti in 5 giorni: 17×5=85; poi sottrai: 234-85=149 libri rimanenti."}
+{"id": "mat-5-problemi-089", "explanation": "Calcola i libri venduti in 3 giorni: 19×3=57; poi sottrai: 201-57=144 libri rimanenti."}
+{"id": "mat-5-problemi-090", "explanation": "Calcola i libri venduti in 4 giorni: 20×4=80; poi sottrai: 408-80=328 libri rimanenti."}
+{"id": "mat-5-problemi-091", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (84+77)×2=161×2=322 m."}
+{"id": "mat-5-problemi-092", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (36+14)×2=50×2=100 m."}
+{"id": "mat-5-problemi-093", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (21+48)×2=69×2=138 m."}
+{"id": "mat-5-problemi-094", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (60+7)×2=67×2=134 m."}
+{"id": "mat-5-problemi-095", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (52+25)×2=77×2=154 m."}
+{"id": "mat-5-problemi-096", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (67+38)×2=105×2=210 m."}
+{"id": "mat-5-problemi-097", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (97+73)×2=170×2=340 m."}
+{"id": "mat-5-problemi-098", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (35+5)×2=40×2=80 m."}
+{"id": "mat-5-problemi-099", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (11+45)×2=56×2=112 m."}
+{"id": "mat-5-problemi-100", "explanation": "Il perimetro di un rettangolo è (base+altezza)×2: (82+39)×2=121×2=242 m."}
+{"id": "mat-5-geometria-001", "explanation": "Il trapezio ha due basi parallele (maggiore bM e minore bm) e altezza h: Area=(bM+bm)×h÷2."}
+{"id": "mat-5-geometria-002", "explanation": "Il cubo ha tutti i lati uguali, quindi il volume si calcola moltiplicando il lato per sé stesso tre volte: V=lato³."}
+{"id": "mat-5-geometria-003", "explanation": "Il parallelepipedo è un solido con sei facce rettangolari: il suo volume è V=lunghezza×larghezza×altezza."}
+{"id": "mat-5-geometria-004", "explanation": "Il volume si misura in unità cubiche, cioè cm³ (centimetri cubi), dm³ o m³; non in cm² che è per le aree."}
+{"id": "mat-5-geometria-005", "explanation": "Volume del cubo = lato³ = 3×3×3 = 27 cm³."}
+{"id": "mat-5-geometria-006", "explanation": "1 dm³ equivale a 1000 cm³ perché 1 dm = 10 cm, quindi 1 dm³ = 10×10×10 = 1000 cm³."}
+{"id": "mat-5-geometria-007", "explanation": "Il cubo ha 6 facce tutte quadrate e uguali; il parallelepipedo ha 6 facce rettangolari non necessariamente uguali."}
+{"id": "mat-5-geometria-009", "explanation": "Il parallelepipedo rettangolo ha 3 coppie di facce opposte e uguali: in tutto 6 facce."}
+{"id": "mat-5-geometria-010", "explanation": "Volume del cubo = lato³ = 4×4×4 = 64 cm³."}
+{"id": "mat-5-geometria-012", "explanation": "Il cubo ha 8 vertici, uno per ogni angolo; ricorda: 8 spigoli verticali, 12 spigoli totali, 6 facce."}
+{"id": "mat-5-geometria-013", "explanation": "Volume del parallelepipedo = 4×4×5 = 80 cm³."}
+{"id": "mat-5-geometria-014", "explanation": "Area del triangolo = base×altezza÷2 = 7×20÷2 = 140÷2 = 70 cm²."}
+{"id": "mat-5-geometria-015", "explanation": "Area del triangolo = base×altezza÷2 = 5×8÷2 = 40÷2 = 20 cm²."}
+{"id": "mat-5-geometria-016", "explanation": "Volume del parallelepipedo con tutti i lati uguali a 8 cm (cubo) = 8×8×8 = 512 cm³."}
+{"id": "mat-5-geometria-017", "explanation": "Area del triangolo = 17×9÷2 = 153÷2 = 76,5 cm²; la risposta 76 è arrotondata per difetto."}
+{"id": "mat-5-geometria-018", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 9×7÷2 = 63÷2 = 31,5 cm²; la risposta 31 è arrotondata."}
+{"id": "mat-5-geometria-019", "explanation": "Area del rettangolo = base×altezza = 24×5 = 120 cm²."}
+{"id": "mat-5-geometria-020", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (12+6)×7÷2 = 18×7÷2 = 126÷2 = 63 cm²."}
+{"id": "mat-5-geometria-021", "explanation": "Volume del parallelepipedo = 4×7×2 = 56 cm³."}
+{"id": "mat-5-geometria-022", "explanation": "Area del rettangolo = base×altezza = 19×15 = 285 cm²."}
+{"id": "mat-5-geometria-023", "explanation": "Volume del cubo = lato³ = 8×8×8 = 512 cm³."}
+{"id": "mat-5-geometria-024", "explanation": "Area del rettangolo = base×altezza = 19×25 = 475 cm²."}
+{"id": "mat-5-geometria-025", "explanation": "Volume del cubo = lato³ = 3×3×3 = 27 cm³."}
+{"id": "mat-5-geometria-026", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (7+5)×12÷2 = 12×12÷2 = 144÷2 = 72 cm²."}
+{"id": "mat-5-geometria-027", "explanation": "Area del triangolo = base×altezza÷2 = 10×12÷2 = 120÷2 = 60 cm²."}
+{"id": "mat-5-geometria-028", "explanation": "Volume del cubo = lato³ = 10×10×10 = 1000 cm³."}
+{"id": "mat-5-geometria-029", "explanation": "Volume del cubo = lato³ = 6×6×6 = 216 cm³."}
+{"id": "mat-5-geometria-030", "explanation": "Volume del parallelepipedo = 10×7×5 = 350 cm³."}
+{"id": "mat-5-geometria-031", "explanation": "Area del triangolo = base×altezza÷2 = 27×6÷2 = 162÷2 = 81 cm²."}
+{"id": "mat-5-geometria-032", "explanation": "Area del rettangolo = base×altezza = 21×17 = 357 cm²."}
+{"id": "mat-5-geometria-033", "explanation": "Area del rettangolo = base×altezza = 26×29 = 754 cm²."}
+{"id": "mat-5-geometria-034", "explanation": "Area del rettangolo = base×altezza = 8×7 = 56 cm²."}
+{"id": "mat-5-geometria-035", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 20×6÷2 = 120÷2 = 60 cm²."}
+{"id": "mat-5-geometria-036", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 13×17÷2 = 221÷2 = 110,5 cm²; la risposta 110 è arrotondata."}
+{"id": "mat-5-geometria-037", "explanation": "Volume del parallelepipedo = 9×6×4 = 216 cm³."}
+{"id": "mat-5-geometria-038", "explanation": "Area del rettangolo = base×altezza = 16×23 = 368 cm²."}
+{"id": "mat-5-geometria-039", "explanation": "Area del rombo = 11×9÷2 = 99÷2 = 49,5 cm²; la risposta 49 è arrotondata per difetto."}
+{"id": "mat-5-geometria-040", "explanation": "Area del triangolo = base×altezza÷2 = 25×20÷2 = 500÷2 = 250 cm²."}
+{"id": "mat-5-geometria-041", "explanation": "Area del rettangolo = base×altezza = 6×5 = 30 cm²."}
+{"id": "mat-5-geometria-042", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 10×3÷2 = 30÷2 = 15 cm²."}
+{"id": "mat-5-geometria-043", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (6+4)×11÷2 = 10×11÷2 = 110÷2 = 55 cm²."}
+{"id": "mat-5-geometria-044", "explanation": "Volume del cubo = lato³ = 5×5×5 = 125 cm³."}
+{"id": "mat-5-geometria-045", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 4×20÷2 = 80÷2 = 40 cm²."}
+{"id": "mat-5-geometria-046", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (18+13)×12÷2 = 31×12÷2 = 372÷2 = 186 cm²."}
+{"id": "mat-5-geometria-047", "explanation": "Area del rettangolo = base×altezza = 14×23 = 322 cm²."}
+{"id": "mat-5-geometria-048", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (14+5)×9÷2 = 19×9÷2 = 171÷2 = 85,5 cm²; la risposta 85 è arrotondata."}
+{"id": "mat-5-geometria-049", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 11×4÷2 = 44÷2 = 22 cm²."}
+{"id": "mat-5-geometria-050", "explanation": "Volume del cubo = lato³ = 4×4×4 = 64 cm³."}
+{"id": "mat-5-geometria-051", "explanation": "Area del rettangolo = base×altezza = 23×15 = 345 cm²."}
+{"id": "mat-5-geometria-052", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 10×6÷2 = 60÷2 = 30 cm²."}
+{"id": "mat-5-geometria-053", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (11+6)×9÷2 = 17×9÷2 = 153÷2 = 76,5 cm²; arrotondata a 76."}
+{"id": "mat-5-geometria-054", "explanation": "Area del rettangolo = base×altezza = 11×21 = 231 cm²."}
+{"id": "mat-5-geometria-055", "explanation": "Volume del parallelepipedo = 2×8×3 = 48 cm³."}
+{"id": "mat-5-geometria-056", "explanation": "Volume del parallelepipedo = 8×4×9 = 288 cm³."}
+{"id": "mat-5-geometria-057", "explanation": "Volume del parallelepipedo = 3×5×8 = 120 cm³."}
+{"id": "mat-5-geometria-058", "explanation": "Volume del cubo = lato³ = 2×2×2 = 8 cm³."}
+{"id": "mat-5-geometria-059", "explanation": "Area del rettangolo = base×altezza = 25×21 = 525 cm²."}
+{"id": "mat-5-geometria-060", "explanation": "Area del triangolo = base×altezza÷2 = 17×10÷2 = 170÷2 = 85 cm²."}
+{"id": "mat-5-geometria-061", "explanation": "Area del triangolo = base×altezza÷2 = 28×5÷2 = 140÷2 = 70 cm²."}
+{"id": "mat-5-geometria-062", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 9×20÷2 = 180÷2 = 90 cm²."}
+{"id": "mat-5-geometria-063", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 2×12÷2 = 24÷2 = 12 cm²."}
+{"id": "mat-5-geometria-064", "explanation": "Area del rettangolo = base×altezza = 24×8 = 192 cm²."}
+{"id": "mat-5-geometria-065", "explanation": "Area del rettangolo = base×altezza = 19×27 = 513 cm²."}
+{"id": "mat-5-geometria-066", "explanation": "Area del triangolo = base×altezza÷2 = 30×7÷2 = 210÷2 = 105 cm²."}
+{"id": "mat-5-geometria-067", "explanation": "Volume del parallelepipedo = 5×3×6 = 90 cm³."}
+{"id": "mat-5-geometria-068", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (15+4)×11÷2 = 19×11÷2 = 209÷2 = 104,5 cm²; arrotondata a 104."}
+{"id": "mat-5-geometria-069", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (8+3)×11÷2 = 11×11÷2 = 121÷2 = 60,5 cm²; arrotondata a 60 (per difetto)."}
+{"id": "mat-5-geometria-070", "explanation": "Area del triangolo = base×altezza÷2 = 14×11÷2 = 154÷2 = 77 cm²."}
+{"id": "mat-5-geometria-071", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 18×12÷2 = 216÷2 = 108 cm²."}
+{"id": "mat-5-geometria-072", "explanation": "Volume del parallelepipedo = 4×8×4 = 128 cm³."}
+{"id": "mat-5-geometria-073", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (12+8)×3÷2 = 20×3÷2 = 60÷2 = 30 cm²."}
+{"id": "mat-5-geometria-074", "explanation": "Area del rettangolo = base×altezza = 12×23 = 276 cm²."}
+{"id": "mat-5-geometria-075", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (18+7)×5÷2 = 25×5÷2 = 125÷2 = 62,5 cm²; arrotondata a 62."}
+{"id": "mat-5-geometria-076", "explanation": "Area del rettangolo = base×altezza = 9×6 = 54 cm²."}
+{"id": "mat-5-geometria-077", "explanation": "Area del rombo = 17×5÷2 = 85÷2 = 42,5 cm²; la risposta 42 è arrotondata per difetto."}
+{"id": "mat-5-geometria-078", "explanation": "Area del rombo = diagonale1×diagonale2÷2 = 8×12÷2 = 96÷2 = 48 cm²."}
+{"id": "mat-5-geometria-079", "explanation": "Volume del parallelepipedo = 9×3×7 = 189 cm³."}
+{"id": "mat-5-geometria-080", "explanation": "Area del triangolo = 25×15÷2 = 375÷2 = 187,5 cm²; la risposta 187 è arrotondata per difetto."}
+{"id": "mat-5-geometria-081", "explanation": "Volume del parallelepipedo = 8×7×6 = 336 cm³."}
+{"id": "mat-5-geometria-082", "explanation": "Area del rombo = 11×18÷2 = 198÷2 = 99 cm²."}
+{"id": "mat-5-geometria-083", "explanation": "Volume del parallelepipedo = 8×4×8 = 256 cm³."}
+{"id": "mat-5-geometria-084", "explanation": "Volume del parallelepipedo = 5×9×7 = 315 cm³."}
+{"id": "mat-5-geometria-085", "explanation": "Volume del parallelepipedo = 8×2×9 = 144 cm³."}
+{"id": "mat-5-geometria-086", "explanation": "Area del trapezio = (bM+bm)×h÷2 = (16+2)×7÷2 = 18×7÷2 = 126÷2 = 63 cm²."}
+{"id": "mat-5-geometria-087", "explanation": "Area del rettangolo = base×altezza = 30×24 = 720 cm²."}
+{"id": "mat-5-geometria-088", "explanation": "Volume del parallelepipedo = 2×5×7 = 70 cm³."}
+{"id": "mat-5-geometria-089", "explanation": "Area del rettangolo = base×altezza = 17×27 = 459 cm²."}
+{"id": "mat-5-logica_e_dati-001", "explanation": "La probabilità 0 significa che l'evento non può mai accadere: è impossibile (es. pescare un jolly da un mazzo normale)."}
+{"id": "mat-5-logica_e_dati-002", "explanation": "La probabilità 1 significa che l'evento accade sempre, senza eccezioni: è certo (es. tirare un dado e ottenere un numero tra 1 e 6)."}
+{"id": "mat-5-logica_e_dati-003", "explanation": "La probabilità si calcola dividendo i casi favorevoli per i casi totali possibili: P = casi favorevoli ÷ casi totali."}
+{"id": "mat-5-logica_e_dati-004", "explanation": "Ci sono 4 assi in 40 carte: P = 4÷40 = 1÷10 = 1/10. Semplifica dividendo numeratore e denominatore per 4."}
+{"id": "mat-5-logica_e_dati-005", "explanation": "La moda è il valore che compare più volte: 7 appare 3 volte, 3 appare 2 volte, 2 e 5 appaiono 1 volta ciascuno."}
+{"id": "mat-5-logica_e_dati-006", "explanation": "Per trovare la mediana ordina i numeri (1,3,5,7,9) e prendi quello al centro: il terzo su 5 è 5."}
+{"id": "mat-5-logica_e_dati-007", "explanation": "Il campo di variazione (o escursione) è la differenza tra il valore massimo e il valore minimo di un insieme di dati."}
+{"id": "mat-5-logica_e_dati-008", "explanation": "Un settore di 90° è un quarto di 360°: 90°÷360° = 1/4, quindi rappresenta 1/4 del totale."}
+{"id": "mat-5-logica_e_dati-009", "explanation": "Il grafico lineare (o a linea spezzata) mostra come un valore cambia nel tempo collegando i punti con segmenti."}
+{"id": "mat-5-logica_e_dati-010", "explanation": "Ci sono 10 palline in tutto (3+3+4=10); le rosse sono 3: P = 3÷10 = 3/10."}
+{"id": "mat-5-logica_e_dati-011", "explanation": "Ogni moneta ha 2 facce (T=testa, C=croce): le combinazioni sono TT, TC, CT, CC → 4 possibilità in tutto."}
+{"id": "mat-5-logica_e_dati-012", "explanation": "Con 6 valori pari la mediana è la media dei due valori centrali (3° e 4°): (6+8)÷2 = 14÷2 = 7."}
+{"id": "mat-5-logica_e_dati-013", "explanation": "La frequenza relativa indica quante volte un evento si verifica rispetto al totale, espressa come percentuale o frazione."}
+{"id": "mat-5-logica_e_dati-014", "explanation": "La media si calcola sommando tutti i valori e dividendo per quanti sono: (15+25+35+45)÷4 = 120÷4 = 30."}
+{"id": "mat-5-logica_e_dati-015", "explanation": "Per calcolare la media di 5 numeri: somma tutti e cinque i valori, poi dividi il totale per 5."}
+{"id": "mat-5-logica_e_dati-016", "explanation": "La serie è formata dai quadrati perfetti: 1²,2²,3²,4²,5²,6²; il prossimo è 7²=49."}
+{"id": "mat-5-logica_e_dati-017", "explanation": "La serie di Fibonacci: ogni numero è la somma dei due precedenti (8+13=21)."}
+{"id": "mat-5-logica_e_dati-018", "explanation": "La serie si dimezza ogni volta (÷2): 128,64,32,16,8 → il prossimo è 8÷2=4."}
+{"id": "mat-5-logica_e_dati-019", "explanation": "La serie moltiplica per 3 ogni volta: 3,9,27,81,243 → il prossimo è 243×3=729."}
+{"id": "mat-5-logica_e_dati-020", "explanation": "Ogni termine aumenta di 1 più del precedente: +2,+3,+4,+5,+6,+7 → 21+7=28."}
+{"id": "mat-5-logica_e_dati-021", "explanation": "La serie diminuisce di 5 ogni volta: 100,95,90,85,80 → il prossimo è 80-5=75."}
+{"id": "mat-5-logica_e_dati-022", "explanation": "La serie moltiplica per 3 ogni volta: 2,6,18,54,162 → il prossimo è 162×3=486."}
+{"id": "mat-5-logica_e_dati-023", "explanation": "Somma tutti i valori: 43+34+29+9 = 115; poi dividi per 4: 115÷4 = 28.75."}
+{"id": "mat-5-logica_e_dati-024", "explanation": "Somma tutti i valori: 56+67+32+70 = 225; poi dividi per 4: 225÷4 = 56.25."}
+{"id": "mat-5-logica_e_dati-025", "explanation": "Somma tutti i valori: 32+16+32+24 = 104; poi dividi per 4: 104÷4 = 26."}
+{"id": "mat-5-logica_e_dati-026", "explanation": "Somma tutti i valori: 13+78+53+78 = 222; poi dividi per 4: 222÷4 = 55.5."}
+{"id": "mat-5-logica_e_dati-027", "explanation": "Somma tutti i valori: 33+34+18+49 = 134; poi dividi per 4: 134÷4 = 33.5."}
+{"id": "mat-5-logica_e_dati-028", "explanation": "Somma tutti i valori: 23+74+70+53 = 220; poi dividi per 4: 220÷4 = 55."}
+{"id": "mat-5-logica_e_dati-029", "explanation": "Somma tutti i valori: 54+9+69+76 = 208; poi dividi per 4: 208÷4 = 52."}
+{"id": "mat-5-logica_e_dati-030", "explanation": "Somma tutti i valori: 43+44+31+57 = 175; poi dividi per 4: 175÷4 = 43.75."}
+{"id": "mat-5-logica_e_dati-031", "explanation": "Somma tutti i valori: 36+49+38+42 = 165; poi dividi per 4: 165÷4 = 41.25."}
+{"id": "mat-5-logica_e_dati-032", "explanation": "Somma tutti i valori: 7+17+27+69 = 120; poi dividi per 4: 120÷4 = 30."}
+{"id": "mat-5-logica_e_dati-033", "explanation": "Somma tutti i valori: 56+36+28+54 = 174; poi dividi per 4: 174÷4 = 43.5."}
+{"id": "mat-5-logica_e_dati-034", "explanation": "Somma tutti i valori: 65+35+22+39 = 161; poi dividi per 4: 161÷4 = 40.25."}
+{"id": "mat-5-logica_e_dati-035", "explanation": "Somma tutti i valori: 61+54+69+61 = 245; poi dividi per 4: 245÷4 = 61.25."}
+{"id": "mat-5-logica_e_dati-036", "explanation": "Somma tutti i valori: 62+14+6+40 = 122; poi dividi per 4: 122÷4 = 30.5."}
+{"id": "mat-5-logica_e_dati-037", "explanation": "Somma tutti i valori: 34+26+69+25 = 154; poi dividi per 4: 154÷4 = 38.5."}
+{"id": "mat-5-logica_e_dati-038", "explanation": "Somma tutti i valori: 70+37+46+11 = 164; poi dividi per 4: 164÷4 = 41."}
+{"id": "mat-5-logica_e_dati-039", "explanation": "Somma tutti i valori: 34+30+34+59 = 157; poi dividi per 4: 157÷4 = 39.25."}
+{"id": "mat-5-logica_e_dati-040", "explanation": "Somma tutti i valori: 51+50+74+39 = 214; poi dividi per 4: 214÷4 = 53.5."}
+{"id": "mat-5-logica_e_dati-041", "explanation": "Somma tutti i valori: 77+60+15+66 = 218; poi dividi per 4: 218÷4 = 54.5."}
+{"id": "mat-5-logica_e_dati-042", "explanation": "Somma tutti i valori: 65+75+63+73 = 276; poi dividi per 4: 276÷4 = 69."}
+{"id": "mat-5-logica_e_dati-043", "explanation": "Somma tutti i valori: 48+33+78+59 = 218; poi dividi per 4: 218÷4 = 54.5."}
+{"id": "mat-5-logica_e_dati-044", "explanation": "Somma tutti i valori: 60+74+37+32 = 203; poi dividi per 4: 203÷4 = 50.75."}
+{"id": "mat-5-logica_e_dati-045", "explanation": "Somma tutti i valori: 31+47+49+79 = 206; poi dividi per 4: 206÷4 = 51.5."}
+{"id": "mat-5-logica_e_dati-046", "explanation": "Somma tutti i valori: 51+47+37+46 = 181; poi dividi per 4: 181÷4 = 45.25."}
+{"id": "mat-5-logica_e_dati-047", "explanation": "Somma tutti i valori: 15+32+73+10 = 130; poi dividi per 4: 130÷4 = 32.5."}
+{"id": "mat-5-logica_e_dati-048", "explanation": "Somma tutti i valori: 77+12+57+63 = 209; poi dividi per 4: 209÷4 = 52.25."}
+{"id": "mat-5-logica_e_dati-049", "explanation": "Somma tutti i valori: 42+13+39+78 = 172; poi dividi per 4: 172÷4 = 43."}
+{"id": "mat-5-logica_e_dati-050", "explanation": "Somma tutti i valori: 12+50+67+36 = 165; poi dividi per 4: 165÷4 = 41.25."}
+{"id": "mat-5-logica_e_dati-051", "explanation": "Somma tutti i valori: 45+37+44+56 = 182; poi dividi per 4: 182÷4 = 45.5."}
+{"id": "mat-5-logica_e_dati-052", "explanation": "Somma tutti i valori: 38+73+53+57 = 221; poi dividi per 4: 221÷4 = 55.25."}
+{"id": "mat-5-logica_e_dati-053", "explanation": "Somma tutti i valori: 7+52+27+30 = 116; poi dividi per 4: 116÷4 = 29."}
+{"id": "mat-5-logica_e_dati-054", "explanation": "Somma tutti i valori: 53+61+37+60 = 211; poi dividi per 4: 211÷4 = 52.75."}
+{"id": "mat-5-logica_e_dati-055", "explanation": "Somma tutti i valori: 26+17+42+51 = 136; poi dividi per 4: 136÷4 = 34."}
+{"id": "mat-5-logica_e_dati-056", "explanation": "Somma tutti i valori: 29+61+80+62 = 232; poi dividi per 4: 232÷4 = 58."}
+{"id": "mat-5-logica_e_dati-057", "explanation": "Somma tutti i valori: 22+80+22+47 = 171; poi dividi per 4: 171÷4 = 42.75."}
+{"id": "mat-5-logica_e_dati-058", "explanation": "Somma tutti i valori: 66+55+23+69 = 213; poi dividi per 4: 213÷4 = 53.25."}
+{"id": "mat-5-logica_e_dati-059", "explanation": "Somma tutti i valori: 72+52+16+56 = 196; poi dividi per 4: 196÷4 = 49."}
+{"id": "mat-5-logica_e_dati-060", "explanation": "Somma tutti i valori: 25+18+28+33 = 104; poi dividi per 4: 104÷4 = 26."}
+{"id": "mat-5-logica_e_dati-061", "explanation": "Somma tutti i valori: 31+36+26+49 = 142; poi dividi per 4: 142÷4 = 35.5."}
+{"id": "mat-5-logica_e_dati-062", "explanation": "Somma tutti i valori: 59+55+9+51 = 174; poi dividi per 4: 174÷4 = 43.5."}
+{"id": "mat-5-logica_e_dati-063", "explanation": "Somma tutti i valori: 42+78+74+69 = 263; poi dividi per 4: 263÷4 = 65.75."}
+{"id": "mat-5-logica_e_dati-064", "explanation": "Somma tutti i valori: 66+23+6+71 = 166; poi dividi per 4: 166÷4 = 41.5."}
+{"id": "mat-5-logica_e_dati-065", "explanation": "Somma tutti i valori: 8+76+13+77 = 174; poi dividi per 4: 174÷4 = 43.5."}
+{"id": "mat-5-logica_e_dati-066", "explanation": "Somma tutti i valori: 66+9+37+28 = 140; poi dividi per 4: 140÷4 = 35."}
+{"id": "mat-5-logica_e_dati-067", "explanation": "Somma tutti i valori: 43+53+57+47 = 200; poi dividi per 4: 200÷4 = 50."}
+{"id": "mat-5-logica_e_dati-068", "explanation": "Somma tutti i valori: 6+52+17+62 = 137; poi dividi per 4: 137÷4 = 34.25."}
+{"id": "mat-5-logica_e_dati-069", "explanation": "Somma tutti i valori: 14+67+6+27 = 114; poi dividi per 4: 114÷4 = 28.5."}
+{"id": "mat-5-logica_e_dati-070", "explanation": "Somma tutti i valori: 11+72+19+43 = 145; poi dividi per 4: 145÷4 = 36.25."}
+{"id": "mat-5-logica_e_dati-071", "explanation": "Somma tutti i valori: 58+35+26+61 = 180; poi dividi per 4: 180÷4 = 45."}
+{"id": "mat-5-logica_e_dati-072", "explanation": "Somma tutti i valori: 49+72+6+38 = 165; poi dividi per 4: 165÷4 = 41.25."}
+{"id": "mat-5-logica_e_dati-073", "explanation": "Somma tutti i valori: 12+14+59+30 = 115; poi dividi per 4: 115÷4 = 28.75."}
+{"id": "mat-5-logica_e_dati-074", "explanation": "Somma tutti i valori: 53+53+60+6 = 172; poi dividi per 4: 172÷4 = 43."}
+{"id": "mat-5-logica_e_dati-075", "explanation": "Somma tutti i valori: 46+76+35+59 = 216; poi dividi per 4: 216÷4 = 54."}
+{"id": "mat-5-logica_e_dati-076", "explanation": "Somma tutti i valori: 14+68+11+20 = 113; poi dividi per 4: 113÷4 = 28.25."}
+{"id": "mat-5-logica_e_dati-077", "explanation": "Somma tutti i valori: 17+42+38+77 = 174; poi dividi per 4: 174÷4 = 43.5."}
+{"id": "mat-5-logica_e_dati-078", "explanation": "Somma tutti i valori: 64+11+45+12 = 132; poi dividi per 4: 132÷4 = 33."}
+{"id": "mat-5-logica_e_dati-079", "explanation": "Somma tutti i valori: 36+32+11+49 = 128; poi dividi per 4: 128÷4 = 32."}
+{"id": "mat-5-logica_e_dati-080", "explanation": "Somma tutti i valori: 16+38+60+39 = 153; poi dividi per 4: 153÷4 = 38.25."}
+{"id": "mat-5-logica_e_dati-081", "explanation": "Somma tutti i valori: 10+29+71+63 = 173; poi dividi per 4: 173÷4 = 43.25."}
+{"id": "mat-5-logica_e_dati-082", "explanation": "Somma tutti i valori: 15+64+40+13 = 132; poi dividi per 4: 132÷4 = 33."}
+{"id": "mat-5-logica_e_dati-083", "explanation": "Somma tutti i valori: 51+43+49+20 = 163; poi dividi per 4: 163÷4 = 40.75."}
+{"id": "mat-5-logica_e_dati-084", "explanation": "Somma tutti i valori: 12+24+74+72 = 182; poi dividi per 4: 182÷4 = 45.5."}
+{"id": "mat-5-logica_e_dati-085", "explanation": "Somma tutti i valori: 73+62+33+31 = 199; poi dividi per 4: 199÷4 = 49.75."}
+{"id": "mat-5-logica_e_dati-086", "explanation": "Somma tutti i valori: 57+33+18+59 = 167; poi dividi per 4: 167÷4 = 41.75."}
+{"id": "mat-5-logica_e_dati-087", "explanation": "Somma tutti i valori: 76+71+59+9 = 215; poi dividi per 4: 215÷4 = 53.75."}
+{"id": "mat-5-logica_e_dati-088", "explanation": "Somma tutti i valori: 13+58+35+54 = 160; poi dividi per 4: 160÷4 = 40."}
+{"id": "mat-5-logica_e_dati-089", "explanation": "Somma tutti i valori: 25+10+63+64 = 162; poi dividi per 4: 162÷4 = 40.5."}
+{"id": "mat-5-logica_e_dati-090", "explanation": "Somma tutti i valori: 50+57+62+65 = 234; poi dividi per 4: 234÷4 = 58.5."}
+{"id": "mat-5-logica_e_dati-091", "explanation": "Somma tutti i valori: 30+75+50+15 = 170; poi dividi per 4: 170÷4 = 42.5."}
+{"id": "mat-5-logica_e_dati-092", "explanation": "Somma tutti i valori: 23+66+9+10 = 108; poi dividi per 4: 108÷4 = 27."}
+{"id": "mat-5-logica_e_dati-093", "explanation": "Somma tutti i valori: 65+37+67+32 = 201; poi dividi per 4: 201÷4 = 50.25."}
+{"id": "mat-5-logica_e_dati-094", "explanation": "Somma tutti i valori: 33+61+79+19 = 192; poi dividi per 4: 192÷4 = 48."}
+{"id": "mat-5-logica_e_dati-095", "explanation": "Somma tutti i valori: 7+25+22+11 = 65; poi dividi per 4: 65÷4 = 16.25."}
+{"id": "mat-5-logica_e_dati-096", "explanation": "Somma tutti i valori: 62+58+55+28 = 203; poi dividi per 4: 203÷4 = 50.75."}
+{"id": "mat-5-logica_e_dati-097", "explanation": "Somma tutti i valori: 5+28+58+67 = 158; poi dividi per 4: 158÷4 = 39.5."}
+{"id": "mat-5-logica_e_dati-098", "explanation": "Somma tutti i valori: 33+18+19+79 = 149; poi dividi per 4: 149÷4 = 37.25."}
+{"id": "mat-5-logica_e_dati-099", "explanation": "Somma tutti i valori: 60+69+49+51 = 229; poi dividi per 4: 229÷4 = 57.25."}
