@@ -31117,16 +31117,16 @@
    "area": "regioni_antropica",
    "subarea": "regioni_italiane",
    "difficulty": 2,
-   "question": "Con quali Paesi confina la Lombardia?",
+   "question": "Con quale Stato estero confina la Lombardia?",
    "options": [
-    "Con Francia e Monaco",
-    "Con Svizzera e Austria",
-    "Con Slovenia e Croazia",
-    "Con Austria e Ungheria"
+    "Con la Svizzera",
+    "Con la Francia",
+    "Con l'Austria",
+    "Con la Slovenia"
    ],
-   "answerIndex": 1,
-   "answer": "Con Svizzera e Austria",
-   "explanation": "La Lombardia è una regione del Nord Italia che confina a nord con la Svizzera e con il Trentino-Alto Adige (confinante con l'Austria). I confini di montagna caratterizzano il paesaggio alpino lombardo.",
+   "answerIndex": 0,
+   "answer": "Con la Svizzera",
+   "explanation": "La Lombardia confina a nord con un solo Stato estero, la Svizzera, lungo le Alpi. Gli altri confini sono con regioni italiane: Piemonte, Trentino-Alto Adige, Veneto ed Emilia-Romagna.",
    "active": true,
    "tag": "geografia;regioni_italiane;classe_4;primaria",
    "tags": [

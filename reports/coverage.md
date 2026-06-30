@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 30/06/2026, 19:42:55
+Data generazione: 30/06/2026, 21:45:02
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -245,12 +245,12 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | animali                | 0     | 7  ⚠️  | 0     | 0     | 7    
 | animali_habitat        | 5  ⚠️  | 0     | 0     | 0     | 5    
 | apparati_e_sistemi     | 0     | 0     | 0     | 24    | 24   
-| applicazione           | 0     | 58    | 76    | 25    | 159  
+| applicazione           | 0     | 10 ⚠️  | 8  ⚠️  | 5  ⚠️  | 23   
 | aria                   | 0     | 0     | 7  ⚠️  | 0     | 7    
 | aria_e_suolo           | 0     | 6  ⚠️  | 0     | 0     | 6    
 | astronomia_base        | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 3  ⚠️  | 9    
 | base                   | 0     | 7  ⚠️  | 0     | 0     | 7    
-| biodiversita           | 0     | 0     | 39    | 0     | 39   
+| biodiversita           | 0     | 0     | 5  ⚠️  | 0     | 5    
 | botanica               | 0     | 0     | 7  ⚠️  | 0     | 7    
 | catena_alimentare      | 3  ⚠️  | 4  ⚠️  | 0     | 0     | 7    
 | catena_rete            | 0     | 3  ⚠️  | 0     | 0     | 3    
@@ -268,7 +268,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | dati_ambiente          | 0     | 0     | 3  ⚠️  | 0     | 3    
 | ecosistemi             | 3  ⚠️  | 11 ⚠️  | 25    | 4  ⚠️  | 43   
 | educazione_ambientale  | 0     | 0     | 4  ⚠️  | 0     | 4    
-| educazione_salute      | 0     | 0     | 0     | 37    | 37   
+| educazione_salute      | 0     | 0     | 0     | 3  ⚠️  | 3    
 | energia                | 1  ⚠️  | 2  ⚠️  | 2  ⚠️  | 25    | 30   
 | esperimenti            | 2  ⚠️  | 3  ⚠️  | 4  ⚠️  | 3  ⚠️  | 12   
 | esperimento            | 0     | 1  ⚠️  | 0     | 0     | 1    
@@ -276,7 +276,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | forze                  | 0     | 0     | 0     | 4  ⚠️  | 4    
 | forze_e_movimento      | 0     | 0     | 6  ⚠️  | 0     | 6    
 | forze_luce_suono       | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 3  ⚠️  | 9    
-| funzioni_vitali        | 0     | 10 ⚠️  | 16    | 0     | 26   
+| funzioni_vitali        | 0     | 10 ⚠️  | 3  ⚠️  | 0     | 13   
 | habitat                | 0     | 10 ⚠️  | 0     | 0     | 10   
 | habitat_adattamento    | 7  ⚠️  | 0     | 0     | 0     | 7    
 | ipotesi                | 0     | 1  ⚠️  | 0     | 0     | 1    
@@ -291,7 +291,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | metodo_scientifico     | 0     | 0     | 0     | 8  ⚠️  | 8    
 | metodo_strumenti       | 0     | 0     | 5  ⚠️  | 0     | 5    
 | misurazioni            | 0     | 0     | 2  ⚠️  | 0     | 2    
-| movimenti_terra        | 0     | 0     | 0     | 25    | 25   
+| movimenti_terra        | 0     | 0     | 0     | 5  ⚠️  | 5    
 | nutrizione             | 0     | 3  ⚠️  | 0     | 0     | 3    
 | organi_apparati        | 0     | 0     | 16    | 20    | 36   
 | organi_di_senso        | 0     | 0     | 0     | 5  ⚠️  | 5    
@@ -306,7 +306,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | piante_osservazione    | 5  ⚠️  | 0     | 0     | 0     | 5    
 | pratica                | 0     | 21    | 0     | 0     | 21   
 | proprieta              | 0     | 5  ⚠️  | 0     | 0     | 5    
-| riconoscimento         | 0     | 20    | 0     | 0     | 20   
+| riconoscimento         | 0     | 5  ⚠️  | 0     | 0     | 5    
 | riconoscimento_non_viventi| 1  ⚠️  | 0     | 0     | 0     | 1    
 | riconoscimento_viventi | 1  ⚠️  | 0     | 0     | 0     | 1    
 | salute                 | 5  ⚠️  | 3  ⚠️  | 3  ⚠️  | 5  ⚠️  | 16   
@@ -317,7 +317,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | sequenza               | 0     | 1  ⚠️  | 0     | 0     | 1    
 | sistema_solare         | 0     | 0     | 14 ⚠️  | 18    | 32   
 | sostenibilita          | 10 ⚠️  | 0     | 0     | 0     | 10   
-| sostenibilita_energetica| 0     | 0     | 0     | 27    | 27   
+| sostenibilita_energetica| 0     | 0     | 0     | 3  ⚠️  | 3    
 | stagioni               | 23    | 0     | 0     | 0     | 23   
 | stagioni_e_ambiente    | 3  ⚠️  | 0     | 0     | 0     | 3    
 | stati                  | 0     | 4  ⚠️  | 0     | 0     | 4    
@@ -331,7 +331,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | vertebrati_invertebrati| 0     | 2  ⚠️  | 0     | 0     | 2    
 | viventi_non_viventi    | 12 ⚠️  | 0     | 0     | 0     | 12   
 | zoologia               | 0     | 0     | 7  ⚠️  | 0     | 7    
-| TOTAL                   |        |        |        |        | 1119  
+| TOTAL                   |        |        |        |        | 843   
 
 ## ⚠️  Celle sotto soglia (< 15 domande)
 
@@ -426,12 +426,15 @@ scienze         | ciclo_vitale              | c3    | 3
 scienze         | classificazione           | c5    | 3
 scienze         | dati_ambiente             | c4    | 3
 scienze         | ecosistemi                | c2    | 3
+scienze         | educazione_salute         | c5    | 3
 scienze         | esperimenti               | c3    | 3
 scienze         | esperimenti               | c5    | 3
 scienze         | forze_luce_suono          | c5    | 3
+scienze         | funzioni_vitali           | c4    | 3
 scienze         | nutrizione                | c3    | 3
 scienze         | salute                    | c3    | 3
 scienze         | salute                    | c4    | 3
+scienze         | sostenibilita_energetica  | c5    | 3
 scienze         | stagioni_e_ambiente       | c2    | 3
 matematica      | ragionamento              | c3    | 4
 problemi        | divisione                 | c3    | 4
@@ -485,16 +488,20 @@ geografia       | riduzione_in_scala_ingenua | c2    | 5
 storia          | approfondimenti           | c5    | 5
 storia          | confronti_e_lessico       | c5    | 5
 scienze         | animali_habitat           | c2    | 5
+scienze         | applicazione              | c5    | 5
+scienze         | biodiversita              | c4    | 5
 scienze         | corpo_salute              | c2    | 5
 scienze         | luce_e_suono              | c5    | 5
 scienze         | materia_e_calore          | c5    | 5
 scienze         | materiali_e_oggetti       | c2    | 5
 scienze         | metodo_strumenti          | c4    | 5
+scienze         | movimenti_terra           | c5    | 5
 scienze         | organi_di_senso           | c5    | 5
 scienze         | osservazione              | c4    | 5
 scienze         | osservazione_dati         | c3    | 5
 scienze         | piante_osservazione       | c2    | 5
 scienze         | proprieta                 | c3    | 5
+scienze         | riconoscimento            | c3    | 5
 scienze         | salute                    | c2    | 5
 scienze         | salute                    | c5    | 5
 scienze         | suolo                     | c4    | 5
@@ -547,6 +554,7 @@ storia          | linea_del_tempo           | c5    | 8
 storia          | linea_tempo_e_periodi     | c3    | 8
 storia          | sintesi                   | c4    | 8
 scienze         | acqua_e_stati             | c2    | 8
+scienze         | applicazione              | c4    | 8
 scienze         | materia                   | c4    | 8
 scienze         | metodo_scientifico        | c5    | 8
 scienze         | osservazione              | c2    | 8
@@ -603,6 +611,7 @@ storia          | vita_nel_tempo            | c3    | 10
 storia          | vita_nomade               | c3    | 10
 storia          | vita_quotidiana           | c3    | 10
 storia          | vita_quotidiana           | c4    | 10
+scienze         | applicazione              | c3    | 10
 scienze         | fenomeni_fisici           | c5    | 10
 scienze         | funzioni_vitali           | c3    | 10
 scienze         | habitat                   | c3    | 10
@@ -650,4 +659,4 @@ storia          | origini_e_mito            | c5    | 14
 scienze         | classificazione_base      | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 312
+Totale celle sotto soglia: 321

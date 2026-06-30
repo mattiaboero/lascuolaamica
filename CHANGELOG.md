@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.11.4 - 2026-06-30
+
+### Fixed
+- content(QA pedagogico): rimosso il riferimento penzolante "nella domanda n.X" da 287 domande di scienze (artefatto di numerazione CSV, privo di senso nel quiz mescolato). Gli stem ripuliti collassavano in soli 11 quesiti unici: **rimossi 276 duplicati ridondanti** (stesso testo+risposta+opzioni), tenuti gli 11 originali. Le domande gonfiate erano live e servite.
+- content(geografia): corretta `geo-4-regioni_italiane-9097` — "la Lombardia confina con Svizzera e Austria" era errato (l'unico Stato estero confinante è la Svizzera). Domanda riformulata e spiegazione corretta.
+
+### Changed
+- content: totale domande **9.900 → 9.624** (cull duplicati scienze). Aggiornati `llms.txt`, `README.md`, `json/index.json` (`totalQuestions` + stats scienze).
+- test(content): verifica automatica aritmetica su matematica+problemi — 736 quesiti computabili controllati, 0 errori. Confermata l'integrità meccanica (l'audit già copre answerIndex↔answer, risposta∈opzioni, duplicati).
+- chore: bump versione `4.11.3` → `4.11.4` in `app-version.js`, `package.json`, `llms.txt`; rigenerato `reports/coverage.md`.
+
 ## 4.11.3 - 2026-06-30
 
 ### Fixed
