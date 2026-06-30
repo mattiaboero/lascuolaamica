@@ -20355,7 +20355,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Quale frase usa correttamente il verbo 'essere' come ausiliare?",
    "options": [
@@ -20387,7 +20387,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale parola è un avverbio di modo?",
    "options": [
@@ -20419,7 +20419,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "Quale congiunzione si usa per unire due idee opposte?",
    "options": [
@@ -20451,7 +20451,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale di queste parole è una preposizione?",
    "options": [
@@ -20483,7 +20483,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "In quale frase il verbo è usato in modo riflessivo?",
    "options": [
@@ -20515,7 +20515,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "lingua",
    "difficulty": 3,
    "question": "Quale frase contiene una similitudine?",
    "options": [
@@ -20547,7 +20547,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale parola indica il modo in cui si compie un'azione nella frase: 'Luca cammina lentamente'?",
    "options": [
@@ -20579,7 +20579,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale parola indica una qualità del nome 'cielo' nella frase: 'Il cielo azzurro brillava'?",
    "options": [
@@ -20611,7 +20611,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "Quale coppia di parole è formata da aggettivo e suo superlativo assoluto?",
    "options": [
@@ -20643,7 +20643,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Che tipo di frase è: 'Non toccare il vaso!'?",
    "options": [
@@ -20675,7 +20675,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "Quale pronome personale sostituisce correttamente 'Sofia e Luca' nella frase 'Sofia e Luca giocano'?",
    "options": [
@@ -20707,7 +20707,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale parola è un nome astratto?",
    "options": [
@@ -20739,7 +20739,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "Quale frase usa correttamente il discorso diretto?",
    "options": [
@@ -20771,7 +20771,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale parola è un nome collettivo?",
    "options": [
@@ -20803,7 +20803,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "In quale frase l'uso del congiuntivo è corretto?",
    "options": [
@@ -20835,7 +20835,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Quale parola indica un'azione che sta avvenendo proprio adesso?",
    "options": [
@@ -20867,7 +20867,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "ortografia",
    "difficulty": 3,
    "question": "Quale frase usa correttamente 'sé' con accento?",
    "options": [
@@ -21251,7 +21251,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Quale frase usa correttamente la virgola prima di 'ma'?",
    "options": [
@@ -24963,7 +24963,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Cosa studia la morfologia?",
    "options": [
@@ -24995,7 +24995,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Quale proverbio significa che è meglio avere qualcosa di sicuro che rischiare per averne di più?",
    "options": [
@@ -25027,7 +25027,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Che cosa sono i 'falsi amici' nel lessico?",
    "options": [
@@ -25059,7 +25059,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 3,
    "question": "Quale delle seguenti è una parola polisemica?",
    "options": [
@@ -25091,7 +25091,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Cosa significa il proverbio 'Chi semina vento raccoglie tempesta'?",
    "options": [
@@ -25123,7 +25123,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Qual è la differenza tra 'sinonimo' e 'omonimo'?",
    "options": [
@@ -25155,7 +25155,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 3,
    "question": "A cosa serve il dizionario?",
    "options": [
@@ -25187,7 +25187,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Quale delle seguenti frasi usa correttamente il plurale irregolare?",
    "options": [
@@ -25219,7 +25219,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Cosa indica il suffisso '-ino'/'-ina' aggiunto a una parola?",
    "options": [
@@ -25251,7 +25251,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 3,
    "question": "Quale delle seguenti parole NON è nella stessa famiglia di 'sole'?",
    "options": [
@@ -25283,7 +25283,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Cosa si intende per 'lingua standard'?",
    "options": [
@@ -25315,7 +25315,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 3,
    "question": "Che cos'è un'allitterazione?",
    "options": [
@@ -25347,7 +25347,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 2,
    "question": "Qual è l'etimologia (origine) della parola 'scuola'?",
    "options": [
@@ -25379,7 +25379,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 3,
    "question": "In questa frase, qual è l'iperbole? 'Aspetto da mille anni!'",
    "options": [
@@ -25411,7 +25411,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 1,
    "question": "Quale delle seguenti parole è un nome proprio?",
    "options": [
@@ -25443,7 +25443,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "ortografia",
    "difficulty": 1,
    "question": "Quante sillabe ha la parola 'pa-pa-ga-llo'?",
    "options": [
@@ -25475,7 +25475,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "ortografia",
    "difficulty": 2,
    "question": "Quale parola ha l'accento tonico sulla seconda sillaba?",
    "options": [
@@ -25507,7 +25507,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale delle seguenti è una congiunzione?",
    "options": [
@@ -25539,7 +25539,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 1,
    "question": "Quale di queste parole è un aggettivo?",
    "options": [
@@ -25571,7 +25571,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 2,
    "question": "Quale tipo di testo ha lo scopo di convincere il lettore?",
    "options": [
@@ -25603,7 +25603,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "In questa frase, che funzione ha la virgola? 'Marco, smettila di fare chiasso!'",
    "options": [
@@ -25635,7 +25635,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Quale delle seguenti è una frase interrogativa?",
    "options": [
@@ -25667,7 +25667,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 2,
    "question": "Che cos'è un paragrafo?",
    "options": [
@@ -25699,7 +25699,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 1,
    "question": "Quale articolo si usa prima di 'zaino'?",
    "options": [
@@ -25731,7 +25731,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale frase è scritta al plurale?",
    "options": [
@@ -25763,7 +25763,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "In questa frase, che cos'è 'stranamente'? 'Stranamente, nessuno ha risposto.'",
    "options": [
@@ -25795,7 +25795,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale delle seguenti parole è un verbo riflessivo?",
    "options": [
@@ -25827,7 +25827,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "Quale delle seguenti parole è un'interiezione?",
    "options": [
@@ -25859,7 +25859,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Quale frase contiene un errore di accordo?",
    "options": [
@@ -25891,7 +25891,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Quale delle seguenti frasi esprime un ordine?",
    "options": [
@@ -25923,7 +25923,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "Qual è il plurale corretto di 'medico'?",
    "options": [
@@ -25955,7 +25955,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "lessico",
    "difficulty": 2,
    "question": "Quale delle seguenti parole appartiene al campo semantico dell'acqua?",
    "options": [
@@ -25987,7 +25987,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 3,
    "question": "Cosa succede al significato di 'libro' e 'libri'?",
    "options": [
@@ -26019,7 +26019,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "sintassi",
    "difficulty": 2,
    "question": "In questa frase, qual è il soggetto? 'Studiare fa bene al cervello.'",
    "options": [
@@ -26051,7 +26051,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 1,
    "question": "Quale articolo indeterminativo si usa prima di 'zaino'?",
    "options": [
@@ -26083,7 +26083,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale delle seguenti parole è un nome astratto?",
    "options": [
@@ -26115,7 +26115,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "In quale dei seguenti casi si usa il punto e virgola (;)?",
    "options": [
@@ -29763,7 +29763,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lessico",
    "difficulty": 2,
    "question": "Che cosa è un sinonimo contestuale?",
    "options": [
@@ -29795,7 +29795,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lingua",
    "difficulty": 2,
    "question": "Cosa indica il corsivo in un testo scritto?",
    "options": [
@@ -29827,7 +29827,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lingua",
    "difficulty": 3,
    "question": "Cosa si intende per 'coerenza' di un testo?",
    "options": [
@@ -29859,7 +29859,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lessico",
    "difficulty": 2,
    "question": "Quale sigla si usa per indicare il significato di una parola in un dizionario?",
    "options": [
@@ -29891,7 +29891,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lingua",
    "difficulty": 2,
    "question": "Cosa si intende per 'parafrasi' di un testo?",
    "options": [
@@ -29923,7 +29923,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "In quale frase si usa correttamente la virgola?",
    "options": [
@@ -29955,7 +29955,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Che funzione ha il punto e virgola (;) in un testo?",
    "options": [
@@ -29987,7 +29987,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "Qual è la differenza tra discorso diretto e discorso indiretto?",
    "options": [
@@ -30019,7 +30019,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale parola è un avverbio di modo?",
    "options": [
@@ -30051,7 +30051,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "In 'Né Marco né Sofia sono venuti alla festa', la congiunzione 'né...né' indica:",
    "options": [
@@ -30083,7 +30083,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 2,
    "question": "Cosa indica il punto esclamativo (!) in un testo?",
    "options": [
@@ -30115,7 +30115,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lingua",
    "difficulty": 3,
    "question": "Cosa si intende per 'registro linguistico' di un testo?",
    "options": [
@@ -30147,7 +30147,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 2,
    "question": "Quale dei seguenti è un testo misto (che combina immagini e testo scritto)?",
    "options": [
@@ -30179,7 +30179,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "In quale frase i due punti (:) sono usati correttamente?",
    "options": [
@@ -30211,7 +30211,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Cosa fa il lessema (o radice) di una parola?",
    "options": [
@@ -30243,7 +30243,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "sintassi",
    "difficulty": 3,
    "question": "Quale delle seguenti è una proposizione subordinata causale?",
    "options": [
@@ -30275,7 +30275,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lingua",
    "difficulty": 2,
    "question": "Quale figura retorica è presente in 'Correva veloce come il vento'?",
    "options": [
@@ -30307,7 +30307,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 3,
    "question": "Cosa sono le 'parole-chiave' di un testo?",
    "options": [
@@ -30339,7 +30339,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "morfologia",
    "difficulty": 2,
    "question": "Quale delle seguenti è una preposizione impropria (usata anche come avverbio)?",
    "options": [
@@ -30371,7 +30371,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "sintassi",
    "difficulty": 2,
    "question": "In quale frase 'bello' è un aggettivo predicativo?",
    "options": [
@@ -30403,7 +30403,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "grammatica",
    "difficulty": 3,
    "question": "Cosa indica la locuzione 'in quanto' in una frase?",
    "options": [
@@ -30435,7 +30435,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "sintassi",
    "difficulty": 2,
    "question": "Quale delle seguenti è una frase ellittica?",
    "options": [
@@ -33219,7 +33219,7 @@
    "sourceSubject": "italiano",
    "class": 3,
    "area": "italiano_classe3",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 2,
    "question": "Come si chiama la parte iniziale di una storia, dove si presentano i personaggi?",
    "options": [
@@ -33795,7 +33795,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "riflessione_linguistica",
+   "subarea": "riflessione_sulla_lingua",
    "difficulty": 3,
    "question": "Da quale parola deriva 'fioraio'?",
    "options": [
@@ -33955,7 +33955,7 @@
    "sourceSubject": "italiano",
    "class": 4,
    "area": "italiano_classe4",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 2,
    "question": "In un testo, come si chiama la parte che conclude la storia?",
    "options": [
@@ -34691,7 +34691,7 @@
    "sourceSubject": "italiano",
    "class": 5,
    "area": "italiano_classe5",
-   "subarea": "vari",
+   "subarea": "lettura",
    "difficulty": 2,
    "question": "Come si chiama il riassunto breve che spiega di cosa parla un testo?",
    "options": [

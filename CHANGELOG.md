@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.11.2 - 2026-06-30
+
+### Changed
+- chore(taxonomy): eliminata la subarea `vari` da italiano (66 domande cl.3-5) e inglese (26 domande cl.2-5), ciascuna riclassificata nella subarea curricolare corretta (morfologia, grammatica, lessico, sintassi, ortografia, lettura, lingua, uso_guidato, ecc.).
+- chore(taxonomy): rinominata `riflessione_linguistica` → `riflessione_sulla_lingua` in italiano cl.4 (15 domande) per uniformità con cl.5.
+- chore: bump versione `4.11.1` → `4.11.2` in `app-version.js`, `package.json`, `llms.txt`.
+
 ## 4.11.1 - 2026-06-30
 
 ### Fixed
