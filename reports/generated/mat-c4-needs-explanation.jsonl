@@ -1,0 +1,408 @@
+{"id": "mat-4-tabelline-001", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 8 × 11?", "options": ["87", "85", "88", "86"], "answer": "88"}
+{"id": "mat-4-tabelline-002", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 9 × 12?", "options": ["106", "108", "105", "107"], "answer": "108"}
+{"id": "mat-4-tabelline-003", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 1 × 11?", "options": ["9", "11", "10", "8"], "answer": "11"}
+{"id": "mat-4-tabelline-004", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 5 × 12?", "options": ["58", "60", "59", "57"], "answer": "60"}
+{"id": "mat-4-tabelline-005", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 7 × 12?", "options": ["81", "83", "84", "82"], "answer": "84"}
+{"id": "mat-4-tabelline-006", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 2 × 11?", "options": ["22", "19", "21", "20"], "answer": "22"}
+{"id": "mat-4-tabelline-007", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 8 × 12?", "options": ["96", "94", "93", "95"], "answer": "96"}
+{"id": "mat-4-tabelline-008", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 4 × 11?", "options": ["43", "41", "42", "44"], "answer": "44"}
+{"id": "mat-4-tabelline-009", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 6 × 12?", "options": ["70", "69", "72", "71"], "answer": "72"}
+{"id": "mat-4-tabelline-010", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 7 × 11?", "options": ["74", "76", "77", "75"], "answer": "77"}
+{"id": "mat-4-tabelline-011", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 6 × 11?", "options": ["64", "65", "63", "66"], "answer": "66"}
+{"id": "mat-4-tabelline-012", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 10 × 11?", "options": ["109", "110", "107", "108"], "answer": "110"}
+{"id": "mat-4-tabelline-013", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 1 × 12?", "options": ["12", "11", "10", "9"], "answer": "12"}
+{"id": "mat-4-tabelline-014", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 3 × 11?", "options": ["33", "31", "32", "30"], "answer": "33"}
+{"id": "mat-4-tabelline-015", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 5 × 11?", "options": ["52", "53", "54", "55"], "answer": "55"}
+{"id": "mat-4-tabelline-016", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 4 × 12?", "options": ["47", "48", "45", "46"], "answer": "48"}
+{"id": "mat-4-tabelline-017", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 10 × 12?", "options": ["120", "117", "118", "119"], "answer": "120"}
+{"id": "mat-4-tabelline-018", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 9 × 11?", "options": ["98", "96", "97", "99"], "answer": "99"}
+{"id": "mat-4-tabelline-019", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 2 × 12?", "options": ["23", "24", "22", "21"], "answer": "24"}
+{"id": "mat-4-tabelline-020", "class": 4, "area": "tabelline", "subarea": "", "question": "Quanto fa 3 × 12?", "options": ["34", "35", "36", "33"], "answer": "36"}
+{"id": "mat-4-aritmetica-001", "class": 4, "area": "aritmetica", "subarea": "", "question": "8031 + 8670 = ?", "options": ["16701", "16698", "16700", "16699"], "answer": "16701"}
+{"id": "mat-4-aritmetica-002", "class": 4, "area": "aritmetica", "subarea": "", "question": "540 + 8063 = ?", "options": ["8602", "8603", "8601", "8600"], "answer": "8603"}
+{"id": "mat-4-aritmetica-003", "class": 4, "area": "aritmetica", "subarea": "", "question": "8136 + 4179 = ?", "options": ["12313", "12314", "12312", "12315"], "answer": "12315"}
+{"id": "mat-4-aritmetica-004", "class": 4, "area": "aritmetica", "subarea": "", "question": "4808 + 8558 = ?", "options": ["13366", "13363", "13364", "13365"], "answer": "13366"}
+{"id": "mat-4-aritmetica-005", "class": 4, "area": "aritmetica", "subarea": "", "question": "9634 + 4400 = ?", "options": ["14032", "14033", "14031", "14034"], "answer": "14034"}
+{"id": "mat-4-aritmetica-006", "class": 4, "area": "aritmetica", "subarea": "", "question": "4356 + 5979 = ?", "options": ["10332", "10335", "10334", "10333"], "answer": "10335"}
+{"id": "mat-4-aritmetica-007", "class": 4, "area": "aritmetica", "subarea": "", "question": "4822 + 5018 = ?", "options": ["9838", "9837", "9840", "9839"], "answer": "9840"}
+{"id": "mat-4-aritmetica-008", "class": 4, "area": "aritmetica", "subarea": "", "question": "1183 + 6533 = ?", "options": ["7716", "7715", "7713", "7714"], "answer": "7716"}
+{"id": "mat-4-aritmetica-009", "class": 4, "area": "aritmetica", "subarea": "", "question": "1715 + 3006 = ?", "options": ["4719", "4721", "4718", "4720"], "answer": "4721"}
+{"id": "mat-4-aritmetica-010", "class": 4, "area": "aritmetica", "subarea": "", "question": "4422 + 5341 = ?", "options": ["9761", "9760", "9762", "9763"], "answer": "9763"}
+{"id": "mat-4-aritmetica-011", "class": 4, "area": "aritmetica", "subarea": "", "question": "4240 + 2624 = ?", "options": ["6863", "6864", "6862", "6861"], "answer": "6864"}
+{"id": "mat-4-aritmetica-012", "class": 4, "area": "aritmetica", "subarea": "", "question": "3199 + 6183 = ?", "options": ["9380", "9382", "9381", "9379"], "answer": "9382"}
+{"id": "mat-4-aritmetica-013", "class": 4, "area": "aritmetica", "subarea": "", "question": "2804 + 1300 = ?", "options": ["4103", "4104", "4102", "4101"], "answer": "4104"}
+{"id": "mat-4-aritmetica-014", "class": 4, "area": "aritmetica", "subarea": "", "question": "3093 + 3448 = ?", "options": ["6541", "6538", "6540", "6539"], "answer": "6541"}
+{"id": "mat-4-aritmetica-015", "class": 4, "area": "aritmetica", "subarea": "", "question": "3321 + 5366 = ?", "options": ["8684", "8685", "8687", "8686"], "answer": "8687"}
+{"id": "mat-4-aritmetica-016", "class": 4, "area": "aritmetica", "subarea": "", "question": "3850 + 5297 = ?", "options": ["9145", "9146", "9147", "9144"], "answer": "9147"}
+{"id": "mat-4-aritmetica-017", "class": 4, "area": "aritmetica", "subarea": "", "question": "7163 + 8218 = ?", "options": ["15380", "15379", "15381", "15378"], "answer": "15381"}
+{"id": "mat-4-aritmetica-018", "class": 4, "area": "aritmetica", "subarea": "", "question": "188 + 985 = ?", "options": ["1173", "1170", "1171", "1172"], "answer": "1173"}
+{"id": "mat-4-aritmetica-019", "class": 4, "area": "aritmetica", "subarea": "", "question": "111 + 4157 = ?", "options": ["4267", "4266", "4265", "4268"], "answer": "4268"}
+{"id": "mat-4-aritmetica-020", "class": 4, "area": "aritmetica", "subarea": "", "question": "8246 + 1078 = ?", "options": ["9324", "9322", "9323", "9321"], "answer": "9324"}
+{"id": "mat-4-aritmetica-021", "class": 4, "area": "aritmetica", "subarea": "", "question": "9601 - 8242 = ?", "options": ["1358", "1357", "1359", "1356"], "answer": "1359"}
+{"id": "mat-4-aritmetica-022", "class": 4, "area": "aritmetica", "subarea": "", "question": "2142 - 2062 = ?", "options": ["77", "80", "78", "79"], "answer": "80"}
+{"id": "mat-4-aritmetica-023", "class": 4, "area": "aritmetica", "subarea": "", "question": "7738 - 3109 = ?", "options": ["4626", "4627", "4628", "4629"], "answer": "4629"}
+{"id": "mat-4-aritmetica-024", "class": 4, "area": "aritmetica", "subarea": "", "question": "6315 - 2032 = ?", "options": ["4280", "4281", "4282", "4283"], "answer": "4283"}
+{"id": "mat-4-aritmetica-025", "class": 4, "area": "aritmetica", "subarea": "", "question": "9954 - 3604 = ?", "options": ["6347", "6348", "6349", "6350"], "answer": "6350"}
+{"id": "mat-4-aritmetica-026", "class": 4, "area": "aritmetica", "subarea": "", "question": "5132 - 2539 = ?", "options": ["2591", "2593", "2590", "2592"], "answer": "2593"}
+{"id": "mat-4-aritmetica-027", "class": 4, "area": "aritmetica", "subarea": "", "question": "7021 - 6265 = ?", "options": ["754", "756", "755", "753"], "answer": "756"}
+{"id": "mat-4-aritmetica-028", "class": 4, "area": "aritmetica", "subarea": "", "question": "8931 - 594 = ?", "options": ["8336", "8337", "8335", "8334"], "answer": "8337"}
+{"id": "mat-4-aritmetica-029", "class": 4, "area": "aritmetica", "subarea": "", "question": "868 - 264 = ?", "options": ["602", "604", "603", "601"], "answer": "604"}
+{"id": "mat-4-aritmetica-030", "class": 4, "area": "aritmetica", "subarea": "", "question": "8696 - 5409 = ?", "options": ["3284", "3287", "3286", "3285"], "answer": "3287"}
+{"id": "mat-4-aritmetica-031", "class": 4, "area": "aritmetica", "subarea": "", "question": "1410 - 160 = ?", "options": ["1248", "1250", "1247", "1249"], "answer": "1250"}
+{"id": "mat-4-aritmetica-032", "class": 4, "area": "aritmetica", "subarea": "", "question": "535 - 189 = ?", "options": ["343", "346", "345", "344"], "answer": "346"}
+{"id": "mat-4-aritmetica-033", "class": 4, "area": "aritmetica", "subarea": "", "question": "7332 - 4761 = ?", "options": ["2569", "2568", "2570", "2571"], "answer": "2571"}
+{"id": "mat-4-aritmetica-034", "class": 4, "area": "aritmetica", "subarea": "", "question": "881 - 654 = ?", "options": ["225", "227", "226", "224"], "answer": "227"}
+{"id": "mat-4-aritmetica-035", "class": 4, "area": "aritmetica", "subarea": "", "question": "7529 - 1892 = ?", "options": ["5636", "5635", "5637", "5634"], "answer": "5637"}
+{"id": "mat-4-aritmetica-036", "class": 4, "area": "aritmetica", "subarea": "", "question": "6513 - 6363 = ?", "options": ["149", "148", "147", "150"], "answer": "150"}
+{"id": "mat-4-aritmetica-037", "class": 4, "area": "aritmetica", "subarea": "", "question": "4260 - 3871 = ?", "options": ["388", "389", "386", "387"], "answer": "389"}
+{"id": "mat-4-aritmetica-038", "class": 4, "area": "aritmetica", "subarea": "", "question": "3778 - 2887 = ?", "options": ["888", "891", "889", "890"], "answer": "891"}
+{"id": "mat-4-aritmetica-039", "class": 4, "area": "aritmetica", "subarea": "", "question": "709 - 671 = ?", "options": ["38", "36", "37", "35"], "answer": "38"}
+{"id": "mat-4-aritmetica-040", "class": 4, "area": "aritmetica", "subarea": "", "question": "8476 - 4048 = ?", "options": ["4425", "4426", "4427", "4428"], "answer": "4428"}
+{"id": "mat-4-aritmetica-041", "class": 4, "area": "aritmetica", "subarea": "", "question": "9 × 15 = ?", "options": ["133", "132", "135", "134"], "answer": "135"}
+{"id": "mat-4-aritmetica-042", "class": 4, "area": "aritmetica", "subarea": "", "question": "10 × 70 = ?", "options": ["700", "697", "699", "698"], "answer": "700"}
+{"id": "mat-4-aritmetica-043", "class": 4, "area": "aritmetica", "subarea": "", "question": "3 × 25 = ?", "options": ["74", "75", "72", "73"], "answer": "75"}
+{"id": "mat-4-aritmetica-044", "class": 4, "area": "aritmetica", "subarea": "", "question": "5 × 96 = ?", "options": ["480", "478", "479", "477"], "answer": "480"}
+{"id": "mat-4-aritmetica-045", "class": 4, "area": "aritmetica", "subarea": "", "question": "10 × 49 = ?", "options": ["489", "488", "490", "487"], "answer": "490"}
+{"id": "mat-4-aritmetica-046", "class": 4, "area": "aritmetica", "subarea": "", "question": "11 × 70 = ?", "options": ["770", "769", "767", "768"], "answer": "770"}
+{"id": "mat-4-aritmetica-047", "class": 4, "area": "aritmetica", "subarea": "", "question": "3 × 33 = ?", "options": ["99", "97", "98", "96"], "answer": "99"}
+{"id": "mat-4-aritmetica-048", "class": 4, "area": "aritmetica", "subarea": "", "question": "10 × 94 = ?", "options": ["937", "939", "938", "940"], "answer": "940"}
+{"id": "mat-4-aritmetica-049", "class": 4, "area": "aritmetica", "subarea": "", "question": "3 × 16 = ?", "options": ["48", "45", "46", "47"], "answer": "48"}
+{"id": "mat-4-aritmetica-050", "class": 4, "area": "aritmetica", "subarea": "", "question": "4 × 89 = ?", "options": ["356", "353", "354", "355"], "answer": "356"}
+{"id": "mat-4-aritmetica-051", "class": 4, "area": "aritmetica", "subarea": "", "question": "5 × 33 = ?", "options": ["164", "163", "162", "165"], "answer": "165"}
+{"id": "mat-4-aritmetica-052", "class": 4, "area": "aritmetica", "subarea": "", "question": "8 × 71 = ?", "options": ["567", "568", "565", "566"], "answer": "568"}
+{"id": "mat-4-aritmetica-053", "class": 4, "area": "aritmetica", "subarea": "", "question": "7 × 46 = ?", "options": ["321", "320", "319", "322"], "answer": "322"}
+{"id": "mat-4-aritmetica-054", "class": 4, "area": "aritmetica", "subarea": "", "question": "6 × 94 = ?", "options": ["563", "562", "564", "561"], "answer": "564"}
+{"id": "mat-4-aritmetica-055", "class": 4, "area": "aritmetica", "subarea": "", "question": "5 × 34 = ?", "options": ["169", "168", "167", "170"], "answer": "170"}
+{"id": "mat-4-aritmetica-056", "class": 4, "area": "aritmetica", "subarea": "", "question": "5 × 59 = ?", "options": ["295", "292", "294", "293"], "answer": "295"}
+{"id": "mat-4-aritmetica-057", "class": 4, "area": "aritmetica", "subarea": "", "question": "10 × 51 = ?", "options": ["509", "507", "508", "510"], "answer": "510"}
+{"id": "mat-4-aritmetica-058", "class": 4, "area": "aritmetica", "subarea": "", "question": "6 × 34 = ?", "options": ["204", "201", "203", "202"], "answer": "204"}
+{"id": "mat-4-aritmetica-059", "class": 4, "area": "aritmetica", "subarea": "", "question": "6 × 87 = ?", "options": ["519", "521", "520", "522"], "answer": "522"}
+{"id": "mat-4-aritmetica-060", "class": 4, "area": "aritmetica", "subarea": "", "question": "2 × 34 = ?", "options": ["66", "68", "65", "67"], "answer": "68"}
+{"id": "mat-4-aritmetica-061", "class": 4, "area": "aritmetica", "subarea": "", "question": "360 ÷ 9 = ?", "options": ["37", "40", "38", "39"], "answer": "40"}
+{"id": "mat-4-aritmetica-062", "class": 4, "area": "aritmetica", "subarea": "", "question": "156 ÷ 12 = ?", "options": ["13", "11", "12", "10"], "answer": "13"}
+{"id": "mat-4-aritmetica-063", "class": 4, "area": "aritmetica", "subarea": "", "question": "36 ÷ 3 = ?", "options": ["11", "12", "9", "10"], "answer": "12"}
+{"id": "mat-4-aritmetica-064", "class": 4, "area": "aritmetica", "subarea": "", "question": "243 ÷ 9 = ?", "options": ["26", "25", "27", "24"], "answer": "27"}
+{"id": "mat-4-aritmetica-065", "class": 4, "area": "aritmetica", "subarea": "", "question": "60 ÷ 4 = ?", "options": ["13", "12", "14", "15"], "answer": "15"}
+{"id": "mat-4-aritmetica-066", "class": 4, "area": "aritmetica", "subarea": "", "question": "207 ÷ 9 = ?", "options": ["21", "22", "20", "23"], "answer": "23"}
+{"id": "mat-4-aritmetica-067", "class": 4, "area": "aritmetica", "subarea": "", "question": "46 ÷ 2 = ?", "options": ["23", "21", "22", "20"], "answer": "23"}
+{"id": "mat-4-aritmetica-068", "class": 4, "area": "aritmetica", "subarea": "", "question": "65 ÷ 5 = ?", "options": ["13", "12", "10", "11"], "answer": "13"}
+{"id": "mat-4-aritmetica-069", "class": 4, "area": "aritmetica", "subarea": "", "question": "45 ÷ 3 = ?", "options": ["13", "12", "15", "14"], "answer": "15"}
+{"id": "mat-4-aritmetica-070", "class": 4, "area": "aritmetica", "subarea": "", "question": "120 ÷ 5 = ?", "options": ["22", "21", "23", "24"], "answer": "24"}
+{"id": "mat-4-aritmetica-071", "class": 4, "area": "aritmetica", "subarea": "", "question": "220 ÷ 10 = ?", "options": ["22", "21", "20", "19"], "answer": "22"}
+{"id": "mat-4-aritmetica-072", "class": 4, "area": "aritmetica", "subarea": "", "question": "150 ÷ 6 = ?", "options": ["22", "24", "25", "23"], "answer": "25"}
+{"id": "mat-4-aritmetica-073", "class": 4, "area": "aritmetica", "subarea": "", "question": "217 ÷ 7 = ?", "options": ["31", "29", "30", "28"], "answer": "31"}
+{"id": "mat-4-aritmetica-074", "class": 4, "area": "aritmetica", "subarea": "", "question": "414 ÷ 9 = ?", "options": ["44", "46", "43", "45"], "answer": "46"}
+{"id": "mat-4-aritmetica-075", "class": 4, "area": "aritmetica", "subarea": "", "question": "245 ÷ 5 = ?", "options": ["48", "46", "49", "47"], "answer": "49"}
+{"id": "mat-4-aritmetica-076", "class": 4, "area": "aritmetica", "subarea": "", "question": "132 ÷ 4 = ?", "options": ["31", "33", "30", "32"], "answer": "33"}
+{"id": "mat-4-aritmetica-077", "class": 4, "area": "aritmetica", "subarea": "", "question": "180 ÷ 10 = ?", "options": ["16", "17", "18", "15"], "answer": "18"}
+{"id": "mat-4-aritmetica-078", "class": 4, "area": "aritmetica", "subarea": "", "question": "333 ÷ 9 = ?", "options": ["34", "37", "35", "36"], "answer": "37"}
+{"id": "mat-4-aritmetica-079", "class": 4, "area": "aritmetica", "subarea": "", "question": "468 ÷ 12 = ?", "options": ["36", "37", "39", "38"], "answer": "39"}
+{"id": "mat-4-aritmetica-080", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 1/2 di 16?", "options": ["6", "5", "7", "8"], "answer": "8"}
+{"id": "mat-4-aritmetica-081", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 1/2 di 8?", "options": ["4", "1", "3", "2"], "answer": "4"}
+{"id": "mat-4-aritmetica-082", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 3/5 di 40?", "options": ["24", "22", "23", "21"], "answer": "24"}
+{"id": "mat-4-aritmetica-083", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 9/10 di 80?", "options": ["72", "70", "69", "71"], "answer": "72"}
+{"id": "mat-4-aritmetica-084", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 1/4 di 40?", "options": ["10", "8", "7", "9"], "answer": "10"}
+{"id": "mat-4-aritmetica-085", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 1/10 di 60?", "options": ["3", "6", "4", "5"], "answer": "6"}
+{"id": "mat-4-aritmetica-086", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 5/10 di 90?", "options": ["45", "43", "42", "44"], "answer": "45"}
+{"id": "mat-4-aritmetica-087", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 8/10 di 90?", "options": ["70", "71", "69", "72"], "answer": "72"}
+{"id": "mat-4-aritmetica-088", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 2/4 di 8?", "options": ["1", "4", "2", "3"], "answer": "4"}
+{"id": "mat-4-aritmetica-089", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 1/5 di 20?", "options": ["3", "2", "4", "1"], "answer": "4"}
+{"id": "mat-4-aritmetica-090", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 3/5 di 35?", "options": ["20", "19", "18", "21"], "answer": "21"}
+{"id": "mat-4-aritmetica-091", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 1/2 di 6?", "options": ["3", "2", "0", "1"], "answer": "3"}
+{"id": "mat-4-aritmetica-092", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 2/10 di 30?", "options": ["5", "3", "6", "4"], "answer": "6"}
+{"id": "mat-4-aritmetica-093", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 8/10 di 20?", "options": ["16", "14", "13", "15"], "answer": "16"}
+{"id": "mat-4-aritmetica-094", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 8/10 di 40?", "options": ["29", "32", "31", "30"], "answer": "32"}
+{"id": "mat-4-aritmetica-095", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 2/4 di 20?", "options": ["9", "7", "10", "8"], "answer": "10"}
+{"id": "mat-4-aritmetica-096", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 5/10 di 100?", "options": ["47", "50", "49", "48"], "answer": "50"}
+{"id": "mat-4-aritmetica-097", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 5/10 di 50?", "options": ["22", "24", "23", "25"], "answer": "25"}
+{"id": "mat-4-aritmetica-098", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 2/5 di 50?", "options": ["17", "19", "20", "18"], "answer": "20"}
+{"id": "mat-4-aritmetica-099", "class": 4, "area": "aritmetica", "subarea": "", "question": "Quanto fa 9/10 di 50?", "options": ["42", "45", "43", "44"], "answer": "45"}
+{"id": "mat-4-problemi-001", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 13 kg di grano per ettaro. Su 12 ettari quanti kg?", "options": ["155", "154", "153", "156"], "answer": "156"}
+{"id": "mat-4-problemi-002", "class": 4, "area": "problemi", "subarea": "", "question": "Un negozio vende 44 kg di frutta al giorno. In 13 giorni quanti kg vende?", "options": ["572", "570", "571", "569"], "answer": "572"}
+{"id": "mat-4-problemi-003", "class": 4, "area": "problemi", "subarea": "", "question": "Un camion trasporta 40 scatole per viaggio. In 7 viaggi quante scatole?", "options": ["277", "278", "280", "279"], "answer": "280"}
+{"id": "mat-4-problemi-004", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 33 kg di grano per ettaro. Su 5 ettari quanti kg?", "options": ["165", "162", "163", "164"], "answer": "165"}
+{"id": "mat-4-problemi-005", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 79 kg di grano per ettaro. Su 7 ettari quanti kg?", "options": ["552", "550", "551", "553"], "answer": "553"}
+{"id": "mat-4-problemi-006", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 71 euro al mese. In 7 mesi quanto spende?", "options": ["494", "495", "496", "497"], "answer": "497"}
+{"id": "mat-4-problemi-007", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 15 euro al mese. In 13 mesi quanto spende?", "options": ["192", "193", "194", "195"], "answer": "195"}
+{"id": "mat-4-problemi-008", "class": 4, "area": "problemi", "subarea": "", "question": "Un negozio vende 22 kg di frutta al giorno. In 3 giorni quanti kg vende?", "options": ["66", "65", "64", "63"], "answer": "66"}
+{"id": "mat-4-problemi-009", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 90 kg di grano per ettaro. Su 11 ettari quanti kg?", "options": ["987", "989", "988", "990"], "answer": "990"}
+{"id": "mat-4-problemi-010", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 33 euro al mese. In 12 mesi quanto spende?", "options": ["393", "394", "395", "396"], "answer": "396"}
+{"id": "mat-4-problemi-011", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 35 kg di grano per ettaro. Su 7 ettari quanti kg?", "options": ["244", "245", "243", "242"], "answer": "245"}
+{"id": "mat-4-problemi-012", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 50 euro al mese. In 4 mesi quanto spende?", "options": ["199", "200", "198", "197"], "answer": "200"}
+{"id": "mat-4-problemi-013", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 43 euro al mese. In 8 mesi quanto spende?", "options": ["344", "341", "343", "342"], "answer": "344"}
+{"id": "mat-4-problemi-014", "class": 4, "area": "problemi", "subarea": "", "question": "Un atleta percorre 11 m al minuto. In 3 minuti quanti m percorre?", "options": ["31", "33", "30", "32"], "answer": "33"}
+{"id": "mat-4-problemi-015", "class": 4, "area": "problemi", "subarea": "", "question": "Un camion trasporta 79 scatole per viaggio. In 11 viaggi quante scatole?", "options": ["868", "866", "869", "867"], "answer": "869"}
+{"id": "mat-4-problemi-016", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 98 euro al mese. In 5 mesi quanto spende?", "options": ["489", "487", "488", "490"], "answer": "490"}
+{"id": "mat-4-problemi-017", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 48 euro al mese. In 14 mesi quanto spende?", "options": ["672", "670", "669", "671"], "answer": "672"}
+{"id": "mat-4-problemi-018", "class": 4, "area": "problemi", "subarea": "", "question": "Un treno percorre 98 km in un'ora. Quanti km in 7 ore?", "options": ["686", "683", "685", "684"], "answer": "686"}
+{"id": "mat-4-problemi-019", "class": 4, "area": "problemi", "subarea": "", "question": "Un negozio vende 97 kg di frutta al giorno. In 7 giorni quanti kg vende?", "options": ["679", "677", "676", "678"], "answer": "679"}
+{"id": "mat-4-problemi-020", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 32 kg di grano per ettaro. Su 3 ettari quanti kg?", "options": ["93", "95", "96", "94"], "answer": "96"}
+{"id": "mat-4-problemi-021", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 12 euro al mese. In 14 mesi quanto spende?", "options": ["168", "166", "167", "165"], "answer": "168"}
+{"id": "mat-4-problemi-022", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 78 euro al mese. In 3 mesi quanto spende?", "options": ["234", "232", "233", "231"], "answer": "234"}
+{"id": "mat-4-problemi-023", "class": 4, "area": "problemi", "subarea": "", "question": "Un treno percorre 63 km in un'ora. Quanti km in 7 ore?", "options": ["441", "440", "438", "439"], "answer": "441"}
+{"id": "mat-4-problemi-024", "class": 4, "area": "problemi", "subarea": "", "question": "Una famiglia spende 14 euro al mese. In 9 mesi quanto spende?", "options": ["125", "123", "124", "126"], "answer": "126"}
+{"id": "mat-4-problemi-025", "class": 4, "area": "problemi", "subarea": "", "question": "Un camion trasporta 11 scatole per viaggio. In 5 viaggi quante scatole?", "options": ["54", "53", "52", "55"], "answer": "55"}
+{"id": "mat-4-problemi-026", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 30 kg di grano per ettaro. Su 3 ettari quanti kg?", "options": ["88", "89", "87", "90"], "answer": "90"}
+{"id": "mat-4-problemi-027", "class": 4, "area": "problemi", "subarea": "", "question": "Un atleta percorre 48 m al minuto. In 13 minuti quanti m percorre?", "options": ["624", "623", "622", "621"], "answer": "624"}
+{"id": "mat-4-problemi-028", "class": 4, "area": "problemi", "subarea": "", "question": "Un atleta percorre 100 m al minuto. In 11 minuti quanti m percorre?", "options": ["1100", "1098", "1097", "1099"], "answer": "1100"}
+{"id": "mat-4-problemi-029", "class": 4, "area": "problemi", "subarea": "", "question": "Un campo produce 57 kg di grano per ettaro. Su 13 ettari quanti kg?", "options": ["740", "738", "739", "741"], "answer": "741"}
+{"id": "mat-4-problemi-030", "class": 4, "area": "problemi", "subarea": "", "question": "Un negozio vende 53 kg di frutta al giorno. In 9 giorni quanti kg vende?", "options": ["476", "477", "474", "475"], "answer": "477"}
+{"id": "mat-4-problemi-031", "class": 4, "area": "problemi", "subarea": "", "question": "Una piscina ha 225 litri svuotata in 5 giorni uguali. Quanti litri al giorno?", "options": ["44", "45", "42", "43"], "answer": "45"}
+{"id": "mat-4-problemi-032", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 60 scatole in 6 file uguali. Quante scatole per fila?", "options": ["7", "8", "10", "9"], "answer": "10"}
+{"id": "mat-4-problemi-033", "class": 4, "area": "problemi", "subarea": "", "question": "Un libro ha 266 pagine. Ne leggo 7 al giorno. In quanti giorni lo finisco?", "options": ["37", "38", "35", "36"], "answer": "38"}
+{"id": "mat-4-problemi-034", "class": 4, "area": "problemi", "subarea": "", "question": "85 biglietti divisi in 5 gruppi uguali. Quanti biglietti per gruppo?", "options": ["14", "15", "16", "17"], "answer": "17"}
+{"id": "mat-4-problemi-035", "class": 4, "area": "problemi", "subarea": "", "question": "96 biglietti divisi in 12 gruppi uguali. Quanti biglietti per gruppo?", "options": ["6", "7", "5", "8"], "answer": "8"}
+{"id": "mat-4-problemi-036", "class": 4, "area": "problemi", "subarea": "", "question": "Una piscina ha 88 litri svuotata in 4 giorni uguali. Quanti litri al giorno?", "options": ["19", "21", "22", "20"], "answer": "22"}
+{"id": "mat-4-problemi-037", "class": 4, "area": "problemi", "subarea": "", "question": "Un libro ha 75 pagine. Ne leggo 15 al giorno. In quanti giorni lo finisco?", "options": ["3", "2", "4", "5"], "answer": "5"}
+{"id": "mat-4-problemi-038", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 165 scatole in 5 file uguali. Quante scatole per fila?", "options": ["32", "31", "30", "33"], "answer": "33"}
+{"id": "mat-4-problemi-039", "class": 4, "area": "problemi", "subarea": "", "question": "Una piscina ha 451 litri svuotata in 11 giorni uguali. Quanti litri al giorno?", "options": ["39", "40", "38", "41"], "answer": "41"}
+{"id": "mat-4-problemi-040", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 546 scatole in 13 file uguali. Quante scatole per fila?", "options": ["39", "40", "42", "41"], "answer": "42"}
+{"id": "mat-4-problemi-041", "class": 4, "area": "problemi", "subarea": "", "question": "333 biglietti divisi in 9 gruppi uguali. Quanti biglietti per gruppo?", "options": ["36", "34", "37", "35"], "answer": "37"}
+{"id": "mat-4-problemi-042", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 500 scatole in 10 file uguali. Quante scatole per fila?", "options": ["50", "49", "47", "48"], "answer": "50"}
+{"id": "mat-4-problemi-043", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 288 scatole in 9 file uguali. Quante scatole per fila?", "options": ["31", "29", "32", "30"], "answer": "32"}
+{"id": "mat-4-problemi-044", "class": 4, "area": "problemi", "subarea": "", "question": "Un libro ha 128 pagine. Ne leggo 8 al giorno. In quanti giorni lo finisco?", "options": ["16", "13", "14", "15"], "answer": "16"}
+{"id": "mat-4-problemi-045", "class": 4, "area": "problemi", "subarea": "", "question": "Un libro ha 250 pagine. Ne leggo 5 al giorno. In quanti giorni lo finisco?", "options": ["50", "48", "49", "47"], "answer": "50"}
+{"id": "mat-4-problemi-046", "class": 4, "area": "problemi", "subarea": "", "question": "546 biglietti divisi in 14 gruppi uguali. Quanti biglietti per gruppo?", "options": ["37", "38", "39", "36"], "answer": "39"}
+{"id": "mat-4-problemi-047", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 100 scatole in 5 file uguali. Quante scatole per fila?", "options": ["19", "17", "20", "18"], "answer": "20"}
+{"id": "mat-4-problemi-048", "class": 4, "area": "problemi", "subarea": "", "question": "Un libro ha 90 pagine. Ne leggo 6 al giorno. In quanti giorni lo finisco?", "options": ["14", "15", "13", "12"], "answer": "15"}
+{"id": "mat-4-problemi-049", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 440 scatole in 11 file uguali. Quante scatole per fila?", "options": ["39", "37", "40", "38"], "answer": "40"}
+{"id": "mat-4-problemi-050", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 253 pacchi. Arrivano altri 546. Quanti pacchi ci sono?", "options": ["796", "797", "799", "798"], "answer": "799"}
+{"id": "mat-4-problemi-051", "class": 4, "area": "problemi", "subarea": "", "question": "Una libreria ha 747 libri di narrativa e 124 di scienze. Quanti libri in tutto?", "options": ["868", "871", "869", "870"], "answer": "871"}
+{"id": "mat-4-problemi-052", "class": 4, "area": "problemi", "subarea": "", "question": "Una libreria ha 707 libri di narrativa e 884 di scienze. Quanti libri in tutto?", "options": ["1590", "1588", "1589", "1591"], "answer": "1591"}
+{"id": "mat-4-problemi-053", "class": 4, "area": "problemi", "subarea": "", "question": "Un contadino raccoglie 662 kg dalla prima pianta e 423 dalla seconda. Quanti kg?", "options": ["1082", "1083", "1085", "1084"], "answer": "1085"}
+{"id": "mat-4-problemi-054", "class": 4, "area": "problemi", "subarea": "", "question": "Una libreria ha 753 libri di narrativa e 200 di scienze. Quanti libri in tutto?", "options": ["951", "952", "953", "950"], "answer": "953"}
+{"id": "mat-4-problemi-055", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 554 pacchi. Arrivano altri 265. Quanti pacchi ci sono?", "options": ["817", "818", "816", "819"], "answer": "819"}
+{"id": "mat-4-problemi-056", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 401 pacchi. Arrivano altri 344. Quanti pacchi ci sono?", "options": ["742", "744", "743", "745"], "answer": "745"}
+{"id": "mat-4-problemi-057", "class": 4, "area": "problemi", "subarea": "", "question": "Un contadino raccoglie 452 kg dalla prima pianta e 996 dalla seconda. Quanti kg?", "options": ["1446", "1445", "1447", "1448"], "answer": "1448"}
+{"id": "mat-4-problemi-058", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 824 pacchi. Arrivano altri 146. Quanti pacchi ci sono?", "options": ["967", "969", "968", "970"], "answer": "970"}
+{"id": "mat-4-problemi-059", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 586 pacchi. Arrivano altri 306. Quanti pacchi ci sono?", "options": ["892", "891", "890", "889"], "answer": "892"}
+{"id": "mat-4-problemi-060", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 447 pacchi. Arrivano altri 264. Quanti pacchi ci sono?", "options": ["711", "709", "708", "710"], "answer": "711"}
+{"id": "mat-4-problemi-061", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 307 pacchi. Arrivano altri 684. Quanti pacchi ci sono?", "options": ["990", "991", "988", "989"], "answer": "991"}
+{"id": "mat-4-problemi-062", "class": 4, "area": "problemi", "subarea": "", "question": "Un contadino raccoglie 388 kg dalla prima pianta e 209 dalla seconda. Quanti kg?", "options": ["596", "595", "594", "597"], "answer": "597"}
+{"id": "mat-4-problemi-063", "class": 4, "area": "problemi", "subarea": "", "question": "Una libreria ha 294 libri di narrativa e 707 di scienze. Quanti libri in tutto?", "options": ["1000", "999", "998", "1001"], "answer": "1001"}
+{"id": "mat-4-problemi-064", "class": 4, "area": "problemi", "subarea": "", "question": "Un contadino raccoglie 856 kg dalla prima pianta e 107 dalla seconda. Quanti kg?", "options": ["961", "963", "962", "960"], "answer": "963"}
+{"id": "mat-4-problemi-065", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 286 pacchi. Arrivano altri 158. Quanti pacchi ci sono?", "options": ["443", "444", "441", "442"], "answer": "444"}
+{"id": "mat-4-problemi-066", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 937 pacchi. Arrivano altri 786. Quanti pacchi ci sono?", "options": ["1721", "1722", "1723", "1720"], "answer": "1723"}
+{"id": "mat-4-problemi-067", "class": 4, "area": "problemi", "subarea": "", "question": "Una libreria ha 488 libri di narrativa e 703 di scienze. Quanti libri in tutto?", "options": ["1189", "1190", "1188", "1191"], "answer": "1191"}
+{"id": "mat-4-problemi-068", "class": 4, "area": "problemi", "subarea": "", "question": "Un contadino raccoglie 262 kg dalla prima pianta e 179 dalla seconda. Quanti kg?", "options": ["439", "438", "440", "441"], "answer": "441"}
+{"id": "mat-4-problemi-069", "class": 4, "area": "problemi", "subarea": "", "question": "In magazzino ci sono 540 pacchi. Arrivano altri 780. Quanti pacchi ci sono?", "options": ["1317", "1320", "1318", "1319"], "answer": "1320"}
+{"id": "mat-4-problemi-070", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 109 atleti. 49 non arrivano. Quanti finiscono?", "options": ["58", "59", "60", "57"], "answer": "60"}
+{"id": "mat-4-problemi-071", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 113 atleti. 39 non arrivano. Quanti finiscono?", "options": ["72", "74", "71", "73"], "answer": "74"}
+{"id": "mat-4-problemi-072", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 94 prodotti. Ne vende 18. Quanti restano?", "options": ["74", "76", "75", "73"], "answer": "76"}
+{"id": "mat-4-problemi-073", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 145 atleti. 28 non arrivano. Quanti finiscono?", "options": ["114", "115", "116", "117"], "answer": "117"}
+{"id": "mat-4-problemi-074", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 217 prodotti. Ne vende 33. Quanti restano?", "options": ["182", "184", "183", "181"], "answer": "184"}
+{"id": "mat-4-problemi-075", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 64 atleti. 11 non arrivano. Quanti finiscono?", "options": ["50", "51", "52", "53"], "answer": "53"}
+{"id": "mat-4-problemi-076", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 182 prodotti. Ne vende 45. Quanti restano?", "options": ["137", "136", "135", "134"], "answer": "137"}
+{"id": "mat-4-problemi-077", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 96 atleti. 42 non arrivano. Quanti finiscono?", "options": ["52", "54", "51", "53"], "answer": "54"}
+{"id": "mat-4-problemi-078", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 85 prodotti. Ne vende 39. Quanti restano?", "options": ["46", "44", "45", "43"], "answer": "46"}
+{"id": "mat-4-problemi-079", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 217 atleti. 35 non arrivano. Quanti finiscono?", "options": ["180", "182", "179", "181"], "answer": "182"}
+{"id": "mat-4-problemi-080", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 118 prodotti. Ne vende 15. Quanti restano?", "options": ["103", "102", "101", "100"], "answer": "103"}
+{"id": "mat-4-problemi-081", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 168 prodotti. Ne vende 12. Quanti restano?", "options": ["154", "156", "155", "153"], "answer": "156"}
+{"id": "mat-4-problemi-082", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 51 prodotti. Ne vende 23. Quanti restano?", "options": ["25", "27", "26", "28"], "answer": "28"}
+{"id": "mat-4-problemi-083", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 134 atleti. 28 non arrivano. Quanti finiscono?", "options": ["104", "105", "103", "106"], "answer": "106"}
+{"id": "mat-4-problemi-084", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 205 prodotti. Ne vende 50. Quanti restano?", "options": ["155", "153", "154", "152"], "answer": "155"}
+{"id": "mat-4-problemi-085", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 119 prodotti. Ne vende 30. Quanti restano?", "options": ["88", "86", "87", "89"], "answer": "89"}
+{"id": "mat-4-problemi-086", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 103 prodotti. Ne vende 16. Quanti restano?", "options": ["84", "85", "86", "87"], "answer": "87"}
+{"id": "mat-4-problemi-087", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 127 prodotti. Ne vende 11. Quanti restano?", "options": ["116", "115", "114", "113"], "answer": "116"}
+{"id": "mat-4-problemi-088", "class": 4, "area": "problemi", "subarea": "", "question": "In una gara partono 147 atleti. 42 non arrivano. Quanti finiscono?", "options": ["105", "102", "104", "103"], "answer": "105"}
+{"id": "mat-4-problemi-089", "class": 4, "area": "problemi", "subarea": "", "question": "Un magazzino aveva 83 prodotti. Ne vende 23. Quanti restano?", "options": ["57", "60", "59", "58"], "answer": "60"}
+{"id": "mat-4-problemi-090", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 8 alunni raccoglie 400 euro. Quanto paga ogni alunno?", "options": ["47", "48", "50", "49"], "answer": "50"}
+{"id": "mat-4-problemi-091", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 3 alunni raccoglie 72 euro. Quanto paga ogni alunno?", "options": ["23", "24", "22", "21"], "answer": "24"}
+{"id": "mat-4-problemi-092", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 6 alunni raccoglie 192 euro. Quanto paga ogni alunno?", "options": ["30", "32", "31", "29"], "answer": "32"}
+{"id": "mat-4-problemi-093", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 9 alunni raccoglie 54 euro. Quanto paga ogni alunno?", "options": ["3", "6", "4", "5"], "answer": "6"}
+{"id": "mat-4-problemi-094", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 11 alunni raccoglie 187 euro. Quanto paga ogni alunno?", "options": ["16", "15", "17", "14"], "answer": "17"}
+{"id": "mat-4-problemi-095", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 11 alunni raccoglie 495 euro. Quanto paga ogni alunno?", "options": ["43", "42", "44", "45"], "answer": "45"}
+{"id": "mat-4-problemi-096", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 11 alunni raccoglie 165 euro. Quanto paga ogni alunno?", "options": ["13", "12", "14", "15"], "answer": "15"}
+{"id": "mat-4-problemi-097", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 12 alunni raccoglie 192 euro. Quanto paga ogni alunno?", "options": ["13", "14", "15", "16"], "answer": "16"}
+{"id": "mat-4-problemi-098", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 10 alunni raccoglie 90 euro. Quanto paga ogni alunno?", "options": ["7", "9", "8", "6"], "answer": "9"}
+{"id": "mat-4-problemi-099", "class": 4, "area": "problemi", "subarea": "", "question": "Una classe di 14 alunni raccoglie 350 euro. Quanto paga ogni alunno?", "options": ["23", "22", "24", "25"], "answer": "25"}
+{"id": "mat-4-geometria-001", "class": 4, "area": "geometria", "subarea": "", "question": "Come si calcola l'area di un rettangolo?", "options": ["base + altezza", "base × altezza", "(base + altezza) × 2", "base × 4"], "answer": "base × altezza"}
+{"id": "mat-4-geometria-002", "class": 4, "area": "geometria", "subarea": "", "question": "Come si calcola l'area di un quadrato?", "options": ["lato × 4", "lato + lato", "lato × lato", "lato × 2"], "answer": "lato × lato"}
+{"id": "mat-4-geometria-003", "class": 4, "area": "geometria", "subarea": "", "question": "L'area si misura in:", "options": ["cm", "cm²", "m", "km"], "answer": "cm²"}
+{"id": "mat-4-geometria-004", "class": 4, "area": "geometria", "subarea": "", "question": "Come si calcola l'area di un triangolo?", "options": ["base × altezza", "(base × altezza) ÷ 2", "base + altezza", "lato × 3"], "answer": "(base × altezza) ÷ 2"}
+{"id": "mat-4-geometria-005", "class": 4, "area": "geometria", "subarea": "", "question": "1 m² quanti cm² vale?", "options": ["100", "1000", "10000", "100000"], "answer": "10000"}
+{"id": "mat-4-geometria-006", "class": 4, "area": "geometria", "subarea": "", "question": "Come si calcola l'area di un parallelogramma?", "options": ["(base + altezza) ÷ 2", "base × altezza", "base × lato", "(base + lato) × 2"], "answer": "base × altezza"}
+{"id": "mat-4-geometria-007", "class": 4, "area": "geometria", "subarea": "", "question": "Un quadrato ha area 36 cm². Quanto misura il lato?", "options": ["4 cm", "6 cm", "9 cm", "12 cm"], "answer": "6 cm"}
+{"id": "mat-4-geometria-008", "class": 4, "area": "geometria", "subarea": "", "question": "L'area di un triangolo con base 10 cm e altezza 4 cm è:", "options": ["20 cm²", "40 cm²", "14 cm²", "10 cm²"], "answer": "20 cm²"}
+{"id": "mat-4-geometria-009", "class": 4, "area": "geometria", "subarea": "", "question": "Il perimetro di un quadrato con lato 7 cm è:", "options": ["14 cm", "21 cm", "28 cm", "49 cm"], "answer": "28 cm"}
+{"id": "mat-4-geometria-010", "class": 4, "area": "geometria", "subarea": "", "question": "Come si calcola l'area di un rombo?", "options": ["(d1 × d2) ÷ 2", "d1 + d2", "d1 × d2", "(d1 + d2) × 2"], "answer": "(d1 × d2) ÷ 2"}
+{"id": "mat-4-geometria-011", "class": 4, "area": "geometria", "subarea": "", "question": "Un rettangolo ha area 48 cm² e base 8 cm. Qual è l'altezza?", "options": ["4 cm", "6 cm", "8 cm", "12 cm"], "answer": "6 cm"}
+{"id": "mat-4-geometria-012", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 12 cm, 11 cm, 14 cm. Perimetro?", "options": ["35", "37", "34", "36"], "answer": "37"}
+{"id": "mat-4-geometria-013", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 5 cm, 10 cm, 10 cm. Perimetro?", "options": ["24", "23", "25", "22"], "answer": "25"}
+{"id": "mat-4-geometria-014", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 15 cm. Perimetro?", "options": ["59", "60", "58", "57"], "answer": "60"}
+{"id": "mat-4-geometria-015", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 20 cm, altezza 7 cm. Area?", "options": ["68", "69", "67", "70"], "answer": "70"}
+{"id": "mat-4-geometria-016", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 16 cm e 7 cm. Perimetro?", "options": ["46", "44", "43", "45"], "answer": "46"}
+{"id": "mat-4-geometria-017", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 4 cm. Perimetro?", "options": ["14", "13", "15", "16"], "answer": "16"}
+{"id": "mat-4-geometria-018", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 14 cm. Perimetro?", "options": ["53", "54", "56", "55"], "answer": "56"}
+{"id": "mat-4-geometria-019", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 3 cm e 15 cm. Perimetro?", "options": ["35", "36", "34", "33"], "answer": "36"}
+{"id": "mat-4-geometria-020", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 7 cm, altezza 2 cm. Area?", "options": ["4", "6", "5", "7"], "answer": "7"}
+{"id": "mat-4-geometria-021", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 13 cm. Area?", "options": ["167", "168", "166", "169"], "answer": "169"}
+{"id": "mat-4-geometria-022", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 7 cm, 14 cm, 3 cm. Perimetro?", "options": ["23", "21", "22", "24"], "answer": "24"}
+{"id": "mat-4-geometria-023", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 11 cm, altezza 3 cm. Area?", "options": ["32", "31", "33", "30"], "answer": "33"}
+{"id": "mat-4-geometria-024", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 17 cm, altezza 3 cm. Area?", "options": ["48", "50", "51", "49"], "answer": "51"}
+{"id": "mat-4-geometria-025", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 7 cm, altezza 17 cm. Area?", "options": ["116", "119", "118", "117"], "answer": "119"}
+{"id": "mat-4-geometria-026", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 19 cm e 16 cm. Perimetro?", "options": ["67", "68", "69", "70"], "answer": "70"}
+{"id": "mat-4-geometria-027", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 16 cm, altezza 11 cm. Area?", "options": ["86", "88", "87", "85"], "answer": "88"}
+{"id": "mat-4-geometria-028", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 11 cm. Area?", "options": ["120", "118", "121", "119"], "answer": "121"}
+{"id": "mat-4-geometria-029", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 13 cm, altezza 16 cm. Area?", "options": ["205", "208", "206", "207"], "answer": "208"}
+{"id": "mat-4-geometria-030", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 7 cm. Area?", "options": ["48", "47", "46", "49"], "answer": "49"}
+{"id": "mat-4-geometria-031", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 4 cm, altezza 20 cm. Area?", "options": ["78", "79", "80", "77"], "answer": "80"}
+{"id": "mat-4-geometria-032", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 5 cm, altezza 14 cm. Area?", "options": ["32", "34", "35", "33"], "answer": "35"}
+{"id": "mat-4-geometria-033", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 12 cm. Area?", "options": ["141", "143", "142", "144"], "answer": "144"}
+{"id": "mat-4-geometria-034", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 19 cm. Perimetro?", "options": ["74", "76", "75", "73"], "answer": "76"}
+{"id": "mat-4-geometria-035", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 3 cm. Perimetro?", "options": ["9", "11", "10", "12"], "answer": "12"}
+{"id": "mat-4-geometria-036", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 14 cm e 3 cm. Perimetro?", "options": ["33", "34", "32", "31"], "answer": "34"}
+{"id": "mat-4-geometria-037", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 10 cm, 12 cm, 4 cm. Perimetro?", "options": ["26", "23", "25", "24"], "answer": "26"}
+{"id": "mat-4-geometria-038", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 18 cm. Perimetro?", "options": ["69", "71", "70", "72"], "answer": "72"}
+{"id": "mat-4-geometria-039", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 14 cm, altezza 14 cm. Area?", "options": ["195", "193", "196", "194"], "answer": "196"}
+{"id": "mat-4-geometria-040", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 4 cm, 14 cm, 12 cm. Perimetro?", "options": ["30", "29", "27", "28"], "answer": "30"}
+{"id": "mat-4-geometria-041", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 13 cm, altezza 3 cm. Area?", "options": ["16", "19", "17", "18"], "answer": "19"}
+{"id": "mat-4-geometria-042", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 17 cm. Area?", "options": ["286", "289", "288", "287"], "answer": "289"}
+{"id": "mat-4-geometria-043", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 16 cm, altezza 14 cm. Area?", "options": ["223", "222", "224", "221"], "answer": "224"}
+{"id": "mat-4-geometria-044", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 13 cm, 4 cm, 11 cm. Perimetro?", "options": ["25", "28", "26", "27"], "answer": "28"}
+{"id": "mat-4-geometria-045", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 16 cm, altezza 17 cm. Area?", "options": ["272", "271", "269", "270"], "answer": "272"}
+{"id": "mat-4-geometria-046", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 5 cm, altezza 2 cm. Area?", "options": ["5", "3", "2", "4"], "answer": "5"}
+{"id": "mat-4-geometria-047", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 16 cm e 4 cm. Perimetro?", "options": ["38", "40", "37", "39"], "answer": "40"}
+{"id": "mat-4-geometria-048", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 18 cm, altezza 19 cm. Area?", "options": ["342", "341", "340", "339"], "answer": "342"}
+{"id": "mat-4-geometria-049", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 8 cm. Area?", "options": ["63", "62", "61", "64"], "answer": "64"}
+{"id": "mat-4-geometria-050", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 10 cm. Area?", "options": ["100", "99", "97", "98"], "answer": "100"}
+{"id": "mat-4-geometria-051", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 2 cm, altezza 20 cm. Area?", "options": ["37", "39", "38", "40"], "answer": "40"}
+{"id": "mat-4-geometria-052", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 20 cm. Perimetro?", "options": ["80", "77", "78", "79"], "answer": "80"}
+{"id": "mat-4-geometria-053", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 19 cm, altezza 6 cm. Area?", "options": ["113", "111", "112", "114"], "answer": "114"}
+{"id": "mat-4-geometria-054", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 7 cm, 13 cm, 6 cm. Perimetro?", "options": ["24", "23", "26", "25"], "answer": "26"}
+{"id": "mat-4-geometria-055", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 4 cm e 2 cm. Perimetro?", "options": ["12", "11", "10", "9"], "answer": "12"}
+{"id": "mat-4-geometria-056", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 12 cm, altezza 4 cm. Area?", "options": ["24", "21", "22", "23"], "answer": "24"}
+{"id": "mat-4-geometria-057", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 8 cm, altezza 6 cm. Area?", "options": ["21", "22", "23", "24"], "answer": "24"}
+{"id": "mat-4-geometria-058", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 6 cm, altezza 3 cm. Area?", "options": ["17", "15", "16", "18"], "answer": "18"}
+{"id": "mat-4-geometria-059", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 7 cm, altezza 9 cm. Area?", "options": ["31", "29", "30", "28"], "answer": "31"}
+{"id": "mat-4-geometria-060", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 10 cm, altezza 19 cm. Area?", "options": ["190", "187", "189", "188"], "answer": "190"}
+{"id": "mat-4-geometria-061", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 11 cm. Perimetro?", "options": ["42", "41", "43", "44"], "answer": "44"}
+{"id": "mat-4-geometria-062", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 19 cm, altezza 7 cm. Area?", "options": ["63", "64", "66", "65"], "answer": "66"}
+{"id": "mat-4-geometria-063", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 2 cm e 4 cm. Perimetro?", "options": ["10", "12", "9", "11"], "answer": "12"}
+{"id": "mat-4-geometria-064", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 4 cm, altezza 7 cm. Area?", "options": ["14", "11", "13", "12"], "answer": "14"}
+{"id": "mat-4-geometria-065", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 4 cm e 11 cm. Perimetro?", "options": ["28", "30", "29", "27"], "answer": "30"}
+{"id": "mat-4-geometria-066", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 10 cm. Perimetro?", "options": ["37", "40", "39", "38"], "answer": "40"}
+{"id": "mat-4-geometria-067", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 14 cm e 5 cm. Perimetro?", "options": ["36", "38", "37", "35"], "answer": "38"}
+{"id": "mat-4-geometria-068", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 9 cm, altezza 3 cm. Area?", "options": ["11", "13", "10", "12"], "answer": "13"}
+{"id": "mat-4-geometria-069", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 15 cm. Area?", "options": ["224", "222", "223", "225"], "answer": "225"}
+{"id": "mat-4-geometria-070", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 11 cm e 13 cm. Perimetro?", "options": ["48", "46", "47", "45"], "answer": "48"}
+{"id": "mat-4-geometria-071", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 6 cm. Perimetro?", "options": ["23", "21", "24", "22"], "answer": "24"}
+{"id": "mat-4-geometria-072", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 5 cm. Area?", "options": ["24", "23", "22", "25"], "answer": "25"}
+{"id": "mat-4-geometria-073", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 11 cm, altezza 6 cm. Area?", "options": ["30", "32", "31", "33"], "answer": "33"}
+{"id": "mat-4-geometria-074", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 12 cm, altezza 9 cm. Area?", "options": ["51", "53", "52", "54"], "answer": "54"}
+{"id": "mat-4-geometria-075", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 11 cm, 6 cm, 5 cm. Perimetro?", "options": ["21", "20", "19", "22"], "answer": "22"}
+{"id": "mat-4-geometria-076", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 3 cm e 3 cm. Perimetro?", "options": ["9", "12", "10", "11"], "answer": "12"}
+{"id": "mat-4-geometria-077", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 19 cm. Area?", "options": ["361", "360", "358", "359"], "answer": "361"}
+{"id": "mat-4-geometria-078", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 2 cm e 10 cm. Perimetro?", "options": ["22", "21", "23", "24"], "answer": "24"}
+{"id": "mat-4-geometria-079", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 17 cm e 4 cm. Perimetro?", "options": ["39", "42", "40", "41"], "answer": "42"}
+{"id": "mat-4-geometria-080", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 7 cm. Perimetro?", "options": ["26", "27", "28", "25"], "answer": "28"}
+{"id": "mat-4-geometria-081", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 10 cm, 10 cm, 4 cm. Perimetro?", "options": ["21", "22", "23", "24"], "answer": "24"}
+{"id": "mat-4-geometria-082", "class": 4, "area": "geometria", "subarea": "", "question": "Quadrato: lato 8 cm. Perimetro?", "options": ["30", "32", "31", "29"], "answer": "32"}
+{"id": "mat-4-geometria-083", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 15 cm, 14 cm, 6 cm. Perimetro?", "options": ["35", "32", "34", "33"], "answer": "35"}
+{"id": "mat-4-geometria-084", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 20 cm e 20 cm. Perimetro?", "options": ["79", "80", "78", "77"], "answer": "80"}
+{"id": "mat-4-geometria-085", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo: base 11 cm, altezza 13 cm. Area?", "options": ["68", "69", "70", "71"], "answer": "71"}
+{"id": "mat-4-geometria-086", "class": 4, "area": "geometria", "subarea": "", "question": "Triangolo con lati 6 cm, 4 cm, 10 cm. Perimetro?", "options": ["19", "17", "18", "20"], "answer": "20"}
+{"id": "mat-4-geometria-087", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 18 cm e 11 cm. Perimetro?", "options": ["56", "55", "57", "58"], "answer": "58"}
+{"id": "mat-4-geometria-088", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: lati 13 cm e 2 cm. Perimetro?", "options": ["30", "29", "28", "27"], "answer": "30"}
+{"id": "mat-4-geometria-089", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 20 cm, altezza 15 cm. Area?", "options": ["299", "297", "298", "300"], "answer": "300"}
+{"id": "mat-4-geometria-090", "class": 4, "area": "geometria", "subarea": "", "question": "Rettangolo: base 14 cm, altezza 10 cm. Area?", "options": ["139", "137", "140", "138"], "answer": "140"}
+{"id": "mat-4-logica_e_dati-001", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Come si calcola la media aritmetica di 3 numeri?", "options": ["Si sommano e si divide per 3", "Si prende il maggiore", "Si trova il centrale", "Si moltiplicano"], "answer": "Si sommano e si divide per 3"}
+{"id": "mat-4-logica_e_dati-002", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "La probabilità si esprime come numero compreso tra:", "options": ["0 e 10", "0 e 100", "0 e 1", "−1 e 1"], "answer": "0 e 1"}
+{"id": "mat-4-logica_e_dati-003", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Come si chiama il grafico con rettangoli proporzionali alle frequenze?", "options": ["Grafico a torta", "Ideogramma", "Grafico a barre", "Tabella"], "answer": "Grafico a barre"}
+{"id": "mat-4-logica_e_dati-004", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Come si chiama il diagramma circolare?", "options": ["Istogramma", "Grafico a torta", "Grafico a barre", "Tabella di frequenza"], "answer": "Grafico a torta"}
+{"id": "mat-4-logica_e_dati-005", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la moda di: 2, 3, 3, 4, 5, 3, 6?", "options": ["2", "3", "4", "5"], "answer": "3"}
+{"id": "mat-4-logica_e_dati-006", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la mediana di: 1, 3, 5, 7, 9?", "options": ["3", "5", "7", "4"], "answer": "5"}
+{"id": "mat-4-logica_e_dati-007", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la mediana di: 2, 4, 6, 8?", "options": ["4", "5", "6", "3"], "answer": "5"}
+{"id": "mat-4-logica_e_dati-008", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Come si chiama la rappresentazione con simboli per le quantità?", "options": ["Ideogramma", "Istogramma", "Aerogramma", "Tabella"], "answer": "Ideogramma"}
+{"id": "mat-4-logica_e_dati-009", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Probabilità di ottenere numero pari con un dado a 6 facce?", "options": ["1/6", "2/6", "3/6", "4/6"], "answer": "3/6"}
+{"id": "mat-4-logica_e_dati-010", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "30 alunni, 6 con occhiali. Probabilità di sorteggiarne uno con occhiali?", "options": ["1/5", "1/6", "1/3", "1/4"], "answer": "1/5"}
+{"id": "mat-4-logica_e_dati-011", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di 0, 4, 8, 12?", "options": ["4", "6", "8", "5"], "answer": "6"}
+{"id": "mat-4-logica_e_dati-012", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di 5, 10, 15, 20?", "options": ["10", "12,5", "15", "17,5"], "answer": "12,5"}
+{"id": "mat-4-logica_e_dati-013", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Probabilità di ottenere testa o croce?", "options": ["1/4", "1/2", "1", "1/3"], "answer": "1/2"}
+{"id": "mat-4-logica_e_dati-014", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 1, 4, 9, 16, 25, ___?", "options": ["35", "36", "33", "34"], "answer": "36"}
+{"id": "mat-4-logica_e_dati-015", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 1, 3, 6, 10, 15, ___?", "options": ["20", "19", "21", "18"], "answer": "21"}
+{"id": "mat-4-logica_e_dati-016", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 2, 4, 8, 16, 32, ___?", "options": ["63", "64", "62", "61"], "answer": "64"}
+{"id": "mat-4-logica_e_dati-017", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 100, 90, 80, 70, 60, ___?", "options": ["48", "50", "47", "49"], "answer": "50"}
+{"id": "mat-4-logica_e_dati-018", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 5, 10, 20, 40, 80, ___?", "options": ["157", "158", "160", "159"], "answer": "160"}
+{"id": "mat-4-logica_e_dati-019", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 1, 2, 4, 7, 11, ___?", "options": ["13", "15", "16", "14"], "answer": "16"}
+{"id": "mat-4-logica_e_dati-020", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 3, 6, 9, 12, 15, ___?", "options": ["17", "15", "18", "16"], "answer": "18"}
+{"id": "mat-4-logica_e_dati-021", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Prossimo numero: 7, 14, 21, 28, 35, ___?", "options": ["39", "41", "40", "42"], "answer": "42"}
+{"id": "mat-4-logica_e_dati-022", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 13, 33, 43, 17?", "options": ["25", "24", "23", "26"], "answer": "26"}
+{"id": "mat-4-logica_e_dati-023", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 29, 29, 46, 26?", "options": ["29", "31", "30", "32"], "answer": "32"}
+{"id": "mat-4-logica_e_dati-024", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 27, 36, 42, 14?", "options": ["27", "26", "29", "28"], "answer": "29"}
+{"id": "mat-4-logica_e_dati-025", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 20, 15, 6, 16?", "options": ["11", "14", "12", "13"], "answer": "14"}
+{"id": "mat-4-logica_e_dati-026", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 36, 13, 42, 31?", "options": ["28", "30", "27", "29"], "answer": "30"}
+{"id": "mat-4-logica_e_dati-027", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 28, 32, 24, 9?", "options": ["22", "21", "23", "20"], "answer": "23"}
+{"id": "mat-4-logica_e_dati-028", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 47, 22, 34, 50?", "options": ["35", "36", "38", "37"], "answer": "38"}
+{"id": "mat-4-logica_e_dati-029", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 12, 12, 24, 10?", "options": ["11", "13", "12", "14"], "answer": "14"}
+{"id": "mat-4-logica_e_dati-030", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 15, 36, 37, 38?", "options": ["30", "29", "28", "31"], "answer": "31"}
+{"id": "mat-4-logica_e_dati-031", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 20, 13, 32, 11?", "options": ["19", "16", "17", "18"], "answer": "19"}
+{"id": "mat-4-logica_e_dati-032", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 38, 18, 48, 33?", "options": ["33", "32", "34", "31"], "answer": "34"}
+{"id": "mat-4-logica_e_dati-033", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 31, 49, 43, 21?", "options": ["35", "34", "36", "33"], "answer": "36"}
+{"id": "mat-4-logica_e_dati-034", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 30, 32, 20, 12?", "options": ["23", "22", "20", "21"], "answer": "23"}
+{"id": "mat-4-logica_e_dati-035", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 8, 49, 8, 5?", "options": ["15", "16", "14", "17"], "answer": "17"}
+{"id": "mat-4-logica_e_dati-036", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 13, 38, 15, 10?", "options": ["19", "18", "16", "17"], "answer": "19"}
+{"id": "mat-4-logica_e_dati-037", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 26, 8, 8, 15?", "options": ["12", "14", "11", "13"], "answer": "14"}
+{"id": "mat-4-logica_e_dati-038", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 8, 5, 41, 43?", "options": ["23", "22", "24", "21"], "answer": "24"}
+{"id": "mat-4-logica_e_dati-039", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 31, 45, 38, 19?", "options": ["32", "30", "31", "33"], "answer": "33"}
+{"id": "mat-4-logica_e_dati-040", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 37, 34, 8, 12?", "options": ["22", "20", "19", "21"], "answer": "22"}
+{"id": "mat-4-logica_e_dati-041", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 16, 32, 42, 36?", "options": ["29", "28", "30", "31"], "answer": "31"}
+{"id": "mat-4-logica_e_dati-042", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 30, 13, 36, 35?", "options": ["27", "26", "25", "28"], "answer": "28"}
+{"id": "mat-4-logica_e_dati-043", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 27, 16, 28, 14?", "options": ["19", "21", "18", "20"], "answer": "21"}
+{"id": "mat-4-logica_e_dati-044", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 8, 8, 30, 24?", "options": ["16", "17", "15", "14"], "answer": "17"}
+{"id": "mat-4-logica_e_dati-045", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 7, 19, 29, 39?", "options": ["21", "20", "22", "23"], "answer": "23"}
+{"id": "mat-4-logica_e_dati-046", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 43, 8, 46, 46?", "options": ["35", "34", "32", "33"], "answer": "35"}
+{"id": "mat-4-logica_e_dati-047", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 40, 11, 49, 24?", "options": ["28", "29", "31", "30"], "answer": "31"}
+{"id": "mat-4-logica_e_dati-048", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 44, 49, 18, 5?", "options": ["27", "28", "29", "26"], "answer": "29"}
+{"id": "mat-4-logica_e_dati-049", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 11, 40, 43, 21?", "options": ["25", "26", "27", "28"], "answer": "28"}
+{"id": "mat-4-logica_e_dati-050", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 21, 30, 39, 35?", "options": ["29", "30", "28", "31"], "answer": "31"}
+{"id": "mat-4-logica_e_dati-051", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 16, 33, 14, 15?", "options": ["16", "18", "19", "17"], "answer": "19"}
+{"id": "mat-4-logica_e_dati-052", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 10, 22, 39, 38?", "options": ["27", "24", "25", "26"], "answer": "27"}
+{"id": "mat-4-logica_e_dati-053", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 43, 23, 17, 7?", "options": ["21", "19", "20", "22"], "answer": "22"}
+{"id": "mat-4-logica_e_dati-054", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 37, 21, 26, 13?", "options": ["24", "22", "23", "21"], "answer": "24"}
+{"id": "mat-4-logica_e_dati-055", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 17, 29, 37, 49?", "options": ["33", "31", "30", "32"], "answer": "33"}
+{"id": "mat-4-logica_e_dati-056", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 41, 27, 27, 48?", "options": ["33", "34", "32", "35"], "answer": "35"}
+{"id": "mat-4-logica_e_dati-057", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 27, 28, 12, 25?", "options": ["23", "20", "22", "21"], "answer": "23"}
+{"id": "mat-4-logica_e_dati-058", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 32, 30, 22, 27?", "options": ["26", "24", "25", "27"], "answer": "27"}
+{"id": "mat-4-logica_e_dati-059", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 9, 44, 28, 25?", "options": ["25", "23", "26", "24"], "answer": "26"}
+{"id": "mat-4-logica_e_dati-060", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 40, 35, 25, 13?", "options": ["26", "28", "27", "25"], "answer": "28"}
+{"id": "mat-4-logica_e_dati-061", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 38, 35, 41, 45?", "options": ["39", "37", "38", "36"], "answer": "39"}
+{"id": "mat-4-logica_e_dati-062", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 48, 39, 38, 40?", "options": ["38", "39", "40", "41"], "answer": "41"}
+{"id": "mat-4-logica_e_dati-063", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 11, 8, 33, 5?", "options": ["11", "13", "14", "12"], "answer": "14"}
+{"id": "mat-4-logica_e_dati-064", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 40, 25, 20, 37?", "options": ["27", "29", "30", "28"], "answer": "30"}
+{"id": "mat-4-logica_e_dati-065", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 46, 42, 20, 34?", "options": ["34", "32", "33", "35"], "answer": "35"}
+{"id": "mat-4-logica_e_dati-066", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 33, 21, 23, 44?", "options": ["30", "27", "29", "28"], "answer": "30"}
+{"id": "mat-4-logica_e_dati-067", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 23, 20, 8, 29?", "options": ["17", "18", "20", "19"], "answer": "20"}
+{"id": "mat-4-logica_e_dati-068", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 16, 47, 5, 27?", "options": ["20", "23", "22", "21"], "answer": "23"}
+{"id": "mat-4-logica_e_dati-069", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 23, 8, 6, 11?", "options": ["10", "12", "9", "11"], "answer": "12"}
+{"id": "mat-4-logica_e_dati-070", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 18, 10, 27, 7?", "options": ["13", "12", "14", "15"], "answer": "15"}
+{"id": "mat-4-logica_e_dati-071", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 39, 16, 22, 42?", "options": ["28", "27", "26", "29"], "answer": "29"}
+{"id": "mat-4-logica_e_dati-072", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 26, 12, 21, 20?", "options": ["19", "18", "17", "16"], "answer": "19"}
+{"id": "mat-4-logica_e_dati-073", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 8, 25, 10, 32?", "options": ["15", "17", "18", "16"], "answer": "18"}
+{"id": "mat-4-logica_e_dati-074", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 16, 7, 39, 30?", "options": ["21", "22", "20", "23"], "answer": "23"}
+{"id": "mat-4-logica_e_dati-075", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 21, 45, 44, 18?", "options": ["31", "30", "32", "29"], "answer": "32"}
+{"id": "mat-4-logica_e_dati-076", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 11, 44, 20, 33?", "options": ["27", "24", "26", "25"], "answer": "27"}
+{"id": "mat-4-logica_e_dati-077", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 19, 44, 17, 47?", "options": ["30", "29", "31", "28"], "answer": "31"}
+{"id": "mat-4-logica_e_dati-078", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 8, 41, 6, 19?", "options": ["18", "15", "16", "17"], "answer": "18"}
+{"id": "mat-4-logica_e_dati-079", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 30, 8, 34, 46?", "options": ["28", "29", "26", "27"], "answer": "29"}
+{"id": "mat-4-logica_e_dati-080", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 24, 40, 48, 6?", "options": ["27", "26", "29", "28"], "answer": "29"}
+{"id": "mat-4-logica_e_dati-081", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 11, 27, 34, 17?", "options": ["19", "21", "22", "20"], "answer": "22"}
+{"id": "mat-4-logica_e_dati-082", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 31, 9, 31, 27?", "options": ["22", "24", "23", "21"], "answer": "24"}
+{"id": "mat-4-logica_e_dati-083", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 44, 41, 30, 47?", "options": ["39", "37", "40", "38"], "answer": "40"}
+{"id": "mat-4-logica_e_dati-084", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 43, 11, 38, 47?", "options": ["33", "31", "32", "34"], "answer": "34"}
+{"id": "mat-4-logica_e_dati-085", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 26, 6, 41, 13?", "options": ["18", "21", "20", "19"], "answer": "21"}
+{"id": "mat-4-logica_e_dati-086", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 34, 20, 29, 39?", "options": ["29", "30", "27", "28"], "answer": "30"}
+{"id": "mat-4-logica_e_dati-087", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 31, 45, 24, 28?", "options": ["29", "30", "31", "32"], "answer": "32"}
+{"id": "mat-4-logica_e_dati-088", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 46, 34, 32, 33?", "options": ["33", "35", "34", "36"], "answer": "36"}
+{"id": "mat-4-logica_e_dati-089", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 16, 28, 25, 42?", "options": ["26", "24", "27", "25"], "answer": "27"}
+{"id": "mat-4-logica_e_dati-090", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 18, 47, 10, 9?", "options": ["21", "19", "18", "20"], "answer": "21"}
+{"id": "mat-4-logica_e_dati-091", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 45, 22, 22, 29?", "options": ["26", "28", "27", "29"], "answer": "29"}
+{"id": "mat-4-logica_e_dati-092", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 8, 50, 5, 12?", "options": ["17", "15", "18", "16"], "answer": "18"}
+{"id": "mat-4-logica_e_dati-093", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 14, 29, 22, 36?", "options": ["25", "22", "23", "24"], "answer": "25"}
+{"id": "mat-4-logica_e_dati-094", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 23, 38, 39, 25?", "options": ["28", "31", "30", "29"], "answer": "31"}
+{"id": "mat-4-logica_e_dati-095", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 50, 28, 19, 48?", "options": ["34", "33", "36", "35"], "answer": "36"}
+{"id": "mat-4-logica_e_dati-096", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 45, 26, 33, 36?", "options": ["35", "34", "33", "32"], "answer": "35"}
+{"id": "mat-4-logica_e_dati-097", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 5, 49, 24, 45?", "options": ["30", "29", "28", "27"], "answer": "30"}
+{"id": "mat-4-logica_e_dati-098", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 9, 21, 6, 31?", "options": ["16", "14", "15", "13"], "answer": "16"}
+{"id": "mat-4-logica_e_dati-099", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 46, 43, 19, 20?", "options": ["30", "29", "31", "32"], "answer": "32"}
+{"id": "mat-4-logica_e_dati-100", "class": 4, "area": "logica_e_dati", "subarea": "", "question": "Qual è la media di: 9, 38, 25, 7?", "options": ["18", "16", "17", "19"], "answer": "19"}

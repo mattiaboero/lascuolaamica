@@ -1,0 +1,360 @@
+{"id": "mat-3-tabelline-001", "explanation": "Qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 8 × 1 = 8 perché prendere 1 gruppo di 8 fa sempre 8."}
+{"id": "mat-3-tabelline-002", "explanation": "9 × 7 = 63: conta di 9 in 9 per 7 volte: 9, 18, 27, 36, 45, 54, 63. Puoi anche ricordare 9 × 7 come 'nove per sette fa sessantatré'."}
+{"id": "mat-3-tabelline-004", "explanation": "9 × 10 = 90: moltiplicare per 10 significa aggiungere uno zero al numero. 9 × 10 = 90."}
+{"id": "mat-3-tabelline-005", "explanation": "7 × 6 = 42: conta di 7 in 7 per 6 volte: 7, 14, 21, 28, 35, 42. Oppure ricorda che 6 × 7 = 42 è lo stesso risultato."}
+{"id": "mat-3-tabelline-006", "explanation": "6 × 4 = 24: conta di 6 in 6 per 4 volte: 6, 12, 18, 24. Ricorda che 4 × 6 dà lo stesso risultato."}
+{"id": "mat-3-tabelline-008", "explanation": "6 × 3 = 18: conta di 6 in 6 per 3 volte: 6, 12, 18. Tre gruppi di sei fanno diciotto."}
+{"id": "mat-3-tabelline-009", "explanation": "8 × 6 = 48: conta di 8 in 8 per 6 volte: 8, 16, 24, 32, 40, 48. Oppure usa 8 × 5 = 40 e aggiungi ancora 8."}
+{"id": "mat-3-tabelline-010", "explanation": "7 × 10 = 70: moltiplicare per 10 significa aggiungere uno zero al numero. 7 × 10 = 70."}
+{"id": "mat-3-tabelline-011", "explanation": "7 × 9 = 63: conta di 7 in 7 per 9 volte, oppure ricorda che 7 × 9 = 63 (lo stesso di 9 × 7). Puoi anche calcolare 7 × 10 = 70 e togliere 7: 70 − 7 = 63."}
+{"id": "mat-3-tabelline-012", "explanation": "6 × 5 = 30: conta di 6 in 6 per 5 volte: 6, 12, 18, 24, 30. Cinque gruppi da 6 fanno 30."}
+{"id": "mat-3-tabelline-013", "explanation": "8 × 3 = 24: conta di 8 in 8 per 3 volte: 8, 16, 24. Tre gruppi di 8 fanno 24."}
+{"id": "mat-3-tabelline-014", "explanation": "6 × 9 = 54: usa la strategia 6 × 10 = 60, poi togli 6: 60 − 6 = 54. Oppure conta di 6 in 6 per 9 volte."}
+{"id": "mat-3-tabelline-015", "explanation": "9 × 3 = 27: conta di 9 in 9 per 3 volte: 9, 18, 27. Tre gruppi di 9 fanno 27."}
+{"id": "mat-3-tabelline-016", "explanation": "Qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 9 × 1 = 9 perché un solo gruppo di 9 fa 9."}
+{"id": "mat-3-tabelline-017", "explanation": "8 × 4 = 32: conta di 8 in 8 per 4 volte: 8, 16, 24, 32. Quattro gruppi di 8 fanno 32."}
+{"id": "mat-3-tabelline-018", "explanation": "6 × 7 = 42: conta di 6 in 6 per 7 volte: 6, 12, 18, 24, 30, 36, 42. Oppure ricorda che 7 × 6 dà lo stesso risultato."}
+{"id": "mat-3-tabelline-019", "explanation": "8 × 8 = 64: 8 × 8 è un quadrato perfetto da memorizzare. Puoi calcolare 8 × 4 = 32 e raddoppiare: 32 × 2 = 64."}
+{"id": "mat-3-tabelline-021", "explanation": "8 × 9 = 72: usa la strategia 8 × 10 = 80 e togli 8: 80 − 8 = 72. Oppure conta di 8 in 8 per 9 volte."}
+{"id": "mat-3-tabelline-022", "explanation": "Qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 6 × 1 = 6 perché un solo gruppo di 6 fa 6."}
+{"id": "mat-3-tabelline-023", "explanation": "7 × 5 = 35: conta di 7 in 7 per 5 volte: 7, 14, 21, 28, 35. Cinque gruppi di 7 fanno 35."}
+{"id": "mat-3-tabelline-024", "explanation": "8 × 7 = 56: conta di 8 in 8 per 7 volte: 8, 16, 24, 32, 40, 48, 56. Oppure usa 8 × 6 = 48 e aggiungi 8."}
+{"id": "mat-3-tabelline-025", "explanation": "9 × 8 = 72: usa la strategia 9 × 10 = 90 e togli 9 due volte: 90 − 18 = 72. Oppure ricorda che è lo stesso di 8 × 9 = 72."}
+{"id": "mat-3-tabelline-026", "explanation": "8 × 10 = 80: moltiplicare per 10 significa aggiungere uno zero al numero. 8 × 10 = 80."}
+{"id": "mat-3-tabelline-028", "explanation": "9 × 5 = 45: conta di 9 in 9 per 5 volte: 9, 18, 27, 36, 45. Cinque gruppi di 9 fanno 45."}
+{"id": "mat-3-tabelline-029", "explanation": "7 × 3 = 21: conta di 7 in 7 per 3 volte: 7, 14, 21. Tre gruppi di 7 fanno 21."}
+{"id": "mat-3-tabelline-030", "explanation": "9 × 9 = 81: è un quadrato perfetto da memorizzare. Puoi calcolare 9 × 10 = 90 e togliere 9: 90 − 9 = 81."}
+{"id": "mat-3-tabelline-031", "explanation": "9 × 2 = 18: conta di 9 in 9 per 2 volte: 9, 18. Due gruppi di 9 fanno 18."}
+{"id": "mat-3-tabelline-032", "explanation": "6 × 10 = 60: moltiplicare per 10 significa aggiungere uno zero al numero. 6 × 10 = 60."}
+{"id": "mat-3-tabelline-033", "explanation": "9 × 4 = 36: conta di 9 in 9 per 4 volte: 9, 18, 27, 36. Oppure usa 9 × 5 = 45 e togli 9: 45 − 9 = 36."}
+{"id": "mat-3-tabelline-035", "explanation": "6 × 6 = 36: è un quadrato perfetto da memorizzare. Conta di 6 in 6 per 6 volte: 6, 12, 18, 24, 30, 36."}
+{"id": "mat-3-tabelline-036", "explanation": "7 × 4 = 28: conta di 7 in 7 per 4 volte: 7, 14, 21, 28. Quattro gruppi di 7 fanno 28."}
+{"id": "mat-3-tabelline-037", "explanation": "Qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 7 × 1 = 7 perché un solo gruppo di 7 fa 7."}
+{"id": "mat-3-tabelline-040", "explanation": "7 × 2 = 14: conta di 7 in 7 per 2 volte: 7, 14. Due gruppi di 7 fanno 14."}
+{"id": "mat-3-aritmetica-001", "explanation": "Per sommare 262 + 182, allinea le unità, decine e centinaia e somma colonna per colonna da destra: 2+2=4, 6+8=14 (scrivi 4, riporta 1), 2+1+1=4. Il risultato è 444."}
+{"id": "mat-3-aritmetica-002", "explanation": "Per sommare 461 + 280, somma prima le centinaia (400+200=600), poi le decine (60+80=140), poi le unità (1+0=1): 600+140+1=741."}
+{"id": "mat-3-aritmetica-003", "explanation": "Per sommare 457 + 145, somma colonna per colonna: unità 7+5=12 (scrivi 2, riporta 1), decine 5+4+1=10 (scrivi 0, riporta 1), centinaia 4+1+1=6. Il risultato è 602."}
+{"id": "mat-3-aritmetica-004", "explanation": "Per sommare 13 + 193, puoi pensare 13 + 193 = 13 + 200 − 7 = 213 − 7 = 206. Oppure somma colonna per colonna partendo dalle unità."}
+{"id": "mat-3-aritmetica-005", "explanation": "Per sommare 156 + 440, somma le centinaia (100+400=500), poi le decine (50+40=90), poi le unità (6+0=6): 500+90+6=596."}
+{"id": "mat-3-aritmetica-006", "explanation": "Per sommare 175 + 476, somma colonna per colonna: unità 5+6=11 (scrivi 1, riporta 1), decine 7+7+1=15 (scrivi 5, riporta 1), centinaia 1+4+1=6. Il risultato è 651."}
+{"id": "mat-3-aritmetica-007", "explanation": "Per sommare 305 + 492, somma colonna per colonna: unità 5+2=7, decine 0+9=9, centinaia 3+4=7. Il risultato è 797."}
+{"id": "mat-3-aritmetica-008", "explanation": "Per sommare 369 + 166, somma colonna per colonna: unità 9+6=15 (scrivi 5, riporta 1), decine 6+6+1=13 (scrivi 3, riporta 1), centinaia 3+1+1=5. Il risultato è 535."}
+{"id": "mat-3-aritmetica-009", "explanation": "Per sommare 263 + 450, somma colonna per colonna: unità 3+0=3, decine 6+5=11 (scrivi 1, riporta 1), centinaia 2+4+1=7. Il risultato è 713."}
+{"id": "mat-3-aritmetica-010", "explanation": "Per sommare 440 + 254, somma le centinaia (400+200=600), le decine (40+50=90), le unità (0+4=4): 600+90+4=694."}
+{"id": "mat-3-aritmetica-011", "explanation": "Per sommare 62 + 201, somma colonna per colonna: unità 2+1=3, decine 6+0=6, centinaia 0+2=2. Il risultato è 263."}
+{"id": "mat-3-aritmetica-012", "explanation": "Per sommare 215 + 310, somma colonna per colonna: unità 5+0=5, decine 1+1=2, centinaia 2+3=5. Il risultato è 525."}
+{"id": "mat-3-aritmetica-013", "explanation": "Per sommare 225 + 207, somma colonna per colonna: unità 5+7=12 (scrivi 2, riporta 1), decine 2+0+1=3, centinaia 2+2=4. Il risultato è 432."}
+{"id": "mat-3-aritmetica-014", "explanation": "Per sommare 129 + 305, somma colonna per colonna: unità 9+5=14 (scrivi 4, riporta 1), decine 2+0+1=3, centinaia 1+3=4. Il risultato è 434."}
+{"id": "mat-3-aritmetica-015", "explanation": "Per sommare 483 + 204, somma colonna per colonna: unità 3+4=7, decine 8+0=8, centinaia 4+2=6. Il risultato è 687."}
+{"id": "mat-3-aritmetica-016", "explanation": "Per sommare 446 + 127, somma colonna per colonna: unità 6+7=13 (scrivi 3, riporta 1), decine 4+2+1=7, centinaia 4+1=5. Il risultato è 573."}
+{"id": "mat-3-aritmetica-017", "explanation": "Per sommare 29 + 52, somma le decine (20+50=70) e le unità (9+2=11), poi unisci: 70+11=81."}
+{"id": "mat-3-aritmetica-018", "explanation": "Per sommare 352 + 50, somma le decine (50+50=100) e aggiungi al resto: 300+100+2=402."}
+{"id": "mat-3-aritmetica-019", "explanation": "Per sommare 134 + 253, somma le centinaia (100+200=300), le decine (30+50=80), le unità (4+3=7): 300+80+7=387."}
+{"id": "mat-3-aritmetica-020", "explanation": "Per sommare 178 + 156, somma colonna per colonna: unità 8+6=14 (scrivi 4, riporta 1), decine 7+5+1=13 (scrivi 3, riporta 1), centinaia 1+1+1=3. Il risultato è 334."}
+{"id": "mat-3-aritmetica-021", "explanation": "Per sommare 46 + 336, somma colonna per colonna: unità 6+6=12 (scrivi 2, riporta 1), decine 4+3+1=8, centinaia 0+3=3. Il risultato è 382."}
+{"id": "mat-3-aritmetica-022", "explanation": "Per sommare 35 + 215, somma le centinaia (0+200=200), le decine (30+10=40), le unità (5+5=10): 200+40+10=250."}
+{"id": "mat-3-aritmetica-023", "explanation": "Per sommare 377 + 476, somma colonna per colonna: unità 7+6=13 (scrivi 3, riporta 1), decine 7+7+1=15 (scrivi 5, riporta 1), centinaia 3+4+1=8. Il risultato è 853."}
+{"id": "mat-3-aritmetica-024", "explanation": "Per sommare 302 + 329, somma colonna per colonna: unità 2+9=11 (scrivi 1, riporta 1), decine 0+2+1=3, centinaia 3+3=6. Il risultato è 631."}
+{"id": "mat-3-aritmetica-025", "explanation": "Per sommare 365 + 338, somma colonna per colonna: unità 5+8=13 (scrivi 3, riporta 1), decine 6+3+1=10 (scrivi 0, riporta 1), centinaia 3+3+1=7. Il risultato è 703."}
+{"id": "mat-3-aritmetica-026", "explanation": "Per sottrarre 847 − 672, sottrai colonna per colonna da destra: unità 7−2=5, decine 4−7 (prendi in prestito): 14−7=7, centinaia 7−1−6=0. Rimane 175."}
+{"id": "mat-3-aritmetica-027", "explanation": "Per sottrarre 176 − 4, sottrai solo le unità: 6−4=2, le decine e centinaia restano uguali: 172."}
+{"id": "mat-3-aritmetica-028", "explanation": "Per sottrarre 98 − 46, sottrai le decine (90−40=50) e le unità (8−6=2): 50+2=52."}
+{"id": "mat-3-aritmetica-029", "explanation": "Per sottrarre 279 − 167, sottrai colonna per colonna: unità 9−7=2, decine 7−6=1, centinaia 2−1=1. Il risultato è 112."}
+{"id": "mat-3-aritmetica-030", "explanation": "Per sottrarre 155 − 46, sottrai le unità (5−6: prendi in prestito) 15−6=9, poi le decine (4−1−4=0), centinaia (1−0=1). Il risultato è 109."}
+{"id": "mat-3-aritmetica-031", "explanation": "Per sottrarre 386 − 325, sottrai colonna per colonna: unità 6−5=1, decine 8−2=6, centinaia 3−3=0. Il risultato è 061 = 61."}
+{"id": "mat-3-aritmetica-032", "explanation": "Per sottrarre 170 − 148, sottrai colonna per colonna: unità 0−8 (prendi in prestito) 10−8=2, decine 6−1−4=1... oppure pensa: 148+22=170, quindi la differenza è 22."}
+{"id": "mat-3-aritmetica-033", "explanation": "Per sottrarre 711 − 484, sottrai colonna per colonna con i prestiti necessari. Puoi anche pensare: 484+227=711, quindi la differenza è 227."}
+{"id": "mat-3-aritmetica-034", "explanation": "Per sottrarre 176 − 107, sottrai colonna per colonna: unità 6−7 (prendi in prestito) 16−7=9, decine 6−1−0=5... 176−107=69. Pensa: 107+69=176."}
+{"id": "mat-3-aritmetica-035", "explanation": "Per sottrarre 529 − 252, sottrai colonna per colonna con i prestiti necessari: 252+277=529, quindi la differenza è 277."}
+{"id": "mat-3-aritmetica-036", "explanation": "Per sottrarre 963 − 959, i due numeri sono molto vicini: basta contare quanti passi separano 959 da 963: 959, 960, 961, 962, 963 — sono 4 passi, quindi il risultato è 4."}
+{"id": "mat-3-aritmetica-037", "explanation": "Per sottrarre 411 − 52, sottrai colonna per colonna con i prestiti necessari: unità 1−2 (prendi in prestito) 11−2=9, decine 0−1−5 (prendi in prestito) 10−6=4... Pensa: 52+359=411."}
+{"id": "mat-3-aritmetica-038", "explanation": "Per sottrarre 326 − 106, sottrai colonna per colonna: unità 6−6=0, decine 2−0=2, centinaia 3−1=2. Il risultato è 220."}
+{"id": "mat-3-aritmetica-039", "explanation": "Per sottrarre 736 − 368, i due numeri si dimezzano: 368 è esattamente la metà di 736, quindi il risultato è 368."}
+{"id": "mat-3-aritmetica-040", "explanation": "Per sottrarre 529 − 35, sottrai solo decine e unità: 29−35 richiede prestito, oppure pensa 529−30=499, poi 499−5=494."}
+{"id": "mat-3-aritmetica-041", "explanation": "Per sottrarre 988 − 352, sottrai colonna per colonna: unità 8−2=6, decine 8−5=3, centinaia 9−3=6. Il risultato è 636."}
+{"id": "mat-3-aritmetica-042", "explanation": "Per sottrarre 371 − 84, prima sottrai 371−80=291, poi sottrai ancora 4: 291−4=287."}
+{"id": "mat-3-aritmetica-043", "explanation": "Per sottrarre 739 − 357, sottrai colonna per colonna con i prestiti necessari: 357+382=739, quindi la differenza è 382."}
+{"id": "mat-3-aritmetica-044", "explanation": "Per sottrarre 582 − 391, sottrai colonna per colonna con i prestiti necessari: 391+191=582, quindi la differenza è 191."}
+{"id": "mat-3-aritmetica-045", "explanation": "Per sottrarre 657 − 568, i due numeri sono vicini: 568+89=657, quindi la differenza è 89."}
+{"id": "mat-3-aritmetica-046", "explanation": "Per sottrarre 332 − 63, prima sottrai 332−60=272, poi sottrai ancora 3: 272−3=269."}
+{"id": "mat-3-aritmetica-047", "explanation": "Per sottrarre 629 − 397, prima sottrai 629−400=229, poi aggiungi 3 (perché hai tolto 3 in più): 229+3=232."}
+{"id": "mat-3-aritmetica-048", "explanation": "Per sottrarre 982 − 25, prima sottrai 982−20=962, poi sottrai ancora 5: 962−5=957."}
+{"id": "mat-3-aritmetica-049", "explanation": "Per sottrarre 717 − 132, sottrai colonna per colonna: unità 7−2=5, decine 1−3 (prendi in prestito) 11−3=8, centinaia 6−1=5... 717−132=585."}
+{"id": "mat-3-aritmetica-050", "explanation": "Per sottrarre 169 − 48, prima sottrai 169−40=129, poi sottrai ancora 8: 129−8=121."}
+{"id": "mat-3-aritmetica-051", "explanation": "10 × 6 = 60: moltiplicare per 10 significa aggiungere uno zero al numero. 6 × 10 = 60."}
+{"id": "mat-3-aritmetica-052", "explanation": "8 × 7 = 56: conta di 8 in 8 per 7 volte: 8, 16, 24, 32, 40, 48, 56. Oppure usa 8 × 6 = 48 e aggiungi 8."}
+{"id": "mat-3-aritmetica-053", "explanation": "6 × 3 = 18: conta di 6 in 6 per 3 volte: 6, 12, 18. Tre gruppi di 6 fanno 18."}
+{"id": "mat-3-aritmetica-054", "explanation": "Qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 9 × 1 = 9 perché un solo gruppo di 9 fa 9."}
+{"id": "mat-3-aritmetica-055", "explanation": "6 × 9 = 54: usa la strategia 6 × 10 = 60 e togli 6: 60 − 6 = 54. Sei gruppi di 9 fanno 54."}
+{"id": "mat-3-aritmetica-056", "explanation": "9 × 10 = 90: moltiplicare per 10 significa aggiungere uno zero al numero. 9 × 10 = 90."}
+{"id": "mat-3-aritmetica-057", "explanation": "8 × 5 = 40: conta di 8 in 8 per 5 volte: 8, 16, 24, 32, 40. Cinque gruppi di 8 fanno 40."}
+{"id": "mat-3-aritmetica-058", "explanation": "5 × 5 = 25: è un quadrato perfetto da memorizzare. Cinque gruppi da 5 fanno 25."}
+{"id": "mat-3-aritmetica-059", "explanation": "9 × 3 = 27: conta di 9 in 9 per 3 volte: 9, 18, 27. Tre gruppi di 9 fanno 27."}
+{"id": "mat-3-aritmetica-060", "explanation": "2 × 7 = 14: conta di 2 in 2 per 7 volte: 2, 4, 6, 8, 10, 12, 14. Sette gruppi di 2 fanno 14."}
+{"id": "mat-3-aritmetica-061", "explanation": "10 × 1 = 10: qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 10 × 1 = 10."}
+{"id": "mat-3-aritmetica-062", "explanation": "2 × 9 = 18: conta di 2 in 2 per 9 volte: 2, 4, 6, 8, 10, 12, 14, 16, 18. Nove gruppi di 2 fanno 18."}
+{"id": "mat-3-aritmetica-063", "explanation": "5 × 8 = 40: conta di 5 in 5 per 8 volte: 5, 10, 15, 20, 25, 30, 35, 40. Otto gruppi di 5 fanno 40."}
+{"id": "mat-3-aritmetica-064", "explanation": "4 × 2 = 8: conta di 4 in 4 per 2 volte: 4, 8. Due gruppi di 4 fanno 8."}
+{"id": "mat-3-aritmetica-065", "explanation": "2 × 8 = 16: conta di 2 in 2 per 8 volte: 2, 4, 6, 8, 10, 12, 14, 16. Otto gruppi di 2 fanno 16."}
+{"id": "mat-3-aritmetica-066", "explanation": "Qualsiasi numero moltiplicato per 1 rimane uguale a se stesso. 8 × 1 = 8 perché un solo gruppo di 8 fa 8."}
+{"id": "mat-3-aritmetica-067", "explanation": "5 × 3 = 15: conta di 5 in 5 per 3 volte: 5, 10, 15. Tre gruppi di 5 fanno 15."}
+{"id": "mat-3-aritmetica-068", "explanation": "3 × 4 = 12: conta di 3 in 3 per 4 volte: 3, 6, 9, 12. Quattro gruppi di 3 fanno 12."}
+{"id": "mat-3-aritmetica-069", "explanation": "8 × 9 = 72: usa la strategia 8 × 10 = 80 e togli 8: 80 − 8 = 72. Otto gruppi di 9 fanno 72."}
+{"id": "mat-3-aritmetica-070", "explanation": "70 ÷ 7 = 10: quante volte entra il 7 nel 70? 7 × 10 = 70, quindi il risultato è 10."}
+{"id": "mat-3-aritmetica-071", "explanation": "36 ÷ 9 = 4: quante volte entra il 9 nel 36? 9 × 4 = 36, quindi il risultato è 4."}
+{"id": "mat-3-aritmetica-072", "explanation": "64 ÷ 8 = 8: quante volte entra l'8 nel 64? 8 × 8 = 64, quindi il risultato è 8."}
+{"id": "mat-3-aritmetica-073", "explanation": "90 ÷ 9 = 10: quante volte entra il 9 nel 90? 9 × 10 = 90, quindi il risultato è 10."}
+{"id": "mat-3-aritmetica-074", "explanation": "24 ÷ 3 = 8: quante volte entra il 3 nel 24? 3 × 8 = 24, quindi il risultato è 8."}
+{"id": "mat-3-aritmetica-075", "explanation": "12 ÷ 2 = 6: quante volte entra il 2 nel 12? 2 × 6 = 12, quindi il risultato è 6."}
+{"id": "mat-3-aritmetica-076", "explanation": "12 ÷ 6 = 2: quante volte entra il 6 nel 12? 6 × 2 = 12, quindi il risultato è 2."}
+{"id": "mat-3-aritmetica-077", "explanation": "40 ÷ 10 = 4: quante volte entra il 10 nel 40? 10 × 4 = 40, quindi il risultato è 4."}
+{"id": "mat-3-aritmetica-078", "explanation": "90 ÷ 10 = 9: quante volte entra il 10 nel 90? 10 × 9 = 90, quindi il risultato è 9."}
+{"id": "mat-3-aritmetica-079", "explanation": "24 ÷ 8 = 3: quante volte entra l'8 nel 24? 8 × 3 = 24, quindi il risultato è 3."}
+{"id": "mat-3-aritmetica-080", "explanation": "21 ÷ 3 = 7: quante volte entra il 3 nel 21? 3 × 7 = 21, quindi il risultato è 7."}
+{"id": "mat-3-aritmetica-081", "explanation": "8 ÷ 4 = 2: quante volte entra il 4 nell'8? 4 × 2 = 8, quindi il risultato è 2."}
+{"id": "mat-3-aritmetica-082", "explanation": "20 ÷ 2 = 10: quante volte entra il 2 nel 20? 2 × 10 = 20, quindi il risultato è 10."}
+{"id": "mat-3-aritmetica-083", "explanation": "8 ÷ 2 = 4: quante volte entra il 2 nell'8? 2 × 4 = 8, quindi il risultato è 4."}
+{"id": "mat-3-aritmetica-084", "explanation": "60 ÷ 10 = 6: quante volte entra il 10 nel 60? 10 × 6 = 60, quindi il risultato è 6."}
+{"id": "mat-3-aritmetica-085", "explanation": "40 ÷ 8 = 5: quante volte entra l'8 nel 40? 8 × 5 = 40, quindi il risultato è 5."}
+{"id": "mat-3-aritmetica-086", "explanation": "18 ÷ 2 = 9: quante volte entra il 2 nel 18? 2 × 9 = 18, quindi il risultato è 9."}
+{"id": "mat-3-aritmetica-087", "explanation": "30 ÷ 6 = 5: quante volte entra il 6 nel 30? 6 × 5 = 30, quindi il risultato è 5."}
+{"id": "mat-3-aritmetica-088", "explanation": "54 ÷ 6 = 9: quante volte entra il 6 nel 54? 6 × 9 = 54, quindi il risultato è 9."}
+{"id": "mat-3-problemi-001", "explanation": "Devi trovare quanti cioccolatini ci sono in 6 scatole da 5: moltiplica il numero di scatole per quanti cioccolatini contiene ciascuna. 6 × 5 = 30."}
+{"id": "mat-3-problemi-002", "explanation": "Devi trovare quante matite hanno in tutto 5 bambini se ognuno ne porta 10: moltiplica il numero di bambini per le matite di ciascuno. 5 × 10 = 50."}
+{"id": "mat-3-problemi-003", "explanation": "Per trovare i panini in 2 ore, moltiplica la produzione oraria per il numero di ore. 9 × 2 = 18."}
+{"id": "mat-3-problemi-004", "explanation": "Per trovare i panini in 6 ore, moltiplica la produzione oraria per il numero di ore. 12 × 6 = 72."}
+{"id": "mat-3-problemi-005", "explanation": "Per trovare i panini in 9 ore, moltiplica la produzione oraria per il numero di ore. 8 × 9 = 72."}
+{"id": "mat-3-problemi-006", "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 7 × 4 = 28."}
+{"id": "mat-3-problemi-007", "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 6 × 10 = 60."}
+{"id": "mat-3-problemi-008", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 8 × 10 = 80."}
+{"id": "mat-3-problemi-009", "explanation": "Per trovare quanti cioccolatini ci sono in 9 scatole da 9: moltiplica il numero di scatole per quanti cioccolatini contiene ciascuna. 9 × 9 = 81."}
+{"id": "mat-3-problemi-010", "explanation": "Per trovare i panini in 9 ore, moltiplica la produzione oraria per il numero di ore. 13 × 9 = 117."}
+{"id": "mat-3-problemi-011", "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 10 × 8 = 80."}
+{"id": "mat-3-problemi-012", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 9 × 8 = 72."}
+{"id": "mat-3-problemi-013", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 7 × 10 = 70."}
+{"id": "mat-3-problemi-014", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 7 × 9 = 63."}
+{"id": "mat-3-problemi-015", "explanation": "Per trovare quante matite hanno in tutto 8 bambini se ognuno ne porta 10, moltiplica il numero di bambini per le matite di ciascuno. 8 × 10 = 80."}
+{"id": "mat-3-problemi-016", "explanation": "Per trovare quanti cioccolatini ci sono in 8 scatole da 5: moltiplica il numero di scatole per quanti ne contiene ciascuna. 8 × 5 = 40."}
+{"id": "mat-3-problemi-017", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 11 × 8 = 88."}
+{"id": "mat-3-problemi-018", "explanation": "Per trovare quante matite hanno in tutto 15 bambini se ognuno ne porta 10, moltiplica il numero di bambini per le matite di ciascuno. 15 × 10 = 150."}
+{"id": "mat-3-problemi-019", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 9 × 6 = 54."}
+{"id": "mat-3-problemi-020", "explanation": "Per trovare quanti cioccolatini ci sono in 7 scatole da 11: moltiplica il numero di scatole per quanti ne contiene ciascuna. 11 × 7 = 77."}
+{"id": "mat-3-problemi-021", "explanation": "Per trovare i panini in 10 ore, moltiplica la produzione oraria per il numero di ore. 6 × 10 = 60."}
+{"id": "mat-3-problemi-022", "explanation": "Per trovare quante matite hanno in tutto 8 bambini se ognuno ne porta 8, moltiplica il numero di bambini per le matite di ciascuno. 8 × 8 = 64."}
+{"id": "mat-3-problemi-023", "explanation": "Per trovare i panini in 8 ore, moltiplica la produzione oraria per il numero di ore. 7 × 8 = 56."}
+{"id": "mat-3-problemi-024", "explanation": "Per trovare i km totali, moltiplica i km percorsi ogni giorno per il numero di giorni. 8 × 7 = 56."}
+{"id": "mat-3-problemi-025", "explanation": "Per trovare il totale dei libri ricevuti lunedì e mercoledì, somma le due quantità. 33 + 41 = 74."}
+{"id": "mat-3-problemi-026", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 118 + 164 = 282."}
+{"id": "mat-3-problemi-027", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 119 + 196 = 315."}
+{"id": "mat-3-problemi-028", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 175 + 19 = 194."}
+{"id": "mat-3-problemi-029", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 184 + 101 = 285."}
+{"id": "mat-3-problemi-030", "explanation": "Per trovare il totale dei bambini al parco durante la giornata, somma quelli del mattino e quelli del pomeriggio. 115 + 112 = 227."}
+{"id": "mat-3-problemi-031", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 23 + 165 = 188."}
+{"id": "mat-3-problemi-032", "explanation": "Per trovare il totale dei bambini al parco durante la giornata, somma quelli del mattino e quelli del pomeriggio. 82 + 12 = 94."}
+{"id": "mat-3-problemi-033", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 175 + 32 = 207."}
+{"id": "mat-3-problemi-034", "explanation": "Per trovare il totale dei libri ricevuti, somma quelli di lunedì e quelli di mercoledì. 52 + 128 = 180."}
+{"id": "mat-3-problemi-035", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 193 + 57 = 250."}
+{"id": "mat-3-problemi-036", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 199 + 130 = 329."}
+{"id": "mat-3-problemi-037", "explanation": "Per trovare il totale dei libri ricevuti, somma quelli di lunedì e quelli di mercoledì. 56 + 149 = 205."}
+{"id": "mat-3-problemi-038", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 95 + 120 = 215."}
+{"id": "mat-3-problemi-039", "explanation": "Per trovare il totale dei bambini al parco durante la giornata, somma quelli del mattino e quelli del pomeriggio. 155 + 75 = 230."}
+{"id": "mat-3-problemi-040", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 94 + 179 = 273."}
+{"id": "mat-3-problemi-041", "explanation": "Per trovare il totale dei libri ricevuti, somma quelli di lunedì e quelli di mercoledì. 163 + 105 = 268."}
+{"id": "mat-3-problemi-042", "explanation": "Per trovare il totale dei libri ricevuti, somma quelli di lunedì e quelli di mercoledì. 169 + 123 = 292."}
+{"id": "mat-3-problemi-043", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 157 + 130 = 287."}
+{"id": "mat-3-problemi-044", "explanation": "Per trovare il totale dei bambini al parco durante la giornata, somma quelli del mattino e quelli del pomeriggio. 96 + 140 = 236."}
+{"id": "mat-3-problemi-045", "explanation": "Per trovare il totale dei panini sfornati, somma quelli del mattino e quelli del pomeriggio. 141 + 79 = 220."}
+{"id": "mat-3-problemi-046", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 192 + 100 = 292."}
+{"id": "mat-3-problemi-047", "explanation": "Per trovare il totale dei libri ricevuti, somma quelli di lunedì e quelli di mercoledì. 21 + 187 = 208."}
+{"id": "mat-3-problemi-048", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 62 + 61 = 123."}
+{"id": "mat-3-problemi-049", "explanation": "Per trovare il totale degli animali in fattoria, somma il numero di galline e quello dei conigli. 154 + 128 = 282."}
+{"id": "mat-3-problemi-050", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 89 − 30 = 59."}
+{"id": "mat-3-problemi-051", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 20 − 9 = 11."}
+{"id": "mat-3-problemi-052", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 76 − 5 = 71."}
+{"id": "mat-3-problemi-053", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 107 − 34 = 73."}
+{"id": "mat-3-problemi-054", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 113 − 35 = 78."}
+{"id": "mat-3-problemi-055", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 66 − 11 = 55."}
+{"id": "mat-3-problemi-056", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 17 − 9 = 8."}
+{"id": "mat-3-problemi-057", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 41 − 32 = 9."}
+{"id": "mat-3-problemi-058", "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 21 − 13 = 8."}
+{"id": "mat-3-problemi-059", "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 118 − 40 = 78."}
+{"id": "mat-3-problemi-060", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 48 − 10 = 38."}
+{"id": "mat-3-problemi-061", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 107 − 29 = 78."}
+{"id": "mat-3-problemi-062", "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 49 − 34 = 15."}
+{"id": "mat-3-problemi-063", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 36 − 14 = 22."}
+{"id": "mat-3-problemi-064", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 114 − 38 = 76."}
+{"id": "mat-3-problemi-065", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 80 − 6 = 74."}
+{"id": "mat-3-problemi-066", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 96 − 20 = 76."}
+{"id": "mat-3-problemi-067", "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 52 − 6 = 46."}
+{"id": "mat-3-problemi-068", "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 72 − 32 = 40."}
+{"id": "mat-3-problemi-069", "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 100 − 21 = 79."}
+{"id": "mat-3-problemi-070", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 78 − 6 = 72."}
+{"id": "mat-3-problemi-071", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 88 − 9 = 79."}
+{"id": "mat-3-problemi-072", "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 67 − 25 = 42."}
+{"id": "mat-3-problemi-073", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 30 − 6 = 24."}
+{"id": "mat-3-problemi-074", "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 45 − 37 = 8."}
+{"id": "mat-3-problemi-075", "explanation": "Per dividere 140 figurine tra 7 bambini in parti uguali, usa la divisione: 140 ÷ 7 = 20. Puoi verificare: 7 × 20 = 140."}
+{"id": "mat-3-problemi-076", "explanation": "Per dividere 85 biscotti in 5 sacchetti uguali, usa la divisione: 85 ÷ 5 = 17. Puoi verificare: 5 × 17 = 85."}
+{"id": "mat-3-problemi-077", "explanation": "Per dividere 42 arance in 7 cesti uguali, usa la divisione: 42 ÷ 7 = 6. Puoi verificare: 7 × 6 = 42."}
+{"id": "mat-3-problemi-078", "explanation": "Per dividere 27 figurine tra 3 bambini in parti uguali, usa la divisione: 27 ÷ 3 = 9. Puoi verificare: 3 × 9 = 27."}
+{"id": "mat-3-problemi-079", "explanation": "Per dividere 30 figurine tra 3 bambini in parti uguali, usa la divisione: 30 ÷ 3 = 10. Puoi verificare: 3 × 10 = 30."}
+{"id": "mat-3-problemi-080", "explanation": "Per dividere 45 biscotti in 5 sacchetti uguali, usa la divisione: 45 ÷ 5 = 9. Puoi verificare: 5 × 9 = 45."}
+{"id": "mat-3-problemi-081", "explanation": "Per dividere 30 palline in 5 scatole uguali, usa la divisione: 30 ÷ 5 = 6. Puoi verificare: 5 × 6 = 30."}
+{"id": "mat-3-problemi-082", "explanation": "Per dividere 28 biscotti in 2 sacchetti uguali, usa la divisione: 28 ÷ 2 = 14. Puoi verificare: 2 × 14 = 28."}
+{"id": "mat-3-problemi-083", "explanation": "Per dividere 42 arance in 3 cesti uguali, usa la divisione: 42 ÷ 3 = 14. Puoi verificare: 3 × 14 = 42."}
+{"id": "mat-3-problemi-084", "explanation": "Per dividere 32 figurine tra 4 bambini in parti uguali, usa la divisione: 32 ÷ 4 = 8. Puoi verificare: 4 × 8 = 32."}
+{"id": "mat-3-problemi-085", "explanation": "Per dividere 63 figurine tra 7 bambini in parti uguali, usa la divisione: 63 ÷ 7 = 9. Puoi verificare: 7 × 9 = 63."}
+{"id": "mat-3-problemi-086", "explanation": "Per dividere 108 biscotti in 6 sacchetti uguali, usa la divisione: 108 ÷ 6 = 18. Puoi verificare: 6 × 18 = 108."}
+{"id": "mat-3-problemi-087", "explanation": "Per dividere 64 biscotti in 4 sacchetti uguali, usa la divisione: 64 ÷ 4 = 16. Puoi verificare: 4 × 16 = 64."}
+{"id": "mat-3-problemi-088", "explanation": "Per dividere 70 arance in 5 cesti uguali, usa la divisione: 70 ÷ 5 = 14. Puoi verificare: 5 × 14 = 70."}
+{"id": "mat-3-problemi-089", "explanation": "Per dividere 144 palline in 8 scatole uguali, usa la divisione: 144 ÷ 8 = 18. Puoi verificare: 8 × 18 = 144."}
+{"id": "mat-3-problemi-090", "explanation": "Per dividere 36 arance in 4 cesti uguali, usa la divisione: 36 ÷ 4 = 9. Puoi verificare: 4 × 9 = 36."}
+{"id": "mat-3-problemi-091", "explanation": "Per dividere 144 biscotti in 8 sacchetti uguali, usa la divisione: 144 ÷ 8 = 18. Puoi verificare: 8 × 18 = 144."}
+{"id": "mat-3-problemi-092", "explanation": "Per dividere 48 arance in 3 cesti uguali, usa la divisione: 48 ÷ 3 = 16. Puoi verificare: 3 × 16 = 48."}
+{"id": "mat-3-problemi-093", "explanation": "Per dividere 28 palline in 4 scatole uguali, usa la divisione: 28 ÷ 4 = 7. Puoi verificare: 4 × 7 = 28."}
+{"id": "mat-3-problemi-094", "explanation": "Per dividere 64 arance in 8 cesti uguali, usa la divisione: 64 ÷ 8 = 8. Puoi verificare: 8 × 8 = 64."}
+{"id": "mat-3-problemi-095", "explanation": "Per dividere 50 figurine tra 5 bambini in parti uguali, usa la divisione: 50 ÷ 5 = 10. Puoi verificare: 5 × 10 = 50."}
+{"id": "mat-3-problemi-096", "explanation": "Per dividere 77 palline in 7 scatole uguali, usa la divisione: 77 ÷ 7 = 11. Puoi verificare: 7 × 11 = 77."}
+{"id": "mat-3-problemi-097", "explanation": "Per dividere 98 biscotti in 7 sacchetti uguali, usa la divisione: 98 ÷ 7 = 14. Puoi verificare: 7 × 14 = 98."}
+{"id": "mat-3-geometria-001", "explanation": "Il perimetro è la lunghezza del contorno di una figura, cioè la somma di tutti i suoi lati. Si misura in unità di lunghezza come cm o m."}
+{"id": "mat-3-geometria-002", "explanation": "L'area è la misura della superficie interna di una figura, cioè quanto 'spazio' occupa all'interno. Si misura in unità quadrate come cm²."}
+{"id": "mat-3-geometria-003", "explanation": "Il quadrato ha 4 assi di simmetria: 2 che uniscono i punti medi dei lati opposti e 2 che passano per i vertici opposti. Ogni asse divide il quadrato in due parti speculari."}
+{"id": "mat-3-geometria-004", "explanation": "Un triangolo rettangolo ha esattamente 1 angolo retto (che misura 90°), che si indica con un piccolo quadratino nel vertice. Gli altri due angoli sono acuti."}
+{"id": "mat-3-geometria-005", "explanation": "La diagonale è il segmento che unisce due vertici non adiacenti (cioè non collegati da un lato) di un poligono. Attraversa l'interno della figura."}
+{"id": "mat-3-geometria-006", "explanation": "Il quadrato ha 2 diagonali: una che va dal vertice in alto a sinistra a quello in basso a destra, e l'altra che va dal vertice in alto a destra a quello in basso a sinistra."}
+{"id": "mat-3-geometria-007", "explanation": "Un angolo retto misura esattamente 90°, come l'angolo di un foglio di carta in un angolo. Si riconosce dal piccolo quadratino disegnato nel vertice."}
+{"id": "mat-3-geometria-008", "explanation": "Un angolo ottuso è più aperto di un angolo retto, cioè misura più di 90°. Puoi riconoscerlo perché è 'più largo' dell'angolo di un foglio."}
+{"id": "mat-3-geometria-009", "explanation": "Un angolo acuto è più chiuso di un angolo retto, cioè misura meno di 90°. Puoi riconoscerlo perché è 'più stretto' dell'angolo di un foglio."}
+{"id": "mat-3-geometria-010", "explanation": "Il perimetro del quadrato si calcola moltiplicando il lato per 4, perché tutti e 4 i lati sono uguali. Perimetro = lato × 4."}
+{"id": "mat-3-geometria-011", "explanation": "Il perimetro del rettangolo si calcola sommando base e altezza e moltiplicando per 2, perché i lati opposti sono uguali a coppie. Perimetro = (base + altezza) × 2."}
+{"id": "mat-3-geometria-012", "explanation": "Il triangolo equilatero ha tutti e tre i lati della stessa lunghezza. 'Equilatero' significa proprio 'lati uguali'."}
+{"id": "mat-3-geometria-013", "explanation": "Il rettangolo ha 2 diagonali, come il quadrato: i segmenti che collegano i vertici opposti. Le diagonali del rettangolo si tagliano a metà esattamente nel centro."}
+{"id": "mat-3-geometria-014", "explanation": "Il perimetro è una lunghezza, quindi si misura con unità di lunghezza come centimetri (cm) o metri (m), non in unità di area (cm²) o di peso (kg)."}
+{"id": "mat-3-geometria-015", "explanation": "Il cerchio è la linea curva chiusa con tutti i punti alla stessa distanza dal centro. La distanza dal centro si chiama raggio."}
+{"id": "mat-3-geometria-016", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 5 × 3 = 15 cm."}
+{"id": "mat-3-geometria-017", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 14 × 3 = 42 cm."}
+{"id": "mat-3-geometria-018", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 9 × 3 = 27 cm."}
+{"id": "mat-3-geometria-019", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (3 + 11) × 2 = 14 × 2 = 28 cm."}
+{"id": "mat-3-geometria-020", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (7 + 6) × 2 = 13 × 2 = 26 cm."}
+{"id": "mat-3-geometria-021", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 8 × 4 = 32 cm."}
+{"id": "mat-3-geometria-022", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 11 × 3 = 33 cm."}
+{"id": "mat-3-geometria-023", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 10 × 3 = 30 cm."}
+{"id": "mat-3-geometria-024", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (14 + 20) × 2 = 34 × 2 = 68 cm."}
+{"id": "mat-3-geometria-025", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (12 + 18) × 2 = 30 × 2 = 60 cm."}
+{"id": "mat-3-geometria-026", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 4 × 4 = 16 cm."}
+{"id": "mat-3-geometria-027", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 3 × 4 = 12 cm."}
+{"id": "mat-3-geometria-028", "explanation": "Il triangolo isoscele ha 2 lati uguali (i lati) e 1 base diversa: somma base + lato + lato. 14 + 8 + 8 = 30 cm."}
+{"id": "mat-3-geometria-029", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 5 + 12 + 12 = 29 cm."}
+{"id": "mat-3-geometria-030", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 15 × 3 = 45 cm."}
+{"id": "mat-3-geometria-031", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 8 × 3 = 24 cm."}
+{"id": "mat-3-geometria-032", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (3 + 6) × 2 = 9 × 2 = 18 cm."}
+{"id": "mat-3-geometria-033", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 11 + 2 + 2 = 15 cm."}
+{"id": "mat-3-geometria-034", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 6 + 5 + 5 = 16 cm."}
+{"id": "mat-3-geometria-035", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 15 + 11 + 11 = 37 cm."}
+{"id": "mat-3-geometria-036", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 11 × 4 = 44 cm."}
+{"id": "mat-3-geometria-037", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 20 × 4 = 80 cm."}
+{"id": "mat-3-geometria-038", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 9 × 4 = 36 cm."}
+{"id": "mat-3-geometria-039", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 3 + 2 + 2 = 7 cm."}
+{"id": "mat-3-geometria-040", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (18 + 16) × 2 = 34 × 2 = 68 cm."}
+{"id": "mat-3-geometria-041", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (16 + 6) × 2 = 22 × 2 = 44 cm."}
+{"id": "mat-3-geometria-042", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 9 + 5 + 5 = 19 cm."}
+{"id": "mat-3-geometria-043", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 6 × 3 = 18 cm."}
+{"id": "mat-3-geometria-044", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 12 + 9 + 9 = 30 cm."}
+{"id": "mat-3-geometria-045", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 7 + 3 + 3 = 13 cm."}
+{"id": "mat-3-geometria-046", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 16 × 4 = 64 cm."}
+{"id": "mat-3-geometria-047", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 17 × 4 = 68 cm."}
+{"id": "mat-3-geometria-048", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 7 + 10 + 10 = 27 cm."}
+{"id": "mat-3-geometria-049", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 3 × 3 = 9 cm."}
+{"id": "mat-3-geometria-050", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 12 × 4 = 48 cm."}
+{"id": "mat-3-geometria-051", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (15 + 13) × 2 = 28 × 2 = 56 cm."}
+{"id": "mat-3-geometria-052", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 3 + 3 + 3 = 9 cm. In questo caso tutti i lati sono uguali, è anche un triangolo equilatero."}
+{"id": "mat-3-geometria-053", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 14 × 4 = 56 cm."}
+{"id": "mat-3-geometria-054", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 4 × 3 = 12 cm."}
+{"id": "mat-3-geometria-055", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 7 × 4 = 28 cm."}
+{"id": "mat-3-geometria-056", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (2 + 2) × 2 = 4 × 2 = 8 cm. Con lati uguali si comporta come un quadrato: 2 × 4 = 8."}
+{"id": "mat-3-geometria-057", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (20 + 5) × 2 = 25 × 2 = 50 cm."}
+{"id": "mat-3-geometria-058", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 4 + 12 + 12 = 28 cm."}
+{"id": "mat-3-geometria-059", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (15 + 3) × 2 = 18 × 2 = 36 cm."}
+{"id": "mat-3-geometria-060", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (13 + 11) × 2 = 24 × 2 = 48 cm."}
+{"id": "mat-3-geometria-061", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 13 + 11 + 11 = 35 cm."}
+{"id": "mat-3-geometria-062", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 7 × 3 = 21 cm."}
+{"id": "mat-3-geometria-063", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (2 + 10) × 2 = 12 × 2 = 24 cm."}
+{"id": "mat-3-geometria-064", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 4 + 10 + 10 = 24 cm."}
+{"id": "mat-3-geometria-065", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 14 + 10 + 10 = 34 cm."}
+{"id": "mat-3-geometria-066", "explanation": "Il triangolo equilatero ha 3 lati uguali: per trovare il perimetro, moltiplica il lato per 3. 2 × 3 = 6 cm."}
+{"id": "mat-3-geometria-067", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 11 + 8 + 8 = 27 cm."}
+{"id": "mat-3-geometria-068", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 4 + 4 + 4 = 12 cm. In questo caso tutti i lati sono uguali, è anche un triangolo equilatero."}
+{"id": "mat-3-geometria-069", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (20 + 3) × 2 = 23 × 2 = 46 cm."}
+{"id": "mat-3-geometria-070", "explanation": "Il perimetro del quadrato si calcola con lato × 4, perché tutti i lati sono uguali. 19 × 4 = 76 cm."}
+{"id": "mat-3-geometria-071", "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 9 + 3 + 3 = 15 cm."}
+{"id": "mat-3-geometria-072", "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (2 + 3) × 2 = 5 × 2 = 10 cm."}
+{"id": "mat-3-logica_e_dati-001", "explanation": "Ci sono 3 palline rosse e solo 1 blu: il rosso ha più palline, quindi è il colore che ha più probabilità di essere estratto. Maggiore è la quantità, maggiore è la probabilità."}
+{"id": "mat-3-logica_e_dati-002", "explanation": "Un dado ha 6 facce numerate da 1 a 6: il 6 compare su 1 sola faccia su 6 totali. La probabilità di ottenere il 6 è quindi 1 su 6."}
+{"id": "mat-3-logica_e_dati-003", "explanation": "Il valore più frequente (la moda) è quello che compare più volte. Nella serie 3, 5, 3, 7, 3, 9 il numero 3 compare 3 volte, mentre gli altri compaiono una sola volta."}
+{"id": "mat-3-logica_e_dati-004", "explanation": "Una moneta ha solo 2 facce: testa e croce. La probabilità di ottenere testa è 1 su 2, cioè una volta ogni due lanci in media."}
+{"id": "mat-3-logica_e_dati-005", "explanation": "Con 5 palline rosse e 5 blu il numero è uguale: la probabilità di prenderne una rossa è uguale a quella di prenderne una blu. Le chances sono identiche."}
+{"id": "mat-3-logica_e_dati-006", "explanation": "La moda è il nome statistico del valore che appare più spesso in una serie di dati. Si chiama 'moda' come nella moda dei vestiti: è il valore 'più di tendenza'."}
+{"id": "mat-3-logica_e_dati-007", "explanation": "Per calcolare la media di 4, 6, 8: prima somma tutti i numeri (4+6+8=18), poi dividi per quanti numeri ci sono (3 numeri): 18÷3=6."}
+{"id": "mat-3-logica_e_dati-008", "explanation": "In un grafico a barre, l'altezza di ogni barra rappresenta la quantità. La barra più alta indica il valore più grande, cioè il valore massimo."}
+{"id": "mat-3-logica_e_dati-009", "explanation": "Un evento impossibile è qualcosa che non può mai accadere (come estrarre un 7 da un dado con facce da 1 a 6). La sua probabilità è 0, cioè zero possibilità."}
+{"id": "mat-3-logica_e_dati-010", "explanation": "Un evento certo è qualcosa che accade sempre senza eccezioni (come estrarre un numero da 1 a 6 da un dado normale). La sua probabilità è 1, cioè sicuro al 100%."}
+{"id": "mat-3-logica_e_dati-011", "explanation": "La mediana è il valore di mezzo quando i dati sono in ordine. Nella serie 2, 4, 6, 8, 10 ci sono 5 numeri: il numero centrale (il 3°) è 6."}
+{"id": "mat-3-logica_e_dati-012", "explanation": "La frequenza indica quante volte un valore appare in una raccolta di dati. Si conta semplicemente quante volte lo stesso numero o dato si ripete."}
+{"id": "mat-3-logica_e_dati-013", "explanation": "Un evento 'certo' è qualcosa che accadrà sicuramente, senza alcun dubbio. È il contrario di 'impossibile', che indica qualcosa che non può mai succedere."}
+{"id": "mat-3-logica_e_dati-014", "explanation": "Un evento 'impossibile' è qualcosa che non potrà mai accadere in nessun caso. È il contrario di 'certo', che indica qualcosa che succederà sicuramente."}
+{"id": "mat-3-logica_e_dati-015", "explanation": "Per calcolare la media di 10, 20, 30: somma tutti i numeri (10+20+30=60), poi dividi per quanti sono (3 numeri): 60÷3=20."}
+{"id": "mat-3-logica_e_dati-016", "explanation": "La sequenza 2, 8, 32, 128 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-017", "explanation": "La sequenza 13, 23, 33, 43, 53 cresce aggiungendo sempre 10. La regola è +10 ad ogni passo: 53 + 10 = 63."}
+{"id": "mat-3-logica_e_dati-018", "explanation": "La sequenza 1, 4, 16, 64 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-019", "explanation": "La sequenza 6, 13, 20, 27, 34 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 34 + 7 = 41."}
+{"id": "mat-3-logica_e_dati-020", "explanation": "La sequenza 3, 6, 12, 24 cresce moltiplicando ogni termine per 2. La regola è ×2 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-021", "explanation": "La sequenza 10, 17, 24, 31, 38 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 38 + 7 = 45."}
+{"id": "mat-3-logica_e_dati-022", "explanation": "La sequenza 4, 13, 22, 31, 40 cresce aggiungendo sempre 9. La regola è +9 ad ogni passo: 40 + 9 = 49."}
+{"id": "mat-3-logica_e_dati-023", "explanation": "La sequenza 14, 26, 38, 50, 62 cresce aggiungendo sempre 12. La regola è +12 ad ogni passo: 62 + 12 = 74."}
+{"id": "mat-3-logica_e_dati-024", "explanation": "La sequenza 8, 18, 28, 38, 48 cresce aggiungendo sempre 10. La regola è +10 ad ogni passo: 48 + 10 = 58."}
+{"id": "mat-3-logica_e_dati-025", "explanation": "La sequenza 13, 18, 23, 28, 33 cresce aggiungendo sempre 5. La regola è +5 ad ogni passo: 33 + 5 = 38."}
+{"id": "mat-3-logica_e_dati-026", "explanation": "La sequenza 11, 15, 19, 23, 27 cresce aggiungendo sempre 4. La regola è +4 ad ogni passo: 27 + 4 = 31."}
+{"id": "mat-3-logica_e_dati-027", "explanation": "La sequenza 2, 5, 8, 11, 14 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 14 + 3 = 17."}
+{"id": "mat-3-logica_e_dati-028", "explanation": "La sequenza 3, 15, 27, 39, 51 cresce aggiungendo sempre 12. La regola è +12 ad ogni passo: 51 + 12 = 63."}
+{"id": "mat-3-logica_e_dati-029", "explanation": "La sequenza 15, 23, 31, 39, 47 cresce aggiungendo sempre 8. La regola è +8 ad ogni passo: 47 + 8 = 55."}
+{"id": "mat-3-logica_e_dati-030", "explanation": "La sequenza 1, 3, 9, 27 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-031", "explanation": "La sequenza 13, 20, 27, 34, 41 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 41 + 7 = 48."}
+{"id": "mat-3-logica_e_dati-032", "explanation": "La sequenza 12, 17, 22, 27, 32 cresce aggiungendo sempre 5. La regola è +5 ad ogni passo: 32 + 5 = 37."}
+{"id": "mat-3-logica_e_dati-033", "explanation": "La sequenza 2, 6, 10, 14, 18 cresce aggiungendo sempre 4. La regola è +4 ad ogni passo: 18 + 4 = 22."}
+{"id": "mat-3-logica_e_dati-034", "explanation": "La sequenza 14, 17, 20, 23, 26 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 26 + 3 = 29."}
+{"id": "mat-3-logica_e_dati-035", "explanation": "La sequenza 3, 11, 19, 27, 35 cresce aggiungendo sempre 8. La regola è +8 ad ogni passo: 35 + 8 = 43."}
+{"id": "mat-3-logica_e_dati-036", "explanation": "La sequenza 5, 12, 19, 26, 33 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 33 + 7 = 40."}
+{"id": "mat-3-logica_e_dati-037", "explanation": "La sequenza 14, 23, 32, 41, 50 cresce aggiungendo sempre 9. La regola è +9 ad ogni passo: 50 + 9 = 59."}
+{"id": "mat-3-logica_e_dati-038", "explanation": "La sequenza 7, 14, 21, 28, 35 cresce aggiungendo sempre 7 (è la tabellina del 7). La regola è +7 ad ogni passo: 35 + 7 = 42."}
+{"id": "mat-3-logica_e_dati-039", "explanation": "La sequenza 12, 21, 30, 39, 48 cresce aggiungendo sempre 9. La regola è +9 ad ogni passo: 48 + 9 = 57."}
+{"id": "mat-3-logica_e_dati-040", "explanation": "La sequenza 7, 10, 13, 16, 19 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 19 + 3 = 22."}
+{"id": "mat-3-logica_e_dati-041", "explanation": "La sequenza 15, 26, 37, 48, 59 cresce aggiungendo sempre 11. La regola è +11 ad ogni passo: 59 + 11 = 70."}
+{"id": "mat-3-logica_e_dati-042", "explanation": "La sequenza 3, 9, 15, 21, 27 cresce aggiungendo sempre 6. La regola è +6 ad ogni passo: 27 + 6 = 33."}
+{"id": "mat-3-logica_e_dati-043", "explanation": "La sequenza 13, 17, 21, 25, 29 cresce aggiungendo sempre 4. La regola è +4 ad ogni passo: 29 + 4 = 33."}
+{"id": "mat-3-logica_e_dati-044", "explanation": "La sequenza 4, 7, 10, 13, 16 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 16 + 3 = 19."}
+{"id": "mat-3-logica_e_dati-045", "explanation": "La sequenza 11, 17, 23, 29, 35 cresce aggiungendo sempre 6. La regola è +6 ad ogni passo: 35 + 6 = 41."}
+{"id": "mat-3-logica_e_dati-046", "explanation": "La sequenza 6, 11, 16, 21, 26 cresce aggiungendo sempre 5. La regola è +5 ad ogni passo: 26 + 5 = 31."}
+{"id": "mat-3-logica_e_dati-047", "explanation": "La sequenza 2, 9, 16, 23, 30 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 30 + 7 = 37."}
+{"id": "mat-3-logica_e_dati-048", "explanation": "La sequenza 6, 10, 14, 18, 22 cresce aggiungendo sempre 4. La regola è +4 ad ogni passo: 22 + 4 = 26."}
+{"id": "mat-3-logica_e_dati-049", "explanation": "La sequenza 2, 7, 12, 17, 22 cresce aggiungendo sempre 5. La regola è +5 ad ogni passo: 22 + 5 = 27."}
+{"id": "mat-3-logica_e_dati-050", "explanation": "La sequenza 13, 16, 19, 22, 25 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 25 + 3 = 28."}
+{"id": "mat-3-logica_e_dati-051", "explanation": "La sequenza 14, 20, 26, 32, 38 cresce aggiungendo sempre 6. La regola è +6 ad ogni passo: 38 + 6 = 44."}
+{"id": "mat-3-logica_e_dati-052", "explanation": "La sequenza 9, 12, 15, 18, 21 cresce aggiungendo sempre 3 (è la tabellina del 3 a partire da 9). La regola è +3 ad ogni passo: 21 + 3 = 24."}
+{"id": "mat-3-logica_e_dati-053", "explanation": "La sequenza 10, 21, 32, 43, 54 cresce aggiungendo sempre 11. La regola è +11 ad ogni passo: 54 + 11 = 65."}
+{"id": "mat-3-logica_e_dati-054", "explanation": "La sequenza 15, 24, 33, 42, 51 cresce aggiungendo sempre 9. La regola è +9 ad ogni passo: 51 + 9 = 60."}
+{"id": "mat-3-logica_e_dati-055", "explanation": "La sequenza 12, 15, 18, 21, 24 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 24 + 3 = 27."}
+{"id": "mat-3-logica_e_dati-056", "explanation": "La sequenza 3, 9, 27, 81 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-057", "explanation": "La sequenza 2, 6, 18, 54 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-058", "explanation": "La sequenza 12, 18, 24, 30, 36 cresce aggiungendo sempre 6. La regola è +6 ad ogni passo: 36 + 6 = 42."}
+{"id": "mat-3-logica_e_dati-059", "explanation": "La sequenza 1, 2, 4, 8 cresce moltiplicando ogni termine per 2. La regola è ×2 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-060", "explanation": "La sequenza 14, 25, 36, 47, 58 cresce aggiungendo sempre 11. La regola è +11 ad ogni passo: 58 + 11 = 69."}
+{"id": "mat-3-logica_e_dati-061", "explanation": "La sequenza 7, 17, 27, 37, 47 cresce aggiungendo sempre 10. La regola è +10 ad ogni passo: 47 + 10 = 57."}
+{"id": "mat-3-logica_e_dati-062", "explanation": "La sequenza 10, 16, 22, 28, 34 cresce aggiungendo sempre 6. La regola è +6 ad ogni passo: 34 + 6 = 40."}
+{"id": "mat-3-logica_e_dati-063", "explanation": "La sequenza 12, 19, 26, 33, 40 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 40 + 7 = 47."}
+{"id": "mat-3-logica_e_dati-064", "explanation": "La sequenza 15, 18, 21, 24, 27 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 27 + 3 = 30."}
+{"id": "mat-3-logica_e_dati-065", "explanation": "La sequenza 9, 16, 23, 30, 37 cresce aggiungendo sempre 7. La regola è +7 ad ogni passo: 37 + 7 = 44."}
+{"id": "mat-3-logica_e_dati-066", "explanation": "La sequenza 3, 12, 48, 192 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo."}
+{"id": "mat-3-logica_e_dati-067", "explanation": "La sequenza 11, 14, 17, 20, 23 cresce aggiungendo sempre 3. La regola è +3 ad ogni passo: 23 + 3 = 26."}
+{"id": "mat-3-logica_e_dati-068", "explanation": "La sequenza 15, 25, 35, 45, 55 cresce aggiungendo sempre 10. La regola è +10 ad ogni passo: 55 + 10 = 65."}
+{"id": "mat-3-logica_e_dati-069", "explanation": "La sequenza 11, 21, 31, 41, 51 cresce aggiungendo sempre 10. La regola è +10 ad ogni passo: 51 + 10 = 61."}
+{"id": "mat-3-logica_e_dati-070", "explanation": "La sequenza 3, 12, 21, 30, 39 cresce aggiungendo sempre 9. La regola è +9 ad ogni passo: 39 + 9 = 48."}

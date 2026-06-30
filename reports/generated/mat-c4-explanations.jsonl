@@ -1,0 +1,408 @@
+{"id": "mat-4-tabelline-001", "explanation": "Moltiplichiamo 8 × 11 sommando 8 per 11 volte: 8 × 11 = 88."}
+{"id": "mat-4-tabelline-002", "explanation": "Moltiplichiamo 9 × 12 sommando 9 per 12 volte: 9 × 12 = 108."}
+{"id": "mat-4-tabelline-003", "explanation": "Moltiplichiamo 1 × 11 sommando 1 per 11 volte: 1 × 11 = 11."}
+{"id": "mat-4-tabelline-004", "explanation": "Moltiplichiamo 5 × 12 sommando 5 per 12 volte: 5 × 12 = 60."}
+{"id": "mat-4-tabelline-005", "explanation": "Moltiplichiamo 7 × 12 sommando 7 per 12 volte: 7 × 12 = 84."}
+{"id": "mat-4-tabelline-006", "explanation": "Moltiplichiamo 2 × 11 sommando 2 per 11 volte: 2 × 11 = 22."}
+{"id": "mat-4-tabelline-007", "explanation": "Moltiplichiamo 8 × 12 sommando 8 per 12 volte: 8 × 12 = 96."}
+{"id": "mat-4-tabelline-008", "explanation": "Moltiplichiamo 4 × 11 sommando 4 per 11 volte: 4 × 11 = 44."}
+{"id": "mat-4-tabelline-009", "explanation": "Moltiplichiamo 6 × 12 sommando 6 per 12 volte: 6 × 12 = 72."}
+{"id": "mat-4-tabelline-010", "explanation": "Moltiplichiamo 7 × 11 sommando 7 per 11 volte: 7 × 11 = 77."}
+{"id": "mat-4-tabelline-011", "explanation": "Moltiplichiamo 6 × 11 sommando 6 per 11 volte: 6 × 11 = 66."}
+{"id": "mat-4-tabelline-012", "explanation": "Moltiplichiamo 10 × 11 sommando 10 per 11 volte: 10 × 11 = 110."}
+{"id": "mat-4-tabelline-013", "explanation": "Moltiplichiamo 1 × 12 sommando 1 per 12 volte: 1 × 12 = 12."}
+{"id": "mat-4-tabelline-014", "explanation": "Moltiplichiamo 3 × 11 sommando 3 per 11 volte: 3 × 11 = 33."}
+{"id": "mat-4-tabelline-015", "explanation": "Moltiplichiamo 5 × 11 sommando 5 per 11 volte: 5 × 11 = 55."}
+{"id": "mat-4-tabelline-016", "explanation": "Moltiplichiamo 4 × 12 sommando 4 per 12 volte: 4 × 12 = 48."}
+{"id": "mat-4-tabelline-017", "explanation": "Moltiplichiamo 10 × 12 sommando 10 per 12 volte: 10 × 12 = 120."}
+{"id": "mat-4-tabelline-018", "explanation": "Moltiplichiamo 9 × 11 sommando 9 per 11 volte: 9 × 11 = 99."}
+{"id": "mat-4-tabelline-019", "explanation": "Moltiplichiamo 2 × 12 sommando 2 per 12 volte: 2 × 12 = 24."}
+{"id": "mat-4-tabelline-020", "explanation": "Moltiplichiamo 3 × 12 sommando 3 per 12 volte: 3 × 12 = 36."}
+{"id": "mat-4-aritmetica-001", "explanation": "Si esegue l'addizione colonna per colonna: 8031 + 8670 = 16701. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-002", "explanation": "Si esegue l'addizione colonna per colonna: 540 + 8063 = 8603. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-003", "explanation": "Si esegue l'addizione colonna per colonna: 8136 + 4179 = 12315. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-004", "explanation": "Si esegue l'addizione colonna per colonna: 4808 + 8558 = 13366. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-005", "explanation": "Si esegue l'addizione colonna per colonna: 9634 + 4400 = 14034. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-006", "explanation": "Si esegue l'addizione colonna per colonna: 4356 + 5979 = 10335. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-007", "explanation": "Si esegue l'addizione colonna per colonna: 4822 + 5018 = 9840. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-008", "explanation": "Si esegue l'addizione colonna per colonna: 1183 + 6533 = 7716. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-009", "explanation": "Si esegue l'addizione colonna per colonna: 1715 + 3006 = 4721. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-010", "explanation": "Si esegue l'addizione colonna per colonna: 4422 + 5341 = 9763. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-011", "explanation": "Si esegue l'addizione colonna per colonna: 4240 + 2624 = 6864. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-012", "explanation": "Si esegue l'addizione colonna per colonna: 3199 + 6183 = 9382. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-013", "explanation": "Si esegue l'addizione colonna per colonna: 2804 + 1300 = 4104. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-014", "explanation": "Si esegue l'addizione colonna per colonna: 3093 + 3448 = 6541. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-015", "explanation": "Si esegue l'addizione colonna per colonna: 3321 + 5366 = 8687. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-016", "explanation": "Si esegue l'addizione colonna per colonna: 3850 + 5297 = 9147. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-017", "explanation": "Si esegue l'addizione colonna per colonna: 7163 + 8218 = 15381. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-018", "explanation": "Si esegue l'addizione colonna per colonna: 188 + 985 = 1173. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-019", "explanation": "Si esegue l'addizione colonna per colonna: 111 + 4157 = 4268. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-020", "explanation": "Si esegue l'addizione colonna per colonna: 8246 + 1078 = 9324. Si sommano le unità, le decine, le centinaia e le migliaia riportando i valori quando necessario."}
+{"id": "mat-4-aritmetica-021", "explanation": "Si esegue la sottrazione colonna per colonna: 9601 - 8242 = 1359. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-022", "explanation": "Si esegue la sottrazione colonna per colonna: 2142 - 2062 = 80. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-023", "explanation": "Si esegue la sottrazione colonna per colonna: 7738 - 3109 = 4629. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-024", "explanation": "Si esegue la sottrazione colonna per colonna: 6315 - 2032 = 4283. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-025", "explanation": "Si esegue la sottrazione colonna per colonna: 9954 - 3604 = 6350. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-026", "explanation": "Si esegue la sottrazione colonna per colonna: 5132 - 2539 = 2593. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-027", "explanation": "Si esegue la sottrazione colonna per colonna: 7021 - 6265 = 756. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-028", "explanation": "Si esegue la sottrazione colonna per colonna: 8931 - 594 = 8337. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-029", "explanation": "Si esegue la sottrazione colonna per colonna: 868 - 264 = 604. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-030", "explanation": "Si esegue la sottrazione colonna per colonna: 8696 - 5409 = 3287. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-031", "explanation": "Si esegue la sottrazione colonna per colonna: 1410 - 160 = 1250. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-032", "explanation": "Si esegue la sottrazione colonna per colonna: 535 - 189 = 346. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-033", "explanation": "Si esegue la sottrazione colonna per colonna: 7332 - 4761 = 2571. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-034", "explanation": "Si esegue la sottrazione colonna per colonna: 881 - 654 = 227. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-035", "explanation": "Si esegue la sottrazione colonna per colonna: 7529 - 1892 = 5637. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-036", "explanation": "Si esegue la sottrazione colonna per colonna: 6513 - 6363 = 150. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-037", "explanation": "Si esegue la sottrazione colonna per colonna: 4260 - 3871 = 389. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-038", "explanation": "Si esegue la sottrazione colonna per colonna: 3778 - 2887 = 891. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-039", "explanation": "Si esegue la sottrazione colonna per colonna: 709 - 671 = 38. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-040", "explanation": "Si esegue la sottrazione colonna per colonna: 8476 - 4048 = 4428. Si parte dalle unità e si prende in prestito dalle decine o centinaia quando serve."}
+{"id": "mat-4-aritmetica-041", "explanation": "Si moltiplica 9 × 15: si calcola 9 × 15 = 135. Puoi usare la proprietà distributiva: 9 × 15 = 9 × (10 + 5) se utile."}
+{"id": "mat-4-aritmetica-042", "explanation": "Si moltiplica 10 × 70: si calcola 10 × 70 = 700. Puoi usare la proprietà distributiva: 10 × 70 = 10 × (70 + 0) se utile."}
+{"id": "mat-4-aritmetica-043", "explanation": "Si moltiplica 3 × 25: si calcola 3 × 25 = 75. Puoi usare la proprietà distributiva: 3 × 25 = 3 × (20 + 5) se utile."}
+{"id": "mat-4-aritmetica-044", "explanation": "Si moltiplica 5 × 96: si calcola 5 × 96 = 480. Puoi usare la proprietà distributiva: 5 × 96 = 5 × (90 + 6) se utile."}
+{"id": "mat-4-aritmetica-045", "explanation": "Si moltiplica 10 × 49: si calcola 10 × 49 = 490. Puoi usare la proprietà distributiva: 10 × 49 = 10 × (40 + 9) se utile."}
+{"id": "mat-4-aritmetica-046", "explanation": "Si moltiplica 11 × 70: si calcola 11 × 70 = 770. Puoi usare la proprietà distributiva: 11 × 70 = 11 × (70 + 0) se utile."}
+{"id": "mat-4-aritmetica-047", "explanation": "Si moltiplica 3 × 33: si calcola 3 × 33 = 99. Puoi usare la proprietà distributiva: 3 × 33 = 3 × (30 + 3) se utile."}
+{"id": "mat-4-aritmetica-048", "explanation": "Si moltiplica 10 × 94: si calcola 10 × 94 = 940. Puoi usare la proprietà distributiva: 10 × 94 = 10 × (90 + 4) se utile."}
+{"id": "mat-4-aritmetica-049", "explanation": "Si moltiplica 3 × 16: si calcola 3 × 16 = 48. Puoi usare la proprietà distributiva: 3 × 16 = 3 × (10 + 6) se utile."}
+{"id": "mat-4-aritmetica-050", "explanation": "Si moltiplica 4 × 89: si calcola 4 × 89 = 356. Puoi usare la proprietà distributiva: 4 × 89 = 4 × (80 + 9) se utile."}
+{"id": "mat-4-aritmetica-051", "explanation": "Si moltiplica 5 × 33: si calcola 5 × 33 = 165. Puoi usare la proprietà distributiva: 5 × 33 = 5 × (30 + 3) se utile."}
+{"id": "mat-4-aritmetica-052", "explanation": "Si moltiplica 8 × 71: si calcola 8 × 71 = 568. Puoi usare la proprietà distributiva: 8 × 71 = 8 × (70 + 1) se utile."}
+{"id": "mat-4-aritmetica-053", "explanation": "Si moltiplica 7 × 46: si calcola 7 × 46 = 322. Puoi usare la proprietà distributiva: 7 × 46 = 7 × (40 + 6) se utile."}
+{"id": "mat-4-aritmetica-054", "explanation": "Si moltiplica 6 × 94: si calcola 6 × 94 = 564. Puoi usare la proprietà distributiva: 6 × 94 = 6 × (90 + 4) se utile."}
+{"id": "mat-4-aritmetica-055", "explanation": "Si moltiplica 5 × 34: si calcola 5 × 34 = 170. Puoi usare la proprietà distributiva: 5 × 34 = 5 × (30 + 4) se utile."}
+{"id": "mat-4-aritmetica-056", "explanation": "Si moltiplica 5 × 59: si calcola 5 × 59 = 295. Puoi usare la proprietà distributiva: 5 × 59 = 5 × (50 + 9) se utile."}
+{"id": "mat-4-aritmetica-057", "explanation": "Si moltiplica 10 × 51: si calcola 10 × 51 = 510. Puoi usare la proprietà distributiva: 10 × 51 = 10 × (50 + 1) se utile."}
+{"id": "mat-4-aritmetica-058", "explanation": "Si moltiplica 6 × 34: si calcola 6 × 34 = 204. Puoi usare la proprietà distributiva: 6 × 34 = 6 × (30 + 4) se utile."}
+{"id": "mat-4-aritmetica-059", "explanation": "Si moltiplica 6 × 87: si calcola 6 × 87 = 522. Puoi usare la proprietà distributiva: 6 × 87 = 6 × (80 + 7) se utile."}
+{"id": "mat-4-aritmetica-060", "explanation": "Si moltiplica 2 × 34: si calcola 2 × 34 = 68. Puoi usare la proprietà distributiva: 2 × 34 = 2 × (30 + 4) se utile."}
+{"id": "mat-4-aritmetica-061", "explanation": "Si divide 360 ÷ 9 = 40 perché 9 × 40 = 360. Verifica: 9 × 40 = 360."}
+{"id": "mat-4-aritmetica-062", "explanation": "Si divide 156 ÷ 12 = 13 perché 12 × 13 = 156. Verifica: 12 × 13 = 156."}
+{"id": "mat-4-aritmetica-063", "explanation": "Si divide 36 ÷ 3 = 12 perché 3 × 12 = 36. Verifica: 3 × 12 = 36."}
+{"id": "mat-4-aritmetica-064", "explanation": "Si divide 243 ÷ 9 = 27 perché 9 × 27 = 243. Verifica: 9 × 27 = 243."}
+{"id": "mat-4-aritmetica-065", "explanation": "Si divide 60 ÷ 4 = 15 perché 4 × 15 = 60. Verifica: 4 × 15 = 60."}
+{"id": "mat-4-aritmetica-066", "explanation": "Si divide 207 ÷ 9 = 23 perché 9 × 23 = 207. Verifica: 9 × 23 = 207."}
+{"id": "mat-4-aritmetica-067", "explanation": "Si divide 46 ÷ 2 = 23 perché 2 × 23 = 46. Verifica: 2 × 23 = 46."}
+{"id": "mat-4-aritmetica-068", "explanation": "Si divide 65 ÷ 5 = 13 perché 5 × 13 = 65. Verifica: 5 × 13 = 65."}
+{"id": "mat-4-aritmetica-069", "explanation": "Si divide 45 ÷ 3 = 15 perché 3 × 15 = 45. Verifica: 3 × 15 = 45."}
+{"id": "mat-4-aritmetica-070", "explanation": "Si divide 120 ÷ 5 = 24 perché 5 × 24 = 120. Verifica: 5 × 24 = 120."}
+{"id": "mat-4-aritmetica-071", "explanation": "Si divide 220 ÷ 10 = 22 perché 10 × 22 = 220. Verifica: 10 × 22 = 220."}
+{"id": "mat-4-aritmetica-072", "explanation": "Si divide 150 ÷ 6 = 25 perché 6 × 25 = 150. Verifica: 6 × 25 = 150."}
+{"id": "mat-4-aritmetica-073", "explanation": "Si divide 217 ÷ 7 = 31 perché 7 × 31 = 217. Verifica: 7 × 31 = 217."}
+{"id": "mat-4-aritmetica-074", "explanation": "Si divide 414 ÷ 9 = 46 perché 9 × 46 = 414. Verifica: 9 × 46 = 414."}
+{"id": "mat-4-aritmetica-075", "explanation": "Si divide 245 ÷ 5 = 49 perché 5 × 49 = 245. Verifica: 5 × 49 = 245."}
+{"id": "mat-4-aritmetica-076", "explanation": "Si divide 132 ÷ 4 = 33 perché 4 × 33 = 132. Verifica: 4 × 33 = 132."}
+{"id": "mat-4-aritmetica-077", "explanation": "Si divide 180 ÷ 10 = 18 perché 10 × 18 = 180. Verifica: 10 × 18 = 180."}
+{"id": "mat-4-aritmetica-078", "explanation": "Si divide 333 ÷ 9 = 37 perché 9 × 37 = 333. Verifica: 9 × 37 = 333."}
+{"id": "mat-4-aritmetica-079", "explanation": "Si divide 468 ÷ 12 = 39 perché 12 × 39 = 468. Verifica: 12 × 39 = 468."}
+{"id": "mat-4-aritmetica-080", "explanation": "Per trovare 1/2 di 16: prima dividiamo 16 ÷ 2 = 8 (una parte), poi moltiplichiamo 8 × 1 = 8. Risultato: 8."}
+{"id": "mat-4-aritmetica-081", "explanation": "Per trovare 1/2 di 8: prima dividiamo 8 ÷ 2 = 4 (una parte), poi moltiplichiamo 4 × 1 = 4. Risultato: 4."}
+{"id": "mat-4-aritmetica-082", "explanation": "Per trovare 3/5 di 40: prima dividiamo 40 ÷ 5 = 8 (una parte), poi moltiplichiamo 8 × 3 = 24. Risultato: 24."}
+{"id": "mat-4-aritmetica-083", "explanation": "Per trovare 9/10 di 80: prima dividiamo 80 ÷ 10 = 8 (una parte), poi moltiplichiamo 8 × 9 = 72. Risultato: 72."}
+{"id": "mat-4-aritmetica-084", "explanation": "Per trovare 1/4 di 40: prima dividiamo 40 ÷ 4 = 10 (una parte), poi moltiplichiamo 10 × 1 = 10. Risultato: 10."}
+{"id": "mat-4-aritmetica-085", "explanation": "Per trovare 1/10 di 60: prima dividiamo 60 ÷ 10 = 6 (una parte), poi moltiplichiamo 6 × 1 = 6. Risultato: 6."}
+{"id": "mat-4-aritmetica-086", "explanation": "Per trovare 5/10 di 90: prima dividiamo 90 ÷ 10 = 9 (una parte), poi moltiplichiamo 9 × 5 = 45. Risultato: 45."}
+{"id": "mat-4-aritmetica-087", "explanation": "Per trovare 8/10 di 90: prima dividiamo 90 ÷ 10 = 9 (una parte), poi moltiplichiamo 9 × 8 = 72. Risultato: 72."}
+{"id": "mat-4-aritmetica-088", "explanation": "Per trovare 2/4 di 8: prima dividiamo 8 ÷ 4 = 2 (una parte), poi moltiplichiamo 2 × 2 = 4. Risultato: 4."}
+{"id": "mat-4-aritmetica-089", "explanation": "Per trovare 1/5 di 20: prima dividiamo 20 ÷ 5 = 4 (una parte), poi moltiplichiamo 4 × 1 = 4. Risultato: 4."}
+{"id": "mat-4-aritmetica-090", "explanation": "Per trovare 3/5 di 35: prima dividiamo 35 ÷ 5 = 7 (una parte), poi moltiplichiamo 7 × 3 = 21. Risultato: 21."}
+{"id": "mat-4-aritmetica-091", "explanation": "Per trovare 1/2 di 6: prima dividiamo 6 ÷ 2 = 3 (una parte), poi moltiplichiamo 3 × 1 = 3. Risultato: 3."}
+{"id": "mat-4-aritmetica-092", "explanation": "Per trovare 2/10 di 30: prima dividiamo 30 ÷ 10 = 3 (una parte), poi moltiplichiamo 3 × 2 = 6. Risultato: 6."}
+{"id": "mat-4-aritmetica-093", "explanation": "Per trovare 8/10 di 20: prima dividiamo 20 ÷ 10 = 2 (una parte), poi moltiplichiamo 2 × 8 = 16. Risultato: 16."}
+{"id": "mat-4-aritmetica-094", "explanation": "Per trovare 8/10 di 40: prima dividiamo 40 ÷ 10 = 4 (una parte), poi moltiplichiamo 4 × 8 = 32. Risultato: 32."}
+{"id": "mat-4-aritmetica-095", "explanation": "Per trovare 2/4 di 20: prima dividiamo 20 ÷ 4 = 5 (una parte), poi moltiplichiamo 5 × 2 = 10. Risultato: 10."}
+{"id": "mat-4-aritmetica-096", "explanation": "Per trovare 5/10 di 100: prima dividiamo 100 ÷ 10 = 10 (una parte), poi moltiplichiamo 10 × 5 = 50. Risultato: 50."}
+{"id": "mat-4-aritmetica-097", "explanation": "Per trovare 5/10 di 50: prima dividiamo 50 ÷ 10 = 5 (una parte), poi moltiplichiamo 5 × 5 = 25. Risultato: 25."}
+{"id": "mat-4-aritmetica-098", "explanation": "Per trovare 2/5 di 50: prima dividiamo 50 ÷ 5 = 10 (una parte), poi moltiplichiamo 10 × 2 = 20. Risultato: 20."}
+{"id": "mat-4-aritmetica-099", "explanation": "Per trovare 9/10 di 50: prima dividiamo 50 ÷ 10 = 5 (una parte), poi moltiplichiamo 5 × 9 = 45. Risultato: 45."}
+{"id": "mat-4-problemi-001", "explanation": "Moltiplichiamo la quantità per il numero di volte: 13 × 12 = 156. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-002", "explanation": "Moltiplichiamo la quantità per il numero di volte: 44 × 13 = 572. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-003", "explanation": "Moltiplichiamo la quantità per il numero di volte: 40 × 7 = 280. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-004", "explanation": "Moltiplichiamo la quantità per il numero di volte: 33 × 5 = 165. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-005", "explanation": "Moltiplichiamo la quantità per il numero di volte: 79 × 7 = 553. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-006", "explanation": "Moltiplichiamo la quantità per il numero di volte: 71 × 7 = 497. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-007", "explanation": "Moltiplichiamo la quantità per il numero di volte: 15 × 13 = 195. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-008", "explanation": "Moltiplichiamo la quantità per il numero di volte: 22 × 3 = 66. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-009", "explanation": "Moltiplichiamo la quantità per il numero di volte: 90 × 11 = 990. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-010", "explanation": "Moltiplichiamo la quantità per il numero di volte: 33 × 12 = 396. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-011", "explanation": "Moltiplichiamo la quantità per il numero di volte: 35 × 7 = 245. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-012", "explanation": "Moltiplichiamo la quantità per il numero di volte: 50 × 4 = 200. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-013", "explanation": "Moltiplichiamo la quantità per il numero di volte: 43 × 8 = 344. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-014", "explanation": "Moltiplichiamo la quantità per il numero di volte: 11 × 3 = 33. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-015", "explanation": "Moltiplichiamo la quantità per il numero di volte: 79 × 11 = 869. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-016", "explanation": "Moltiplichiamo la quantità per il numero di volte: 98 × 5 = 490. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-017", "explanation": "Moltiplichiamo la quantità per il numero di volte: 48 × 14 = 672. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-018", "explanation": "Moltiplichiamo la quantità per il numero di volte: 98 × 7 = 686. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-019", "explanation": "Moltiplichiamo la quantità per il numero di volte: 97 × 7 = 679. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-020", "explanation": "Moltiplichiamo la quantità per il numero di volte: 32 × 3 = 96. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-021", "explanation": "Moltiplichiamo la quantità per il numero di volte: 12 × 14 = 168. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-022", "explanation": "Moltiplichiamo la quantità per il numero di volte: 78 × 3 = 234. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-023", "explanation": "Moltiplichiamo la quantità per il numero di volte: 63 × 7 = 441. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-024", "explanation": "Moltiplichiamo la quantità per il numero di volte: 14 × 9 = 126. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-025", "explanation": "Moltiplichiamo la quantità per il numero di volte: 11 × 5 = 55. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-026", "explanation": "Moltiplichiamo la quantità per il numero di volte: 30 × 3 = 90. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-027", "explanation": "Moltiplichiamo la quantità per il numero di volte: 48 × 13 = 624. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-028", "explanation": "Moltiplichiamo la quantità per il numero di volte: 100 × 11 = 1100. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-029", "explanation": "Moltiplichiamo la quantità per il numero di volte: 57 × 13 = 741. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-030", "explanation": "Moltiplichiamo la quantità per il numero di volte: 53 × 9 = 477. Si tratta di una moltiplicazione perché la stessa quantità si ripete più volte."}
+{"id": "mat-4-problemi-031", "explanation": "Dividiamo il totale per il numero di parti: 225 ÷ 5 = 45. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-032", "explanation": "Dividiamo il totale per il numero di parti: 60 ÷ 6 = 10. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-033", "explanation": "Dividiamo il totale per il numero di parti: 266 ÷ 7 = 38. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-034", "explanation": "Dividiamo il totale per il numero di parti: 85 ÷ 5 = 17. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-035", "explanation": "Dividiamo il totale per il numero di parti: 96 ÷ 12 = 8. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-036", "explanation": "Dividiamo il totale per il numero di parti: 88 ÷ 4 = 22. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-037", "explanation": "Dividiamo il totale per il numero di parti: 75 ÷ 15 = 5. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-038", "explanation": "Dividiamo il totale per il numero di parti: 165 ÷ 5 = 33. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-039", "explanation": "Dividiamo il totale per il numero di parti: 451 ÷ 11 = 41. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-040", "explanation": "Dividiamo il totale per il numero di parti: 546 ÷ 13 = 42. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-041", "explanation": "Dividiamo il totale per il numero di parti: 333 ÷ 9 = 37. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-042", "explanation": "Dividiamo il totale per il numero di parti: 500 ÷ 10 = 50. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-043", "explanation": "Dividiamo il totale per il numero di parti: 288 ÷ 9 = 32. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-044", "explanation": "Dividiamo il totale per il numero di parti: 128 ÷ 8 = 16. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-045", "explanation": "Dividiamo il totale per il numero di parti: 250 ÷ 5 = 50. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-046", "explanation": "Dividiamo il totale per il numero di parti: 546 ÷ 14 = 39. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-047", "explanation": "Dividiamo il totale per il numero di parti: 100 ÷ 5 = 20. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-048", "explanation": "Dividiamo il totale per il numero di parti: 90 ÷ 6 = 15. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-049", "explanation": "Dividiamo il totale per il numero di parti: 440 ÷ 11 = 40. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-050", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 799."}
+{"id": "mat-4-problemi-051", "explanation": "Sommiamo le due quantità: 747 + 124 = 871. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-052", "explanation": "Sommiamo le due quantità: 707 + 884 = 1591. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-053", "explanation": "Sommiamo le due quantità: 662 + 423 = 1085. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-054", "explanation": "Sommiamo le due quantità: 753 + 200 = 953. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-055", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 819."}
+{"id": "mat-4-problemi-056", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 745."}
+{"id": "mat-4-problemi-057", "explanation": "Sommiamo le due quantità: 452 + 996 = 1448. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-058", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 970."}
+{"id": "mat-4-problemi-059", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 892."}
+{"id": "mat-4-problemi-060", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 711."}
+{"id": "mat-4-problemi-061", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 991."}
+{"id": "mat-4-problemi-062", "explanation": "Sommiamo le due quantità: 388 + 209 = 597. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-063", "explanation": "Sommiamo le due quantità: 294 + 707 = 1001. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-064", "explanation": "Sommiamo le due quantità: 856 + 107 = 963. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-065", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 444."}
+{"id": "mat-4-problemi-066", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 1723."}
+{"id": "mat-4-problemi-067", "explanation": "Sommiamo le due quantità: 488 + 703 = 1191. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-068", "explanation": "Sommiamo le due quantità: 262 + 179 = 441. Usiamo l'addizione perché le quantità si uniscono."}
+{"id": "mat-4-problemi-069", "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 1320."}
+{"id": "mat-4-problemi-070", "explanation": "Dividiamo il totale per il numero di parti: 109 ÷ 49 = 60. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-071", "explanation": "Dividiamo il totale per il numero di parti: 113 ÷ 39 = 74. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-072", "explanation": "Sottraiamo: 94 - 18 = 76. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-073", "explanation": "Dividiamo il totale per il numero di parti: 145 ÷ 28 = 117. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-074", "explanation": "Sottraiamo: 217 - 33 = 184. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-075", "explanation": "Dividiamo il totale per il numero di parti: 64 ÷ 11 = 53. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-076", "explanation": "Sottraiamo: 182 - 45 = 137. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-077", "explanation": "Dividiamo il totale per il numero di parti: 96 ÷ 42 = 54. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-078", "explanation": "Sottraiamo: 85 - 39 = 46. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-079", "explanation": "Dividiamo il totale per il numero di parti: 217 ÷ 35 = 182. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-080", "explanation": "Sottraiamo: 118 - 15 = 103. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-081", "explanation": "Sottraiamo: 168 - 12 = 156. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-082", "explanation": "Sottraiamo: 51 - 23 = 28. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-083", "explanation": "Dividiamo il totale per il numero di parti: 134 ÷ 28 = 106. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-084", "explanation": "Sottraiamo: 205 - 50 = 155. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-085", "explanation": "Sottraiamo: 119 - 30 = 89. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-086", "explanation": "Sottraiamo: 103 - 16 = 87. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-087", "explanation": "Sottraiamo: 127 - 11 = 116. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-088", "explanation": "Dividiamo il totale per il numero di parti: 147 ÷ 42 = 105. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-089", "explanation": "Sottraiamo: 83 - 23 = 60. Usiamo la sottrazione perché una parte viene tolta dal totale."}
+{"id": "mat-4-problemi-090", "explanation": "Dividiamo il totale per il numero di parti: 8 ÷ 400 = 50. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-091", "explanation": "Dividiamo il totale per il numero di parti: 3 ÷ 72 = 24. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-092", "explanation": "Dividiamo il totale per il numero di parti: 6 ÷ 192 = 32. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-093", "explanation": "Dividiamo il totale per il numero di parti: 9 ÷ 54 = 6. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-094", "explanation": "Dividiamo il totale per il numero di parti: 11 ÷ 187 = 17. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-095", "explanation": "Dividiamo il totale per il numero di parti: 11 ÷ 495 = 45. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-096", "explanation": "Dividiamo il totale per il numero di parti: 11 ÷ 165 = 15. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-097", "explanation": "Dividiamo il totale per il numero di parti: 12 ÷ 192 = 16. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-098", "explanation": "Dividiamo il totale per il numero di parti: 10 ÷ 90 = 9. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-problemi-099", "explanation": "Dividiamo il totale per il numero di parti: 14 ÷ 350 = 25. Usiamo la divisione perché dobbiamo distribuire in parti uguali."}
+{"id": "mat-4-geometria-001", "explanation": "L'area di un rettangolo si calcola moltiplicando base × altezza. Ad esempio, un rettangolo con base 5 cm e altezza 3 cm ha area 5 × 3 = 15 cm²."}
+{"id": "mat-4-geometria-002", "explanation": "L'area di un quadrato si calcola moltiplicando lato × lato (lato²). Ad esempio, un quadrato di lato 4 cm ha area 4 × 4 = 16 cm²."}
+{"id": "mat-4-geometria-003", "explanation": "L'area è una misura di superficie, quindi si esprime in unità quadrate come cm², m² o km². Le misure lineari (cm, m) si usano invece per lunghezze e perimetri."}
+{"id": "mat-4-geometria-004", "explanation": "L'area del triangolo si calcola con la formula (base × altezza) ÷ 2. Si divide per 2 perché il triangolo è la metà di un parallelogramma con la stessa base e altezza."}
+{"id": "mat-4-geometria-005", "explanation": "1 metro = 100 centimetri, quindi 1 m² = 100 cm × 100 cm = 10 000 cm². Quando si converte un'area bisogna moltiplicare due volte il fattore di conversione lineare."}
+{"id": "mat-4-geometria-006", "explanation": "L'area del parallelogramma è base × altezza, dove l'altezza è la distanza perpendicolare tra le basi (non il lato obliquo). Ad esempio, base 6 cm e altezza 4 cm: area = 6 × 4 = 24 cm²."}
+{"id": "mat-4-geometria-007", "explanation": "Se l'area del quadrato è 36 cm², cerchiamo quale numero moltiplicato per sé stesso fa 36: 6 × 6 = 36, quindi il lato è 6 cm."}
+{"id": "mat-4-geometria-008", "explanation": "Applichiamo la formula: Area = (base × altezza) ÷ 2 = (10 × 4) ÷ 2 = 40 ÷ 2 = 20 cm²."}
+{"id": "mat-4-geometria-009", "explanation": "Il perimetro del quadrato = lato × 4 = 7 × 4 = 28 cm. Il quadrato ha 4 lati uguali, quindi si moltiplica il lato per 4."}
+{"id": "mat-4-geometria-010", "explanation": "L'area del rombo si calcola con (diagonale1 × diagonale2) ÷ 2. Le due diagonali si intersecano al centro e creano 4 triangoli uguali."}
+{"id": "mat-4-geometria-011", "explanation": "Se area = base × altezza, allora altezza = area ÷ base = 48 ÷ 8 = 6 cm. Si usa la divisione per trovare il lato mancante."}
+{"id": "mat-4-geometria-012", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 12 + 11 + 14 = 37 cm."}
+{"id": "mat-4-geometria-013", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 5 + 10 + 10 = 25 cm."}
+{"id": "mat-4-geometria-014", "explanation": "Perimetro del quadrato = lato × 4 = 15 × 4 = 60 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-015", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (20 × 7) ÷ 2 = 140 ÷ 2 = 70 cm²."}
+{"id": "mat-4-geometria-016", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (16 + 7) × 2 = 23 × 2 = 46 cm."}
+{"id": "mat-4-geometria-017", "explanation": "Perimetro del quadrato = lato × 4 = 4 × 4 = 16 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-018", "explanation": "Perimetro del quadrato = lato × 4 = 14 × 4 = 56 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-019", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (3 + 15) × 2 = 18 × 2 = 36 cm."}
+{"id": "mat-4-geometria-020", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (7 × 2) ÷ 2 = 14 ÷ 2 = 7 cm²."}
+{"id": "mat-4-geometria-021", "explanation": "Area del quadrato = lato × lato = 13 × 13 = 169 cm²."}
+{"id": "mat-4-geometria-022", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 7 + 14 + 3 = 24 cm."}
+{"id": "mat-4-geometria-023", "explanation": "Area del rettangolo = base × altezza = 11 × 3 = 33 cm²."}
+{"id": "mat-4-geometria-024", "explanation": "Area del rettangolo = base × altezza = 17 × 3 = 51 cm²."}
+{"id": "mat-4-geometria-025", "explanation": "Area del rettangolo = base × altezza = 7 × 17 = 119 cm²."}
+{"id": "mat-4-geometria-026", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (19 + 16) × 2 = 35 × 2 = 70 cm."}
+{"id": "mat-4-geometria-027", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (16 × 11) ÷ 2 = 176 ÷ 2 = 88 cm²."}
+{"id": "mat-4-geometria-028", "explanation": "Area del quadrato = lato × lato = 11 × 11 = 121 cm²."}
+{"id": "mat-4-geometria-029", "explanation": "Area del rettangolo = base × altezza = 13 × 16 = 208 cm²."}
+{"id": "mat-4-geometria-030", "explanation": "Area del quadrato = lato × lato = 7 × 7 = 49 cm²."}
+{"id": "mat-4-geometria-031", "explanation": "Area del rettangolo = base × altezza = 4 × 20 = 80 cm²."}
+{"id": "mat-4-geometria-032", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (5 × 14) ÷ 2 = 70 ÷ 2 = 35 cm²."}
+{"id": "mat-4-geometria-033", "explanation": "Area del quadrato = lato × lato = 12 × 12 = 144 cm²."}
+{"id": "mat-4-geometria-034", "explanation": "Perimetro del quadrato = lato × 4 = 19 × 4 = 76 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-035", "explanation": "Perimetro del quadrato = lato × 4 = 3 × 4 = 12 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-036", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (14 + 3) × 2 = 17 × 2 = 34 cm."}
+{"id": "mat-4-geometria-037", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 10 + 12 + 4 = 26 cm."}
+{"id": "mat-4-geometria-038", "explanation": "Perimetro del quadrato = lato × 4 = 18 × 4 = 72 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-039", "explanation": "Area del rettangolo = base × altezza = 14 × 14 = 196 cm²."}
+{"id": "mat-4-geometria-040", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 4 + 14 + 12 = 30 cm."}
+{"id": "mat-4-geometria-041", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (13 × 3) ÷ 2 = 39 ÷ 2 = 19 cm²."}
+{"id": "mat-4-geometria-042", "explanation": "Area del quadrato = lato × lato = 17 × 17 = 289 cm²."}
+{"id": "mat-4-geometria-043", "explanation": "Area del rettangolo = base × altezza = 16 × 14 = 224 cm²."}
+{"id": "mat-4-geometria-044", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 13 + 4 + 11 = 28 cm."}
+{"id": "mat-4-geometria-045", "explanation": "Area del rettangolo = base × altezza = 16 × 17 = 272 cm²."}
+{"id": "mat-4-geometria-046", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (5 × 2) ÷ 2 = 10 ÷ 2 = 5 cm²."}
+{"id": "mat-4-geometria-047", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (16 + 4) × 2 = 20 × 2 = 40 cm."}
+{"id": "mat-4-geometria-048", "explanation": "Area del rettangolo = base × altezza = 18 × 19 = 342 cm²."}
+{"id": "mat-4-geometria-049", "explanation": "Area del quadrato = lato × lato = 8 × 8 = 64 cm²."}
+{"id": "mat-4-geometria-050", "explanation": "Area del quadrato = lato × lato = 10 × 10 = 100 cm²."}
+{"id": "mat-4-geometria-051", "explanation": "Area del rettangolo = base × altezza = 2 × 20 = 40 cm²."}
+{"id": "mat-4-geometria-052", "explanation": "Perimetro del quadrato = lato × 4 = 20 × 4 = 80 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-053", "explanation": "Area del rettangolo = base × altezza = 19 × 6 = 114 cm²."}
+{"id": "mat-4-geometria-054", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 7 + 13 + 6 = 26 cm."}
+{"id": "mat-4-geometria-055", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (4 + 2) × 2 = 6 × 2 = 12 cm."}
+{"id": "mat-4-geometria-056", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (12 × 4) ÷ 2 = 48 ÷ 2 = 24 cm²."}
+{"id": "mat-4-geometria-057", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (8 × 6) ÷ 2 = 48 ÷ 2 = 24 cm²."}
+{"id": "mat-4-geometria-058", "explanation": "Area del rettangolo = base × altezza = 6 × 3 = 18 cm²."}
+{"id": "mat-4-geometria-059", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (7 × 9) ÷ 2 = 63 ÷ 2 = 31 cm²."}
+{"id": "mat-4-geometria-060", "explanation": "Area del rettangolo = base × altezza = 10 × 19 = 190 cm²."}
+{"id": "mat-4-geometria-061", "explanation": "Perimetro del quadrato = lato × 4 = 11 × 4 = 44 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-062", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (19 × 7) ÷ 2 = 133 ÷ 2 = 66 cm²."}
+{"id": "mat-4-geometria-063", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (2 + 4) × 2 = 6 × 2 = 12 cm."}
+{"id": "mat-4-geometria-064", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (4 × 7) ÷ 2 = 28 ÷ 2 = 14 cm²."}
+{"id": "mat-4-geometria-065", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (4 + 11) × 2 = 15 × 2 = 30 cm."}
+{"id": "mat-4-geometria-066", "explanation": "Perimetro del quadrato = lato × 4 = 10 × 4 = 40 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-067", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (14 + 5) × 2 = 19 × 2 = 38 cm."}
+{"id": "mat-4-geometria-068", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (9 × 3) ÷ 2 = 27 ÷ 2 = 13 cm²."}
+{"id": "mat-4-geometria-069", "explanation": "Area del quadrato = lato × lato = 15 × 15 = 225 cm²."}
+{"id": "mat-4-geometria-070", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (11 + 13) × 2 = 24 × 2 = 48 cm."}
+{"id": "mat-4-geometria-071", "explanation": "Perimetro del quadrato = lato × 4 = 6 × 4 = 24 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-072", "explanation": "Area del quadrato = lato × lato = 5 × 5 = 25 cm²."}
+{"id": "mat-4-geometria-073", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (11 × 6) ÷ 2 = 66 ÷ 2 = 33 cm²."}
+{"id": "mat-4-geometria-074", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (12 × 9) ÷ 2 = 108 ÷ 2 = 54 cm²."}
+{"id": "mat-4-geometria-075", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 11 + 6 + 5 = 22 cm."}
+{"id": "mat-4-geometria-076", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (3 + 3) × 2 = 6 × 2 = 12 cm."}
+{"id": "mat-4-geometria-077", "explanation": "Area del quadrato = lato × lato = 19 × 19 = 361 cm²."}
+{"id": "mat-4-geometria-078", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (2 + 10) × 2 = 12 × 2 = 24 cm."}
+{"id": "mat-4-geometria-079", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (17 + 4) × 2 = 21 × 2 = 42 cm."}
+{"id": "mat-4-geometria-080", "explanation": "Perimetro del quadrato = lato × 4 = 7 × 4 = 28 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-081", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 10 + 10 + 4 = 24 cm."}
+{"id": "mat-4-geometria-082", "explanation": "Perimetro del quadrato = lato × 4 = 8 × 4 = 32 cm. Il quadrato ha 4 lati tutti uguali."}
+{"id": "mat-4-geometria-083", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 15 + 14 + 6 = 35 cm."}
+{"id": "mat-4-geometria-084", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (20 + 20) × 2 = 40 × 2 = 80 cm."}
+{"id": "mat-4-geometria-085", "explanation": "Area del triangolo = (base × altezza) ÷ 2 = (11 × 13) ÷ 2 = 143 ÷ 2 = 71 cm²."}
+{"id": "mat-4-geometria-086", "explanation": "Il perimetro del triangolo è la somma dei tre lati: 6 + 4 + 10 = 20 cm."}
+{"id": "mat-4-geometria-087", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (18 + 11) × 2 = 29 × 2 = 58 cm."}
+{"id": "mat-4-geometria-088", "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (13 + 2) × 2 = 15 × 2 = 30 cm."}
+{"id": "mat-4-geometria-089", "explanation": "Area del rettangolo = base × altezza = 20 × 15 = 300 cm²."}
+{"id": "mat-4-geometria-090", "explanation": "Area del rettangolo = base × altezza = 14 × 10 = 140 cm²."}
+{"id": "mat-4-logica_e_dati-001", "explanation": "La media si calcola sommando tutti i valori e dividendo per quanti sono. Ad esempio, la media di 4, 6, 8 è (4+6+8) ÷ 3 = 18 ÷ 3 = 6."}
+{"id": "mat-4-logica_e_dati-002", "explanation": "La probabilità è sempre un numero tra 0 e 1: 0 significa impossibile, 1 significa certo. Ad esempio, la probabilità di ottenere 6 con un dado è 1/6 ≈ 0,17."}
+{"id": "mat-4-logica_e_dati-003", "explanation": "Il grafico a barre usa rettangoli la cui altezza è proporzionale alla frequenza di ciascuna categoria, rendendo facile il confronto visivo tra dati."}
+{"id": "mat-4-logica_e_dati-004", "explanation": "Il grafico a torta è un diagramma circolare: ogni fetta rappresenta una categoria e la sua ampiezza è proporzionale alla frequenza rispetto al totale."}
+{"id": "mat-4-logica_e_dati-005", "explanation": "La moda è il valore che compare più spesso in un insieme di dati. Nella serie 2, 3, 3, 4, 5, 3, 6 il numero 3 si ripete 3 volte: è la moda."}
+{"id": "mat-4-logica_e_dati-006", "explanation": "La mediana è il valore centrale quando i dati sono in ordine. Nella serie 1, 3, 5, 7, 9 (5 valori) il centrale è il terzo: 5."}
+{"id": "mat-4-logica_e_dati-007", "explanation": "Con un numero pari di valori, la mediana è la media dei due centrali. In 2, 4, 6, 8 i due centrali sono 4 e 6: (4+6) ÷ 2 = 5."}
+{"id": "mat-4-logica_e_dati-008", "explanation": "L'ideogramma usa simboli o disegni al posto delle barre: ogni simbolo vale una certa quantità e contando i simboli si legge il dato."}
+{"id": "mat-4-logica_e_dati-009", "explanation": "I numeri pari da 1 a 6 sono: 2, 4, 6 → 3 casi favorevoli su 6 possibili. Probabilità = 3/6 = 1/2."}
+{"id": "mat-4-logica_e_dati-010", "explanation": "Probabilità = casi favorevoli ÷ casi totali = 6 ÷ 30 = 1/5. Semplifichiamo la frazione dividendo numeratore e denominatore per 6."}
+{"id": "mat-4-logica_e_dati-011", "explanation": "Media = somma ÷ numero di valori = (0 + 4 + 8 + 12) ÷ 4 = 24 ÷ 4 = 6."}
+{"id": "mat-4-logica_e_dati-012", "explanation": "Media = somma ÷ numero di valori = (5 + 10 + 15 + 20) ÷ 4 = 50 ÷ 4 = 12,5."}
+{"id": "mat-4-logica_e_dati-013", "explanation": "Lanciando una moneta ci sono solo 2 esiti possibili (testa o croce), entrambi con uguale probabilità. Probabilità di testa = 1/2."}
+{"id": "mat-4-logica_e_dati-014", "explanation": "La sequenza è 1², 2², 3², 4², 5²: sono i numeri quadrati. Il prossimo è 6² = 36."}
+{"id": "mat-4-logica_e_dati-015", "explanation": "Ogni termine si ottiene aggiungendo +2, +3, +4, +5... al precedente: 15 + 6 = 21. Sono i numeri triangolari."}
+{"id": "mat-4-logica_e_dati-016", "explanation": "Ogni termine si moltiplica per 2: 2→4→8→16→32→64. È una successione geometrica con ragione 2."}
+{"id": "mat-4-logica_e_dati-017", "explanation": "Ogni termine diminuisce di 10: 100-10=90, 90-10=80... 60-10=50. È una successione aritmetica decrescente con ragione -10."}
+{"id": "mat-4-logica_e_dati-018", "explanation": "Ogni termine si moltiplica per 2: 5→10→20→40→80→160. È una successione geometrica con ragione 2."}
+{"id": "mat-4-logica_e_dati-019", "explanation": "Le differenze tra i termini aumentano di 1: +1, +2, +3, +4, +5... Quindi 11 + 5 = 16."}
+{"id": "mat-4-logica_e_dati-020", "explanation": "È la tabellina del 3: ogni termine aumenta di 3. Il prossimo è 15 + 3 = 18."}
+{"id": "mat-4-logica_e_dati-021", "explanation": "È la tabellina del 7: ogni termine aumenta di 7. Il prossimo è 35 + 7 = 42."}
+{"id": "mat-4-logica_e_dati-022", "explanation": "Media = somma ÷ numero di valori = (13 + 33 + 43 + 17) ÷ 4 = 106 ÷ 4 = 26."}
+{"id": "mat-4-logica_e_dati-023", "explanation": "Media = somma ÷ numero di valori = (29 + 29 + 46 + 26) ÷ 4 = 130 ÷ 4 = 32."}
+{"id": "mat-4-logica_e_dati-024", "explanation": "Media = somma ÷ numero di valori = (27 + 36 + 42 + 14) ÷ 4 = 119 ÷ 4 = 29."}
+{"id": "mat-4-logica_e_dati-025", "explanation": "Media = somma ÷ numero di valori = (20 + 15 + 6 + 16) ÷ 4 = 57 ÷ 4 = 14."}
+{"id": "mat-4-logica_e_dati-026", "explanation": "Media = somma ÷ numero di valori = (36 + 13 + 42 + 31) ÷ 4 = 122 ÷ 4 = 30."}
+{"id": "mat-4-logica_e_dati-027", "explanation": "Media = somma ÷ numero di valori = (28 + 32 + 24 + 9) ÷ 4 = 93 ÷ 4 = 23."}
+{"id": "mat-4-logica_e_dati-028", "explanation": "Media = somma ÷ numero di valori = (47 + 22 + 34 + 50) ÷ 4 = 153 ÷ 4 = 38."}
+{"id": "mat-4-logica_e_dati-029", "explanation": "Media = somma ÷ numero di valori = (12 + 12 + 24 + 10) ÷ 4 = 58 ÷ 4 = 14."}
+{"id": "mat-4-logica_e_dati-030", "explanation": "Media = somma ÷ numero di valori = (15 + 36 + 37 + 38) ÷ 4 = 126 ÷ 4 = 31."}
+{"id": "mat-4-logica_e_dati-031", "explanation": "Media = somma ÷ numero di valori = (20 + 13 + 32 + 11) ÷ 4 = 76 ÷ 4 = 19."}
+{"id": "mat-4-logica_e_dati-032", "explanation": "Media = somma ÷ numero di valori = (38 + 18 + 48 + 33) ÷ 4 = 137 ÷ 4 = 34."}
+{"id": "mat-4-logica_e_dati-033", "explanation": "Media = somma ÷ numero di valori = (31 + 49 + 43 + 21) ÷ 4 = 144 ÷ 4 = 36."}
+{"id": "mat-4-logica_e_dati-034", "explanation": "Media = somma ÷ numero di valori = (30 + 32 + 20 + 12) ÷ 4 = 94 ÷ 4 = 23."}
+{"id": "mat-4-logica_e_dati-035", "explanation": "Media = somma ÷ numero di valori = (8 + 49 + 8 + 5) ÷ 4 = 70 ÷ 4 = 17."}
+{"id": "mat-4-logica_e_dati-036", "explanation": "Media = somma ÷ numero di valori = (13 + 38 + 15 + 10) ÷ 4 = 76 ÷ 4 = 19."}
+{"id": "mat-4-logica_e_dati-037", "explanation": "Media = somma ÷ numero di valori = (26 + 8 + 8 + 15) ÷ 4 = 57 ÷ 4 = 14."}
+{"id": "mat-4-logica_e_dati-038", "explanation": "Media = somma ÷ numero di valori = (8 + 5 + 41 + 43) ÷ 4 = 97 ÷ 4 = 24."}
+{"id": "mat-4-logica_e_dati-039", "explanation": "Media = somma ÷ numero di valori = (31 + 45 + 38 + 19) ÷ 4 = 133 ÷ 4 = 33."}
+{"id": "mat-4-logica_e_dati-040", "explanation": "Media = somma ÷ numero di valori = (37 + 34 + 8 + 12) ÷ 4 = 91 ÷ 4 = 22."}
+{"id": "mat-4-logica_e_dati-041", "explanation": "Media = somma ÷ numero di valori = (16 + 32 + 42 + 36) ÷ 4 = 126 ÷ 4 = 31."}
+{"id": "mat-4-logica_e_dati-042", "explanation": "Media = somma ÷ numero di valori = (30 + 13 + 36 + 35) ÷ 4 = 114 ÷ 4 = 28."}
+{"id": "mat-4-logica_e_dati-043", "explanation": "Media = somma ÷ numero di valori = (27 + 16 + 28 + 14) ÷ 4 = 85 ÷ 4 = 21."}
+{"id": "mat-4-logica_e_dati-044", "explanation": "Media = somma ÷ numero di valori = (8 + 8 + 30 + 24) ÷ 4 = 70 ÷ 4 = 17."}
+{"id": "mat-4-logica_e_dati-045", "explanation": "Media = somma ÷ numero di valori = (7 + 19 + 29 + 39) ÷ 4 = 94 ÷ 4 = 23."}
+{"id": "mat-4-logica_e_dati-046", "explanation": "Media = somma ÷ numero di valori = (43 + 8 + 46 + 46) ÷ 4 = 143 ÷ 4 = 35."}
+{"id": "mat-4-logica_e_dati-047", "explanation": "Media = somma ÷ numero di valori = (40 + 11 + 49 + 24) ÷ 4 = 124 ÷ 4 = 31."}
+{"id": "mat-4-logica_e_dati-048", "explanation": "Media = somma ÷ numero di valori = (44 + 49 + 18 + 5) ÷ 4 = 116 ÷ 4 = 29."}
+{"id": "mat-4-logica_e_dati-049", "explanation": "Media = somma ÷ numero di valori = (11 + 40 + 43 + 21) ÷ 4 = 115 ÷ 4 = 28."}
+{"id": "mat-4-logica_e_dati-050", "explanation": "Media = somma ÷ numero di valori = (21 + 30 + 39 + 35) ÷ 4 = 125 ÷ 4 = 31."}
+{"id": "mat-4-logica_e_dati-051", "explanation": "Media = somma ÷ numero di valori = (16 + 33 + 14 + 15) ÷ 4 = 78 ÷ 4 = 19."}
+{"id": "mat-4-logica_e_dati-052", "explanation": "Media = somma ÷ numero di valori = (10 + 22 + 39 + 38) ÷ 4 = 109 ÷ 4 = 27."}
+{"id": "mat-4-logica_e_dati-053", "explanation": "Media = somma ÷ numero di valori = (43 + 23 + 17 + 7) ÷ 4 = 90 ÷ 4 = 22."}
+{"id": "mat-4-logica_e_dati-054", "explanation": "Media = somma ÷ numero di valori = (37 + 21 + 26 + 13) ÷ 4 = 97 ÷ 4 = 24."}
+{"id": "mat-4-logica_e_dati-055", "explanation": "Media = somma ÷ numero di valori = (17 + 29 + 37 + 49) ÷ 4 = 132 ÷ 4 = 33."}
+{"id": "mat-4-logica_e_dati-056", "explanation": "Media = somma ÷ numero di valori = (41 + 27 + 27 + 48) ÷ 4 = 143 ÷ 4 = 35."}
+{"id": "mat-4-logica_e_dati-057", "explanation": "Media = somma ÷ numero di valori = (27 + 28 + 12 + 25) ÷ 4 = 92 ÷ 4 = 23."}
+{"id": "mat-4-logica_e_dati-058", "explanation": "Media = somma ÷ numero di valori = (32 + 30 + 22 + 27) ÷ 4 = 111 ÷ 4 = 27."}
+{"id": "mat-4-logica_e_dati-059", "explanation": "Media = somma ÷ numero di valori = (9 + 44 + 28 + 25) ÷ 4 = 106 ÷ 4 = 26."}
+{"id": "mat-4-logica_e_dati-060", "explanation": "Media = somma ÷ numero di valori = (40 + 35 + 25 + 13) ÷ 4 = 113 ÷ 4 = 28."}
+{"id": "mat-4-logica_e_dati-061", "explanation": "Media = somma ÷ numero di valori = (38 + 35 + 41 + 45) ÷ 4 = 159 ÷ 4 = 39."}
+{"id": "mat-4-logica_e_dati-062", "explanation": "Media = somma ÷ numero di valori = (48 + 39 + 38 + 40) ÷ 4 = 165 ÷ 4 = 41."}
+{"id": "mat-4-logica_e_dati-063", "explanation": "Media = somma ÷ numero di valori = (11 + 8 + 33 + 5) ÷ 4 = 57 ÷ 4 = 14."}
+{"id": "mat-4-logica_e_dati-064", "explanation": "Media = somma ÷ numero di valori = (40 + 25 + 20 + 37) ÷ 4 = 122 ÷ 4 = 30."}
+{"id": "mat-4-logica_e_dati-065", "explanation": "Media = somma ÷ numero di valori = (46 + 42 + 20 + 34) ÷ 4 = 142 ÷ 4 = 35."}
+{"id": "mat-4-logica_e_dati-066", "explanation": "Media = somma ÷ numero di valori = (33 + 21 + 23 + 44) ÷ 4 = 121 ÷ 4 = 30."}
+{"id": "mat-4-logica_e_dati-067", "explanation": "Media = somma ÷ numero di valori = (23 + 20 + 8 + 29) ÷ 4 = 80 ÷ 4 = 20."}
+{"id": "mat-4-logica_e_dati-068", "explanation": "Media = somma ÷ numero di valori = (16 + 47 + 5 + 27) ÷ 4 = 95 ÷ 4 = 23."}
+{"id": "mat-4-logica_e_dati-069", "explanation": "Media = somma ÷ numero di valori = (23 + 8 + 6 + 11) ÷ 4 = 48 ÷ 4 = 12."}
+{"id": "mat-4-logica_e_dati-070", "explanation": "Media = somma ÷ numero di valori = (18 + 10 + 27 + 7) ÷ 4 = 62 ÷ 4 = 15."}
+{"id": "mat-4-logica_e_dati-071", "explanation": "Media = somma ÷ numero di valori = (39 + 16 + 22 + 42) ÷ 4 = 119 ÷ 4 = 29."}
+{"id": "mat-4-logica_e_dati-072", "explanation": "Media = somma ÷ numero di valori = (26 + 12 + 21 + 20) ÷ 4 = 79 ÷ 4 = 19."}
+{"id": "mat-4-logica_e_dati-073", "explanation": "Media = somma ÷ numero di valori = (8 + 25 + 10 + 32) ÷ 4 = 75 ÷ 4 = 18."}
+{"id": "mat-4-logica_e_dati-074", "explanation": "Media = somma ÷ numero di valori = (16 + 7 + 39 + 30) ÷ 4 = 92 ÷ 4 = 23."}
+{"id": "mat-4-logica_e_dati-075", "explanation": "Media = somma ÷ numero di valori = (21 + 45 + 44 + 18) ÷ 4 = 128 ÷ 4 = 32."}
+{"id": "mat-4-logica_e_dati-076", "explanation": "Media = somma ÷ numero di valori = (11 + 44 + 20 + 33) ÷ 4 = 108 ÷ 4 = 27."}
+{"id": "mat-4-logica_e_dati-077", "explanation": "Media = somma ÷ numero di valori = (19 + 44 + 17 + 47) ÷ 4 = 127 ÷ 4 = 31."}
+{"id": "mat-4-logica_e_dati-078", "explanation": "Media = somma ÷ numero di valori = (8 + 41 + 6 + 19) ÷ 4 = 74 ÷ 4 = 18."}
+{"id": "mat-4-logica_e_dati-079", "explanation": "Media = somma ÷ numero di valori = (30 + 8 + 34 + 46) ÷ 4 = 118 ÷ 4 = 29."}
+{"id": "mat-4-logica_e_dati-080", "explanation": "Media = somma ÷ numero di valori = (24 + 40 + 48 + 6) ÷ 4 = 118 ÷ 4 = 29."}
+{"id": "mat-4-logica_e_dati-081", "explanation": "Media = somma ÷ numero di valori = (11 + 27 + 34 + 17) ÷ 4 = 89 ÷ 4 = 22."}
+{"id": "mat-4-logica_e_dati-082", "explanation": "Media = somma ÷ numero di valori = (31 + 9 + 31 + 27) ÷ 4 = 98 ÷ 4 = 24."}
+{"id": "mat-4-logica_e_dati-083", "explanation": "Media = somma ÷ numero di valori = (44 + 41 + 30 + 47) ÷ 4 = 162 ÷ 4 = 40."}
+{"id": "mat-4-logica_e_dati-084", "explanation": "Media = somma ÷ numero di valori = (43 + 11 + 38 + 47) ÷ 4 = 139 ÷ 4 = 34."}
+{"id": "mat-4-logica_e_dati-085", "explanation": "Media = somma ÷ numero di valori = (26 + 6 + 41 + 13) ÷ 4 = 86 ÷ 4 = 21."}
+{"id": "mat-4-logica_e_dati-086", "explanation": "Media = somma ÷ numero di valori = (34 + 20 + 29 + 39) ÷ 4 = 122 ÷ 4 = 30."}
+{"id": "mat-4-logica_e_dati-087", "explanation": "Media = somma ÷ numero di valori = (31 + 45 + 24 + 28) ÷ 4 = 128 ÷ 4 = 32."}
+{"id": "mat-4-logica_e_dati-088", "explanation": "Media = somma ÷ numero di valori = (46 + 34 + 32 + 33) ÷ 4 = 145 ÷ 4 = 36."}
+{"id": "mat-4-logica_e_dati-089", "explanation": "Media = somma ÷ numero di valori = (16 + 28 + 25 + 42) ÷ 4 = 111 ÷ 4 = 27."}
+{"id": "mat-4-logica_e_dati-090", "explanation": "Media = somma ÷ numero di valori = (18 + 47 + 10 + 9) ÷ 4 = 84 ÷ 4 = 21."}
+{"id": "mat-4-logica_e_dati-091", "explanation": "Media = somma ÷ numero di valori = (45 + 22 + 22 + 29) ÷ 4 = 118 ÷ 4 = 29."}
+{"id": "mat-4-logica_e_dati-092", "explanation": "Media = somma ÷ numero di valori = (8 + 50 + 5 + 12) ÷ 4 = 75 ÷ 4 = 18."}
+{"id": "mat-4-logica_e_dati-093", "explanation": "Media = somma ÷ numero di valori = (14 + 29 + 22 + 36) ÷ 4 = 101 ÷ 4 = 25."}
+{"id": "mat-4-logica_e_dati-094", "explanation": "Media = somma ÷ numero di valori = (23 + 38 + 39 + 25) ÷ 4 = 125 ÷ 4 = 31."}
+{"id": "mat-4-logica_e_dati-095", "explanation": "Media = somma ÷ numero di valori = (50 + 28 + 19 + 48) ÷ 4 = 145 ÷ 4 = 36."}
+{"id": "mat-4-logica_e_dati-096", "explanation": "Media = somma ÷ numero di valori = (45 + 26 + 33 + 36) ÷ 4 = 140 ÷ 4 = 35."}
+{"id": "mat-4-logica_e_dati-097", "explanation": "Media = somma ÷ numero di valori = (5 + 49 + 24 + 45) ÷ 4 = 123 ÷ 4 = 30."}
+{"id": "mat-4-logica_e_dati-098", "explanation": "Media = somma ÷ numero di valori = (9 + 21 + 6 + 31) ÷ 4 = 67 ÷ 4 = 16."}
+{"id": "mat-4-logica_e_dati-099", "explanation": "Media = somma ÷ numero di valori = (46 + 43 + 19 + 20) ÷ 4 = 128 ÷ 4 = 32."}
+{"id": "mat-4-logica_e_dati-100", "explanation": "Media = somma ÷ numero di valori = (9 + 38 + 25 + 7) ÷ 4 = 79 ÷ 4 = 19."}

@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.11.0 - 2026-06-30
+
+### Added
+- feat(quiz): A1 — spiegazione risposta. Dopo ogni risposta compare una card `#qExplanation` con il testo `explanation` dalla domanda JSON, colorata verde/rossa. Si azzera al caricamento della domanda successiva. Nessuna modifica HTML: il div è iniettato dinamicamente dal core.
+- feat(quiz): A2 — difficoltà adattiva. Al termine di ogni partita il core calcola un target EMA per classe (`${CURSOR_KEY}_adapt_v1`) e aggiunge un termine `|q.difficulty − target| × 2.6` in `candidateScore`. Converge in 3–5 sessioni. Opt-out via `cfg.adaptiveDifficulty: false`. No-op su matematica (varianza intra-classe assente nei dati attuali).
+- feat(quiz): A3 — ripassa errori. Le domande sbagliate vengono salvate in `${CURSOR_KEY}_wrong_q_v1` (max 30). Appare il pulsante "Ripassa i tuoi errori (N)" nella schermata iniziale; avvia una sessione speciale che, al completamento, rimuove dalla lista le domande risposte correttamente.
+- feat(quiz): A4 — filtro sotto-ambito. Dopo la selezione dell'area appare una griglia di sotto-ambiti derivata dinamicamente da `BANKS` per area+classe corrente. Nessuna config per materia necessaria.
+- feat(quiz): C1 — overlay progressi. Pulsante "Progressi" nella schermata risultati apre un modale con statistiche per classe/area e tabella delle ultime partite, costruita da `loadStats()` / `loadLB()`.
+
+### Changed
+- content: 9.366 domande totali (+1.991 rispetto a 7.375). Aggiornati badge README, llms.txt, index.json.
+- content(matematica): `difficulty` ri-derivata da feature intrinseche (grandezza operandi, tipo operazione, decimali/frazioni, esponenti, parentesi, multi-step) con binning per terzili intra-classe, sostituendo il collasso sulla classe. Sblocca la difficoltà adattiva (A2) per matematica. Vedi `scripts/derive_math_difficulty.py`.
+- content(matematica): riempite 1.701 `subarea` vuote tramite classificatore deterministico su vocabolario controllato (`scripts/fill_math_subarea.py`). Nessuna materia ha più domande con `subarea` vuota.
+- content: +153 domande nuove autorali (inglese +111, italiano +32, geografia +10) per portare ogni coppia materia-classe ad almeno 250 domande attive. Nessuna classe sotto soglia.
+- content: +534 domande nuove autorali di arricchimento (italiano +88, inglese +88, scienze +80, storia +72, civica +72, geografia +72, problemi +62), tutte deduplicate per testo e curricolarmente coerenti, raggiungendo 9.900 domande totali. Nessuna classe sotto 250.
+- chore: bump versione `4.10.13` → `4.11.0` in `app-version.js`, `package.json`, `llms.txt`.
+
 ## 4.10.2 - 2026-05-28
 
 ### Changed
