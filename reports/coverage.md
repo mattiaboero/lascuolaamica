@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 30/06/2026, 16:22:29
+Data generazione: 30/06/2026, 19:42:55
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -35,17 +35,15 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
 | alfabeto               | 29    | 24    | 0     | 0     | 53   
-| grammatica             | 30    | 34    | 32    | 32    | 128  
-| lessico                | 33    | 35    | 32    | 32    | 132  
-| lettura                | 28    | 27    | 30    | 29    | 114  
-| lingua                 | 20    | 21    | 23    | 24    | 88   
-| morfologia             | 35    | 29    | 27    | 30    | 121  
-| ortografia             | 51    | 28    | 21    | 16    | 116  
-| riflessione_linguistica| 0     | 0     | 15    | 0     | 15   
-| riflessione_sulla_lingua| 0     | 0     | 0     | 16    | 16   
+| grammatica             | 30    | 41    | 37    | 39    | 147  
+| lessico                | 33    | 35    | 33    | 34    | 135  
+| lettura                | 28    | 28    | 33    | 32    | 121  
+| lingua                 | 20    | 22    | 23    | 29    | 94   
+| morfologia             | 35    | 38    | 39    | 33    | 145  
+| ortografia             | 51    | 29    | 23    | 16    | 119  
+| riflessione_sulla_lingua| 0     | 0     | 15    | 16    | 31   
 | scrittura              | 23    | 24    | 24    | 23    | 94   
-| sintassi               | 25    | 33    | 45    | 47    | 150  
-| vari                   | 0     | 19    | 24    | 23    | 66   
+| sintassi               | 25    | 33    | 46    | 50    | 154  
 | TOTAL                   |        |        |        |        | 1093  
 
 ## INGLESE
@@ -54,179 +52,102 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | bonus_easy             | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 0     | 3    
 | bonus_hard             | 0     | 0     | 1  ⚠️  | 2  ⚠️  | 3    
 | bonus_medium           | 0     | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 3    
-| classroom_language     | 10 ⚠️  | 0     | 0     | 0     | 10   
-| comprensione_in_contesto| 25    | 38    | 42    | 107    | 212  
+| classroom_language     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| comprensione_in_contesto| 25    | 39    | 42    | 107    | 213  
 | days_months_seasons    | 0     | 11 ⚠️  | 0     | 0     | 11   
-| frasi_semplici         | 37    | 140    | 24    | 19    | 220  
+| frasi_semplici         | 38    | 141    | 25    | 19    | 223  
 | future_going_to        | 0     | 0     | 0     | 21    | 21   
 | futuro_will            | 0     | 0     | 0     | 1  ⚠️  | 1    
-| lessico_base           | 163    | 42    | 24    | 20    | 249  
+| lessico_base           | 167    | 42    | 24    | 20    | 253  
 | preposizioni           | 0     | 0     | 22    | 0     | 22   
 | present_continuous     | 0     | 0     | 28    | 0     | 28   
 | simple_past            | 0     | 0     | 0     | 42    | 42   
-| uso_guidato            | 30    | 35    | 130    | 48    | 243  
-| vari                   | 7  ⚠️  | 5  ⚠️  | 1  ⚠️  | 13 ⚠️  | 26   
+| uso_guidato            | 30    | 38    | 130    | 61    | 259  
 | TOTAL                   |        |        |        |        | 1094  
 
 ## CIVICA
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
-| acqua                  | 5  ⚠️  | 17    | 0     | 5  ⚠️  | 27   
-| agenda_2030            | 0     | 0     | 0     | 4  ⚠️  | 4    
-| animali                | 5  ⚠️  | 0     | 0     | 0     | 5    
-| benessere_digitale     | 5  ⚠️  | 5  ⚠️  | 0     | 5  ⚠️  | 15   
-| beni_comuni            | 5  ⚠️  | 17    | 5  ⚠️  | 10 ⚠️  | 37   
-| bicicletta             | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 0     | 15   
-| biodiversita           | 0     | 5  ⚠️  | 5  ⚠️  | 0     | 10   
-| bonus_difficile        | 0     | 0     | 1  ⚠️  | 2  ⚠️  | 3    
-| bonus_facile           | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 0     | 3    
-| bonus_medio            | 0     | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 3    
-| cittadinanza_attiva    | 0     | 3  ⚠️  | 10 ⚠️  | 5  ⚠️  | 18   
-| cittadinanza_digitale  | 0     | 0     | 6  ⚠️  | 12 ⚠️  | 18   
-| consumo_responsabile   | 0     | 0     | 14 ⚠️  | 0     | 14   
-| contatti_sconosciuti   | 5  ⚠️  | 5  ⚠️  | 0     | 0     | 10   
-| convivenza             | 5  ⚠️  | 5  ⚠️  | 0     | 0     | 10   
-| costituzione_italiana  | 0     | 5  ⚠️  | 0     | 0     | 5    
-| costituzione_valori    | 0     | 5  ⚠️  | 13 ⚠️  | 5  ⚠️  | 23   
-| cura_degli_spazi_comuni| 4  ⚠️  | 0     | 0     | 0     | 4    
-| cyberbullismo          | 0     | 5  ⚠️  | 5  ⚠️  | 0     | 10   
-| dati_personali         | 5  ⚠️  | 5  ⚠️  | 0     | 5  ⚠️  | 15   
-| democrazia             | 0     | 0     | 5  ⚠️  | 5  ⚠️  | 10   
-| diritti_doveri         | 12 ⚠️  | 5  ⚠️  | 13 ⚠️  | 13 ⚠️  | 43   
-| diritti_e_doveri       | 0     | 0     | 4  ⚠️  | 0     | 4    
-| diritti_online         | 0     | 5  ⚠️  | 5  ⚠️  | 0     | 10   
-| diritti_umani          | 0     | 0     | 0     | 5  ⚠️  | 5    
-| educazione_finanziaria | 0     | 0     | 0     | 4  ⚠️  | 4    
-| emergenza              | 0     | 0     | 5  ⚠️  | 0     | 5    
-| energia                | 5  ⚠️  | 5  ⚠️  | 0     | 5  ⚠️  | 15   
-| fonti                  | 0     | 12 ⚠️  | 5  ⚠️  | 11 ⚠️  | 28   
-| gentilezza             | 23    | 11 ⚠️  | 5  ⚠️  | 10 ⚠️  | 49   
-| gentilezza_convivenza  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 20   
-| gentilezza_online      | 11 ⚠️  | 0     | 5  ⚠️  | 0     | 16   
-| identita_digitale      | 0     | 0     | 5  ⚠️  | 5  ⚠️  | 10   
-| inclusione             | 0     | 0     | 5  ⚠️  | 5  ⚠️  | 10   
-| inquinamento           | 0     | 0     | 5  ⚠️  | 0     | 5    
-| istituzioni_locali     | 0     | 5  ⚠️  | 5  ⚠️  | 0     | 10   
-| istituzioni_nazionali  | 0     | 0     | 0     | 14 ⚠️  | 14   
-| legalita               | 0     | 5  ⚠️  | 0     | 5  ⚠️  | 10   
-| mezzi_pubblici         | 12 ⚠️  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 27   
-| mobilita_sostenibile   | 0     | 5  ⚠️  | 10 ⚠️  | 0     | 15   
-| natura                 | 5  ⚠️  | 0     | 0     | 0     | 5    
-| netiquette             | 5  ⚠️  | 13 ⚠️  | 12 ⚠️  | 5  ⚠️  | 35   
-| organi_dello_stato     | 0     | 4  ⚠️  | 0     | 0     | 4    
-| orto                   | 0     | 5  ⚠️  | 0     | 0     | 5    
-| partecipazione         | 0     | 5  ⚠️  | 5  ⚠️  | 0     | 10   
-| password               | 5  ⚠️  | 0     | 5  ⚠️  | 5  ⚠️  | 15   
-| pedoni                 | 24    | 5  ⚠️  | 11 ⚠️  | 5  ⚠️  | 45   
-| privacy                | 5  ⚠️  | 5  ⚠️  | 13 ⚠️  | 5  ⚠️  | 28   
-| privacy_online         | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 20   
-| pulizia                | 5  ⚠️  | 0     | 0     | 0     | 5    
-| raccolta_differenziata | 16    | 18    | 5  ⚠️  | 5  ⚠️  | 44   
-| regole_classe          | 17    | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 32   
-| regole_comunita        | 5  ⚠️  | 5  ⚠️  | 0     | 0     | 10   
-| regole_della_classe    | 4  ⚠️  | 0     | 0     | 0     | 4    
-| regole_della_scuola    | 1  ⚠️  | 0     | 0     | 0     | 1    
-| responsabilita         | 0     | 5  ⚠️  | 0     | 0     | 5    
-| riciclo                | 5  ⚠️  | 0     | 5  ⚠️  | 5  ⚠️  | 15   
-| riduzione_rifiuti      | 5  ⚠️  | 5  ⚠️  | 0     | 5  ⚠️  | 15   
-| rifiuti_speciali       | 0     | 5  ⚠️  | 5  ⚠️  | 0     | 10   
-| risparmio_risorse      | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 20   
-| rispetto_degli_altri   | 4  ⚠️  | 0     | 0     | 0     | 4    
-| rispetto_della_natura  | 4  ⚠️  | 0     | 0     | 0     | 4    
-| riuso                  | 0     | 0     | 5  ⚠️  | 0     | 5    
-| salute_ambiente        | 0     | 0     | 0     | 5  ⚠️  | 5    
-| segnali                | 0     | 5  ⚠️  | 12 ⚠️  | 0     | 17   
-| semaforo_attraversamento| 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 20   
-| sicurezza              | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 20   
-| sicurezza_auto         | 5  ⚠️  | 11 ⚠️  | 0     | 0     | 16   
-| sicurezza_stradale     | 0     | 12 ⚠️  | 6  ⚠️  | 28    | 46   
-| simboli                | 5  ⚠️  | 0     | 0     | 5  ⚠️  | 10   
-| solidarieta            | 0     | 5  ⚠️  | 5  ⚠️  | 5  ⚠️  | 15   
-| sostenibilita          | 0     | 0     | 5  ⚠️  | 18    | 23   
-| spazi_comuni           | 5  ⚠️  | 0     | 0     | 0     | 5    
-| spazi_verdi            | 5  ⚠️  | 0     | 0     | 0     | 5    
-| spreco                 | 5  ⚠️  | 0     | 0     | 0     | 5    
-| unione_europea         | 0     | 0     | 0     | 9  ⚠️  | 9    
-| uscita_scuola          | 0     | 0     | 5  ⚠️  | 5  ⚠️  | 10   
-| uso_dispositivi        | 11 ⚠️  | 0     | 0     | 0     | 11   
-| volontariato_solidarieta| 0     | 0     | 4  ⚠️  | 0     | 4    
+| costituzione_e_istituzioni| 6  ⚠️  | 24    | 23    | 43    | 96   
+| diritti_e_doveri       | 12 ⚠️  | 10 ⚠️  | 17    | 19    | 58   
+| diritti_e_informazione | 0     | 17    | 16    | 23    | 56   
+| gentilezza_in_strada   | 15    | 16    | 10 ⚠️  | 15    | 56   
+| mezzi_e_mobilita       | 17    | 10 ⚠️  | 15    | 5  ⚠️  | 47   
+| natura_e_biodiversita  | 19    | 10 ⚠️  | 10 ⚠️  | 5  ⚠️  | 44   
+| partecipazione_e_solidarieta| 5  ⚠️  | 30    | 24    | 14 ⚠️  | 73   
+| pedoni_e_attraversamento| 29    | 11 ⚠️  | 21    | 16    | 77   
+| privacy_e_dati         | 20    | 16    | 28    | 25    | 89   
+| regole_e_convivenza    | 58    | 15    | 10 ⚠️  | 10 ⚠️  | 93   
+| relazioni_online       | 16    | 18    | 23    | 5  ⚠️  | 62   
+| rifiuti_e_riciclo      | 36    | 28    | 21    | 16    | 101  
+| risorse_ed_energia     | 15    | 27    | 20    | 20    | 82   
+| segnali_e_sicurezza    | 5  ⚠️  | 28    | 23    | 28    | 84   
+| sicurezza_online       | 26    | 15    | 5  ⚠️  | 10 ⚠️  | 56   
+| sostenibilita_e_mobilita| 0     | 5  ⚠️  | 15    | 27    | 47   
 | TOTAL                   |        |        |        |        | 1121  
 
 ## GEOGRAFIA
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
-| Ambienti acquatici     | 10 ⚠️  | 0     | 0     | 0     | 10   
-| Ambienti acquatici approfonditi| 0     | 6  ⚠️  | 0     | 0     | 6    
-| Clima e ambiente       | 0     | 5  ⚠️  | 0     | 0     | 5    
-| Clima italiano         | 0     | 0     | 5  ⚠️  | 0     | 5    
-| Geografia fisica europea| 0     | 0     | 0     | 8  ⚠️  | 8    
-| Idrografia italiana    | 0     | 0     | 9  ⚠️  | 0     | 9    
-| Italia nel contesto europeo| 0     | 0     | 0     | 11 ⚠️  | 11   
-| L'Italia: forma e mari | 0     | 7  ⚠️  | 0     | 0     | 7    
-| Mappe e piante         | 7  ⚠️  | 0     | 0     | 0     | 7    
-| Morfologia italiana    | 0     | 0     | 9  ⚠️  | 0     | 9    
-| Orientamento con carte geografiche| 0     | 6  ⚠️  | 0     | 0     | 6    
-| Orientamento e indicatori topologici| 8  ⚠️  | 0     | 0     | 0     | 8    
-| Paesaggi italiani base | 7  ⚠️  | 0     | 0     | 0     | 7    
-| Paesaggi: collina      | 0     | 6  ⚠️  | 0     | 0     | 6    
-| Paesaggi: montagna     | 0     | 6  ⚠️  | 0     | 0     | 6    
-| Paesaggi: pianura      | 0     | 4  ⚠️  | 0     | 0     | 4    
-| Popolazione e città    | 0     | 0     | 0     | 7  ⚠️  | 7    
-| Punti cardinali base   | 8  ⚠️  | 0     | 0     | 0     | 8    
-| Regioni italiane       | 0     | 0     | 12 ⚠️  | 0     | 12   
-| Settori economici      | 0     | 0     | 7  ⚠️  | 0     | 7    
-| Sviluppo sostenibile e ambiente| 0     | 0     | 0     | 8  ⚠️  | 8    
-| Unione Europea         | 0     | 0     | 0     | 9  ⚠️  | 9    
 | acque                  | 3  ⚠️  | 3  ⚠️  | 3  ⚠️  | 5  ⚠️  | 14   
+| ambienti_acquatici     | 10 ⚠️  | 6  ⚠️  | 0     | 0     | 16   
 | attivita_economiche_e_amministrazione| 0     | 0     | 52    | 0     | 52   
 | carte_legenda_scala_coordinate| 0     | 0     | 53    | 0     | 53   
 | carte_tematiche_e_dati | 0     | 0     | 0     | 53    | 53   
 | clima                  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 8    
+| clima_e_ambiente       | 0     | 5  ⚠️  | 0     | 0     | 5    
+| clima_italiano         | 0     | 0     | 5  ⚠️  | 0     | 5    
+| collina                | 0     | 6  ⚠️  | 0     | 0     | 6    
 | elementi_antropici     | 2  ⚠️  | 0     | 0     | 0     | 2    
 | elementi_naturali      | 4  ⚠️  | 0     | 0     | 0     | 4    
 | europa_base            | 0     | 2  ⚠️  | 2  ⚠️  | 3  ⚠️  | 7    
 | fiume_lago_mare        | 0     | 56    | 0     | 0     | 56   
 | fiumi_laghi_mari_vulcani_climi| 0     | 0     | 56    | 0     | 56   
 | funzione_degli_spazi   | 18    | 0     | 0     | 0     | 18   
-| indicatori_topologici  | 57    | 0     | 0     | 0     | 57   
+| geografia_fisica_europea| 0     | 0     | 0     | 8  ⚠️  | 8    
+| idrografia_italiana    | 0     | 0     | 9  ⚠️  | 0     | 9    
+| indicatori_topologici  | 65    | 0     | 0     | 0     | 65   
+| italia_forma_mari      | 0     | 7  ⚠️  | 0     | 0     | 7    
+| italia_in_europa       | 0     | 0     | 0     | 11 ⚠️  | 11   
 | italia_regioni         | 0     | 2  ⚠️  | 4  ⚠️  | 4  ⚠️  | 10   
 | legenda                | 4  ⚠️  | 2  ⚠️  | 3  ⚠️  | 1  ⚠️  | 10   
 | legenda_e_simboli      | 11 ⚠️  | 0     | 0     | 0     | 11   
 | lettura_di_mappe_e_carte| 0     | 33    | 0     | 0     | 33   
+| mappe_e_piante         | 7  ⚠️  | 0     | 0     | 0     | 7    
+| montagna               | 0     | 6  ⚠️  | 0     | 0     | 6    
 | montagna_collina_pianura| 0     | 56    | 0     | 0     | 56   
 | morfologia_idrografia_coste| 0     | 0     | 0     | 53    | 53   
-| morfologia_italiana    | 0     | 0     | 55    | 0     | 55   
+| morfologia_italiana    | 0     | 0     | 64    | 0     | 64   
+| orientamento_carte     | 0     | 6  ⚠️  | 0     | 0     | 6    
+| paesaggi_base          | 7  ⚠️  | 0     | 0     | 0     | 7    
 | paesaggio_antropico    | 3  ⚠️  | 4  ⚠️  | 4  ⚠️  | 5  ⚠️  | 16   
 | paesaggio_fisico       | 6  ⚠️  | 6  ⚠️  | 4  ⚠️  | 5  ⚠️  | 21   
 | percorsi               | 13 ⚠️  | 2  ⚠️  | 3  ⚠️  | 1  ⚠️  | 19   
 | pianta_e_prospettiva_verticale| 12 ⚠️  | 0     | 0     | 0     | 12   
 | pianta_legenda_percorsi| 22    | 0     | 0     | 0     | 22   
+| pianura                | 0     | 4  ⚠️  | 0     | 0     | 4    
+| popolazione_e_citta    | 0     | 0     | 0     | 7  ⚠️  | 7    
 | posizione_confini_ue   | 0     | 0     | 0     | 56    | 56   
-| punti_cardinali        | 5  ⚠️  | 4  ⚠️  | 2  ⚠️  | 2  ⚠️  | 13   
+| punti_cardinali        | 13 ⚠️  | 4  ⚠️  | 2  ⚠️  | 2  ⚠️  | 21   
 | punti_cardinali_e_carte| 0     | 22    | 0     | 0     | 22   
 | regioni_economia_popolazione_patrimonio| 0     | 0     | 0     | 51    | 51   
+| regioni_italiane       | 0     | 0     | 12 ⚠️  | 0     | 12   
 | riduzione_in_scala_ingenua| 5  ⚠️  | 0     | 0     | 0     | 5    
 | riferimenti_e_punti_cardinali| 14 ⚠️  | 0     | 0     | 0     | 14   
 | scala                  | 0     | 3  ⚠️  | 3  ⚠️  | 2  ⚠️  | 8    
+| settori_economici      | 0     | 0     | 7  ⚠️  | 0     | 7    
+| sviluppo_sostenibile   | 0     | 0     | 0     | 8  ⚠️  | 8    
 | territorio_e_educazione_stradale| 0     | 51    | 0     | 0     | 51   
 | territorio_vicino_e_funzioni| 27    | 0     | 0     | 0     | 27   
 | trasformazioni_del_paesaggio| 22    | 0     | 0     | 0     | 22   
+| unione_europea         | 0     | 0     | 0     | 9  ⚠️  | 9    
 | TOTAL                   |        |        |        |        | 1132  
 
 ## STORIA
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
-| Alto Medioevo          | 0     | 0     | 0     | 8  ⚠️  | 8    
-| Caduta dell'Impero Romano d'Occidente| 0     | 0     | 0     | 7  ⚠️  | 7    
-| Civiltà egizia         | 0     | 0     | 16    | 0     | 16   
-| Civiltà fenicia        | 0     | 0     | 5  ⚠️  | 0     | 5    
-| Civiltà greca          | 0     | 0     | 16    | 0     | 16   
-| Civiltà mesopotamiche  | 0     | 0     | 7  ⚠️  | 0     | 7    
-| Confronto tra civiltà  | 0     | 0     | 6  ⚠️  | 0     | 6    
-| Impero romano          | 0     | 0     | 0     | 9  ⚠️  | 9    
-| Linea del tempo        | 0     | 0     | 0     | 8  ⚠️  | 8    
-| Repubblica romana      | 0     | 0     | 0     | 8  ⚠️  | 8    
 | agricoltura_e_sedentarieta| 0     | 10 ⚠️  | 0     | 0     | 10   
+| alto_medioevo          | 0     | 0     | 0     | 8  ⚠️  | 8    
 | approfondimenti        | 0     | 0     | 0     | 5  ⚠️  | 5    
 | babilonesi_assiri      | 0     | 0     | 12 ⚠️  | 0     | 12   
 | big_bang_ere_geologiche| 0     | 10 ⚠️  | 0     | 0     | 10   
@@ -234,20 +155,19 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | cambiamenti_e_cause    | 9  ⚠️  | 0     | 0     | 0     | 9    
 | cambiamenti_nel_tempo  | 10 ⚠️  | 0     | 0     | 0     | 10   
 | causa_effetto          | 4  ⚠️  | 0     | 0     | 0     | 4    
-| cicli temporali        | 6  ⚠️  | 0     | 0     | 0     | 6    
+| cicli_temporali        | 6  ⚠️  | 0     | 0     | 0     | 6    
 | civilta                | 0     | 13 ⚠️  | 23    | 27    | 63   
+| civilta_fluviali       | 0     | 14 ⚠️  | 0     | 0     | 14   
 | civilta_fluviali_confronti| 0     | 0     | 10 ⚠️  | 0     | 10   
-| civiltà dei fiumi      | 0     | 14 ⚠️  | 0     | 0     | 14   
 | concetti_temporali     | 0     | 18    | 0     | 0     | 18   
 | confronti              | 0     | 10 ⚠️  | 10 ⚠️  | 0     | 20   
-| confronti e sintesi    | 0     | 9  ⚠️  | 0     | 0     | 9    
 | confronti_e_lessico    | 0     | 0     | 0     | 5  ⚠️  | 5    
-| confronti_e_sintesi    | 0     | 0     | 0     | 8  ⚠️  | 8    
+| confronti_e_sintesi    | 0     | 9  ⚠️  | 0     | 8  ⚠️  | 17   
 | confronto_fonti        | 10 ⚠️  | 10 ⚠️  | 0     | 0     | 20   
 | contemporaneita        | 4  ⚠️  | 0     | 0     | 0     | 4    
-| cretesi_micenei_fenici | 0     | 0     | 10 ⚠️  | 0     | 10   
+| cretesi_micenei_fenici | 0     | 0     | 15    | 0     | 15   
 | crisi_della_repubblica | 0     | 0     | 0     | 10 ⚠️  | 10   
-| crisi_e_caduta         | 0     | 0     | 0     | 10 ⚠️  | 10   
+| crisi_e_caduta         | 0     | 0     | 0     | 17    | 17   
 | cronologia             | 18    | 3  ⚠️  | 2  ⚠️  | 0     | 23   
 | eta_dei_metalli        | 0     | 10 ⚠️  | 0     | 0     | 10   
 | etruschi               | 0     | 0     | 0     | 12 ⚠️  | 12   
@@ -258,20 +178,18 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | fuoco_e_strumenti      | 0     | 10 ⚠️  | 0     | 0     | 10   
 | giorni_settimana       | 18    | 0     | 0     | 0     | 18   
 | guerre_persiane_ellenismo| 0     | 0     | 0     | 13 ⚠️  | 13   
-| impero_e_vita_quotidiana| 0     | 0     | 0     | 10 ⚠️  | 10   
+| impero_e_vita_quotidiana| 0     | 0     | 0     | 19    | 19   
 | indo_cina_ebrei        | 0     | 0     | 10 ⚠️  | 0     | 10   
-| istituzioni_e_conquiste| 0     | 0     | 0     | 10 ⚠️  | 10   
+| istituzioni_e_conquiste| 0     | 0     | 0     | 18    | 18   
 | istituzioni_monarchiche| 0     | 0     | 0     | 12 ⚠️  | 12   
 | lessico_e_contemporaneita| 8  ⚠️  | 0     | 0     | 0     | 8    
-| lettura linea del tempo| 5  ⚠️  | 0     | 0     | 0     | 5    
-| lettura_linea_tempo    | 13 ⚠️  | 0     | 0     | 0     | 13   
+| lettura_linea_tempo    | 18    | 0     | 0     | 0     | 18   
+| linea_del_tempo        | 0     | 0     | 0     | 8  ⚠️  | 8    
 | linea_tempo_e_periodi  | 0     | 8  ⚠️  | 0     | 0     | 8    
 | linea_tempo_personale  | 10 ⚠️  | 0     | 0     | 0     | 10   
-| mesi e anno            | 7  ⚠️  | 0     | 0     | 0     | 7    
-| mesi_anno              | 15    | 0     | 0     | 0     | 15   
+| mesi_anno              | 22    | 0     | 0     | 0     | 22   
 | metodo                 | 3  ⚠️  | 2  ⚠️  | 1  ⚠️  | 0     | 6    
-| metodo storico e fonti | 0     | 9  ⚠️  | 0     | 0     | 9    
-| metodo_e_ricerca       | 0     | 11 ⚠️  | 0     | 0     | 11   
+| metodo_e_ricerca       | 0     | 20    | 0     | 0     | 20   
 | nascita_del_cristianesimo| 0     | 0     | 0     | 10 ⚠️  | 10   
 | nilo_e_societa         | 0     | 0     | 10 ⚠️  | 0     | 10   
 | oggetti_vecchi_nuovi   | 10 ⚠️  | 0     | 0     | 0     | 10   
@@ -286,24 +204,23 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | polis_e_cultura        | 0     | 0     | 0     | 13 ⚠️  | 13   
 | preistoria             | 0     | 16    | 0     | 0     | 16   
 | prima_dopo             | 4  ⚠️  | 0     | 0     | 0     | 4    
-| quadro_di_civilta      | 0     | 0     | 29    | 0     | 29   
+| quadro_di_civilta      | 0     | 0     | 68    | 0     | 68   
 | religione_e_cultura    | 0     | 0     | 10 ⚠️  | 0     | 10   
 | religione_e_societa    | 0     | 0     | 10 ⚠️  | 0     | 10   
 | ricerca_personale      | 10 ⚠️  | 0     | 0     | 0     | 10   
 | ruoli_e_fonti          | 0     | 13 ⚠️  | 0     | 0     | 13   
 | sequenze               | 0     | 17    | 0     | 0     | 17   
 | sintesi                | 0     | 0     | 8  ⚠️  | 0     | 8    
-| sintesi_e_confronti    | 0     | 0     | 10 ⚠️  | 6  ⚠️  | 16   
+| sintesi_e_confronti    | 0     | 0     | 16    | 6  ⚠️  | 22   
 | societa_e_amministrazione| 0     | 0     | 0     | 10 ⚠️  | 10   
 | societa_e_cultura      | 0     | 0     | 0     | 12 ⚠️  | 12   
 | societa_e_espansione   | 0     | 0     | 0     | 10 ⚠️  | 10   
 | societa_e_polis        | 0     | 0     | 0     | 11 ⚠️  | 11   
 | stagioni               | 6  ⚠️  | 0     | 0     | 0     | 6    
-| storia personale e familiare| 9  ⚠️  | 0     | 0     | 0     | 9    
-| strumenti_del_tempo    | 4  ⚠️  | 0     | 0     | 0     | 4    
+| storia_personale       | 9  ⚠️  | 0     | 0     | 0     | 9    
+| strumenti_del_tempo    | 11 ⚠️  | 0     | 0     | 0     | 11   
 | strumenti_dello_storico| 0     | 0     | 11 ⚠️  | 0     | 11   
 | sumeri                 | 0     | 0     | 13 ⚠️  | 0     | 13   
-| tempo e strumenti      | 7  ⚠️  | 0     | 0     | 0     | 7    
 | tempo_storico          | 0     | 11 ⚠️  | 0     | 0     | 11   
 | tipi_di_fonti          | 12 ⚠️  | 0     | 0     | 0     | 12   
 | uso_delle_fonti        | 11 ⚠️  | 0     | 0     | 0     | 11   
@@ -430,15 +347,6 @@ inglese         | bonus_medium              | c3    | 1
 inglese         | bonus_medium              | c4    | 1
 inglese         | bonus_medium              | c5    | 1
 inglese         | futuro_will               | c5    | 1
-inglese         | vari                      | c4    | 1
-civica          | bonus_difficile           | c4    | 1
-civica          | bonus_facile              | c2    | 1
-civica          | bonus_facile              | c3    | 1
-civica          | bonus_facile              | c4    | 1
-civica          | bonus_medio               | c3    | 1
-civica          | bonus_medio               | c4    | 1
-civica          | bonus_medio               | c5    | 1
-civica          | regole_della_scuola       | c2    | 1
 geografia       | legenda                   | c5    | 1
 geografia       | percorsi                  | c5    | 1
 storia          | fonti                     | c5    | 1
@@ -464,7 +372,6 @@ matematica      | frazioni                  | c3    | 2
 problemi        | frazioni                  | c2    | 2
 problemi        | frazioni                  | c3    | 2
 inglese         | bonus_hard                | c5    | 2
-civica          | bonus_difficile           | c5    | 2
 geografia       | clima                     | c2    | 2
 geografia       | clima                     | c3    | 2
 geografia       | clima                     | c4    | 2
@@ -500,7 +407,6 @@ matematica      | ragionamento              | c4    | 3
 matematica      | ragionamento              | c5    | 3
 problemi        | moltiplicazione           | c2    | 3
 problemi        | moltiplicazione           | c3    | 3
-civica          | cittadinanza_attiva       | c3    | 3
 geografia       | acque                     | c2    | 3
 geografia       | acque                     | c3    | 3
 geografia       | acque                     | c4    | 3
@@ -529,16 +435,6 @@ scienze         | salute                    | c4    | 3
 scienze         | stagioni_e_ambiente       | c2    | 3
 matematica      | ragionamento              | c3    | 4
 problemi        | divisione                 | c3    | 4
-civica          | agenda_2030               | c5    | 4
-civica          | cura_degli_spazi_comuni   | c2    | 4
-civica          | diritti_e_doveri          | c4    | 4
-civica          | educazione_finanziaria    | c5    | 4
-civica          | organi_dello_stato        | c3    | 4
-civica          | regole_della_classe       | c2    | 4
-civica          | rispetto_degli_altri      | c2    | 4
-civica          | rispetto_della_natura     | c2    | 4
-civica          | volontariato_solidarieta  | c4    | 4
-geografia       | Paesaggi: pianura         | c3    | 4
 geografia       | elementi_naturali         | c2    | 4
 geografia       | italia_regioni            | c4    | 4
 geografia       | italia_regioni            | c5    | 4
@@ -546,6 +442,7 @@ geografia       | legenda                   | c2    | 4
 geografia       | paesaggio_antropico       | c3    | 4
 geografia       | paesaggio_antropico       | c4    | 4
 geografia       | paesaggio_fisico          | c4    | 4
+geografia       | pianura                   | c3    | 4
 geografia       | punti_cardinali           | c3    | 4
 storia          | causa_effetto             | c2    | 4
 storia          | contemporaneita           | c2    | 4
@@ -553,7 +450,6 @@ storia          | fonti                     | c4    | 4
 storia          | parti_giornata            | c2    | 4
 storia          | periodizzazione           | c3    | 4
 storia          | prima_dopo                | c2    | 4
-storia          | strumenti_del_tempo       | c2    | 4
 scienze         | acqua                     | c3    | 4
 scienze         | alimentazione             | c2    | 4
 scienze         | catena_alimentare         | c3    | 4
@@ -573,136 +469,21 @@ scienze         | passaggi_di_stato         | c4    | 4
 scienze         | stati                     | c3    | 4
 scienze         | trasformazioni            | c3    | 4
 problemi        | addizione                 | c3    | 5
-inglese         | vari                      | c3    | 5
-civica          | acqua                     | c2    | 5
-civica          | acqua                     | c5    | 5
-civica          | animali                   | c2    | 5
-civica          | benessere_digitale        | c2    | 5
-civica          | benessere_digitale        | c3    | 5
-civica          | benessere_digitale        | c5    | 5
-civica          | beni_comuni               | c2    | 5
-civica          | beni_comuni               | c4    | 5
-civica          | bicicletta                | c2    | 5
-civica          | bicicletta                | c3    | 5
-civica          | bicicletta                | c4    | 5
-civica          | biodiversita              | c3    | 5
-civica          | biodiversita              | c4    | 5
-civica          | cittadinanza_attiva       | c5    | 5
-civica          | contatti_sconosciuti      | c2    | 5
-civica          | contatti_sconosciuti      | c3    | 5
-civica          | convivenza                | c2    | 5
-civica          | convivenza                | c3    | 5
-civica          | costituzione_italiana     | c3    | 5
-civica          | costituzione_valori       | c3    | 5
-civica          | costituzione_valori       | c5    | 5
-civica          | cyberbullismo             | c3    | 5
-civica          | cyberbullismo             | c4    | 5
-civica          | dati_personali            | c2    | 5
-civica          | dati_personali            | c3    | 5
-civica          | dati_personali            | c5    | 5
-civica          | democrazia                | c4    | 5
-civica          | democrazia                | c5    | 5
-civica          | diritti_doveri            | c3    | 5
-civica          | diritti_online            | c3    | 5
-civica          | diritti_online            | c4    | 5
-civica          | diritti_umani             | c5    | 5
-civica          | emergenza                 | c4    | 5
-civica          | energia                   | c2    | 5
-civica          | energia                   | c3    | 5
-civica          | energia                   | c5    | 5
-civica          | fonti                     | c4    | 5
-civica          | gentilezza                | c4    | 5
-civica          | gentilezza_convivenza     | c2    | 5
-civica          | gentilezza_convivenza     | c3    | 5
-civica          | gentilezza_convivenza     | c4    | 5
-civica          | gentilezza_convivenza     | c5    | 5
-civica          | gentilezza_online         | c4    | 5
-civica          | identita_digitale         | c4    | 5
-civica          | identita_digitale         | c5    | 5
-civica          | inclusione                | c4    | 5
-civica          | inclusione                | c5    | 5
-civica          | inquinamento              | c4    | 5
-civica          | istituzioni_locali        | c3    | 5
-civica          | istituzioni_locali        | c4    | 5
-civica          | legalita                  | c3    | 5
-civica          | legalita                  | c5    | 5
-civica          | mezzi_pubblici            | c3    | 5
-civica          | mezzi_pubblici            | c4    | 5
-civica          | mezzi_pubblici            | c5    | 5
-civica          | mobilita_sostenibile      | c3    | 5
-civica          | natura                    | c2    | 5
-civica          | netiquette                | c2    | 5
-civica          | netiquette                | c5    | 5
-civica          | orto                      | c3    | 5
-civica          | partecipazione            | c3    | 5
-civica          | partecipazione            | c4    | 5
-civica          | password                  | c2    | 5
-civica          | password                  | c4    | 5
-civica          | password                  | c5    | 5
-civica          | pedoni                    | c3    | 5
-civica          | pedoni                    | c5    | 5
-civica          | privacy                   | c2    | 5
-civica          | privacy                   | c3    | 5
-civica          | privacy                   | c5    | 5
-civica          | privacy_online            | c2    | 5
-civica          | privacy_online            | c3    | 5
-civica          | privacy_online            | c4    | 5
-civica          | privacy_online            | c5    | 5
-civica          | pulizia                   | c2    | 5
-civica          | raccolta_differenziata    | c4    | 5
-civica          | raccolta_differenziata    | c5    | 5
-civica          | regole_classe             | c3    | 5
-civica          | regole_classe             | c4    | 5
-civica          | regole_classe             | c5    | 5
-civica          | regole_comunita           | c2    | 5
-civica          | regole_comunita           | c3    | 5
-civica          | responsabilita            | c3    | 5
-civica          | riciclo                   | c2    | 5
-civica          | riciclo                   | c4    | 5
-civica          | riciclo                   | c5    | 5
-civica          | riduzione_rifiuti         | c2    | 5
-civica          | riduzione_rifiuti         | c3    | 5
-civica          | riduzione_rifiuti         | c5    | 5
-civica          | rifiuti_speciali          | c3    | 5
-civica          | rifiuti_speciali          | c4    | 5
-civica          | risparmio_risorse         | c2    | 5
-civica          | risparmio_risorse         | c3    | 5
-civica          | risparmio_risorse         | c4    | 5
-civica          | risparmio_risorse         | c5    | 5
-civica          | riuso                     | c4    | 5
-civica          | salute_ambiente           | c5    | 5
-civica          | segnali                   | c3    | 5
-civica          | semaforo_attraversamento  | c2    | 5
-civica          | semaforo_attraversamento  | c3    | 5
-civica          | semaforo_attraversamento  | c4    | 5
-civica          | semaforo_attraversamento  | c5    | 5
-civica          | sicurezza                 | c2    | 5
-civica          | sicurezza                 | c3    | 5
-civica          | sicurezza                 | c4    | 5
-civica          | sicurezza                 | c5    | 5
-civica          | sicurezza_auto            | c2    | 5
-civica          | simboli                   | c2    | 5
-civica          | simboli                   | c5    | 5
-civica          | solidarieta               | c3    | 5
-civica          | solidarieta               | c4    | 5
-civica          | solidarieta               | c5    | 5
-civica          | sostenibilita             | c4    | 5
-civica          | spazi_comuni              | c2    | 5
-civica          | spazi_verdi               | c2    | 5
-civica          | spreco                    | c2    | 5
-civica          | uscita_scuola             | c4    | 5
-civica          | uscita_scuola             | c5    | 5
-geografia       | Clima e ambiente          | c3    | 5
-geografia       | Clima italiano            | c4    | 5
+civica          | mezzi_e_mobilita          | c5    | 5
+civica          | natura_e_biodiversita     | c5    | 5
+civica          | partecipazione_e_solidarieta | c2    | 5
+civica          | relazioni_online          | c5    | 5
+civica          | segnali_e_sicurezza       | c2    | 5
+civica          | sicurezza_online          | c4    | 5
+civica          | sostenibilita_e_mobilita  | c3    | 5
 geografia       | acque                     | c5    | 5
+geografia       | clima_e_ambiente          | c3    | 5
+geografia       | clima_italiano            | c4    | 5
 geografia       | paesaggio_antropico       | c5    | 5
 geografia       | paesaggio_fisico          | c5    | 5
-geografia       | punti_cardinali           | c2    | 5
 geografia       | riduzione_in_scala_ingenua | c2    | 5
-storia          | Civiltà fenicia           | c4    | 5
 storia          | approfondimenti           | c5    | 5
 storia          | confronti_e_lessico       | c5    | 5
-storia          | lettura linea del tempo   | c2    | 5
 scienze         | animali_habitat           | c2    | 5
 scienze         | corpo_salute              | c2    | 5
 scienze         | luce_e_suono              | c5    | 5
@@ -719,16 +500,14 @@ scienze         | salute                    | c5    | 5
 scienze         | suolo                     | c4    | 5
 scienze         | tutela                    | c3    | 5
 matematica      | figure                    | c4    | 6
-civica          | cittadinanza_digitale     | c4    | 6
-civica          | sicurezza_stradale        | c4    | 6
-geografia       | Ambienti acquatici approfonditi | c3    | 6
-geografia       | Orientamento con carte geografiche | c3    | 6
-geografia       | Paesaggi: collina         | c3    | 6
-geografia       | Paesaggi: montagna        | c3    | 6
+civica          | costituzione_e_istituzioni | c2    | 6
+geografia       | ambienti_acquatici        | c3    | 6
+geografia       | collina                   | c3    | 6
+geografia       | montagna                  | c3    | 6
+geografia       | orientamento_carte        | c3    | 6
 geografia       | paesaggio_fisico          | c2    | 6
 geografia       | paesaggio_fisico          | c3    | 6
-storia          | Confronto tra civiltà     | c4    | 6
-storia          | cicli temporali           | c2    | 6
+storia          | cicli_temporali           | c2    | 6
 storia          | fonti                     | c3    | 6
 storia          | sintesi_e_confronti       | c5    | 6
 storia          | stagioni                  | c2    | 6
@@ -740,17 +519,12 @@ scienze         | materia                   | c5    | 6
 scienze         | osservazione              | c3    | 6
 scienze         | piante                    | c3    | 6
 matematica      | figure                    | c5    | 7
-inglese         | vari                      | c2    | 7
-geografia       | L'Italia: forma e mari    | c3    | 7
-geografia       | Mappe e piante            | c2    | 7
-geografia       | Paesaggi italiani base    | c2    | 7
-geografia       | Popolazione e città       | c5    | 7
-geografia       | Settori economici         | c4    | 7
-storia          | Caduta dell'Impero Romano d'Occidente | c5    | 7
-storia          | Civiltà mesopotamiche     | c4    | 7
-storia          | mesi e anno               | c2    | 7
+geografia       | italia_forma_mari         | c3    | 7
+geografia       | mappe_e_piante            | c2    | 7
+geografia       | paesaggi_base             | c2    | 7
+geografia       | popolazione_e_citta       | c5    | 7
+geografia       | settori_economici         | c4    | 7
 storia          | passaggio_alla_repubblica | c5    | 7
-storia          | tempo e strumenti         | c2    | 7
 scienze         | acqua_e_ciclo             | c2    | 7
 scienze         | adattamenti               | c3    | 7
 scienze         | animali                   | c3    | 7
@@ -764,15 +538,12 @@ scienze         | sensi_e_bisogni           | c2    | 7
 scienze         | sensi_e_salute            | c2    | 7
 scienze         | stati_della_materia       | c2    | 7
 scienze         | zoologia                  | c4    | 7
-geografia       | Geografia fisica europea  | c5    | 8
-geografia       | Orientamento e indicatori topologici | c2    | 8
-geografia       | Punti cardinali base      | c2    | 8
-geografia       | Sviluppo sostenibile e ambiente | c5    | 8
-storia          | Alto Medioevo             | c5    | 8
-storia          | Linea del tempo           | c5    | 8
-storia          | Repubblica romana         | c5    | 8
+geografia       | geografia_fisica_europea  | c5    | 8
+geografia       | sviluppo_sostenibile      | c5    | 8
+storia          | alto_medioevo             | c5    | 8
 storia          | confronti_e_sintesi       | c5    | 8
 storia          | lessico_e_contemporaneita | c2    | 8
+storia          | linea_del_tempo           | c5    | 8
 storia          | linea_tempo_e_periodi     | c3    | 8
 storia          | sintesi                   | c4    | 8
 scienze         | acqua_e_stati             | c2    | 8
@@ -783,23 +554,22 @@ scienze         | parti_del_corpo           | c2    | 8
 scienze         | salute_e_igiene           | c2    | 8
 scienze         | tempo_atmosferico         | c2    | 8
 matematica      | misure                    | c3    | 9
-civica          | unione_europea            | c5    | 9
-geografia       | Idrografia italiana       | c4    | 9
-geografia       | Morfologia italiana       | c4    | 9
-geografia       | Unione Europea            | c5    | 9
-storia          | Impero romano             | c5    | 9
+geografia       | idrografia_italiana       | c4    | 9
+geografia       | unione_europea            | c5    | 9
 storia          | cambiamenti_e_cause       | c2    | 9
-storia          | confronti e sintesi       | c3    | 9
-storia          | metodo storico e fonti    | c3    | 9
-storia          | storia personale e familiare | c2    | 9
+storia          | confronti_e_sintesi       | c3    | 9
+storia          | storia_personale          | c2    | 9
 scienze         | ciclo_acqua               | c3    | 9
 problemi        | due_operazioni            | c3    | 10
-inglese         | classroom_language        | c2    | 10
-civica          | beni_comuni               | c5    | 10
-civica          | cittadinanza_attiva       | c4    | 10
-civica          | gentilezza                | c5    | 10
-civica          | mobilita_sostenibile      | c4    | 10
-geografia       | Ambienti acquatici        | c2    | 10
+civica          | diritti_e_doveri          | c3    | 10
+civica          | gentilezza_in_strada      | c4    | 10
+civica          | mezzi_e_mobilita          | c3    | 10
+civica          | natura_e_biodiversita     | c3    | 10
+civica          | natura_e_biodiversita     | c4    | 10
+civica          | regole_e_convivenza       | c4    | 10
+civica          | regole_e_convivenza       | c5    | 10
+civica          | sicurezza_online          | c5    | 10
+geografia       | ambienti_acquatici        | c2    | 10
 storia          | agricoltura_e_sedentarieta | c3    | 10
 storia          | big_bang_ere_geologiche   | c3    | 10
 storia          | caccia_raccolta           | c3    | 10
@@ -809,17 +579,13 @@ storia          | confronti                 | c3    | 10
 storia          | confronti                 | c4    | 10
 storia          | confronto_fonti           | c2    | 10
 storia          | confronto_fonti           | c3    | 10
-storia          | cretesi_micenei_fenici    | c4    | 10
 storia          | crisi_della_repubblica    | c5    | 10
-storia          | crisi_e_caduta            | c5    | 10
 storia          | eta_dei_metalli           | c3    | 10
 storia          | fonti                     | c2    | 10
 storia          | fonti_e_mappe             | c4    | 10
 storia          | fossili_e_dinosauri       | c3    | 10
 storia          | fuoco_e_strumenti         | c3    | 10
-storia          | impero_e_vita_quotidiana  | c5    | 10
 storia          | indo_cina_ebrei           | c4    | 10
-storia          | istituzioni_e_conquiste   | c5    | 10
 storia          | linea_tempo_personale     | c2    | 10
 storia          | nascita_del_cristianesimo | c5    | 10
 storia          | nilo_e_societa            | c4    | 10
@@ -828,7 +594,6 @@ storia          | origine_e_miti            | c3    | 10
 storia          | religione_e_cultura       | c4    | 10
 storia          | religione_e_societa       | c4    | 10
 storia          | ricerca_personale         | c2    | 10
-storia          | sintesi_e_confronti       | c4    | 10
 storia          | societa_e_amministrazione | c5    | 10
 storia          | societa_e_espansione      | c5    | 10
 storia          | villaggi_e_lavori         | c3    | 10
@@ -846,17 +611,12 @@ problemi        | addizione                 | c5    | 11
 problemi        | tempo                     | c2    | 11
 problemi        | tempo                     | c4    | 11
 inglese         | days_months_seasons       | c3    | 11
-civica          | fonti                     | c5    | 11
-civica          | gentilezza                | c3    | 11
-civica          | gentilezza_online         | c2    | 11
-civica          | pedoni                    | c4    | 11
-civica          | sicurezza_auto            | c3    | 11
-civica          | uso_dispositivi           | c2    | 11
-geografia       | Italia nel contesto europeo | c5    | 11
+civica          | pedoni_e_attraversamento  | c3    | 11
+geografia       | italia_in_europa          | c5    | 11
 geografia       | legenda_e_simboli         | c2    | 11
 storia          | fonti_e_cronologia        | c4    | 11
-storia          | metodo_e_ricerca          | c3    | 11
 storia          | societa_e_polis           | c5    | 11
+storia          | strumenti_del_tempo       | c2    | 11
 storia          | strumenti_dello_storico   | c4    | 11
 storia          | tempo_storico             | c3    | 11
 storia          | uso_delle_fonti           | c2    | 11
@@ -865,41 +625,29 @@ scienze         | ciclo_dell_acqua          | c2    | 11
 scienze         | ecosistemi                | c3    | 11
 problemi        | addizione                 | c4    | 12
 problemi        | euro_denaro               | c2    | 12
-civica          | cittadinanza_digitale     | c5    | 12
-civica          | diritti_doveri            | c2    | 12
-civica          | fonti                     | c3    | 12
-civica          | mezzi_pubblici            | c2    | 12
-civica          | netiquette                | c4    | 12
-civica          | segnali                   | c4    | 12
-civica          | sicurezza_stradale        | c3    | 12
-geografia       | Regioni italiane          | c4    | 12
+inglese         | classroom_language        | c2    | 12
+civica          | diritti_e_doveri          | c2    | 12
 geografia       | pianta_e_prospettiva_verticale | c2    | 12
+geografia       | regioni_italiane          | c4    | 12
 storia          | babilonesi_assiri         | c4    | 12
 storia          | etruschi                  | c5    | 12
 storia          | istituzioni_monarchiche   | c5    | 12
 storia          | societa_e_cultura         | c5    | 12
 storia          | tipi_di_fonti             | c2    | 12
 scienze         | viventi_non_viventi       | c2    | 12
-inglese         | vari                      | c5    | 13
-civica          | costituzione_valori       | c4    | 13
-civica          | diritti_doveri            | c4    | 13
-civica          | diritti_doveri            | c5    | 13
-civica          | netiquette                | c3    | 13
-civica          | privacy                   | c4    | 13
 geografia       | percorsi                  | c2    | 13
+geografia       | punti_cardinali           | c2    | 13
 storia          | civilta                   | c3    | 13
 storia          | guerre_persiane_ellenismo | c5    | 13
-storia          | lettura_linea_tempo       | c2    | 13
 storia          | polis_e_cultura           | c5    | 13
 storia          | ruoli_e_fonti             | c3    | 13
 storia          | sumeri                    | c4    | 13
 scienze         | osservazione_base         | c2    | 13
-civica          | consumo_responsabile      | c4    | 14
-civica          | istituzioni_nazionali     | c5    | 14
+civica          | partecipazione_e_solidarieta | c5    | 14
 geografia       | riferimenti_e_punti_cardinali | c2    | 14
-storia          | civiltà dei fiumi         | c3    | 14
+storia          | civilta_fluviali          | c3    | 14
 storia          | origini_e_mito            | c5    | 14
 scienze         | classificazione_base      | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 481
+Totale celle sotto soglia: 312

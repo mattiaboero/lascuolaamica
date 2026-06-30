@@ -1,5 +1,17 @@
 # Changelog Repo
 
+## 4.11.3 - 2026-06-30
+
+### Fixed
+- content(reachability): riattivate **706 domande "morte"** che il loader scartava perché il loro `area` (o `subarea` per italiano) non era nella `areaMap` di pagina e veniva mappato a stringa vuota (`mapArea` → `''` → riga droppata). Recuperate: civica 82 (area legacy `educazione_civica`), storia 178 (area legacy `storia`), scienze 212 (area legacy `scienze`), geografia 165 (area legacy `geografia`), italiano 69 (`alfabeto` + `riflessione_sulla_lingua` mai inserite nella areaMap). Ora tutte le domande del dataset sono effettivamente servibili in gioco.
+- content(italiano): aggiunte `alfabeto` (in `write`) e `riflessione_sulla_lingua` (in `gram`) alla `areaMap` di `js/italiano-page.js`.
+
+### Changed
+- chore(taxonomy): civica — dissolte ~60 micro-subaree da 5 domande in 16 macro-subaree coerenti (4 per area), e ridistribuite le 82 domande dell'area legacy `educazione_civica` nelle 4 aree reali (rules/env/digital/road). Celle civica sotto soglia 154 → 19; i 9 `bonus_*` instradati a subaree reali.
+- chore(taxonomy): storia/scienze/geografia — domande delle aree legacy ricollocate nelle aree "vive" mappate dalla pagina, fondendole nelle subaree esistenti dove naturale (0 duplicati ridondanti introdotti; verificate le varianti testo-uguale/risposta-diversa).
+- chore(coverage): rigenerato `reports/coverage.md` (celle sotto soglia 481 → 312; il residuo è costituito in prevalenza da unità curricolari coerenti da ~10 domande, non da lacune reali).
+- chore: bump versione `4.11.2` → `4.11.3` in `app-version.js`, `package.json`, `llms.txt`.
+
 ## 4.11.2 - 2026-06-30
 
 ### Changed
