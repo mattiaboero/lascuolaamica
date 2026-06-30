@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.11.1 - 2026-06-30
+
+### Fixed
+- content: corrette 6 domande duplicate vere (testo + risposta + opzioni identici) sostituendole con domande distinte e curricolarmente coerenti (italiano 3, inglese 3), mantenendo il totale a 9.900. Una di queste (`ita-2-morfologia-9133`, articolo per "amica") era anche pedagogicamente errata ed è stata riscritta.
+
+### Added
+- test(content): nuovi guardrail bloccanti in `scripts/audit_questions_json.js` — `subarea` non vuota, `difficulty ∈ {1,2,3}`, `explanation` non vuota, e rilevamento duplicati ridondanti (stesso testo normalizzato + stessa risposta + stesse opzioni). Varianti con stesso testo ma risposta/opzioni diverse restano consentite.
+- chore(qa): `scripts/lint_content.js` ora è cablato come gate bloccante in `prepublish-check.sh`.
+
+### Changed
+- chore(lint): `lint_content.js` — rimossa euristica apostrofo errata (`un'` segnalato anche per maschili corretti come "un albero"), applicati realmente i gruppi di regole prima inerti, reset `lastIndex` per regex globali, aggiunto check accenti troncati (`citta`→`città`, ecc.) con soppressione del contrasto didattico in ortografia.
+- chore(ci): `.lighthouseci/` aggiunto a `.gitignore` ed escluso dallo scan pattern pericolosi in `prepublish-check.sh` (i report generati contengono `innerHTML`/`javascript:` nei dati inline).
+- chore: bump versione `4.11.0` → `4.11.1` in `app-version.js`, `package.json`, `llms.txt`.
+
 ## 4.11.0 - 2026-06-30
 
 ### Added

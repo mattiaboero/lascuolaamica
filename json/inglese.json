@@ -21665,16 +21665,16 @@
    "area": "inglese",
    "subarea": "days_months_seasons",
    "difficulty": 1,
-   "question": "Which day comes after Monday?",
+   "question": "Which day comes after Thursday?",
    "options": [
-    "Sunday",
-    "Wednesday",
-    "Tuesday",
-    "Thursday"
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Wednesday"
    ],
-   "answerIndex": 2,
-   "answer": "Tuesday",
-   "explanation": "I giorni della settimana in ordine sono: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Dopo lunedì viene martedì (Tuesday).",
+   "answerIndex": 1,
+   "answer": "Friday",
+   "explanation": "After Thursday comes Friday. Dopo giovedì viene venerdì.",
    "active": true,
    "tag": "inglese;days_months_seasons;classe_3;primaria",
    "tags": [
@@ -21698,16 +21698,16 @@
    "area": "inglese",
    "subarea": "days_months_seasons",
    "difficulty": 1,
-   "question": "Which month comes after March?",
+   "question": "Which month comes after June?",
    "options": [
-    "February",
-    "May",
-    "April",
-    "June"
+    "June",
+    "July",
+    "August",
+    "May"
    ],
-   "answerIndex": 2,
-   "answer": "April",
-   "explanation": "I mesi in ordine: January, February, March, April, May... Dopo marzo (March) viene aprile (April).",
+   "answerIndex": 1,
+   "answer": "July",
+   "explanation": "After June comes July. Dopo giugno viene luglio.",
    "active": true,
    "tag": "inglese;days_months_seasons;classe_3;primaria",
    "tags": [
@@ -22490,16 +22490,16 @@
    "area": "inglese",
    "subarea": "lessico_base",
    "difficulty": 2,
-   "question": "What is the English word for 'bicicletta'?",
+   "question": "What is the English word for 'ombrello'?",
    "options": [
-    "motorbike",
-    "bicycle",
-    "scooter",
-    "skateboard"
+    "raincoat",
+    "umbrella",
+    "umbrela",
+    "sunglasses"
    ],
    "answerIndex": 1,
-   "answer": "bicycle",
-   "explanation": "'Bicycle' (o 'bike') è la bicicletta. È un mezzo di trasporto ecologico! 'Motorbike' è moto, 'scooter' è monopattino/scooter.",
+   "answer": "umbrella",
+   "explanation": "'Umbrella' è l'ombrello, ti protegge dalla pioggia. 'Raincoat' è l'impermeabile.",
    "active": true,
    "tag": "inglese;lessico_base;classe_4;primaria",
    "tags": [

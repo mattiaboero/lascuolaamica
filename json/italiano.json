@@ -13285,16 +13285,16 @@
    "area": "italiano_classe2",
    "subarea": "grammatica",
    "difficulty": 2,
-   "question": "Quale articolo si usa con 'zaino'?",
+   "question": "Quale articolo determinativo si usa con 'specchio'?",
    "options": [
     "il",
     "lo",
     "la",
-    "un'"
+    "gli"
    ],
    "answerIndex": 1,
    "answer": "lo",
-   "explanation": "L'articolo 'lo' (e 'uno' per l'indeterminativo) si usa davanti a parole maschili che iniziano con Z, GN, S+consonante, PS, X. 'Zaino' inizia con Z, quindi si dice 'lo zaino'.",
+   "explanation": "'Specchio' inizia con s seguita da consonante: davanti a queste parole maschili si usa 'lo' (lo specchio).",
    "active": true,
    "tag": "italiano;grammatica;classe_2;primaria",
    "tags": [
@@ -14533,16 +14533,16 @@
    "area": "italiano_classe2",
    "subarea": "morfologia",
    "difficulty": 1,
-   "question": "Quale articolo si usa con 'amica'?",
+   "question": "Quale articolo determinativo si usa con 'gatto'?",
    "options": [
-    "il",
     "lo",
+    "il",
     "la",
-    "un"
+    "l'"
    ],
-   "answerIndex": 2,
-   "answer": "la",
-   "explanation": "'Amica' è un nome femminile singolare. L'articolo determinativo femminile singolare è 'la' (davanti a consonante) o 'l'' (davanti a vocale). 'Amica' inizia con vocale, quindi si dice 'l'amica'. Ma tra le opzioni 'la' è la forma base corretta.",
+   "answerIndex": 1,
+   "answer": "il",
+   "explanation": "'Gatto' è maschile singolare e inizia con consonante semplice: l'articolo determinativo è 'il' (il gatto).",
    "active": true,
    "tag": "italiano;morfologia;classe_2;primaria",
    "tags": [
@@ -16741,16 +16741,16 @@
    "area": "italiano_classe3",
    "subarea": "alfabeto",
    "difficulty": 1,
-   "question": "Quante lettere ha l'alfabeto italiano?",
+   "question": "Quante vocali ci sono nell'alfabeto italiano?",
    "options": [
-    "21",
-    "26",
-    "24",
-    "23"
+    "4",
+    "5",
+    "6",
+    "7"
    ],
-   "answerIndex": 0,
-   "answer": "21",
-   "explanation": "L'alfabeto italiano ha 21 lettere. Le lettere J, K, W, X, Y non fanno parte dell'alfabeto italiano nativo (si usano solo nelle parole straniere).",
+   "answerIndex": 1,
+   "answer": "5",
+   "explanation": "Le vocali italiane sono cinque: a, e, i, o, u. Tutte le altre lettere sono consonanti.",
    "active": true,
    "tag": "italiano;alfabeto;classe_3;primaria",
    "tags": [
