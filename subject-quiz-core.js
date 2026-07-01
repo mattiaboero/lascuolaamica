@@ -171,6 +171,16 @@
   const BONUS_LABELS = cfg.bonusLabels || { easy: 'Facile', medium: 'Media', hard: 'Difficile' };
   const FEEDBACK_OK = cfg.feedbackOk || ['Esatto!', 'Ottimo!', 'Complimenti!', 'Continua così!'];
   const FEEDBACK_KO = cfg.feedbackKo || ['Riprova!', 'Quasi!', 'Non mollare!'];
+  // B1: streak-aware feedback — milestone thresholds show a special message + celebrate mascot
+  // instead of the plain random one. Ordered from highest to lowest so the first match wins.
+  const STREAK_MILESTONES = cfg.streakMilestones || [
+    { min: 8, label: (n) => `${n} di fila! Sei inarrestabile! 🚀` },
+    { min: 5, label: (n) => `${n} di fila! Serie perfetta! ⭐` },
+    { min: 3, label: (n) => `${n} di fila! 🔥` },
+  ];
+  function getStreakBonus(n) {
+    return STREAK_MILESTONES.find((m) => n >= m.min) || null;
+  }
   const MASCOT_STATES = {
     neutral: true,
     happy: true,
@@ -310,6 +320,7 @@
   let points = 0;
   let correct = 0;
   let wrong = 0;
+  let streak = 0;
   let history = [];
   let answered = false;
   let muted = false;
@@ -1844,6 +1855,7 @@
     points = 0;
     correct = 0;
     wrong = 0;
+    streak = 0;
     history = [];
     answered = false;
     baseScore = 0;
@@ -1938,12 +1950,20 @@
       btn.classList.add('correct');
       points += POINTS_PER_Q;
       correct += 1;
+      streak += 1;
       playOk();
-      setMascot('happy');
-      showFeedback(true);
+      const bonus = getStreakBonus(streak);
+      if (bonus) {
+        setMascot('celebrate');
+        showFeedback(true, bonus.label(streak));
+      } else {
+        setMascot('happy');
+        showFeedback(true);
+      }
     } else {
       btn.classList.add('wrong');
       wrong += 1;
+      streak = 0;
       buttons.forEach((b) => {
         if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
       });
@@ -2406,6 +2426,7 @@
     points = 0;
     correct = 0;
     wrong = 0;
+    streak = 0;
     history = [];
     answered = false;
     baseScore = 0;
