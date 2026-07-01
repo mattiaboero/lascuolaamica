@@ -295,6 +295,10 @@ body.info-page .actions {
   gap: 10px;
 }
 
+body.info-page .actions + .text {
+  margin-top: 20px;
+}
+
 body.info-page .action-btn {
   text-decoration: none;
   border-radius: 14px;
