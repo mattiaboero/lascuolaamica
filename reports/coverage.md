@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 01/07/2026, 12:25:35
+Data generazione: 01/07/2026, 13:09:24
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -236,7 +236,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 ## SCIENZE
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
-| adattamenti_e_ambiente | 0     | 7  ⚠️  | 4  ⚠️  | 0     | 11   
+| adattamenti_e_ambiente | 0     | 7  ⚠️  | 11 ⚠️  | 0     | 18   
 | alimentazione          | 4  ⚠️  | 0     | 0     | 0     | 4    
 | animali                | 0     | 16    | 0     | 0     | 16   
 | animali_e_habitat      | 15    | 0     | 0     | 0     | 15   
@@ -248,33 +248,33 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | ciclo_vitale_e_causa_effetto| 10 ⚠️  | 0     | 0     | 0     | 10   
 | ecosistemi             | 1  ⚠️  | 21    | 16    | 2  ⚠️  | 40   
 | ecosistemi_e_biodiversita| 2  ⚠️  | 2  ⚠️  | 18    | 2  ⚠️  | 24   
-| energia                | 1  ⚠️  | 2  ⚠️  | 2  ⚠️  | 30    | 35   
-| forze_e_movimento      | 0     | 0     | 6  ⚠️  | 14 ⚠️  | 20   
+| energia                | 1  ⚠️  | 2  ⚠️  | 11 ⚠️  | 30    | 44   
+| forze_e_movimento      | 0     | 0     | 15    | 14 ⚠️  | 29   
 | habitat_e_funzioni_vitali| 0     | 26    | 0     | 0     | 26   
 | ipotesi_esperimento_conclusioni| 1  ⚠️  | 4  ⚠️  | 1  ⚠️  | 1  ⚠️  | 7    
 | lessico_e_pratica_scientifica| 0     | 39    | 0     | 8  ⚠️  | 47   
-| luce_e_suono           | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 13 ⚠️  | 19   
-| metodo_e_classificazione| 2  ⚠️  | 7  ⚠️  | 4  ⚠️  | 3  ⚠️  | 16   
+| luce_e_suono           | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 13 ⚠️  | 28   
+| metodo_e_classificazione| 2  ⚠️  | 7  ⚠️  | 12 ⚠️  | 3  ⚠️  | 24   
 | metodo_e_strumenti     | 0     | 0     | 10 ⚠️  | 0     | 10   
 | metodo_ed_esperimenti  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 8    
 | osservazione_e_applicazione| 1  ⚠️  | 0     | 6  ⚠️  | 0     | 7    
 | osservazione_e_dati    | 1  ⚠️  | 9  ⚠️  | 1  ⚠️  | 1  ⚠️  | 12   
-| passaggi_di_stato_e_ciclo| 1  ⚠️  | 9  ⚠️  | 6  ⚠️  | 1  ⚠️  | 17   
+| passaggi_di_stato_e_ciclo| 1  ⚠️  | 9  ⚠️  | 15    | 1  ⚠️  | 26   
 | piante                 | 26    | 6  ⚠️  | 0     | 0     | 32   
-| salute_e_igiene        | 17    | 2  ⚠️  | 2  ⚠️  | 27    | 48   
+| salute_e_igiene        | 17    | 2  ⚠️  | 11 ⚠️  | 27    | 57   
 | sensi                  | 14 ⚠️  | 0     | 0     | 5  ⚠️  | 19   
 | sistema_solare         | 0     | 0     | 14 ⚠️  | 19    | 33   
 | sostenibilita_e_osservazione| 12 ⚠️  | 2  ⚠️  | 1  ⚠️  | 1  ⚠️  | 16   
 | sostenibilita_energetica| 1  ⚠️  | 0     | 0     | 3  ⚠️  | 4    
 | stagioni_e_tempo_atmosferico| 40    | 0     | 0     | 0     | 40   
 | stati_e_proprieta_materia| 25    | 0     | 0     | 0     | 25   
-| stati_proprieta_materia| 9  ⚠️  | 10 ⚠️  | 9  ⚠️  | 7  ⚠️  | 35   
+| stati_proprieta_materia| 9  ⚠️  | 10 ⚠️  | 15    | 7  ⚠️  | 41   
 | tecnologia_applicata   | 2  ⚠️  | 1  ⚠️  | 5  ⚠️  | 1  ⚠️  | 9    
-| terra_e_movimenti      | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 12 ⚠️  | 18   
-| trasformazioni_ed_esperimenti| 1  ⚠️  | 10 ⚠️  | 1  ⚠️  | 1  ⚠️  | 13   
-| tutela_ambientale      | 1  ⚠️  | 6  ⚠️  | 1  ⚠️  | 1  ⚠️  | 9    
+| terra_e_movimenti      | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 12 ⚠️  | 27   
+| trasformazioni_ed_esperimenti| 1  ⚠️  | 10 ⚠️  | 10 ⚠️  | 1  ⚠️  | 22   
+| tutela_ambientale      | 1  ⚠️  | 6  ⚠️  | 7  ⚠️  | 1  ⚠️  | 15   
 | viventi_e_non_viventi  | 43    | 2  ⚠️  | 1  ⚠️  | 0     | 46   
-| TOTAL                   |        |        |        |        | 843   
+| TOTAL                   |        |        |        |        | 933   
 
 ## ⚠️  Celle sotto soglia (< 15 domande)
 
@@ -311,10 +311,8 @@ scienze         | sostenibilita_energetica  | c2    | 1
 scienze         | tecnologia_applicata      | c3    | 1
 scienze         | tecnologia_applicata      | c5    | 1
 scienze         | trasformazioni_ed_esperimenti | c2    | 1
-scienze         | trasformazioni_ed_esperimenti | c4    | 1
 scienze         | trasformazioni_ed_esperimenti | c5    | 1
 scienze         | tutela_ambientale         | c2    | 1
-scienze         | tutela_ambientale         | c4    | 1
 scienze         | tutela_ambientale         | c5    | 1
 scienze         | viventi_e_non_viventi     | c4    | 1
 problemi        | frazioni                  | c2    | 2
@@ -341,22 +339,18 @@ scienze         | ecosistemi_e_biodiversita | c2    | 2
 scienze         | ecosistemi_e_biodiversita | c3    | 2
 scienze         | ecosistemi_e_biodiversita | c5    | 2
 scienze         | energia                   | c3    | 2
-scienze         | energia                   | c4    | 2
 scienze         | luce_e_suono              | c2    | 2
 scienze         | luce_e_suono              | c3    | 2
-scienze         | luce_e_suono              | c4    | 2
 scienze         | metodo_e_classificazione  | c2    | 2
 scienze         | metodo_ed_esperimenti     | c2    | 2
 scienze         | metodo_ed_esperimenti     | c3    | 2
 scienze         | metodo_ed_esperimenti     | c4    | 2
 scienze         | metodo_ed_esperimenti     | c5    | 2
 scienze         | salute_e_igiene           | c3    | 2
-scienze         | salute_e_igiene           | c4    | 2
 scienze         | sostenibilita_e_osservazione | c3    | 2
 scienze         | tecnologia_applicata      | c2    | 2
 scienze         | terra_e_movimenti         | c2    | 2
 scienze         | terra_e_movimenti         | c3    | 2
-scienze         | terra_e_movimenti         | c4    | 2
 scienze         | viventi_e_non_viventi     | c3    | 2
 matematica      | dati_probabilita          | c2    | 3
 problemi        | moltiplicazione           | c2    | 3
@@ -391,10 +385,8 @@ storia          | fonti                     | c4    | 4
 storia          | parti_giornata            | c2    | 4
 storia          | periodizzazione           | c3    | 4
 storia          | prima_dopo                | c2    | 4
-scienze         | adattamenti_e_ambiente    | c4    | 4
 scienze         | alimentazione             | c2    | 4
 scienze         | ipotesi_esperimento_conclusioni | c3    | 4
-scienze         | metodo_e_classificazione  | c4    | 4
 problemi        | addizione                 | c3    | 5
 civica          | mezzi_e_mobilita          | c5    | 5
 civica          | natura_e_biodiversita     | c5    | 5
@@ -425,9 +417,7 @@ storia          | cicli_temporali           | c2    | 6
 storia          | fonti                     | c3    | 6
 storia          | sintesi_e_confronti       | c5    | 6
 storia          | stagioni                  | c2    | 6
-scienze         | forze_e_movimento         | c4    | 6
 scienze         | osservazione_e_applicazione | c4    | 6
-scienze         | passaggi_di_stato_e_ciclo | c4    | 6
 scienze         | piante                    | c3    | 6
 scienze         | tutela_ambientale         | c3    | 6
 matematica      | figure                    | c5    | 7
@@ -440,6 +430,7 @@ storia          | passaggio_alla_repubblica | c5    | 7
 scienze         | adattamenti_e_ambiente    | c3    | 7
 scienze         | metodo_e_classificazione  | c3    | 7
 scienze         | stati_proprieta_materia   | c5    | 7
+scienze         | tutela_ambientale         | c4    | 7
 geografia       | geografia_fisica_europea  | c5    | 8
 geografia       | sviluppo_sostenibile      | c5    | 8
 storia          | alto_medioevo             | c5    | 8
@@ -460,7 +451,6 @@ storia          | storia_personale          | c2    | 9
 scienze         | osservazione_e_dati       | c3    | 9
 scienze         | passaggi_di_stato_e_ciclo | c3    | 9
 scienze         | stati_proprieta_materia   | c2    | 9
-scienze         | stati_proprieta_materia   | c4    | 9
 problemi        | due_operazioni            | c3    | 10
 civica          | diritti_e_doveri          | c3    | 10
 civica          | gentilezza_in_strada      | c4    | 10
@@ -509,6 +499,7 @@ scienze         | ciclo_vitale_e_causa_effetto | c2    | 10
 scienze         | metodo_e_strumenti        | c4    | 10
 scienze         | stati_proprieta_materia   | c3    | 10
 scienze         | trasformazioni_ed_esperimenti | c3    | 10
+scienze         | trasformazioni_ed_esperimenti | c4    | 10
 problemi        | addizione                 | c5    | 11
 problemi        | tempo                     | c2    | 11
 problemi        | tempo                     | c4    | 11
@@ -523,6 +514,11 @@ storia          | strumenti_dello_storico   | c4    | 11
 storia          | tempo_storico             | c3    | 11
 storia          | uso_delle_fonti           | c2    | 11
 storia          | vita_e_eredita            | c5    | 11
+scienze         | adattamenti_e_ambiente    | c4    | 11
+scienze         | energia                   | c4    | 11
+scienze         | luce_e_suono              | c4    | 11
+scienze         | salute_e_igiene           | c4    | 11
+scienze         | terra_e_movimenti         | c4    | 11
 problemi        | addizione                 | c4    | 12
 problemi        | euro_denaro               | c2    | 12
 inglese         | classroom_language        | c2    | 12
@@ -534,6 +530,7 @@ storia          | etruschi                  | c5    | 12
 storia          | istituzioni_monarchiche   | c5    | 12
 storia          | societa_e_cultura         | c5    | 12
 storia          | tipi_di_fonti             | c2    | 12
+scienze         | metodo_e_classificazione  | c4    | 12
 scienze         | sostenibilita_e_osservazione | c2    | 12
 scienze         | terra_e_movimenti         | c5    | 12
 geografia       | percorsi                  | c2    | 13
@@ -554,4 +551,4 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 273
+Totale celle sotto soglia: 270

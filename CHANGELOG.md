@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.12.3 - 2026-07-01
+
+### Added
+- content(scienze): **G8 fase 2 batch 1 — top-up classe 4.** +90 domande vettate su 11 subaree sotto quota, portando scienze c4 da 160 a **250 domande** (target di piano). Mix di difficoltà 1/2/3 (30/40/20). Aree coperte: passaggi di stato e ciclo dell'acqua, stati e proprietà della materia, trasformazioni reversibili/irreversibili, salute e igiene, movimenti della Terra, forze e movimento, luce e suono, energia e fonti rinnovabili, classificazione dei viventi, adattamenti, tutela ambientale. Ogni domanda con distrattori plausibili e spiegazione formativa; nessun duplicato semantico. Totale domande **9.698 → 9.788**.
+
+### Changed
+- chore: bump versione `4.12.2` → `4.12.3` (`json/scienze.json` precachato dal service worker). Aggiornati `json/index.json`, `README.md`, `llms.txt`, `reports/coverage.md`.
+
 ## 4.12.2 - 2026-07-01
 
 ### Changed
