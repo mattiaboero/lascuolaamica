@@ -48,6 +48,11 @@ const TYPOS = ['the', 'tha', 'yuo', 'recieve', 'occured', 'knowwn'];
 const GENERATOR_META = /ricontroll|aggiorno (la )?risposta|ricalcolo|aggiorno risposta|come (assistente|modello)|non posso rispondere/i;
 const SELF_CONTRADICTION = /tutte le opzioni conteng|tutte.{0,30}derivano.{0,30}ma scegliamo|scegliamo la più comune|ma 'questa' è la più/i;
 const ANOMALOUS_ACCENT = /[íúÍÚ]/; // acute on i/u — not used in standard Italian (which uses ì/ù grave)
+// D3: dangling cross-references. A quiz question is served standalone and shuffled,
+// so any pointer to another question/number/"above" is a broken artifact (e.g. the
+// scienze "nella domanda n.X" batch culled in 4.11.4). Checked on the QUESTION field
+// only — explanations legitimately say things like "nella domanda indiretta l'ordine…".
+const DANGLING_REFERENCE = /\bdomanda\s+n\.?\s*\d+|\bdomanda precedente\b|\b(come visto|vedi|figura|immagine)\s+(qui\s+)?sopra\b|nell'esercizio precedente/i;
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
   const errors = [];
@@ -64,6 +69,9 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   }
   if (explanation && SELF_CONTRADICTION.test(explanation)) {
     errors.push({ level: 'error', field: 'explanation', msg: 'self-contradictory "all options qualify" explanation' });
+  }
+  if (question && DANGLING_REFERENCE.test(question)) {
+    errors.push({ level: 'error', field: 'question', msg: 'dangling cross-reference in question (e.g. "domanda n.X" / "vedi sopra") — quiz questions must be self-contained' });
   }
   const isItalianText = subject !== 'inglese';
   if (isItalianText && ANOMALOUS_ACCENT.test(`${question || ''} ${explanation || ''}`)) {

@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.11.5 - 2026-07-01
+
+### Added
+- content(matematica): +74 domande vettate per colmare i veri gap curricolari core, portando ogni cella a 15: `decimali` cl.4 (+12) e cl.5 (+14), `frazioni` cl.3 (+13), `ragionamento` cl.3/4/5 (+11/+12/+12). Ogni cella ha un mix di difficoltà 1/2/3 (mantiene la varianza intra-classe richiesta da A2). Tutte le domande aritmetiche verificate automaticamente (742/742 corrette).
+- test(content): nuovo guardrail bloccante **D3** in `scripts/lint_content.js` — rileva riferimenti penzolanti nel testo della domanda ("domanda n.X", "domanda precedente", "vedi/figura sopra"). Controllato solo sul campo `question` per non colpire l'uso legittimo di "nella domanda" nelle spiegazioni.
+
+### Changed
+- content: totale domande **9.624 → 9.698**. Aggiornati `llms.txt`, `README.md`, `json/index.json`.
+- chore: bump versione `4.11.4` → `4.11.5`; rigenerato `reports/coverage.md`.
+
 ## 4.11.4 - 2026-06-30
 
 ### Fixed

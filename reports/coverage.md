@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 30/06/2026, 21:45:02
+Data generazione: 01/07/2026, 08:13:07
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -8,15 +8,15 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
 | calcolo_mentale        | 65    | 41    | 28    | 52    | 186  
 | dati_probabilita       | 3  ⚠️  | 16    | 95    | 94    | 208  
-| decimali               | 0     | 0     | 3  ⚠️  | 1  ⚠️  | 4    
+| decimali               | 0     | 0     | 15    | 15    | 30   
 | figure                 | 23    | 16    | 6  ⚠️  | 7  ⚠️  | 52   
-| frazioni               | 0     | 2  ⚠️  | 21    | 30    | 53   
+| frazioni               | 0     | 15    | 21    | 30    | 66   
 | misure                 | 0     | 9  ⚠️  | 25    | 29    | 63   
 | operazioni             | 224    | 212    | 187    | 175    | 798  
 | perimetro_area         | 58    | 68    | 96    | 92    | 314  
-| ragionamento           | 22    | 4  ⚠️  | 3  ⚠️  | 3  ⚠️  | 32   
+| ragionamento           | 22    | 15    | 15    | 15    | 67   
 | sequenze               | 49    | 66    | 18    | 17    | 150  
-| TOTAL                   |        |        |        |        | 1860  
+| TOTAL                   |        |        |        |        | 1934  
 
 ## PROBLEMI
 Subarea                   | c2     | c3     | c4     | c5     | Total
@@ -337,7 +337,6 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 
 Subject         | Subarea                   | Classe | Domande
 ----------------------------------------------------------------------
-matematica      | decimali                  | c5    | 1
 problemi        | tempo                     | c3    | 1
 inglese         | bonus_easy                | c2    | 1
 inglese         | bonus_easy                | c3    | 1
@@ -368,7 +367,6 @@ scienze         | strumenti                 | c3    | 1
 scienze         | tecnologia                | c3    | 1
 scienze         | tecnologia                | c5    | 1
 scienze         | trasformazioni            | c4    | 1
-matematica      | frazioni                  | c3    | 2
 problemi        | frazioni                  | c2    | 2
 problemi        | frazioni                  | c3    | 2
 inglese         | bonus_hard                | c5    | 2
@@ -402,9 +400,6 @@ scienze         | tecnologia                | c2    | 2
 scienze         | tecnologia                | c4    | 2
 scienze         | vertebrati_invertebrati   | c3    | 2
 matematica      | dati_probabilita          | c2    | 3
-matematica      | decimali                  | c4    | 3
-matematica      | ragionamento              | c4    | 3
-matematica      | ragionamento              | c5    | 3
 problemi        | moltiplicazione           | c2    | 3
 problemi        | moltiplicazione           | c3    | 3
 geografia       | acque                     | c2    | 3
@@ -436,7 +431,6 @@ scienze         | salute                    | c3    | 3
 scienze         | salute                    | c4    | 3
 scienze         | sostenibilita_energetica  | c5    | 3
 scienze         | stagioni_e_ambiente       | c2    | 3
-matematica      | ragionamento              | c3    | 4
 problemi        | divisione                 | c3    | 4
 geografia       | elementi_naturali         | c2    | 4
 geografia       | italia_regioni            | c4    | 4
@@ -659,4 +653,4 @@ storia          | origini_e_mito            | c5    | 14
 scienze         | classificazione_base      | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 321
+Totale celle sotto soglia: 315

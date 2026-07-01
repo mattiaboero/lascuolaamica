@@ -1,26 +1,26 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 9624,
+ "totalQuestions": 9698,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
-   "rows": 1860,
+   "rows": 1934,
    "stats": {
     "file": "template_matematica_da_json.csv",
     "rows": 1876,
     "areas": {
-     "tabelline": 196,
-     "aritmetica": 501,
+     "tabelline": 186,
+     "aritmetica": 539,
      "problemi": 428,
-     "geometria": 371,
-     "logica_e_dati": 380
+     "geometria": 366,
+     "logica_e_dati": 415
     },
     "classes": {
-     "2": 450,
-     "3": 441,
-     "4": 482,
-     "5": 503
+     "2": 444,
+     "3": 458,
+     "4": 506,
+     "5": 526
     }
    }
   },
