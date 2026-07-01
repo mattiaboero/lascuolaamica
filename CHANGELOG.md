@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.12.1 - 2026-07-01
+
+### Added
+- content(pagine-adulti): **G6 — pagine per-genitori/per-insegnanti arricchite.** Aggiunta mappa curricolare (materie × aree tematiche × classi 2ª-5ª, con conteggio domande) e sezione consigli d'uso pratici, separate per target: consigli casa in `/per-genitori`, suggerimenti didattici per materia in `/per-insegnanti`. Nessuna nuova classe CSS (riuso di `.section`/`.list` esistenti), zero impatto CSP.
+
+### Changed
+- chore: bump versione `4.12.0` → `4.12.1` (HTML precachato dal service worker); `dateModified` aggiornato in entrambe le pagine.
+
 ## 4.12.0 - 2026-07-01
 
 ### Added
