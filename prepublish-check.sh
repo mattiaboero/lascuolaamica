@@ -123,6 +123,8 @@ check_security_patterns() {
   findings=$(find . \
     -path './node_modules' -prune -o \
     -path './.git' -prune -o \
+    -path './.lighthouseci' -prune -o \
+    -path './export' -prune -o \
     -type f \( -name '*.js' -o -name '*.html' \) -print0 \
     | xargs -0 grep -nE 'eval\(|new Function\(|document\.write\(|innerHTML[[:space:]]*=|javascript:' || true)
   if [[ -n "$findings" ]]; then
@@ -415,6 +417,13 @@ check_pwa_version_bump_for_precache_changes
 if node scripts/audit_questions_json.js; then
   echo "[OK] question JSON audit passed"
 else
+  status=1
+fi
+
+if node scripts/lint_content.js >/dev/null 2>&1; then
+  echo "[OK] content linguistic lint passed"
+else
+  echo "[ERROR] content linguistic lint failed (run: npm run lint:content)"
   status=1
 fi
 

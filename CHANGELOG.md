@@ -1,5 +1,59 @@
 # Changelog Repo
 
+## 4.11.5 - 2026-07-01
+
+### Added
+- content(matematica): +74 domande vettate per colmare i veri gap curricolari core, portando ogni cella a 15: `decimali` cl.4 (+12) e cl.5 (+14), `frazioni` cl.3 (+13), `ragionamento` cl.3/4/5 (+11/+12/+12). Ogni cella ha un mix di difficoltà 1/2/3 (mantiene la varianza intra-classe richiesta da A2). Tutte le domande aritmetiche verificate automaticamente (742/742 corrette).
+- test(content): nuovo guardrail bloccante **D3** in `scripts/lint_content.js` — rileva riferimenti penzolanti nel testo della domanda ("domanda n.X", "domanda precedente", "vedi/figura sopra"). Controllato solo sul campo `question` per non colpire l'uso legittimo di "nella domanda" nelle spiegazioni.
+
+### Changed
+- content: totale domande **9.624 → 9.698**. Aggiornati `llms.txt`, `README.md`, `json/index.json`.
+- chore: bump versione `4.11.4` → `4.11.5`; rigenerato `reports/coverage.md`.
+
+## 4.11.4 - 2026-06-30
+
+### Fixed
+- content(QA pedagogico): rimosso il riferimento penzolante "nella domanda n.X" da 287 domande di scienze (artefatto di numerazione CSV, privo di senso nel quiz mescolato). Gli stem ripuliti collassavano in soli 11 quesiti unici: **rimossi 276 duplicati ridondanti** (stesso testo+risposta+opzioni), tenuti gli 11 originali. Le domande gonfiate erano live e servite.
+- content(geografia): corretta `geo-4-regioni_italiane-9097` — "la Lombardia confina con Svizzera e Austria" era errato (l'unico Stato estero confinante è la Svizzera). Domanda riformulata e spiegazione corretta.
+
+### Changed
+- content: totale domande **9.900 → 9.624** (cull duplicati scienze). Aggiornati `llms.txt`, `README.md`, `json/index.json` (`totalQuestions` + stats scienze).
+- test(content): verifica automatica aritmetica su matematica+problemi — 736 quesiti computabili controllati, 0 errori. Confermata l'integrità meccanica (l'audit già copre answerIndex↔answer, risposta∈opzioni, duplicati).
+- chore: bump versione `4.11.3` → `4.11.4` in `app-version.js`, `package.json`, `llms.txt`; rigenerato `reports/coverage.md`.
+
+## 4.11.3 - 2026-06-30
+
+### Fixed
+- content(reachability): riattivate **706 domande "morte"** che il loader scartava perché il loro `area` (o `subarea` per italiano) non era nella `areaMap` di pagina e veniva mappato a stringa vuota (`mapArea` → `''` → riga droppata). Recuperate: civica 82 (area legacy `educazione_civica`), storia 178 (area legacy `storia`), scienze 212 (area legacy `scienze`), geografia 165 (area legacy `geografia`), italiano 69 (`alfabeto` + `riflessione_sulla_lingua` mai inserite nella areaMap). Ora tutte le domande del dataset sono effettivamente servibili in gioco.
+- content(italiano): aggiunte `alfabeto` (in `write`) e `riflessione_sulla_lingua` (in `gram`) alla `areaMap` di `js/italiano-page.js`.
+
+### Changed
+- chore(taxonomy): civica — dissolte ~60 micro-subaree da 5 domande in 16 macro-subaree coerenti (4 per area), e ridistribuite le 82 domande dell'area legacy `educazione_civica` nelle 4 aree reali (rules/env/digital/road). Celle civica sotto soglia 154 → 19; i 9 `bonus_*` instradati a subaree reali.
+- chore(taxonomy): storia/scienze/geografia — domande delle aree legacy ricollocate nelle aree "vive" mappate dalla pagina, fondendole nelle subaree esistenti dove naturale (0 duplicati ridondanti introdotti; verificate le varianti testo-uguale/risposta-diversa).
+- chore(coverage): rigenerato `reports/coverage.md` (celle sotto soglia 481 → 312; il residuo è costituito in prevalenza da unità curricolari coerenti da ~10 domande, non da lacune reali).
+- chore: bump versione `4.11.2` → `4.11.3` in `app-version.js`, `package.json`, `llms.txt`.
+
+## 4.11.2 - 2026-06-30
+
+### Changed
+- chore(taxonomy): eliminata la subarea `vari` da italiano (66 domande cl.3-5) e inglese (26 domande cl.2-5), ciascuna riclassificata nella subarea curricolare corretta (morfologia, grammatica, lessico, sintassi, ortografia, lettura, lingua, uso_guidato, ecc.).
+- chore(taxonomy): rinominata `riflessione_linguistica` → `riflessione_sulla_lingua` in italiano cl.4 (15 domande) per uniformità con cl.5.
+- chore: bump versione `4.11.1` → `4.11.2` in `app-version.js`, `package.json`, `llms.txt`.
+
+## 4.11.1 - 2026-06-30
+
+### Fixed
+- content: corrette 6 domande duplicate vere (testo + risposta + opzioni identici) sostituendole con domande distinte e curricolarmente coerenti (italiano 3, inglese 3), mantenendo il totale a 9.900. Una di queste (`ita-2-morfologia-9133`, articolo per "amica") era anche pedagogicamente errata ed è stata riscritta.
+
+### Added
+- test(content): nuovi guardrail bloccanti in `scripts/audit_questions_json.js` — `subarea` non vuota, `difficulty ∈ {1,2,3}`, `explanation` non vuota, e rilevamento duplicati ridondanti (stesso testo normalizzato + stessa risposta + stesse opzioni). Varianti con stesso testo ma risposta/opzioni diverse restano consentite.
+- chore(qa): `scripts/lint_content.js` ora è cablato come gate bloccante in `prepublish-check.sh`.
+
+### Changed
+- chore(lint): `lint_content.js` — rimossa euristica apostrofo errata (`un'` segnalato anche per maschili corretti come "un albero"), applicati realmente i gruppi di regole prima inerti, reset `lastIndex` per regex globali, aggiunto check accenti troncati (`citta`→`città`, ecc.) con soppressione del contrasto didattico in ortografia.
+- chore(ci): `.lighthouseci/` aggiunto a `.gitignore` ed escluso dallo scan pattern pericolosi in `prepublish-check.sh` (i report generati contengono `innerHTML`/`javascript:` nei dati inline).
+- chore: bump versione `4.11.0` → `4.11.1` in `app-version.js`, `package.json`, `llms.txt`.
+
 ## 4.11.0 - 2026-06-30
 
 ### Added

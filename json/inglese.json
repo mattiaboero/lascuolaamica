@@ -18330,7 +18330,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "lessico_base",
    "difficulty": 2,
    "question": "What is the opposite of 'big'?",
    "options": [
@@ -18363,7 +18363,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "lessico_base",
    "difficulty": 1,
    "question": "Which animal lives in water?",
    "options": [
@@ -18396,7 +18396,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "classroom_language",
    "difficulty": 2,
    "question": "How do you greet someone in the morning?",
    "options": [
@@ -18429,7 +18429,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "classroom_language",
    "difficulty": 2,
    "question": "What do you say when someone gives you a gift?",
    "options": [
@@ -18462,7 +18462,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "lessico_base",
    "difficulty": 2,
    "question": "Which day comes after Monday?",
    "options": [
@@ -18495,7 +18495,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "lessico_base",
    "difficulty": 3,
    "question": "What colour do you get if you mix red and yellow?",
    "options": [
@@ -18528,7 +18528,7 @@
    "sourceSubject": "inglese",
    "class": 2,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "frasi_semplici",
    "difficulty": 3,
    "question": "Which sentence asks a question?",
    "options": [
@@ -21665,16 +21665,16 @@
    "area": "inglese",
    "subarea": "days_months_seasons",
    "difficulty": 1,
-   "question": "Which day comes after Monday?",
+   "question": "Which day comes after Thursday?",
    "options": [
-    "Sunday",
-    "Wednesday",
-    "Tuesday",
-    "Thursday"
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Wednesday"
    ],
-   "answerIndex": 2,
-   "answer": "Tuesday",
-   "explanation": "I giorni della settimana in ordine sono: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Dopo lunedì viene martedì (Tuesday).",
+   "answerIndex": 1,
+   "answer": "Friday",
+   "explanation": "After Thursday comes Friday. Dopo giovedì viene venerdì.",
    "active": true,
    "tag": "inglese;days_months_seasons;classe_3;primaria",
    "tags": [
@@ -21698,16 +21698,16 @@
    "area": "inglese",
    "subarea": "days_months_seasons",
    "difficulty": 1,
-   "question": "Which month comes after March?",
+   "question": "Which month comes after June?",
    "options": [
-    "February",
-    "May",
-    "April",
-    "June"
+    "June",
+    "July",
+    "August",
+    "May"
    ],
-   "answerIndex": 2,
-   "answer": "April",
-   "explanation": "I mesi in ordine: January, February, March, April, May... Dopo marzo (March) viene aprile (April).",
+   "answerIndex": 1,
+   "answer": "July",
+   "explanation": "After June comes July. Dopo giugno viene luglio.",
    "active": true,
    "tag": "inglese;days_months_seasons;classe_3;primaria",
    "tags": [
@@ -21927,7 +21927,7 @@
    "sourceSubject": "inglese",
    "class": 3,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "Which sentence uses 'there is' correctly?",
    "options": [
@@ -21960,7 +21960,7 @@
    "sourceSubject": "inglese",
    "class": 3,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "Which sentence uses colours correctly?",
    "options": [
@@ -21993,7 +21993,7 @@
    "sourceSubject": "inglese",
    "class": 3,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "frasi_semplici",
    "difficulty": 2,
    "question": "Choose the correct greeting for the morning.",
    "options": [
@@ -22026,7 +22026,7 @@
    "sourceSubject": "inglese",
    "class": 3,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 3,
    "question": "Which sentence correctly uses 'can'?",
    "options": [
@@ -22059,7 +22059,7 @@
    "sourceSubject": "inglese",
    "class": 3,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "comprensione_in_contesto",
    "difficulty": 3,
    "question": "Read: 'It is Sunday. The shops are closed. The family is at home. Mum is reading, Dad is cooking and the children are playing in the garden.' What day is it?",
    "options": [
@@ -22490,16 +22490,16 @@
    "area": "inglese",
    "subarea": "lessico_base",
    "difficulty": 2,
-   "question": "What is the English word for 'bicicletta'?",
+   "question": "What is the English word for 'ombrello'?",
    "options": [
-    "motorbike",
-    "bicycle",
-    "scooter",
-    "skateboard"
+    "raincoat",
+    "umbrella",
+    "umbrela",
+    "sunglasses"
    ],
    "answerIndex": 1,
-   "answer": "bicycle",
-   "explanation": "'Bicycle' (o 'bike') è la bicicletta. È un mezzo di trasporto ecologico! 'Motorbike' è moto, 'scooter' è monopattino/scooter.",
+   "answer": "umbrella",
+   "explanation": "'Umbrella' è l'ombrello, ti protegge dalla pioggia. 'Raincoat' è l'impermeabile.",
    "active": true,
    "tag": "inglese;lessico_base;classe_4;primaria",
    "tags": [
@@ -25854,7 +25854,7 @@
    "sourceSubject": "inglese",
    "class": 4,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "frasi_semplici",
    "difficulty": 2,
    "question": "Which of these is a correct greeting when you meet a friend in the morning?",
    "options": [
@@ -29121,7 +29121,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "This is the book ___ I told you about.",
    "options": [
@@ -29154,7 +29154,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "She ___ always ___ her teeth before going to bed.",
    "options": [
@@ -29187,7 +29187,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "___ did you go on holiday last summer?",
    "options": [
@@ -29220,7 +29220,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 3,
    "question": "The man ___ lives next door is a famous scientist.",
    "options": [
@@ -29253,7 +29253,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "Which sentence has the correct word order?",
    "options": [
@@ -29286,7 +29286,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "I haven't seen him ___ last Monday.",
    "options": [
@@ -29319,7 +29319,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 3,
    "question": "The planet ___ we live on is called Earth.",
    "options": [
@@ -29352,7 +29352,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 1,
    "question": "She finished her homework, and ___ she went to play.",
    "options": [
@@ -29385,7 +29385,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 3,
    "question": "Which sentence is correct?",
    "options": [
@@ -29418,7 +29418,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "She has lived in this city ___ five years.",
    "options": [
@@ -29451,7 +29451,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 3,
    "question": "The scientist ___ discovered penicillin was Alexander Fleming.",
    "options": [
@@ -29484,7 +29484,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 2,
    "question": "We usually eat lunch ___ noon.",
    "options": [
@@ -29517,7 +29517,7 @@
    "sourceSubject": "inglese",
    "class": 5,
    "area": "inglese",
-   "subarea": "vari",
+   "subarea": "uso_guidato",
    "difficulty": 1,
    "question": "My birthday is ___ the 15th of March.",
    "options": [

@@ -1,26 +1,26 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 9900,
+ "totalQuestions": 9698,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
-   "rows": 1860,
+   "rows": 1934,
    "stats": {
     "file": "template_matematica_da_json.csv",
-    "rows": 1860,
+    "rows": 1876,
     "areas": {
-     "tabelline": 196,
-     "aritmetica": 501,
+     "tabelline": 186,
+     "aritmetica": 539,
      "problemi": 428,
-     "geometria": 371,
-     "logica_e_dati": 380
+     "geometria": 366,
+     "logica_e_dati": 415
     },
     "classes": {
-     "2": 450,
-     "3": 441,
-     "4": 482,
-     "5": 503
+     "2": 444,
+     "3": 458,
+     "4": 506,
+     "5": 526
     }
    }
   },
@@ -31,14 +31,7 @@
     "file": "matematica_problemi.csv",
     "rows": 1361,
     "areas": {
-     "misure": 648,
-     "tempo": 40,
-     "addizione": 33,
-     "moltiplicazione": 24,
-     "euro_denaro": 287,
-     "due_operazioni": 9,
-     "frazioni": 7,
-     "divisione": 1
+     "problemi": 1049
     },
     "classes": {
      "2": 264,
@@ -171,32 +164,31 @@
   },
   "scienze": {
    "path": "scienze.json",
-   "rows": 1119,
+   "rows": 843,
    "stats": {
     "file": "template_scienze_800.csv",
-    "rows": 1119,
+    "rows": 1319,
     "areas": {
-     "viventi_non_viventi": 77,
+     "viventi_non_viventi": 89,
      "materia_materiali_trasformazioni": 55,
-     "terra_stagioni_ambiente": 48,
-     "corpo_umano_salute": 131,
-     "metodo_scientifico": 52,
-     "materia_materiali": 54,
-     "viventi_biologia": 62,
-     "ecosistemi_ambiente": 64,
-     "aria_acqua_suolo_materia": 60,
-     "viventi_ambiente": 92,
-     "scienza_tecnologia": 57,
-     "astronomia_terra": 49,
-     "materia_energia_fenomeni": 53,
-     "forze_luce_suono": 53,
-     "scienze": 212
+     "terra_stagioni_ambiente": 56,
+     "corpo_umano_salute": 139,
+     "metodo_scientifico": 66,
+     "materia_materiali": 58,
+     "viventi_biologia": 72,
+     "ecosistemi_ambiente": 63,
+     "aria_acqua_suolo_materia": 45,
+     "viventi_ambiente": 52,
+     "scienza_tecnologia": 19,
+     "astronomia_terra": 51,
+     "materia_energia_fenomeni": 39,
+     "forze_luce_suono": 39
     },
     "classes": {
      "2": 274,
-     "3": 274,
-     "4": 275,
-     "5": 296
+     "3": 211,
+     "4": 160,
+     "5": 198
     }
    }
   },

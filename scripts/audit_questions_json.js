@@ -37,6 +37,15 @@ function add(file, q, type, detail) {
   issues.push({ file, id: q && q.id, type, detail, question: q && q.question });
 }
 
+// Normalized question text for semantic-duplicate detection.
+function normText(s) {
+  return String(s || '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[^\wàèéìòù ]/g, '')
+    .trim();
+}
+
 for (const file of files) {
   const fullPath = path.join(JSON_DIR, file);
   let data;
@@ -57,6 +66,8 @@ for (const file of files) {
   }
 
   const ids = new Set();
+  // Bucket by normalized question text to flag true redundant duplicates.
+  const byText = new Map();
   for (const q of questions) {
     if (!q || typeof q !== 'object') {
       issues.push({ file, type: 'invalid_question_object' });
@@ -68,6 +79,17 @@ for (const file of files) {
 
     if (typeof q.question !== 'string' || !q.question.trim()) add(file, q, 'empty_question');
     if (typeof q.answer !== 'string' || !q.answer.trim()) add(file, q, 'empty_answer');
+
+    // D2 schema guardrails: content fields must be populated and well-formed.
+    if (typeof q.subarea !== 'string' || !q.subarea.trim()) add(file, q, 'empty_subarea');
+    if (![1, 2, 3].includes(q.difficulty)) add(file, q, 'bad_difficulty', String(q.difficulty));
+    if (typeof q.explanation !== 'string' || !q.explanation.trim()) add(file, q, 'empty_explanation');
+
+    const textKey = normText(q.question);
+    if (textKey) {
+      if (!byText.has(textKey)) byText.set(textKey, []);
+      byText.get(textKey).push(q);
+    }
 
     const options = Array.isArray(q.options) ? q.options.map(String) : [];
     if (options.length !== 4) add(file, q, 'options_count', String(options.length));
@@ -97,6 +119,19 @@ for (const file of files) {
     }
     if (file === 'scienze.json' && SCIENZE_BAD_PATTERNS.some((pattern) => pattern.test(String(q.question || '')))) {
       add(file, q, 'scienze_generated_grammar', q.question);
+    }
+  }
+
+  // True redundant duplicates: same normalized question AND same answer AND same option set.
+  // (Same question text with different answer/options is a legitimate variant and is allowed.)
+  for (const group of byText.values()) {
+    if (group.length < 2) continue;
+    const answers = new Set(group.map((q) => normText(q.answer)));
+    const optSets = new Set(
+      group.map((q) => JSON.stringify((Array.isArray(q.options) ? q.options : []).map(normText).sort()))
+    );
+    if (answers.size === 1 && optSets.size === 1) {
+      for (const q of group.slice(1)) add(file, q, 'redundant_duplicate', `dup of ${group[0].id}`);
     }
   }
 }

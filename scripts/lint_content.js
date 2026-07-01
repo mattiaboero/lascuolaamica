@@ -9,26 +9,37 @@ const JSON_DIR = path.join(__dirname, '..', 'json');
 // Italian linguistic patterns to check
 const COMMON_MISTAKES = {
   accents: [
-    { pattern: /\bperche\b/g, message: 'missing accent: "perche" → "perché"', fix: 'perché' },
-    { pattern: /\bqual'?è\b/g, check: (m) => !m.includes('quale'), message: 'should be "qual è" (two words)' },
-    { pattern: /\bpo'\b/g, message: 'missing apostrophe in "po\'è" (if needed)' },
-    { pattern: /\bcome mai\b/g, message: 'consider "perché" instead' },
-    { pattern: /\bcome\s+mai\b/g, message: 'two words: "come mai"' },
-  ],
-  apostrophes: [
-    { pattern: /\bl\s+[aeiou]/g, message: 'missing apostrophe: "l " → "l\'"' },
-    { pattern: /\bun\s+[aeiou]/g, message: 'missing apostrophe: "un " → "un\'"' },
-    { pattern: /\bdell\s+[aeiou]/g, message: 'missing apostrophe: "dell " → "dell\'"' },
+    { pattern: /\bperche\b/gi, message: 'missing accent: "perche" → "perché"' },
+    { pattern: /\bpoiche\b/gi, message: 'missing accent: "poiche" → "poiché"' },
+    { pattern: /\bbenche\b/gi, message: 'missing accent: "benche" → "benché"' },
+    { pattern: /\bfinche\b/gi, message: 'missing accent: "finche" → "finché"' },
+    { pattern: /\bqual'\s*è\b/g, message: 'should be "qual è" (no apostrophe)' },
+    // Truncated accented words: these spellings are unambiguously wrong in Italian.
+    // Skipped when the correctly-accented counterpart also appears (intentional teaching contrast).
+    { pattern: /\b(citta|universita|societa|liberta|verita|qualita|attivita|identita|virtu|gioventu)\b/gi,
+      check: (text) => !hasAccentedCounterpart(text),
+      message: 'missing final accent on a truncated word (e.g. "citta" → "città")' },
   ],
   spacing: [
     { pattern: /\s{2,}/g, message: 'double or multiple spaces' },
     { pattern: /\s+[,;:.!?]/g, message: 'space before punctuation' },
   ],
-  quotes: [
-    { pattern: /"([^"]*)'/g, message: 'mixed quotes' },
-    { pattern: /'([^']*)"/g, message: 'mixed quotes' },
-  ],
 };
+
+// Truncated-accent pairs (bare → accented). Used to suppress false positives in
+// ortografia questions that deliberately quote the wrong form next to the right one.
+const ACCENT_PAIRS = {
+  citta: 'città', universita: 'università', societa: 'società', liberta: 'libertà',
+  verita: 'verità', qualita: 'qualità', attivita: 'attività', identita: 'identità',
+  virtu: 'virtù', gioventu: 'gioventù',
+};
+function hasAccentedCounterpart(text) {
+  const lower = text.toLowerCase();
+  for (const [bare, accented] of Object.entries(ACCENT_PAIRS)) {
+    if (new RegExp(`\\b${bare}\\b`, 'i').test(lower) && lower.includes(accented)) return true;
+  }
+  return false;
+}
 
 // Common typos
 const TYPOS = ['the', 'tha', 'yuo', 'recieve', 'occured', 'knowwn'];
@@ -37,6 +48,11 @@ const TYPOS = ['the', 'tha', 'yuo', 'recieve', 'occured', 'knowwn'];
 const GENERATOR_META = /ricontroll|aggiorno (la )?risposta|ricalcolo|aggiorno risposta|come (assistente|modello)|non posso rispondere/i;
 const SELF_CONTRADICTION = /tutte le opzioni conteng|tutte.{0,30}derivano.{0,30}ma scegliamo|scegliamo la più comune|ma 'questa' è la più/i;
 const ANOMALOUS_ACCENT = /[íúÍÚ]/; // acute on i/u — not used in standard Italian (which uses ì/ù grave)
+// D3: dangling cross-references. A quiz question is served standalone and shuffled,
+// so any pointer to another question/number/"above" is a broken artifact (e.g. the
+// scienze "nella domanda n.X" batch culled in 4.11.4). Checked on the QUESTION field
+// only — explanations legitimately say things like "nella domanda indiretta l'ordine…".
+const DANGLING_REFERENCE = /\bdomanda\s+n\.?\s*\d+|\bdomanda precedente\b|\b(come visto|vedi|figura|immagine)\s+(qui\s+)?sopra\b|nell'esercizio precedente/i;
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
   const errors = [];
@@ -53,6 +69,9 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   }
   if (explanation && SELF_CONTRADICTION.test(explanation)) {
     errors.push({ level: 'error', field: 'explanation', msg: 'self-contradictory "all options qualify" explanation' });
+  }
+  if (question && DANGLING_REFERENCE.test(question)) {
+    errors.push({ level: 'error', field: 'question', msg: 'dangling cross-reference in question (e.g. "domanda n.X" / "vedi sopra") — quiz questions must be self-contained' });
   }
   const isItalianText = subject !== 'inglese';
   if (isItalianText && ANOMALOUS_ACCENT.test(`${question || ''} ${explanation || ''}`)) {
@@ -82,21 +101,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   }
 
   // Italian linguistic checks (only for IT subjects)
-  const isItalian = subject !== 'inglese' && (subject !== 'inglese');
+  const isItalian = subject !== 'inglese';
   if (isItalian && question) {
     const text = question + ' ' + (explanation || '');
 
-    COMMON_MISTAKES.accents.forEach(rule => {
-      if (rule.pattern.test(text)) {
-        errors.push({ level: 'warn', field: 'text', msg: rule.message });
-      }
-    });
-
-    COMMON_MISTAKES.spacing.forEach(rule => {
-      if (rule.pattern.test(text)) {
-        errors.push({ level: 'warn', field: 'text', msg: rule.message });
-      }
-    });
+    // Apply every linguistic rule group (accents, apostrophes, spacing, quotes).
+    for (const group of Object.values(COMMON_MISTAKES)) {
+      group.forEach(rule => {
+        if (rule.check && !rule.check(text)) return;
+        rule.pattern.lastIndex = 0; // global regexes keep lastIndex between .test() calls
+        if (rule.pattern.test(text)) {
+          errors.push({ level: 'warn', field: 'text', msg: rule.message });
+        }
+      });
+    }
 
     // Check for typos in options/explanation
     if (explanation) {

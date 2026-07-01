@@ -12,8 +12,8 @@ __sa.subjectConfig = {
     areaMap: {
       oral: ['lingua', 'lessico'],
       read: ['lettura'],
-      write: ['scrittura', 'ortografia'],
-      gram: ['grammatica', 'morfologia', 'sintassi']
+      write: ['scrittura', 'ortografia', 'alfabeto'],
+      gram: ['grammatica', 'morfologia', 'sintassi', 'riflessione_sulla_lingua']
     }
   },
   bgIcons: ['📖', '✍️', '📝', '🔤', '💬', '📚'],
