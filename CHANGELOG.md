@@ -1,5 +1,27 @@
 # Changelog Repo
 
+## 4.12.4 - 2026-07-01
+
+### Added
+- content(scienze): **G8 fase 2 batch 2+3 — top-up classi 5 e 3.** +52 domande classe 5 (198 → **250**) e +39 classe 3 (211 → **250**), completando il target di 250 domande/classe per tutte le classi di scienze (c2=274, c3/c4/c5=250). Classe 5: organi di senso e sistema nervoso, ecosistemi e catene alimentari, biodiversità, sostenibilità energetica, atomi e molecole. Classe 3: salute e igiene di base, ciclo dell'acqua, viventi/non viventi, parti della pianta. Mix di difficoltà adeguato all'età, distrattori plausibili, spiegazioni formative, nessun duplicato semantico. Totale domande **9.788 → 9.879**.
+
+### Changed
+- chore: bump versione `4.12.3` → `4.12.4` (`json/scienze.json` precachato dal service worker). Aggiornati `json/index.json`, `README.md`, `llms.txt`, `reports/coverage.md`.
+
+## 4.12.3 - 2026-07-01
+
+### Added
+- content(scienze): **G8 fase 2 batch 1 — top-up classe 4.** +90 domande vettate su 11 subaree sotto quota, portando scienze c4 da 160 a **250 domande** (target di piano). Mix di difficoltà 1/2/3 (30/40/20). Aree coperte: passaggi di stato e ciclo dell'acqua, stati e proprietà della materia, trasformazioni reversibili/irreversibili, salute e igiene, movimenti della Terra, forze e movimento, luce e suono, energia e fonti rinnovabili, classificazione dei viventi, adattamenti, tutela ambientale. Ogni domanda con distrattori plausibili e spiegazione formativa; nessun duplicato semantico. Totale domande **9.698 → 9.788**.
+
+### Changed
+- chore: bump versione `4.12.2` → `4.12.3` (`json/scienze.json` precachato dal service worker). Aggiornati `json/index.json`, `README.md`, `llms.txt`, `reports/coverage.md`.
+
+## 4.12.2 - 2026-07-01
+
+### Changed
+- content(scienze): **G8 fase 1 — consolidamento subaree.** Rimappate 707/843 domande da 120 combinazioni area/subarea frammentate (retaggio ingest) a ~38 macro-subaree (2-4 per area, stesso pattern del consolidamento civica G3). Nessuna domanda aggiunta/rimossa/modificata nel testo, solo il campo `subarea`. Celle sotto soglia coverage: 315 → 273. Prepara il terreno per il top-up G8 fase 2 (scienze c3/c4/c5 sotto quota 250/classe).
+- chore: bump versione `4.12.1` → `4.12.2` (`json/scienze.json` precachato dal service worker).
+
 ## 4.12.1 - 2026-07-01
 
 ### Added

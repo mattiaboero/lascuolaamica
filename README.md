@@ -3,10 +3,10 @@
 [![Licenza MIT](https://img.shields.io/badge/licenza-MIT-blue.svg)](LICENSE)
 [![PWA](https://img.shields.io/badge/PWA-supportata-brightgreen.svg)](https://lascuolaamica.it)
 [![WCAG 2.1 AA](https://img.shields.io/badge/WCAG%202.1-AA-success.svg)](https://lascuolaamica.it/accessibilita)
-[![Domande](https://img.shields.io/badge/domande-9.698-orange.svg)](https://lascuolaamica.it)
+[![Domande](https://img.shields.io/badge/domande-9.879-orange.svg)](https://lascuolaamica.it)
 [![Gratuito](https://img.shields.io/badge/accesso-gratuito%20%26%20senza%20registrazione-yellow.svg)](https://lascuolaamica.it)
 
-Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 9.698 domande — senza registrazione, senza tracciamento, accessibile anche offline.
+Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 9.879 domande — senza registrazione, senza tracciamento, accessibile anche offline.
 
 🌐 **[lascuolaamica.it](https://lascuolaamica.it)**
 
@@ -50,7 +50,7 @@ I progressi vengono salvati localmente nel browser. Non c'è nessun server che l
 - **PWA con supporto offline** — funziona dopo il primo caricamento, anche su URL pulite come `/storia` o `/faq`
 - **Accessibilità WCAG 2.1 AA** — validata manualmente con tastiera, VoiceOver, zoom 200% e riduzione movimento
 - **Privacy-first** — nessuna registrazione, nessun cookie di terze parti, dati di gioco salvati solo nella memoria locale del browser
-- **9.698 domande** su 8 materie, coerenti con le Indicazioni Nazionali per la scuola primaria
+- **9.879 domande** su 8 materie, coerenti con le Indicazioni Nazionali per la scuola primaria
 - **Font self-hosted** — nessuna richiesta esterna a Google Fonts o CDN
 - **Politiche di sicurezza restrittive** — contenuti pubblici e aree tecniche separati con controlli dedicati
 

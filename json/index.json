@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 9698,
+ "totalQuestions": 9879,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
@@ -164,31 +164,31 @@
   },
   "scienze": {
    "path": "scienze.json",
-   "rows": 843,
+   "rows": 1024,
    "stats": {
     "file": "template_scienze_800.csv",
-    "rows": 1319,
+    "rows": 1024,
     "areas": {
-     "viventi_non_viventi": 89,
+     "viventi_non_viventi": 102,
      "materia_materiali_trasformazioni": 55,
      "terra_stagioni_ambiente": 56,
-     "corpo_umano_salute": 139,
+     "corpo_umano_salute": 172,
      "metodo_scientifico": 66,
-     "materia_materiali": 58,
-     "viventi_biologia": 72,
-     "ecosistemi_ambiente": 63,
-     "aria_acqua_suolo_materia": 45,
-     "viventi_ambiente": 52,
+     "materia_materiali": 76,
+     "viventi_biologia": 87,
+     "ecosistemi_ambiente": 82,
+     "aria_acqua_suolo_materia": 60,
+     "viventi_ambiente": 72,
      "scienza_tecnologia": 19,
-     "astronomia_terra": 51,
-     "materia_energia_fenomeni": 39,
-     "forze_luce_suono": 39
+     "astronomia_terra": 60,
+     "materia_energia_fenomeni": 60,
+     "forze_luce_suono": 57
     },
     "classes": {
      "2": 274,
-     "3": 211,
-     "4": 160,
-     "5": 198
+     "3": 250,
+     "4": 250,
+     "5": 250
     }
    }
   },
