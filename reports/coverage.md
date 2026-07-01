@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 01/07/2026, 13:18:06
+Data generazione: 01/07/2026, 16:48:23
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -267,8 +267,7 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | sostenibilita_e_osservazione| 12 ⚠️  | 2  ⚠️  | 1  ⚠️  | 1  ⚠️  | 16   
 | sostenibilita_energetica| 1  ⚠️  | 0     | 0     | 15    | 16   
 | stagioni_e_tempo_atmosferico| 40    | 0     | 0     | 0     | 40   
-| stati_e_proprieta_materia| 25    | 0     | 0     | 0     | 25   
-| stati_proprieta_materia| 9  ⚠️  | 10 ⚠️  | 15    | 10 ⚠️  | 44   
+| stati_proprieta_materia| 34    | 10 ⚠️  | 15    | 10 ⚠️  | 69   
 | tecnologia_applicata   | 2  ⚠️  | 1  ⚠️  | 5  ⚠️  | 1  ⚠️  | 9    
 | terra_e_movimenti      | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 12 ⚠️  | 27   
 | trasformazioni_ed_esperimenti| 1  ⚠️  | 10 ⚠️  | 10 ⚠️  | 1  ⚠️  | 22   
@@ -441,7 +440,6 @@ storia          | cambiamenti_e_cause       | c2    | 9
 storia          | confronti_e_sintesi       | c3    | 9
 storia          | storia_personale          | c2    | 9
 scienze         | osservazione_e_dati       | c3    | 9
-scienze         | stati_proprieta_materia   | c2    | 9
 problemi        | due_operazioni            | c3    | 10
 civica          | diritti_e_doveri          | c3    | 10
 civica          | gentilezza_in_strada      | c4    | 10
@@ -544,4 +542,4 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 263
+Totale celle sotto soglia: 262

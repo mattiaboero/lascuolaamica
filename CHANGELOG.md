@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.5 - 2026-07-01
+
+### Changed
+- content(scienze): unificato slug subarea duplicato — `stati_e_proprieta_materia` (area `materia_materiali_trasformazioni`, 25 domande) rinominato in `stati_proprieta_materia`, coerente con lo stesso slug già usato in altre 3 aree. Nessuna domanda modificata nel testo. Nessun impatto UI (A4 raggruppa già i sotto-ambiti per etichetta visualizzata).
+- chore: bump versione `4.12.4` → `4.12.5` (`json/scienze.json` precachato). Aggiornati `json/index.json`, `llms.txt`, `reports/coverage.md`.
+
 ## 4.12.4 - 2026-07-01
 
 ### Added

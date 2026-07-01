@@ -905,7 +905,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale di questi è un solido?",
    "options": [
@@ -936,7 +936,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale di questi è un liquido?",
    "options": [
@@ -967,7 +967,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale di questi è un gas?",
    "options": [
@@ -998,7 +998,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale galleggia spesso sull'acqua?",
    "options": [
@@ -1029,7 +1029,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale è trasparente in una finestra?",
    "options": [
@@ -1060,7 +1060,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale si usa spesso per fare quaderni?",
    "options": [
@@ -1091,7 +1091,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale si usa spesso per bottiglie leggere?",
    "options": [
@@ -2493,7 +2493,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale oggetto è spesso di carta?",
    "options": [
@@ -2524,7 +2524,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale oggetto è spesso di legno?",
    "options": [
@@ -2555,7 +2555,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale oggetto è spesso di plastica?",
    "options": [
@@ -2586,7 +2586,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale è duro come un chiodo?",
    "options": [
@@ -2617,7 +2617,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale è morbido come un maglione?",
    "options": [
@@ -2648,7 +2648,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Quale materiale può assorbire bene l'acqua?",
    "options": [
@@ -2679,7 +2679,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Il succo in un bicchiere è...",
    "options": [
@@ -2710,7 +2710,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "L'aria in un palloncino è...",
    "options": [
@@ -2741,7 +2741,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Un cubetto di ghiaccio è...",
    "options": [
@@ -2772,7 +2772,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Il vapore che esce da una pentola è...",
    "options": [
@@ -3981,7 +3981,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Di quale materiale è spesso fatto un libro?",
    "options": [
@@ -4012,7 +4012,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Di quale materiale è spesso fatto un finestra?",
    "options": [
@@ -4043,7 +4043,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Di quale materiale è spesso fatto un chiave?",
    "options": [
@@ -4074,7 +4074,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Di quale materiale è spesso fatto un secchiello?",
    "options": [
@@ -4105,7 +4105,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 1,
    "question": "Di quale materiale è spesso fatto un matita?",
    "options": [
@@ -23955,7 +23955,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 2,
    "question": "Quale di questi materiali è trasparente?",
    "options": [
@@ -23987,7 +23987,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 2,
    "question": "Di quale materiale è fatto di solito un quaderno?",
    "options": [
@@ -24275,7 +24275,7 @@
    "sourceSubject": "scienze",
    "class": 2,
    "area": "materia_materiali_trasformazioni",
-   "subarea": "stati_e_proprieta_materia",
+   "subarea": "stati_proprieta_materia",
    "difficulty": 2,
    "question": "Quale di questi oggetti galleggia sull'acqua?",
    "options": [
