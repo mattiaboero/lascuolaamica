@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.2 - 2026-07-01
+
+### Changed
+- content(scienze): **G8 fase 1 — consolidamento subaree.** Rimappate 707/843 domande da 120 combinazioni area/subarea frammentate (retaggio ingest) a ~38 macro-subaree (2-4 per area, stesso pattern del consolidamento civica G3). Nessuna domanda aggiunta/rimossa/modificata nel testo, solo il campo `subarea`. Celle sotto soglia coverage: 315 → 273. Prepara il terreno per il top-up G8 fase 2 (scienze c3/c4/c5 sotto quota 250/classe).
+- chore: bump versione `4.12.1` → `4.12.2` (`json/scienze.json` precachato dal service worker).
+
 ## 4.12.1 - 2026-07-01
 
 ### Added
