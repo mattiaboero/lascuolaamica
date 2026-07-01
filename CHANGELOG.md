@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.0 - 2026-07-01
+
+### Added
+- feat(quiz): **B1 — streak-aware feedback.** Tracciato lo streak di risposte corrette consecutive nella sessione (reset a 0 su risposta errata). Alle soglie 3/5/8 il messaggio di feedback casuale è sostituito da un messaggio dedicato col conteggio ("3 di fila! 🔥", "5 di fila! Serie perfetta! ⭐", "8 di fila! Sei inarrestabile! 🚀") e la mascotte passa a `celebrate` invece di `happy`. Sotto soglia 3, comportamento invariato (messaggio random + `happy`). Le domande bonus di fine partita restano un flusso separato, non toccano lo streak.
+- Scope B3 (mascotte contestuale) tenuto lean: nessuna nuova UI/DOM — riuso degli elementi `#feedback`/`#mascot` esistenti, zero impatto CSP/accessibilità.
+
+### Changed
+- chore: bump versione `4.11.5` → `4.12.0` (cambio comportamentale in `subject-quiz-core.js`, precachato).
+
 ## 4.11.5 - 2026-07-01
 
 ### Added
