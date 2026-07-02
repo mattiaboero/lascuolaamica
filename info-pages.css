@@ -78,8 +78,8 @@ body.page-accessibilita {
   --page-card-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
   --page-secondary-bg: rgba(232, 240, 255, 0.96);
   --page-secondary-text: #0f2747;
-  --page-title-color: #0f2747;
-  --page-section-color: #0f2747;
+  --page-title-color: #154a86;
+  --page-section-color: #154a86;
   --page-section-border: rgba(156, 185, 225, 0.7);
   --page-breadcrumb-bg: #0b2b56;
   --page-breadcrumb-border: rgba(255, 255, 255, 0.18);
@@ -258,6 +258,12 @@ body.info-page .section-title {
   font-weight: 900;
   margin-bottom: 8px;
   color: var(--page-section-color);
+}
+
+body.info-page h2.section-title {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--page-section-border);
 }
 
 body.info-page .list,
