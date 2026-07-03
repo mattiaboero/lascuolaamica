@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## 4.12.7 - 2026-07-03
+
+### Changed
+- perf(font): ridotto il preload dei font sulle 8 pagine materia (matematica, inglese, problemi, civica, geografia, storia, scienze, italiano) da 5 a 3 pesi critici (Fredoka-700, Nunito-800, Nunito-900). Rimossi i preload di Nunito-regular (peso mai usato in `subject-quiz-theme.css`) e Nunito-700 (usato solo per `.result-msg` post-risposta, non above-the-fold). Le dichiarazioni `@font-face` restano invariate: i pesi non più precaricati continuano a caricare on-demand se richiesti, con priorità di rete più bassa. Verificato su preview: nessun FOUT visibile sul titolo, nessun errore console. Bump versione `4.12.6` → `4.12.7` (HTML precachato modificato).
+
 ## Non rilasciato
 
 ### Changed

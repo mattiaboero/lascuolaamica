@@ -70,12 +70,11 @@ Sei un copywriter SEO italiano per un sito educativo per bambini. Individua in t
 
 ### Gruppo B — Performance
 
-#### B1 — Minificazione asset statici in fase di build
-- **Persona:** Performance engineer · **subagent:** `general-purpose` · **modello:** `opus` · **effort:** High
-- **Dipendenze:** nessuna · **Parallelo:** sì (ma tocca la build → coordinare con A2)
-```
-Sei un performance engineer su un sito statico (no framework, deploy Cloudflare/Netlify via _headers). Obiettivo: minificare CSS e JS senza alterare comportamento né rompere la CSP a hash. Vincoli critici: (a) gli script inline in HTML sono coperti da hash CSP in _headers via scripts/sync_csp_hashes.py — se la minificazione cambia gli inline, gli hash vanno risincronizzati (npm run audit:csp deve restare verde); (b) niente cambi di nome file che romperebbero il precache del service worker sw.js. Proponi e implementa la strategia meno invasiva: minifica i .css e .js ESTERNI (non inline) in un passo di build ripetibile (script npm "build:min"), preservando i sorgenti; aggiorna sw.js/_headers solo se cambiano i path. Misura prima/dopo con npm run lighthouse. Se il rischio CSP è alto, fermati e riporta il trade-off invece di forzare. Chiudi con npm run verify + audit:csp. CHANGELOG.
-```
+#### B1 — Minificazione asset statici in fase di build — ✅ GIÀ FATTO (verificato 2026-07-03)
+- **Esito:** già implementato e in produzione. Il build command di deploy è `scripts/export_for_cloudflare.sh`, che nella funzione `minify_export_assets()` esegue `esbuild --minify --legal-comments=none --target=es2020` su **tutti** i .js/.css nella dir `export/` (l'output pubblicato). Non-distruttivo: i sorgenti in root restano leggibili/editabili a mano; le copie minificate vivono in `export/` (gitignored).
+- **Perché non rompe nulla:** esbuild tocca solo i file ESTERNI (`script-src 'self'`, nessun hash); gli script inline in HTML non vengono toccati → hash CSP invariati; i nomi file restano identici → precache SW intatto.
+- **Guadagno reale misurato** (poi ulteriormente ridotto da brotli all'edge): shared.js 90→64KB (gzip 21.6→18.2), subject-quiz-core.js 91→45KB (gzip 22.1→15.1), subject-quiz-theme.css 50→39KB, index.css 23→19KB.
+- **Nota:** la voce originale di questo piano nasceva da analisi incompleta (letto `prepublish-check.sh`/`package.json` ma non `export_for_cloudflare.sh`). Nessuna azione richiesta.
 
 #### B2 — Ridurre l'over-preload dei font
 - **Persona:** Performance engineer · **subagent:** `general-purpose` · **modello:** `sonnet` · **effort:** Medium
