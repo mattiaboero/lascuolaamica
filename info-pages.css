@@ -39,7 +39,7 @@ body.info-page {
   --page-card-padding: 24px 20px 26px;
   --page-footer-bg: rgba(255, 255, 255, 0.9);
   --page-footer-border: rgba(31, 95, 170, 0.12);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Nunito Fallback', sans-serif;
   background: var(--page-bg);
   color: var(--page-text);
   min-height: 100vh;
@@ -228,7 +228,7 @@ body.info-page .card {
 }
 
 body.info-page .title {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: clamp(1.9rem, 7vw, 2.8rem);
   line-height: 1.1;
   margin-bottom: 14px;
@@ -490,7 +490,7 @@ body.info-page .skip-link:focus {
 }
 
 .modal-title {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: 1.7rem;
   margin-bottom: 4px;
   color: var(--page-link-strong, var(--info-light-link-strong));
@@ -503,7 +503,7 @@ body.info-page .skip-link:focus {
 }
 
 .modal-body h3 {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: 1.08rem;
   margin: 14px 0 6px;
   color: var(--page-link-strong, var(--info-light-link-strong));

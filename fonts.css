@@ -37,3 +37,54 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Fallback locali con metriche allineate ai webfont, per ridurre il CLS dovuto allo swap */
+@font-face {
+  font-family: 'Fredoka One Fallback';
+  src: local('Arial');
+  font-weight: 400;
+  ascent-override: 79.18%;
+  descent-override: 19.18%;
+  line-gap-override: 0%;
+  size-adjust: 123.02%;
+}
+
+@font-face {
+  font-family: 'Nunito Fallback';
+  src: local('Arial');
+  font-weight: 400;
+  ascent-override: 85.65%;
+  descent-override: 29.91%;
+  line-gap-override: 0%;
+  size-adjust: 118.03%;
+}
+
+@font-face {
+  font-family: 'Nunito Fallback';
+  src: local('Arial');
+  font-weight: 700;
+  ascent-override: 83.10%;
+  descent-override: 29.02%;
+  line-gap-override: 0%;
+  size-adjust: 121.66%;
+}
+
+@font-face {
+  font-family: 'Nunito Fallback';
+  src: local('Arial');
+  font-weight: 800;
+  ascent-override: 81.58%;
+  descent-override: 28.49%;
+  line-gap-override: 0%;
+  size-adjust: 123.92%;
+}
+
+@font-face {
+  font-family: 'Nunito Fallback';
+  src: local('Arial');
+  font-weight: 900;
+  ascent-override: 80.12%;
+  descent-override: 27.97%;
+  line-gap-override: 0%;
+  size-adjust: 126.19%;
+}
