@@ -497,6 +497,13 @@ else
   fi
 fi
 
+if npm run --silent freshness >/dev/null 2>&1; then
+  echo "[OK] freshness: sitemap.xml e dateModified JSON-LD rigenerati dai timestamp reali"
+else
+  echo "[ERROR] freshness: rigenerazione sitemap.xml/JSON-LD fallita (npm run freshness)"
+  status=1
+fi
+
 if [[ ! -f "sitemap.xml" ]]; then
   echo "[ERROR] Missing file: sitemap.xml"
   status=1

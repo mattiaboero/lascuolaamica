@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## Non rilasciato
+
+### Changed
+- chore(build): aggiunto script npm `freshness` (`refresh_structured_data.py` → `generate_sitemap.py` → `sync_csp_hashes.py`) e agganciato a `prepublish-check.sh` prima della validazione di `sitemap.xml`, cosicché il gate di rilascio rigeneri sempre `lastmod`/`dateModified` dai timestamp reali dei file invece di lasciarli stale. Rigenerati `sitemap.xml` e i `dateModified` JSON-LD delle pagine con contenuti allineati alle modifiche reali (fino al 2026-07-03).
+
+## 4.12.6 - 2026-07-03
+
+### Fixed
+- content: allineato il conteggio domande stale ("7.000+" in `index.html`, "7.300" in `faq.html`, "843" per scienze in `per-insegnanti.html") al totale reale di `json/index.json` (9.879). `index.html` e `faq.html` ora mostrano "9.800+" (arrotondamento onesto); `per-insegnanti.html` mostra "1.024 domande" per scienze. Verificato che `llms.txt` e `README.md` fossero già corretti (9.879) e che `#questionsTotalCount` resti popolato dinamicamente da JS senza duplicazioni manuali. Bump versione `4.12.5` → `4.12.6` (contenuto precachato modificato).
+
 ## 4.12.5 - 2026-07-01
 
 ### Changed
