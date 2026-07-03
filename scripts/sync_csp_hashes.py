@@ -47,12 +47,35 @@ def _hash(body: str) -> str:
     return "'sha256-" + base64.b64encode(digest).decode("ascii") + "'"
 
 
+# Type di <script> effettivamente ESEGUITI dal browser e quindi soggetti a
+# CSP script-src. Tutto il resto (es. application/ld+json, application/json,
+# speculationrules) e' un "data block" inerte: il browser non lo esegue, CSP
+# non lo blocca e NON serve alcun hash. Hasharli creava fragilita' inutile:
+# ogni modifica a date/conteggi/FAQ nei blocchi JSON-LD rompeva la CSP.
+JS_EXECUTABLE_TYPES = {
+    "",  # nessun type => classic script eseguibile
+    "text/javascript",
+    "application/javascript",
+    "module",
+    "importmap",
+}
+
+
+def _script_type(attrs: str) -> str:
+    match = re.search(r"type\s*=\s*[\"']([^\"']+)[\"']", attrs, re.I)
+    return match.group(1).strip().lower() if match else ""
+
+
 def _inline_script_hashes() -> list[str]:
     hashes: set[str] = set()
     for path in sorted(ROOT.glob("*.html")):
         html = path.read_text(encoding="utf-8")
         for match in SCRIPT_RE.finditer(html):
-            if re.search(r"\bsrc\s*=", match.group("attrs"), re.I):
+            attrs = match.group("attrs")
+            if re.search(r"\bsrc\s*=", attrs, re.I):
+                continue
+            # Solo gli script eseguibili sono soggetti a script-src.
+            if _script_type(attrs) not in JS_EXECUTABLE_TYPES:
                 continue
             body = match.group("body")
             if not body.strip():

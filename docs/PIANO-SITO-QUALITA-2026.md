@@ -85,12 +85,11 @@ Sei un performance engineer. Le pagine materia precaricano 5 woff2 (fredoka 700,
 
 ### Gruppo C — Sicurezza & Stabilità
 
-#### C1 — Ridurre la fragilità della CSP inline
-- **Persona:** Security/frontend engineer · **subagent:** `general-purpose` · **modello:** `opus` · **effort:** High
-- **Dipendenze:** valutare prima di B1 (stesso terreno inline) · **Parallelo:** no rispetto a B1
-```
-Sei un security engineer. La CSP in _headers elenca 46 hash di script inline, sincronizzati a mano con scripts/sync_csp_hashes.py: ogni edit inline rischia di rompere la CSP se il sync salta. Valuta l'esternalizzazione degli script inline ripetuti/critici in file .js self-hosted (coperti da script-src 'self'), riducendo il numero di hash. NON introdurre 'unsafe-inline' né nonce dinamici (sito statico, no server). Per ogni inline mantieni identico il comportamento e l'ordine di esecuzione (defer). Dopo l'intervento rilancia npm run audit:csp finché verde e verifica su preview che nessuna pagina abbia violazioni CSP in console. Riporta quanti hash eliminati. Se un inline non è esternalizzabile senza rischio (es. bootstrap critico anti-FOUC), lascialo e spiega perché. CHANGELOG.
-```
+#### C1 — Ridurre la fragilità della CSP inline — ✅ FATTO (2026-07-03), diverso dalla diagnosi iniziale
+- **Diagnosi corretta:** l'analisi che stava dietro questa voce assumeva "46 hash di script inline eseguibili da esternalizzare". Falso. **Tutti i 48 `<script>` inline del sito sono `type="application/ld+json"`** (dati strutturati SEO), zero JavaScript eseguibile inline. I data block JSON-LD non vengono eseguiti dal browser e **CSP `script-src` non li governa**: i loro hash erano superflui.
+- **Fix applicato (migliore dell'esternalizzazione):** modificato `scripts/sync_csp_hashes.py` per hashare solo gli script *eseguibili* (`type` assente/`text/javascript`/`module`/`importmap`), saltando i data block. `_headers` `script-src` passa da **46 hash a solo `'self'`** (hash `style-src` invariati). Nessuna esternalizzazione, nessun rischio ordine/FOUC.
+- **Perché è la vera fragilità:** i JSON-LD cambiano di continuo (date, conteggi, FAQ) → ogni edit rompeva la CSP e imponeva un resync (è successo in A1 e A2). Ora quegli edit non toccano più la CSP.
+- **Nessun impatto produzione:** i data block non erano comunque soggetti a enforcement `script-src`. Nessun bump versione (`_headers`/`scripts/` non precachati). Verificato: gate verde, `npm run audit:csp` OK, 3 JSON-LD intatti nel DOM di una pagina materia.
 
 #### C2 — Reporting CSP e hardening header residuo
 - **Persona:** Security engineer · **subagent:** `general-purpose` · **modello:** `sonnet` · **effort:** Medium

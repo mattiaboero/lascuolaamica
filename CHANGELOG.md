@@ -8,6 +8,7 @@
 ## Non rilasciato
 
 ### Changed
+- fix(csp): `sync_csp_hashes.py` ora hasha solo gli script **eseguibili** (`type` assente/`text/javascript`/`module`/`importmap`), non più i blocchi `application/ld+json`. Tutti i 48 `<script>` inline del sito sono data block JSON-LD (dati strutturati SEO), che il browser non esegue e che CSP `script-src` non governa: i loro hash erano inutili e creavano fragilità: ogni modifica a date/conteggi/FAQ nei JSON-LD rompeva la CSP e imponeva un resync (vedi A1/A2). `_headers` `script-src` passa da 46 hash a solo `'self'` (hash `style-src` invariati). Nessun impatto su produzione: i data block non erano comunque soggetti a enforcement. Nessun bump versione (`_headers`/`scripts/` non precachati).
 - chore(build): aggiunto script npm `freshness` (`refresh_structured_data.py` → `generate_sitemap.py` → `sync_csp_hashes.py`) e agganciato a `prepublish-check.sh` prima della validazione di `sitemap.xml`, cosicché il gate di rilascio rigeneri sempre `lastmod`/`dateModified` dai timestamp reali dei file invece di lasciarli stale. Rigenerati `sitemap.xml` e i `dateModified` JSON-LD delle pagine con contenuti allineati alle modifiche reali (fino al 2026-07-03).
 
 ## 4.12.6 - 2026-07-03
