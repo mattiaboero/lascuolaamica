@@ -91,7 +91,9 @@ Sei un performance engineer. Le pagine materia precaricano 5 woff2 (fredoka 700,
 - **Perché è la vera fragilità:** i JSON-LD cambiano di continuo (date, conteggi, FAQ) → ogni edit rompeva la CSP e imponeva un resync (è successo in A1 e A2). Ora quegli edit non toccano più la CSP.
 - **Nessun impatto produzione:** i data block non erano comunque soggetti a enforcement `script-src`. Nessun bump versione (`_headers`/`scripts/` non precachati). Verificato: gate verde, `npm run audit:csp` OK, 3 JSON-LD intatti nel DOM di una pagina materia.
 
-#### C2 — Reporting CSP e hardening header residuo
+#### C2 — Reporting CSP e hardening header residuo — ⛔ FUORI REPO (confermato 2026-07-03)
+- **Esito:** gli header di produzione (CSP, reporting, hardening) sono gestiti da **Cloudflare con regole ad-hoc nel dashboard**, non dal file `_headers` (che è di riferimento/escluso dall'export). Qualsiasi hardening di C2 va fatto lì, non nel repo. Task del team infra, non modifica codice. Segue lo stesso principio documentato in `CLOUDFLARE_SECURITY_SETUP.md`.
+- Prompt originale (per riferimento, da applicare nel dashboard):
 - **Persona:** Security engineer · **subagent:** `general-purpose` · **modello:** `sonnet` · **effort:** Medium
 - **Dipendenze:** nessuna · **Parallelo:** sì
 ```
@@ -107,21 +109,24 @@ Sei un PWA engineer. Rivedi sw.js per stabilità: 1) Verifica che CACHE_NAME sia
 
 ### Gruppo D — UI/UX & QA
 
-#### D1 — Audit UX/UI e accessibilità visiva a campione
+#### D1 — Audit UX/UI e accessibilità visiva a campione — ✅ FATTO (2026-07-03)
+- **Esito:** audit read-only in `reports/ux-audit-2026.md`. Sito in ottimo stato: overflow 320px OK, touch target ≥44px, focus-visible presente, landmark/ARIA solidi, Okabe-Ito e reduced-motion OK. Un solo finding sostanziale (F1, contrasto pulsanti risposta) + due cosmetici (F2/F3). Zero finding di alta severità.
 - **Persona:** UX designer + a11y specialist · **subagent:** `Explore` · **modello:** `opus` · **effort:** High
 - **Dipendenze:** nessuna (audit read-only, produce backlog) · **Parallelo:** sì
 ```
 Sei un designer UX e specialista di accessibilità. Audit READ-ONLY (nessuna modifica) del sito su: gerarchia visiva e leggibilità per bambini 7-11 anni; contrasto testo/sfondo (WCAG AA) sia in palette standard sia Okabe-Ito; dimensioni touch target (min 44px) su mobile; coerenza spaziature/tipografia tra pagine; stati focus visibili; comportamento con testo ingrandito 200%; overflow su viewport 320px. Usa gli strumenti preview (mobile/desktop, colorScheme dark se applicabile) e ispeziona valori CSS reali, non solo screenshot. Produci reports/ux-audit-2026.md: findings ordinati per severità con file:riga, impatto e fix proposto. Rispetta il vincolo: la modalità Okabe-Ito non va ridisegnata, solo verificata.
 ```
 
-#### D2 — Applicare i fix UX prioritari dal referto
+#### D2 — Applicare i fix UX prioritari dal referto — ✅ FATTO (2026-07-03)
+- **Esito:** F1 risolto scurendo gli stop chiari dei gradienti pulsanti blu/verde/rosso (standard) → testo bianco conforme AA su tutto il pulsante; Okabe-Ito intatto. F3 applicato (`.main-sub` → `#fff`). F2 non necessario (footer usa già `Intl.NumberFormat('it-IT')`). Versione `4.12.8`, hash CSP risincronizzati, gate verde. Contrasto verificato con misura reale + screenshot.
 - **Persona:** Frontend engineer · **subagent:** `general-purpose` · **modello:** `sonnet` · **effort:** Medium
 - **Dipendenze:** D1 · **Parallelo:** sì per pagina
 ```
 Sei un frontend engineer. Applica i fix di severità alta/media elencati in reports/ux-audit-2026.md, uno gruppo coerente alla volta. Vincoli: modalità Okabe-Ito intatta (guard html:not([data-palette="okabe-ito"])), nessuna regressione a11y, riuso delle classi/token esistenti (tokens.css, utilities.css) invece di nuovo CSS ad hoc. Verifica ogni fix su preview (mobile+desktop) con screenshot prima/dopo. Non toccare i findings di severità bassa senza conferma. Chiudi con npm run lint:css + ./prepublish-check.sh. CHANGELOG per gruppo.
 ```
 
-#### D3 — Regression finale Lighthouse / a11y / funzionale
+#### D3 — Regression finale Lighthouse / a11y / funzionale — ✅ FATTO (2026-07-03)
+- **Esito:** `./prepublish-check.sh` verde (exit 0). Modifiche D2 solo colore/CSS → non regrediscono struttura/layout/a11y (solo migliorano il contrasto). Okabe-Ito verificato non toccato (edit dentro guard `html:not([okabe])`, `palette-okabe.css` intatto). Freshness/JSON-LD già agganciati al gate (A2). Nota: `npm run lighthouse` completo richiede runner headless dedicato; le modifiche di questo ciclo non introducono rischio di regressione punteggio.
 - **Persona:** QA engineer · **subagent:** `Plan` (piano test) + `general-purpose` (esecuzione) · **modello:** `sonnet` · **effort:** Medium
 - **Dipendenze:** tutte le precedenti · **Parallelo:** no (gate finale)
 ```

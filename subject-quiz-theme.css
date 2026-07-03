@@ -1944,12 +1944,12 @@ html:not([data-palette="okabe-ito"]) body.subject-civica {
 /* --- Bottoni risposta: 4 toni Wada armonici (tutti i quiz) ---
    Fallback hex prima di color-mix per browser meno recenti. */
 html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(1) {
-  background: linear-gradient(135deg, #2e6fa6, #4e8fc4);
+  background: linear-gradient(135deg, #2e6fa6, #3877ac);
   box-shadow: 0 6px 0 #1e4c78;
   color: #fff;
 }
 html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(2) {
-  background: linear-gradient(135deg, #2e8455, #4da870);
+  background: linear-gradient(135deg, #276e45, #2f8253);
   box-shadow: 0 6px 0 #1f5c3a;
   color: #fff;
 }
@@ -1959,7 +1959,7 @@ html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(3) {
   color: var(--ws-slate-black);
 }
 html:not([data-palette="okabe-ito"]) .answer-btn:nth-child(4) {
-  background: linear-gradient(135deg, #c4452f, #d9673e);
+  background: linear-gradient(135deg, #b23f2b, #c04a30);
   box-shadow: 0 6px 0 #8a2f1f;
   color: #fff;
 }

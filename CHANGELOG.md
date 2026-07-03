@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.12.8 - 2026-07-03
+
+### Changed
+- a11y(contrasto): scuriti gli stop chiari dei gradienti dei pulsanti risposta blu/verde/rosso (palette standard Wada Sanzo, `subject-quiz-theme.css` blocco `html:not([data-palette="okabe-ito"])`) così che il testo bianco superi WCAG AA 4.5:1 su tutto il pulsante, non solo sulla metà scura. Prima il testo bianco falliva sullo stop chiaro (2.94–3.52); ora passa su entrambi gli stop (blu 5.33/4.77, verde 6.17/4.73, rosso 5.77/4.93). Il pulsante ambra (testo scuro) era già conforme e resta invariato. Modalità **Okabe-Ito non toccata**. Cambio visivo minimo: pulsanti leggermente più profondi.
+- a11y(contrasto): sottotitolo home `.main-sub` da `rgba(255,255,255,.85)` a `#fff` (margine di contrasto in più sul gradiente cielo, nessun impatto visivo percepibile).
+- chore: bump versione `4.12.7` → `4.12.8` (HTML/CSS precachati modificati); hash CSP degli stili risincronizzati per lo `<style>` inline di `index.html`.
+
+### Note
+- Audit UX/accessibilità completo in `reports/ux-audit-2026.md`. Il conteggio domande nel footer usa già `Intl.NumberFormat('it-IT')` (separatore migliaia corretto in produzione): nessuna modifica necessaria.
+
 ## 4.12.7 - 2026-07-03
 
 ### Changed
