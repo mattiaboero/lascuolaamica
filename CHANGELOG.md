@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.12.19 - 2026-07-04
+
+### Fixed
+- fix(a11y-contrasto): `#questionsTotalCount` (contatore domande nel footer di `index.html`/`chi-siamo.html`) falliva WCAG AA — `.footer-meta` (`utilities.css`) applicava `opacity: 0.78` sopra il colore già conforme di `.footer-link`, portando il contrasto reale da 5.43:1 a 3.62:1 (rilevato da Lighthouse su `chi-siamo`, unica pagina delle 5 monitorate sotto 1.0 in accessibilità). Rimossa l'opacity: l'opacità su testo si mescola col colore di sfondo sottostante e ne abbassa il contrasto in modo dipendente dalla superficie, un pattern fragile per elementi mostrati su più pagine/contesti. Verificato in preview: colore reso `rgb(110,99,87)`, contrasto 5.86:1.
+- chore(css): rimossi da `tokens.css` i token dichiarati nella Fase 0 del restyle Wada Sanzo e mai consumati da nessuna regola: `--radius-sm`, `--radius-pill`, `--space-1..5`, `--fs-h1/h2/body/q/small`, `--lh-tight/body`, `--fw-body/strong/btn`, `--shadow-btn`, `--t-fast/base`, `--ws-shadow-warm` (14 dichiarazioni). Verificato con grep su tutti i CSS/JS/HTML prima della rimozione; i token realmente usati (`--radius-md/lg`, `--shadow-card`, tutti i `--ws-*` rimanenti, `--subj-*`, `--info-blue*`) restano invariati.
+- chore: bump versione `4.12.18` → `4.12.19` (CSS precachato modificato).
+
 ## Non rilasciato
 
 ### Fixed
