@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.12.16 - 2026-07-04
+
+### Fixed
+- fix(a11y-okabe): risolto leak del colore di marca per-materia nella modalità accessibile Okabe-Ito. Gli 8 blocchi `body.subject-X` in `subject-quiz-theme.css` dichiaravano `--accent-1/2/3` senza guardia (intenzionalmente, per lasciare ereditare `--bg-1/2/3`/`--card-bg`/`--text-main` a Okabe-Ito), ma nello stesso blocco `--accent-1/2/3` finiva per sovrascrivere il palette Okabe reale (`#0072B2`/`#009E73`) col colore di marca della materia (es. matematica mostrava viola `#7b43ff` invece del blu Okabe). Rimossi `--accent-1/2/3` dagli 8 blocchi non guardati — restano solo bg/card-bg/text-main come da intento originale, invariato. In standard mode nessun impatto: `--accent-1/2/3` arriva già dal blocco guardato Wada esistente. Verificato in browser su 4 materie (matematica, inglese, problemi, civica): Okabe-Ito ora mostra `#0072B2`/`#009E73` uniformemente; standard mode identico a prima.
+- fix(a11y-okabe): l'accent-2 ufficiale Okabe-Ito (`#009E73`) non raggiunge 4.5:1 su sfondo chiaro — senza alterare il valore canonico (citazione scientifica), aggiunto override scoped solo Okabe-Ito per i selettori dove accent-2 è colore di testo (`.icon-btn`, `.seo-static h2`, `.seo-faq-item summary`, `.related-subjects h2/a`, `.class-selector-label`/`.levels-title`) verso `--text-main` (per-materia, verificato 12.16–15.99:1 su tutte le 8). `.btn-replay` (accent-2 come sfondo con testo bianco) scurito solo in Okabe-Ito con lo stesso pattern `color-mix` già usato da `.start-btn`.
+- fix(css): `body.subject-inglese` aveva `--accent-1`/`--accent-2` invertiti rispetto alla convenzione delle altre 7 materie, costringendo `inglese.css` a 6 regole di compenso (`.back-btn`, `.icon-btn`, `.class-btn.selected`, `.btn-replay`, `.btn-home`, `.modal-body h3`) che referenziavano la variabile "sbagliata" apposta. Rimosse tutte e 6 (ora ridondanti, il tema condiviso copre identicamente): `inglese.css` eredita gli stessi default delle altre materie. Mantenute le personalizzazioni genuinamente uniche di inglese (rainbow class-btn, level-card CEFR, levels-wrap, score-pill.ok/ko, level-badge) non toccate dal problema.
+- chore: bump versione `4.12.15` → `4.12.16` (CSS precachato modificato).
+
 ## 4.12.15 - 2026-07-04
 
 ### Fixed

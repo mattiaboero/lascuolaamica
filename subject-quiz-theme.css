@@ -10,13 +10,14 @@
   --pill-bg: #ffffff;
 }
 
+/* accent-1/2/3 NON dichiarati qui: solo bg/card-bg/text-main. Okabe-Ito eredita
+   questi da qui (di proposito), ma deve ereditare i SUOI accent da
+   html[data-palette="okabe-ito"], non quelli di marca della materia. In modalita
+   standard, accent-1/2/3 arrivano dal blocco guardato piu sotto (Wada). */
 body.subject-matematica {
   --bg-1: #c6a6ff;
   --bg-2: #9fd2ff;
   --bg-3: #ffd891;
-  --accent-1: #7b43ff;
-  --accent-2: #2f7dff;
-  --accent-3: #ffb347;
   --text-main: #261a44;
   --card-bg: #fff7ef;
 }
@@ -25,9 +26,6 @@ body.subject-geografia {
   --bg-1: #aaf2c8;
   --bg-2: #9fcdff;
   --bg-3: #ffe29f;
-  --accent-1: #1f9d5d;
-  --accent-2: #2b67d8;
-  --accent-3: #f0b63f;
   --text-main: #1a3442;
   --card-bg: #fffaf0;
 }
@@ -36,9 +34,6 @@ body.subject-storia {
   --bg-1: #ffd6ad;
   --bg-2: #cfc3ff;
   --bg-3: #ffdcb8;
-  --accent-1: #8b4e2e;
-  --accent-2: #6a45d1;
-  --accent-3: #df9d45;
   --text-main: #362319;
   --card-bg: #fff7ee;
 }
@@ -47,9 +42,6 @@ body.subject-scienze {
   --bg-1: #a9f4e2;
   --bg-2: #9fceff;
   --bg-3: #ffe3a3;
-  --accent-1: #159883;
-  --accent-2: #2863d6;
-  --accent-3: #f2b23f;
   --text-main: #16323d;
   --card-bg: #fffaf1;
 }
@@ -58,9 +50,6 @@ body.subject-italiano {
   --bg-1: #ffc0cf;
   --bg-2: #b9cbff;
   --bg-3: #ffe5ad;
-  --accent-1: #cc3550;
-  --accent-2: #3d67d8;
-  --accent-3: #f2b950;
   --text-main: #3a2532;
   --card-bg: #fff9f2;
 }
@@ -69,9 +58,6 @@ body.subject-civica {
   --bg-1: #aef3dd;
   --bg-2: #a6d3ff;
   --bg-3: #ffe8ad;
-  --accent-1: #1f9f8f;
-  --accent-2: #2a67d8;
-  --accent-3: #ff9f3d;
   --text-main: #183a44;
   --card-bg: #fffaf1;
 }
@@ -80,9 +66,6 @@ body.subject-problemi {
   --bg-1: #ffd48e;
   --bg-2: #ffb2a3;
   --bg-3: #adf5c8;
-  --accent-1: #ff7b54;
-  --accent-2: #2a9d8f;
-  --accent-3: #f9c74f;
   --text-main: #2e2a2a;
   --card-bg: #fff8f0;
 }
@@ -91,8 +74,6 @@ body.subject-inglese {
   --bg-1: #b8e6ff;
   --bg-2: #c9d0ff;
   --bg-3: #ffe3a8;
-  --accent-1: #1f7fe0;
-  --accent-2: #17a388;
   --text-main: #20344d;
   --card-bg: #fff9f1;
 }
@@ -1940,6 +1921,24 @@ html:not([data-palette="okabe-ito"]) body.subject-civica {
   --bg-3: var(--ws-cartridge-buff);
   --card-bg: var(--ws-ivory);
   --text-main: var(--ws-slate-black);
+}
+
+/* --- Okabe-Ito: testo su accent-2 ---
+   L'accent-2 ufficiale Okabe-Ito (#009E73) non raggiunge 4.5:1 su sfondo
+   chiaro. Non alteriamo il valore canonico (citazione scientifica): per i
+   soli selettori dove accent-2 e' colore di TESTO, in Okabe-Ito usiamo
+   --text-main (gia' verificato >13:1). Decorativo (bordi/ombre) invariato. */
+html[data-palette="okabe-ito"] .icon-btn,
+html[data-palette="okabe-ito"] .seo-static h2,
+html[data-palette="okabe-ito"] .seo-faq-item summary,
+html[data-palette="okabe-ito"] .related-subjects h2,
+html[data-palette="okabe-ito"] .related-subjects a,
+html[data-palette="okabe-ito"] .class-selector-label,
+html[data-palette="okabe-ito"] .levels-title {
+  color: var(--text-main);
+}
+html[data-palette="okabe-ito"] .btn-replay {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-2) 78%, #000 22%), #2f68d8);
 }
 
 /* --- Bottoni risposta: 4 toni Wada armonici (tutti i quiz) ---
