@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.9 - 2026-07-04
+
+### Changed
+- perf(favicon): sostituito `favicon.svg` — era un export raster (PNG 1254×1254 imbustato in base64 dentro tag `<svg><image>`, 1.1MB) con un vero SVG vettoriale (path disegnati, Adobe Illustrator export, 6.5KB). Stesso path pubblico `/favicon.svg`, nessun link da aggiornare. Riduzione ~99% del peso scaricato da ogni visitatore nuovo.
+- chore: bump versione `4.12.8` → `4.12.9` (asset statico modificato, cache browser/CDN da invalidare).
+
 ## 4.12.8 - 2026-07-03
 
 ### Changed
