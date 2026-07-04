@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.12.15 - 2026-07-04
+
+### Fixed
+- fix(contenuto/civica): riformulato distrattore innaturale "Ridire in giro il problema di salute" (domanda diritto alla salute, classe 3) in "Raccontare in giro il problema di salute" — segnalato da utente come confuso in gioco, letto erroneamente come refuso di "ridere".
+- fix(ui): aggiunto `margin-top: 10px` a `.bonus-note` (`subject-quiz-theme.css`) — il testo "Se sbagli il bonus, il punteggio resta invariato." era attaccato al pulsante "Tieni il punteggio e salta bonus" sopra (nessun margine per via del reset globale `* { margin: 0 }`). Verificato in preview su civica, stesso markup condiviso da tutte e 8 le materie.
+- chore: bump versione `4.12.14` → `4.12.15` (CSS precachato modificato).
+
 ## 4.12.14 - 2026-07-04
 
 ### Fixed
