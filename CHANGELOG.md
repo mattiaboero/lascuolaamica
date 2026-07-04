@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.13 - 2026-07-04
+
+### Fixed
+- fix(fallback): `civica`, `inglese` e `problemi` non avevano NESSUNA banca di domande statica di riserva (`js/*-page.js`) — se il fetch di `json/index.json`/`json/<materia>.json` falliva (offline al primissimo avvio, rete assente), il quiz restava con zero domande invece di degradare a un contenuto minimo. Ora hanno reale contenuto di fallback generato campionando `json/civica.json` (60 domande, 4 aree), `json/problemi.json` (20 domande) e `json/inglese.json` (102 domande, 17 aree) — solo domande a bassa difficoltà, già passate dal pipeline di qualità corrente (dedup, difficoltà, lint), non testo scritto a mano. Formato identico alle banche già funzionanti (matematica/storia/scienze/italiano/geografia): `{ q, a, d }`. Verificato: sintassi JS valida, `eslint` pulito, `npm run verify` passa, tutte le pagine materia sotto il limite di 250 righe.
+- chore: bump versione `4.12.12` → `4.12.13` (JS pagine materia precachati modificati).
+
 ## 4.12.12 - 2026-07-04
 
 ### Changed
