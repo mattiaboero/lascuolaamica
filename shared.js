@@ -1248,8 +1248,15 @@
     target.classList.add('play-window-panel');
     target.setAttribute('data-play-window-panel', '1');
     if (options?.context) target.dataset.context = options.context;
-    target.setAttribute('aria-live', 'polite');
-    target.setAttribute('aria-atomic', 'true');
+
+    let srAnnounce = target.querySelector('.play-window-sr-announce');
+    if (!srAnnounce) {
+      srAnnounce = document.createElement('p');
+      srAnnounce.className = 'play-window-sr-announce sr-only';
+      srAnnounce.setAttribute('aria-live', 'polite');
+      srAnnounce.setAttribute('aria-atomic', 'true');
+      target.appendChild(srAnnounce);
+    }
 
     let kicker = target.querySelector('.play-window-kicker');
     if (!kicker) {
@@ -1308,6 +1315,12 @@
       button.dataset.playWindowBound = '1';
     }
 
+    const announcePhase = (phase) => {
+      if (target.dataset.playWindowPhase === phase) return;
+      target.dataset.playWindowPhase = phase;
+      srAnnounce.textContent = status.textContent;
+    };
+
     const render = (state) => {
       const snapshot = state || getPlayWindowState();
       target.classList.toggle('is-active', snapshot.active);
@@ -1320,6 +1333,7 @@
         button.textContent = 'Timer attivo';
         button.disabled = true;
         button.setAttribute('aria-disabled', 'true');
+        announcePhase('active');
         return;
       }
 
@@ -1332,14 +1346,17 @@
         button.textContent = 'Disponibile tra';
         button.disabled = true;
         button.setAttribute('aria-disabled', 'true');
+        announcePhase('cooldown');
         return;
       }
       if (snapshot.expired) {
         status.textContent = 'I 30 minuti sono terminati. Per continuare a giocare bisogna prima aspettare 60 minuti.';
         button.textContent = 'Riattiva 30 minuti';
+        announcePhase('expired');
       } else {
         status.textContent = 'Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo. Dopo i 30 minuti bisogna aspettare 60 minuti prima di poter tornare a giocare.';
         button.textContent = 'Attiva 30 minuti';
+        announcePhase('idle');
       }
     };
 

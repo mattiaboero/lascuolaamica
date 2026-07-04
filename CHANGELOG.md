@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.12.20 - 2026-07-04
+
+### Fixed
+- fix(a11y-audit): audit manuale oltre Lighthouse (R6) — trovato un bug reale non rilevabile da tool automatici. Il pannello "Tempo di gioco" (`shared.js`, `ensurePlayWindowPanel`) aveva `aria-live="polite"` + `aria-atomic="true"` sull'intera `<section>`, e il countdown al suo interno si aggiorna ogni secondo per tutta la sessione di 30 minuti: uno screen reader avrebbe riletto l'intero paragrafo ("Timer attivo: puoi giocare liberamente...") una volta al secondo, non stop, mentre si gioca. Rimosso `aria-live` dalla sezione; aggiunta una regione `sr-only` dedicata che annuncia solo ai cambi di fase reali (idle → attivo → cooldown → scaduto), non ai tick del countdown. Verificato con simulazione isolata: 4 annunci su 7 render (3 tick nella stessa fase correttamente silenziosi).
+- fix(a11y-audit): i pulsanti risposta corretta/sbagliata comunicavano lo stato solo via icona CSS `::after` (`✓`/`✕`, content generato via CSS — non affidabilmente esposto agli screen reader) e classe colore. Aggiunto helper `markAnswerState()` in `subject-quiz-core.js` che aggiorna anche `aria-label` del bottone (" (risposta corretta)"/" (risposta sbagliata)") per entrambi i flussi domanda standard e bonus. Nota: un primo tentativo aggiungeva uno `span.sr-only` come figlio, ma i bottoni risposta hanno sempre `aria-label` esplicito impostato da `renderAnswerButtonText` (anche in modalità bilingue) che sovrascrive qualsiasi contenuto figlio nel nome accessibile — corretto per aggiornare `aria-label` direttamente. Verificato con simulazione isolata su caso standard e bilingue.
+- fix(a11y-audit): aggiunto `role="status"` mancante su `#qExplanation` (creato dinamicamente da A1) per coerenza con `#feedback`, che lo ha già nel markup statico.
+- chore: bump versione `4.12.19` → `4.12.20` (JS precachato modificato).
+
 ## 4.12.19 - 2026-07-04
 
 ### Fixed

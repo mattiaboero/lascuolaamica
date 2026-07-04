@@ -1935,6 +1935,15 @@
     updateDots();
   }
 
+  function markAnswerState(btn, isCorrect) {
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    // aria-label (impostato da renderAnswerButtonText per ogni bottone, incluso il
+    // caso bilingue) sovrascrive sempre il nome accessibile: il checkmark/croce
+    // CSS (::after) resta invisibile agli screen reader se non lo rispecchiamo qui.
+    const label = btn.getAttribute('aria-label') || btn.textContent;
+    btn.setAttribute('aria-label', `${label}${isCorrect ? ' (risposta corretta)' : ' (risposta sbagliata)'}`);
+  }
+
   function checkAnswer(chosen, correctAnswer, btn) {
     if (answered) return;
     answered = true;
@@ -1947,7 +1956,7 @@
     });
 
     if (isOk) {
-      btn.classList.add('correct');
+      markAnswerState(btn, true);
       points += POINTS_PER_Q;
       correct += 1;
       streak += 1;
@@ -1961,11 +1970,11 @@
         showFeedback(true);
       }
     } else {
-      btn.classList.add('wrong');
+      markAnswerState(btn, false);
       wrong += 1;
       streak = 0;
       buttons.forEach((b) => {
-        if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
+        if (answersMatch(b.textContent, correctAnswer)) markAnswerState(b, true);
       });
       playKo();
       setMascot('sad');
@@ -2027,15 +2036,15 @@
 
     const ok = answersMatch(chosen, correctAnswer);
     if (ok) {
-      btn.classList.add('correct');
+      markAnswerState(btn, true);
       playPerfect();
       setMascot('celebrate');
       showFeedback(true, 'Bonus corretto!');
       finishGame('bonus-ok');
     } else {
-      btn.classList.add('wrong');
+      markAnswerState(btn, false);
       buttons.forEach((b) => {
-        if (answersMatch(b.textContent, correctAnswer)) b.classList.add('correct');
+        if (answersMatch(b.textContent, correctAnswer)) markAnswerState(b, true);
       });
       playKo();
       setMascot('sad');
@@ -2306,6 +2315,7 @@
     const el = document.createElement('div');
     el.id = 'qExplanation';
     el.className = 'q-explanation';
+    el.setAttribute('role', 'status');
     el.setAttribute('aria-live', 'polite');
     el.setAttribute('aria-atomic', 'true');
     answersEl.insertAdjacentElement('afterend', el);
