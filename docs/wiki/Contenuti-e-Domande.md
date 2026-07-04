@@ -1,6 +1,6 @@
 # Contenuti e domande
 
-Il dataset conta **7.375 domande** su 8 materie, per classi dalla 2ª alla 5ª. Questa pagina descrive come sono strutturate, come vengono generate e come mantenerle.
+Il dataset conta **9.879 domande** su 8 materie, per classi dalla 2ª alla 5ª. Questa pagina descrive come sono strutturate, come vengono generate e come mantenerle.
 
 ---
 
@@ -10,27 +10,31 @@ Ogni materia ha un file `json/<materia>.json` con questa struttura:
 
 ```json
 {
+  "schemaVersion": 1,
   "subject": "matematica",
-  "totalQuestions": 1716,
-  "generatedAt": "2026-04-29T...",
-  "stats": {
-    "rows": 1716,
-    "areas": [...],
-    "classes": [2, 3, 4, 5]
-  },
+  "totalQuestions": 1934,
+  "generatedAt": "2026-07-01T...",
+  "stats": { "areas": {...}, "classes": {...} },
   "questions": [
     {
-      "id": "mat-2-addizioni-001",
+      "id": "mat-2-tabelline-001",
+      "subject": "matematica",
       "class": 2,
-      "area": "addizioni",
+      "area": "tabelline",
+      "subarea": "calcolo_mentale",
       "difficulty": 1,
-      "question": "Quanto fa 7 + 5?",
-      "options": ["10", "11", "12", "13"],
-      "correct": 2
+      "question": "Quanto fa 2 × 4?",
+      "options": ["7", "5", "6", "8"],
+      "answerIndex": 3,
+      "answer": "8",
+      "explanation": "2 × 4 significa 2 preso 4 volte...",
+      "active": true
     }
   ]
 }
 ```
+
+`json/index.json` è l'entry point caricato dal client (`questions-loader.js`): elenca i path dei file materia e i totali aggregati; ogni file materia viene poi caricato separatamente (lazy) dal core quiz.
 
 L’indice dati tiene il conteggio aggiornato per materia e il timestamp di generazione.
 
@@ -65,13 +69,14 @@ Per inglese il dataset include anche metadata opzionali usati dal core:
 
 ## Pipeline aggiornamento domande
 
-1. Aggiorna i CSV sorgente (se usati come base)
-2. Esegui il generatore JSON: `python3 build_questions_json.py`
+1. Genera le domande in JSONL in `reports/generated/<subject>-c*.jsonl`
+2. Ingest nel dataset materia: `python3 scripts/ingest_generated.py --subject <materia>` (o `--all`)
 3. Per domande parametriche: `python3 scripts/append_parametric_pilot.py --profile extended`
-4. Esegui i controlli: `./prepublish-check.sh`
+4. Esegui i controlli: `./prepublish-check.sh` (include audit JSON, lint contenuti, freshness sitemap/JSON-LD)
 5. Verifica manuale su almeno 2 classi per materia toccata
-6. Aggiorna l’indice dati con le nuove cardinalità
-7. Merge su `main` → pubblicazione automatica
+6. Merge su `main` → pubblicazione automatica
+
+**Attenzione:** `ingest_generated.py` non deduplica automaticamente in caso di ri-esecuzione sullo stesso shard — archiviare gli shard già ingeriti e verificare i duplicati prima di rilanciare.
 
 ---
 

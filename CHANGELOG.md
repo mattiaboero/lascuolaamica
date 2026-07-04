@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## Non rilasciato
+
+### Removed
+- chore: rimosso `build_questions_json.py` (generatore JSON monolitico, formato già esplicitamente rifiutato da `questions-loader.js:195`) e `questions-build-report.json` (report stale ad aprile 2026, non letto da nessun codice runtime). La pipeline reale è `scripts/ingest_generated.py`.
+- docs: aggiornata `docs/wiki/Contenuti-e-Domande.md` — conteggio domande (7.375 → 9.879 reale), formato JSON di esempio allineato allo schema attuale (`answerIndex`/`answer`/`explanation`, non `correct`), pipeline di aggiornamento sostituita con `ingest_generated.py`. `docs/archive/` non toccato (record storico).
+
 ## 4.12.9 - 2026-07-04
 
 ### Changed
