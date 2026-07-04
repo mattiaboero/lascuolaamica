@@ -19,9 +19,9 @@ body.modal-open {
   margin: 14px 0 0;
   padding: 14px 16px;
   border-radius: 18px;
-  border: 2px solid rgba(45,108,223,.18);
+  border: 2px solid rgba(var(--info-blue-rgb) / .18);
   background: linear-gradient(135deg,#ffffff,#f4f8ff);
-  box-shadow: 0 10px 24px rgba(45,108,223,.10);
+  box-shadow: 0 10px 24px rgba(var(--info-blue-rgb) / .10);
 }
 
 .play-window-panel-home {
@@ -74,7 +74,7 @@ body.modal-open {
   font-weight: 900;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: #2d6cdf;
+  color: var(--info-blue);
 }
 
 .play-window-status {
@@ -112,13 +112,13 @@ body.modal-open {
   border-radius: 999px;
   min-height: 46px;
   padding: 12px 18px;
-  background: linear-gradient(135deg,#2d6cdf,#4d8dff);
+  background: linear-gradient(135deg,var(--info-blue),#4d8dff);
   color: #fff;
   font-size: .96rem;
   line-height: 1.2;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 6px 16px rgba(45,108,223,.24);
+  box-shadow: 0 6px 16px rgba(var(--info-blue-rgb) / .24);
 }
 
 .play-window-btn:hover {

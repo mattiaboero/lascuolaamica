@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.11 - 2026-07-04
+
+### Changed
+- perf(css): introdotto token condiviso `--info-blue`/`--info-blue-rgb` (`tokens.css`, #2d6cdf / `45 108 223`) per il blu informativo ricorrente (box "per genitori e insegnanti", `.play-window-*`, `.area-more-btn`, link/pill FAQ e premi) finora hardcoded in ~20 punti distinti tra `subject-quiz-theme.css`, `utilities.css`, `index.css`, `faq.css`, `rewards.css`. Sostituiti tutti gli usi letterali (`#2d6cdf`, `rgba(45, 108, 223, alpha)`) con `var(--info-blue)`/`rgba(var(--info-blue-rgb) / alpha)`; non toccate le dichiarazioni `--accent-2`/`--civ-b`/`--sci-b` che condividono lo stesso hex per altra semantica (colore per-subject, non "info box" generico). Zero cambio visivo: verificato in preview su index/faq/inglese, incluso il valore renderizzato in modalità Okabe-Ito (identico, il token non è palette-scoped).
+- chore: bump versione `4.12.10` → `4.12.11` (CSS precachato modificato).
+
 ## 4.12.10 - 2026-07-04
 
 ### Changed

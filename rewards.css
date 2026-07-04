@@ -88,11 +88,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
-  border: 2px solid rgba(45, 108, 223, .2);
+  border: 2px solid rgba(var(--info-blue-rgb) / .2);
   border-radius: 50px;
   padding: 6px 14px;
   background: #fff;
-  color: #2d6cdf;
+  color: var(--info-blue);
   font-size: .85rem;
   font-weight: 900;
   line-height: normal;

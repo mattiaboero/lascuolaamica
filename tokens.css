@@ -32,6 +32,10 @@
   --ws-maize: #f2c14e;            /* highlight / "sole" */
   --ws-shadow-warm: 44 42 40;     /* RGB per ombre tinteggiate: rgba(var(--ws-shadow-warm) / .16) */
 
+  /* ---- Blu informativo condiviso (box "per genitori", link/pill cross-pagina) ---- */
+  --info-blue: #2d6cdf;
+  --info-blue-rgb: 45 108 223;    /* rgba(var(--info-blue-rgb) / alpha) */
+
   /* ---- Hue canoniche per materia (a = primario, b = stop gradiente, dec = decorativo) ---- */
   --subj-math-a: #6e57a6;  --subj-math-b: #8a74c0;  --subj-math-dec: #f2c14e;  /* Pansy Purple */
   --subj-ita-a: #c24a5b;   --subj-ita-b: #d86a78;   --subj-ita-dec: #e0a526;   /* Rose / Pompeian Red */
