@@ -36,15 +36,17 @@
   --info-blue: #2d6cdf;
   --info-blue-rgb: 45 108 223;    /* rgba(var(--info-blue-rgb) / alpha) */
 
-  /* ---- Hue canoniche per materia (a = primario, b = stop gradiente, dec = decorativo) ---- */
-  --subj-math-a: #6e57a6;  --subj-math-b: #8a74c0;  --subj-math-dec: #f2c14e;  /* Pansy Purple */
-  --subj-ita-a: #c24a5b;   --subj-ita-b: #d86a78;   --subj-ita-dec: #e0a526;   /* Rose / Pompeian Red */
-  --subj-geo-a: #3e8e5a;   --subj-geo-b: #5ba876;   --subj-geo-dec: #3c6e9f;   /* Cosse / Cedar Green */
-  --subj-sto-a: #9a6a43;   --subj-sto-b: #b5895e;   --subj-sto-dec: #c4452f;   /* Sepia / Hay's Russet */
-  --subj-sci-a: #2c8c86;   --subj-sci-b: #4fb0a6;   --subj-sci-dec: #f2c14e;   /* Verdigris / Nile Blue */
-  --subj-eng-a: #2e6fa6;   --subj-eng-b: #4e8fc4;   --subj-eng-dec: #dd6347;   /* Hortense Blue */
-  --subj-prob-a: #d9743f;  --subj-prob-b: #ec9a5e;  --subj-prob-dec: #2c8c86;  /* Terra Cotta / Mikado */
-  --subj-civ-a: #1f7a5e;   --subj-civ-b: #3e9c7b;   --subj-civ-dec: #c8881a;   /* Cossack Green (pine) */
+  /* ---- Hue canoniche per materia (a = primario, b = stop gradiente, dec = decorativo) ----
+     a/b scuriti dove necessario per garantire >=4.5:1 su bianco come testo (icon-btn,
+     seo-static h2, related-subjects, ecc.). Stessa tonalita, luminosita ridotta. */
+  --subj-math-a: #6e57a6;  --subj-math-b: #8068bb;  --subj-math-dec: #f2c14e;  /* Pansy Purple */
+  --subj-ita-a: #c24a5b;   --subj-ita-b: #ce4556;   --subj-ita-dec: #e0a526;   /* Rose / Pompeian Red */
+  --subj-geo-a: #3a8454;   --subj-geo-b: #45825b;   --subj-geo-dec: #3c6e9f;   /* Cosse / Cedar Green */
+  --subj-sto-a: #9a6a43;   --subj-sto-b: #976e45;   --subj-sto-dec: #c4452f;   /* Sepia / Hay's Russet */
+  --subj-sci-a: #29837d;   --subj-sci-b: #3a817a;   --subj-sci-dec: #f2c14e;   /* Verdigris / Nile Blue */
+  --subj-eng-a: #2e6fa6;   --subj-eng-b: #3a7baf;   --subj-eng-dec: #dd6347;   /* Hortense Blue */
+  --subj-prob-a: #bc5925;  --subj-prob-b: #ba5b16;  --subj-prob-dec: #2c8c86;  /* Terra Cotta / Mikado */
+  --subj-civ-a: #1f7a5e;   --subj-civ-b: #348368;   --subj-civ-dec: #c8881a;   /* Cossack Green (pine) */
 
   /* ---- Scala raggi ---- */
   --radius-sm: 12px;

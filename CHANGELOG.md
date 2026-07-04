@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.14 - 2026-07-04
+
+### Fixed
+- fix(a11y-contrasto): `accent-2` falliva WCAG AA 4.5:1 su tutte le 8 materie in modalità standard (testo reale su `.icon-btn`, `.seo-static h2`, `.seo-faq-item summary`, `.related-subjects h2/a` — misurato con font-size/weight reali in browser, non dedotti). `accent-1` falliva anche su geografia (4.02), scienze (4.04) e problemi (3.22, il peggiore). Scuriti gli 11 token in `tokens.css` (`--subj-*-a`/`--subj-*-b`) mantenendo la stessa tonalità fino a raggiungere ≥4.5:1 su bianco; gli altri 5 valori già conformi restano invariati. Verificato in browser su tutte le 8 materie (back-btn e icon-btn, i due selettori più a rischio): tutti ora tra 4.53 e 5.33. Nessun impatto su modalità Okabe-Ito (i token toccati sono `--subj-*-a/b`, consumati solo dal blocco standard-mode guardato; scoperto peraltro — separatamente, non toccato qui — che i blocchi `body.subject-X` non guardati fanno leak del colore di marca anche in Okabe-Ito: task di follow-up aperto).
+- chore: bump versione `4.12.13` → `4.12.14` (CSS precachato modificato).
+
 ## 4.12.13 - 2026-07-04
 
 ### Fixed
