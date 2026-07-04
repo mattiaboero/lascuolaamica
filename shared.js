@@ -52,6 +52,47 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '4 luglio 2026 · Release 4.12.16',
+      items: [
+        'Corrette diverse piccole imprecisioni segnalate dagli utenti: un distrattore poco chiaro in educazione civica e la spaziatura del messaggio bonus a fine partita.',
+        'Migliorata l\'accessibilità per chi usa la modalità a contrasto elevato (Okabe-Ito): ogni materia ora mostra i colori pensati apposta per quella modalità invece del proprio colore abituale.',
+        'Rinforzato il contrasto testo/sfondo su più elementi dell\'interfaccia per superare gli standard di accessibilità WCAG su tutte le materie.',
+      ]
+    },
+    {
+      date: '4 luglio 2026 · Release 4.12.9 - 4.12.13',
+      items: [
+        'Il sito ora scarica i dati di ogni materia solo quando serve davvero, invece di scaricarli tutti al primo avvio: molto più leggero su rete mobile.',
+        'Aggiunto un contenuto minimo di riserva per inglese, problemi ed educazione civica nel raro caso in cui la connessione manchi al primo avvio.',
+        'Sostituita l\'icona del sito con una versione molto più leggera, stessa immagine.',
+      ]
+    },
+    {
+      date: '3 luglio 2026 · Release 4.12.6 - 4.12.8',
+      items: [
+        'Aggiornato ovunque il conteggio reale delle domande disponibili (9.879), prima mostrato con numeri superati.',
+        'Rinforzato il contrasto dei pulsanti di risposta (blu/verde/rosso) per una migliore leggibilità del testo.',
+      ]
+    },
+    {
+      date: '1 luglio 2026 · Release 4.12.0 - 4.12.5',
+      items: [
+        'Il gioco ora festeggia le serie di risposte corrette consecutive con un messaggio dedicato e la mascotte che esulta.',
+        'Arricchite le pagine per genitori e insegnanti con una mappa di materie/argomenti per classe e consigli d\'uso pratici.',
+        'Aggiunte centinaia di nuove domande di scienze per completare la copertura di tutte le classi.',
+      ]
+    },
+    {
+      date: '30 giugno 2026 · Release 4.11.0',
+      items: [
+        'Dopo ogni risposta compare ora una spiegazione del perché è corretta o sbagliata.',
+        'Il gioco adatta gradualmente la difficoltà delle domande al livello di ogni bambina/o.',
+        'Nuovo pulsante "Ripassa i tuoi errori" per rivedere solo le domande sbagliate in precedenza.',
+        'Nuovo filtro per sotto-argomento dopo aver scelto l\'ambito, e un pannello "Progressi" con le statistiche delle ultime partite.',
+        'Il dataset ha raggiunto le 9.900 domande totali, con controlli di qualità automatici più rigorosi su ogni nuovo contenuto.',
+      ]
+    },
+    {
       date: '28 maggio 2026 · Release 4.10.2',
       items: [
         'Rimosso CSS legacy residuo dal post-refactor del motore quiz, con pulizia concentrata su inglese e fogli condivisi senza impatti visivi sulle pagine pubbliche.'

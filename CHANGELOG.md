@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.17 - 2026-07-04
+
+### Fixed
+- fix(contenuto): il log "Ultimi aggiornamenti" mostrato in Info (`UPDATE_LOG` in `shared.js`) era fermo alla release 4.10.2 (28 maggio 2026) — segnalato da utente, ~40 release senza voce nel log da allora. Aggiunte 6 voci narrative per gli utenti (parenti/insegnanti) che riassumono i punti salienti reali di 4.11.0→4.12.16: le 5 nuove funzioni quiz (spiegazione risposta, difficoltà adattiva, ripassa errori, filtro sotto-ambito, progressi), l'espansione del dataset a 9.879 domande, lo streak feedback, le pagine per genitori/insegnanti arricchite, e il lavoro di oggi (fallback offline, PWA più leggera, contrasto WCAG, fix Okabe-Ito). Non un'entry per patch (sarebbe ~40 voci illeggibili): consolidate per rilascio realmente user-facing, come già fatto in passato per il gap 4.6.8→4.9.0 (vedi entry 4.9.1 esistente).
+- chore: bump versione `4.12.16` → `4.12.17` (`shared.js` precachato).
+
 ## 4.12.16 - 2026-07-04
 
 ### Fixed
