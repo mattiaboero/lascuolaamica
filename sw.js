@@ -34,6 +34,10 @@ const CORE_PRECACHE_URLS = [
 
 // Risorse aggiuntive: se una manca, il SW resta installabile.
 // Questo evita failure atomiche di cache.addAll su un singolo 404.
+// Nota: i json/<materia>.json NON sono precachati qui (erano ~7.9MB totali
+// scaricati all'install per ogni utente, anche per le 7 materie mai aperte).
+// Restano cacheable via isSameOriginStaticAsset (estensione .json) quindi
+// vengono comunque salvati offline al primo fetch reale della materia.
 const OPTIONAL_PRECACHE_URLS = [
   '/matematica',
   '/inglese',
@@ -69,14 +73,6 @@ const OPTIONAL_PRECACHE_URLS = [
   '/palette-okabe.css',
   '/robots.txt',
   '/sitemap.xml',
-  '/json/matematica.json',
-  '/json/problemi.json',
-  '/json/inglese.json',
-  '/json/civica.json',
-  '/json/geografia.json',
-  '/json/storia.json',
-  '/json/scienze.json',
-  '/json/italiano.json',
   '/screenshots/home-390x844.webp',
   '/screenshots/home-1280x720.webp',
   '/screenshots/og-home-1200x630.jpg',

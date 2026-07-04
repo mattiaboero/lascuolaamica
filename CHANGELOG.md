@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.12 - 2026-07-04
+
+### Changed
+- perf(pwa): rimossi i 8 `json/<materia>.json` (~7.9MB totali) da `OPTIONAL_PRECACHE_URLS` in `sw.js`. Prima venivano scaricati TUTTI all'install del service worker, anche le materie che l'utente non avrebbe mai aperto. Restano cacheable via `isSameOriginStaticAsset` (estensione `.json` già coperta dalla regex statica): ogni materia viene ora salvata offline al primo fetch reale della pagina, non prima. `json/index.json` resta in `CORE_PRECACHE_URLS` (piccolo, necessario alla home per il conteggio totale domande). Verificato in preview: dopo install solo `index.json` è in cache; dopo la visita a `/matematica` anche `matematica.json` viene cachato, gli altri 7 restano assenti finché non si visita quella materia.
+- chore: bump versione `4.12.11` → `4.12.12` (strategia di precache del service worker modificata).
+
 ## 4.12.11 - 2026-07-04
 
 ### Changed
