@@ -1,10 +1,12 @@
 # Changelog Repo
 
-## Non rilasciato
+## 4.12.10 - 2026-07-04
 
-### Removed
-- chore: rimosso `build_questions_json.py` (generatore JSON monolitico, formato già esplicitamente rifiutato da `questions-loader.js:195`) e `questions-build-report.json` (report stale ad aprile 2026, non letto da nessun codice runtime). La pipeline reale è `scripts/ingest_generated.py`.
-- docs: aggiornata `docs/wiki/Contenuti-e-Domande.md` — conteggio domande (7.375 → 9.879 reale), formato JSON di esempio allineato allo schema attuale (`answerIndex`/`answer`/`explanation`, non `correct`), pipeline di aggiornamento sostituita con `ingest_generated.py`. `docs/archive/` non toccato (record storico).
+### Changed
+- perf(css): rimosse da `inglese.css` 83 regole duplicate/morte (1198 → 611 righe). 76 erano byte-identiche a `subject-quiz-theme.css` (waste puro, rischio drift su future modifiche condivise); 5 (`.seo-static`/`::before`/`h2`, `.seo-faq-item`, `.seo-faq-item summary`) erano già inerti perché shadowate da regole più specifiche `html:not([data-palette="okabe-ito"]) body.subject-inglese ...` aggiunte dal restyle Wada Sanzo (Fase 4) più avanti nello stesso file; 2 (`.si .n`/`.si .l`) erano dead code senza alcun markup corrispondente. Mantenute intatte tutte le personalizzazioni deliberate della pagina inglese (rainbow class-btn per classe, level-card CEFR con stati locked/hover, levels-wrap decorativo, seo-100-domande, differenze di colore legate ai token `--accent-1`/`--accent-2` invertiti per questo subject). Verificato in preview: nessuna differenza visiva, nessun errore console, stati locked/hover/seo confermati via inspect.
+- chore: bump versione `4.12.9` → `4.12.10` (CSS precachato modificato).
+
+## Non rilasciato
 
 ## 4.12.9 - 2026-07-04
 
