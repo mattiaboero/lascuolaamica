@@ -2,6 +2,12 @@
 
 ## Non rilasciato
 
+### Fixed
+- docs: `docs/wiki/Home.md` riportava ancora "7.375 domande" (reale 9.879) e `CONTRIBUTING.md` la stessa cifra stale più un elenco "aree meno coperte" (inglese/civica/problemi) non più accurato — verificato via `json/index.json` che oggi le aree più scoperte sono scienze (1.024) e inglese (1.094), non civica (1.121) né problemi (1.361, seconda materia più coperta). Corretti entrambi; `CONTRIBUTING.md` ora rimanda a `reports/coverage.md` invece di elencare cifre che si stanno per sfasare di nuovo.
+- docs: `docs/wiki/Architettura.md` non documentava nessuna delle funzioni quiz A1-A4/B1/C1 (spiegazione risposta, difficoltà adattiva, ripassa errori, filtro sotto-ambito, streak feedback, overlay progressi) né la strategia di precache lazy dei JSON materia introdotta in 4.12.12. Aggiunta tabella funzioni con chiavi storage/opt-out e nota sw.js aggiornata.
+- docs: `README.md` sezione "Come funziona" non menzionava le stesse funzioni quiz A1-A4/B1/C1. Aggiunto paragrafo riassuntivo.
+- fix(gate): `relevant_paths` in `check_pwa_version_bump_for_precache_changes` (`prepublish-check.sh`) usava il pattern bare `*.js`, che secondo la semantica pathspec di git matcha anche file in sottocartelle come `scripts/*.js` — non precachati, mai pensati per triggerare il check. Scoperto perché il commit C3 (aggiunta di `scripts/check_sw_precache.js`) ha fatto fallire retroattivamente il gate al giro successivo. Aggiunto pathspec negativo `:!scripts/*.js` per escluderli esplicitamente.
+
 ### Added
 - test(pwa): nuovo gate bloccante `scripts/check_sw_precache.js` (`npm run check:sw-precache`) — verifica che ogni path in `CORE_PRECACHE_URLS`/`OPTIONAL_PRECACHE_URLS` (`sw.js`) corrisponda a un file reale su disco. Prima un path morto in `OPTIONAL_PRECACHE_URLS` falliva silenziosamente (try/catch ingoia l'errore per non bloccare l'install), producendo 404 invisibili in produzione. Verificato che rilevi e blocchi un path rotto iniettato di proposito, sia a livello di script standalone sia dentro `npm run verify` completo. Agganciato in `prepublish-check.sh` subito dopo gli altri controlli PWA. Nessun bump versione (`scripts/`/`prepublish-check.sh` non precachati).
 

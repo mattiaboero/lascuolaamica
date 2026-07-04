@@ -259,6 +259,7 @@ check_pwa_version_bump_for_precache_changes() {
     'manifest.json'
     'robots.txt'
     'sitemap.xml'
+    ':!scripts/*.js'
   )
   local changed_relevant=""
 

@@ -20,7 +20,7 @@ Documentazione tecnica del progetto [lascuolaamica.it](https://lascuolaamica.it)
 
 La Scuola Amica è una piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie (matematica, italiano, inglese, problemi, civica, geografia, storia, scienze), per le classi dalla 2ª alla 5ª.
 
-**7.375 domande** validate, coerenti con le Indicazioni Nazionali.
+**9.879 domande** validate, coerenti con le Indicazioni Nazionali.
 
 Principi tecnici fondamentali:
 

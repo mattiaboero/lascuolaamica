@@ -39,6 +39,8 @@ La Scuola Amica parte da un presupposto diverso: un bambino di 8 anni non dovreb
 
 Ogni partita propone 10 domande a scelta multipla (4 opzioni). Al termine c'è un bonus facoltativo con moltiplicatore punteggio. Le domande vengono selezionate con un algoritmo stocastico per classe e ambito che riduce i pattern ripetitivi tra sessioni.
 
+Dopo ogni risposta compare una spiegazione del perché è corretta o sbagliata. Il gioco adatta gradualmente la difficoltà al livello di chi gioca, tiene traccia delle serie di risposte corrette consecutive con un feedback dedicato, e propone un pulsante "Ripassa i tuoi errori" per rivedere solo le domande sbagliate in precedenza. Un filtro per sotto-ambito e un pannello "Progressi" con le statistiche delle ultime partite completano l'esperienza.
+
 I risultati possono sbloccare una bacheca premi locale con badge, coccarde, coppe e trofei. La bacheca può essere esportata come immagine PNG/JPEG.
 
 I progressi vengono salvati localmente nel browser. Non c'è nessun server che li riceve.

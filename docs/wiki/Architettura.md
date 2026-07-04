@@ -97,6 +97,23 @@ Tutte le 8 materie usano oggi la stessa pipeline di selezione nel core condiviso
 
 ---
 
+## Funzioni quiz (A1-A4, B1, C1)
+
+Aggiunte in `subject-quiz-core.js`, condivise da tutte le 8 materie senza branch per subject:
+
+| Funzione | Comportamento | Chiave storage / opt-out |
+|---|---|---|
+| A1 — Spiegazione risposta | Dopo ogni risposta appare `#qExplanation` con il campo `explanation` della domanda JSON, colorata in base a corretto/sbagliato | nessuna |
+| A2 — Difficoltà adattiva | A fine partita calcola una media mobile esponenziale (EMA) per classe e la usa per pesare la selezione delle domande successive | `${CURSOR_KEY}_adapt_v1`; opt-out con `cfg.adaptiveDifficulty: false` |
+| A3 — Ripassa i tuoi errori | Le domande sbagliate (max 30) restano disponibili per una sessione dedicata dalla schermata iniziale | `${CURSOR_KEY}_wrong_q_v1` |
+| A4 — Filtro sotto-ambito | Dopo la selezione dell'area, una griglia di sotto-ambiti derivata dinamicamente dal dataset (nessuna config per materia necessaria) | nessuna |
+| B1 — Streak feedback | Risposte corrette consecutive: alle soglie configurate (default 3/5/8) messaggio dedicato + mascotte `celebrate` invece di `happy` | `cfg.streakMilestones` per personalizzare le soglie |
+| C1 — Overlay progressi | Pulsante "Progressi" nella schermata risultati apre statistiche per classe/area e le ultime partite | legge `loadStats()`/`loadLB()` esistenti |
+
+Riferimento storico: `CHANGELOG.md` release 4.11.0 e 4.12.0.
+
+---
+
 ## Dati
 
 ```
@@ -138,7 +155,8 @@ Tutto nella memoria locale del browser, tutto locale, niente server:
 
 `sw.js` gestisce:
 
-- **Precache** degli asset statici principali
+- **Precache** degli asset statici principali all'install
+- **Precache lazy per i dataset materia** — `json/index.json` è precached all'install (serve alla home per il conteggio totale); i `json/<materia>.json` (~1MB ciascuno) NON sono precached: vengono salvati offline al primo fetch reale di quella materia, per non forzare il download di tutte le 8 materie a chi ne gioca una sola
 - **Fallback offline** sulle rotte pubbliche principali
 - Strategie differenziate per contenuti statici e dati quiz
 
