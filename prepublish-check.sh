@@ -414,6 +414,12 @@ check_pwa_root_only_contract
 check_pwa_cache_headers
 check_pwa_version_bump_for_precache_changes
 
+if node scripts/check_sw_precache.js; then
+  echo "[OK] sw.js precache: tutti i path verificati esistono su disco"
+else
+  status=1
+fi
+
 if node scripts/audit_questions_json.js; then
   echo "[OK] question JSON audit passed"
 else

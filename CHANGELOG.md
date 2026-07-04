@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## Non rilasciato
+
+### Added
+- test(pwa): nuovo gate bloccante `scripts/check_sw_precache.js` (`npm run check:sw-precache`) — verifica che ogni path in `CORE_PRECACHE_URLS`/`OPTIONAL_PRECACHE_URLS` (`sw.js`) corrisponda a un file reale su disco. Prima un path morto in `OPTIONAL_PRECACHE_URLS` falliva silenziosamente (try/catch ingoia l'errore per non bloccare l'install), producendo 404 invisibili in produzione. Verificato che rilevi e blocchi un path rotto iniettato di proposito, sia a livello di script standalone sia dentro `npm run verify` completo. Agganciato in `prepublish-check.sh` subito dopo gli altri controlli PWA. Nessun bump versione (`scripts/`/`prepublish-check.sh` non precachati).
+
 ## 4.12.18 - 2026-07-04
 
 ### Fixed
