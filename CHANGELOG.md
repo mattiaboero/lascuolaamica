@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.18 - 2026-07-04
+
+### Fixed
+- fix(contenuto): la voce più recente di `UPDATE_LOG` (`shared.js`) descriveva sempre la release *precedente* a `APP_VERSION` — segnalato da utente (versione 4.12.17, changelog fermo a "Release 4.12.16"). Causa: la voce viene scritta per riassumere il fix appena fatto, poi la STESSA commit bumpa la versione per invalidare la cache di `shared.js`, disallineando l'etichetta di un passo ogni volta. D'ora in poi l'etichetta della voce più recente deve coincidere con `APP_VERSION` finale del commit, non con la release del fix che la genera. Verificato in browser: `app-version.js` e prima voce di `shared.js` ora entrambi `4.12.18`.
+- chore: bump versione `4.12.17` → `4.12.18` (`shared.js` precachato).
+
 ## 4.12.17 - 2026-07-04
 
 ### Fixed

@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '4 luglio 2026 · Release 4.12.18',
+      items: [
+        'Aggiornato questo elenco, che era rimasto fermo da parecchie release.',
+      ]
+    },
+    {
       date: '4 luglio 2026 · Release 4.12.16',
       items: [
         'Corrette diverse piccole imprecisioni segnalate dagli utenti: un distrattore poco chiaro in educazione civica e la spaziatura del messaggio bonus a fine partita.',
