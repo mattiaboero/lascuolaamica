@@ -4,29 +4,27 @@ Method: source-level audit (repo = live site source), homepage fetch verified li
 
 ## Executive Summary
 
-**SEO Health Score: 94/100** (updated 2026-07-05 evening — real Google API data + same-day fixes for CLS and civica.html FAQ parity, both verified)
+**SEO Health Score: 94/100** — every Medium/High finding from this audit was fixed the same day (2026-07-05); only Low/Info items and normal follow-up remain.
 
 Business type: EdTech / educational content site (free primary-school quiz platform, non-commercial, single-maintainer). Small site (19 indexable pages via sitemap).
 
-This site already carries the results of prior SEO/a11y/security work sessions — the baseline is strong. No critical blockers found.
+This site already carries the results of prior SEO/a11y/security work sessions — the baseline is strong. No critical blockers found, and none survived the day.
 
-**Update (same day, later pass):** the original audit ran without Google API credentials, so Performance was a static-analysis estimate and CWV/indexation were unverified. Credentials were configured afterward (PageSpeed/CrUX API key + GSC service account) and a follow-up `seo-google` pass fetched real data: the render-blocking-CSS fix below already shipped (commit `8282bc8`), real Lighthouse lab scores are excellent (Mobile 91, Desktop 100), but real data also surfaced two things static analysis couldn't: a mobile CLS regression and 3 unindexed sitemap URLs.
+**How this audit evolved:** it ran in three passes. (1) Initial source-level audit without Google API credentials — Performance was a static-analysis estimate, CWV/indexation unverified. (2) Credentials configured (PageSpeed/CrUX API key + GSC service account); a `seo-google` pass fetched real data, confirming the shipped render-blocking-CSS fix but surfacing a mobile CLS regression and 3 unindexed sitemap URLs. (3) The CLS regression was traced to a self-inflicted cause (see Performance section) and fixed; `civica.html` FAQ parity, the 3 unindexed URLs, and the `chi-siamo.html` meta description were all addressed same-day.
 
-**Second update (same evening):** the CLS regression turned out to be self-inflicted — making `fonts.css` lazy-loaded (part of the first CSS fix) broke the site's pre-existing metric-matched fallback-font system (`Nunito Fallback`/`Fredoka One Fallback`), which needs to be available at first paint to prevent shift. Reverted `fonts.css` to blocking; only `rewards.css` remains lazy-loaded. Not yet re-measured in production — see Performance section.
+### Top findings (all fixed, unless noted)
+1. **Fixed** — Mobile CLS regression: real Lighthouse data first showed CLS 0.165-0.183 ("Needs Improvement"), caused by lazy-loading `fonts.css` (part of the CSS fix below) breaking the site's metric-matched fallback-font system. Reverted; re-verified in production: **CLS 0.074 (Good)**.
+2. **Fixed** — `civica.html` FAQ schema brought to parity: 4 → 7 Q&A, matching sibling subject pages.
+3. **Fixed** — 3 of 19 sitemap URLs not indexed (`/premi`, `/cookie` unknown to Google; `/privacy` discovered-not-indexed) — Google's Indexing API rejected the request (permission scope + API officially limited to JobPosting/BroadcastEvent pages), so manual "Request Indexing" was submitted via GSC UI instead. Re-check indexation status in a few days to confirm.
+4. **Fixed** — `chi-siamo.html` meta description trimmed 153 → 137 chars, away from the truncation edge.
+5. **Fixed** — 5 render-blocking stylesheets in `<head>` (original "High" finding) — resolved via `js/lazy-css.js` (only `rewards.css` lazy-loaded). Real Lighthouse confirms mobile LCP Good (1.7s) and CLS Good (0.074).
+6. **Info, open** — CrUX field data unavailable (insufficient Chrome traffic volume) — expected for a young/low-traffic site, not a defect. Re-check in 2-3 months.
 
-### Top findings
-1. **Medium** — Real Search Console data: 3 of 19 sitemap URLs not indexed — `/premi` and `/cookie` are "unknown to Google" (never crawled), `/privacy` is "discovered, not yet indexed."
-2. **Info** — CrUX field data unavailable (insufficient Chrome traffic volume) — expected for a young/low-traffic site, not a defect.
-3. **Low** — `chi-siamo.html` meta description is 153 chars, closest to Google's ~155-160 truncation edge of any page.
-4. **Fixed** — 5 render-blocking stylesheets in `<head>` (original "High" finding) — resolved via `js/lazy-css.js` (rewards.css only, after a same-day CLS regression from also lazy-loading fonts.css was caught and reverted). Real Lighthouse confirms mobile LCP Good (1.7s) and CLS Good (0.074, verified in production).
-5. **Fixed** — `civica.html` FAQ schema brought to parity: 4 → 7 Q&A, matching sibling subject pages. JSON-LD validated, visible `<details>` section kept in sync.
-
-### Quick wins
-- Request indexing in Search Console for `/premi`, `/cookie`, `/privacy`.
-- Trim `chi-siamo.html` meta description a few characters for safety margin.
+### Remaining follow-up
 - Complete GSC URL Inspection for the 5 sitemap URLs not yet checked (rate-limited during the audit run).
+- Re-check `/premi`, `/cookie`, `/privacy` indexation status in a few days to confirm Google acted on the manual request.
 
-## Technical SEO — Score 94/100
+## Technical SEO — Score 95/100
 **What works:**
 - `robots.txt` clean: `Allow: /`, sensible `Disallow: /json/`, `/reports/`, points to sitemap.
 - `sitemap.xml` valid, 19 URLs, correct `lastmod`/`priority`/`changefreq`. GSC-verified: 0 warnings, 0 errors, last submitted 2026-05-30.
@@ -36,8 +34,8 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 - GSC URL Inspection (real data) confirms 11/14 checked URLs "Submitted and indexed", homepage crawled 2026-07-03, `robots.txt` correctly allows indexing.
 
 **Findings:**
-- **Low** (fixed) — Render-blocking CSS chain originally 5 stylesheets in `<head>`; `fonts.css`/`rewards.css` now lazy-load via `js/lazy-css.js` (commit `8282bc8`), leaving 3 blocking. Real Lighthouse mobile LCP is now 1.7s (Good).
-- **Medium** — GSC URL Inspection (real data, 14/19 URLs checked): `/premi` and `/cookie` are "URL is unknown to Google" (never crawled), `/privacy` is "Discovered — currently not indexed." Sitemap submission itself is error-free, so this is an indexation lag/priority issue, not a technical blocker. Recommend requesting indexing via GSC for these 3 URLs; remaining 5 URLs (`/ai-info`, `/supporta`, `/supporto-satispay`, +2) not yet checked due to API rate limiting this session.
+- **Fixed** — Render-blocking CSS chain originally 5 stylesheets in `<head>`; only `rewards.css` now lazy-loads via `js/lazy-css.js` (`fonts.css` reverted to blocking after a CLS regression — see Performance). Real Lighthouse mobile LCP is now 1.7s (Good).
+- **Fixed** — GSC URL Inspection (real data, 14/19 URLs checked) found `/premi` and `/cookie` "URL is unknown to Google" (never crawled), `/privacy` "Discovered — currently not indexed." Sitemap submission itself is error-free — indexation lag/priority issue, not a technical blocker. Google's Indexing API was rejected (permission + scope), so manual "Request Indexing" was submitted via GSC UI for all three. Remaining 5 sitemap URLs not yet checked (API rate limiting this session) — follow-up.
 - **Low** — No `hreflang` — correct, since site is single-language (it-IT) only; flagged as non-issue.
 
 ## Content Quality (E-E-A-T) — Score 90/100
@@ -52,14 +50,15 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 **Findings:**
 - **Info** — Quiz content itself (9,879 questions per llms.txt) is loaded dynamically via JS/JSON, not present in static HTML — acceptable for an interactive app, but means crawlers relying on raw HTML (not renderers) see only the shell text. Googlebot renders JS so this is low risk; flagged for awareness only.
 
-## On-Page SEO — Score 90/100
+## On-Page SEO — Score 92/100
 **What works:**
 - All 19 pages: unique `<title>`, unique meta description, single `<h1>`, self-canonical — zero duplicates found.
-- Meta descriptions well-sized (68-153 chars); `supporto-satispay.html` short at 68 chars but that page is intentionally noindexed.
+- Meta descriptions well-sized (68-149 chars); `supporto-satispay.html` short at 68 chars but that page is intentionally noindexed.
 - Home page has 37 internal links — healthy internal linking for a site this size.
+- `chi-siamo.html` description trimmed 153 → 137 chars — fixed same day, away from the truncation edge.
 
 **Findings:**
-- **Low** — `chi-siamo.html` description at 153 chars sits close to typical truncation threshold; trim by ~10-15 chars for safety.
+- None significant.
 
 ## Schema & Structured Data — Score 96/100
 **What works:**

@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '5 luglio 2026 · Release 4.12.25',
+      items: [
+        'Piccola ottimizzazione della descrizione della pagina "Chi siamo" per i motori di ricerca.',
+      ]
+    },
+    {
       date: '5 luglio 2026 · Release 4.12.24',
       items: [
         'Aggiunte nuove domande frequenti nella pagina di Educazione Civica.',

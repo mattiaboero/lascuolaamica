@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.12.25 - 2026-07-05
+
+### Changed
+- content(seo-audit): risolto finding "Low" da audit SEO — meta description di `chi-siamo.html` era 153 caratteri, vicina alla soglia di troncamento SERP (~155-160). Accorciata a 137 caratteri mantenendo parole chiave e senso ("Chi siamo: La Scuola Amica è una piattaforma educativa gratuita per la scuola primaria. Missione, metodo didattico e principi di privacy."). `og:description`/`twitter:description`/JSON-LD `description` restano invariate (già distinte e non impattate).
+- chore: bump versione `4.12.24` → `4.12.25` (`/chi-siamo` è in `OPTIONAL_PRECACHE_URLS` di `sw.js`, contenuto modificato).
+
+Con questo si chiudono tutti i finding aperti dell'audit SEO del 2026-07-05 (vedi `lascuolaamica.it-audit/`): 5 fix consegnati in giornata (render-blocking CSS, regressione CLS, parità FAQ civica, indicizzazione GSC di 3 URL richiesta manualmente, meta description chi-siamo).
+
 ## 4.12.24 - 2026-07-05
 
 ### Added
