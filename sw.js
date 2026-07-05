@@ -27,6 +27,7 @@ const CORE_PRECACHE_URLS = [
   '/subject-quiz-core.js',
   '/subject-quiz-theme.css',
   '/js/dom-utils.js',
+  '/js/lazy-css.js',
   '/js/index-page.js',
   '/js/rewards.js',
   '/json/index.json'

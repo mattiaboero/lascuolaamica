@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '5 luglio 2026 · Release 4.12.22',
+      items: [
+        'Velocizzato il caricamento della pagina: font e stile dei premi ora si caricano senza bloccare la visualizzazione del resto del sito.',
+      ]
+    },
+    {
       date: '4 luglio 2026 · Release 4.12.19 - 4.12.21',
       items: [
         'Rinforzato ulteriormente il contrasto del contatore domande nel footer per gli standard di accessibilità.',

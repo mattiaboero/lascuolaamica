@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "health_score": 90,
+    "business_type": "EdTech / educational content (free primary-school quiz platform)",
+    "top_findings": [
+      "5 render-blocking stylesheets in <head> on every page, no critical CSS inlining",
+      "civica.html FAQ schema thinner (4 Q&A) than sibling subject pages (7-8 Q&A)",
+      "No live Core Web Vitals field data available in this environment (no GSC/CrUX credentials)",
+      "chi-siamo.html meta description near truncation edge (153 chars)",
+      "supporto-satispay.html correctly noindexed and excluded from sitemap (verified correct, not a bug)"
+    ],
+    "quick_wins": [
+      "Bundle/inline critical CSS for the 5 head stylesheets",
+      "Add 3-4 FAQ Q&As to civica.html to match sibling pages",
+      "Trim chi-siamo.html description to ~140 chars",
+      "Connect Search Console to get real CWV/indexation data"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 92,
+      "what_works": [
+        "Clean robots.txt with correct sitemap reference",
+        "Valid sitemap.xml, 19 URLs with correct lastmod/priority",
+        "Self-referencing canonical on every page",
+        "Strong security headers: CSP, HSTS, X-Frame-Options, nosniff, COOP/CORP, Permissions-Policy",
+        "Service worker for offline/PWA support"
+      ],
+      "findings": [
+        {
+          "title": "Render-blocking CSS chain in <head>",
+          "severity": "High",
+          "description": "5 stylesheets (tokens.css, [page].css, fonts.css, utilities.css, rewards.css) load serially before first paint, no critical CSS inlined.",
+          "recommendation": "Inline above-the-fold critical CSS, defer/bundle the rest."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 88,
+      "what_works": [
+        "Transparent authorship via Person + AboutPage schema on chi-siamo.html",
+        "Audience-segmented pages (per-insegnanti, per-genitori)",
+        "Published WCAG 2.1 A/AA accessibility statement",
+        "Clear no-data-collection privacy/cookie statements, fitting for a children's site",
+        "Unique on-page copy across all 8 subject pages"
+      ],
+      "findings": [
+        {
+          "title": "civica.html FAQ depth inconsistent with siblings",
+          "severity": "Medium",
+          "description": "civica.html has 4 Question/Answer schema entries vs 7-8 on every other subject page.",
+          "recommendation": "Add 3-4 more FAQ Q&As to civica.html for parity."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 90,
+      "what_works": [
+        "Unique title, description, single h1 on all 19 pages",
+        "Meta descriptions well-sized (68-153 chars)",
+        "37 internal links from homepage"
+      ],
+      "findings": [
+        {
+          "title": "chi-siamo.html description near truncation limit",
+          "severity": "Low",
+          "description": "153 chars, close to Google's ~155-160 char truncation threshold.",
+          "recommendation": "Trim to ~140 chars for safety margin."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 95,
+      "what_works": [
+        "WebSite, Organization/EducationalOrganization, Person, AboutPage, CollectionPage, ItemList, BreadcrumbList on every page",
+        "FAQPage/Question/Answer on all 8 subject pages plus faq.html (25 Q&As)",
+        "EducationalAudience markup signaling target grade level (2a-5a primaria)"
+      ],
+      "findings": [
+        {
+          "title": "civica.html FAQPage depth gap",
+          "severity": "Medium",
+          "description": "Same finding as Content Quality: 4 vs 7-8 Q&A entries.",
+          "recommendation": "Bring to parity with sibling subject pages."
+        }
+      ]
+    },
+    {
+      "name": "Performance",
+      "score": 80,
+      "what_works": [
+        "Fonts preloaded with font-display: swap",
+        "All scripts deferred, no render-blocking JS",
+        "OG images reasonably sized (43-80 KB per 1200x630 JPEG)"
+      ],
+      "findings": [
+        {
+          "title": "No live CWV field data",
+          "severity": "Info",
+          "description": "No CrUX/GSC/PageSpeed credentials detected in this environment; score is a static-analysis estimate, not measured field data.",
+          "recommendation": "Run seo-google once Search Console access is configured."
+        },
+        {
+          "title": "Render-blocking CSS impacts LCP",
+          "severity": "High",
+          "description": "Same as Technical SEO finding: 5 blocking stylesheets before first paint.",
+          "recommendation": "Inline critical CSS."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 95,
+      "what_works": [
+        "All img tags carry descriptive alt text, verified across all 19 pages",
+        "OG images exist on disk for every major page with matching width/height/alt meta"
+      ],
+      "findings": []
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 95,
+      "what_works": [
+        "llms.txt present with structured identity, subject index, quantitative facts",
+        "Dedicated ai-info.html page addressed to AI crawlers/models",
+        "EducationalOrganization + Person schema gives clean entity/authorship signals"
+      ],
+      "findings": []
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1: Critical Fixes", "timeframe": "Week 1", "items": ["None — no critical/blocking issues found"]},
+      {"name": "Phase 2: High-Impact Improvements", "timeframe": "Weeks 2-3", "items": ["Bundle/inline critical CSS for 5 head stylesheets", "Bring civica.html FAQ schema to parity (add 3-4 Q&As)"]},
+      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": ["Trim chi-siamo.html meta description", "Run seo-google once GSC connected", "Consider backlink baseline via Moz/Bing/Common Crawl"]},
+      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": ["Keep sitemap lastmod accurate", "Re-audit after CSS bundling change", "Maintain schema/meta/canonical discipline on new pages"]}
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

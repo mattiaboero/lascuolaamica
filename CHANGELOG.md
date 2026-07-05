@@ -1,5 +1,12 @@
 # Changelog Repo
 
+## 4.12.22 - 2026-07-05
+
+### Changed
+- perf(seo-audit): risolto finding "High" da audit SEO — 5 stylesheet bloccanti nell'`<head>` di ogni pagina (`tokens.css`, `[page].css`/`subject-quiz-theme.css`/`info-pages.css`, `utilities.css`, `rewards.css`, `fonts.css`) ritardavano il first paint. `fonts.css` e `rewards.css` (i due meno critici per il contenuto above-the-fold: il primo gestisce solo `@font-face` con `font-display: swap` già attivo, il secondo stile del widget premi/toast, visibile solo a fine quiz o sotto la piega) ora vengono iniettati dinamicamente da un nuovo script esterno `js/lazy-css.js` (CSP-safe, nessun inline handler: il CSP del sito è `script-src 'self'` senza `unsafe-inline`, quindi la tecnica preload+`onload` inline non era praticabile). I due file restano comunque `<link rel="preload" as="style">` per non perdere il prefetch anticipato del browser. Riduce a 3 (o 4 su `faq.html`) gli stylesheet realmente bloccanti per pagina. Verificato in preview su `index.html`, `matematica.html`, `premi.html`: nessuna regressione visiva, nessun errore console, stile premi/font applicati correttamente. Il sito richiede comunque JS per funzionare (messaggio `<noscript>` esplicito), quindi nessun utente senza JS perde stili che non vedrebbe comunque.
+- chore: aggiunto `/js/lazy-css.js` a `CORE_PRECACHE_URLS` in `sw.js` per mantenere la disponibilità offline di `fonts.css`/`rewards.css`.
+- chore: bump versione `4.12.21` → `4.12.22` (`sw.js` precache modificato).
+
 ## 4.12.21 - 2026-07-05
 
 ### Fixed
