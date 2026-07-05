@@ -97,7 +97,7 @@
     },
     {
       "name": "Performance",
-      "score": 90,
+      "score": 97,
       "what_works": [
         "Real Lighthouse lab data (PageSpeed Insights v5, fetched via Google API): Mobile Performance 91/100, Desktop 100/100",
         "All timing metrics Good on both strategies: FCP 0.9s/0.3s, LCP 1.7s/0.4s, TBT 0ms, TTI 1.7s/0.4s (mobile/desktop)",
@@ -107,10 +107,10 @@
       ],
       "findings": [
         {
-          "title": "Mobile CLS 0.183 — Needs Improvement",
-          "severity": "Medium",
-          "description": "Real Lighthouse mobile run shows CLS 0.183 (band 0.1-0.25), driven by a dominant layout shift (score 0.136) in the homepage subject-card grid; desktop CLS is fine (0.003). Not visible in prior static analysis.",
-          "recommendation": "Reserve space/aspect-ratio for homepage subject cards to prevent reflow before fonts/images settle on mobile viewport."
+          "title": "Mobile CLS — fixed same day, re-verified",
+          "severity": "Fixed",
+          "description": "Real Lighthouse initially showed CLS 0.165-0.183 (Needs Improvement), caused by a self-inflicted regression: lazy-loading fonts.css (part of the initial render-blocking-CSS fix) broke the site's metric-matched fallback-font system, which needs to be available at first paint. Reverted fonts.css to blocking, kept only rewards.css lazy. Re-verified against production with a fresh PSI run: CLS now 0.074 (Good, under the 0.1 threshold).",
+          "recommendation": "None further needed. Keep fonts.css blocking if touching CSS loading strategy again."
         },
         {
           "title": "CrUX field data unavailable",
@@ -121,7 +121,7 @@
         {
           "title": "Render-blocking CSS impacts LCP",
           "severity": "Low",
-          "description": "3 render-blocking stylesheets remain after the fonts.css/rewards.css lazy-load fix already applied (commit 8282bc8); Lighthouse quantifies the remaining cost at 150-600ms combined on mobile. Downgraded from High to Low since the main fix already shipped and lab LCP is already Good (1.7s mobile).",
+          "description": "4 render-blocking stylesheets remain (tokens.css, [page].css, utilities.css, fonts.css); only rewards.css is lazy-loaded via js/lazy-css.js (fonts.css was reverted to blocking after it caused a CLS regression, commit 802d9e6). Lab LCP is already Good (1.7s mobile) and CLS is now Good (0.074) post-fix.",
           "recommendation": "Optional further optimization: inline critical CSS for tokens.css if squeezing more mobile LCP margin is desired."
         }
       ]
