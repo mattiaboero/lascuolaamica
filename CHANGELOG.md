@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.23 - 2026-07-05
+
+### Fixed
+- fix(perf): regressione CLS mobile introdotta dal fix 4.12.22. Rendere `fonts.css` lazy-loaded (via `js/lazy-css.js`) rompeva l'ottimizzazione anti-CLS già presente nel CSS: `fonts.css` contiene, oltre ai veri `@font-face`, i font di fallback con metriche allineate (`Nunito Fallback`, `Fredoka One Fallback` — `ascent-override`/`descent-override`/`size-adjust` calcolati apposta) usati come secondo nome nello stack `font-family` (es. `'Nunito','Nunito Fallback',sans-serif`). Con `fonts.css` bloccante, il first paint usava già il fallback allineato; reso lazy, il first paint cadeva sul generico `sans-serif`/`cursive` non allineato, e lo swap al fallback allineato (poi al font vero) causava un layout shift reale — confermato con dato Lighthouse via PageSpeed Insights API: CLS mobile 0.165-0.183 ("Needs Improvement"), causa esatta "Web font loaded" su `<main>` (font Nunito 700/900), identificata dall'audit `layout-shifts`/`cls-culprits-insight` di Lighthouse, non da ipotesi. Rimesso `fonts.css` come `<link rel="stylesheet">` bloccante su tutte le 20 pagine; `rewards.css` resta l'unico file lazy-loaded via `js/lazy-css.js` (nessuna dipendenza da font-metric fallback, sicuro da ritardare). Verificato in preview: font e stile premi corretti, nessun errore console.
+- chore: bump versione `4.12.22` → `4.12.23` (`js/lazy-css.js` modificato, cache-relevant).
+
 ## 4.12.22 - 2026-07-05
 
 ### Changed

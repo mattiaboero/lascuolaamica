@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '5 luglio 2026 · Release 4.12.23',
+      items: [
+        'Corretto un piccolo scatto nel layout della home su mobile (i font tornano a caricarsi normalmente, resta più veloce solo lo stile della bacheca premi).',
+      ]
+    },
+    {
       date: '5 luglio 2026 · Release 4.12.22',
       items: [
         'Velocizzato il caricamento della pagina: font e stile dei premi ora si caricano senza bloccare la visualizzazione del resto del sito.',

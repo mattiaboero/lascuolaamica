@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var files = ['fonts.css', 'rewards.css'];
+  var files = ['rewards.css'];
   files.forEach(function (href) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';

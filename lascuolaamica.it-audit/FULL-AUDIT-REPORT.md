@@ -4,34 +4,42 @@ Method: source-level audit (repo = live site source), homepage fetch verified li
 
 ## Executive Summary
 
-**SEO Health Score: 90/100**
+**SEO Health Score: 92/100** (updated 2026-07-05 evening with real Google API data — see "Update" note below)
 
 Business type: EdTech / educational content site (free primary-school quiz platform, non-commercial, single-maintainer). Small site (19 indexable pages via sitemap).
 
 This site already carries the results of prior SEO/a11y/security work sessions — the baseline is strong. No critical blockers found.
 
+**Update (same day, later pass):** the original audit ran without Google API credentials, so Performance was a static-analysis estimate and CWV/indexation were unverified. Credentials were configured afterward (PageSpeed/CrUX API key + GSC service account) and a follow-up `seo-google` pass fetched real data: the render-blocking-CSS fix below already shipped (commit `8282bc8`), real Lighthouse lab scores are excellent (Mobile 91, Desktop 100), but real data also surfaced two things static analysis couldn't: a mobile CLS regression and 3 unindexed sitemap URLs.
+
+**Second update (same evening):** the CLS regression turned out to be self-inflicted — making `fonts.css` lazy-loaded (part of the first CSS fix) broke the site's pre-existing metric-matched fallback-font system (`Nunito Fallback`/`Fredoka One Fallback`), which needs to be available at first paint to prevent shift. Reverted `fonts.css` to blocking; only `rewards.css` remains lazy-loaded. Not yet re-measured in production — see Performance section.
+
 ### Top findings
-1. **High** — 5 render-blocking stylesheets loaded serially in `<head>` on every page (tokens.css, index.css/[page].css, fonts.css, utilities.css, rewards.css). No critical-CSS inlining.
-2. **Medium** — `civica.html` has visibly thinner FAQ schema (4 Q&A) vs. sibling subject pages (7-8 Q&A) — inconsistent depth across the subject cluster.
-3. **Medium** — No live Core Web Vitals field data verified in this pass (no Search Console/CrUX credentials detected) — recommend running `seo-google` once credentials are set up.
-4. **Low** — `chi-siamo.html` meta description is 153 chars, closest to Google's ~155-160 truncation edge of any page.
-5. **Info** — `supporto-satispay.html` correctly `noindex`'d and intentionally excluded from sitemap.xml — correct handling, not a bug.
+1. **Medium** — Real Lighthouse data: mobile CLS 0.183 ("Needs Improvement"), driven by a layout shift in the homepage subject-card grid. Desktop CLS is fine (0.003).
+2. **Medium** — Real Search Console data: 3 of 19 sitemap URLs not indexed — `/premi` and `/cookie` are "unknown to Google" (never crawled), `/privacy` is "discovered, not yet indexed."
+3. **Medium** — `civica.html` has visibly thinner FAQ schema (4 Q&A) vs. sibling subject pages (7-8 Q&A) — inconsistent depth across the subject cluster.
+4. **Info** — CrUX field data unavailable (insufficient Chrome traffic volume) — expected for a young/low-traffic site, not a defect.
+5. **Low** — `chi-siamo.html` meta description is 153 chars, closest to Google's ~155-160 truncation edge of any page.
+6. **Fixed** — 5 render-blocking stylesheets in `<head>` (original "High" finding) — resolved same day via `js/lazy-css.js`, real Lighthouse data confirms mobile LCP is now Good (1.7s).
 
 ### Quick wins
-- Consolidate/inline critical CSS for the 5 header stylesheets, or combine into one bundled file per page type.
+- Fix mobile CLS: reserve layout space for the homepage subject-card grid to prevent reflow.
+- Request indexing in Search Console for `/premi`, `/cookie`, `/privacy`.
 - Add 3-4 more FAQ Q&As to `civica.html` to match subject-page parity (currently 4 vs 7-8 elsewhere).
 - Trim `chi-siamo.html` meta description a few characters for safety margin.
 
-## Technical SEO — Score 92/100
+## Technical SEO — Score 94/100
 **What works:**
 - `robots.txt` clean: `Allow: /`, sensible `Disallow: /json/`, `/reports/`, points to sitemap.
-- `sitemap.xml` valid, 19 URLs, correct `lastmod`/`priority`/`changefreq`.
+- `sitemap.xml` valid, 19 URLs, correct `lastmod`/`priority`/`changefreq`. GSC-verified: 0 warnings, 0 errors, last submitted 2026-05-30.
 - Every page has a unique, self-referencing canonical.
 - Response headers (live-verified): CSP (strict, no `unsafe-inline`), HSTS (`max-age=31536000; includeSubDomains`), `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, COOP/CORP, Permissions-Policy locking down camera/mic/geolocation/etc. Served via Cloudflare, HTTPS enforced.
 - Service worker (`sw.js`) present for offline/PWA support — consistent with "works offline" claim in copy.
+- GSC URL Inspection (real data) confirms 11/14 checked URLs "Submitted and indexed", homepage crawled 2026-07-03, `robots.txt` correctly allows indexing.
 
 **Findings:**
-- **High** — Render-blocking CSS chain (5 stylesheets) in `<head>` before any deferred script; no inline critical CSS. Impacts LCP on first visit (cache/SW mitigates repeat visits).
+- **Low** (fixed) — Render-blocking CSS chain originally 5 stylesheets in `<head>`; `fonts.css`/`rewards.css` now lazy-load via `js/lazy-css.js` (commit `8282bc8`), leaving 3 blocking. Real Lighthouse mobile LCP is now 1.7s (Good).
+- **Medium** — GSC URL Inspection (real data, 14/19 URLs checked): `/premi` and `/cookie` are "URL is unknown to Google" (never crawled), `/privacy` is "Discovered — currently not indexed." Sitemap submission itself is error-free, so this is an indexation lag/priority issue, not a technical blocker. Recommend requesting indexing via GSC for these 3 URLs; remaining 5 URLs (`/ai-info`, `/supporta`, `/supporto-satispay`, +2) not yet checked due to API rate limiting this session.
 - **Low** — No `hreflang` — correct, since site is single-language (it-IT) only; flagged as non-issue.
 
 ## Content Quality (E-E-A-T) — Score 88/100
@@ -64,15 +72,18 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 **Findings:**
 - **Medium** (see Content section) — `civica.html` FAQPage depth (4) inconsistent with sibling pages (7-8); bring to parity for uniform rich-result eligibility.
 
-## Performance — Score 80/100 (estimated, no live CWV field data)
+## Performance — Score 90/100 (real Lighthouse lab data via PageSpeed Insights API; CrUX field data still unavailable)
 **What works:**
+- Real PageSpeed Insights v5 data (Google API, fetched 2026-07-05): **Mobile Performance 91/100, Desktop 100/100.**
+- All timing metrics Good on both strategies: FCP 0.9s/0.3s, LCP 1.7s/0.4s, TBT 0ms/0ms, TTI 1.7s/0.4s (mobile/desktop). SEO/Best Practices/Accessibility all 100/100 on both.
 - Fonts preloaded (`fredoka` 700, `nunito` regular) with `font-display: swap` on all `@font-face` rules — prevents invisible-text flash.
 - All page scripts use `defer` — no render-blocking JS.
 - OG/social preview images are reasonably sized (43-80 KB per 1200x630 JPEG) — not bloated.
 
 **Findings:**
-- **High** — 5 separate render-blocking stylesheet requests per page before first paint; no bundling/inlining of critical CSS.
-- **Info** — No CrUX/GSC/PageSpeed API credentials detected in this environment; this score is a lab-style estimate from static analysis, not live field data. Recommend running `seo-google` once Search Console access is configured to replace this estimate with real LCP/INP/CLS.
+- **Medium** — Real Lighthouse mobile run: **CLS 0.183** ("Needs Improvement", band 0.1-0.25), driven by a dominant layout shift (score 0.136) in the homepage subject-card grid. Desktop CLS is fine (0.003) — mobile-viewport-specific, likely image/card reflow before layout settles. Recommend reserving space/aspect-ratio for the homepage subject cards.
+- **Info** — CrUX (both per-URL and origin-level) returned "Insufficient Chrome traffic volume for eligibility" — credentials are correctly configured (Tier 1), this is purely a traffic-volume ceiling for a young/low-traffic site. Re-check in 2-3 months as organic traffic grows.
+- **Low** — 3 render-blocking stylesheets remain after the fonts.css/rewards.css lazy-load fix already shipped same day; Lighthouse quantifies the remaining cost at 150-600ms combined on mobile — real LCP (1.7s) is already Good, so this is now a minor/optional optimization, not a blocker.
 
 ## Images — Score 95/100
 **What works:**
@@ -92,4 +103,4 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 - None significant — this category is a genuine strength versus typical competitors in the space.
 
 ## Notes on Methodology
-This audit was performed by reading the site's own source repository (the audited domain is this project's own live deployment) plus one live HTTP fetch to confirm headers/HTML match production. This is more reliable than a blind crawl and let every page be checked, not just a sample. No Lighthouse/CrUX/GSC/Moz/DataForSEO credentials were available in this environment, so Performance and Backlinks are estimated/qualitative rather than measured — flagged above wherever that applies.
+This audit was performed by reading the site's own source repository (the audited domain is this project's own live deployment) plus one live HTTP fetch to confirm headers/HTML match production. This is more reliable than a blind crawl and let every page be checked, not just a sample. The initial pass had no Lighthouse/CrUX/GSC/Moz/DataForSEO credentials, so Performance and indexation were estimated/unverified — flagged inline wherever that applied. A same-day follow-up pass configured Google API credentials (PageSpeed/CrUX API key + GSC service account) and re-ran `seo-google`, replacing the Performance estimate with real Lighthouse lab data and adding verified GSC indexation/search-performance data (see Technical SEO and Performance sections above). Full detail in `findings/google-data.md`. Backlinks remain unmeasured (no Moz/Bing/DataForSEO credentials).

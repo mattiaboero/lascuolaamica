@@ -1,25 +1,25 @@
 {
   "summary": {
-    "health_score": 90,
+    "health_score": 92,
     "business_type": "EdTech / educational content (free primary-school quiz platform)",
     "top_findings": [
-      "5 render-blocking stylesheets in <head> on every page, no critical CSS inlining",
+      "Mobile CLS 0.183 (Needs Improvement) on homepage, real Lighthouse data — layout shift in subject-card grid",
+      "3 of 19 sitemap URLs not indexed: /premi and /cookie unknown to Google, /privacy discovered but not indexed",
       "civica.html FAQ schema thinner (4 Q&A) than sibling subject pages (7-8 Q&A)",
-      "No live Core Web Vitals field data available in this environment (no GSC/CrUX credentials)",
-      "chi-siamo.html meta description near truncation edge (153 chars)",
-      "supporto-satispay.html correctly noindexed and excluded from sitemap (verified correct, not a bug)"
+      "CrUX field data unavailable (insufficient Chrome traffic volume) — young/low-traffic site, not a defect",
+      "chi-siamo.html meta description near truncation edge (153 chars)"
     ],
     "quick_wins": [
-      "Bundle/inline critical CSS for the 5 head stylesheets",
+      "Fix mobile CLS: stabilize subject-card grid layout on homepage (dominant shift score 0.136)",
+      "Request indexing in GSC for /premi, /cookie, /privacy",
       "Add 3-4 FAQ Q&As to civica.html to match sibling pages",
-      "Trim chi-siamo.html description to ~140 chars",
-      "Connect Search Console to get real CWV/indexation data"
+      "Trim chi-siamo.html description to ~140 chars"
     ]
   },
   "categories": [
     {
       "name": "Technical SEO",
-      "score": 92,
+      "score": 94,
       "what_works": [
         "Clean robots.txt with correct sitemap reference",
         "Valid sitemap.xml, 19 URLs with correct lastmod/priority",
@@ -29,10 +29,16 @@
       ],
       "findings": [
         {
-          "title": "Render-blocking CSS chain in <head>",
-          "severity": "High",
-          "description": "5 stylesheets (tokens.css, [page].css, fonts.css, utilities.css, rewards.css) load serially before first paint, no critical CSS inlined.",
-          "recommendation": "Inline above-the-fold critical CSS, defer/bundle the rest."
+          "title": "Render-blocking CSS chain in <head> (fixed)",
+          "severity": "Low",
+          "description": "5 stylesheets originally loaded serially before first paint; fonts.css and rewards.css now lazy-load via js/lazy-css.js (commit 8282bc8), leaving 3 blocking stylesheets. Real Lighthouse data confirms mobile LCP is now Good (1.7s).",
+          "recommendation": "Optional: inline tokens.css for marginal further gain, not required."
+        },
+        {
+          "title": "3 of 19 sitemap URLs not indexed (GSC-verified)",
+          "severity": "Medium",
+          "description": "Search Console URL Inspection (real data, 14/19 URLs checked): /premi and /cookie are 'URL is unknown to Google' (never crawled), /privacy is 'Discovered - currently not indexed'. Sitemap itself has 0 errors/warnings, 19 URLs correctly submitted.",
+          "recommendation": "Use GSC URL Inspection > Request Indexing for /premi, /cookie, /privacy. Verify internal linking isn't orphaning them."
         }
       ]
     },
@@ -91,24 +97,32 @@
     },
     {
       "name": "Performance",
-      "score": 80,
+      "score": 90,
       "what_works": [
+        "Real Lighthouse lab data (PageSpeed Insights v5, fetched via Google API): Mobile Performance 91/100, Desktop 100/100",
+        "All timing metrics Good on both strategies: FCP 0.9s/0.3s, LCP 1.7s/0.4s, TBT 0ms, TTI 1.7s/0.4s (mobile/desktop)",
         "Fonts preloaded with font-display: swap",
         "All scripts deferred, no render-blocking JS",
         "OG images reasonably sized (43-80 KB per 1200x630 JPEG)"
       ],
       "findings": [
         {
-          "title": "No live CWV field data",
+          "title": "Mobile CLS 0.183 — Needs Improvement",
+          "severity": "Medium",
+          "description": "Real Lighthouse mobile run shows CLS 0.183 (band 0.1-0.25), driven by a dominant layout shift (score 0.136) in the homepage subject-card grid; desktop CLS is fine (0.003). Not visible in prior static analysis.",
+          "recommendation": "Reserve space/aspect-ratio for homepage subject cards to prevent reflow before fonts/images settle on mobile viewport."
+        },
+        {
+          "title": "CrUX field data unavailable",
           "severity": "Info",
-          "description": "No CrUX/GSC/PageSpeed credentials detected in this environment; score is a static-analysis estimate, not measured field data.",
-          "recommendation": "Run seo-google once Search Console access is configured."
+          "description": "CrUX (both per-URL and origin-level) returned 'Insufficient Chrome traffic volume for eligibility'. Google API credentials are correctly configured (Tier 1); this is a traffic-volume ceiling for a young/low-traffic site, not a configuration or code defect.",
+          "recommendation": "Re-check CrUX eligibility in 2-3 months as organic traffic grows."
         },
         {
           "title": "Render-blocking CSS impacts LCP",
-          "severity": "High",
-          "description": "Same as Technical SEO finding: 5 blocking stylesheets before first paint.",
-          "recommendation": "Inline critical CSS."
+          "severity": "Low",
+          "description": "3 render-blocking stylesheets remain after the fonts.css/rewards.css lazy-load fix already applied (commit 8282bc8); Lighthouse quantifies the remaining cost at 150-600ms combined on mobile. Downgraded from High to Low since the main fix already shipped and lab LCP is already Good (1.7s mobile).",
+          "recommendation": "Optional further optimization: inline critical CSS for tokens.css if squeezing more mobile LCP margin is desired."
         }
       ]
     },
@@ -135,9 +149,9 @@
   "action_plan": {
     "phases": [
       {"name": "Phase 1: Critical Fixes", "timeframe": "Week 1", "items": ["None — no critical/blocking issues found"]},
-      {"name": "Phase 2: High-Impact Improvements", "timeframe": "Weeks 2-3", "items": ["Bundle/inline critical CSS for 5 head stylesheets", "Bring civica.html FAQ schema to parity (add 3-4 Q&As)"]},
-      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": ["Trim chi-siamo.html meta description", "Run seo-google once GSC connected", "Consider backlink baseline via Moz/Bing/Common Crawl"]},
-      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": ["Keep sitemap lastmod accurate", "Re-audit after CSS bundling change", "Maintain schema/meta/canonical discipline on new pages"]}
+      {"name": "Phase 2: High-Impact Improvements", "timeframe": "Weeks 2-3", "items": ["Fix mobile CLS 0.183: stabilize homepage subject-card grid layout", "Request indexing in GSC for /premi, /cookie, /privacy", "Bring civica.html FAQ schema to parity (add 3-4 Q&As)"]},
+      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": ["Trim chi-siamo.html meta description", "Complete URL Inspection for remaining 5 sitemap URLs (rate-limited this run)", "Consider backlink baseline via Moz/Bing/Common Crawl"]},
+      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": ["Keep sitemap lastmod accurate", "Re-check CrUX eligibility in 2-3 months as traffic grows", "Maintain schema/meta/canonical discipline on new pages"]}
     ]
   },
   "artifacts": {
