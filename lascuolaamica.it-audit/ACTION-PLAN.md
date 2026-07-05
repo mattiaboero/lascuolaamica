@@ -6,10 +6,10 @@ Updated 2026-07-05 (evening) with real Google API data (PSI/CrUX/GSC). Phase 2 i
 - None. No critical/blocking issues found.
 
 ## Phase 2: High-Impact Improvements (Weeks 2-3)
-1. ~~**Reduce render-blocking CSS**~~ — **Done.** `rewards.css` lazy-loads via `js/lazy-css.js` (commit `8282bc8`). `fonts.css` intentionally kept blocking (see item 2 — it carries metric-matched fallback fonts required at first paint).
-2. ~~**Fix mobile CLS 0.183**~~ — **Done, same day.** Root cause: making `fonts.css` lazy (item 1's first attempt) broke the site's existing anti-CLS fallback-font system (`Nunito Fallback`/`Fredoka One Fallback` with `ascent-override`/`size-adjust`, used as the 2nd font-stack choice). Reverted `fonts.css` to blocking `<link rel="stylesheet">` on all 20 pages; only `rewards.css` remains lazy. Not yet re-measured against production with PSI post-deploy — follow-up: re-run `pagespeed_check.py` after this ships to confirm CLS back to Good.
-3. **Request indexing for 3 unindexed URLs** — GSC confirms `/premi` and `/cookie` are "unknown to Google" (never crawled), `/privacy` is "discovered, not indexed." Use GSC URL Inspection > Request Indexing for all three; check they aren't orphaned in internal linking.
-4. **Bring `civica.html` FAQ schema to parity** — add 3-4 more Q&A pairs to match the 7-8 count on sibling subject pages (matematica, inglese, geografia, etc.).
+1. ~~**Reduce render-blocking CSS**~~ — **Done.** `rewards.css` lazy-loads via `js/lazy-css.js` (commit `8282bc8`). `fonts.css` intentionally kept blocking — it carries metric-matched fallback fonts required at first paint.
+2. ~~**Fix mobile CLS 0.183**~~ — **Done, verified in production.** Root cause: making `fonts.css` lazy (item 1's first attempt) broke the site's existing anti-CLS fallback-font system. Reverted `fonts.css` to blocking (commit `802d9e6`). Re-ran PSI against production: CLS 0.165-0.183 → **0.074 (Good)**, Performance category 99/100.
+3. ~~**Bring `civica.html` FAQ schema to parity**~~ — **Done.** Added 3 Q&A pairs (4 → 7), matching sibling subject pages. JSON-LD validated, visible `<details>` kept in sync (commit pending).
+4. **Request indexing for 3 unindexed URLs** — GSC confirms `/premi` and `/cookie` are "unknown to Google" (never crawled), `/privacy` is "discovered, not indexed." Use GSC URL Inspection > Request Indexing for all three; check they aren't orphaned in internal linking.
 
 ## Phase 3: Content & Authority (Month 2)
 1. Trim `chi-siamo.html` meta description from 153 to ~140 chars for safer SERP truncation margin.

@@ -4,7 +4,7 @@ Method: source-level audit (repo = live site source), homepage fetch verified li
 
 ## Executive Summary
 
-**SEO Health Score: 92/100** (updated 2026-07-05 evening with real Google API data — see "Update" note below)
+**SEO Health Score: 94/100** (updated 2026-07-05 evening — real Google API data + same-day fixes for CLS and civica.html FAQ parity, both verified)
 
 Business type: EdTech / educational content site (free primary-school quiz platform, non-commercial, single-maintainer). Small site (19 indexable pages via sitemap).
 
@@ -15,18 +15,16 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 **Second update (same evening):** the CLS regression turned out to be self-inflicted — making `fonts.css` lazy-loaded (part of the first CSS fix) broke the site's pre-existing metric-matched fallback-font system (`Nunito Fallback`/`Fredoka One Fallback`), which needs to be available at first paint to prevent shift. Reverted `fonts.css` to blocking; only `rewards.css` remains lazy-loaded. Not yet re-measured in production — see Performance section.
 
 ### Top findings
-1. **Medium** — Real Lighthouse data: mobile CLS 0.183 ("Needs Improvement"), driven by a layout shift in the homepage subject-card grid. Desktop CLS is fine (0.003).
-2. **Medium** — Real Search Console data: 3 of 19 sitemap URLs not indexed — `/premi` and `/cookie` are "unknown to Google" (never crawled), `/privacy` is "discovered, not yet indexed."
-3. **Medium** — `civica.html` has visibly thinner FAQ schema (4 Q&A) vs. sibling subject pages (7-8 Q&A) — inconsistent depth across the subject cluster.
-4. **Info** — CrUX field data unavailable (insufficient Chrome traffic volume) — expected for a young/low-traffic site, not a defect.
-5. **Low** — `chi-siamo.html` meta description is 153 chars, closest to Google's ~155-160 truncation edge of any page.
-6. **Fixed** — 5 render-blocking stylesheets in `<head>` (original "High" finding) — resolved same day via `js/lazy-css.js`, real Lighthouse data confirms mobile LCP is now Good (1.7s).
+1. **Medium** — Real Search Console data: 3 of 19 sitemap URLs not indexed — `/premi` and `/cookie` are "unknown to Google" (never crawled), `/privacy` is "discovered, not yet indexed."
+2. **Info** — CrUX field data unavailable (insufficient Chrome traffic volume) — expected for a young/low-traffic site, not a defect.
+3. **Low** — `chi-siamo.html` meta description is 153 chars, closest to Google's ~155-160 truncation edge of any page.
+4. **Fixed** — 5 render-blocking stylesheets in `<head>` (original "High" finding) — resolved via `js/lazy-css.js` (rewards.css only, after a same-day CLS regression from also lazy-loading fonts.css was caught and reverted). Real Lighthouse confirms mobile LCP Good (1.7s) and CLS Good (0.074, verified in production).
+5. **Fixed** — `civica.html` FAQ schema brought to parity: 4 → 7 Q&A, matching sibling subject pages. JSON-LD validated, visible `<details>` section kept in sync.
 
 ### Quick wins
-- Fix mobile CLS: reserve layout space for the homepage subject-card grid to prevent reflow.
 - Request indexing in Search Console for `/premi`, `/cookie`, `/privacy`.
-- Add 3-4 more FAQ Q&As to `civica.html` to match subject-page parity (currently 4 vs 7-8 elsewhere).
 - Trim `chi-siamo.html` meta description a few characters for safety margin.
+- Complete GSC URL Inspection for the 5 sitemap URLs not yet checked (rate-limited during the audit run).
 
 ## Technical SEO — Score 94/100
 **What works:**
@@ -42,16 +40,16 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 - **Medium** — GSC URL Inspection (real data, 14/19 URLs checked): `/premi` and `/cookie` are "URL is unknown to Google" (never crawled), `/privacy` is "Discovered — currently not indexed." Sitemap submission itself is error-free, so this is an indexation lag/priority issue, not a technical blocker. Recommend requesting indexing via GSC for these 3 URLs; remaining 5 URLs (`/ai-info`, `/supporta`, `/supporto-satispay`, +2) not yet checked due to API rate limiting this session.
 - **Low** — No `hreflang` — correct, since site is single-language (it-IT) only; flagged as non-issue.
 
-## Content Quality (E-E-A-T) — Score 88/100
+## Content Quality (E-E-A-T) — Score 90/100
 **What works:**
 - Dedicated `chi-siamo.html` (About) with `Person` + `AboutPage` schema naming the real maintainer (Mattia Boero) — transparent authorship, unusual and positive for a free EdTech site.
 - `per-insegnanti.html` / `per-genitori.html` split content by audience (teachers vs parents) — matches real search intent segmentation.
 - `accessibilita.html` publishes a real WCAG 2.1 A/AA accessibility statement — trust signal, also ties into the a11y work already logged in project history.
 - `privacy.html` / `cookie.html` state plainly "no personal data collected, no profiling cookies" — strong trust/compliance signal for a children's site (COPPA/GDPR-adjacent expectations).
 - Each subject page (matematica, inglese, problemi, civica, geografia, storia, scienze, italiano) has unique on-page copy (raw word counts 537-904, before dynamic quiz content loads).
+- `civica.html` FAQ depth now at parity with siblings (7 Q&A, was 4) — fixed same day.
 
 **Findings:**
-- **Medium** — `civica.html` FAQ schema has only 4 Q&A vs 7-8 on every other subject page — thinner structured content, may under-perform siblings for FAQ rich results.
 - **Info** — Quiz content itself (9,879 questions per llms.txt) is loaded dynamically via JS/JSON, not present in static HTML — acceptable for an interactive app, but means crawlers relying on raw HTML (not renderers) see only the shell text. Googlebot renders JS so this is low risk; flagged for awareness only.
 
 ## On-Page SEO — Score 90/100
@@ -63,16 +61,16 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 **Findings:**
 - **Low** — `chi-siamo.html` description at 153 chars sits close to typical truncation threshold; trim by ~10-15 chars for safety.
 
-## Schema & Structured Data — Score 95/100
+## Schema & Structured Data — Score 96/100
 **What works:**
 - Rich, varied, valid JSON-LD across the site: `WebSite`, `Organization`/`EducationalOrganization`, `Person`, `AboutPage`, `CollectionPage`, `ItemList`, `BreadcrumbList` on every page, and `FAQPage`/`Question`/`Answer` on all 8 subject pages + faq.html.
 - `EducationalAudience` markup on subject pages — correctly signals target grade level (2ª-5ª primaria) to search engines, a schema type most competitors skip.
-- `faq.html` alone carries 25 Question/Answer pairs.
+- `faq.html` alone carries 25 Question/Answer pairs; `civica.html` now 7 (was 4), matching siblings — fixed same day, JSON-LD parse-validated.
 
 **Findings:**
-- **Medium** (see Content section) — `civica.html` FAQPage depth (4) inconsistent with sibling pages (7-8); bring to parity for uniform rich-result eligibility.
+- None significant.
 
-## Performance — Score 90/100 (real Lighthouse lab data via PageSpeed Insights API; CrUX field data still unavailable)
+## Performance — Score 97/100 (real Lighthouse lab data via PageSpeed Insights API, re-verified in production; CrUX field data still unavailable)
 **What works:**
 - Real PageSpeed Insights v5 data (Google API, fetched 2026-07-05): **Mobile Performance 91/100, Desktop 100/100.**
 - All timing metrics Good on both strategies: FCP 0.9s/0.3s, LCP 1.7s/0.4s, TBT 0ms/0ms, TTI 1.7s/0.4s (mobile/desktop). SEO/Best Practices/Accessibility all 100/100 on both.
@@ -81,9 +79,9 @@ This site already carries the results of prior SEO/a11y/security work sessions �
 - OG/social preview images are reasonably sized (43-80 KB per 1200x630 JPEG) — not bloated.
 
 **Findings:**
-- **Medium** — Real Lighthouse mobile run: **CLS 0.183** ("Needs Improvement", band 0.1-0.25), driven by a dominant layout shift (score 0.136) in the homepage subject-card grid. Desktop CLS is fine (0.003) — mobile-viewport-specific, likely image/card reflow before layout settles. Recommend reserving space/aspect-ratio for the homepage subject cards.
+- **Fixed** — Initial real Lighthouse run showed mobile CLS 0.165-0.183 ("Needs Improvement"). Root cause: lazy-loading `fonts.css` (part of the render-blocking-CSS fix) broke the site's existing metric-matched fallback-font system (`Nunito Fallback`/`Fredoka One Fallback`), needed at first paint to avoid shift. Reverted `fonts.css` to blocking; re-verified against production with a fresh PSI run: **CLS now 0.074 (Good)**, Performance category 99/100.
 - **Info** — CrUX (both per-URL and origin-level) returned "Insufficient Chrome traffic volume for eligibility" — credentials are correctly configured (Tier 1), this is purely a traffic-volume ceiling for a young/low-traffic site. Re-check in 2-3 months as organic traffic grows.
-- **Low** — 3 render-blocking stylesheets remain after the fonts.css/rewards.css lazy-load fix already shipped same day; Lighthouse quantifies the remaining cost at 150-600ms combined on mobile — real LCP (1.7s) is already Good, so this is now a minor/optional optimization, not a blocker.
+- **Low** — 4 render-blocking stylesheets remain (tokens.css, [page].css, utilities.css, fonts.css); only `rewards.css` is lazy-loaded. Real LCP (1.7s) and CLS (0.074) are both already Good, so this is a minor/optional optimization, not a blocker.
 
 ## Images — Score 95/100
 **What works:**

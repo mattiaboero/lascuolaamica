@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.24 - 2026-07-05
+
+### Added
+- content(seo-audit): risolto finding "Medium" da audit SEO — `civica.html` aveva solo 4 coppie FAQ Question/Answer contro le 7-8 delle pagine materia gemelle (matematica, inglese, ecc.), profondità inconsistente nel cluster subject. Aggiunte 3 nuove FAQ (classe minima per iniziare, possibilità di scegliere un singolo ambito, contenuto dell'ambito "Strada e Gentilezza") sia nel JSON-LD `FAQPage` sia nella sezione `<details>` visibile, mantenendo l'allineamento 1:1 tra i due richiesto per rich-result eligibility. Ora 7 Q&A, parità raggiunta. Verificato: JSON-LD valido (parse + count), rendering preview corretto, nessun errore console.
+- chore: bump versione `4.12.23` → `4.12.24` (`/civica` è in `OPTIONAL_PRECACHE_URLS` di `sw.js`, contenuto modificato).
+
 ## 4.12.23 - 2026-07-05
 
 ### Fixed
