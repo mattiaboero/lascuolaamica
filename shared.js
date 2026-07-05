@@ -52,6 +52,14 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '4 luglio 2026 · Release 4.12.19 - 4.12.21',
+      items: [
+        'Rinforzato ulteriormente il contrasto del contatore domande nel footer per gli standard di accessibilità.',
+        'Corretto un problema per cui gli screen reader ripetevano in continuazione il timer del "Tempo di gioco" invece di annunciarlo solo ai cambi reali di stato.',
+        'Lo stato di risposta corretta/sbagliata è ora comunicato correttamente anche dagli screen reader, non solo con colore e icona.',
+      ]
+    },
+    {
       date: '4 luglio 2026 · Release 4.12.18',
       items: [
         'Aggiornato questo elenco, che era rimasto fermo da parecchie release.',

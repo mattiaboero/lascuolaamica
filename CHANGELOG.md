@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.21 - 2026-07-05
+
+### Fixed
+- fix(contenuto): `UPDATE_LOG` (`shared.js`) era rimasto indietro di 2 release (4.12.19, 4.12.20) — segnalato da utente (popup "Info" mostrava ancora 4.12.18). Terza occorrenza dello stesso bug (già visto e "risolto" manualmente in 4.12.17 e 4.12.18): la regola "l'etichetta della voce più recente deve coincidere con `APP_VERSION`" viveva solo in prosa nel changelog, senza alcun controllo automatico, quindi si perde ogni volta che una release viene fatta pensando ad altro (in questo caso: audit contrasto WCAG e accessibilità screen reader). Aggiunta voce consolidata per 4.12.19-4.12.21.
+
+### Added
+- test(contenuto): nuovo gate bloccante `scripts/check_update_log.js` (`npm run check:update-log`) — verifica che la versione massima citata nella prima voce di `UPDATE_LOG` (`shared.js`) coincida con `APP_VERSION` (`app-version.js`). Agganciato in `prepublish-check.sh` subito dopo `check_sw_precache.js`. Verificato iniettando un mismatch di proposito: blocca correttamente, e torna verde una volta corretto. Questo era l'anello mancante — le prime due volte il problema era stato risolto solo nei dati, mai nel processo che lo genera.
+
+### Changed
+- chore: bump versione `4.12.20` → `4.12.21` (`shared.js` precachato).
+
 ## 4.12.20 - 2026-07-04
 
 ### Fixed

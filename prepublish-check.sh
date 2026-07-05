@@ -421,6 +421,12 @@ else
   status=1
 fi
 
+if node scripts/check_update_log.js; then
+  echo "[OK] UPDATE_LOG (shared.js) allineato ad APP_VERSION"
+else
+  status=1
+fi
+
 if node scripts/audit_questions_json.js; then
   echo "[OK] question JSON audit passed"
 else
