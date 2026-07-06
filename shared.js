@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '6 luglio 2026 · Release 4.12.27',
+      items: [
+        'Nella pagina "Per genitori" aggiunto il rimando alla Privacy e Cookie Policy dalla sezione sicurezza.',
+      ]
+    },
+    {
       date: '6 luglio 2026 · Release 4.12.26',
       items: [
         'Aggiornate le pagine Privacy e Cookie: indicato il titolare del trattamento, i dati tecnici del provider e chiarite le informazioni per i genitori.',

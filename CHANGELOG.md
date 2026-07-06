@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.27 - 2026-07-06
+
+### Changed
+- content(privacy): `per-genitori.html` — aggiunto rimando contestuale a `Privacy Policy` e `Cookie Policy` nella sezione "Sicurezza e privacy" (prima i link erano solo nel footer), dove il genitore legge dei temi privacy; così la sfumatura sui dati tecnici del provider è a un clic. Allineata la formulazione del primo bullet ("nessun dato personale raccolto" → "…tramite le funzionalità del sito") a quella delle policy corrette in 4.12.26.
+- chore: bump versione `4.12.26` → `4.12.27` (`/per-genitori` è in `OPTIONAL_PRECACHE_URLS` di `sw.js`, contenuto modificato).
+
 ## 4.12.26 - 2026-07-06
 
 ### Changed
