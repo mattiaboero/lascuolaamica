@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.28 - 2026-07-06
+
+### Changed
+- style(privacy): `.updated-note` (nuova classe in `info-pages.css`, usata da `privacy.html` e `cookie.html`) aggiunge `margin-top: 24px` al paragrafo "Ultimo aggiornamento", che risultava troppo attaccato al paragrafo precedente (blocco "Bambini" in privacy, "Come cancellare i dati" in cookie) — nessuna regola di spaziatura dedicata esisteva prima in `.modal-body p`.
+- chore: bump versione `4.12.27` → `4.12.28` (`/privacy` e `/cookie` in `OPTIONAL_PRECACHE_URLS` di `sw.js`, contenuto/CSS modificato).
+
 ## 4.12.27 - 2026-07-06
 
 ### Changed
