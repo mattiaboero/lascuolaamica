@@ -52,6 +52,12 @@
   const playWindowSubscribers = new Set();
   const UPDATE_LOG = [
     {
+      date: '6 luglio 2026 · Release 4.12.26',
+      items: [
+        'Aggiornate le pagine Privacy e Cookie: indicato il titolare del trattamento, i dati tecnici del provider e chiarite le informazioni per i genitori.',
+      ]
+    },
+    {
       date: '5 luglio 2026 · Release 4.12.25',
       items: [
         'Piccola ottimizzazione della descrizione della pagina "Chi siamo" per i motori di ricerca.',

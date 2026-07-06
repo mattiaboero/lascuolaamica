@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.26 - 2026-07-06
+
+### Changed
+- content(privacy): revisione di conformità GDPR/ePrivacy di `privacy.html` e `cookie.html` (sito rivolto a minori). Aggiunta la sezione **Titolare del trattamento** con identità (Mattia Boero) e contatto (`supporto@lascuolaamica.it`), assente prima e richiesta dall'Art. 13 GDPR. Riformulato "non raccoglie dati personali" (troppo assoluto): esplicitato che l'hosting **Cloudflare** può trattare dati tecnici come l'indirizzo IP nei log del server per sicurezza/erogazione, in qualità di responsabile, con garanzie adeguate (Clausole Contrattuali Standard) per trasferimenti extra-UE. Aggiunta sezione **Bambini** (Art. 8 GDPR non applicabile in assenza di trattamento su consenso → nessun age-gate; invito ai genitori). In `cookie.html` esplicitato che `localStorage` è tecnico e strettamente necessario → esente da consenso, nessun banner richiesto; aggiunto rimando ai dati tecnici del provider. Aggiunta data "Ultimo aggiornamento" visibile su entrambe e `dateModified` JSON-LD → `2026-07-06`.
+- chore: bump versione `4.12.25` → `4.12.26` (`/privacy` e `/cookie` sono in `OPTIONAL_PRECACHE_URLS` di `sw.js`, contenuto modificato).
+
 ## 4.12.25 - 2026-07-05
 
 ### Changed
