@@ -1,5 +1,13 @@
 [
  {
+  "date": "16 luglio 2026 · Release 4.12.29",
+  "items": [
+   "Rimosso lo strumento interno di editor esercizi (cartella admin/), mai pubblicato online.",
+   "Ottimizzato il caricamento: il registro degli aggiornamenti non è più incluso nel file principale del sito ma caricato solo quando apri \"Ultimi aggiornamenti\".",
+   "Rafforzate le protezioni di sicurezza del sito contro attacchi di tipo XSS e migliorato il supporto HSTS."
+  ]
+ },
+ {
   "date": "6 luglio 2026 · Release 4.12.28",
   "items": [
    "Piccolo ritocco grafico nella pagina Privacy: più spazio tra il testo e la data di aggiornamento."

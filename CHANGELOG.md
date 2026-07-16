@@ -1,5 +1,13 @@
 # Changelog Repo
 
+## 4.12.29 - 2026-07-16
+
+### Changed
+- chore(admin): rimossa la cartella `admin/` (editor esercizi interno con auth token client-side) — non era mai in `OPTIONAL_PRECACHE_URLS`/deploy pubblico (già escluso da `export_for_cloudflare.sh`), nessun link nel sito la referenziava. Rimossi anche i riferimenti dead in `README.md`, `docs/wiki/Architettura.md`, `_headers` (`/admin/*`) e `scripts/export_for_cloudflare.sh` (`--exclude 'admin/'`, ora superfluo).
+- perf(shared): `UPDATE_LOG` (30KB, 32% di `shared.js`) estratto in `json/changelog.json`, caricato via `fetch` lazy solo al click su "Ultimi aggiornamenti" invece di essere bundlato ed eseguito su ogni page load. `shared.js` passa da 95KB a 65KB. `scripts/check_update_log.js` e `scripts/audit_questions_json.js` aggiornati per il nuovo formato.
+- security(headers): CSP `require-trusted-types-for 'script'` (codebase già a zero `innerHTML`/`insertAdjacentHTML`), `preload` su HSTS, regola eslint `no-restricted-properties` per vietare `innerHTML`/`insertAdjacentHTML` e prevenire regressioni.
+- chore: bump versione `4.12.28` → `4.12.29` (nessuna pagina in `OPTIONAL_PRECACHE_URLS` impattata: cambi su file core già in `CORE_PRECACHE_URLS` di `sw.js`, invalidati automaticamente dal bump di `CACHE_NAME`).
+
 ## 4.12.28 - 2026-07-06
 
 ### Changed
