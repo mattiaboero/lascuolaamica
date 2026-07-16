@@ -7,7 +7,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const JSON_DIR = path.join(ROOT, 'json');
 const files = fs.readdirSync(JSON_DIR)
-  .filter((file) => file.endsWith('.json') && file !== 'index.json')
+  .filter((file) => file.endsWith('.json') && file !== 'index.json' && file !== 'changelog.json')
   .sort();
 
 const TECHNICAL_TEXT = /\(\s*ambito\b|\bvariante\s+\d+\b|\b(TODO|FIXME|placeholder|undefined|null|NaN|lorem ipsum)\b|\$\{[^}]+\}|\{[^}]+\}|\b(di la|di il|di lo|a il|a la)\b|depenendo/i;

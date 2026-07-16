@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-// Verifica che la voce piu' recente di UPDATE_LOG (shared.js), mostrata nel
+// Verifica che la voce piu' recente di json/changelog.json, mostrata nel
 // popup "Info" agli utenti, citi APP_VERSION (app-version.js) come versione
 // massima nel campo `date`. Senza questo controllo il log resta silenziosamente
 // indietro di N release ogni volta che una versione viene rilasciata senza che
-// nessuno tocchi shared.js (successo gia' due volte: 4.10.2->4.12.17, poi di
+// nessuno tocchi changelog.json (successo gia' due volte: 4.10.2->4.12.17, poi di
 // nuovo 4.12.18->4.12.20).
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SHARED_PATH = path.join(ROOT, 'shared.js');
+const CHANGELOG_PATH = path.join(ROOT, 'json', 'changelog.json');
 const APP_VERSION_PATH = path.join(ROOT, 'app-version.js');
 
 function extractAppVersion(source) {
@@ -19,19 +19,6 @@ function extractAppVersion(source) {
     throw new Error("Impossibile trovare APP_VERSION in app-version.js");
   }
   return match[1];
-}
-
-function extractFirstUpdateLogDate(source) {
-  const marker = 'const UPDATE_LOG = [';
-  const start = source.indexOf(marker);
-  if (start === -1) {
-    throw new Error('Impossibile trovare UPDATE_LOG in shared.js');
-  }
-  const dateMatch = source.slice(start).match(/date:\s*'([^']+)'/);
-  if (!dateMatch) {
-    throw new Error('Impossibile trovare il campo date della prima voce di UPDATE_LOG');
-  }
-  return dateMatch[1];
 }
 
 function extractMaxVersionFromDateLabel(dateLabel) {
@@ -51,20 +38,23 @@ function extractMaxVersionFromDateLabel(dateLabel) {
 
 function main() {
   const appVersionSource = fs.readFileSync(APP_VERSION_PATH, 'utf8');
-  const sharedSource = fs.readFileSync(SHARED_PATH, 'utf8');
+  const changelog = JSON.parse(fs.readFileSync(CHANGELOG_PATH, 'utf8'));
 
   const appVersion = extractAppVersion(appVersionSource);
-  const dateLabel = extractFirstUpdateLogDate(sharedSource);
+  const dateLabel = (changelog[0] || {}).date;
+  if (!dateLabel) {
+    throw new Error('json/changelog.json e vuoto o privo di campo date nella prima voce');
+  }
   const logVersion = extractMaxVersionFromDateLabel(dateLabel);
 
   if (logVersion !== appVersion) {
-    console.error(`[ERROR] UPDATE_LOG (shared.js) non allineato: prima voce cita fino a '${logVersion}' ('${dateLabel}'), ma APP_VERSION e' '${appVersion}'.`);
-    console.error("Aggiungi/aggiorna la voce piu' recente di UPDATE_LOG in shared.js.");
+    console.error(`[ERROR] changelog.json non allineato: prima voce cita fino a '${logVersion}' ('${dateLabel}'), ma APP_VERSION e' '${appVersion}'.`);
+    console.error("Aggiungi/aggiorna la voce piu' recente in json/changelog.json.");
     process.exitCode = 1;
     return;
   }
 
-  console.error(`UPDATE_LOG: prima voce allineata alla versione corrente (${appVersion}).`);
+  console.error(`changelog.json: prima voce allineata alla versione corrente (${appVersion}).`);
 }
 
 main();
