@@ -60,7 +60,6 @@ rsync -av --delete --delete-excluded \
   --exclude '.github/' \
   --exclude '.gitignore' \
   --exclude '__pycache__/' \
-  --exclude 'admin/' \
   --exclude 'docs/' \
   --exclude 'reports/' \
   --exclude 'scripts/' \

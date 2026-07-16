@@ -30,17 +30,6 @@ Questa scelta non è per semplicità: è per controllabilità. Ogni file che arr
 
 ---
 
-## Area admin (tool interno)
-
-La cartella `admin/` e uno strumento interno, non una boundary di sicurezza.
-
-- L'autenticazione attuale e client-side (`localStorage` + verifica token nel browser).
-- L'hash token pubblicato in `admin/editor-config.js` non equivale a protezione reale.
-- Se `admin/` deve essere online, serve protezione infrastrutturale (access policy, basic auth, VPN o equivalente).
-- L'export pubblico esclude `admin/` per default.
-
----
-
 ## Quiz engine
 
 - Un solo motore runtime: `subject-quiz-core.js`

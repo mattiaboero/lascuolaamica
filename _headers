@@ -13,9 +13,6 @@
   X-Robots-Tag: noindex, nofollow, noai, noimageai
   Cache-Control: public, max-age=0, must-revalidate
 
-/admin/*
-  X-Robots-Tag: noindex, nofollow, noarchive, noai, noimageai
-
 /reports/*
   X-Robots-Tag: noindex, nofollow, noarchive, noai, noimageai
 
