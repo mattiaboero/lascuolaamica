@@ -66,7 +66,19 @@ const sharedRules = {
   }],
   'no-undef': 'error',
   semi: ['error', 'always'],
-  'no-console': ['warn', { allow: ['warn', 'error'] }]
+  'no-console': ['warn', { allow: ['warn', 'error'] }],
+  'no-restricted-properties': ['error',
+    {
+      object: 'Element',
+      property: 'innerHTML',
+      message: 'Use textContent or createElement/appendChild instead of innerHTML to prevent XSS'
+    },
+    {
+      object: 'Element',
+      property: 'insertAdjacentHTML',
+      message: 'Use textContent or createElement/appendChild instead of insertAdjacentHTML to prevent XSS'
+    }
+  ]
 };
 
 export default [
