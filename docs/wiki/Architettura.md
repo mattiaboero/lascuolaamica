@@ -27,6 +27,27 @@ Questa scelta non è per semplicità: è per controllabilità. Ogni file che arr
 | `js/<subject>-page.js` | Config materia dichiarativa (`window.SA.subjectConfig`) |
 | `questions-loader.js` | Caricamento e parsing dataset JSON |
 | `sw.js` | Service Worker: cache PWA, fallback offline, clean URLs |
+| `js/rewards.js` | Bacheca premi: badge/coppe/trofei, salvataggio locale |
+
+---
+
+## Coupling `subject-quiz-core.js` ↔ `js/rewards.js`
+
+`js/rewards.js` è incluso con `defer` in **tutte** le pagine HTML (non solo `premi.html`), non solo dove serve. Nessun `import`/chiamata diretta tra i due file: sono disaccoppiati a compile-time e comunicano solo a runtime tramite `window.SA` + eventi DOM. Scelta deliberata, non un gap — un grafo di dipendenze statico (AST) non troverà mai un edge tra questi due file.
+
+**Flusso:**
+
+1. `rewards.js` si registra su `window.SA.rewards = { recordGame, ... }` al caricamento.
+2. A fine partita, `subject-quiz-core.js` chiama con guard difensivo:
+   ```js
+   if (!window.SA || !window.SA.rewards || typeof window.SA.rewards.recordGame !== 'function') return;
+   window.SA.rewards.recordGame({ ... });
+   ```
+   Se `rewards.js` non è caricato per qualche motivo, la chiamata viene saltata senza crash.
+3. Quando `recordGame()` sblocca un badge, `rewards.js` dispatcha `document.dispatchEvent(new CustomEvent('sa:rewards-updated', { detail: { unlocked, state } }))`.
+4. `rewards.js` stesso riascolta `sa:rewards-updated` per ridisegnare la bacheca (`renderBoard()`), utile se `premi.html` è aperta in un'altra tab o dopo un aggiornamento asincrono.
+
+**Perché non un import diretto**: ogni pagina materia carica `rewards.js` indipendentemente da `subject-quiz-core.js`; il contratto è sul namespace globale `window.SA`, non sul grafo di file. Aggiungere un nuovo consumer di eventi rewards (es. una nuova bacheca) richiede solo ascoltare `sa:rewards-updated`, zero modifiche a `subject-quiz-core.js`.
 
 ---
 
