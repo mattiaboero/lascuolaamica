@@ -19829,7 +19829,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "Cosa sono i 'decomponitori' in un ecosistema?",
+   "question": "Cosa sono i 'decompositori' in un ecosistema?",
    "options": [
     "Animali che mangiano solo frutta",
     "Organismi (funghi, batteri) che scompongono la materia organica morta",
@@ -19838,7 +19838,7 @@
    ],
    "answerIndex": 1,
    "answer": "Organismi (funghi, batteri) che scompongono la materia organica morta",
-   "explanation": "I decomponitori sono fondamentali: trasformano foglie morte, escrementi e carcasse in sali minerali che ritornano nel suolo. Senza di loro i nutrienti non si riciclerebbero e l'ecosistema si bloccherebbe.",
+   "explanation": "I decompositori sono fondamentali: trasformano foglie morte, escrementi e carcasse in sali minerali che ritornano nel suolo. Senza di loro i nutrienti non si riciclerebbero e l'ecosistema si bloccherebbe.",
    "active": true,
    "tag": "scienze;lessico;classe_3;primaria",
    "tags": [

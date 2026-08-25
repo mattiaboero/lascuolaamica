@@ -1,0 +1,393 @@
+/*
+  breakout.css — Stili specifici del gioco Cervellino Spacca-Muri.
+
+  La struttura di pagina (wrapper, card, screen, score-pill, result-card, bottoni)
+  arriva da subject-quiz-theme.css: qui c'e' solo cio' che il gioco aggiunge.
+
+  REGOLA OKABE: palette-okabe.css non va mai modificato. I token dei mattoni sono
+  dichiarati due volte: il blocco senza guardia porta i valori Okabe-Ito (che la
+  modalita' accessibile eredita), il blocco con guardia
+  html:not([data-palette="okabe-ito"]) li rimappa sui token Wada Sanzo.
+*/
+
+/* ---- Modalita' accessibile (valori Okabe-Ito, ereditati senza guardia) ---- */
+body.subject-breakout {
+  --bg-1: #dff1ee;
+  --bg-2: #e1f3ec;
+  --bg-3: #fff8da;
+  --card-bg: #fffdf7;
+  --text-main: #1f2d3d;
+
+  --breakout-brick-1: #009E73; /* 1 punto */
+  --breakout-brick-2: #0072B2; /* 3 punti */
+  --breakout-brick-3: #E69F00; /* 5 punti */
+  --breakout-brick-4: #D55E00; /* 7 punti */
+  /* Feedback risposta giusta/sbagliata nell'overlay: token separati dai mattoni.
+     I mattoni possono permettersi colori chiari e giocosi (sono grafica, non testo);
+     questi invece fanno da sfondo a testo bianco e devono restare >=4.5:1. */
+  --breakout-feedback-ok: #009E73;
+  --breakout-feedback-ko: #D55E00;
+  --breakout-field: #fffdf7;
+  --breakout-ink: #1f2d3d;
+}
+
+/* ---- Modalita' standard (Wada Sanzo) ---- */
+html:not([data-palette="okabe-ito"]) body.subject-breakout {
+  --accent-1: var(--ws-verdigris);
+  --accent-2: var(--ws-hortense-blue);
+  --accent-3: var(--ws-terracotta);
+  --bg-1: #dfeeec;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+
+  /* Mattoni "candy" (registro Wada Sanzo): Sea Green #100, Blue #122,
+     Orange Yellow #61, Jasper Red #16. Piu' vivaci dei token testo del sito:
+     lecito perche' i mattoni sono grafica di gioco (WCAG 1.4.11, non testo) e il
+     bordo scuro dello sprite (shade -0.4, >=4.3:1 sul campo) delimita comunque
+     ogni mattone. Il "+N" volante e il simbolo capsula usano varianti scurite
+     calcolate in js/breakout.js, non questi valori pieni. */
+  --breakout-brick-1: #00b49b;
+  --breakout-brick-2: #006eb8;
+  --breakout-brick-3: #fcb315;
+  --breakout-brick-4: #eb5324;
+  /* Feedback overlay: verdi/rossi scuri del sito (testo bianco >=4.5:1). */
+  --breakout-feedback-ok: var(--ws-cossack-green);
+  --breakout-feedback-ko: var(--ws-jasper-red);
+  --breakout-field: var(--ws-cartridge-buff);
+  --breakout-ink: var(--ws-slate-black);
+}
+
+/* ---- Sfondo animato: bolle morbide che salgono ----
+   Vivono in #bgShapes (position:fixed, z-index 0) quindi restano DIETRO al canvas
+   e alla card: decorano i margini della pagina senza disturbare la partita.
+   Solo modalita' standard; spente in accessibile, con il toggle "riduci animazioni"
+   del sito e con prefers-reduced-motion di sistema. Animano solo transform/opacity
+   per restare sul compositor e non rubare frame al loop di gioco. */
+.game-bubble {
+  display: none;
+}
+
+/* Le bolle laterali sporgono oltre il viewport: le contiene qui, senza dipendere
+   dall'overflow-x del body (su mobile creerebbe scroll orizzontale). */
+body.subject-breakout .bg-shapes {
+  overflow: hidden;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble {
+  display: block;
+  position: absolute;
+  bottom: -22vh;
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: gameBubbleRise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gameBubbleRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.85);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(var(--bubble-drift, 24px), -128vh, 0) scale(1.12);
+    opacity: 0;
+  }
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-1 {
+  left: 6%;
+  width: 92px;
+  height: 92px;
+  background: radial-gradient(circle at 32% 30%, rgba(47, 142, 134, 0.42), rgba(47, 142, 134, 0.14));
+  animation-duration: 30s;
+  animation-delay: -4s;
+  --bubble-drift: 26px;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-2 {
+  left: 18%;
+  width: 56px;
+  height: 56px;
+  background: radial-gradient(circle at 32% 30%, rgba(200, 136, 26, 0.42), rgba(200, 136, 26, 0.14));
+  animation-duration: 24s;
+  animation-delay: -12s;
+  --bubble-drift: -20px;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-3 {
+  left: 34%;
+  width: 118px;
+  height: 118px;
+  background: radial-gradient(circle at 32% 30%, rgba(60, 110, 159, 0.38), rgba(60, 110, 159, 0.12));
+  animation-duration: 38s;
+  animation-delay: -20s;
+  --bubble-drift: 34px;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-4 {
+  left: 52%;
+  width: 46px;
+  height: 46px;
+  background: radial-gradient(circle at 32% 30%, rgba(200, 85, 61, 0.42), rgba(200, 85, 61, 0.14));
+  animation-duration: 22s;
+  animation-delay: -7s;
+  --bubble-drift: -28px;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-5 {
+  left: 68%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 32% 30%, rgba(46, 132, 85, 0.40), rgba(46, 132, 85, 0.13));
+  animation-duration: 34s;
+  animation-delay: -16s;
+  --bubble-drift: 22px;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-6 {
+  left: 82%;
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle at 32% 30%, rgba(242, 193, 78, 0.44), rgba(242, 193, 78, 0.15));
+  animation-duration: 27s;
+  animation-delay: -2s;
+  --bubble-drift: -24px;
+}
+
+html:not([data-palette="okabe-ito"]) .game-bubble-7 {
+  left: 92%;
+  width: 78px;
+  height: 78px;
+  background: radial-gradient(circle at 32% 30%, rgba(47, 142, 134, 0.36), rgba(47, 142, 134, 0.12));
+  animation-duration: 32s;
+  animation-delay: -24s;
+  --bubble-drift: 30px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-palette="okabe-ito"]) .game-bubble {
+    display: none;
+  }
+}
+
+html[data-motion="reduce"] .game-bubble {
+  display: none;
+}
+
+/* ---- Popup "nuovo premio": su questa pagina il canvas riempie gran parte dello
+   schermo e bottom:82px (default di rewards.css) cade quasi esattamente sopra la
+   barra di gioco, rendendolo invisibile durante la partita. Qui va spostato in alto. */
+body.subject-breakout .reward-toast {
+  top: 16px;
+  bottom: auto;
+  transform: translate(-50%, -24px);
+}
+
+body.subject-breakout .reward-toast.is-visible {
+  transform: translate(-50%, 0);
+}
+
+/* ---- Barra punteggio: visibile solo a partita avviata ---- */
+body.subject-breakout.is-playing .score-bar {
+  display: flex;
+}
+
+.score-pill.lives {
+  border-color: var(--accent-3);
+}
+
+.score-pill.level,
+.score-pill.record {
+  border-color: var(--accent-2);
+}
+
+/* .class-grid / .class-btn / .class-btn.selected arrivano da subject-quiz-theme.css */
+
+.intro-note-small {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 16px;
+}
+
+/* ---- Area di gioco ---- */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.game-canvas {
+  /* 3:2 fisso: la larghezza tiene conto anche dell'altezza utile (68vh * 1.5). */
+  width: min(100%, 900px, 102vh);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  display: block;
+  border: 4px solid var(--accent-1);
+  border-radius: 20px;
+  background: var(--breakout-field);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+  touch-action: none;
+  cursor: none;
+}
+
+.game-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.control-btn {
+  padding: 10px 18px;
+  border: 3px solid var(--accent-1);
+  background: var(--pill-bg);
+  color: var(--text-main);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.control-btn:hover {
+  background: var(--accent-1);
+  color: #fff;
+}
+
+.touch-hint {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.75;
+  text-align: center;
+}
+
+@media (hover: none) {
+  .touch-hint {
+    display: block;
+  }
+}
+
+/* ---- Overlay domanda (usato dalla fase 3) ---- */
+.question-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  padding: 16px;
+  background: rgba(31, 45, 61, 0.72);
+  max-width: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.question-overlay.active {
+  display: flex;
+}
+
+.question-card {
+  background: var(--card-bg);
+  border: 4px solid var(--accent-1);
+  border-radius: 26px;
+  padding: 26px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.question-title {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--accent-1);
+}
+
+.question-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.question-options {
+  display: grid;
+  gap: 10px;
+}
+
+.question-option {
+  padding: 14px 16px;
+  border: 3px solid rgba(0, 0, 0, 0.08);
+  background: var(--pill-bg);
+  color: var(--text-main);
+  border-radius: 18px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.question-option:hover:not(:disabled) {
+  border-color: var(--accent-1);
+}
+
+.question-option.correct {
+  background: var(--breakout-feedback-ok);
+  border-color: var(--breakout-feedback-ok);
+  color: #fff;
+}
+
+.question-option.wrong {
+  background: var(--breakout-feedback-ko);
+  border-color: var(--breakout-feedback-ko);
+  color: #fff;
+}
+
+.question-continue {
+  display: block;
+  margin: 16px auto 0;
+  /* Il pulsante riceve sempre il focus (vedi focus trap in showQuestion): senza questa
+     riga il border-radius:4px di :focus-visible in subject-quiz-theme.css (dichiarato
+     dopo .btn-replay in quel file) vince e lo fa sembrare quadrato appena focalizzato. */
+  border-radius: 50px;
+}
+
+.question-explanation {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 5px solid var(--accent-1);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    gap: 10px;
+  }
+
+  .control-btn {
+    padding: 9px 14px;
+    font-size: 0.85rem;
+  }
+
+  .question-card {
+    padding: 18px;
+  }
+}

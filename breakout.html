@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="dns-prefetch" href="https://lascuolaamica.it">
+<link rel="preconnect" href="https://lascuolaamica.it" crossorigin>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Cervellino Spacca-Muri - Gioco Arcade | La Scuola Amica</title>
+<meta name="description" content="Cervellino Spacca-Muri: il gioco arcade classico per imparare divertendosi. Rispondi alle domande per attivare bonus e sbloccare trofei speciali.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://lascuolaamica.it/breakout">
+<meta property="og:url" content="https://lascuolaamica.it/breakout">
+<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-breakout-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cervellino Spacca-Muri - Gioco Arcade Educativo - La Scuola Amica">
+<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-breakout-1200x630.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="La Scuola Amica">
+<meta property="og:title" content="Cervellino Spacca-Muri - Gioco Arcade | La Scuola Amica">
+<meta property="og:description" content="Cervellino Spacca-Muri: il gioco arcade classico per imparare. Distruggi i mattoni, rispondi alle domande, guadagna bonus e trofei.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cervellino Spacca-Muri - Gioco Arcade | La Scuola Amica">
+<meta name="twitter:description" content="Gioco Cervellino Spacca-Muri educativo: elimina i mattoni, attiva bonus rispondendo alle domande, sblocca trofei.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2F8E86">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Scuola Amica">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="subject-quiz-theme.css">
+<link rel="stylesheet" href="utilities.css">
+<link rel="stylesheet" href="breakout.css">
+<link rel="preload" href="rewards.css" as="style">
+<link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<script defer src="js/lazy-css.js"></script>
+<script defer src="js/dom-utils.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "EducationalApplication",
+    "Game"
+  ],
+  "@id": "https://lascuolaamica.it/breakout#app",
+  "name": "Cervellino Spacca-Muri - Gioco Arcade Educativo",
+  "description": "Cervellino Spacca-Muri: il gioco arcade classico con domande educative. Distruggi i mattoni, rispondi alle domande per attivare bonus e sblocca trofei speciali.",
+  "url": "https://lascuolaamica.it/breakout",
+  "inLanguage": "it-IT",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Web Browser",
+  "educationalUse": "practice",
+  "learningResourceType": "Game",
+  "keywords": "gioco breakout, gioco arcade, gioco educativo, quiz, matematica, storia, geografia, scienze, inglese",
+  "isAccessibleForFree": true,
+  "typicalAgeRange": "7-11",
+  "educationalLevel": "Scuola primaria",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "La Scuola Amica",
+    "url": "https://lascuolaamica.it/"
+  },
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "publisher": {
+    "@id": "https://lascuolaamica.it/#organization"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lascuolaamica.it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cervellino Spacca-Muri",
+      "item": "https://lascuolaamica.it/breakout"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Come si gioca a Cervellino Spacca-Muri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si muove la barra in basso per far rimbalzare la pallina verso il muro di mattoni, distruggendoli tutti senza far cadere la pallina oltre la barra. Ci sono 3 palline a disposizione per partita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come si ottengono i bonus nel gioco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alcuni mattoni distrutti fanno cadere una capsula bonus: va presa con la barra, poi bisogna rispondere correttamente a una domanda per attivarlo davvero. Non basta raccoglierla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa succede se la pallina cade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prima di perdere una vita compare una domanda a sorpresa: rispondendo bene la pallina torna attaccata alla barra senza perdere la partita, sbagliando si perde una vita come di consueto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Da dove arrivano le domande del gioco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dallo stesso archivio usato dai quiz delle 8 materie del sito, filtrato in base alla classe scelta all'inizio della partita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Si può giocare da tablet o smartphone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Da computer si usano le frecce della tastiera, da tablet e smartphone basta trascinare il dito sotto il muro per muovere la barra."
+      }
+    }
+  ],
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-10"
+}
+</script>
+</head>
+<body class="subject-breakout">
+<noscript>
+  <link rel="stylesheet" href="noscript.css">
+  <div class="noscript-msg">
+    <p>
+      Per usare i giochi di <strong>La Scuola Amica</strong> è necessario abilitare JavaScript nel browser.<br><br>
+      <a href="/faq">Vai alle FAQ</a>
+    </p>
+  </div>
+</noscript>
+
+<a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
+<div class="bg-shapes" id="bgShapes" aria-hidden="true">
+  <span class="game-bubble game-bubble-1"></span>
+  <span class="game-bubble game-bubble-2"></span>
+  <span class="game-bubble game-bubble-3"></span>
+  <span class="game-bubble game-bubble-4"></span>
+  <span class="game-bubble game-bubble-5"></span>
+  <span class="game-bubble game-bubble-6"></span>
+  <span class="game-bubble game-bubble-7"></span>
+</div>
+<div class="feedback" id="feedback" aria-hidden="true"></div>
+<p id="gameStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+
+<div class="wrapper">
+  <div class="top-nav">
+    <a class="back-btn" href="/" aria-label="Torna al menu principale">← Menu</a>
+    <div></div>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Percorso di navigazione">
+    <a href="/">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Cervellino Spacca‑Muri</span>
+  </nav>
+
+  <header>
+    <h1 class="title" id="mainTitle"><span aria-hidden="true">🎮</span> Cervellino Spacca‑Muri <span aria-hidden="true">🧱</span></h1>
+    <p class="subtitle">La Scuola Amica · Gioco arcade educativo</p>
+  </header>
+
+  <div class="header-row">
+    <button type="button" class="icon-btn" id="muteBtn" data-action="toggle-mute" aria-pressed="false">🔊 Audio</button>
+    <a class="icon-btn" href="/premi" aria-label="Apri la bacheca dei premi">🏆 Premi</a>
+  </div>
+
+  <div class="score-bar" id="scoreBar" aria-live="off">
+    <div class="score-pill points"><span aria-hidden="true">⭐</span> <span id="scorePoints">0</span><span class="sr-only"> punti</span></div>
+    <div class="score-pill lives"><span aria-hidden="true">❤️</span> <span id="scoreLives">3</span><span class="sr-only"> vite</span></div>
+    <div class="score-pill level"><span aria-hidden="true">🚩</span> <span class="sr-only">Livello </span><span id="scoreLevel">1</span></div>
+    <div class="score-pill record"><span aria-hidden="true">🏅</span> <span id="scoreHighscore">0</span><span class="sr-only"> record</span></div>
+  </div>
+
+  <div class="screen active" id="screenStart">
+    <main id="contenuto-principale" class="card" aria-labelledby="mainTitle">
+      <div class="section-label">Scegli la classe</div>
+      <div class="intro-note">
+        Abbatti il muro di mattoni con la pallina, senza farla cadere.<br>
+        Hai <strong>3 palline</strong>: i mattoni in alto valgono più punti.<br>
+        Muovi la barra con le frecce <strong>← →</strong> oppure trascinando il dito.<br>
+        Premi <strong>spazio</strong> o tocca lo schermo per lanciare la pallina.<br>
+        Durante la partita <strong>spazio</strong> mette in pausa e fa riprendere.
+      </div>
+      <div class="class-grid" id="classGrid" aria-label="Selezione classe"></div>
+      <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
+      <p class="intro-note intro-note-small">Nessuna registrazione e nessun login: il record resta su questo dispositivo.</p>
+    </main>
+
+    <section class="seo-static" aria-label="Il gioco Cervellino Spacca-Muri">
+      <h2>Cervellino Spacca-Muri: il gioco arcade con le domande della scuola primaria</h2>
+      <p>Cervellino Spacca-Muri è il <strong>gioco arcade di La Scuola Amica</strong> ispirato ai classici rompi-mattoni: si muove una barra in basso per rimbalzare la pallina e distruggere il muro di mattoni colorati, senza farla cadere oltre la barra.</p>
+      <ul>
+        <li>Muro di 8 file di mattoni: quelli più in alto valgono più punti.</li>
+        <li>4 bonus di gioco (barra larga, vita extra, distruggi un colore, pallina magnetica) si attivano solo rispondendo bene a una domanda.</li>
+        <li>Se la pallina cade, una domanda a sorpresa può salvarla prima di perdere una vita.</li>
+        <li>Le domande arrivano dallo stesso archivio degli 8 quiz materia: matematica, inglese, problemi, civica, geografia, storia, scienze e italiano.</li>
+      </ul>
+      <p>Il gioco funziona su computer con le frecce della tastiera, e su tablet e smartphone trascinando il dito. Sbloccando i traguardi si guadagnano trofei dedicati, visibili nella bacheca premi insieme a quelli dei quiz.</p>
+    </section>
+
+    <section class="seo-static seo-faq" aria-label="Domande frequenti su Cervellino Spacca-Muri">
+      <h2>Domande frequenti su Cervellino Spacca-Muri</h2>
+      <details class="seo-faq-item">
+        <summary>Come si gioca a Cervellino Spacca-Muri?</summary>
+        <p>Si muove la barra in basso per far rimbalzare la pallina verso il muro di mattoni, distruggendoli tutti senza far cadere la pallina oltre la barra. Ci sono 3 palline a disposizione per partita.</p>
+      </details>
+      <details class="seo-faq-item">
+        <summary>Come si ottengono i bonus nel gioco?</summary>
+        <p>Alcuni mattoni distrutti fanno cadere una capsula bonus: va presa con la barra, poi bisogna rispondere correttamente a una domanda per attivarlo davvero. Non basta raccoglierla.</p>
+      </details>
+      <details class="seo-faq-item">
+        <summary>Cosa succede se la pallina cade?</summary>
+        <p>Prima di perdere una vita compare una domanda a sorpresa: rispondendo bene la pallina torna attaccata alla barra senza perdere la partita, sbagliando si perde una vita come di consueto.</p>
+      </details>
+      <details class="seo-faq-item">
+        <summary>Da dove arrivano le domande del gioco?</summary>
+        <p>Dallo stesso archivio usato dai quiz delle 8 materie del sito, filtrato in base alla classe scelta all'inizio della partita.</p>
+      </details>
+      <details class="seo-faq-item">
+        <summary>Si può giocare da tablet o smartphone?</summary>
+        <p>Sì. Da computer si usano le frecce della tastiera, da tablet e smartphone basta trascinare il dito sotto il muro per muovere la barra.</p>
+      </details>
+    </section>
+  </div>
+
+  <div class="screen" id="screenGame">
+    <div class="game-container">
+      <canvas class="game-canvas" id="gameCanvas" width="900" height="600" aria-label="Area di gioco Cervellino Spacca‑Muri"></canvas>
+      <div class="game-controls">
+        <button type="button" class="control-btn" id="pauseBtn" data-action="toggle-pause">⏸ Pausa</button>
+        <button type="button" class="control-btn" data-action="play-again">↺ Ricomincia</button>
+        <button type="button" class="control-btn" data-action="go-start">🏠 Cambia classe</button>
+      </div>
+      <div class="touch-hint" aria-hidden="true">Trascina il dito sotto il muro per muovere la barra</div>
+    </div>
+  </div>
+
+  <div class="screen" id="screenGameOver">
+    <div class="result-card">
+      <div class="result-emoji" id="resultEmoji" aria-hidden="true">🏁</div>
+      <h2 class="result-title" id="resultTitle">Partita finita!</h2>
+      <p class="result-msg" id="resultMsg"></p>
+      <div class="score-final" aria-label="Riepilogo partita">
+        <div class="score-item"><div class="num" id="rFinal">0</div><div class="lbl">Punteggio</div></div>
+        <div class="score-item"><div class="num" id="rHighscore">0</div><div class="lbl">Record</div></div>
+        <div class="score-item"><div class="num" id="rBricks">0</div><div class="lbl">Mattoni</div></div>
+      </div>
+      <div class="result-btns">
+        <button type="button" class="btn-replay" data-action="play-again">Gioca ancora</button>
+        <button type="button" class="btn-home" data-action="go-start">Cambia classe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen question-overlay" id="screenQuestionOverlay" role="dialog" aria-modal="true" aria-labelledby="questionTitle">
+    <div class="question-card">
+      <h2 id="questionTitle" class="question-title">Domanda</h2>
+      <p id="questionText" class="question-text"></p>
+      <div id="questionOptions" class="question-options" role="group" aria-labelledby="questionTitle"></div>
+      <p id="questionExplanation" class="question-explanation" hidden></p>
+      <button type="button" class="btn-replay question-continue" id="questionContinue" hidden>Continua</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <a class="footer-link" href="/privacy">Privacy Policy</a>
+  <a class="footer-link" href="/cookie">Cookie Policy</a>
+  <span class="footer-link footer-version" data-app-version data-app-version-format="compact"></span>
+</footer>
+
+<script defer src="questions-loader.js"></script>
+<script defer src="js/rewards.js"></script>
+<script defer src="js/breakout.js"></script>
+<script defer src="app-version.js"></script>
+<script defer src="shared.js"></script>
+</body>
+</html>
