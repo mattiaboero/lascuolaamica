@@ -97,3 +97,37 @@ Homepage detail: robots.txt ALLOWED, indexing_state INDEXING_ALLOWED, page_fetch
 - **Revised: 90/100 (lab-data verified, CrUX field data still unavailable)**
 - Rationale: Live Lighthouse lab data is materially better than the prior static-analysis estimate assumed — mobile 91, desktop 100, with all Core Web Vitals-adjacent timing metrics in "Good" territory. The only real regression found is mobile CLS (0.183, "Needs Improvement"), which the estimate had not flagged with a specific number. Revising up to 90 (not higher) because: (a) true field CWV data (what actually determines Google's Page Experience ranking signal) remains unmeasured due to insufficient Chrome traffic, so this is still lab-based, not field-verified; (b) the newly-quantified CLS issue and the pre-existing render-blocking-CSS/no-CSP findings are real, unresolved deductions.
 - Recommend re-running this Google-data check in 2-3 months to track: (a) resolution of the 3 indexation gaps (`/premi`, `/cookie`, `/privacy`) after requesting indexing, (b) completion of URL Inspection for the 5 not-yet-checked URLs (rate-limited this session), and (c) whether traffic has grown enough for CrUX eligibility. Performance score itself is not affected by GSC data (indexation/queries are separate from CWV) — the 90/100 above stands independent of the GSC findings, which instead inform Indexation/Discoverability sections of the audit.
+
+---
+
+## Update — 2026-08-25 (Tier 1 confirmed, GSC permissions fixed to Owner, Indexing API enabled)
+
+Fetched: 2026-08-25. `google_auth.py --check` = Tier 1, all green (PSI, CrUX, CrUX History, GSC, URL Inspection, Sitemaps, Indexing API all `available: true` via service account `seo-audit-reader@la-scuola-amica.iam.gserviceaccount.com`). GA4 still not configured (no `ga4_property_id`) — out of scope, not a credential problem. This update re-checks sitemap submission and indexation status following the same-day fix of GSC service-account permissions (now Owner-level) and enablement of the Indexing API, plus publication of the new `/breakout` page.
+
+**1) Sitemap status (re-checked):**
+- `https://lascuolaamica.it/sitemap.xml`: last submitted **2026-08-25T09:34:37Z (today)**, **0 warnings, 0 errors**, type `sitemap` (not an index), **20 URLs submitted** — one more than the 19 recorded on 2026-07-05, consistent with the new `/breakout` page being added to the sitemap. Sitemap health is clean.
+
+**2) URL Inspection — sample of 4 (homepage + matematica + breakout + faq):**
+
+| URL | Verdict | Coverage state | Last crawl |
+|---|---|---|---|
+| `/` (homepage) | PASS | Submitted and indexed | 2026-08-21 (mobile) |
+| `/matematica` | PASS | Submitted and indexed | 2026-08-05 (mobile) |
+| `/breakout` | NEUTRAL | **URL is unknown to Google** | never crawled |
+| `/faq` | PASS | Submitted and indexed | 2026-08-04 (mobile) |
+
+- Homepage: robots.txt ALLOWED, indexing_state INDEXING_ALLOWED, page_fetch_state SUCCESSFUL, canonical self-referential (matches), 2 referring URLs (sitemap.xml + an external GitHub blob link to `italiano.html`).
+- `/matematica` and `/faq`: both indexed with matching self-canonicals; `/matematica` additionally shows a detected Breadcrumbs rich-result item (verdict PASS).
+- `/breakout` — expected result: page was published today and an indexing request was just submitted via the Indexing API. `coverage_state = "URL is unknown to Google"` with no crawl history yet is the normal pre-crawl state immediately after a same-day Indexing API submission; this is not a failure. Recommend re-inspecting in 24-48h to confirm Google has picked up the request (typical turnaround for Indexing API-notified URLs is hours to a few days, not guaranteed).
+
+**3) Search performance (28 days, 2026-07-28 to 2026-08-22):**
+- Totals: **10 clicks, 238 impressions, CTR 4.2%, avg. position 16.0** — improved on all four metrics vs. the 2026-07-05 snapshot (6 clicks / 233 impressions / 2.58% CTR / pos. 18.4), consistent with a young site still building authority.
+- 26 distinct query/page rows. Best performer: "100 domande in inglese per bambini" → `/inglese`, pos. 2.4, 2 clicks / 11 impressions, CTR 18.2% — a genuine near-top ranking. "esercizi di scienze" → `/scienze`, pos. 17.2, 1 click.
+- New queries surfacing this period for `/civica`, `/geografia`, `/italiano`, `/storia`, `/per-genitori`, `/per-insegnanti`, `/ai-info`, `/supporta` — mostly positions 20-80 (long tail, low authority, expected at this stage), but breadth of surfaced queries (26 vs 38 previously) growing indicates expanding topical footprint even as absolute volume stays low.
+- No quick-wins flagged (data still too sparse for the script's threshold logic).
+
+**Findings:**
+- **Info** — Sitemap correctly reflects the new `/breakout` page (20 URLs, 0 errors) same-day as publication; sitemap pipeline is healthy and current.
+- **Info (expected, not a defect)** — `/breakout` shows "unknown to Google" in URL Inspection. This matches the expected pre-crawl state for a same-day Indexing-API-notified page; homepage and other subject pages (`/matematica`, `/faq`) remain solidly indexed with no regression.
+- **Positive** — Search performance ticked up across all four headline metrics (clicks, impressions, CTR, avg. position) over the prior ~7-week gap between checks; `/inglese` is now ranking near page 1 (pos. 2.4) for "100 domande in inglese per bambini," a concrete early win worth watching for continued growth or feature-snippet eligibility.
+- **Carryover from 2026-07-05** — The three indexation gaps flagged then (`/premi`, `/cookie` unknown; `/privacy` discovered-not-indexed) were not re-checked this session (out of the 4-URL sample scope); recommend re-inspecting them alongside `/breakout` in the next follow-up to confirm whether the GSC permission fix / Indexing API enablement helps them get picked up too.

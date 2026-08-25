@@ -1,103 +1,90 @@
-# SEO Audit — lascuolaamica.it
-Date: 2026-07-05
-Method: source-level audit (repo = live site source), homepage fetch verified live headers/HTML match.
+# Full SEO Audit — lascuolaamica.it
+
+Data: 2026-08-25. Sito: piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª), PWA statica (HTML/CSS/JS vanilla, no framework), 20 pagine, hosting Cloudflare Pages. 8 materie quiz + 1 gioco arcade canvas ("Cervellino Spacca-Muri", pubblicato oggi stesso).
 
 ## Executive Summary
 
-**SEO Health Score: 94/100** — every Medium/High finding from this audit was fixed the same day (2026-07-05); only Low/Info items and normal follow-up remain.
+**SEO Health Score: 82/100** (78 all'audit iniziale → 81 dopo il fix Cloudflare → 82 dopo i fix di CLS/schema/immagini)
 
-Business type: EdTech / educational content site (free primary-school quiz platform, non-commercial, single-maintainer). Small site (19 indexable pages via sitemap).
+| Categoria | Punteggio | Peso |
+|---|---|---|
+| Technical SEO | 95 ⬆️ (era 93) | 22% |
+| Content Quality | 71 | 23% |
+| On-Page SEO | 82 | 20% |
+| Schema/Structured Data | 96 ⬆️ (era 91) | 10% |
+| Performance (CWV) | 96 ⬆️ (era 90) | 10% |
+| AI Search Readiness | 78 ⬆️ (era 50) | 10% |
+| Images | 35 ⬆️ (era 30) | 5% |
 
-This site already carries the results of prior SEO/a11y/security work sessions — the baseline is strong. No critical blockers found, and none survived the day.
+Fondamenta tecniche solide (sicurezza, schema, performance, sitemap tutti sopra 90). Il problema più grave trovato — blocco Cloudflare ai crawler AI — è stato **risolto e verificato in giornata**, così come CLS mobile e il mismatch schema/testo delle FAQ. Resta l'assenza di immagini/media sulla maggior parte delle pagine come principale area debole (`/breakout` ora ne ha una).
 
-**How this audit evolved:** it ran in three passes. (1) Initial source-level audit without Google API credentials — Performance was a static-analysis estimate, CWV/indexation unverified. (2) Credentials configured (PageSpeed/CrUX API key + GSC service account); a `seo-google` pass fetched real data, confirming the shipped render-blocking-CSS fix but surfacing a mobile CLS regression and 3 unindexed sitemap URLs. (3) The CLS regression was traced to a self-inflicted cause (see Performance section) and fixed; `civica.html` FAQ parity, the 3 unindexed URLs, and the `chi-siamo.html` meta description were all addressed same-day.
+### ✅ Risolto in giornata
 
-### Top findings (all fixed, unless noted)
-1. **Fixed** — Mobile CLS regression: real Lighthouse data first showed CLS 0.165-0.183 ("Needs Improvement"), caused by lazy-loading `fonts.css` (part of the CSS fix below) breaking the site's metric-matched fallback-font system. Reverted; re-verified in production: **CLS 0.074 (Good)**.
-2. **Fixed** — `civica.html` FAQ schema brought to parity: 4 → 7 Q&A, matching sibling subject pages.
-3. **Fixed** — 3 of 19 sitemap URLs not indexed (`/premi`, `/cookie` unknown to Google; `/privacy` discovered-not-indexed) — Google's Indexing API rejected the request (permission scope + API officially limited to JobPosting/BroadcastEvent pages), so manual "Request Indexing" was submitted via GSC UI instead. Re-check indexation status in a few days to confirm.
-4. **Fixed** — `chi-siamo.html` meta description trimmed 153 → 137 chars, away from the truncation edge.
-5. **Fixed** — 5 render-blocking stylesheets in `<head>` (original "High" finding) — resolved via `js/lazy-css.js` (only `rewards.css` lazy-loaded). Real Lighthouse confirms mobile LCP Good (1.7s) and CLS Good (0.074).
-6. **Info, open** — CrUX field data unavailable (insufficient Chrome traffic volume) — expected for a young/low-traffic site, not a defect. Re-check in 2-3 months.
+- **Cloudflare bloccava GPTBot/ClaudeBot/PerplexityBot/OAI-SearchBot a livello edge (403)**, nonostante robots.txt e llms.txt dichiarassero accesso libero. Causa: toggle legacy "Block AI bots" su "Block on all pages". Disattivato, preferenza mixed-purpose-crawler impostata su "permessi", nuove AI bot policies lasciate `disabled`. **Ri-verificato live**: tutti e 4 i bot ora rispondono 200 con contenuto reale.
+- **CLS mobile fuori soglia** su `/chi-siamo` (0.254 Poor) e home (0.105 borderline). Causa: `#questionsTotalCount` nel footer condiviso parte con l'attributo HTML `hidden` (footprint zero) e viene popolato da JS differito dopo il paint iniziale, andando a capo su più righe a larghezza mobile. Riservato lo spazio in CSS. **Verificato**: box riservato e box popolato coincidono, 0px di shift. Trovato in corso di test su iPhone reale un secondo bug preesistente e indipendente: il padding del footer (132px) non copriva la sua altezza reale su 3 righe (169px) su `/chi-siamo`, tagliando il testo del pulsante "Torna alla home" — portato a 190px.
+- **Testo FAQPage schema non combaciava col testo visibile** su matematica/geografia/storia/italiano (3 risposte per pagina, schema espanso oltre il testo dell'HTML). Allineato 1:1 su tutte e 4 le pagine. Su `problemi.html` i 4 "esempi svolti" extra (già correttamente esclusi dallo schema) riusavano la classe CSS delle FAQ facendo apparire 11 voci FAQ invece di 7 — rinominati in una classe distinta, nessun cambio visivo.
+- **Prima immagine di contenuto del sito**: anteprima gameplay su `/breakout`, riusando/ricatturando l'asset esistente. Aggiornata due volte dopo test su device reale: prima perché mostrava ancora i mattoni piatti pre-restyling invece dello stile "candy" attuale, poi reinquadrata per includere pallina e barra invece di tagliare nello spazio vuoto.
 
-### Remaining follow-up
-- Complete GSC URL Inspection for the 5 sitemap URLs not yet checked (rate-limited during the audit run).
-- Re-check `/premi`, `/cookie`, `/privacy` indexation status in a few days to confirm Google acted on the manual request.
+### Decisione presa (nessuna azione)
 
-## Technical SEO — Score 95/100
-**What works:**
-- `robots.txt` clean: `Allow: /`, sensible `Disallow: /json/`, `/reports/`, points to sitemap.
-- `sitemap.xml` valid, 19 URLs, correct `lastmod`/`priority`/`changefreq`. GSC-verified: 0 warnings, 0 errors, last submitted 2026-05-30.
-- Every page has a unique, self-referencing canonical.
-- Response headers (live-verified): CSP (strict, no `unsafe-inline`), HSTS (`max-age=31536000; includeSubDomains`), `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, COOP/CORP, Permissions-Policy locking down camera/mic/geolocation/etc. Served via Cloudflare, HTTPS enforced.
-- Service worker (`sw.js`) present for offline/PWA support — consistent with "works offline" claim in copy.
-- GSC URL Inspection (real data) confirms 11/14 checked URLs "Submitted and indexed", homepage crawled 2026-07-03, `robots.txt` correctly allows indexing.
+**`/breakout` mismatch di tipo-pagina (SXO)**: discusso con il titolare del sito, si accetta il posizionamento su query di marca/long-tail invece di costruire una pagina hub "Giochi" — avrebbe senso solo con più giochi in arrivo.
 
-**Findings:**
-- **Fixed** — Render-blocking CSS chain originally 5 stylesheets in `<head>`; only `rewards.css` now lazy-loads via `js/lazy-css.js` (`fonts.css` reverted to blocking after a CLS regression — see Performance). Real Lighthouse mobile LCP is now 1.7s (Good).
-- **Fixed** — GSC URL Inspection (real data, 14/19 URLs checked) found `/premi` and `/cookie` "URL is unknown to Google" (never crawled), `/privacy` "Discovered — currently not indexed." Sitemap submission itself is error-free — indexation lag/priority issue, not a technical blocker. Google's Indexing API was rejected (permission + scope), so manual "Request Indexing" was submitted via GSC UI for all three. Remaining 5 sitemap URLs not yet checked (API rate limiting this session) — follow-up.
-- **Low** — No `hreflang` — correct, since site is single-language (it-IT) only; flagged as non-issue.
+### Problemi rimanenti
 
-## Content Quality (E-E-A-T) — Score 90/100
-**What works:**
-- Dedicated `chi-siamo.html` (About) with `Person` + `AboutPage` schema naming the real maintainer (Mattia Boero) — transparent authorship, unusual and positive for a free EdTech site.
-- `per-insegnanti.html` / `per-genitori.html` split content by audience (teachers vs parents) — matches real search intent segmentation.
-- `accessibilita.html` publishes a real WCAG 2.1 A/AA accessibility statement — trust signal, also ties into the a11y work already logged in project history.
-- `privacy.html` / `cookie.html` state plainly "no personal data collected, no profiling cookies" — strong trust/compliance signal for a children's site (COPPA/GDPR-adjacent expectations).
-- Each subject page (matematica, inglese, problemi, civica, geografia, storia, scienze, italiano) has unique on-page copy (raw word counts 537-904, before dynamic quiz content loads).
-- `civica.html` FAQ depth now at parity with siblings (7 Q&A, was 4) — fixed same day.
+1. Zero immagini/screenshot sulle altre 19 pagine (8 materie + pagine utility) — resta la dimensione più debole dell'audit, `/breakout` era la pagina più urgente ed è risolta.
+2. Ri-testare `/matematica` desktop (TBT 330ms in un solo run, probabile rumore di misurazione).
 
-**Findings:**
-- **Info** — Quiz content itself (9,879 questions per llms.txt) is loaded dynamically via JS/JSON, not present in static HTML — acceptable for an interactive app, but means crawlers relying on raw HTML (not renderers) see only the shell text. Googlebot renders JS so this is low risk; flagged for awareness only.
+### Quick win rimanenti
 
-## On-Page SEO — Score 92/100
-**What works:**
-- All 19 pages: unique `<title>`, unique meta description, single `<h1>`, self-canonical — zero duplicates found.
-- Meta descriptions well-sized (68-149 chars); `supporto-satispay.html` short at 68 chars but that page is intentionally noindexed.
-- Home page has 37 internal links — healthy internal linking for a site this size.
-- `chi-siamo.html` description trimmed 153 → 137 chars — fixed same day, away from the truncation edge.
+1. Alzare i target touch del footer da 44px a 48px minimo.
+2. Aggiungere link `sameAs` allo schema Person/Organization del fondatore.
 
-**Findings:**
-- None significant.
+---
 
-## Schema & Structured Data — Score 96/100
-**What works:**
-- Rich, varied, valid JSON-LD across the site: `WebSite`, `Organization`/`EducationalOrganization`, `Person`, `AboutPage`, `CollectionPage`, `ItemList`, `BreadcrumbList` on every page, and `FAQPage`/`Question`/`Answer` on all 8 subject pages + faq.html.
-- `EducationalAudience` markup on subject pages — correctly signals target grade level (2ª-5ª primaria) to search engines, a schema type most competitors skip.
-- `faq.html` alone carries 25 Question/Answer pairs; `civica.html` now 7 (was 4), matching siblings — fixed same day, JSON-LD parse-validated.
+## Technical SEO — 95/100 (era 93)
 
-**Findings:**
-- None significant.
+Zero problemi critical/high. **Confermato dal vivo**: la registrazione del Service Worker (bug Trusted Types corretto oggi in produzione) tiene — testata con sessione Chromium pulita, stato `activated`, zero errori console. Header di sicurezza forti (CSP, HSTS con preload sottomesso oggi, X-Frame-Options, COOP, CORP, Permissions-Policy), nessun mixed content, redirect a hop singolo ovunque, 404 reale correttamente noindexata, contenuto interamente server-rendered (zero rischio di indicizzazione JS-dipendente).
 
-## Performance — Score 97/100 (real Lighthouse lab data via PageSpeed Insights API, re-verified in production; CrUX field data still unavailable)
-**What works:**
-- Real PageSpeed Insights v5 data (Google API, fetched 2026-07-05): **Mobile Performance 91/100, Desktop 100/100.**
-- All timing metrics Good on both strategies: FCP 0.9s/0.3s, LCP 1.7s/0.4s, TBT 0ms/0ms, TTI 1.7s/0.4s (mobile/desktop). SEO/Best Practices/Accessibility all 100/100 on both.
-- Fonts preloaded (`fredoka` 700, `nunito` regular) with `font-display: swap` on all `@font-face` rules — prevents invisible-text flash.
-- All page scripts use `defer` — no render-blocking JS.
-- OG/social preview images are reasonably sized (43-80 KB per 1200x630 JPEG) — not bloated.
+~~CLS mobile 0.105 sulla home~~ **Risolto** (stessa causa e fix del caso più grave su chi-siamo, vedi Performance sotto). Restano: IndexNow non implementato (Low, non impatta Google); nessuna regola AI-crawler in robots.txt (Info, scelta deliberata, coerente col blocco Cloudflare già risolto).
 
-**Findings:**
-- **Fixed** — Initial real Lighthouse run showed mobile CLS 0.165-0.183 ("Needs Improvement"). Root cause: lazy-loading `fonts.css` (part of the render-blocking-CSS fix) broke the site's existing metric-matched fallback-font system (`Nunito Fallback`/`Fredoka One Fallback`), needed at first paint to avoid shift. Reverted `fonts.css` to blocking; re-verified against production with a fresh PSI run: **CLS now 0.074 (Good)**, Performance category 99/100.
-- **Info** — CrUX (both per-URL and origin-level) returned "Insufficient Chrome traffic volume for eligibility" — credentials are correctly configured (Tier 1), this is purely a traffic-volume ceiling for a young/low-traffic site. Re-check in 2-3 months as organic traffic grows.
-- **Low** — 4 render-blocking stylesheets remain (tokens.css, [page].css, utilities.css, fonts.css); only `rewards.css` is lazy-loaded. Real LCP (1.7s) and CLS (0.074) are both already Good, so this is a minor/optional optimization, not a blocker.
+## Content Quality — 71/100
 
-## Images — Score 95/100
-**What works:**
-- All `<img>` tags carry descriptive, contextual `alt` text (verified across all 19 pages + `supporto-satispay.html`'s QR image).
-- OG images exist on disk for every major page (16 files in `/screenshots/`), correctly referenced with matching `width`/`height`/`alt` OG meta tags — no broken image references found.
+Nessun rischio reale di contenuto duplicato tra le 8 pagine materia: overlap di frasi a 5 parole misurato allo 0,2%-4,4% tra ogni coppia di pagine, ben sotto la soglia 30-40% che fa scattare preoccupazioni di contenuto scalato. Il gap FAQ di civica.html (4→7) è confermato risolto. Presente una pagina `/ai-info` dedicata alla trasparenza AI — raro e genuinamente utile.
 
-**Findings:**
-- None significant.
+Punto debole: Autorevolezza (11/25) — nessuna citazione esterna, backlink, stampa o partnership scolastiche; lo schema Organization/Person è solo-nome. Gli H1 delle pagine materia non contengono la keyword (solo emoji+titolo in-app, la frase chiave compare solo in un H2 più sotto). Nessun link contestuale tra le pagine materia (solo nav/footer globali). Il claim di allineamento al "programma ministeriale" non cita il documento specifico, e il background dell'autore dichiarato non è una credenziale pedagogica.
 
-## AI Search Readiness (GEO) — Score 95/100
-**What works:**
-- `llms.txt` present at root with structured identity, subject index, quantitative facts (9,879 questions, 8 subjects, version), and clear target-audience statement — genuinely rare and well-executed for a site this size.
-- Dedicated `ai-info.html` page explicitly addressed to AI models/search engines — explains identity, scope, privacy, contact.
-- `EducationalOrganization` + `Person` schema gives AI crawlers clean entity/authorship signals for citation.
+## On-Page SEO — 82/100
 
-**Findings:**
-- None significant — this category is a genuine strength versus typical competitors in the space.
+Verificato direttamente: tutte le 20 pagine hanno title tag unici e ben formati (31-57 caratteri), meta description tutte nel range sicuro per la SERP (118-149 caratteri), nessun duplicato. I due problemi (H1 senza keyword, gap di link interni) sono condivisi con Content Quality sopra.
 
-## Notes on Methodology
-This audit was performed by reading the site's own source repository (the audited domain is this project's own live deployment) plus one live HTTP fetch to confirm headers/HTML match production. This is more reliable than a blind crawl and let every page be checked, not just a sample. The initial pass had no Lighthouse/CrUX/GSC/Moz/DataForSEO credentials, so Performance and indexation were estimated/unverified — flagged inline wherever that applied. A same-day follow-up pass configured Google API credentials (PageSpeed/CrUX API key + GSC service account) and re-ran `seo-google`, replacing the Performance estimate with real Lighthouse lab data and adding verified GSC indexation/search-performance data (see Technical SEO and Performance sections above). Full detail in `findings/google-data.md`. Backlinks remain unmeasured (no Moz/Bing/DataForSEO credentials).
+## Schema / Structured Data — 96/100 (era 91)
+
+33 blocchi JSON-LD su 20 pagine, tutti validi, nessun tipo deprecato, tutte le date ISO 8601. Il blocco EducationalApplication/LearningResource è pienamente coerente sulle 8 pagine materia. Schema Person per l'autore già correttamente collegato via `@id` al fondatore in homepage. Review/AggregateRating correttamente NON aggiunto (nessun meccanismo di recensione reale, sarebbe spam).
+
+~~Testo FAQPage non combaciava col testo visibile su matematica/geografia/storia/italiano~~ **Risolto**, allineato 1:1. ~~`problemi.html` aveva 7 Q&A in schema contro 11 `<details>` visibili~~ **Risolto**: i 4 extra erano esempi svolti già correttamente esclusi dallo schema, solo la classe CSS condivisa con le FAQ generava confusione visiva — rinominata. Resta: schema Person/Organization privo di `sameAs` (Low).
+
+## Performance (Core Web Vitals) — 96/100 (era 90)
+
+Home e `/breakout`: Performance 100, Accessibilità 100, SEO 100 (mobile+desktop), LCP 1,7-1,8s, TBT 0ms. `/faq` e `/premi`: 100/100 su entrambi i dispositivi. Peso pagina eccellente (150-174 KiB ovunque). Nessun dato CrUX field disponibile — traffico ancora insufficiente, atteso per un sito piccolo/nuovo, non un problema.
+
+~~`/chi-siamo` mobile CLS 0,254 (Poor)~~ **Risolto**: il footer condiviso popolava testo (contatore domande) dopo il paint iniziale via JS differito, andando a capo su più righe a larghezza mobile. Riservato lo spazio in CSS — verificato 0px di shift. Nel test su iPhone reale trovato anche un bug preesistente indipendente: il padding riservato del footer non copriva la sua altezza reale, tagliando il testo di un pulsante — corretto. Resta: `/matematica` desktop ha mostrato TBT 330ms in un solo run (Performance 85 vs 98-100 altrove) — probabile rumore di misurazione, da riverificare.
+
+## AI Search Readiness (GEO) — 78/100 (era 50/100)
+
+**Il problema più grave dell'intero audit, risolto e verificato in giornata.** Testato con user-agent reali: Cloudflare bloccava GPTBot, OAI-SearchBot, ClaudeBot e PerplexityBot con HTTP 403 "Your request was blocked" — a livello di edge, prima ancora che robots.txt venisse consultato. Googlebot, Bingbot e meta-externalagent passavano regolarmente (Google AI Overviews e Bing Copilot non erano impattati), ma ChatGPT e Perplexity non potevano proprio scaricare il sito. Causa: toggle legacy Cloudflare "Block AI bots" su "Block on all pages". Disattivato dall'utente in dashboard, preferenza mixed-purpose-crawler impostata su "permessi", nuove AI bot policies (Search/Agent/Training) lasciate `disabled` coerentemente con l'intento di accesso libero già dichiarato in robots.txt/llms.txt. **Ri-verificato live subito dopo**: tutti e 4 i bot rispondono 200 con contenuto reale (non una pagina di challenge).
+
+Punti di forza: `llms.txt` completo e aggiornato oggi con la sezione del nuovo gioco; Citabilità 72/100, Struttura 80/100 — il contenuto stesso è ragionevolmente pronto per la citazione AI. Nessun segnale di brand mention (Wikipedia/Reddit/YouTube) — atteso per un sito lanciato ad aprile 2026, non un'azione immediata.
+
+## Images — 35/100 (era 30)
+
+~~Zero immagini di contenuto o screenshot su qualunque pagina controllata~~ **Parzialmente risolto**: `/breakout` ha ora un'anteprima gameplay reale nella sezione descrittiva (era la pagina più urgente per il persona "bambino che sfoglia giochi" prima di caricare il canvas). Le altre 19 pagine (8 materie + pagine utility) restano senza immagini di contenuto — resta la dimensione più debole dell'audit, priorità più bassa perché le pagine materia sono più "app" che "contenuto".
+
+## Search Experience (SXO) — 56/100 (informativo)
+
+Schema e Lighthouse eccellenti su `/breakout` (100/100) — la base tecnica non è il problema. Per la query "gioco arcade educativo bambini online gratis" i risultati Google sono esclusivamente portali multi-gioco (Poki, WellGames, Cartoonito) e listicle, mai pagine singolo-gioco come `/breakout` — mismatch di tipo-pagina strutturale, non un difetto della pagina in sé. **Deciso col titolare del sito**: nessun cambio strutturale, si accetta il posizionamento su query di marca/long-tail (una pagina hub "Giochi" avrebbe senso solo con più giochi in arrivo). `/per-genitori` targettizza l'intento fiducia/sicurezza, ma la query che i genitori cercano davvero ("aiutare i compiti scuola primaria") restituisce guide lunghe (800-1500+ parole), un formato che il sito non ha.
+
+---
+
+## Metodologia
+
+Audit condotto sul sito **live in produzione** (non locale), 25 agosto 2026, con 10 sub-agent specializzati in parallelo (technical, content, schema, sitemap, performance, visual, geo, google-data, backlinks, sxo) più verifica diretta di title/meta tag. Dati Google reali via API (tier 1: PageSpeed Insights, CrUX, Search Console, URL Inspection, Sitemaps, Indexing API — service account con permessi Owner). Screenshot desktop+mobile in `screenshots/`. Findings dettagliati per categoria in `findings/*.md`.

@@ -1,23 +1,43 @@
 # Action Plan — lascuolaamica.it
 
-Updated 2026-07-05 (evening) with real Google API data (PSI/CrUX/GSC). All Medium/High findings from this audit were fixed same day.
+Audit del 2026-08-25. Punteggio SEO Health: **78/100**.
 
-## Phase 1: Critical Fixes (Week 1)
-- None. No critical/blocking issues found.
+---
 
-## Phase 2: High-Impact Improvements (Weeks 2-3) — ALL DONE
-1. ~~**Reduce render-blocking CSS**~~ — **Done.** `rewards.css` lazy-loads via `js/lazy-css.js` (commit `8282bc8`). `fonts.css` intentionally kept blocking — it carries metric-matched fallback fonts required at first paint.
-2. ~~**Fix mobile CLS 0.183**~~ — **Done, verified in production.** Root cause: making `fonts.css` lazy (item 1's first attempt) broke the site's existing anti-CLS fallback-font system. Reverted `fonts.css` to blocking (commit `802d9e6`). Re-ran PSI against production: CLS 0.165-0.183 → **0.074 (Good)**, Performance category 99/100.
-3. ~~**Bring `civica.html` FAQ schema to parity**~~ — **Done** (commit `726f85b`). Added 3 Q&A pairs (4 → 7), matching sibling subject pages. JSON-LD validated, visible `<details>` kept in sync.
-4. ~~**Request indexing for 3 unindexed URLs**~~ — **Done.** Google's Indexing API was rejected (permission scope + API officially limited to JobPosting/BroadcastEvent pages); manual "Request Indexing" submitted via GSC UI for `/premi`, `/cookie`, `/privacy` instead. Follow-up: re-check indexation status in a few days.
-5. ~~**Trim `chi-siamo.html` meta description**~~ — **Done.** 153 → 137 chars, keywords/meaning preserved.
+## ✅ Fase 1 — Critica — RISOLTA (2026-08-25)
 
-## Phase 3: Content & Authority (Month 2)
-1. Complete GSC URL Inspection for the 5 sitemap URLs not yet checked (`/ai-info`, `/supporta`, `/supporto-satispay` + 2 others) — rate-limited during the audit run, not an error.
-2. Consider a Moz/Bing Webmaster or Common Crawl backlink check to establish a baseline domain authority reading (no backlink data was available in this pass).
+1. ~~Disattivare il blocco Cloudflare ai crawler AI.~~ **Fatto.** Disattivato il toggle legacy "Block AI bots" (era su "Block on all pages"), preferenza mixed-purpose-crawler impostata su "continueranno a essere permessi", nuove "AI bot policies" (Search/Agent/Training) lasciate su `disabled`. Ri-verificato con user-agent reali: **GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot tutti HTTP 200 con contenuto reale** (non una pagina di challenge). Googlebot continua a passare come prima.
 
-## Phase 4: Monitoring & Iteration (Ongoing)
-1. Keep sitemap `lastmod` dates accurate on content updates (currently accurate as of 2026-07-05).
-2. Re-check CrUX eligibility in 2-3 months — currently "Insufficient Chrome traffic volume for eligibility" (expected for a young/low-traffic site, not a defect).
-3. Watch that new subject/content pages maintain the same schema/meta/canonical discipline already established across the 19 existing pages.
-4. Search performance baseline (28 days, real GSC data): 6 clicks, 233 impressions, CTR 2.58%, avg. position 18.4. Track this trending up over time as an authority-building signal.
+## 🟠 Fase 2 — Alto impatto (questa settimana)
+
+3. ~~**CLS mobile**~~ **Fatto.** Causa: `#questionsTotalCount` nel footer condiviso parte con l'attributo HTML `hidden` (footprint zero) e viene popolato da `renderQuestionsTotal()` dopo il paint iniziale — a larghezza mobile lo span andava a capo cambiando l'altezza del footer. Riservato lo spazio in CSS (`min-width:22ch` sul selettore `[hidden]`, in `index.html` e `info-pages.css`). Verificato: box riservato e box popolato coincidono, **0px di shift** su `/chi-siamo` mobile (era 0.254 Poor).
+4. Ri-testare `/matematica` desktop (TBT 330ms in un solo run, probabile rumore di misurazione — mobile stesso test 0ms).
+5. Ri-controllare tra 24-48h l'indicizzazione di `/breakout` (richiesta già inviata oggi), `/premi`, `/cookie`, `/privacy` (risultavano unknown/non indicizzate in uno snapshot precedente, non ricontrollate in questo giro).
+
+## 🟡 Fase 3 — Contenuto e autorevolezza (questo mese)
+
+6. ~~Allineare il testo FAQPage schema al testo visibile~~ **Fatto.** matematica/geografia/storia/italiano allineati 1:1 (schema conteneva versioni espanse mai mostrate in pagina). `problemi.html`: i 4 `<details>` extra erano esempi svolti, non FAQ — correttamente esclusi dallo schema già prima, ma riusavano la classe `seo-faq-item` facendoli sembrare FAQ; rinominati in `seo-example-item` (stesso stile, nessun cambio visivo).
+7. ~~Aggiungere un'immagine di anteprima a `/breakout`~~ **Fatto.** Riusato l'asset `og-breakout-1200x630.jpg` già esistente (screenshot reale del gameplay) come immagine di contenuto nella sezione descrittiva della pagina — prima immagine di contenuto dell'intero sito.
+8. Aumentare i target touch del footer a 48px minimo.
+9. Aggiungere link `sameAs` allo schema Person/Organization del fondatore.
+10. Valutare di avvicinare la keyword all'H1 delle pagine materia (oggi solo emoji+titolo) senza perdere il brand giocoso.
+11. Aggiungere 1-2 link contestuali tra pagine materia correlate.
+
+**`/breakout` mismatch di tipo-pagina (SXO)**: decisione presa con l'utente — nessun cambio strutturale, si accetta il posizionamento su query di marca/long-tail invece di costruire una pagina hub "Giochi" (avrebbe senso solo con più giochi in arrivo).
+
+## 🟢 Fase 4 — Monitoraggio continuo
+
+12. Ricontrollare Common Crawl tra 3-4 mesi (l'assenza attuale è dovuta al lancio del sito dopo lo snapshot CC interrogato, non un segnale di bassa autorità).
+13. Perseguire backlink realistici: elenchi di risorse scuola/insegnanti, listicle "risorse gratuite scuola primaria", link reciproci da scuole che già usano il sito. Esplicitamente sconsigliati: directory a pagamento, link farm.
+14. Monitorare il trend GSC (oggi: 10 click/238 impression/28gg, in miglioramento rispetto allo snapshot precedente; `/inglese` in posizione 2.4 per una query long-tail reale è un primo segnale positivo).
+15. Tracciare segnali di brand mention (YouTube/Reddit/Wikipedia) — zero oggi è atteso per un sito lanciato ad aprile 2026, non un'azione immediata.
+
+---
+
+## Non azionabile / già a posto
+
+- **Trofeo/documento**: fix Service Worker Trusted Types confermato attivo in produzione (verificato dal vivo oggi).
+- **Sitemap**: 98/100, zero problemi strutturali.
+- **Rischio contenuto duplicato tra le 8 pagine materia**: verificato e smentito (overlap 5-gram 0.2%-4.4%, ben sotto la soglia di rischio).
+- **Review/AggregateRating schema**: correttamente NON aggiunto (nessun meccanismo di recensione reale esiste, sarebbe spam).
+- Script inline bloccato dalla CSP visto in console: è di Cloudflare stesso (bot management), non modificabile da codice, nessun impatto funzionale.
