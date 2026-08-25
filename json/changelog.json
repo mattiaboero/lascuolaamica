@@ -1,5 +1,16 @@
 [
  {
+  "date": "25 agosto 2026 · Release 4.12.30",
+  "items": [
+   "Nuovo gioco arcade \"Cervellino Spacca-Muri\", ispirato a Breakout: abbatti il muro di mattoni con la pallina senza farla cadere.",
+   "Le domande dei bonus e del salvataggio pallina arrivano dallo stesso archivio degli 8 quiz materia, in base alla classe scelta.",
+   "4 bonus di gioco (barra larga, vita extra, distruggi un colore, pallina magnetica): si attivano solo rispondendo bene a una domanda, non basta raccoglierli.",
+   "Se la pallina cade, una domanda a sorpresa può salvarla prima di perdere una vita.",
+   "10 nuovi trofei dedicati al gioco, visibili nella bacheca premi insieme a quelli dei quiz.",
+   "Grafica dei mattoni, della pallina e della barra rinnovata con uno stile più giocoso, verificata per il contrasto colore secondo gli stessi standard di accessibilità del resto del sito."
+  ]
+ },
+ {
   "date": "16 luglio 2026 · Release 4.12.29",
   "items": [
    "Rimosso lo strumento interno di editor esercizi (cartella admin/), mai pubblicato online.",

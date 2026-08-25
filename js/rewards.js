@@ -97,6 +97,16 @@
     ['tutti-ambiti', 'Tutti gli Ambiti', 'reward-tutti-ambiti.png', 'Gioca tanti ambiti diversi nelle materie.'],
     ['giro-completo', 'Giro Completo', 'reward-giro-completo.png', 'Fai almeno una partita in ciascuna materia.'],
     ['tutto-completato', 'Tutto Completato', 'reward-tutto-completato.png', 'Completa tutte le classi di tutte le materie.'],
+    ['breakout-primo-mattone', 'Primo Mattone', 'reward-breakout-primo-mattone.png', 'Completa la tua prima partita a Cervellino Spacca‑Muri.'],
+    ['breakout-muro-abbattuto', 'Muro Abbattuto', 'reward-breakout-muro-abbattuto.png', 'Distruggi un intero muro di mattoni.'],
+    ['breakout-demolitore-100', 'Demolitore', 'reward-breakout-demolitore-100.png', 'Distruggi 100 mattoni in totale a Cervellino Spacca‑Muri.'],
+    ['breakout-demolitore-500', 'Gran Demolitore', 'reward-breakout-demolitore-500.png', 'Distruggi 500 mattoni in totale a Cervellino Spacca‑Muri.'],
+    ['breakout-cecchino-terracotta', 'Cecchino di Precisione', 'reward-breakout-cecchino-terracotta.png', 'Distruggi un\'intera fila di mattoni rossi, quelli in cima al muro.'],
+    ['breakout-salvataggio-extremis', 'Salvataggio in Extremis', 'reward-breakout-salvataggio-extremis.png', 'Salva la pallina rispondendo bene a una domanda.'],
+    ['breakout-poker-bonus', 'Poker di Bonus', 'reward-breakout-poker-bonus.png', 'Attiva tutti e 4 i tipi di bonus di Cervellino Spacca‑Muri.'],
+    ['breakout-barra-acciaio', 'Barra d\'Acciaio', 'reward-breakout-barra-acciaio.png', 'Completa un muro senza perdere vite.'],
+    ['breakout-punteggio-oro', 'Punteggio d\'Oro', 'reward-breakout-punteggio-oro.png', 'Raggiungi 300 punti in una partita a Cervellino Spacca‑Muri.'],
+    ['breakout-campione', 'Campione di Cervellino Spacca‑Muri', 'reward-breakout-campione.png', 'Raggiungi 1000 punti in una partita a Cervellino Spacca‑Muri.'],
     ['bacheca-piena', 'Bacheca Piena', 'reward-bacheca-piena.png', 'Sblocca tutti gli altri premi.']
   ].map((row) => ({ id: row[0], name: row[1], file: row[2], description: row[3] }));
 
@@ -139,6 +149,7 @@
       classes: {},
       areas: {},
       days: {},
+      breakout: {},
       lastUpdated: ''
     };
   }
@@ -152,12 +163,30 @@
         subjects: parsed.subjects && typeof parsed.subjects === 'object' ? parsed.subjects : {},
         classes: parsed.classes && typeof parsed.classes === 'object' ? parsed.classes : {},
         areas: parsed.areas && typeof parsed.areas === 'object' ? parsed.areas : {},
-        days: parsed.days && typeof parsed.days === 'object' ? parsed.days : {}
+        days: parsed.days && typeof parsed.days === 'object' ? parsed.days : {},
+        breakout: parsed.breakout && typeof parsed.breakout === 'object' ? parsed.breakout : {}
       });
     } catch (e) {
       debugWarn('loadState', e);
       return createDefaultState();
     }
+  }
+
+  // Sotto-stato dedicato a Cervellino Spacca‑Muri, dentro lo stesso blob STORAGE_KEY: i suoi
+  // premi vivono nella stessa bacheca ma non toccano i contatori delle materie
+  // (partite totali, materie giocate, ecc.) che restano per i quiz.
+  function breakoutState(state) {
+    if (!state.breakout || typeof state.breakout !== 'object') state.breakout = {};
+    const b = state.breakout;
+    if (typeof b.games !== 'number') b.games = 0;
+    if (typeof b.bricksTotal !== 'number') b.bricksTotal = 0;
+    if (typeof b.wallsCleared !== 'number') b.wallsCleared = 0;
+    if (typeof b.wallsClearedNoLifeLost !== 'number') b.wallsClearedNoLifeLost = 0;
+    if (typeof b.ballSaves !== 'number') b.ballSaves = 0;
+    if (typeof b.bestFinal !== 'number') b.bestFinal = 0;
+    if (!b.bonusTypesUsed || typeof b.bonusTypesUsed !== 'object') b.bonusTypesUsed = {};
+    if (typeof b.terracottaRowCleared !== 'boolean') b.terracottaRowCleared = false;
+    return b;
   }
 
   function saveState(state) {
@@ -281,6 +310,62 @@
     if (SUBJECTS.every((subjectKey) => hasSubjectAllClasses(state, subjectKey))) {
       unlock(state, 'tutto-completato', unlockedNow);
     }
+    if (REWARDS.filter((reward) => reward.id !== 'bacheca-piena').every((reward) => state.unlocked[reward.id])) {
+      unlock(state, 'bacheca-piena', unlockedNow);
+    }
+
+    saveState(state);
+    if (unlockedNow.length) showRewardToast(unlockedNow[0], unlockedNow.length);
+    document.dispatchEvent(new CustomEvent('sa:rewards-updated', { detail: { unlocked: unlockedNow, state } }));
+    return { unlocked: unlockedNow, state };
+  }
+
+  const BONUS_TYPES = ['wide', 'sticky', 'extraLife', 'destroyColor'];
+
+  // Trofei dedicati al gioco Cervellino Spacca‑Muri: stessa bacheca (STORAGE_KEY) dei quiz materia,
+  // ma sotto-stato e sblocchi separati (vedi breakoutState) per non alterare i
+  // contatori delle materie.
+  function recordBreakout(input) {
+    const event = input || {};
+    const state = loadState();
+    const b = breakoutState(state);
+    const unlockedNow = [];
+
+    const bricksDestroyed = safeInt(event.bricksDestroyed, 0);
+    const wallsCleared = safeInt(event.wallsCleared, 0);
+    const wallsClearedNoLifeLost = safeInt(event.wallsClearedNoLifeLost, 0);
+    const ballSaves = safeInt(event.ballSaves, 0);
+    const finalScore = safeInt(event.score, 0);
+    const bonusTypesUsed = Array.isArray(event.bonusTypesUsed) ? event.bonusTypesUsed : [];
+    const isFinal = !!event.final;
+
+    // breakout.js chiama questa funzione piu' volte per partita (muro abbattuto,
+    // salvataggio, bonus, fine partita): ogni volta invia solo la differenza rispetto
+    // all'ultimo invio, quindi sommare qui e' corretto e non conta niente due volte.
+    // "games" pero' deve crescere di 1 per partita, non a ogni chiamata: solo isFinal lo tocca.
+    if (isFinal) b.games += 1;
+    b.bricksTotal += bricksDestroyed;
+    b.wallsCleared += wallsCleared;
+    b.wallsClearedNoLifeLost += wallsClearedNoLifeLost;
+    b.ballSaves += ballSaves;
+    b.bestFinal = Math.max(b.bestFinal, finalScore);
+    if (event.terracottaRowCleared) b.terracottaRowCleared = true;
+    bonusTypesUsed.forEach((type) => {
+      if (BONUS_TYPES.includes(type)) b.bonusTypesUsed[type] = true;
+    });
+
+    // "Completa la tua prima partita": si sblocca solo a partita conclusa (final),
+    // non al primo salvataggio intermedio in corso di partita.
+    if (isFinal) unlock(state, 'breakout-primo-mattone', unlockedNow);
+    if (b.wallsCleared >= 1) unlock(state, 'breakout-muro-abbattuto', unlockedNow);
+    if (b.bricksTotal >= 100) unlock(state, 'breakout-demolitore-100', unlockedNow);
+    if (b.bricksTotal >= 500) unlock(state, 'breakout-demolitore-500', unlockedNow);
+    if (b.terracottaRowCleared) unlock(state, 'breakout-cecchino-terracotta', unlockedNow);
+    if (b.ballSaves >= 1) unlock(state, 'breakout-salvataggio-extremis', unlockedNow);
+    if (BONUS_TYPES.every((type) => b.bonusTypesUsed[type])) unlock(state, 'breakout-poker-bonus', unlockedNow);
+    if (b.wallsClearedNoLifeLost >= 1) unlock(state, 'breakout-barra-acciaio', unlockedNow);
+    if (finalScore >= 300) unlock(state, 'breakout-punteggio-oro', unlockedNow);
+    if (finalScore >= 1000) unlock(state, 'breakout-campione', unlockedNow);
     if (REWARDS.filter((reward) => reward.id !== 'bacheca-piena').every((reward) => state.unlocked[reward.id])) {
       unlock(state, 'bacheca-piena', unlockedNow);
     }
@@ -541,6 +626,7 @@
   SA.rewards = {
     definitions: REWARDS,
     recordGame,
+    recordBreakout,
     loadState,
     getProgress,
     renderBoard,

@@ -46,6 +46,8 @@
   --subj-eng-a: #2e6fa6;   --subj-eng-b: #3a7baf;   --subj-eng-dec: #dd6347;   /* Hortense Blue */
   --subj-prob-a: #bc5925;  --subj-prob-b: #ba5b16;  --subj-prob-dec: #2c8c86;  /* Terra Cotta / Mikado */
   --subj-civ-a: #1f7a5e;   --subj-civ-b: #348368;   --subj-civ-dec: #c8881a;   /* Cossack Green (pine) */
+  --subj-breakout-a: #993377; --subj-breakout-b: #b03b89; --subj-breakout-dec: #2f8e86; /* Fucsia/Orchidea (Wada Sanzo), calibrato per contrasto AA come le altre materie */
+  --subj-breakout-text: #993377; /* stesso colore di 'a': gia' >=4.5:1 su bianco, nessuna variante scurita necessaria */
 
   /* ---- Scala raggi ---- */
   --radius-md: 18px;

@@ -1,5 +1,25 @@
 # Changelog Repo
 
+## 4.12.30 - 2026-08-25
+
+### Added
+- feat(breakout): nuova pagina `/breakout` — gioco arcade "Cervellino Spacca-Muri" ispirato a Breakout/Arkanoid, motore Canvas 2D vanilla in `js/breakout.js` (nessuna dipendenza nuova). Barra/pallina/muro di 8 file (4 fasce colore, 1/3/5/7 punti), 3 vite, velocità progressiva (dopo 4 colpi, poi altri 12, poi al contatto con le due fasce più alte), barra dimezzata permanentemente per la vita corrente se la pallina sfonda il muro superiore. Frecce da desktop, drag touch da mobile/tablet, sotto-passi di fisica dimensionati sul raggio pallina per evitare tunneling ad alta velocità.
+- feat(breakout): le domande di bonus e salva-pallina pescano dallo stesso pool delle 8 materie (`json/*.json` via `questions-loader.js`), filtrato per la classe scelta a inizio partita; pool mescolato e consumato senza ripetizioni nella sessione, ricaricato solo al cambio classe.
+- feat(breakout): 4 bonus (barra larga, +1 vita, distruggi un colore, pallina appiccicosa) — la capsula che cade va presa con la barra ma si attiva solo rispondendo bene a una domanda, altrimenti va persa; ogni bonus temporizzato (15s, countdown a schermo) si può riattivare per estendere la durata. Se la pallina cade, una domanda a sorpresa la riattacca alla barra prima di scalare una vita, disponibile a ogni pallina persa.
+- feat(rewards): 10 trofei dedicati a Cervellino Spacca-Muri in `js/rewards.js` (`recordBreakout`), sotto-stato separato dai contatori materia nello stesso `STORAGE_KEY` — giocare al gioco non altera "partite totali"/"materie giocate" dei trofei quiz. Registrazione progressiva (muro abbattuto, salvataggio, nuovo bonus scoperto), non solo a fine partita: sistemati tutti i varchi che facevano perdere il progresso (Ricomincia, Cambia classe, timer scaduto, cambio scheda) tramite `flushBreakoutProgress()` con invio a delta, idempotente sul conteggio partite.
+- feat(a11y): overlay domanda con focus trap completo (Tab/Shift+Tab intrappolati, focus iniziale sulla prima opzione, ripristino del focus precedente alla chiusura) — la sola `aria-modal` non basta, i browser non impediscono a Tab di uscire dal dialog.
+- feat(seo): `BreadcrumbList` e `FAQPage` JSON-LD su `/breakout` (5 domande, testo `<details>` e schema allineati 1:1), sezione dedicata in `llms.txt`, card in homepage.
+- style(breakout): mattoni/pallina/barra ridisegnati in stile "candy" (gradienti pre-renderizzati su canvas offscreen, riusati via `drawImage` — più leggero del ridisegno per-frame precedente), occhietti sulla barra che seguono la pallina, capsule colorate per tipo, particelle e punteggio volante alla distruzione di un mattone, squash/stretch su pallina e barra agli urti. Tutti gli effetti decorativi rispettano il toggle "riduci animazioni" del sito e `prefers-reduced-motion`; la fisica di gioco non è mai interessata.
+- style(breakout): palette mattoni dal registro Wada Sanzo (Sea Green/Blue/Orange Yellow/Jasper Red) più vivace dei token testo del sito — lecito perché i mattoni sono grafica di gioco (WCAG 1.4.11, soglia 3:1 non-text), non testo. Introdotti token separati `--breakout-feedback-ok`/`-ko` per l'overlay domanda (dove il colore fa da sfondo a testo bianco, resta ≥4.5:1) e varianti scurite per punteggio volante/simbolo capsula, per non ereditare i colori mattone ora troppo chiari in quei contesti testuali. Modalità Okabe-Ito invariata: stessi 4 colori certificati di prima.
+
+### Fixed
+- fix(a11y): `border-radius` del pulsante "Continua" nell'overlay domanda veniva schiacciato da una regola `:focus-visible` globale ogni volta che il pulsante riceveva il focus automatico — dichiarato un `border-radius` esplicito in `breakout.css` (che carica dopo, stessa specificità) per vincere la cascata.
+- fix(ux): popup "nuovo premio" (`rewards.css`, posizionato in basso su tutte le pagine) cadeva sopra la barra di gioco su `/breakout`, dove il canvas riempie gran parte dello schermo — override scoped a `body.subject-breakout` che lo sposta in alto.
+- fix(content): refuso "decomponitori" → "decompositori" in una domanda di scienze (`json/scienze.json`); refuso "righell" → "righello" ripetuto in 7 domande di problemi (`json/problemi.json`), stesso template generato.
+
+### Changed
+- chore: bump versione `4.12.29` → `4.12.30` (nuova pagina `/breakout` aggiunta a `OPTIONAL_PRECACHE_URLS` di `sw.js` insieme a `breakout.css`/`js/breakout.js`; bump di `CACHE_NAME` invalida automaticamente la cache di chi aveva già visitato il sito prima del rilascio).
+
 ## 4.12.29 - 2026-07-16
 
 ### Changed
