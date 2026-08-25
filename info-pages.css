@@ -152,7 +152,7 @@ body.info-page .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 16px 132px;
+  padding: 20px 16px 190px;
 }
 
 body.info-page .top-links,
@@ -418,6 +418,12 @@ body.info-page .skip-link:focus {
   cursor: default;
   color: inherit;
   opacity: 0.95;
+}
+
+#questionsTotalCount[hidden] {
+  display: inline-flex !important;
+  visibility: hidden;
+  min-width: 22ch;
 }
 
 .footer-support-cta {

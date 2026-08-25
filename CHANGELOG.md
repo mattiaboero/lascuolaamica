@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.32 - 2026-08-25
+
+### Fixed
+- fix(perf): CLS mobile fuori soglia (`/chi-siamo` 0.254 Poor, home 0.105) causata dal footer condiviso — `#questionsTotalCount` parte con l'attributo HTML `hidden` (footprint zero) e viene popolato da `renderQuestionsTotal()` (`shared.js`) dopo il paint iniziale, a larghezza mobile lo span andava a capo su più righe cambiando l'altezza del footer. Riservato lo spazio in CSS (`#questionsTotalCount[hidden]{display:inline-flex!important;visibility:hidden;min-width:22ch}` in `index.html`/`info-pages.css`, l'unico override necessario dato che `.footer-version` era già dimensionato via `.footer-link`) — verificato che il box riservato coincide con quello popolato (0px di shift su `/chi-siamo` mobile).
+- fix(schema): testo `FAQPage` non combaciava col testo visibile su matematica/geografia/storia/italiano (3 risposte per pagina, item 5-7 espansi nello schema oltre il testo dell'HTML) — allineato lo schema al testo visibile 1:1 su tutte e 4 le pagine.
+- fix(schema): `problemi.html` aveva 11 `<details>` visibili ma solo 7 in `FAQPage` — i 4 extra sono esempi svolti (uno per classe), non FAQ, correttamente esclusi dallo schema ma riusavano la classe `seo-faq-item` facendoli apparire come voci FAQ. Rinominati in `seo-example-item` (stile identico via selettore condiviso in `subject-quiz-theme.css`), nessun cambio visivo.
+- fix(perf): trovato in test su iPhone reale — `body.info-page .wrapper` riservava solo 132px di padding-bottom per il footer fisso, ma su `/chi-siamo` (footer con più voci: contatore domande + CTA supporto) il footer va su 3 righe (169px reali), 37px in più dello spazio riservato. Il footer sovrapponeva il pulsante "Torna alla home", tagliandone il testo. Bug preesistente, indipendente dal fix CLS di questa release (stesso stato finale prima e dopo). Portato il padding a 190px con margine di sicurezza.
+
+### Added
+- feat(seo): prima immagine di contenuto del sito — anteprima gameplay di `/breakout` inserita nella sezione descrittiva della pagina, riusando l'asset `og-breakout-1200x630.jpg`. Copre il gap "zero immagini di contenuto" segnalato dall'audit SXO/visivo per la pagina più urgente. Aggiornato lo screenshot stesso in due passaggi: prima ricatturato dal gioco live perché mostrava ancora i mattoni piatti pre-restyling invece dell'attuale stile "candy"; una seconda ricattura ha poi ristretto l'inquadratura al solo riquadro di gioco (muro completo, pallina, barra, bordi), la prima versione tagliava a metà l'area vuota sotto il muro senza mostrare pallina/barra.
+
+### Changed
+- chore: bump versione `4.12.31` → `4.12.32` (CSS precachate in `sw.js` modificate: `subject-quiz-theme.css`, `info-pages.css`; bump di `CACHE_NAME` necessario).
+
 ## 4.12.31 - 2026-08-25
 
 ### Fixed

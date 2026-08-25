@@ -1,5 +1,13 @@
 [
  {
+  "date": "25 agosto 2026 · Release 4.12.32",
+  "items": [
+   "Corretto un problema di layout in Chi siamo su smartphone: il footer sovrapponeva il pulsante \"Torna alla home\", tagliandone il testo.",
+   "Allineato il testo delle domande frequenti (visibile nella pagina) con quello usato dai motori di ricerca e dagli assistenti IA su matematica, geografia, storia e italiano.",
+   "Aggiunta la prima immagine di contenuto del sito: un'anteprima del gameplay nella pagina di Cervellino Spacca-Muri."
+  ]
+ },
+ {
   "date": "25 agosto 2026 · Release 4.12.31",
   "items": [
    "Corretto un bug che impediva al Service Worker di registrarsi sul sito online: la protezione di sicurezza Trusted Types (introdotta il 16 luglio) bloccava per errore la registrazione, disattivando di fatto il funzionamento offline per tutti i nuovi visitatori.",
