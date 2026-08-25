@@ -36,6 +36,8 @@ Ogni materia ha un file `json/<materia>.json` con questa struttura:
 
 `json/index.json` è l'entry point caricato dal client (`questions-loader.js`): elenca i path dei file materia e i totali aggregati; ogni file materia viene poi caricato separatamente (lazy) dal core quiz.
 
+**Due consumer, un solo dataset.** Oltre alle 8 pagine materia, anche il gioco arcade `/breakout` (`js/breakout.js`) legge da qui tramite `questions-loader.js`, filtrando per classe. Chi modifica i JSON materia sta quindi modificando anche il pool del gioco — non serve nessun passo aggiuntivo, ma vale la pena saperlo.
+
 L’indice dati tiene il conteggio aggiornato per materia e il timestamp di generazione.
 
 Le bonus questions non vivono più inline nei file pagina: stanno negli stessi JSON materia, con `bonus: true` e `bonusRaw` impostato su `easy`, `medium` o `hard`.

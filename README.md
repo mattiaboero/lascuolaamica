@@ -6,7 +6,7 @@
 [![Domande](https://img.shields.io/badge/domande-9.879-orange.svg)](https://lascuolaamica.it)
 [![Gratuito](https://img.shields.io/badge/accesso-gratuito%20%26%20senza%20registrazione-yellow.svg)](https://lascuolaamica.it)
 
-Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 9.879 domande — senza registrazione, senza tracciamento, accessibile anche offline.
+Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 9.879 domande, più un gioco arcade — senza registrazione, senza tracciamento, accessibile anche offline.
 
 🌐 **[lascuolaamica.it](https://lascuolaamica.it)**
 
@@ -32,6 +32,14 @@ La Scuola Amica parte da un presupposto diverso: un bambino di 8 anni non dovreb
 | Geografia | 2ª – 5ª |
 | Storia | 2ª – 5ª |
 | Scienze | 2ª – 5ª |
+
+---
+
+## Gioco arcade: Cervellino Spacca-Muri
+
+Un rompi-mattoni ispirato a Breakout/Arkanoid, su [/breakout](https://lascuolaamica.it/breakout). Motore Canvas 2D vanilla indipendente (`js/breakout.js`), nessuna dipendenza dal quiz engine condiviso.
+
+Le domande dei bonus e del salvataggio pallina pescano dallo stesso pool delle 8 materie, filtrato per la classe scelta a inizio partita. 4 bonus (barra larga, +1 vita, distruggi un colore, pallina appiccicosa) si attivano solo rispondendo bene a una domanda — raccogliere la capsula non basta. Se la pallina cade, una domanda a sorpresa può salvarla prima di perdere una vita. 10 trofei dedicati, visibili nella bacheca premi insieme a quelli dei quiz.
 
 ---
 
@@ -95,11 +103,14 @@ Nessun framework frontend. Nessuna dipendenza NPM a runtime.
 ```
 ├── index.html              # Home
 ├── *.html                  # Pagine materia
+├── breakout.html           # Gioco arcade "Cervellino Spacca-Muri"
+├── breakout.css            # Stili dedicati al gioco
 ├── premi.html              # Bacheca premi locale
 ├── rewards.css             # Stili bacheca premi
 ├── shared.js               # Componenti e logica condivisa
 ├── subject-quiz-core.js    # Motore quiz condiviso per tutte le 8 materie
 ├── js/
+│   ├── breakout.js         # Motore Canvas 2D del gioco arcade
 │   ├── rewards.js          # Motore premi locale
 │   └── <subject>-page.js   # Config materia dichiarativa
 ├── questions-loader.js     # Loader dataset JSON

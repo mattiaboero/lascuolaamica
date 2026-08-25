@@ -124,6 +124,18 @@ Riferimento storico: `CHANGELOG.md` release 4.11.0 e 4.12.0.
 
 ---
 
+## Gioco arcade: Cervellino Spacca-Muri
+
+`/breakout` (`breakout.html` + `breakout.css` + `js/breakout.js`) è un rompi-mattoni ispirato a Breakout/Arkanoid, motore Canvas 2D vanilla **indipendente da `subject-quiz-core.js`**: non fa parte del quiz engine unificato, non usa `window.SA.subjectConfig`, non consuma `onBuildSession`/`onPickBonus`/`onScore`.
+
+**Punti di contatto con il resto del sito:**
+
+- **Domande**: usa `questions-loader.js` (`SA.questionsLoader.getSubjectRows`) per pescare dagli stessi `json/<materia>.json` delle 8 materie, filtrati per classe a inizio partita. Nessun dataset dedicato al gioco.
+- **Premi**: `js/rewards.js` espone `recordBreakout()` accanto a `recordGame()` — stesso `STORAGE_KEY`/stessa bacheca (`premi.html`), ma sotto-stato (`state.breakout`) e contatori separati da quelli quiz, così giocare non altera "partite totali" o "materie giocate". Registrazione **progressiva** durante la partita (muro abbattuto, salvataggio, nuovo bonus scoperto), non solo a fine partita, per non perdere il progresso se si esce con "Ricomincia"/"Cambia classe"/timer scaduto/cambio scheda — vedi `flushBreakoutProgress()` in `js/breakout.js`, invio a delta e idempotente sul conteggio partite.
+- **Service Worker**: `/breakout`, `breakout.css`, `js/breakout.js` sono in `OPTIONAL_PRECACHE_URLS` di `sw.js`, stesso trattamento delle pagine materia.
+- **Grafica**: mattoni/pallina/barra disegnati su canvas con gradienti pre-renderizzati (sprite offscreen riusati via `drawImage`, non ridisegnati ogni frame). Palette mattoni più vivace dei token testo del sito (lecito: sono grafica di gioco, soglia WCAG 1.4.11 non-text 3:1, non 4.5:1), con token separati (`--breakout-feedback-ok`/`-ko`) per gli usi testuali (overlay risposta, punteggio volante, simbolo capsula) che restano a 4.5:1. Effetti decorativi (particelle, squash/stretch, wobble capsula) rispettano il toggle "riduci animazioni" e `prefers-reduced-motion`; la fisica di gioco non ne è mai influenzata. Modalità Okabe-Ito: stessi 4 colori mattone certificati, nessuna differenza.
+- **Accessibilità**: overlay domanda con focus trap dedicato (Tab/Shift+Tab intrappolati nel dialog, focus iniziale sulla prima opzione, ripristino del focus precedente alla chiusura) — `aria-modal` da solo non impedisce a Tab di uscire dal dialog nei browser.
+
 ## Dati
 
 ```
