@@ -957,6 +957,24 @@
     }
   }
 
+  // La CSP ha require-trusted-types-for 'script': service worker registration e'
+  // uno "script URL sink", quindi navigator.serviceWorker.register() rifiuta una
+  // stringa semplice e richiede un TrustedScriptURL. L'URL e' un letterale fisso
+  // ('/sw.js'), nessun input esterno: createScriptURL identita' e' sicura qui.
+  function trustedScriptUrl(url) {
+    if (!window.trustedTypes || typeof window.trustedTypes.createPolicy !== 'function') return url;
+    try {
+      if (!SA._swUrlPolicy) {
+        SA._swUrlPolicy = window.trustedTypes.createPolicy('sa-sw-url', {
+          createScriptURL: (u) => u
+        });
+      }
+      return SA._swUrlPolicy.createScriptURL(url);
+    } catch (e) {
+      return url;
+    }
+  }
+
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
 
@@ -991,7 +1009,7 @@
         };
 
         try {
-          const reg = await navigator.serviceWorker.register('/sw.js', {
+          const reg = await navigator.serviceWorker.register(trustedScriptUrl('/sw.js'), {
             updateViaCache: 'none'
           });
 

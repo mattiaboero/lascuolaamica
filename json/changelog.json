@@ -1,5 +1,12 @@
 [
  {
+  "date": "25 agosto 2026 · Release 4.12.31",
+  "items": [
+   "Corretto un bug che impediva al Service Worker di registrarsi sul sito online: la protezione di sicurezza Trusted Types (introdotta il 16 luglio) bloccava per errore la registrazione, disattivando di fatto il funzionamento offline per tutti i nuovi visitatori.",
+   "Aggiornata la sitemap per includere correttamente la nuova pagina del gioco in ogni rigenerazione futura."
+  ]
+ },
+ {
   "date": "25 agosto 2026 · Release 4.12.30",
   "items": [
    "Nuovo gioco arcade \"Cervellino Spacca-Muri\", ispirato a Breakout: abbatti il muro di mattoni con la pallina senza farla cadere.",

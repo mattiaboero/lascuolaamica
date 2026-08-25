@@ -4,7 +4,21 @@
 // Network First con fallback per tutto il resto.
 // ============================================================
 
-importScripts('/app-version.js');
+// Stesso vincolo Trusted Types di shared.js (la CSP con require-trusted-types-for
+// 'script' si applica anche alla risposta di questo file): importScripts() e' uno
+// script URL sink e rifiuta una stringa semplice. URL fisso, nessun input esterno.
+(function importAppVersion() {
+  let url = '/app-version.js';
+  if (self.trustedTypes && typeof self.trustedTypes.createPolicy === 'function') {
+    try {
+      const policy = self.trustedTypes.createPolicy('sa-sw-import', { createScriptURL: (u) => u });
+      url = policy.createScriptURL('/app-version.js');
+    } catch (e) {
+      // policy non creabile: tenta comunque con la stringa semplice
+    }
+  }
+  importScripts(url);
+})();
 
 const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v1';
 const REWARDS_CACHE_NAME = `${CACHE_NAME}-rewards`;

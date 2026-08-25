@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.31 - 2026-08-25
+
+### Fixed
+- fix(sw): `require-trusted-types-for 'script'` (introdotto in 4.12.29) blocca `navigator.serviceWorker.register()`/`importScripts()` quando riceve una stringa semplice invece di un `TrustedScriptURL` — sono entrambi "script URL sink" secondo la spec Trusted Types. Trovato durante un audit tecnico SEO in produzione (console: `This document requires 'TrustedScriptURL' assignment. The action has been blocked.`), non nei test locali dove la CSP non veniva applicata. Effetto reale: il Service Worker non si registrava più su nessun nuovo visitatore dal deploy del 16 luglio — funzionamento offline e precache silenziosamente disattivati per ~5 settimane, senza errori visibili all'utente (il sito restava comunque utilizzabile online, solo senza PWA/offline).
+- fix(sw): `shared.js` crea una policy Trusted Types minima (`createScriptURL` identità, nessun input esterno: l'URL è sempre il letterale `/sw.js`) prima di chiamare `register()`. `sw.js` applica la stessa correzione al proprio `importScripts('/app-version.js')`, dato che la CSP si applica anche alla risposta HTTP di `sw.js` stesso (`_headers` usa `/*`). Fallback silenzioso alla stringa semplice se `window.trustedTypes`/`self.trustedTypes` non è disponibile (browser che non supportano Trusted Types ignorano comunque la direttiva `require-trusted-types-for`).
+- chore(sitemap): `/breakout` era stata aggiunta a mano solo in `sitemap.xml`, non nella lista `PAGES` di `scripts/generate_sitemap.py` — al prossimo rilancio dello script sarebbe sparita silenziosamente. Rigenerata con date `lastmod` reali da git invece che a mano.
+- chore(seo): sitemap risottomessa a Search Console via API (20 URL, zero errori); URL Inspection su `/breakout` conferma robots/canonical/meta corretti (non ancora indicizzata da Google, atteso per una pagina pubblicata lo stesso giorno). Richiesta di indicizzazione diretta via Indexing API non riuscita: l'account di servizio SEO non ha permessi da Proprietario su Search Console (serve intervento manuale dell'utente se lo si vuole abilitare).
+
+### Changed
+- chore: bump versione `4.12.30` → `4.12.31` (`sw.js` modificato, bump di `CACHE_NAME` necessario per far ripartire la registrazione sui client che l'avevano già persa).
+
 ## 4.12.30 - 2026-08-25
 
 ### Added
