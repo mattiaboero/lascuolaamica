@@ -1,5 +1,12 @@
 [
  {
+  "date": "27 agosto 2026 · Release 4.12.33",
+  "items": [
+   "Riscritti i titoli e le descrizioni che Google mostra nei risultati di ricerca per educazione civica, storia, scienze, geografia e italiano, usando le parole che le persone cercano davvero.",
+   "La pagina di inglese ora indica chiaramente che contiene oltre 100 domande con risposte."
+  ]
+ },
+ {
   "date": "25 agosto 2026 · Release 4.12.32",
   "items": [
    "Corretto un problema di layout in Chi siamo su smartphone: il footer sovrapponeva il pulsante \"Torna alla home\", tagliandone il testo.",

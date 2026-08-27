@@ -1,0 +1,83 @@
+# Baseline on-page pre-modifica title/description
+# Data: 2026-08-27  commit: 8820e9e
+
+## /index
+9:<title>La Scuola Amica | Giochi Educativi per la Scuola Primaria</title>
+10:<meta name="description" content="Giochi educativi gratis per la scuola primaria (classi 2ª-5ª), anche offline. Quiz di matematica, inglese, storia, scienze, italiano e molto altro.">
+22:<meta property="og:title" content="La Scuola Amica | Giochi Educativi per la Scuola Primaria">
+23:<meta property="og:description" content="Giochi educativi gratis per la scuola primaria (classi 2ª-5ª), anche offline: matematica, inglese, problemi, civica, geografia, storia, scienze e italiano.">
+25:<meta name="twitter:title" content="La Scuola Amica | Giochi Educativi per la Scuola Primaria">
+26:<meta name="twitter:description" content="Giochi educativi gratis per la scuola primaria (classi 2ª-5ª), anche offline: matematica, inglese, problemi, civica, geografia, storia, scienze e italiano.">
+8:      "name": "La Scuola Amica",
+9:      "description": "Raccolta di giochi educativi gratuiti per la scuola primaria: matematica, inglese, problemi, educazione civica, geografia, storia, scienze e lingua italiana.",
+
+## /inglese
+10:<title>Domande in Inglese per Bambini | Quiz Scuola Primaria</title>
+11:<meta name="description" content="Domande in inglese per bambini della scuola primaria: quiz gratis con vocaboli, frasi e comprensione. Esercizi online per classi 2ª-5ª.">
+23:<meta property="og:title" content="Domande in Inglese per Bambini | Quiz Scuola Primaria">
+24:<meta property="og:description" content="Quiz di inglese per bambini con vocaboli, frasi e comprensione per la scuola primaria.">
+26:<meta name="twitter:title" content="Domande in Inglese per Bambini | Quiz Scuola Primaria">
+27:<meta name="twitter:description" content="Domande e quiz di inglese per bambini della scuola primaria con vocaboli, frasi e comprensione.">
+7:  "name": "Inglese per Bambini",
+8:  "description": "Domande e quiz interattivi di inglese per bambini della scuola primaria con vocaboli, frasi semplici e comprensione in contesto.",
+
+## /civica
+10:<title>Quiz Educazione Civica | Scuola Primaria Gratis</title>
+11:<meta name="description" content="Quiz di educazione civica gratis per la scuola primaria: test, verifiche e domande con risposte su regole, ambiente e cittadinanza digitale.">
+23:<meta property="og:title" content="Quiz Educazione Civica | Scuola Primaria Gratis">
+24:<meta property="og:description" content="Quiz, test e verifiche di educazione civica per la scuola primaria con 10 domande per partita.">
+26:<meta name="twitter:title" content="Quiz Educazione Civica | Scuola Primaria Gratis">
+27:<meta name="twitter:description" content="Quiz e test di educazione civica per la scuola primaria: regole, ambiente, digitale e strada.">
+6:  "name": "Educazione Civica per Bambini",
+7:  "description": "Quiz, test e verifiche di educazione civica per la scuola primaria con domande su regole, ambiente, cittadinanza digitale e sicurezza stradale.",
+
+## /storia
+10:<title>Quiz di Storia | Scuola Primaria Gratis</title>
+11:<meta name="description" content="Quiz di storia gratis per la scuola primaria: cronologia, fonti storiche, civiltà e periodizzazione. Esercizi online per classi 2ª-5ª.">
+23:<meta property="og:title" content="Quiz di Storia | Scuola Primaria Gratis">
+24:<meta property="og:description" content="Quiz ed esercizi di storia per la scuola primaria su cronologia, fonti, civiltà e trasformazioni nel tempo.">
+26:<meta name="twitter:title" content="Quiz di Storia | Scuola Primaria Gratis">
+27:<meta name="twitter:description" content="Quiz di storia per la scuola primaria con cronologia, fonti storiche, civiltà e periodizzazione.">
+6:  "name": "Storia Scuola Primaria",
+7:  "description": "Quiz ed esercizi interattivi di storia per la scuola primaria su cronologia, fonti storiche, civiltà e periodizzazione.",
+
+## /scienze
+10:<title>Esercizi di Scienze | Scuola Primaria Gratis</title>
+11:<meta name="description" content="Esercizi di scienze gratis per la scuola primaria: viventi, ambiente, corpo umano, fenomeni naturali e tecnologia. Quiz online per classi 2ª-5ª.">
+23:<meta property="og:title" content="Esercizi di Scienze | Scuola Primaria Gratis">
+24:<meta property="og:description" content="Esercizi e quiz di scienze per la scuola primaria su viventi, ambiente, corpo umano e fenomeni naturali.">
+26:<meta name="twitter:title" content="Esercizi di Scienze | Scuola Primaria Gratis">
+27:<meta name="twitter:description" content="Quiz ed esercizi di scienze per la scuola primaria: ambiente, viventi, corpo umano e fenomeni.">
+6:  "name": "Scienze Scuola Primaria",
+7:  "description": "Esercizi e quiz interattivi di scienze per la scuola primaria su viventi, ambiente, corpo umano, fenomeni naturali e tecnologia.",
+
+## /geografia
+10:<title>Esercizi di Geografia | Scuola Primaria Gratis</title>
+11:<meta name="description" content="Esercizi di geografia gratis per la scuola primaria: orientamento, carte geografiche, paesaggi, Italia ed Europa. Quiz online per classi 2ª-5ª.">
+23:<meta property="og:title" content="Esercizi di Geografia | Scuola Primaria Gratis">
+24:<meta property="og:description" content="Esercizi e quiz di geografia per la scuola primaria su orientamento, carte, paesaggi, Italia ed Europa.">
+26:<meta name="twitter:title" content="Esercizi di Geografia | Scuola Primaria Gratis">
+27:<meta name="twitter:description" content="Quiz ed esercizi di geografia per la scuola primaria: mappe, paesaggi, orientamento e territorio.">
+6:  "name": "Geografia Scuola Primaria",
+7:  "description": "Esercizi e quiz interattivi di geografia per la scuola primaria su orientamento, carte geografiche, paesaggi, Italia ed Europa.",
+
+## /italiano
+10:<title>Esercizi di Italiano | Scuola Primaria Gratis</title>
+11:<meta name="description" content="Esercizi di italiano gratis per la scuola primaria: lettura, scrittura, lessico, ascolto e grammatica. Quiz online per classi 2ª-5ª.">
+23:<meta property="og:title" content="Esercizi di Italiano | Scuola Primaria Gratis">
+24:<meta property="og:description" content="Esercizi e quiz di italiano per la scuola primaria su lettura, scrittura, lessico, ascolto e grammatica.">
+26:<meta name="twitter:title" content="Esercizi di Italiano | Scuola Primaria Gratis">
+27:<meta name="twitter:description" content="Quiz ed esercizi di italiano per la scuola primaria: comprensione, scrittura, lessico e grammatica.">
+6:  "name": "Lingua Italiana Scuola Primaria",
+7:  "description": "Esercizi e quiz interattivi di italiano per la scuola primaria su ascolto, lettura, scrittura, lessico e grammatica.",
+
+## /matematica
+10:<title>Esercizi di Matematica | Scuola Primaria Gratis</title>
+11:<meta name="description" content="Esercizi di matematica gratis per la scuola primaria: tabelline, calcolo, problemi, geometria e logica. Quiz online per classi 2ª-5ª.">
+23:<meta property="og:title" content="Esercizi di Matematica | Scuola Primaria Gratis">
+24:<meta property="og:description" content="Quiz di matematica per la scuola primaria con tabelline, calcolo, problemi, geometria e logica.">
+26:<meta name="twitter:title" content="Esercizi di Matematica | Scuola Primaria Gratis">
+27:<meta name="twitter:description" content="Esercizi e quiz di matematica per la scuola primaria con tabelline, calcolo, problemi e geometria.">
+6:  "name": "Matematica Scuola Primaria",
+7:  "description": "Esercizi e quiz interattivi di matematica per la scuola primaria con tabelline, calcolo, problemi, geometria e logica.",
+
