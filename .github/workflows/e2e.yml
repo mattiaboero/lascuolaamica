@@ -28,6 +28,9 @@ jobs:
       - name: E2E smoke (perfect, 8 subjects)
         run: npm run test:e2e:perfect
 
+      - name: E2E ripasso (mixed + sessione di ripasso, 8 subjects)
+        run: npm run test:e2e:ripassa
+
   full:
     # Daily schedule: perfect + mixed + worst
     if: github.event_name == 'schedule'

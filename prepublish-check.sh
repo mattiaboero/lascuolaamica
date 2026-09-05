@@ -5,26 +5,15 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$BASE_DIR"
 
 status=0
-HTML_FILES=(
-  "index.html"
-  "matematica.html"
-  "inglese.html"
-  "problemi.html"
-  "civica.html"
-  "geografia.html"
-  "storia.html"
-  "scienze.html"
-  "italiano.html"
-  "chi-siamo.html"
-  "per-insegnanti.html"
-  "per-genitori.html"
-  "ai-info.html"
-  "accessibilita.html"
-  "supporta.html"
-  "supporto-satispay.html"
-  "faq.html"
-  "premi.html"
-)
+# Tutte le pagine del sito, non una lista da aggiornare a mano: una lista
+# hardcoded lascia le pagine nuove fuori dai controlli senza che nessuno se ne
+# accorga (stesso pattern gia' usato da scripts/sync_csp_hashes.py).
+HTML_FILES=()
+while IFS= read -r -d '' f; do HTML_FILES+=("$(basename "$f")"); done \
+  < <(find . -maxdepth 1 -name '*.html' -print0 | sort -z)
+
+# Pagine statiche che non dipendono da JS: un <noscript> qui sarebbe decorativo.
+NOSCRIPT_EXEMPT=("404.html")
 
 check_html_integrity() {
   local file="$1"
@@ -75,7 +64,14 @@ check_html_integrity() {
     status=1
   fi
 
-  if grep -qi '<noscript>' "$file"; then
+  local ns_exempt=0
+  local exempt
+  for exempt in "${NOSCRIPT_EXEMPT[@]}"; do
+    [[ "$file" == "$exempt" ]] && ns_exempt=1
+  done
+  if [[ "$ns_exempt" -eq 1 ]]; then
+    echo "[SKIP] $file: noscript non richiesto (pagina statica)"
+  elif grep -qi '<noscript>' "$file"; then
     echo "[OK] $file: noscript fallback found"
   else
     echo "[ERROR] $file: missing <noscript> fallback"
@@ -125,6 +121,8 @@ check_security_patterns() {
     -path './.git' -prune -o \
     -path './.lighthouseci' -prune -o \
     -path './export' -prune -o \
+    -path './graphify-out' -prune -o \
+    -path './docs/graphify-out' -prune -o \
     -type f \( -name '*.js' -o -name '*.html' \) -print0 \
     | xargs -0 grep -nE 'eval\(|new Function\(|document\.write\(|innerHTML[[:space:]]*=|javascript:' || true)
   if [[ -n "$findings" ]]; then
@@ -221,9 +219,13 @@ check_runtime_split_json_only() {
 check_runtime_split_json_only
 
 check_pwa_root_only_contract() {
-  if grep -q "navigator.serviceWorker.register('/sw.js', {" shared.js \
+  # I due sink di script URL passano da Trusted Types (commit b228ac5): il
+  # contratto da verificare e' che gli URL restino /sw.js e /app-version.js alla
+  # radice, non la forma letterale della chiamata.
+  if grep -qE "navigator\.serviceWorker\.register\((trustedScriptUrl\()?'/sw\.js'" shared.js \
     && grep -q "updateViaCache: 'none'" shared.js \
-    && grep -q 'importScripts('\''/app-version.js'\'')' sw.js \
+    && grep -q "importScripts(" sw.js \
+    && grep -q "'/app-version.js'" sw.js \
     && grep -q '"start_url": "/"' manifest.json \
     && grep -q '"scope": "/"' manifest.json; then
     echo "[OK] PWA: root-only contract, scope and updateViaCache are aligned"

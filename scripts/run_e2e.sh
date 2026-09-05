@@ -5,6 +5,7 @@
 #   modes = lista comma-separated (default: perfect)
 #   esempi: bash scripts/run_e2e.sh perfect
 #           bash scripts/run_e2e.sh perfect,mixed,worst
+#   il modo "ripassa" gioca una sessione mixed e poi "Ripassa i tuoi errori"
 #
 # Env:
 #   E2E_BASE_URL  host test server (default http://127.0.0.1:4173)
@@ -28,9 +29,15 @@ for mode in "${MODE_ARR[@]}"; do
     if [[ "$subj" == "inglese" ]]; then
       extra=(--level 1)
     fi
+    run_mode="$mode"
+    # "ripassa" non e' un mode del harness: e' una sessione mixed seguita dal ripasso
+    if [[ "$mode" == "ripassa" ]]; then
+      run_mode="mixed"
+      extra+=(--ripassa)
+    fi
     echo "=== E2E: $subj mode=$mode ==="
     if ! node scripts/subject_quiz_test_harness.js \
-          --base-url "$BASE" --page "$subj" --mode "$mode" "${extra[@]}"; then
+          --base-url "$BASE" --page "$subj" --mode "$run_mode" ${extra[@]+"${extra[@]}"}; then
       echo "[FAIL] $subj mode=$mode"
       fail=1
     fi

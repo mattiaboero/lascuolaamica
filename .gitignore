@@ -39,3 +39,7 @@ reports/questions_coverage_summary_[0-9]*.csv
 09-Note-volanti/
 templates/
 .obsidian/
+
+# Output del tool graphify: non è codice del sito e fa fallire il check dei pattern pericolosi
+graphify-out/
+docs/graphify-out/

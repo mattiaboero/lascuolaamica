@@ -146,6 +146,11 @@ async function main() {
       };
     });
 
+    let ripassa = null;
+    if (options.ripassa) {
+      ripassa = await playRipassaSession(page);
+    }
+
     const payload = {
       page: options.page,
       mode: options.mode,
@@ -155,6 +160,7 @@ async function main() {
       result,
       questions,
       bonus,
+      ripassa,
       pageErrors: trackers.pageErrors,
       consoleErrors: trackers.consoleErrors
     };
@@ -163,6 +169,44 @@ async function main() {
   } finally {
     await browser.close();
   }
+}
+
+// Regressione A1: la sessione di ripasso e' piu' corta di TOTAL_Q, quindi la fine
+// partita va riconosciuta su questions.length. Se torna la guardia sbagliata il
+// gioco resta congelato sull'ultima domanda e questa attesa scade.
+async function playRipassaSession(page) {
+  // piu' schermate hanno un go-start: prendere quello della schermata risultato
+  await page.locator('#screenResult [data-action="go-start"]').first().click();
+  const ripassaBtn = page.locator('#ripassaBtn');
+  await ripassaBtn.waitFor({ timeout: 5000 });
+  const label = String(await ripassaBtn.textContent() || '');
+  const count = Number((label.match(/\((\d+)\)/) || [])[1] || 0);
+  if (!count) {
+    throw new Error(`Bottone ripasso senza conteggio leggibile: "${label}"`);
+  }
+  await ripassaBtn.click();
+  await page.waitForSelector('#screenGame.active', { timeout: 15000 });
+
+  for (let i = 0; i < count; i++) {
+    await page.locator('#answers .answer-btn:not([disabled])').first().click();
+    // il core avanza con un setTimeout da 2200 ms
+    await page.waitForTimeout(2500);
+  }
+
+  if (await page.locator('#screenBonusPick.active').count()) {
+    await page.locator('[data-action="skip-bonus"]').click();
+  }
+  await page.waitForSelector('#screenResult.active', { timeout: 10000 });
+
+  const scored = await page.evaluate(() => ({
+    correct: String(document.getElementById('rCorrect')?.textContent || '').trim(),
+    wrong: String(document.getElementById('rWrong')?.textContent || '').trim()
+  }));
+  const answered = Number(scored.correct) + Number(scored.wrong);
+  if (answered !== count) {
+    throw new Error(`Ripasso: attese ${count} domande, il risultato ne conta ${answered}`);
+  }
+  return { count, ...scored };
 }
 
 function parseArgs(argv) {
@@ -174,6 +218,7 @@ function parseArgs(argv) {
     classKey: '3',
     area: 'mixed',
     level: '',
+    ripassa: false,
     headless: true,
     help: false
   };
@@ -202,6 +247,9 @@ function parseArgs(argv) {
       case '--level':
         options.level = String(argv[++i] || options.level);
         break;
+      case '--ripassa':
+        options.ripassa = true;
+        break;
       case '--headed':
         options.headless = false;
         break;
@@ -220,6 +268,9 @@ function parseArgs(argv) {
   if (!['easy', 'medium', 'hard', 'skip'].includes(options.bonus)) {
     throw new Error(`bonus non supportato: ${options.bonus}`);
   }
+  if (options.ripassa && options.mode === 'perfect') {
+    throw new Error('--ripassa richiede --mode mixed o worst: senza errori il bottone di ripasso non compare');
+  }
   return options;
 }
 
@@ -236,6 +287,7 @@ function printHelp() {
     '  --class <n>          classe iniziale (default: 3)',
     '  --area <key>         area iniziale (default: mixed)',
     '  --level <key>        livello da selezionare se la materia usa screenLevels',
+    '  --ripassa            dopo il risultato gioca la sessione "Ripassa i tuoi errori" (richiede mode mixed/worst)',
     '  --base-url <url>     host locale del test server',
     '  --headed             avvia il browser non-headless',
     '  --help               mostra questo messaggio'

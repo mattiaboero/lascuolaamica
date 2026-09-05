@@ -16,26 +16,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 
-HTML_FILES = [
-    "index.html",
-    "matematica.html",
-    "inglese.html",
-    "problemi.html",
-    "civica.html",
-    "geografia.html",
-    "storia.html",
-    "scienze.html",
-    "italiano.html",
-    "chi-siamo.html",
-    "per-insegnanti.html",
-    "per-genitori.html",
-    "ai-info.html",
-    "faq.html",
-    "premi.html",
-    "supporta.html",
-    "accessibilita.html",
-    "supporto-satispay.html",
-]
+# Tutte le pagine del sito: una lista hardcoded lascia fuori le pagine nuove
+# (tabelline.html e breakout.html erano gia' scoperte) senza segnalarlo.
+HTML_FILES = sorted(p.name for p in ROOT.glob("*.html"))
 
 ORG_ID = "https://lascuolaamica.it/#organization"
 WEBSITE_ID = "https://lascuolaamica.it/#website"

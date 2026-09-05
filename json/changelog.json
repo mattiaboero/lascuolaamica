@@ -1,5 +1,12 @@
 [
  {
+  "date": "5 settembre 2026 · Release 4.12.36",
+  "items": [
+   "Risolto: la sessione \"Ripassa i tuoi errori\" si bloccava sull'ultima domanda senza mostrare il risultato. Ora arriva in fondo e salva il punteggio come una partita normale.",
+   "Durante il ripasso il contatore in alto mostra il numero reale di domande da rivedere invece di /10."
+  ]
+ },
+ {
   "date": "5 settembre 2026 · Release 4.12.35",
   "items": [
    "Le tabelline hanno ora una card dedicata in home, subito dopo Cervellino Spacca-Muri: prima la pagina si raggiungeva solo da un link dentro il testo di matematica."

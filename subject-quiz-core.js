@@ -1888,12 +1888,20 @@
     loadQuestion();
   }
 
+  // Lunghezza reale della sessione in corso. Il ripasso costruisce `questions`
+  // dagli errori accumulati (1-9 domande) e anche una sessione normale può
+  // restare sotto TOTAL_Q se il pool filtrato e' magro: usare la costante come
+  // soglia di fine partita manda `questions[curQ]` a undefined.
+  function sessionLen() {
+    return questions.length ? Math.min(TOTAL_Q, questions.length) : TOTAL_Q;
+  }
+
   function buildDots() {
     const c = $('progressDots');
     if (!c) return;
     c.textContent = '';
     const frag = document.createDocumentFragment();
-    for (let i = 0; i < TOTAL_Q; i++) {
+    for (let i = 0; i < sessionLen(); i++) {
       const d = document.createElement('div');
       d.className = 'dot' + (i === 0 ? ' current' : '');
       d.id = 'dot-' + i;
@@ -1903,7 +1911,7 @@
   }
 
   function updateDots() {
-    for (let i = 0; i < TOTAL_Q; i++) {
+    for (let i = 0; i < sessionLen(); i++) {
       const d = $('dot-' + i);
       if (!d) continue;
       d.className = 'dot';
@@ -1916,7 +1924,9 @@
     const pointsEl = $('scorePoints');
     const qnEl = $('scoreQn');
     if (pointsEl) pointsEl.textContent = points;
-    if (qnEl) qnEl.textContent = Math.min(curQ, TOTAL_Q);
+    if (qnEl) qnEl.textContent = Math.min(curQ, sessionLen());
+    const qnTotalEl = $('scoreQnTotal');
+    if (qnTotalEl) qnTotalEl.textContent = sessionLen();
   }
 
   function loadQuestion() {
@@ -1928,8 +1938,8 @@
     const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
     const levelMeta = getCurrentLevelMeta();
     $('qMeta').textContent = levelMeta
-      ? `Domanda ${curQ + 1} di ${TOTAL_Q} · ${levelMeta.label} · ${areaLabel} · ${classLabel}`
-      : `Domanda ${curQ + 1} di ${TOTAL_Q} · ${areaLabel} · ${classLabel}`;
+      ? `Domanda ${curQ + 1} di ${sessionLen()} · ${levelMeta.label} · ${areaLabel} · ${classLabel}`
+      : `Domanda ${curQ + 1} di ${sessionLen()} · ${areaLabel} · ${classLabel}`;
     renderPrompt($('qText'), q);
 
     const answers = $('answers');
@@ -2002,7 +2012,7 @@
     updateScoreBar();
 
     setTimeout(() => {
-      if (curQ >= TOTAL_Q) openBonusPick();
+      if (curQ >= sessionLen()) openBonusPick();
       else loadQuestion();
     }, 2200);
   }
@@ -2144,7 +2154,7 @@
         grades: Array.from(new Set(questions.map((q) => q && q._grade).filter(Boolean))),
         correct,
         wrong,
-        total: TOTAL_Q,
+        total: sessionLen(),
         baseScore,
         finalScore,
         bonusAttempted: !!bonusType,
@@ -2166,7 +2176,7 @@
       base: baseScore,
       bonus: bonusType ? `${BONUS_LABELS[bonusType] || bonusType} ${bonusApplied ? `x${bonusFactor}` : 'x1'}` : 'Nessuno',
       final: finalScore,
-      total: TOTAL_Q,
+      total: sessionLen(),
       correct: correct,
       wrong: wrong,
       date: new Date().toLocaleDateString('it-IT')
