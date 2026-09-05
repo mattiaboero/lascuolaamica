@@ -1,5 +1,13 @@
 [
  {
+  "date": "5 settembre 2026 · Release 4.12.34",
+  "items": [
+   "Nuova pagina dedicata alle tabelline dal 2 al 10, con la tabella completa, i video del canale YouTube Cecilia e il Papà Mattone e il collegamento diretto ai quiz.",
+   "Dal link ai quiz sulle tabelline la pagina di matematica si apre con l'argomento già selezionato, senza doverlo scegliere ogni volta.",
+   "Aggiunto in fondo a ogni pagina il collegamento al canale YouTube con i video delle tabelline."
+  ]
+ },
+ {
   "date": "27 agosto 2026 · Release 4.12.33",
   "items": [
    "Riscritti i titoli e le descrizioni che Google mostra nei risultati di ricerca per educazione civica, storia, scienze, geografia e italiano, usando le parole che le persone cercano davvero.",

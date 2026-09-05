@@ -13,6 +13,7 @@ SITEMAP_PATH = ROOT / "sitemap.xml"
 PAGES = [
     ("/", "index.html", "weekly", "1.0"),
     ("/matematica", "matematica.html", "weekly", "0.9"),
+    ("/tabelline", "tabelline.html", "weekly", "0.88"),
     ("/inglese", "inglese.html", "weekly", "0.9"),
     ("/problemi", "problemi.html", "weekly", "0.9"),
     ("/civica", "civica.html", "weekly", "0.9"),

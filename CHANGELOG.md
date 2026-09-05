@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.12.34 - 2026-09-05
+
+### Added
+- feat(seo): nuova pagina `/tabelline`. Il canale YouTube "Cecilia e il Papà Mattone" ha sette video sulle tabelline (dal 2 all'8, 1.181.000 impressioni e 6,52% di CTR al 5 settembre 2026) che linkano `lascuolaamica.it` in descrizione, ma sul sito le tabelline erano solo una sezione di `/matematica`, pagina che deve competere per cinque argomenti insieme e che genera 10 impressioni in tre mesi. La landing 1:1 dà una destinazione coerente al traffico del canale e un bersaglio unico alla query. Contenuto: tabella completa 2-10 in HTML statico, griglia delle nove copertine con link ai video nella playlist, procedura di allenamento e quattro FAQ. JSON-LD: `WebPage`, `BreadcrumbList` (Home › Matematica › Tabelline), `FAQPage` con testo identico a quello visibile, e un `ItemList` di sette `VideoObject` con `uploadDate` e `duration` reali letti da YouTube.
+- feat(seo): collegamento reciproco sito ↔ canale. `sameAs` del canale in `EducationalOrganization` (`index.html`) e in `ORG_SAME_AS` di `refresh_structured_data.py` perché sopravviva alla rigenerazione; link "Video su YouTube" nel footer di tutte le pagine; sezione "Canale YouTube" in `llms.txt` e `/ai-info`.
+- chore(assets): nove copertine convertite in WebP 640x360 (~20 KB l'una, `loading="lazy"`) e `og-tabelline-1200x630.jpg` come montaggio 3x3 delle stesse copertine.
+
+### Changed
+- feat(ux): deep link `?area=<key>` in `subject-quiz-core.js`. Serviva perché il link dalla descrizione dei video aprisse direttamente le tabelline invece del menu degli ambiti. Implementato nel core e non in `matematica-page.js` per non violare il vincolo "nessun ramo specifico per materia": vale per ogni pagina materia. Chiave sconosciuta o non disponibile per la classe selezionata: `normalizeSelectedAreaForClass()` ricade su `mixed`, comportamento invariato.
+- chore: bump versione `4.12.33` → `4.12.34`. `/tabelline` entra in `OPTIONAL_PRECACHE_URLS` di `sw.js` con strategia cache-first: senza bump di `CACHE_NAME` i visitatori di ritorno non riceverebbero la nuova pagina.
+
+### Notes
+- decisione(privacy): i video sono presentati come copertina più link, non come `<iframe>`. La CSP del sito è `default-src 'self'` senza `frame-src`, quindi l'embed richiederebbe di aprirla a `youtube-nocookie.com`, in contraddizione con il claim "nessun tracker di terze parti" dichiarato in `llms.txt` e `/per-genitori`. Conseguenza accettata: senza player in pagina Google non assegna i video rich result a `/tabelline` e Search Console può segnalare "video non trovato nella pagina". Lo schema `VideoObject` resta perché descrive correttamente risorse referenziate e non comporta penalizzazione. Soglia di riapertura: se il canale supera i 100 clic/mese verso il sito, valutare una facciata click-to-load (nessuna richiesta a YouTube prima del clic) più una riga di `frame-src`.
+- decisione(seo): i link esterni restano in stessa scheda. Il gate di `prepublish-check.sh` impone `rel="noopener noreferrer"` su ogni `target="_blank"`, e `noreferrer` azzererebbe il referrer: YouTube Analytics registrerebbe il traffico dal sito come "diretto", rendendo non misurabile proprio la direzione sito → canale.
+- verifica: `PLHctzIjd-9Qg` è un ID playlist valido (risponde, titolo "Tabelline con CalcOlettore, dalla 2 alla 10"), contrariamente alla nota "DA VERIFICARE" nel foglio di lavoro delle descrizioni YouTube.
+
 ## 4.12.33 - 2026-08-27
 
 ### Changed

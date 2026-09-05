@@ -313,7 +313,21 @@
   const AREA_KEYS = getAreaKeys();
   const BANKS = buildNormalizedBanks();
 
-  let selectedArea = cfg.defaultArea || 'mixed';
+  // Deep link ?area=<key>: apre la pagina con l'ambito gia selezionato.
+  // Chiave sconosciuta o non disponibile per la classe: buildAreaGrid()
+  // ricade su 'mixed' via normalizeSelectedAreaForClass().
+  function areaFromQuery() {
+    try {
+      const raw = new URLSearchParams(window.location.search).get('area');
+      if (!raw) return null;
+      const key = safeText(raw, 32);
+      return (cfg.areas || []).some((a) => a.key === key) ? key : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  let selectedArea = areaFromQuery() || cfg.defaultArea || 'mixed';
   let selectedClass = normalizeClassKey(loadClassPref() || cfg.defaultClass || 3);
   let questions = [];
   let curQ = 0;

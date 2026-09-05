@@ -578,3 +578,93 @@ html:not([data-palette="okabe-ito"]) {
   --info-light-border: var(--ws-cinnamon-border);
   --info-light-button-border: var(--ws-cinnamon-border);
 }
+
+/* =========================================================================
+   Pagina /tabelline: griglia video del canale YouTube e tabella 2-10.
+   Usa solo i token --page-*, quindi segue anche la palette Okabe-Ito.
+   ========================================================================= */
+
+body.page-tabelline {
+  --page-shell-max: 900px;
+}
+
+body.page-tabelline .tab-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+body.page-tabelline .tab-card {
+  display: block;
+  border: 1px solid var(--page-card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--page-secondary-bg);
+  text-decoration: none !important;
+  color: var(--page-text) !important;
+}
+
+body.page-tabelline .tab-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--page-secondary-bg);
+}
+
+body.page-tabelline .tab-card-body {
+  padding: 10px 12px 12px;
+}
+
+body.page-tabelline .tab-card-title {
+  display: block;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--page-link-strong);
+}
+
+body.page-tabelline .tab-card-meta {
+  display: block;
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--page-muted);
+}
+
+body.page-tabelline .tab-card.is-soon {
+  opacity: 0.72;
+}
+
+body.page-tabelline .tab-table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+body.page-tabelline .tab-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+  font-weight: 800;
+}
+
+body.page-tabelline .tab-table caption {
+  text-align: left;
+  padding-bottom: 8px;
+  font-weight: 800;
+  color: var(--page-muted);
+}
+
+body.page-tabelline .tab-table th,
+body.page-tabelline .tab-table td {
+  border: 1px solid var(--page-card-border);
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+body.page-tabelline .tab-table thead th,
+body.page-tabelline .tab-table tbody th {
+  background: var(--page-secondary-bg);
+  color: var(--page-secondary-text);
+}
