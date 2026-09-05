@@ -329,6 +329,11 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   background:linear-gradient(145deg,var(--ita-a),var(--ita-b));
   box-shadow:0 12px 40px rgba(209,73,91,.42),0 0 0 4px rgba(255,255,255,.3);
 }
+/* Tabelline card — Ocra (Wada Sanzo), testo bianco a 5,13:1 e 4,68:1 sui due estremi del gradiente */
+.card-tabelline{
+  background:linear-gradient(145deg,#96631a,#9c6a1b);
+  box-shadow:0 12px 40px rgba(150,99,26,.45),0 0 0 4px rgba(255,255,255,.3);
+}
 /* Breakout card — Fucsia/Orchidea (Wada Sanzo), contrasto >=4.5:1 come le altre card materia */
 .card-breakout{
   background:linear-gradient(145deg,#993377,#b03b89);
@@ -408,6 +413,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 .card-storia .card-btn{color:var(--sto-a);}
 .card-scienze .card-btn{color:var(--sci-a);}
 .card-italiano .card-btn{color:var(--ita-a);}
+.card-tabelline .card-btn{color:#96631a;}
 .card-breakout .card-btn{color:#993377;}
 .card-btn:hover{transform:scale(1.05);}
 
@@ -666,6 +672,10 @@ html:not([data-palette="okabe-ito"]) .card-italiano{
   background:linear-gradient(145deg,var(--subj-ita-a),var(--subj-ita-b));
   box-shadow:0 12px 40px rgba(194,74,91,.42),0 0 0 4px rgba(255,255,255,.3);
 }
+html:not([data-palette="okabe-ito"]) .card-tabelline{
+  background:linear-gradient(145deg,var(--subj-tabelline-a),var(--subj-tabelline-b));
+  box-shadow:0 12px 40px rgba(150,99,26,.45),0 0 0 4px rgba(255,255,255,.3);
+}
 html:not([data-palette="okabe-ito"]) .card-breakout{
   background:linear-gradient(145deg,var(--subj-breakout-a),var(--subj-breakout-b));
   box-shadow:0 12px 40px rgba(153,51,119,.45),0 0 0 4px rgba(255,255,255,.3);
@@ -679,4 +689,5 @@ html:not([data-palette="okabe-ito"]) .card-geografia .card-btn{color:var(--subj-
 html:not([data-palette="okabe-ito"]) .card-storia   .card-btn{color:var(--subj-sto-a);}
 html:not([data-palette="okabe-ito"]) .card-scienze  .card-btn{color:var(--subj-sci-a);}
 html:not([data-palette="okabe-ito"]) .card-italiano .card-btn{color:var(--subj-ita-a);}
+html:not([data-palette="okabe-ito"]) .card-tabelline .card-btn{color:var(--subj-tabelline-text);}
 html:not([data-palette="okabe-ito"]) .card-breakout .card-btn{color:var(--subj-breakout-text);}

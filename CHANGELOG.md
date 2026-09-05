@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.35 - 2026-09-05
+
+### Changed
+- fix(seo): card "Tabelline" nella griglia della home, in seconda posizione dopo Cervellino Spacca-Muri. Nella 4.12.34 `/tabelline` era raggiungibile solo da un link dentro il paragrafo della sezione `seo-static` di `/matematica` e da una voce della lista in fondo alla home: entrambi sotto la piega e dentro blocchi di testo, quindi quasi invisibili agli utenti e con poco peso come segnale di importanza interna. Una pagina di destinazione per il traffico del canale YouTube non può dipendere da un link nel corpo del testo. Colore Ocra (`#96631a` → `#9c6a1b`), l'unica tonalità Wada Sanzo non ancora usata dalle altre nove card: testo bianco a 5,13:1 e 4,68:1 sui due estremi del gradiente, `.card-btn` a 5,13:1 su bianco. Token `--subj-tabelline-*` in `tokens.css` e regola sotto la guardia `html:not([data-palette="okabe-ito"])`, come le altre card; la modalità accessibile resta invariata.
+- chore: bump versione `4.12.34` → `4.12.35`. `index.html` e `index.css` sono in precache cache-first: senza bump di `CACHE_NAME` i visitatori di ritorno vedrebbero la home senza la nuova card.
+
+### Notes
+- decisione(schema): `/tabelline` non è stata aggiunta all'`ItemList` `#subjects` della home. Quella lista dichiara le otto materie del sito e le tabelline sono un sottoinsieme di matematica, non una materia: includerla gonfierebbe `numberOfItems` con un doppione. Il collegamento resta espresso dal `BreadcrumbList` di `/tabelline` (Home › Matematica › Tabelline).
+
 ## 4.12.34 - 2026-09-05
 
 ### Added
