@@ -331,6 +331,7 @@
   let selectedClass = normalizeClassKey(loadClassPref() || cfg.defaultClass || 3);
   let questions = [];
   let curQ = 0;
+  let nextStepTimer = null;
   let points = 0;
   let correct = 0;
   let wrong = 0;
@@ -2011,7 +2012,8 @@
     curQ += 1;
     updateScoreBar();
 
-    setTimeout(() => {
+    nextStepTimer = setTimeout(() => {
+      nextStepTimer = null;
       if (curQ >= sessionLen()) openBonusPick();
       else loadQuestion();
     }, 2200);
@@ -2304,6 +2306,15 @@
   }
 
   function showScreen(id) {
+    // L'avanzamento differito appartiene alla partita in corso: qualunque
+    // cambio di schermata lo invalida. Senza questo, uscire dal gioco entro
+    // 2200 ms da una risposta (scadenza della play window, click su
+    // "Classifica") lascia il timer pendente, che poi apre openBonusPick() e
+    // riporta l'utente dentro una partita che aveva gia' lasciato.
+    if (nextStepTimer) {
+      clearTimeout(nextStepTimer);
+      nextStepTimer = null;
+    }
     document.querySelectorAll('.screen').forEach((s) => s.classList.remove('active'));
     const target = $(id);
     if (!target) return;

@@ -1,5 +1,12 @@
 [
  {
+  "date": "5 settembre 2026 · Release 4.12.37",
+  "items": [
+   "Il livello \"Campione\" di inglese era bloccato per tutte le classi: nessuna domanda corrispondeva ai suoi filtri. Ora è giocabile con 96 domande.",
+   "Risolto: uscire dal gioco subito dopo l'ultima risposta (tempo di gioco scaduto, o aprendo la classifica) riportava dentro la schermata del bonus la partita appena lasciata."
+  ]
+ },
+ {
   "date": "5 settembre 2026 · Release 4.12.36",
   "items": [
    "Risolto: la sessione \"Ripassa i tuoi errori\" si bloccava sull'ultima domanda senza mostrare il risultato. Ora arriva in fondo e salva il punteggio come una partita normale.",

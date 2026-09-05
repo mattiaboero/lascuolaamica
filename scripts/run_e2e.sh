@@ -6,6 +6,7 @@
 #   esempi: bash scripts/run_e2e.sh perfect
 #           bash scripts/run_e2e.sh perfect,mixed,worst
 #   il modo "ripassa" gioca una sessione mixed e poi "Ripassa i tuoi errori"
+#   il modo "interrupt" verifica che uscire dal gioco annulli l'avanzamento differito
 #
 # Env:
 #   E2E_BASE_URL  host test server (default http://127.0.0.1:4173)
@@ -24,10 +25,18 @@ IFS=',' read -ra MODE_ARR <<< "$MODES"
 
 for mode in "${MODE_ARR[@]}"; do
   for subj in "${SUBJECTS[@]}"; do
-    extra=()
-    # inglese usa screenLevels: seleziona livello 1
+    # inglese usa screenLevels: si giocano tutti i livelli dichiarati, non solo
+    # il primo. Un livello il cui filtro non seleziona domande resta disabled e
+    # il click fallisce: e' successo in produzione (livello 3 con
+    # fallbackDifficulty [4], assente dai dati) senza che nulla lo segnalasse.
+    levels=("")
     if [[ "$subj" == "inglese" ]]; then
-      extra=(--level 1)
+      levels=(1 2 3)
+    fi
+    for lvl in "${levels[@]}"; do
+    extra=()
+    if [[ -n "$lvl" ]]; then
+      extra=(--level "$lvl")
     fi
     run_mode="$mode"
     # "ripassa" non e' un mode del harness: e' una sessione mixed seguita dal ripasso
@@ -35,12 +44,18 @@ for mode in "${MODE_ARR[@]}"; do
       run_mode="mixed"
       extra+=(--ripassa)
     fi
-    echo "=== E2E: $subj mode=$mode ==="
+    # "interrupt" esce dalla partita subito dopo una risposta
+    if [[ "$mode" == "interrupt" ]]; then
+      run_mode="perfect"
+      extra+=(--interrupt)
+    fi
+    echo "=== E2E: $subj mode=$mode${lvl:+ level=$lvl} ==="
     if ! node scripts/subject_quiz_test_harness.js \
           --base-url "$BASE" --page "$subj" --mode "$run_mode" ${extra[@]+"${extra[@]}"}; then
-      echo "[FAIL] $subj mode=$mode"
+      echo "[FAIL] $subj mode=$mode${lvl:+ level=$lvl}"
       fail=1
     fi
+    done
   done
 done
 

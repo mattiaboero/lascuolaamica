@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.37 - 2026-09-05
+
+### Fixed
+- fix(quiz): il timer di avanzamento da 2200 ms accodato da `checkAnswer()` non veniva mai annullato. Uscendo dal gioco entro quella finestra dopo l'ultima risposta, il timeout scattava comunque e chiamava `openBonusPick()`, riportando l'utente dentro una partita che aveva già lasciato. Due percorsi reali: la scadenza della play window (`handlePlayWindowExpired()` alza `playWindowExpiryLock`, chiama `goStart()` e apre l'alert "Tempo di gioco terminato", ma chiuso l'alert ci si ritrova sulla schermata bonus, si gioca il bonus e `finishGame()` salva il punteggio — **il limite parentale dei 30 minuti risultava aggirabile**); e il pulsante "🏆 Classifica" nella `.header-row`, che sta fuori dai `.screen` ed è quindi sempre cliccabile. Il timer è ora in `nextStepTimer` e viene annullato in cima a `showScreen()`: l'avanzamento differito appartiene alla partita in corso, quindi qualunque cambio di schermata lo invalida. Un solo punto invece di uno per ogni via d'uscita (`goStart()`, `showLeaderboard()`, `showLevelsScreen()` passano tutti di lì, come gli altri 9 chiamanti).
+- fix(inglese): il livello 3 "Campione" era `disabled` e `.locked` per tutte e quattro le classi, con il title "Livello non disponibile". `questionMatchesLevel()` combina `subareas`, `areas` e `fallbackDifficulty` in AND, e il livello chiedeva `fallbackDifficulty: [4]` mentre `json/inglese.json` contiene solo difficoltà 1, 2 e 3 (214/439/441 domande): zero corrispondenze, `poolSize: 0`, `available: false`. L'intero percorso avanzato di inglese era irraggiungibile in produzione. Portato a `fallbackDifficulty: [3]`, che con gli stessi filtri di subarea e area seleziona 96 domande.
+
+### Changed
+- test(e2e): `--interrupt` risponde a tutte e dieci le domande, esce dal gioco subito dopo l'ultima e verifica che 3 secondi dopo la schermata attiva sia ancora quella di uscita. Con il timer non annullato il test fallisce con `schermata attiva "screenBonusPick"`. La prima versione del controllo usciva dopo la *prima* risposta e non vedeva niente: in quel punto il timer chiama `loadQuestion()`, che non cambia schermata. Il bug si manifesta solo all'ultima domanda.
+- test(e2e): `scripts/run_e2e.sh` gioca ora tutti e tre i livelli di inglese, non solo il primo. Un livello i cui filtri non selezionano domande resta `disabled` e il click fallisce: è esattamente il modo in cui il livello 3 sarebbe stato intercettato prima di andare in produzione.
+- chore: bump versione `4.12.36` → `4.12.37`. `subject-quiz-core.js` e `js/inglese-page.js` sono in precache cache-first.
+
 ## 4.12.36 - 2026-09-05
 
 ### Fixed

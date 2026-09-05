@@ -78,6 +78,19 @@ async function main() {
     }
     await page.waitForSelector('#screenGame.active', { timeout: 15000 });
 
+    if (options.interrupt) {
+      const interrupted = await checkPendingTimerCleared(page);
+      process.stdout.write(`${JSON.stringify({
+        page: options.page,
+        check: 'interrupt',
+        interrupted,
+        pageErrors: trackers.pageErrors,
+        consoleErrors: trackers.consoleErrors
+      }, null, 2)}\n`);
+      await context.close();
+      return;
+    }
+
     const questions = [];
     for (let index = 0; index < 10; index++) {
       const questionText = normalize(await page.locator('#qText').textContent());
@@ -171,6 +184,30 @@ async function main() {
   }
 }
 
+// Regressione A2: l'avanzamento differito di checkAnswer resta pendente per
+// 2200 ms. Chi esce dal gioco in quella finestra (qui: apre la classifica; in
+// produzione anche la scadenza della play window) veniva riportato dentro la
+// partita dal timer, fino a giocare il bonus e salvare il punteggio a limite di
+// tempo gia' scaduto.
+async function checkPendingTimerCleared(page) {
+  const totalQ = await page.evaluate(() => Number((window.SA && window.SA.subjectConfig || {}).totalQ) || 10);
+  // il timer riporta dentro la partita solo all'ultima domanda, quando chiama
+  // openBonusPick() (prima chiama loadQuestion(), che non cambia schermata)
+  for (let i = 0; i < totalQ - 1; i++) {
+    await page.locator('#answers .answer-btn:not([disabled])').first().click();
+    await page.waitForTimeout(2500);
+  }
+  await page.locator('#answers .answer-btn:not([disabled])').first().click();
+  await page.locator('[data-action="show-leaderboard"]').first().click();
+  await page.waitForSelector('#screenLeaderboard.active', { timeout: 5000 });
+  await page.waitForTimeout(3000);
+  const active = await page.evaluate(() => document.querySelector('.screen.active')?.id || '');
+  if (active !== 'screenLeaderboard') {
+    throw new Error(`Timer di avanzamento non annullato: schermata attiva "${active}" 3 s dopo l'uscita dal gioco`);
+  }
+  return { active };
+}
+
 // Regressione A1: la sessione di ripasso e' piu' corta di TOTAL_Q, quindi la fine
 // partita va riconosciuta su questions.length. Se torna la guardia sbagliata il
 // gioco resta congelato sull'ultima domanda e questa attesa scade.
@@ -219,6 +256,7 @@ function parseArgs(argv) {
     area: 'mixed',
     level: '',
     ripassa: false,
+    interrupt: false,
     headless: true,
     help: false
   };
@@ -250,6 +288,9 @@ function parseArgs(argv) {
       case '--ripassa':
         options.ripassa = true;
         break;
+      case '--interrupt':
+        options.interrupt = true;
+        break;
       case '--headed':
         options.headless = false;
         break;
@@ -267,6 +308,9 @@ function parseArgs(argv) {
   }
   if (!['easy', 'medium', 'hard', 'skip'].includes(options.bonus)) {
     throw new Error(`bonus non supportato: ${options.bonus}`);
+  }
+  if (options.ripassa && options.interrupt) {
+    throw new Error('--ripassa e --interrupt sono alternativi: --interrupt esce dalla partita prima del risultato');
   }
   if (options.ripassa && options.mode === 'perfect') {
     throw new Error('--ripassa richiede --mode mixed o worst: senza errori il bottone di ripasso non compare');
@@ -288,6 +332,7 @@ function printHelp() {
     '  --area <key>         area iniziale (default: mixed)',
     '  --level <key>        livello da selezionare se la materia usa screenLevels',
     '  --ripassa            dopo il risultato gioca la sessione "Ripassa i tuoi errori" (richiede mode mixed/worst)',
+    '  --interrupt          risponde a una domanda, esce subito dal gioco e verifica che il timer di avanzamento sia annullato',
     '  --base-url <url>     host locale del test server',
     '  --headed             avvia il browser non-headless',
     '  --help               mostra questo messaggio'

@@ -77,7 +77,7 @@ __sa.subjectConfig = {
       filters: {
         subareas: ['uso_guidato', 'comprensione_in_contesto'],
         areas: ['routine_quotidiana', 'sport', 'casa', 'domande', 'hobby'],
-        fallbackDifficulty: [4]
+        fallbackDifficulty: [3]
       }
     }
   ],
