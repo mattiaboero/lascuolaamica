@@ -24,6 +24,13 @@
 ## Giochi arcade
 - Cervellino Spacca-Muri: https://lascuolaamica.it/breakout — gioco arcade ispirato a Breakout/Arkanoid. Rispondere correttamente alle domande (pescate dal pool delle 8 materie) attiva bonus di gioco o salva la pallina persa. Include trofei dedicati nella bacheca premi.
 
+## Canale YouTube
+- Nome: Cecilia e il Papà Mattone
+- URL: https://www.youtube.com/@ceciliaeilpapamattone
+- Playlist tabelline (dalla 2 alla 10): https://www.youtube.com/playlist?list=PLHctzIjd-9Qg
+- Contenuto: video per imparare le tabelline alla scuola primaria, con il personaggio CalcOlettore. Ogni tabellina viene ripetuta tre volte: lenta, a tempo e da completare.
+- Relazione con il sito: i video spiegano, i quiz di https://lascuolaamica.it/matematica servono a esercitarsi dopo la visione.
+
 ## Dati quantitativi
 - Domande totali: 9.879 (verificate a luglio 2026).
 - Materie: 8.
