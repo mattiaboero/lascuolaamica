@@ -1,5 +1,10 @@
 # Changelog Repo
 
+## Non rilasciato
+
+### Changed
+- ci(e2e): il job `smoke` sforava il limite di 12 minuti e veniva ucciso da GitHub ("The job has exceeded the maximum execution time of 12m0s", run 34017730437). Causa: le tre suite di regressione aggiunte fra la 4.12.36 e la 4.12.43 giravano su tutte e otto le materie, come `perfect`. Ma `ripassa`, `interrupt` e `dialogs` esercitano codice condiviso — `subject-quiz-core.js` e `shared.js`, identici per ogni materia — quindi sette delle otto esecuzioni erano ridondanza. Ora girano su due materie (`matematica` e `inglese`) tramite la variabile `E2E_SUBJECTS`, e il fan-out sui tre livelli di inglese resta solo su `perfect`, l'unico modo che verifica che ogni livello dichiarato sia giocabile. Cronometrato in locale: perfect 300 s, ripassa 108 s, interrupt 59 s, dialogs 9 s, circa 8 minuti in totale contro i circa 17 di prima. Limite del job alzato comunque a 20 minuti come margine.
+
 ## 4.12.48 - 2026-09-06
 
 ### Fixed

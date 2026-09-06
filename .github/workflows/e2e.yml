@@ -13,7 +13,7 @@ jobs:
     # PR + push: solo mode perfect (smoke veloce)
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,14 +28,20 @@ jobs:
       - name: E2E smoke (perfect, 8 subjects)
         run: npm run test:e2e:perfect
 
-      - name: E2E ripasso (mixed + sessione di ripasso, 8 subjects)
+      - name: E2E ripasso (mixed + sessione di ripasso)
         run: npm run test:e2e:ripassa
+        env:
+          E2E_SUBJECTS: matematica inglese
 
-      - name: E2E uscita dal gioco (timer di avanzamento annullato, 8 subjects)
+      - name: E2E uscita dal gioco (timer di avanzamento annullato)
         run: npm run test:e2e:interrupt
+        env:
+          E2E_SUBJECTS: matematica inglese
 
-      - name: E2E dialoghi (focus di ritorno e coda, 8 subjects)
+      - name: E2E dialoghi (focus di ritorno e coda)
         run: npm run test:e2e:dialogs
+        env:
+          E2E_SUBJECTS: matematica inglese
 
   full:
     # Daily schedule: perfect + mixed + worst

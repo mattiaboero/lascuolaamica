@@ -19,7 +19,10 @@ set -uo pipefail
 
 BASE="${E2E_BASE_URL:-http://127.0.0.1:4173}"
 MODES="${1:-perfect}"
-SUBJECTS=(matematica inglese problemi civica geografia storia scienze italiano)
+# Override con E2E_SUBJECTS="matematica inglese" per i modi di regressione, che
+# esercitano codice condiviso (subject-quiz-core.js, shared.js) identico su tutte
+# le materie: girarli su tutte e otto e' ridondanza che costa minuti di CI.
+read -ra SUBJECTS <<< "${E2E_SUBJECTS:-matematica inglese problemi civica geografia storia scienze italiano}"
 
 fail=0
 IFS=',' read -ra MODE_ARR <<< "$MODES"
@@ -30,8 +33,11 @@ for mode in "${MODE_ARR[@]}"; do
     # il primo. Un livello il cui filtro non seleziona domande resta disabled e
     # il click fallisce: e' successo in produzione (livello 3 con
     # fallbackDifficulty [4], assente dai dati) senza che nulla lo segnalasse.
+    # Il fan-out sui livelli serve solo a "perfect", che verifica che ogni
+    # livello dichiarato sia davvero giocabile. Gli altri modi non guardano i
+    # livelli: ripeterli tre volte allunga solo il job.
     levels=("")
-    if [[ "$subj" == "inglese" ]]; then
+    if [[ "$subj" == "inglese" && "$mode" == "perfect" ]]; then
       levels=(1 2 3)
     fi
     for lvl in "${levels[@]}"; do
