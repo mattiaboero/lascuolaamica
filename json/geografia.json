@@ -1964,7 +1964,7 @@
    "area": "geo_graficita",
    "subarea": "pianta_e_prospettiva_verticale",
    "difficulty": 1,
-   "question": "In una pianta della aula, gli oggetti sono visti...",
+   "question": "In una pianta dell'aula, gli oggetti sono visti...",
    "options": [
     "dall'alto",
     "dal basso",
@@ -1996,7 +1996,7 @@
    "area": "geo_graficita",
    "subarea": "legenda_e_simboli",
    "difficulty": 1,
-   "question": "In una pianta della aula, un piccolo disegno che indica un oggetto è...",
+   "question": "In una pianta dell'aula, un piccolo disegno che indica un oggetto è...",
    "options": [
     "un simbolo",
     "un rumore",
@@ -2028,7 +2028,7 @@
    "area": "geo_graficita",
    "subarea": "legenda_e_simboli",
    "difficulty": 2,
-   "question": "La legenda di una pianta della aula serve a...",
+   "question": "La legenda di una pianta dell'aula serve a...",
    "options": [
     "spiegare il significato dei simboli",
     "contare le finestre a voce",
@@ -2060,7 +2060,7 @@
    "area": "geo_graficita",
    "subarea": "riduzione_in_scala_ingenua",
    "difficulty": 2,
-   "question": "Quando disegni la aula più piccola sul foglio, stai facendo...",
+   "question": "Quando disegni l'aula più piccola sul foglio, stai facendo...",
    "options": [
     "una riduzione",
     "una stagione",
@@ -2092,7 +2092,7 @@
    "area": "geo_graficita",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Per mostrare il percorso dalla porta alla finestra nella aula, puoi usare...",
+   "question": "Per mostrare il percorso dalla porta alla finestra nell'aula, puoi usare...",
    "options": [
     "una linea o delle frecce",
     "solo un titolo",
@@ -2348,7 +2348,7 @@
    "area": "geo_graficita",
    "subarea": "pianta_e_prospettiva_verticale",
    "difficulty": 1,
-   "question": "In una pianta della giardino, gli oggetti sono visti...",
+   "question": "In una pianta del giardino, gli oggetti sono visti...",
    "options": [
     "dall'alto",
     "dal basso",
@@ -2380,7 +2380,7 @@
    "area": "geo_graficita",
    "subarea": "legenda_e_simboli",
    "difficulty": 1,
-   "question": "In una pianta della giardino, un piccolo disegno che indica un oggetto è...",
+   "question": "In una pianta del giardino, un piccolo disegno che indica un oggetto è...",
    "options": [
     "un simbolo",
     "un rumore",
@@ -2412,7 +2412,7 @@
    "area": "geo_graficita",
    "subarea": "legenda_e_simboli",
    "difficulty": 2,
-   "question": "La legenda di una pianta della giardino serve a...",
+   "question": "La legenda di una pianta del giardino serve a...",
    "options": [
     "spiegare il significato dei simboli",
     "contare le finestre a voce",
@@ -2444,7 +2444,7 @@
    "area": "geo_graficita",
    "subarea": "riduzione_in_scala_ingenua",
    "difficulty": 2,
-   "question": "Quando disegni la giardino più piccola sul foglio, stai facendo...",
+   "question": "Quando disegni il giardino più piccolo sul foglio, stai facendo...",
    "options": [
     "una riduzione",
     "una stagione",
@@ -2476,7 +2476,7 @@
    "area": "geo_graficita",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Per mostrare il percorso dalla porta alla finestra nella giardino, puoi usare...",
+   "question": "Per mostrare il percorso dalla porta alla finestra nel giardino, puoi usare...",
    "options": [
     "una linea o delle frecce",
     "solo un titolo",
@@ -2732,7 +2732,7 @@
    "area": "geo_graficita",
    "subarea": "pianta_e_prospettiva_verticale",
    "difficulty": 1,
-   "question": "In una pianta della parco, gli oggetti sono visti...",
+   "question": "In una pianta del parco, gli oggetti sono visti...",
    "options": [
     "dall'alto",
     "dal basso",
@@ -2764,7 +2764,7 @@
    "area": "geo_graficita",
    "subarea": "legenda_e_simboli",
    "difficulty": 1,
-   "question": "In una pianta della parco, un piccolo disegno che indica un oggetto è...",
+   "question": "In una pianta del parco, un piccolo disegno che indica un oggetto è...",
    "options": [
     "un simbolo",
     "un rumore",
@@ -2796,7 +2796,7 @@
    "area": "geo_graficita",
    "subarea": "legenda_e_simboli",
    "difficulty": 2,
-   "question": "La legenda di una pianta della parco serve a...",
+   "question": "La legenda di una pianta del parco serve a...",
    "options": [
     "spiegare il significato dei simboli",
     "contare le finestre a voce",
@@ -2828,7 +2828,7 @@
    "area": "geo_graficita",
    "subarea": "riduzione_in_scala_ingenua",
    "difficulty": 2,
-   "question": "Quando disegni la parco più piccola sul foglio, stai facendo...",
+   "question": "Quando disegni il parco più piccolo sul foglio, stai facendo...",
    "options": [
     "una riduzione",
     "una stagione",
@@ -2860,7 +2860,7 @@
    "area": "geo_graficita",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Per mostrare il percorso dalla porta alla finestra nella parco, puoi usare...",
+   "question": "Per mostrare il percorso dalla porta alla finestra nel parco, puoi usare...",
    "options": [
     "una linea o delle frecce",
     "solo un titolo",

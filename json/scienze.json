@@ -4014,7 +4014,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "stati_proprieta_materia",
    "difficulty": 1,
-   "question": "Di quale materiale è spesso fatto un finestra?",
+   "question": "Di quale materiale è spesso fatta una finestra?",
    "options": [
     "vetro",
     "metallo",
@@ -4045,7 +4045,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "stati_proprieta_materia",
    "difficulty": 1,
-   "question": "Di quale materiale è spesso fatto un chiave?",
+   "question": "Di quale materiale è spesso fatta una chiave?",
    "options": [
     "carta",
     "metallo",
@@ -4107,7 +4107,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "stati_proprieta_materia",
    "difficulty": 1,
-   "question": "Di quale materiale è spesso fatto un matita?",
+   "question": "Di quale materiale è spesso fatta una matita?",
    "options": [
     "carta",
     "legno",
@@ -8019,7 +8019,7 @@
    "area": "viventi_biologia",
    "subarea": "habitat_e_funzioni_vitali",
    "difficulty": 1,
-   "question": "Quale animale vive soprattutto nel fattoria?",
+   "question": "Quale animale vive soprattutto nella fattoria?",
    "options": [
     "delfino",
     "scoiattolo",
@@ -8028,7 +8028,7 @@
    ],
    "answerIndex": 3,
    "answer": "gallina",
-   "explanation": "Gallina vive soprattutto nel fattoria.",
+   "explanation": "Gallina vive soprattutto nella fattoria.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [

@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.53",
+  "items": [
+   "Corretti errori di grammatica in 69 domande: articoli e accordi sbagliati come \"un borsa\", \"Quante biscotti\" o \"8 burro (in grammi)\" al posto di \"8 grammi di burro\"."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.52",
   "items": [
    "Nella pagina delle tabelline i riquadri dei video in arrivo hanno ora testo pienamente leggibile: prima erano sbiaditi sotto la soglia di contrasto."

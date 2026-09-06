@@ -54,6 +54,39 @@ const ANOMALOUS_ACCENT = /[íúÍÚ]/; // acute on i/u — not used in standard 
 // only — explanations legitimately say things like "nella domanda indiretta l'ordine…".
 const DANGLING_REFERENCE = /\bdomanda\s+n\.?\s*\d+|\bdomanda precedente\b|\b(come visto|vedi|figura|immagine)\s+(qui\s+)?sopra\b|nell'esercizio precedente/i;
 
+// Accordo grammaticale rotto dalla sostituzione del nome nei template generati.
+// Origine reale: una famiglia di problemi diceva "richiede 8 burro (in grammi).
+// Quante burro (in grammi) servono...", e la stessa causa aveva prodotto "Un
+// borsa", "Nella laboratorio", "Quante biscotti" in 55 domande su tre materie.
+// I nomi negli elenchi sono quelli davvero presenti nel corpus; le esclusioni
+// sono deliberate e verificate: "sale" (stanze, non il sale), "moto" (il moto di
+// rivoluzione in scienze), "zuccheri" (plurale legittimo in biologia), "caffè"
+// (numerabile: "tre caffè").
+const NOMI_MASSA = 'burro|zucchero|farina|farine|latte|olio|pane|riso|miele|marmellata|panna';
+const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo';
+const NOMI_FEMMINILI = 'borsa|giacca|scarpe|maglietta|penna|matita|aula|palestra|biblioteca|fattoria|figurine|caramelle|pagine|mele|cameretta|cucina|stanza|classe|scuola|finestra|porta|piscina|libreria|cartoleria';
+const GRAMMATICA = [
+  { pattern: /\((?:in|espress[oa] in)\s+(?:grammi|chilogrammi|metri|centimetri|litri|minuti|euro|km|kg|cm|ml)\)/i,
+    msg: 'unita di misura tra parentesi dopo il nome (artefatto di template: "8 burro (in grammi)" invece di "8 grammi di burro")' },
+  { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_MASSA})\\b`, 'i'),
+    msg: 'numero seguito da un nome non numerabile senza unita di misura (es. "8 burro")' },
+  { pattern: new RegExp(`\\bquant[ei]\\s+(?:${NOMI_MASSA})\\b`, 'i'),
+    msg: 'quanti/quante davanti a un nome non numerabile (serve "quanto" o l\'unita di misura)' },
+  { pattern: new RegExp(`\\bquante\\s+(?:${NOMI_MASCHILI})\\b`, 'i'), msg: 'accordo: "quante" davanti a un nome maschile' },
+  { pattern: new RegExp(`\\bquanti\\s+(?:${NOMI_FEMMINILI})\\b`, 'i'), msg: 'accordo: "quanti" davanti a un nome femminile' },
+  { pattern: new RegExp(`\\b(?:un|il)\\s+(?:${NOMI_FEMMINILI})\\b`, 'i'), msg: 'accordo: articolo maschile davanti a un nome femminile' },
+  { pattern: new RegExp(`\\b(?:una|la)\\s+(?:${NOMI_MASCHILI})\\b`, 'i'), msg: 'accordo: articolo femminile davanti a un nome maschile' },
+  { pattern: new RegExp(`\\b(?:nella|della)\\s+(?:${NOMI_MASCHILI})\\b`, 'i'), msg: 'accordo: preposizione femminile davanti a un nome maschile' },
+  { pattern: new RegExp(`\\bnel\\s+(?:${NOMI_FEMMINILI})\\b`, 'i'), msg: 'accordo: "nel" davanti a un nome femminile' },
+  { pattern: /\b(?:un)\s+(?:zaino|zucchero|studente|spazzolino|stadio)\b/i, msg: 'serve "uno" davanti a z- o s+consonante (es. "uno zaino")' },
+  // Participio maschile davanti a un soggetto femminile: stessa causa, il
+  // template e' scritto per un nome maschile e il nome viene sostituito.
+  { pattern: new RegExp(`\\b(?:fatto|finito|riempito|costruito|usato)\\s+(?:una|la|un')\\s*(?:${NOMI_FEMMINILI}|chiave|finestra)\\b`, 'i'),
+    msg: 'accordo: participio maschile con un soggetto femminile (es. "fatto una finestra")' },
+  { pattern: /\b(?:nella|della|alla|la)\s+(?:aula|arancia|automobile|entrata|isola|uscita|ora)\b/i,
+    msg: "manca l'elisione davanti a vocale (es. \"nella aula\" invece di \"nell'aula\")" },
+];
+
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
   const errors = [];
 
@@ -74,6 +107,14 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     errors.push({ level: 'error', field: 'question', msg: 'dangling cross-reference in question (e.g. "domanda n.X" / "vedi sopra") — quiz questions must be self-contained' });
   }
   const isItalianText = subject !== 'inglese';
+  if (isItalianText) {
+    const testoIt = `${question || ''} ${explanation || ''}`;
+    for (const regola of GRAMMATICA) {
+      if (regola.pattern.test(testoIt)) {
+        errors.push({ level: 'error', field: 'text', msg: `grammatica — ${regola.msg}` });
+      }
+    }
+  }
   if (isItalianText && ANOMALOUS_ACCENT.test(`${question || ''} ${explanation || ''}`)) {
     errors.push({ level: 'warn', field: 'text', msg: 'anomalous accent character (í/ú/ì) in Italian text' });
   }

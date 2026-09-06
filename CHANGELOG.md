@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.53 - 2026-09-06
+
+### Fixed
+- fix(contenuti): corretti errori di grammatica in **69 domande** su tre materie (problemi, geografia, scienze). Segnalazione di partenza: una domanda vista giocando a Spacca-Muri diceva *"Una ricetta per 4 persone richiede 8 burro (in grammi). Quante burro (in grammi) servono per 16 persone?"*. Non era un caso isolato ma una firma: template scritti per un nome e riempiti con un altro, senza riaccordare articoli, participi e interrogativi.
+  - 18 domande della famiglia "ricetta": `8 burro (in grammi)` → `8 grammi di burro`, `Quante burro` → `Quanti grammi di burro`, `farine` → `farina`, `latte (in ml)` → `millilitri di latte`. Corretti anche `explanation` e `bonusRaw`, che ripetevano l'errore.
+  - 48 domande con accordo rotto: `Un borsa`/`il borsa scontato` → `Una borsa`/`la borsa scontata`, `Un zaino` → `Uno zaino`, `Un scarpe` → `Un paio di scarpe`, `Nella laboratorio` → `Nel laboratorio`, `nella aula` → `nell'aula`, `della giardino` → `del giardino`, `Quante biscotti/cioccolatini/panini/euro` → `Quanti …`, `nel fattoria` → `nella fattoria`, `un matita` → `una matita`.
+  - 3 domande di scienze con participio non accordato: `è spesso fatto una finestra` → `fatta una finestra`, `fatto un chiave` → `fatta una chiave`.
+
+### Changed
+- ci(contenuti): `scripts/lint_content.js` ha ora 12 regole di accordo grammaticale, che girano su ogni domanda a ogni build. Coprono la classe di errore trovata: unità di misura tra parentesi, numero + nome non numerabile, `quanti/quante` in disaccordo, articolo o preposizione in disaccordo, mancata elisione, participio non accordato. Le esclusioni sono deliberate e verificate una per una: `sale` (nel corpus significa stanze), `moto` (il moto di rivoluzione in scienze), `zuccheri` (plurale legittimo in biologia), `caffè` (numerabile).
+
+### Notes
+- metodo: la ricerca non è stata fatta a campione. Ho normalizzato le 9.879 domande in "scheletri" (numeri → `#`, nomi propri → `NOME`) ottenendo 7.820 forme distinte, di cui 180 famiglie con almeno 3 occorrenze che coprono 2.133 domande: rivedendo un rappresentante per famiglia si intercetta ogni errore sistematico di template a costo quasi nullo, ed è così che sono emersi i casi oltre a quello segnalato. Poi ho estratto tutte le 1.749 coppie articolo-nome del corpus e le ho confrontate con un lessico di genere: 19 coppie sospette, di cui 3 false (`il moto`, `un moto`, `3 sale`) verificate a mano prima di toccare i dati. Restano 7.534 domande con scheletro unico, che questo metodo non copre: per quelle serve una revisione linguistica a tappeto, non deterministica.
+
 ## 4.12.52 - 2026-09-06
 
 ### Fixed

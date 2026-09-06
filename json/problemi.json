@@ -12002,7 +12002,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Martina ha preparato 10 panini. Martina ne mangia 1/2. Quante panini ha mangiato?",
+   "question": "La nonna di Martina ha preparato 10 panini. Martina ne mangia 1/2. Quanti panini ha mangiato?",
    "options": [
     "2",
     "5",
@@ -12022,7 +12022,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante panini sono rimaste?"
+   "bonusRaw": "Quanti panini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-004",
@@ -12156,7 +12156,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Serena ha preparato 120 biscotti. Serena ne mangia 1/10. Quante biscotti ha mangiato?",
+   "question": "La nonna di Serena ha preparato 120 biscotti. Serena ne mangia 1/10. Quanti biscotti ha mangiato?",
    "options": [
     "108",
     "24",
@@ -12176,7 +12176,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-009",
@@ -12432,7 +12432,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Stefano ha preparato 28 cioccolatini. Stefano ne mangia 1/2. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Stefano ha preparato 28 cioccolatini. Stefano ne mangia 1/2. Quanti cioccolatini ha mangiato?",
    "options": [
     "26",
     "14",
@@ -12452,7 +12452,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-018",
@@ -13322,7 +13322,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Francesca ha preparato 50 biscotti. Francesca ne mangia 3/10. Quante biscotti ha mangiato?",
+   "question": "La nonna di Francesca ha preparato 50 biscotti. Francesca ne mangia 3/10. Quanti biscotti ha mangiato?",
    "options": [
     "5",
     "15",
@@ -13342,7 +13342,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-047",
@@ -13566,7 +13566,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Daniele ha preparato 40 biscotti. Daniele ne mangia 1/4. Quante biscotti ha mangiato?",
+   "question": "La nonna di Daniele ha preparato 40 biscotti. Daniele ne mangia 1/4. Quanti biscotti ha mangiato?",
    "options": [
     "30",
     "4",
@@ -13586,7 +13586,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-055",
@@ -13842,7 +13842,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Sofia ha preparato 28 cioccolatini. Sofia ne mangia 1/4. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Sofia ha preparato 28 cioccolatini. Sofia ne mangia 1/4. Quanti cioccolatini ha mangiato?",
    "options": [
     "8",
     "22",
@@ -13862,7 +13862,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-064",
@@ -14118,7 +14118,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Marco ha preparato 44 cioccolatini. Marco ne mangia 1/4. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Marco ha preparato 44 cioccolatini. Marco ne mangia 1/4. Quanti cioccolatini ha mangiato?",
    "options": [
     "11",
     "19",
@@ -14138,7 +14138,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-073",
@@ -15408,7 +15408,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Riccardo ha preparato 50 biscotti. Riccardo ne mangia 1/10. Quante biscotti ha mangiato?",
+   "question": "La nonna di Riccardo ha preparato 50 biscotti. Riccardo ne mangia 1/10. Quanti biscotti ha mangiato?",
    "options": [
     "10",
     "3",
@@ -15428,7 +15428,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-115",
@@ -15681,7 +15681,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Emma ha preparato 65 panini. Emma ne mangia 3/5. Quante panini ha mangiato?",
+   "question": "La nonna di Emma ha preparato 65 panini. Emma ne mangia 3/5. Quanti panini ha mangiato?",
    "options": [
     "47",
     "39",
@@ -15701,7 +15701,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante panini sono rimaste?"
+   "bonusRaw": "Quanti panini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-124",
@@ -15742,7 +15742,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Anna ha preparato 100 cioccolatini. Anna ne mangia 3/10. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Anna ha preparato 100 cioccolatini. Anna ne mangia 3/10. Quanti cioccolatini ha mangiato?",
    "options": [
     "34",
     "70",
@@ -15762,7 +15762,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-126",
@@ -16205,7 +16205,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Fabio ha preparato 44 biscotti. Fabio ne mangia 3/4. Quante biscotti ha mangiato?",
+   "question": "La nonna di Fabio ha preparato 44 biscotti. Fabio ne mangia 3/4. Quanti biscotti ha mangiato?",
    "options": [
     "33",
     "26",
@@ -16225,7 +16225,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-141",
@@ -16358,7 +16358,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Valentina ha preparato 55 cioccolatini. Valentina ne mangia 1/5. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Valentina ha preparato 55 cioccolatini. Valentina ne mangia 1/5. Quanti cioccolatini ha mangiato?",
    "options": [
     "13",
     "33",
@@ -16378,7 +16378,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-146",
@@ -16450,7 +16450,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Davide ha preparato 26 biscotti. Davide ne mangia 1/2. Quante biscotti ha mangiato?",
+   "question": "La nonna di Davide ha preparato 26 biscotti. Davide ne mangia 1/2. Quanti biscotti ha mangiato?",
    "options": [
     "13",
     "8",
@@ -16470,7 +16470,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-149",
@@ -17220,7 +17220,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Luca ha preparato 32 cioccolatini. Luca ne mangia 3/4. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Luca ha preparato 32 cioccolatini. Luca ne mangia 3/4. Quanti cioccolatini ha mangiato?",
    "options": [
     "36",
     "8",
@@ -17240,7 +17240,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-174",
@@ -17587,7 +17587,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Giorgio ha preparato 65 cioccolatini. Giorgio ne mangia 3/5. Quante cioccolatini ha mangiato?",
+   "question": "La nonna di Giorgio ha preparato 65 cioccolatini. Giorgio ne mangia 3/5. Quanti cioccolatini ha mangiato?",
    "options": [
     "26",
     "41",
@@ -17607,7 +17607,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante cioccolatini sono rimaste?"
+   "bonusRaw": "Quanti cioccolatini sono rimaste?"
   },
   {
    "id": "pro-4-problemi-186",
@@ -17648,7 +17648,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "La nonna di Andrea ha preparato 60 biscotti. Andrea ne mangia 2/5. Quante biscotti ha mangiato?",
+   "question": "La nonna di Andrea ha preparato 60 biscotti. Andrea ne mangia 2/5. Quanti biscotti ha mangiato?",
    "options": [
     "24",
     "36",
@@ -17668,7 +17668,7 @@
    "program": "Matematica Classe 4 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante biscotti sono rimaste?"
+   "bonusRaw": "Quanti biscotti sono rimaste?"
   },
   {
    "id": "pro-4-problemi-188",
@@ -18172,7 +18172,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un borsa costa 190 euro. Il negozio applica uno sconto del 50%. Quanto costa il borsa scontato?",
+   "question": "Una borsa costa 190 euro. Il negozio applica uno sconto del 50%. Quanto costa la borsa scontata?",
    "options": [
     "190",
     "101",
@@ -18668,7 +18668,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 8 latte (in ml). Quante latte (in ml) servono per 9 persone?",
+   "question": "Una ricetta per 3 persone richiede 8 millilitri di latte. Quanti millilitri di latte servono per 9 persone?",
    "options": [
     "8",
     "3",
@@ -18677,7 +18677,7 @@
    ],
    "answerIndex": 2,
    "answer": "24",
-   "explanation": "Per 3 persone → 8 latte (in ml). Per 9 persone (3 volte tanto): 8 × 3 = 24.",
+   "explanation": "Per 3 persone → 8 millilitri di latte. Per 9 persone (3 volte tanto): 8 × 3 = 24.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -18689,7 +18689,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-025",
@@ -18699,7 +18699,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 8 zucchero (in grammi). Quante zucchero (in grammi) servono per 15 persone?",
+   "question": "Una ricetta per 5 persone richiede 8 grammi di zucchero. Quanti grammi di zucchero servono per 15 persone?",
    "options": [
     "5",
     "9",
@@ -18708,7 +18708,7 @@
    ],
    "answerIndex": 2,
    "answer": "24",
-   "explanation": "Per 5 persone → 8 zucchero (in grammi). Per 15 persone (3 volte tanto): 8 × 3 = 24.",
+   "explanation": "Per 5 persone → 8 grammi di zucchero. Per 15 persone (3 volte tanto): 8 × 3 = 24.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -18720,7 +18720,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-026",
@@ -18885,7 +18885,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un zaino costa 130 euro. Il negozio applica uno sconto del 25%. Quanto costa il zaino scontato?",
+   "question": "Uno zaino costa 130 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
    "options": [
     "130",
     "294",
@@ -18916,7 +18916,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un scarpe costa 80 euro. Il negozio applica uno sconto del 20%. Quanto costa il scarpe scontato?",
+   "question": "Un paio di scarpe costa 80 euro. Il negozio applica uno sconto del 20%. Quanto costa il paio scontato?",
    "options": [
     "72",
     "80",
@@ -19102,7 +19102,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 12 farine (in grammi). Quante farine (in grammi) servono per 12 persone?",
+   "question": "Una ricetta per 4 persone richiede 12 grammi di farina. Quanti grammi di farina servono per 12 persone?",
    "options": [
     "12",
     "18",
@@ -19111,7 +19111,7 @@
    ],
    "answerIndex": 2,
    "answer": "36",
-   "explanation": "Per 4 persone → 12 farine (in grammi). Per 12 persone (3 volte tanto): 12 × 3 = 36.",
+   "explanation": "Per 4 persone → 12 grammi di farina. Per 12 persone (3 volte tanto): 12 × 3 = 36.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19123,7 +19123,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-039",
@@ -19164,7 +19164,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 10 farine (in grammi). Quante farine (in grammi) servono per 12 persone?",
+   "question": "Una ricetta per 4 persone richiede 10 grammi di farina. Quanti grammi di farina servono per 12 persone?",
    "options": [
     "4",
     "30",
@@ -19173,7 +19173,7 @@
    ],
    "answerIndex": 1,
    "answer": "30",
-   "explanation": "Per 4 persone → 10 farine (in grammi). Per 12 persone (3 volte tanto): 10 × 3 = 30.",
+   "explanation": "Per 4 persone → 10 grammi di farina. Per 12 persone (3 volte tanto): 10 × 3 = 30.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19185,7 +19185,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-041",
@@ -19443,7 +19443,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 11 farine (in grammi). Quante farine (in grammi) servono per 15 persone?",
+   "question": "Una ricetta per 5 persone richiede 11 grammi di farina. Quanti grammi di farina servono per 15 persone?",
    "options": [
     "11",
     "5",
@@ -19452,7 +19452,7 @@
    ],
    "answerIndex": 2,
    "answer": "33",
-   "explanation": "Per 5 persone → 11 farine (in grammi). Per 15 persone (3 volte tanto): 11 × 3 = 33.",
+   "explanation": "Per 5 persone → 11 grammi di farina. Per 15 persone (3 volte tanto): 11 × 3 = 33.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19464,7 +19464,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-050",
@@ -19474,7 +19474,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un borsa costa 140 euro. Il negozio applica uno sconto del 10%. Quanto costa il borsa scontato?",
+   "question": "Una borsa costa 140 euro. Il negozio applica uno sconto del 10%. Quanto costa la borsa scontata?",
    "options": [
     "126",
     "131",
@@ -19505,7 +19505,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 9 burro (in grammi). Quante burro (in grammi) servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 9 grammi di burro. Quanti grammi di burro servono per 6 persone?",
    "options": [
     "2",
     "27",
@@ -19514,7 +19514,7 @@
    ],
    "answerIndex": 1,
    "answer": "27",
-   "explanation": "Per 2 persone → 9 burro (in grammi). Per 6 persone (3 volte tanto): 9 × 3 = 27.",
+   "explanation": "Per 2 persone → 9 grammi di burro. Per 6 persone (3 volte tanto): 9 × 3 = 27.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19526,7 +19526,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-052",
@@ -19629,7 +19629,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un scarpe costa 130 euro. Il negozio applica uno sconto del 10%. Quanto costa il scarpe scontato?",
+   "question": "Un paio di scarpe costa 130 euro. Il negozio applica uno sconto del 10%. Quanto costa il paio scontato?",
    "options": [
     "87",
     "117",
@@ -19784,7 +19784,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 5 latte (in ml). Quante latte (in ml) servono per 12 persone?",
+   "question": "Una ricetta per 3 persone richiede 5 millilitri di latte. Quanti millilitri di latte servono per 12 persone?",
    "options": [
     "8",
     "3",
@@ -19793,7 +19793,7 @@
    ],
    "answerIndex": 2,
    "answer": "20",
-   "explanation": "Per 3 persone → 5 latte (in ml). Per 12 persone (4 volte tanto): 5 × 4 = 20.",
+   "explanation": "Per 3 persone → 5 millilitri di latte. Per 12 persone (4 volte tanto): 5 × 4 = 20.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19805,7 +19805,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-061",
@@ -19970,7 +19970,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 8 zucchero (in grammi). Quante zucchero (in grammi) servono per 20 persone?",
+   "question": "Una ricetta per 5 persone richiede 8 grammi di zucchero. Quanti grammi di zucchero servono per 20 persone?",
    "options": [
     "32",
     "5",
@@ -19979,7 +19979,7 @@
    ],
    "answerIndex": 0,
    "answer": "32",
-   "explanation": "Per 5 persone → 8 zucchero (in grammi). Per 20 persone (4 volte tanto): 8 × 4 = 32.",
+   "explanation": "Per 5 persone → 8 grammi di zucchero. Per 20 persone (4 volte tanto): 8 × 4 = 32.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19991,7 +19991,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-067",
@@ -20063,7 +20063,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un giacca costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa il giacca scontato?",
+   "question": "Una giacca costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa la giacca scontata?",
    "options": [
     "42",
     "170",
@@ -20156,7 +20156,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un giacca costa 60 euro. Il negozio applica uno sconto del 50%. Quanto costa il giacca scontato?",
+   "question": "Una giacca costa 60 euro. Il negozio applica uno sconto del 50%. Quanto costa la giacca scontata?",
    "options": [
     "60",
     "30",
@@ -20218,7 +20218,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un borsa costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa il borsa scontato?",
+   "question": "Una borsa costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa la borsa scontata?",
    "options": [
     "128",
     "170",
@@ -20373,7 +20373,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un zaino costa 210 euro. Il negozio applica uno sconto del 25%. Quanto costa il zaino scontato?",
+   "question": "Uno zaino costa 210 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
    "options": [
     "158",
     "210",
@@ -20559,7 +20559,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 10 zucchero (in grammi). Quante zucchero (in grammi) servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 10 grammi di zucchero. Quanti grammi di zucchero servono per 6 persone?",
    "options": [
     "2",
     "15",
@@ -20568,7 +20568,7 @@
    ],
    "answerIndex": 2,
    "answer": "30",
-   "explanation": "Per 2 persone → 10 zucchero (in grammi). Per 6 persone (3 volte tanto): 10 × 3 = 30.",
+   "explanation": "Per 2 persone → 10 grammi di zucchero. Per 6 persone (3 volte tanto): 10 × 3 = 30.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20580,7 +20580,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-086",
@@ -20621,7 +20621,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 10 zucchero (in grammi). Quante zucchero (in grammi) servono per 8 persone?",
+   "question": "Una ricetta per 4 persone richiede 10 grammi di zucchero. Quanti grammi di zucchero servono per 8 persone?",
    "options": [
     "4",
     "10",
@@ -20630,7 +20630,7 @@
    ],
    "answerIndex": 2,
    "answer": "20",
-   "explanation": "Per 4 persone → 10 zucchero (in grammi). Per 8 persone (2 volte tanto): 10 × 2 = 20.",
+   "explanation": "Per 4 persone → 10 grammi di zucchero. Per 8 persone (2 volte tanto): 10 × 2 = 20.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20642,7 +20642,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-088",
@@ -20714,7 +20714,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 6 burro (in grammi). Quante burro (in grammi) servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 6 grammi di burro. Quanti grammi di burro servono per 6 persone?",
    "options": [
     "2",
     "9",
@@ -20723,7 +20723,7 @@
    ],
    "answerIndex": 3,
    "answer": "18",
-   "explanation": "Per 2 persone → 6 burro (in grammi). Per 6 persone (3 volte tanto): 6 × 3 = 18.",
+   "explanation": "Per 2 persone → 6 grammi di burro. Per 6 persone (3 volte tanto): 6 × 3 = 18.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20735,7 +20735,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-091",
@@ -20776,7 +20776,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 8 burro (in grammi). Quante burro (in grammi) servono per 10 persone?",
+   "question": "Una ricetta per 5 persone richiede 8 grammi di burro. Quanti grammi di burro servono per 10 persone?",
    "options": [
     "8",
     "5",
@@ -20785,7 +20785,7 @@
    ],
    "answerIndex": 2,
    "answer": "16",
-   "explanation": "Per 5 persone → 8 burro (in grammi). Per 10 persone (2 volte tanto): 8 × 2 = 16.",
+   "explanation": "Per 5 persone → 8 grammi di burro. Per 10 persone (2 volte tanto): 8 × 2 = 16.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20797,7 +20797,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-093",
@@ -21303,7 +21303,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un scarpe costa 140 euro. Il negozio applica uno sconto del 20%. Quanto costa il scarpe scontato?",
+   "question": "Un paio di scarpe costa 140 euro. Il negozio applica uno sconto del 20%. Quanto costa il paio scontato?",
    "options": [
     "140",
     "28",
@@ -21365,7 +21365,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 11 farine (in grammi). Quante farine (in grammi) servono per 9 persone?",
+   "question": "Una ricetta per 3 persone richiede 11 grammi di farina. Quanti grammi di farina servono per 9 persone?",
    "options": [
     "11",
     "3",
@@ -21374,7 +21374,7 @@
    ],
    "answerIndex": 3,
    "answer": "33",
-   "explanation": "Per 3 persone → 11 farine (in grammi). Per 9 persone (3 volte tanto): 11 × 3 = 33.",
+   "explanation": "Per 3 persone → 11 grammi di farina. Per 9 persone (3 volte tanto): 11 × 3 = 33.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -21386,7 +21386,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-112",
@@ -21644,7 +21644,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un giacca costa 160 euro. Il negozio applica uno sconto del 50%. Quanto costa il giacca scontato?",
+   "question": "Una giacca costa 160 euro. Il negozio applica uno sconto del 50%. Quanto costa la giacca scontata?",
    "options": [
     "65",
     "88",
@@ -21768,7 +21768,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 9 zucchero (in grammi). Quante zucchero (in grammi) servono per 10 persone?",
+   "question": "Una ricetta per 5 persone richiede 9 grammi di zucchero. Quanti grammi di zucchero servono per 10 persone?",
    "options": [
     "5",
     "9",
@@ -21777,7 +21777,7 @@
    ],
    "answerIndex": 2,
    "answer": "18",
-   "explanation": "Per 5 persone → 9 zucchero (in grammi). Per 10 persone (2 volte tanto): 9 × 2 = 18.",
+   "explanation": "Per 5 persone → 9 grammi di zucchero. Per 10 persone (2 volte tanto): 9 × 2 = 18.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -21789,7 +21789,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-125",
@@ -22233,7 +22233,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un zaino costa 50 euro. Il negozio applica uno sconto del 50%. Quanto costa il zaino scontato?",
+   "question": "Uno zaino costa 50 euro. Il negozio applica uno sconto del 50%. Quanto costa lo zaino scontato?",
    "options": [
     "25",
     "50",
@@ -22605,7 +22605,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 8 burro (in grammi). Quante burro (in grammi) servono per 16 persone?",
+   "question": "Una ricetta per 4 persone richiede 8 grammi di burro. Quanti grammi di burro servono per 16 persone?",
    "options": [
     "8",
     "32",
@@ -22614,7 +22614,7 @@
    ],
    "answerIndex": 1,
    "answer": "32",
-   "explanation": "Per 4 persone → 8 burro (in grammi). Per 16 persone (4 volte tanto): 8 × 4 = 32.",
+   "explanation": "Per 4 persone → 8 grammi di burro. Per 16 persone (4 volte tanto): 8 × 4 = 32.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -22626,7 +22626,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-152",
@@ -22915,7 +22915,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un borsa costa 180 euro. Il negozio applica uno sconto del 10%. Quanto costa il borsa scontato?",
+   "question": "Una borsa costa 180 euro. Il negozio applica uno sconto del 10%. Quanto costa la borsa scontata?",
    "options": [
     "158",
     "18",
@@ -22977,7 +22977,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 5 burro (in grammi). Quante burro (in grammi) servono per 8 persone?",
+   "question": "Una ricetta per 4 persone richiede 5 grammi di burro. Quanti grammi di burro servono per 8 persone?",
    "options": [
     "10",
     "5",
@@ -22986,7 +22986,7 @@
    ],
    "answerIndex": 0,
    "answer": "10",
-   "explanation": "Per 4 persone → 5 burro (in grammi). Per 8 persone (2 volte tanto): 5 × 2 = 10.",
+   "explanation": "Per 4 persone → 5 grammi di burro. Per 8 persone (2 volte tanto): 5 × 2 = 10.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -22998,7 +22998,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-164",
@@ -23039,7 +23039,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un borsa costa 110 euro. Il negozio applica uno sconto del 10%. Quanto costa il borsa scontato?",
+   "question": "Una borsa costa 110 euro. Il negozio applica uno sconto del 10%. Quanto costa la borsa scontata?",
    "options": [
     "110",
     "84",
@@ -23101,7 +23101,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un zaino costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa il zaino scontato?",
+   "question": "Uno zaino costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
    "options": [
     "143",
     "190",
@@ -23194,7 +23194,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un zaino costa 190 euro. Il negozio applica uno sconto del 50%. Quanto costa il zaino scontato?",
+   "question": "Uno zaino costa 190 euro. Il negozio applica uno sconto del 50%. Quanto costa lo zaino scontato?",
    "options": [
     "95",
     "91",
@@ -23256,7 +23256,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 6 zucchero (in grammi). Quante zucchero (in grammi) servono per 12 persone?",
+   "question": "Una ricetta per 3 persone richiede 6 grammi di zucchero. Quanti grammi di zucchero servono per 12 persone?",
    "options": [
     "6",
     "9",
@@ -23265,7 +23265,7 @@
    ],
    "answerIndex": 2,
    "answer": "24",
-   "explanation": "Per 3 persone → 6 zucchero (in grammi). Per 12 persone (4 volte tanto): 6 × 4 = 24.",
+   "explanation": "Per 3 persone → 6 grammi di zucchero. Per 12 persone (4 volte tanto): 6 × 4 = 24.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -23277,7 +23277,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-173",
@@ -23349,7 +23349,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 11 burro (in grammi). Quante burro (in grammi) servono per 8 persone?",
+   "question": "Una ricetta per 2 persone richiede 11 grammi di burro. Quanti grammi di burro servono per 8 persone?",
    "options": [
     "132",
     "11",
@@ -23358,7 +23358,7 @@
    ],
    "answerIndex": 3,
    "answer": "44",
-   "explanation": "Per 2 persone → 11 burro (in grammi). Per 8 persone (4 volte tanto): 11 × 4 = 44.",
+   "explanation": "Per 2 persone → 11 grammi di burro. Per 8 persone (4 volte tanto): 11 × 4 = 44.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -23370,7 +23370,7 @@
    "program": "Matematica Classe 5 - MIUR",
    "teacherNote": "",
    "bonus": false,
-   "bonusRaw": "Quante servirebbero per 1 sola persona?"
+   "bonusRaw": "Quanti ne servirebbero per 1 sola persona?"
   },
   {
    "id": "pro-5-problemi-176",
@@ -23752,7 +23752,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un giacca costa 190 euro. Il negozio applica uno sconto del 20%. Quanto costa il giacca scontato?",
+   "question": "Una giacca costa 190 euro. Il negozio applica uno sconto del 20%. Quanto costa la giacca scontata?",
    "options": [
     "190",
     "456",
@@ -23814,7 +23814,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un giacca costa 180 euro. Il negozio applica uno sconto del 20%. Quanto costa il giacca scontato?",
+   "question": "Una giacca costa 180 euro. Il negozio applica uno sconto del 20%. Quanto costa la giacca scontata?",
    "options": [
     "180",
     "36",
@@ -24155,7 +24155,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Nella aula ci sono 6 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 6 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "64",
     "68",
@@ -24527,7 +24527,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Nella aula ci sono 5 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 5 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "53",
     "55",
@@ -24961,7 +24961,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Nella aula ci sono 8 scaffali con 9 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 8 scaffali con 9 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "63",
     "67",
@@ -24992,7 +24992,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Nella laboratorio ci sono 8 scaffali con 5 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nel laboratorio ci sono 8 scaffali con 5 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "43",
     "40",
@@ -25488,7 +25488,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Nella laboratorio ci sono 5 scaffali con 6 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nel laboratorio ci sono 5 scaffali con 6 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "27",
     "36",
@@ -25922,7 +25922,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Nella aula ci sono 10 scaffali con 11 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 10 scaffali con 11 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "95",
     "97",
@@ -25953,7 +25953,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Nella laboratorio ci sono 7 scaffali con 13 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nel laboratorio ci sono 7 scaffali con 13 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "91",
     "101",
@@ -26356,7 +26356,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Nella aula ci sono 8 scaffali con 8 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 8 scaffali con 8 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "66",
     "71",
@@ -26821,7 +26821,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Nella aula ci sono 5 scaffali con 5 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 5 scaffali con 5 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "29",
     "18",
@@ -26852,7 +26852,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Nella laboratorio ci sono 9 scaffali con 8 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nel laboratorio ci sono 9 scaffali con 8 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "71",
     "72",
@@ -27317,7 +27317,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Nella laboratorio ci sono 9 scaffali con 4 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nel laboratorio ci sono 9 scaffali con 4 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "36",
     "44",
@@ -27348,7 +27348,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Nella aula ci sono 5 scaffali con 6 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 5 scaffali con 6 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "30",
     "33",
@@ -27813,7 +27813,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Nella aula ci sono 8 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
+   "question": "Nell'aula ci sono 8 scaffali con 10 libri ciascuno. Quanti libri ci sono in tutto?",
    "options": [
     "91",
     "80",
@@ -37594,7 +37594,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Una famiglia spende 45,60 euro a settimana per la spesa. In un mese (4 settimane) quante euro spende? E se risparmia 30 euro al mese, quanti euro avrà a fine anno (12 mesi)?",
+   "question": "Una famiglia spende 45,60 euro a settimana per la spesa. In un mese (4 settimane) quanti euro spende? E se risparmia 30 euro al mese, quanti euro avrà a fine anno (12 mesi)?",
    "options": [
     "360,00",
     "182,40",
