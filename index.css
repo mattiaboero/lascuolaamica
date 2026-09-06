@@ -649,3 +649,15 @@ html:not([data-palette="okabe-ito"]) .card-scienze  .card-btn{color:var(--subj-s
 html:not([data-palette="okabe-ito"]) .card-italiano .card-btn{color:var(--subj-ita-a);}
 html:not([data-palette="okabe-ito"]) .card-tabelline .card-btn{color:var(--subj-tabelline-text);}
 html:not([data-palette="okabe-ito"]) .card-breakout .card-btn{color:var(--subj-breakout-text);}
+
+/* Cromo della home rimasto al viola legacy #9B5DE5 quando le card sono passate
+   a Wada Sanzo: hover dei link del footer e titoli/link delle modali condivise
+   (Info, Aggiornamenti), che index.css serve anche a /premi. Oltre alla
+   coerenza e' un fix di contrasto, perche' quel viola su bianco da' 4,13:1,
+   sotto la soglia AA di 4,5:1 per il testo normale; il viola Wada da' 5,87:1.
+   Le altre famiglie di pagine hanno un proprio accento per il cromo
+   (--accent-1 sulle materie, --page-link-strong sulle info): la home tiene il
+   suo viola, aggiornato alla palette corrente. */
+html:not([data-palette="okabe-ito"]) .footer-link:hover{color:var(--subj-math-a);}
+html:not([data-palette="okabe-ito"]) .modal-body h3{color:var(--subj-math-a);}
+html:not([data-palette="okabe-ito"]) .modal-body a{color:var(--subj-math-a);}

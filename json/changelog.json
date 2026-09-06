@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.49",
+  "items": [
+   "I link della finestra Info e del footer, sulla home e nella pagina dei premi, ora usano un viola più scuro: si leggono meglio, soprattutto su schermi poco contrastati."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.48",
   "items": [
    "Le date di aggiornamento delle pagine ora riflettono la modifica reale del contenuto invece dell'ultimo scaricamento dei file."

@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.12.49 - 2026-09-06
+
+### Fixed
+- fix(a11y): il cromo della home era rimasto al viola legacy `#9B5DE5`, che su bianco dà **4,13:1** — sotto la soglia WCAG AA di 4,5:1 per il testo normale. Riguardava l'hover dei link del footer e i link delle modali condivise, cioè anche i pulsanti dell'Info hub, che sono `<a class="info-hub-btn">` e ricadono nella stessa regola. Portati a `var(--subj-math-a)` (`#6e57a6`, **5,87:1**) sotto la guardia `html:not([data-palette="okabe-ito"])`. Vale per `index.html` e `/premi`, le due pagine che caricano `index.css`.
+
+### Notes
+- correzione(audit): la voce A8 diceva che la home usa una palette materia diversa dai token Wada Sanzo delle pagine quiz, con gli otto `--math-a`/`--eng-a`/… ancora ai valori vecchi. Non regge: il blocco "FASE 2" di `index.css` migra già tutte e dieci le card — gradienti, ombre e colore del pulsante — ai token `--subj-*` sotto la guardia della modalità standard. Misurato: `.card-math` rende `rgb(110, 87, 166)`, cioè `#6e57a6` Wada, non `#9B5DE5`. Le variabili legacy in `:root` restano come base per la modalità accessibile e come fallback, ed erano usate in standard solo dalle tre regole di cromo qui sistemate. La migrazione della home era quindi quasi completa; mancava il contorno, che però è anche l'unico punto dove il colore vecchio faceva danno.
+- Modalità Okabe-Ito non toccata, come da vincolo: verificato in Chromium prima e dopo con `data-palette="okabe-ito"` — gradiente della card, colore del pulsante, hover del footer e link della modale identici (`rgb(0, 91, 144)`, `rgb(0, 114, 178)`).
+- chore: bump versione `4.12.48` → `4.12.49`.
+
 ## Non rilasciato
 
 ### Changed
