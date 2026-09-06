@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.12.47 - 2026-09-06
+
+### Fixed
+- fix(ci): lo script npm si chiamava `prepublish`, che è il nome di un hook di lifecycle di npm — deprecato dalla v5 ma **ancora attivo su npm 11**, dove parte a ogni `npm install` e `npm ci`. Verificato in isolamento con un `package.json` minimo: uno script `prepublish` viene eseguito da `npm install`, uno `check:prepublish` no. Conseguenza: `npm ci` eseguiva l'intero `prepublish-check.sh` dentro il passo di installazione — 187 righe del suo output finite nello step "Install dependencies" della run 34017730431 — e con esso il passo `freshness`, che riscrive i `dateModified` dei JSON-LD dai timestamp dei file. In CI il checkout dà a tutti i file l'mtime corrente, quindi tutte le pagine risultavano modificate; il controllo vero, eseguito subito dopo, trovava l'albero sporco e falliva il bump di `APP_VERSION`. Script rinominato in `check:prepublish`.
+- La trappola era latente da prima e non l'ha introdotta il lint aggiunto in 4.12.36: da sempre un `npm install` in questo repo riscriveva in silenzio i `dateModified` di tutte le pagine. Era invisibile perché nessun workflow eseguiva `npm ci` prima di `prepublish-check.sh`; aggiungerlo per far girare eslint e stylelint ha reso il difetto osservabile.
+
+### Changed
+- ci: nuovo controllo in `prepublish-check.sh` che fallisce se `package.json` dichiara uno script con il nome di un hook npm (`preinstall`, `install`, `postinstall`, `prepublish`, `prepare`), cioè eseguito a ogni installazione. Verificato rimettendo il nome vecchio.
+- chore: bump versione `4.12.46` → `4.12.47`.
+
 ## 4.12.46 - 2026-09-06
 
 ### Fixed

@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.47",
+  "items": [
+   "Correzione interna alla catena di controlli automatici prima della pubblicazione. Nessun cambiamento nei giochi."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.46",
   "items": [
    "L'impostazione \"riduci le animazioni\" ora ferma davvero le figure decorative che fluttuano sulla home e nelle FAQ: prima comparivano lo stesso."

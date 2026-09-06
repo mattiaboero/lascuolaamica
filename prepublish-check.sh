@@ -456,6 +456,31 @@ check_stable_cache_names_are_literal() {
   fi
 }
 
+# npm esegue da solo gli script che portano il nome di un suo hook di lifecycle.
+# Lo script si chiamava "prepublish" (nome legacy, deprecato ma ancora attivo su
+# npm 11): ogni npm install e ogni npm ci rieseguivano l'intero prepublish-check,
+# quindi anche il passo freshness, che riscrive i dateModified dei JSON-LD dai
+# timestamp dei file. In CI, dove il checkout da a tutti i file l'mtime di adesso,
+# questo sporcava l'albero prima ancora del controllo vero e faceva fallire la
+# verifica del bump di APP_VERSION.
+check_no_npm_lifecycle_script_names() {
+  local reserved=(preinstall install postinstall prepublish prepare)
+  local found=""
+  local name
+  for name in "${reserved[@]}"; do
+    if node -e "const s=require('./package.json').scripts||{};process.exit(s['$name']?0:1)"; then
+      found="$found $name"
+    fi
+  done
+  if [[ -n "$found" ]]; then
+    echo "[ERROR] package.json: script con nome di hook npm (eseguiti a ogni install):$found"
+    status=1
+  else
+    echo "[OK] package.json: nessuno script con nome di hook npm"
+  fi
+}
+
+check_no_npm_lifecycle_script_names
 check_pwa_root_only_contract
 check_stable_cache_names_are_literal
 check_pwa_cache_headers
