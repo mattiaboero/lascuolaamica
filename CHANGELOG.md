@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.50 - 2026-09-06
+
+### Fixed
+- fix(aeo): `llms.txt` non rispettava il formato di llmstxt.org e PageSpeed lo segnalava ("Il file non sembra contenere link"). L'intestazione H1 c'era, ma gli URL erano testo nudo (`- Matematica: https://…`) invece di link markdown, quindi un modello che legge il file non trovava nulla da seguire. Convertiti 15 URL in `- [nome](url)` e aggiunta la descrizione alle 11 pagine principali, che è la parte su cui un modello decide se una pagina gli serve. Le due righe `Versione corrente`, di cui una è letta dal controllo di allineamento in `prepublish-check.sh`, sono rimaste nel formato atteso.
+
+### Changed
+- refactor(css): `.footer-support-cta` aveva due proprietari e se le contendeva a colpi di `!important`. `utilities.css` dichiarava `background:#FF3D00; color:#fff !important`, lo `<style>` iniettato da `shared.js` dichiarava `background:#fff !important; color:#5f6b7a !important`: vinceva il secondo perché iniettato dopo, quindi il bottone arancione descritto nel CSS non è mai esistito su nessuna pagina. Misurato prima dell'intervento, il CSS sopravviveva per tre sole proprietà (`min-height`, `font-size`, `font-weight`), tutto l'aspetto veniva dal JS. Il componente è ora definito solo in `shared.js`, che è anche il file che lo crea in `ensureSupportCta()`; le tre proprietà superstiti e le regole di hover sono state spostate lì, la regola in `utilities.css` è stata cancellata e **entrambi gli `!important` sono spariti**, perché non compete più nessuno.
+- Verificato che il refactor non cambia nulla: 10 combinazioni pagina/palette (`index`, `premi`, `matematica`, `tabelline`, `faq` × standard e Okabe-Ito) confrontate su 26 proprietà calcolate, **zero differenze**. Hover verificato a parte: `translateY(-1px)` e `brightness(1.05)` attivi come prima, con l'annullamento su touch.
+- chore: bump versione `4.12.49` → `4.12.50`.
+
+### Notes
+- L'`!important` resta legittimo dove serve davvero — i blocchi `prefers-reduced-motion` e `html[data-motion="reduce"]` in `tokens.css` lo usano per non essere negoziabili. Il caso di questo componente era l'opposto: due definizioni dello stesso selettore che alzavano il peso per vincersi a vicenda, invece di avere un proprietario solo.
+
 ## 4.12.49 - 2026-09-06
 
 ### Fixed

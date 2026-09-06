@@ -2,41 +2,41 @@
 > Piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª).
 > Offre quiz interattivi su 8 materie, senza registrazione e senza raccolta di dati personali.
 > Funziona offline come Progressive Web App dopo il primo caricamento.
-> Versione corrente: 4.12.49.
+> Versione corrente: 4.12.50.
 
 ## Identità
 - Nome: La Scuola Amica
-- URL: https://lascuolaamica.it
+- [Home del sito](https://lascuolaamica.it)
 - Lingua: italiano (it-IT)
 - Target: bambine e bambini della scuola primaria, insegnanti, genitori
 
 ## Materie
-- Matematica: https://lascuolaamica.it/matematica
-- Tabelline (dal 2 al 10, con video): https://lascuolaamica.it/tabelline
-- Inglese: https://lascuolaamica.it/inglese
-- Problemi di matematica: https://lascuolaamica.it/problemi
-- Educazione civica: https://lascuolaamica.it/civica
-- Geografia: https://lascuolaamica.it/geografia
-- Storia: https://lascuolaamica.it/storia
-- Scienze: https://lascuolaamica.it/scienze
-- Lingua italiana: https://lascuolaamica.it/italiano
-- Premi e bacheca: https://lascuolaamica.it/premi
+- [Matematica](https://lascuolaamica.it/matematica): quiz di matematica per le classi 2ª-5ª, con livelli e aree per argomento
+- [Tabelline (dal 2 al 10, con video)](https://lascuolaamica.it/tabelline): tabelline dal 2 al 10: tabella completa, video con CalcOlettore e collegamento ai quiz
+- [Inglese](https://lascuolaamica.it/inglese): quiz di inglese su lessico, frasi e comprensione, con tre livelli di percorso
+- [Problemi di matematica](https://lascuolaamica.it/problemi): problemi di matematica con testo, per classi 2ª-5ª
+- [Educazione civica](https://lascuolaamica.it/civica): quiz di educazione civica: regole, ambiente, cittadinanza
+- [Geografia](https://lascuolaamica.it/geografia): quiz di geografia italiana e generale
+- [Storia](https://lascuolaamica.it/storia): quiz di storia dalla preistoria all'antichità
+- [Scienze](https://lascuolaamica.it/scienze): quiz di scienze: corpo umano, animali, materia, ambiente
+- [Lingua italiana](https://lascuolaamica.it/italiano): quiz di lingua italiana: grammatica, lessico, comprensione
+- [Premi e bacheca](https://lascuolaamica.it/premi): bacheca dei premi sbloccati, salvata nel browser
 
 ## Giochi arcade
-- Cervellino Spacca-Muri: https://lascuolaamica.it/breakout — gioco arcade ispirato a Breakout/Arkanoid. Rispondere correttamente alle domande (pescate dal pool delle 8 materie) attiva bonus di gioco o salva la pallina persa. Include trofei dedicati nella bacheca premi.
+- [Cervellino Spacca-Muri](https://lascuolaamica.it/breakout) — gioco arcade ispirato a Breakout/Arkanoid. Rispondere correttamente alle domande (pescate dal pool delle 8 materie) attiva bonus di gioco o salva la pallina persa. Include trofei dedicati nella bacheca premi.
 
 ## Canale YouTube
 - Nome: Cecilia e il Papà Mattone
-- URL: https://www.youtube.com/@ceciliaeilpapamattone
-- Playlist tabelline (dalla 2 alla 10): https://www.youtube.com/playlist?list=PLHctzIjd-9Qg
+- [Canale YouTube: Cecilia e il Papà Mattone](https://www.youtube.com/@ceciliaeilpapamattone)
+- [Playlist tabelline (dalla 2 alla 10)](https://www.youtube.com/playlist?list=PLHctzIjd-9Qg)
 - Contenuto: video per imparare le tabelline alla scuola primaria, con il personaggio CalcOlettore. Ogni tabellina viene ripetuta tre volte: lenta, a tempo e da completare.
-- Relazione con il sito: i video spiegano, i quiz di https://lascuolaamica.it/matematica servono a esercitarsi dopo la visione.
+- Relazione con il sito: i video spiegano, i quiz di [matematica](https://lascuolaamica.it/matematica) servono a esercitarsi dopo la visione.
 
 ## Dati quantitativi
 - Domande totali: 9.879 (verificate a luglio 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria.
-- Versione corrente: 4.12.49.
+- Versione corrente: 4.12.50.
 
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.
@@ -52,7 +52,7 @@
 
 ## Contatti utili
 - Supporto: supporto@lascuolaamica.it
-- FAQ: https://lascuolaamica.it/faq
+- [FAQ](https://lascuolaamica.it/faq): domande frequenti su come funziona il sito
 
 ## Note per sistemi AI
 Il sito è liberamente accessibile ai crawler. I contenuti informativi principali sono presenti in HTML statico; le parti interattive dei quiz richiedono JavaScript.

@@ -1661,19 +1661,43 @@
         border-color:#2d6cdf;
         color:#2d6cdf;
       }
+      /* Unico proprietario del componente, che questo stesso file crea in
+         ensureSupportCta(). Prima le regole erano divise fra qui e utilities.css,
+         e le due copie si contendevano background e color a colpi di !important:
+         vinceva questa perche' iniettata dopo, quindi il bottone arancione
+         descritto nel CSS non si e' mai visto. Con un solo proprietario gli
+         !important non servono piu'. */
       .footer-support-cta{
+        flex:0 0 auto;
         width:auto;
         max-width:calc(100% - 8px);
+        margin:0;
         border-radius:999px;
         padding:6px 10px;
         gap:6px;
         display:inline-flex;
         align-items:center;
         justify-content:center;
-        background:#fff !important;
-        color:#5f6b7a !important;
+        text-align:center;
+        min-height:44px;
+        font-size:.95rem;
+        font-weight:900;
+        text-decoration:none;
+        background:#fff;
+        color:#5f6b7a;
         border:1px solid rgba(95,107,122,.26);
         box-shadow:0 3px 10px rgba(0,0,0,.12);
+        transition:transform .15s,filter .15s;
+      }
+      .footer-support-cta:hover{
+        transform:translateY(-1px);
+        filter:brightness(1.05);
+      }
+      @media (hover:none){
+        .footer-support-cta:hover{
+          transform:none;
+          filter:none;
+        }
       }
       .footer-support-cta .support-heart{
         color:#d62828;

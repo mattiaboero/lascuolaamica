@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.50",
+  "items": [
+   "Migliorata la scheda che descrive il sito agli assistenti AI: ora elenca le pagine come collegamenti veri, con una riga di descrizione ciascuna."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.49",
   "items": [
    "I link della finestra Info e del footer, sulla home e nella pagina dei premi, ora usano un viola più scuro: si leggono meglio, soprattutto su schermi poco contrastati."
