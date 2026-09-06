@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.41 - 2026-09-06
+
+### Fixed
+- fix(breakout): `js/breakout.js` aveva perso le chiamate a `debugWarn` nei wrapper di `localStorage`. Un `localStorage` che lancia (Safari in navigazione privata, quota piena) faceva fallire il salvataggio di record, classe e stato audio del gioco senza lasciare traccia nemmeno con `?debug`, mentre gli altri tre moduli lo segnalavano. Ripristinati `DEBUG_MODE` e `debugWarn`; le quattro copie di `storageGet`/`storageSet` sono ora byte-identiche.
+
+### Changed
+- ci: nuovo `scripts/check_storage_helpers.js`, in `prepublish-check.sh`, che confronta i blocchi `storageGet`/`storageSet` nei quattro moduli e fallisce se divergono. Verificato togliendo una riga da `js/breakout.js`.
+
+### Notes
+- non fatto(refactor): gli helper di storage **non** sono stati unificati in un modulo condiviso, come suggeriva l'audit (~101 righe duplicate su 4 file). `shared.js` è caricato per **ultimo** in tutte e 23 le pagine, dopo `subject-quiz-core.js`, `js/rewards.js` e `js/breakout.js`: non può esporre gli helper in tempo per il loro init. Un modulo dedicato richiederebbe un nuovo `<script>` in 23 pagine, una voce di precache e un vincolo di ordinamento su ogni pagina, per ~30 righe di codice stabile e senza dipendenze. Verificato inoltre che il presunto rischio funzionale non esiste: tutti e quattro i moduli condividono lo stesso `SA.memoryStorage`, e i namespace delle chiavi sono disgiunti (`scuolaAmica_*`, `subject_*`, `lascuolaamica_rewards_v1`, `lascuolaamica_breakout_*`). Il problema reale era solo la deriva silenziosa fra le copie, che ora il controllo impedisce.
+- non fatto(perf): la memoizzazione di `getLevelScopedPool()` (M5 dell'audit: ~10.000 chiamate a `questionMatchesLevel` e ~20.000 regex per un tap sulla classe su `/inglese`) è stata **misurata prima di implementarla**, e non serve. Con Chromium: 0,4-2,3 ms per tap e 6,1 ms per "Inizia!" senza throttling; 2,9-14 ms per tap e 17,5 ms per "Inizia!" con CPU throttling 6x, che approssima un tablet scolastico vecchio. Il conteggio delle operazioni era corretto, la conclusione sul ritardo percepibile no: una cache qui sarebbe codice in più per un problema che non si misura.
+- chore: bump versione `4.12.40` → `4.12.41`.
+
 ## 4.12.40 - 2026-09-06
 
 ### Fixed

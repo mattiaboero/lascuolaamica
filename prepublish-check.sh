@@ -462,6 +462,13 @@ check_pwa_cache_headers
 check_pwa_version_bump_for_precache_changes
 check_immutable_assets_not_replaced_in_place
 
+if node scripts/check_storage_helpers.js; then
+  echo "[OK] storage helpers: le quattro copie sono identiche"
+else
+  echo "[ERROR] storage helpers: le copie sono divergenti"
+  status=1
+fi
+
 if node scripts/check_sw_precache.js; then
   echo "[OK] sw.js precache: tutti i path verificati esistono su disco"
 else

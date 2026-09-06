@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.41",
+  "items": [
+   "Manutenzione interna: nel gioco Spacca-Muri gli errori di salvataggio dei dati tornano a essere segnalati in fase di diagnosi."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.40",
   "items": [
    "Il pulsante \"Cancella dati locali\" ora funziona: la richiesta di conferma restava nascosta sotto la finestra Info e non era cliccabile.",

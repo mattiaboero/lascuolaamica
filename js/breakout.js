@@ -5,12 +5,29 @@
   const KEY_HIGHSCORE = 'lascuolaamica_breakout_highscore_v1';
   const KEY_CLASS = 'lascuolaamica_breakout_class_v1';
   const KEY_MUTED = 'lascuolaamica_breakout_muted_v1';
+  const DEBUG_MODE = (() => {
+    try {
+      const host = window.location.hostname;
+      if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local')) return true;
+      return new URLSearchParams(window.location.search).has('debug');
+    } catch (e) {
+      return false;
+    }
+  })();
   const memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
+
+  function debugWarn(context, error) {
+    if (!DEBUG_MODE) return;
+    try {
+      console.warn(`[La Scuola Amica][${context}]`, error);
+    } catch (_) {}
+  }
 
   function storageGet(key) {
     try {
       return localStorage.getItem(key);
     } catch (e) {
+      debugWarn(`storageGet:${key}`, e);
       return Object.prototype.hasOwnProperty.call(memoryStorage, key) ? memoryStorage[key] : null;
     }
   }
@@ -20,6 +37,7 @@
     try {
       localStorage.setItem(key, normalized);
     } catch (e) {
+      debugWarn(`storageSet:${key}`, e);
       memoryStorage[key] = normalized;
     }
   }
