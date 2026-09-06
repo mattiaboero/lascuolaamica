@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.52",
+  "items": [
+   "Nella pagina delle tabelline i riquadri dei video in arrivo hanno ora testo pienamente leggibile: prima erano sbiaditi sotto la soglia di contrasto."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.51",
   "items": [
    "Le pagine mostrano il titolo quasi subito invece di farlo comparire dal nulla: l'animazione di entrata è la stessa, ma il contenuto si vede prima."

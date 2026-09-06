@@ -1,5 +1,11 @@
 # Changelog Repo
 
+## 4.12.52 - 2026-09-06
+
+### Fixed
+- fix(a11y): `/tabelline` era l'unica pagina del sito sotto 100 in accessibilità (96 su desktop). Causa: `.tab-card.is-soon { opacity: 0.72 }` sulle due card "video in arrivo". L'opacità sul testo lo mescola col fondo e ne abbassa il contrasto: titolo a **3,17:1** e meta a **2,74:1**, contro il 6,16 e il 5,13 dei token pieni — entrambi sotto la soglia AA di 4,5:1, e infatti Lighthouse segnalava esattamente 2 titoli + 2 meta. È lo stesso errore già corretto su `.footer-meta` nella 4.12.x: l'opacità è una scorciatoia che sembra innocua e rompe il contrasto in modo dipendente dalla superficie. L'aria "in arrivo" sta ora sull'immagine (`opacity` + `grayscale`) e sul bordo tratteggiato, che non sono testo. Misurato dopo il fix: titolo **5,79:1**, meta **4,73:1**.
+- chore: bump versione `4.12.51` → `4.12.52`.
+
 ## 4.12.51 - 2026-09-06
 
 ### Fixed

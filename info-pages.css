@@ -589,8 +589,19 @@ body.page-tabelline .tab-card-meta {
   color: var(--page-muted);
 }
 
+/* L'aria "in arrivo" resta sull'immagine e sul bordo: niente opacity sul testo.
+   L'opacita' su testo lo mescola col fondo e ne abbassa il contrasto in modo
+   dipendente dalla superficie — qui portava il titolo a 3,17:1 e il meta a
+   2,74:1 (contro 6,16 e 5,13 dei token pieni), sotto la soglia AA. Stesso
+   errore gia' corretto su .footer-meta: l'opacita' e' una scorciatoia che
+   sembra innocua e rompe il contrasto. */
 body.page-tabelline .tab-card.is-soon {
+  border-style: dashed;
+}
+
+body.page-tabelline .tab-card.is-soon img {
   opacity: 0.72;
+  filter: grayscale(0.35);
 }
 
 body.page-tabelline .tab-table-wrap {
