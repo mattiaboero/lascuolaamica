@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.67",
+  "items": [
+   "Corretti 8 refusi introdotti dalle riscritture di ieri: una minuscola dopo il punto (\"...vicino. cosa è meglio fare?\").",
+   "Riscritte 22 domande di civica rimaste con la consegna che non corrispondeva alle risposte, e uniformate 118 domande che mescolavano forma impersonale e seconda persona.",
+   "Sistemata la famiglia di domande sulla riduzione dei rifiuti: le risposte proposte mescolavano due tipi di frase."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.66",
   "items": [
    "Uniformate 366 domande che restavano a metà con un punto interrogativo (\"Gli animali onnivori mangiano?\"): ora finiscono con i puntini o sono formulate per esteso.",

@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.12.67 - 2026-09-06
+
+Lotto quasi interamente di **regressioni introdotte dalle tre release precedenti**. Il campione mostra una variante per volta, mai la famiglia intera, ed è questo che le ha lasciate passare.
+
+### Fixed
+- fix(contenuti): **8 domande avevano la minuscola dopo il punto** (`...Non c'è un cestino vicino. cosa è meglio fare?`, `5 palline rosse e 5 blu. qual è la probabilità...`). Prodotte dalle riscritture della 4.12.64 e della 4.12.66, che sostituivano la coda della domanda senza guardare se era preceduta da una frase già chiusa.
+- fix(contenuti): **22 domande di civica erano rimaste con la consegna sbagliata sulla quinta variante** (`Se vuoi spiegare chi è un volontario, qual è il comportamento corretto?`). Nella 4.12.65 avevo corretto tre varianti su cinque credendo di aver chiuso la famiglia: ogni tema ne ha cinque, e la quinta comincia con `Se` invece che con uno dei tre stem che stavo cercando. Le altre 13 di quella variante hanno opzioni all'azione e sono corrette così: non toccate.
+- fix(contenuti): **118 domande mescolavano forma impersonale e seconda persona** (`Come ci si comporta bene quando scegli come bere a scuola?`), effetto della sostituzione fatta nella 4.12.66. Ora `Qual è il modo giusto di comportarsi quando...`.
+- fix(contenuti): la famiglia sulla riduzione dei rifiuti aveva **opzioni di due tipi diversi** — una dichiarativa (quella corretta) e tre causali (`perché il riciclo è inutile`, `per fare più imballaggi`). Nessuno stem poteva reggerle tutte. Uniformate a forma dichiarativa e adattati i cinque stem.
+- fix(contenuti): il distrattore `vince il più forte` in un elenco di infiniti restava in 4 domande gemelle; nella 4.12.64 ne avevo corretta una sola.
+
+### Changed
+- lint(contenuti): regola nuova per la minuscola dopo il punto, con le esclusioni verificate — `a.C.`/`d.C.`, i puntini di sospensione e le citazioni di punteggiatura (`la domanda 'chi? che cosa?'`).
+- lint(contenuti): controllo nuovo per il distrattore all'indicativo dentro un elenco di infiniti. Come gli altri due controlli di questo tipo sta in `checkQuestion`, perché confronta le opzioni fra loro. Entrambi verificati reintroducendo il difetto.
+
+### Notes
+- **il campione da 60 non vede le famiglie.** Le domande di civica sono organizzate in cinque varianti per tema, e il campionamento per scheletro unico ne mostra una per volta: tre lotti di seguito hanno scoperto lo stesso difetto su varianti diverse. Da qui in avanti, quando un difetto sta in una famiglia, conviene enumerare la famiglia prima di correggere — non fidarsi del prefisso con cui è comparsa.
+
 ## 4.12.66 - 2026-09-06
 
 ### Fixed

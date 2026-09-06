@@ -160,6 +160,13 @@ const GRAMMATICA = [
   { pattern: /^(?:Quale scelta è più responsabile|Che cosa mostra più rispetto|Quale risposta aiuta di più la comunità) quando (?:vuoi|devi) (?:spiegare|ricordare|dire|indicare|descrivere|capire|collegare|riconoscere|fare un esempio)\b/,
     soloDomanda: true,
     msg: 'stem di civica incollato sopra una domanda di definizione: serve una domanda diretta' },
+  // Dal lotto 11: minuscola dopo il punto. Nasce dalle riscritture della 4.12.64,
+  // dove "cosa fai?" e' diventato "cosa e' meglio fare?" anche in coda a una
+  // frase gia' chiusa. Le abbreviazioni di datazione ("2000 a.C. e' piu'
+  // antica"), i puntini e le citazioni di punteggiatura restano fuori.
+  { pattern: /(?<!\b[ad])(?<!\b[ad]\.[CcEe])(?<!\.\.)\.\s+[a-zà-ù]/,
+    soloDomanda: true,
+    msg: 'minuscola dopo il punto' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
@@ -195,6 +202,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const infinito = (o) => /^(?:non\s+|mai\s+)?[a-zà-ù']+(?:are|ere|ire|urre|orre)(?:l[oaie]|gli|gliel[oaie]|ne|si|ti|mi|ci|vi|tene|sene)?\b/i.test(o.trim());
     if (opts.length && opts.every(infinito)) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — "cosa fai?" con opzioni all\'infinito: la consegna giusta e\' "cosa e\' meglio fare?"' });
+    }
+  }
+
+  // Dal lotto 11: un solo distrattore all'indicativo dentro un elenco di
+  // infiniti ("cercare dialogo | umiliare l'altro | vince il piu' forte").
+  // Serve confrontare le opzioni fra loro, quindi non e' una regex di GRAMMATICA.
+  if (subject !== 'inglese') {
+    const opts = (options || []).filter((o) => typeof o === 'string' && o.trim());
+    const inf = (o) => /^(?:non\s+|mai\s+)?[a-zà-ù']+(?:are|ere|ire|urre|orre)(?:l[oaie]|gli|ne|si|ti|mi|ci|vi|tene|sene)?\b/i.test(o.trim());
+    if (opts.length >= 3 && opts.filter(inf).length === opts.length - 1) {
+      const fuori = opts.find((o) => !inf(o));
+      if (/^(?:vince|serve|vale|conta|riguarda|interessa|segnala|indica|protegge|approva|gestisce|dirige|sceglie|aiuta|decide|contiene|spiega|perde|resta)\b/i.test(fuori.trim())) {
+        errors.push({ level: 'error', field: 'options', msg: `grammatica — un distrattore all'indicativo ("${fuori}") in un elenco di infiniti` });
+      }
     }
   }
 

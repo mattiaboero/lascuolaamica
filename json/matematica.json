@@ -42124,7 +42124,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "5 palline rosse e 5 blu. qual è la probabilità di prenderne una rossa?",
+   "question": "5 palline rosse e 5 blu. Qual è la probabilità di prenderne una rossa?",
    "options": [
     "Bassa",
     "Alta",
@@ -44524,7 +44524,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 2,
-   "question": "30 alunni, 6 con occhiali. qual è la probabilità di sorteggiarne uno con occhiali?",
+   "question": "30 alunni, 6 con occhiali. Qual è la probabilità di sorteggiarne uno con occhiali?",
    "options": [
     "1/5",
     "1/6",

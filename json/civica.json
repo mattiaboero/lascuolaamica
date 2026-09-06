@@ -108,7 +108,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando vuoi parlare in classe?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi parlare in classe?",
    "options": [
     "uscire dall'aula",
     "correre alla cattedra",
@@ -268,7 +268,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando entri in biblioteca?",
+   "question": "Qual è il modo giusto di comportarsi quando entri in biblioteca?",
    "options": [
     "gridare",
     "correre tra gli scaffali",
@@ -428,7 +428,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando arriva un nuovo compagno?",
+   "question": "Qual è il modo giusto di comportarsi quando arriva un nuovo compagno?",
    "options": [
     "escluderlo",
     "nascondergli il posto",
@@ -588,7 +588,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando un compagno cade?",
+   "question": "Qual è il modo giusto di comportarsi quando un compagno cade?",
    "options": [
     "spingerlo ancora",
     "aiutarlo o chiamare un adulto",
@@ -748,7 +748,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando due bambini vogliono lo stesso gioco?",
+   "question": "Qual è il modo giusto di comportarsi quando due bambini vogliono lo stesso gioco?",
    "options": [
     "strappare il gioco",
     "fare a turno",
@@ -972,7 +972,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "Se devi riconoscere i colori della bandiera italiana, qual è il comportamento corretto?",
+   "question": "Quale terna di colori forma la bandiera italiana?",
    "options": [
     "rosa, viola e azzurro",
     "blu, rosso e giallo",
@@ -1228,7 +1228,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando usi il materiale della classe?",
+   "question": "Qual è il modo giusto di comportarsi quando usi il materiale della classe?",
    "options": [
     "averne cura",
     "romperlo per gioco",
@@ -1388,7 +1388,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sei in fila per la mensa?",
+   "question": "Qual è il modo giusto di comportarsi quando sei in fila per la mensa?",
    "options": [
     "saltare avanti",
     "correre",
@@ -1548,7 +1548,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando trovi un oggetto non tuo?",
+   "question": "Qual è il modo giusto di comportarsi quando trovi un oggetto non tuo?",
    "options": [
     "consegnarlo a un adulto",
     "tenerlo",
@@ -1708,7 +1708,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando la classe vota per scegliere un incarico?",
+   "question": "Qual è il modo giusto di comportarsi quando la classe vota per scegliere un incarico?",
    "options": [
     "litigare",
     "strappare i fogli",
@@ -1772,7 +1772,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Se vuoi dire cosa fa il sindaco, qual è il comportamento corretto?",
+   "question": "Che cosa rientra fra i compiti del sindaco?",
    "options": [
     "vende quaderni",
     "sceglie i compiti",
@@ -1932,7 +1932,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Se devi spiegare cos'è la biblioteca comunale, qual è il comportamento corretto?",
+   "question": "Come si descrive una biblioteca comunale?",
    "options": [
     "un luogo pubblico per leggere e prendere libri",
     "un garage",
@@ -2092,7 +2092,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Se vuoi spiegare cosa significa uguaglianza, qual è il comportamento corretto?",
+   "question": "Quale affermazione descrive l'uguaglianza?",
    "options": [
     "decide chi grida di più",
     "le regole valgono per tutti",
@@ -2348,7 +2348,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando prendi in prestito un libro della biblioteca?",
+   "question": "Qual è il modo giusto di comportarsi quando prendi in prestito un libro della biblioteca?",
    "options": [
     "strapparne le pagine",
     "tenerlo per sempre",
@@ -2508,7 +2508,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando discuti in gruppo?",
+   "question": "Qual è il modo giusto di comportarsi quando discuti in gruppo?",
    "options": [
     "zittire chi parla",
     "ascoltare più opinioni",
@@ -2668,7 +2668,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando un compagno dimentica il materiale?",
+   "question": "Qual è il modo giusto di comportarsi quando un compagno dimentica il materiale?",
    "options": [
     "nascondergli lo zaino",
     "prenderlo in giro",
@@ -2988,7 +2988,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando usi un parco pubblico?",
+   "question": "Qual è il modo giusto di comportarsi quando usi un parco pubblico?",
    "options": [
     "lasciare rifiuti",
     "rispettare giochi e spazi",
@@ -3212,7 +3212,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se vuoi spiegare perché è importante la Costituzione, qual è il comportamento corretto?",
+   "question": "Che cosa troviamo scritto nella Costituzione?",
    "options": [
     "contiene pubblicità",
     "indica principi e diritti fondamentali",
@@ -3372,7 +3372,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se devi spiegare il principio di uguaglianza, qual è il comportamento corretto?",
+   "question": "Quale affermazione esprime il principio di uguaglianza?",
    "options": [
     "solo alcuni meritano rispetto",
     "vincono sempre i più forti",
@@ -3788,7 +3788,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando fai un'assemblea di classe?",
+   "question": "Qual è il modo giusto di comportarsi quando fai un'assemblea di classe?",
    "options": [
     "evitare il dialogo",
     "giocare senza regole",
@@ -3852,7 +3852,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se vuoi spiegare a cosa serve il Comune, qual è il comportamento corretto?",
+   "question": "Che cosa rientra fra i compiti del Comune?",
    "options": [
     "gestisce servizi vicini ai cittadini",
     "sceglie le scarpe dei cittadini",
@@ -4108,7 +4108,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando usi uno spazio pubblico come piazza o giardino?",
+   "question": "Qual è il modo giusto di comportarsi quando usi uno spazio pubblico come piazza o giardino?",
    "options": [
     "usarlo senza regole",
     "sporcarlo",
@@ -4268,7 +4268,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando in classe ci sono persone con abitudini diverse?",
+   "question": "Qual è il modo giusto di comportarsi quando in classe ci sono persone con abitudini diverse?",
    "options": [
     "escluderle",
     "zittirle",
@@ -4332,7 +4332,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Se vuoi spiegare chi è un volontario, qual è il comportamento corretto?",
+   "question": "Quale definizione corrisponde a un volontario?",
    "options": [
     "chi pensa solo a sé",
     "chi rompe le regole",
@@ -4588,7 +4588,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando si deve prendere una decisione condivisa?",
+   "question": "Qual è il modo giusto di comportarsi quando si deve prendere una decisione condivisa?",
    "options": [
     "ascoltare e confrontarsi",
     "gridare",
@@ -4748,7 +4748,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando noti un problema nel quartiere?",
+   "question": "Qual è il modo giusto di comportarsi quando noti un problema nel quartiere?",
    "options": [
     "segnalarlo in modo corretto",
     "far finta di niente",
@@ -4812,7 +4812,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se vuoi ricordare su quale valore si fonda la Repubblica italiana, qual è il comportamento corretto?",
+   "question": "Quale valore fonda la Repubblica secondo la Costituzione?",
    "options": [
     "il rumore",
     "il lavoro",
@@ -5132,7 +5132,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Se spieghi il rapporto tra diritti e doveri, qual è il comportamento corretto?",
+   "question": "Quale affermazione descrive il legame tra diritti e doveri?",
    "options": [
     "ai diritti corrispondono responsabilità verso la comunità",
     "contano solo i privilegi",
@@ -5292,7 +5292,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se vuoi dire cosa fa il Parlamento, qual è il comportamento corretto?",
+   "question": "Che cosa rientra fra i compiti del Parlamento?",
    "options": [
     "controlla i compiti",
     "vende biglietti",
@@ -5452,7 +5452,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se devi indicare chi rappresenta l'unità nazionale, qual è il comportamento corretto?",
+   "question": "Quale figura istituzionale rappresenta l'unità nazionale?",
    "options": [
     "il sindaco",
     "il capitano della squadra",
@@ -5936,7 +5936,7 @@
    "options": [
     "usare minacce",
     "cercare dialogo e regole",
-    "vince il più forte",
+    "lasciare vincere il più forte",
     "umiliare l'altro"
    ],
    "answerIndex": 1,
@@ -5998,7 +5998,7 @@
    "difficulty": 3,
    "question": "Quale scelta è più responsabile quando nasce un conflitto in un gruppo?",
    "options": [
-    "vince il più forte",
+    "lasciare vincere il più forte",
     "umiliare l'altro",
     "usare minacce",
     "cercare dialogo e regole"
@@ -6028,9 +6028,9 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando nasce un conflitto in un gruppo?",
+   "question": "Qual è il modo giusto di comportarsi quando nasce un conflitto in un gruppo?",
    "options": [
-    "vince il più forte",
+    "lasciare vincere il più forte",
     "umiliare l'altro",
     "usare minacce",
     "cercare dialogo e regole"
@@ -6064,7 +6064,7 @@
    "options": [
     "cercare dialogo e regole",
     "umiliare l'altro",
-    "vince il più forte",
+    "lasciare vincere il più forte",
     "usare minacce"
    ],
    "answerIndex": 0,
@@ -6188,7 +6188,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vuoi contrastare una discriminazione?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi contrastare una discriminazione?",
    "options": [
     "rispettare la dignità di ogni persona",
     "favorire chi urla",
@@ -6508,7 +6508,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando devi buttare un rifiuto a scuola?",
+   "question": "Qual è il modo giusto di comportarsi quando devi buttare un rifiuto a scuola?",
    "options": [
     "gettarlo dalla finestra",
     "lasciarlo a terra",
@@ -6668,7 +6668,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando esci da una stanza vuota?",
+   "question": "Qual è il modo giusto di comportarsi quando esci da una stanza vuota?",
    "options": [
     "spegnere la luce",
     "aprire il frigorifero",
@@ -6828,7 +6828,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando ti lavi le mani e non ti serve più acqua?",
+   "question": "Qual è il modo giusto di comportarsi quando ti lavi le mani e non ti serve più acqua?",
    "options": [
     "farlo scorrere senza bisogno",
     "chiudere il rubinetto",
@@ -6988,7 +6988,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sei in un parco con alberi e fiori?",
+   "question": "Qual è il modo giusto di comportarsi quando sei in un parco con alberi e fiori?",
    "options": [
     "rompere i rami",
     "buttare rifiuti tra i cespugli",
@@ -7148,7 +7148,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando scegli come bere a scuola?",
+   "question": "Qual è il modo giusto di comportarsi quando scegli come bere a scuola?",
    "options": [
     "lasciare plastica in giro",
     "usare tante bottigliette e buttarle",
@@ -7308,7 +7308,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando hai un foglio scritto solo da un lato?",
+   "question": "Qual è il modo giusto di comportarsi quando hai un foglio scritto solo da un lato?",
    "options": [
     "riusarlo",
     "bagnarlo apposta",
@@ -7468,7 +7468,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sei a mensa o a merenda?",
+   "question": "Qual è il modo giusto di comportarsi quando sei a mensa o a merenda?",
    "options": [
     "prendere solo quello che riesci a mangiare",
     "giocare col cibo",
@@ -7628,7 +7628,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando vai al parco dopo la merenda?",
+   "question": "Qual è il modo giusto di comportarsi quando vai al parco dopo la merenda?",
    "options": [
     "lasciare la carta sulla panchina",
     "lasciarlo pulito",
@@ -7788,7 +7788,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando incontri piccoli animali nel giardino?",
+   "question": "Qual è il modo giusto di comportarsi quando incontri piccoli animali nel giardino?",
    "options": [
     "spaventarli per gioco",
     "disturbarli sempre",
@@ -8108,7 +8108,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando hai una bottiglia di plastica da buttare?",
+   "question": "Qual è il modo giusto di comportarsi quando hai una bottiglia di plastica da buttare?",
    "options": [
     "lasciarla nel prato",
     "buttarla nel WC",
@@ -8172,7 +8172,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Se devi riconoscere i rifiuti organici, qual è il comportamento corretto?",
+   "question": "Quale coppia è formata da rifiuti organici?",
    "options": [
     "quaderni e libri",
     "vetro e lattine",
@@ -8428,7 +8428,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando finisci di usare la LIM o il computer?",
+   "question": "Qual è il modo giusto di comportarsi quando finisci di usare la LIM o il computer?",
    "options": [
     "aprire tante finestre sullo schermo",
     "spegnerlo se non serve più",
@@ -8588,7 +8588,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando puoi fare un tragitto breve vicino a casa?",
+   "question": "Qual è il modo giusto di comportarsi quando puoi fare un tragitto breve vicino a casa?",
    "options": [
     "lasciare il motore acceso",
     "andare a piedi o in bici quando possibile",
@@ -8748,7 +8748,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando noti una fontanella che perde?",
+   "question": "Qual è il modo giusto di comportarsi quando noti una fontanella che perde?",
    "options": [
     "giocarci per ore",
     "dirlo a un adulto",
@@ -8908,7 +8908,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando hai una pila scarica?",
+   "question": "Qual è il modo giusto di comportarsi quando hai una pila scarica?",
    "options": [
     "buttarla per terra",
     "gettarla nel lavandino",
@@ -9068,7 +9068,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando vuoi proteggere il mare?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi proteggere il mare?",
    "options": [
     "lasciare bottiglie in spiaggia",
     "non buttare rifiuti nei tombini e nei fiumi",
@@ -9228,7 +9228,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando scegli una merenda più ecologica?",
+   "question": "Qual è il modo giusto di comportarsi quando scegli una merenda più ecologica?",
    "options": [
     "scegliere solo usa e getta",
     "buttare involucri a terra",
@@ -9548,7 +9548,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando partecipi all'orto scolastico?",
+   "question": "Qual è il modo giusto di comportarsi quando partecipi all'orto scolastico?",
    "options": [
     "sprecare acqua",
     "buttare rifiuti tra le foglie",
@@ -10028,7 +10028,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando devi scegliere uno spostamento più ecologico?",
+   "question": "Qual è il modo giusto di comportarsi quando devi scegliere uno spostamento più ecologico?",
    "options": [
     "lasciare il motore acceso",
     "usare mezzi pubblici, bici o piedi quando possibile",
@@ -10092,7 +10092,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Se vuoi spiegare il compost, qual è il comportamento corretto?",
+   "question": "Quale definizione corrisponde al compost?",
    "options": [
     "pile schiacciate",
     "vetro tritato",
@@ -10348,7 +10348,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando scegli del cibo da comprare?",
+   "question": "Qual è il modo giusto di comportarsi quando scegli del cibo da comprare?",
    "options": [
     "preferire prodotti locali o di stagione quando possibile",
     "comprare e buttare cibo",
@@ -10508,7 +10508,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando hai un vecchio dispositivo elettronico?",
+   "question": "Qual è il modo giusto di comportarsi quando hai un vecchio dispositivo elettronico?",
    "options": [
     "gettarlo nel lavandino",
     "buttarlo nel prato",
@@ -10668,7 +10668,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vuoi ridurre l'inquinamento dell'aria?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi ridurre l'inquinamento dell'aria?",
    "options": [
     "sporcare i parchi",
     "bruciare rifiuti",
@@ -10828,7 +10828,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando la scuola organizza una giornata ecologica?",
+   "question": "Qual è il modo giusto di comportarsi quando la scuola organizza una giornata ecologica?",
    "options": [
     "sporcare di più",
     "lasciare fare agli altri",
@@ -10988,7 +10988,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando hai un oggetto ancora utile ma rovinato?",
+   "question": "Qual è il modo giusto di comportarsi quando hai un oggetto ancora utile ma rovinato?",
    "options": [
     "provare a ripararlo o riusarlo",
     "buttarlo subito",
@@ -11148,7 +11148,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vuoi comprare in modo responsabile?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi comprare in modo responsabile?",
    "options": [
     "comprare per buttare",
     "scegliere ciò che serve davvero",
@@ -11532,7 +11532,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Se devi descrivere l'impronta ecologica, qual è il comportamento corretto?",
+   "question": "Quale definizione corrisponde all'impronta ecologica?",
    "options": [
     "la misura delle scarpe",
     "il peso dello zaino",
@@ -11692,7 +11692,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Se vuoi fare un esempio di energia rinnovabile, qual è il comportamento corretto?",
+   "question": "Quale coppia è formata da fonti rinnovabili?",
    "options": [
     "pile scariche",
     "plastica e vetro",
@@ -11852,12 +11852,12 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Se spieghi perché ridurre i rifiuti viene prima del riciclo, qual è il comportamento corretto?",
+   "question": "Che effetto ha ridurre i rifiuti?",
    "options": [
-    "perché il riciclo è inutile",
+    "rende inutile il riciclo",
     "evita di produrre scarti inutili",
-    "per fare più imballaggi",
-    "così si usa più plastica"
+    "serve a produrre più imballaggi",
+    "fa usare più plastica"
    ],
    "answerIndex": 1,
    "answer": "evita di produrre scarti inutili",
@@ -11884,12 +11884,12 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Perché ridurre i rifiuti viene prima del riciclo?",
+   "question": "Quale risultato dà la riduzione dei rifiuti?",
    "options": [
-    "perché il riciclo è inutile",
-    "per fare più imballaggi",
+    "rende inutile il riciclo",
+    "serve a produrre più imballaggi",
     "evita di produrre scarti inutili",
-    "così si usa più plastica"
+    "fa usare più plastica"
    ],
    "answerIndex": 2,
    "answer": "evita di produrre scarti inutili",
@@ -11919,9 +11919,9 @@
    "question": "Qual è il vantaggio di ridurre i rifiuti?",
    "options": [
     "evita di produrre scarti inutili",
-    "perché il riciclo è inutile",
-    "per fare più imballaggi",
-    "così si usa più plastica"
+    "rende inutile il riciclo",
+    "serve a produrre più imballaggi",
+    "fa usare più plastica"
    ],
    "answerIndex": 0,
    "answer": "evita di produrre scarti inutili",
@@ -11948,11 +11948,11 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Perché è meglio ridurre che riciclare?",
+   "question": "In che modo la riduzione dei rifiuti aiuta più del riciclo?",
    "options": [
-    "così si usa più plastica",
-    "perché il riciclo è inutile",
-    "per fare più imballaggi",
+    "fa usare più plastica",
+    "rende inutile il riciclo",
+    "serve a produrre più imballaggi",
     "evita di produrre scarti inutili"
    ],
    "answerIndex": 3,
@@ -11982,10 +11982,10 @@
    "difficulty": 3,
    "question": "Che cosa ottiene chi riduce i rifiuti?",
    "options": [
-    "per fare più imballaggi",
-    "perché il riciclo è inutile",
+    "serve a produrre più imballaggi",
+    "rende inutile il riciclo",
     "evita di produrre scarti inutili",
-    "così si usa più plastica"
+    "fa usare più plastica"
    ],
    "answerIndex": 2,
    "answer": "evita di produrre scarti inutili",
@@ -12172,7 +12172,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Se vuoi collegare ambiente e salute, qual è il comportamento corretto?",
+   "question": "Quale affermazione collega ambiente e salute?",
    "options": [
     "interessa solo gli scienziati",
     "riguarda solo i parchi",
@@ -12428,7 +12428,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando hai cura di una spiaggia o di un parco?",
+   "question": "Qual è il modo giusto di comportarsi quando hai cura di una spiaggia o di un parco?",
    "options": [
     "pensare che non riguardi nessuno",
     "usarlo senza regole",
@@ -12588,7 +12588,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando rifletti sulle generazioni future?",
+   "question": "Qual è il modo giusto di comportarsi quando rifletti sulle generazioni future?",
    "options": [
     "lasciare il problema agli altri",
     "consumare il più possibile oggi",
@@ -12748,7 +12748,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vuoi essere un cittadino attento all'ambiente?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi essere un cittadino attento all'ambiente?",
    "options": [
     "trasformare i valori in gesti quotidiani",
     "pensare che uno da solo non conti",
@@ -12908,7 +12908,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando un amico ti chiede la password?",
+   "question": "Qual è il modo giusto di comportarsi quando un amico ti chiede la password?",
    "options": [
     "pubblicarla",
     "tenerla segreta",
@@ -13068,7 +13068,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando vuoi scaricare una nuova app?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi scaricare una nuova app?",
    "options": [
     "scaricarla da solo sempre",
     "pagare da solo",
@@ -13228,7 +13228,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando un sito ti chiede l'indirizzo di casa?",
+   "question": "Qual è il modo giusto di comportarsi quando un sito ti chiede l'indirizzo di casa?",
    "options": [
     "non condividerlo",
     "inventarlo e inviarlo",
@@ -13388,7 +13388,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando devi scrivere in chat?",
+   "question": "Qual è il modo giusto di comportarsi quando devi scrivere in chat?",
    "options": [
     "insultare",
     "usare parole gentili",
@@ -13548,7 +13548,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando vuoi fare una foto a un compagno?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi fare una foto a un compagno?",
    "options": [
     "farla di nascosto",
     "pubblicarla subito",
@@ -13708,7 +13708,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando ricevi un messaggio che ti spaventa?",
+   "question": "Qual è il modo giusto di comportarsi quando ricevi un messaggio che ti spaventa?",
    "options": [
     "tenerlo segreto per sempre",
     "inoltrarlo a tutti",
@@ -13868,7 +13868,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando uno sconosciuto ti scrive online?",
+   "question": "Qual è il modo giusto di comportarsi quando uno sconosciuto ti scrive online?",
    "options": [
     "mandare una foto",
     "avvisare un adulto",
@@ -14028,7 +14028,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando usi il tablet per molto tempo?",
+   "question": "Qual è il modo giusto di comportarsi quando usi il tablet per molto tempo?",
    "options": [
     "saltare il sonno",
     "stare sempre online",
@@ -14188,7 +14188,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando ricevi una foto che prende in giro qualcuno?",
+   "question": "Qual è il modo giusto di comportarsi quando ricevi una foto che prende in giro qualcuno?",
    "options": [
     "ridere e commentare",
     "non inoltrarla",
@@ -14348,7 +14348,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando finisci di usare un dispositivo della scuola?",
+   "question": "Qual è il modo giusto di comportarsi quando finisci di usare un dispositivo della scuola?",
    "options": [
     "riporlo con cura",
     "premere tasti a caso",
@@ -14508,7 +14508,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando leggi una notizia online?",
+   "question": "Qual è il modo giusto di comportarsi quando leggi una notizia online?",
    "options": [
     "fidarti solo del titolo",
     "inoltrarla a tutti",
@@ -14668,7 +14668,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando vuoi verificare se una informazione è vera?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi verificare se una informazione è vera?",
    "options": [
     "fidarti dei commenti",
     "guardare solo la prima immagine",
@@ -14828,7 +14828,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando devi scegliere un nome per giocare online?",
+   "question": "Qual è il modo giusto di comportarsi quando devi scegliere un nome per giocare online?",
    "options": [
     "mettere numero di telefono",
     "usare un nickname invece del nome completo",
@@ -14988,7 +14988,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando qualcuno ti chiede una foto privata?",
+   "question": "Qual è il modo giusto di comportarsi quando qualcuno ti chiede una foto privata?",
    "options": [
     "inoltrarla a un gruppo",
     "mandarla subito",
@@ -15148,7 +15148,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando in chat prendono in giro un compagno?",
+   "question": "Qual è il modo giusto di comportarsi quando in chat prendono in giro un compagno?",
    "options": [
     "aggiungere commenti cattivi",
     "girare tutto ad altri",
@@ -15308,7 +15308,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando ricevi una richiesta di amicizia da uno sconosciuto?",
+   "question": "Qual è il modo giusto di comportarsi quando ricevi una richiesta di amicizia da uno sconosciuto?",
    "options": [
     "mandare i tuoi dati",
     "scrivere dove abiti",
@@ -15468,7 +15468,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando usi una chat di classe?",
+   "question": "Qual è il modo giusto di comportarsi quando usi una chat di classe?",
    "options": [
     "scrivere di notte per disturbare",
     "inviare foto senza permesso",
@@ -15628,7 +15628,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando ti arriva un link strano?",
+   "question": "Qual è il modo giusto di comportarsi quando ti arriva un link strano?",
    "options": [
     "inserire la password",
     "non aprirlo e chiedere aiuto",
@@ -15788,7 +15788,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando fai un compito con materiale trovato online?",
+   "question": "Qual è il modo giusto di comportarsi quando fai un compito con materiale trovato online?",
    "options": [
     "non copiarlo come se fosse tuo",
     "incollarlo e basta",
@@ -15948,7 +15948,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando usi dispositivi prima di dormire?",
+   "question": "Qual è il modo giusto di comportarsi quando usi dispositivi prima di dormire?",
    "options": [
     "saltare il riposo",
     "usare il telefono sotto le coperte tutta la notte",
@@ -16012,7 +16012,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Se vuoi capire cosa sono le tracce digitali, qual è il comportamento corretto?",
+   "question": "Quale affermazione descrive le tracce digitali?",
    "options": [
     "riguarda solo i videogiochi",
     "sparisce sempre subito",
@@ -16268,7 +16268,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando devi creare una password?",
+   "question": "Qual è il modo giusto di comportarsi quando devi creare una password?",
    "options": [
     "scriverla in pubblico",
     "sceglierla difficile da indovinare e non condividerla",
@@ -16428,7 +16428,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando un'app chiede molti permessi e la posizione?",
+   "question": "Qual è il modo giusto di comportarsi quando un'app chiede molti permessi e la posizione?",
    "options": [
     "scrivere più dati possibili",
     "valutare con attenzione e chiedere aiuto se serve",
@@ -16588,7 +16588,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando leggi una notizia molto sorprendente?",
+   "question": "Qual è il modo giusto di comportarsi quando leggi una notizia molto sorprendente?",
    "options": [
     "verificare autore, data e più fonti",
     "condividerla subito",
@@ -16748,7 +16748,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando usi un'immagine o un testo trovati online?",
+   "question": "Qual è il modo giusto di comportarsi quando usi un'immagine o un testo trovati online?",
    "options": [
     "cancellare il nome dell'autore",
     "rispettare il diritto d'autore e citare la fonte",
@@ -16908,7 +16908,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando assisti a un episodio di cyberbullismo?",
+   "question": "Qual è il modo giusto di comportarsi quando assisti a un episodio di cyberbullismo?",
    "options": [
     "segnalarlo e non partecipare",
     "restare a guardare e basta",
@@ -17068,7 +17068,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando una chat diventa offensiva?",
+   "question": "Qual è il modo giusto di comportarsi quando una chat diventa offensiva?",
    "options": [
     "scrivere insulti peggiori",
     "coinvolgere più persone",
@@ -17228,7 +17228,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando ricevi un messaggio che imita un servizio e chiede password?",
+   "question": "Qual è il modo giusto di comportarsi quando ricevi un messaggio che imita un servizio e chiede password?",
    "options": [
     "inoltrarlo ai compagni",
     "considerarlo sospetto",
@@ -17388,7 +17388,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando un'app vuole microfono e fotocamera senza motivo chiaro?",
+   "question": "Qual è il modo giusto di comportarsi quando un'app vuole microfono e fotocamera senza motivo chiaro?",
    "options": [
     "pubblicare più dati",
     "non dare tutto senza riflettere",
@@ -17548,7 +17548,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando partecipi a una videolezione?",
+   "question": "Qual è il modo giusto di comportarsi quando partecipi a una videolezione?",
    "options": [
     "ascoltare e rispettare i turni",
     "giocare mentre gli altri parlano",
@@ -17708,7 +17708,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando stai per pubblicare un contenuto su di te?",
+   "question": "Qual è il modo giusto di comportarsi quando stai per pubblicare un contenuto su di te?",
    "options": [
     "cercare solo i like",
     "taggare tutti senza chiedere",
@@ -17868,7 +17868,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vuoi aumentare la sicurezza di un account?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi aumentare la sicurezza di un account?",
    "options": [
     "usare la stessa per tutto",
     "usare anche l'autenticazione a due fattori",
@@ -18028,7 +18028,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando stai per inoltrare lo screenshot di una chat privata?",
+   "question": "Qual è il modo giusto di comportarsi quando stai per inoltrare lo screenshot di una chat privata?",
    "options": [
     "girarlo a più persone",
     "fermarti e pensare a privacy e rispetto",
@@ -18188,7 +18188,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando leggi una notizia con titolo molto emotivo?",
+   "question": "Qual è il modo giusto di comportarsi quando leggi una notizia con titolo molto emotivo?",
    "options": [
     "condividerla perché colpisce",
     "crederle subito",
@@ -18348,7 +18348,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando usi uno strumento automatico o di intelligenza artificiale?",
+   "question": "Qual è il modo giusto di comportarsi quando usi uno strumento automatico o di intelligenza artificiale?",
    "options": [
     "credere a tutto sempre",
     "copiare senza controllare",
@@ -18508,7 +18508,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando compili un modulo online?",
+   "question": "Qual è il modo giusto di comportarsi quando compili un modulo online?",
    "options": [
     "dare solo i dati davvero necessari",
     "mettere password e telefono ovunque",
@@ -18668,7 +18668,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando un utente ti disturba o ti molesta online?",
+   "question": "Qual è il modo giusto di comportarsi quando un utente ti disturba o ti molesta online?",
    "options": [
     "bloccarlo e segnalarlo",
     "continuare a parlare da solo",
@@ -18828,7 +18828,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vuoi usare il digitale in modo etico?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi usare il digitale in modo etico?",
    "options": [
     "pensare solo alla velocità",
     "restare online sempre",
@@ -18988,7 +18988,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando noti che le notifiche ti distraggono sempre?",
+   "question": "Qual è il modo giusto di comportarsi quando noti che le notifiche ti distraggono sempre?",
    "options": [
     "tenere tutto acceso sempre",
     "studiare con mille chat aperte",
@@ -19148,7 +19148,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando partecipi a una discussione online?",
+   "question": "Qual è il modo giusto di comportarsi quando partecipi a una discussione online?",
    "options": [
     "argomentare senza insultare",
     "deridere chi non è d'accordo",
@@ -19308,7 +19308,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando vuoi attraversare la strada?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi attraversare la strada?",
    "options": [
     "attraversare in curva",
     "passare dove capita",
@@ -19468,7 +19468,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando il semaforo per i pedoni è rosso?",
+   "question": "Qual è il modo giusto di comportarsi quando il semaforo per i pedoni è rosso?",
    "options": [
     "giocare sul bordo",
     "passare in bici",
@@ -19628,7 +19628,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sali in auto per un viaggio?",
+   "question": "Qual è il modo giusto di comportarsi quando sali in auto per un viaggio?",
    "options": [
     "stare senza cintura",
     "allacciare la cintura",
@@ -19788,7 +19788,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando vai in bici?",
+   "question": "Qual è il modo giusto di comportarsi quando vai in bici?",
    "options": [
     "andare senza protezioni",
     "fare lo slalom tra le persone",
@@ -19948,7 +19948,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando il pallone finisce verso la strada?",
+   "question": "Qual è il modo giusto di comportarsi quando il pallone finisce verso la strada?",
    "options": [
     "correre dietro al pallone",
     "chiamare un adulto",
@@ -20108,7 +20108,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sali sull'autobus?",
+   "question": "Qual è il modo giusto di comportarsi quando sali sull'autobus?",
    "options": [
     "bloccare la porta",
     "lasciare salire e scendere con ordine",
@@ -20268,7 +20268,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando cammini sul marciapiede con altri?",
+   "question": "Qual è il modo giusto di comportarsi quando cammini sul marciapiede con altri?",
    "options": [
     "non spingere e lasciare spazio",
     "spingere i più piccoli",
@@ -20428,7 +20428,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando una persona anziana passa lentamente?",
+   "question": "Qual è il modo giusto di comportarsi quando una persona anziana passa lentamente?",
    "options": [
     "spingerla",
     "aspettare con rispetto",
@@ -20588,7 +20588,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sei vicino alla strada?",
+   "question": "Qual è il modo giusto di comportarsi quando sei vicino alla strada?",
    "options": [
     "fare gare sul bordo",
     "non giocare in carreggiata",
@@ -20748,7 +20748,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Come ci si comporta bene quando sei su un bus o in fila?",
+   "question": "Qual è il modo giusto di comportarsi quando sei su un bus o in fila?",
    "options": [
     "spingere per passare",
     "lasciarlo in mezzo",
@@ -21068,7 +21068,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando vuoi attraversare tra auto parcheggiate?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi attraversare tra auto parcheggiate?",
    "options": [
     "cercare un punto sicuro e ben visibile",
     "passare in mezzo alle auto",
@@ -21228,7 +21228,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando usi la bici in città?",
+   "question": "Qual è il modo giusto di comportarsi quando usi la bici in città?",
    "options": [
     "usare cuffie ad alto volume",
     "gareggiare con le auto",
@@ -21388,7 +21388,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando si ferma il bus e vuoi salire?",
+   "question": "Qual è il modo giusto di comportarsi quando si ferma il bus e vuoi salire?",
    "options": [
     "bloccare la porta",
     "lasciare prima scendere chi è a bordo",
@@ -21548,7 +21548,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando piove o c'è poca luce?",
+   "question": "Qual è il modo giusto di comportarsi quando piove o c'è poca luce?",
    "options": [
     "correre di più",
     "guardare meno",
@@ -21708,7 +21708,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando viaggi in auto da bambino?",
+   "question": "Qual è il modo giusto di comportarsi quando viaggi in auto da bambino?",
    "options": [
     "alzarti mentre l'auto va",
     "togliere la cintura",
@@ -21868,7 +21868,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando accompagni un compagno più piccolo?",
+   "question": "Qual è il modo giusto di comportarsi quando accompagni un compagno più piccolo?",
    "options": [
     "lasciarlo da solo",
     "spingerlo ad andare veloce",
@@ -22028,7 +22028,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando sei passeggero in auto?",
+   "question": "Qual è il modo giusto di comportarsi quando sei passeggero in auto?",
    "options": [
     "slacciare la cintura",
     "urlare vicino al guidatore",
@@ -22188,7 +22188,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando sei in una fila lunga?",
+   "question": "Qual è il modo giusto di comportarsi quando sei in una fila lunga?",
    "options": [
     "urlare",
     "saltare avanti",
@@ -22348,7 +22348,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Come ci si comporta bene quando cammini quando è buio?",
+   "question": "Qual è il modo giusto di comportarsi quando cammini quando è buio?",
    "options": [
     "usare il telefono mentre cammini",
     "cercare di essere visibile e prudente",
@@ -22508,7 +22508,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando usi il telefono mentre attraversi?",
+   "question": "Qual è il modo giusto di comportarsi quando usi il telefono mentre attraversi?",
    "options": [
     "distrarti con lo schermo",
     "rispondere mentre passi",
@@ -22572,7 +22572,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Se vuoi spiegare un cartello triangolare, qual è il comportamento corretto?",
+   "question": "Quale significato ha un cartello stradale triangolare?",
    "options": [
     "indica una gara",
     "obbliga a parcheggiare",
@@ -22828,7 +22828,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando arrivi a un incrocio con regole di precedenza?",
+   "question": "Qual è il modo giusto di comportarsi quando arrivi a un incrocio con regole di precedenza?",
    "options": [
     "ignorare chi arriva",
     "passare per primo sempre",
@@ -22988,7 +22988,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando usi bici o monopattino tra i pedoni?",
+   "question": "Qual è il modo giusto di comportarsi quando usi bici o monopattino tra i pedoni?",
    "options": [
     "suonare per spaventare",
     "fare acrobazie",
@@ -23148,7 +23148,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando sei in autobus o in metro?",
+   "question": "Qual è il modo giusto di comportarsi quando sei in autobus o in metro?",
    "options": [
     "correre dentro il mezzo",
     "lasciare zaini in mezzo",
@@ -23308,7 +23308,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando noti una persona anziana o fragile in piedi sul bus?",
+   "question": "Qual è il modo giusto di comportarsi quando noti una persona anziana o fragile in piedi sul bus?",
    "options": [
     "occupare più spazio",
     "cedere il posto",
@@ -23468,7 +23468,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando esci da scuola con molti compagni?",
+   "question": "Qual è il modo giusto di comportarsi quando esci da scuola con molti compagni?",
    "options": [
     "invadere la strada all'improvviso",
     "correre davanti agli altri",
@@ -23628,7 +23628,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando vedi una situazione pericolosa in strada?",
+   "question": "Qual è il modo giusto di comportarsi quando vedi una situazione pericolosa in strada?",
    "options": [
     "toccare tutto",
     "fare un video",
@@ -23788,7 +23788,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando puoi scegliere come spostarti?",
+   "question": "Qual è il modo giusto di comportarsi quando puoi scegliere come spostarti?",
    "options": [
     "lasciare il motore acceso",
     "occupare il marciapiede",
@@ -23948,7 +23948,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando cammini su un marciapiede stretto?",
+   "question": "Qual è il modo giusto di comportarsi quando cammini su un marciapiede stretto?",
    "options": [
     "giocare sul bordo",
     "lasciare il passaggio libero",
@@ -24012,7 +24012,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Se vuoi spiegare perché la sicurezza stradale è un bene comune, qual è il comportamento corretto?",
+   "question": "Quale affermazione spiega perché la sicurezza stradale è un bene comune?",
    "options": [
     "interessa solo alle città grandi",
     "riguarda solo chi guida",
@@ -24332,7 +24332,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Se vuoi ricordare il ruolo del pedone, qual è il comportamento corretto?",
+   "question": "Quale affermazione descrive il ruolo del pedone?",
    "options": [
     "il pedone non ha regole",
     "basta il semaforo e non serve guardare",
@@ -24588,7 +24588,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando cammini o vai in bici con poca visibilità?",
+   "question": "Qual è il modo giusto di comportarsi quando cammini o vai in bici con poca visibilità?",
    "options": [
     "correre di più",
     "fidarti del caso",
@@ -24748,7 +24748,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando usi i mezzi pubblici con altre persone?",
+   "question": "Qual è il modo giusto di comportarsi quando usi i mezzi pubblici con altre persone?",
    "options": [
     "occupare più posti possibile",
     "spingere per salire",
@@ -24908,7 +24908,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando in strada incontri utenti più fragili?",
+   "question": "Qual è il modo giusto di comportarsi quando in strada incontri utenti più fragili?",
    "options": [
     "occupare rampe e passaggi",
     "ignorare i loro bisogni",
@@ -25068,7 +25068,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Come ci si comporta bene quando ragioni sul percorso casa-scuola?",
+   "question": "Qual è il modo giusto di comportarsi quando ragioni sul percorso casa-scuola?",
    "options": [
     "cambiare strada a caso",
     "camminare distratto col telefono",
@@ -25452,7 +25452,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Se vuoi collegare cortesia e sicurezza, qual è il comportamento corretto?",
+   "question": "Quale affermazione collega cortesia e sicurezza?",
    "options": [
     "la cortesia riduce tensioni e rischi",
     "serve solo quando non c'è traffico",
@@ -30930,7 +30930,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Bonus difficile: trovi un commento offensivo in chat di classe. cosa è meglio fare?",
+   "question": "Bonus difficile: trovi un commento offensivo in chat di classe. Che cosa è meglio fare?",
    "options": [
     "Resto gentile, non rispondo male e avviso un adulto",
     "Insulto di più",
@@ -30963,7 +30963,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Bonus difficile: al parco vedi rifiuti vicino a un cestino pieno. cosa è meglio fare?",
+   "question": "Bonus difficile: al parco vedi rifiuti vicino a un cestino pieno. Che cosa è meglio fare?",
    "options": [
     "Li raccolgo se posso in sicurezza o avviso un adulto",
     "Li lascio lì",
@@ -31125,7 +31125,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Un compagno è caduto nel cortile e si è fatto male. cosa è meglio fare?",
+   "question": "Un compagno è caduto nel cortile e si è fatto male. Che cosa è meglio fare?",
    "options": [
     "Ridi con gli altri",
     "Ti avvicini e lo aiuti o chiami una maestra",
@@ -31253,7 +31253,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Nel corridoio della scuola trovi un foglio di carta per terra. Nessuno ti guarda. cosa è meglio fare?",
+   "question": "Nel corridoio della scuola trovi un foglio di carta per terra. Nessuno ti guarda. Che cosa è meglio fare?",
    "options": [
     "Lo lasci lì, non è colpa tua",
     "Lo raccogli e lo butti nel cestino",
@@ -31413,7 +31413,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. cosa è meglio fare?",
+   "question": "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. Che cosa è meglio fare?",
    "options": [
     "La butti sull'erba",
     "La tieni in mano finché non trovi un cestino",
@@ -32629,7 +32629,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Ricevi un messaggio da uno sconosciuto che ti chiede di incontrarlo di persona. cosa è meglio fare?",
+   "question": "Ricevi un messaggio da uno sconosciuto che ti chiede di incontrarlo di persona. Che cosa è meglio fare?",
    "options": [
     "Vai all'appuntamento da solo",
     "Non rispondi e lo dici subito a un adulto di fiducia",

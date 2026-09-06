@@ -43,6 +43,7 @@ const SBAGLIATE = [
   "Irene compra 7 sciarpe a 16 euro l'uno.",
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
+  "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. cosa è meglio fare?",
   '27 + 10 =?',
   "La risposta corretta è 'l'euro'.",
   'Che cosa mostra più rispetto quando vuoi ricordare su quale valore si fonda la Repubblica italiana?',
@@ -52,6 +53,9 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "Una civiltà vissuta nel 2000 a.C. è più antica di una del 500 a.C.?",
+  'Sulla linea del tempo, 3000 a.C. viene...',
+  "Quale complemento risponde alla domanda 'chi? che cosa?' dopo un verbo transitivo?",
   'Perché il ghiaccio si scioglie al sole?',
   'Tutto quello che si legge su internet è sempre vero?',
   'La preistoria viene prima o dopo la storia?',
