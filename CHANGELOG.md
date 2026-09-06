@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.12.48 - 2026-09-06
+
+### Fixed
+- fix(build): `scripts/refresh_structured_data.py` derivava il `dateModified` dei JSON-LD dall'mtime del file. L'mtime non dice quando il contenuto è cambiato: un clone, un `git checkout` di branch o un merge lo riportano all'istante corrente, quindi ogni cambio di branch faceva dichiarare "modificate oggi" tutte e 23 le pagine. Due conseguenze concrete: diffs di puro rumore da scartare a mano prima di ogni commit (successo due volte durante il merge su main di oggi), e date di modifica false verso Google su pagine il cui contenuto non era stato toccato. Ora la data viene dall'ultimo commit che ha toccato il file, con l'mtime usato solo per i file non ancora committati — che sono davvero in lavorazione adesso.
+- La logica esisteva già, corretta, in `scripts/generate_sitemap.py` per il `lastmod` della sitemap. Estratta in `scripts/git_dates.py` e usata da entrambi, invece di copiarla: sono due script Python nella stessa cartella, un modulo condiviso non ha i vincoli di ordine di caricamento che hanno gli helper lato browser.
+
+### Notes
+- Verificato con `touch *.html` (mtime di tutte le pagine portato all'istante corrente) seguito da `npm run freshness`: zero file riscritti. Prima, la stessa sequenza riscriveva il `dateModified` di una ventina di pagine più il `lastmod` di `sitemap.xml`.
+- chore: bump versione `4.12.47` → `4.12.48`.
+
 ## 4.12.47 - 2026-09-06
 
 ### Fixed

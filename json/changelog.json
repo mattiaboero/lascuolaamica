@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.48",
+  "items": [
+   "Le date di aggiornamento delle pagine ora riflettono la modifica reale del contenuto invece dell'ultimo scaricamento dei file."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.47",
   "items": [
    "Correzione interna alla catena di controlli automatici prima della pubblicazione. Nessun cambiamento nei giochi."

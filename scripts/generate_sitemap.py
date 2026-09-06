@@ -36,60 +36,16 @@ PAGES = [
 ]
 
 
-def _dirty_files() -> frozenset[str]:
-    result = subprocess.run(
-        ["git", "status", "--porcelain", "-z"],
-        cwd=ROOT,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        return frozenset()
-    dirty: set[str] = set()
-    tokens = result.stdout.split("\0")
-    i = 0
-    while i < len(tokens):
-        token = tokens[i]
-        if len(token) < 3:
-            i += 1
-            continue
-        status = token[:2]
-        dirty.add(token[3:])
-        # Renames/copies emit two NUL-separated paths: new first, then old.
-        i += 2 if any(code in status for code in ("R", "C")) else 1
-    return frozenset(dirty)
-
-
-def _lastmod_for(filename: str, dirty: frozenset[str]) -> str:
-    path = ROOT / filename
-    if not path.exists():
-        return datetime.now().date().isoformat()
-    try:
-        if filename in dirty:
-            return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
-
-        result = subprocess.run(
-            ["git", "log", "-1", "--format=%cI", "--", str(path)],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        stamp = (result.stdout or "").strip()
-        if result.returncode == 0 and stamp:
-            return datetime.fromisoformat(stamp.replace("Z", "+00:00")).date().isoformat()
-    except Exception as exc:  # git non disponibile o repo senza storia
-        print(f"[warn] git log non utilizzabile per {path.name}, uso mtime: {exc}", file=sys.stderr)
-    return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from git_dates import dirty_files, last_modified_date  # noqa: E402
 
 
 def main() -> int:
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    dirty = _dirty_files()
+    dirty = dirty_files(ROOT)
     for route, source_file, changefreq, priority in PAGES:
         loc = "https://lascuolaamica.it/" if route == "/" else f"https://lascuolaamica.it{route}"
-        lastmod = _lastmod_for(source_file, dirty)
+        lastmod = last_modified_date(source_file, ROOT, dirty)
         lines.extend(
             [
                 "  <url>",

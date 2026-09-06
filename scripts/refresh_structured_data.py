@@ -17,6 +17,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from git_dates import dirty_files, last_modified_date  # noqa: E402
+
 # Tutte le pagine del sito: una lista hardcoded lascia fuori le pagine nuove
 # (tabelline.html e breakout.html erano gia' scoperte) senza segnalarlo.
 HTML_FILES = sorted(p.name for p in ROOT.glob("*.html"))
@@ -149,11 +152,15 @@ def _replace_ldjson_blocks(html: str, date_iso: str) -> tuple[str, int]:
 
 
 def main() -> int:
+    # La data viene dalla storia git, non dall'mtime: un clone o un cambio di
+    # branch riportano l'mtime a adesso, e i JSON-LD dichiaravano modificate
+    # oggi tutte le pagine. I file non ancora committati restano sull'mtime.
+    dirty = dirty_files(ROOT)
     for rel in HTML_FILES:
         path = ROOT / rel
         if not path.exists():
             continue
-        date_value = datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
+        date_value = last_modified_date(rel, ROOT, dirty)
         html = path.read_text(encoding="utf-8")
         new_html, touched = _replace_ldjson_blocks(html, date_value)
         if touched and new_html != html:
