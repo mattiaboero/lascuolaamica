@@ -78,12 +78,6 @@ body.subject-inglese {
   --card-bg: #fff9f1;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Nunito', 'Nunito Fallback', sans-serif;
   background: linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-3) 100%);
@@ -1606,33 +1600,6 @@ body.subject-problemi .answer-btn {
   opacity: 0.95;
 }
 
-.footer-support-cta {
-  flex: 0 0 auto;
-  width: fit-content;
-  max-width: calc(100% - 8px);
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: #FF3D00;
-  color: #fff !important;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 20px;
-  min-height: 44px;
-  font-size: 0.95rem;
-  font-weight: 900;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  transition: transform 0.15s, filter 0.15s;
-}
-
-.footer-support-cta:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1798,30 +1765,9 @@ body.subject-problemi .answer-btn {
   .bonus-btn:hover,
   .btn-replay:hover,
   .btn-home:hover,
-  .btn-clear:hover,
-  .footer-support-cta:hover {
+  .btn-clear:hover {
     transform: none;
     filter: none;
-  }
-}
-
-html[data-motion="reduce"] *,
-html[data-motion="reduce"] *::before,
-html[data-motion="reduce"] *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 

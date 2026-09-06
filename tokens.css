@@ -58,3 +58,41 @@
   /* ---- Ombre (tinta calda) ---- */
   --shadow-card: 0 14px 34px rgba(44 42 40 / 0.16);
 }
+
+/* Reset condiviso. Era ridichiarato in index.css, info-pages.css,
+   subject-quiz-theme.css e (nella sola parte box-sizing) 404.css: quattro copie
+   della stessa regola, che ogni pagina ereditava comunque da uno di quei file.
+   tokens.css e' l'unico foglio incluso da tutte e 23 le pagine, e viene per
+   primo: e' il posto giusto per un reset. */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Riduzione del movimento, in un posto solo. Il blocco @media era in index.css,
+   inglese.css e subject-quiz-theme.css ma NON in faq.css e info-pages.css:
+   /faq e le 10 pagine info ignoravano la preferenza di sistema, e qualunque
+   animazione aggiunta li' non l'avrebbe ereditata. Il gemello html[data-motion]
+   (il toggle del sito) era a sua volta copiato in quattro file. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-motion="reduce"] *,
+html[data-motion="reduce"] *::before,
+html[data-motion="reduce"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}

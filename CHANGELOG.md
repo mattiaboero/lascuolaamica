@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.12.39 - 2026-09-06
+
+### Fixed
+- fix(a11y): le 10 pagine info (`accessibilita`, `ai-info`, `chi-siamo`, `cookie`, `per-genitori`, `per-insegnanti`, `privacy`, `supporta`, `supporto-satispay`, `tabelline`) ignoravano la preferenza di sistema "riduci il movimento". `info-pages.css` aveva solo il blocco `html[data-motion="reduce"]` del toggle interno, non il `@media (prefers-reduced-motion: reduce)`. Misurato con Chromium in `reducedMotion: 'reduce'`: `transition-duration` di un link passa da `0s` a `1e-05s` su `/tabelline` e `/supporta`. L'audit segnalava anche `/faq`, ma quella pagina eredita il blocco da `subject-quiz-theme.css` ed era già a posto.
+- perf: `js/lazy-css.js` iniettava `rewards.css` (606 righe) su tutte e 23 le pagine, comprese `/404` e `/tabelline`, che non caricano `js/rewards.js` e non hanno una sola classe `reward-*`/`lb-card` nel markup. L'iniezione ora avviene solo se la pagina dichiara il `preload` di `rewards.css` nell'head, che è il segnale già presente sulle 21 pagine che ne hanno bisogno; rimosso il preload orfano da `tabelline.html`.
+- perf: su `faq.html` i due preload dei font e `fonts.css` stavano dopo ~245 righe di JSON-LD, e su `tabelline.html` l'intero blocco CSS stava dopo quattro blocchi JSON-LD. Il parser doveva attraversare tutto il JSON prima di scoprire i font e i fogli render-blocking. Spostati sopra, con l'ordine reciproco invariato.
+
+### Changed
+- refactor(css): rimossi 96 righe di `@keyframes` duplicati da `inglese.css` (`popIn`, `slideUp`, `fbPop`, `resultBoom`, `mascotResultIn`, `mascotResultCelebrate`, `emojiWiggle`), verificati identici a quelli di `subject-quiz-theme.css` che `inglese.html` carica prima: erano scaricati e parsati due volte sulla stessa pagina.
+- refactor(css): il reset universale era ridichiarato in `index.css`, `info-pages.css`, `subject-quiz-theme.css` e — nella sola parte `box-sizing` — in `404.css`. Verificato che ognuna delle 23 pagine eredita esattamente uno di quei quattro file, quindi spostarlo in `tokens.css` (l'unico foglio incluso ovunque, e il primo caricato) non cambia nulla per nessuna pagina.
+- refactor(css): il componente `.footer-support-cta` era copiato in `index.css`, `info-pages.css`, `subject-quiz-theme.css` e — per l'override `@media (hover: none)` — anche in `inglese.css`, quarta copia che l'audit non aveva visto. Consolidato in `utilities.css`, incluso da tutte le pagine e caricato per ultimo. Nota emersa durante la verifica: `shared.js` inietta a runtime uno `<style>` che ridefinisce lo stesso selettore con `background`/`color` in `!important` e un border-radius a pillola, quindi buona parte di quelle regole CSS non era mai visibile. Le proprietà residue che restano effettive (min-height, font-size, font-weight, transition) ora valgono uguali su tutte le pagine: prima su `inglese.html` il `font-weight` risultava 800 invece di 900 perché `.footer-link` di `inglese.css`, caricato dopo il tema, vinceva a parità di specificità. Verificato con screenshot del footer prima/dopo: nessuna differenza visibile, il testo visibile sta in `.support-tag` che ha un peso proprio.
+- refactor(css): anche i due blocchi di riduzione del movimento (`@media (prefers-reduced-motion: reduce)` e `html[data-motion="reduce"]`) erano copiati rispettivamente in 3 e 4 file. Ora stanno una volta sola in `tokens.css`, il che è anche ciò che chiude il buco delle pagine info.
+- chore: bump versione `4.12.38` → `4.12.39`.
+
+### Notes
+- non fatto(css): `index.css` definisce una propria palette per le card della home (`--math-a` ecc.) diversa dai token Wada Sanzo di `tokens.css` (`--subj-math-a` ecc.) usati dalle pagine quiz, quindi i colori materia non coincidono tra home e pagina della stessa materia. Coerente con il commento "FASE 0" in `tokens.css`: sembra una migrazione a fasi ancora aperta, non una svista, e allinearla è una decisione di design, non una pulizia. Lasciata invariata in attesa di conferma.
+- non fatto(css): `.q-explanation` (`subject-quiz-theme.css`) anima `max-height`, che non è compositabile e forza un reflow a ogni apertura, cioè dopo ogni risposta su tutte le 8 pagine quiz. È l'animazione più frequente del sito su una proprietà costosa, ma l'elemento è piccolo e la riscrittura (`grid-template-rows` o `scaleY`) cambia il rendering dell'apertura: va misurata prima, non cambiata al buio.
+
 ## 4.12.38 - 2026-09-06
 
 ### Fixed

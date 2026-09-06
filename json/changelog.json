@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.39",
+  "items": [
+   "Le pagine informative ora rispettano l'impostazione \"riduci le animazioni\" del dispositivo, come già facevano le pagine dei quiz.",
+   "Pagine più leggere: rimossi fogli di stile e animazioni duplicate che venivano scaricati senza essere usati."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.38",
   "items": [
    "Le immagini dei premi già sbloccati non spariscono più a ogni aggiornamento del sito: restano disponibili anche senza connessione.",
