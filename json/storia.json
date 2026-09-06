@@ -18614,10 +18614,10 @@
     "re spartani",
     "consoli romani",
     "faraoni egizi",
-    "dei greci"
+    "dei Greci"
    ],
    "answerIndex": 3,
-   "answer": "dei greci",
+   "answer": "dei Greci",
    "explanation": "La risposta corretta è dei Greci.",
    "active": true,
    "tag": "grecia;polis;classe5",
@@ -25091,7 +25091,7 @@
    "question": "I dinosauri vissero...",
    "options": [
     "Prima degli esseri umani",
-    "Nello stesso tempo dei romani",
+    "Nello stesso tempo dei Romani",
     "Dopo i computer",
     "Nel futuro"
    ],
@@ -25648,14 +25648,14 @@
    "difficulty": 1,
    "question": "Sulla linea del tempo, quale civiltà viene molto prima dei Romani?",
    "options": [
-    "Gli egizi",
+    "Gli Egizi",
     "I ciclisti moderni",
     "Gli astronauti",
     "I vigili urbani"
    ],
    "answerIndex": 0,
-   "answer": "Gli egizi",
-   "explanation": "Gli egizi appartengono all'antichità e precedono i Romani.",
+   "answer": "Gli Egizi",
+   "explanation": "Gli Egizi appartengono all'antichità e precedono i Romani.",
    "active": true,
    "tag": "antiche_civilta",
    "tags": [
@@ -25832,7 +25832,7 @@
    "area": "mesopotamia",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "I sumeri scrivevano soprattutto su...",
+   "question": "I Sumeri scrivevano soprattutto su...",
    "options": [
     "Lastre di ghiaccio",
     "Tele di plastica",
@@ -26111,7 +26111,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli ebrei credevano in...",
+   "question": "Gli Ebrei credevano in...",
    "options": [
     "Nessuna legge",
     "Molti dei del mare",
@@ -26275,7 +26275,7 @@
    ],
    "answerIndex": 3,
    "answer": "Mercanti e navigatori",
-   "explanation": "I fenici commerciavano molto via mare.",
+   "explanation": "I Fenici commerciavano molto via mare.",
    "active": true,
    "tag": "civilta_mediterranee",
    "tags": [
@@ -26297,7 +26297,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Ai fenici si deve la diffusione di un pratico...",
+   "question": "Ai Fenici si deve la diffusione di un pratico...",
    "options": [
     "Calendario lunare di 3 giorni",
     "Treno a vapore",
@@ -26580,12 +26580,12 @@
    "options": [
     "I medievali europei",
     "I vigili del fuoco",
-    "Gli egizi",
+    "Gli Egizi",
     "Gli astronauti"
    ],
    "answerIndex": 2,
-   "answer": "Gli egizi",
-   "explanation": "Gli egizi appartengono a un'epoca precedente a Roma.",
+   "answer": "Gli Egizi",
+   "explanation": "Gli Egizi appartengono a un'epoca precedente a Roma.",
    "active": true,
    "tag": "antiche_civilta",
    "tags": [
@@ -26731,7 +26731,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli etruschi vivevano soprattutto nell'Italia...",
+   "question": "Gli Etruschi vivevano soprattutto nell'Italia...",
    "options": [
     "Artica",
     "Centrale",
@@ -26762,7 +26762,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli etruschi erano molto abili nella lavorazione di...",
+   "question": "Gli Etruschi erano molto abili nella lavorazione di...",
    "options": [
     "Carta da giornale",
     "Cemento armato",
@@ -26797,11 +26797,11 @@
    "options": [
     "Le strade dei computer",
     "Le previsioni del tempo di oggi",
-    "Usi e credenze degli etruschi",
+    "Usi e credenze degli Etruschi",
     "Le regole del basket"
    ],
    "answerIndex": 2,
-   "answer": "Usi e credenze degli etruschi",
+   "answer": "Usi e credenze degli Etruschi",
    "explanation": "Le pitture funerarie mostrano scene di vita e riti.",
    "active": true,
    "tag": "etruschi",
@@ -26855,7 +26855,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Gli etruschi influenzarono anche i Romani soprattutto in...",
+   "question": "Gli Etruschi influenzarono anche i Romani soprattutto in...",
    "options": [
     "Tecniche, religione e simboli del potere",
     "Fotografia digitale",
@@ -27568,7 +27568,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "I fenici fondavano scali e colonie soprattutto per...",
+   "question": "I Fenici fondavano scali e colonie soprattutto per...",
    "options": [
     "Allenare gladiatori",
     "Coltivare riso in montagna",
@@ -29613,7 +29613,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "civilta_fluviali",
    "difficulty": 2,
-   "question": "Gli egizi costruirono canali di irrigazione intorno al Nilo. A cosa servivano?",
+   "question": "Gli Egizi costruirono canali di irrigazione intorno al Nilo. A cosa servivano?",
    "options": [
     "A navigare più velocemente",
     "A portare l'acqua del fiume anche nei campi lontani dalla riva",

@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.12.74 - 2026-09-06
+
+**Tre regole scritte nei lotti precedenti erano più strette del difetto.** Il lotto ha corretto quello che si erano lasciate dietro.
+
+### Fixed
+- fix(contenuti): **6 spiegazioni con il participio maschile dopo un nome femminile plurale** (`20 farfalle rimasti`, `42 gomme raccolti`). La regola della 4.12.55 elencava i nomi a mano — `lumache`, `mele`, `pagine` — e non conteneva `capre`, `farfalle`, `gomme`. Sostituita con un criterio generale che non ha bisogno di elencarli: **numero + nome plurale in `-e` + participio in `-i`**. Il numero davanti serve a escludere i due falsi positivi che il criterio senza numero produce (`essere usati`, `registrare raccolti`), dove la parola in `-e` è un infinito.
+- fix(contenuti): **4 domande chiedevano `Quanti ne ha` di gomme, figurine e matite** — femminili, quindi `Quante`.
+- fix(contenuti): **15 nomi di popolo ancora in minuscolo.** La 4.12.70 ne aveva corretti 20 ma toccava solo domanda e spiegazione, e cercava l'articolo in minuscolo: a inizio frase `Gli egizi` non veniva visto, e `answer` e `options` non erano nemmeno guardate. Ora la regola accetta l'articolo maiuscolo, e la correzione ha toccato tutti i campi.
+- fix(contenuti): `Quale parte della pianta stanno sotto terra?` e `Quale parte della pianta sono spesso verdi?` — soggetto singolare, verbo plurale. Ora `Quali parti`.
+
+### Changed
+- lint(contenuti): la regola sull'accordo del participio non elenca più i nomi; regola nuova per `Quanti ne` riferito a un nome femminile; la regola sugli etnonimi accetta l'articolo maiuscolo.
+
+### Notes
+- provato un controllo su `Quale <singolare>` con risposta plurale: 67 casi, ma quasi tutti corretti — `Quale popolo inventò la scrittura? → I Sumeri` è giusto, e `Quale parola è plurale? → gatti` è l'esercizio stesso. Ha comunque fatto emergere i due accordi rotti sopra, che erano gli unici veri.
+
 ## 4.12.73 - 2026-09-06
 
 ### Fixed

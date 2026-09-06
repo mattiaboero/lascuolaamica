@@ -44,11 +44,14 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  '42 - 22 = 20 farfalle rimasti.',
+  'Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quanti ne ha in tutto?',
   "'ca-sa' è divisa bene",
   "L'ombra si forma quando un corpo?",
   'I Fenici erano famosi soprattutto come?',
   'Il soggetto è "Fatima\' e il predicato è \'ha comprato".',
   'Quale sistema di scrittura usavano gli egizi?',
+  "Gli egizi appartengono all'antichita.",
   "Nell'acqua è la risposta corretta.",
   'Sia vegetali sia animali è la risposta corretta.',
   'Quante ciliegine riceve ogni bambino se li divide in parti uguali?',
@@ -64,6 +67,10 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  '42 - 22 = 20 farfalle rimaste.',
+  'I fiumi possono essere usati per la navigazione.',
+  'Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quante ne ha in tutto?',
+  'Pietro raccoglie 13 libri al mattino e 16 nel pomeriggio. Quanti ne ha in tutto?',
   "'ca-sa' è divisa bene.",
   'Un ciclista viaggia a 26 km/h. In 18 ore quanti km percorre?',
   'Quale materiale è duro come un chiodo?',

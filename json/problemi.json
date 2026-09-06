@@ -1041,7 +1041,7 @@
    ],
    "answerIndex": 2,
    "answer": "19",
-   "explanation": "26 - 7 = 19 capre rimasti.",
+   "explanation": "26 - 7 = 19 capre rimaste.",
    "active": true,
    "tag": "sottrazione,animali",
    "tags": [
@@ -2241,7 +2241,7 @@
    ],
    "answerIndex": 1,
    "answer": "20",
-   "explanation": "42 - 22 = 20 farfalle rimasti.",
+   "explanation": "42 - 22 = 20 farfalle rimaste.",
    "active": true,
    "tag": "sottrazione,animali",
    "tags": [
@@ -2772,7 +2772,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quanti ne ha in tutto?",
+   "question": "Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quante ne ha in tutto?",
    "options": [
     "33",
     "27",
@@ -2781,7 +2781,7 @@
    ],
    "answerIndex": 3,
    "answer": "42",
-   "explanation": "20 + 22 = 42 gomme raccolti.",
+   "explanation": "20 + 22 = 42 gomme raccolte.",
    "active": true,
    "tag": "addizione,oggetti",
    "tags": [
@@ -4032,7 +4032,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Pietro raccoglie 13 gomme al mattino e 16 nel pomeriggio. Quanti ne ha in tutto?",
+   "question": "Pietro raccoglie 13 gomme al mattino e 16 nel pomeriggio. Quante ne ha in tutto?",
    "options": [
     "21",
     "36",
@@ -4041,7 +4041,7 @@
    ],
    "answerIndex": 3,
    "answer": "29",
-   "explanation": "13 + 16 = 29 gomme raccolti.",
+   "explanation": "13 + 16 = 29 gomme raccolte.",
    "active": true,
    "tag": "addizione,oggetti",
    "tags": [
@@ -4512,7 +4512,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Giorgia raccoglie 28 figurine al mattino e 21 nel pomeriggio. Quanti ne ha in tutto?",
+   "question": "Giorgia raccoglie 28 figurine al mattino e 21 nel pomeriggio. Quante ne ha in tutto?",
    "options": [
     "59",
     "56",
@@ -4521,7 +4521,7 @@
    ],
    "answerIndex": 2,
    "answer": "49",
-   "explanation": "28 + 21 = 49 figurine raccolti.",
+   "explanation": "28 + 21 = 49 figurine raccolte.",
    "active": true,
    "tag": "addizione,oggetti",
    "tags": [
@@ -5082,7 +5082,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Alice raccoglie 24 matite al mattino e 9 nel pomeriggio. Quanti ne ha in tutto?",
+   "question": "Alice raccoglie 24 matite al mattino e 9 nel pomeriggio. Quante ne ha in tutto?",
    "options": [
     "33",
     "18",
@@ -5091,7 +5091,7 @@
    ],
    "answerIndex": 0,
    "answer": "33",
-   "explanation": "24 + 9 = 33 matite raccolti.",
+   "explanation": "24 + 9 = 33 matite raccolte.",
    "active": true,
    "tag": "addizione,oggetti",
    "tags": [

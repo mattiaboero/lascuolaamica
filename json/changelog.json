@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.74",
+  "items": [
+   "Corretti 10 accordi sbagliati nei problemi di classe 2 (\"20 farfalle rimasti\", \"Quanti ne ha\" riferito alle gomme).",
+   "Sistemati altri 15 nomi di popolo in minuscolo, questa volta anche nelle risposte e nelle opzioni.",
+   "Corrette 2 domande di scienze in cui il soggetto singolare aveva il verbo al plurale."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.73",
   "items": [
    "Corretto il refuso \"ogni quadern costa\" in 6 problemi di classe 3.",

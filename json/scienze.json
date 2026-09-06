@@ -3708,7 +3708,7 @@
    "area": "viventi_non_viventi",
    "subarea": "piante",
    "difficulty": 1,
-   "question": "Quale parte della pianta stanno sotto terra?",
+   "question": "Quali parti della pianta stanno sotto terra?",
    "options": [
     "radici",
     "fiore",
@@ -3770,7 +3770,7 @@
    "area": "viventi_non_viventi",
    "subarea": "piante",
    "difficulty": 1,
-   "question": "Quale parte della pianta sono spesso verdi?",
+   "question": "Quali parti della pianta sono spesso verdi?",
    "options": [
     "fusto",
     "fiore",

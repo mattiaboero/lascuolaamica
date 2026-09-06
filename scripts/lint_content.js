@@ -99,8 +99,11 @@ const GRAMMATICA = [
   // Trovate dal lotto di prova sulle domande a scheletro unico: participio
   // maschile dopo un nome femminile plurale nelle spiegazioni ("10 lumache
   // rimasti") e frase che inizia con un nome comune senza articolo.
-  { pattern: /\b(?:lumache|galline|mele|pere|caramelle|figurine|pagine|matite|penne|uova|scatole|piante|fragole)\s+(?:rimasti|finiti|venduti|mangiati|comprati)\b/i,
+  { pattern: /\b\d+\s+[a-zà-ù]{4,}e\s+(?:rimast|finit|vendut|mangiat|comprat|raccolt|usat|pres|pers|contat|distribuit|arrivat|cadut|nat|cresciut|colorat|piantat|sistemat|regalat|trovat)i\b/i,
     msg: 'accordo: participio maschile dopo un nome femminile plurale (es. "10 lumache rimasti")' },
+  { pattern: /\b(?:gomme|figurine|matite|caramelle|mele|pere|banane|carote|ciliegine|fragole|farfalle|capre|penne|scatole|monete|conchiglie|palline|pagine|magliette|sciarpe)\b[^.?!]*[.?!][^.?!]*\bQuanti\s+ne\b/,
+    soloDomanda: true,
+    msg: 'accordo: "Quanti ne" riferito a un nome femminile (serve "Quante ne")' },
   { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro|Pesce|Nuvola|Farfalla|Uccello|Cavallo|Ape|Roccia|Neve|Pioggia|Vento|Sabbia|Erba|Foglia|Automobile|Fungo|Matita)\s+(?:è|era|ha)(?=\s|$)/,
     msg: "manca l'articolo a inizio frase (es. \"Gatto è un essere\" invece di \"Il gatto è un essere\")" },
   // In italiano una domanda non puo' finire con una preposizione: se la frase e'
@@ -197,7 +200,7 @@ const GRAMMATICA = [
   // greci", "gli egizi"). Come aggettivo la minuscola e' corretta ("i vasi
   // greci"), quindi la regola chiede l'articolo o la preposizione articolata
   // subito prima, che e' il segnale del sostantivo.
-  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:i|gli|dei|degli|ai|agli|dai|dagli|nei|negli|coi)\s+(?:fenici|etruschi|sumeri|egizi|greci|romani|babilonesi|assiri|micenei|cretesi|persiani|ateniesi|spartani|ebrei|mesopotamici|minoici|cartaginesi|celti|longobardi|franchi)\b/,
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Ii]|[Gg]li|[Dd]ei|[Dd]egli|[Aa]i|[Aa]gli|[Dd]ai|[Dd]agli|[Nn]ei|[Nn]egli|[Cc]oi)\s+(?:fenici|etruschi|sumeri|egizi|greci|romani|babilonesi|assiri|micenei|cretesi|persiani|ateniesi|spartani|ebrei|mesopotamici|minoici|cartaginesi|celti|longobardi|franchi|unni)\b/,
     msg: 'nome di popolo in minuscolo usato come sostantivo (es. "gli egizi" invece di "gli Egizi")' },
   // Dal lotto 15: frase sospesa in cui "quando" o "come" sono congiunzioni, non
   // interrogativi ("L'ombra si forma quando un corpo?", "Un materiale
