@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.12.75 - 2026-09-06
+
+**Lotto magro: due refusi su 60 domande lette.** Vale la pena registrarlo — dopo diciotto lotti i difetti sistematici si stanno esaurendo, e quattro criteri di ricerca su cinque hanno restituito solo falsi positivi.
+
+### Fixed
+- fix(contenuti): `peròh` fra le opzioni di `Quale parola è una congiunzione?`. Sembra un `però` storpiato di proposito per non avere due risposte corrette nella stessa domanda — `però` è una congiunzione quanto `e`. Sostituito con `veloce`, che congiunzione non è.
+- fix(contenuti): `iperoniìmi` → `iperonimi` in una spiegazione.
+
+### Notes
+Quattro ricerche fatte e chiuse senza correzioni, perché **quello che sembrava un difetto era la forma giusta**:
+- **62 domande hanno opzioni che differiscono solo per accenti o punteggiatura** (`perche | perchè | perché | percè`, `3,05 | 3,5 | 3,50 | 35,0`). Sono esercizi di ortografia e di numeri decimali: la differenza *è* l'oggetto della domanda.
+- **27 parole hanno una lettera dopo la vocale accentata** (`citàa`, `pèrche`, `càffè`). Quasi tutte sono distrattori voluti negli esercizi sull'accento, e le restanti sono accenti didattici legittimi (`tàvolo` per mostrare l'accento tonico, `hypér` per l'etimologia greca). Solo `peròh` e `iperoniìmi` erano refusi, e per questo non è stata aggiunta nessuna regola: darebbe 27 falsi positivi.
+- **`il sole tramonta` in minuscolo, contro 33 `Sole` maiuscoli.** Non è un'incoerenza: la maiuscola vale per l'astro in contesto astronomico (`il Sole è la stella al centro`), la minuscola per l'uso quotidiano (`il sole tramonta`, `girasole`). Il corpus fa già la distinzione giusta.
+- **8 "punti senza spazio"** sono i puntini dentro le citazioni grammaticali (`'né...né'`, `'più...più'`).
+
+Un controllo è invece rassicurante: **nessuna spiegazione indica come corretta un'opzione diversa da `answer`**, su tutte le 9.879 domande. Le inversioni di forma fatte nella 4.12.64 e nella 4.12.69 non hanno spostato nessuna risposta.
+
 ## 4.12.74 - 2026-09-06
 
 **Tre regole scritte nei lotti precedenti erano più strette del difetto.** Il lotto ha corretto quello che si erano lasciate dietro.

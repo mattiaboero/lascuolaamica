@@ -1816,7 +1816,7 @@
    "options": [
     "e",
     "molto",
-    "peròh",
+    "veloce",
     "sedia"
    ],
    "answerIndex": 0,
@@ -28494,7 +28494,7 @@
    ],
    "answerIndex": 2,
    "answer": "rosa",
-   "explanation": "Un iponimo è una parola il cui significato è incluso in quello di un'altra parola più generale (iperonimo). 'Rosa' è un tipo specifico di fiore, quindi 'rosa' è un iponimo di 'fiore'. Al contrario, 'pianta', 'vegetazione' e 'natura' sono termini più generali di 'fiore' (iperoniìmi o coordinate).",
+   "explanation": "Un iponimo è una parola il cui significato è incluso in quello di un'altra parola più generale (iperonimo). 'Rosa' è un tipo specifico di fiore, quindi 'rosa' è un iponimo di 'fiore'. Al contrario, 'pianta', 'vegetazione' e 'natura' sono termini più generali di 'fiore' (iperonimi o coordinate).",
    "active": true,
    "tag": "italiano;lessico;classe_5;primaria",
    "tags": [
