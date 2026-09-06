@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.73 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **`In cartoleria ogni quadern costa 8 euro`** — la parola è troncata in 6 problemi di classe 3. Il rilevatore di troncature scritto per il lotto scorso non l'aveva vista: cercava parole **rare** (≤2 occorrenze), e con 6 occorrenze un refuso sistematico non è raro. Riscritto con un criterio a rapporto — la forma completa almeno dieci volte più frequente del troncone — che lo trova.
+- fix(contenuti): **3 piscine da 88, 225 e 451 litri** (una vasca da bagno ne contiene 150). Come per gli aerei lenti della 4.12.72 ho cambiato il contenitore e non il numero: bidone, serbatoio, cisterna. Riformulata anche la frase, perché cambiando genere il participio non concordava più (`Un serbatoio ha 225 litri svuotata`).
+- fix(contenuti): `Una classe di 3 alunni raccoglie 72 euro` → `Un gruppo di 3 alunni`.
+
+### Changed
+- test(contenuti): **`scripts/check_plausibility.js`**, in `npm run verify` e in `prepublish-check.sh`. Verifica che i numeri dei problemi siano compatibili col soggetto: velocità di aerei, navi, treni, biciclette e automobili, capienza di piscine e bottiglie, lunghezza di una maratona. Gli intervalli sono larghi di proposito — servono a intercettare l'assurdo, non il caso limite. Verificato reintroducendo l'aereo a 26 km/h e la piscina da 88 litri.
+
+### Notes
+- **195 domande hanno tutti e tre i distrattori che cominciano con "solo"** mentre la risposta no (`Solo nelle gare di ciclismo | Solo quando si va in montagna | Sempre, soprattutto per i minori di 14 anni | Solo quando piove`). Si risponde senza sapere nulla. **Non toccate**, e non per pigrizia: `solo` è spesso proprio ciò che rende falso il distrattore, quindi toglierlo lo renderebbe vero (`Solo i pesci del fiume` → `I pesci del fiume`, che è parzialmente corretto). Riscriverli richiede rifare 585 distrattori uno per uno: è redazione, non correzione meccanica, e va programmata come tale.
+- provato anche un controllo sui distrattori che condividono la prima parola: 324 casi, quasi tutti innocui (`Il genere di libri | Il tuo sport | L'indirizzo di casa`). Scartato.
+
 ## 4.12.72 - 2026-09-06
 
 ### Fixed

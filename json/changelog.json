@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.73",
+  "items": [
+   "Corretto il refuso \"ogni quadern costa\" in 6 problemi di classe 3.",
+   "Sistemate 3 piscine da meno di 500 litri, diventate serbatoi e cisterne.",
+   "Da oggi un controllo automatico verifica che i numeri dei problemi siano fisicamente possibili."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.72",
   "items": [
    "Corrette 10 domande con dati impossibili: un aereo che volava a 15 km/h e navi più veloci di un'automobile.",

@@ -533,6 +533,13 @@ else
   status=1
 fi
 
+if node scripts/check_plausibility.js >/dev/null 2>&1; then
+  echo "[OK] plausibility of numbers in word problems verified"
+else
+  echo "[ERROR] implausible data in a word problem (run: npm run check:plausibility)"
+  status=1
+fi
+
 if [[ ! -f "robots.txt" ]]; then
   echo "[ERROR] Missing file: robots.txt"
   status=1

@@ -24588,7 +24588,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Una piscina ha 225 litri svuotata in 5 giorni uguali. Quanti litri al giorno?",
+   "question": "Un serbatoio da 225 litri viene svuotato in 5 giorni uguali. Quanti litri al giorno?",
    "options": [
     "44",
     "45",
@@ -24748,7 +24748,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Una piscina ha 88 litri svuotata in 4 giorni uguali. Quanti litri al giorno?",
+   "question": "Un bidone da 88 litri viene svuotato in 4 giorni uguali. Quanti litri al giorno?",
    "options": [
     "19",
     "21",
@@ -24844,7 +24844,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Una piscina ha 451 litri svuotata in 11 giorni uguali. Quanti litri al giorno?",
+   "question": "Una cisterna da 451 litri viene svuotata in 11 giorni uguali. Quanti litri al giorno?",
    "options": [
     "39",
     "40",
@@ -26508,7 +26508,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Una classe di 3 alunni raccoglie 72 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 3 alunni raccoglie 72 euro. Quanto paga ogni alunno?",
    "options": [
     "23",
     "24",
