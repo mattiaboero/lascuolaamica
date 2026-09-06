@@ -167,7 +167,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Pesce è un essere...",
+   "question": "Il pesce è un essere...",
    "options": [
     "non vivente",
     "oggetto",
@@ -198,7 +198,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Nuvola è un essere...",
+   "question": "La nuvola è un essere...",
    "options": [
     "pianta",
     "vivente",
@@ -229,7 +229,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Farfalla è un essere...",
+   "question": "La farfalla è un essere...",
    "options": [
     "non vivente",
     "roccia",
@@ -3177,7 +3177,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Se il cielo è sereno e c'è il Sole, il tempo è",
+   "question": "Se il cielo è sereno e c'è il Sole, il tempo è...",
    "options": [
     "nebbioso",
     "temporalesco",
@@ -3207,7 +3207,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Se cade neve, il tempo è",
+   "question": "Se cade neve, il tempo è...",
    "options": [
     "asciutto",
     "nevoso",
@@ -3237,7 +3237,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Se si sente molto vento, il tempo è",
+   "question": "Se si sente molto vento, il tempo è...",
    "options": [
     "fruttato",
     "ventoso",
@@ -3267,7 +3267,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Se il cielo è pieno di nuvole grigie, il tempo è",
+   "question": "Se il cielo è pieno di nuvole grigie, il tempo è...",
    "options": [
     "colorato",
     "nuvoloso",
@@ -4138,7 +4138,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Da che cosa può cadere la pioggia??",
+   "question": "Da che cosa può cadere la pioggia?",
    "options": [
     "dalle matite",
     "dalle scarpe",
@@ -4169,7 +4169,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Che cosa fa evaporare l'acqua più facilmente??",
+   "question": "Che cosa fa evaporare l'acqua più facilmente?",
    "options": [
     "il calore del Sole",
     "la carta",
@@ -4200,7 +4200,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quale fenomeno porta acqua a terra dalle nuvole??",
+   "question": "Quale fenomeno porta acqua a terra dalle nuvole?",
    "options": [
     "respirazione",
     "rotazione",
@@ -4231,7 +4231,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quale parola indica l'acqua trasformata in vapore??",
+   "question": "Quale parola indica l'acqua trasformata in vapore?",
    "options": [
     "colazione",
     "evaporazione",
@@ -4262,7 +4262,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quale parola indica l'acqua che da vapore torna goccioline??",
+   "question": "Quale parola indica l'acqua che da vapore torna goccioline?",
    "options": [
     "vibrazione",
     "condensazione",
@@ -4293,7 +4293,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 2,
-   "question": "In quale stagione può nevicare più facilmente??",
+   "question": "In quale stagione può nevicare più facilmente?",
    "options": [
     "inverno",
     "settembre",
@@ -4323,7 +4323,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale senso usi per ascoltare una campanella??",
+   "question": "Quale senso usi per ascoltare una campanella?",
    "options": [
     "vista",
     "udito",
@@ -4353,7 +4353,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale senso usi per vedere un arcobaleno??",
+   "question": "Quale senso usi per vedere un arcobaleno?",
    "options": [
     "gusto",
     "tatto",
@@ -4383,7 +4383,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale senso usi per sentire il profumo di un fiore??",
+   "question": "Quale senso usi per sentire il profumo di un fiore?",
    "options": [
     "gusto",
     "olfatto",
@@ -4413,7 +4413,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale senso usi per sentire se l'acqua è fredda??",
+   "question": "Quale senso usi per sentire se l'acqua è fredda?",
    "options": [
     "tatto",
     "vista",
@@ -4443,7 +4443,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale senso usi per riconoscere il sapore di una mela??",
+   "question": "Quale senso usi per riconoscere il sapore di una mela?",
    "options": [
     "udito",
     "gusto",
@@ -4473,7 +4473,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "Quale abitudine è utile per la salute??",
+   "question": "Quale abitudine è utile per la salute?",
    "options": [
     "non muoversi mai",
     "dormire pochissimo",
@@ -4503,7 +4503,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "Quale bevanda è importante bere ogni giorno??",
+   "question": "Quale bevanda è importante bere ogni giorno?",
    "options": [
     "succo di limone puro soltanto",
     "inchiostro",
@@ -4533,7 +4533,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 2,
-   "question": "Quale comportamento aiuta a non sprecare acqua??",
+   "question": "Quale comportamento aiuta a non sprecare acqua?",
    "options": [
     "giocare con l'acqua per terra",
     "chiudere il rubinetto",
@@ -4563,7 +4563,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 2,
-   "question": "Quale azione rispetta di più la natura??",
+   "question": "Quale azione rispetta di più la natura?",
    "options": [
     "lasciare carte nel prato",
     "calpestare i fiori",
@@ -4593,7 +4593,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale tra questi ha bisogno di acqua per vivere??",
+   "question": "Quale tra questi ha bisogno di acqua per vivere?",
    "options": [
     "gomma",
     "sasso",
@@ -4623,7 +4623,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale tra questi cresce nel tempo??",
+   "question": "Quale tra questi cresce nel tempo?",
    "options": [
     "gattino",
     "quaderno",
@@ -4653,7 +4653,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale oggetto non cresce da solo??",
+   "question": "Quale oggetto non cresce da solo?",
    "options": [
     "banco",
     "albero",
@@ -4683,7 +4683,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale animale vive spesso in una stalla??",
+   "question": "Quale animale vive spesso in una stalla?",
    "options": [
     "aquila",
     "delfino",
@@ -4713,7 +4713,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale animale vive spesso in un nido??",
+   "question": "Quale animale vive spesso in un nido?",
    "options": [
     "cavallo",
     "pesce",
@@ -4743,7 +4743,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale parte della pianta prende acqua dal terreno??",
+   "question": "Quale parte della pianta prende acqua dal terreno?",
    "options": [
     "foglie",
     "petali",
@@ -4773,7 +4773,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale parte della pianta è spesso verde??",
+   "question": "Quale parte della pianta è spesso verde?",
    "options": [
     "radice",
     "sasso",
@@ -4803,7 +4803,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 1,
-   "question": "Quale tra questi può diventare vapore??",
+   "question": "Quale tra questi può diventare vapore?",
    "options": [
     "sasso",
     "matita",
@@ -4833,7 +4833,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Che cosa diventa l'acqua quando gela??",
+   "question": "Che cosa diventa l'acqua quando gela?",
    "options": [
     "fumo",
     "succo",
@@ -4863,7 +4863,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Che cosa serve per osservare meglio un fenomeno??",
+   "question": "Che cosa serve per osservare meglio un fenomeno?",
    "options": [
     "fretta",
     "rumore",
@@ -4893,7 +4893,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quale stagione è spesso collegata ai fiori??",
+   "question": "Quale stagione è spesso collegata ai fiori?",
    "options": [
     "primavera",
     "inverno",
@@ -4924,7 +4924,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quale stagione è spesso collegata al freddo??",
+   "question": "Quale stagione è spesso collegata al freddo?",
    "options": [
     "estate",
     "mezzogiorno",
@@ -4955,7 +4955,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quale azione aiuta il riciclo??",
+   "question": "Quale azione aiuta il riciclo?",
    "options": [
     "gettare carta a terra",
     "separare i rifiuti",
@@ -4986,7 +4986,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale contenitore va usato per la carta??",
+   "question": "Quale contenitore va usato per la carta?",
    "options": [
     "la strada",
     "il prato",
@@ -5016,7 +5016,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 2,
-   "question": "Che cosa succede spesso alle foglie in autunno??",
+   "question": "Che cosa succede spesso alle foglie in autunno?",
    "options": [
     "diventano pesci",
     "cambiano colore e cadono",
@@ -5047,7 +5047,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Con quale parte del corpo mastichi??",
+   "question": "Con quale parte del corpo mastichi?",
    "options": [
     "occhi",
     "gomiti",
@@ -5078,7 +5078,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Con quale parte del corpo ascolti??",
+   "question": "Con quale parte del corpo ascolti?",
    "options": [
     "piedi",
     "mani",
@@ -5109,7 +5109,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Con quale parte del corpo cammini??",
+   "question": "Con quale parte del corpo cammini?",
    "options": [
     "capelli",
     "gomiti",
@@ -5140,7 +5140,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Quale cibo fa parte di una merenda sana??",
+   "question": "Quale cibo fa parte di una merenda sana?",
    "options": [
     "frutta",
     "solo caramelle",
@@ -5201,7 +5201,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quale elemento del tempo atmosferico puoi osservare fuori dalla finestra??",
+   "question": "Quale elemento del tempo atmosferico puoi osservare fuori dalla finestra?",
    "options": [
     "matite",
     "lampadine",
@@ -5262,7 +5262,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quale comportamento è gentile verso gli animali??",
+   "question": "Quale comportamento è gentile verso gli animali?",
    "options": [
     "spaventarli per gioco",
     "rispettare il loro ambiente",
@@ -5293,7 +5293,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 1,
-   "question": "Quale materiale si rompe più facilmente se cade??",
+   "question": "Quale materiale si rompe più facilmente se cade?",
    "options": [
     "stoffa",
     "gomma morbida",
@@ -5323,7 +5323,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 1,
-   "question": "Quale materiale è utile per cancellare la matita??",
+   "question": "Quale materiale è utile per cancellare la matita?",
    "options": [
     "gomma",
     "legno",
@@ -5353,7 +5353,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Quale comportamento aiuta a stare bene??",
+   "question": "Quale comportamento aiuta a stare bene?",
    "options": [
     "non bere acqua",
     "lavarsi spesso le mani",
@@ -7406,7 +7406,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 2,
-   "question": "La fotosintesi avviene soprattutto nelle",
+   "question": "La fotosintesi avviene soprattutto nelle...",
    "options": [
     "foglie",
     "zampe",
@@ -7436,7 +7436,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 2,
-   "question": "La clorofilla è una sostanza di colore",
+   "question": "La clorofilla è una sostanza di colore...",
    "options": [
     "blu",
     "rosso",
@@ -7466,7 +7466,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 2,
-   "question": "Le piante hanno bisogno di luce, acqua e",
+   "question": "Le piante hanno bisogno di luce, acqua e...",
    "options": [
     "aria",
     "plastica",
@@ -7496,7 +7496,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 2,
-   "question": "Le piante producono il proprio nutrimento grazie alla",
+   "question": "Le piante producono il proprio nutrimento grazie alla...",
    "options": [
     "digestione",
     "erosione",
@@ -7588,7 +7588,7 @@
    "area": "viventi_biologia",
    "subarea": "animali",
    "difficulty": 2,
-   "question": "Gli uccelli hanno il corpo coperto di",
+   "question": "Gli uccelli hanno il corpo coperto di...",
    "options": [
     "squame",
     "piume",
@@ -7619,7 +7619,7 @@
    "area": "viventi_biologia",
    "subarea": "animali",
    "difficulty": 2,
-   "question": "I pesci respirano con le",
+   "question": "I pesci respirano con le...",
    "options": [
     "ali",
     "antenne",
@@ -7650,7 +7650,7 @@
    "area": "viventi_biologia",
    "subarea": "animali",
    "difficulty": 2,
-   "question": "I mammiferi nutrono i piccoli con",
+   "question": "I mammiferi nutrono i piccoli con...",
    "options": [
     "metallo",
     "latte",
@@ -7681,7 +7681,7 @@
    "area": "viventi_biologia",
    "subarea": "animali",
    "difficulty": 2,
-   "question": "Gli anfibi vivono spesso",
+   "question": "Gli anfibi vivono spesso...",
    "options": [
     "solo sugli alberi",
     "in acqua e sulla terra",
@@ -7712,7 +7712,7 @@
    "area": "viventi_biologia",
    "subarea": "animali",
    "difficulty": 2,
-   "question": "I rettili hanno spesso il corpo coperto di",
+   "question": "I rettili hanno spesso il corpo coperto di...",
    "options": [
     "foglie",
     "pelliccia di lana",
@@ -7803,7 +7803,7 @@
    "area": "viventi_biologia",
    "subarea": "habitat_e_funzioni_vitali",
    "difficulty": 2,
-   "question": "Un essere vivente nasce, cresce, si riproduce e",
+   "question": "Un essere vivente nasce, cresce, si riproduce e...",
    "options": [
     "diventa sempre un fiore",
     "si congela per forza",
@@ -9200,7 +9200,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Quale terreno trattiene più acqua??",
+   "question": "Quale terreno trattiene più acqua?",
    "options": [
     "argilloso",
     "ghiaioso",
@@ -9230,7 +9230,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Quale terreno lascia filtrare l'acqua più velocemente??",
+   "question": "Quale terreno lascia filtrare l'acqua più velocemente?",
    "options": [
     "fangoso compatto",
     "sabbioso",
@@ -9290,7 +9290,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Quale strumento misura la pressione atmosferica??",
+   "question": "Quale strumento misura la pressione atmosferica?",
    "options": [
     "termometro",
     "bilancia",
@@ -9320,7 +9320,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Quale strumento misura la temperatura??",
+   "question": "Quale strumento misura la temperatura?",
    "options": [
     "termometro",
     "barometro",

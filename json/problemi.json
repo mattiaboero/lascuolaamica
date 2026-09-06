@@ -36931,7 +36931,7 @@
    ],
    "answerIndex": 0,
    "answer": "3330",
-   "explanation": "Prima: 5400 - 3870 = 1530 posti liberi (non utile). Oppure: 3870 - 540 = 3330 persone rimaste.",
+   "explanation": "Le persone rimaste sono quelle presenti meno quelle uscite: 3870 - 540 = 3330.",
    "active": true,
    "tag": "problemi;due_operazioni;classe_5;primaria",
    "tags": [

@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.12.58 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **65 difetti di forma** trovati dal lotto 4 di revisione, tutti cercati poi su tutto il corpus:
+  - **43 domande con il doppio punto interrogativo** (`Quale terreno trattiene più acqua??`), quasi tutte in scienze classe 2.
+  - **14 domande senza alcuna punteggiatura finale** — né `?` né puntini (`Se cade neve, il tempo è`, `I pesci respirano con le`). Chiuse con i puntini, come le altre frasi da completare.
+  - **3 domande senza articolo a inizio frase** (`Pesce è un essere...`, `Nuvola`, `Farfalla`): stessa famiglia `sci-2-viventi` già corretta nella 4.12.54, ma con nomi che la regola non elencava.
+  - **3 domande di civica alla persona sbagliata**: `quando partecipa a una videolezione` → `quando partecipi`, coerente con il resto della famiglia che usa la seconda persona.
+  - **1 nota di redazione rimasta nel testo**: la spiegazione di `pro-5-due_operazioni-9147` conteneva `5400 - 3870 = 1530 posti liberi (non utile)`, cioè un calcolo scartato dall'autore lasciato in pagina davanti al bambino. Riscritta.
+  - **1 punteggiatura doppia** `:...` in `geo-5-italia_europa-010`.
+
+### Changed
+- ci(contenuti): due regole nuove in `lint_content.js` (19 in totale) per il doppio `?` e per la domanda senza punteggiatura finale; ampliata la lista dei nomi che richiedono l'articolo. `check_grammar_rules.js` verifica 19 regole contro 20 frasi sbagliate e 18 corrette.
+
+### Notes
+- lotto 4: 60 domande fra le 6.375 a scheletro unico; 239 revisionate finora. Nessun errore di grammatica vera in questo lotto — tutti difetti di forma e una nota di redazione, il che è coerente con l'idea che gli errori grammaticali fossero concentrati nelle famiglie generate da template, già setacciate.
+
 ## 4.12.57 - 2026-09-06
 
 ### Fixed

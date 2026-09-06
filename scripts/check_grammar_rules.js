@@ -34,6 +34,9 @@ const SBAGLIATE = [
   'Una password serve a?',
   'Il Monte Bianco si trova nelle?',
   'Il cuore batte dentro il.',
+  'Quale terreno trattiene più acqua??',
+  'Se cade neve, il tempo è',
+  'Nuvola è un essere vivente.',
 ];
 
 const CORRETTE = [

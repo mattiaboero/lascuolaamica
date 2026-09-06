@@ -90,7 +90,7 @@ const GRAMMATICA = [
   // rimasti") e frase che inizia con un nome comune senza articolo.
   { pattern: /\b(?:lumache|galline|mele|pere|caramelle|figurine|pagine|matite|penne|uova|scatole|piante|fragole)\s+(?:rimasti|finiti|venduti|mangiati|comprati)\b/i,
     msg: 'accordo: participio maschile dopo un nome femminile plurale (es. "10 lumache rimasti")' },
-  { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro)\s+(?:è|era|ha)(?=\s|$)/,
+  { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro|Pesce|Nuvola|Farfalla|Uccello|Cavallo|Ape|Roccia|Neve|Pioggia|Vento|Sabbia|Erba|Foglia)\s+(?:è|era|ha)(?=\s|$)/,
     msg: "manca l'articolo a inizio frase (es. \"Gatto è un essere\" invece di \"Il gatto è un essere\")" },
   // In italiano una domanda non puo' finire con una preposizione: se la frase e'
   // sospesa e sono le opzioni a completarla, va chiusa con i puntini. Il corpus
@@ -112,6 +112,11 @@ const GRAMMATICA = [
   { pattern: /\b(?:a|ad|da|di|in|con|su|per|tra|fra|e|o|ma|perché|più|meno|il|lo|la|i|gli|le|un|uno|una|nel|nella|nei|nelle|del|della|dei|delle|al|alla|ai|alle|dal|dalla|verso)\.\s*$/i,
     soloDomanda: true,
     msg: 'frase sospesa chiusa con un punto: usare i puntini di sospensione' },
+  // Trovate dal lotto 4: doppio punto interrogativo e domanda senza alcuna
+  // punteggiatura finale ("...il tempo è" senza ne' "?" ne' puntini).
+  { pattern: /\?\?/, soloDomanda: true, msg: 'doppio punto interrogativo' },
+  { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
+    msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
 ];
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
