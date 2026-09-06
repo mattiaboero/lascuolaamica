@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.55 - 2026-09-06
+
+### Changed
+- contenuti: uniformate **157 domande a frase sospesa**, che finivano con una preposizione o una copula seguita da punto interrogativo (`Una password serve a?`), alla forma con i puntini già usata da 374 domande del corpus (`Le colline sono spesso adatte a...`). Distribuzione: scienze 104, geografia 24, storia 19, italiano 6, civica 2, matematica 1, problemi 1.
+- **47 delle 204 intercettate non sono state toccate**, perché sono interrogative vere che finiscono con le stesse parole: tutte le `Quanti … ci sono?` dei problemi (34 casi), `Quale strumento usi per sapere che ore sono?`, `Quanti centimetri sono?`, `Che tipo di precipitazione c'era?`, `Che figura retorica è?`, `Il verbo 'mangerò' a quale tempo è?`. Convertirle tutte e 204 in blocco avrebbe rotto quasi un quarto delle domande intercettate: l'elenco delle esclusioni è stato letto voce per voce.
+
+### Added
+- ci(contenuti): nuova regola in `lint_content.js` (15 in totale) sulle domande che terminano con una **preposizione sospesa**. È una regola senza ambiguità: in italiano una domanda non può finire con una preposizione, quindi non richiede eccezioni. La copula resta deliberatamente fuori: lì il punto interrogativo può essere corretto (`Che ore sono?`), ed è esattamente il confine che ha richiesto la lettura manuale. Esempi aggiunti a `check_grammar_rules.js`, che ora verifica 15 regole contro 15 frasi sbagliate e 14 corrette.
+
 ## 4.12.54 - 2026-09-06
 
 ### Fixed

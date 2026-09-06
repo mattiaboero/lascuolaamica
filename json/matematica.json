@@ -59571,7 +59571,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 1,
-   "question": "Se tutti i multipli di 10 finiscono con 0 e 70 finisce con 0, allora 70 è?",
+   "question": "Se tutti i multipli di 10 finiscono con 0 e 70 finisce con 0, allora 70 è...",
    "options": [
     "un numero dispari",
     "un multiplo di 10",

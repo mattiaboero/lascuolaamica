@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.55",
+  "items": [
+   "Le domande da completare ora finiscono tutte con i puntini di sospensione (\"Una password serve a...\") invece che con un punto interrogativo fuori posto."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.54",
   "items": [
    "Piccole correzioni di lingua in sei domande, trovate rileggendo un campione di domande a caso."

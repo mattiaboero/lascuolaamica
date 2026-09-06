@@ -24313,7 +24313,7 @@
    "area": "linea_del_tempo",
    "subarea": "cronologia",
    "difficulty": 1,
-   "question": "La linea del tempo serve a?",
+   "question": "La linea del tempo serve a...",
    "options": [
     "Colorare una mappa",
     "Misurare la pioggia",
@@ -25212,7 +25212,7 @@
    "area": "preistoria_paleolitico",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "La scoperta del fuoco servì anche per?",
+   "question": "La scoperta del fuoco servì anche per...",
    "options": [
     "Stampare libri",
     "Costruire computer",
@@ -25336,7 +25336,7 @@
    "area": "preistoria_neolitico_metalli",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Nel Neolitico gli uomini impararono a?",
+   "question": "Nel Neolitico gli uomini impararono a...",
    "options": [
     "Scrivere al computer",
     "Coltivare la terra",
@@ -25460,7 +25460,7 @@
    "area": "preistoria_neolitico_metalli",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Nell'età dei metalli si iniziarono a usare oggetti in?",
+   "question": "Nell'età dei metalli si iniziarono a usare oggetti in...",
    "options": [
     "Carta, stoffa e lana",
     "Vetro, plastica e gomma",
@@ -25832,7 +25832,7 @@
    "area": "mesopotamia",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "I sumeri scrivevano soprattutto su?",
+   "question": "I sumeri scrivevano soprattutto su...",
    "options": [
     "Lastre di ghiaccio",
     "Tele di plastica",
@@ -25925,7 +25925,7 @@
    "area": "mesopotamia",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Il codice di Hammurabi era?",
+   "question": "Il codice di Hammurabi era...",
    "options": [
     "Un tipo di aratro",
     "Un insieme di leggi",
@@ -26111,7 +26111,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli ebrei credevano in?",
+   "question": "Gli ebrei credevano in...",
    "options": [
     "Nessuna legge",
     "Molti dei del mare",
@@ -26204,7 +26204,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "fonti",
    "difficulty": 2,
-   "question": "Il testo sacro principale dell'ebraismo è?",
+   "question": "Il testo sacro principale dell'ebraismo è...",
    "options": [
     "Il Codice di Hammurabi",
     "La Torah",
@@ -26452,7 +26452,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "L'agorà era?",
+   "question": "L'agorà era...",
    "options": [
     "La piazza principale",
     "Un tempio egizio",
@@ -26483,7 +26483,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "I giochi olimpici nacquero in?",
+   "question": "I giochi olimpici nacquero in...",
    "options": [
     "Grecia",
     "Cina",
@@ -26762,7 +26762,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli etruschi erano molto abili nella lavorazione di?",
+   "question": "Gli etruschi erano molto abili nella lavorazione di...",
    "options": [
     "Carta da giornale",
     "Cemento armato",
@@ -26855,7 +26855,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Gli etruschi influenzarono anche i romani soprattutto in?",
+   "question": "Gli etruschi influenzarono anche i romani soprattutto in...",
    "options": [
     "Tecniche, religione e simboli del potere",
     "Fotografia digitale",
@@ -26979,7 +26979,7 @@
    "area": "roma_monarchia",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Il senato, già in età monarchica, era?",
+   "question": "Il senato, già in età monarchica, era...",
    "options": [
     "Un esercito di cavalli",
     "Una nave commerciale",
@@ -27103,7 +27103,7 @@
    "area": "roma_repubblica",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Le strade romane servivano soprattutto a?",
+   "question": "Le strade romane servivano soprattutto a...",
    "options": [
     "Far crescere il grano più in fretta",
     "Collegare territori e muovere eserciti",
@@ -27258,7 +27258,7 @@
    "area": "roma_impero_cristianesimo_fine",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Il Colosseo è un esempio di?",
+   "question": "Il Colosseo è un esempio di...",
    "options": [
     "Ziggurat mesopotamica",
     "Anfiteatro romano",
@@ -27475,7 +27475,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "A Sparta l'educazione dei cittadini maschi puntava molto su?",
+   "question": "A Sparta l'educazione dei cittadini maschi puntava molto su...",
    "options": [
     "Pittura su seta",
     "Commercio del cacao",
@@ -27537,7 +27537,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Per molti popoli antichi il Mediterraneo fu un mare di?",
+   "question": "Per molti popoli antichi il Mediterraneo fu un mare di...",
    "options": [
     "Foreste tropicali",
     "Incontri e scambi",
@@ -27568,7 +27568,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "I fenici fondavano scali e colonie soprattutto per?",
+   "question": "I fenici fondavano scali e colonie soprattutto per...",
    "options": [
     "Allenare gladiatori",
     "Coltivare riso in montagna",
@@ -28557,7 +28557,7 @@
    "area": "storia_personale_familiare",
    "subarea": "storia_personale",
    "difficulty": 2,
-   "question": "Giulia trova in soffitta il libro delle elementari di suo padre. Che tipo di fonte è?",
+   "question": "Giulia trova in soffitta il libro delle elementari di suo padre. Che tipo di fonte è...",
    "options": [
     "Una fonte orale",
     "Una fonte iconografica",

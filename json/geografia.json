@@ -24877,7 +24877,7 @@
    "area": "paesaggi_terra",
    "subarea": "paesaggio_fisico",
    "difficulty": 1,
-   "question": "Il deserto è un tipo di?",
+   "question": "Il deserto è un tipo di...",
    "options": [
     "paesaggio fisico",
     "mezzo di trasporto",
@@ -24941,7 +24941,7 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 1,
-   "question": "Il mare è una grande distesa di?",
+   "question": "Il mare è una grande distesa di...",
    "options": [
     "sabbia",
     "rocce",
@@ -25357,7 +25357,7 @@
    "area": "paesaggio",
    "subarea": "clima",
    "difficulty": 1,
-   "question": "In una giornata di pioggia il tempo atmosferico è?",
+   "question": "In una giornata di pioggia il tempo atmosferico è...",
    "options": [
     "piovoso",
     "nevoso",
@@ -25389,7 +25389,7 @@
    "area": "paesaggio",
    "subarea": "clima",
    "difficulty": 1,
-   "question": "Quando il cielo è senza nuvole, il tempo è?",
+   "question": "Quando il cielo è senza nuvole, il tempo è...",
    "options": [
     "nebbioso",
     "sereno",
@@ -25901,7 +25901,7 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 1,
-   "question": "Un lago è?",
+   "question": "Un lago è...",
    "options": [
     "un'acqua circondata dalla terra",
     "una strada piena di curve",
@@ -25997,7 +25997,7 @@
    "area": "territorio_sicurezza",
    "subarea": "percorsi",
    "difficulty": 1,
-   "question": "In bicicletta, dove è più sicuro pedalare quando c'è?",
+   "question": "In bicicletta, dove è più sicuro pedalare quando c'è...",
    "options": [
     "Sulla pista ciclabile",
     "Sul marciapiede affollato",
@@ -26029,7 +26029,7 @@
    "area": "territorio_sicurezza",
    "subarea": "paesaggio_antropico",
    "difficulty": 1,
-   "question": "Il semaforo serve a?",
+   "question": "Il semaforo serve a...",
    "options": [
     "decorare le strade",
     "regolare il traffico",
@@ -26061,7 +26061,7 @@
    "area": "territorio_italiano",
    "subarea": "italia_regioni",
    "difficulty": 2,
-   "question": "L'Italia ha la forma di?",
+   "question": "L'Italia ha la forma di...",
    "options": [
     "stivale",
     "triangolo",
@@ -26221,7 +26221,7 @@
    "area": "antropico_ambiente",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Piantare alberi in una zona spoglia può aiutare a?",
+   "question": "Piantare alberi in una zona spoglia può aiutare a...",
    "options": [
     "proteggere il suolo",
     "far sparire le nuvole",
@@ -26317,7 +26317,7 @@
    "area": "paesaggio",
    "subarea": "clima",
    "difficulty": 1,
-   "question": "Quando c'è molta nebbia, vedere lontano è?",
+   "question": "Quando c'è molta nebbia, vedere lontano è...",
    "options": [
     "facile",
     "impossibile sempre",
@@ -26413,7 +26413,7 @@
    "area": "geografia_fisica_italia",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Le Alpi sono?",
+   "question": "Le Alpi sono...",
    "options": [
     "un gruppo di isole",
     "una catena montuosa",
@@ -26477,7 +26477,7 @@
    "area": "orientamento",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Una descrizione come 'vai dritto, poi gira a sinistra al ponte' è?",
+   "question": "Una descrizione come 'vai dritto, poi gira a sinistra al ponte' è...",
    "options": [
     "una legenda",
     "un percorso",
@@ -26541,7 +26541,7 @@
    "area": "geo_graficita",
    "subarea": "scala",
    "difficulty": 2,
-   "question": "In una carta con scala 1:100, 1 cm sulla carta corrisponde a?",
+   "question": "In una carta con scala 1:100, 1 cm sulla carta corrisponde a...",
    "options": [
     "1 m nella realtà",
     "100 cm nella realtà",
@@ -26669,7 +26669,7 @@
    "area": "strumenti_orientamento",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Il navigatore serve soprattutto a?",
+   "question": "Il navigatore serve soprattutto a...",
    "options": [
     "misurare la pioggia",
     "indicare un percorso",
@@ -26733,7 +26733,7 @@
    "area": "territorio_italiano",
    "subarea": "italia_regioni",
    "difficulty": 2,
-   "question": "La Sicilia è?",
+   "question": "La Sicilia è...",
    "options": [
     "una pianura",
     "un'isola",
@@ -26989,7 +26989,7 @@
    "area": "italia_europa",
    "subarea": "europa_base",
    "difficulty": 2,
-   "question": "L'Europa è?",
+   "question": "L'Europa è...",
    "options": [
     "una città",
     "un continente",
@@ -27021,7 +27021,7 @@
    "area": "antropico_ambiente",
    "subarea": "paesaggio_antropico",
    "difficulty": 2,
-   "question": "Una diga è un'opera costruita per?",
+   "question": "Una diga è un'opera costruita per...",
    "options": [
     "regolare e raccogliere l'acqua",
     "alzare le montagne",
@@ -27085,7 +27085,7 @@
    "area": "territorio_sicurezza",
    "subarea": "paesaggio_antropico",
    "difficulty": 2,
-   "question": "Gli argini lungo un fiume aiutano a?",
+   "question": "Gli argini lungo un fiume aiutano a...",
    "options": [
     "fermare il vento",
     "contenere l'acqua",
@@ -27213,7 +27213,7 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 2,
-   "question": "Il fiume Tevere attraversa la città di?",
+   "question": "Il fiume Tevere attraversa la città di...",
    "options": [
     "Milano",
     "Roma",
@@ -27373,7 +27373,7 @@
    "area": "idrografia_clima_italia",
    "subarea": "acque",
    "difficulty": 2,
-   "question": "L'Adriatico è?",
+   "question": "L'Adriatico è...",
    "options": [
     "un lago",
     "un fiume",
@@ -27469,7 +27469,7 @@
    "area": "geo_graficita",
    "subarea": "scala",
    "difficulty": 2,
-   "question": "In una carta in scala 1:1.000.000, 1 cm corrisponde a?",
+   "question": "In una carta in scala 1:1.000.000, 1 cm corrisponde a...",
    "options": [
     "10 km",
     "100 km",
@@ -27501,7 +27501,7 @@
    "area": "geo_graficita",
    "subarea": "legenda",
    "difficulty": 2,
-   "question": "Se una carta usa simboli senza legenda, il lettore rischia di?",
+   "question": "Se una carta usa simboli senza legenda, il lettore rischia di...",
    "options": [
     "capire tutto meglio",
     "confondersi",
@@ -27565,7 +27565,7 @@
    "area": "territorio_italiano",
    "subarea": "italia_regioni",
    "difficulty": 2,
-   "question": "Il capoluogo della Lombardia è?",
+   "question": "Il capoluogo della Lombardia è...",
    "options": [
     "Venezia",
     "Milano",
@@ -28109,7 +28109,7 @@
    "area": "paesaggi_terra",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Il vulcano Etna si trova in?",
+   "question": "Il vulcano Etna si trova in...",
    "options": [
     "Sicilia",
     "Sardegna",

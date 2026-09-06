@@ -9285,7 +9285,7 @@
    "area": "italiano_classe4",
    "subarea": "lettura",
    "difficulty": 3,
-   "question": "Leggi: 'Per preparare il dolce occorrono: farina, uova, zucchero e burro.' Che tipo di testo è?",
+   "question": "Leggi: 'Per preparare il dolce occorrono: farina, uova, zucchero e burro.' Che tipo di testo è...",
    "options": [
     "narrativo",
     "descrittivo",
@@ -9317,7 +9317,7 @@
    "area": "italiano_classe4",
    "subarea": "lettura",
    "difficulty": 3,
-   "question": "Leggi: 'I ricercatori hanno dimostrato che dormire bene migliora la memoria.' Che tipo di testo è?",
+   "question": "Leggi: 'I ricercatori hanno dimostrato che dormire bene migliora la memoria.' Che tipo di testo è...",
    "options": [
     "fantastico",
     "narrativo",
@@ -11621,7 +11621,7 @@
    "area": "italiano_classe5",
    "subarea": "lettura",
    "difficulty": 3,
-   "question": "Leggi: 'Il testo riporta dati, grafici e fonti scientifiche.' Che tipo di testo è?",
+   "question": "Leggi: 'Il testo riporta dati, grafici e fonti scientifiche.' Che tipo di testo è...",
    "options": [
     "narrativo",
     "poetico",
@@ -11653,7 +11653,7 @@
    "area": "italiano_classe5",
    "subarea": "lettura",
    "difficulty": 3,
-   "question": "Leggi: 'L'autore sostiene che la lettura migliora l'empatia e porta prove a supporto.' Che tipo di testo è?",
+   "question": "Leggi: 'L'autore sostiene che la lettura migliora l'empatia e porta prove a supporto.' Che tipo di testo è...",
    "options": [
     "descrittivo",
     "narrativo",
@@ -23845,7 +23845,7 @@
    "area": "italiano_classe4",
    "subarea": "lettura",
    "difficulty": 2,
-   "question": "Leggi questo testo: 'Il serpente è un rettile privo di zampe. Si muove ondulando il corpo. Alcune specie sono velenose.' Che tipo di testo è?",
+   "question": "Leggi questo testo: 'Il serpente è un rettile privo di zampe. Si muove ondulando il corpo. Alcune specie sono velenose.' Che tipo di testo è...",
    "options": [
     "Narrativo",
     "Descrittivo-espositivo",
@@ -34053,7 +34053,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "Nella frase 'mangio una mela', 'una mela' che complemento è?",
+   "question": "Nella frase 'mangio una mela', 'una mela' che complemento è...",
    "options": [
     "Complemento oggetto",
     "Complemento di luogo",

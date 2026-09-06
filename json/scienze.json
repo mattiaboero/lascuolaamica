@@ -1465,7 +1465,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quando cadono gocce dal cielo, il tempo è?",
+   "question": "Quando cadono gocce dal cielo, il tempo è...",
    "options": [
     "piovoso",
     "silenzioso",
@@ -1496,7 +1496,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quando il vento soffia forte, il tempo è?",
+   "question": "Quando il vento soffia forte, il tempo è...",
    "options": [
     "ventoso",
     "fiorito",
@@ -1527,7 +1527,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Quando il cielo è pieno di nuvole, il tempo è?",
+   "question": "Quando il cielo è pieno di nuvole, il tempo è...",
    "options": [
     "calendario",
     "nuvoloso",
@@ -1837,7 +1837,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Le gambe servono soprattutto per?",
+   "question": "Le gambe servono soprattutto per...",
    "options": [
     "annusare",
     "muoversi",
@@ -8294,7 +8294,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Un animale che mangia piante e altri animali è?",
+   "question": "Un animale che mangia piante e altri animali è...",
    "options": [
     "onnivoro",
     "sempre acquatico",
@@ -9050,7 +9050,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Il calore può causare cambiamenti di?",
+   "question": "Il calore può causare cambiamenti di...",
    "options": [
     "numero dei pianeti",
     "stato",
@@ -9080,7 +9080,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Quando un liquido si trasforma in gas si parla di?",
+   "question": "Quando un liquido si trasforma in gas si parla di...",
    "options": [
     "evaporazione",
     "filtrazione",
@@ -9110,7 +9110,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Quando un gas si trasforma in liquido si parla di?",
+   "question": "Quando un gas si trasforma in liquido si parla di...",
    "options": [
     "condensazione",
     "fotosintesi",
@@ -9140,7 +9140,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Quando un solido si trasforma in liquido si parla di?",
+   "question": "Quando un solido si trasforma in liquido si parla di...",
    "options": [
     "germinazione",
     "evaporazione",
@@ -9170,7 +9170,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Quando un liquido si trasforma in solido si parla di?",
+   "question": "Quando un liquido si trasforma in solido si parla di...",
    "options": [
     "fusione",
     "ossidazione",
@@ -9471,7 +9471,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "La fotosintesi permette alla pianta di?",
+   "question": "La fotosintesi permette alla pianta di...",
    "options": [
     "scavare nel terreno",
     "accendere il Sole",
@@ -9711,7 +9711,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "I pesci vivono in acqua e respirano con?",
+   "question": "I pesci vivono in acqua e respirano con...",
    "options": [
     "ventose",
     "branchie",
@@ -9801,7 +9801,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "La funzione di nutrizione negli animali serve a?",
+   "question": "La funzione di nutrizione negli animali serve a...",
    "options": [
     "ricavare energia dal cibo",
     "spostare le montagne",
@@ -9831,7 +9831,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "La funzione di riproduzione serve a?",
+   "question": "La funzione di riproduzione serve a...",
    "options": [
     "produrre rumore",
     "colorare il suolo",
@@ -9921,7 +9921,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "La biodiversità indica la varietà di?",
+   "question": "La biodiversità indica la varietà di...",
    "options": [
     "righelli",
     "quaderni",
@@ -9981,7 +9981,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Gli erbivori si nutrono soprattutto di?",
+   "question": "Gli erbivori si nutrono soprattutto di...",
    "options": [
     "pietre",
     "vegetali",
@@ -10011,7 +10011,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "I decompositori aiutano a trasformare resti di viventi in?",
+   "question": "I decompositori aiutano a trasformare resti di viventi in...",
    "options": [
     "automobili",
     "sostanze utili al suolo",
@@ -10495,7 +10495,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "La tecnologia può aiutare la scienza perché permette di?",
+   "question": "La tecnologia può aiutare la scienza perché permette di...",
    "options": [
     "osservare e misurare meglio",
     "spegnere il Sole",
@@ -10709,7 +10709,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "La cellula è?",
+   "question": "La cellula è...",
    "options": [
     "un organo",
     "un pianeta",
@@ -10829,7 +10829,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "L'apparato digerente serve a?",
+   "question": "L'apparato digerente serve a...",
    "options": [
     "ricevere gli stimoli luminosi",
     "pompare il sangue",
@@ -10859,7 +10859,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "L'apparato respiratorio serve a?",
+   "question": "L'apparato respiratorio serve a...",
    "options": [
     "trasportare il sangue da solo",
     "produrre urina",
@@ -11009,7 +11009,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Gli occhi sono organi di?",
+   "question": "Gli occhi sono organi di...",
    "options": [
     "udito",
     "vista",
@@ -11039,7 +11039,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Le orecchie sono organi di?",
+   "question": "Le orecchie sono organi di...",
    "options": [
     "tatto",
     "vista",
@@ -12130,7 +12130,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "La Terra compie un moto di?",
+   "question": "La Terra compie un moto di...",
    "options": [
     "germinazione",
     "rotazione",
@@ -12190,7 +12190,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "La Terra compie anche un moto di?",
+   "question": "La Terra compie anche un moto di...",
    "options": [
     "respirazione",
     "condensazione",
@@ -12490,7 +12490,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Quando vediamo tutta la faccia illuminata si parla di?",
+   "question": "Quando vediamo tutta la faccia illuminata si parla di...",
    "options": [
     "Luna doppia",
     "Luna piena",
@@ -12671,7 +12671,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "L'energia elettrica può trasformarsi in?",
+   "question": "L'energia elettrica può trasformarsi in...",
    "options": [
     "solo terra",
     "luce e calore",
@@ -12701,7 +12701,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Una lampadina accesa trasforma l'energia elettrica in?",
+   "question": "Una lampadina accesa trasforma l'energia elettrica in...",
    "options": [
     "energia minerale",
     "humus",
@@ -12943,7 +12943,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "La temperatura indica quanto un corpo è?",
+   "question": "La temperatura indica quanto un corpo è...",
    "options": [
     "caldo o freddo",
     "veloce o lento",
@@ -13097,7 +13097,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Un magnete attira soprattutto oggetti di?",
+   "question": "Un magnete attira soprattutto oggetti di...",
    "options": [
     "ferro",
     "gomma",
@@ -13127,7 +13127,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Una leva aiuta a?",
+   "question": "Una leva aiuta a...",
    "options": [
     "fermare il tempo",
     "sollevare o spostare pesi con meno fatica",
@@ -13337,7 +13337,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "La luce del Sole permette di?",
+   "question": "La luce del Sole permette di...",
    "options": [
     "rendere il ferro elastico",
     "vedere gli oggetti",
@@ -13397,7 +13397,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Due poli uguali di una calamita tendono a?",
+   "question": "Due poli uguali di una calamita tendono a...",
    "options": [
     "respingersi",
     "sciogliersi",
@@ -13983,7 +13983,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 1,
-   "question": "La pioggia è fatta di?",
+   "question": "La pioggia è fatta di...",
    "options": [
     "sabbia",
     "acqua",
@@ -14138,7 +14138,7 @@
    "area": "scienza_tecnologia",
    "subarea": "tecnologia_applicata",
    "difficulty": 1,
-   "question": "La matita serve soprattutto per?",
+   "question": "La matita serve soprattutto per...",
    "options": [
     "annusare",
     "scrivere e disegnare",
@@ -14603,7 +14603,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 1,
-   "question": "Il seme serve alla pianta per?",
+   "question": "Il seme serve alla pianta per...",
    "options": [
     "correre",
     "riprodursi",
@@ -14634,7 +14634,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 1,
-   "question": "Il bruco si trasforma in?",
+   "question": "Il bruco si trasforma in...",
    "options": [
     "rana",
     "farfalla",
@@ -14944,7 +14944,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Fare movimento aiuta il corpo a?",
+   "question": "Fare movimento aiuta il corpo a...",
    "options": [
     "stare fermo meglio",
     "restare in salute",
@@ -15006,7 +15006,7 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 2,
-   "question": "In un esperimento, scrivere quello che succede serve a?",
+   "question": "In un esperimento, scrivere quello che succede serve a...",
    "options": [
     "dimenticare prima",
     "registrare i risultati",
@@ -15099,7 +15099,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "La Luna è?",
+   "question": "La Luna è...",
    "options": [
     "una stella",
     "un satellite naturale della Terra",
@@ -15502,7 +15502,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 2,
-   "question": "Nelle piante, il fusto serve soprattutto a?",
+   "question": "Nelle piante, il fusto serve soprattutto a...",
    "options": [
     "sentire i suoni",
     "sostenere la pianta e trasportare sostanze",
@@ -15595,7 +15595,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Le ossa servono soprattutto a?",
+   "question": "Le ossa servono soprattutto a...",
    "options": [
     "farci sentire gli odori",
     "sostenere e proteggere il corpo",
@@ -15657,7 +15657,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Un miscuglio di acqua e sabbia si può separare con?",
+   "question": "Un miscuglio di acqua e sabbia si può separare con...",
    "options": [
     "filtrazione",
     "ombra",
@@ -15905,7 +15905,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Un animale erbivoro si nutre soprattutto di?",
+   "question": "Un animale erbivoro si nutre soprattutto di...",
    "options": [
     "altri animali",
     "piante",
@@ -15936,7 +15936,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "La mimetizzazione aiuta alcuni animali a?",
+   "question": "La mimetizzazione aiuta alcuni animali a...",
    "options": [
     "fare luce",
     "nascondersi nell'ambiente",
@@ -15998,7 +15998,7 @@
    "area": "scienza_tecnologia",
    "subarea": "tecnologia_applicata",
    "difficulty": 2,
-   "question": "Una tecnologia utile per risparmiare energia in casa è?",
+   "question": "Una tecnologia utile per risparmiare energia in casa è...",
    "options": [
     "lasciare tutte le luci accese",
     "usare lampadine efficienti",
@@ -16091,7 +16091,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Le stagioni cambiano nel corso dell'anno per il moto di rivoluzione della Terra e per?",
+   "question": "Le stagioni cambiano nel corso dell'anno per il moto di rivoluzione della Terra e per...",
    "options": [
     "il colore del cielo",
     "l'inclinazione dell'asse terrestre",
@@ -16494,7 +16494,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 2,
-   "question": "La fotosintesi clorofilliana permette alle piante di?",
+   "question": "La fotosintesi clorofilliana permette alle piante di...",
    "options": [
     "cacciare insetti sempre",
     "produrre nutrimento usando luce, acqua e anidride carbonica",
@@ -16649,7 +16649,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Riciclare i materiali serve a?",
+   "question": "Riciclare i materiali serve a...",
    "options": [
     "sprecare più risorse",
     "ridurre rifiuti e consumo di materie prime",
@@ -16866,7 +16866,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Una lampadina accesa trasforma energia elettrica in?",
+   "question": "Una lampadina accesa trasforma energia elettrica in...",
    "options": [
     "luce e calore",
     "solo ghiaccio",
@@ -16990,7 +16990,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "La luce bianca del Sole può essere scomposta nei colori dell'arcobaleno con?",
+   "question": "La luce bianca del Sole può essere scomposta nei colori dell'arcobaleno con...",
    "options": [
     "una calamita",
     "un prisma",
@@ -17021,7 +17021,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Il Sole è?",
+   "question": "Il Sole è...",
    "options": [
     "un pianeta",
     "una stella",
@@ -17176,7 +17176,7 @@
    "area": "scienza_tecnologia",
    "subarea": "tecnologia_applicata",
    "difficulty": 2,
-   "question": "Un pannello solare serve a trasformare l'energia del Sole in?",
+   "question": "Un pannello solare serve a trasformare l'energia del Sole in...",
    "options": [
     "plastica",
     "energia utile, spesso elettrica o termica",
@@ -17207,7 +17207,7 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 2,
-   "question": "Una conclusione scientifica affidabile si basa su?",
+   "question": "Una conclusione scientifica affidabile si basa su...",
    "options": [
     "un solo tentativo e basta",
     "osservazioni e dati raccolti",
@@ -21269,7 +21269,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 3,
-   "question": "Sofia mette una pentola d'acqua sul fuoco. Dopo un po' nota goccioline d'acqua sul coperchio freddo. Che fenomeno è?",
+   "question": "Sofia mette una pentola d'acqua sul fuoco. Dopo un po' nota goccioline d'acqua sul coperchio freddo. Che fenomeno è...",
    "options": [
     "Evaporazione",
     "Fusione",
@@ -26756,7 +26756,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Un miscuglio di acqua e sabbia si può separare con?",
+   "question": "Un miscuglio di acqua e sabbia si può separare con...",
    "options": [
     "un filtro",
     "una calamita",
@@ -27004,7 +27004,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Lavarsi le mani prima di mangiare serve a?",
+   "question": "Lavarsi le mani prima di mangiare serve a...",
    "options": [
     "eliminare i germi",
     "asciugarle",
@@ -27066,7 +27066,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Le proteine servono soprattutto a?",
+   "question": "Le proteine servono soprattutto a...",
    "options": [
     "costruire e riparare i tessuti",
     "dare colore alla pelle",
@@ -27128,7 +27128,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Fare attività fisica regolare aiuta a?",
+   "question": "Fare attività fisica regolare aiuta a...",
    "options": [
     "mantenere il corpo in salute",
     "indebolire i muscoli",
@@ -27159,7 +27159,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Le vitamine si trovano soprattutto in?",
+   "question": "Le vitamine si trovano soprattutto in...",
    "options": [
     "frutta e verdura",
     "dolci e merendine",
@@ -27221,7 +27221,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 3,
-   "question": "Lavarsi i denti dopo i pasti serve soprattutto a?",
+   "question": "Lavarsi i denti dopo i pasti serve soprattutto a...",
    "options": [
     "prevenire la carie",
     "rinforzare la lingua",
@@ -27314,7 +27314,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "L'alternarsi del giorno e della notte è causato dalla?",
+   "question": "L'alternarsi del giorno e della notte è causato dalla...",
    "options": [
     "rotazione terrestre",
     "rivoluzione terrestre",
@@ -27345,7 +27345,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Le stagioni dipendono soprattutto dalla?",
+   "question": "Le stagioni dipendono soprattutto dalla...",
    "options": [
     "rivoluzione della Terra e dall'inclinazione dell'asse",
     "rotazione veloce",
@@ -27407,7 +27407,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Il satellite naturale della Terra è?",
+   "question": "Il satellite naturale della Terra è...",
    "options": [
     "la Luna",
     "il Sole",
@@ -27438,7 +27438,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Quando in una zona è giorno, nella zona opposta della Terra è?",
+   "question": "Quando in una zona è giorno, nella zona opposta della Terra è...",
    "options": [
     "notte",
     "sempre giorno",
@@ -27624,7 +27624,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Una calamita attira soprattutto oggetti di?",
+   "question": "Una calamita attira soprattutto oggetti di...",
    "options": [
     "ferro",
     "plastica",
@@ -27655,7 +27655,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Su una superficie ruvida l'attrito è?",
+   "question": "Su una superficie ruvida l'attrito è...",
    "options": [
     "maggiore che su una liscia",
     "minore che su una liscia",
@@ -28089,7 +28089,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 1,
-   "question": "Il Sole è per la Terra la principale fonte di?",
+   "question": "Il Sole è per la Terra la principale fonte di...",
    "options": [
     "energia",
     "gravità",
@@ -28275,7 +28275,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 1,
-   "question": "Spegnere le luci quando usciamo da una stanza serve a?",
+   "question": "Spegnere le luci quando usciamo da una stanza serve a...",
    "options": [
     "risparmiare energia",
     "consumare di più",
@@ -28399,7 +28399,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 1,
-   "question": "Gli insetti, privi di scheletro interno, sono?",
+   "question": "Gli insetti, privi di scheletro interno, sono...",
    "options": [
     "invertebrati",
     "vertebrati",
@@ -28461,7 +28461,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 2,
-   "question": "Gli uccelli hanno il corpo ricoperto di?",
+   "question": "Gli uccelli hanno il corpo ricoperto di...",
    "options": [
     "penne e piume",
     "squame",
@@ -28492,7 +28492,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 2,
-   "question": "I pesci respirano grazie a?",
+   "question": "I pesci respirano grazie a...",
    "options": [
     "branchie",
     "polmoni",
@@ -28616,7 +28616,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 1,
-   "question": "La folta pelliccia dell'orso polare serve a?",
+   "question": "La folta pelliccia dell'orso polare serve a...",
    "options": [
     "proteggerlo dal freddo",
     "nuotare più veloce",
@@ -28647,7 +28647,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Il cammello resiste nel deserto grazie a?",
+   "question": "Il cammello resiste nel deserto grazie a...",
    "options": [
     "riserve di grasso nella gobba",
     "branchie",
@@ -28709,7 +28709,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 1,
-   "question": "In inverno alcuni animali come la marmotta vanno in?",
+   "question": "In inverno alcuni animali come la marmotta vanno in...",
    "options": [
     "letargo",
     "migrazione",
@@ -28802,7 +28802,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 3,
-   "question": "Le zampe palmate dell'anatra sono un adattamento per?",
+   "question": "Le zampe palmate dell'anatra sono un adattamento per...",
    "options": [
     "nuotare meglio",
     "scavare tane",
@@ -28864,7 +28864,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Riciclare la carta permette di?",
+   "question": "Riciclare la carta permette di...",
    "options": [
     "salvare alberi",
     "sporcare i fiumi",
@@ -28926,7 +28926,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Un comportamento che aiuta l'ambiente è?",
+   "question": "Un comportamento che aiuta l'ambiente è...",
    "options": [
     "usare la bicicletta al posto dell'auto",
     "lasciare l'acqua aperta",
@@ -29019,7 +29019,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "L'organo di senso che ci permette di vedere è?",
+   "question": "L'organo di senso che ci permette di vedere è...",
    "options": [
     "l'occhio",
     "l'orecchio",
@@ -29050,7 +29050,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Il senso legato all'orecchio è?",
+   "question": "Il senso legato all'orecchio è...",
    "options": [
     "l'udito",
     "la vista",
@@ -29081,7 +29081,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "Le informazioni dagli organi di senso arrivano al cervello attraverso?",
+   "question": "Le informazioni dagli organi di senso arrivano al cervello attraverso...",
    "options": [
     "i nervi",
     "i muscoli",
@@ -29112,7 +29112,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "L'organo che coordina il corpo e interpreta i sensi è?",
+   "question": "L'organo che coordina il corpo e interpreta i sensi è...",
    "options": [
     "il cervello",
     "il cuore",
@@ -29329,7 +29329,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "L'organo di senso più esteso del corpo umano è?",
+   "question": "L'organo di senso più esteso del corpo umano è...",
    "options": [
     "la pelle",
     "l'occhio",
@@ -29546,7 +29546,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "In un ecosistema l'energia arriva per prima cosa dal?",
+   "question": "In un ecosistema l'energia arriva per prima cosa dal...",
    "options": [
     "Sole",
     "vento",
@@ -29670,7 +29670,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "In uno stagno, le piante acquatiche hanno il ruolo di?",
+   "question": "In uno stagno, le piante acquatiche hanno il ruolo di...",
    "options": [
     "produttori",
     "decompositori",
@@ -29794,7 +29794,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Un ambiente con molte specie diverse è?",
+   "question": "Un ambiente con molte specie diverse è...",
    "options": [
     "più ricco e stabile",
     "più povero",
@@ -29887,7 +29887,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Le aree protette e i parchi naturali servono a?",
+   "question": "Le aree protette e i parchi naturali servono a...",
    "options": [
     "tutelare piante e animali",
     "costruire città",
@@ -30104,7 +30104,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Un modo per proteggere la biodiversità nel proprio giardino è?",
+   "question": "Un modo per proteggere la biodiversità nel proprio giardino è...",
    "options": [
     "piantare fiori e specie locali",
     "usare molti pesticidi",
@@ -30259,7 +30259,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 1,
-   "question": "Spegnere gli apparecchi invece di lasciarli in stand-by aiuta a?",
+   "question": "Spegnere gli apparecchi invece di lasciarli in stand-by aiuta a...",
    "options": [
     "risparmiare energia",
     "consumare di più",
@@ -30290,7 +30290,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 2,
-   "question": "Isolare bene le pareti di una casa serve a?",
+   "question": "Isolare bene le pareti di una casa serve a...",
    "options": [
     "disperdere meno calore",
     "far entrare il freddo",
@@ -30476,7 +30476,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 1,
-   "question": "Riciclare i materiali permette anche di?",
+   "question": "Riciclare i materiali permette anche di...",
    "options": [
     "risparmiare energia",
     "sprecarne di più",
@@ -30507,7 +30507,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 2,
-   "question": "Un comportamento sostenibile a casa è?",
+   "question": "Un comportamento sostenibile a casa è...",
    "options": [
     "chiudere l'acqua mentre ci si lava i denti",
     "tenere le luci sempre accese",
@@ -30569,7 +30569,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 2,
-   "question": "Nei solidi le particelle sono?",
+   "question": "Nei solidi le particelle sono...",
    "options": [
     "molto vicine e ordinate",
     "lontane e libere",
@@ -30724,7 +30724,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Fare movimento e giocare all'aperto aiuta il corpo a?",
+   "question": "Fare movimento e giocare all'aperto aiuta il corpo a...",
    "options": [
     "restare in forma",
     "ammalarsi",
@@ -30879,7 +30879,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "La colazione al mattino serve a?",
+   "question": "La colazione al mattino serve a...",
    "options": [
     "darci energia per la giornata",
     "farci venire sonno",
@@ -31003,7 +31003,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Stare puliti e curare l'igiene serve a?",
+   "question": "Stare puliti e curare l'igiene serve a...",
    "options": [
     "restare in salute",
     "ammalarsi",
@@ -31158,7 +31158,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Dalle nuvole l'acqua torna sulla terra sotto forma di?",
+   "question": "Dalle nuvole l'acqua torna sulla terra sotto forma di...",
    "options": [
     "pioggia",
     "vento",
@@ -31313,7 +31313,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Tutti gli esseri viventi hanno bisogno di?",
+   "question": "Tutti gli esseri viventi hanno bisogno di...",
    "options": [
     "nutrirsi",
     "arrugginire",
@@ -31344,7 +31344,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Le piante, per vivere, hanno bisogno soprattutto di?",
+   "question": "Le piante, per vivere, hanno bisogno soprattutto di...",
    "options": [
     "acqua, luce e aria",
     "solo buio",
@@ -31406,7 +31406,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Un seme che germoglia e diventa pianta dimostra che è?",
+   "question": "Un seme che germoglia e diventa pianta dimostra che è...",
    "options": [
     "un essere vivente",
     "un oggetto",
@@ -31592,7 +31592,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Un elemento non vivente dell'ambiente è?",
+   "question": "Un elemento non vivente dell'ambiente è...",
    "options": [
     "una roccia",
     "un albero",
@@ -31623,7 +31623,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 1,
-   "question": "La parte della pianta che sta sotto terra e assorbe l'acqua è?",
+   "question": "La parte della pianta che sta sotto terra e assorbe l'acqua è...",
    "options": [
     "la radice",
     "il fiore",
@@ -31654,7 +31654,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 1,
-   "question": "La parte che sostiene la pianta e porta la linfa è?",
+   "question": "La parte che sostiene la pianta e porta la linfa è...",
    "options": [
     "il fusto",
     "la radice",
@@ -31685,7 +31685,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 2,
-   "question": "Le foglie servono alla pianta soprattutto per?",
+   "question": "Le foglie servono alla pianta soprattutto per...",
    "options": [
     "respirare e produrre nutrimento",
     "assorbire l'acqua",

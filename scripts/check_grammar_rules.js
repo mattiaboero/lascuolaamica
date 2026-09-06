@@ -31,6 +31,7 @@ const SBAGLIATE = [
   'Nella aula ci sono 20 banchi.',
   '10 lumache rimasti sul prato.',
   'Gatto è un essere vivente.',
+  'Una password serve a?',
 ];
 
 const CORRETTE = [
@@ -45,6 +46,9 @@ const CORRETTE = [
   'La palestra ha 3 sale.',
   'Gli zuccheri della mela vengono assorbiti.',
   "Nell'aula ci sono 20 banchi.",
+  'Una password serve a...',
+  'Quale strumento usi per sapere che ore sono?',
+  'Quanti pacchi ci sono?',
 ];
 
 function caricaRegole() {

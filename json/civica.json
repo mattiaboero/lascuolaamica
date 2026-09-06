@@ -26380,7 +26380,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Una password serve a?",
+   "question": "Una password serve a...",
    "options": [
     "Proteggere un account",
     "Fare foto migliori",
@@ -30540,7 +30540,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Per i pedoni, il semaforo e le strisce servono soprattutto a?",
+   "question": "Per i pedoni, il semaforo e le strisce servono soprattutto a...",
    "options": [
     "Rendere l'attraversamento più ordinato e sicuro",
     "Far camminare più lentamente",

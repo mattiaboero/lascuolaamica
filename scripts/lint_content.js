@@ -92,6 +92,13 @@ const GRAMMATICA = [
     msg: 'accordo: participio maschile dopo un nome femminile plurale (es. "10 lumache rimasti")' },
   { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro)\s+(?:è|era|ha)(?=\s|$)/,
     msg: "manca l'articolo a inizio frase (es. \"Gatto è un essere\" invece di \"Il gatto è un essere\")" },
+  // In italiano una domanda non puo' finire con una preposizione: se la frase e'
+  // sospesa e sono le opzioni a completarla, va chiusa con i puntini. Il corpus
+  // usava entrambe le forme (374 con i puntini, 204 col punto interrogativo);
+  // uniformato nella 4.12.55. La copula ("...il tempo è?") resta fuori dalla
+  // regola: li' il punto interrogativo puo' essere corretto ("Che ore sono?").
+  { pattern: /\b(?:in|di|dal|dalla|dallo|con|per|su|tra|fra|a|attraverso|verso|senza)\?\s*$/i,
+    msg: 'domanda che termina con una preposizione sospesa: usare i puntini di sospensione (es. "serve a...")' },
 ];
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
