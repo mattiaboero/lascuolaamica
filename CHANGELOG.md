@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.46 - 2026-09-06
+
+### Fixed
+- fix(a11y): il toggle "riduci animazioni" del sito non fermava le figure decorative fluttuanti, né sulla home né su `/faq`. `js/index-page.js` e `js/faq-page.js` sono caricati **prima** di `shared.js` (ordine dei `defer`), e `shared.js` è l'unico a impostare `html[data-motion]` e a esporre `SA.motion`: valutando la condizione all'esecuzione del file, l'attributo non esisteva ancora e la scelta dell'utente veniva ignorata. Restava rispettata solo la preferenza di sistema. Il controllo è ora dentro la funzione di render, che gira dopo il `load`. Misurato in Chromium con `scuolaAmica_motion_v1` a `reduce`: prima 4 figure su entrambe le pagine, dopo 0 su entrambe; con `auto` restano 4, invariato.
+
+### Notes
+- correzione(audit): la voce di D metteva le due implementazioni come duplicazione da estrarre in `SADom.renderFloatingIcons`, notando che `faq-page.js` controlla `matchMedia` direttamente mentre `index-page.js` passa da `SA.motion.isReduced()`. La differenza c'era, ma non era quella il difetto: **nessuna delle due funzionava**, perché entrambe valutano la condizione troppo presto. Corretto il momento del controllo in entrambe; l'estrazione in un helper condiviso non è stata fatta — le due copie differiscono per container, classe CSS, set di icone e strategia di scheduling, e un helper con quattro parametri per due chiamanti è più codice di quello che toglie.
+- chore: bump versione `4.12.45` → `4.12.46`.
+
 ## 4.12.45 - 2026-09-06
 
 ### Fixed

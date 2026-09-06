@@ -20,9 +20,14 @@
     };
   })();
 
-  if (cont && !isMotionReduced()) {
+  if (cont) {
     const renderFloats = () => {
-      if (cont.childElementCount) return;
+      // Il controllo va qui, non attorno al blocco: questo file e' caricato
+      // prima di shared.js (ordine dei defer), che e' l'unico a impostare
+      // html[data-motion] e a esporre SA.motion. Valutandolo subito, il toggle
+      // "riduci animazioni" del sito non aveva effetto e le icone comparivano
+      // lo stesso; solo la preferenza di sistema veniva rispettata.
+      if (cont.childElementCount || isMotionReduced()) return;
       const frag = document.createDocumentFragment();
       for (let i = 0; i < 4; i++) {
         const el = document.createElement('div');
