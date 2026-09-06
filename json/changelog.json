@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.63",
+  "items": [
+   "Corrette 28 domande di matematica e scienze: pronome sbagliato con un nome femminile (\"Irene ... gli applicano\"), prezzo unitario \"l'uno\" con un nome femminile (\"4 magliette a 18 euro l'uno\") e articolo mancante a inizio domanda (\"Fungo è un essere...\")."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.62",
   "items": [
    "Una partita non può più proporre due volte la stessa domanda: prima poteva succedere quando le domande disponibili non bastavano a riempirla.",

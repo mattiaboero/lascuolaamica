@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.63 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **28 domande con accordi rotti dal template**, trovate col lotto 7 della revisione linguistica. Undici avevano il pronome maschile con un soggetto femminile (`Irene compra 8 libri... In cassa gli applicano uno sconto`), tredici il prezzo unitario al maschile con un nome femminile (`4 magliette a 18 euro l'uno` → `l'una`; `puzzle` e `album` restano `l'uno`, sono maschili), tre l'articolo mancante a inizio domanda (`Automobile/Fungo/Matita è un essere...`), una il pronome maschile con un soggetto femminile comune (`Una famiglia... Quanto gli rimane?`).
+
+### Changed
+- lint(contenuti): la regola del pronome dativo non ha più le liste di nomi propri scritte a mano dentro il pattern. `NOMI_PERSONA_F` e `NOMI_PERSONA_M` sono estratte dal corpus e dichiarate a parte, e `check_grammar_rules.js` **rilegge i JSON a ogni build e fallisce se compare un nome che non sta in nessuna delle due liste**. Era la causa vera del residuo: la stessa classe di difetti era già stata corretta nella 4.12.59, ma la lista scritta a mano non conteneva Irene, Monica, Paola, Roberta, Giorgia ed Elisa, quindi la regola sembrava attiva e non intercettava niente. Verificato togliendo `Irene` dalla lista: il controllo fallisce.
+- lint(contenuti): due regole nuove, prezzo unitario `l'uno` con nome femminile e pronome `gli` con soggetto femminile comune (`una famiglia`, `una bambina`, `una maestra`), con i rispettivi esempi sbagliati e le frasi corrette che non devono scattare (`Un bambino... quanto gli rimane?`, `3 puzzle a 14 euro l'uno`).
+- lint(contenuti): la regola dell'articolo mancante copre anche `Automobile`, `Fungo`, `Matita`.
+
+### Notes
+- il rilevatore dell'articolo mancante filtrava i nomi comuni per frequenza (`>= 3` occorrenze in minuscolo): con quella soglia `Automobile è un essere...` sfuggiva. Abbassata a 1, i candidati restano 3 su 629 righe grezze.
+
 ## 4.12.62 - 2026-09-06
 
 ### Fixed

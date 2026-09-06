@@ -1242,7 +1242,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Giorgia ha 18 banane. Ne mangia 6. Quante banane gli rimangono?",
+   "question": "Giorgia ha 18 banane. Ne mangia 6. Quante banane le rimangono?",
    "options": [
     "9",
     "15",
@@ -5022,7 +5022,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Roberta ha 52 biscotti. Ne mangia 15. Quanti biscotti gli rimangono?",
+   "question": "Roberta ha 52 biscotti. Ne mangia 15. Quanti biscotti le rimangono?",
    "options": [
     "30",
     "28",
@@ -12094,7 +12094,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Sara compra 4 magliette a 18 euro l'uno. In cassa le applicano uno sconto di 24 euro sul totale. Quanto paga alla fine?",
+   "question": "Sara compra 4 magliette a 18 euro l'una. In cassa le applicano uno sconto di 24 euro sul totale. Quanto paga alla fine?",
    "options": [
     "48",
     "46",
@@ -12247,7 +12247,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Irene compra 8 libri a 20 euro l'uno. In cassa gli applicano uno sconto di 19 euro sul totale. Quanto paga alla fine?",
+   "question": "Irene compra 8 libri a 20 euro l'uno. In cassa le applicano uno sconto di 19 euro sul totale. Quanto paga alla fine?",
    "options": [
     "141",
     "160",
@@ -12309,7 +12309,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Paola compra 8 album a 16 euro l'uno. In cassa gli applicano uno sconto di 15 euro sul totale. Quanto paga alla fine?",
+   "question": "Paola compra 8 album a 16 euro l'uno. In cassa le applicano uno sconto di 15 euro sul totale. Quanto paga alla fine?",
    "options": [
     "15",
     "128",
@@ -12767,7 +12767,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Irene compra 7 sciarpe a 16 euro l'uno. In cassa gli applicano uno sconto di 36 euro sul totale. Quanto paga alla fine?",
+   "question": "Irene compra 7 sciarpe a 16 euro l'una. In cassa le applicano uno sconto di 36 euro sul totale. Quanto paga alla fine?",
    "options": [
     "76",
     "57",
@@ -14087,7 +14087,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Matteo compra 7 sciarpe a 7 euro l'uno. In cassa gli applicano uno sconto di 11 euro sul totale. Quanto paga alla fine?",
+   "question": "Matteo compra 7 sciarpe a 7 euro l'una. In cassa gli applicano uno sconto di 11 euro sul totale. Quanto paga alla fine?",
    "options": [
     "38",
     "49",
@@ -14209,7 +14209,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Monica compra 8 sciarpe a 14 euro l'uno. In cassa gli applicano uno sconto di 37 euro sul totale. Quanto paga alla fine?",
+   "question": "Monica compra 8 sciarpe a 14 euro l'una. In cassa le applicano uno sconto di 37 euro sul totale. Quanto paga alla fine?",
    "options": [
     "75",
     "112",
@@ -14517,7 +14517,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Alessandro compra 3 sciarpe a 17 euro l'uno. In cassa gli applicano uno sconto di 15 euro sul totale. Quanto paga alla fine?",
+   "question": "Alessandro compra 3 sciarpe a 17 euro l'una. In cassa gli applicano uno sconto di 15 euro sul totale. Quanto paga alla fine?",
    "options": [
     "36",
     "51",
@@ -15192,7 +15192,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Giorgia compra 6 fumetti a 18 euro l'uno. In cassa gli applicano uno sconto di 7 euro sul totale. Quanto paga alla fine?",
+   "question": "Giorgia compra 6 fumetti a 18 euro l'uno. In cassa le applicano uno sconto di 7 euro sul totale. Quanto paga alla fine?",
    "options": [
     "101",
     "7",
@@ -16296,7 +16296,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Davide compra 4 magliette a 15 euro l'uno. In cassa gli applicano uno sconto di 10 euro sul totale. Quanto paga alla fine?",
+   "question": "Davide compra 4 magliette a 15 euro l'una. In cassa gli applicano uno sconto di 10 euro sul totale. Quanto paga alla fine?",
    "options": [
     "60",
     "10",
@@ -17127,7 +17127,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Chiara compra 6 magliette a 12 euro l'uno. In cassa le applicano uno sconto di 8 euro sul totale. Quanto paga alla fine?",
+   "question": "Chiara compra 6 magliette a 12 euro l'una. In cassa le applicano uno sconto di 8 euro sul totale. Quanto paga alla fine?",
    "options": [
     "8",
     "32",
@@ -17250,7 +17250,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Irene compra 7 puzzle a 7 euro l'uno. In cassa gli applicano uno sconto di 2 euro sul totale. Quanto paga alla fine?",
+   "question": "Irene compra 7 puzzle a 7 euro l'uno. In cassa le applicano uno sconto di 2 euro sul totale. Quanto paga alla fine?",
    "options": [
     "49",
     "47",
@@ -17311,7 +17311,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Carlo compra 3 magliette a 18 euro l'uno. In cassa gli applicano uno sconto di 8 euro sul totale. Quanto paga alla fine?",
+   "question": "Carlo compra 3 magliette a 18 euro l'una. In cassa gli applicano uno sconto di 8 euro sul totale. Quanto paga alla fine?",
    "options": [
     "54",
     "92",
@@ -17863,7 +17863,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Monica compra 6 fumetti a 14 euro l'uno. In cassa gli applicano uno sconto di 6 euro sul totale. Quanto paga alla fine?",
+   "question": "Monica compra 6 fumetti a 14 euro l'uno. In cassa le applicano uno sconto di 6 euro sul totale. Quanto paga alla fine?",
    "options": [
     "6",
     "80",
@@ -18730,7 +18730,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Simone ha 198 euro. Compra 3 magliette a 11 euro l'uno. Quanto denaro gli rimane?",
+   "question": "Simone ha 198 euro. Compra 3 magliette a 11 euro l'una. Quanto denaro gli rimane?",
    "options": [
     "165",
     "198",
@@ -20590,7 +20590,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Anna ha 223 euro. Compra 7 magliette a 17 euro l'uno. Quanto denaro le rimane?",
+   "question": "Anna ha 223 euro. Compra 7 magliette a 17 euro l'una. Quanto denaro le rimane?",
    "options": [
     "104",
     "223",
@@ -22171,7 +22171,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Giorgio ha 291 euro. Compra 4 magliette a 25 euro l'uno. Quanto denaro gli rimane?",
+   "question": "Giorgio ha 291 euro. Compra 4 magliette a 25 euro l'una. Quanto denaro gli rimane?",
    "options": [
     "291",
     "100",
@@ -22419,7 +22419,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Paola ha 286 euro. Compra 7 libri a 21 euro l'uno. Quanto denaro gli rimane?",
+   "question": "Paola ha 286 euro. Compra 7 libri a 21 euro l'uno. Quanto denaro le rimane?",
    "options": [
     "147",
     "286",
@@ -22698,7 +22698,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Elisa ha 295 euro. Compra 8 quaderni a 25 euro l'uno. Quanto denaro gli rimane?",
+   "question": "Elisa ha 295 euro. Compra 8 quaderni a 25 euro l'uno. Quanto denaro le rimane?",
    "options": [
     "200",
     "295",
@@ -22791,7 +22791,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Martina ha 257 euro. Compra 4 magliette a 9 euro l'uno. Quanto denaro le rimane?",
+   "question": "Martina ha 257 euro. Compra 4 magliette a 9 euro l'una. Quanto denaro le rimane?",
    "options": [
     "36",
     "257",
@@ -23287,7 +23287,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Lorenzo ha 101 euro. Compra 3 magliette a 17 euro l'uno. Quanto denaro gli rimane?",
+   "question": "Lorenzo ha 101 euro. Compra 3 magliette a 17 euro l'una. Quanto denaro gli rimane?",
    "options": [
     "101",
     "50",
@@ -33338,7 +33338,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "Una famiglia spende 35 euro al giorno per il cibo per 6 giorni di vacanza. Ha un budget di 250 euro. Quanto gli rimane dopo la spesa per il cibo?",
+   "question": "Una famiglia spende 35 euro al giorno per il cibo per 6 giorni di vacanza. Ha un budget di 250 euro. Quanto le rimane dopo la spesa per il cibo?",
    "options": [
     "40",
     "210",

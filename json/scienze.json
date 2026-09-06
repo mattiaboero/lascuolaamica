@@ -136,7 +136,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Automobile è un essere...",
+   "question": "L'automobile è un essere...",
    "options": [
     "vivente",
     "animale",
@@ -260,7 +260,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Fungo è un essere...",
+   "question": "Il fungo è un essere...",
    "options": [
     "vivente",
     "artificiale",
@@ -291,7 +291,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Matita è un essere...",
+   "question": "La matita è un essere...",
    "options": [
     "animale",
     "pianta",

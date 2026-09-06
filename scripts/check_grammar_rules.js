@@ -38,11 +38,21 @@ const SBAGLIATE = [
   'Se cade neve, il tempo è',
   'Nuvola è un essere vivente.',
   "Sara compra 4 magliette. In cassa gli applicano uno sconto.",
+  'Una famiglia spende 35 euro al giorno. Quanto gli rimane?',
+  "Sara compra 4 magliette a 18 euro l'uno.",
+  "Irene compra 7 sciarpe a 16 euro l'uno.",
+  'Automobile è un essere vivente.',
+  'Fungo è un essere vivente.',
   'Le energie rinnovabili sono importanti perché?',
   'Un oggetto metallico lasciato al sole diventa…',
 ];
 
 const CORRETTE = [
+  'Un bambino ha 60 euro. Compra 4 pacchi di figurine. Quanto gli rimane?',
+  'Un contadino ha 120 mele. Ne vende 30. Quante mele gli restano?',
+  "Marco compra 3 puzzle a 14 euro l'uno. Quanto paga?",
+  "Sara compra 4 magliette a 18 euro l'una. Quanto paga?",
+  "Chiara ha 104 euro e vuole comprare figurine a 15 euro l'una. Quante ne compra?",
   'Una ricetta richiede 8 grammi di burro.',
   'Quanti grammi di burro servono?',
   'Una borsa costa 10 euro.',
@@ -77,6 +87,43 @@ function caricaRegole() {
   return ctx.__G;
 }
 
+
+// Le due liste di nomi propri in lint_content.js sono l'unico modo di sapere il
+// genere del referente, e sono gia' rimaste indietro due volte mentre il corpus
+// cresceva (lotto 5 e lotto 7): la regola sembrava attiva e lasciava passare
+// "Irene ... gli applicano". Qui il corpus viene riletto a ogni build e ogni
+// nome che fa da soggetto va classificato, altrimenti il controllo fallisce.
+const NON_NOMI = new Set([
+  'Cosa', 'Chi', 'Come', 'Dove', 'Quando', 'Quanto', 'Quanta', 'Quanti', 'Quante',
+  'Quale', 'Quali', 'Ognuno', 'Ognuna', 'Nessuno', 'Poi', 'Una', 'Uno', 'Studiare',
+  'Roma', 'Italia', 'Terra', 'Padana', 'Indo', 'Mediterraneo', 'Solare', 'Paese',
+]);
+
+function controllaNomiClassificati(sorgente) {
+  const lista = (nome) => {
+    const m = sorgente.match(new RegExp(`const ${nome} = '([^']+)'`));
+    if (!m) throw new Error(`${nome} non trovata in lint_content.js`);
+    return new Set(m[1].split('|'));
+  };
+  const noti = new Set([...lista('NOMI_PERSONA_F'), ...lista('NOMI_PERSONA_M')]);
+  const dir = path.join(__dirname, '..', 'json');
+  const verbi = 'ha|compra|legge|corre|mangia|prepara|raccoglie|guadagna|spende|percorre|riceve|porta|studia|gioca';
+  const re = new RegExp(`\\b([A-Z][a-zà-ù]{2,})\\s+(?:${verbi})\\b`, 'g');
+  const sconosciuti = new Set();
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    if (f.includes('index') || f.includes('changelog')) continue;
+    const dati = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    const domande = Array.isArray(dati) ? dati : dati.questions;
+    if (!Array.isArray(domande)) continue;
+    for (const q of domande) {
+      for (const m of String(q.question || '').matchAll(re)) {
+        if (!noti.has(m[1]) && !NON_NOMI.has(m[1])) sconosciuti.add(m[1]);
+      }
+    }
+  }
+  return [...sconosciuti].sort();
+}
+
 function main() {
   const regole = caricaRegole();
   let fallito = false;
@@ -100,6 +147,13 @@ function main() {
     fallito = true;
     console.error('[ERROR] falsi positivi su frasi corrette:');
     falsi.forEach((t) => console.error(`  - ${t} → ${regole.find((r) => r.pattern.test(t)).msg}`));
+  }
+
+  const sconosciuti = controllaNomiClassificati(fs.readFileSync(LINT, 'utf8'));
+  if (sconosciuti.length) {
+    fallito = true;
+    console.error('[ERROR] nomi propri nel corpus non classificati in NOMI_PERSONA_F / NOMI_PERSONA_M:');
+    sconosciuti.forEach((n) => console.error(`  - ${n} (aggiungilo alla lista giusta in lint_content.js)`));
   }
 
   if (fallito) process.exit(1);

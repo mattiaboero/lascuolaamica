@@ -65,6 +65,17 @@ const DANGLING_REFERENCE = /\bdomanda\s+n\.?\s*\d+|\bdomanda precedente\b|\b(com
 const NOMI_MASSA = 'burro|zucchero|farina|farine|latte|olio|pane|riso|miele|marmellata|panna';
 const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo';
 const NOMI_FEMMINILI = 'borsa|giacca|scarpe|maglietta|penna|matita|aula|palestra|biblioteca|fattoria|figurine|caramelle|pagine|mele|cameretta|cucina|stanza|classe|scuola|finestra|porta|piscina|libreria|cartoleria';
+// Nomi propri di persona presenti nel corpus. In italiano il genere del pronome
+// dipende dal referente e nessuna regex lo deduce dal testo, quindi le due liste
+// vanno enumerate: check_grammar_rules.js rilegge il corpus a ogni build e
+// fallisce se compare un nome che non sta in nessuna delle due, cosi' la lista
+// non puo' restare indietro in silenzio (era gia' successo due volte).
+const NOMI_PERSONA_F = 'Ada|Aisha|Alice|Amina|Amy|Anna|Arianna|Asel|Bea|Beatrice|Chiara|Claudia|Elena|Elisa|Emma|Fatima|Francesca|Giada|Giorgia|Giulia|Grace|Irene|Julia|Laura|Lea|Lena|Lisa|Lucy|Maria|Marina|Marta|Martina|Mei|Mia|Monica|Nadia|Nina|Olivia|Paola|Priya|Rima|Roberta|Sara|Sarah|Serena|Sofia|Valentina|Yasmin';
+const NOMI_PERSONA_M = 'Ahmed|Alessandro|Amir|Andrea|Carlo|Dan|Daniele|Davide|Emilio|Fabio|Filippo|Francesco|Gianni|Giacomo|Giorgio|Giovanni|Giulio|Ivo|Jack|Jake|Leo|Lorenzo|Luca|Marco|Marino|Mario|Matteo|Mattia|Mike|Nicola|Omar|Paolo|Paul|Pedro|Peter|Pietro|Riccardo|Roberto|Sam|Simone|Soren|Stefano|Tom|Tommaso|Yusuf';
+const VERBI_DATIVO = 'rimane|resta|restano|rimangono|serve|servono|applicano|danno|chiedono';
+// Nomi femminili plurali usati nei problemi col prezzo unitario: "4 magliette a
+// 18 euro l'uno" e' l'accordo rotto dal template, che era scritto per "libri".
+const NOMI_FEMMINILI_PREZZO = 'magliette|sciarpe|maglie|matite|penne|granite|figurine|caramelle|scarpe|borse|gonne';
 const GRAMMATICA = [
   { pattern: /\((?:in|espress[oa] in)\s+(?:grammi|chilogrammi|metri|centimetri|litri|minuti|euro|km|kg|cm|ml)\)/i,
     msg: 'unita di misura tra parentesi dopo il nome (artefatto di template: "8 burro (in grammi)" invece di "8 grammi di burro")' },
@@ -90,7 +101,7 @@ const GRAMMATICA = [
   // rimasti") e frase che inizia con un nome comune senza articolo.
   { pattern: /\b(?:lumache|galline|mele|pere|caramelle|figurine|pagine|matite|penne|uova|scatole|piante|fragole)\s+(?:rimasti|finiti|venduti|mangiati|comprati)\b/i,
     msg: 'accordo: participio maschile dopo un nome femminile plurale (es. "10 lumache rimasti")' },
-  { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro|Pesce|Nuvola|Farfalla|Uccello|Cavallo|Ape|Roccia|Neve|Pioggia|Vento|Sabbia|Erba|Foglia)\s+(?:è|era|ha)(?=\s|$)/,
+  { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro|Pesce|Nuvola|Farfalla|Uccello|Cavallo|Ape|Roccia|Neve|Pioggia|Vento|Sabbia|Erba|Foglia|Automobile|Fungo|Matita)\s+(?:è|era|ha)(?=\s|$)/,
     msg: "manca l'articolo a inizio frase (es. \"Gatto è un essere\" invece di \"Il gatto è un essere\")" },
   // In italiano una domanda non puo' finire con una preposizione: se la frase e'
   // sospesa e sono le opzioni a completarla, va chiusa con i puntini. Il corpus
@@ -118,8 +129,12 @@ const GRAMMATICA = [
   // Dal lotto 5: pronome maschile con un soggetto femminile. La regola nomina i
   // nomi propri usati nel corpus, perche' in italiano il genere del pronome
   // dipende dal referente e nessuna regex lo deduce dal testo.
-  { pattern: /\b(?:Anna|Sara|Giulia|Sofia|Elena|Maria|Laura|Marta|Chiara|Alice|Serena|Martina|Arianna|Claudia|Beatrice|Emma|Valentina|Priya)\b(?:(?!\b(?:Marco|Luca|Matteo|Paolo|Giovanni|Davide|Simone|Stefano|Tommaso|Pietro|Gianni|Mario|Nicola|Giacomo|Daniele|Amir|Andrea|Fabio|Filippo|Carlo|Roberto)\b)[\s\S])*\bgli\s+(?:rimane|resta|restano|rimangono|serve|servono|applicano|danno|chiedono)\b/,
+  { pattern: new RegExp(`\\b(?:${NOMI_PERSONA_F})\\b(?:(?!\\b(?:${NOMI_PERSONA_M})\\b)[\\s\\S])*\\bgli\\s+(?:${VERBI_DATIVO})\\b`),
     msg: 'pronome maschile "gli" con un soggetto femminile (es. "Sara ... gli rimane")' },
+  { pattern: /\b(?:una famiglia|una bambina|una signora|una maestra|una nonna|una mamma|una ragazza|una turista)\b(?:(?!\b(?:un|il|lo)\s)[\s\S])*\bgli\s+(?:rimane|resta|restano|rimangono|serve|servono)\b/i,
+    msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
+  { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
+    msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
   { pattern: /\bperch[ée]\?\s*$/, soloDomanda: true,
     msg: 'domanda che termina con "perché?": se sono le opzioni a completarla, usare i puntini' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
