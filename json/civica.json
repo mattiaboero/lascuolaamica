@@ -3532,7 +3532,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Se parli della libertà di una persona, qual è il comportamento corretto?",
+   "question": "Quale affermazione sulla libertà di una persona è corretta?",
    "options": [
     "non ha limiti",
     "vale solo se si urla",
@@ -3564,7 +3564,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "In una situazione in cui parli della libertà di una persona, cosa fai?",
+   "question": "Fino a dove arriva la libertà di una persona?",
    "options": [
     "non ha limiti",
     "finisce quando danneggia i diritti degli altri",
@@ -3596,7 +3596,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli della libertà di una persona?",
+   "question": "Come si può descrivere il limite della libertà di ciascuno?",
    "options": [
     "non ha limiti",
     "finisce quando danneggia i diritti degli altri",
@@ -3628,7 +3628,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli della libertà di una persona?",
+   "question": "Quale frase spiega meglio che cos'è la libertà di una persona?",
    "options": [
     "finisce quando danneggia i diritti degli altri",
     "dipende dalla simpatia",
@@ -3660,7 +3660,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli della libertà di una persona?",
+   "question": "Come si può descrivere il rapporto tra la libertà di una persona e i diritti degli altri?",
    "options": [
     "non ha limiti",
     "vale solo se si urla",
@@ -4972,7 +4972,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se parli della democrazia, qual è il comportamento corretto?",
+   "question": "Che cosa significa vivere in democrazia?",
    "options": [
     "evitare ogni confronto",
     "seguire solo il più forte",
@@ -5004,7 +5004,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui parli della democrazia, cosa fai?",
+   "question": "Quale comportamento è coerente con la democrazia?",
    "options": [
     "seguire solo il più forte",
     "rispettare regole, diritti e partecipazione",
@@ -5036,7 +5036,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli della democrazia?",
+   "question": "Quale atteggiamento è alla base della democrazia?",
    "options": [
     "evitare ogni confronto",
     "seguire solo il più forte",
@@ -5068,7 +5068,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli della democrazia?",
+   "question": "Che cosa chiede la democrazia ai cittadini?",
    "options": [
     "pensare agli interessi di pochi",
     "evitare ogni confronto",
@@ -5100,7 +5100,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli della democrazia?",
+   "question": "Quale frase descrive meglio la democrazia?",
    "options": [
     "pensare agli interessi di pochi",
     "seguire solo il più forte",
@@ -5772,7 +5772,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Se parli di un monumento del tuo territorio, qual è il comportamento corretto?",
+   "question": "Qual è il comportamento corretto verso un monumento del tuo territorio?",
    "options": [
     "usarlo come discarica",
     "pensare che non riguardi nessuno",
@@ -5804,7 +5804,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui parli di un monumento del tuo territorio, cosa fai?",
+   "question": "Come ci si comporta con un monumento del proprio territorio?",
    "options": [
     "rovinarlo per gioco",
     "pensare che non riguardi nessuno",
@@ -5836,7 +5836,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli di un monumento del tuo territorio?",
+   "question": "Che cosa è giusto fare con un monumento del tuo territorio?",
    "options": [
     "usarlo come discarica",
     "tutelarlo come patrimonio di tutti",
@@ -5868,7 +5868,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli di un monumento del tuo territorio?",
+   "question": "Quale atteggiamento mostra rispetto per un monumento del territorio?",
    "options": [
     "rovinarlo per gioco",
     "pensare che non riguardi nessuno",
@@ -5900,7 +5900,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli di un monumento del tuo territorio?",
+   "question": "Come si prende cura la comunità di un monumento del territorio?",
    "options": [
     "tutelarlo come patrimonio di tutti",
     "pensare che non riguardi nessuno",
@@ -6252,7 +6252,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Se parli delle ricorrenze civili, qual è il comportamento corretto?",
+   "question": "A che cosa servono le ricorrenze civili?",
    "options": [
     "dividere le persone",
     "fare solo vacanza",
@@ -6284,7 +6284,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui parli delle ricorrenze civili, cosa fai?",
+   "question": "Qual è lo scopo principale delle ricorrenze civili?",
    "options": [
     "fare solo vacanza",
     "dividere le persone",
@@ -6316,7 +6316,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli delle ricorrenze civili?",
+   "question": "Perché una comunità celebra le ricorrenze civili?",
    "options": [
     "fare solo vacanza",
     "saltare le regole",
@@ -6348,7 +6348,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli delle ricorrenze civili?",
+   "question": "Che cosa aiutano a fare le ricorrenze civili?",
    "options": [
     "fare solo vacanza",
     "dividere le persone",
@@ -6380,7 +6380,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli delle ricorrenze civili?",
+   "question": "Quale frase spiega meglio a che cosa servono le ricorrenze civili?",
    "options": [
     "fare solo vacanza",
     "ricordare valori e storia comune",
@@ -9292,7 +9292,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Se parli di api e insetti utili, qual è il comportamento corretto?",
+   "question": "Qual è il comportamento corretto verso le api e gli insetti utili?",
    "options": [
     "disturbarli nei fiori",
     "proteggerli",
@@ -9324,7 +9324,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "In una situazione in cui parli di api e insetti utili, cosa fai?",
+   "question": "Come ci si comporta con le api e gli insetti utili?",
    "options": [
     "proteggerli",
     "spaventarli sempre",
@@ -9356,7 +9356,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando parli di api e insetti utili?",
+   "question": "Che cosa è giusto fare quando incontri api e insetti utili?",
    "options": [
     "disturbarli nei fiori",
     "proteggerli",
@@ -9388,7 +9388,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando parli di api e insetti utili?",
+   "question": "Quale atteggiamento mostra rispetto per le api e gli insetti utili?",
    "options": [
     "disturbarli nei fiori",
     "schiacciarli per gioco",
@@ -9420,7 +9420,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando parli di api e insetti utili?",
+   "question": "Che cosa aiuta di più le api e gli insetti utili?",
    "options": [
     "proteggerli",
     "spaventarli sempre",
@@ -9772,7 +9772,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Se parli della biodiversità, qual è il comportamento corretto?",
+   "question": "Che cos'è la biodiversità?",
    "options": [
     "un tipo di bottiglia",
     "una strada speciale",
@@ -9804,7 +9804,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "In una situazione in cui parli della biodiversità, cosa fai?",
+   "question": "Quale definizione di biodiversità è corretta?",
    "options": [
     "un cestino colorato",
     "una strada speciale",
@@ -9836,7 +9836,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli della biodiversità?",
+   "question": "Che cosa indica la parola 'biodiversità'?",
    "options": [
     "la varietà di esseri viventi",
     "una strada speciale",
@@ -9868,7 +9868,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli della biodiversità?",
+   "question": "Come si può spiegare la biodiversità a un compagno?",
    "options": [
     "una strada speciale",
     "un tipo di bottiglia",
@@ -9900,7 +9900,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli della biodiversità?",
+   "question": "Quale frase descrive meglio la biodiversità?",
    "options": [
     "una strada speciale",
     "un cestino colorato",
@@ -11372,7 +11372,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Se parli di economia circolare, qual è il comportamento corretto?",
+   "question": "Che cosa significa economia circolare?",
    "options": [
     "riutilizzare e recuperare materiali",
     "produrre e buttare più in fretta",
@@ -11404,7 +11404,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "In una situazione in cui parli di economia circolare, cosa fai?",
+   "question": "Che cosa si fa in un'economia circolare?",
    "options": [
     "mescolare tutti i rifiuti",
     "consumare senza pensare",
@@ -11436,7 +11436,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli di economia circolare?",
+   "question": "Quale idea sta alla base dell'economia circolare?",
    "options": [
     "mescolare tutti i rifiuti",
     "riutilizzare e recuperare materiali",
@@ -11468,7 +11468,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli di economia circolare?",
+   "question": "Che cosa propone l'economia circolare?",
    "options": [
     "consumare senza pensare",
     "mescolare tutti i rifiuti",
@@ -11500,7 +11500,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli di economia circolare?",
+   "question": "Quale frase descrive meglio l'economia circolare?",
    "options": [
     "produrre e buttare più in fretta",
     "mescolare tutti i rifiuti",
@@ -12012,7 +12012,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Se parli dell'acqua come bene comune, qual è il comportamento corretto?",
+   "question": "Che cosa rende l'acqua un bene comune di tutti?",
    "options": [
     "riguarda solo i fiumi lontani",
     "serve solo per lavare i piatti",
@@ -12044,7 +12044,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "In una situazione in cui parli dell'acqua come bene comune, cosa fai?",
+   "question": "Quale affermazione sull'acqua come bene comune è corretta?",
    "options": [
     "è essenziale per la vita di tutti",
     "serve solo per lavare i piatti",
@@ -12076,7 +12076,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli dell'acqua come bene comune?",
+   "question": "Che cosa significa dire che l'acqua è un bene comune?",
    "options": [
     "non dipende dai comportamenti",
     "è essenziale per la vita di tutti",
@@ -12108,7 +12108,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli dell'acqua come bene comune?",
+   "question": "Come si può spiegare che l'acqua è un bene di tutti?",
    "options": [
     "è essenziale per la vita di tutti",
     "non dipende dai comportamenti",
@@ -12140,7 +12140,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli dell'acqua come bene comune?",
+   "question": "Quale frase descrive meglio il valore dell'acqua per la comunità?",
    "options": [
     "è essenziale per la vita di tutti",
     "serve solo per lavare i piatti",
@@ -24172,7 +24172,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Se parli delle regole della strada, qual è il comportamento corretto?",
+   "question": "Quale affermazione sulle regole della strada è corretta?",
    "options": [
     "si interpretano a piacere",
     "funzionano meglio se tutti le rispettano",
@@ -24204,7 +24204,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui parli delle regole della strada, cosa fai?",
+   "question": "Perché è importante che tutti rispettino le regole della strada?",
    "options": [
     "si interpretano a piacere",
     "valgono solo per gli adulti",
@@ -24236,7 +24236,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli delle regole della strada?",
+   "question": "Quale affermazione spiega meglio l'efficacia delle regole della strada?",
    "options": [
     "valgono solo per gli adulti",
     "funzionano meglio se tutti le rispettano",
@@ -24268,7 +24268,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli delle regole della strada?",
+   "question": "Come si può spiegare l'utilità delle regole della strada?",
    "options": [
     "si interpretano a piacere",
     "contano solo nelle emergenze",
@@ -24300,7 +24300,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli delle regole della strada?",
+   "question": "Quale frase spiega meglio a che cosa servono le regole della strada?",
    "options": [
     "si interpretano a piacere",
     "contano solo nelle emergenze",
@@ -25292,7 +25292,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Se parli della strada come spazio pubblico, qual è il comportamento corretto?",
+   "question": "Quale affermazione descrive meglio la strada come spazio pubblico?",
    "options": [
     "libertà e regole devono stare insieme",
     "conta solo la velocità",
@@ -25324,7 +25324,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui parli della strada come spazio pubblico, cosa fai?",
+   "question": "Che cosa significa che la strada è uno spazio pubblico?",
    "options": [
     "libertà e regole devono stare insieme",
     "ognuno può fare ciò che vuole",
@@ -25356,7 +25356,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando parli della strada come spazio pubblico?",
+   "question": "Come convivono libertà e regole sulla strada?",
    "options": [
     "libertà e regole devono stare insieme",
     "vince chi arriva primo",
@@ -25388,7 +25388,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando parli della strada come spazio pubblico?",
+   "question": "Quale principio vale sulla strada, che è spazio di tutti?",
    "options": [
     "libertà e regole devono stare insieme",
     "ognuno può fare ciò che vuole",
@@ -25420,7 +25420,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando parli della strada come spazio pubblico?",
+   "question": "Quale frase spiega meglio perché la strada è uno spazio condiviso?",
    "options": [
     "vince chi arriva primo",
     "ognuno può fare ciò che vuole",

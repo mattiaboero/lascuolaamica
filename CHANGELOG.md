@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.61 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **riscritti gli stem di 50 domande di civica** il cui testo non corrispondeva alle opzioni. Chiedevano un comportamento — `Se parli della libertà di una persona, qual è il comportamento corretto?` — mentre le opzioni erano definizioni: `non ha limiti` / `finisce quando danneggia i diritti degli altri`. Il bambino leggeva "cosa fai?" e doveva scegliere fra quattro descrizioni. Rilievo aperto dal lotto 3 della revisione linguistica.
+
+### Changed
+- La famiglia è fatta di **10 argomenti × 5 varianti** (libertà, democrazia, monumenti, ricorrenze civili, api e insetti utili, biodiversità, economia circolare, acqua bene comune, regole della strada, strada come spazio pubblico), e le 5 varianti di ogni argomento **condividono le stesse opzioni**: riscriverle tutte con la stessa formulazione avrebbe prodotto 5 domande identiche. Sono state quindi scritte **50 formulazioni distinte**, calibrate sul tipo di opzioni: definizione (`Che cos'è la biodiversità?`), scopo (`A che cosa servono le ricorrenze civili?`), comportamento dove le opzioni erano davvero azioni (`Qual è il comportamento corretto verso le api e gli insetti utili?`).
+- Sei accoppiamenti sono stati rifiniti dopo una rilettura: `Su che cosa si fonda la democrazia?` con risposta `rispettare regole, diritti e partecipazione` chiedeva un nome e riceveva un infinito, ed è diventato `Quale atteggiamento è alla base della democrazia?`; `Quando funzionano davvero le regole della strada?` con risposta `funzionano meglio se tutti le rispettano` ripeteva il verbo della domanda.
+- Una formulazione nuova collideva con una domanda già esistente in un'altra area (`Perché l'acqua è considerata un bene comune?`, presente in `civ-3-acqua-9090`): intercettata dal controllo duplicati e riformulata.
+
+### Notes
+- verificato che le riscritture non abbiano introdotto duplicati: 38 domande con testo identico esistevano già prima di oggi in tutto il corpus e sono **esattamente le stesse** dopo (nessuna aggiunta dalle conversioni dei sei lotti). Restano un rilievo aperto a sé, non affrontato qui.
+
 ## 4.12.60 - 2026-09-06
 
 ### Fixed
