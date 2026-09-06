@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.43",
+  "items": [
+   "\"Cancella dati locali\" ora cancella anche record, classe e impostazione audio di Cervellino Spacca-Muri: prima restavano sul dispositivo pur dichiarando di averli rimossi.",
+   "Le domande già viste vengono ricordate più a lungo tra una sessione e l'altra, così si ripetono meno."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.42",
   "items": [
    "Cervellino Spacca-Muri parte più in fretta: le domande vengono richieste già mentre la pagina si carica.",

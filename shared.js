@@ -299,6 +299,11 @@
     const value = String(key || '');
     if (!value) return false;
     return (
+      // Prefisso di progetto: copre anche lascuolaamica_rewards_v1 e le tre
+      // chiavi di Breakout (highscore, class, muted), che restavano fuori dalla
+      // whitelist mentre la modale prometteva di cancellare "progressi,
+      // classifiche e preferenze salvate su questo dispositivo".
+      value.startsWith('lascuolaamica_') ||
       value.startsWith('scuolaAmica_') ||
       value.startsWith('englishAdventure_') ||
       value.startsWith('educazioneCivica_') ||

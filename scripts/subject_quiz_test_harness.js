@@ -255,7 +255,39 @@ async function checkDialogFocusAndQueue(page) {
     throw new Error(`Risoluzioni inattese dei dialoghi: ${resolved.join(',')}`);
   }
 
-  return { focusDopoAnnidata: afterNested.text, focusDopoEsterna: afterOuter, coda: resolved };
+  // "Cancella dati locali" deve cancellare davvero tutto: la whitelist di
+  // isProjectStorageKey non copriva le chiavi di Breakout, quindi il record
+  // restava sul dispositivo mentre l'alert dichiarava di averlo rimosso.
+  const chiaviRimaste = await checkClearLocalData(page);
+
+  return { focusDopoAnnidata: afterNested.text, focusDopoEsterna: afterOuter, coda: resolved, chiaviRimaste };
+}
+
+async function checkClearLocalData(page) {
+  const seeded = await page.evaluate(() => {
+    const keys = {
+      lascuolaamica_breakout_highscore_v1: '4242',
+      lascuolaamica_breakout_class_v1: '4',
+      lascuolaamica_breakout_muted_v1: '1',
+      lascuolaamica_rewards_v1: '{}',
+      subject_lb_v1: '[]'
+    };
+    Object.entries(keys).forEach(([k, v]) => localStorage.setItem(k, v));
+    return Object.keys(keys);
+  });
+
+  await page.locator('footer [data-open-modal="modalInfoHub"]').click();
+  await page.waitForSelector('#modalInfoHub.open', { timeout: 5000 });
+  await page.locator('#modalInfoHub .info-hub-btn-danger').click();
+  await page.waitForSelector('#modalPromptShared.open', { timeout: 5000 });
+  await page.locator('#sharedPromptConfirm').click();
+  await page.waitForTimeout(1000);
+
+  const rimaste = await page.evaluate((keys) => keys.filter((k) => localStorage.getItem(k) !== null), seeded);
+  if (rimaste.length) {
+    throw new Error(`"Cancella dati locali" ha lasciato queste chiavi: ${rimaste.join(', ')}`);
+  }
+  return rimaste;
 }
 
 // Regressione A2: l'avanzamento differito di checkAnswer resta pendente per

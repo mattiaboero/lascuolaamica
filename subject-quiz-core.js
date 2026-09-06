@@ -146,6 +146,16 @@
   function notifyLoadError() {
     const message = 'Non riesco a caricare le domande. Controlla la connessione e riprova.';
     try {
+      // showFeedback e' l'overlay gigante da 3.5rem: il keyframe fbPop finisce
+      // a opacity 0 dopo 1.2 s (holdMs non ha alcun effetto) e la frase, con
+      // white-space: nowrap, occupa ~1500 px, quindi su un telefono deborda da
+      // entrambi i lati. Per un errore che l'utente deve poter leggere serve il
+      // dialogo condiviso, che resta finche' non lo chiude. shared.js e'
+      // caricato dopo questo file: finche' non c'e', si ripiega sul feedback.
+      if (window.SA && window.SA.ui && typeof window.SA.ui.alert === 'function') {
+        window.SA.ui.alert(message, { title: 'Domande non disponibili' });
+        return;
+      }
       showFeedback(false, message, 4200);
     } catch (e) {
       debugWarn('notifyLoadError', e);
@@ -199,6 +209,12 @@
   const METRICS_ROLLING_WINDOW = Math.max(10, Number(cfg.metricsRollingWindow || 30));
   const CLASS_PREF_KEY = cfg.classPrefKey || `${CURSOR_KEY}_class_pref_v1`;
   const LEADERBOARD_AREA_FALLBACK = safeText(cfg.leaderboardAreaFallback || '', 64);
+  // Tetto per bucket dello storico anti-ripetizione. Deve valere sia in
+  // scrittura (pickQuestion) sia in lettura (loadHistoryStore): erano due
+  // numeri diversi, si scriveva fino a pool.length * 4 id e al reload
+  // successivo se ne rileggevano solo 300, quindi alzare cfg.recentIdSessions
+  // oltre 30 non allargava piu' la finestra, la tappava in silenzio.
+  const HISTORY_BUCKET_MAX = 2000;
   const RECENT_ID_SESSIONS = Math.max(3, Number(cfg.recentIdSessions || 6));
   const RECENT_SIG_SESSIONS = Math.max(4, Number(cfg.recentSigSessions || 8));
   const ANSWER_MODE = cfg.answerMode === 'numeric' ? 'numeric' : 'mcq';
@@ -860,7 +876,7 @@
       const out = {};
       Object.keys(raw).forEach((k) => {
         if (!Array.isArray(raw[k])) return;
-        out[k] = raw[k].map((v) => safeText(v, 80)).filter(Boolean).slice(-300);
+        out[k] = raw[k].map((v) => safeText(v, 80)).filter(Boolean).slice(-HISTORY_BUCKET_MAX);
       });
       return out;
     } catch (e) {
@@ -1658,14 +1674,14 @@
 
     if (!Array.isArray(historyStore[bucket])) historyStore[bucket] = [];
     historyStore[bucket].push(chosen._id);
-    const maxSeen = Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, pool.length * 4, 60);
+    const maxSeen = Math.min(HISTORY_BUCKET_MAX, Math.max(TOTAL_Q * RECENT_ID_SESSIONS * 3, pool.length * 4, 60));
     if (historyStore[bucket].length > maxSeen) {
       historyStore[bucket] = historyStore[bucket].slice(-maxSeen);
     }
 
     if (!Array.isArray(historySigStore[bucket])) historySigStore[bucket] = [];
     historySigStore[bucket].push(chosen._sig);
-    const maxSeenSig = Math.max(TOTAL_Q * RECENT_SIG_SESSIONS * 3, pool.length * 4, 90);
+    const maxSeenSig = Math.min(HISTORY_BUCKET_MAX, Math.max(TOTAL_Q * RECENT_SIG_SESSIONS * 3, pool.length * 4, 90));
     if (historySigStore[bucket].length > maxSeenSig) {
       historySigStore[bucket] = historySigStore[bucket].slice(-maxSeenSig);
     }

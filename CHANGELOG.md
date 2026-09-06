@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.12.43 - 2026-09-06
+
+### Fixed
+- fix(privacy): "Cancella dati locali" non cancellava i dati di Breakout. La whitelist di `isProjectStorageKey()` elencava i prefissi storici più la chiave esatta `lascuolaamica_rewards_v1`, lasciando fuori `lascuolaamica_breakout_highscore_v1`, `_class_v1` e `_muted_v1`: la modale prometteva "progressi, classifiche e preferenze salvate su questo dispositivo" e l'alert confermava "Dati rimossi: N", ma il record del gioco era ancora lì al reload. Aggiunto il prefisso `lascuolaamica_`, che copre anche i reward e rende superfluo il confronto esatto. Verificato in Chromium: le tre chiavi seminate spariscono e il messaggio riporta "Dati rimossi: 6".
+- fix(quiz): lo storico anti-ripetizione veniva scritto con un tetto e riletto con un altro. `pickQuestion()` lasciava crescere ogni bucket fino a `max(TOTAL_Q * RECENT_ID_SESSIONS * 3, pool.length * 4, 60)` — per un'area di matematica circa 1600 id — mentre `loadHistoryStore()` troncava a 300 al caricamento successivo. Alzare `cfg.recentIdSessions` oltre 30 non allargava la finestra anti-ripetizione: la tappava in silenzio a 300, e ogni sessione scriveva in `localStorage` id che il caricamento dopo buttava via. Ora c'è una sola costante `HISTORY_BUCKET_MAX`, usata sia dal cap in scrittura sia dallo `slice` in lettura (vale per entrambi gli store, id e signature, che passano dalla stessa funzione).
+- fix(ui): l'errore "Non riesco a caricare le domande" passava da `showFeedback`, cioè l'overlay da 3.5rem con `white-space: nowrap` la cui animazione `fbPop` termina a `opacity: 0` dopo 1,2 s — il parametro `holdMs: 4200` non ha mai avuto effetto. Su un telefono da 390 px la frase da 55 caratteri occupa circa 1500 px e deborda da entrambi i lati. Ora usa il dialogo condiviso, che resta finché l'utente non lo chiude, con fallback al vecchio feedback se `shared.js` non è ancora stato eseguito (è caricato dopo `subject-quiz-core.js`).
+
+### Changed
+- test(e2e): il modo `dialogs` semina cinque chiavi di storage, esegue "Cancella dati locali" e verifica che non ne resti nessuna. Verificato togliendo il prefisso dalla whitelist: il test elenca le tre chiavi di Breakout rimaste.
+- chore: bump versione `4.12.42` → `4.12.43`.
+
+### Notes
+- Il fix dell'errore di caricamento non è riproducibile end-to-end con i test attuali: bloccando `**/json/**` le pagine materia restano comunque giocabili perché portano un banco inline di riserva (48 domande su `/storia`), quindi `notifyLoadError()` non viene raggiunto. Il percorso è più raro di quanto stimasse l'audit; la modifica è comunque protetta da fallback.
+- Durante la verifica di "Cancella dati locali" sulla revisione precedente al fix dello `z-index` (4.12.40) il click su "Sì, cancella tutto" andava in timeout, intercettato dalla modale Info: conferma indipendente che quel bug rendeva la funzione inutilizzabile.
+
 ## 4.12.42 - 2026-09-06
 
 ### Changed
