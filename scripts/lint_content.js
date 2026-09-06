@@ -141,7 +141,7 @@ const GRAMMATICA = [
   // nessuno la risolveva ("al senso del/della udito"). Vale solo sulla domanda:
   // in inglese le spiegazioni usano "il/la suo/sua" per spiegare che 'his' e
   // 'her' non distinguono la cosa posseduta, e li' la doppia forma e' voluta.
-  { pattern: /\b(?:del\/della|il\/la|un\/una|nel\/nella|dei\/delle|lo\/la|dello\/della)\b/,
+  { pattern: /\b(?:il|lo|la|i|gli|le|un|uno|una|del|dello|della|dei|degli|delle|nel|nello|nella|nei|negli|nelle|al|allo|alla|ai|agli|alle)\/(?:il|lo|la|i|gli|le|un|uno|una|del|dello|della|dei|degli|delle|nel|nello|nella|nei|negli|nelle|al|allo|alla|ai|agli|alle)\b/,
     soloDomanda: true,
     msg: 'alternativa di genere non risolta dal template (es. "al senso del/della udito")' },
   // Dal lotto 9: nell'aritmetica il segno di uguale era attaccato al punto
@@ -167,6 +167,12 @@ const GRAMMATICA = [
   { pattern: /(?<!\b[ad])(?<!\b[ad]\.[CcEe])(?<!\.\.)\.\s+[a-zà-ù]/,
     soloDomanda: true,
     msg: 'minuscola dopo il punto' },
+  // Dal lotto 12: davanti a s+consonante, z, gn, ps si usano lo/uno/nello/dello,
+  // non il/un/nel/del ("Rana vive nel stagno", "il stazione"). L'elenco delle
+  // parole e' quello che compare davvero nel corpus: "sole", "sale", "sasso" e
+  // gli altri nomi con s+vocale prendono "il" e non c'entrano con la regola.
+  { pattern: /(?<!['’])\b(?:il|un|nel|del|al|dal|sul|col)\s+(?:s[bcdfglmnpqrtvz]|z|gn|ps|pn)[a-zà-ù]+/i,
+    msg: 'serve lo/uno/nello/dello davanti a s+consonante, z, gn o ps (es. "nello stagno", non "nel stagno")' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },

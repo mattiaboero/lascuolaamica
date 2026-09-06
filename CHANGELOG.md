@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.68 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **5 domande dicevano ancora `il/i cuore`**. La regola sulle alternative non risolte, scritta nella 4.12.64, elencava le coppie a mano (`del/della`, `il/la`, `un/una`…) e `il/i` non c'era. Ora il pattern accetta qualunque coppia di articoli o preposizioni articolate separati da `/`. `km/h` e `'panino'/'michetta'` restano fuori perché non sono articoli. Corretto anche l'accordo del verbo dove il soggetto era plurale (`A quale apparato appartengono soprattutto i polmoni?`).
+- fix(contenuti): **22 spiegazioni senza articolo iniziale** con verbi che la regola della 4.12.64 non copriva — cercava solo `è/era/ha`, e queste usano `appartiene`, `vive`, `significa` (`Cuore appartiene all'apparato circolatorio`, `Rana vive soprattutto nello stagno`). Le 10 sugli organi hanno anche il verbo riaccordato al plurale; le 8 che glossano un termine ora lo citano fra apici (`'Ipotesi' significa...`), come già faceva il resto del corpus. Gli infiniti sostantivati (`Correre significa muoversi`, `Riusare significa dare nuova vita`) sono corretti senza articolo e non sono stati toccati.
+- fix(contenuti): `Rana vive soprattutto nel stagno` → `nello stagno`, e `A che cosa serve di solito il stazione?` → `la stazione` (doppio errore: articolo maschile su un nome femminile).
+
+### Changed
+- lint(contenuti): regola nuova per l'articolo davanti a s impura, z, gn, ps (`nel stagno`, `il zaino`). Esclude le forme fra apici: le spiegazioni di ortografia mostrano l'errore di proposito per insegnare la regola (`'sul zaino' sarebbe sbagliato`), ed era l'unico falso positivo sul corpus.
+- lint(contenuti): la regola sulle alternative non risolte non elenca più le coppie a mano.
+
+### Notes
+- entrambe le regole verificate reintroducendo il difetto. La lezione del lotto scorso — enumerare la famiglia invece di fidarsi del prefisso — ha funzionato: `sci-5-corpo-031` è comparso nel campione, ma i difetti erano 5 nella stessa famiglia e 10 nelle spiegazioni collegate.
+
 ## 4.12.67 - 2026-09-06
 
 Lotto quasi interamente di **regressioni introdotte dalle tre release precedenti**. Il campione mostra una variante per volta, mai la famiglia intera, ed è questo che le ha lasciate passare.

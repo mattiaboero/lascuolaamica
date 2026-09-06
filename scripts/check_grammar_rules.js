@@ -43,6 +43,9 @@ const SBAGLIATE = [
   "Irene compra 7 sciarpe a 16 euro l'uno.",
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
+  'A quale apparato appartiene soprattutto il/i cuore?',
+  'La rana vive soprattutto nel stagno.',
+  'A che cosa serve di solito il stazione?',
   "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. cosa è meglio fare?",
   '27 + 10 =?',
   "La risposta corretta è 'l'euro'.",
@@ -53,6 +56,11 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "'Sul' è la preposizione articolata su+il, ma 'sul zaino' sarebbe sbagliato.",
+  'Un treno viaggia a 96 km/h. Quanti km percorre in 2 ore?',
+  'La rana vive soprattutto nello stagno.',
+  'Il sole scalda il sasso e il sale si scioglie nel sugo.',
+  "Nel XX secolo la popolazione si è concentrata nelle città.",
   "Una civiltà vissuta nel 2000 a.C. è più antica di una del 500 a.C.?",
   'Sulla linea del tempo, 3000 a.C. viene...',
   "Quale complemento risponde alla domanda 'chi? che cosa?' dopo un verbo transitivo?",

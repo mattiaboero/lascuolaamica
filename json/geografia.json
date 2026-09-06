@@ -4546,7 +4546,7 @@
    "area": "sistema_territoriale",
    "subarea": "funzione_degli_spazi",
    "difficulty": 1,
-   "question": "A che cosa serve di solito il stazione?",
+   "question": "A che cosa serve di solito la stazione?",
    "options": [
     "partire e arrivare con i mezzi",
     "a nuotare in mare",
@@ -4555,7 +4555,7 @@
    ],
    "answerIndex": 0,
    "answer": "partire e arrivare con i mezzi",
-   "explanation": "Il stazione serve di solito a partire e arrivare con i mezzi.",
+   "explanation": "La stazione serve di solito a partire e arrivare con i mezzi.",
    "active": true,
    "tag": "geografia;classe_2;funzione_spazi;stazione",
    "tags": [

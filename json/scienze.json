@@ -5879,7 +5879,7 @@
    ],
    "answerIndex": 2,
    "answer": "guardare con attenzione",
-   "explanation": "Osservazione significa guardare con attenzione.",
+   "explanation": "'Osservazione' significa guardare con attenzione.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5909,7 +5909,7 @@
    ],
    "answerIndex": 1,
    "answer": "una possibile spiegazione da verificare",
-   "explanation": "Ipotesi significa una possibile spiegazione da verificare.",
+   "explanation": "'Ipotesi' significa una possibile spiegazione da verificare.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5939,7 +5939,7 @@
    ],
    "answerIndex": 0,
    "answer": "una prova per controllare un'idea",
-   "explanation": "Esperimento significa una prova per controllare un'idea.",
+   "explanation": "'Esperimento' significa una prova per controllare un'idea.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5969,7 +5969,7 @@
    ],
    "answerIndex": 3,
    "answer": "informazioni raccolte",
-   "explanation": "Dati significa informazioni raccolte.",
+   "explanation": "'Dati' significa informazioni raccolte.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5999,7 +5999,7 @@
    ],
    "answerIndex": 2,
    "answer": "ciò che si capisce alla fine",
-   "explanation": "Conclusione significa ciò che si capisce alla fine.",
+   "explanation": "'Conclusione' significa ciò che si capisce alla fine.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -7904,7 +7904,7 @@
    ],
    "answerIndex": 1,
    "answer": "cammello",
-   "explanation": "Cammello vive soprattutto nel deserto.",
+   "explanation": "Il cammello vive soprattutto nel deserto.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [
@@ -7935,7 +7935,7 @@
    ],
    "answerIndex": 2,
    "answer": "delfino",
-   "explanation": "Delfino vive soprattutto nel mare.",
+   "explanation": "Il delfino vive soprattutto nel mare.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [
@@ -7957,7 +7957,7 @@
    "area": "viventi_biologia",
    "subarea": "habitat_e_funzioni_vitali",
    "difficulty": 1,
-   "question": "Quale animale vive soprattutto nel stagno?",
+   "question": "Quale animale vive soprattutto nello stagno?",
    "options": [
     "cammello",
     "delfino",
@@ -7966,7 +7966,7 @@
    ],
    "answerIndex": 3,
    "answer": "rana",
-   "explanation": "Rana vive soprattutto nel stagno.",
+   "explanation": "La rana vive soprattutto nello stagno.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [
@@ -7997,7 +7997,7 @@
    ],
    "answerIndex": 1,
    "answer": "scoiattolo",
-   "explanation": "Scoiattolo vive soprattutto nel bosco.",
+   "explanation": "Lo scoiattolo vive soprattutto nel bosco.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [
@@ -8028,7 +8028,7 @@
    ],
    "answerIndex": 3,
    "answer": "gallina",
-   "explanation": "Gallina vive soprattutto nella fattoria.",
+   "explanation": "La gallina vive soprattutto nella fattoria.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [
@@ -8090,7 +8090,7 @@
    ],
    "answerIndex": 1,
    "answer": "trota",
-   "explanation": "Trota vive soprattutto nel fiume.",
+   "explanation": "La trota vive soprattutto nel fiume.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [
@@ -11609,7 +11609,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "A quale apparato appartiene soprattutto il/i cuore?",
+   "question": "A quale apparato appartiene soprattutto il cuore?",
    "options": [
     "escretore",
     "digerente",
@@ -11618,7 +11618,7 @@
    ],
    "answerIndex": 2,
    "answer": "circolatorio",
-   "explanation": "Cuore appartiene all'apparato circolatorio.",
+   "explanation": "Il cuore appartiene all'apparato circolatorio.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11640,7 +11640,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "A quale apparato appartiene soprattutto il/i polmoni?",
+   "question": "A quale apparato appartengono soprattutto i polmoni?",
    "options": [
     "respiratorio",
     "circolatorio",
@@ -11649,7 +11649,7 @@
    ],
    "answerIndex": 0,
    "answer": "respiratorio",
-   "explanation": "Polmoni appartiene all'apparato respiratorio.",
+   "explanation": "I polmoni appartengono all'apparato respiratorio.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11671,7 +11671,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "A quale apparato appartiene soprattutto il/i stomaco?",
+   "question": "A quale apparato appartiene soprattutto lo stomaco?",
    "options": [
     "circolatorio",
     "escretore",
@@ -11680,7 +11680,7 @@
    ],
    "answerIndex": 3,
    "answer": "digerente",
-   "explanation": "Stomaco appartiene all'apparato digerente.",
+   "explanation": "Lo stomaco appartiene all'apparato digerente.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11702,7 +11702,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "A quale apparato appartiene soprattutto il/i reni?",
+   "question": "A quale apparato appartengono soprattutto i reni?",
    "options": [
     "circolatorio",
     "digerente",
@@ -11711,7 +11711,7 @@
    ],
    "answerIndex": 3,
    "answer": "escretore",
-   "explanation": "Reni appartiene all'apparato escretore.",
+   "explanation": "I reni appartengono all'apparato escretore.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11733,7 +11733,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "A quale apparato appartiene soprattutto il/i cervello?",
+   "question": "A quale apparato appartiene soprattutto il cervello?",
    "options": [
     "respiratorio",
     "digerente",
@@ -11742,7 +11742,7 @@
    ],
    "answerIndex": 2,
    "answer": "nervoso",
-   "explanation": "Cervello appartiene all'apparato nervoso.",
+   "explanation": "Il cervello appartiene all'apparato nervoso.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11773,7 +11773,7 @@
    ],
    "answerIndex": 2,
    "answer": "cuore",
-   "explanation": "Cuore appartiene all'apparato circolatorio.",
+   "explanation": "Il cuore appartiene all'apparato circolatorio.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11804,7 +11804,7 @@
    ],
    "answerIndex": 2,
    "answer": "polmoni",
-   "explanation": "Polmoni appartiene all'apparato respiratorio.",
+   "explanation": "I polmoni appartengono all'apparato respiratorio.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11835,7 +11835,7 @@
    ],
    "answerIndex": 3,
    "answer": "stomaco",
-   "explanation": "Stomaco appartiene all'apparato digerente.",
+   "explanation": "Lo stomaco appartiene all'apparato digerente.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11866,7 +11866,7 @@
    ],
    "answerIndex": 1,
    "answer": "reni",
-   "explanation": "Reni appartiene all'apparato escretore.",
+   "explanation": "I reni appartengono all'apparato escretore.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
@@ -11897,7 +11897,7 @@
    ],
    "answerIndex": 0,
    "answer": "cervello",
-   "explanation": "Cervello appartiene all'apparato nervoso.",
+   "explanation": "Il cervello appartiene all'apparato nervoso.",
    "active": true,
    "tag": "organi;apparati;classe5",
    "tags": [
