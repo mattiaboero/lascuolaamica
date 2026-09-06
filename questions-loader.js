@@ -305,9 +305,7 @@
     load,
     getSubjectRows,
     buildBanks,
-    applySubjectConfig,
-    normalizeKey,
-    clone
+    applySubjectConfig
   };
 
   const SA = window.SA = window.SA || {};

@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.44 - 2026-09-06
+
+### Fixed
+- fix(metriche): l'entry di qualità sessione registrava come `subject` la chiave del cursore invece del nome della materia su 5 pagine su 8. `cfg.subject` è dichiarato solo in `civica`, `problemi` e `inglese`, quindi le altre cinque ripiegavano su `cfg.cursorKey` e scrivevano `"matematica_programma_cursor_v3"`, `"geografia_cursor_v3"` e simili. Aggiunto il ripiego su `cfg.questionsSource.subject`, lo stesso ordine che `recordRewards()` usa già: un punto solo invece di cinque file di configurazione da allineare.
+
+### Changed
+- refactor: rimosso codice morto verificato con grep su tutti i 23 HTML e su tutti i moduli JS. `shared.js`: il ramo `SA.questionsLoader.loadIndex` (metodo che il loader non espone, condizione sempre falsa) e gli export `SA.modal`, `SA.palette` e `SA.renderQuestionsTotal`, senza un solo call site — le funzioni restano, usate internamente. `questions-loader.js`: `normalizeKey` e `clone` tolti dall'API pubblica, restano interni. `js/dom-utils.js`: `show`, `hide`, `toggleClass` e `restartAnimation` non erano chiamate da nessuna parte, e nemmeno la classe `.is-hidden` che le prime due gestivano veniva mai applicata da JS; il file passa da 40 a 21 righe e resta con le due funzioni realmente usate.
+- refactor(rewards): la regola "sblocca la bacheca quando tutto il resto è sbloccato" era copiata in `recordGame()` e `recordBreakout()`. Estratta in `maybeUnlockBachecaPiena()`.
+- refactor(index): `js/index-page.js` era l'unico `*-page.js` con variabili di pagina nello scope globale (`items`, `cont`, `isMotionReduced`). Wrappato in IIFE come tutti gli altri.
+- chore: bump versione `4.12.43` → `4.12.44`.
+
+### Notes
+- correzione(audit): la voce che dava la chiave `subject:` come "morta e da rimuovere dai 3 file che ce l'hanno" era sbagliata. `cfg.subject` è letto in due punti di `subject-quiz-core.js`: l'entry delle metriche di qualità e l'etichetta materia del riepilogo progressi. Rimuoverla avrebbe degradato entrambi. Il difetto reale era l'opposto — la chiave manca dove servirebbe — ed è stato risolto nel consumatore invece che nei file di configurazione.
+
 ## 4.12.43 - 2026-09-06
 
 ### Fixed

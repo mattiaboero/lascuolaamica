@@ -1,34 +1,17 @@
 (function (global) {
   'use strict';
 
+  // Restano solo le due funzioni con call site reali: lockScroll (shared.js,
+  // con fallback inline) e randomVariant (subject-quiz-core.js, index-page.js,
+  // faq-page.js). show/hide/toggleClass/restartAnimation non erano chiamate da
+  // nessuna parte, e nemmeno la classe .is-hidden che le prime due gestivano
+  // veniva mai applicata da JS.
   const api = global.SADom = global.SADom || {};
-
-  api.show = function (el) {
-    if (el) el.classList.remove('is-hidden');
-  };
-
-  api.hide = function (el) {
-    if (el) el.classList.add('is-hidden');
-  };
-
-  api.toggleClass = function (el, cls, enabled) {
-    if (el && cls) el.classList.toggle(cls, !!enabled);
-  };
 
   api.lockScroll = function (lock) {
     if (document && document.body) {
       document.body.classList.toggle('modal-open', !!lock);
     }
-  };
-
-  api.restartAnimation = function (el, cls) {
-    if (!el || !cls) return;
-    el.classList.remove(cls);
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        el.classList.add(cls);
-      });
-    });
   };
 
   api.randomVariant = function (prefix, count) {

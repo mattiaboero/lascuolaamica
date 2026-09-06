@@ -223,6 +223,16 @@
     return SUBJECTS.every((subject) => state.subjects[subject] && state.subjects[subject].classes && state.subjects[subject].classes[cls]);
   }
 
+  // La regola "sbloccata la bacheca quando tutto il resto e' sbloccato" era
+  // copiata in recordGame() e recordBreakout(): cambiando l'elenco delle
+  // esclusioni bisognava ricordarsi di entrambi i punti.
+  function maybeUnlockBachecaPiena(state, unlockedNow) {
+    const others = REWARDS.filter((reward) => reward.id !== 'bacheca-piena');
+    if (others.every((reward) => state.unlocked[reward.id])) {
+      unlock(state, 'bacheca-piena', unlockedNow);
+    }
+  }
+
   function hasSubjectAllClasses(state, subject) {
     const row = state.subjects[subject];
     return !!row && CLASSES.every((cls) => row.classes && row.classes[cls]);
@@ -310,9 +320,7 @@
     if (SUBJECTS.every((subjectKey) => hasSubjectAllClasses(state, subjectKey))) {
       unlock(state, 'tutto-completato', unlockedNow);
     }
-    if (REWARDS.filter((reward) => reward.id !== 'bacheca-piena').every((reward) => state.unlocked[reward.id])) {
-      unlock(state, 'bacheca-piena', unlockedNow);
-    }
+    maybeUnlockBachecaPiena(state, unlockedNow);
 
     saveState(state);
     if (unlockedNow.length) showRewardToast(unlockedNow[0], unlockedNow.length);
@@ -366,9 +374,7 @@
     if (b.wallsClearedNoLifeLost >= 1) unlock(state, 'breakout-barra-acciaio', unlockedNow);
     if (finalScore >= 300) unlock(state, 'breakout-punteggio-oro', unlockedNow);
     if (finalScore >= 1000) unlock(state, 'breakout-campione', unlockedNow);
-    if (REWARDS.filter((reward) => reward.id !== 'bacheca-piena').every((reward) => state.unlocked[reward.id])) {
-      unlock(state, 'bacheca-piena', unlockedNow);
-    }
+    maybeUnlockBachecaPiena(state, unlockedNow);
 
     saveState(state);
     if (unlockedNow.length) showRewardToast(unlockedNow[0], unlockedNow.length);

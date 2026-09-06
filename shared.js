@@ -1212,9 +1212,6 @@
   }
 
   async function fetchQuestionsIndex() {
-    if (SA.questionsLoader && typeof SA.questionsLoader.loadIndex === 'function') {
-      return SA.questionsLoader.loadIndex();
-    }
     const response = await fetch('/json/index.json', { credentials: 'same-origin' });
     if (!response.ok) {
       throw new Error(`index fetch failed: ${response.status}`);
@@ -1975,18 +1972,9 @@
     bindModalEvents();
   }
 
-  SA.modal = SA.modal || {};
-  SA.modal.open = openModal;
-  SA.modal.close = closeModal;
-  SA.palette = {
-    get mode() {
-      return document.documentElement.getAttribute('data-palette') || PALETTE_MODE.LEGACY;
-    },
-    set(mode) {
-      return setPaletteMode(mode);
-    },
-    modes: { ...PALETTE_MODE }
-  };
+  // SA.modal, SA.palette e SA.renderQuestionsTotal erano esposti senza un solo
+  // call site in tutto il repo (23 HTML, js/*.js, i moduli root). Le funzioni
+  // restano, usate internamente: qui spariva solo la superficie pubblica.
   SA.motion = {
     get mode() {
       return document.documentElement.getAttribute('data-motion') || MOTION_MODE.AUTO;
@@ -2002,7 +1990,6 @@
   SA.ui = SA.ui || {};
   SA.ui.confirm = promptConfirm;
   SA.ui.alert = promptAlert;
-  SA.renderQuestionsTotal = renderQuestionsTotal;
   SA.playWindow = {
     key: PLAY_WINDOW_KEY,
     durationMs: PLAY_WINDOW_DURATION_MS,

@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.44",
+  "items": [
+   "Manutenzione interna: rimosso codice non più utilizzato e unificate alcune regole duplicate. Nessun cambiamento visibile nei giochi."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.43",
   "items": [
    "\"Cancella dati locali\" ora cancella anche record, classe e impostazione audio di Cervellino Spacca-Muri: prima restavano sul dispositivo pur dichiarando di averli rimossi.",

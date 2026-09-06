@@ -1022,7 +1022,11 @@
 
     const entry = {
       ts: Date.now(),
-      subject: safeText(cfg.subject || cfg.cursorKey || 'subject', 48),
+      // cfg.subject e' presente solo in 3 configurazioni materia su 8: senza il
+      // ripiego su questionsSource.subject le altre 5 registravano qui la
+      // chiave del cursore ("matematica_programma_cursor_v3") invece del nome
+      // della materia. Stesso ordine gia' usato da recordRewards().
+      subject: safeText(cfg.subject || (cfg.questionsSource && cfg.questionsSource.subject) || cfg.cursorKey || 'subject', 48),
       class: normalizeClassKey(quality.class || selectedClass),
       mode: safeText(quality.mode || selectedArea, 24),
       total,
