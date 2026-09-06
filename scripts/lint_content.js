@@ -115,6 +115,14 @@ const GRAMMATICA = [
   // Trovate dal lotto 4: doppio punto interrogativo e domanda senza alcuna
   // punteggiatura finale ("...il tempo è" senza ne' "?" ne' puntini).
   { pattern: /\?\?/, soloDomanda: true, msg: 'doppio punto interrogativo' },
+  // Dal lotto 5: pronome maschile con un soggetto femminile. La regola nomina i
+  // nomi propri usati nel corpus, perche' in italiano il genere del pronome
+  // dipende dal referente e nessuna regex lo deduce dal testo.
+  { pattern: /\b(?:Anna|Sara|Giulia|Sofia|Elena|Maria|Laura|Marta|Chiara|Alice|Serena|Martina|Arianna|Claudia|Beatrice|Emma|Valentina|Priya)\b(?:(?!\b(?:Marco|Luca|Matteo|Paolo|Giovanni|Davide|Simone|Stefano|Tommaso|Pietro|Gianni|Mario|Nicola|Giacomo|Daniele|Amir|Andrea|Fabio|Filippo|Carlo|Roberto)\b)[\s\S])*\bgli\s+(?:rimane|resta|restano|rimangono|serve|servono|applicano|danno|chiedono)\b/,
+    msg: 'pronome maschile "gli" con un soggetto femminile (es. "Sara ... gli rimane")' },
+  { pattern: /\bperch[ée]\?\s*$/, soloDomanda: true,
+    msg: 'domanda che termina con "perché?": se sono le opzioni a completarla, usare i puntini' },
+  { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
 ];

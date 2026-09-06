@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.59 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **29 problemi con protagonista femminile usavano il pronome maschile** — `Beatrice ha 114 euro… Quanto denaro **gli** rimane?`, `Sara compra 4 magliette. In cassa **gli** applicano uno sconto` → `le rimane`, `le applicano`. È l'errore più sostanziale trovato dai lotti dopo la famiglia del burro: il template è scritto al maschile e il nome viene sostituito senza riaccordare il pronome, esattamente lo stesso meccanismo degli articoli.
+- fix(contenuti): 15 difetti di forma — 11 domande che terminano con `perché?` mentre sono le opzioni a completare la frase (`Le energie rinnovabili sono importanti perché?`), 2 stem `si trova allo stato?`, 2 domande con il carattere unicode `…` invece dei tre punti.
+
+### Changed
+- ci(contenuti): tre regole nuove in `lint_content.js` (22 in totale). Quella sul pronome elenca i nomi propri usati nel corpus: in italiano il genere del pronome dipende dal referente, e nessuna espressione regolare lo deduce dal testo — l'elenco è il prezzo da pagare per intercettare la classe.
+- I due stem `Quando l'acqua diventa ghiaccio, si trova allo stato?` erano sfuggiti ai passaggi precedenti perché il filtro escludeva le domande contenenti parole interrogative, e `Quando` lì è temporale, non interrogativo.
+
+### Notes
+- lotto 5: 60 domande fra le 6.373 a scheletro unico; 299 revisionate. Contrariamente a quanto suggerivo dopo il lotto 4, questo giro ha prodotto una classe grammaticale vera e di dimensioni non banali. La revisione a campione non ha ancora esaurito il suo valore.
+
 ## 4.12.58 - 2026-09-06
 
 ### Fixed

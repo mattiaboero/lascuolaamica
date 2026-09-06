@@ -1124,7 +1124,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quando l'acqua diventa ghiaccio, si trova allo stato?",
+   "question": "Quando l'acqua diventa ghiaccio, si trova allo stato...",
    "options": [
     "gassoso",
     "liquido",
@@ -1155,7 +1155,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quando l'acqua bolle e diventa vapore, si trova allo stato?",
+   "question": "Quando l'acqua bolle e diventa vapore, si trova allo stato...",
    "options": [
     "freddo",
     "solido",
@@ -9260,7 +9260,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Il suolo è importante per le piante perché?",
+   "question": "Il suolo è importante per le piante perché...",
    "options": [
     "fornisce sostegno e sali minerali",
     "ferma il vento",
@@ -12761,7 +12761,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Le energie rinnovabili sono importanti perché?",
+   "question": "Le energie rinnovabili sono importanti perché...",
    "options": [
     "si rigenerano più facilmente in natura",
     "si esauriscono subito",
@@ -15843,7 +15843,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "I funghi e molti batteri sono importanti perché?",
+   "question": "I funghi e molti batteri sono importanti perché...",
    "options": [
     "spengono il Sole",
     "decompongono resti di esseri viventi",
@@ -17365,7 +17365,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Una pianta e un sasso hanno in comune che…",
+   "question": "Una pianta e un sasso hanno in comune che...",
    "options": [
     "entrambi respirano",
     "entrambi crescono",
@@ -17909,7 +17909,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 2,
-   "question": "Un oggetto metallico lasciato al sole diventa…",
+   "question": "Un oggetto metallico lasciato al sole diventa...",
    "options": [
     "più freddo",
     "più leggero",
@@ -27903,7 +27903,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Uno specchio ci mostra la nostra immagine perché?",
+   "question": "Uno specchio ci mostra la nostra immagine perché...",
    "options": [
     "riflette la luce",
     "assorbe la luce",
@@ -28430,7 +28430,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 2,
-   "question": "I mammiferi si riconoscono perché?",
+   "question": "I mammiferi si riconoscono perché...",
    "options": [
     "allattano i piccoli",
     "depongono sempre uova",
@@ -29918,7 +29918,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "L'inquinamento di un fiume riduce la biodiversità perché?",
+   "question": "L'inquinamento di un fiume riduce la biodiversità perché...",
    "options": [
     "danneggia gli organismi che vi vivono",
     "aumenta i pesci",
@@ -29980,7 +29980,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "La deforestazione riduce la biodiversità soprattutto perché?",
+   "question": "La deforestazione riduce la biodiversità soprattutto perché...",
    "options": [
     "toglie l'habitat a molte specie",
     "aumenta le piogge",
@@ -30011,7 +30011,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 1,
-   "question": "Proteggere le api è importante perché?",
+   "question": "Proteggere le api è importante perché...",
    "options": [
     "impollinano moltissime piante",
     "producono solo miele",
@@ -30042,7 +30042,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Il riscaldamento globale minaccia la biodiversità perché?",
+   "question": "Il riscaldamento globale minaccia la biodiversità perché...",
    "options": [
     "modifica gli ambienti di vita delle specie",
     "crea nuovi ghiacciai",
@@ -30228,7 +30228,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 2,
-   "question": "Le fonti rinnovabili sono preferibili perché?",
+   "question": "Le fonti rinnovabili sono preferibili perché...",
    "options": [
     "non si esauriscono e inquinano meno",
     "costano sempre di più",

@@ -37,6 +37,9 @@ const SBAGLIATE = [
   'Quale terreno trattiene più acqua??',
   'Se cade neve, il tempo è',
   'Nuvola è un essere vivente.',
+  "Sara compra 4 magliette. In cassa gli applicano uno sconto.",
+  'Le energie rinnovabili sono importanti perché?',
+  'Un oggetto metallico lasciato al sole diventa…',
 ];
 
 const CORRETTE = [
@@ -58,6 +61,8 @@ const CORRETTE = [
   "Arrotonda 3,7 all'unità più vicina.",
   'Tra queste parole, individua la preposizione semplice.',
   'Quale parola contiene il suono GLI?',
+  "Luca compra 4 magliette. In cassa gli applicano uno sconto.",
+  'Perché il ghiaccio si scioglie al sole?',
 ];
 
 function caricaRegole() {

@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.59",
+  "items": [
+   "Corretto il pronome in 29 problemi con protagonista femminile: \"Sara... gli rimane\" diventa \"le rimane\"."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.58",
   "items": [
    "Corretti 65 difetti di forma nelle domande: doppi punti interrogativi, domande senza punteggiatura finale, articoli mancanti e una nota di redazione rimasta in una spiegazione."
