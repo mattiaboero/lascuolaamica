@@ -2125,7 +2125,7 @@
    ],
    "answerIndex": 0,
    "answer": "nell'acqua",
-   "explanation": "Nell'acqua è la risposta corretta.",
+   "explanation": "La risposta corretta è \"nell'acqua\".",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2157,7 +2157,7 @@
    ],
    "answerIndex": 1,
    "answer": "nel deserto",
-   "explanation": "Nel deserto è la risposta corretta.",
+   "explanation": "La risposta corretta è 'nel deserto'.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2189,7 +2189,7 @@
    ],
    "answerIndex": 3,
    "answer": "vicino all'acqua",
-   "explanation": "Vicino all'acqua è la risposta corretta.",
+   "explanation": "La risposta corretta è \"vicino all'acqua\".",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2221,7 +2221,7 @@
    ],
    "answerIndex": 3,
    "answer": "in ambienti freddi",
-   "explanation": "In ambienti freddi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'in ambienti freddi'.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2253,7 +2253,7 @@
    ],
    "answerIndex": 2,
    "answer": "tra gli alberi",
-   "explanation": "Tra gli alberi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'tra gli alberi'.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2285,7 +2285,7 @@
    ],
    "answerIndex": 1,
    "answer": "respirare nell'acqua",
-   "explanation": "Respirare nell'acqua è la risposta corretta.",
+   "explanation": "La risposta corretta è \"respirare nell'acqua\".",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -3493,7 +3493,7 @@
    ],
    "answerIndex": 2,
    "answer": "caldo e freddo",
-   "explanation": "Caldo e freddo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'caldo e freddo'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3525,7 +3525,7 @@
    ],
    "answerIndex": 3,
    "answer": "il corpo",
-   "explanation": "Il corpo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'il corpo'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3621,7 +3621,7 @@
    ],
    "answerIndex": 0,
    "answer": "stare in salute",
-   "explanation": "Stare in salute è la risposta corretta.",
+   "explanation": "La risposta corretta è 'stare in salute'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3685,7 +3685,7 @@
    ],
    "answerIndex": 3,
    "answer": "tenerli puliti",
-   "explanation": "Tenerli puliti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'tenerli puliti'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -4482,7 +4482,7 @@
    ],
    "answerIndex": 3,
    "answer": "mangiare frutta",
-   "explanation": "Mangiare frutta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'mangiare frutta'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4542,7 +4542,7 @@
    ],
    "answerIndex": 1,
    "answer": "chiudere il rubinetto",
-   "explanation": "Chiudere il rubinetto è la risposta corretta.",
+   "explanation": "La risposta corretta è 'chiudere il rubinetto'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4572,7 +4572,7 @@
    ],
    "answerIndex": 3,
    "answer": "raccogliere un rifiuto da terra",
-   "explanation": "Raccogliere un rifiuto da terra è la risposta corretta.",
+   "explanation": "La risposta corretta è 'raccogliere un rifiuto da terra'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4964,7 +4964,7 @@
    ],
    "answerIndex": 1,
    "answer": "separare i rifiuti",
-   "explanation": "Separare i rifiuti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'separare i rifiuti'.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -4995,7 +4995,7 @@
    ],
    "answerIndex": 3,
    "answer": "quello della raccolta della carta",
-   "explanation": "Quello della raccolta della carta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'quello della raccolta della carta'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -5025,7 +5025,7 @@
    ],
    "answerIndex": 1,
    "answer": "cambiano colore e cadono",
-   "explanation": "Cambiano colore e cadono è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cambiano colore e cadono'.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5180,7 +5180,7 @@
    ],
    "answerIndex": 2,
    "answer": "aspettare alcuni giorni",
-   "explanation": "Aspettare alcuni giorni è la risposta corretta.",
+   "explanation": "La risposta corretta è 'aspettare alcuni giorni'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -5271,7 +5271,7 @@
    ],
    "answerIndex": 1,
    "answer": "rispettare il loro ambiente",
-   "explanation": "Rispettare il loro ambiente è la risposta corretta.",
+   "explanation": "La risposta corretta è 'rispettare il loro ambiente'.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5362,7 +5362,7 @@
    ],
    "answerIndex": 1,
    "answer": "lavarsi spesso le mani",
-   "explanation": "Lavarsi spesso le mani è la risposta corretta.",
+   "explanation": "La risposta corretta è 'lavarsi spesso le mani'.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -6029,7 +6029,7 @@
    ],
    "answerIndex": 3,
    "answer": "strumenti adatti",
-   "explanation": "Strumenti adatti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'strumenti adatti'.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6060,7 +6060,7 @@
    ],
    "answerIndex": 0,
    "answer": "ripetere la prova",
-   "explanation": "Ripetere la prova è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ripetere la prova'.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6091,7 +6091,7 @@
    ],
    "answerIndex": 2,
    "answer": "organizzare i dati",
-   "explanation": "Organizzare i dati è la risposta corretta.",
+   "explanation": "La risposta corretta è 'organizzare i dati'.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6122,7 +6122,7 @@
    ],
    "answerIndex": 0,
    "answer": "capire i cambiamenti",
-   "explanation": "Capire i cambiamenti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'capire i cambiamenti'.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6153,7 +6153,7 @@
    ],
    "answerIndex": 2,
    "answer": "osservare meglio piccoli dettagli",
-   "explanation": "Osservare meglio piccoli dettagli è la risposta corretta.",
+   "explanation": "La risposta corretta è 'osservare meglio piccoli dettagli'.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -7018,7 +7018,7 @@
    ],
    "answerIndex": 1,
    "answer": "serve alla vita",
-   "explanation": "Serve alla vita è la risposta corretta.",
+   "explanation": "La risposta corretta è 'serve alla vita'.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7078,7 +7078,7 @@
    ],
    "answerIndex": 3,
    "answer": "adatta da bere",
-   "explanation": "Adatta da bere è la risposta corretta.",
+   "explanation": "La risposta corretta è 'adatta da bere'.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7108,7 +7108,7 @@
    ],
    "answerIndex": 1,
    "answer": "il mare",
-   "explanation": "Il mare è la risposta corretta.",
+   "explanation": "La risposta corretta è 'il mare'.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7690,7 +7690,7 @@
    ],
    "answerIndex": 1,
    "answer": "in acqua e sulla terra",
-   "explanation": "In acqua e sulla terra è la risposta corretta.",
+   "explanation": "La risposta corretta è 'in acqua e sulla terra'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7752,7 +7752,7 @@
    ],
    "answerIndex": 2,
    "answer": "seme - germoglio - pianta adulta",
-   "explanation": "Seme - germoglio - pianta adulta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'seme - germoglio - pianta adulta'.",
    "active": true,
    "tag": "ciclo_vitale;classe3",
    "tags": [
@@ -7782,7 +7782,7 @@
    ],
    "answerIndex": 0,
    "answer": "nascita - crescita - riproduzione",
-   "explanation": "Nascita - crescita - riproduzione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'nascita - crescita - riproduzione'.",
    "active": true,
    "tag": "ciclo_vitale;classe3",
    "tags": [
@@ -8182,7 +8182,7 @@
    ],
    "answerIndex": 3,
    "answer": "altri animali",
-   "explanation": "Altri animali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'altri animali'.",
    "active": true,
    "tag": "nutrizione;classe3",
    "tags": [
@@ -8212,7 +8212,7 @@
    ],
    "answerIndex": 2,
    "answer": "sia vegetali sia animali",
-   "explanation": "Sia vegetali sia animali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sia vegetali sia animali'.",
    "active": true,
    "tag": "nutrizione;classe3",
    "tags": [
@@ -8273,7 +8273,7 @@
    ],
    "answerIndex": 2,
    "answer": "un erbivoro",
-   "explanation": "Un erbivoro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'un erbivoro'.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8333,7 +8333,7 @@
    ],
    "answerIndex": 2,
    "answer": "chi mangia chi",
-   "explanation": "Chi mangia chi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'chi mangia chi'.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8393,7 +8393,7 @@
    ],
    "answerIndex": 1,
    "answer": "piante e animali",
-   "explanation": "Piante e animali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'piante e animali'.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8423,7 +8423,7 @@
    ],
    "answerIndex": 2,
    "answer": "gli equilibri dell'ecosistema",
-   "explanation": "Gli equilibri dell'ecosistema è la risposta corretta.",
+   "explanation": "La risposta corretta è \"gli equilibri dell'ecosistema\".",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8693,7 +8693,7 @@
    ],
    "answerIndex": 1,
    "answer": "ridurre i rifiuti",
-   "explanation": "Ridurre i rifiuti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ridurre i rifiuti'.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8724,7 +8724,7 @@
    ],
    "answerIndex": 3,
    "answer": "risparmiare energia",
-   "explanation": "Risparmiare energia è la risposta corretta.",
+   "explanation": "La risposta corretta è 'risparmiare energia'.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8755,7 +8755,7 @@
    ],
    "answerIndex": 3,
    "answer": "proteggere l'acqua",
-   "explanation": "Proteggere l'acqua è la risposta corretta.",
+   "explanation": "La risposta corretta è \"proteggere l'acqua\".",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8786,7 +8786,7 @@
    ],
    "answerIndex": 2,
    "answer": "offrono ossigeno e habitat",
-   "explanation": "Offrono ossigeno e habitat è la risposta corretta.",
+   "explanation": "La risposta corretta è 'offrono ossigeno e habitat'.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8817,7 +8817,7 @@
    ],
    "answerIndex": 1,
    "answer": "inquinare meno",
-   "explanation": "Inquinare meno è la risposta corretta.",
+   "explanation": "La risposta corretta è 'inquinare meno'.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -9269,7 +9269,7 @@
    ],
    "answerIndex": 0,
    "answer": "fornisce sostegno e sali minerali",
-   "explanation": "Fornisce sostegno e sali minerali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fornisce sostegno e sali minerali'.",
    "active": true,
    "tag": "suolo;classe4",
    "tags": [
@@ -9480,7 +9480,7 @@
    ],
    "answerIndex": 3,
    "answer": "produrre nutrimento",
-   "explanation": "Produrre nutrimento è la risposta corretta.",
+   "explanation": "La risposta corretta è 'produrre nutrimento'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9510,7 +9510,7 @@
    ],
    "answerIndex": 2,
    "answer": "si riproducono",
-   "explanation": "Si riproducono è la risposta corretta.",
+   "explanation": "La risposta corretta è 'si riproducono'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9540,7 +9540,7 @@
    ],
    "answerIndex": 0,
    "answer": "riproduzione delle piante",
-   "explanation": "Riproduzione delle piante è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riproduzione delle piante'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9600,7 +9600,7 @@
    ],
    "answerIndex": 3,
    "answer": "sali minerali",
-   "explanation": "Sali minerali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sali minerali'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9660,7 +9660,7 @@
    ],
    "answerIndex": 3,
    "answer": "colonna vertebrale",
-   "explanation": "Colonna vertebrale è la risposta corretta.",
+   "explanation": "La risposta corretta è 'colonna vertebrale'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9780,7 +9780,7 @@
    ],
    "answerIndex": 1,
    "answer": "sei zampe",
-   "explanation": "Sei zampe è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sei zampe'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9810,7 +9810,7 @@
    ],
    "answerIndex": 0,
    "answer": "ricavare energia dal cibo",
-   "explanation": "Ricavare energia dal cibo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ricavare energia dal cibo'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9840,7 +9840,7 @@
    ],
    "answerIndex": 3,
    "answer": "generare nuovi individui",
-   "explanation": "Generare nuovi individui è la risposta corretta.",
+   "explanation": "La risposta corretta è 'generare nuovi individui'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9930,7 +9930,7 @@
    ],
    "answerIndex": 3,
    "answer": "esseri viventi",
-   "explanation": "Esseri viventi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'esseri viventi'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -9960,7 +9960,7 @@
    ],
    "answerIndex": 0,
    "answer": "la pianta",
-   "explanation": "La pianta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'la pianta'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10020,7 +10020,7 @@
    ],
    "answerIndex": 1,
    "answer": "sostanze utili al suolo",
-   "explanation": "Sostanze utili al suolo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sostanze utili al suolo'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10050,7 +10050,7 @@
    ],
    "answerIndex": 0,
    "answer": "soffrire o scomparire",
-   "explanation": "Soffrire o scomparire è la risposta corretta.",
+   "explanation": "La risposta corretta è 'soffrire o scomparire'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10110,7 +10110,7 @@
    ],
    "answerIndex": 1,
    "answer": "erba - cavalletta - rana - airone",
-   "explanation": "Erba - cavalletta - rana - airone è la risposta corretta.",
+   "explanation": "La risposta corretta è 'erba - cavalletta - rana - airone'.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10230,7 +10230,7 @@
    ],
    "answerIndex": 0,
    "answer": "tutelare una risorsa preziosa",
-   "explanation": "Tutelare una risorsa preziosa è la risposta corretta.",
+   "explanation": "La risposta corretta è 'tutelare una risorsa preziosa'.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10290,7 +10290,7 @@
    ],
    "answerIndex": 2,
    "answer": "comprare e usare solo ciò che serve",
-   "explanation": "Comprare e usare solo ciò che serve è la risposta corretta.",
+   "explanation": "La risposta corretta è 'comprare e usare solo ciò che serve'.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10320,7 +10320,7 @@
    ],
    "answerIndex": 3,
    "answer": "flora e fauna",
-   "explanation": "Flora e fauna è la risposta corretta.",
+   "explanation": "La risposta corretta è 'flora e fauna'.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10411,7 +10411,7 @@
    ],
    "answerIndex": 0,
    "answer": "dati raccolti",
-   "explanation": "Dati raccolti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'dati raccolti'.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10504,7 +10504,7 @@
    ],
    "answerIndex": 0,
    "answer": "osservare e misurare meglio",
-   "explanation": "Osservare e misurare meglio è la risposta corretta.",
+   "explanation": "La risposta corretta è 'osservare e misurare meglio'.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10595,7 +10595,7 @@
    ],
    "answerIndex": 0,
    "answer": "ridurre gli sprechi",
-   "explanation": "Ridurre gli sprechi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ridurre gli sprechi'.",
    "active": true,
    "tag": "dati;ambiente;classe4",
    "tags": [
@@ -10626,7 +10626,7 @@
    ],
    "answerIndex": 0,
    "answer": "riutilizzare alcuni oggetti",
-   "explanation": "Riutilizzare alcuni oggetti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riutilizzare alcuni oggetti'.",
    "active": true,
    "tag": "dati;ambiente;classe4",
    "tags": [
@@ -10657,7 +10657,7 @@
    ],
    "answerIndex": 1,
    "answer": "interpretare meglio i dati",
-   "explanation": "Interpretare meglio i dati è la risposta corretta.",
+   "explanation": "La risposta corretta è 'interpretare meglio i dati'.",
    "active": true,
    "tag": "dati;ambiente;classe4",
    "tags": [
@@ -11378,7 +11378,7 @@
    ],
    "answerIndex": 2,
    "answer": "respiratorio e locomotore",
-   "explanation": "Respiratorio e locomotore è la risposta corretta.",
+   "explanation": "La risposta corretta è 'respiratorio e locomotore'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11408,7 +11408,7 @@
    ],
    "answerIndex": 1,
    "answer": "recuperare energie",
-   "explanation": "Recuperare energie è la risposta corretta.",
+   "explanation": "La risposta corretta è 'recuperare energie'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11438,7 +11438,7 @@
    ],
    "answerIndex": 0,
    "answer": "trasmettere germi",
-   "explanation": "Trasmettere germi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'trasmettere germi'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11468,7 +11468,7 @@
    ],
    "answerIndex": 3,
    "answer": "funzionare bene",
-   "explanation": "Funzionare bene è la risposta corretta.",
+   "explanation": "La risposta corretta è 'funzionare bene'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11528,7 +11528,7 @@
    ],
    "answerIndex": 2,
    "answer": "movimenti e risposte agli stimoli",
-   "explanation": "Movimenti e risposte agli stimoli è la risposta corretta.",
+   "explanation": "La risposta corretta è 'movimenti e risposte agli stimoli'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11588,7 +11588,7 @@
    ],
    "answerIndex": 0,
    "answer": "le ossa",
-   "explanation": "Le ossa è la risposta corretta.",
+   "explanation": "La risposta corretta è 'le ossa'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -12169,7 +12169,7 @@
    ],
    "answerIndex": 3,
    "answer": "alternanza di giorno e notte",
-   "explanation": "Alternanza di giorno e notte è la risposta corretta.",
+   "explanation": "La risposta corretta è 'alternanza di giorno e notte'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12229,7 +12229,7 @@
    ],
    "answerIndex": 2,
    "answer": "un anno",
-   "explanation": "Un anno è la risposta corretta.",
+   "explanation": "La risposta corretta è 'un anno'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12259,7 +12259,7 @@
    ],
    "answerIndex": 1,
    "answer": "le stagioni",
-   "explanation": "Le stagioni è la risposta corretta.",
+   "explanation": "La risposta corretta è 'le stagioni'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12319,7 +12319,7 @@
    ],
    "answerIndex": 2,
    "answer": "riflette quella del Sole",
-   "explanation": "Riflette quella del sole è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riflette quella del Sole'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12379,7 +12379,7 @@
    ],
    "answerIndex": 0,
    "answer": "emette luce propria",
-   "explanation": "Emette luce propria è la risposta corretta.",
+   "explanation": "La risposta corretta è 'emette luce propria'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12439,7 +12439,7 @@
    ],
    "answerIndex": 2,
    "answer": "fasi lunari",
-   "explanation": "Fasi lunari è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fasi lunari'.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12469,7 +12469,7 @@
    ],
    "answerIndex": 2,
    "answer": "Luna nuova",
-   "explanation": "Luna nuova è la risposta corretta.",
+   "explanation": "La risposta corretta è 'Luna nuova'.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12499,7 +12499,7 @@
    ],
    "answerIndex": 1,
    "answer": "Luna piena",
-   "explanation": "Luna piena è la risposta corretta.",
+   "explanation": "La risposta corretta è 'Luna piena'.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12529,7 +12529,7 @@
    ],
    "answerIndex": 3,
    "answer": "i corpi celesti",
-   "explanation": "I corpi celesti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'i corpi celesti'.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12680,7 +12680,7 @@
    ],
    "answerIndex": 1,
    "answer": "luce e calore",
-   "explanation": "Luce e calore è la risposta corretta.",
+   "explanation": "La risposta corretta è 'luce e calore'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12710,7 +12710,7 @@
    ],
    "answerIndex": 2,
    "answer": "energia luminosa",
-   "explanation": "Energia luminosa è la risposta corretta.",
+   "explanation": "La risposta corretta è 'energia luminosa'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12770,7 +12770,7 @@
    ],
    "answerIndex": 0,
    "answer": "si rigenerano più facilmente in natura",
-   "explanation": "Si rigenerano più facilmente in natura è la risposta corretta.",
+   "explanation": "La risposta corretta è 'si rigenerano più facilmente in natura'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12800,7 +12800,7 @@
    ],
    "answerIndex": 1,
    "answer": "usarla senza sprechi",
-   "explanation": "Usarla senza sprechi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'usarla senza sprechi'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12830,7 +12830,7 @@
    ],
    "answerIndex": 3,
    "answer": "pale eoliche",
-   "explanation": "Pale eoliche è la risposta corretta.",
+   "explanation": "La risposta corretta è 'pale eoliche'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12952,7 +12952,7 @@
    ],
    "answerIndex": 0,
    "answer": "caldo o freddo",
-   "explanation": "Caldo o freddo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'caldo o freddo'.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -13076,7 +13076,7 @@
    ],
    "answerIndex": 0,
    "answer": "la Terra",
-   "explanation": "La terra è la risposta corretta.",
+   "explanation": "La risposta corretta è 'la Terra'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13136,7 +13136,7 @@
    ],
    "answerIndex": 1,
    "answer": "sollevare o spostare pesi con meno fatica",
-   "explanation": "Sollevare o spostare pesi con meno fatica è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sollevare o spostare pesi con meno fatica'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13346,7 +13346,7 @@
    ],
    "answerIndex": 1,
    "answer": "vedere gli oggetti",
-   "explanation": "Vedere gli oggetti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'vedere gli oggetti'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13466,7 +13466,7 @@
    ],
    "answerIndex": 0,
    "answer": "tra forza e resistenza",
-   "explanation": "Tra forza e resistenza è la risposta corretta.",
+   "explanation": "La risposta corretta è 'tra forza e resistenza'.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13527,7 +13527,7 @@
    ],
    "answerIndex": 1,
    "answer": "molta luce",
-   "explanation": "Molta luce è la risposta corretta.",
+   "explanation": "La risposta corretta è 'molta luce'.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13558,7 +13558,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'ombra",
-   "explanation": "L'ombra è la risposta corretta.",
+   "explanation": "La risposta corretta è \"l'ombra\".",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13589,7 +13589,7 @@
    ],
    "answerIndex": 0,
    "answer": "sgradevole o troppo forte",
-   "explanation": "Sgradevole o troppo forte è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sgradevole o troppo forte'.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13620,7 +13620,7 @@
    ],
    "answerIndex": 3,
    "answer": "suoni troppo forti per lungo tempo",
-   "explanation": "Suoni troppo forti per lungo tempo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'suoni troppo forti per lungo tempo'.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [

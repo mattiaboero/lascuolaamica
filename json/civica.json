@@ -3980,7 +3980,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa gestisce il Comune?",
+   "question": "In che modo il Comune aiuta i cittadini?",
    "options": [
     "gestisce servizi vicini ai cittadini",
     "sceglie le scarpe dei cittadini",
@@ -24076,7 +24076,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa protegge la sicurezza stradale?",
+   "question": "Quale bene difende la sicurezza stradale?",
    "options": [
     "serve solo a evitare multe",
     "interessa solo alle città grandi",
@@ -24428,7 +24428,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Perché anche il pedone deve stare attento?",
+   "question": "Qual è la posizione del pedone rispetto al traffico?",
    "options": [
     "il pedone non ha regole",
     "basta il semaforo e non serve guardare",

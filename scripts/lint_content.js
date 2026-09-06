@@ -173,6 +173,20 @@ const GRAMMATICA = [
   // gli altri nomi con s+vocale prendono "il" e non c'entrano con la regola.
   { pattern: /(?<!['’])\b(?:il|un|nel|del|al|dal|sul|col)\s+(?:s[bcdfglmnpqrtvz]|z|gn|ps|pn)[a-zà-ù]+/i,
     msg: 'serve lo/uno/nello/dello davanti a s+consonante, z, gn o ps (es. "nello stagno", non "nel stagno")' },
+  // Dal lotto 13: la spiegazione mette la risposta prima della copula
+  // ("Nell'acqua è la risposta corretta.", "Sia vegetali sia animali è la
+  // risposta corretta."). La 4.12.64 aveva invertito solo i casi in cui la
+  // risposta era una parola sola, perche' li' il problema era l'articolo
+  // mancante; ne restavano 92 in cui la risposta e' un'intera espressione, e
+  // l'inversione risolve anche l'accordo ("animali è").
+  { pattern: /^(?!La risposta corretta)[^.!?]+\s+è la risposta corretta\./,
+    soloSpiegazione: true,
+    msg: 'spiegazione con la risposta prima della copula: scrivere "La risposta corretta è \'x\'."' },
+  // Dal lotto 13: clitico maschile con un oggetto femminile plurale, altro
+  // effetto del template scritto per "biscotti" e riusato con "ciliegine"
+  // ("Quante ciliegine riceve ogni bambino se li divide in parti uguali?").
+  { pattern: new RegExp(`\\b(?:${NOMI_FEMMINILI_PREZZO}|ciliegine|mele|pere|banane|carote|monete|conchiglie|palline|uova|fragole)\\b[^.?!]{0,140}\\bli\\s+(?:divide|dividono|distribuisce|conta|mette)\\b`, 'i'),
+    msg: 'clitico maschile "li" con un oggetto femminile plurale (es. "ciliegine ... se li divide")' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
@@ -249,7 +263,13 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     for (const regola of GRAMMATICA) {
       // Le regole sulla frase sospesa valgono solo sul testo della domanda: in
       // una spiegazione "molti dei", "contiene GLI" o "tre A." sono corretti.
-      const bersaglio = regola.soloDomanda ? (question || '') : testoIt;
+      // soloDomanda / soloSpiegazione: alcune regole valgono su un campo solo.
+      // Sul testo concatenato la punteggiatura dell'altro campo interferisce —
+      // i puntini di una domanda sospesa spezzano un pattern ancorato a inizio
+      // frase — e certe forme sono corrette in un campo e sbagliate nell'altro.
+      const bersaglio = regola.soloDomanda ? (question || '')
+        : regola.soloSpiegazione ? (explanation || '')
+        : testoIt;
       if (regola.pattern.test(bersaglio)) {
         errors.push({ level: 'error', field: 'text', msg: `grammatica — ${regola.msg}` });
       }

@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.12.69 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **92 spiegazioni mettevano la risposta prima della copula** (`Nell'acqua è la risposta corretta.`, `Sia vegetali sia animali è la risposta corretta.`). Nella 4.12.64 avevo invertito solo i casi in cui la risposta era **una parola sola**, perché lì il difetto visibile era l'articolo mancante; il pattern chiedeva una singola parola capitalizzata e le 92 in cui la risposta è un'intera espressione sono passate. L'inversione risolve anche l'accordo (`animali è` → `La risposta corretta è 'sia vegetali sia animali'`).
+- fix(contenuti): le spiegazioni riscritte sono state **riallineate al valore esatto di `answer`** invece che al testo ricavato: due avevano perso una maiuscola significativa (`la terra` → `la Terra`, `riflette quella del sole` → `del Sole`).
+- fix(contenuti): **6 domande dividevano le ciliegine con il pronome maschile** (`Quante ciliegine riceve ogni bambino se li divide in parti uguali?`). Stesso template di `pro-3-problemi-061`, scritto per i biscotti.
+- fix(contenuti): **3 domande di civica avevano la risposta che ripeteva il verbo della domanda** (`Che cosa gestisce il Comune? — gestisce servizi vicini ai cittadini`), effetto delle riscritture della 4.12.65. Riformulati i tre stem.
+
+### Changed
+- lint(contenuti): due regole nuove — spiegazione con la risposta prima della copula, e clitico maschile con un oggetto femminile plurale.
+- lint(contenuti): aggiunto `soloSpiegazione`, simmetrico al `soloDomanda` che c'era già. **Serviva davvero**: la prima regola sembrava scritta bene ma non scattava, perché `GRAMMATICA` gira sul testo di domanda e spiegazione concatenati e i puntini di una domanda sospesa spezzavano il pattern ancorato a inizio frase.
+
+### Notes
+- entrambe le regole verificate reintroducendo il difetto. È la quarta release di fila in cui il difetto trovato nel campione era la punta di una famiglia più grande: qui una domanda ne ha rivelate 92.
+
 ## 4.12.68 - 2026-09-06
 
 ### Fixed

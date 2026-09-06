@@ -44,6 +44,9 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  "Nell'acqua è la risposta corretta.",
+  'Sia vegetali sia animali è la risposta corretta.',
+  'Quante ciliegine riceve ogni bambino se li divide in parti uguali?',
   'La rana vive soprattutto nel stagno.',
   'A che cosa serve di solito il stazione?',
   "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. cosa è meglio fare?",
@@ -56,6 +59,8 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "La risposta corretta è 'sia vegetali sia animali'.",
+  'La risposta corretta è "nell\'acqua".',
   "'Sul' è la preposizione articolata su+il, ma 'sul zaino' sarebbe sbagliato.",
   'Un treno viaggia a 96 km/h. Quanti km percorre in 2 ore?',
   'La rana vive soprattutto nello stagno.',

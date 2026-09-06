@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.69",
+  "items": [
+   "Uniformate 92 spiegazioni di scienze che mettevano la risposta prima del verbo (\"Sia vegetali sia animali è la risposta corretta\").",
+   "Corrette 6 domande in cui le ciliegine venivano divise con il pronome maschile, e 3 domande di civica in cui la risposta ripeteva il verbo della domanda."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.68",
   "items": [
    "Corrette 5 domande di scienze che dicevano ancora \"il/i cuore\" e 22 spiegazioni a cui mancava l'articolo (\"Cuore appartiene all'apparato circolatorio\").",
