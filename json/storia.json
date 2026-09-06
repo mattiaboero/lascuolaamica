@@ -18618,7 +18618,7 @@
    ],
    "answerIndex": 3,
    "answer": "dei greci",
-   "explanation": "La risposta corretta è dei greci.",
+   "explanation": "La risposta corretta è dei Greci.",
    "active": true,
    "tag": "grecia;polis;classe5",
    "tags": [
@@ -25646,7 +25646,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "cronologia",
    "difficulty": 1,
-   "question": "Sulla linea del tempo, quale civiltà viene molto prima dei romani?",
+   "question": "Sulla linea del tempo, quale civiltà viene molto prima dei Romani?",
    "options": [
     "Gli egizi",
     "I ciclisti moderni",
@@ -25655,7 +25655,7 @@
    ],
    "answerIndex": 0,
    "answer": "Gli egizi",
-   "explanation": "Gli egizi appartengono all'antichità e precedono i romani.",
+   "explanation": "Gli egizi appartengono all'antichità e precedono i Romani.",
    "active": true,
    "tag": "antiche_civilta",
    "tags": [
@@ -25863,7 +25863,7 @@
    "area": "mesopotamia",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Come si chiama la scrittura dei sumeri fatta di piccoli segni a cuneo?",
+   "question": "Come si chiama la scrittura dei Sumeri fatta di piccoli segni a cuneo?",
    "options": [
     "Scrittura musicale",
     "Scrittura digitale",
@@ -26049,7 +26049,7 @@
    "area": "egizi",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Per conservare il corpo dei defunti gli egizi praticavano...",
+   "question": "Per conservare il corpo dei defunti gli Egizi praticavano...",
    "options": [
     "La mummificazione",
     "La stampa",
@@ -26080,7 +26080,7 @@
    "area": "egizi",
    "subarea": "fonti",
    "difficulty": 2,
-   "question": "Quale sistema di scrittura usavano gli egizi?",
+   "question": "Quale sistema di scrittura usavano gli Egizi?",
    "options": [
     "L'alfabeto morse",
     "I geroglifici",
@@ -26142,7 +26142,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Chi guidò gli ebrei fuori dall'Egitto secondo la tradizione?",
+   "question": "Chi guidò gli Ebrei fuori dall'Egitto secondo la tradizione?",
    "options": [
     "Ulisse",
     "Romolo",
@@ -26173,7 +26173,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "La terra verso cui si diressero gli ebrei è chiamata spesso...",
+   "question": "La terra verso cui si diressero gli Ebrei è chiamata spesso...",
    "options": [
     "Isola del sole",
     "Pianura dei venti",
@@ -26235,7 +26235,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "I Dieci Comandamenti erano per gli ebrei...",
+   "question": "I Dieci Comandamenti erano per gli Ebrei...",
    "options": [
     "Un calendario agricolo",
     "Regole importanti di vita",
@@ -26514,7 +26514,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Secondo i greci, gli dei abitavano sul...",
+   "question": "Secondo i Greci, gli dei abitavano sul...",
    "options": [
     "Vesuvio",
     "Kilimangiaro",
@@ -26576,7 +26576,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "cronologia",
    "difficulty": 1,
-   "question": "Quale civiltà è più antica dei romani?",
+   "question": "Quale civiltà è più antica dei Romani?",
    "options": [
     "I medievali europei",
     "I vigili del fuoco",
@@ -26855,7 +26855,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Gli etruschi influenzarono anche i romani soprattutto in...",
+   "question": "Gli etruschi influenzarono anche i Romani soprattutto in...",
    "options": [
     "Tecniche, religione e simboli del potere",
     "Fotografia digitale",
@@ -27351,7 +27351,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Come si chiamavano le città fondate dai greci nell'Italia meridionale?",
+   "question": "Come si chiamavano le città fondate dai Greci nell'Italia meridionale?",
    "options": [
     "Ville patrizie",
     "Municipi imperiali",
@@ -27360,7 +27360,7 @@
    ],
    "answerIndex": 2,
    "answer": "Colonie della Magna Grecia",
-   "explanation": "Molte città dell'Italia meridionale furono fondate dai greci.",
+   "explanation": "Molte città dell'Italia meridionale furono fondate dai Greci.",
    "active": true,
    "tag": "greci",
    "tags": [
@@ -27506,7 +27506,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Carthage, rivale di Roma, era nata come città di origine?",
+   "question": "Cartagine, rivale di Roma, era nata come città di origine...",
    "options": [
     "Egizia",
     "Etrusca",
@@ -27515,7 +27515,7 @@
    ],
    "answerIndex": 2,
    "answer": "Fenicia",
-   "explanation": "Cartagine fu fondata da fenici nell'Africa del Nord.",
+   "explanation": "Cartagine fu fondata dai Fenici nell'Africa del Nord.",
    "active": true,
    "tag": "civilta_mediterranee",
    "tags": [
@@ -27599,7 +27599,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Quale elemento culturale passò dai fenici ad altri popoli del Mediterraneo?",
+   "question": "Quale elemento culturale passò dai Fenici ad altri popoli del Mediterraneo?",
    "options": [
     "Il calendario digitale",
     "Il senato romano",
@@ -29549,7 +29549,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "civilta_fluviali",
    "difficulty": 2,
-   "question": "Perché le piene del Nilo erano utili agli egizi, anche se a volte sembravano pericolose?",
+   "question": "Perché le piene del Nilo erano utili agli Egizi, anche se a volte sembravano pericolose?",
    "options": [
     "Perché portavano pesci nuovi nel fiume",
     "Perché depositavano un fango scuro e fertile sui campi",
@@ -29558,7 +29558,7 @@
    ],
    "answerIndex": 1,
    "answer": "Perché depositavano un fango scuro e fertile sui campi",
-   "explanation": "Ogni anno il Nilo esondava e depositava sulle rive un limo nero ricchissimo di nutrienti. Grazie a questo fango fertile, gli egizi potevano coltivare grano, lino e altri cereali nel mezzo del deserto. Senza il Nilo, l'Egitto sarebbe stato solo un deserto.",
+   "explanation": "Ogni anno il Nilo esondava e depositava sulle rive un limo nero ricchissimo di nutrienti. Grazie a questo fango fertile, gli Egizi potevano coltivare grano, lino e altri cereali nel mezzo del deserto. Senza il Nilo, l'Egitto sarebbe stato solo un deserto.",
    "active": true,
    "tag": "storia;civilt_dei_fiumi;classe_3;primaria",
    "tags": [
@@ -29622,7 +29622,7 @@
    ],
    "answerIndex": 1,
    "answer": "A portare l'acqua del fiume anche nei campi lontani dalla riva",
-   "explanation": "I canali di irrigazione servivano a distribuire l'acqua del Nilo sui campi coltivati, anche quelli più lontani dalla riva. Questo sistema idrico permise agli egizi di coltivare grandi estensioni di terra e di sfamare una popolazione numerosa.",
+   "explanation": "I canali di irrigazione servivano a distribuire l'acqua del Nilo sui campi coltivati, anche quelli più lontani dalla riva. Questo sistema idrico permise agli Egizi di coltivare grandi estensioni di terra e di sfamare una popolazione numerosa.",
    "active": true,
    "tag": "storia;civilt_dei_fiumi;classe_3;primaria",
    "tags": [
@@ -29686,7 +29686,7 @@
    ],
    "answerIndex": 1,
    "answer": "Il Nilo aveva piene regolari e prevedibili, il Tigri e l'Eufrate erano più irregolari e imprevedibili",
-   "explanation": "Il Nilo esondava ogni anno in modo abbastanza regolare, permettendo agli egizi di pianificare l'agricoltura. Il Tigri e l'Eufrate erano invece più imprevedibili: le loro piene potevano essere catastrofiche. Questa differenza influenzò le religioni e le visioni del mondo delle due civiltà.",
+   "explanation": "Il Nilo esondava ogni anno in modo abbastanza regolare, permettendo agli Egizi di pianificare l'agricoltura. Il Tigri e l'Eufrate erano invece più imprevedibili: le loro piene potevano essere catastrofiche. Questa differenza influenzò le religioni e le visioni del mondo delle due civiltà.",
    "active": true,
    "tag": "storia;civilt_dei_fiumi;classe_3;primaria",
    "tags": [

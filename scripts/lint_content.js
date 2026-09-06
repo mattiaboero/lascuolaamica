@@ -187,6 +187,18 @@ const GRAMMATICA = [
   // ("Quante ciliegine riceve ogni bambino se li divide in parti uguali?").
   { pattern: new RegExp(`\\b(?:${NOMI_FEMMINILI_PREZZO}|ciliegine|mele|pere|banane|carote|monete|conchiglie|palline|uova|fragole)\\b[^.?!]{0,140}\\bli\\s+(?:divide|dividono|distribuisce|conta|mette)\\b`, 'i'),
     msg: 'clitico maschile "li" con un oggetto femminile plurale (es. "ciliegine ... se li divide")' },
+  // Dal lotto 14: citazione aperta con la virgoletta doppia e chiusa con
+  // l'apice singolo ("Il soggetto è \"Fatima' e il predicato è 'ha comprato\".").
+  // L'apostrofo vero sta fra due lettere (dell'acqua, l'ombra): qui invece
+  // l'apice e' seguito da spazio o punteggiatura, quindi e' una chiusura.
+  { pattern: /"[^"\n]{1,60}?[a-zà-ùA-Z?]'(?=[\s.,;:)])/,
+    msg: 'citazione aperta con le virgolette doppie e chiusa con l\'apice singolo' },
+  // Dal lotto 14: nome di popolo in minuscolo quando fa da sostantivo ("dei
+  // greci", "gli egizi"). Come aggettivo la minuscola e' corretta ("i vasi
+  // greci"), quindi la regola chiede l'articolo o la preposizione articolata
+  // subito prima, che e' il segnale del sostantivo.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:i|gli|dei|degli|ai|agli|dai|dagli|nei|negli|coi)\s+(?:fenici|etruschi|sumeri|egizi|greci|romani|babilonesi|assiri|micenei|cretesi|persiani|ateniesi|spartani|ebrei|mesopotamici|minoici|cartaginesi|celti|longobardi|franchi)\b/,
+    msg: 'nome di popolo in minuscolo usato come sostantivo (es. "gli egizi" invece di "gli Egizi")' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },

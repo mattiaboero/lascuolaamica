@@ -44,6 +44,8 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  'Il soggetto è "Fatima\' e il predicato è \'ha comprato".',
+  'Quale sistema di scrittura usavano gli egizi?',
   "Nell'acqua è la risposta corretta.",
   'Sia vegetali sia animali è la risposta corretta.',
   'Quante ciliegine riceve ogni bambino se li divide in parti uguali?',
@@ -59,6 +61,11 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Zeus era il più potente degli dèi greci e regnava sullOlimpo.',
+  "Il soggetto è 'Fatima' e il predicato è 'ha comprato'.",
+  'La risposta corretta è "l\'effetto delle abitudini sull\'ambiente".',
+  'Quale sistema di scrittura usavano gli Egizi?',
+  'I vasi greci erano decorati con scene di vita quotidiana.',
   "La risposta corretta è 'sia vegetali sia animali'.",
   'La risposta corretta è "nell\'acqua".',
   "'Sul' è la preposizione articolata su+il, ma 'sul zaino' sarebbe sbagliato.",

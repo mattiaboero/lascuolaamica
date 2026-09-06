@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.70",
+  "items": [
+   "Corrette 29 spiegazioni in cui una citazione era aperta con le virgolette doppie e chiusa con l'apice.",
+   "I nomi dei popoli antichi ora sono sempre maiuscoli quando indicano il popolo (gli Egizi, i Fenici), e \"Carthage\" è tornata Cartagine.",
+   "Sistemata una domanda di italiano che chiedeva il predicato verbale in una frase che non ne ha uno."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.69",
   "items": [
    "Uniformate 92 spiegazioni di scienze che mettevano la risposta prima del verbo (\"Sia vegetali sia animali è la risposta corretta\").",

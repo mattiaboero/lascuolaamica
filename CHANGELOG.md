@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.70 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **29 spiegazioni aprivano una citazione con le virgolette doppie e la chiudevano con l'apice** (`Il soggetto è "Fatima' e il predicato è 'ha comprato".`). Tutte hanno esattamente due `"`, entrambe orfane: sembra una conversione passata che ha toccato solo l'apertura. Uniformate ad apici singoli.
+- fix(contenuti): **20 nomi di popolo erano minuscoli dove fanno da sostantivo** (`gli egizi`, `dei romani`, `fondata da fenici`). Il corpus usa la maiuscola 193 volte contro 63, quindi ho uniformato in quella direzione — ma solo dove c'è un articolo o una preposizione articolata subito prima, che è il segnale del sostantivo: come aggettivo (`i vasi greci`, `l'esercito romano`) la minuscola è corretta e resta.
+- fix(contenuti): `Carthage, rivale di Roma, era nata come città di origine?` → `Cartagine…` con i puntini. Tre difetti in una domanda sola: il nome inglese, la frase sospesa chiusa dal `?`, e `fondata da fenici` nella spiegazione.
+- fix(contenuti): `ita-4-sintassi-9224` **chiedeva il predicato verbale di una frase che non ne ha uno** — `I bambini sono felici oggi` — e la sua stessa spiegazione lo diceva (`'Sono felici' è un predicato nominale`). Ora chiede il predicato nominale; aggiornati risposta e `answerIndex`.
+
+### Changed
+- lint(contenuti): due regole nuove — citazione con virgolette miste (l'apostrofo vero sta fra due lettere, l'apice di chiusura è seguito da spazio o punteggiatura: è questo a distinguerli) e nome di popolo minuscolo usato come sostantivo.
+
+### Notes
+- **le lettere accentate hanno rotto un `\b` per la quarta volta, stavolta al contrario**: `\bi\s+greci` scattava su `degli dèi greci`, perché per JavaScript `è` non è un carattere di parola e il confine cade fra `dè` e `i`. Finora il problema era un `\b` che non trovava mai un confine; qui ne trovava uno inesistente, e la regola segnalava un aggettivo correttamente minuscolo. Sostituito con un lookbehind che esclude anche le accentate.
+
 ## 4.12.69 - 2026-09-06
 
 ### Fixed
