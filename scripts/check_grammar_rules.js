@@ -32,6 +32,8 @@ const SBAGLIATE = [
   '10 lumache rimasti sul prato.',
   'Gatto è un essere vivente.',
   'Una password serve a?',
+  'Il Monte Bianco si trova nelle?',
+  'Il cuore batte dentro il.',
 ];
 
 const CORRETTE = [
@@ -49,6 +51,10 @@ const CORRETTE = [
   'Una password serve a...',
   'Quale strumento usi per sapere che ore sono?',
   'Quanti pacchi ci sono?',
+  'Il Monte Bianco si trova nelle Alpi.',
+  "Arrotonda 3,7 all'unità più vicina.",
+  'Tra queste parole, individua la preposizione semplice.',
+  'Quale parola contiene il suono GLI?',
 ];
 
 function caricaRegole() {

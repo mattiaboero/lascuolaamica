@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.56",
+  "items": [
+   "Altre 150 domande da completare uniformate ai puntini di sospensione.",
+   "Corrette quattro domande sulle sillabe che mostravano la parola già divisa, rivelando la risposta: una di queste conteneva anche un refuso (\"papagallo\")."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.55",
   "items": [
    "Le domande da completare ora finiscono tutte con i puntini di sospensione (\"Una password serve a...\") invece che con un punto interrogativo fuori posto."

@@ -24437,7 +24437,7 @@
    "area": "fonti_storiche",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Una vecchia fotografia di famiglia è una?",
+   "question": "Una vecchia fotografia di famiglia è una...",
    "options": [
     "Regola",
     "Fonte",
@@ -24654,7 +24654,7 @@
    "area": "storia_personale_familiare",
    "subarea": "passato_presente",
    "difficulty": 1,
-   "question": "I nonni fanno parte soprattutto del?",
+   "question": "I nonni fanno parte soprattutto del...",
    "options": [
     "Futuro della settimana",
     "Gioco dell'intervallo",
@@ -25398,7 +25398,7 @@
    "area": "preistoria_neolitico_metalli",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Nel Neolitico si usava spesso la?",
+   "question": "Nel Neolitico si usava spesso la...",
    "options": [
     "Pietra trasparente",
     "Carta colorata",
@@ -26514,7 +26514,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Secondo i greci, gli dei abitavano sul?",
+   "question": "Secondo i greci, gli dei abitavano sul...",
    "options": [
     "Vesuvio",
     "Kilimangiaro",
@@ -27165,7 +27165,7 @@
    "area": "roma_repubblica",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Giulio Cesare visse alla fine della?",
+   "question": "Giulio Cesare visse alla fine della...",
    "options": [
     "Monarchia egizia",
     "Età moderna",
@@ -34093,7 +34093,7 @@
    "area": "mesopotamia",
    "subarea": "sumeri",
    "difficulty": 3,
-   "question": "Come si chiamavano le grandi costruzioni a gradoni che i Sumeri dedicavano agli dei?",
+   "question": "Come si chiamavano le grandi costruzioni a gradoni che i Sumeri dedicavano agli dei...",
    "options": [
     "Le ziggurat",
     "Le piramidi",

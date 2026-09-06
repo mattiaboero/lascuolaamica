@@ -98,7 +98,20 @@ const GRAMMATICA = [
   // uniformato nella 4.12.55. La copula ("...il tempo è?") resta fuori dalla
   // regola: li' il punto interrogativo puo' essere corretto ("Che ore sono?").
   { pattern: /\b(?:in|di|dal|dalla|dallo|con|per|su|tra|fra|a|attraverso|verso|senza)\?\s*$/i,
+    soloDomanda: true,
     msg: 'domanda che termina con una preposizione sospesa: usare i puntini di sospensione (es. "serve a...")' },
+  // Stesse frasi sospese, altre due forme trovate col secondo lotto: chiuse con
+  // un articolo o una preposizione articolata invece che con una preposizione
+  // semplice, e chiuse col punto invece che col punto interrogativo. Nessuna
+  // delle due puo' chiudere una frase italiana, quindi non servono eccezioni.
+  // Il /i finale e' assente di proposito: "contiene il suono GLI?" cita un
+  // gruppo di lettere in maiuscolo, non usa un articolo.
+  { pattern: /\b(?:il|lo|la|i|gli|le|un|uno|una|nel|nello|nella|nei|negli|nelle|del|dello|della|dei|degli|delle|al|allo|alla|ai|agli|alle|sul|sulla|sui|sulle|col|coi)\?\s*$/,
+    soloDomanda: true,
+    msg: 'domanda che termina con un articolo o una preposizione articolata: usare i puntini di sospensione' },
+  { pattern: /\b(?:a|ad|da|di|in|con|su|per|tra|fra|e|o|ma|perché|più|meno|il|lo|la|i|gli|le|un|uno|una|nel|nella|nei|nelle|del|della|dei|delle|al|alla|ai|alle|dal|dalla|verso)\.\s*$/i,
+    soloDomanda: true,
+    msg: 'frase sospesa chiusa con un punto: usare i puntini di sospensione' },
 ];
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
@@ -124,7 +137,10 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   if (isItalianText) {
     const testoIt = `${question || ''} ${explanation || ''}`;
     for (const regola of GRAMMATICA) {
-      if (regola.pattern.test(testoIt)) {
+      // Le regole sulla frase sospesa valgono solo sul testo della domanda: in
+      // una spiegazione "molti dei", "contiene GLI" o "tre A." sono corretti.
+      const bersaglio = regola.soloDomanda ? (question || '') : testoIt;
+      if (regola.pattern.test(bersaglio)) {
         errors.push({ level: 'error', field: 'text', msg: `grammatica — ${regola.msg}` });
       }
     }

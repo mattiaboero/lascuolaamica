@@ -24653,7 +24653,7 @@
    "area": "geo_graficita",
    "subarea": "legenda",
    "difficulty": 1,
-   "question": "Nella piantina della classe, il simbolo del banco si spiega nella?",
+   "question": "Nella piantina della classe, il simbolo del banco si spiega nella...",
    "options": [
     "cornice",
     "legenda",
@@ -25037,7 +25037,7 @@
    "area": "sistema_territoriale",
    "subarea": "paesaggio_antropico",
    "difficulty": 1,
-   "question": "Un quartiere con case, negozi e strade fa parte del?",
+   "question": "Un quartiere con case, negozi e strade fa parte del...",
    "options": [
     "territorio abitato",
     "fiume",
@@ -25485,7 +25485,7 @@
    "area": "orientamento",
    "subarea": "punti_cardinali",
    "difficulty": 1,
-   "question": "Se il Sole tramonta davanti a te, stai guardando verso?",
+   "question": "Se il Sole tramonta davanti a te, stai guardando verso...",
    "options": [
     "Nord",
     "Sud",
@@ -25837,7 +25837,7 @@
    "area": "paesaggi_terra",
    "subarea": "paesaggio_fisico",
    "difficulty": 1,
-   "question": "La collina è più bassa, in genere, della?",
+   "question": "La collina è più bassa, in genere, della...",
    "options": [
     "spiaggia",
     "montagna",
@@ -25869,7 +25869,7 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 1,
-   "question": "Il fiume nasce da una sorgente e arriva spesso al?",
+   "question": "Il fiume nasce da una sorgente e arriva spesso al...",
    "options": [
     "vulcano",
     "mare",
@@ -26157,7 +26157,7 @@
    "area": "idrografia_clima_italia",
    "subarea": "acque",
    "difficulty": 2,
-   "question": "Il Po è un?",
+   "question": "Il Po è un...",
    "options": [
     "mare",
     "fiume",
@@ -26253,7 +26253,7 @@
    "area": "orientamento_carte",
    "subarea": "punti_cardinali",
    "difficulty": 2,
-   "question": "Su una carta, se vai verso il basso stai andando di solito verso?",
+   "question": "Su una carta, se vai verso il basso stai andando di solito verso...",
    "options": [
     "nord",
     "sud",
@@ -27661,7 +27661,7 @@
    "area": "geografia_fisica_italia",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Il Monte Bianco si trova nelle?",
+   "question": "Il Monte Bianco si trova nelle...",
    "options": [
     "Alpi",
     "Appennini",
@@ -28141,7 +28141,7 @@
    "area": "paesaggi_terra",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Le Dolomiti fanno parte delle?",
+   "question": "Le Dolomiti fanno parte delle...",
    "options": [
     "Alpi",
     "Appennini",

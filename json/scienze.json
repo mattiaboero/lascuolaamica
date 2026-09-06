@@ -1186,7 +1186,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "La pioggia fa parte del?",
+   "question": "La pioggia fa parte del...",
    "options": [
     "ciclo del pane",
     "ciclo dell'acqua",
@@ -1279,7 +1279,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quando il ghiaccio si scioglie, avviene la?",
+   "question": "Quando il ghiaccio si scioglie, avviene la...",
    "options": [
     "germinazione",
     "evaporazione",
@@ -1341,7 +1341,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "In primavera molte piante.",
+   "question": "In primavera molte piante...",
    "options": [
     "diventano di ferro",
     "fioriscono",
@@ -1372,7 +1372,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "In estate il clima è spesso più.",
+   "question": "In estate il clima è spesso più...",
    "options": [
     "gelato",
     "nevoso",
@@ -1403,7 +1403,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "In autunno molte foglie.",
+   "question": "In autunno molte foglie...",
    "options": [
     "diventano vetro",
     "nuotano",
@@ -1434,7 +1434,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "In inverno fa spesso più.",
+   "question": "In inverno fa spesso più...",
    "options": [
     "secco come la sabbia",
     "ventoso in ogni luogo",
@@ -1589,7 +1589,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Buttare la plastica nel contenitore giusto aiuta il.",
+   "question": "Buttare la plastica nel contenitore giusto aiuta il...",
    "options": [
     "riciclo",
     "rumore",
@@ -1620,7 +1620,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Per rispettare la natura è meglio.",
+   "question": "Per rispettare la natura è meglio...",
    "options": [
     "strappare tutte le foglie",
     "gettare rifiuti a terra",
@@ -1651,7 +1651,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Chi inquina un fiume danneggia.",
+   "question": "Chi inquina un fiume danneggia...",
    "options": [
     "solo i banchi",
     "solo le scarpe",
@@ -1682,7 +1682,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Chiude il rubinetto mentre si lava i denti chi vuole.",
+   "question": "Chiude il rubinetto mentre si lava i denti chi vuole...",
    "options": [
     "colorare il bagno",
     "risparmiare acqua",
@@ -1930,7 +1930,7 @@
    "area": "corpo_umano_salute",
    "subarea": "alimentazione",
    "difficulty": 2,
-   "question": "Per stare bene è utile mangiare in modo.",
+   "question": "Per stare bene è utile mangiare in modo...",
    "options": [
     "solo caramelle",
     "solo dolci",
@@ -1961,7 +1961,7 @@
    "area": "corpo_umano_salute",
    "subarea": "alimentazione",
    "difficulty": 2,
-   "question": "La frutta è un cibo generalmente.",
+   "question": "La frutta è un cibo generalmente...",
    "options": [
     "sano",
     "minerale",
@@ -1992,7 +1992,7 @@
    "area": "corpo_umano_salute",
    "subarea": "alimentazione",
    "difficulty": 2,
-   "question": "Bere acqua durante il giorno aiuta il corpo a.",
+   "question": "Bere acqua durante il giorno aiuta il corpo a...",
    "options": [
     "diventare di legno",
     "funzionare bene",
@@ -2023,7 +2023,7 @@
    "area": "corpo_umano_salute",
    "subarea": "alimentazione",
    "difficulty": 2,
-   "question": "Lavarsi le mani prima di mangiare è una regola di.",
+   "question": "Lavarsi le mani prima di mangiare è una regola di...",
    "options": [
     "musica",
     "geografia",
@@ -2805,7 +2805,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "L'acqua dei mari scaldata dal Sole può.",
+   "question": "L'acqua dei mari scaldata dal Sole può...",
    "options": [
     "evaporare",
     "trasformarsi in metallo",
@@ -2836,7 +2836,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Il vapore acqueo in alto si raffredda e forma.",
+   "question": "Il vapore acqueo in alto si raffredda e forma...",
    "options": [
     "strade",
     "sassi",
@@ -2867,7 +2867,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "Quando le nuvole sono piene d'acqua può cadere.",
+   "question": "Quando le nuvole sono piene d'acqua può cadere...",
    "options": [
     "pioggia",
     "zucchero",
@@ -2898,7 +2898,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "ciclo_acqua",
    "difficulty": 2,
-   "question": "La neve che si scioglie torna acqua.",
+   "question": "La neve che si scioglie torna acqua...",
    "options": [
     "di ferro",
     "liquida",
@@ -3297,7 +3297,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Per aiutare l'ambiente è utile.",
+   "question": "Per aiutare l'ambiente è utile...",
    "options": [
     "riusare alcuni oggetti",
     "sprecare carta",
@@ -3328,7 +3328,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Le piante sono importanti perché.",
+   "question": "Le piante sono importanti perché...",
    "options": [
     "rendono più sano l'ambiente",
     "creano plastica",
@@ -3359,7 +3359,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Una bottiglia di plastica va.",
+   "question": "Una bottiglia di plastica va...",
    "options": [
     "nella raccolta corretta",
     "sotto il banco",
@@ -3390,7 +3390,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Spegnere una luce quando non serve aiuta a.",
+   "question": "Spegnere una luce quando non serve aiuta a...",
    "options": [
     "fermare il vento",
     "risparmiare energia",
@@ -3421,7 +3421,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Un parco pulito è importante per.",
+   "question": "Un parco pulito è importante per...",
    "options": [
     "persone e animali",
     "solo per le biciclette",
@@ -3452,7 +3452,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Con le mani possiamo.",
+   "question": "Con le mani possiamo...",
    "options": [
     "ascoltare con precisione",
     "annusare",
@@ -3484,7 +3484,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Con la pelle possiamo sentire.",
+   "question": "Con la pelle possiamo sentire...",
    "options": [
     "solo il rumore",
     "solo i numeri",
@@ -3516,7 +3516,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Il cuore batte dentro.",
+   "question": "Il cuore batte dentro...",
    "options": [
     "il quaderno",
     "il frigorifero",
@@ -3548,7 +3548,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "I denti servono a.",
+   "question": "I denti servono a...",
    "options": [
     "guardare",
     "masticare",
@@ -3580,7 +3580,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Un cibo utile per crescere bene è.",
+   "question": "Un cibo utile per crescere bene è...",
    "options": [
     "solo bibite gassate",
     "verdura",
@@ -3612,7 +3612,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Fare movimento aiuta a.",
+   "question": "Fare movimento aiuta a...",
    "options": [
     "stare in salute",
     "dormire tutto il giorno",
@@ -3644,7 +3644,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Dormire abbastanza aiuta il corpo a.",
+   "question": "Dormire abbastanza aiuta il corpo a...",
    "options": [
     "galleggiare",
     "raffreddarsi sempre",
@@ -3676,7 +3676,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Lavarsi i denti serve a.",
+   "question": "Lavarsi i denti serve a...",
    "options": [
     "renderli più lunghi",
     "farli sparire",
@@ -3863,7 +3863,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Se una pianta non riceve acqua per molto tempo, può.",
+   "question": "Se una pianta non riceve acqua per molto tempo, può...",
    "options": [
     "trasformarsi in sasso",
     "diventare di metallo",
@@ -3893,7 +3893,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Se metti un cubetto di ghiaccio al Sole, può.",
+   "question": "Se metti un cubetto di ghiaccio al Sole, può...",
    "options": [
     "sparire senza acqua",
     "sciogliersi",
@@ -3923,7 +3923,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Se annaffi un seme e c'è luce, può.",
+   "question": "Se annaffi un seme e c'è luce, può...",
    "options": [
     "germogliare",
     "diventare plastica",
@@ -3953,7 +3953,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Se un animale non trova cibo, fa più fatica a.",
+   "question": "Se un animale non trova cibo, fa più fatica a...",
    "options": [
     "vivere",
     "colorarsi",
@@ -5444,7 +5444,7 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 1,
-   "question": "Per verificare un'ipotesi si può fare un?",
+   "question": "Per verificare un'ipotesi si può fare un...",
    "options": [
     "esperimento",
     "indovinello",
@@ -5474,7 +5474,7 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 1,
-   "question": "Dopo l'esperimento si scrivono spesso le?",
+   "question": "Dopo l'esperimento si scrivono spesso le...",
    "options": [
     "conclusioni",
     "stagioni",
@@ -5504,7 +5504,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 1,
-   "question": "Uno strumento utile per misurare la temperatura è il?",
+   "question": "Uno strumento utile per misurare la temperatura è il...",
    "options": [
     "termometro",
     "righello",
@@ -5534,7 +5534,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 2,
-   "question": "Quando confronto due risultati sto.",
+   "question": "Quando confronto due risultati sto...",
    "options": [
     "osservando differenze",
     "scrivendo una favola",
@@ -5565,7 +5565,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 2,
-   "question": "Una prova ripetuta più volte serve a.",
+   "question": "Una prova ripetuta più volte serve a...",
    "options": [
     "controllare meglio il risultato",
     "far sparire l'acqua",
@@ -5596,7 +5596,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 2,
-   "question": "Scrivere ciò che accade durante una prova aiuta a.",
+   "question": "Scrivere ciò che accade durante una prova aiuta a...",
    "options": [
     "accendere il cielo",
     "fermare il vento",
@@ -5627,7 +5627,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 2,
-   "question": "Una domanda come 'perché il ghiaccio si scioglie?' è una.",
+   "question": "Una domanda come 'perché il ghiaccio si scioglie?' è una...",
    "options": [
     "tabellina",
     "poesia",
@@ -5658,7 +5658,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 2,
-   "question": "Guardare, toccare e descrivere è un modo per.",
+   "question": "Guardare, toccare e descrivere è un modo per...",
    "options": [
     "confondere i dati",
     "fermare il tempo",
@@ -6020,7 +6020,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "Per misurare con precisione è utile usare.",
+   "question": "Per misurare con precisione è utile usare...",
    "options": [
     "solo la fantasia",
     "solo il rumore",
@@ -6051,7 +6051,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "Se un risultato non è chiaro, lo scienziato può.",
+   "question": "Se un risultato non è chiaro, lo scienziato può...",
    "options": [
     "ripetere la prova",
     "indovinare",
@@ -6082,7 +6082,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "Annotare su una tabella serve a.",
+   "question": "Annotare su una tabella serve a...",
    "options": [
     "mescolare i risultati",
     "cambiare argomento",
@@ -6113,7 +6113,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "Fare un confronto tra prima e dopo aiuta a.",
+   "question": "Fare un confronto tra prima e dopo aiuta a...",
    "options": [
     "capire i cambiamenti",
     "spegnere il termometro",
@@ -6144,7 +6144,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "Una lente di ingrandimento aiuta a.",
+   "question": "Una lente di ingrandimento aiuta a...",
    "options": [
     "misurare il peso",
     "ascoltare suoni lontani",
@@ -6885,7 +6885,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Quando il ghiaccio diventa acqua avviene la?",
+   "question": "Quando il ghiaccio diventa acqua avviene la...",
    "options": [
     "combustione",
     "evaporazione",
@@ -6947,7 +6947,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Quando il vapore diventa goccioline avviene la?",
+   "question": "Quando il vapore diventa goccioline avviene la...",
    "options": [
     "condensazione",
     "respirazione",
@@ -6978,7 +6978,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Quando l'acqua si raffredda molto e diventa ghiaccio avviene la?",
+   "question": "Quando l'acqua si raffredda molto e diventa ghiaccio avviene la...",
    "options": [
     "solidificazione",
     "fusione",
@@ -7009,7 +7009,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'acqua è importante per gli esseri viventi perché.",
+   "question": "L'acqua è importante per gli esseri viventi perché...",
    "options": [
     "ferma il vento",
     "serve alla vita",
@@ -7039,7 +7039,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Il ciclo dell'acqua comprende evaporazione, condensazione e.",
+   "question": "Il ciclo dell'acqua comprende evaporazione, condensazione e...",
    "options": [
     "duplicazione",
     "colorazione",
@@ -7069,7 +7069,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'acqua potabile è acqua.",
+   "question": "L'acqua potabile è acqua...",
    "options": [
     "sempre colorata",
     "sempre ghiacciata",
@@ -7099,7 +7099,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Nei fiumi l'acqua scorre verso.",
+   "question": "Nei fiumi l'acqua scorre verso...",
    "options": [
     "il vulcano",
     "il mare",
@@ -7129,7 +7129,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'aria occupa.",
+   "question": "L'aria occupa...",
    "options": [
     "solo i quaderni",
     "solo il vetro",
@@ -7160,7 +7160,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'aria è necessaria per la.",
+   "question": "L'aria è necessaria per la...",
    "options": [
     "decorazione",
     "fotografia",
@@ -7191,7 +7191,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Il suolo è formato da terra, sassolini, acqua e.",
+   "question": "Il suolo è formato da terra, sassolini, acqua e...",
    "options": [
     "gomma",
     "vetro",
@@ -7222,7 +7222,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Nel suolo vivono anche piccoli.",
+   "question": "Nel suolo vivono anche piccoli...",
    "options": [
     "automobili",
     "telefoni",
@@ -7253,7 +7253,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Il fuoco ha bisogno anche di.",
+   "question": "Il fuoco ha bisogno anche di...",
    "options": [
     "neve",
     "aria",
@@ -7284,7 +7284,7 @@
    "area": "materia_materiali",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "La parte più superficiale del suolo contiene spesso.",
+   "question": "La parte più superficiale del suolo contiene spesso...",
    "options": [
     "plastilina",
     "vetro",
@@ -8354,7 +8354,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Molti viventi insieme al loro ambiente formano un?",
+   "question": "Molti viventi insieme al loro ambiente formano un...",
    "options": [
     "orologio",
     "temperino",
@@ -8684,7 +8684,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Riciclare carta e plastica aiuta a.",
+   "question": "Riciclare carta e plastica aiuta a...",
    "options": [
     "far sparire gli alberi",
     "ridurre i rifiuti",
@@ -8715,7 +8715,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Spegnere la luce quando non serve aiuta a.",
+   "question": "Spegnere la luce quando non serve aiuta a...",
    "options": [
     "scaldare il mare",
     "fermare l'aria",
@@ -8746,7 +8746,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Non gettare rifiuti nel fiume serve a.",
+   "question": "Non gettare rifiuti nel fiume serve a...",
    "options": [
     "raffreddare il Sole",
     "fermare il vento",
@@ -8777,7 +8777,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Gli alberi sono utili all'ambiente perché.",
+   "question": "Gli alberi sono utili all'ambiente perché...",
    "options": [
     "creano plastica",
     "producono metallo",
@@ -8808,7 +8808,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Usare meno plastica usa e getta aiuta a.",
+   "question": "Usare meno plastica usa e getta aiuta a...",
    "options": [
     "fare più rumore",
     "inquinare meno",
@@ -8930,7 +8930,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'aria in movimento forma il?",
+   "question": "L'aria in movimento forma il...",
    "options": [
     "vapore",
     "vento",
@@ -8960,7 +8960,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Il ciclo dell'acqua è alimentato soprattutto dal calore del?",
+   "question": "Il ciclo dell'acqua è alimentato soprattutto dal calore del...",
    "options": [
     "vento",
     "ghiaccio",
@@ -9350,7 +9350,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'ossigeno dell'aria è importante soprattutto per la?",
+   "question": "L'ossigeno dell'aria è importante soprattutto per la...",
    "options": [
     "fotocopia",
     "scrittura",
@@ -9380,7 +9380,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'anidride carbonica è usata dalle piante nella?",
+   "question": "L'anidride carbonica è usata dalle piante nella...",
    "options": [
     "fotosintesi",
     "digestione",
@@ -9441,7 +9441,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "L'unità fondamentale dei viventi è la?",
+   "question": "L'unità fondamentale dei viventi è la...",
    "options": [
     "montagna",
     "goccia",
@@ -9531,7 +9531,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "Il polline serve alla?",
+   "question": "Il polline serve alla...",
    "options": [
     "riproduzione delle piante",
     "respirazione dell'aria",
@@ -9651,7 +9651,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "Gli animali vertebrati hanno una?",
+   "question": "Gli animali vertebrati hanno una...",
    "options": [
     "corolla",
     "corteccia",
@@ -9681,7 +9681,7 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "I mammiferi respirano con i?",
+   "question": "I mammiferi respirano con i...",
    "options": [
     "polmoni",
     "rami",
@@ -10221,7 +10221,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Ridurre gli sprechi d'acqua aiuta a.",
+   "question": "Ridurre gli sprechi d'acqua aiuta a...",
    "options": [
     "tutelare una risorsa preziosa",
     "aumentare l'inquinamento",
@@ -10251,7 +10251,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Raccogliere in modo differenziato carta, vetro e plastica favorisce il.",
+   "question": "Raccogliere in modo differenziato carta, vetro e plastica favorisce il...",
    "options": [
     "rumore",
     "degrado del suolo",
@@ -10281,7 +10281,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Consumare in modo consapevole significa.",
+   "question": "Consumare in modo consapevole significa...",
    "options": [
     "usare sempre usa e getta",
     "sprecare tutto",
@@ -10311,7 +10311,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Un parco naturale protegge.",
+   "question": "Un parco naturale protegge...",
    "options": [
     "solo le strade",
     "solo i negozi",
@@ -10371,7 +10371,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Nel metodo scientifico, dopo l'ipotesi si svolge spesso un?",
+   "question": "Nel metodo scientifico, dopo l'ipotesi si svolge spesso un...",
    "options": [
     "gioco libero",
     "viaggio",
@@ -10402,7 +10402,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Una conclusione scientifica dovrebbe basarsi sui?",
+   "question": "Una conclusione scientifica dovrebbe basarsi sui...",
    "options": [
     "dati raccolti",
     "casi fortuiti soltanto",
@@ -10433,7 +10433,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Per osservare oggetti molto piccoli si può usare il?",
+   "question": "Per osservare oggetti molto piccoli si può usare il...",
    "options": [
     "barometro",
     "metro",
@@ -10464,7 +10464,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Per misurare la temperatura dell'aria si usa il?",
+   "question": "Per misurare la temperatura dell'aria si usa il...",
    "options": [
     "compasso",
     "orologio",
@@ -10586,7 +10586,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Usare meno energia elettrica quando possibile aiuta a.",
+   "question": "Usare meno energia elettrica quando possibile aiuta a...",
    "options": [
     "ridurre gli sprechi",
     "cambiare il clima in un giorno",
@@ -10617,7 +10617,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Una scelta sostenibile è.",
+   "question": "Una scelta sostenibile è...",
    "options": [
     "riutilizzare alcuni oggetti",
     "comprare e buttare subito",
@@ -10648,7 +10648,7 @@
    "area": "scienza_tecnologia",
    "subarea": "metodo_e_strumenti",
    "difficulty": 2,
-   "question": "Studiare un fenomeno con tabelle e grafici aiuta a.",
+   "question": "Studiare un fenomeno con tabelle e grafici aiuta a...",
    "options": [
     "mescolare argomenti diversi",
     "interpretare meglio i dati",
@@ -10739,7 +10739,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Più cellule simili formano un?",
+   "question": "Più cellule simili formano un...",
    "options": [
     "satellite",
     "continente",
@@ -10769,7 +10769,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Più tessuti insieme formano un?",
+   "question": "Più tessuti insieme formano un...",
    "options": [
     "minerale",
     "ecosistema",
@@ -10799,7 +10799,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Più organi che lavorano insieme formano un?",
+   "question": "Più organi che lavorano insieme formano un...",
    "options": [
     "giorno",
     "colore",
@@ -11069,7 +11069,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "La pelle è importante soprattutto per il?",
+   "question": "La pelle è importante soprattutto per il...",
    "options": [
     "gusto",
     "tatto",
@@ -11219,7 +11219,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "I muscoli permettono il?",
+   "question": "I muscoli permettono il...",
    "options": [
     "galleggiamento delle rocce",
     "moto dei pianeti",
@@ -11309,7 +11309,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Il sangue porta ossigeno e nutrienti alle.",
+   "question": "Il sangue porta ossigeno e nutrienti alle...",
    "options": [
     "nuvole",
     "cellule",
@@ -11339,7 +11339,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "I denti iniziano la digestione con la.",
+   "question": "I denti iniziano la digestione con la...",
    "options": [
     "masticazione",
     "evaporazione",
@@ -11369,7 +11369,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Respirare bene e fare movimento aiuta a mantenere sano l'apparato.",
+   "question": "Respirare bene e fare movimento aiuta a mantenere sano l'apparato...",
    "options": [
     "stellare",
     "minerale",
@@ -11399,7 +11399,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Dormire a sufficienza aiuta il corpo a.",
+   "question": "Dormire a sufficienza aiuta il corpo a...",
    "options": [
     "produrre ruggine",
     "recuperare energie",
@@ -11429,7 +11429,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Lavarsi le mani riduce il rischio di.",
+   "question": "Lavarsi le mani riduce il rischio di...",
    "options": [
     "trasmettere germi",
     "fermare il cuore",
@@ -11459,7 +11459,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Bere acqua ogni giorno aiuta il corpo a.",
+   "question": "Bere acqua ogni giorno aiuta il corpo a...",
    "options": [
     "fermare il respiro",
     "diventare di vetro",
@@ -11489,7 +11489,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Un corretto stile di vita comprende alimentazione equilibrata, movimento e.",
+   "question": "Un corretto stile di vita comprende alimentazione equilibrata, movimento e...",
    "options": [
     "spreco",
     "riposo",
@@ -11519,7 +11519,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Il sistema nervoso coordina.",
+   "question": "Il sistema nervoso coordina...",
    "options": [
     "la formazione delle montagne",
     "la crescita dei sassi",
@@ -11549,7 +11549,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "I nervi trasportano messaggi tra corpo e.",
+   "question": "I nervi trasportano messaggi tra corpo e...",
    "options": [
     "cervello",
     "mare",
@@ -11579,7 +11579,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Le articolazioni collegano.",
+   "question": "Le articolazioni collegano...",
    "options": [
     "le ossa",
     "le nuvole",
@@ -12100,7 +12100,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "Il Sistema Solare ha al centro il?",
+   "question": "Il Sistema Solare ha al centro il...",
    "options": [
     "Giove",
     "Marte",
@@ -12280,7 +12280,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "La Luna è il satellite naturale della?",
+   "question": "La Luna è il satellite naturale della...",
    "options": [
     "Venere",
     "Mercurio",
@@ -12340,7 +12340,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "I pianeti del Sistema Solare ruotano intorno al?",
+   "question": "I pianeti del Sistema Solare ruotano intorno al...",
    "options": [
     "Sole",
     "telescopio",
@@ -12611,7 +12611,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Una fonte di energia rinnovabile è il?",
+   "question": "Una fonte di energia rinnovabile è il...",
    "options": [
     "petrolio",
     "Sole",
@@ -12641,7 +12641,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Una fonte di energia non rinnovabile è il?",
+   "question": "Una fonte di energia non rinnovabile è il...",
    "options": [
     "acqua",
     "petrolio",
@@ -12821,7 +12821,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Il vento può produrre energia con le?",
+   "question": "Il vento può produrre energia con le...",
    "options": [
     "ruote dentate di carta",
     "forchette magnetiche",
@@ -12974,7 +12974,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Per misurare la temperatura si usa il?",
+   "question": "Per misurare la temperatura si usa il...",
    "options": [
     "termometro",
     "compasso",
@@ -13067,7 +13067,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "La gravità è una forza che attira i corpi verso?",
+   "question": "La gravità è una forza che attira i corpi verso...",
    "options": [
     "la Terra",
     "la Luna sempre",
@@ -13217,7 +13217,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Uno specchio mostra la riflessione della?",
+   "question": "Uno specchio mostra la riflessione della...",
    "options": [
     "luce",
     "gravità",
@@ -13247,7 +13247,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Il suono è prodotto da una?",
+   "question": "Il suono è prodotto da una...",
    "options": [
     "solidificazione",
     "vibrazione",
@@ -13367,7 +13367,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Se lasci cadere una mela, scende per effetto della?",
+   "question": "Se lasci cadere una mela, scende per effetto della...",
    "options": [
     "magnetizzazione",
     "riflessione",
@@ -15161,7 +15161,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Il suono si sente grazie a vibrazioni che arrivano alle?",
+   "question": "Il suono si sente grazie a vibrazioni che arrivano alle...",
    "options": [
     "ginocchia",
     "orecchie",
@@ -15750,7 +15750,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Quando il vapore acqueo diventa goccioline, avviene la?",
+   "question": "Quando il vapore acqueo diventa goccioline, avviene la...",
    "options": [
     "fusione",
     "condensazione",
@@ -26291,7 +26291,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Il vapore acqueo che a contatto con una superficie fredda torna liquido compie la?",
+   "question": "Il vapore acqueo che a contatto con una superficie fredda torna liquido compie la...",
    "options": [
     "condensazione",
     "evaporazione",
@@ -26446,7 +26446,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Nel ciclo dell'acqua, la pioggia che cade e ritorna nei fiumi rappresenta la?",
+   "question": "Nel ciclo dell'acqua, la pioggia che cade e ritorna nei fiumi rappresenta la...",
    "options": [
     "precipitazione",
     "evaporazione",
@@ -27531,7 +27531,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 1,
-   "question": "La forza che fa cadere gli oggetti verso il basso è la?",
+   "question": "La forza che fa cadere gli oggetti verso il basso è la...",
    "options": [
     "forza di gravità",
     "forza elettrica",
@@ -27593,7 +27593,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 1,
-   "question": "Per mettere in movimento una palla ferma serve una?",
+   "question": "Per mettere in movimento una palla ferma serve una...",
    "options": [
     "forza",
     "luce",
@@ -27872,7 +27872,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Il suono per propagarsi ha bisogno di un?",
+   "question": "Il suono per propagarsi ha bisogno di un...",
    "options": [
     "mezzo materiale come l'aria",
     "vuoto assoluto",
@@ -28554,7 +28554,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 3,
-   "question": "Un animale con pelle umida, che da piccolo respira con branchie e da adulto vive anche sulla terra, è un?",
+   "question": "Un animale con pelle umida, che da piccolo respira con branchie e da adulto vive anche sulla terra, è un...",
    "options": [
     "anfibio",
     "rettile",
@@ -28740,7 +28740,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Le rondini in autunno partono verso i paesi caldi: questo comportamento è la?",
+   "question": "Le rondini in autunno partono verso i paesi caldi: questo comportamento è la...",
    "options": [
     "migrazione",
     "letargo",
@@ -29143,7 +29143,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "Il senso dell'olfatto ha sede nel?",
+   "question": "Il senso dell'olfatto ha sede nel...",
    "options": [
     "naso",
     "orecchio",
@@ -29174,7 +29174,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 2,
-   "question": "La lingua ci permette di percepire i?",
+   "question": "La lingua ci permette di percepire i...",
    "options": [
     "sapori",
     "suoni",
@@ -29205,7 +29205,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Il senso che percepisce caldo, freddo e forme toccando è il?",
+   "question": "Il senso che percepisce caldo, freddo e forme toccando è il...",
    "options": [
     "tatto",
     "gusto",
@@ -29391,7 +29391,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "In una catena alimentare le piante sono i?",
+   "question": "In una catena alimentare le piante sono i...",
    "options": [
     "produttori",
     "consumatori",
@@ -29453,7 +29453,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Funghi e batteri che trasformano i resti degli organismi morti sono i?",
+   "question": "Funghi e batteri che trasformano i resti degli organismi morti sono i...",
    "options": [
     "decompositori",
     "produttori",
@@ -29484,7 +29484,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Gli animali che si nutrono di altri animali sono i?",
+   "question": "Gli animali che si nutrono di altri animali sono i...",
    "options": [
     "carnivori",
     "erbivori",
@@ -29515,7 +29515,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 1,
-   "question": "L'insieme di più catene alimentari collegate forma una?",
+   "question": "L'insieme di più catene alimentari collegate forma una...",
    "options": [
     "rete alimentare",
     "piramide di sassi",
@@ -29701,7 +29701,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "L'insieme degli individui della stessa specie in un luogo forma una?",
+   "question": "L'insieme degli individui della stessa specie in un luogo forma una...",
    "options": [
     "popolazione",
     "catena",
@@ -29763,7 +29763,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 1,
-   "question": "La biodiversità indica la?",
+   "question": "La biodiversità indica la...",
    "options": [
     "varietà di esseri viventi",
     "quantità di acqua",
@@ -30135,7 +30135,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 1,
-   "question": "La varietà di ambienti diversi (bosco, fiume, prato) in un territorio favorisce la?",
+   "question": "La varietà di ambienti diversi (bosco, fiume, prato) in un territorio favorisce la...",
    "options": [
     "biodiversità",
     "siccità",
@@ -30972,7 +30972,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Mangiare troppi dolci può far male soprattutto ai?",
+   "question": "Mangiare troppi dolci può far male soprattutto ai...",
    "options": [
     "denti",
     "capelli",
@@ -31499,7 +31499,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Un fungo è considerato un?",
+   "question": "Un fungo è considerato un...",
    "options": [
     "essere vivente",
     "oggetto",
@@ -31747,7 +31747,7 @@
    "area": "viventi_biologia",
    "subarea": "piante",
    "difficulty": 2,
-   "question": "Dentro il frutto si trovano i?",
+   "question": "Dentro il frutto si trovano i...",
    "options": [
     "semi",
     "fiori",

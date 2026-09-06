@@ -16933,7 +16933,7 @@
    "area": "italiano_classe3",
    "subarea": "alfabeto",
    "difficulty": 1,
-   "question": "Quante sillabe ha la parola 'ca-sa'?",
+   "question": "Quante sillabe ha la parola 'casa'?",
    "options": [
     "3",
     "1",
@@ -16965,7 +16965,7 @@
    "area": "italiano_classe3",
    "subarea": "alfabeto",
    "difficulty": 1,
-   "question": "Quante sillabe ha la parola 'far-fal-la'?",
+   "question": "Quante sillabe ha la parola 'farfalla'?",
    "options": [
     "2",
     "4",
@@ -17317,7 +17317,7 @@
    "area": "italiano_classe3",
    "subarea": "alfabeto",
    "difficulty": 2,
-   "question": "Quante sillabe ha la parola 'stra-or-di-na-rio'?",
+   "question": "Quante sillabe ha la parola 'straordinario'?",
    "options": [
     "4",
     "3",
@@ -25445,7 +25445,7 @@
    "area": "italiano_classe4",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Quante sillabe ha la parola 'pa-pa-ga-llo'?",
+   "question": "Quante sillabe ha la parola 'pappagallo'?",
    "options": [
     "Tre",
     "Quattro",
@@ -25454,7 +25454,7 @@
    ],
    "answerIndex": 1,
    "answer": "Quattro",
-   "explanation": "Per contare le sillabe si divide la parola in gruppi di suoni: pa-pa-ga-llo = 4 sillabe. La divisione in sillabe segue regole precise: la consonante doppia (ll) si divide tra le due sillabe (ga-llo). Contare le sillabe è utile per la divisione a capo e per la poesia.",
+   "explanation": "Per contare le sillabe si divide la parola in gruppi di suoni: pap-pa-gal-lo = 4 sillabe. La divisione in sillabe segue regole precise: la consonante doppia (ll) si divide tra le due sillabe (gal-lo). Contare le sillabe è utile per la divisione a capo e per la poesia.",
    "active": true,
    "tag": "italiano;vari;classe_4;primaria",
    "tags": [

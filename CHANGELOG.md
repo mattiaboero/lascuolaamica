@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.56 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **quattro domande sulle sillabe mostravano la parola già divisa** — `Quante sillabe ha la parola 'ca-sa'?`, `'far-fal-la'`, `'stra-or-di-na-rio'`, `'pa-pa-ga-llo'` — cioè contenevano la risposta. Rimossi i trattini. Togliendoli è emerso un refuso che la sillabazione nascondeva: `pa-pa-ga-llo` è **papagallo** con una p sola; corretto in `pappagallo` insieme alla sillabazione nella spiegazione (`pap-pa-gal-lo`).
+- fix(contenuti): altre **150 domande a frase sospesa** uniformate ai puntini, in due forme che il primo passaggio non copriva: 72 chiuse con un articolo o una preposizione articolata (`Il Monte Bianco si trova nelle?`, `Il Po è un?`) e 78 chiuse con un punto invece che coi puntini (`Il cuore batte dentro.`, `Le articolazioni collegano.`), queste ultime quasi tutte in scienze.
+
+### Changed
+- ci(contenuti): tre regole nuove in `lint_content.js`, che sale a 17. Le regole sulla frase sospesa valgono **solo sul testo della domanda**: nelle spiegazioni le stesse parole sono legittime, e applicarle ovunque produceva 20 falsi positivi (`molti dei` = gli dèi, `contiene GLI` = il gruppo di lettere, `tre A.` = la lettera). La regola sull'articolo finale è inoltre **sensibile alle maiuscole**, perché `Quale parola contiene il suono GLI?` cita un gruppo di lettere e non usa un articolo.
+
+### Notes
+- lotto 2 di revisione linguistica: 60 domande estratte fra le 6.381 a scheletro unico, escluse quelle del lotto 1. Registro dei lotti in `reports/revisione-linguistica.json`, generato da `scripts/sample_review_batch.py`, così i lotti successivi non ripetono le stesse domande.
+- durante l'applicazione la conversione automatica ha **danneggiato una domanda** (`Quale parola contiene il suono GLI?` diventata `... GLI...`): trovata dal linter subito dopo, ripristinata, e la regola resa sensibile alle maiuscole perché non riaccada. È il motivo per cui ogni passaggio automatico su questi dati va seguito da una rilettura: le regole non sanno distinguere un articolo da una lettera citata.
+- i 20 falsi positivi nelle spiegazioni e i 7 comandi legittimi (`Arrotonda 3,7 all'unità più vicina.`, `Tra queste parole, individua la preposizione semplice.`) sono stati esclusi leggendoli, non con una scorciatoia: `Se metti un cubetto di ghiaccio al Sole, può.` contiene un verbo all'imperativo ma è una frase sospesa, non un comando.
+
 ## 4.12.55 - 2026-09-06
 
 ### Changed
