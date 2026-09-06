@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -131,7 +132,10 @@ def _replace_ldjson_blocks(html: str, date_iso: str) -> tuple[str, int]:
         start, raw_json, end = match.group(1), match.group(2), match.group(3)
         try:
             payload = json.loads(raw_json)
-        except Exception:
+        except Exception as exc:
+            # Blocco JSON-LD non parsabile: si lascia intatto, ma in silenzio
+            # non se ne accorgeva nessuno e il blocco restava senza dateModified.
+            print(f"[warn] blocco JSON-LD non parsabile, lasciato invariato: {exc}", file=sys.stderr)
             return match.group(0)
         if not isinstance(payload, dict):
             return match.group(0)

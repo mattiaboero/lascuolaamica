@@ -6,6 +6,7 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
@@ -78,8 +79,8 @@ def _lastmod_for(filename: str, dirty: frozenset[str]) -> str:
         stamp = (result.stdout or "").strip()
         if result.returncode == 0 and stamp:
             return datetime.fromisoformat(stamp.replace("Z", "+00:00")).date().isoformat()
-    except Exception:
-        pass
+    except Exception as exc:  # git non disponibile o repo senza storia
+        print(f"[warn] git log non utilizzabile per {path.name}, uso mtime: {exc}", file=sys.stderr)
     return datetime.fromtimestamp(path.stat().st_mtime).date().isoformat()
 
 

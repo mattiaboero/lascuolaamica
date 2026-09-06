@@ -78,7 +78,24 @@ Per inglese il dataset include anche metadata opzionali usati dal core:
 5. Verifica manuale su almeno 2 classi per materia toccata
 6. Merge su `main` → pubblicazione automatica
 
-**Attenzione:** `ingest_generated.py` non deduplica automaticamente in caso di ri-esecuzione sullo stesso shard — archiviare gli shard già ingeriti e verificare i duplicati prima di rilanciare.
+Dalla 4.12.45 `ingest_generated.py` è idempotente: salta le domande il cui testo è già presente nel dataset (confronto normalizzato: spazi compattati, minuscole) e, a fine ingest reale, sposta gli shard processati in `reports/generated/ingested/`. Il conteggio finale riporta anche quanti duplicati ha saltato. Prima ogni riga riceveva un id nuovo da `next_id()`, quindi rilanciare lo script sullo stesso shard duplicava le domande in silenzio.
+
+---
+
+## Script manuali (non in CI)
+
+Strumenti one-shot, da lanciare a mano quando serve. Non sono in `package.json` né nei workflow: nessuno li esegue automaticamente.
+
+| Script | Cosa fa | Quando serve |
+| --- | --- | --- |
+| `dedup_questions.py` | Rimuove domande duplicate dai dataset materia | Dopo un ingest sospetto, o come bonifica una tantum |
+| `derive_math_difficulty.py` | Ricalcola `difficulty` di matematica dalle caratteristiche intrinseche della domanda | Se la difficoltà risulta collassata sulla classe (era il caso prima del suo primo uso: la difficoltà adattiva richiede varianza dentro la classe, non fra classi) |
+| `fill_math_subarea.py` | Riempie le `subarea` vuote di matematica in modo deterministico | Dopo un import che lascia `subarea` vuota |
+| `normalize_difficulty.py` | Normalizza i valori di `difficulty` su tutte le materie | Bonifica di dataset importati con difficoltà fuori scala. Nota: inferisce dalla classe, quindi su matematica va seguito da `derive_math_difficulty.py` |
+| `retag_problemi_areas.py` | Riassegna le aree delle domande di `problemi` | Dopo un cambio della tassonomia delle aree |
+| `update_total_questions.py` | Riallinea `totalQuestions` e `stats.rows` nei JSON materia | Se un'edit manuale ha lasciato i contatori disallineati |
+
+Prima di lanciarne uno: commit pulito, perché scrivono direttamente sui `json/*.json` e la rete di sicurezza è solo git.
 
 ---
 

@@ -65,6 +65,11 @@ def build_tags(subject, area, cls):
     base = [subject, area, f'classe_{cls}', 'primaria']
     return {'tag': ';'.join(base), 'tags': base}
 
+def question_signature(text):
+    """Testo della domanda normalizzato, per riconoscere un re-ingest."""
+    return re.sub(r'\s+', ' ', str(text or '')).strip().lower()
+
+
 def ingest_new(subject, dry_run=False):
     """Ingest new questions from JSONL shards into subject JSON."""
     json_file = JSON_DIR / f'{subject}.json'
@@ -76,6 +81,11 @@ def ingest_new(subject, dry_run=False):
 
     questions = get_questions(data)
     existing_ids = {q.get('id', '') for q in questions}
+    # Ogni riga riceve un id nuovo da next_id(), quindi l'id non protegge da
+    # niente: rilanciare lo script sullo stesso shard duplicava le domande in
+    # silenzio. La difesa e' sul testo della domanda, l'unica cosa che resta
+    # uguale fra due ingest dello stesso contenuto.
+    existing_texts = {question_signature(q.get('question')) for q in questions}
     meta = SUBJECT_FIELDS[subject]
     prefix = PREFIX_MAP[subject]
 
@@ -87,6 +97,8 @@ def ingest_new(subject, dry_run=False):
 
     added = 0
     errors = 0
+    duplicates = 0
+    ingested_shards = []
 
     for shard in shards:
         print(f'  Processing {shard.name}...')
@@ -121,6 +133,12 @@ def ingest_new(subject, dry_run=False):
                     print(f'    SKIP line {lineno}: answer not in options — "{answer}"')
                     errors += 1
                     continue
+
+                signature = question_signature(q['question'])
+                if signature in existing_texts:
+                    duplicates += 1
+                    continue
+                existing_texts.add(signature)
 
                 cls = int(q['class'])
                 area = str(q.get('area') or f"{subject}_classe{cls}")
@@ -167,6 +185,7 @@ def ingest_new(subject, dry_run=False):
                 if not dry_run:
                     questions.append(row)
                 added += 1
+        ingested_shards.append(shard)
 
     if not dry_run:
         # Update totalQuestions
@@ -179,7 +198,14 @@ def ingest_new(subject, dry_run=False):
         with open(json_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=1, ensure_ascii=False)
 
-    print(f'  {subject}: +{added} questions added, {errors} skipped')
+    if not dry_run and ingested_shards:
+        archive_dir = GENERATED_DIR / 'ingested'
+        archive_dir.mkdir(exist_ok=True)
+        for shard in ingested_shards:
+            shard.rename(archive_dir / shard.name)
+        print(f'  archiviati {len(ingested_shards)} shard in {archive_dir.relative_to(ROOT)}/')
+
+    print(f'  {subject}: +{added} questions added, {errors} skipped, {duplicates} duplicati gia presenti')
     return added
 
 def apply_explanations(dry_run=False):

@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.12.45 - 2026-09-06
+
+### Fixed
+- fix(ingest): `scripts/ingest_generated.py` non era idempotente. Ogni riga riceve un id nuovo da `next_id()`, quindi l'id non proteggeva da niente e rilanciare lo script sullo stesso shard duplicava le domande in silenzio — un rischio finora mitigato solo dalla memoria di chi lo lanciava, con l'avvertenza scritta nel wiki. Ora salta le domande il cui testo normalizzato (spazi compattati, minuscole) è già nel dataset, riporta quanti duplicati ha saltato e, dopo un ingest reale, sposta gli shard processati in `reports/generated/ingested/`. Verificato in un worktree isolato con uno shard di prova: con la versione precedente due esecuzioni lasciavano la stessa domanda due volte, con questa la seconda aggiunge 0 righe e la domanda resta unica.
+
+### Changed
+- ci: i due `except Exception` silenziosi ora scrivono su stderr. `scripts/generate_sitemap.py` quando `git log` non è utilizzabile e ripiega sull'mtime del file; `scripts/refresh_structured_data.py` quando un blocco JSON-LD non è parsabile e viene lasciato intatto — in quel caso il blocco resta senza `dateModified` aggiornato e prima non lo segnalava niente.
+- docs(wiki): documentati i sei script manuali (`dedup_questions`, `derive_math_difficulty`, `fill_math_subarea`, `normalize_difficulty`, `retag_problemi_areas`, `update_total_questions`), che non compaiono in `package.json`, nei workflow o nel wiki: nessuno sapeva più quando andassero lanciati. Tabella con cosa fa ognuno e quando serve, più la nota che `normalize_difficulty.py` inferisce la difficoltà dalla classe e va quindi seguito da `derive_math_difficulty.py` su matematica.
+- chore: bump versione `4.12.44` → `4.12.45`.
+
 ## 4.12.44 - 2026-09-06
 
 ### Fixed
