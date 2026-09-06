@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.64",
+  "items": [
+   "Riscritte 150 domande di educazione civica: chiedevano \"cosa fai?\" ma offrivano risposte all'infinito, e in 24 casi la domanda non corrispondeva alle risposte proposte.",
+   "Corrette 212 spiegazioni a cui mancava l'articolo (\"Rotazione è la risposta corretta\") e 5 domande di scienze in cui il testo diceva ancora \"del/della\"."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.63",
   "items": [
    "Corrette 28 domande di matematica e scienze: pronome sbagliato con un nome femminile (\"Irene ... gli applicano\"), prezzo unitario \"l'uno\" con un nome femminile (\"4 magliette a 18 euro l'uno\") e articolo mancante a inizio domanda (\"Fungo è un essere...\")."

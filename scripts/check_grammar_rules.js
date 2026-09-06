@@ -42,6 +42,7 @@ const SBAGLIATE = [
   "Sara compra 4 magliette a 18 euro l'uno.",
   "Irene compra 7 sciarpe a 16 euro l'uno.",
   'Automobile è un essere vivente.',
+  'Quale organo è legato soprattutto al senso del/della udito?',
   'Fungo è un essere vivente.',
   'Le energie rinnovabili sono importanti perché?',
   'Un oggetto metallico lasciato al sole diventa…',

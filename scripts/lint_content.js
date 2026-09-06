@@ -137,6 +137,13 @@ const GRAMMATICA = [
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
   { pattern: /\bperch[ée]\?\s*$/, soloDomanda: true,
     msg: 'domanda che termina con "perché?": se sono le opzioni a completarla, usare i puntini' },
+  // Dal lotto 8: il template lasciava l'alternativa di genere da risolvere e
+  // nessuno la risolveva ("al senso del/della udito"). Vale solo sulla domanda:
+  // in inglese le spiegazioni usano "il/la suo/sua" per spiegare che 'his' e
+  // 'her' non distinguono la cosa posseduta, e li' la doppia forma e' voluta.
+  { pattern: /\b(?:del\/della|il\/la|un\/una|nel\/nella|dei\/delle|lo\/la|dello\/della)\b/,
+    soloDomanda: true,
+    msg: 'alternativa di genere non risolta dal template (es. "al senso del/della udito")' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
@@ -161,6 +168,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   if (question && DANGLING_REFERENCE.test(question)) {
     errors.push({ level: 'error', field: 'question', msg: 'dangling cross-reference in question (e.g. "domanda n.X" / "vedi sopra") — quiz questions must be self-contained' });
   }
+  // Dal lotto 8: 151 domande di civica chiedevano "cosa fai?" e offrivano
+  // risposte all'infinito ("alzare la mano"). In italiano quella domanda vuole
+  // un verbo di seconda persona; con l'infinito la consegna giusta e' "cosa e'
+  // meglio fare?". Serve confrontare domanda e opzioni, quindi non e' una regex
+  // di GRAMMATICA. Le domande con opzioni gia' alla seconda persona ("Lo chiudi
+  // bene") restano valide e non scattano.
+  if (subject !== 'inglese' && /cosa fai\?\s*$/i.test(question || '')) {
+    const opts = (options || []).filter((o) => typeof o === 'string' && o.trim());
+    const infinito = (o) => /^(?:non\s+|mai\s+)?[a-zà-ù']+(?:are|ere|ire|urre|orre)(?:l[oaie]|gli|gliel[oaie]|ne|si|ti|mi|ci|vi|tene|sene)?\b/i.test(o.trim());
+    if (opts.length && opts.every(infinito)) {
+      errors.push({ level: 'error', field: 'question', msg: 'grammatica — "cosa fai?" con opzioni all\'infinito: la consegna giusta e\' "cosa e\' meglio fare?"' });
+    }
+  }
+
   const isItalianText = subject !== 'inglese';
   if (isItalianText) {
     const testoIt = `${question || ''} ${explanation || ''}`;

@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.12.64 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **126 domande di civica chiedevano "cosa fai?" e offrivano risposte all'infinito** ("In una situazione in cui vuoi parlare in classe, cosa fai? — alzare la mano"). In italiano quella consegna vuole un verbo di seconda persona, quindi lo stem diventa "cosa è meglio fare?". Le 6 domande della stessa famiglia che hanno già opzioni alla seconda persona ("Lo chiudi bene", "Fai colazione") sono corrette e non sono state toccate.
+- fix(contenuti): **24 domande della stessa famiglia non chiedevano affatto un'azione**: il template "In una situazione in cui vuoi spiegare X, cosa fai?" era stato applicato anche a definizioni, e le opzioni erano la definizione stessa (`vuoi spiegare chi è un volontario, cosa fai? — una persona che aiuta la comunità`). Riscritte come domande dirette (`Chi è un volontario?`), opzioni invariate.
+- fix(contenuti): **212 spiegazioni senza articolo iniziale** (`Rotazione è la risposta corretta.`, `Secchiello è spesso fatto di plastica.`). Le 191 col template tautologico sono state invertite invece di indovinare l'articolo: `La risposta corretta è 'rotazione'.`, `Lo stato corretto è 'gas'.` — l'articolo è già nel template, quindi nessun rischio di sbagliare il genere. Le 21 informative hanno l'articolo esplicito, con il participio riaccordato dove serviva (`La matita è spesso fatta di legno`).
+- fix(contenuti): 5 domande di scienze avevano l'alternativa di genere del template mai risolta (`al senso del/della udito` → `al senso dell'udito`), e un'opzione di storia conteneva il refuso `fermire il commercio`.
+- fix(contenuti): `In una situazione in cui partecipa a una videolezione` → `partecipi`, e il distrattore `vince il più forte` in un elenco di infiniti → `lasciare vincere il più forte`.
+
+### Changed
+- lint(contenuti): controllo nuovo sulla coerenza fra consegna e opzioni — `cosa fai?` con tutte le opzioni all'infinito è un errore. Non è una regex di `GRAMMATICA` perché serve confrontare la domanda con le opzioni, quindi vive in `checkQuestion`. Verificato rimettendo una domanda difettosa: il lint la segnala e le domande con opzioni alla seconda persona restano verdi.
+- lint(contenuti): regola nuova per l'alternativa di genere non risolta (`del/della`, `il/la`, `un/una`), attiva solo sulla domanda: nelle spiegazioni di inglese `il/la suo/sua` è voluto, serve a dire che `his` e `her` non concordano con la cosa posseduta.
+
+### Notes
+- 62 domande finiscono con i due punti invece che con i puntini (`Un angolo acuto è:`, `Choose the correct sentence about a pencil:`). **Non toccate**: i due punti prima di un elenco sono corretti in italiano — lo insegna una domanda del corpus stesso — e la forma è coerente all'interno delle famiglie che la usano (geometria, analisi logica, inglese).
+- 25 spiegazioni iniziano ancora senza articolo, e sono corrette: sono nomi propri (`Milano è il capoluogo`, `Giove è il pianeta più grande`, `Sparta era nota per`).
+
 ## 4.12.63 - 2026-09-06
 
 ### Fixed

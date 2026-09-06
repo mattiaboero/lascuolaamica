@@ -796,7 +796,7 @@
    ],
    "answerIndex": 2,
    "answer": "nascita",
-   "explanation": "Nascita è una fase del ciclo vitale.",
+   "explanation": "La nascita è una fase del ciclo vitale.",
    "active": true,
    "tag": "ciclo_vitale;classe2",
    "tags": [
@@ -916,7 +916,7 @@
    ],
    "answerIndex": 0,
    "answer": "ghiaccio",
-   "explanation": "Ghiaccio è un esempio di solido.",
+   "explanation": "Il ghiaccio è un esempio di solido.",
    "active": true,
    "tag": "materia;stati;classe2",
    "tags": [
@@ -947,7 +947,7 @@
    ],
    "answerIndex": 2,
    "answer": "acqua",
-   "explanation": "Acqua è un esempio di liquido.",
+   "explanation": "L'acqua è un esempio di liquido.",
    "active": true,
    "tag": "materia;stati;classe2",
    "tags": [
@@ -978,7 +978,7 @@
    ],
    "answerIndex": 2,
    "answer": "vapore",
-   "explanation": "Vapore è un esempio di gas.",
+   "explanation": "Il vapore è un esempio di gas.",
    "active": true,
    "tag": "materia;stati;classe2",
    "tags": [
@@ -1009,7 +1009,7 @@
    ],
    "answerIndex": 0,
    "answer": "legno",
-   "explanation": "Legno è la risposta corretta per la proprietà indicata.",
+   "explanation": "La risposta corretta per la proprietà indicata è 'legno'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1040,7 +1040,7 @@
    ],
    "answerIndex": 1,
    "answer": "vetro",
-   "explanation": "Vetro è la risposta corretta per la proprietà indicata.",
+   "explanation": "La risposta corretta per la proprietà indicata è 'vetro'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1071,7 +1071,7 @@
    ],
    "answerIndex": 3,
    "answer": "carta",
-   "explanation": "Carta è la risposta corretta per la proprietà indicata.",
+   "explanation": "La risposta corretta per la proprietà indicata è 'carta'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1102,7 +1102,7 @@
    ],
    "answerIndex": 2,
    "answer": "plastica",
-   "explanation": "Plastica è la risposta corretta per la proprietà indicata.",
+   "explanation": "La risposta corretta per la proprietà indicata è 'plastica'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1133,7 +1133,7 @@
    ],
    "answerIndex": 2,
    "answer": "solido",
-   "explanation": "Solido è il termine corretto.",
+   "explanation": "Il termine corretto è 'solido'.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1164,7 +1164,7 @@
    ],
    "answerIndex": 3,
    "answer": "gassoso",
-   "explanation": "Gassoso è il termine corretto.",
+   "explanation": "Il termine corretto è 'gassoso'.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1257,7 +1257,7 @@
    ],
    "answerIndex": 1,
    "answer": "condensazione",
-   "explanation": "Condensazione è il termine corretto.",
+   "explanation": "Il termine corretto è 'condensazione'.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1288,7 +1288,7 @@
    ],
    "answerIndex": 3,
    "answer": "fusione",
-   "explanation": "Fusione è il termine corretto.",
+   "explanation": "Il termine corretto è 'fusione'.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1319,7 +1319,7 @@
    ],
    "answerIndex": 2,
    "answer": "solido",
-   "explanation": "Solido è il termine corretto.",
+   "explanation": "Il termine corretto è 'solido'.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1350,7 +1350,7 @@
    ],
    "answerIndex": 1,
    "answer": "fioriscono",
-   "explanation": "Fioriscono è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fioriscono'.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1381,7 +1381,7 @@
    ],
    "answerIndex": 3,
    "answer": "caldo",
-   "explanation": "Caldo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'caldo'.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1412,7 +1412,7 @@
    ],
    "answerIndex": 3,
    "answer": "cadono",
-   "explanation": "Cadono è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cadono'.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1443,7 +1443,7 @@
    ],
    "answerIndex": 3,
    "answer": "freddo",
-   "explanation": "Freddo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'freddo'.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1474,7 +1474,7 @@
    ],
    "answerIndex": 0,
    "answer": "piovoso",
-   "explanation": "Piovoso è la parola corretta.",
+   "explanation": "La parola corretta è 'piovoso'.",
    "active": true,
    "tag": "meteo;stagioni;classe2",
    "tags": [
@@ -1505,7 +1505,7 @@
    ],
    "answerIndex": 0,
    "answer": "ventoso",
-   "explanation": "Ventoso è la parola corretta.",
+   "explanation": "La parola corretta è 'ventoso'.",
    "active": true,
    "tag": "meteo;stagioni;classe2",
    "tags": [
@@ -1536,7 +1536,7 @@
    ],
    "answerIndex": 1,
    "answer": "nuvoloso",
-   "explanation": "Nuvoloso è la parola corretta.",
+   "explanation": "La parola corretta è 'nuvoloso'.",
    "active": true,
    "tag": "meteo;stagioni;classe2",
    "tags": [
@@ -1567,7 +1567,7 @@
    ],
    "answerIndex": 0,
    "answer": "termometro",
-   "explanation": "Termometro è la parola corretta.",
+   "explanation": "La parola corretta è 'termometro'.",
    "active": true,
    "tag": "meteo;stagioni;classe2",
    "tags": [
@@ -1598,7 +1598,7 @@
    ],
    "answerIndex": 0,
    "answer": "riciclo",
-   "explanation": "Riciclo è il comportamento corretto.",
+   "explanation": "Il comportamento corretto è 'riciclo'.",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -1722,7 +1722,7 @@
    ],
    "answerIndex": 3,
    "answer": "vedere",
-   "explanation": "Vedere è la funzione corretta.",
+   "explanation": "La funzione corretta è 'vedere'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1753,7 +1753,7 @@
    ],
    "answerIndex": 2,
    "answer": "sentire",
-   "explanation": "Sentire è la funzione corretta.",
+   "explanation": "La funzione corretta è 'sentire'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1784,7 +1784,7 @@
    ],
    "answerIndex": 2,
    "answer": "annusare",
-   "explanation": "Annusare è la funzione corretta.",
+   "explanation": "La funzione corretta è 'annusare'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1815,7 +1815,7 @@
    ],
    "answerIndex": 0,
    "answer": "gustare",
-   "explanation": "Gustare è la funzione corretta.",
+   "explanation": "La funzione corretta è 'gustare'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1846,7 +1846,7 @@
    ],
    "answerIndex": 1,
    "answer": "muoversi",
-   "explanation": "Muoversi è la funzione corretta.",
+   "explanation": "La funzione corretta è 'muoversi'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1877,7 +1877,7 @@
    ],
    "answerIndex": 2,
    "answer": "sete",
-   "explanation": "Sete è la funzione corretta.",
+   "explanation": "La funzione corretta è 'sete'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1908,7 +1908,7 @@
    ],
    "answerIndex": 2,
    "answer": "fame",
-   "explanation": "Fame è la funzione corretta.",
+   "explanation": "La funzione corretta è 'fame'.",
    "active": true,
    "tag": "corpo;sensi;classe2",
    "tags": [
@@ -1970,7 +1970,7 @@
    ],
    "answerIndex": 0,
    "answer": "sano",
-   "explanation": "Sano è la scelta corretta.",
+   "explanation": "La scelta corretta è 'sano'.",
    "active": true,
    "tag": "salute;alimentazione;classe2",
    "tags": [
@@ -2032,7 +2032,7 @@
    ],
    "answerIndex": 3,
    "answer": "igiene",
-   "explanation": "Igiene è la scelta corretta.",
+   "explanation": "La scelta corretta è 'igiene'.",
    "active": true,
    "tag": "salute;alimentazione;classe2",
    "tags": [
@@ -2063,7 +2063,7 @@
    ],
    "answerIndex": 2,
    "answer": "cane",
-   "explanation": "Cane è un essere vivente.",
+   "explanation": "Il cane è un essere vivente.",
    "active": true,
    "tag": "viventi;riconoscimento;classe2",
    "tags": [
@@ -2317,7 +2317,7 @@
    ],
    "answerIndex": 2,
    "answer": "muoversi",
-   "explanation": "Muoversi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'muoversi'.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2504,7 +2504,7 @@
    ],
    "answerIndex": 1,
    "answer": "giornale",
-   "explanation": "Giornale è la risposta corretta.",
+   "explanation": "La risposta corretta è 'giornale'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2535,7 +2535,7 @@
    ],
    "answerIndex": 2,
    "answer": "tavolo",
-   "explanation": "Tavolo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'tavolo'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2566,7 +2566,7 @@
    ],
    "answerIndex": 2,
    "answer": "bottiglietta",
-   "explanation": "Bottiglietta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'bottiglietta'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2597,7 +2597,7 @@
    ],
    "answerIndex": 2,
    "answer": "metallo",
-   "explanation": "Metallo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'metallo'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2628,7 +2628,7 @@
    ],
    "answerIndex": 1,
    "answer": "lana",
-   "explanation": "Lana è la risposta corretta.",
+   "explanation": "La risposta corretta è 'lana'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2659,7 +2659,7 @@
    ],
    "answerIndex": 2,
    "answer": "spugna",
-   "explanation": "Spugna è la risposta corretta.",
+   "explanation": "La risposta corretta è 'spugna'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2690,7 +2690,7 @@
    ],
    "answerIndex": 0,
    "answer": "liquido",
-   "explanation": "Liquido è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'liquido'.",
    "active": true,
    "tag": "stati;materia;classe2",
    "tags": [
@@ -2721,7 +2721,7 @@
    ],
    "answerIndex": 3,
    "answer": "gas",
-   "explanation": "Gas è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'gas'.",
    "active": true,
    "tag": "stati;materia;classe2",
    "tags": [
@@ -2752,7 +2752,7 @@
    ],
    "answerIndex": 0,
    "answer": "solido",
-   "explanation": "Solido è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'solido'.",
    "active": true,
    "tag": "stati;materia;classe2",
    "tags": [
@@ -2783,7 +2783,7 @@
    ],
    "answerIndex": 3,
    "answer": "gas",
-   "explanation": "Gas è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'gas'.",
    "active": true,
    "tag": "stati;materia;classe2",
    "tags": [
@@ -2814,7 +2814,7 @@
    ],
    "answerIndex": 0,
    "answer": "evaporare",
-   "explanation": "Evaporare è la trasformazione corretta.",
+   "explanation": "La trasformazione corretta è 'evaporare'.",
    "active": true,
    "tag": "acqua;trasformazioni;classe2",
    "tags": [
@@ -2845,7 +2845,7 @@
    ],
    "answerIndex": 3,
    "answer": "nuvole",
-   "explanation": "Nuvole è la trasformazione corretta.",
+   "explanation": "La trasformazione corretta è 'nuvole'.",
    "active": true,
    "tag": "acqua;trasformazioni;classe2",
    "tags": [
@@ -2876,7 +2876,7 @@
    ],
    "answerIndex": 0,
    "answer": "pioggia",
-   "explanation": "Pioggia è la trasformazione corretta.",
+   "explanation": "La trasformazione corretta è 'pioggia'.",
    "active": true,
    "tag": "acqua;trasformazioni;classe2",
    "tags": [
@@ -2907,7 +2907,7 @@
    ],
    "answerIndex": 1,
    "answer": "liquida",
-   "explanation": "Liquida è la trasformazione corretta.",
+   "explanation": "La trasformazione corretta è 'liquida'.",
    "active": true,
    "tag": "acqua;trasformazioni;classe2",
    "tags": [
@@ -2938,7 +2938,7 @@
    ],
    "answerIndex": 1,
    "answer": "primavera",
-   "explanation": "Primavera è la stagione corretta.",
+   "explanation": "La stagione corretta è 'primavera'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -2969,7 +2969,7 @@
    ],
    "answerIndex": 2,
    "answer": "estate",
-   "explanation": "Estate è la stagione corretta.",
+   "explanation": "La stagione corretta è 'estate'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3000,7 +3000,7 @@
    ],
    "answerIndex": 3,
    "answer": "autunno",
-   "explanation": "Autunno è la stagione corretta.",
+   "explanation": "La stagione corretta è 'autunno'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3031,7 +3031,7 @@
    ],
    "answerIndex": 1,
    "answer": "inverno",
-   "explanation": "Inverno è la stagione corretta.",
+   "explanation": "La stagione corretta è 'inverno'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3062,7 +3062,7 @@
    ],
    "answerIndex": 0,
    "answer": "primavera",
-   "explanation": "Primavera è la stagione corretta.",
+   "explanation": "La stagione corretta è 'primavera'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3093,7 +3093,7 @@
    ],
    "answerIndex": 3,
    "answer": "estate",
-   "explanation": "Estate è la stagione corretta.",
+   "explanation": "La stagione corretta è 'estate'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3124,7 +3124,7 @@
    ],
    "answerIndex": 0,
    "answer": "autunno",
-   "explanation": "Autunno è la stagione corretta.",
+   "explanation": "La stagione corretta è 'autunno'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3155,7 +3155,7 @@
    ],
    "answerIndex": 0,
    "answer": "inverno",
-   "explanation": "Inverno è la stagione corretta.",
+   "explanation": "La stagione corretta è 'inverno'.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -3461,7 +3461,7 @@
    ],
    "answerIndex": 3,
    "answer": "toccare",
-   "explanation": "Toccare è la risposta corretta.",
+   "explanation": "La risposta corretta è 'toccare'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3557,7 +3557,7 @@
    ],
    "answerIndex": 1,
    "answer": "masticare",
-   "explanation": "Masticare è la risposta corretta.",
+   "explanation": "La risposta corretta è 'masticare'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3589,7 +3589,7 @@
    ],
    "answerIndex": 1,
    "answer": "verdura",
-   "explanation": "Verdura è la risposta corretta.",
+   "explanation": "La risposta corretta è 'verdura'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3653,7 +3653,7 @@
    ],
    "answerIndex": 2,
    "answer": "riposare",
-   "explanation": "Riposare è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riposare'.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3717,7 +3717,7 @@
    ],
    "answerIndex": 0,
    "answer": "radici",
-   "explanation": "Radici è la parte corretta.",
+   "explanation": "La parte corretta è 'radici'.",
    "active": true,
    "tag": "piante;osservazione;classe2",
    "tags": [
@@ -3748,7 +3748,7 @@
    ],
    "answerIndex": 3,
    "answer": "fusto",
-   "explanation": "Fusto è la parte corretta.",
+   "explanation": "La parte corretta è 'fusto'.",
    "active": true,
    "tag": "piante;osservazione;classe2",
    "tags": [
@@ -3779,7 +3779,7 @@
    ],
    "answerIndex": 3,
    "answer": "foglie",
-   "explanation": "Foglie è la parte corretta.",
+   "explanation": "La parte corretta è 'foglie'.",
    "active": true,
    "tag": "piante;osservazione;classe2",
    "tags": [
@@ -3810,7 +3810,7 @@
    ],
    "answerIndex": 0,
    "answer": "fiore",
-   "explanation": "Fiore è la parte corretta.",
+   "explanation": "La parte corretta è 'fiore'.",
    "active": true,
    "tag": "piante;osservazione;classe2",
    "tags": [
@@ -3841,7 +3841,7 @@
    ],
    "answerIndex": 0,
    "answer": "seme",
-   "explanation": "Seme è la parte corretta.",
+   "explanation": "La parte corretta è 'seme'.",
    "active": true,
    "tag": "piante;osservazione;classe2",
    "tags": [
@@ -3872,7 +3872,7 @@
    ],
    "answerIndex": 2,
    "answer": "seccarsi",
-   "explanation": "Seccarsi è l'effetto più corretto.",
+   "explanation": "L'effetto più corretto è 'seccarsi'.",
    "active": true,
    "tag": "causa_effetto;classe2",
    "tags": [
@@ -3902,7 +3902,7 @@
    ],
    "answerIndex": 1,
    "answer": "sciogliersi",
-   "explanation": "Sciogliersi è l'effetto più corretto.",
+   "explanation": "L'effetto più corretto è 'sciogliersi'.",
    "active": true,
    "tag": "causa_effetto;classe2",
    "tags": [
@@ -3932,7 +3932,7 @@
    ],
    "answerIndex": 0,
    "answer": "germogliare",
-   "explanation": "Germogliare è l'effetto più corretto.",
+   "explanation": "L'effetto più corretto è 'germogliare'.",
    "active": true,
    "tag": "causa_effetto;classe2",
    "tags": [
@@ -3962,7 +3962,7 @@
    ],
    "answerIndex": 0,
    "answer": "vivere",
-   "explanation": "Vivere è l'effetto più corretto.",
+   "explanation": "L'effetto più corretto è 'vivere'.",
    "active": true,
    "tag": "causa_effetto;classe2",
    "tags": [
@@ -3992,7 +3992,7 @@
    ],
    "answerIndex": 3,
    "answer": "carta",
-   "explanation": "Libro è spesso fatto di carta.",
+   "explanation": "Il libro è spesso fatto di carta.",
    "active": true,
    "tag": "materiali;oggetti;classe2",
    "tags": [
@@ -4023,7 +4023,7 @@
    ],
    "answerIndex": 0,
    "answer": "vetro",
-   "explanation": "Finestra è spesso fatto di vetro.",
+   "explanation": "La finestra è spesso fatta di vetro.",
    "active": true,
    "tag": "materiali;oggetti;classe2",
    "tags": [
@@ -4054,7 +4054,7 @@
    ],
    "answerIndex": 1,
    "answer": "metallo",
-   "explanation": "Chiave è spesso fatto di metallo.",
+   "explanation": "La chiave è spesso fatta di metallo.",
    "active": true,
    "tag": "materiali;oggetti;classe2",
    "tags": [
@@ -4085,7 +4085,7 @@
    ],
    "answerIndex": 2,
    "answer": "plastica",
-   "explanation": "Secchiello è spesso fatto di plastica.",
+   "explanation": "Il secchiello è spesso fatto di plastica.",
    "active": true,
    "tag": "materiali;oggetti;classe2",
    "tags": [
@@ -4116,7 +4116,7 @@
    ],
    "answerIndex": 1,
    "answer": "legno",
-   "explanation": "Matita è spesso fatto di legno.",
+   "explanation": "La matita è spesso fatta di legno.",
    "active": true,
    "tag": "materiali;oggetti;classe2",
    "tags": [
@@ -4209,7 +4209,7 @@
    ],
    "answerIndex": 2,
    "answer": "precipitazione",
-   "explanation": "Precipitazione è il termine corretto.",
+   "explanation": "Il termine corretto è 'precipitazione'.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -4240,7 +4240,7 @@
    ],
    "answerIndex": 1,
    "answer": "evaporazione",
-   "explanation": "Evaporazione è il termine corretto.",
+   "explanation": "Il termine corretto è 'evaporazione'.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -4271,7 +4271,7 @@
    ],
    "answerIndex": 1,
    "answer": "condensazione",
-   "explanation": "Condensazione è il termine corretto.",
+   "explanation": "Il termine corretto è 'condensazione'.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -4302,7 +4302,7 @@
    ],
    "answerIndex": 0,
    "answer": "inverno",
-   "explanation": "Inverno è la risposta corretta.",
+   "explanation": "La risposta corretta è 'inverno'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4332,7 +4332,7 @@
    ],
    "answerIndex": 1,
    "answer": "udito",
-   "explanation": "Udito è la risposta corretta.",
+   "explanation": "La risposta corretta è 'udito'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4362,7 +4362,7 @@
    ],
    "answerIndex": 2,
    "answer": "vista",
-   "explanation": "Vista è la risposta corretta.",
+   "explanation": "La risposta corretta è 'vista'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4392,7 +4392,7 @@
    ],
    "answerIndex": 1,
    "answer": "olfatto",
-   "explanation": "Olfatto è la risposta corretta.",
+   "explanation": "La risposta corretta è 'olfatto'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4422,7 +4422,7 @@
    ],
    "answerIndex": 0,
    "answer": "tatto",
-   "explanation": "Tatto è la risposta corretta.",
+   "explanation": "La risposta corretta è 'tatto'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4452,7 +4452,7 @@
    ],
    "answerIndex": 1,
    "answer": "gusto",
-   "explanation": "Gusto è la risposta corretta.",
+   "explanation": "La risposta corretta è 'gusto'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4512,7 +4512,7 @@
    ],
    "answerIndex": 3,
    "answer": "acqua",
-   "explanation": "Acqua è la risposta corretta.",
+   "explanation": "La risposta corretta è 'acqua'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4602,7 +4602,7 @@
    ],
    "answerIndex": 2,
    "answer": "pianta",
-   "explanation": "Pianta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'pianta'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4632,7 +4632,7 @@
    ],
    "answerIndex": 0,
    "answer": "gattino",
-   "explanation": "Gattino è la risposta corretta.",
+   "explanation": "La risposta corretta è 'gattino'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4662,7 +4662,7 @@
    ],
    "answerIndex": 0,
    "answer": "banco",
-   "explanation": "Banco è la risposta corretta.",
+   "explanation": "La risposta corretta è 'banco'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4692,7 +4692,7 @@
    ],
    "answerIndex": 3,
    "answer": "mucca",
-   "explanation": "Mucca è la risposta corretta.",
+   "explanation": "La risposta corretta è 'mucca'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4722,7 +4722,7 @@
    ],
    "answerIndex": 3,
    "answer": "uccello",
-   "explanation": "Uccello è la risposta corretta.",
+   "explanation": "La risposta corretta è 'uccello'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4752,7 +4752,7 @@
    ],
    "answerIndex": 3,
    "answer": "radici",
-   "explanation": "Radici è la risposta corretta.",
+   "explanation": "La risposta corretta è 'radici'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4782,7 +4782,7 @@
    ],
    "answerIndex": 3,
    "answer": "foglia",
-   "explanation": "Foglia è la risposta corretta.",
+   "explanation": "La risposta corretta è 'foglia'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4812,7 +4812,7 @@
    ],
    "answerIndex": 3,
    "answer": "acqua",
-   "explanation": "Acqua è la risposta corretta.",
+   "explanation": "La risposta corretta è 'acqua'.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -4842,7 +4842,7 @@
    ],
    "answerIndex": 2,
    "answer": "ghiaccio",
-   "explanation": "Ghiaccio è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ghiaccio'.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -4872,7 +4872,7 @@
    ],
    "answerIndex": 3,
    "answer": "attenzione",
-   "explanation": "Attenzione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'attenzione'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4902,7 +4902,7 @@
    ],
    "answerIndex": 0,
    "answer": "primavera",
-   "explanation": "Primavera è la risposta corretta.",
+   "explanation": "La risposta corretta è 'primavera'.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -4933,7 +4933,7 @@
    ],
    "answerIndex": 2,
    "answer": "inverno",
-   "explanation": "Inverno è la risposta corretta.",
+   "explanation": "La risposta corretta è 'inverno'.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5056,7 +5056,7 @@
    ],
    "answerIndex": 3,
    "answer": "denti",
-   "explanation": "Denti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'denti'.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5087,7 +5087,7 @@
    ],
    "answerIndex": 3,
    "answer": "orecchie",
-   "explanation": "Orecchie è la risposta corretta.",
+   "explanation": "La risposta corretta è 'orecchie'.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5118,7 +5118,7 @@
    ],
    "answerIndex": 3,
    "answer": "gambe",
-   "explanation": "Gambe è la risposta corretta.",
+   "explanation": "La risposta corretta è 'gambe'.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5149,7 +5149,7 @@
    ],
    "answerIndex": 0,
    "answer": "frutta",
-   "explanation": "Frutta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'frutta'.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5210,7 +5210,7 @@
    ],
    "answerIndex": 3,
    "answer": "nuvole",
-   "explanation": "Nuvole è la risposta corretta.",
+   "explanation": "La risposta corretta è 'nuvole'.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5241,7 +5241,7 @@
    ],
    "answerIndex": 3,
    "answer": "piova",
-   "explanation": "Piova è la risposta corretta.",
+   "explanation": "La risposta corretta è 'piova'.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -5302,7 +5302,7 @@
    ],
    "answerIndex": 2,
    "answer": "vetro",
-   "explanation": "Vetro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'vetro'.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -5332,7 +5332,7 @@
    ],
    "answerIndex": 0,
    "answer": "gomma",
-   "explanation": "Gomma è la risposta corretta.",
+   "explanation": "La risposta corretta è 'gomma'.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -5729,7 +5729,7 @@
    ],
    "answerIndex": 1,
    "answer": "osservazione",
-   "explanation": "Osservazione è il termine corretto.",
+   "explanation": "Il termine corretto è 'osservazione'.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5759,7 +5759,7 @@
    ],
    "answerIndex": 2,
    "answer": "ipotesi",
-   "explanation": "Ipotesi è il termine corretto.",
+   "explanation": "Il termine corretto è 'ipotesi'.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5789,7 +5789,7 @@
    ],
    "answerIndex": 2,
    "answer": "esperimento",
-   "explanation": "Esperimento è il termine corretto.",
+   "explanation": "Il termine corretto è 'esperimento'.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5819,7 +5819,7 @@
    ],
    "answerIndex": 1,
    "answer": "dati",
-   "explanation": "Dati è il termine corretto.",
+   "explanation": "Il termine corretto è 'dati'.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -5849,7 +5849,7 @@
    ],
    "answerIndex": 3,
    "answer": "conclusione",
-   "explanation": "Conclusione è il termine corretto.",
+   "explanation": "Il termine corretto è 'conclusione'.",
    "active": true,
    "tag": "lessico_scientifico;classe3",
    "tags": [
@@ -6618,7 +6618,7 @@
    ],
    "answerIndex": 2,
    "answer": "solido",
-   "explanation": "Solido è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'solido'.",
    "active": true,
    "tag": "stati_materia;classe3",
    "tags": [
@@ -6648,7 +6648,7 @@
    ],
    "answerIndex": 2,
    "answer": "liquido",
-   "explanation": "Liquido è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'liquido'.",
    "active": true,
    "tag": "stati_materia;classe3",
    "tags": [
@@ -6678,7 +6678,7 @@
    ],
    "answerIndex": 0,
    "answer": "aeriforme",
-   "explanation": "Aeriforme è lo stato corretto.",
+   "explanation": "Lo stato corretto è 'aeriforme'.",
    "active": true,
    "tag": "stati_materia;classe3",
    "tags": [
@@ -6708,7 +6708,7 @@
    ],
    "answerIndex": 1,
    "answer": "aria",
-   "explanation": "Aria è un esempio di aeriforme.",
+   "explanation": "L'aria è un esempio di aeriforme.",
    "active": true,
    "tag": "stati_materia;esempi;classe3",
    "tags": [
@@ -6739,7 +6739,7 @@
    ],
    "answerIndex": 0,
    "answer": "vetro",
-   "explanation": "Vetro è un materiale trasparente.",
+   "explanation": "Il vetro è un materiale trasparente.",
    "active": true,
    "tag": "materiali;proprieta;classe3",
    "tags": [
@@ -6770,7 +6770,7 @@
    ],
    "answerIndex": 1,
    "answer": "gomma",
-   "explanation": "Gomma è un materiale elastico.",
+   "explanation": "La gomma è un materiale elastico.",
    "active": true,
    "tag": "materiali;proprieta;classe3",
    "tags": [
@@ -6801,7 +6801,7 @@
    ],
    "answerIndex": 2,
    "answer": "ferro",
-   "explanation": "Ferro è un materiale duro.",
+   "explanation": "Il ferro è un materiale duro.",
    "active": true,
    "tag": "materiali;proprieta;classe3",
    "tags": [
@@ -6832,7 +6832,7 @@
    ],
    "answerIndex": 3,
    "answer": "spugna",
-   "explanation": "Spugna è un materiale assorbente.",
+   "explanation": "La spugna è un materiale assorbente.",
    "active": true,
    "tag": "materiali;proprieta;classe3",
    "tags": [
@@ -6863,7 +6863,7 @@
    ],
    "answerIndex": 0,
    "answer": "carta",
-   "explanation": "Carta è un materiale leggero.",
+   "explanation": "La carta è un materiale leggero.",
    "active": true,
    "tag": "materiali;proprieta;classe3",
    "tags": [
@@ -6894,7 +6894,7 @@
    ],
    "answerIndex": 3,
    "answer": "fusione",
-   "explanation": "Fusione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'fusione'.",
    "active": true,
    "tag": "trasformazioni;acqua;classe3",
    "tags": [
@@ -6925,7 +6925,7 @@
    ],
    "answerIndex": 2,
    "answer": "evaporazione",
-   "explanation": "Evaporazione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'evaporazione'.",
    "active": true,
    "tag": "trasformazioni;acqua;classe3",
    "tags": [
@@ -6956,7 +6956,7 @@
    ],
    "answerIndex": 0,
    "answer": "condensazione",
-   "explanation": "Condensazione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'condensazione'.",
    "active": true,
    "tag": "trasformazioni;acqua;classe3",
    "tags": [
@@ -6987,7 +6987,7 @@
    ],
    "answerIndex": 0,
    "answer": "solidificazione",
-   "explanation": "Solidificazione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'solidificazione'.",
    "active": true,
    "tag": "trasformazioni;acqua;classe3",
    "tags": [
@@ -7048,7 +7048,7 @@
    ],
    "answerIndex": 2,
    "answer": "precipitazione",
-   "explanation": "Precipitazione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'precipitazione'.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7138,7 +7138,7 @@
    ],
    "answerIndex": 2,
    "answer": "spazio",
-   "explanation": "Spazio è la risposta corretta.",
+   "explanation": "La risposta corretta è 'spazio'.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7169,7 +7169,7 @@
    ],
    "answerIndex": 2,
    "answer": "respirazione",
-   "explanation": "Respirazione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'respirazione'.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7200,7 +7200,7 @@
    ],
    "answerIndex": 3,
    "answer": "aria",
-   "explanation": "Aria è la risposta corretta.",
+   "explanation": "La risposta corretta è 'aria'.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7231,7 +7231,7 @@
    ],
    "answerIndex": 3,
    "answer": "organismi",
-   "explanation": "Organismi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'organismi'.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7262,7 +7262,7 @@
    ],
    "answerIndex": 1,
    "answer": "aria",
-   "explanation": "Aria è la risposta corretta.",
+   "explanation": "La risposta corretta è 'aria'.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7293,7 +7293,7 @@
    ],
    "answerIndex": 3,
    "answer": "humus",
-   "explanation": "Humus è la risposta corretta.",
+   "explanation": "La risposta corretta è 'humus'.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7355,7 +7355,7 @@
    ],
    "answerIndex": 0,
    "answer": "radice",
-   "explanation": "Radice è la risposta corretta.",
+   "explanation": "La risposta corretta è 'radice'.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7385,7 +7385,7 @@
    ],
    "answerIndex": 0,
    "answer": "fiore",
-   "explanation": "Fiore è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fiore'.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7415,7 +7415,7 @@
    ],
    "answerIndex": 0,
    "answer": "foglie",
-   "explanation": "Foglie è la risposta corretta.",
+   "explanation": "La risposta corretta è 'foglie'.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7445,7 +7445,7 @@
    ],
    "answerIndex": 3,
    "answer": "verde",
-   "explanation": "Verde è la risposta corretta.",
+   "explanation": "La risposta corretta è 'verde'.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7475,7 +7475,7 @@
    ],
    "answerIndex": 0,
    "answer": "aria",
-   "explanation": "Aria è la risposta corretta.",
+   "explanation": "La risposta corretta è 'aria'.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7505,7 +7505,7 @@
    ],
    "answerIndex": 2,
    "answer": "fotosintesi",
-   "explanation": "Fotosintesi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fotosintesi'.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7535,7 +7535,7 @@
    ],
    "answerIndex": 1,
    "answer": "cane",
-   "explanation": "Cane è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cane'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7566,7 +7566,7 @@
    ],
    "answerIndex": 2,
    "answer": "farfalla",
-   "explanation": "Farfalla è la risposta corretta.",
+   "explanation": "La risposta corretta è 'farfalla'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7597,7 +7597,7 @@
    ],
    "answerIndex": 1,
    "answer": "piume",
-   "explanation": "Piume è la risposta corretta.",
+   "explanation": "La risposta corretta è 'piume'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7628,7 +7628,7 @@
    ],
    "answerIndex": 3,
    "answer": "branchie",
-   "explanation": "Branchie è la risposta corretta.",
+   "explanation": "La risposta corretta è 'branchie'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7659,7 +7659,7 @@
    ],
    "answerIndex": 1,
    "answer": "latte",
-   "explanation": "Latte è la risposta corretta.",
+   "explanation": "La risposta corretta è 'latte'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7721,7 +7721,7 @@
    ],
    "answerIndex": 3,
    "answer": "squame",
-   "explanation": "Squame è la risposta corretta.",
+   "explanation": "La risposta corretta è 'squame'.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7812,7 +7812,7 @@
    ],
    "answerIndex": 2,
    "answer": "muore",
-   "explanation": "Muore è la risposta corretta.",
+   "explanation": "La risposta corretta è 'muore'.",
    "active": true,
    "tag": "ciclo_vitale;classe3",
    "tags": [
@@ -7842,7 +7842,7 @@
    ],
    "answerIndex": 2,
    "answer": "cane",
-   "explanation": "Cane è un vertebrato.",
+   "explanation": "Il cane è un vertebrato.",
    "active": true,
    "tag": "animali;vertebrati;classe3",
    "tags": [
@@ -7873,7 +7873,7 @@
    ],
    "answerIndex": 0,
    "answer": "farfalla",
-   "explanation": "Farfalla è un invertebrato.",
+   "explanation": "La farfalla è un invertebrato.",
    "active": true,
    "tag": "animali;invertebrati;classe3",
    "tags": [
@@ -8152,7 +8152,7 @@
    ],
    "answerIndex": 0,
    "answer": "piante",
-   "explanation": "Piante è la risposta corretta.",
+   "explanation": "La risposta corretta è 'piante'.",
    "active": true,
    "tag": "nutrizione;classe3",
    "tags": [
@@ -8303,7 +8303,7 @@
    ],
    "answerIndex": 0,
    "answer": "onnivoro",
-   "explanation": "Onnivoro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'onnivoro'.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8363,7 +8363,7 @@
    ],
    "answerIndex": 2,
    "answer": "ecosistema",
-   "explanation": "Ecosistema è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ecosistema'.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8453,7 +8453,7 @@
    ],
    "answerIndex": 0,
    "answer": "riparo",
-   "explanation": "Riparo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riparo'.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -9089,7 +9089,7 @@
    ],
    "answerIndex": 0,
    "answer": "evaporazione",
-   "explanation": "Evaporazione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'evaporazione'.",
    "active": true,
    "tag": "passaggi_di_stato;classe4",
    "tags": [
@@ -9119,7 +9119,7 @@
    ],
    "answerIndex": 0,
    "answer": "condensazione",
-   "explanation": "Condensazione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'condensazione'.",
    "active": true,
    "tag": "passaggi_di_stato;classe4",
    "tags": [
@@ -9149,7 +9149,7 @@
    ],
    "answerIndex": 3,
    "answer": "fusione",
-   "explanation": "Fusione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'fusione'.",
    "active": true,
    "tag": "passaggi_di_stato;classe4",
    "tags": [
@@ -9179,7 +9179,7 @@
    ],
    "answerIndex": 3,
    "answer": "solidificazione",
-   "explanation": "Solidificazione è il passaggio corretto.",
+   "explanation": "Il passaggio corretto è 'solidificazione'.",
    "active": true,
    "tag": "passaggi_di_stato;classe4",
    "tags": [
@@ -9209,7 +9209,7 @@
    ],
    "answerIndex": 0,
    "answer": "argilloso",
-   "explanation": "Argilloso è la risposta corretta.",
+   "explanation": "La risposta corretta è 'argilloso'.",
    "active": true,
    "tag": "suolo;classe4",
    "tags": [
@@ -9239,7 +9239,7 @@
    ],
    "answerIndex": 1,
    "answer": "sabbioso",
-   "explanation": "Sabbioso è la risposta corretta.",
+   "explanation": "La risposta corretta è 'sabbioso'.",
    "active": true,
    "tag": "suolo;classe4",
    "tags": [
@@ -9299,7 +9299,7 @@
    ],
    "answerIndex": 2,
    "answer": "barometro",
-   "explanation": "Barometro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'barometro'.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9329,7 +9329,7 @@
    ],
    "answerIndex": 0,
    "answer": "termometro",
-   "explanation": "Termometro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'termometro'.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9359,7 +9359,7 @@
    ],
    "answerIndex": 2,
    "answer": "respirazione",
-   "explanation": "Respirazione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'respirazione'.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9389,7 +9389,7 @@
    ],
    "answerIndex": 0,
    "answer": "fotosintesi",
-   "explanation": "Fotosintesi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fotosintesi'.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9450,7 +9450,7 @@
    ],
    "answerIndex": 2,
    "answer": "cellula",
-   "explanation": "Cellula è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cellula'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9570,7 +9570,7 @@
    ],
    "answerIndex": 3,
    "answer": "semi",
-   "explanation": "Semi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'semi'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9630,7 +9630,7 @@
    ],
    "answerIndex": 0,
    "answer": "foglie",
-   "explanation": "Foglie è la risposta corretta.",
+   "explanation": "La risposta corretta è 'foglie'.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9690,7 +9690,7 @@
    ],
    "answerIndex": 0,
    "answer": "polmoni",
-   "explanation": "Polmoni è la risposta corretta.",
+   "explanation": "La risposta corretta è 'polmoni'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9720,7 +9720,7 @@
    ],
    "answerIndex": 1,
    "answer": "branchie",
-   "explanation": "Branchie è la risposta corretta.",
+   "explanation": "La risposta corretta è 'branchie'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9750,7 +9750,7 @@
    ],
    "answerIndex": 2,
    "answer": "becco",
-   "explanation": "Becco è la risposta corretta.",
+   "explanation": "La risposta corretta è 'becco'.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9900,7 +9900,7 @@
    ],
    "answerIndex": 1,
    "answer": "relazioni",
-   "explanation": "Relazioni è la risposta corretta.",
+   "explanation": "La risposta corretta è 'relazioni'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -9990,7 +9990,7 @@
    ],
    "answerIndex": 1,
    "answer": "vegetali",
-   "explanation": "Vegetali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'vegetali'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10080,7 +10080,7 @@
    ],
    "answerIndex": 1,
    "answer": "biodiversità",
-   "explanation": "Biodiversità è la risposta corretta.",
+   "explanation": "La risposta corretta è 'biodiversità'.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10140,7 +10140,7 @@
    ],
    "answerIndex": 3,
    "answer": "coniglio",
-   "explanation": "Coniglio è la risposta corretta.",
+   "explanation": "La risposta corretta è 'coniglio'.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10170,7 +10170,7 @@
    ],
    "answerIndex": 2,
    "answer": "alga",
-   "explanation": "Alga è la risposta corretta.",
+   "explanation": "La risposta corretta è 'alga'.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10200,7 +10200,7 @@
    ],
    "answerIndex": 1,
    "answer": "fungo",
-   "explanation": "Fungo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fungo'.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10260,7 +10260,7 @@
    ],
    "answerIndex": 3,
    "answer": "riciclo",
-   "explanation": "Riciclo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riciclo'.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10380,7 +10380,7 @@
    ],
    "answerIndex": 2,
    "answer": "esperimento",
-   "explanation": "Esperimento è la risposta corretta.",
+   "explanation": "La risposta corretta è 'esperimento'.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10442,7 +10442,7 @@
    ],
    "answerIndex": 2,
    "answer": "microscopio",
-   "explanation": "Microscopio è la risposta corretta.",
+   "explanation": "La risposta corretta è 'microscopio'.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10473,7 +10473,7 @@
    ],
    "answerIndex": 3,
    "answer": "termometro",
-   "explanation": "Termometro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'termometro'.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10535,7 +10535,7 @@
    ],
    "answerIndex": 1,
    "answer": "bilancia",
-   "explanation": "Bilancia è lo strumento corretto.",
+   "explanation": "Lo strumento corretto è 'bilancia'.",
    "active": true,
    "tag": "misurazioni;classe4",
    "tags": [
@@ -10565,7 +10565,7 @@
    ],
    "answerIndex": 0,
    "answer": "microscopio",
-   "explanation": "Microscopio è lo strumento corretto.",
+   "explanation": "Lo strumento corretto è 'microscopio'.",
    "active": true,
    "tag": "misurazioni;classe4",
    "tags": [
@@ -11318,7 +11318,7 @@
    ],
    "answerIndex": 1,
    "answer": "cellule",
-   "explanation": "Cellule è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cellule'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11348,7 +11348,7 @@
    ],
    "answerIndex": 0,
    "answer": "masticazione",
-   "explanation": "Masticazione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'masticazione'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11498,7 +11498,7 @@
    ],
    "answerIndex": 1,
    "answer": "riposo",
-   "explanation": "Riposo è la risposta corretta.",
+   "explanation": "La risposta corretta è 'riposo'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11558,7 +11558,7 @@
    ],
    "answerIndex": 0,
    "answer": "cervello",
-   "explanation": "Cervello è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cervello'.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11919,7 +11919,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale organo è legato soprattutto al senso del/della vista?",
+   "question": "Quale organo è legato soprattutto al senso della vista?",
    "options": [
     "lingua",
     "naso",
@@ -11928,7 +11928,7 @@
    ],
    "answerIndex": 3,
    "answer": "occhi",
-   "explanation": "Occhi è l'organo corretto.",
+   "explanation": "Gli organi della vista sono gli occhi.",
    "active": true,
    "tag": "organi_di_senso;classe5",
    "tags": [
@@ -11949,7 +11949,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale organo è legato soprattutto al senso del/della udito?",
+   "question": "Quale organo è legato soprattutto al senso dell'udito?",
    "options": [
     "occhi",
     "lingua",
@@ -11958,7 +11958,7 @@
    ],
    "answerIndex": 3,
    "answer": "orecchie",
-   "explanation": "Orecchie è l'organo corretto.",
+   "explanation": "Gli organi dell'udito sono le orecchie.",
    "active": true,
    "tag": "organi_di_senso;classe5",
    "tags": [
@@ -11979,7 +11979,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale organo è legato soprattutto al senso del/della olfatto?",
+   "question": "Quale organo è legato soprattutto al senso dell'olfatto?",
    "options": [
     "orecchie",
     "occhi",
@@ -11988,7 +11988,7 @@
    ],
    "answerIndex": 3,
    "answer": "naso",
-   "explanation": "Naso è l'organo corretto.",
+   "explanation": "L'organo dell'olfatto è il naso.",
    "active": true,
    "tag": "organi_di_senso;classe5",
    "tags": [
@@ -12009,7 +12009,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale organo è legato soprattutto al senso del/della gusto?",
+   "question": "Quale organo è legato soprattutto al senso del gusto?",
    "options": [
     "occhi",
     "lingua",
@@ -12018,7 +12018,7 @@
    ],
    "answerIndex": 1,
    "answer": "lingua",
-   "explanation": "Lingua è l'organo corretto.",
+   "explanation": "L'organo del gusto è la lingua.",
    "active": true,
    "tag": "organi_di_senso;classe5",
    "tags": [
@@ -12039,7 +12039,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quale organo è legato soprattutto al senso del/della tatto?",
+   "question": "Quale organo è legato soprattutto al senso del tatto?",
    "options": [
     "orecchie",
     "occhi",
@@ -12048,7 +12048,7 @@
    ],
    "answerIndex": 3,
    "answer": "pelle",
-   "explanation": "Pelle è l'organo corretto.",
+   "explanation": "L'organo del tatto è la pelle.",
    "active": true,
    "tag": "organi_di_senso;classe5",
    "tags": [
@@ -12109,7 +12109,7 @@
    ],
    "answerIndex": 2,
    "answer": "Sole",
-   "explanation": "Sole è la risposta corretta.",
+   "explanation": "La risposta corretta è 'Sole'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12139,7 +12139,7 @@
    ],
    "answerIndex": 1,
    "answer": "rotazione",
-   "explanation": "Rotazione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'rotazione'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12199,7 +12199,7 @@
    ],
    "answerIndex": 2,
    "answer": "rivoluzione",
-   "explanation": "Rivoluzione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'rivoluzione'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12289,7 +12289,7 @@
    ],
    "answerIndex": 2,
    "answer": "Terra",
-   "explanation": "Terra è la risposta corretta.",
+   "explanation": "La risposta corretta è 'Terra'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12349,7 +12349,7 @@
    ],
    "answerIndex": 0,
    "answer": "Sole",
-   "explanation": "Sole è la risposta corretta.",
+   "explanation": "La risposta corretta è 'Sole'.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12409,7 +12409,7 @@
    ],
    "answerIndex": 2,
    "answer": "Terra",
-   "explanation": "Terra è un pianeta del Sistema Solare.",
+   "explanation": "La Terra è un pianeta del Sistema Solare.",
    "active": true,
    "tag": "pianeti;classe5",
    "tags": [
@@ -12590,7 +12590,7 @@
    ],
    "answerIndex": 2,
    "answer": "cambiamenti",
-   "explanation": "Cambiamenti è la risposta corretta.",
+   "explanation": "La risposta corretta è 'cambiamenti'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12620,7 +12620,7 @@
    ],
    "answerIndex": 1,
    "answer": "Sole",
-   "explanation": "Sole è la risposta corretta.",
+   "explanation": "La risposta corretta è 'Sole'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12650,7 +12650,7 @@
    ],
    "answerIndex": 1,
    "answer": "petrolio",
-   "explanation": "Petrolio è la risposta corretta.",
+   "explanation": "La risposta corretta è 'petrolio'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12740,7 +12740,7 @@
    ],
    "answerIndex": 1,
    "answer": "termica",
-   "explanation": "Termica è la risposta corretta.",
+   "explanation": "La risposta corretta è 'termica'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12860,7 +12860,7 @@
    ],
    "answerIndex": 3,
    "answer": "idroelettrica",
-   "explanation": "Idroelettrica è la risposta corretta.",
+   "explanation": "La risposta corretta è 'idroelettrica'.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12890,7 +12890,7 @@
    ],
    "answerIndex": 2,
    "answer": "fisica",
-   "explanation": "Fisica è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fisica'.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -12921,7 +12921,7 @@
    ],
    "answerIndex": 1,
    "answer": "fisica",
-   "explanation": "Fisica è la risposta corretta.",
+   "explanation": "La risposta corretta è 'fisica'.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -12983,7 +12983,7 @@
    ],
    "answerIndex": 0,
    "answer": "termometro",
-   "explanation": "Termometro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'termometro'.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -13014,7 +13014,7 @@
    ],
    "answerIndex": 2,
    "answer": "materiali",
-   "explanation": "Materiali è la risposta corretta.",
+   "explanation": "La risposta corretta è 'materiali'.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -13106,7 +13106,7 @@
    ],
    "answerIndex": 0,
    "answer": "ferro",
-   "explanation": "Ferro è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ferro'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13166,7 +13166,7 @@
    ],
    "answerIndex": 1,
    "answer": "retta",
-   "explanation": "Retta è la risposta corretta.",
+   "explanation": "La risposta corretta è 'retta'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13196,7 +13196,7 @@
    ],
    "answerIndex": 1,
    "answer": "ombra",
-   "explanation": "Ombra è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ombra'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13226,7 +13226,7 @@
    ],
    "answerIndex": 0,
    "answer": "luce",
-   "explanation": "Luce è la risposta corretta.",
+   "explanation": "La risposta corretta è 'luce'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13256,7 +13256,7 @@
    ],
    "answerIndex": 1,
    "answer": "vibrazione",
-   "explanation": "Vibrazione è la risposta corretta.",
+   "explanation": "La risposta corretta è 'vibrazione'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13286,7 +13286,7 @@
    ],
    "answerIndex": 0,
    "answer": "aria",
-   "explanation": "Aria è la risposta corretta.",
+   "explanation": "La risposta corretta è 'aria'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13316,7 +13316,7 @@
    ],
    "answerIndex": 1,
    "answer": "dannoso",
-   "explanation": "Dannoso è la risposta corretta.",
+   "explanation": "La risposta corretta è 'dannoso'.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13376,7 +13376,7 @@
    ],
    "answerIndex": 3,
    "answer": "gravità",
-   "explanation": "Gravità è la risposta corretta.",
+   "explanation": "La risposta corretta è 'gravità'.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13406,7 +13406,7 @@
    ],
    "answerIndex": 0,
    "answer": "respingersi",
-   "explanation": "Respingersi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'respingersi'.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13436,7 +13436,7 @@
    ],
    "answerIndex": 3,
    "answer": "attrarsi",
-   "explanation": "Attrarsi è la risposta corretta.",
+   "explanation": "La risposta corretta è 'attrarsi'.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13496,7 +13496,7 @@
    ],
    "answerIndex": 1,
    "answer": "ruvida",
-   "explanation": "Ruvida è la risposta corretta.",
+   "explanation": "La risposta corretta è 'ruvida'.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [

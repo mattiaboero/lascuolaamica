@@ -44,7 +44,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi parlare in classe, cosa fai?",
+   "question": "In una situazione in cui vuoi parlare in classe, cosa è meglio fare?",
    "options": [
     "urlare",
     "correre alla cattedra",
@@ -204,7 +204,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui entri in biblioteca, cosa fai?",
+   "question": "In una situazione in cui entri in biblioteca, cosa è meglio fare?",
    "options": [
     "gridare",
     "spingere",
@@ -364,7 +364,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui arriva un nuovo compagno, cosa fai?",
+   "question": "In una situazione in cui arriva un nuovo compagno, cosa è meglio fare?",
    "options": [
     "nascondergli il posto",
     "escluderlo",
@@ -524,7 +524,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui un compagno cade, cosa fai?",
+   "question": "In una situazione in cui un compagno cade, cosa è meglio fare?",
    "options": [
     "aiutarlo o chiamare un adulto",
     "spingerlo ancora",
@@ -684,7 +684,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui due bambini vogliono lo stesso gioco, cosa fai?",
+   "question": "In una situazione in cui due bambini vogliono lo stesso gioco, cosa è meglio fare?",
    "options": [
     "litigare",
     "fare a turno",
@@ -844,7 +844,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi indicare un diritto dei bambini, cosa fai?",
+   "question": "In una situazione in cui vuoi indicare un diritto dei bambini, cosa è meglio fare?",
    "options": [
     "imparare e giocare",
     "comandare sempre",
@@ -1004,7 +1004,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "In una situazione in cui devi riconoscere i colori della bandiera italiana, cosa fai?",
+   "question": "Quali sono i colori della bandiera italiana?",
    "options": [
     "verde, bianco e rosso",
     "nero, bianco e arancione",
@@ -1164,7 +1164,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 1,
-   "question": "In una situazione in cui usi il materiale della classe, cosa fai?",
+   "question": "In una situazione in cui usi il materiale della classe, cosa è meglio fare?",
    "options": [
     "averne cura",
     "lasciarlo a terra",
@@ -1324,7 +1324,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui sei in fila per la mensa, cosa fai?",
+   "question": "In una situazione in cui sei in fila per la mensa, cosa è meglio fare?",
    "options": [
     "correre",
     "saltare avanti",
@@ -1484,7 +1484,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "In una situazione in cui trovi un oggetto non tuo, cosa fai?",
+   "question": "In una situazione in cui trovi un oggetto non tuo, cosa è meglio fare?",
    "options": [
     "consegnarlo a un adulto",
     "tenerlo",
@@ -1644,7 +1644,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "In una situazione in cui la classe vota per scegliere un incarico, cosa fai?",
+   "question": "In una situazione in cui la classe vota per scegliere un incarico, cosa è meglio fare?",
    "options": [
     "barare",
     "litigare",
@@ -1804,7 +1804,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi dire cosa fa il sindaco, cosa fai?",
+   "question": "Che cosa fa il sindaco?",
    "options": [
     "vende quaderni",
     "dirige una squadra sportiva",
@@ -1964,7 +1964,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "In una situazione in cui devi spiegare cos'è la biblioteca comunale, cosa fai?",
+   "question": "Che cos'è la biblioteca comunale?",
    "options": [
     "un garage",
     "un luogo pubblico per leggere e prendere libri",
@@ -2124,7 +2124,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi spiegare cosa significa uguaglianza, cosa fai?",
+   "question": "Che cosa significa uguaglianza?",
    "options": [
     "contano solo i più forti",
     "le regole valgono per tutti",
@@ -2284,7 +2284,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 2,
-   "question": "In una situazione in cui prendi in prestito un libro della biblioteca, cosa fai?",
+   "question": "In una situazione in cui prendi in prestito un libro della biblioteca, cosa è meglio fare?",
    "options": [
     "tenerlo per sempre",
     "strapparne le pagine",
@@ -2444,7 +2444,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "In una situazione in cui discuti in gruppo, cosa fai?",
+   "question": "In una situazione in cui discuti in gruppo, cosa è meglio fare?",
    "options": [
     "decidere urlando",
     "lasciare decidere solo al più forte",
@@ -2604,7 +2604,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "In una situazione in cui un compagno dimentica il materiale, cosa fai?",
+   "question": "In una situazione in cui un compagno dimentica il materiale, cosa è meglio fare?",
    "options": [
     "prenderlo in giro",
     "dirgli di andare via",
@@ -2764,7 +2764,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi spiegare a cosa serve una regola, cosa fai?",
+   "question": "A che cosa serve una regola?",
    "options": [
     "complicare la giornata",
     "far vincere sempre gli stessi",
@@ -2924,7 +2924,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "In una situazione in cui usi un parco pubblico, cosa fai?",
+   "question": "In una situazione in cui usi un parco pubblico, cosa è meglio fare?",
    "options": [
     "lasciare rifiuti",
     "rispettare giochi e spazi",
@@ -3084,7 +3084,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi descrivere un comportamento onesto, cosa fai?",
+   "question": "In una situazione in cui vuoi descrivere un comportamento onesto, cosa è meglio fare?",
    "options": [
     "dire la verità e comportarsi correttamente",
     "barare per vincere",
@@ -3244,7 +3244,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare perché è importante la Costituzione, cosa fai?",
+   "question": "Perché è importante la Costituzione?",
    "options": [
     "spiega solo giochi da tavolo",
     "contiene pubblicità",
@@ -3404,7 +3404,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui devi spiegare il principio di uguaglianza, cosa fai?",
+   "question": "Che cosa afferma il principio di uguaglianza?",
    "options": [
     "vincono sempre i più forti",
     "tutte le persone hanno la stessa dignità",
@@ -3724,7 +3724,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui fai un'assemblea di classe, cosa fai?",
+   "question": "In una situazione in cui fai un'assemblea di classe, cosa è meglio fare?",
    "options": [
     "scegliere il più rumoroso",
     "evitare il dialogo",
@@ -3884,7 +3884,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare a cosa serve il Comune, cosa fai?",
+   "question": "A che cosa serve il Comune?",
    "options": [
     "corregge i compiti",
     "decide le regole del mondo",
@@ -4044,7 +4044,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui usi uno spazio pubblico come piazza o giardino, cosa fai?",
+   "question": "In una situazione in cui usi uno spazio pubblico come piazza o giardino, cosa è meglio fare?",
    "options": [
     "romperlo",
     "sporcarlo",
@@ -4204,7 +4204,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "In una situazione in cui in classe ci sono persone con abitudini diverse, cosa fai?",
+   "question": "In una situazione in cui in classe ci sono persone con abitudini diverse, cosa è meglio fare?",
    "options": [
     "sospettare sempre di loro",
     "zittirle",
@@ -4364,7 +4364,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare chi è un volontario, cosa fai?",
+   "question": "Chi è un volontario?",
    "options": [
     "chi pensa solo a sé",
     "chi comanda tutti",
@@ -4524,7 +4524,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui si deve prendere una decisione condivisa, cosa fai?",
+   "question": "In una situazione in cui si deve prendere una decisione condivisa, cosa è meglio fare?",
    "options": [
     "ascoltare e confrontarsi",
     "usare prepotenza",
@@ -4684,7 +4684,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui noti un problema nel quartiere, cosa fai?",
+   "question": "In una situazione in cui noti un problema nel quartiere, cosa è meglio fare?",
    "options": [
     "lamentarti e basta",
     "far finta di niente",
@@ -4844,7 +4844,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi ricordare su quale valore si fonda la Repubblica italiana, cosa fai?",
+   "question": "Su quale valore si fonda la Repubblica italiana?",
    "options": [
     "il lavoro",
     "il rumore",
@@ -5164,7 +5164,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "In una situazione in cui spieghi il rapporto tra diritti e doveri, cosa fai?",
+   "question": "Qual è il rapporto tra diritti e doveri?",
    "options": [
     "valgono solo i premi",
     "contano solo i privilegi",
@@ -5324,7 +5324,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi dire cosa fa il Parlamento, cosa fai?",
+   "question": "Che cosa fa il Parlamento?",
    "options": [
     "vende biglietti",
     "controlla i compiti",
@@ -5484,7 +5484,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui devi indicare chi rappresenta l'unità nazionale, cosa fai?",
+   "question": "Chi rappresenta l'unità nazionale?",
    "options": [
     "il Presidente della Repubblica",
     "il preside",
@@ -5644,7 +5644,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare il volontariato, cosa fai?",
+   "question": "In una situazione in cui vuoi spiegare il volontariato, cosa è meglio fare?",
    "options": [
     "decidere per tutti",
     "ricevere sempre un premio",
@@ -5964,10 +5964,10 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "In una situazione in cui nasce un conflitto in un gruppo, cosa fai?",
+   "question": "In una situazione in cui nasce un conflitto in un gruppo, cosa è meglio fare?",
    "options": [
     "cercare dialogo e regole",
-    "vince il più forte",
+    "lasciare vincere il più forte",
     "usare minacce",
     "umiliare l'altro"
    ],
@@ -6124,7 +6124,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi contrastare una discriminazione, cosa fai?",
+   "question": "In una situazione in cui vuoi contrastare una discriminazione, cosa è meglio fare?",
    "options": [
     "escludere chi è diverso",
     "favorire chi urla",
@@ -6444,7 +6444,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "In una situazione in cui devi buttare un rifiuto a scuola, cosa fai?",
+   "question": "In una situazione in cui devi buttare un rifiuto a scuola, cosa è meglio fare?",
    "options": [
     "usare il cestino giusto",
     "gettarlo dalla finestra",
@@ -6604,7 +6604,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "In una situazione in cui esci da una stanza vuota, cosa fai?",
+   "question": "In una situazione in cui esci da una stanza vuota, cosa è meglio fare?",
    "options": [
     "buttare carta a terra",
     "aprire il frigorifero",
@@ -6764,7 +6764,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "In una situazione in cui ti lavi le mani e non ti serve più acqua, cosa fai?",
+   "question": "In una situazione in cui ti lavi le mani e non ti serve più acqua, cosa è meglio fare?",
    "options": [
     "lasciarlo aperto",
     "giocare con l'acqua",
@@ -6924,7 +6924,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "In una situazione in cui sei in un parco con alberi e fiori, cosa fai?",
+   "question": "In una situazione in cui sei in un parco con alberi e fiori, cosa è meglio fare?",
    "options": [
     "rompere i rami",
     "buttare rifiuti tra i cespugli",
@@ -7084,7 +7084,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "In una situazione in cui scegli come bere a scuola, cosa fai?",
+   "question": "In una situazione in cui scegli come bere a scuola, cosa è meglio fare?",
    "options": [
     "lasciare plastica in giro",
     "usare tante bottigliette e buttarle",
@@ -7244,7 +7244,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "In una situazione in cui hai un foglio scritto solo da un lato, cosa fai?",
+   "question": "In una situazione in cui hai un foglio scritto solo da un lato, cosa è meglio fare?",
    "options": [
     "strapparlo",
     "bagnarlo apposta",
@@ -7404,7 +7404,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "In una situazione in cui sei a mensa o a merenda, cosa fai?",
+   "question": "In una situazione in cui sei a mensa o a merenda, cosa è meglio fare?",
    "options": [
     "riempire il piatto e buttare il resto",
     "giocare col cibo",
@@ -7564,7 +7564,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "In una situazione in cui vai al parco dopo la merenda, cosa fai?",
+   "question": "In una situazione in cui vai al parco dopo la merenda, cosa è meglio fare?",
    "options": [
     "nascondere i rifiuti nei cespugli",
     "lasciarlo pulito",
@@ -7724,7 +7724,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "In una situazione in cui incontri piccoli animali nel giardino, cosa fai?",
+   "question": "In una situazione in cui incontri piccoli animali nel giardino, cosa è meglio fare?",
    "options": [
     "rispettarli",
     "colpirli",
@@ -7884,7 +7884,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi spiegare a cosa serve la raccolta differenziata, cosa fai?",
+   "question": "In una situazione in cui vuoi spiegare a cosa serve la raccolta differenziata, cosa è meglio fare?",
    "options": [
     "sporcare di più",
     "separare bene i rifiuti",
@@ -8044,7 +8044,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "In una situazione in cui hai una bottiglia di plastica da buttare, cosa fai?",
+   "question": "In una situazione in cui hai una bottiglia di plastica da buttare, cosa è meglio fare?",
    "options": [
     "lasciarla nel prato",
     "buttarla nel WC",
@@ -8204,7 +8204,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "In una situazione in cui devi riconoscere i rifiuti organici, cosa fai?",
+   "question": "Quali di questi sono rifiuti organici?",
    "options": [
     "bucce e resti di frutta",
     "quaderni e libri",
@@ -8364,7 +8364,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "In una situazione in cui finisci di usare la LIM o il computer, cosa fai?",
+   "question": "In una situazione in cui finisci di usare la LIM o il computer, cosa è meglio fare?",
    "options": [
     "battere sui tasti",
     "lasciarlo acceso sempre",
@@ -8524,7 +8524,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 2,
-   "question": "In una situazione in cui puoi fare un tragitto breve vicino a casa, cosa fai?",
+   "question": "In una situazione in cui puoi fare un tragitto breve vicino a casa, cosa è meglio fare?",
    "options": [
     "andare a piedi o in bici quando possibile",
     "lasciare il motore acceso",
@@ -8684,7 +8684,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "In una situazione in cui noti una fontanella che perde, cosa fai?",
+   "question": "In una situazione in cui noti una fontanella che perde, cosa è meglio fare?",
    "options": [
     "giocarci per ore",
     "romperla",
@@ -8844,7 +8844,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "In una situazione in cui hai una pila scarica, cosa fai?",
+   "question": "In una situazione in cui hai una pila scarica, cosa è meglio fare?",
    "options": [
     "buttarla per terra",
     "portarla in un punto di raccolta adatto",
@@ -9004,7 +9004,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi proteggere il mare, cosa fai?",
+   "question": "In una situazione in cui vuoi proteggere il mare, cosa è meglio fare?",
    "options": [
     "lasciare bottiglie in spiaggia",
     "gettare sacchetti dall'auto",
@@ -9164,7 +9164,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "In una situazione in cui scegli una merenda più ecologica, cosa fai?",
+   "question": "In una situazione in cui scegli una merenda più ecologica, cosa è meglio fare?",
    "options": [
     "scegliere solo usa e getta",
     "buttare involucri a terra",
@@ -9484,7 +9484,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "In una situazione in cui partecipi all'orto scolastico, cosa fai?",
+   "question": "In una situazione in cui partecipi all'orto scolastico, cosa è meglio fare?",
    "options": [
     "sprecare acqua",
     "calpestare l'orto",
@@ -9644,7 +9644,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa fai?",
+   "question": "In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa è meglio fare?",
    "options": [
     "usare le risorse pensando anche al futuro",
     "pensare solo a oggi",
@@ -9964,7 +9964,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui devi scegliere uno spostamento più ecologico, cosa fai?",
+   "question": "In una situazione in cui devi scegliere uno spostamento più ecologico, cosa è meglio fare?",
    "options": [
     "usare mezzi pubblici, bici o piedi quando possibile",
     "buttare rifiuti dal finestrino",
@@ -10124,7 +10124,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare il compost, cosa fai?",
+   "question": "Che cos'è il compost?",
    "options": [
     "vetro tritato",
     "materiale utile ottenuto dai rifiuti organici",
@@ -10284,7 +10284,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "In una situazione in cui scegli del cibo da comprare, cosa fai?",
+   "question": "In una situazione in cui scegli del cibo da comprare, cosa è meglio fare?",
    "options": [
     "scegliere confezioni inutili",
     "preferire prodotti locali o di stagione quando possibile",
@@ -10444,7 +10444,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "In una situazione in cui hai un vecchio dispositivo elettronico, cosa fai?",
+   "question": "In una situazione in cui hai un vecchio dispositivo elettronico, cosa è meglio fare?",
    "options": [
     "gettarlo nel lavandino",
     "metterlo con l'organico",
@@ -10604,7 +10604,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi ridurre l'inquinamento dell'aria, cosa fai?",
+   "question": "In una situazione in cui vuoi ridurre l'inquinamento dell'aria, cosa è meglio fare?",
    "options": [
     "bruciare rifiuti",
     "lasciare motori accesi",
@@ -10764,7 +10764,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui la scuola organizza una giornata ecologica, cosa fai?",
+   "question": "In una situazione in cui la scuola organizza una giornata ecologica, cosa è meglio fare?",
    "options": [
     "sporcare di più",
     "rompere gli attrezzi",
@@ -10924,7 +10924,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "In una situazione in cui hai un oggetto ancora utile ma rovinato, cosa fai?",
+   "question": "In una situazione in cui hai un oggetto ancora utile ma rovinato, cosa è meglio fare?",
    "options": [
     "romperlo del tutto",
     "provare a ripararlo o riusarlo",
@@ -11084,7 +11084,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi comprare in modo responsabile, cosa fai?",
+   "question": "In una situazione in cui vuoi comprare in modo responsabile, cosa è meglio fare?",
    "options": [
     "scegliere ciò che serve davvero",
     "comprare per buttare",
@@ -11244,7 +11244,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare lo sviluppo sostenibile, cosa fai?",
+   "question": "In una situazione in cui vuoi spiegare lo sviluppo sostenibile, cosa è meglio fare?",
    "options": [
     "equilibrare bisogni delle persone, ambiente e futuro",
     "sprecare oggi senza limiti",
@@ -11564,7 +11564,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui devi descrivere l'impronta ecologica, cosa fai?",
+   "question": "Che cosa misura l'impronta ecologica?",
    "options": [
     "il peso dello zaino",
     "la misura delle scarpe",
@@ -11724,7 +11724,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi fare un esempio di energia rinnovabile, cosa fai?",
+   "question": "Quale di questi è un esempio di energia rinnovabile?",
    "options": [
     "pile scariche",
     "cartacce e fumo",
@@ -11884,7 +11884,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "In una situazione in cui spieghi perché ridurre i rifiuti viene prima del riciclo, cosa fai?",
+   "question": "Perché ridurre i rifiuti viene prima del riciclo?",
    "options": [
     "perché il riciclo è inutile",
     "per fare più imballaggi",
@@ -12204,7 +12204,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi collegare ambiente e salute, cosa fai?",
+   "question": "Qual è il legame tra ambiente e salute?",
    "options": [
     "riguarda solo i parchi",
     "aria, acqua e cibo puliti aiutano il benessere",
@@ -12364,7 +12364,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "In una situazione in cui hai cura di una spiaggia o di un parco, cosa fai?",
+   "question": "In una situazione in cui hai cura di una spiaggia o di un parco, cosa è meglio fare?",
    "options": [
     "lasciare ogni responsabilità agli altri",
     "pensare che non riguardi nessuno",
@@ -12524,7 +12524,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui rifletti sulle generazioni future, cosa fai?",
+   "question": "In una situazione in cui rifletti sulle generazioni future, cosa è meglio fare?",
    "options": [
     "usare tutto subito",
     "lasciare il problema agli altri",
@@ -12684,7 +12684,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi essere un cittadino attento all'ambiente, cosa fai?",
+   "question": "In una situazione in cui vuoi essere un cittadino attento all'ambiente, cosa è meglio fare?",
    "options": [
     "trasformare i valori in gesti quotidiani",
     "fare promesse e basta",
@@ -12844,7 +12844,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "In una situazione in cui un amico ti chiede la password, cosa fai?",
+   "question": "In una situazione in cui un amico ti chiede la password, cosa è meglio fare?",
    "options": [
     "pubblicarla",
     "tenerla segreta",
@@ -13004,7 +13004,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi scaricare una nuova app, cosa fai?",
+   "question": "In una situazione in cui vuoi scaricare una nuova app, cosa è meglio fare?",
    "options": [
     "scaricarla da solo sempre",
     "chiedere prima a un adulto",
@@ -13164,7 +13164,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "In una situazione in cui un sito ti chiede l'indirizzo di casa, cosa fai?",
+   "question": "In una situazione in cui un sito ti chiede l'indirizzo di casa, cosa è meglio fare?",
    "options": [
     "scriverlo subito",
     "mandarlo a un gruppo",
@@ -13324,7 +13324,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "In una situazione in cui devi scrivere in chat, cosa fai?",
+   "question": "In una situazione in cui devi scrivere in chat, cosa è meglio fare?",
    "options": [
     "insultare",
     "prendere in giro",
@@ -13484,7 +13484,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi fare una foto a un compagno, cosa fai?",
+   "question": "In una situazione in cui vuoi fare una foto a un compagno, cosa è meglio fare?",
    "options": [
     "farla di nascosto",
     "pubblicarla subito",
@@ -13644,7 +13644,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "In una situazione in cui ricevi un messaggio che ti spaventa, cosa fai?",
+   "question": "In una situazione in cui ricevi un messaggio che ti spaventa, cosa è meglio fare?",
    "options": [
     "tenerlo segreto per sempre",
     "rispondere con rabbia",
@@ -13804,7 +13804,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "In una situazione in cui uno sconosciuto ti scrive online, cosa fai?",
+   "question": "In una situazione in cui uno sconosciuto ti scrive online, cosa è meglio fare?",
    "options": [
     "accettare subito l'amicizia",
     "mandare una foto",
@@ -13964,7 +13964,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "In una situazione in cui usi il tablet per molto tempo, cosa fai?",
+   "question": "In una situazione in cui usi il tablet per molto tempo, cosa è meglio fare?",
    "options": [
     "non alzarti mai",
     "stare sempre online",
@@ -14124,7 +14124,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "In una situazione in cui ricevi una foto che prende in giro qualcuno, cosa fai?",
+   "question": "In una situazione in cui ricevi una foto che prende in giro qualcuno, cosa è meglio fare?",
    "options": [
     "ridere e commentare",
     "pubblicarla",
@@ -14284,7 +14284,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "In una situazione in cui finisci di usare un dispositivo della scuola, cosa fai?",
+   "question": "In una situazione in cui finisci di usare un dispositivo della scuola, cosa è meglio fare?",
    "options": [
     "premere tasti a caso",
     "sporcarlo",
@@ -14444,7 +14444,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "In una situazione in cui leggi una notizia online, cosa fai?",
+   "question": "In una situazione in cui leggi una notizia online, cosa è meglio fare?",
    "options": [
     "fidarti solo del titolo",
     "crederle subito",
@@ -14604,7 +14604,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi verificare se una informazione è vera, cosa fai?",
+   "question": "In una situazione in cui vuoi verificare se una informazione è vera, cosa è meglio fare?",
    "options": [
     "guardare solo la prima immagine",
     "fidarti dei commenti",
@@ -14764,7 +14764,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "In una situazione in cui devi scegliere un nome per giocare online, cosa fai?",
+   "question": "In una situazione in cui devi scegliere un nome per giocare online, cosa è meglio fare?",
    "options": [
     "mettere numero di telefono",
     "scrivere indirizzo e scuola",
@@ -14924,7 +14924,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "In una situazione in cui qualcuno ti chiede una foto privata, cosa fai?",
+   "question": "In una situazione in cui qualcuno ti chiede una foto privata, cosa è meglio fare?",
    "options": [
     "scambiarla con la password",
     "dire no e avvisare un adulto",
@@ -15084,7 +15084,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "In una situazione in cui in chat prendono in giro un compagno, cosa fai?",
+   "question": "In una situazione in cui in chat prendono in giro un compagno, cosa è meglio fare?",
    "options": [
     "mettere like alle offese",
     "aggiungere commenti cattivi",
@@ -15244,7 +15244,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "In una situazione in cui ricevi una richiesta di amicizia da uno sconosciuto, cosa fai?",
+   "question": "In una situazione in cui ricevi una richiesta di amicizia da uno sconosciuto, cosa è meglio fare?",
    "options": [
     "mandare i tuoi dati",
     "valutarla con un adulto",
@@ -15404,7 +15404,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "In una situazione in cui usi una chat di classe, cosa fai?",
+   "question": "In una situazione in cui usi una chat di classe, cosa è meglio fare?",
    "options": [
     "mandare insulti",
     "inviare foto senza permesso",
@@ -15564,7 +15564,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "In una situazione in cui ti arriva un link strano, cosa fai?",
+   "question": "In una situazione in cui ti arriva un link strano, cosa è meglio fare?",
    "options": [
     "cliccarlo subito",
     "non aprirlo e chiedere aiuto",
@@ -15724,7 +15724,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "In una situazione in cui fai un compito con materiale trovato online, cosa fai?",
+   "question": "In una situazione in cui fai un compito con materiale trovato online, cosa è meglio fare?",
    "options": [
     "non copiarlo come se fosse tuo",
     "cancellare il nome dell'autore",
@@ -15884,7 +15884,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "In una situazione in cui usi dispositivi prima di dormire, cosa fai?",
+   "question": "In una situazione in cui usi dispositivi prima di dormire, cosa è meglio fare?",
    "options": [
     "usare il telefono sotto le coperte tutta la notte",
     "evitare tempi lunghi e fare attenzione al sonno",
@@ -16044,7 +16044,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi capire cosa sono le tracce digitali, cosa fai?",
+   "question": "Che cosa sono le tracce digitali?",
    "options": [
     "sparisce sempre subito",
     "vale solo per gli adulti",
@@ -16204,7 +16204,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui devi creare una password, cosa fai?",
+   "question": "In una situazione in cui devi creare una password, cosa è meglio fare?",
    "options": [
     "usarla uguale per tutti e dirla agli amici",
     "usare sempre il tuo nome",
@@ -16364,7 +16364,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui un'app chiede molti permessi e la posizione, cosa fai?",
+   "question": "In una situazione in cui un'app chiede molti permessi e la posizione, cosa è meglio fare?",
    "options": [
     "accettare tutto sempre",
     "scrivere più dati possibili",
@@ -16524,7 +16524,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "In una situazione in cui leggi una notizia molto sorprendente, cosa fai?",
+   "question": "In una situazione in cui leggi una notizia molto sorprendente, cosa è meglio fare?",
    "options": [
     "fidarti del titolo",
     "verificare autore, data e più fonti",
@@ -16684,7 +16684,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "In una situazione in cui usi un'immagine o un testo trovati online, cosa fai?",
+   "question": "In una situazione in cui usi un'immagine o un testo trovati online, cosa è meglio fare?",
    "options": [
     "copiarlo senza leggere",
     "cancellare il nome dell'autore",
@@ -16844,7 +16844,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "In una situazione in cui assisti a un episodio di cyberbullismo, cosa fai?",
+   "question": "In una situazione in cui assisti a un episodio di cyberbullismo, cosa è meglio fare?",
    "options": [
     "segnalarlo e non partecipare",
     "restare a guardare e basta",
@@ -17004,7 +17004,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "In una situazione in cui una chat diventa offensiva, cosa fai?",
+   "question": "In una situazione in cui una chat diventa offensiva, cosa è meglio fare?",
    "options": [
     "scrivere insulti peggiori",
     "fermarsi e cercare aiuto",
@@ -17164,7 +17164,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "In una situazione in cui ricevi un messaggio che imita un servizio e chiede password, cosa fai?",
+   "question": "In una situazione in cui ricevi un messaggio che imita un servizio e chiede password, cosa è meglio fare?",
    "options": [
     "inoltrarlo ai compagni",
     "scrivere subito i dati",
@@ -17324,7 +17324,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui un'app vuole microfono e fotocamera senza motivo chiaro, cosa fai?",
+   "question": "In una situazione in cui un'app vuole microfono e fotocamera senza motivo chiaro, cosa è meglio fare?",
    "options": [
     "non dare tutto senza riflettere",
     "pubblicare più dati",
@@ -17484,7 +17484,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "In una situazione in cui partecipa a una videolezione, cosa fai?",
+   "question": "In una situazione in cui partecipi a una videolezione, cosa è meglio fare?",
    "options": [
     "scrivere commenti offensivi",
     "aprire il microfono per fare rumore",
@@ -17644,7 +17644,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui stai per pubblicare un contenuto su di te, cosa fai?",
+   "question": "In una situazione in cui stai per pubblicare un contenuto su di te, cosa è meglio fare?",
    "options": [
     "cercare solo i like",
     "pubblicare d'impulso",
@@ -17804,7 +17804,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi aumentare la sicurezza di un account, cosa fai?",
+   "question": "In una situazione in cui vuoi aumentare la sicurezza di un account, cosa è meglio fare?",
    "options": [
     "dire la password a un amico",
     "usare la stessa per tutto",
@@ -17964,7 +17964,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui stai per inoltrare lo screenshot di una chat privata, cosa fai?",
+   "question": "In una situazione in cui stai per inoltrare lo screenshot di una chat privata, cosa è meglio fare?",
    "options": [
     "girarlo a più persone",
     "pubblicarlo in un gruppo",
@@ -18124,7 +18124,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "In una situazione in cui leggi una notizia con titolo molto emotivo, cosa fai?",
+   "question": "In una situazione in cui leggi una notizia con titolo molto emotivo, cosa è meglio fare?",
    "options": [
     "sospettare che possa essere poco affidabile e verificare",
     "fidarti solo del titolo",
@@ -18284,7 +18284,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "In una situazione in cui usi uno strumento automatico o di intelligenza artificiale, cosa fai?",
+   "question": "In una situazione in cui usi uno strumento automatico o di intelligenza artificiale, cosa è meglio fare?",
    "options": [
     "copiare senza controllare",
     "verificare i risultati con senso critico",
@@ -18444,7 +18444,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "In una situazione in cui compili un modulo online, cosa fai?",
+   "question": "In una situazione in cui compili un modulo online, cosa è meglio fare?",
    "options": [
     "dare solo i dati davvero necessari",
     "mettere password e telefono ovunque",
@@ -18604,7 +18604,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "In una situazione in cui un utente ti disturba o ti molesta online, cosa fai?",
+   "question": "In una situazione in cui un utente ti disturba o ti molesta online, cosa è meglio fare?",
    "options": [
     "rispondere con minacce",
     "pubblicare i suoi dati",
@@ -18764,7 +18764,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi usare il digitale in modo etico, cosa fai?",
+   "question": "In una situazione in cui vuoi usare il digitale in modo etico, cosa è meglio fare?",
    "options": [
     "unire competenze, rispetto e responsabilità",
     "usare più app possibile",
@@ -18924,7 +18924,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "In una situazione in cui noti che le notifiche ti distraggono sempre, cosa fai?",
+   "question": "In una situazione in cui noti che le notifiche ti distraggono sempre, cosa è meglio fare?",
    "options": [
     "studiare con mille chat aperte",
     "gestire tempi e momenti di disconnessione",
@@ -19084,7 +19084,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "In una situazione in cui partecipi a una discussione online, cosa fai?",
+   "question": "In una situazione in cui partecipi a una discussione online, cosa è meglio fare?",
    "options": [
     "diffondere fake news",
     "scrivere solo slogan offensivi",
@@ -19244,7 +19244,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi attraversare la strada, cosa fai?",
+   "question": "In una situazione in cui vuoi attraversare la strada, cosa è meglio fare?",
    "options": [
     "correre tra le auto",
     "usare il passaggio pedonale",
@@ -19404,7 +19404,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "In una situazione in cui il semaforo per i pedoni è rosso, cosa fai?",
+   "question": "In una situazione in cui il semaforo per i pedoni è rosso, cosa è meglio fare?",
    "options": [
     "passare in bici",
     "aspettare",
@@ -19564,7 +19564,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 1,
-   "question": "In una situazione in cui sali in auto per un viaggio, cosa fai?",
+   "question": "In una situazione in cui sali in auto per un viaggio, cosa è meglio fare?",
    "options": [
     "alzarti durante il viaggio",
     "stare senza cintura",
@@ -19724,7 +19724,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "In una situazione in cui vai in bici, cosa fai?",
+   "question": "In una situazione in cui vai in bici, cosa è meglio fare?",
    "options": [
     "indossare il casco",
     "andare senza protezioni",
@@ -19884,7 +19884,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "In una situazione in cui il pallone finisce verso la strada, cosa fai?",
+   "question": "In una situazione in cui il pallone finisce verso la strada, cosa è meglio fare?",
    "options": [
     "correre dietro al pallone",
     "chiamare un adulto",
@@ -20044,7 +20044,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "In una situazione in cui sali sull'autobus, cosa fai?",
+   "question": "In una situazione in cui sali sull'autobus, cosa è meglio fare?",
    "options": [
     "lasciare salire e scendere con ordine",
     "correre urlando",
@@ -20204,7 +20204,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "In una situazione in cui cammini sul marciapiede con altri, cosa fai?",
+   "question": "In una situazione in cui cammini sul marciapiede con altri, cosa è meglio fare?",
    "options": [
     "spingere i più piccoli",
     "occupare tutto il passaggio",
@@ -20364,7 +20364,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "In una situazione in cui una persona anziana passa lentamente, cosa fai?",
+   "question": "In una situazione in cui una persona anziana passa lentamente, cosa è meglio fare?",
    "options": [
     "correre davanti",
     "ridere",
@@ -20524,7 +20524,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "In una situazione in cui sei vicino alla strada, cosa fai?",
+   "question": "In una situazione in cui sei vicino alla strada, cosa è meglio fare?",
    "options": [
     "fare gare sul bordo",
     "non giocare in carreggiata",
@@ -20684,7 +20684,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "In una situazione in cui sei su un bus o in fila, cosa fai?",
+   "question": "In una situazione in cui sei su un bus o in fila, cosa è meglio fare?",
    "options": [
     "far cadere gli altri",
     "tenere lo zaino senza intralciare",
@@ -20844,7 +20844,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "In una situazione in cui devi spiegare il cartello di stop, cosa fai?",
+   "question": "In una situazione in cui devi spiegare il cartello di stop, cosa è meglio fare?",
    "options": [
     "svoltare sempre",
     "salire sul marciapiede",
@@ -21004,7 +21004,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi attraversare tra auto parcheggiate, cosa fai?",
+   "question": "In una situazione in cui vuoi attraversare tra auto parcheggiate, cosa è meglio fare?",
    "options": [
     "sbucare all'improvviso",
     "correre senza guardare",
@@ -21164,7 +21164,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "In una situazione in cui usi la bici in città, cosa fai?",
+   "question": "In una situazione in cui usi la bici in città, cosa è meglio fare?",
    "options": [
     "andare senza casco",
     "usare cuffie ad alto volume",
@@ -21324,7 +21324,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "In una situazione in cui si ferma il bus e vuoi salire, cosa fai?",
+   "question": "In una situazione in cui si ferma il bus e vuoi salire, cosa è meglio fare?",
    "options": [
     "correre contro gli altri",
     "lasciare prima scendere chi è a bordo",
@@ -21484,7 +21484,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "In una situazione in cui piove o c'è poca luce, cosa fai?",
+   "question": "In una situazione in cui piove o c'è poca luce, cosa è meglio fare?",
    "options": [
     "correre di più",
     "distrarti con il telefono",
@@ -21644,7 +21644,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "In una situazione in cui viaggi in auto da bambino, cosa fai?",
+   "question": "In una situazione in cui viaggi in auto da bambino, cosa è meglio fare?",
    "options": [
     "alzarti mentre l'auto va",
     "togliere la cintura",
@@ -21804,7 +21804,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "In una situazione in cui accompagni un compagno più piccolo, cosa fai?",
+   "question": "In una situazione in cui accompagni un compagno più piccolo, cosa è meglio fare?",
    "options": [
     "spingerlo ad andare veloce",
     "dargli il buon esempio",
@@ -21964,7 +21964,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "In una situazione in cui sei passeggero in auto, cosa fai?",
+   "question": "In una situazione in cui sei passeggero in auto, cosa è meglio fare?",
    "options": [
     "non distrarre chi guida",
     "muoverti in continuazione",
@@ -22124,7 +22124,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "In una situazione in cui sei in una fila lunga, cosa fai?",
+   "question": "In una situazione in cui sei in una fila lunga, cosa è meglio fare?",
    "options": [
     "saltare avanti",
     "mantenere calma e ordine",
@@ -22284,7 +22284,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "In una situazione in cui cammini quando è buio, cosa fai?",
+   "question": "In una situazione in cui cammini quando è buio, cosa è meglio fare?",
    "options": [
     "correre in strada",
     "vestirti in modo da non farti vedere",
@@ -22444,7 +22444,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "In una situazione in cui usi il telefono mentre attraversi, cosa fai?",
+   "question": "In una situazione in cui usi il telefono mentre attraversi, cosa è meglio fare?",
    "options": [
     "metterlo via e guardare bene",
     "rispondere mentre passi",
@@ -22604,7 +22604,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare un cartello triangolare, cosa fai?",
+   "question": "Che cosa indica un cartello stradale triangolare?",
    "options": [
     "segnala un pericolo",
     "indica una gara",
@@ -22764,7 +22764,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui arrivi a un incrocio con regole di precedenza, cosa fai?",
+   "question": "In una situazione in cui arrivi a un incrocio con regole di precedenza, cosa è meglio fare?",
    "options": [
     "ignorare chi arriva",
     "urlare per farsi dare spazio",
@@ -22924,7 +22924,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui usi bici o monopattino tra i pedoni, cosa fai?",
+   "question": "In una situazione in cui usi bici o monopattino tra i pedoni, cosa è meglio fare?",
    "options": [
     "fare acrobazie",
     "suonare per spaventare",
@@ -23084,7 +23084,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui sei in autobus o in metro, cosa fai?",
+   "question": "In una situazione in cui sei in autobus o in metro, cosa è meglio fare?",
    "options": [
     "correre dentro il mezzo",
     "lasciare zaini in mezzo",
@@ -23244,7 +23244,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "In una situazione in cui noti una persona anziana o fragile in piedi sul bus, cosa fai?",
+   "question": "In una situazione in cui noti una persona anziana o fragile in piedi sul bus, cosa è meglio fare?",
    "options": [
     "cedere il posto",
     "occupare più spazio",
@@ -23404,7 +23404,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "In una situazione in cui esci da scuola con molti compagni, cosa fai?",
+   "question": "In una situazione in cui esci da scuola con molti compagni, cosa è meglio fare?",
    "options": [
     "correre davanti agli altri",
     "spingere alla porta",
@@ -23564,7 +23564,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui vedi una situazione pericolosa in strada, cosa fai?",
+   "question": "In una situazione in cui vedi una situazione pericolosa in strada, cosa è meglio fare?",
    "options": [
     "fare un video",
     "toccare tutto",
@@ -23724,7 +23724,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui puoi scegliere come spostarti, cosa fai?",
+   "question": "In una situazione in cui puoi scegliere come spostarti, cosa è meglio fare?",
    "options": [
     "occupare il marciapiede",
     "lasciare il motore acceso",
@@ -23884,7 +23884,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "In una situazione in cui cammini su un marciapiede stretto, cosa fai?",
+   "question": "In una situazione in cui cammini su un marciapiede stretto, cosa è meglio fare?",
    "options": [
     "giocare sul bordo",
     "lasciare il passaggio libero",
@@ -24044,7 +24044,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare perché la sicurezza stradale è un bene comune, cosa fai?",
+   "question": "Perché la sicurezza stradale è un bene comune?",
    "options": [
     "serve solo a evitare multe",
     "interessa solo alle città grandi",
@@ -24364,7 +24364,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi ricordare il ruolo del pedone, cosa fai?",
+   "question": "Qual è il ruolo del pedone nel traffico?",
    "options": [
     "basta il semaforo e non serve guardare",
     "anche il pedone fa parte del traffico e deve fare attenzione",
@@ -24524,7 +24524,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui cammini o vai in bici con poca visibilità, cosa fai?",
+   "question": "In una situazione in cui cammini o vai in bici con poca visibilità, cosa è meglio fare?",
    "options": [
     "fidarti del caso",
     "usare il telefono",
@@ -24684,7 +24684,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui usi i mezzi pubblici con altre persone, cosa fai?",
+   "question": "In una situazione in cui usi i mezzi pubblici con altre persone, cosa è meglio fare?",
    "options": [
     "occupare più posti possibile",
     "spingere per salire",
@@ -24844,7 +24844,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "In una situazione in cui in strada incontri utenti più fragili, cosa fai?",
+   "question": "In una situazione in cui in strada incontri utenti più fragili, cosa è meglio fare?",
    "options": [
     "occupare rampe e passaggi",
     "ignorare i loro bisogni",
@@ -25004,7 +25004,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "In una situazione in cui ragioni sul percorso casa-scuola, cosa fai?",
+   "question": "In una situazione in cui ragioni sul percorso casa-scuola, cosa è meglio fare?",
    "options": [
     "cambiare strada a caso",
     "camminare distratto col telefono",
@@ -25164,7 +25164,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare che cos'è la prudenza, cosa fai?",
+   "question": "In una situazione in cui vuoi spiegare che cos'è la prudenza, cosa è meglio fare?",
    "options": [
     "avere paura di tutto",
     "correre più degli altri",
@@ -25484,7 +25484,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi collegare cortesia e sicurezza, cosa fai?",
+   "question": "Qual è il legame tra cortesia e sicurezza?",
    "options": [
     "la cortesia riduce tensioni e rischi",
     "fa perdere sempre tempo",
@@ -30930,7 +30930,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Bonus difficile: trovi un commento offensivo in chat di classe. Cosa fai?",
+   "question": "Bonus difficile: trovi un commento offensivo in chat di classe. cosa è meglio fare?",
    "options": [
     "Resto gentile, non rispondo male e avviso un adulto",
     "Insulto di più",
@@ -30963,7 +30963,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Bonus difficile: al parco vedi rifiuti vicino a un cestino pieno. Cosa fai?",
+   "question": "Bonus difficile: al parco vedi rifiuti vicino a un cestino pieno. cosa è meglio fare?",
    "options": [
     "Li raccolgo se posso in sicurezza o avviso un adulto",
     "Li lascio lì",
@@ -31125,7 +31125,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Un compagno è caduto nel cortile e si è fatto male. Cosa fai?",
+   "question": "Un compagno è caduto nel cortile e si è fatto male. cosa è meglio fare?",
    "options": [
     "Ridi con gli altri",
     "Ti avvicini e lo aiuti o chiami una maestra",
@@ -31253,7 +31253,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Nel corridoio della scuola trovi un foglio di carta per terra. Nessuno ti guarda. Cosa fai?",
+   "question": "Nel corridoio della scuola trovi un foglio di carta per terra. Nessuno ti guarda. cosa è meglio fare?",
    "options": [
     "Lo lasci lì, non è colpa tua",
     "Lo raccogli e lo butti nel cestino",
@@ -31413,7 +31413,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. Cosa fai?",
+   "question": "Sei in un parco e hai una bottiglietta vuota. Non c'è un cestino vicino. cosa è meglio fare?",
    "options": [
     "La butti sull'erba",
     "La tieni in mano finché non trovi un cestino",
@@ -32629,7 +32629,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Ricevi un messaggio da uno sconosciuto che ti chiede di incontrarlo di persona. Cosa fai?",
+   "question": "Ricevi un messaggio da uno sconosciuto che ti chiede di incontrarlo di persona. cosa è meglio fare?",
    "options": [
     "Vai all'appuntamento da solo",
     "Non rispondi e lo dici subito a un adulto di fiducia",
