@@ -31843,7 +31843,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Bonus facile: 7 + 5 =?",
+   "question": "Bonus facile: quanto fa 7 + 5?",
    "options": [
     "12",
     "10",
@@ -31874,7 +31874,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Bonus facile: 18 - 9 =?",
+   "question": "Bonus facile: quanto fa 18 - 9?",
    "options": [
     "9",
     "7",
@@ -31905,7 +31905,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Bonus facile: 4 + 8 =?",
+   "question": "Bonus facile: quanto fa 4 + 8?",
    "options": [
     "12",
     "10",
@@ -31936,7 +31936,7 @@
    "area": "problemi",
    "subarea": "divisione",
    "difficulty": 2,
-   "question": "Bonus medio: 36 ÷ 6 =?",
+   "question": "Bonus medio: quanto fa 36 ÷ 6?",
    "options": [
     "6",
     "4",
@@ -31967,7 +31967,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 2,
-   "question": "Bonus medio: 9 × 7 =?",
+   "question": "Bonus medio: quanto fa 9 × 7?",
    "options": [
     "63",
     "56",
@@ -31998,7 +31998,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 2,
-   "question": "Bonus medio: 45 - 17 =?",
+   "question": "Bonus medio: quanto fa 45 - 17?",
    "options": [
     "28",
     "26",
@@ -32029,7 +32029,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Bonus difficile: (18 × 3) - 17 =?",
+   "question": "Bonus difficile: quanto fa (18 × 3) - 17?",
    "options": [
     "37",
     "35",
@@ -32060,7 +32060,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Bonus difficile: 144 ÷ 12 + 19 =?",
+   "question": "Bonus difficile: quanto fa 144 ÷ 12 + 19?",
    "options": [
     "31",
     "29",
@@ -32091,7 +32091,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Bonus difficile: (25 + 35) ÷ 2 =?",
+   "question": "Bonus difficile: quanto fa (25 + 35) ÷ 2?",
    "options": [
     "30",
     "25",

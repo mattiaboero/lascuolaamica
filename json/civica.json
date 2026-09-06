@@ -876,7 +876,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 1,
-   "question": "Quale scelta è più responsabile quando vuoi indicare un diritto dei bambini?",
+   "question": "Quale di questi è un diritto dei bambini?",
    "options": [
     "imparare e giocare",
     "comandare sempre",
@@ -908,7 +908,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vuoi indicare un diritto dei bambini?",
+   "question": "Che cosa hanno diritto di fare i bambini?",
    "options": [
     "rompere i giochi altrui",
     "comandare sempre",
@@ -940,7 +940,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi indicare un diritto dei bambini?",
+   "question": "Quale diritto è riconosciuto a ogni bambino?",
    "options": [
     "comandare sempre",
     "imparare e giocare",
@@ -1036,7 +1036,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "Quale scelta è più responsabile quando devi riconoscere i colori della bandiera italiana?",
+   "question": "Di quali colori è la bandiera italiana?",
    "options": [
     "rosa, viola e azzurro",
     "blu, rosso e giallo",
@@ -1068,7 +1068,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando devi riconoscere i colori della bandiera italiana?",
+   "question": "Quali colori compaiono nel tricolore italiano?",
    "options": [
     "blu, rosso e giallo",
     "rosa, viola e azzurro",
@@ -1100,7 +1100,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando devi riconoscere i colori della bandiera italiana?",
+   "question": "Come sono i colori della bandiera d'Italia?",
    "options": [
     "blu, rosso e giallo",
     "nero, bianco e arancione",
@@ -1836,7 +1836,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando vuoi dire cosa fa il sindaco?",
+   "question": "Qual è il compito del sindaco?",
    "options": [
     "aiuta ad amministrare il Comune",
     "sceglie i compiti",
@@ -1868,7 +1868,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi dire cosa fa il sindaco?",
+   "question": "Di che cosa si occupa il sindaco?",
    "options": [
     "aiuta ad amministrare il Comune",
     "dirige una squadra sportiva",
@@ -1900,7 +1900,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi dire cosa fa il sindaco?",
+   "question": "Quale ruolo ha il sindaco nel Comune?",
    "options": [
     "dirige una squadra sportiva",
     "vende quaderni",
@@ -1996,7 +1996,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando devi spiegare cos'è la biblioteca comunale?",
+   "question": "Come si può definire la biblioteca comunale?",
    "options": [
     "un garage",
     "un negozio di scarpe",
@@ -2028,7 +2028,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando devi spiegare cos'è la biblioteca comunale?",
+   "question": "Che tipo di luogo è la biblioteca comunale?",
    "options": [
     "un negozio di scarpe",
     "un luogo pubblico per leggere e prendere libri",
@@ -2060,7 +2060,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando devi spiegare cos'è la biblioteca comunale?",
+   "question": "A che cosa serve la biblioteca comunale?",
    "options": [
     "un garage",
     "una pista da corsa",
@@ -2156,7 +2156,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare cosa significa uguaglianza?",
+   "question": "Che cos'è l'uguaglianza?",
    "options": [
     "le regole valgono per tutti",
     "contano solo i più forti",
@@ -2188,7 +2188,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare cosa significa uguaglianza?",
+   "question": "Come si spiega l'uguaglianza tra le persone?",
    "options": [
     "ognuno fa come vuole",
     "le regole valgono per tutti",
@@ -2220,7 +2220,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare cosa significa uguaglianza?",
+   "question": "Che cosa comporta l'uguaglianza in una comunità?",
    "options": [
     "contano solo i più forti",
     "le regole valgono per tutti",
@@ -2796,7 +2796,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare a cosa serve una regola?",
+   "question": "Perché in un gruppo servono le regole?",
    "options": [
     "far vincere sempre gli stessi",
     "mettere paura",
@@ -2828,7 +2828,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare a cosa serve una regola?",
+   "question": "Che cosa permettono di fare le regole?",
    "options": [
     "far convivere bene tutti",
     "complicare la giornata",
@@ -2860,7 +2860,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare a cosa serve una regola?",
+   "question": "Qual è lo scopo di una regola?",
    "options": [
     "mettere paura",
     "complicare la giornata",
@@ -3116,7 +3116,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando vuoi descrivere un comportamento onesto?",
+   "question": "Che cosa significa comportarsi in modo onesto?",
    "options": [
     "prendere cose non proprie",
     "dire la verità e comportarsi correttamente",
@@ -3148,7 +3148,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi descrivere un comportamento onesto?",
+   "question": "Come si riconosce una persona onesta?",
    "options": [
     "nascondere ogni errore",
     "prendere cose non proprie",
@@ -3180,7 +3180,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi descrivere un comportamento onesto?",
+   "question": "Qual è il comportamento di chi è onesto?",
    "options": [
     "barare per vincere",
     "nascondere ogni errore",
@@ -3276,7 +3276,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare perché è importante la Costituzione?",
+   "question": "Che cosa contiene la Costituzione?",
    "options": [
     "serve solo agli adulti famosi",
     "spiega solo giochi da tavolo",
@@ -3308,7 +3308,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare perché è importante la Costituzione?",
+   "question": "Quale funzione ha la Costituzione?",
    "options": [
     "contiene pubblicità",
     "spiega solo giochi da tavolo",
@@ -3340,7 +3340,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare perché è importante la Costituzione?",
+   "question": "Che cosa stabilisce la Costituzione italiana?",
    "options": [
     "contiene pubblicità",
     "serve solo agli adulti famosi",
@@ -3436,7 +3436,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando devi spiegare il principio di uguaglianza?",
+   "question": "Che cosa dice il principio di uguaglianza?",
    "options": [
     "tutte le persone hanno la stessa dignità",
     "il valore dipende dai voti",
@@ -3468,7 +3468,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando devi spiegare il principio di uguaglianza?",
+   "question": "Su che cosa si basa il principio di uguaglianza?",
    "options": [
     "tutte le persone hanno la stessa dignità",
     "il valore dipende dai voti",
@@ -3500,7 +3500,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando devi spiegare il principio di uguaglianza?",
+   "question": "Come si può spiegare il principio di uguaglianza?",
    "options": [
     "solo alcuni meritano rispetto",
     "tutte le persone hanno la stessa dignità",
@@ -3916,7 +3916,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare a cosa serve il Comune?",
+   "question": "Di che cosa si occupa il Comune?",
    "options": [
     "corregge i compiti",
     "sceglie le scarpe dei cittadini",
@@ -3948,7 +3948,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare a cosa serve il Comune?",
+   "question": "Quale compito ha il Comune?",
    "options": [
     "decide le regole del mondo",
     "gestisce servizi vicini ai cittadini",
@@ -3980,7 +3980,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare a cosa serve il Comune?",
+   "question": "Che cosa gestisce il Comune?",
    "options": [
     "gestisce servizi vicini ai cittadini",
     "sceglie le scarpe dei cittadini",
@@ -4396,7 +4396,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare chi è un volontario?",
+   "question": "Come si può descrivere un volontario?",
    "options": [
     "chi pensa solo a sé",
     "una persona che aiuta la comunità",
@@ -4428,7 +4428,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare chi è un volontario?",
+   "question": "Che tipo di persona è un volontario?",
    "options": [
     "chi comanda tutti",
     "chi rompe le regole",
@@ -4460,7 +4460,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare chi è un volontario?",
+   "question": "Chi viene chiamato volontario?",
    "options": [
     "chi pensa solo a sé",
     "chi comanda tutti",
@@ -4876,7 +4876,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi ricordare su quale valore si fonda la Repubblica italiana?",
+   "question": "Su che cosa si fonda la Repubblica italiana?",
    "options": [
     "il comando di pochi",
     "il rumore",
@@ -4908,7 +4908,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi ricordare su quale valore si fonda la Repubblica italiana?",
+   "question": "Quale valore sta alla base della Repubblica italiana?",
    "options": [
     "il gioco d'azzardo",
     "il comando di pochi",
@@ -4940,7 +4940,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi ricordare su quale valore si fonda la Repubblica italiana?",
+   "question": "Secondo la Costituzione, la Repubblica italiana è fondata su...",
    "options": [
     "il comando di pochi",
     "il rumore",
@@ -5196,7 +5196,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando spieghi il rapporto tra diritti e doveri?",
+   "question": "Come sono legati i diritti e i doveri?",
    "options": [
     "valgono solo i premi",
     "ai diritti corrispondono responsabilità verso la comunità",
@@ -5228,7 +5228,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando spieghi il rapporto tra diritti e doveri?",
+   "question": "Che cosa comportano i diritti verso la comunità?",
    "options": [
     "contano solo i privilegi",
     "valgono solo i premi",
@@ -5260,7 +5260,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando spieghi il rapporto tra diritti e doveri?",
+   "question": "Perché ai diritti corrispondono dei doveri?",
    "options": [
     "contano solo i privilegi",
     "valgono solo i premi",
@@ -5356,7 +5356,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi dire cosa fa il Parlamento?",
+   "question": "Qual è il compito del Parlamento?",
    "options": [
     "vende biglietti",
     "approva le leggi",
@@ -5388,7 +5388,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi dire cosa fa il Parlamento?",
+   "question": "Di che cosa si occupa il Parlamento?",
    "options": [
     "vende biglietti",
     "dirige una scuola",
@@ -5420,7 +5420,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi dire cosa fa il Parlamento?",
+   "question": "Quale ruolo ha il Parlamento nello Stato?",
    "options": [
     "dirige una scuola",
     "approva le leggi",
@@ -5516,7 +5516,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando devi indicare chi rappresenta l'unità nazionale?",
+   "question": "Quale carica dello Stato rappresenta l'unità nazionale?",
    "options": [
     "il preside",
     "il Presidente della Repubblica",
@@ -5548,7 +5548,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando devi indicare chi rappresenta l'unità nazionale?",
+   "question": "Chi rappresenta l'unità di tutti gli italiani?",
    "options": [
     "il capitano della squadra",
     "il sindaco",
@@ -5580,7 +5580,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando devi indicare chi rappresenta l'unità nazionale?",
+   "question": "Chi è il rappresentante dell'unità nazionale?",
    "options": [
     "il capitano della squadra",
     "il Presidente della Repubblica",
@@ -5676,7 +5676,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare il volontariato?",
+   "question": "Che cos'è il volontariato?",
    "options": [
     "evitare ogni impegno",
     "decidere per tutti",
@@ -5708,7 +5708,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare il volontariato?",
+   "question": "In che cosa consiste il volontariato?",
    "options": [
     "ricevere sempre un premio",
     "evitare ogni impegno",
@@ -5740,7 +5740,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare il volontariato?",
+   "question": "Che cosa mettono a disposizione i volontari?",
    "options": [
     "mettere tempo ed energie a disposizione degli altri",
     "decidere per tutti",
@@ -7916,7 +7916,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare a cosa serve la raccolta differenziata?",
+   "question": "A che cosa serve la raccolta differenziata?",
    "options": [
     "sporcare di più",
     "riempire i corridoi",
@@ -7948,7 +7948,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare a cosa serve la raccolta differenziata?",
+   "question": "Che cosa si fa con la raccolta differenziata?",
    "options": [
     "separare bene i rifiuti",
     "mescolare tutto",
@@ -7980,7 +7980,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare a cosa serve la raccolta differenziata?",
+   "question": "Perché si fa la raccolta differenziata?",
    "options": [
     "sporcare di più",
     "mescolare tutto",
@@ -8236,7 +8236,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando devi riconoscere i rifiuti organici?",
+   "question": "Che cosa va nella raccolta dell'organico?",
    "options": [
     "vetro e lattine",
     "bucce e resti di frutta",
@@ -8268,7 +8268,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando devi riconoscere i rifiuti organici?",
+   "question": "Quale gruppo contiene solo rifiuti organici?",
    "options": [
     "pile e cavi",
     "vetro e lattine",
@@ -8300,7 +8300,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando devi riconoscere i rifiuti organici?",
+   "question": "Quali di questi rifiuti sono organici?",
    "options": [
     "bucce e resti di frutta",
     "pile e cavi",
@@ -9676,7 +9676,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare che cosa significa sostenibilità?",
+   "question": "Che cosa significa sostenibilità?",
    "options": [
     "sprecare senza limiti",
     "usare le risorse pensando anche al futuro",
@@ -9708,7 +9708,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare che cosa significa sostenibilità?",
+   "question": "Che cos'è uno stile di vita sostenibile?",
    "options": [
     "usare le risorse pensando anche al futuro",
     "sprecare senza limiti",
@@ -9740,7 +9740,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare che cosa significa sostenibilità?",
+   "question": "Su quale idea si basa la sostenibilità?",
    "options": [
     "pensare solo a oggi",
     "usare le risorse pensando anche al futuro",
@@ -10156,7 +10156,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare il compost?",
+   "question": "Da che cosa si ottiene il compost?",
    "options": [
     "vetro tritato",
     "pile schiacciate",
@@ -10188,7 +10188,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare il compost?",
+   "question": "Come si può definire il compost?",
    "options": [
     "vetro tritato",
     "pile schiacciate",
@@ -10220,7 +10220,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare il compost?",
+   "question": "Che cosa si ricava dai rifiuti organici?",
    "options": [
     "materiale utile ottenuto dai rifiuti organici",
     "plastica fusa",
@@ -11276,7 +11276,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare lo sviluppo sostenibile?",
+   "question": "Che cos'è lo sviluppo sostenibile?",
    "options": [
     "sprecare oggi senza limiti",
     "pensare solo al profitto",
@@ -11308,7 +11308,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare lo sviluppo sostenibile?",
+   "question": "Su quale equilibrio si basa lo sviluppo sostenibile?",
    "options": [
     "equilibrare bisogni delle persone, ambiente e futuro",
     "ignorare le generazioni future",
@@ -11340,7 +11340,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare lo sviluppo sostenibile?",
+   "question": "Che cosa tiene insieme lo sviluppo sostenibile?",
    "options": [
     "sprecare oggi senza limiti",
     "ignorare le generazioni future",
@@ -11596,7 +11596,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando devi descrivere l'impronta ecologica?",
+   "question": "Che cos'è l'impronta ecologica?",
    "options": [
     "il peso dello zaino",
     "la pulizia del banco",
@@ -11628,7 +11628,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando devi descrivere l'impronta ecologica?",
+   "question": "A che cosa si riferisce l'impronta ecologica?",
    "options": [
     "la misura delle scarpe",
     "la pulizia del banco",
@@ -11660,7 +11660,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando devi descrivere l'impronta ecologica?",
+   "question": "Che cosa ci dice l'impronta ecologica di una persona?",
    "options": [
     "il peso dello zaino",
     "la misura delle scarpe",
@@ -11756,7 +11756,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi fare un esempio di energia rinnovabile?",
+   "question": "Da che cosa si ricava l'energia rinnovabile?",
    "options": [
     "cartacce e fumo",
     "plastica e vetro",
@@ -11788,7 +11788,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi fare un esempio di energia rinnovabile?",
+   "question": "Quale coppia indica fonti di energia rinnovabile?",
    "options": [
     "plastica e vetro",
     "cartacce e fumo",
@@ -11820,7 +11820,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi fare un esempio di energia rinnovabile?",
+   "question": "Quali fonti di energia si rinnovano naturalmente?",
    "options": [
     "sole e vento",
     "cartacce e fumo",
@@ -11916,7 +11916,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando spieghi perché ridurre i rifiuti viene prima del riciclo?",
+   "question": "Qual è il vantaggio di ridurre i rifiuti?",
    "options": [
     "evita di produrre scarti inutili",
     "perché il riciclo è inutile",
@@ -11948,7 +11948,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando spieghi perché ridurre i rifiuti viene prima del riciclo?",
+   "question": "Perché è meglio ridurre che riciclare?",
    "options": [
     "così si usa più plastica",
     "perché il riciclo è inutile",
@@ -11980,7 +11980,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando spieghi perché ridurre i rifiuti viene prima del riciclo?",
+   "question": "Che cosa ottiene chi riduce i rifiuti?",
    "options": [
     "per fare più imballaggi",
     "perché il riciclo è inutile",
@@ -12236,7 +12236,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi collegare ambiente e salute?",
+   "question": "In che modo l'ambiente influisce sulla salute?",
    "options": [
     "aria, acqua e cibo puliti aiutano il benessere",
     "non c'è nessun legame",
@@ -12268,7 +12268,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi collegare ambiente e salute?",
+   "question": "Perché ambiente e salute sono collegati?",
    "options": [
     "aria, acqua e cibo puliti aiutano il benessere",
     "riguarda solo i parchi",
@@ -12300,7 +12300,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi collegare ambiente e salute?",
+   "question": "Che cosa lega la qualità dell'ambiente al benessere?",
    "options": [
     "non c'è nessun legame",
     "riguarda solo i parchi",
@@ -16076,7 +16076,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi capire cosa sono le tracce digitali?",
+   "question": "Che cosa sono le tracce che lasciamo online?",
    "options": [
     "vale solo per gli adulti",
     "ciò che lasci online può restare e circolare",
@@ -16108,7 +16108,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi capire cosa sono le tracce digitali?",
+   "question": "Come si possono definire le tracce digitali?",
    "options": [
     "ciò che lasci online può restare e circolare",
     "vale solo per gli adulti",
@@ -16140,7 +16140,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi capire cosa sono le tracce digitali?",
+   "question": "Che cosa succede a ciò che pubblichi online?",
    "options": [
     "vale solo per gli adulti",
     "ciò che lasci online può restare e circolare",
@@ -20876,7 +20876,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando devi spiegare il cartello di stop?",
+   "question": "Che cosa impone il cartello di stop?",
    "options": [
     "salire sul marciapiede",
     "correre",
@@ -20908,7 +20908,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando devi spiegare il cartello di stop?",
+   "question": "Qual è l'obbligo indicato dal cartello di stop?",
    "options": [
     "correre",
     "svoltare sempre",
@@ -20940,7 +20940,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando devi spiegare il cartello di stop?",
+   "question": "Che cosa si deve fare davanti a un cartello di stop?",
    "options": [
     "correre",
     "fermarsi",
@@ -22636,7 +22636,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare un cartello triangolare?",
+   "question": "Che cosa indica la forma triangolare di un cartello stradale?",
    "options": [
     "serve solo a decorare",
     "segnala un pericolo",
@@ -22668,7 +22668,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare un cartello triangolare?",
+   "question": "A che cosa serve un cartello stradale triangolare?",
    "options": [
     "obbliga a parcheggiare",
     "indica una gara",
@@ -22700,7 +22700,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare un cartello triangolare?",
+   "question": "Che cosa avverte un cartello triangolare?",
    "options": [
     "serve solo a decorare",
     "indica una gara",
@@ -24076,7 +24076,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare perché la sicurezza stradale è un bene comune?",
+   "question": "Che cosa protegge la sicurezza stradale?",
    "options": [
     "serve solo a evitare multe",
     "interessa solo alle città grandi",
@@ -24108,7 +24108,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare perché la sicurezza stradale è un bene comune?",
+   "question": "Perché la sicurezza stradale riguarda tutti?",
    "options": [
     "riguarda solo chi guida",
     "serve solo a evitare multe",
@@ -24140,7 +24140,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare perché la sicurezza stradale è un bene comune?",
+   "question": "A che cosa serve la sicurezza stradale?",
    "options": [
     "serve solo a evitare multe",
     "interessa solo alle città grandi",
@@ -24396,7 +24396,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi ricordare il ruolo del pedone?",
+   "question": "Che cosa deve fare il pedone in strada?",
    "options": [
     "il pedone non ha regole",
     "solo le auto devono stare attente",
@@ -24428,7 +24428,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi ricordare il ruolo del pedone?",
+   "question": "Perché anche il pedone deve stare attento?",
    "options": [
     "il pedone non ha regole",
     "basta il semaforo e non serve guardare",
@@ -24460,7 +24460,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi ricordare il ruolo del pedone?",
+   "question": "Come si comporta un pedone responsabile?",
    "options": [
     "solo le auto devono stare attente",
     "il pedone non ha regole",
@@ -25196,7 +25196,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi spiegare che cos'è la prudenza?",
+   "question": "Che cos'è la prudenza?",
    "options": [
     "avere paura di tutto",
     "prevenire i rischi senza agire d'impulso",
@@ -25228,7 +25228,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi spiegare che cos'è la prudenza?",
+   "question": "Come si comporta una persona prudente?",
    "options": [
     "correre più degli altri",
     "prevenire i rischi senza agire d'impulso",
@@ -25260,7 +25260,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi spiegare che cos'è la prudenza?",
+   "question": "Che cosa significa essere prudenti?",
    "options": [
     "correre più degli altri",
     "prevenire i rischi senza agire d'impulso",
@@ -25516,7 +25516,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando vuoi collegare cortesia e sicurezza?",
+   "question": "In che modo la cortesia aiuta la sicurezza?",
    "options": [
     "la cortesia riduce tensioni e rischi",
     "serve solo quando non c'è traffico",
@@ -25548,7 +25548,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi collegare cortesia e sicurezza?",
+   "question": "Perché essere cortesi rende la strada più sicura?",
    "options": [
     "serve solo quando non c'è traffico",
     "fa perdere sempre tempo",
@@ -25580,7 +25580,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi collegare cortesia e sicurezza?",
+   "question": "Che effetto ha la cortesia sulla sicurezza stradale?",
    "options": [
     "la gentilezza è inutile",
     "la cortesia riduce tensioni e rischi",

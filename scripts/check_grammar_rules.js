@@ -43,12 +43,19 @@ const SBAGLIATE = [
   "Irene compra 7 sciarpe a 16 euro l'uno.",
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
+  '27 + 10 =?',
+  "La risposta corretta è 'l'euro'.",
+  'Che cosa mostra più rispetto quando vuoi ricordare su quale valore si fonda la Repubblica italiana?',
   'Fungo è un essere vivente.',
   'Le energie rinnovabili sono importanti perché?',
   'Un oggetto metallico lasciato al sole diventa…',
 ];
 
 const CORRETTE = [
+  'Quanto fa 27 + 10?',
+  'La risposta corretta è "l\'euro".',
+  "La risposta corretta è 'il mare'.",
+  'Che cosa mostra più rispetto quando entri in biblioteca?',
   'Un bambino ha 60 euro. Compra 4 pacchi di figurine. Quanto gli rimane?',
   'Un contadino ha 120 mele. Ne vende 30. Quante mele gli restano?',
   "Marco compra 3 puzzle a 14 euro l'uno. Quanto paga?",

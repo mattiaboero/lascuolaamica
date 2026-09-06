@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.65",
+  "items": [
+   "403 domande di aritmetica non finiscono più con \"27 + 10 =?\": ora chiedono \"Qual è il risultato di 27 + 10?\".",
+   "Riscritte 96 domande di civica in cui la consegna non corrispondeva alle risposte proposte.",
+   "Corrette 66 spiegazioni in cui gli apici attorno alla risposta si chiudevano nel punto sbagliato (\"è 'l'euro'\")."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.64",
   "items": [
    "Riscritte 150 domande di educazione civica: chiedevano \"cosa fai?\" ma offrivano risposte all'infinito, e in 24 casi la domanda non corrispondeva alle risposte proposte.",

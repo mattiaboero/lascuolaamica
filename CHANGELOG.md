@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.65 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **403 domande di aritmetica finivano con `=?`** (`27 + 10 =?`). La prima conversione, a `= ?`, ha fatto scattare la regola preesistente sullo spazio prima della punteggiatura — che ha ragione, in italiano quello spazio non ci va — e la seconda, a `= ...`, pure. La forma buona è la domanda per esteso: `Qual è il risultato di 27 + 10?`. **`Quanto fa X?` era la scelta ovvia ed era sbagliata**: è già la consegna delle tabelline, e usarla anche qui ha creato 25 firme duplicate nella stessa classe (`mat-2-tabelline-002` = `mat-2-aritmetica-078`). Ecco a cosa serviva il `=?`: teneva separate le due famiglie. Ora la separazione è nella consegna, e l'uniformazione ha eliminato anche i duplicati che c'erano già prima.
+- fix(contenuti): **96 domande di civica avevano uno dei tre stem alternativi incollato sopra una domanda di definizione** (`Che cosa mostra più rispetto quando vuoi ricordare su quale valore si fonda la Repubblica italiana?`). Sono le gemelle delle 24 riscritte nella 4.12.64: ogni tema ha quattro varianti, e nella scorsa release ne era stata corretta una sola. Riscritte come domande dirette con **tre formulazioni diverse per tema** (32 temi × 3), perché usare la stessa per tutte avrebbe prodotto 96 duplicati. Opzioni invariate.
+- fix(contenuti): **66 spiegazioni chiudevano gli apici nel punto sbagliato** quando la risposta contiene un apostrofo (`La risposta corretta è 'l'euro'.`, `'un'alluvione'`). Ora usano le virgolette doppie, come già faceva civica.
+
+### Changed
+- lint(contenuti): tre regole nuove — operazione chiusa con `=?`, apici singoli chiusi male attorno a un valore con apostrofo, stem di civica sopra una domanda di definizione. Sul corpus di partenza segnalano 466 difetti, cioè esattamente quelli corretti qui.
+
+### Notes
+- 242 domande contengono la risposta nel testo (`Se la palla è sopra la sedia, quale espressione descrive bene la posizione? → sopra la sedia`). **Non toccate**: 50 sono la famiglia degli indicatori topologici di classe 2, dove riconoscere l'espressione giusta *è* l'esercizio, e le altre sono comprensione del testo, dove la risposta deve stare nel brano citato.
+
 ## 4.12.64 - 2026-09-06
 
 ### Fixed

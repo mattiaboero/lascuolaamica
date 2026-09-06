@@ -144,6 +144,22 @@ const GRAMMATICA = [
   { pattern: /\b(?:del\/della|il\/la|un\/una|nel\/nella|dei\/delle|lo\/la|dello\/della)\b/,
     soloDomanda: true,
     msg: 'alternativa di genere non risolta dal template (es. "al senso del/della udito")' },
+  // Dal lotto 9: nell'aritmetica il segno di uguale era attaccato al punto
+  // interrogativo in 340 domande ("27 + 10 =?").
+  { pattern: /=\s*\?/, soloDomanda: true,
+    msg: 'operazione chiusa con "=?": formulare la domanda per esteso ("Quanto fa 27 + 10?")' },
+  // Dal lotto 9: la spiegazione cita la risposta fra apici singoli, ma il valore
+  // contiene a sua volta un apostrofo e gli apici si chiudono nel punto
+  // sbagliato ("La risposta corretta è 'l'euro'."). In quel caso servono le
+  // virgolette doppie, che il corpus usa gia' in civica.
+  { pattern: /è '[^']*'[^']*'\./,
+    msg: "apici singoli chiusi male attorno a un valore che contiene un apostrofo (usare le virgolette doppie)" },
+  // Dal lotto 9: i tre stem alternativi di civica erano stati incollati anche
+  // sopra domande di definizione, dove non hanno senso ("Che cosa mostra più
+  // rispetto quando vuoi ricordare su quale valore si fonda la Repubblica?").
+  { pattern: /^(?:Quale scelta è più responsabile|Che cosa mostra più rispetto|Quale risposta aiuta di più la comunità) quando (?:vuoi|devi) (?:spiegare|ricordare|dire|indicare|descrivere|capire|collegare|riconoscere|fare un esempio)\b/,
+    soloDomanda: true,
+    msg: 'stem di civica incollato sopra una domanda di definizione: serve una domanda diretta' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
