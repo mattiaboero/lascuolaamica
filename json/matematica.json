@@ -25845,7 +25845,7 @@
    ],
    "answerIndex": 2,
    "answer": "60",
-   "explanation": "Dividiamo il totale per il numero di parti: 109 ÷ 49 = 60. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 109 - 49 = 60 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25877,7 +25877,7 @@
    ],
    "answerIndex": 1,
    "answer": "74",
-   "explanation": "Dividiamo il totale per il numero di parti: 113 ÷ 39 = 74. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 113 - 39 = 74 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25941,7 +25941,7 @@
    ],
    "answerIndex": 3,
    "answer": "117",
-   "explanation": "Dividiamo il totale per il numero di parti: 145 ÷ 28 = 117. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 145 - 28 = 117 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26005,7 +26005,7 @@
    ],
    "answerIndex": 3,
    "answer": "53",
-   "explanation": "Dividiamo il totale per il numero di parti: 64 ÷ 11 = 53. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 64 - 11 = 53 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26069,7 +26069,7 @@
    ],
    "answerIndex": 1,
    "answer": "54",
-   "explanation": "Dividiamo il totale per il numero di parti: 96 ÷ 42 = 54. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 96 - 42 = 54 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26133,7 +26133,7 @@
    ],
    "answerIndex": 1,
    "answer": "182",
-   "explanation": "Dividiamo il totale per il numero di parti: 217 ÷ 35 = 182. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 217 - 35 = 182 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26261,7 +26261,7 @@
    ],
    "answerIndex": 3,
    "answer": "106",
-   "explanation": "Dividiamo il totale per il numero di parti: 134 ÷ 28 = 106. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 134 - 28 = 106 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26421,7 +26421,7 @@
    ],
    "answerIndex": 0,
    "answer": "105",
-   "explanation": "Dividiamo il totale per il numero di parti: 147 ÷ 42 = 105. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Si sottrae chi non arriva dal totale dei partenti: 147 - 42 = 105 atleti al traguardo.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26485,7 +26485,7 @@
    ],
    "answerIndex": 2,
    "answer": "50",
-   "explanation": "Dividiamo il totale per il numero di parti: 8 ÷ 400 = 50. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 400 ÷ 8 = 50 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26517,7 +26517,7 @@
    ],
    "answerIndex": 1,
    "answer": "24",
-   "explanation": "Dividiamo il totale per il numero di parti: 3 ÷ 72 = 24. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 72 ÷ 3 = 24 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26549,7 +26549,7 @@
    ],
    "answerIndex": 1,
    "answer": "32",
-   "explanation": "Dividiamo il totale per il numero di parti: 6 ÷ 192 = 32. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 192 ÷ 6 = 32 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26581,7 +26581,7 @@
    ],
    "answerIndex": 1,
    "answer": "6",
-   "explanation": "Dividiamo il totale per il numero di parti: 9 ÷ 54 = 6. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 54 ÷ 9 = 6 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26613,7 +26613,7 @@
    ],
    "answerIndex": 2,
    "answer": "17",
-   "explanation": "Dividiamo il totale per il numero di parti: 11 ÷ 187 = 17. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 187 ÷ 11 = 17 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26645,7 +26645,7 @@
    ],
    "answerIndex": 3,
    "answer": "45",
-   "explanation": "Dividiamo il totale per il numero di parti: 11 ÷ 495 = 45. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 495 ÷ 11 = 45 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26677,7 +26677,7 @@
    ],
    "answerIndex": 3,
    "answer": "15",
-   "explanation": "Dividiamo il totale per il numero di parti: 11 ÷ 165 = 15. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 165 ÷ 11 = 15 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26709,7 +26709,7 @@
    ],
    "answerIndex": 3,
    "answer": "16",
-   "explanation": "Dividiamo il totale per il numero di parti: 12 ÷ 192 = 16. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 192 ÷ 12 = 16 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26741,7 +26741,7 @@
    ],
    "answerIndex": 1,
    "answer": "9",
-   "explanation": "Dividiamo il totale per il numero di parti: 10 ÷ 90 = 9. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 90 ÷ 10 = 9 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -26773,7 +26773,7 @@
    ],
    "answerIndex": 3,
    "answer": "25",
-   "explanation": "Dividiamo il totale per il numero di parti: 14 ÷ 350 = 25. Usiamo la divisione perché dobbiamo distribuire in parti uguali.",
+   "explanation": "Dividiamo la somma raccolta per il numero di alunni: 350 ÷ 14 = 25 euro a testa.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [

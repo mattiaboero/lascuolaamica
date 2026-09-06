@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.12.71 - 2026-09-06
+
+**Il primo lotto che trova errori di matematica, non di lingua.** Le spiegazioni mostrano il calcolo passo per passo e finora nessuno lo verificava.
+
+### Fixed
+- fix(contenuti): **18 spiegazioni descrivevano l'operazione sbagliata.** Otto sottrazioni erano presentate come divisioni (`In una gara partono 109 atleti. 49 non arrivano` → `Dividiamo il totale per il numero di parti: 109 ÷ 49 = 60`), e dieci divisioni avevano gli operandi invertiti (`Una classe di 8 alunni raccoglie 400 euro` → `8 ÷ 400 = 50`). La risposta era giusta in tutti i casi: sbagliato era il metodo insegnato.
+- fix(contenuti): **9 sconti del 25% erano troncati** (`770 × 25/100 = 192`, che fa 192,50), e la risposta finale seguiva l'errore. Corretti calcolo, opzione e risposta; gli importi in euro ora hanno due decimali, come già il resto del corpus.
+- fix(contenuti): `pro-5-euro_denaro-9172` calcolava `125 - 74,70 = 25,30`. Fa 50,30, e **nessuna delle quattro opzioni conteneva il valore giusto**.
+- fix(contenuti): **10 domande restavano a metà chiuse dal punto interrogativo** (`L'ombra si forma quando un corpo?`, `I fenici erano famosi soprattutto come?`). Il controllo del lotto 10 le lasciava passare perché cerca una parola interrogativa, e `quando` e `come` lo sono solo a volte.
+
+### Changed
+- test(contenuti): **`scripts/check_math_explanations.js`**, agganciato a `npm run verify` e a `prepublish-check.sh`. Verifica le uguaglianze isolate `a OP b = c` nelle spiegazioni. È volutamente stretto: restano fuori le catene (`(12+6)×7÷2 = 18×7÷2 = 126÷2 = 63`), le divisioni con resto esplicito, le frazioni, gli orari e le somme ripetute che spiegano la moltiplicazione — tutte forme corrette che un parser ingenuo segnalerebbe.
+- lint(contenuti): regola nuova per la frase sospesa con `quando` congiunzione. `come` + articolo + nome resta fuori: è quasi sempre un paragone (`duro come un chiodo?`, `animali come il riccio?`), e includerlo dava quattro falsi positivi su cinque.
+
+### Notes
+- **il controllo dei calcoli è nato inerte due volte prima di funzionare.** Alla prima stesura il lookahead finale rifiutava il punto di fine frase, quindi `109 ÷ 49 = 60.` non veniva nemmeno letto; alla seconda, il filtro anti-catena scartava il match perché `:` è insieme segno di divisione e due punti di punteggiatura, e la frase diceva `per il numero di parti: 109 ÷ 49`. Entrambe le volte lo script stampava "nessuna uguaglianza sbagliata" su un corpus che ne aveva 28. L'ho scoperto solo perché reintroduco sempre un difetto per vedere se il controllo scatta.
+- normalizzare i decimali degli euro a due cifre ha rotto un esercizio in cui `3,5` e `35,0` erano distrattori voluti (`Quale numero decimale rappresenta 3 euro e 50 centesimi?`): l'audit ha segnalato l'opzione duplicata e l'ho ripristinato.
+
 ## 4.12.70 - 2026-09-06
 
 ### Fixed

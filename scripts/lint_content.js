@@ -199,6 +199,16 @@ const GRAMMATICA = [
   // subito prima, che e' il segnale del sostantivo.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:i|gli|dei|degli|ai|agli|dai|dagli|nei|negli|coi)\s+(?:fenici|etruschi|sumeri|egizi|greci|romani|babilonesi|assiri|micenei|cretesi|persiani|ateniesi|spartani|ebrei|mesopotamici|minoici|cartaginesi|celti|longobardi|franchi)\b/,
     msg: 'nome di popolo in minuscolo usato come sostantivo (es. "gli egizi" invece di "gli Egizi")' },
+  // Dal lotto 15: frase sospesa in cui "quando" o "come" sono congiunzioni, non
+  // interrogativi ("L'ombra si forma quando un corpo?", "Un materiale
+  // trasparente come il vetro?"). Il controllo del lotto 10 le lasciava passare
+  // perche' cerca una parola interrogativa e quelle due lo sono solo a volte.
+  // Il segnale che le distingue e' che dopo la congiunzione non c'e' nessun
+  // verbo: "dove arriva la liberta'?" e "come si sentiva il mercante?" hanno un
+  // verbo e restano fuori, "quando l'acqua?" no.
+  { pattern: /\bquando\s+(?:il|lo|la|i|gli|le|un|uno|una|l'|un')\s*[a-zà-ù]+(?:\s+(?:in|di|a|da|su)\s+[a-zà-ù]+)?\s*\?\s*$|\b(?:quando|come|si)\s*\?\s*$/,
+    soloDomanda: true,
+    msg: 'frase sospesa con "quando" o "come" usati da congiunzione: usare i puntini' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },

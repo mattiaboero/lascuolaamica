@@ -526,6 +526,13 @@ else
   status=1
 fi
 
+if node scripts/check_math_explanations.js >/dev/null 2>&1; then
+  echo "[OK] math in explanations verified"
+else
+  echo "[ERROR] wrong arithmetic in an explanation (run: npm run check:math)"
+  status=1
+fi
+
 if [[ ! -f "robots.txt" ]]; then
   echo "[ERROR] Missing file: robots.txt"
   status=1

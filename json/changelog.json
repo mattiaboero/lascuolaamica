@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.71",
+  "items": [
+   "Corretti 28 calcoli sbagliati nelle spiegazioni dei problemi: sconti del 25% troncati, un resto sbagliato, e diciotto spiegazioni che descrivevano l'operazione sbagliata.",
+   "Da oggi tutti i calcoli mostrati nelle spiegazioni vengono verificati automaticamente prima di ogni pubblicazione.",
+   "Uniformate 10 domande che restavano a metà con un punto interrogativo."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.70",
   "items": [
    "Corrette 29 spiegazioni in cui una citazione era aperta con le virgolette doppie e chiusa con l'apice.",

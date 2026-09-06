@@ -18795,13 +18795,13 @@
    "question": "Paola guadagna 110 euro al mese. In 7 mesi guadagna 770 euro in tutto. Se risparmia il 25% delle sue entrate totali, quanto risparmia?",
    "options": [
     "189",
-    "192",
+    "192,50",
     "770",
     "578"
    ],
    "answerIndex": 1,
-   "answer": "192",
-   "explanation": "Entrate totali: 110 × 7 = 770 euro. Risparmio: 770 × 25/100 = 192 euro.",
+   "answer": "192,50",
+   "explanation": "Entrate totali: 110 × 7 = 770 euro. Risparmio: 770 × 25/100 = 192,50 euro.",
    "active": true,
    "tag": "percentuale,risparmio,moltiplicazione",
    "tags": [
@@ -18889,12 +18889,12 @@
    "options": [
     "130",
     "294",
-    "98",
+    "97,50",
     "32"
    ],
    "answerIndex": 2,
-   "answer": "98",
-   "explanation": "Sconto: 130 × 25/100 = 32 euro. Prezzo finale: 130 - 32 = 98 euro.",
+   "answer": "97,50",
+   "explanation": "Sconto: 130 × 25/100 = 32,50 euro. Prezzo finale: 130 - 32,50 = 97,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -19293,11 +19293,11 @@
     "77",
     "110",
     "27",
-    "83"
+    "82,50"
    ],
    "answerIndex": 3,
-   "answer": "83",
-   "explanation": "Sconto: 110 × 25/100 = 27 euro. Prezzo finale: 110 - 27 = 83 euro.",
+   "answer": "82,50",
+   "explanation": "Sconto: 110 × 25/100 = 27,50 euro. Prezzo finale: 110 - 27,50 = 82,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -20068,11 +20068,11 @@
     "42",
     "170",
     "143",
-    "128"
+    "127,50"
    ],
    "answerIndex": 3,
-   "answer": "128",
-   "explanation": "Sconto: 170 × 25/100 = 42 euro. Prezzo finale: 170 - 42 = 128 euro.",
+   "answer": "127,50",
+   "explanation": "Sconto: 170 × 25/100 = 42,50 euro. Prezzo finale: 170 - 42,50 = 127,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -20220,14 +20220,14 @@
    "difficulty": 3,
    "question": "Una borsa costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa la borsa scontata?",
    "options": [
-    "128",
+    "127,50",
     "170",
     "133",
     "42"
    ],
    "answerIndex": 0,
-   "answer": "128",
-   "explanation": "Sconto: 170 × 25/100 = 42 euro. Prezzo finale: 170 - 42 = 128 euro.",
+   "answer": "127,50",
+   "explanation": "Sconto: 170 × 25/100 = 42,50 euro. Prezzo finale: 170 - 42,50 = 127,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -20375,14 +20375,14 @@
    "difficulty": 3,
    "question": "Uno zaino costa 210 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
    "options": [
-    "158",
+    "157,50",
     "210",
     "52",
     "151"
    ],
    "answerIndex": 0,
-   "answer": "158",
-   "explanation": "Sconto: 210 × 25/100 = 52 euro. Prezzo finale: 210 - 52 = 158 euro.",
+   "answer": "157,50",
+   "explanation": "Sconto: 210 × 25/100 = 52,50 euro. Prezzo finale: 210 - 52,50 = 157,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -21462,12 +21462,12 @@
    "options": [
     "42",
     "122",
-    "128",
+    "127,50",
     "170"
    ],
    "answerIndex": 2,
-   "answer": "128",
-   "explanation": "Sconto: 170 × 25/100 = 42 euro. Prezzo finale: 170 - 42 = 128 euro.",
+   "answer": "127,50",
+   "explanation": "Sconto: 170 × 25/100 = 42,50 euro. Prezzo finale: 170 - 42,50 = 127,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -21710,12 +21710,12 @@
    "options": [
     "47",
     "151",
-    "143",
+    "142,50",
     "190"
    ],
    "answerIndex": 2,
-   "answer": "143",
-   "explanation": "Sconto: 190 × 25/100 = 47 euro. Prezzo finale: 190 - 47 = 143 euro.",
+   "answer": "142,50",
+   "explanation": "Sconto: 190 × 25/100 = 47,50 euro. Prezzo finale: 190 - 47,50 = 142,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -23103,14 +23103,14 @@
    "difficulty": 3,
    "question": "Uno zaino costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
    "options": [
-    "143",
+    "142,50",
     "190",
     "47",
     "150"
    ],
    "answerIndex": 0,
-   "answer": "143",
-   "explanation": "Sconto: 190 × 25/100 = 47 euro. Prezzo finale: 190 - 47 = 143 euro.",
+   "answer": "142,50",
+   "explanation": "Sconto: 190 × 25/100 = 47,50 euro. Prezzo finale: 190 - 47,50 = 142,50 euro.",
    "active": true,
    "tag": "percentuale,sconto,acquisti",
    "tags": [
@@ -37724,14 +37724,14 @@
    "difficulty": 3,
    "question": "Una mamma compra 3 maglie a 24,90 euro l'una e paga con 3 banconote da 25 euro e 1 da 50 euro. Quanti euro riceve di resto?",
    "options": [
-    "25,30",
+    "50,30",
     "74,70",
     "49,40",
     "0,30"
    ],
    "answerIndex": 0,
-   "answer": "25,30",
-   "explanation": "Prima: 3 × 24,90 = 74,70 euro da pagare. Poi: 3×25 + 50 = 125 euro pagati. Resto: 125 - 74,70 = 25,30 euro.",
+   "answer": "50,30",
+   "explanation": "Prima: 3 × 24,90 = 74,70 euro da pagare. Poi: 3×25 + 50 = 125 euro pagati. Resto: 125 - 74,70 = 50,30 euro.",
    "active": true,
    "tag": "problemi;euro_denaro;classe_5;primaria",
    "tags": [

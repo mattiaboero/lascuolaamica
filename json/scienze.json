@@ -14820,7 +14820,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Nel ciclo dell'acqua, l'evaporazione avviene quando l'acqua?",
+   "question": "Nel ciclo dell'acqua, l'evaporazione avviene quando l'acqua...",
    "options": [
     "si ghiaccia",
     "sale in aria come vapore",
@@ -15130,7 +15130,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "L'ombra si forma quando un corpo?",
+   "question": "L'ombra si forma quando un corpo...",
    "options": [
     "ferma la luce",
     "produce vento",
@@ -15409,7 +15409,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Le nuvole si formano quando il vapore acqueo?",
+   "question": "Le nuvole si formano quando il vapore acqueo...",
    "options": [
     "si raffredda e si condensa",
     "brucia",
@@ -26384,7 +26384,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Nel ciclo dell'acqua, le nuvole si formano quando il vapore in alto si?",
+   "question": "Nel ciclo dell'acqua, le nuvole si formano quando il vapore in alto si...",
    "options": [
     "condensa in goccioline",
     "solidifica in sassi",
@@ -27841,7 +27841,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 1,
-   "question": "L'ombra si forma quando un oggetto?",
+   "question": "L'ombra si forma quando un oggetto...",
    "options": [
     "blocca la luce",
     "emette luce",
@@ -27934,7 +27934,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Un materiale trasparente come il vetro?",
+   "question": "Un materiale trasparente come il vetro...",
    "options": [
     "lascia passare la luce",
     "blocca tutta la luce",
@@ -31034,7 +31034,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 1,
-   "question": "L'acqua diventa ghiaccio quando fa?",
+   "question": "L'acqua diventa ghiaccio quando fa...",
    "options": [
     "molto freddo",
     "molto caldo",

@@ -44,6 +44,8 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  "L'ombra si forma quando un corpo?",
+  'I Fenici erano famosi soprattutto come?',
   'Il soggetto è "Fatima\' e il predicato è \'ha comprato".',
   'Quale sistema di scrittura usavano gli egizi?',
   "Nell'acqua è la risposta corretta.",
@@ -61,6 +63,11 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Quale materiale è duro come un chiodo?',
+  'Cosa succede agli animali come il riccio in inverno?',
+  'Fino a dove arriva la libertà di una persona?',
+  'Come si sentiva il mercante?',
+  "Leggi: 'Il treno arriva alle tre.' Quando arriva il treno?",
   'Zeus era il più potente degli dèi greci e regnava sullOlimpo.',
   "Il soggetto è 'Fatima' e il predicato è 'ha comprato'.",
   'La risposta corretta è "l\'effetto delle abitudini sull\'ambiente".',
