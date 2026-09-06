@@ -1,5 +1,17 @@
 # Changelog Repo
 
+## 4.12.42 - 2026-09-06
+
+### Changed
+- security(csp): la CSP dichiarava `require-trusted-types-for 'script'` senza la direttiva `trusted-types` che elenca le policy ammesse, quindi qualunque script poteva crearne una con un nome qualsiasi e passare da lì per i sink di script URL — metà della protezione. Aggiunto `trusted-types sa-sw-url sa-sw-import`, gli unici due nomi creati dal codice (`shared.js:993` e `sw.js:14`). Verificato applicando la CSP reale a `/matematica` in Chromium: service worker registrato e in controllo, zero violazioni; e con un nome di policy sbagliato nella direttiva il browser blocca la creazione, a conferma che il vincolo è davvero applicato e non decorativo.
+- perf(breakout): `breakout.html` non precaricava `/json/index.json`, che `js/breakout.js` richiede comunque all'avvio della partita tramite `SA.questionsLoader`. Aggiunto il `preload`, come già fanno le 8 pagine materia.
+- seo(premi): `premi.html` era l'unica delle 20 pagine indicizzabili senza `max-video-preview:-1` nella meta robots. Allineata.
+- fix(html): 7 `href` YouTube in `tabelline.html` usavano `&` non escapato invece di `&amp;` nel separatore dei parametri.
+
+### Notes
+- non fatto: quattro voci minori dell'audit lasciate come sono, perché il cambiamento costerebbe più del difetto. `class="site-footer"` manca su `index.html` e `premi.html`, ma non esiste una regola `.site-footer` nei fogli che quelle due pagine caricano e `shared.js:349` interroga già `.site-footer, footer`: aggiungerla non cambierebbe nulla. Le classi `page-404`, `page-cookie` e `page-privacy` sul body non hanno regole CSS né riferimenti JS, ma sono hook di pagina innocui. Le FAQ di `/tabelline` usano `h3`/`p` invece del pattern `<details>` delle altre pagine: è una scelta di presentazione, e il markup è appaiato al JSON-LD `FAQPage` verificato. `/reports/*` non ha un `Cache-Control` esplicito in `_headers` a differenza di `/json/*`: asimmetria senza effetto pratico.
+- chore: bump versione `4.12.41` → `4.12.42`.
+
 ## 4.12.41 - 2026-09-06
 
 ### Fixed

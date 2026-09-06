@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.42",
+  "items": [
+   "Cervellino Spacca-Muri parte più in fretta: le domande vengono richieste già mentre la pagina si carica.",
+   "Sicurezza: la policy del sito ora consente solo le due regole interne previste per il caricamento degli script."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.41",
   "items": [
    "Manutenzione interna: nel gioco Spacca-Muri gli errori di salvataggio dei dati tornano a essere segnalati in fase di diagnosi."
