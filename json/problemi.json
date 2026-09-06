@@ -39354,7 +39354,7 @@
    "area": "problemi",
    "subarea": "divisione",
    "difficulty": 3,
-   "question": "Un campo di 5400 mq viene diviso in 25 lotti identici. Quanti mq ha ogni lotto?",
+   "question": "Un campo di 5400 m² viene diviso in 25 lotti identici. Quanti m² ha ogni lotto?",
    "options": [
     "216",
     "270",
@@ -39363,7 +39363,7 @@
    ],
    "answerIndex": 0,
    "answer": "216",
-   "explanation": "Prima: 5400 ÷ 25. Poi: 5400 ÷ 25 = 216 mq per lotto.",
+   "explanation": "Prima: 5400 ÷ 25. Poi: 5400 ÷ 25 = 216 m² per lotto.",
    "active": true,
    "tag": "problemi;divisione;classe_5;primaria",
    "tags": [
@@ -39450,7 +39450,7 @@
    "area": "problemi",
    "subarea": "divisione",
    "difficulty": 3,
-   "question": "Un terreno di 4608 mq deve essere diviso in 12 parti uguali. Poi ognuna di queste parti viene divisa in 4 appezzamenti. Quanti mq ha ogni appezzamento?",
+   "question": "Un terreno di 4608 m² deve essere diviso in 12 parti uguali. Poi ognuna di queste parti viene divisa in 4 appezzamenti. Quanti m² ha ogni appezzamento?",
    "options": [
     "96",
     "128",
@@ -39459,7 +39459,7 @@
    ],
    "answerIndex": 0,
    "answer": "96",
-   "explanation": "Prima: 4608 ÷ 12 = 384 mq per parte. Poi: 384 ÷ 4 = 96 mq per appezzamento.",
+   "explanation": "Prima: 4608 ÷ 12 = 384 m² per parte. Poi: 384 ÷ 4 = 96 m² per appezzamento.",
    "active": true,
    "tag": "problemi;divisione;classe_5;primaria",
    "tags": [
@@ -40058,7 +40058,7 @@
    "area": "problemi",
    "subarea": "addizione",
    "difficulty": 3,
-   "question": "Una palestra ha 3 sale. La sala A misura 1248 mq, la sala B misura 976 mq e la sala C misura 1540 mq. Qual è la superficie totale?",
+   "question": "Una palestra ha 3 sale. La sala A misura 1248 m², la sala B misura 976 m² e la sala C misura 1540 m². Qual è la superficie totale?",
    "options": [
     "3764",
     "2224",
@@ -40067,7 +40067,7 @@
    ],
    "answerIndex": 0,
    "answer": "3764",
-   "explanation": "Prima: 1248 + 976 = 2224 mq. Poi: 2224 + 1540 = 3764 mq totali.",
+   "explanation": "Prima: 1248 + 976 = 2224 m². Poi: 2224 + 1540 = 3764 m² totali.",
    "active": true,
    "tag": "problemi;addizione;classe_5;primaria",
    "tags": [

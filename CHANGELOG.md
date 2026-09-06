@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.76 - 2026-09-06
+
+Due incoerenze interne al corpus: in entrambe la forma giusta era già la maggioranza, e la minoranza è stata allineata.
+
+### Fixed
+- fix(contenuti): **`dei` come plurale di `dio`, senza accento, in 8 punti** (`molti dei`, `gli dei abitavano sul...`). Il corpus scriveva già `dèi` in 7 altri punti. L'accento qui non è un vezzo: distingue il sostantivo dalla preposizione articolata, che nella stessa frase può comparire (`il re degli dèi greci`).
+- fix(contenuti): **26 unità di superficie e volume senza esponente** — `mq` e `cm2` contro i `m²` (56) e `cm²` (118) già presenti. Cambiate anche dentro le opzioni, con `answerIndex` riallineato.
+
+### Changed
+- lint(contenuti): due regole nuove. Quella su `dèi` chiede un quantificatore o un articolo davanti, che è il segnale del sostantivo: `dei Greci` da solo resta ambiguo e fuori dal controllo.
+
+### Notes
+- cercati e archiviati senza correzioni gli altri accenti distintivi (`dà`, `sì`, `là`, `né`, `sé`): zero errori. `ne torta ne gelato` è un distrattore voluto nell'esercizio sul `né`, e `se stesso` senza accento è la forma corretta.
+
 ## 4.12.75 - 2026-09-06
 
 **Lotto magro: due refusi su 60 domande lette.** Vale la pena registrarlo — dopo diciotto lotti i difetti sistematici si stanno esaurendo, e quattro criteri di ricerca su cinque hanno restituito solo falsi positivi.

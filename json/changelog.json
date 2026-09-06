@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.76",
+  "items": [
+   "Il plurale di \"dio\" ora è scritto \"dèi\" in tutte le domande di storia, come già in metà del corpus.",
+   "Uniformate le unità di misura di superficie e volume: mq e cm2 diventano m² e cm²."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.75",
   "items": [
    "Corretti due refusi: \"peròh\" fra le risposte di una domanda di grammatica e \"iperoniìmi\" in una spiegazione."

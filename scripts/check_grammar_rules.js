@@ -44,6 +44,8 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  'Secondo i Greci, gli dei abitavano sul Monte Olimpo.',
+  'Un campo di 5400 mq viene diviso in 25 lotti identici.',
   '42 - 22 = 20 farfalle rimasti.',
   'Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quanti ne ha in tutto?',
   "'ca-sa' è divisa bene",
@@ -67,6 +69,9 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Secondo i Greci, gli dèi abitavano sul Monte Olimpo.',
+  'Un campo di 5400 m² viene diviso in 25 lotti identici.',
+  'La risposta corretta è dei Greci.',
   '42 - 22 = 20 farfalle rimaste.',
   'I fiumi possono essere usati per la navigazione.',
   'Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quante ne ha in tutto?',

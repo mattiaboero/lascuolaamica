@@ -218,6 +218,16 @@ const GRAMMATICA = [
   { pattern: /[a-zà-ù0-9]$/,
     soloSpiegazione: true,
     msg: 'spiegazione senza punteggiatura finale' },
+  // Dal lotto 20: "dei" come plurale di "dio" va accentato, per distinguerlo
+  // dalla preposizione articolata. Il corpus usava gia' "dèi" sette volte e
+  // "dei" otto. La regola chiede un quantificatore o un articolo davanti, che
+  // e' il segnale del sostantivo: "dei greci" da solo resta ambiguo e fuori.
+  { pattern: /\b(?:gli|molti|tanti|questi|quegli|altri|numerosi|vari)\s+dei\b/,
+    msg: 'plurale di "dio" senza accento: serve "dèi" (es. "gli dèi", "molti dèi")' },
+  // Dal lotto 20: unita di superficie e volume scritte senza esponente. Il
+  // corpus usa cm² 118 volte e cm2 16, m² 56 e mq 12: uniformate all'esponente.
+  { pattern: /\b(?:cm2|m2|mq|cmq|kmq|cm3|dm3|mc)\b/,
+    msg: 'unita di misura senza esponente (usare cm², m², cm³)' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },

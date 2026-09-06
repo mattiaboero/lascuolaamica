@@ -16148,7 +16148,7 @@
    "difficulty": 1,
    "question": "Monoteismo significa credere in...",
    "options": [
-    "molti dei",
+    "molti dèi",
     "nessun dio",
     "un solo Dio",
     "un re-divinità"
@@ -18582,12 +18582,12 @@
    "options": [
     "un solo Dio",
     "nessuna divinità",
-    "molti dei",
+    "molti dèi",
     "solo il faraone"
    ],
    "answerIndex": 2,
-   "answer": "molti dei",
-   "explanation": "La risposta corretta è molti dei.",
+   "answer": "molti dèi",
+   "explanation": "La risposta corretta è molti dèi.",
    "active": true,
    "tag": "grecia;polis;classe5",
    "tags": [
@@ -18766,14 +18766,14 @@
    "difficulty": 2,
    "question": "La religione greca era detta politeista perché...",
    "options": [
-    "prevedeva molti dei",
+    "prevedeva molti dèi",
     "prevedeva un solo Dio",
     "non aveva riti",
     "non aveva templi"
    ],
    "answerIndex": 0,
-   "answer": "prevedeva molti dei",
-   "explanation": "La risposta corretta è prevedeva molti dei.",
+   "answer": "prevedeva molti dèi",
+   "explanation": "La risposta corretta è prevedeva molti dèi.",
    "active": true,
    "tag": "grecia;societa;classe5",
    "tags": [
@@ -21618,7 +21618,7 @@
    "difficulty": 1,
    "question": "I plebei erano...",
    "options": [
-    "gli dei di Roma",
+    "gli dèi di Roma",
     "i senatori etruschi",
     "la parte più numerosa del popolo",
     "i faraoni"
@@ -23438,7 +23438,7 @@
    "question": "I cristiani credevano in...",
    "options": [
     "un solo Dio e nel messaggio di Gesù",
-    "molti dei olimpici",
+    "molti dèi olimpici",
     "il faraone come dio",
     "solo gli astri"
    ],
@@ -26514,7 +26514,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Secondo i Greci, gli dei abitavano sul...",
+   "question": "Secondo i Greci, gli dèi abitavano sul...",
    "options": [
     "Vesuvio",
     "Kilimangiaro",

@@ -58037,13 +58037,13 @@
    "difficulty": 1,
    "question": "Un quadrato ha lato 6 cm. Quanto misura l'area?",
    "options": [
-    "12 cm2",
-    "24 cm2",
-    "30 cm2",
-    "36 cm2"
+    "12 cm²",
+    "24 cm²",
+    "30 cm²",
+    "36 cm²"
    ],
    "answerIndex": 3,
-   "answer": "36 cm2",
+   "answer": "36 cm²",
    "explanation": "L'area del quadrato è lato × lato: 6 × 6 = 36 cm².",
    "active": true,
    "tag": "geometria",
@@ -58069,13 +58069,13 @@
    "difficulty": 1,
    "question": "Un rettangolo ha base 5 cm e altezza 4 cm. Quanto misura l'area?",
    "options": [
-    "9 cm2",
-    "18 cm2",
-    "20 cm2",
-    "25 cm2"
+    "9 cm²",
+    "18 cm²",
+    "20 cm²",
+    "25 cm²"
    ],
    "answerIndex": 2,
-   "answer": "20 cm2",
+   "answer": "20 cm²",
    "explanation": "Area = base × altezza = 20 cm².",
    "active": true,
    "tag": "geometria",
@@ -59221,13 +59221,13 @@
    "difficulty": 1,
    "question": "Un rettangolo ha base 9 cm e altezza 4 cm. Quanto misura l'area?",
    "options": [
-    "13 cm2",
-    "26 cm2",
-    "36 cm2",
-    "45 cm2"
+    "13 cm²",
+    "26 cm²",
+    "36 cm²",
+    "45 cm²"
    ],
    "answerIndex": 2,
-   "answer": "36 cm2",
+   "answer": "36 cm²",
    "explanation": "9 × 4 = 36 cm².",
    "active": true,
    "tag": "geometria",
@@ -59381,13 +59381,13 @@
    "difficulty": 1,
    "question": "Un rettangolo con base 7 cm e altezza 3 cm ha area...",
    "options": [
-    "10 cm2",
-    "18 cm2",
-    "21 cm2",
-    "24 cm2"
+    "10 cm²",
+    "18 cm²",
+    "21 cm²",
+    "24 cm²"
    ],
    "answerIndex": 2,
-   "answer": "21 cm2",
+   "answer": "21 cm²",
    "explanation": "7 × 3 = 21 cm².",
    "active": true,
    "tag": "geometria",
