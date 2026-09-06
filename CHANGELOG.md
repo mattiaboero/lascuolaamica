@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.60 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **29 stem sospesi** ancora chiusi con il punto interrogativo (`La deforestazione può causare?`, `Un materiale trasparente lascia passare?`, `Una specie che rischia di scomparire si dice?`). Erano sfuggiti ai passaggi precedenti per due motivi distinti: il filtro escludeva le domande contenenti parole interrogative, e in `L'acqua **che** entra nel terreno… si chiama?` il `che` è un pronome relativo, non una parola-domanda; inoltre la lista di code non conclusive non copriva `si dice`, `si trova`, `può causare`, `lascia passare`.
+
+### Notes
+- lotto 6: 60 domande fra le 6.380 a scheletro unico; 359 revisionate. Nessun errore di grammatica: solo la coda della classe "frase sospesa", che sei passaggi non hanno ancora chiuso del tutto.
+- **la conversione è stata fatta a mano, per elenco esplicito di 29 id, e non con una regola.** Il rilevamento automatico proponeva 44 candidati, di cui 15 erano domande legittime: `In quale mare sfocia il fiume Tevere?` finisce in `-ere` come un infinito, `Sull'autobus, a chi è giusto cedere il posto a sedere?` finisce davvero con un infinito ma è una domanda vera, `A cosa servono le tasse…?` apre con una parola interrogativa che il filtro non riconosceva in quella posizione. Nessuna espressione regolare separa i due gruppi: la distinzione è semantica, non di forma. Per questo non è stata aggiunta una regola nuova al linter — sarebbe stata rumorosa — e la classe resta chiusa solo per i casi trovati.
+
 ## 4.12.59 - 2026-09-06
 
 ### Fixed

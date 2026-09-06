@@ -1558,7 +1558,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "stagioni_e_tempo_atmosferico",
    "difficulty": 1,
-   "question": "Lo strumento semplice che indica quanto fa caldo si chiama?",
+   "question": "Lo strumento semplice che indica quanto fa caldo si chiama...",
    "options": [
     "termometro",
     "martello",
@@ -8384,7 +8384,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Inquinare l'acqua può danneggiare?",
+   "question": "Inquinare l'acqua può danneggiare...",
    "options": [
     "solo il cielo",
     "piante e animali",
@@ -8414,7 +8414,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Se scompare un anello della catena alimentare, possono cambiare?",
+   "question": "Se scompare un anello della catena alimentare, possono cambiare...",
    "options": [
     "solo i colori dei fiori",
     "i numeri della calcolatrice",
@@ -10919,7 +10919,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "L'apparato escretore aiuta a eliminare?",
+   "question": "L'apparato escretore aiuta a eliminare...",
    "options": [
     "sostanze di rifiuto",
     "ossa rotte",
@@ -11279,7 +11279,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "La piramide alimentare aiuta a capire?",
+   "question": "La piramide alimentare aiuta a capire...",
    "options": [
     "quali cibi consumare più o meno spesso",
     "come misurare il vento",
@@ -13307,7 +13307,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Un suono molto forte può essere?",
+   "question": "Un suono molto forte può essere...",
    "options": [
     "sempre invisibile",
     "dannoso",
@@ -13518,7 +13518,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Un materiale trasparente lascia passare?",
+   "question": "Un materiale trasparente lascia passare...",
    "options": [
     "solo calore ma mai luce",
     "molta luce",
@@ -13549,7 +13549,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Se una sorgente luminosa è dietro un oggetto, davanti si può vedere?",
+   "question": "Se una sorgente luminosa è dietro un oggetto, davanti si può vedere...",
    "options": [
     "l'ombra",
     "la pioggia",
@@ -13611,7 +13611,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Per proteggere l'udito bisogna evitare?",
+   "question": "Per proteggere l'udito bisogna evitare...",
    "options": [
     "l'acqua potabile",
     "le ombre nel pomeriggio",
@@ -15874,7 +15874,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "L'inquinamento dell'acqua può danneggiare?",
+   "question": "L'inquinamento dell'acqua può danneggiare...",
    "options": [
     "solo le rocce",
     "gli esseri viventi che la usano",
@@ -16277,7 +16277,7 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 2,
-   "question": "Per fare un confronto corretto tra due piante, è meglio cambiare?",
+   "question": "Per fare un confronto corretto tra due piante, è meglio cambiare...",
    "options": [
     "tutto insieme",
     "un solo fattore alla volta",
@@ -16618,7 +16618,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "La deforestazione può causare?",
+   "question": "La deforestazione può causare...",
    "options": [
     "aumento della biodiversità sempre",
     "perdita di habitat",
@@ -16742,7 +16742,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Per separare sale sciolto in acqua si può far evaporare?",
+   "question": "Per separare sale sciolto in acqua si può far evaporare...",
    "options": [
     "il bicchiere",
     "l'acqua",
@@ -17145,7 +17145,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "L'acqua che entra nel terreno e raggiunge gli strati sotterranei si chiama?",
+   "question": "L'acqua che entra nel terreno e raggiunge gli strati sotterranei si chiama...",
    "options": [
     "lava",
     "infiltrazione",
@@ -17238,7 +17238,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 2,
-   "question": "Misurare con strumenti diversi ma adatti serve a ottenere?",
+   "question": "Misurare con strumenti diversi ma adatti serve a ottenere...",
    "options": [
     "dati più precisi",
     "più fantasia",
@@ -27996,7 +27996,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Un oggetto che non lascia passare per niente la luce si dice?",
+   "question": "Un oggetto che non lascia passare per niente la luce si dice...",
    "options": [
     "opaco",
     "trasparente",
@@ -29856,7 +29856,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 1,
-   "question": "Una specie che rischia di scomparire si dice?",
+   "question": "Una specie che rischia di scomparire si dice...",
    "options": [
     "a rischio di estinzione",
     "immortale",
@@ -30941,7 +30941,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Le mani sporche possono portare?",
+   "question": "Le mani sporche possono portare...",
    "options": [
     "germi",
     "vitamine",
@@ -31189,7 +31189,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Il percorso dell'acqua che evapora, forma nuvole e ricade come pioggia si chiama?",
+   "question": "Il percorso dell'acqua che evapora, forma nuvole e ricade come pioggia si chiama...",
    "options": [
     "ciclo dell'acqua",
     "giro del vento",

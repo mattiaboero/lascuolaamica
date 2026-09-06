@@ -25645,7 +25645,7 @@
    "area": "geo_graficita",
    "subarea": "scala",
    "difficulty": 2,
-   "question": "La scala di una carta serve a capire?",
+   "question": "La scala di una carta serve a capire...",
    "options": [
     "quanto pesa la carta",
     "il rapporto tra realtà e disegno",
@@ -25677,7 +25677,7 @@
    "area": "strumenti_orientamento",
    "subarea": "punti_cardinali",
    "difficulty": 1,
-   "question": "La bussola ha un ago che indica soprattutto?",
+   "question": "La bussola ha un ago che indica soprattutto...",
    "options": [
     "il nord",
     "il sud",
@@ -25709,7 +25709,7 @@
    "area": "strumenti_orientamento",
    "subarea": "percorsi",
    "difficulty": 1,
-   "question": "Per organizzare una gita a piedi nel quartiere è utile portare?",
+   "question": "Per organizzare una gita a piedi nel quartiere è utile portare...",
    "options": [
     "una carta o piantina",
     "un cuscino",
@@ -25805,7 +25805,7 @@
    "area": "paesaggi_terra",
    "subarea": "paesaggio_fisico",
    "difficulty": 1,
-   "question": "La pianura è un territorio in genere?",
+   "question": "La pianura è un territorio in genere...",
    "options": [
     "molto ripido",
     "quasi pianeggiante",
@@ -26797,7 +26797,7 @@
    "area": "idrografia_clima_italia",
    "subarea": "clima",
    "difficulty": 2,
-   "question": "Sulle montagne più alte il clima è in genere?",
+   "question": "Sulle montagne più alte il clima è in genere...",
    "options": [
     "più freddo",
     "più tropicale",
@@ -27949,7 +27949,7 @@
    "area": "orientamento_carte",
    "subarea": "punti_cardinali",
    "difficulty": 2,
-   "question": "Se una città è a ovest di Roma, sulla carta si trova?",
+   "question": "Se una città è a ovest di Roma, sulla carta si trova...",
    "options": [
     "a destra di Roma",
     "a sinistra di Roma",
