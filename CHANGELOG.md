@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.38 - 2026-09-06
+
+### Fixed
+- fix(pwa): i 3,9 MB di immagini premio venivano cancellati a ogni release. `REWARDS_CACHE_NAME` era `` `${CACHE_NAME}-rewards` ``, quindi ereditava `APP_VERSION`: al bump il nome cambiava e la regola di `activate` (`key !== CACHE_NAME && key !== REWARDS_CACHE_NAME`) eliminava la cache precedente. Scenario: il bambino sblocca dei trofei, apre `/premi` (57 file in `assets/reward/`, cache-first a runtime), poi va offline; esce una patch, riapre la pagina online una volta e alla successiva apertura offline le immagini sono tutte rotte — l'esatto contrario di quanto promette il commento in `sw.js`. Il nome è ora stabile (`lascuolaamica-rewards-v1`) e non dipende dalla versione.
+- fix(pwa): ogni bump di versione ri-scaricava 2,82 MB di asset immutati (106 URL di precache misurati: 5 woff2, 15 file mascotte, 17 OG jpg da ~100 KB, screenshot, icone). Una patch di sola copy costava al tablet di classe l'intero precache. Font e immagini stanno ora in `ASSETS_CACHE_NAME`, una cache stabile che `activate` non tocca; `CACHE_NAME` resta versionata per HTML, CSS, JS e JSON.
+
+### Changed
+- decisione(pwa): i `json/*.json` **restano** nella cache versionata, benché siano la parte più pesante di quanto veniva buttato via (da 848 KB per scienze a 1,49 MB per matematica, fino a ~8 MB con tutte le materie aperte). Sono contenuto che cambia con le release: servirli stale significherebbe continuare a mostrare una domanda sbagliata dopo che è stata corretta. Il ri-download riguarda solo le materie effettivamente aperte, e la correttezza vale più della banda.
+- pwa: il contratto delle cache stabili è che un file sia immutabile **per nome**. Per sostituirne uno si cambia il nome del file, oppure si alza il suffisso di `ASSETS_CACHE_NAME`. Questo era già implicitamente vero per `_headers`, che marca `/assets/*`, `/icons/*` e `/screenshots/*` come `immutable` per un anno pur senza hash nei nomi: un'immagine sostituita in place restava invisibile ai visitatori di ritorno fino a un anno, senza che niente lo segnalasse. Ora `prepublish-check.sh` blocca la modifica in place di un file `woff2|ttf|svg|png|jpg|webp|avif|ico` sotto quelle cartelle se `sw.js` non contiene anche un bump di `ASSETS_CACHE_NAME`, e il vincolo è scritto sia in `sw.js` sia in `_headers`. Di conseguenza `assets/*`, `icons/*` e `screenshots/*` escono da `relevant_paths` del controllo su `APP_VERSION`: per quei file il bump di versione non serviva più a niente.
+- chore: bump versione `4.12.37` → `4.12.38`. Alla prima attivazione del nuovo service worker le cache vecchie vengono eliminate una volta sola, inclusa quella dei premi con il vecchio nome: il ri-download dei 3,9 MB avviene un'ultima volta e poi mai più.
+
 ## 4.12.37 - 2026-09-05
 
 ### Fixed

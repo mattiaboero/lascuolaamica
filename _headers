@@ -16,6 +16,11 @@
 /reports/*
   X-Robots-Tag: noindex, nofollow, noarchive, noai, noimageai
 
+# I file di queste tre cartelle non hanno un hash nel nome: "immutable" e' un
+# contratto sul nome, non una proprieta' del contenuto. Per sostituirne uno va
+# cambiato il nome del file, oppure alzato ASSETS_CACHE_NAME in sw.js (che li
+# tiene in una cache mai invalidata). prepublish-check.sh blocca la sostituzione
+# in place senza una delle due cose.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 

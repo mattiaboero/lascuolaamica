@@ -254,10 +254,6 @@ check_pwa_version_bump_for_precache_changes() {
     '*.js'
     'js/*.js'
     'json/*.json'
-    'assets/*'
-    'assets/**/*'
-    'icons/*'
-    'screenshots/*'
     'manifest.json'
     'robots.txt'
     'sitemap.xml'
@@ -413,9 +409,58 @@ check_extension_contract_present() {
   fi
 }
 
+# Font e immagini vivono in ASSETS_CACHE_NAME (sw.js), una cache che activate non
+# cancella mai, e _headers li marca immutable per un anno. Sostituirne uno
+# mantenendo lo stesso nome significa che chi ha gia' visitato il sito non vedra'
+# mai il file nuovo: va cambiato il nome del file, oppure alzato il suffisso di
+# ASSETS_CACHE_NAME. Un file aggiunto (A) o rimosso (D) non pone il problema.
+check_immutable_assets_not_replaced_in_place() {
+  local asset_paths=('assets/*' 'assets/**/*' 'icons/*' 'screenshots/*')
+  local stable_ext='\.(woff2?|ttf|svg|png|jpe?g|webp|avif|ico)$'
+  local replaced="" sw_diff=""
+
+  git rev-parse --is-inside-work-tree >/dev/null 2>&1 || return
+
+  replaced=$(git diff --name-only --diff-filter=M -- "${asset_paths[@]}" | grep -Ei "$stable_ext" || true)
+  sw_diff=$(git diff --no-color -- sw.js || true)
+
+  if [[ -z "$replaced" ]] && git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+    replaced=$(git diff --name-only --diff-filter=M HEAD^ HEAD -- "${asset_paths[@]}" | grep -Ei "$stable_ext" || true)
+    sw_diff=$(git diff --no-color HEAD^ HEAD -- sw.js || true)
+  fi
+
+  if [[ -z "$replaced" ]]; then
+    echo "[OK] asset immutabili: nessuna sostituzione in place"
+    return
+  fi
+
+  if printf '%s\n' "$sw_diff" | grep -q '^[+-]const ASSETS_CACHE_NAME'; then
+    echo "[OK] asset immutabili sostituiti in place, con bump di ASSETS_CACHE_NAME"
+  else
+    echo "[ERROR] asset immutabili sostituiti in place senza bump di ASSETS_CACHE_NAME in sw.js"
+    echo "$replaced"
+    status=1
+  fi
+}
+
+# Il senso delle cache stabili e' che sopravvivano al bump di versione. Derivarne
+# il nome da CACHE_NAME (come faceva REWARDS_CACHE_NAME fino alla 4.12.37) le
+# riporta a essere cancellate a ogni release, in silenzio.
+check_stable_cache_names_are_literal() {
+  if grep -qE "^const ASSETS_CACHE_NAME = '[a-z0-9-]+';$" sw.js \
+    && grep -qE "^const REWARDS_CACHE_NAME = '[a-z0-9-]+';$" sw.js; then
+    echo "[OK] sw.js: cache stabili con nomi letterali, indipendenti da APP_VERSION"
+  else
+    echo "[ERROR] sw.js: ASSETS_CACHE_NAME/REWARDS_CACHE_NAME non sono nomi letterali"
+    status=1
+  fi
+}
+
 check_pwa_root_only_contract
+check_stable_cache_names_are_literal
 check_pwa_cache_headers
 check_pwa_version_bump_for_precache_changes
+check_immutable_assets_not_replaced_in_place
 
 if node scripts/check_sw_precache.js; then
   echo "[OK] sw.js precache: tutti i path verificati esistono su disco"

@@ -21,7 +21,23 @@
 })();
 
 const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v1';
-const REWARDS_CACHE_NAME = `${CACHE_NAME}-rewards`;
+
+// Cache stabili: NON derivano da APP_VERSION, quindi activate non le tocca.
+// Font, icone, mascotte, immagini OG e premi non cambiano a ogni release:
+// legarle alla versione significava ri-scaricare ~2,8 MB di asset identici a
+// ogni patch, e cancellare i 3,9 MB di /premi che il bambino aveva gia'
+// sbloccato e visto offline.
+//
+// CONTRATTO: un file servito da queste cache e' immutabile per nome. Per
+// sostituirne uno o si cambia il nome del file, o si alza il suffisso qui
+// sotto (prepublish-check.sh lo verifica). Vale anche per gli header:
+// _headers marca /assets/*, /icons/* e /screenshots/* come immutable.
+//
+// I json/*.json restano nella cache versionata: sono contenuto che cambia con
+// le release, e servirli stale significherebbe nascondere domande corrette.
+const ASSETS_CACHE_NAME = 'lascuolaamica-assets-v1';
+const REWARDS_CACHE_NAME = 'lascuolaamica-rewards-v1';
+const KEEP_CACHE_NAMES = [CACHE_NAME, ASSETS_CACHE_NAME, REWARDS_CACHE_NAME];
 
 // Shell minima: se queste risorse non sono disponibili
 // l'installazione deve fallire (app non consistente).
@@ -148,6 +164,25 @@ const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|avif|ico|txt|xml|woff2?|ttf)$/i;
 const REWARD_ASSET_RE = /^\/assets\/reward\/.+\.(png|webp)$/i;
 
+// Estensioni immutabili per nome. css/js/json/txt/xml restano fuori: cambiano
+// con le release e devono seguire il bump di CACHE_NAME.
+const STABLE_ASSET_RE = /\.(woff2?|ttf|svg|png|jpe?g|webp|avif|ico)$/i;
+
+function cacheNameForPath(pathname) {
+  if (REWARD_ASSET_RE.test(pathname)) return REWARDS_CACHE_NAME;
+  return STABLE_ASSET_RE.test(pathname) ? ASSETS_CACHE_NAME : CACHE_NAME;
+}
+
+function groupUrlsByCache(urls) {
+  const groups = new Map();
+  for (const url of urls) {
+    const name = cacheNameForPath(new URL(url, self.location.origin).pathname);
+    if (!groups.has(name)) groups.set(name, []);
+    groups.get(name).push(url);
+  }
+  return Array.from(groups);
+}
+
 function isSameOriginStaticAsset(url) {
   if (url.origin !== self.location.origin) return false;
   if (PRECACHE_PATHS.has(url.pathname)) return true;
@@ -165,11 +200,17 @@ function canCacheResponse(response) {
 // ============================================================
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    await cache.addAll(CORE_PRECACHE_URLS);
+    await Promise.all(
+      groupUrlsByCache(CORE_PRECACHE_URLS).map(async ([name, urls]) => {
+        const cache = await caches.open(name);
+        await cache.addAll(urls);
+      })
+    );
     await Promise.all(
       OPTIONAL_PRECACHE_URLS.map(async (url) => {
         try {
+          const name = cacheNameForPath(new URL(url, self.location.origin).pathname);
+          const cache = await caches.open(name);
           await cache.add(url);
         } catch {
           // Non bloccare install per risorse non critiche mancanti.
@@ -187,7 +228,7 @@ self.addEventListener('activate', event => {
     caches.keys().then(keys =>
       Promise.all(
         keys
-          .filter(key => key !== CACHE_NAME && key !== REWARDS_CACHE_NAME)
+          .filter(key => !KEEP_CACHE_NAMES.includes(key))
           .map(key => caches.delete(key))
       )
     ).then(() => self.clients.claim())
@@ -227,9 +268,10 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Asset statici della stessa origine: Cache First.
+  // Asset statici della stessa origine: Cache First, nella cache che compete
+  // al tipo di file (versionata per css/js/json, stabile per font e immagini).
   if (isSameOriginStaticAsset(url)) {
-    event.respondWith(cacheFirst(request));
+    event.respondWith(cacheFirst(request, cacheNameForPath(url.pathname)));
   }
 });
 

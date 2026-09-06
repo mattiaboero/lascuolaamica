@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.38",
+  "items": [
+   "Le immagini dei premi già sbloccati non spariscono più a ogni aggiornamento del sito: restano disponibili anche senza connessione.",
+   "Dopo un aggiornamento l'app non riscarica più immagini e caratteri che non sono cambiati: si apre prima, e consuma meno dati."
+  ]
+ },
+ {
   "date": "5 settembre 2026 · Release 4.12.37",
   "items": [
    "Il livello \"Campione\" di inglese era bloccato per tutte le classi: nessuna domanda corrispondeva ai suoi filtri. Ora è giocabile con 96 domande.",
