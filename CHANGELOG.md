@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.12.72 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **10 problemi avevano dati fisicamente impossibili** — `Un aereo vola a 15 km/h`, `Una nave avanza a 114 km/h`. Il generatore ha abbinato numeri casuali a mezzi che hanno una velocità caratteristica. Ho cambiato **il mezzo, non il numero**, così risposta, opzioni e spiegazione restano valide: 15 e 26 km/h diventano una bicicletta e un ciclista, 183 e 200 un treno, le navi fra 69 e 114 km/h un'automobile.
+- fix(contenuti): due refusi ortografici — `terrazamento` (nella domanda e nella spiegazione, mentre la risposta scriveva correttamente `terrazzamenti`) e `oceaaniche` in un distrattore.
+- fix(contenuti): 7 spiegazioni finivano senza punteggiatura.
+- fix(contenuti): **6 domande di `geo-3-paesaggi_collina` avevano la risposta riconoscibile senza saperla**: era sistematicamente la più lunga, con distrattori brevi e assurdi (`Alberi di banane`, `Per creare piste da sci`). Riscritti i distrattori con la stessa lunghezza e un contenuto plausibile ma falso (`Banani coltivati dentro serre riscaldate`, `Per ricavare piste da sci larghe e regolari sui pendii`).
+
+### Changed
+- lint(contenuti): regola nuova per la spiegazione senza punteggiatura finale — una domanda può chiudersi con i puntini, una spiegazione è sempre un'affermazione compiuta.
+
+### Notes
+- due criteri di ricerca provati e **scartati perché non trovavano difetti**: le spiegazioni che non contengono nessuna parola della risposta (393 casi, ma sono parafrasi, e una parafrasi spiega meglio di una ripetizione) e le spiegazioni che sembrano negare la risposta (228, tutti falsi positivi perché la risposta stessa contiene `non`: `non condividerlo`).
+- restano **33 domande in 6 famiglie** dove la risposta è la più lunga di oltre il 50%. Non toccate: in molte la risposta è una definizione articolata e accorciarla la peggiorerebbe, e riscrivere i distrattori è redazione, non correzione. Le famiglie sono `ita-5-riflessione_sulla_li` (11/16), `sci-5-metodo_scientifico` (7/10), `geo-5-sviluppo_sostenibile`, `sci-3-ecosistemi`, `sci-3-ciclo_acqua`, `sci-3-lessico` (5 ciascuna).
+
 ## 4.12.71 - 2026-09-06
 
 **Il primo lotto che trova errori di matematica, non di lingua.** Le spiegazioni mostrano il calcolo passo per passo e finora nessuno lo verificava.

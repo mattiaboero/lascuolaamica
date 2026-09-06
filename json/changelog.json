@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.72",
+  "items": [
+   "Corrette 10 domande con dati impossibili: un aereo che volava a 15 km/h e navi più veloci di un'automobile.",
+   "Riequilibrate 6 domande di geografia in cui la risposta giusta era riconoscibile solo perché era la più lunga.",
+   "Corretti due refusi (\"terrazamento\", \"oceaaniche\") e 7 spiegazioni senza punto finale."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.71",
   "items": [
    "Corretti 28 calcoli sbagliati nelle spiegazioni dei problemi: sconti del 25% troncati, un resto sbagliato, e diciotto spiegazioni che descrivevano l'operazione sbagliata.",

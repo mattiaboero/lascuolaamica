@@ -209,6 +209,12 @@ const GRAMMATICA = [
   { pattern: /\bquando\s+(?:il|lo|la|i|gli|le|un|uno|una|l'|un')\s*[a-zà-ù]+(?:\s+(?:in|di|a|da|su)\s+[a-zà-ù]+)?\s*\?\s*$|\b(?:quando|come|si)\s*\?\s*$/,
     soloDomanda: true,
     msg: 'frase sospesa con "quando" o "come" usati da congiunzione: usare i puntini' },
+  // Dal lotto 16: spiegazione che finisce senza punteggiatura ("'ca-sa' è
+  // divisa bene"). Le domande possono chiudersi con i puntini o col punto
+  // interrogativo, ma una spiegazione e' sempre un'affermazione compiuta.
+  { pattern: /[a-zà-ù0-9]$/,
+    soloSpiegazione: true,
+    msg: 'spiegazione senza punteggiatura finale' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },

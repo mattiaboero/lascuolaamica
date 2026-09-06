@@ -3111,7 +3111,7 @@
    ],
    "answerIndex": 2,
    "answer": "M,R,G,T",
-   "explanation": "'M,R,G,T' sono tutte consonanti",
+   "explanation": "'M,R,G,T' sono tutte consonanti.",
    "active": true,
    "tag": "italiano; alfabeto; classe_2; primaria",
    "tags": [
@@ -3144,7 +3144,7 @@
    ],
    "answerIndex": 0,
    "answer": "penna",
-   "explanation": "'penna' ha due consonanti vicine: n, n",
+   "explanation": "'penna' ha due consonanti vicine: n, n.",
    "active": true,
    "tag": "italiano; alfabeto; classe_2; primaria",
    "tags": [
@@ -3177,7 +3177,7 @@
    ],
    "answerIndex": 2,
    "answer": "im-pa-ro",
-   "explanation": "'im-pa-ro' è divisa bene: m e p si separano sempre",
+   "explanation": "'im-pa-ro' è divisa bene: m e p si separano sempre.",
    "active": true,
    "tag": "italiano; divisione_in_sillabe; classe_2; primaria",
    "tags": [
@@ -3210,7 +3210,7 @@
    ],
    "answerIndex": 0,
    "answer": "ca-sa",
-   "explanation": "'ca-sa' è divisa bene",
+   "explanation": "'ca-sa' è divisa bene.",
    "active": true,
    "tag": "italiano; divisione_in_sillabe; classe_2; primaria",
    "tags": [
@@ -3243,7 +3243,7 @@
    ],
    "answerIndex": 3,
    "answer": "cesto",
-   "explanation": "'cesto' è la parola scritta bene",
+   "explanation": "'cesto' è la parola scritta bene.",
    "active": true,
    "tag": "italiano; suono_c; classe_2; primaria",
    "tags": [
@@ -3276,7 +3276,7 @@
    ],
    "answerIndex": 0,
    "answer": "ghiaccio",
-   "explanation": "gh- in 'ghiaccio' ha il suono g duro",
+   "explanation": "gh- in 'ghiaccio' ha il suono g duro.",
    "active": true,
    "tag": "italiano; suono_g; classe_2; primaria",
    "tags": [
@@ -3309,7 +3309,7 @@
    ],
    "answerIndex": 2,
    "answer": "ghiro",
-   "explanation": "gh- davanti alle vocali 'i' ed 'e' produce suono duro",
+   "explanation": "gh- davanti alle vocali 'i' ed 'e' produce suono duro.",
    "active": true,
    "tag": "italiano; suono_g; classe_2; primaria",
    "tags": [

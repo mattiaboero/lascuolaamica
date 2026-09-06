@@ -18484,7 +18484,7 @@
    "options": [
     "geografiche",
     "planetarie",
-    "oceaaniche",
+    "oceaniche",
     "astratte"
    ],
    "answerIndex": 0,
@@ -29967,10 +29967,10 @@
    "difficulty": 1,
    "question": "Quale coltura tipica si trova spesso sulle colline italiane?",
    "options": [
-    "Riso nelle risaie",
+    "Riso nelle risaie allagate della pianura",
     "Viti per la produzione di uva e vino",
-    "Alberi di banane",
-    "Campi di cotone"
+    "Banani coltivati dentro serre riscaldate",
+    "Cotone seminato nei terreni sabbiosi"
    ],
    "answerIndex": 1,
    "answer": "Viti per la produzione di uva e vino",
@@ -29999,10 +29999,10 @@
    "difficulty": 1,
    "question": "In quale tipo di paesaggio si coltivano spesso gli ulivi?",
    "options": [
-    "Nelle pianure del Nord Italia",
+    "Nelle pianure nebbiose del Nord, lungo il corso del Po",
     "Nelle colline del Centro-Sud e sulle coste del Mediterraneo",
-    "Sui ghiacciai alpini",
-    "Nelle paludi"
+    "Sui pendii innevati dei ghiacciai alpini oltre i 2000 metri",
+    "Nelle zone paludose vicino alle foci dei fiumi"
    ],
    "answerIndex": 1,
    "answer": "Nelle colline del Centro-Sud e sulle coste del Mediterraneo",
@@ -30029,16 +30029,16 @@
    "area": "paesaggi_terra",
    "subarea": "collina",
    "difficulty": 2,
-   "question": "Perché sulle colline si pratica spesso il terrazamento?",
+   "question": "Perché sulle colline si pratica spesso il terrazzamento?",
    "options": [
-    "Per creare piste da sci",
+    "Per ricavare piste da sci larghe e regolari sui pendii",
     "Per sfruttare i pendii coltivando con terrazzamenti orizzontali che evitano l'erosione",
     "Per raccogliere l'acqua piovana in grandi vasche",
-    "Per costruire gallerie stradali"
+    "Per scavare gallerie stradali che attraversano la collina"
    ],
    "answerIndex": 1,
    "answer": "Per sfruttare i pendii coltivando con terrazzamenti orizzontali che evitano l'erosione",
-   "explanation": "Il terrazamento consiste nel costruire gradoni orizzontali lungo i pendii collinari. Questo permette di coltivare su terreni in pendenza e impedisce all'acqua di portare via il terreno fertile (erosione).",
+   "explanation": "Il terrazzamento consiste nel costruire gradoni orizzontali lungo i pendii collinari. Questo permette di coltivare su terreni in pendenza e impedisce all'acqua di portare via il terreno fertile (erosione).",
    "active": true,
    "tag": "geografia;paesaggi_collina;classe_3;primaria",
    "tags": [
@@ -30769,7 +30769,7 @@
    "options": [
     "Perché in pianura il terreno era troppo fertile per costruire",
     "Perché in collina si aveva una visuale ampia per vedere eventuali nemici in arrivo, quindi era più facile difendersi",
-    "Perché le colline erano più vicine al mare",
+    "Perché le colline erano più vicine al mare e ai porti commerciali",
     "Perché le leggi medievali obbligavano a costruire in collina"
    ],
    "answerIndex": 1,
@@ -30863,10 +30863,10 @@
    "difficulty": 2,
    "question": "Gli Appennini attraversano l'Italia da Nord a Sud come una 'spina dorsale'. Da quale regione partono fino a dove arrivano?",
    "options": [
-    "Dalla Calabria fino alla Valle d'Aosta",
+    "Dalla Calabria fino alla Valle d'Aosta, lungo il confine francese",
     "Dalla Liguria e dal Piemonte fino alla Calabria e alla Sicilia",
-    "Dal Trentino fino alla Puglia",
-    "Dalla Toscana fino alla Sardegna"
+    "Dal Trentino fino alla Puglia, seguendo tutta la costa adriatica",
+    "Dalla Toscana fino alla Sardegna, passando sotto il mare"
    ],
    "answerIndex": 1,
    "answer": "Dalla Liguria e dal Piemonte fino alla Calabria e alla Sicilia",
@@ -30897,8 +30897,8 @@
    "options": [
     "Le colline toscane hanno ghiacciai più grandi delle Alpi",
     "Le colline toscane sono più arrotondate, con pendii dolci e coperti di vigneti e cipressi, senza ghiacciai",
-    "Le colline toscane sono più alte delle Alpi",
-    "Le colline toscane sono sempre vicine al mare"
+    "Le colline toscane superano in altezza le cime più alte delle Alpi",
+    "Le colline toscane si affacciano sempre direttamente sul mare"
    ],
    "answerIndex": 1,
    "answer": "Le colline toscane sono più arrotondate, con pendii dolci e coperti di vigneti e cipressi, senza ghiacciai",

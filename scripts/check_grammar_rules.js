@@ -44,6 +44,7 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  "'ca-sa' è divisa bene",
   "L'ombra si forma quando un corpo?",
   'I Fenici erano famosi soprattutto come?',
   'Il soggetto è "Fatima\' e il predicato è \'ha comprato".',
@@ -63,6 +64,8 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "'ca-sa' è divisa bene.",
+  'Un ciclista viaggia a 26 km/h. In 18 ore quanti km percorre?',
   'Quale materiale è duro come un chiodo?',
   'Cosa succede agli animali come il riccio in inverno?',
   'Fino a dove arriva la libertà di una persona?',
