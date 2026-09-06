@@ -33164,7 +33164,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 14 cm, lati 8 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 14 cm, lati 8 cm. Qual è il perimetro?",
    "options": [
     "27",
     "30",
@@ -33196,7 +33196,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 5 cm, lati 12 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 5 cm, lati 12 cm. Qual è il perimetro?",
    "options": [
     "27",
     "29",
@@ -33324,7 +33324,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 11 cm, lati 2 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 11 cm, lati 2 cm. Qual è il perimetro?",
    "options": [
     "14",
     "15",
@@ -33356,7 +33356,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 6 cm, lati 5 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 6 cm, lati 5 cm. Qual è il perimetro?",
    "options": [
     "15",
     "16",
@@ -33388,7 +33388,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 15 cm, lati 11 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 15 cm, lati 11 cm. Qual è il perimetro?",
    "options": [
     "35",
     "37",
@@ -33516,7 +33516,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo isoscele: base 3 cm, lati 2 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 3 cm, lati 2 cm. Qual è il perimetro?",
    "options": [
     "4",
     "7",
@@ -33612,7 +33612,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 9 cm, lati 5 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 9 cm, lati 5 cm. Qual è il perimetro?",
    "options": [
     "17",
     "19",
@@ -33676,7 +33676,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 12 cm, lati 9 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 12 cm, lati 9 cm. Qual è il perimetro?",
    "options": [
     "28",
     "29",
@@ -33708,7 +33708,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 7 cm, lati 3 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 7 cm, lati 3 cm. Qual è il perimetro?",
    "options": [
     "11",
     "13",
@@ -33804,7 +33804,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 7 cm, lati 10 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 7 cm, lati 10 cm. Qual è il perimetro?",
    "options": [
     "27",
     "24",
@@ -33932,7 +33932,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo isoscele: base 3 cm, lati 3 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 3 cm, lati 3 cm. Qual è il perimetro?",
    "options": [
     "7",
     "6",
@@ -34124,7 +34124,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 4 cm, lati 12 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 4 cm, lati 12 cm. Qual è il perimetro?",
    "options": [
     "26",
     "27",
@@ -34220,7 +34220,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 13 cm, lati 11 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 13 cm, lati 11 cm. Qual è il perimetro?",
    "options": [
     "33",
     "34",
@@ -34316,7 +34316,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 4 cm, lati 10 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 4 cm, lati 10 cm. Qual è il perimetro?",
    "options": [
     "21",
     "22",
@@ -34348,7 +34348,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 14 cm, lati 10 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 14 cm, lati 10 cm. Qual è il perimetro?",
    "options": [
     "34",
     "32",
@@ -34412,7 +34412,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 11 cm, lati 8 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 11 cm, lati 8 cm. Qual è il perimetro?",
    "options": [
     "26",
     "24",
@@ -34444,7 +34444,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 4 cm, lati 4 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 4 cm, lati 4 cm. Qual è il perimetro?",
    "options": [
     "10",
     "12",
@@ -34540,7 +34540,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 9 cm, lati 3 cm. Perimetro?",
+   "question": "Triangolo isoscele: base 9 cm, lati 3 cm. Qual è il perimetro?",
    "options": [
     "14",
     "15",
@@ -34956,7 +34956,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 12 cm, 11 cm, 14 cm. Perimetro?",
+   "question": "Triangolo con lati 12 cm, 11 cm, 14 cm. Qual è il perimetro?",
    "options": [
     "35",
     "37",
@@ -34988,7 +34988,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 5 cm, 10 cm, 10 cm. Perimetro?",
+   "question": "Triangolo con lati 5 cm, 10 cm, 10 cm. Qual è il perimetro?",
    "options": [
     "24",
     "23",
@@ -35020,7 +35020,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 15 cm. Perimetro?",
+   "question": "Quadrato: lato 15 cm. Qual è il perimetro?",
    "options": [
     "59",
     "60",
@@ -35052,7 +35052,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 20 cm, altezza 7 cm. Area?",
+   "question": "Triangolo: base 20 cm, altezza 7 cm. Qual è l'area?",
    "options": [
     "68",
     "69",
@@ -35084,7 +35084,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 16 cm e 7 cm. Perimetro?",
+   "question": "Rettangolo: lati 16 cm e 7 cm. Qual è il perimetro?",
    "options": [
     "46",
     "44",
@@ -35116,7 +35116,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 4 cm. Perimetro?",
+   "question": "Quadrato: lato 4 cm. Qual è il perimetro?",
    "options": [
     "14",
     "13",
@@ -35148,7 +35148,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 14 cm. Perimetro?",
+   "question": "Quadrato: lato 14 cm. Qual è il perimetro?",
    "options": [
     "53",
     "54",
@@ -35180,7 +35180,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 3 cm e 15 cm. Perimetro?",
+   "question": "Rettangolo: lati 3 cm e 15 cm. Qual è il perimetro?",
    "options": [
     "35",
     "36",
@@ -35212,7 +35212,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 7 cm, altezza 2 cm. Area?",
+   "question": "Triangolo: base 7 cm, altezza 2 cm. Qual è l'area?",
    "options": [
     "4",
     "6",
@@ -35244,7 +35244,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 13 cm. Area?",
+   "question": "Quadrato: lato 13 cm. Qual è l'area?",
    "options": [
     "167",
     "168",
@@ -35276,7 +35276,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 7 cm, 14 cm, 3 cm. Perimetro?",
+   "question": "Triangolo con lati 7 cm, 14 cm, 3 cm. Qual è il perimetro?",
    "options": [
     "23",
     "21",
@@ -35308,7 +35308,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: base 11 cm, altezza 3 cm. Area?",
+   "question": "Rettangolo: base 11 cm, altezza 3 cm. Qual è l'area?",
    "options": [
     "32",
     "31",
@@ -35340,7 +35340,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: base 17 cm, altezza 3 cm. Area?",
+   "question": "Rettangolo: base 17 cm, altezza 3 cm. Qual è l'area?",
    "options": [
     "48",
     "50",
@@ -35372,7 +35372,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 7 cm, altezza 17 cm. Area?",
+   "question": "Rettangolo: base 7 cm, altezza 17 cm. Qual è l'area?",
    "options": [
     "116",
     "119",
@@ -35404,7 +35404,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 19 cm e 16 cm. Perimetro?",
+   "question": "Rettangolo: lati 19 cm e 16 cm. Qual è il perimetro?",
    "options": [
     "67",
     "68",
@@ -35436,7 +35436,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 16 cm, altezza 11 cm. Area?",
+   "question": "Triangolo: base 16 cm, altezza 11 cm. Qual è l'area?",
    "options": [
     "86",
     "88",
@@ -35468,7 +35468,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 11 cm. Area?",
+   "question": "Quadrato: lato 11 cm. Qual è l'area?",
    "options": [
     "120",
     "118",
@@ -35500,7 +35500,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 13 cm, altezza 16 cm. Area?",
+   "question": "Rettangolo: base 13 cm, altezza 16 cm. Qual è l'area?",
    "options": [
     "205",
     "208",
@@ -35532,7 +35532,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Quadrato: lato 7 cm. Area?",
+   "question": "Quadrato: lato 7 cm. Qual è l'area?",
    "options": [
     "48",
     "47",
@@ -35564,7 +35564,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: base 4 cm, altezza 20 cm. Area?",
+   "question": "Rettangolo: base 4 cm, altezza 20 cm. Qual è l'area?",
    "options": [
     "78",
     "79",
@@ -35596,7 +35596,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 5 cm, altezza 14 cm. Area?",
+   "question": "Triangolo: base 5 cm, altezza 14 cm. Qual è l'area?",
    "options": [
     "32",
     "34",
@@ -35628,7 +35628,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 12 cm. Area?",
+   "question": "Quadrato: lato 12 cm. Qual è l'area?",
    "options": [
     "141",
     "143",
@@ -35660,7 +35660,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 19 cm. Perimetro?",
+   "question": "Quadrato: lato 19 cm. Qual è il perimetro?",
    "options": [
     "74",
     "76",
@@ -35692,7 +35692,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 3 cm. Perimetro?",
+   "question": "Quadrato: lato 3 cm. Qual è il perimetro?",
    "options": [
     "9",
     "11",
@@ -35724,7 +35724,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 14 cm e 3 cm. Perimetro?",
+   "question": "Rettangolo: lati 14 cm e 3 cm. Qual è il perimetro?",
    "options": [
     "33",
     "34",
@@ -35756,7 +35756,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 10 cm, 12 cm, 4 cm. Perimetro?",
+   "question": "Triangolo con lati 10 cm, 12 cm, 4 cm. Qual è il perimetro?",
    "options": [
     "26",
     "23",
@@ -35788,7 +35788,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 18 cm. Perimetro?",
+   "question": "Quadrato: lato 18 cm. Qual è il perimetro?",
    "options": [
     "69",
     "71",
@@ -35820,7 +35820,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 14 cm, altezza 14 cm. Area?",
+   "question": "Rettangolo: base 14 cm, altezza 14 cm. Qual è l'area?",
    "options": [
     "195",
     "193",
@@ -35852,7 +35852,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 4 cm, 14 cm, 12 cm. Perimetro?",
+   "question": "Triangolo con lati 4 cm, 14 cm, 12 cm. Qual è il perimetro?",
    "options": [
     "30",
     "29",
@@ -35884,7 +35884,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 13 cm, altezza 4 cm. Area?",
+   "question": "Triangolo: base 13 cm, altezza 4 cm. Qual è l'area?",
    "options": [
     "25",
     "26",
@@ -35916,7 +35916,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 17 cm. Area?",
+   "question": "Quadrato: lato 17 cm. Qual è l'area?",
    "options": [
     "286",
     "289",
@@ -35948,7 +35948,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 16 cm, altezza 14 cm. Area?",
+   "question": "Rettangolo: base 16 cm, altezza 14 cm. Qual è l'area?",
    "options": [
     "223",
     "222",
@@ -35980,7 +35980,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 13 cm, 4 cm, 11 cm. Perimetro?",
+   "question": "Triangolo con lati 13 cm, 4 cm, 11 cm. Qual è il perimetro?",
    "options": [
     "25",
     "28",
@@ -36012,7 +36012,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 16 cm, altezza 17 cm. Area?",
+   "question": "Rettangolo: base 16 cm, altezza 17 cm. Qual è l'area?",
    "options": [
     "272",
     "271",
@@ -36044,7 +36044,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 5 cm, altezza 2 cm. Area?",
+   "question": "Triangolo: base 5 cm, altezza 2 cm. Qual è l'area?",
    "options": [
     "5",
     "3",
@@ -36076,7 +36076,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 16 cm e 4 cm. Perimetro?",
+   "question": "Rettangolo: lati 16 cm e 4 cm. Qual è il perimetro?",
    "options": [
     "38",
     "40",
@@ -36108,7 +36108,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 18 cm, altezza 19 cm. Area?",
+   "question": "Rettangolo: base 18 cm, altezza 19 cm. Qual è l'area?",
    "options": [
     "342",
     "341",
@@ -36140,7 +36140,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 8 cm. Area?",
+   "question": "Quadrato: lato 8 cm. Qual è l'area?",
    "options": [
     "63",
     "62",
@@ -36172,7 +36172,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 10 cm. Area?",
+   "question": "Quadrato: lato 10 cm. Qual è l'area?",
    "options": [
     "100",
     "99",
@@ -36204,7 +36204,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: base 2 cm, altezza 20 cm. Area?",
+   "question": "Rettangolo: base 2 cm, altezza 20 cm. Qual è l'area?",
    "options": [
     "37",
     "39",
@@ -36236,7 +36236,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 20 cm. Perimetro?",
+   "question": "Quadrato: lato 20 cm. Qual è il perimetro?",
    "options": [
     "80",
     "77",
@@ -36268,7 +36268,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 19 cm, altezza 6 cm. Area?",
+   "question": "Rettangolo: base 19 cm, altezza 6 cm. Qual è l'area?",
    "options": [
     "113",
     "111",
@@ -36300,7 +36300,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 7 cm, 13 cm, 6 cm. Perimetro?",
+   "question": "Triangolo con lati 7 cm, 13 cm, 6 cm. Qual è il perimetro?",
    "options": [
     "24",
     "23",
@@ -36332,7 +36332,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 4 cm e 2 cm. Perimetro?",
+   "question": "Rettangolo: lati 4 cm e 2 cm. Qual è il perimetro?",
    "options": [
     "12",
     "11",
@@ -36364,7 +36364,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 12 cm, altezza 4 cm. Area?",
+   "question": "Triangolo: base 12 cm, altezza 4 cm. Qual è l'area?",
    "options": [
     "24",
     "21",
@@ -36396,7 +36396,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 8 cm, altezza 6 cm. Area?",
+   "question": "Triangolo: base 8 cm, altezza 6 cm. Qual è l'area?",
    "options": [
     "21",
     "22",
@@ -36428,7 +36428,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: base 6 cm, altezza 3 cm. Area?",
+   "question": "Rettangolo: base 6 cm, altezza 3 cm. Qual è l'area?",
    "options": [
     "17",
     "15",
@@ -36460,7 +36460,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 7 cm, altezza 10 cm. Area?",
+   "question": "Triangolo: base 7 cm, altezza 10 cm. Qual è l'area?",
    "options": [
     "34",
     "35",
@@ -36492,7 +36492,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 10 cm, altezza 19 cm. Area?",
+   "question": "Rettangolo: base 10 cm, altezza 19 cm. Qual è l'area?",
    "options": [
     "190",
     "187",
@@ -36524,7 +36524,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 11 cm. Perimetro?",
+   "question": "Quadrato: lato 11 cm. Qual è il perimetro?",
    "options": [
     "42",
     "41",
@@ -36556,7 +36556,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 19 cm, altezza 8 cm. Area?",
+   "question": "Triangolo: base 19 cm, altezza 8 cm. Qual è l'area?",
    "options": [
     "75",
     "76",
@@ -36588,7 +36588,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 2 cm e 4 cm. Perimetro?",
+   "question": "Rettangolo: lati 2 cm e 4 cm. Qual è il perimetro?",
    "options": [
     "10",
     "12",
@@ -36620,7 +36620,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 4 cm, altezza 7 cm. Area?",
+   "question": "Triangolo: base 4 cm, altezza 7 cm. Qual è l'area?",
    "options": [
     "14",
     "11",
@@ -36652,7 +36652,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 4 cm e 11 cm. Perimetro?",
+   "question": "Rettangolo: lati 4 cm e 11 cm. Qual è il perimetro?",
    "options": [
     "28",
     "30",
@@ -36684,7 +36684,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 10 cm. Perimetro?",
+   "question": "Quadrato: lato 10 cm. Qual è il perimetro?",
    "options": [
     "37",
     "40",
@@ -36716,7 +36716,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 14 cm e 5 cm. Perimetro?",
+   "question": "Rettangolo: lati 14 cm e 5 cm. Qual è il perimetro?",
    "options": [
     "36",
     "38",
@@ -36748,7 +36748,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 9 cm, altezza 4 cm. Area?",
+   "question": "Triangolo: base 9 cm, altezza 4 cm. Qual è l'area?",
    "options": [
     "17",
     "18",
@@ -36780,7 +36780,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 15 cm. Area?",
+   "question": "Quadrato: lato 15 cm. Qual è l'area?",
    "options": [
     "224",
     "222",
@@ -36812,7 +36812,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 11 cm e 13 cm. Perimetro?",
+   "question": "Rettangolo: lati 11 cm e 13 cm. Qual è il perimetro?",
    "options": [
     "48",
     "46",
@@ -36844,7 +36844,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 6 cm. Perimetro?",
+   "question": "Quadrato: lato 6 cm. Qual è il perimetro?",
    "options": [
     "23",
     "21",
@@ -36876,7 +36876,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 5 cm. Area?",
+   "question": "Quadrato: lato 5 cm. Qual è l'area?",
    "options": [
     "24",
     "23",
@@ -36908,7 +36908,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 11 cm, altezza 6 cm. Area?",
+   "question": "Triangolo: base 11 cm, altezza 6 cm. Qual è l'area?",
    "options": [
     "30",
     "32",
@@ -36940,7 +36940,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 12 cm, altezza 9 cm. Area?",
+   "question": "Triangolo: base 12 cm, altezza 9 cm. Qual è l'area?",
    "options": [
     "51",
     "53",
@@ -36972,7 +36972,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 11 cm, 6 cm, 5 cm. Perimetro?",
+   "question": "Triangolo con lati 11 cm, 6 cm, 5 cm. Qual è il perimetro?",
    "options": [
     "21",
     "20",
@@ -37004,7 +37004,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 3 cm e 3 cm. Perimetro?",
+   "question": "Rettangolo: lati 3 cm e 3 cm. Qual è il perimetro?",
    "options": [
     "9",
     "12",
@@ -37036,7 +37036,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Quadrato: lato 19 cm. Area?",
+   "question": "Quadrato: lato 19 cm. Qual è l'area?",
    "options": [
     "361",
     "360",
@@ -37068,7 +37068,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 2 cm e 10 cm. Perimetro?",
+   "question": "Rettangolo: lati 2 cm e 10 cm. Qual è il perimetro?",
    "options": [
     "22",
     "21",
@@ -37100,7 +37100,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 17 cm e 4 cm. Perimetro?",
+   "question": "Rettangolo: lati 17 cm e 4 cm. Qual è il perimetro?",
    "options": [
     "39",
     "42",
@@ -37132,7 +37132,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 7 cm. Perimetro?",
+   "question": "Quadrato: lato 7 cm. Qual è il perimetro?",
    "options": [
     "26",
     "27",
@@ -37164,7 +37164,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 10 cm, 10 cm, 4 cm. Perimetro?",
+   "question": "Triangolo con lati 10 cm, 10 cm, 4 cm. Qual è il perimetro?",
    "options": [
     "21",
     "22",
@@ -37196,7 +37196,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Quadrato: lato 8 cm. Perimetro?",
+   "question": "Quadrato: lato 8 cm. Qual è il perimetro?",
    "options": [
     "30",
     "32",
@@ -37228,7 +37228,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 15 cm, 14 cm, 6 cm. Perimetro?",
+   "question": "Triangolo con lati 15 cm, 14 cm, 6 cm. Qual è il perimetro?",
    "options": [
     "35",
     "32",
@@ -37260,7 +37260,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 20 cm e 20 cm. Perimetro?",
+   "question": "Rettangolo: lati 20 cm e 20 cm. Qual è il perimetro?",
    "options": [
     "79",
     "80",
@@ -37292,7 +37292,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Triangolo: base 11 cm, altezza 14 cm. Area?",
+   "question": "Triangolo: base 11 cm, altezza 14 cm. Qual è l'area?",
    "options": [
     "76",
     "77",
@@ -37324,7 +37324,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 6 cm, 4 cm, 10 cm. Perimetro?",
+   "question": "Triangolo con lati 6 cm, 4 cm, 10 cm. Qual è il perimetro?",
    "options": [
     "19",
     "17",
@@ -37356,7 +37356,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 18 cm e 11 cm. Perimetro?",
+   "question": "Rettangolo: lati 18 cm e 11 cm. Qual è il perimetro?",
    "options": [
     "56",
     "55",
@@ -37388,7 +37388,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 13 cm e 2 cm. Perimetro?",
+   "question": "Rettangolo: lati 13 cm e 2 cm. Qual è il perimetro?",
    "options": [
     "30",
     "29",
@@ -37420,7 +37420,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 20 cm, altezza 15 cm. Area?",
+   "question": "Rettangolo: base 20 cm, altezza 15 cm. Qual è l'area?",
    "options": [
     "299",
     "297",
@@ -37452,7 +37452,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 14 cm, altezza 10 cm. Area?",
+   "question": "Rettangolo: base 14 cm, altezza 10 cm. Qual è l'area?",
    "options": [
     "139",
     "137",
@@ -37868,7 +37868,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Parallelepipedo: 4cm × 4cm × 5cm. Volume?",
+   "question": "Parallelepipedo: 4cm × 4cm × 5cm. Qual è il volume?",
    "options": [
     "79",
     "78",
@@ -37900,7 +37900,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 7 cm, altezza 20 cm. Area?",
+   "question": "Triangolo: base 7 cm, altezza 20 cm. Qual è l'area?",
    "options": [
     "67",
     "70",
@@ -37932,7 +37932,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 5 cm, altezza 8 cm. Area?",
+   "question": "Triangolo: base 5 cm, altezza 8 cm. Qual è l'area?",
    "options": [
     "20",
     "17",
@@ -37964,7 +37964,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 8cm × 8cm × 8cm. Volume?",
+   "question": "Parallelepipedo: 8cm × 8cm × 8cm. Qual è il volume?",
    "options": [
     "510",
     "511",
@@ -37996,7 +37996,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 17 cm, altezza 10 cm. Area?",
+   "question": "Triangolo: base 17 cm, altezza 10 cm. Qual è l'area?",
    "options": [
     "84",
     "85",
@@ -38028,7 +38028,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 9 cm e 8 cm. Area?",
+   "question": "Rombo con diagonali 9 cm e 8 cm. Qual è l'area?",
    "options": [
     "35",
     "36",
@@ -38060,7 +38060,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 24 cm, altezza 5 cm. Area?",
+   "question": "Rettangolo: base 24 cm, altezza 5 cm. Qual è l'area?",
    "options": [
     "119",
     "118",
@@ -38092,7 +38092,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=12cm, bm=6cm, h=7cm. Area?",
+   "question": "Trapezio: bM=12cm, bm=6cm, h=7cm. Qual è l'area?",
    "options": [
     "60",
     "63",
@@ -38124,7 +38124,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Parallelepipedo: 4cm × 7cm × 2cm. Volume?",
+   "question": "Parallelepipedo: 4cm × 7cm × 2cm. Qual è il volume?",
    "options": [
     "56",
     "53",
@@ -38156,7 +38156,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 19 cm, altezza 15 cm. Area?",
+   "question": "Rettangolo: base 19 cm, altezza 15 cm. Qual è l'area?",
    "options": [
     "285",
     "284",
@@ -38188,7 +38188,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Cubo con lato 8 cm. Volume?",
+   "question": "Cubo con lato 8 cm. Qual è il volume?",
    "options": [
     "511",
     "512",
@@ -38220,7 +38220,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 19 cm, altezza 25 cm. Area?",
+   "question": "Rettangolo: base 19 cm, altezza 25 cm. Qual è l'area?",
    "options": [
     "472",
     "473",
@@ -38252,7 +38252,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Cubo con lato 3 cm. Volume?",
+   "question": "Cubo con lato 3 cm. Qual è il volume?",
    "options": [
     "27",
     "25",
@@ -38284,7 +38284,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=7cm, bm=5cm, h=12cm. Area?",
+   "question": "Trapezio: bM=7cm, bm=5cm, h=12cm. Qual è l'area?",
    "options": [
     "72",
     "69",
@@ -38316,7 +38316,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 10 cm, altezza 12 cm. Area?",
+   "question": "Triangolo: base 10 cm, altezza 12 cm. Qual è l'area?",
    "options": [
     "59",
     "58",
@@ -38348,7 +38348,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Cubo con lato 10 cm. Volume?",
+   "question": "Cubo con lato 10 cm. Qual è il volume?",
    "options": [
     "997",
     "1000",
@@ -38380,7 +38380,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Cubo con lato 6 cm. Volume?",
+   "question": "Cubo con lato 6 cm. Qual è il volume?",
    "options": [
     "213",
     "214",
@@ -38412,7 +38412,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 10cm × 7cm × 5cm. Volume?",
+   "question": "Parallelepipedo: 10cm × 7cm × 5cm. Qual è il volume?",
    "options": [
     "349",
     "350",
@@ -38444,7 +38444,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 27 cm, altezza 6 cm. Area?",
+   "question": "Triangolo: base 27 cm, altezza 6 cm. Qual è l'area?",
    "options": [
     "81",
     "79",
@@ -38476,7 +38476,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 21 cm, altezza 17 cm. Area?",
+   "question": "Rettangolo: base 21 cm, altezza 17 cm. Qual è l'area?",
    "options": [
     "357",
     "355",
@@ -38508,7 +38508,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 26 cm, altezza 29 cm. Area?",
+   "question": "Rettangolo: base 26 cm, altezza 29 cm. Qual è l'area?",
    "options": [
     "752",
     "754",
@@ -38540,7 +38540,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rettangolo: base 8 cm, altezza 7 cm. Area?",
+   "question": "Rettangolo: base 8 cm, altezza 7 cm. Qual è l'area?",
    "options": [
     "55",
     "53",
@@ -38572,7 +38572,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 20 cm e 6 cm. Area?",
+   "question": "Rombo con diagonali 20 cm e 6 cm. Qual è l'area?",
    "options": [
     "58",
     "59",
@@ -38604,7 +38604,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 13 cm e 18 cm. Area?",
+   "question": "Rombo con diagonali 13 cm e 18 cm. Qual è l'area?",
    "options": [
     "116",
     "117",
@@ -38636,7 +38636,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 9cm × 6cm × 4cm. Volume?",
+   "question": "Parallelepipedo: 9cm × 6cm × 4cm. Qual è il volume?",
    "options": [
     "216",
     "213",
@@ -38668,7 +38668,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 16 cm, altezza 23 cm. Area?",
+   "question": "Rettangolo: base 16 cm, altezza 23 cm. Qual è l'area?",
    "options": [
     "367",
     "368",
@@ -38700,7 +38700,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 11 cm e 10 cm. Area?",
+   "question": "Rombo con diagonali 11 cm e 10 cm. Qual è l'area?",
    "options": [
     "54",
     "55",
@@ -38732,7 +38732,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo: base 25 cm, altezza 20 cm. Area?",
+   "question": "Triangolo: base 25 cm, altezza 20 cm. Qual è l'area?",
    "options": [
     "247",
     "249",
@@ -38764,7 +38764,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rettangolo: base 6 cm, altezza 5 cm. Area?",
+   "question": "Rettangolo: base 6 cm, altezza 5 cm. Qual è l'area?",
    "options": [
     "30",
     "27",
@@ -38796,7 +38796,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 10 cm e 3 cm. Area?",
+   "question": "Rombo con diagonali 10 cm e 3 cm. Qual è l'area?",
    "options": [
     "12",
     "14",
@@ -38828,7 +38828,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=6cm, bm=4cm, h=11cm. Area?",
+   "question": "Trapezio: bM=6cm, bm=4cm, h=11cm. Qual è l'area?",
    "options": [
     "55",
     "53",
@@ -38860,7 +38860,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Cubo con lato 5 cm. Volume?",
+   "question": "Cubo con lato 5 cm. Qual è il volume?",
    "options": [
     "122",
     "123",
@@ -38892,7 +38892,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 4 cm e 20 cm. Area?",
+   "question": "Rombo con diagonali 4 cm e 20 cm. Qual è l'area?",
    "options": [
     "40",
     "38",
@@ -38924,7 +38924,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Trapezio: bM=18cm, bm=13cm, h=12cm. Area?",
+   "question": "Trapezio: bM=18cm, bm=13cm, h=12cm. Qual è l'area?",
    "options": [
     "183",
     "186",
@@ -38956,7 +38956,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 14 cm, altezza 23 cm. Area?",
+   "question": "Rettangolo: base 14 cm, altezza 23 cm. Qual è l'area?",
    "options": [
     "319",
     "322",
@@ -38988,7 +38988,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=14cm, bm=5cm, h=9cm. Area?",
+   "question": "Trapezio: bM=14cm, bm=5cm, h=9cm. Qual è l'area?",
    "options": [
     "83",
     "85",
@@ -39020,7 +39020,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 11 cm e 4 cm. Area?",
+   "question": "Rombo con diagonali 11 cm e 4 cm. Qual è l'area?",
    "options": [
     "21",
     "22",
@@ -39052,7 +39052,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Cubo con lato 4 cm. Volume?",
+   "question": "Cubo con lato 4 cm. Qual è il volume?",
    "options": [
     "61",
     "64",
@@ -39084,7 +39084,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 23 cm, altezza 15 cm. Area?",
+   "question": "Rettangolo: base 23 cm, altezza 15 cm. Qual è l'area?",
    "options": [
     "343",
     "345",
@@ -39116,7 +39116,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 10 cm e 6 cm. Area?",
+   "question": "Rombo con diagonali 10 cm e 6 cm. Qual è l'area?",
    "options": [
     "27",
     "30",
@@ -39148,7 +39148,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=11cm, bm=6cm, h=9cm. Area?",
+   "question": "Trapezio: bM=11cm, bm=6cm, h=9cm. Qual è l'area?",
    "options": [
     "73",
     "74",
@@ -39180,7 +39180,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 11 cm, altezza 21 cm. Area?",
+   "question": "Rettangolo: base 11 cm, altezza 21 cm. Qual è l'area?",
    "options": [
     "230",
     "231",
@@ -39212,7 +39212,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Parallelepipedo: 2cm × 8cm × 3cm. Volume?",
+   "question": "Parallelepipedo: 2cm × 8cm × 3cm. Qual è il volume?",
    "options": [
     "47",
     "45",
@@ -39244,7 +39244,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 8cm × 4cm × 9cm. Volume?",
+   "question": "Parallelepipedo: 8cm × 4cm × 9cm. Qual è il volume?",
    "options": [
     "288",
     "286",
@@ -39276,7 +39276,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 3cm × 5cm × 8cm. Volume?",
+   "question": "Parallelepipedo: 3cm × 5cm × 8cm. Qual è il volume?",
    "options": [
     "120",
     "119",
@@ -39308,7 +39308,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Cubo con lato 2 cm. Volume?",
+   "question": "Cubo con lato 2 cm. Qual è il volume?",
    "options": [
     "7",
     "6",
@@ -39340,7 +39340,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 25 cm, altezza 21 cm. Area?",
+   "question": "Rettangolo: base 25 cm, altezza 21 cm. Qual è l'area?",
    "options": [
     "522",
     "525",
@@ -39372,7 +39372,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 19 cm, altezza 10 cm. Area?",
+   "question": "Triangolo: base 19 cm, altezza 10 cm. Qual è l'area?",
    "options": [
     "93",
     "92",
@@ -39404,7 +39404,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 28 cm, altezza 5 cm. Area?",
+   "question": "Triangolo: base 28 cm, altezza 5 cm. Qual è l'area?",
    "options": [
     "67",
     "69",
@@ -39436,7 +39436,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 9 cm e 20 cm. Area?",
+   "question": "Rombo con diagonali 9 cm e 20 cm. Qual è l'area?",
    "options": [
     "89",
     "90",
@@ -39468,7 +39468,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 2 cm e 12 cm. Area?",
+   "question": "Rombo con diagonali 2 cm e 12 cm. Qual è l'area?",
    "options": [
     "11",
     "9",
@@ -39500,7 +39500,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 24 cm, altezza 8 cm. Area?",
+   "question": "Rettangolo: base 24 cm, altezza 8 cm. Qual è l'area?",
    "options": [
     "190",
     "192",
@@ -39532,7 +39532,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 19 cm, altezza 27 cm. Area?",
+   "question": "Rettangolo: base 19 cm, altezza 27 cm. Qual è l'area?",
    "options": [
     "513",
     "512",
@@ -39564,7 +39564,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo: base 30 cm, altezza 7 cm. Area?",
+   "question": "Triangolo: base 30 cm, altezza 7 cm. Qual è l'area?",
    "options": [
     "104",
     "102",
@@ -39596,7 +39596,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Parallelepipedo: 5cm × 3cm × 6cm. Volume?",
+   "question": "Parallelepipedo: 5cm × 3cm × 6cm. Qual è il volume?",
    "options": [
     "87",
     "88",
@@ -39628,7 +39628,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Trapezio: bM=15cm, bm=4cm, h=11cm. Area?",
+   "question": "Trapezio: bM=15cm, bm=4cm, h=11cm. Qual è l'area?",
    "options": [
     "102",
     "101",
@@ -39660,7 +39660,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=8cm, bm=3cm, h=11cm. Area?",
+   "question": "Trapezio: bM=8cm, bm=3cm, h=11cm. Qual è l'area?",
    "options": [
     "57",
     "58",
@@ -39692,7 +39692,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo: base 14 cm, altezza 11 cm. Area?",
+   "question": "Triangolo: base 14 cm, altezza 11 cm. Qual è l'area?",
    "options": [
     "75",
     "76",
@@ -39724,7 +39724,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 18 cm e 12 cm. Area?",
+   "question": "Rombo con diagonali 18 cm e 12 cm. Qual è l'area?",
    "options": [
     "106",
     "107",
@@ -39756,7 +39756,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 4cm × 8cm × 4cm. Volume?",
+   "question": "Parallelepipedo: 4cm × 8cm × 4cm. Qual è il volume?",
    "options": [
     "127",
     "125",
@@ -39788,7 +39788,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=12cm, bm=8cm, h=3cm. Area?",
+   "question": "Trapezio: bM=12cm, bm=8cm, h=3cm. Qual è l'area?",
    "options": [
     "30",
     "28",
@@ -39820,7 +39820,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 12 cm, altezza 23 cm. Area?",
+   "question": "Rettangolo: base 12 cm, altezza 23 cm. Qual è l'area?",
    "options": [
     "275",
     "274",
@@ -39852,7 +39852,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=18cm, bm=7cm, h=5cm. Area?",
+   "question": "Trapezio: bM=18cm, bm=7cm, h=5cm. Qual è l'area?",
    "options": [
     "61",
     "62",
@@ -39884,7 +39884,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rettangolo: base 9 cm, altezza 6 cm. Area?",
+   "question": "Rettangolo: base 9 cm, altezza 6 cm. Qual è l'area?",
    "options": [
     "53",
     "51",
@@ -39916,7 +39916,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 17 cm e 6 cm. Area?",
+   "question": "Rombo con diagonali 17 cm e 6 cm. Qual è l'area?",
    "options": [
     "50",
     "51",
@@ -39948,7 +39948,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 8 cm e 12 cm. Area?",
+   "question": "Rombo con diagonali 8 cm e 12 cm. Qual è l'area?",
    "options": [
     "48",
     "45",
@@ -39980,7 +39980,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 9cm × 3cm × 7cm. Volume?",
+   "question": "Parallelepipedo: 9cm × 3cm × 7cm. Qual è il volume?",
    "options": [
     "189",
     "188",
@@ -40012,7 +40012,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo: base 25 cm, altezza 16 cm. Area?",
+   "question": "Triangolo: base 25 cm, altezza 16 cm. Qual è l'area?",
    "options": [
     "199",
     "200",
@@ -40044,7 +40044,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 8cm × 7cm × 6cm. Volume?",
+   "question": "Parallelepipedo: 8cm × 7cm × 6cm. Qual è il volume?",
    "options": [
     "336",
     "334",
@@ -40076,7 +40076,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 11 cm e 18 cm. Area?",
+   "question": "Rombo con diagonali 11 cm e 18 cm. Qual è l'area?",
    "options": [
     "98",
     "99",
@@ -40108,7 +40108,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 8cm × 4cm × 8cm. Volume?",
+   "question": "Parallelepipedo: 8cm × 4cm × 8cm. Qual è il volume?",
    "options": [
     "254",
     "255",
@@ -40140,7 +40140,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 5cm × 9cm × 7cm. Volume?",
+   "question": "Parallelepipedo: 5cm × 9cm × 7cm. Qual è il volume?",
    "options": [
     "313",
     "314",
@@ -40172,7 +40172,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Parallelepipedo: 8cm × 2cm × 9cm. Volume?",
+   "question": "Parallelepipedo: 8cm × 2cm × 9cm. Qual è il volume?",
    "options": [
     "142",
     "143",
@@ -40204,7 +40204,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=16cm, bm=2cm, h=7cm. Area?",
+   "question": "Trapezio: bM=16cm, bm=2cm, h=7cm. Qual è l'area?",
    "options": [
     "60",
     "63",
@@ -40236,7 +40236,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 30 cm, altezza 24 cm. Area?",
+   "question": "Rettangolo: base 30 cm, altezza 24 cm. Qual è l'area?",
    "options": [
     "717",
     "719",
@@ -40268,7 +40268,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Parallelepipedo: 2cm × 5cm × 7cm. Volume?",
+   "question": "Parallelepipedo: 2cm × 5cm × 7cm. Qual è il volume?",
    "options": [
     "69",
     "67",
@@ -40300,7 +40300,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 17 cm, altezza 27 cm. Area?",
+   "question": "Rettangolo: base 17 cm, altezza 27 cm. Qual è l'area?",
    "options": [
     "458",
     "456",
@@ -42028,7 +42028,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "In un dado a 6 facce, probabilità di uscita del 6?",
+   "question": "In un dado a 6 facce, qual è la probabilità di uscita del 6?",
    "options": [
     "1 su 3",
     "1 su 6",
@@ -42092,7 +42092,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Probabilità di ottenere testa lanciando una moneta?",
+   "question": "Qual è la probabilità di ottenere testa lanciando una moneta?",
    "options": [
     "1 su 4",
     "1 su 3",
@@ -42124,7 +42124,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "5 palline rosse e 5 blu. Probabilità di prenderne una rossa?",
+   "question": "5 palline rosse e 5 blu. qual è la probabilità di prenderne una rossa?",
    "options": [
     "Bassa",
     "Alta",
@@ -44492,7 +44492,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Probabilità di ottenere numero pari con un dado a 6 facce?",
+   "question": "Qual è la probabilità di ottenere numero pari con un dado a 6 facce?",
    "options": [
     "1/6",
     "2/6",
@@ -44524,7 +44524,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 2,
-   "question": "30 alunni, 6 con occhiali. Probabilità di sorteggiarne uno con occhiali?",
+   "question": "30 alunni, 6 con occhiali. qual è la probabilità di sorteggiarne uno con occhiali?",
    "options": [
     "1/5",
     "1/6",
@@ -44620,7 +44620,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Probabilità di ottenere testa o croce?",
+   "question": "Qual è la probabilità di ottenere testa o croce?",
    "options": [
     "1/4",
     "1/2",
@@ -44652,7 +44652,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 1, 4, 9, 16, 25, ___?",
+   "question": "Qual è il prossimo numero: 1, 4, 9, 16, 25, ___?",
    "options": [
     "35",
     "36",
@@ -44684,7 +44684,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 1, 3, 6, 10, 15, ___?",
+   "question": "Qual è il prossimo numero: 1, 3, 6, 10, 15, ___?",
    "options": [
     "20",
     "19",
@@ -44716,7 +44716,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 2, 4, 8, 16, 32, ___?",
+   "question": "Qual è il prossimo numero: 2, 4, 8, 16, 32, ___?",
    "options": [
     "63",
     "64",
@@ -44748,7 +44748,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 100, 90, 80, 70, 60, ___?",
+   "question": "Qual è il prossimo numero: 100, 90, 80, 70, 60, ___?",
    "options": [
     "48",
     "50",
@@ -44780,7 +44780,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 5, 10, 20, 40, 80, ___?",
+   "question": "Qual è il prossimo numero: 5, 10, 20, 40, 80, ___?",
    "options": [
     "157",
     "158",
@@ -44812,7 +44812,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 1, 2, 4, 7, 11, ___?",
+   "question": "Qual è il prossimo numero: 1, 2, 4, 7, 11, ___?",
    "options": [
     "13",
     "15",
@@ -44844,7 +44844,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 3, 6, 9, 12, 15, ___?",
+   "question": "Qual è il prossimo numero: 3, 6, 9, 12, 15, ___?",
    "options": [
     "17",
     "15",
@@ -44876,7 +44876,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 7, 14, 21, 28, 35, ___?",
+   "question": "Qual è il prossimo numero: 7, 14, 21, 28, 35, ___?",
    "options": [
     "39",
     "41",
@@ -47532,7 +47532,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "Probabilità di estrarre un asso da mazzo di 40 carte (4 assi)?",
+   "question": "Qual è la probabilità di estrarre un asso da mazzo di 40 carte (4 assi)?",
    "options": [
     "1/10",
     "1/40",
@@ -47724,7 +47724,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "Probabilità di pallina rossa: 3 rosse, 3 blu, 4 verdi?",
+   "question": "Qual è la probabilità di pallina rossa: 3 rosse, 3 blu, 4 verdi?",
    "options": [
     "3/10",
     "1/3",
@@ -47916,7 +47916,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Prossimo numero: 1, 4, 9, 16, 25, 36, ___?",
+   "question": "Qual è il prossimo numero: 1, 4, 9, 16, 25, 36, ___?",
    "options": [
     "48",
     "47",
@@ -47948,7 +47948,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Prossimo numero: 1, 1, 2, 3, 5, 8, 13, ___?",
+   "question": "Qual è il prossimo numero: 1, 1, 2, 3, 5, 8, 13, ___?",
    "options": [
     "20",
     "18",
@@ -47980,7 +47980,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 128, 64, 32, 16, 8, ___?",
+   "question": "Qual è il prossimo numero: 128, 64, 32, 16, 8, ___?",
    "options": [
     "3",
     "1",
@@ -48012,7 +48012,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 3, 9, 27, 81, 243, ___?",
+   "question": "Qual è il prossimo numero: 3, 9, 27, 81, 243, ___?",
    "options": [
     "728",
     "727",
@@ -48044,7 +48044,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Prossimo numero: 1, 3, 6, 10, 15, 21, ___?",
+   "question": "Qual è il prossimo numero: 1, 3, 6, 10, 15, 21, ___?",
    "options": [
     "26",
     "25",
@@ -48076,7 +48076,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 100, 95, 90, 85, 80, ___?",
+   "question": "Qual è il prossimo numero: 100, 95, 90, 85, 80, ___?",
    "options": [
     "75",
     "74",
@@ -48108,7 +48108,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Prossimo numero: 2, 6, 18, 54, 162, ___?",
+   "question": "Qual è il prossimo numero: 2, 6, 18, 54, 162, ___?",
    "options": [
     "484",
     "485",
@@ -51297,7 +51297,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 8 cm e 4 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 8 cm e 4 cm?",
    "options": [
     "24",
     "29",
@@ -51330,7 +51330,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 10 cm e 4 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 10 cm e 4 cm?",
    "options": [
     "34",
     "28",
@@ -51825,7 +51825,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 8 cm e 10 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 8 cm e 10 cm?",
    "options": [
     "37",
     "36",
@@ -51858,7 +51858,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 13 cm e 8 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 13 cm e 8 cm?",
    "options": [
     "34",
     "44",
@@ -52353,7 +52353,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 8 cm e 7 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 8 cm e 7 cm?",
    "options": [
     "30",
     "31",
@@ -52386,7 +52386,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 14 cm e 12 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 14 cm e 12 cm?",
    "options": [
     "62",
     "43",
@@ -52881,7 +52881,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 13 cm e 16 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 13 cm e 16 cm?",
    "options": [
     "53",
     "57",
@@ -52914,7 +52914,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 12 cm e 13 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 12 cm e 13 cm?",
    "options": [
     "50",
     "44",
@@ -53409,7 +53409,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 9 cm e 9 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 9 cm e 9 cm?",
    "options": [
     "43",
     "36",
@@ -53442,7 +53442,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 6 cm e 8 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 6 cm e 8 cm?",
    "options": [
     "28",
     "34",
@@ -53937,7 +53937,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 6 cm e 6 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 6 cm e 6 cm?",
    "options": [
     "24",
     "28",
@@ -53970,7 +53970,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 6 cm e 9 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 6 cm e 9 cm?",
    "options": [
     "28",
     "27",
@@ -54465,7 +54465,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 12 cm e 8 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 12 cm e 8 cm?",
    "options": [
     "33",
     "45",
@@ -54498,7 +54498,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 10 cm e 10 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 10 cm e 10 cm?",
    "options": [
     "44",
     "40",
@@ -54993,7 +54993,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 16 cm e 9 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 16 cm e 9 cm?",
    "options": [
     "58",
     "50",
@@ -55026,7 +55026,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Perimetro di un rettangolo con lati 12 cm e 16 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 12 cm e 16 cm?",
    "options": [
     "52",
     "47",
@@ -55443,7 +55443,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Completa: 18 + __ = 25?",
+   "question": "Quale numero completa: 18 + __ = 25?",
    "options": [
     "5",
     "6",
@@ -55475,7 +55475,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Completa: 40 - __ = 16?",
+   "question": "Quale numero completa: 40 - __ = 16?",
    "options": [
     "14",
     "22",
@@ -56051,7 +56051,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Completa la sequenza: 2, 4, 6, 8,?",
+   "question": "Quale numero completa la sequenza 2, 4, 6, 8?",
    "options": [
     "9",
     "10",
@@ -56083,7 +56083,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Completa la sequenza: 15, 14, 13,?",
+   "question": "Quale numero completa la sequenza 15, 14, 13?",
    "options": [
     "10",
     "11",
@@ -56307,7 +56307,7 @@
    "area": "tabelline",
    "subarea": "calcolo_mentale",
    "difficulty": 3,
-   "question": "Completa: 9, 18, 27,?",
+   "question": "Quale numero completa la sequenza 9, 18, 27?",
    "options": [
     "30",
     "35",
@@ -57075,7 +57075,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Completa la sequenza: 100, 90, 80,?",
+   "question": "Quale numero completa la sequenza 100, 90, 80?",
    "options": [
     "60",
     "65",
@@ -58195,7 +58195,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Completa la sequenza: 2, 5, 8, 11,?",
+   "question": "Quale numero completa la sequenza 2, 5, 8, 11?",
    "options": [
     "12",
     "13",
@@ -59379,7 +59379,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Un rettangolo con base 7 cm e altezza 3 cm ha area?",
+   "question": "Un rettangolo con base 7 cm e altezza 3 cm ha area...",
    "options": [
     "10 cm2",
     "18 cm2",
@@ -59411,7 +59411,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Completa la sequenza: 5, 10, 20, 40,?",
+   "question": "Quale numero completa la sequenza 5, 10, 20, 40?",
    "options": [
     "50",
     "60",

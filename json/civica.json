@@ -108,7 +108,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vuoi parlare in classe?",
+   "question": "Come ci si comporta bene quando vuoi parlare in classe?",
    "options": [
     "uscire dall'aula",
     "correre alla cattedra",
@@ -140,7 +140,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi parlare in classe?",
+   "question": "Qual è la scelta migliore quando vuoi parlare in classe?",
    "options": [
     "correre alla cattedra",
     "alzare la mano",
@@ -268,7 +268,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando entri in biblioteca?",
+   "question": "Come ci si comporta bene quando entri in biblioteca?",
    "options": [
     "gridare",
     "correre tra gli scaffali",
@@ -300,7 +300,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando entri in biblioteca?",
+   "question": "Qual è la scelta migliore quando entri in biblioteca?",
    "options": [
     "gridare",
     "spingere",
@@ -428,7 +428,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando arriva un nuovo compagno?",
+   "question": "Come ci si comporta bene quando arriva un nuovo compagno?",
    "options": [
     "escluderlo",
     "nascondergli il posto",
@@ -460,7 +460,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando arriva un nuovo compagno?",
+   "question": "Qual è la scelta migliore quando arriva un nuovo compagno?",
    "options": [
     "escluderlo",
     "nascondergli il posto",
@@ -588,7 +588,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando un compagno cade?",
+   "question": "Come ci si comporta bene quando un compagno cade?",
    "options": [
     "spingerlo ancora",
     "aiutarlo o chiamare un adulto",
@@ -620,7 +620,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando un compagno cade?",
+   "question": "Qual è la scelta migliore quando un compagno cade?",
    "options": [
     "spingerlo ancora",
     "ridere",
@@ -748,7 +748,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando due bambini vogliono lo stesso gioco?",
+   "question": "Come ci si comporta bene quando due bambini vogliono lo stesso gioco?",
    "options": [
     "strappare il gioco",
     "fare a turno",
@@ -780,7 +780,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando due bambini vogliono lo stesso gioco?",
+   "question": "Qual è la scelta migliore quando due bambini vogliono lo stesso gioco?",
    "options": [
     "strappare il gioco",
     "fare a turno",
@@ -1228,7 +1228,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando usi il materiale della classe?",
+   "question": "Come ci si comporta bene quando usi il materiale della classe?",
    "options": [
     "averne cura",
     "romperlo per gioco",
@@ -1260,7 +1260,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando usi il materiale della classe?",
+   "question": "Qual è la scelta migliore quando usi il materiale della classe?",
    "options": [
     "averne cura",
     "lasciarlo a terra",
@@ -1388,7 +1388,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sei in fila per la mensa?",
+   "question": "Come ci si comporta bene quando sei in fila per la mensa?",
    "options": [
     "saltare avanti",
     "correre",
@@ -1420,7 +1420,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sei in fila per la mensa?",
+   "question": "Qual è la scelta migliore quando sei in fila per la mensa?",
    "options": [
     "aspettare il proprio turno",
     "saltare avanti",
@@ -1548,7 +1548,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando trovi un oggetto non tuo?",
+   "question": "Come ci si comporta bene quando trovi un oggetto non tuo?",
    "options": [
     "consegnarlo a un adulto",
     "tenerlo",
@@ -1580,7 +1580,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando trovi un oggetto non tuo?",
+   "question": "Qual è la scelta migliore quando trovi un oggetto non tuo?",
    "options": [
     "consegnarlo a un adulto",
     "nasconderlo",
@@ -1708,7 +1708,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando la classe vota per scegliere un incarico?",
+   "question": "Come ci si comporta bene quando la classe vota per scegliere un incarico?",
    "options": [
     "litigare",
     "strappare i fogli",
@@ -1740,7 +1740,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando la classe vota per scegliere un incarico?",
+   "question": "Qual è la scelta migliore quando la classe vota per scegliere un incarico?",
    "options": [
     "barare",
     "litigare",
@@ -2348,7 +2348,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando prendi in prestito un libro della biblioteca?",
+   "question": "Come ci si comporta bene quando prendi in prestito un libro della biblioteca?",
    "options": [
     "strapparne le pagine",
     "tenerlo per sempre",
@@ -2380,7 +2380,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando prendi in prestito un libro della biblioteca?",
+   "question": "Qual è la scelta migliore quando prendi in prestito un libro della biblioteca?",
    "options": [
     "strapparne le pagine",
     "disegnarci sopra",
@@ -2508,7 +2508,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando discuti in gruppo?",
+   "question": "Come ci si comporta bene quando discuti in gruppo?",
    "options": [
     "zittire chi parla",
     "ascoltare più opinioni",
@@ -2540,7 +2540,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando discuti in gruppo?",
+   "question": "Qual è la scelta migliore quando discuti in gruppo?",
    "options": [
     "decidere urlando",
     "ascoltare più opinioni",
@@ -2668,7 +2668,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando un compagno dimentica il materiale?",
+   "question": "Come ci si comporta bene quando un compagno dimentica il materiale?",
    "options": [
     "nascondergli lo zaino",
     "prenderlo in giro",
@@ -2700,7 +2700,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando un compagno dimentica il materiale?",
+   "question": "Qual è la scelta migliore quando un compagno dimentica il materiale?",
    "options": [
     "dirgli di andare via",
     "prenderlo in giro",
@@ -2988,7 +2988,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando usi un parco pubblico?",
+   "question": "Come ci si comporta bene quando usi un parco pubblico?",
    "options": [
     "lasciare rifiuti",
     "rispettare giochi e spazi",
@@ -3020,7 +3020,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando usi un parco pubblico?",
+   "question": "Qual è la scelta migliore quando usi un parco pubblico?",
    "options": [
     "rispettare giochi e spazi",
     "strappare le piante",
@@ -3788,7 +3788,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando fai un'assemblea di classe?",
+   "question": "Come ci si comporta bene quando fai un'assemblea di classe?",
    "options": [
     "evitare il dialogo",
     "giocare senza regole",
@@ -3820,7 +3820,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando fai un'assemblea di classe?",
+   "question": "Qual è la scelta migliore quando fai un'assemblea di classe?",
    "options": [
     "confrontarsi su problemi e proposte",
     "evitare il dialogo",
@@ -4108,7 +4108,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando usi uno spazio pubblico come piazza o giardino?",
+   "question": "Come ci si comporta bene quando usi uno spazio pubblico come piazza o giardino?",
    "options": [
     "usarlo senza regole",
     "sporcarlo",
@@ -4140,7 +4140,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando usi uno spazio pubblico come piazza o giardino?",
+   "question": "Qual è la scelta migliore quando usi uno spazio pubblico come piazza o giardino?",
    "options": [
     "usarlo senza regole",
     "averne cura",
@@ -4268,7 +4268,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando in classe ci sono persone con abitudini diverse?",
+   "question": "Come ci si comporta bene quando in classe ci sono persone con abitudini diverse?",
    "options": [
     "escluderle",
     "zittirle",
@@ -4300,7 +4300,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando in classe ci sono persone con abitudini diverse?",
+   "question": "Qual è la scelta migliore quando in classe ci sono persone con abitudini diverse?",
    "options": [
     "escluderle",
     "zittirle",
@@ -4588,7 +4588,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando si deve prendere una decisione condivisa?",
+   "question": "Come ci si comporta bene quando si deve prendere una decisione condivisa?",
    "options": [
     "ascoltare e confrontarsi",
     "gridare",
@@ -4620,7 +4620,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando si deve prendere una decisione condivisa?",
+   "question": "Qual è la scelta migliore quando si deve prendere una decisione condivisa?",
    "options": [
     "gridare",
     "imporre il silenzio",
@@ -4748,7 +4748,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando noti un problema nel quartiere?",
+   "question": "Come ci si comporta bene quando noti un problema nel quartiere?",
    "options": [
     "segnalarlo in modo corretto",
     "far finta di niente",
@@ -4780,7 +4780,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando noti un problema nel quartiere?",
+   "question": "Qual è la scelta migliore quando noti un problema nel quartiere?",
    "options": [
     "far finta di niente",
     "segnalarlo in modo corretto",
@@ -6028,7 +6028,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando nasce un conflitto in un gruppo?",
+   "question": "Come ci si comporta bene quando nasce un conflitto in un gruppo?",
    "options": [
     "vince il più forte",
     "umiliare l'altro",
@@ -6060,7 +6060,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando nasce un conflitto in un gruppo?",
+   "question": "Qual è la scelta migliore quando nasce un conflitto in un gruppo?",
    "options": [
     "cercare dialogo e regole",
     "umiliare l'altro",
@@ -6188,7 +6188,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi contrastare una discriminazione?",
+   "question": "Come ci si comporta bene quando vuoi contrastare una discriminazione?",
    "options": [
     "rispettare la dignità di ogni persona",
     "favorire chi urla",
@@ -6220,7 +6220,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi contrastare una discriminazione?",
+   "question": "Qual è la scelta migliore quando vuoi contrastare una discriminazione?",
    "options": [
     "rispettare la dignità di ogni persona",
     "favorire chi urla",
@@ -6508,7 +6508,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando devi buttare un rifiuto a scuola?",
+   "question": "Come ci si comporta bene quando devi buttare un rifiuto a scuola?",
    "options": [
     "gettarlo dalla finestra",
     "lasciarlo a terra",
@@ -6540,7 +6540,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando devi buttare un rifiuto a scuola?",
+   "question": "Qual è la scelta migliore quando devi buttare un rifiuto a scuola?",
    "options": [
     "usare il cestino giusto",
     "nasconderlo sotto il banco",
@@ -6668,7 +6668,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando esci da una stanza vuota?",
+   "question": "Come ci si comporta bene quando esci da una stanza vuota?",
    "options": [
     "spegnere la luce",
     "aprire il frigorifero",
@@ -6700,7 +6700,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando esci da una stanza vuota?",
+   "question": "Qual è la scelta migliore quando esci da una stanza vuota?",
    "options": [
     "buttare carta a terra",
     "lasciarla accesa",
@@ -6828,7 +6828,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando ti lavi le mani e non ti serve più acqua?",
+   "question": "Come ci si comporta bene quando ti lavi le mani e non ti serve più acqua?",
    "options": [
     "farlo scorrere senza bisogno",
     "chiudere il rubinetto",
@@ -6860,7 +6860,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando ti lavi le mani e non ti serve più acqua?",
+   "question": "Qual è la scelta migliore quando ti lavi le mani e non ti serve più acqua?",
    "options": [
     "giocare con l'acqua",
     "chiudere il rubinetto",
@@ -6988,7 +6988,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sei in un parco con alberi e fiori?",
+   "question": "Come ci si comporta bene quando sei in un parco con alberi e fiori?",
    "options": [
     "rompere i rami",
     "buttare rifiuti tra i cespugli",
@@ -7020,7 +7020,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sei in un parco con alberi e fiori?",
+   "question": "Qual è la scelta migliore quando sei in un parco con alberi e fiori?",
    "options": [
     "rispettare piante e fiori",
     "strappare le foglie",
@@ -7148,7 +7148,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando scegli come bere a scuola?",
+   "question": "Come ci si comporta bene quando scegli come bere a scuola?",
    "options": [
     "lasciare plastica in giro",
     "usare tante bottigliette e buttarle",
@@ -7180,7 +7180,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando scegli come bere a scuola?",
+   "question": "Qual è la scelta migliore quando scegli come bere a scuola?",
    "options": [
     "usare tante bottigliette e buttarle",
     "usare una borraccia riutilizzabile",
@@ -7308,7 +7308,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando hai un foglio scritto solo da un lato?",
+   "question": "Come ci si comporta bene quando hai un foglio scritto solo da un lato?",
    "options": [
     "riusarlo",
     "bagnarlo apposta",
@@ -7340,7 +7340,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando hai un foglio scritto solo da un lato?",
+   "question": "Qual è la scelta migliore quando hai un foglio scritto solo da un lato?",
    "options": [
     "buttarlo subito",
     "riusarlo",
@@ -7468,7 +7468,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sei a mensa o a merenda?",
+   "question": "Come ci si comporta bene quando sei a mensa o a merenda?",
    "options": [
     "prendere solo quello che riesci a mangiare",
     "giocare col cibo",
@@ -7500,7 +7500,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sei a mensa o a merenda?",
+   "question": "Qual è la scelta migliore quando sei a mensa o a merenda?",
    "options": [
     "giocare col cibo",
     "prendere solo quello che riesci a mangiare",
@@ -7628,7 +7628,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vai al parco dopo la merenda?",
+   "question": "Come ci si comporta bene quando vai al parco dopo la merenda?",
    "options": [
     "lasciare la carta sulla panchina",
     "lasciarlo pulito",
@@ -7660,7 +7660,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vai al parco dopo la merenda?",
+   "question": "Qual è la scelta migliore quando vai al parco dopo la merenda?",
    "options": [
     "buttare tutto nel prato",
     "lasciare la carta sulla panchina",
@@ -7788,7 +7788,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando incontri piccoli animali nel giardino?",
+   "question": "Come ci si comporta bene quando incontri piccoli animali nel giardino?",
    "options": [
     "spaventarli per gioco",
     "disturbarli sempre",
@@ -7820,7 +7820,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando incontri piccoli animali nel giardino?",
+   "question": "Qual è la scelta migliore quando incontri piccoli animali nel giardino?",
    "options": [
     "colpirli",
     "disturbarli sempre",
@@ -8108,7 +8108,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando hai una bottiglia di plastica da buttare?",
+   "question": "Come ci si comporta bene quando hai una bottiglia di plastica da buttare?",
    "options": [
     "lasciarla nel prato",
     "buttarla nel WC",
@@ -8140,7 +8140,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando hai una bottiglia di plastica da buttare?",
+   "question": "Qual è la scelta migliore quando hai una bottiglia di plastica da buttare?",
    "options": [
     "lasciarla nel prato",
     "buttarla nel WC",
@@ -8428,7 +8428,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando finisci di usare la LIM o il computer?",
+   "question": "Come ci si comporta bene quando finisci di usare la LIM o il computer?",
    "options": [
     "aprire tante finestre sullo schermo",
     "spegnerlo se non serve più",
@@ -8460,7 +8460,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando finisci di usare la LIM o il computer?",
+   "question": "Qual è la scelta migliore quando finisci di usare la LIM o il computer?",
    "options": [
     "aprire tante finestre sullo schermo",
     "battere sui tasti",
@@ -8588,7 +8588,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando puoi fare un tragitto breve vicino a casa?",
+   "question": "Come ci si comporta bene quando puoi fare un tragitto breve vicino a casa?",
    "options": [
     "lasciare il motore acceso",
     "andare a piedi o in bici quando possibile",
@@ -8620,7 +8620,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando puoi fare un tragitto breve vicino a casa?",
+   "question": "Qual è la scelta migliore quando puoi fare un tragitto breve vicino a casa?",
    "options": [
     "lasciare il motore acceso",
     "usare sempre l'auto",
@@ -8748,7 +8748,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando noti una fontanella che perde?",
+   "question": "Come ci si comporta bene quando noti una fontanella che perde?",
    "options": [
     "giocarci per ore",
     "dirlo a un adulto",
@@ -8780,7 +8780,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando noti una fontanella che perde?",
+   "question": "Qual è la scelta migliore quando noti una fontanella che perde?",
    "options": [
     "giocarci per ore",
     "dirlo a un adulto",
@@ -8908,7 +8908,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando hai una pila scarica?",
+   "question": "Come ci si comporta bene quando hai una pila scarica?",
    "options": [
     "buttarla per terra",
     "gettarla nel lavandino",
@@ -8940,7 +8940,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando hai una pila scarica?",
+   "question": "Qual è la scelta migliore quando hai una pila scarica?",
    "options": [
     "buttarla per terra",
     "metterla con la carta",
@@ -9068,7 +9068,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi proteggere il mare?",
+   "question": "Come ci si comporta bene quando vuoi proteggere il mare?",
    "options": [
     "lasciare bottiglie in spiaggia",
     "non buttare rifiuti nei tombini e nei fiumi",
@@ -9100,7 +9100,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi proteggere il mare?",
+   "question": "Qual è la scelta migliore quando vuoi proteggere il mare?",
    "options": [
     "gettare sacchetti dall'auto",
     "lasciare bottiglie in spiaggia",
@@ -9228,7 +9228,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando scegli una merenda più ecologica?",
+   "question": "Come ci si comporta bene quando scegli una merenda più ecologica?",
    "options": [
     "scegliere solo usa e getta",
     "buttare involucri a terra",
@@ -9260,7 +9260,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando scegli una merenda più ecologica?",
+   "question": "Qual è la scelta migliore quando scegli una merenda più ecologica?",
    "options": [
     "buttare involucri a terra",
     "scegliere solo usa e getta",
@@ -9548,7 +9548,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando partecipi all'orto scolastico?",
+   "question": "Come ci si comporta bene quando partecipi all'orto scolastico?",
    "options": [
     "sprecare acqua",
     "buttare rifiuti tra le foglie",
@@ -9580,7 +9580,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando partecipi all'orto scolastico?",
+   "question": "Qual è la scelta migliore quando partecipi all'orto scolastico?",
    "options": [
     "calpestare l'orto",
     "sprecare acqua",
@@ -10028,7 +10028,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando devi scegliere uno spostamento più ecologico?",
+   "question": "Come ci si comporta bene quando devi scegliere uno spostamento più ecologico?",
    "options": [
     "lasciare il motore acceso",
     "usare mezzi pubblici, bici o piedi quando possibile",
@@ -10060,7 +10060,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando devi scegliere uno spostamento più ecologico?",
+   "question": "Qual è la scelta migliore quando devi scegliere uno spostamento più ecologico?",
    "options": [
     "lasciare il motore acceso",
     "usare mezzi pubblici, bici o piedi quando possibile",
@@ -10348,7 +10348,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando scegli del cibo da comprare?",
+   "question": "Come ci si comporta bene quando scegli del cibo da comprare?",
    "options": [
     "preferire prodotti locali o di stagione quando possibile",
     "comprare e buttare cibo",
@@ -10380,7 +10380,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando scegli del cibo da comprare?",
+   "question": "Qual è la scelta migliore quando scegli del cibo da comprare?",
    "options": [
     "preferire prodotti locali o di stagione quando possibile",
     "sprecare tutto",
@@ -10508,7 +10508,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando hai un vecchio dispositivo elettronico?",
+   "question": "Come ci si comporta bene quando hai un vecchio dispositivo elettronico?",
    "options": [
     "gettarlo nel lavandino",
     "buttarlo nel prato",
@@ -10540,7 +10540,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando hai un vecchio dispositivo elettronico?",
+   "question": "Qual è la scelta migliore quando hai un vecchio dispositivo elettronico?",
    "options": [
     "buttarlo nel prato",
     "gettarlo nel lavandino",
@@ -10668,7 +10668,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi ridurre l'inquinamento dell'aria?",
+   "question": "Come ci si comporta bene quando vuoi ridurre l'inquinamento dell'aria?",
    "options": [
     "sporcare i parchi",
     "bruciare rifiuti",
@@ -10700,7 +10700,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi ridurre l'inquinamento dell'aria?",
+   "question": "Qual è la scelta migliore quando vuoi ridurre l'inquinamento dell'aria?",
    "options": [
     "sporcare i parchi",
     "lasciare motori accesi",
@@ -10828,7 +10828,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando la scuola organizza una giornata ecologica?",
+   "question": "Come ci si comporta bene quando la scuola organizza una giornata ecologica?",
    "options": [
     "sporcare di più",
     "lasciare fare agli altri",
@@ -10860,7 +10860,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando la scuola organizza una giornata ecologica?",
+   "question": "Qual è la scelta migliore quando la scuola organizza una giornata ecologica?",
    "options": [
     "sporcare di più",
     "rompere gli attrezzi",
@@ -10988,7 +10988,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando hai un oggetto ancora utile ma rovinato?",
+   "question": "Come ci si comporta bene quando hai un oggetto ancora utile ma rovinato?",
    "options": [
     "provare a ripararlo o riusarlo",
     "buttarlo subito",
@@ -11020,7 +11020,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando hai un oggetto ancora utile ma rovinato?",
+   "question": "Qual è la scelta migliore quando hai un oggetto ancora utile ma rovinato?",
    "options": [
     "provare a ripararlo o riusarlo",
     "comprare sempre il doppio",
@@ -11148,7 +11148,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi comprare in modo responsabile?",
+   "question": "Come ci si comporta bene quando vuoi comprare in modo responsabile?",
    "options": [
     "comprare per buttare",
     "scegliere ciò che serve davvero",
@@ -11180,7 +11180,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi comprare in modo responsabile?",
+   "question": "Qual è la scelta migliore quando vuoi comprare in modo responsabile?",
    "options": [
     "comprare per buttare",
     "preferire sempre usa e getta",
@@ -12428,7 +12428,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando hai cura di una spiaggia o di un parco?",
+   "question": "Come ci si comporta bene quando hai cura di una spiaggia o di un parco?",
    "options": [
     "pensare che non riguardi nessuno",
     "usarlo senza regole",
@@ -12460,7 +12460,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "natura_e_biodiversita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando hai cura di una spiaggia o di un parco?",
+   "question": "Qual è la scelta migliore quando hai cura di una spiaggia o di un parco?",
    "options": [
     "lasciare ogni responsabilità agli altri",
     "usarlo senza regole",
@@ -12588,7 +12588,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando rifletti sulle generazioni future?",
+   "question": "Come ci si comporta bene quando rifletti sulle generazioni future?",
    "options": [
     "lasciare il problema agli altri",
     "consumare il più possibile oggi",
@@ -12620,7 +12620,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando rifletti sulle generazioni future?",
+   "question": "Qual è la scelta migliore quando rifletti sulle generazioni future?",
    "options": [
     "consumare il più possibile oggi",
     "usare tutto subito",
@@ -12748,7 +12748,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi essere un cittadino attento all'ambiente?",
+   "question": "Come ci si comporta bene quando vuoi essere un cittadino attento all'ambiente?",
    "options": [
     "trasformare i valori in gesti quotidiani",
     "pensare che uno da solo non conti",
@@ -12780,7 +12780,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi essere un cittadino attento all'ambiente?",
+   "question": "Qual è la scelta migliore quando vuoi essere un cittadino attento all'ambiente?",
    "options": [
     "fare promesse e basta",
     "pensare che uno da solo non conti",
@@ -12908,7 +12908,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando un amico ti chiede la password?",
+   "question": "Come ci si comporta bene quando un amico ti chiede la password?",
    "options": [
     "pubblicarla",
     "tenerla segreta",
@@ -12940,7 +12940,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando un amico ti chiede la password?",
+   "question": "Qual è la scelta migliore quando un amico ti chiede la password?",
    "options": [
     "tenerla segreta",
     "dirgliela subito",
@@ -13068,7 +13068,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vuoi scaricare una nuova app?",
+   "question": "Come ci si comporta bene quando vuoi scaricare una nuova app?",
    "options": [
     "scaricarla da solo sempre",
     "pagare da solo",
@@ -13100,7 +13100,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi scaricare una nuova app?",
+   "question": "Qual è la scelta migliore quando vuoi scaricare una nuova app?",
    "options": [
     "dare dati a caso",
     "pagare da solo",
@@ -13228,7 +13228,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando un sito ti chiede l'indirizzo di casa?",
+   "question": "Come ci si comporta bene quando un sito ti chiede l'indirizzo di casa?",
    "options": [
     "non condividerlo",
     "inventarlo e inviarlo",
@@ -13260,7 +13260,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando un sito ti chiede l'indirizzo di casa?",
+   "question": "Qual è la scelta migliore quando un sito ti chiede l'indirizzo di casa?",
    "options": [
     "inventarlo e inviarlo",
     "scriverlo subito",
@@ -13388,7 +13388,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando devi scrivere in chat?",
+   "question": "Come ci si comporta bene quando devi scrivere in chat?",
    "options": [
     "insultare",
     "usare parole gentili",
@@ -13420,7 +13420,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando devi scrivere in chat?",
+   "question": "Qual è la scelta migliore quando devi scrivere in chat?",
    "options": [
     "usare parole gentili",
     "insultare",
@@ -13548,7 +13548,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vuoi fare una foto a un compagno?",
+   "question": "Come ci si comporta bene quando vuoi fare una foto a un compagno?",
    "options": [
     "farla di nascosto",
     "pubblicarla subito",
@@ -13580,7 +13580,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi fare una foto a un compagno?",
+   "question": "Qual è la scelta migliore quando vuoi fare una foto a un compagno?",
    "options": [
     "chiedere il permesso",
     "ridere e insistere",
@@ -13708,7 +13708,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando ricevi un messaggio che ti spaventa?",
+   "question": "Come ci si comporta bene quando ricevi un messaggio che ti spaventa?",
    "options": [
     "tenerlo segreto per sempre",
     "inoltrarlo a tutti",
@@ -13740,7 +13740,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando ricevi un messaggio che ti spaventa?",
+   "question": "Qual è la scelta migliore quando ricevi un messaggio che ti spaventa?",
    "options": [
     "rispondere con rabbia",
     "inoltrarlo a tutti",
@@ -13868,7 +13868,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando uno sconosciuto ti scrive online?",
+   "question": "Come ci si comporta bene quando uno sconosciuto ti scrive online?",
    "options": [
     "mandare una foto",
     "avvisare un adulto",
@@ -13900,7 +13900,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando uno sconosciuto ti scrive online?",
+   "question": "Qual è la scelta migliore quando uno sconosciuto ti scrive online?",
    "options": [
     "dirgli tutto di te",
     "avvisare un adulto",
@@ -14028,7 +14028,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando usi il tablet per molto tempo?",
+   "question": "Come ci si comporta bene quando usi il tablet per molto tempo?",
    "options": [
     "saltare il sonno",
     "stare sempre online",
@@ -14060,7 +14060,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando usi il tablet per molto tempo?",
+   "question": "Qual è la scelta migliore quando usi il tablet per molto tempo?",
    "options": [
     "non alzarti mai",
     "saltare il sonno",
@@ -14188,7 +14188,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando ricevi una foto che prende in giro qualcuno?",
+   "question": "Come ci si comporta bene quando ricevi una foto che prende in giro qualcuno?",
    "options": [
     "ridere e commentare",
     "non inoltrarla",
@@ -14220,7 +14220,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando ricevi una foto che prende in giro qualcuno?",
+   "question": "Qual è la scelta migliore quando ricevi una foto che prende in giro qualcuno?",
    "options": [
     "mandarla a più persone",
     "ridere e commentare",
@@ -14348,7 +14348,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando finisci di usare un dispositivo della scuola?",
+   "question": "Come ci si comporta bene quando finisci di usare un dispositivo della scuola?",
    "options": [
     "riporlo con cura",
     "premere tasti a caso",
@@ -14380,7 +14380,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando finisci di usare un dispositivo della scuola?",
+   "question": "Qual è la scelta migliore quando finisci di usare un dispositivo della scuola?",
    "options": [
     "lasciarlo a terra",
     "riporlo con cura",
@@ -14508,7 +14508,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando leggi una notizia online?",
+   "question": "Come ci si comporta bene quando leggi una notizia online?",
    "options": [
     "fidarti solo del titolo",
     "inoltrarla a tutti",
@@ -14540,7 +14540,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando leggi una notizia online?",
+   "question": "Qual è la scelta migliore quando leggi una notizia online?",
    "options": [
     "crederle subito",
     "inoltrarla a tutti",
@@ -14668,7 +14668,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi verificare se una informazione è vera?",
+   "question": "Come ci si comporta bene quando vuoi verificare se una informazione è vera?",
    "options": [
     "fidarti dei commenti",
     "guardare solo la prima immagine",
@@ -14700,7 +14700,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi verificare se una informazione è vera?",
+   "question": "Qual è la scelta migliore quando vuoi verificare se una informazione è vera?",
    "options": [
     "scrivere la tua opinione e basta",
     "confrontare più fonti",
@@ -14828,7 +14828,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando devi scegliere un nome per giocare online?",
+   "question": "Come ci si comporta bene quando devi scegliere un nome per giocare online?",
    "options": [
     "mettere numero di telefono",
     "usare un nickname invece del nome completo",
@@ -14860,7 +14860,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando devi scegliere un nome per giocare online?",
+   "question": "Qual è la scelta migliore quando devi scegliere un nome per giocare online?",
    "options": [
     "mettere numero di telefono",
     "scrivere indirizzo e scuola",
@@ -14988,7 +14988,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando qualcuno ti chiede una foto privata?",
+   "question": "Come ci si comporta bene quando qualcuno ti chiede una foto privata?",
    "options": [
     "inoltrarla a un gruppo",
     "mandarla subito",
@@ -15020,7 +15020,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando qualcuno ti chiede una foto privata?",
+   "question": "Qual è la scelta migliore quando qualcuno ti chiede una foto privata?",
    "options": [
     "dire no e avvisare un adulto",
     "mandarla subito",
@@ -15148,7 +15148,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando in chat prendono in giro un compagno?",
+   "question": "Come ci si comporta bene quando in chat prendono in giro un compagno?",
    "options": [
     "aggiungere commenti cattivi",
     "girare tutto ad altri",
@@ -15180,7 +15180,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando in chat prendono in giro un compagno?",
+   "question": "Qual è la scelta migliore quando in chat prendono in giro un compagno?",
    "options": [
     "girare tutto ad altri",
     "aggiungere commenti cattivi",
@@ -15308,7 +15308,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando ricevi una richiesta di amicizia da uno sconosciuto?",
+   "question": "Come ci si comporta bene quando ricevi una richiesta di amicizia da uno sconosciuto?",
    "options": [
     "mandare i tuoi dati",
     "scrivere dove abiti",
@@ -15340,7 +15340,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando ricevi una richiesta di amicizia da uno sconosciuto?",
+   "question": "Qual è la scelta migliore quando ricevi una richiesta di amicizia da uno sconosciuto?",
    "options": [
     "valutarla con un adulto",
     "accettarla per avere più amici",
@@ -15468,7 +15468,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando usi una chat di classe?",
+   "question": "Come ci si comporta bene quando usi una chat di classe?",
    "options": [
     "scrivere di notte per disturbare",
     "inviare foto senza permesso",
@@ -15500,7 +15500,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando usi una chat di classe?",
+   "question": "Qual è la scelta migliore quando usi una chat di classe?",
    "options": [
     "inviare foto senza permesso",
     "restare sul tema e usare toni educati",
@@ -15628,7 +15628,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando ti arriva un link strano?",
+   "question": "Come ci si comporta bene quando ti arriva un link strano?",
    "options": [
     "inserire la password",
     "non aprirlo e chiedere aiuto",
@@ -15660,7 +15660,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando ti arriva un link strano?",
+   "question": "Qual è la scelta migliore quando ti arriva un link strano?",
    "options": [
     "cliccarlo subito",
     "non aprirlo e chiedere aiuto",
@@ -15788,7 +15788,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando fai un compito con materiale trovato online?",
+   "question": "Come ci si comporta bene quando fai un compito con materiale trovato online?",
    "options": [
     "non copiarlo come se fosse tuo",
     "incollarlo e basta",
@@ -15820,7 +15820,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando fai un compito con materiale trovato online?",
+   "question": "Qual è la scelta migliore quando fai un compito con materiale trovato online?",
    "options": [
     "cancellare il nome dell'autore",
     "non copiarlo come se fosse tuo",
@@ -15948,7 +15948,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando usi dispositivi prima di dormire?",
+   "question": "Come ci si comporta bene quando usi dispositivi prima di dormire?",
    "options": [
     "saltare il riposo",
     "usare il telefono sotto le coperte tutta la notte",
@@ -15980,7 +15980,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando usi dispositivi prima di dormire?",
+   "question": "Qual è la scelta migliore quando usi dispositivi prima di dormire?",
    "options": [
     "restare connesso fino a tardi",
     "usare il telefono sotto le coperte tutta la notte",
@@ -16268,7 +16268,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando devi creare una password?",
+   "question": "Come ci si comporta bene quando devi creare una password?",
    "options": [
     "scriverla in pubblico",
     "sceglierla difficile da indovinare e non condividerla",
@@ -16300,7 +16300,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando devi creare una password?",
+   "question": "Qual è la scelta migliore quando devi creare una password?",
    "options": [
     "usarla uguale per tutti e dirla agli amici",
     "sceglierla difficile da indovinare e non condividerla",
@@ -16428,7 +16428,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando un'app chiede molti permessi e la posizione?",
+   "question": "Come ci si comporta bene quando un'app chiede molti permessi e la posizione?",
    "options": [
     "scrivere più dati possibili",
     "valutare con attenzione e chiedere aiuto se serve",
@@ -16460,7 +16460,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando un'app chiede molti permessi e la posizione?",
+   "question": "Qual è la scelta migliore quando un'app chiede molti permessi e la posizione?",
    "options": [
     "scrivere più dati possibili",
     "valutare con attenzione e chiedere aiuto se serve",
@@ -16588,7 +16588,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando leggi una notizia molto sorprendente?",
+   "question": "Come ci si comporta bene quando leggi una notizia molto sorprendente?",
    "options": [
     "verificare autore, data e più fonti",
     "condividerla subito",
@@ -16620,7 +16620,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando leggi una notizia molto sorprendente?",
+   "question": "Qual è la scelta migliore quando leggi una notizia molto sorprendente?",
    "options": [
     "condividerla subito",
     "verificare autore, data e più fonti",
@@ -16748,7 +16748,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando usi un'immagine o un testo trovati online?",
+   "question": "Come ci si comporta bene quando usi un'immagine o un testo trovati online?",
    "options": [
     "cancellare il nome dell'autore",
     "rispettare il diritto d'autore e citare la fonte",
@@ -16780,7 +16780,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando usi un'immagine o un testo trovati online?",
+   "question": "Qual è la scelta migliore quando usi un'immagine o un testo trovati online?",
    "options": [
     "copiarlo senza leggere",
     "rispettare il diritto d'autore e citare la fonte",
@@ -16908,7 +16908,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando assisti a un episodio di cyberbullismo?",
+   "question": "Come ci si comporta bene quando assisti a un episodio di cyberbullismo?",
    "options": [
     "segnalarlo e non partecipare",
     "restare a guardare e basta",
@@ -16940,7 +16940,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando assisti a un episodio di cyberbullismo?",
+   "question": "Qual è la scelta migliore quando assisti a un episodio di cyberbullismo?",
    "options": [
     "restare a guardare e basta",
     "segnalarlo e non partecipare",
@@ -17068,7 +17068,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando una chat diventa offensiva?",
+   "question": "Come ci si comporta bene quando una chat diventa offensiva?",
    "options": [
     "scrivere insulti peggiori",
     "coinvolgere più persone",
@@ -17100,7 +17100,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando una chat diventa offensiva?",
+   "question": "Qual è la scelta migliore quando una chat diventa offensiva?",
    "options": [
     "pubblicare screenshot per umiliare",
     "coinvolgere più persone",
@@ -17228,7 +17228,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando ricevi un messaggio che imita un servizio e chiede password?",
+   "question": "Come ci si comporta bene quando ricevi un messaggio che imita un servizio e chiede password?",
    "options": [
     "inoltrarlo ai compagni",
     "considerarlo sospetto",
@@ -17260,7 +17260,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando ricevi un messaggio che imita un servizio e chiede password?",
+   "question": "Qual è la scelta migliore quando ricevi un messaggio che imita un servizio e chiede password?",
    "options": [
     "cliccare per forza",
     "inoltrarlo ai compagni",
@@ -17388,7 +17388,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando un'app vuole microfono e fotocamera senza motivo chiaro?",
+   "question": "Come ci si comporta bene quando un'app vuole microfono e fotocamera senza motivo chiaro?",
    "options": [
     "pubblicare più dati",
     "non dare tutto senza riflettere",
@@ -17420,7 +17420,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando un'app vuole microfono e fotocamera senza motivo chiaro?",
+   "question": "Qual è la scelta migliore quando un'app vuole microfono e fotocamera senza motivo chiaro?",
    "options": [
     "non dare tutto senza riflettere",
     "accettare e basta",
@@ -17548,7 +17548,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando partecipi a una videolezione?",
+   "question": "Come ci si comporta bene quando partecipi a una videolezione?",
    "options": [
     "ascoltare e rispettare i turni",
     "giocare mentre gli altri parlano",
@@ -17580,7 +17580,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando partecipi a una videolezione?",
+   "question": "Qual è la scelta migliore quando partecipi a una videolezione?",
    "options": [
     "aprire il microfono per fare rumore",
     "ascoltare e rispettare i turni",
@@ -17708,7 +17708,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando stai per pubblicare un contenuto su di te?",
+   "question": "Come ci si comporta bene quando stai per pubblicare un contenuto su di te?",
    "options": [
     "cercare solo i like",
     "taggare tutti senza chiedere",
@@ -17740,7 +17740,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando stai per pubblicare un contenuto su di te?",
+   "question": "Qual è la scelta migliore quando stai per pubblicare un contenuto su di te?",
    "options": [
     "pubblicare d'impulso",
     "taggare tutti senza chiedere",
@@ -17868,7 +17868,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi aumentare la sicurezza di un account?",
+   "question": "Come ci si comporta bene quando vuoi aumentare la sicurezza di un account?",
    "options": [
     "usare la stessa per tutto",
     "usare anche l'autenticazione a due fattori",
@@ -17900,7 +17900,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi aumentare la sicurezza di un account?",
+   "question": "Qual è la scelta migliore quando vuoi aumentare la sicurezza di un account?",
    "options": [
     "dire la password a un amico",
     "scrivere la password in chat",
@@ -18028,7 +18028,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando stai per inoltrare lo screenshot di una chat privata?",
+   "question": "Come ci si comporta bene quando stai per inoltrare lo screenshot di una chat privata?",
    "options": [
     "girarlo a più persone",
     "fermarti e pensare a privacy e rispetto",
@@ -18060,7 +18060,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando stai per inoltrare lo screenshot di una chat privata?",
+   "question": "Qual è la scelta migliore quando stai per inoltrare lo screenshot di una chat privata?",
    "options": [
     "fermarti e pensare a privacy e rispetto",
     "modificarlo per far ridere",
@@ -18188,7 +18188,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando leggi una notizia con titolo molto emotivo?",
+   "question": "Come ci si comporta bene quando leggi una notizia con titolo molto emotivo?",
    "options": [
     "condividerla perché colpisce",
     "crederle subito",
@@ -18220,7 +18220,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando leggi una notizia con titolo molto emotivo?",
+   "question": "Qual è la scelta migliore quando leggi una notizia con titolo molto emotivo?",
    "options": [
     "sospettare che possa essere poco affidabile e verificare",
     "crederle subito",
@@ -18348,7 +18348,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando usi uno strumento automatico o di intelligenza artificiale?",
+   "question": "Come ci si comporta bene quando usi uno strumento automatico o di intelligenza artificiale?",
    "options": [
     "credere a tutto sempre",
     "copiare senza controllare",
@@ -18380,7 +18380,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando usi uno strumento automatico o di intelligenza artificiale?",
+   "question": "Qual è la scelta migliore quando usi uno strumento automatico o di intelligenza artificiale?",
    "options": [
     "inserire dati sensibili a caso",
     "credere a tutto sempre",
@@ -18508,7 +18508,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando compili un modulo online?",
+   "question": "Come ci si comporta bene quando compili un modulo online?",
    "options": [
     "dare solo i dati davvero necessari",
     "mettere password e telefono ovunque",
@@ -18540,7 +18540,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando compili un modulo online?",
+   "question": "Qual è la scelta migliore quando compili un modulo online?",
    "options": [
     "dare solo i dati davvero necessari",
     "inviare dati di altri",
@@ -18668,7 +18668,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando un utente ti disturba o ti molesta online?",
+   "question": "Come ci si comporta bene quando un utente ti disturba o ti molesta online?",
    "options": [
     "bloccarlo e segnalarlo",
     "continuare a parlare da solo",
@@ -18700,7 +18700,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando un utente ti disturba o ti molesta online?",
+   "question": "Qual è la scelta migliore quando un utente ti disturba o ti molesta online?",
    "options": [
     "rispondere con minacce",
     "continuare a parlare da solo",
@@ -18828,7 +18828,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vuoi usare il digitale in modo etico?",
+   "question": "Come ci si comporta bene quando vuoi usare il digitale in modo etico?",
    "options": [
     "pensare solo alla velocità",
     "restare online sempre",
@@ -18860,7 +18860,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi usare il digitale in modo etico?",
+   "question": "Qual è la scelta migliore quando vuoi usare il digitale in modo etico?",
    "options": [
     "pensare solo alla velocità",
     "restare online sempre",
@@ -18988,7 +18988,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando noti che le notifiche ti distraggono sempre?",
+   "question": "Come ci si comporta bene quando noti che le notifiche ti distraggono sempre?",
    "options": [
     "tenere tutto acceso sempre",
     "studiare con mille chat aperte",
@@ -19020,7 +19020,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando noti che le notifiche ti distraggono sempre?",
+   "question": "Qual è la scelta migliore quando noti che le notifiche ti distraggono sempre?",
    "options": [
     "tenere tutto acceso sempre",
     "gestire tempi e momenti di disconnessione",
@@ -19148,7 +19148,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando partecipi a una discussione online?",
+   "question": "Come ci si comporta bene quando partecipi a una discussione online?",
    "options": [
     "argomentare senza insultare",
     "deridere chi non è d'accordo",
@@ -19180,7 +19180,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando partecipi a una discussione online?",
+   "question": "Qual è la scelta migliore quando partecipi a una discussione online?",
    "options": [
     "scrivere solo slogan offensivi",
     "deridere chi non è d'accordo",
@@ -19308,7 +19308,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vuoi attraversare la strada?",
+   "question": "Come ci si comporta bene quando vuoi attraversare la strada?",
    "options": [
     "attraversare in curva",
     "passare dove capita",
@@ -19340,7 +19340,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi attraversare la strada?",
+   "question": "Qual è la scelta migliore quando vuoi attraversare la strada?",
    "options": [
     "correre tra le auto",
     "passare dove capita",
@@ -19468,7 +19468,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando il semaforo per i pedoni è rosso?",
+   "question": "Come ci si comporta bene quando il semaforo per i pedoni è rosso?",
    "options": [
     "giocare sul bordo",
     "passare in bici",
@@ -19500,7 +19500,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando il semaforo per i pedoni è rosso?",
+   "question": "Qual è la scelta migliore quando il semaforo per i pedoni è rosso?",
    "options": [
     "correre",
     "passare in bici",
@@ -19628,7 +19628,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sali in auto per un viaggio?",
+   "question": "Come ci si comporta bene quando sali in auto per un viaggio?",
    "options": [
     "stare senza cintura",
     "allacciare la cintura",
@@ -19660,7 +19660,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sali in auto per un viaggio?",
+   "question": "Qual è la scelta migliore quando sali in auto per un viaggio?",
    "options": [
     "alzarti durante il viaggio",
     "giocare sul sedile",
@@ -19788,7 +19788,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando vai in bici?",
+   "question": "Come ci si comporta bene quando vai in bici?",
    "options": [
     "andare senza protezioni",
     "fare lo slalom tra le persone",
@@ -19820,7 +19820,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando vai in bici?",
+   "question": "Qual è la scelta migliore quando vai in bici?",
    "options": [
     "correre senza controllo",
     "fare lo slalom tra le persone",
@@ -19948,7 +19948,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando il pallone finisce verso la strada?",
+   "question": "Come ci si comporta bene quando il pallone finisce verso la strada?",
    "options": [
     "correre dietro al pallone",
     "chiamare un adulto",
@@ -19980,7 +19980,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando il pallone finisce verso la strada?",
+   "question": "Qual è la scelta migliore quando il pallone finisce verso la strada?",
    "options": [
     "saltare in carreggiata",
     "mandare un compagno",
@@ -20108,7 +20108,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sali sull'autobus?",
+   "question": "Come ci si comporta bene quando sali sull'autobus?",
    "options": [
     "bloccare la porta",
     "lasciare salire e scendere con ordine",
@@ -20140,7 +20140,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sali sull'autobus?",
+   "question": "Qual è la scelta migliore quando sali sull'autobus?",
    "options": [
     "spingere",
     "lasciare salire e scendere con ordine",
@@ -20268,7 +20268,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando cammini sul marciapiede con altri?",
+   "question": "Come ci si comporta bene quando cammini sul marciapiede con altri?",
    "options": [
     "non spingere e lasciare spazio",
     "spingere i più piccoli",
@@ -20300,7 +20300,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando cammini sul marciapiede con altri?",
+   "question": "Qual è la scelta migliore quando cammini sul marciapiede con altri?",
    "options": [
     "urlare",
     "spingere i più piccoli",
@@ -20428,7 +20428,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando una persona anziana passa lentamente?",
+   "question": "Come ci si comporta bene quando una persona anziana passa lentamente?",
    "options": [
     "spingerla",
     "aspettare con rispetto",
@@ -20460,7 +20460,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando una persona anziana passa lentamente?",
+   "question": "Qual è la scelta migliore quando una persona anziana passa lentamente?",
    "options": [
     "correre davanti",
     "aspettare con rispetto",
@@ -20588,7 +20588,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sei vicino alla strada?",
+   "question": "Come ci si comporta bene quando sei vicino alla strada?",
    "options": [
     "fare gare sul bordo",
     "non giocare in carreggiata",
@@ -20620,7 +20620,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sei vicino alla strada?",
+   "question": "Qual è la scelta migliore quando sei vicino alla strada?",
    "options": [
     "correre vicino alle auto",
     "nasconderti tra i veicoli",
@@ -20748,7 +20748,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Che cosa mostra più rispetto quando sei su un bus o in fila?",
+   "question": "Come ci si comporta bene quando sei su un bus o in fila?",
    "options": [
     "spingere per passare",
     "lasciarlo in mezzo",
@@ -20780,7 +20780,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 1,
-   "question": "Quale risposta aiuta di più la comunità quando sei su un bus o in fila?",
+   "question": "Qual è la scelta migliore quando sei su un bus o in fila?",
    "options": [
     "tenere lo zaino senza intralciare",
     "lasciarlo in mezzo",
@@ -21068,7 +21068,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando vuoi attraversare tra auto parcheggiate?",
+   "question": "Come ci si comporta bene quando vuoi attraversare tra auto parcheggiate?",
    "options": [
     "cercare un punto sicuro e ben visibile",
     "passare in mezzo alle auto",
@@ -21100,7 +21100,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando vuoi attraversare tra auto parcheggiate?",
+   "question": "Qual è la scelta migliore quando vuoi attraversare tra auto parcheggiate?",
    "options": [
     "correre senza guardare",
     "passare in mezzo alle auto",
@@ -21228,7 +21228,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando usi la bici in città?",
+   "question": "Come ci si comporta bene quando usi la bici in città?",
    "options": [
     "usare cuffie ad alto volume",
     "gareggiare con le auto",
@@ -21260,7 +21260,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando usi la bici in città?",
+   "question": "Qual è la scelta migliore quando usi la bici in città?",
    "options": [
     "andare senza casco",
     "restare negli spazi adatti e con prudenza",
@@ -21388,7 +21388,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando si ferma il bus e vuoi salire?",
+   "question": "Come ci si comporta bene quando si ferma il bus e vuoi salire?",
    "options": [
     "bloccare la porta",
     "lasciare prima scendere chi è a bordo",
@@ -21420,7 +21420,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando si ferma il bus e vuoi salire?",
+   "question": "Qual è la scelta migliore quando si ferma il bus e vuoi salire?",
    "options": [
     "spingerti dentro",
     "correre contro gli altri",
@@ -21548,7 +21548,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando piove o c'è poca luce?",
+   "question": "Come ci si comporta bene quando piove o c'è poca luce?",
    "options": [
     "correre di più",
     "guardare meno",
@@ -21580,7 +21580,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando piove o c'è poca luce?",
+   "question": "Qual è la scelta migliore quando piove o c'è poca luce?",
    "options": [
     "correre di più",
     "distrarti con il telefono",
@@ -21708,7 +21708,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando viaggi in auto da bambino?",
+   "question": "Come ci si comporta bene quando viaggi in auto da bambino?",
    "options": [
     "alzarti mentre l'auto va",
     "togliere la cintura",
@@ -21740,7 +21740,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando viaggi in auto da bambino?",
+   "question": "Qual è la scelta migliore quando viaggi in auto da bambino?",
    "options": [
     "togliere la cintura",
     "stare sciolto sul sedile",
@@ -21868,7 +21868,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando accompagni un compagno più piccolo?",
+   "question": "Come ci si comporta bene quando accompagni un compagno più piccolo?",
    "options": [
     "lasciarlo da solo",
     "spingerlo ad andare veloce",
@@ -21900,7 +21900,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando accompagni un compagno più piccolo?",
+   "question": "Qual è la scelta migliore quando accompagni un compagno più piccolo?",
    "options": [
     "prenderlo in giro",
     "dargli il buon esempio",
@@ -22028,7 +22028,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando sei passeggero in auto?",
+   "question": "Come ci si comporta bene quando sei passeggero in auto?",
    "options": [
     "slacciare la cintura",
     "urlare vicino al guidatore",
@@ -22060,7 +22060,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando sei passeggero in auto?",
+   "question": "Qual è la scelta migliore quando sei passeggero in auto?",
    "options": [
     "slacciare la cintura",
     "non distrarre chi guida",
@@ -22188,7 +22188,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando sei in una fila lunga?",
+   "question": "Come ci si comporta bene quando sei in una fila lunga?",
    "options": [
     "urlare",
     "saltare avanti",
@@ -22220,7 +22220,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando sei in una fila lunga?",
+   "question": "Qual è la scelta migliore quando sei in una fila lunga?",
    "options": [
     "mantenere calma e ordine",
     "spingere",
@@ -22348,7 +22348,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Che cosa mostra più rispetto quando cammini quando è buio?",
+   "question": "Come ci si comporta bene quando cammini quando è buio?",
    "options": [
     "usare il telefono mentre cammini",
     "cercare di essere visibile e prudente",
@@ -22380,7 +22380,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale risposta aiuta di più la comunità quando cammini quando è buio?",
+   "question": "Qual è la scelta migliore quando cammini quando è buio?",
    "options": [
     "cercare di essere visibile e prudente",
     "usare il telefono mentre cammini",
@@ -22508,7 +22508,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando usi il telefono mentre attraversi?",
+   "question": "Come ci si comporta bene quando usi il telefono mentre attraversi?",
    "options": [
     "distrarti con lo schermo",
     "rispondere mentre passi",
@@ -22540,7 +22540,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando usi il telefono mentre attraversi?",
+   "question": "Qual è la scelta migliore quando usi il telefono mentre attraversi?",
    "options": [
     "continuare a leggere il messaggio",
     "rispondere mentre passi",
@@ -22828,7 +22828,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando arrivi a un incrocio con regole di precedenza?",
+   "question": "Come ci si comporta bene quando arrivi a un incrocio con regole di precedenza?",
    "options": [
     "ignorare chi arriva",
     "passare per primo sempre",
@@ -22860,7 +22860,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando arrivi a un incrocio con regole di precedenza?",
+   "question": "Qual è la scelta migliore quando arrivi a un incrocio con regole di precedenza?",
    "options": [
     "passare per primo sempre",
     "ignorare chi arriva",
@@ -22988,7 +22988,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando usi bici o monopattino tra i pedoni?",
+   "question": "Come ci si comporta bene quando usi bici o monopattino tra i pedoni?",
    "options": [
     "suonare per spaventare",
     "fare acrobazie",
@@ -23020,7 +23020,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando usi bici o monopattino tra i pedoni?",
+   "question": "Qual è la scelta migliore quando usi bici o monopattino tra i pedoni?",
    "options": [
     "muoverti con grande prudenza e negli spazi adatti",
     "suonare per spaventare",
@@ -23148,7 +23148,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando sei in autobus o in metro?",
+   "question": "Come ci si comporta bene quando sei in autobus o in metro?",
    "options": [
     "correre dentro il mezzo",
     "lasciare zaini in mezzo",
@@ -23180,7 +23180,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando sei in autobus o in metro?",
+   "question": "Qual è la scelta migliore quando sei in autobus o in metro?",
    "options": [
     "bloccare le uscite",
     "correre dentro il mezzo",
@@ -23308,7 +23308,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando noti una persona anziana o fragile in piedi sul bus?",
+   "question": "Come ci si comporta bene quando noti una persona anziana o fragile in piedi sul bus?",
    "options": [
     "occupare più spazio",
     "cedere il posto",
@@ -23340,7 +23340,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando noti una persona anziana o fragile in piedi sul bus?",
+   "question": "Qual è la scelta migliore quando noti una persona anziana o fragile in piedi sul bus?",
    "options": [
     "fare finta di dormire",
     "occupare più spazio",
@@ -23468,7 +23468,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando esci da scuola con molti compagni?",
+   "question": "Come ci si comporta bene quando esci da scuola con molti compagni?",
    "options": [
     "invadere la strada all'improvviso",
     "correre davanti agli altri",
@@ -23500,7 +23500,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando esci da scuola con molti compagni?",
+   "question": "Qual è la scelta migliore quando esci da scuola con molti compagni?",
    "options": [
     "spingere alla porta",
     "invadere la strada all'improvviso",
@@ -23628,7 +23628,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando vedi una situazione pericolosa in strada?",
+   "question": "Come ci si comporta bene quando vedi una situazione pericolosa in strada?",
    "options": [
     "toccare tutto",
     "fare un video",
@@ -23660,7 +23660,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando vedi una situazione pericolosa in strada?",
+   "question": "Qual è la scelta migliore quando vedi una situazione pericolosa in strada?",
    "options": [
     "avvicinarti troppo",
     "toccare tutto",
@@ -23788,7 +23788,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando puoi scegliere come spostarti?",
+   "question": "Come ci si comporta bene quando puoi scegliere come spostarti?",
    "options": [
     "lasciare il motore acceso",
     "occupare il marciapiede",
@@ -23820,7 +23820,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando puoi scegliere come spostarti?",
+   "question": "Qual è la scelta migliore quando puoi scegliere come spostarti?",
    "options": [
     "usare sempre l'auto per ogni metro",
     "preferire quando possibile piedi, bici o mezzi pubblici in sicurezza",
@@ -23948,7 +23948,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando cammini su un marciapiede stretto?",
+   "question": "Come ci si comporta bene quando cammini su un marciapiede stretto?",
    "options": [
     "giocare sul bordo",
     "lasciare il passaggio libero",
@@ -23980,7 +23980,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando cammini su un marciapiede stretto?",
+   "question": "Qual è la scelta migliore quando cammini su un marciapiede stretto?",
    "options": [
     "occupare tutto lo spazio",
     "lasciare il passaggio libero",
@@ -24588,7 +24588,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando cammini o vai in bici con poca visibilità?",
+   "question": "Come ci si comporta bene quando cammini o vai in bici con poca visibilità?",
    "options": [
     "correre di più",
     "fidarti del caso",
@@ -24620,7 +24620,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando cammini o vai in bici con poca visibilità?",
+   "question": "Qual è la scelta migliore quando cammini o vai in bici con poca visibilità?",
    "options": [
     "pensare a essere visto e a vedere bene",
     "fidarti del caso",
@@ -24748,7 +24748,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando usi i mezzi pubblici con altre persone?",
+   "question": "Come ci si comporta bene quando usi i mezzi pubblici con altre persone?",
    "options": [
     "occupare più posti possibile",
     "spingere per salire",
@@ -24780,7 +24780,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "mezzi_e_mobilita",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando usi i mezzi pubblici con altre persone?",
+   "question": "Qual è la scelta migliore quando usi i mezzi pubblici con altre persone?",
    "options": [
     "occupare più posti possibile",
     "lasciare rifiuti e rumore",
@@ -24908,7 +24908,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando in strada incontri utenti più fragili?",
+   "question": "Come ci si comporta bene quando in strada incontri utenti più fragili?",
    "options": [
     "occupare rampe e passaggi",
     "ignorare i loro bisogni",
@@ -24940,7 +24940,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando in strada incontri utenti più fragili?",
+   "question": "Qual è la scelta migliore quando in strada incontri utenti più fragili?",
    "options": [
     "ignorare i loro bisogni",
     "lasciare spazio e mostrare cortesia",
@@ -25068,7 +25068,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Che cosa mostra più rispetto quando ragioni sul percorso casa-scuola?",
+   "question": "Come ci si comporta bene quando ragioni sul percorso casa-scuola?",
    "options": [
     "cambiare strada a caso",
     "camminare distratto col telefono",
@@ -25100,7 +25100,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Quale risposta aiuta di più la comunità quando ragioni sul percorso casa-scuola?",
+   "question": "Qual è la scelta migliore quando ragioni sul percorso casa-scuola?",
    "options": [
     "cambiare strada a caso",
     "seguire un percorso sicuro e condiviso con gli adulti",
@@ -30765,7 +30765,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Bonus facile: semaforo pedonale rosso?",
+   "question": "Bonus facile: il semaforo pedonale è rosso. Che cosa fai?",
    "options": [
     "Mi fermo e aspetto",
     "Corro",
@@ -30831,7 +30831,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Bonus medio: se online qualcuno ti chiede una foto privata?",
+   "question": "Bonus medio: online qualcuno ti chiede una foto privata. Che cosa fai?",
    "options": [
     "Non la invio e avviso un adulto",
     "La invio subito",

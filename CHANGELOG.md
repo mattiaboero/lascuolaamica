@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.12.66 - 2026-09-06
+
+### Fixed
+- fix(contenuti): **150 domande erano frasi sospese chiuse da un punto interrogativo** (`Gli animali onnivori mangiano?`, `La rotazione della Terra causa?`, `In un paese, la piazza è un elemento?`). È la stessa famiglia dei lotti 2-6, ma quelle regole guardavano l'ultima parola — preposizione, articolo, punto — e qui la frase finisce con un verbo o un nome. Il segnale giusto è un altro: **nella domanda non compare nessuna parola interrogativa**, quindi quel `?` non chiude niente. Ora finiscono con i puntini.
+- fix(contenuti): **216 domande di matematica erano ellittiche** (`Triangolo isoscele: base 14 cm, lati 8 cm. Perimetro?`, `Probabilità di ottenere testa lanciando una moneta?`, `Completa la sequenza: 2, 4, 6, 8,?`). Riformulate per esteso (`Qual è il perimetro?`, `Qual è la probabilità...?`, `Quale numero completa la sequenza 2, 4, 6, 8?`).
+- fix(contenuti): **236 domande di civica** chiedevano `Che cosa mostra più rispetto quando...` o `Quale risposta aiuta di più la comunità quando...` anche dove la risposta non riguarda né il rispetto né la comunità (`...quando viaggi in auto da bambino? → usare seggiolino o rialzo`, `...quando usi il tablet per molto tempo? → fare pause`). Sostituiti con `Come ci si comporta bene quando...` e `Qual è la scelta migliore quando...`. Le cinque varianti di stem della materia restano tutte distinte.
+- fix(contenuti): `sci-2-ciclo-001` chiedeva *quale parola fa parte del ciclo vitale* e offriva `crescita | morte | nascita | riproduzione`: **tutte e quattro corrette**. Ora chiede con quale fase il ciclo comincia. Altre quattro della stessa famiglia chiedevano cosa viene *dopo* una fase, con due opzioni entrambe successive: ora chiedono cosa viene **subito dopo**.
+- fix(contenuti): due domande bonus di civica erano telegrafiche (`Bonus facile: semaforo pedonale rosso?`) e una di scienze chiedeva un sì/no offrendo quattro nomi come opzioni.
+
+### Changed
+- lint(contenuti): controllo nuovo per la frase sospesa chiusa con `?`. Vive in `checkQuestion` e non fra le regex, perché **deve leggere le opzioni**: con risposte sì/no o vero/falso la domanda è legittima (`Le polis greche erano unite in un unico Stato? — no, erano città-stato autonome`) e una regex sul solo testo non può distinguerlo.
+- lint(contenuti): il primo tentativo di quel controllo **era inerte e sembrava verde**. Riconosceva le risposte affermative con `/^(sì|si|no|vero|falso)\b/`, e `si` senza accento è il pronome riflessivo: `si trova`, `si scioglie`, `si rigenerano`. Metà corpus veniva scartato come "domanda sì/no". Verificato reintroducendo un difetto: prima non lo segnalava, ora sì — e togliendo `si` sono emersi altri 7 difetti veri che il bug nascondeva.
+
+### Notes
+- terza volta che `\b` dopo una lettera accentata rompe una regola in silenzio: `perch[ée]\b`, `cos'è`, `com'era`. In JavaScript le lettere accentate non sono caratteri di parola, quindi quel confine non fa mai match. Nel codice il confine è ora un lookahead esplicito.
+
 ## 4.12.65 - 2026-09-06
 
 ### Fixed

@@ -52,6 +52,11 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Perché il ghiaccio si scioglie al sole?',
+  'Tutto quello che si legge su internet è sempre vero?',
+  'La preistoria viene prima o dopo la storia?',
+  'In "Luca va a scuola in bicicletta", che complemento è "in bicicletta"?',
+  'Con quale fase comincia il ciclo vitale di un essere vivente?',
   'Quanto fa 27 + 10?',
   'La risposta corretta è "l\'euro".',
   "La risposta corretta è 'il mare'.",

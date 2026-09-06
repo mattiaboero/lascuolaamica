@@ -198,6 +198,24 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 10: la frase sospesa dei lotti 2-6, ma chiusa da un verbo o da un
+  // nome invece che da una preposizione ("Gli animali onnivori mangiano?", "La
+  // rotazione della Terra causa?"). Il segnale e' che nella domanda non compare
+  // nessuna parola interrogativa, quindi quel "?" non chiude niente. Serve pero'
+  // guardare anche le opzioni: con risposte si'/no o vero/falso la domanda e'
+  // legittima ("Le polis greche erano unite in un unico Stato? — no, erano
+  // citta'-stato autonome"), e una regex sul solo testo non puo' saperlo.
+  // Nota: niente \b dopo "perche'" e "cos'", perche' in JavaScript una lettera
+  // accentata non e' un carattere di parola e quel confine non fa mai match.
+  if (subject !== 'inglese' && /[a-zà-ù]\?\s*$/i.test(question || '')) {
+    const interrogativa = /\b(?:chi|cosa|quale|quali|qual|quanto|quanta|quanti|quante|come|dove|quando)\b|perch[ée]|cos['’]|com['’]|qual['’]|\bqual\s+è|\bche\s+[a-zà-ù]+|\b(?:in|di|a|con|per|da|su)\s+(?:che|quale|quali)\b/i.test(question);
+    const alternativa = /\s+o\s+[^?]{0,40}\?\s*$/i.test(question);
+    const siNo = (options || []).some((o) => typeof o === 'string' && /^\s*(sì|no|vero|falso)\b/i.test(o));
+    if (!interrogativa && !alternativa && !siNo) {
+      errors.push({ level: 'error', field: 'question', msg: 'grammatica — frase sospesa chiusa con "?" senza nessuna parola interrogativa: usare i puntini (es. "Gli animali onnivori mangiano...")' });
+    }
+  }
+
   const isItalianText = subject !== 'inglese';
   if (isItalianText) {
     const testoIt = `${question || ''} ${explanation || ''}`;

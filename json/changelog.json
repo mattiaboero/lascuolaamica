@@ -1,5 +1,13 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.66",
+  "items": [
+   "Uniformate 366 domande che restavano a metà con un punto interrogativo (\"Gli animali onnivori mangiano?\"): ora finiscono con i puntini o sono formulate per esteso.",
+   "236 domande di civica non chiedono più \"che cosa mostra più rispetto\" o \"che cosa aiuta la comunità\" quando la risposta riguarda la sicurezza o la salute.",
+   "Corrette 5 domande sul ciclo vitale in cui più di una risposta era valida."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.65",
   "items": [
    "403 domande di aritmetica non finiscono più con \"27 + 10 =?\": ora chiedono \"Qual è il risultato di 27 + 10?\".",

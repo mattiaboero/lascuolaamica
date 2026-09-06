@@ -24158,7 +24158,7 @@
    "area": "successione_contemporaneita",
    "subarea": "cronologia",
    "difficulty": 1,
-   "question": "Se due bambini disegnano nello stesso momento, le loro azioni avvengono?",
+   "question": "Se due bambini disegnano nello stesso momento, le loro azioni avvengono...",
    "options": [
     "Il giorno dopo",
     "Uno dopo l'altro",
@@ -24406,7 +24406,7 @@
    "area": "linea_del_tempo",
    "subarea": "cronologia",
    "difficulty": 2,
-   "question": "Se il tuo compleanno è a maggio e l'estate inizia a giugno, sulla linea del tempo viene prima?",
+   "question": "Se il tuo compleanno è a maggio e l'estate inizia a giugno, sulla linea del tempo viene prima...",
    "options": [
     "Il compleanno",
     "L'estate",
@@ -24499,7 +24499,7 @@
    "area": "fonti_storiche",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Un vecchio giocattolo conservato in casa è una fonte?",
+   "question": "Un vecchio giocattolo conservato in casa è una fonte...",
    "options": [
     "Immaginaria",
     "Geometrica",
@@ -24747,7 +24747,7 @@
    "area": "metodo_storico_fonti",
    "subarea": "metodo",
    "difficulty": 1,
-   "question": "Per sapere com'era un gioco del passato, lo storico prima di tutto?",
+   "question": "Per sapere com'era un gioco del passato, che cosa osserva prima di tutto lo storico?",
    "options": [
     "Indovina a caso",
     "Inventa una storia",
@@ -24778,7 +24778,7 @@
    "area": "metodo_storico_fonti",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Se vuoi conoscere un fatto accaduto al nonno, puoi?",
+   "question": "Se vuoi conoscere un fatto accaduto al nonno, puoi...",
    "options": [
     "Cambiare quaderno",
     "Contare le finestre",
@@ -25088,7 +25088,7 @@
    "area": "origine_terra_vita",
    "subarea": "passato_presente",
    "difficulty": 1,
-   "question": "I dinosauri vissero?",
+   "question": "I dinosauri vissero...",
    "options": [
     "Prima degli esseri umani",
     "Nello stesso tempo dei romani",
@@ -25243,7 +25243,7 @@
    "area": "preistoria_paleolitico",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Le pitture nelle caverne sono una fonte?",
+   "question": "Le pitture nelle caverne sono una fonte...",
    "options": [
     "Del futuro",
     "Dell'età dei social",
@@ -25522,7 +25522,7 @@
    "area": "metodo_storico_fonti",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Un pezzo di vaso trovato sottoterra è una fonte?",
+   "question": "Un pezzo di vaso trovato sottoterra è una fonte...",
    "options": [
     "Musicale",
     "Meteorologica",
@@ -25584,7 +25584,7 @@
    "area": "metodo_storico_fonti",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Un'intervista a una persona anziana è una fonte?",
+   "question": "Un'intervista a una persona anziana è una fonte...",
    "options": [
     "Orale",
     "Numerica",
@@ -25677,7 +25677,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Le tavolette incise dell'antichità sono fonti?",
+   "question": "Le tavolette incise dell'antichità sono fonti...",
    "options": [
     "Scritte",
     "Sportive",
@@ -25894,7 +25894,7 @@
    "area": "mesopotamia",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Per portare l'acqua ai campi in Mesopotamia si costruivano?",
+   "question": "Per portare l'acqua ai campi in Mesopotamia si costruivano...",
    "options": [
     "Canali di irrigazione",
     "Scale mobili",
@@ -26049,7 +26049,7 @@
    "area": "egizi",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Per conservare il corpo dei defunti gli egizi praticavano?",
+   "question": "Per conservare il corpo dei defunti gli egizi praticavano...",
    "options": [
     "La mummificazione",
     "La stampa",
@@ -26235,7 +26235,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "I Dieci Comandamenti erano per gli ebrei?",
+   "question": "I Dieci Comandamenti erano per gli ebrei...",
    "options": [
     "Un calendario agricolo",
     "Regole importanti di vita",
@@ -26297,7 +26297,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Ai fenici si deve la diffusione di un pratico?",
+   "question": "Ai fenici si deve la diffusione di un pratico...",
    "options": [
     "Calendario lunare di 3 giorni",
     "Treno a vapore",
@@ -26545,7 +26545,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Ad Atene nacque una forma di governo chiamata?",
+   "question": "Ad Atene nacque una forma di governo chiamata...",
    "options": [
     "Dittatura dei faraoni",
     "Impero universale",
@@ -26607,7 +26607,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Un'iscrizione su pietra dell'antichità è una fonte?",
+   "question": "Un'iscrizione su pietra dell'antichità è una fonte...",
    "options": [
     "Solo sonora",
     "Scritta",
@@ -26700,7 +26700,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "metodo",
    "difficulty": 2,
-   "question": "Per costruire una linea del tempo delle civiltà, bisogna prima?",
+   "question": "Per costruire una linea del tempo delle civiltà, bisogna prima...",
    "options": [
     "Inventare le date",
     "Conoscere l'ordine dei periodi",
@@ -26731,7 +26731,7 @@
    "area": "italia_antica_etruschi",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli etruschi vivevano soprattutto nell'Italia?",
+   "question": "Gli etruschi vivevano soprattutto nell'Italia...",
    "options": [
     "Artica",
     "Centrale",
@@ -27041,7 +27041,7 @@
    "area": "roma_repubblica",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Nella repubblica romana i consoli erano?",
+   "question": "Nella repubblica romana i consoli erano...",
    "options": [
     "Due re a vita",
     "Due faraoni",
@@ -27072,7 +27072,7 @@
    "area": "roma_repubblica",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Nella società romana patrizi e plebei erano?",
+   "question": "Nella società romana patrizi e plebei erano...",
    "options": [
     "Due animali sacri",
     "Due gruppi sociali",
@@ -27134,7 +27134,7 @@
    "area": "roma_repubblica",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Le guerre puniche furono combattute contro?",
+   "question": "Le guerre puniche furono combattute contro...",
    "options": [
     "Sparta",
     "Cartagine",
@@ -27289,7 +27289,7 @@
    "area": "roma_impero_cristianesimo_fine",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Il cristianesimo si diffuse?",
+   "question": "Il cristianesimo si diffuse...",
    "options": [
     "Solo in Sardegna",
     "Solo nei villaggi del Neolitico",
@@ -27413,7 +27413,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Nei teatri greci si rappresentavano?",
+   "question": "Nei teatri greci si rappresentavano...",
    "options": [
     "Solo gare di nuoto",
     "Tragedie e commedie",

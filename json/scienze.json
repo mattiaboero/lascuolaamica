@@ -787,7 +787,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 1,
-   "question": "Quale di queste parole fa parte del ciclo vitale di un essere vivente?",
+   "question": "Con quale fase comincia il ciclo vitale di un essere vivente?",
    "options": [
     "crescita",
     "morte",
@@ -2340,7 +2340,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Nell'ordine del ciclo vitale, cosa viene dopo 'uovo'?",
+   "question": "Nell'ordine del ciclo vitale, che cosa viene subito dopo 'uovo'?",
    "options": [
     "sasso",
     "gallina adulta",
@@ -2402,7 +2402,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Nell'ordine del ciclo vitale, cosa viene dopo 'seme'?",
+   "question": "Nell'ordine del ciclo vitale, che cosa viene subito dopo 'seme'?",
    "options": [
     "sasso",
     "pianta adulta",
@@ -2433,7 +2433,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Nell'ordine del ciclo vitale, cosa viene dopo 'cucciolo'?",
+   "question": "Nell'ordine del ciclo vitale, che cosa viene subito dopo 'cucciolo'?",
    "options": [
     "adulto",
     "crescita",
@@ -2464,7 +2464,7 @@
    "area": "viventi_non_viventi",
    "subarea": "ciclo_vitale_e_causa_effetto",
    "difficulty": 2,
-   "question": "Nell'ordine del ciclo vitale, cosa viene dopo 'girino'?",
+   "question": "Nell'ordine del ciclo vitale, che cosa viene subito dopo 'girino'?",
    "options": [
     "rana giovane",
     "sasso",
@@ -5171,7 +5171,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Per osservare se un seme cresce bisogna?",
+   "question": "Per osservare se un seme cresce bisogna...",
    "options": [
     "coprirlo di plastica dura",
     "guardarlo per un secondo",
@@ -5232,7 +5232,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Se il cielo è molto scuro e cadono gocce, è probabile che?",
+   "question": "Se il cielo è molto scuro e cadono gocce, è probabile che...",
    "options": [
     "il terreno voli",
     "spuntino fiori subito",
@@ -5384,7 +5384,7 @@
    "area": "metodo_scientifico",
    "subarea": "osservazione_e_dati",
    "difficulty": 1,
-   "question": "Osservare con attenzione è il primo passo del metodo scientifico?",
+   "question": "Osservare con attenzione è il primo passo di quale metodo?",
    "options": [
     "gioco dell'oca",
     "sistema solare",
@@ -8203,7 +8203,7 @@
    "area": "viventi_biologia",
    "subarea": "habitat_e_funzioni_vitali",
    "difficulty": 2,
-   "question": "Gli animali onnivori mangiano?",
+   "question": "Gli animali onnivori mangiano...",
    "options": [
     "solo metalli",
     "solo acqua",
@@ -8324,7 +8324,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Una catena alimentare mostra?",
+   "question": "Una catena alimentare mostra...",
    "options": [
     "i giorni della settimana",
     "le regioni d'Italia",
@@ -8870,7 +8870,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'aria è composta da diversi gas: il più abbondante è l'?",
+   "question": "L'aria è composta da diversi gas: il più abbondante è l'...",
    "options": [
     "ossigeno",
     "elio",
@@ -8900,7 +8900,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "La pressione atmosferica è la pressione esercitata dall'?",
+   "question": "La pressione atmosferica è la pressione esercitata dall'...",
    "options": [
     "suolo",
     "aria",
@@ -9020,7 +9020,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "Un terreno sabbioso lascia passare l'acqua più?",
+   "question": "Un terreno sabbioso lascia passare l'acqua più...",
    "options": [
     "solo di notte",
     "mai",
@@ -9891,7 +9891,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Un ecosistema comprende viventi, non viventi e le loro?",
+   "question": "Un ecosistema comprende viventi, non viventi e le loro...",
    "options": [
     "vacanze",
     "relazioni",
@@ -10071,7 +10071,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Un bosco con molte specie diverse ha alta?",
+   "question": "Un bosco con molte specie diverse ha alta...",
    "options": [
     "periodizzazione",
     "biodiversità",
@@ -10889,7 +10889,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "L'apparato circolatorio trasporta nel corpo?",
+   "question": "L'apparato circolatorio trasporta nel corpo...",
    "options": [
     "sangue e sostanze",
     "solo ossa",
@@ -10979,7 +10979,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Il cervello fa parte del sistema?",
+   "question": "Il cervello fa parte del sistema...",
    "options": [
     "montuoso",
     "solare",
@@ -11189,7 +11189,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Le ossa danno al corpo?",
+   "question": "Le ossa danno al corpo...",
    "options": [
     "clorofilla",
     "fotosintesi",
@@ -11249,7 +11249,7 @@
    "area": "corpo_umano_salute",
    "subarea": "apparati_e_organi",
    "difficulty": 2,
-   "question": "Una dieta equilibrata comprende cibi?",
+   "question": "Una dieta equilibrata comprende cibi...",
    "options": [
     "solo grassi",
     "vari",
@@ -12160,7 +12160,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "La rotazione della Terra causa?",
+   "question": "La rotazione della Terra causa...",
    "options": [
     "le stagioni",
     "le maree soltanto",
@@ -12220,7 +12220,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "La rivoluzione della Terra intorno al Sole dura circa?",
+   "question": "La rivoluzione della Terra intorno al Sole dura circa...",
    "options": [
     "un mese",
     "un'ora",
@@ -12250,7 +12250,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "Il moto di rivoluzione, insieme all'inclinazione dell'asse terrestre, causa?",
+   "question": "Il moto di rivoluzione, insieme all'inclinazione dell'asse terrestre, causa...",
    "options": [
     "le eclissi soltanto",
     "le stagioni",
@@ -12370,7 +12370,7 @@
    "area": "astronomia_terra",
    "subarea": "sistema_solare",
    "difficulty": 2,
-   "question": "Una stella è un corpo celeste che?",
+   "question": "Una stella è un corpo celeste che...",
    "options": [
     "emette luce propria",
     "si trova solo sulla Terra",
@@ -12430,7 +12430,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Le diverse forme con cui vediamo la Luna si chiamano?",
+   "question": "Le diverse forme con cui vediamo la Luna si chiamano...",
    "options": [
     "catene alimentari",
     "ere geologiche",
@@ -12460,7 +12460,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Una fase della Luna in cui non la vediamo quasi è detta?",
+   "question": "Una fase della Luna in cui non la vediamo quasi è detta...",
    "options": [
     "Luna verde",
     "Luna sonora",
@@ -12520,7 +12520,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Il telescopio serve a osservare meglio?",
+   "question": "Il telescopio serve a osservare meglio...",
    "options": [
     "le cellule della pelle",
     "il suolo argilloso",
@@ -12731,7 +12731,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Un termosifone diffonde soprattutto energia?",
+   "question": "Un termosifone diffonde soprattutto energia...",
    "options": [
     "politica",
     "termica",
@@ -12851,7 +12851,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "L'acqua in movimento può produrre energia?",
+   "question": "L'acqua in movimento può produrre energia...",
    "options": [
     "solida",
     "vulcanica",
@@ -13005,7 +13005,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Il calore può far dilatare alcuni?",
+   "question": "Il calore può far dilatare alcuni...",
    "options": [
     "continenti",
     "pianeti",
@@ -13157,7 +13157,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "La luce viaggia in linea?",
+   "question": "La luce viaggia in linea...",
    "options": [
     "circolare sempre",
     "retta",
@@ -13277,7 +13277,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Il suono si propaga meglio nell'?",
+   "question": "Il suono si propaga meglio nell'...",
    "options": [
     "aria",
     "gesso",
@@ -13427,7 +13427,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Due poli diversi di una calamita tendono ad?",
+   "question": "Due poli diversi di una calamita tendono ad...",
    "options": [
     "raffreddarsi",
     "asciugarsi",
@@ -13457,7 +13457,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Una leva di primo genere ha il fulcro?",
+   "question": "Una leva di primo genere ha il fulcro...",
    "options": [
     "tra forza e resistenza",
     "dentro il magnete",
@@ -13487,7 +13487,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Una superficie liscia riflette la luce meglio di una superficie?",
+   "question": "Una superficie liscia riflette la luce meglio di una superficie...",
    "options": [
     "elastica sempre",
     "ruvida",
@@ -13797,7 +13797,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 1,
-   "question": "Il vetro è un materiale?",
+   "question": "Il vetro è un materiale...",
    "options": [
     "morbido",
     "trasparente",
@@ -13952,7 +13952,7 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 1,
-   "question": "Prima di fare un piccolo esperimento in classe bisogna?",
+   "question": "Prima di fare un piccolo esperimento in classe bisogna...",
    "options": [
     "correre",
     "osservare con attenzione",
@@ -14076,7 +14076,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 1,
-   "question": "Il nido è la casa di molti?",
+   "question": "Il nido è la casa di molti...",
    "options": [
     "pesci",
     "uccelli",
@@ -14355,7 +14355,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Per lavare bene i denti si usa?",
+   "question": "Per lavare bene i denti si usa...",
    "options": [
     "spazzolino",
     "righello",
@@ -14386,7 +14386,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Prima di mangiare è importante?",
+   "question": "Prima di mangiare è importante...",
    "options": [
     "sporcarsi le mani",
     "lavarsi le mani",
@@ -14479,7 +14479,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "In un prato trovi più facilmente?",
+   "question": "In un prato trovi più facilmente...",
    "options": [
     "balene",
     "erba e insetti",
@@ -14510,7 +14510,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 1,
-   "question": "Per tenere pulito l'ambiente è meglio?",
+   "question": "Per tenere pulito l'ambiente è meglio...",
    "options": [
     "gettare carte a terra",
     "usare il cestino",
@@ -14696,7 +14696,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 1,
-   "question": "Lo stagno è un ambiente?",
+   "question": "Lo stagno è un ambiente...",
    "options": [
     "acquatico",
     "montano",
@@ -14758,7 +14758,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Se mescoli acqua e zucchero, lo zucchero?",
+   "question": "Se mescoli acqua e zucchero, lo zucchero...",
    "options": [
     "sparisce nel nulla",
     "si scioglie",
@@ -14851,7 +14851,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 1,
-   "question": "In primavera molte piante?",
+   "question": "In primavera molte piante...",
    "options": [
     "perdono sempre i frutti",
     "germogliano",
@@ -15068,7 +15068,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 1,
-   "question": "La Terra è il pianeta su cui?",
+   "question": "La Terra è il pianeta su cui...",
    "options": [
     "nuotano le stelle",
     "viviamo noi",
@@ -15285,7 +15285,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Per proteggere un ambiente naturale è utile?",
+   "question": "Per proteggere un ambiente naturale è utile...",
    "options": [
     "accendere fuochi ovunque",
     "lasciare rifiuti",
@@ -15378,7 +15378,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "metodo_ed_esperimenti",
    "difficulty": 2,
-   "question": "Se lasci asciugare al Sole una maglietta bagnata, l'acqua?",
+   "question": "Se lasci asciugare al Sole una maglietta bagnata, l'acqua...",
    "options": [
     "scompare per evaporazione",
     "diventa sapone",
@@ -15440,7 +15440,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 2,
-   "question": "Gli animali vertebrati hanno?",
+   "question": "Gli animali vertebrati hanno...",
    "options": [
     "peli soltanto",
     "una colonna vertebrale",
@@ -15626,7 +15626,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 2,
-   "question": "Il metallo è spesso un buon?",
+   "question": "Il metallo è spesso un buon...",
    "options": [
     "isolante termico perfetto",
     "conduttore",
@@ -15719,7 +15719,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "metodo_ed_esperimenti",
    "difficulty": 2,
-   "question": "Cuocere un uovo è un esempio di trasformazione?",
+   "question": "Cuocere un uovo è un esempio di trasformazione...",
    "options": [
     "reversibile",
     "irreversibile",
@@ -15781,7 +15781,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "osservazione_e_applicazione",
    "difficulty": 2,
-   "question": "L'acqua potabile è acqua?",
+   "question": "L'acqua potabile è acqua...",
    "options": [
     "sempre salata",
     "adatta da bere",
@@ -16122,7 +16122,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Una calamita attira facilmente?",
+   "question": "Una calamita attira facilmente...",
    "options": [
     "legno",
     "plastica",
@@ -16153,7 +16153,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "La luce si propaga meglio in linea?",
+   "question": "La luce si propaga meglio in linea...",
    "options": [
     "curva",
     "retta",
@@ -16184,7 +16184,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "L'energia del vento può essere usata per produrre?",
+   "question": "L'energia del vento può essere usata per produrre...",
    "options": [
     "elettricità",
     "gesso",
@@ -16215,7 +16215,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Il cibo fornisce al nostro corpo?",
+   "question": "Il cibo fornisce al nostro corpo...",
    "options": [
     "vite",
     "energia",
@@ -16556,7 +16556,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Un predatore è un animale che?",
+   "question": "Un predatore è un animale che...",
    "options": [
     "si nutre di altri animali",
     "mangia solo erba",
@@ -16773,7 +16773,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "metodo_ed_esperimenti",
    "difficulty": 2,
-   "question": "La ruggine sul ferro è una trasformazione?",
+   "question": "La ruggine sul ferro è una trasformazione...",
    "options": [
     "chimica",
     "solo sonora",
@@ -16804,7 +16804,7 @@
    "area": "materia_materiali_trasformazioni",
    "subarea": "metodo_ed_esperimenti",
    "difficulty": 2,
-   "question": "Bruciare un foglio di carta produce nuove sostanze: è una trasformazione?",
+   "question": "Bruciare un foglio di carta produce nuove sostanze: è una trasformazione...",
    "options": [
     "reversibile",
     "chimica",
@@ -16897,7 +16897,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Le fonti rinnovabili sono fonti di energia che?",
+   "question": "Le fonti rinnovabili sono fonti di energia che...",
    "options": [
     "si esauriscono subito",
     "si rigenerano nel tempo",
@@ -16928,7 +16928,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "La forza di gravità attira gli oggetti?",
+   "question": "La forza di gravità attira gli oggetti...",
    "options": [
     "verso l'alto",
     "verso il centro della Terra",
@@ -16959,7 +16959,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Il suono non può propagarsi?",
+   "question": "Il suono non può propagarsi...",
    "options": [
     "nell'aria",
     "nell'acqua",
@@ -17083,7 +17083,7 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Una cometa è un corpo celeste composto soprattutto da?",
+   "question": "Una cometa è un corpo celeste composto soprattutto da...",
    "options": [
     "ghiaccio, polveri e rocce",
     "solo lava",
@@ -17114,7 +17114,7 @@
    "area": "terra_stagioni_ambiente",
    "subarea": "sostenibilita_e_osservazione",
    "difficulty": 2,
-   "question": "Il cambiamento climatico indica variazioni del clima?",
+   "question": "Il cambiamento climatico indica variazioni del clima...",
    "options": [
     "solo in un pomeriggio",
     "su lunghi periodi di tempo",
@@ -26539,7 +26539,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 1,
-   "question": "Un liquido versato in un recipiente?",
+   "question": "Un liquido versato in un recipiente...",
    "options": [
     "prende la forma del recipiente",
     "mantiene la sua forma",
@@ -26601,7 +26601,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 2,
-   "question": "Un gas in un recipiente chiuso?",
+   "question": "Un gas in un recipiente chiuso...",
    "options": [
     "occupa tutto lo spazio disponibile",
     "resta in un angolo",
@@ -26694,7 +26694,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 1,
-   "question": "Sciogliere lo zucchero nell'acqua è una trasformazione?",
+   "question": "Sciogliere lo zucchero nell'acqua è una trasformazione...",
    "options": [
     "reversibile",
     "irreversibile",
@@ -26725,7 +26725,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Cuocere un uovo è una trasformazione?",
+   "question": "Cuocere un uovo è una trasformazione...",
    "options": [
     "irreversibile",
     "reversibile",
@@ -26787,7 +26787,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Per separare il sale sciolto nell'acqua si usa?",
+   "question": "Per separare il sale sciolto nell'acqua si usa...",
    "options": [
     "l'evaporazione",
     "un filtro di carta",
@@ -26880,7 +26880,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Mescolando acqua e olio si ottengono?",
+   "question": "Mescolando acqua e olio si ottengono...",
    "options": [
     "due strati separati",
     "una soluzione limpida",
@@ -26911,7 +26911,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 3,
-   "question": "La formazione della ruggine sul ferro esposto all'aria umida è una trasformazione?",
+   "question": "La formazione della ruggine sul ferro esposto all'aria umida è una trasformazione...",
    "options": [
     "irreversibile",
     "reversibile",
@@ -26973,7 +26973,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Per una crescita sana è importante seguire un'alimentazione?",
+   "question": "Per una crescita sana è importante seguire un'alimentazione...",
    "options": [
     "varia ed equilibrata",
     "solo di dolci",
@@ -27686,7 +27686,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 1,
-   "question": "Le due estremità di una calamita si chiamano?",
+   "question": "Le due estremità di una calamita si chiamano...",
    "options": [
     "poli",
     "punte",
@@ -27717,7 +27717,7 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Avvicinando due poli magnetici uguali (nord e nord) essi si?",
+   "question": "Avvicinando due poli magnetici uguali (nord e nord) essi si...",
    "options": [
     "respingono",
     "attraggono",
@@ -27810,7 +27810,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 1,
-   "question": "In un mezzo uniforme la luce viaggia in linea?",
+   "question": "In un mezzo uniforme la luce viaggia in linea...",
    "options": [
     "retta",
     "curva",
@@ -27965,7 +27965,7 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 1,
-   "question": "Il suono è prodotto da corpi che?",
+   "question": "Il suono è prodotto da corpi che...",
    "options": [
     "vibrano",
     "brillano",
@@ -28120,7 +28120,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "L'energia prodotta dall'acqua di un fiume in movimento è detta?",
+   "question": "L'energia prodotta dall'acqua di un fiume in movimento è detta...",
    "options": [
     "idroelettrica",
     "solare",
@@ -28182,7 +28182,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 1,
-   "question": "I pannelli solari trasformano la luce del Sole in energia?",
+   "question": "I pannelli solari trasformano la luce del Sole in energia...",
    "options": [
     "elettrica",
     "sonora",
@@ -28213,7 +28213,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Carbone e petrolio sono fonti di energia?",
+   "question": "Carbone e petrolio sono fonti di energia...",
    "options": [
     "non rinnovabili",
     "rinnovabili",
@@ -28244,7 +28244,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Il Sole e il vento sono fonti di energia?",
+   "question": "Il Sole e il vento sono fonti di energia...",
    "options": [
     "rinnovabili",
     "esauribili in pochi anni",
@@ -28337,7 +28337,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 3,
-   "question": "Una pallina ferma in cima a uno scivolo possiede energia?",
+   "question": "Una pallina ferma in cima a uno scivolo possiede energia...",
    "options": [
     "potenziale",
     "sonora",
@@ -28368,7 +28368,7 @@
    "area": "viventi_biologia",
    "subarea": "metodo_e_classificazione",
    "difficulty": 1,
-   "question": "Gli animali con la colonna vertebrale si dicono?",
+   "question": "Gli animali con la colonna vertebrale si dicono...",
    "options": [
     "vertebrati",
     "invertebrati",
@@ -28678,7 +28678,7 @@
    "area": "viventi_ambiente",
    "subarea": "adattamenti_e_ambiente",
    "difficulty": 2,
-   "question": "Il colore verde di molti insetti tra le foglie è un adattamento detto?",
+   "question": "Il colore verde di molti insetti tra le foglie è un adattamento detto...",
    "options": [
     "mimetismo",
     "migrazione",
@@ -28895,7 +28895,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 1,
-   "question": "Gettare plastica nei mari provoca?",
+   "question": "Gettare plastica nei mari provoca...",
    "options": [
     "inquinamento e danni agli animali",
     "più pesci",
@@ -28957,7 +28957,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "tutela_ambientale",
    "difficulty": 2,
-   "question": "Con il compostaggio i resti di frutta e verdura diventano un utile?",
+   "question": "Con il compostaggio i resti di frutta e verdura diventano un utile...",
    "options": [
     "concime naturale",
     "plastica",
@@ -29360,7 +29360,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 1,
-   "question": "Un ecosistema è formato dagli esseri viventi e dall'?",
+   "question": "Un ecosistema è formato dagli esseri viventi e dall'...",
    "options": [
     "ambiente in cui vivono",
     "aria soltanto",
@@ -29825,7 +29825,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "La distruzione degli habitat naturali provoca?",
+   "question": "La distruzione degli habitat naturali provoca...",
    "options": [
     "perdita di biodiversità",
     "aumento delle specie",
@@ -30197,7 +30197,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 2,
-   "question": "Una lampadina a LED rispetto a una vecchia lampadina?",
+   "question": "Una lampadina a LED rispetto a una vecchia lampadina...",
    "options": [
     "consuma meno energia",
     "consuma di più",
@@ -30321,7 +30321,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 2,
-   "question": "Un pannello solare sul tetto produce energia?",
+   "question": "Un pannello solare sul tetto produce energia...",
    "options": [
     "elettrica pulita dal Sole",
     "dal carbone",
@@ -30538,7 +30538,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 2,
-   "question": "La materia è formata da minuscole particelle chiamate?",
+   "question": "La materia è formata da minuscole particelle chiamate...",
    "options": [
     "molecole e atomi",
     "cellule",
@@ -30662,7 +30662,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Prima di mangiare dobbiamo sempre?",
+   "question": "Prima di mangiare dobbiamo sempre...",
    "options": [
     "lavarci le mani",
     "saltare",
@@ -30693,7 +30693,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Per avere denti sani dobbiamo?",
+   "question": "Per avere denti sani dobbiamo...",
    "options": [
     "lavarli ogni giorno",
     "mangiare tanti dolci",
@@ -30755,7 +30755,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Durante la giornata è importante bere abbastanza?",
+   "question": "Durante la giornata è importante bere abbastanza...",
    "options": [
     "acqua",
     "bibite gassate",
@@ -30910,7 +30910,7 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Per non affaticare gli occhi mentre leggiamo serve?",
+   "question": "Per non affaticare gli occhi mentre leggiamo serve...",
    "options": [
     "una buona luce",
     "il buio",
@@ -31065,7 +31065,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 1,
-   "question": "Il ghiaccio lasciato al caldo?",
+   "question": "Il ghiaccio lasciato al caldo...",
    "options": [
     "si scioglie in acqua",
     "diventa vapore subito",
@@ -31096,7 +31096,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 2,
-   "question": "Le pozzanghere dopo la pioggia, con il sole, a poco a poco?",
+   "question": "Le pozzanghere dopo la pioggia, con il sole, a poco a poco...",
    "options": [
     "evaporano",
     "diventano ghiaccio",
@@ -31127,7 +31127,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 1,
-   "question": "Le nuvole sono formate da tantissime?",
+   "question": "Le nuvole sono formate da tantissime...",
    "options": [
     "goccioline d'acqua",
     "sassi",
@@ -31220,7 +31220,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Un essere vivente, a differenza di un sasso?",
+   "question": "Un essere vivente, a differenza di un sasso...",
    "options": [
     "nasce, cresce e si nutre",
     "resta sempre uguale",
@@ -31468,7 +31468,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "L'acqua di un fiume è un elemento?",
+   "question": "L'acqua di un fiume è un elemento...",
    "options": [
     "non vivente",
     "vivente",
@@ -31561,7 +31561,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Gli esseri viventi con il tempo?",
+   "question": "Gli esseri viventi con il tempo...",
    "options": [
     "crescono e cambiano",
     "restano sempre uguali",
