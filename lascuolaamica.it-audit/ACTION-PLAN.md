@@ -14,6 +14,24 @@ Audit del 2026-08-25. Punteggio SEO Health: **78/100**.
 4. Ri-testare `/matematica` desktop (TBT 330ms in un solo run, probabile rumore di misurazione — mobile stesso test 0ms).
 5. Ri-controllare tra 24-48h l'indicizzazione di `/breakout` (richiesta già inviata oggi), `/premi`, `/cookie`, `/privacy` (risultavano unknown/non indicizzate in uno snapshot precedente, non ricontrollate in questo giro).
 
+## ✅ Fase 2bis — Hardening del codice — RISOLTA (2026-09-06)
+
+Revisione sistematica di HTML, CSS, JS, script di build e file testuali, con verifica in produzione. 16 release (4.12.36 → 4.12.51). Voci con impatto SEO/AEO/CWV:
+
+- ~~LCP ritardato dall'animazione di entrata dell'header~~ **Fatto.** I keyframe `bounceIn` e `popIn` partivano da `opacity: 0`, che esclude l'elemento dai candidati LCP: la metrica slittava di tutta la durata dell'animazione. Misurato in produzione prima/dopo: `/premi` 1576 → 380 ms, home 1324 → 448 ms, `/breakout` 1124 → 380 ms, `/faq` 520 → 388 ms; PSI desktop home 1,44 s → 0,4 s. Animazione invariata per durata e rimbalzo.
+- ~~`llms.txt` senza link markdown~~ **Fatto.** Non rispettava llmstxt.org (URL come testo nudo), PageSpeed lo segnalava. 15 URL convertiti in link, 11 descrizioni aggiunte.
+- ~~`dateModified` dall'mtime~~ **Fatto.** Ora dalla storia git, come già il `lastmod` della sitemap; logica condivisa in `scripts/git_dates.py`.
+- ~~CSP senza direttiva `trusted-types`~~ **Fatto.** `trusted-types sa-sw-url sa-sw-import`, verificato che un nome diverso venga bloccato.
+- ~~Contrasto 4,13:1 nel cromo della home~~ **Fatto.** Portato a 5,87:1 (viola Wada Sanzo), modalità Okabe-Ito invariata.
+- ~~Preferenza "riduci il movimento" ignorata~~ **Fatto.** Mancava il blocco `@media` sulle 10 pagine info, e il toggle interno non fermava le figure fluttuanti su home e `/faq`.
+- ~~`premi.html` senza `max-video-preview:-1`, `&` non escapato su `/tabelline`, preload mancante su `/breakout`~~ **Fatto.**
+
+### Nuove voci emerse
+
+10. **`/tabelline`: Performance 83 e Accessibilità 96 su desktop** — unica pagina sotto 96 in entrambe, mai misurata prima perché pubblicata dopo l'audit di agosto. Da approfondire.
+11. **`/matematica` mobile: LCP 2,6 s** — il peggiore del sito. L'elemento LCP (`div.intro-note`) sta fuori dall'header animato, quindi non ha beneficiato del fix. TBT 0 ms e CLS 0: è un problema di visibilità dell'elemento, non di thread principale.
+12. **`/premi` mobile: CLS 0,088** — sotto soglia ma il più alto del sito, su una pagina la cui griglia si popola da JS.
+
 ## 🟡 Fase 3 — Contenuto e autorevolezza (questo mese)
 
 6. ~~Allineare il testo FAQPage schema al testo visibile~~ **Fatto.** matematica/geografia/storia/italiano allineati 1:1 (schema conteneva versioni espanse mai mostrate in pagina). `problemi.html`: i 4 `<details>` extra erano esempi svolti, non FAQ — correttamente esclusi dallo schema già prima, ma riusavano la classe `seo-faq-item` facendoli sembrare FAQ; rinominati in `seo-example-item` (stesso stile, nessun cambio visivo).

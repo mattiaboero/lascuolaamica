@@ -16,6 +16,108 @@
     "quick_wins": [
       "Increase footer touch targets from 44px to 48px minimum",
       "Add sameAs links to the founder Person/Organization schema"
+    ],
+    "resolved_2026_09_06": [
+      "RESOLVED 2026-09-06: LCP delayed by the header entrance animation on every page that has one. Both keyframes (bounceIn in index.css, popIn in subject-quiz-theme.css) started at opacity: 0, which disqualifies the element as an LCP candidate, so the metric slipped by the full animation duration. Home: FCP 528ms + 900ms = 1428ms vs the 1440ms element render delay reported by PageSpeed. Fixed by starting the keyframes visible (opacity .35, non-zero scale); duration, easing and bounce unchanged. Measured in production before/after: /premi 1576->380ms, home 1324->448ms, /breakout 1124->380ms, /faq 520->388ms. PSI desktop home LCP 1.44s->0.4s. /tabelline and /chi-siamo (no entrance animation) unchanged at ~370ms: negative control.",
+      "RESOLVED 2026-09-06: llms.txt did not follow the llmstxt.org format. The August audit listed it as a strength; that was optimistic. The H1 was there but URLs were bare text instead of markdown links, and PageSpeed flagged it ('the file does not appear to contain links'). 15 URLs converted to markdown links, descriptions added to the 11 main pages.",
+      "RESOLVED 2026-09-06: JSON-LD dateModified derived from file mtime. A clone, branch checkout or merge resets mtime to now, so every branch switch declared all 23 pages as modified today — a false freshness signal to Google. Now taken from the last commit that touched the file, with mtime kept only for uncommitted files. Same logic already used for sitemap lastmod, now shared in scripts/git_dates.py.",
+      "RESOLVED 2026-09-06: CSP declared require-trusted-types-for 'script' without the trusted-types directive listing allowed policy names, so any script could create one. Added 'trusted-types sa-sw-url sa-sw-import' (the only two names the code creates); verified that a different name is blocked by the browser.",
+      "RESOLVED 2026-09-06: home chrome contrast below AA. Footer link hover and modal links (including Info hub buttons, which are anchors) used the legacy purple #9B5DE5 at 4.13:1 on white, under the 4.5:1 AA threshold. Moved to the Wada Sanzo purple #6e57a6 at 5.87:1. Okabe-Ito accessible mode verified unchanged.",
+      "RESOLVED 2026-09-06: reduced-motion preference ignored in two distinct ways. The 10 info pages lacked the @media (prefers-reduced-motion: reduce) block (measured: link transition-duration 0s -> 1e-05s after the fix), and the site's own toggle did not stop the floating decorative shapes on the home and /faq because the check ran before shared.js set html[data-motion] (measured: 4 shapes -> 0 with the preference on).",
+      "RESOLVED 2026-09-06: on-page hygiene. premi.html was the only one of the 20 indexable pages without max-video-preview:-1 in meta robots; 7 YouTube hrefs on /tabelline used unescaped &; breakout.html did not preload /json/index.json, which it fetches at startup anyway."
+    ],
+    "psi_measurements_2026_09_06": {
+      "note": "Direct PageSpeed Insights API measurements after the fixes. Category scores in `categories` below were NOT recomputed: that needs a full audit, not a partial measurement.",
+      "home": {
+        "mobile": {
+          "perf": 100,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "fcp": "1.3s",
+          "lcp": "1.7s",
+          "cls": 0
+        },
+        "desktop": {
+          "perf": 99,
+          "fcp": "0.3s",
+          "lcp": "0.4s"
+        }
+      },
+      "matematica": {
+        "mobile": {
+          "perf": 86,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "fcp": "1.2s",
+          "lcp": "2.6s",
+          "cls": 0
+        },
+        "desktop": {
+          "perf": 100,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "lcp": "0.5s",
+          "cls": 0.001
+        }
+      },
+      "premi": {
+        "mobile": {
+          "perf": 98,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "lcp": "1.5s",
+          "cls": 0.088
+        },
+        "desktop": {
+          "perf": 100,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "lcp": "0.5s",
+          "cls": 0.01
+        }
+      },
+      "faq": {
+        "mobile": {
+          "perf": 99,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "fcp": "1.3s",
+          "lcp": "1.8s",
+          "cls": 0
+        },
+        "desktop": {
+          "perf": 99,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100,
+          "fcp": "0.4s",
+          "lcp": "0.7s",
+          "cls": 0.007
+        }
+      },
+      "tabelline": {
+        "desktop": {
+          "perf": 83,
+          "a11y": 96,
+          "bp": 100,
+          "seo": 100,
+          "fcp": "0.6s",
+          "lcp": "0.7s",
+          "cls": 0.024
+        }
+      }
+    },
+    "new_findings_2026_09_06": [
+      "/tabelline is the weakest page of the site: Performance 83 and Accessibility 96 on desktop, the only page under 96 on both. It is also the newest (published 5 September, after the August audit) and had never been measured.",
+      "/matematica mobile LCP 2.6s, the worst value measured. Its LCP element (div.intro-note) sits outside the animated header, so it did not benefit from the keyframe fix. TBT 0ms and CLS 0: an element-visibility problem, not main-thread work.",
+      "/premi mobile CLS 0.088: under the 0.1 threshold but the highest on the site, on a page whose rewards grid is populated by JS.",
+      "/tabelline SEO/AEO verified at code level with no issues: title, description, canonical and og:url coherent; 1 H1 + 4 H2; JSON-LD WebPage, BreadcrumbList, FAQPage (4 Q&A) and an ItemList of 7 VideoObject complete with embedUrl, thumbnailUrl (all 7 present on disk), uploadDate and duration. contentUrl absent but not required when embedUrl is present."
     ]
   },
   "categories": [
