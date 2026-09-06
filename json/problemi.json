@@ -2481,7 +2481,7 @@
    ],
    "answerIndex": 2,
    "answer": "10",
-   "explanation": "32 - 22 = 10 lumache rimasti.",
+   "explanation": "32 - 22 = 10 lumache rimaste.",
    "active": true,
    "tag": "sottrazione,animali",
    "tags": [
@@ -2541,7 +2541,7 @@
    ],
    "answerIndex": 3,
    "answer": "8",
-   "explanation": "23 - 15 = 8 galline rimasti.",
+   "explanation": "23 - 15 = 8 galline rimaste.",
    "active": true,
    "tag": "sottrazione,animali",
    "tags": [

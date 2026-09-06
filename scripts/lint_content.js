@@ -85,6 +85,13 @@ const GRAMMATICA = [
     msg: 'accordo: participio maschile con un soggetto femminile (es. "fatto una finestra")' },
   { pattern: /\b(?:nella|della|alla|la)\s+(?:aula|arancia|automobile|entrata|isola|uscita|ora)\b/i,
     msg: "manca l'elisione davanti a vocale (es. \"nella aula\" invece di \"nell'aula\")" },
+  // Trovate dal lotto di prova sulle domande a scheletro unico: participio
+  // maschile dopo un nome femminile plurale nelle spiegazioni ("10 lumache
+  // rimasti") e frase che inizia con un nome comune senza articolo.
+  { pattern: /\b(?:lumache|galline|mele|pere|caramelle|figurine|pagine|matite|penne|uova|scatole|piante|fragole)\s+(?:rimasti|finiti|venduti|mangiati|comprati)\b/i,
+    msg: 'accordo: participio maschile dopo un nome femminile plurale (es. "10 lumache rimasti")' },
+  { pattern: /^(?:Gatto|Cane|Sasso|Albero|Fiore|Sedia|Tavolo|Acqua|Pietra|Legno|Vetro|Ferro)\s+(?:è|era|ha)(?=\s|$)/,
+    msg: "manca l'articolo a inizio frase (es. \"Gatto è un essere\" invece di \"Il gatto è un essere\")" },
 ];
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {

@@ -12,7 +12,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Albero è un essere...",
+   "question": "L'albero è un essere...",
    "options": [
     "artificiale",
     "non vivente",
@@ -43,7 +43,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Gatto è un essere...",
+   "question": "Il gatto è un essere...",
    "options": [
     "gas",
     "minerale",
@@ -74,7 +74,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Sasso è un essere...",
+   "question": "Il sasso è un essere...",
    "options": [
     "vivente",
     "pianta",
@@ -105,7 +105,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Fiore è un essere...",
+   "question": "Il fiore è un essere...",
    "options": [
     "non vivente",
     "artificiale",

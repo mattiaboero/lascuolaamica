@@ -487,6 +487,13 @@ check_pwa_cache_headers
 check_pwa_version_bump_for_precache_changes
 check_immutable_assets_not_replaced_in_place
 
+if node scripts/check_grammar_rules.js; then
+  echo "[OK] regole grammaticali: attive e senza falsi positivi"
+else
+  echo "[ERROR] regole grammaticali: una regola non scatta o produce falsi positivi"
+  status=1
+fi
+
 if node scripts/check_storage_helpers.js; then
   echo "[OK] storage helpers: le quattro copie sono identiche"
 else

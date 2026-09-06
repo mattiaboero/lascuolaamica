@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.12.54 - 2026-09-06
+
+### Fixed
+- fix(contenuti): 6 domande corrette, emerse dal lotto di prova sulla revisione linguistica. Due spiegazioni con participio non accordato (`10 lumache rimasti` → `rimaste`, `8 galline rimasti` → `rimaste`) e quattro domande di scienze che iniziavano con un nome comune senza articolo (`Gatto è un essere...` → `Il gatto è un essere...`, idem per albero, sasso e fiore).
+- ci(contenuti): le due classi corrispondenti aggiunte a `lint_content.js`, che sale a 14 regole di accordo. Verificato reintroducendo `Gatto è un essere...`: la build fallisce.
+
+### Notes
+- lotto di prova: 60 domande estratte a caso (seme fisso 20260906) fra le 6.421 con scheletro unico, cioè quelle che nessuna regola di template può raggiungere, stratificate per materia e rilette una per una. **2 errori grammaticali** trovati nel campione, entrambi appartenenti a classi che una volta riconosciute si cercano su tutto il corpus: le due classi valgono 6 domande in totale, ora corrette. Tasso di errore osservato nel campione: 3,3% (2 su 60), che su 6.421 domande proietterebbe un ordine di grandezza di ~200 casi — ma la proiezione è debole, perché gli errori veri tendono a raggrupparsi in famiglie e le due trovate erano piccole.
+- osservazione di stile, non corretta: 204 domande terminano con una preposizione o una copula seguita da punto interrogativo (`Una password serve a?`, `Il deserto è un tipo di?`), mentre 374 domande usano la stessa costruzione con i puntini di sospensione (`Le colline sono spesso adatte a...`). Le due forme convivono nel corpus e la maggioranza usa i puntini, che è anche la forma corretta per una frase da completare. Uniformarle è una scelta editoriale su 204 domande: non l'ho fatta di mia iniziativa.
+
 ## 4.12.53 - 2026-09-06
 
 ### Fixed
