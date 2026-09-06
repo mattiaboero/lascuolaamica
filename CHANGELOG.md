@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.12.62 - 2026-09-06
+
+### Fixed
+- fix(quiz): **una partita poteva proporre due volte la stessa domanda**. Il ramo finale di `buildSessionQuestions` riempiva gli slot mancanti ciclando sul pool già usato (`rankedLoose[out.length % rankedLoose.length]`), ignorando `sessionUsed`. Da quando la fine partita si riconosce su `questions.length` (4.12.36) una sessione più corta è legittima, quindi il riempimento per ripetizione è stato tolto: meglio nove domande che due volte la stessa.
+- fix(quiz): `sessionUsed` tracciava solo gli id, mentre la firma anti-ripetizione è `hash(domanda|risposta)`. Due domande con id diverso ma testo e risposta identici potevano quindi uscire nella stessa partita. Ora la firma entra nello stesso insieme con il prefisso `sig:`, e i rami di riempimento la controllano come l'id.
+- fix(contenuti): **sei domande erano ripetute nella stessa classe** con la stessa risposta e distrattori diversi. Riscritte come esercizi distinti invece di essere cancellate, per non ridurre il banco: `What colour is the sky on a sunny day?` → `What colour is the grass?`, `Which animal lives in water?` → `Which animal has long ears?`, `Which food is a vegetable?` → `Which food is a drink?`, `Qual è il contrario di 'alto'?` → `di 'grande'?`, il nome astratto `felicità` → `coraggio`, e un triangolo con le stesse misure di un altro (base 17 → 19 cm, area 85 → 95).
+
+### Changed
+- test(e2e): il harness verifica che una partita non contenga due volte la stessa domanda. **La prima esecuzione ha fallito, e il difetto era nel test**: dopo ogni risposta aspettava 1100 ms mentre il gioco avanza a 2200 ms, quindi rileggeva la domanda precedente e la registrava due volte. Ora attende che il testo cambi davvero o che compaia la schermata bonus. Il ciclo si ferma anche se la sessione è più corta di dieci domande.
+
+### Notes
+- restano 9 firme duplicate fra **classi o materie diverse** (`Le Dolomiti fanno parte delle...` in geografia 4 e 5, le stagioni in scienze e storia): sono legittime, lo stesso concetto ripreso a livelli diversi, e ora il motore impedisce comunque che escano insieme.
+- restano 18 testi di domanda ripetuti nella stessa classe ma con **contenuto diverso** (`Quale parola è scritta correttamente?` compare 5 volte in italiano classe 2 con parole diverse). Non sono duplicati: sono la stessa consegna applicata a esercizi diversi, una forma normale per l'ortografia. Non toccati.
+
 ## 4.12.61 - 2026-09-06
 
 ### Fixed

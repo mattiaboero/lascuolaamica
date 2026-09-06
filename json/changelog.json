@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.62",
+  "items": [
+   "Una partita non può più proporre due volte la stessa domanda: prima poteva succedere quando le domande disponibili non bastavano a riempirla.",
+   "Sei domande ripetute nel banco sono state sostituite con esercizi nuovi."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.61",
   "items": [
    "Riscritte 50 domande di educazione civica: chiedevano un comportamento ma offrivano definizioni. Ora la domanda corrisponde alle risposte proposte."

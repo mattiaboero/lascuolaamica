@@ -12,16 +12,16 @@
    "area": "colori",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "What colour is the sky on a sunny day?",
+   "question": "What colour is the grass?",
    "options": [
     "green",
     "blue",
     "red",
     "brown"
    ],
-   "answerIndex": 1,
-   "answer": "blue",
-   "explanation": "The correct answer is \"blue\".",
+   "answerIndex": 0,
+   "answer": "green",
+   "explanation": "The correct answer is \"green\".",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -540,16 +540,16 @@
    "area": "animali",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which animal lives in water?",
+   "question": "Which animal has long ears?",
    "options": [
     "fish",
     "sheep",
     "rabbit",
     "giraffe"
    ],
-   "answerIndex": 0,
-   "answer": "fish",
-   "explanation": "The correct answer is \"fish\".",
+   "answerIndex": 2,
+   "answer": "rabbit",
+   "explanation": "The correct answer is \"rabbit\".",
    "active": true,
    "tag": "inglese;classe_2;animali;primaria",
    "tags": [
@@ -3543,16 +3543,16 @@
    "area": "cibo",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which food is a vegetable?",
+   "question": "Which food is a drink?",
    "options": [
     "cake",
     "carrot",
     "milk",
     "fish"
    ],
-   "answerIndex": 1,
-   "answer": "carrot",
-   "explanation": "The correct answer is \"carrot\".",
+   "answerIndex": 2,
+   "answer": "milk",
+   "explanation": "The correct answer is \"milk\".",
    "active": true,
    "tag": "inglese;classe_2;cibo;primaria",
    "tags": [

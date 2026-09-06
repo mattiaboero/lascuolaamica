@@ -105,8 +105,11 @@ async function main() {
       return;
     }
 
+    // La sessione puo' essere piu' corta di 10 domande quando il pool filtrato
+    // non basta: si gioca finche' non compare la schermata bonus.
     const questions = [];
     for (let index = 0; index < 10; index++) {
+      if (await page.locator('#screenBonusPick.active').count()) break;
       const questionText = normalize(await page.locator('#qText').textContent());
       const promptMeta = await readPromptMeta(page, '#qText');
       const domOptions = await readDomOptions(page, '#answers');
@@ -130,6 +133,15 @@ async function main() {
         answerLang: meta.answerLang,
         optionLangs: domOptionMeta.map((item) => item.lang || '')
       });
+    }
+
+    // Regressione: due domande con id diverso ma testo e risposta identici
+    // potevano uscire nella stessa partita, perche' sessionUsed tracciava solo
+    // gli id. Nel banco esistono ancora firme ripetute fra classi diverse.
+    const testi = questions.map((q) => q.question);
+    const ripetute = testi.filter((t, i) => testi.indexOf(t) !== i);
+    if (ripetute.length) {
+      throw new Error(`Domande ripetute nella stessa partita: ${[...new Set(ripetute)].join(' | ')}`);
     }
 
     await page.waitForSelector('#screenBonusPick.active');
@@ -548,8 +560,17 @@ async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions
     throw new Error(`Risposta non trovata nel DOM: ${normalize(answerPlan.chosen)}`);
   }
 
+  // L'attesa fissa di 1100 ms era piu' corta dei 2200 ms del timer di
+  // avanzamento del gioco: il giro dopo rileggeva la stessa domanda e la
+  // registrava due volte. Si aspetta che la domanda cambi davvero, o che
+  // compaia la schermata bonus se era l'ultima.
+  const prima = normalize(await page.locator('#qText').textContent());
   await buttons.nth(targetIndex).click();
-  await page.waitForTimeout(1100);
+  await page.waitForFunction((testo) => {
+    if (document.querySelector('#screenBonusPick.active')) return true;
+    const el = document.getElementById('qText');
+    return el && el.textContent.replace(/\s+/g, ' ').trim() !== testo;
+  }, prima, { timeout: 10000 });
   return answerPlan;
 }
 

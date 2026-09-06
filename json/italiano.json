@@ -912,16 +912,16 @@
    "area": "italiano_classe2",
    "subarea": "lessico",
    "difficulty": 1,
-   "question": "Qual è il contrario di 'alto'?",
+   "question": "Qual è il contrario di 'grande'?",
    "options": [
-    "grande",
-    "basso",
+    "piccolo",
     "lungo",
-    "forte"
+    "forte",
+    "largo"
    ],
-   "answerIndex": 1,
-   "answer": "basso",
-   "explanation": "Il contrario di 'alto' è 'basso'.",
+   "answerIndex": 0,
+   "answer": "piccolo",
+   "explanation": "Il contrario di 'grande' è 'piccolo'.",
    "active": true,
    "tag": "lessico;contrari",
    "tags": [
@@ -5449,12 +5449,12 @@
    "options": [
     "tavolo",
     "cane",
-    "felicità",
+    "coraggio",
     "rosa"
    ],
    "answerIndex": 2,
-   "answer": "felicità",
-   "explanation": "'Felicità' è un nome astratto: indica un sentimento, non un oggetto concreto.",
+   "answer": "coraggio",
+   "explanation": "'Coraggio' è un nome astratto: indica una qualità, non un oggetto che si può toccare.",
    "active": true,
    "tag": "italiano;classe_3;grammatica;primaria",
    "tags": [

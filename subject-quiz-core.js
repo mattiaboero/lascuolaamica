@@ -682,6 +682,16 @@
       .trim();
   }
 
+  // sessionUsed contiene gli id gia' usati nella partita. Le firme vengono
+  // aggiunte allo stesso insieme con un prefisso: gli id delle domande non
+  // iniziano mai per "sig:", quindi i due spazi di nomi non si sovrappongono.
+  // Serve perche' la firma e' hash(domanda|risposta): due domande diverse per
+  // id ma identiche nel testo e nella risposta potevano uscire entrambe nella
+  // stessa partita, e nel banco ce ne sono (sei coppie nella stessa classe).
+  function sigKey(q) {
+    return `sig:${q && q._sig}`;
+  }
+
   function buildQuestionSignature(q) {
     const qq = normalizeSignatureText(q && q.q);
     const aa = normalizeSignatureText(q && q.a);
@@ -1646,15 +1656,15 @@
     const recentIdSet = buildRecentSet(rawSeen, recentIdCount);
     const recentSigSet = buildRecentSet(rawSeenSig, recentSigCount);
 
-    let available = pool.filter((q) => !sessionUsed.has(q._id) && !recentIdSet.has(q._id) && !recentSigSet.has(q._sig));
+    let available = pool.filter((q) => !sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q)) && !recentIdSet.has(q._id) && !recentSigSet.has(q._sig));
     if (!available.length) {
-      available = pool.filter((q) => !sessionUsed.has(q._id) && !recentSigSet.has(q._sig));
+      available = pool.filter((q) => !sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q)) && !recentSigSet.has(q._sig));
     }
     if (!available.length) {
-      available = pool.filter((q) => !sessionUsed.has(q._id) && !recentIdSet.has(q._id));
+      available = pool.filter((q) => !sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q)) && !recentIdSet.has(q._id));
     }
     if (!available.length) {
-      available = pool.filter((q) => !sessionUsed.has(q._id));
+      available = pool.filter((q) => !sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q)));
     }
     if (!available.length) {
       available = pool.slice();
@@ -1675,6 +1685,7 @@
     const wasRecentId = recentIdSet.has(chosen._id);
     const wasRecentSig = recentSigSet.has(chosen._sig);
     sessionUsed.add(chosen._id);
+    sessionUsed.add(sigKey(chosen));
 
     if (!Array.isArray(historyStore[bucket])) historyStore[bucket] = [];
     historyStore[bucket].push(chosen._id);
@@ -1793,13 +1804,14 @@
       const strictFallback = [];
       availableAreas.forEach((area) => {
         (classPools[area] || []).forEach((q) => {
-          if (!sessionUsed.has(q._id)) strictFallback.push(q);
+          if (!sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q))) strictFallback.push(q);
         });
       });
       shuffle(strictFallback);
       for (let i = 0; i < strictFallback.length && out.length < TOTAL_Q; i++) {
         const q = strictFallback[i];
         sessionUsed.add(q._id);
+        sessionUsed.add(sigKey(q));
         out.push({ ...q });
         trackQuality(q.area, q._grade || classNum, false, false);
       }
@@ -1810,24 +1822,23 @@
       AREA_KEYS.forEach((area) => {
         const pool = getClassAwarePool(area, selectedClass, true, currentLevel && currentLevel.key).pool;
         pool.forEach((q) => {
-          if (!sessionUsed.has(q._id)) loose.push(q);
+          if (!sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q))) loose.push(q);
         });
       });
       const rankedLoose = rankWithScoredMap(loose, (q) => questionClassDistance(q, classNum) + Math.random() * 0.3);
       for (let i = 0; i < rankedLoose.length && out.length < TOTAL_Q; i++) {
         const q = rankedLoose[i];
         sessionUsed.add(q._id);
+        sessionUsed.add(sigKey(q));
         out.push({ ...q });
         trackQuality(q.area, q._grade || classNum, false, false);
       }
 
-      if (out.length < TOTAL_Q && rankedLoose.length) {
-        while (out.length < TOTAL_Q) {
-          const q = rankedLoose[out.length % rankedLoose.length];
-          out.push({ ...q });
-          trackQuality(q.area, q._grade || classNum, false, false);
-        }
-      }
+      // Qui prima si riempivano gli slot mancanti ciclando su rankedLoose, cioe'
+      // ripetendo domande gia' uscite nella stessa partita: il bambino si
+      // ritrovava due volte la stessa domanda. Da quando la fine partita si
+      // riconosce su questions.length (sessionLen), una sessione piu' corta e'
+      // legittima, quindi e' meglio giocare meno domande che ripeterne una.
     }
 
     saveCursor(cursor);
