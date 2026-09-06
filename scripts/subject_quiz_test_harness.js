@@ -45,6 +45,20 @@ async function main() {
     });
 
     await page.goto(buildPageUrl(options.baseUrl, options.page), { waitUntil: 'networkidle' });
+
+    if (options.dialogs) {
+      const dialogs = await checkDialogFocusAndQueue(page);
+      process.stdout.write(`${JSON.stringify({
+        page: options.page,
+        check: 'dialogs',
+        dialogs,
+        pageErrors: trackers.pageErrors,
+        consoleErrors: trackers.consoleErrors
+      }, null, 2)}\n`);
+      await context.close();
+      return;
+    }
+
     await waitForCfg(page);
     const maps = await getConfigMaps(page);
 
@@ -184,6 +198,66 @@ async function main() {
   }
 }
 
+// Regressioni M1 e M2 di shared.js.
+// M1: il focus di ritorno era una variabile sola, quindi una modale aperta da
+// dentro un'altra perdeva il riferimento e alla chiusura il focus finiva su
+// <body>.
+// M2: i dialoghi condividono un overlay e il secondo risolveva il primo come
+// "rifiutato" invece di aspettare il proprio turno.
+async function checkDialogFocusAndQueue(page) {
+  const infoBtn = page.locator('footer [data-open-modal="modalInfoHub"]');
+  await infoBtn.waitFor({ timeout: 10000 });
+  await infoBtn.click();
+  await page.waitForSelector('#modalInfoHub.open', { timeout: 5000 });
+
+  const clearBtn = page.locator('#modalInfoHub .info-hub-btn-danger');
+  await clearBtn.click();
+  await page.waitForSelector('#modalPromptShared.open', { timeout: 5000 });
+  await page.locator('#sharedPromptCancel').click();
+  await page.waitForTimeout(400);
+
+  const afterNested = await page.evaluate(() => {
+    const el = document.activeElement;
+    return { tag: el && el.tagName, text: el && (el.textContent || '').trim().slice(0, 40) };
+  });
+  if (afterNested.text !== 'Cancella dati locali') {
+    throw new Error(`Focus perso dopo la modale annidata: atteso "Cancella dati locali", trovato "${afterNested.text}"`);
+  }
+
+  await page.locator('#modalInfoHub .modal-close').click();
+  await page.waitForTimeout(400);
+  const afterOuter = await page.evaluate(() => (document.activeElement.textContent || '').trim().slice(0, 40));
+  if (afterOuter !== 'Info') {
+    throw new Error(`Focus perso alla chiusura della modale esterna: atteso "Info", trovato "${afterOuter}"`);
+  }
+
+  // due dialoghi in rapida successione: il primo non deve essere annullato
+  await page.evaluate(() => {
+    window.__saQueue = [];
+    window.SA.ui.confirm('PRIMO').then((v) => window.__saQueue.push('primo:' + v));
+    window.SA.ui.confirm('SECONDO').then((v) => window.__saQueue.push('secondo:' + v));
+  });
+  await page.waitForTimeout(400);
+  const firstMsg = await page.locator('#sharedPromptMessage').textContent();
+  if (firstMsg.trim() !== 'PRIMO') {
+    throw new Error(`Il secondo dialogo ha scavalcato il primo: mostrato "${firstMsg.trim()}"`);
+  }
+  await page.locator('#sharedPromptConfirm').click();
+  await page.waitForTimeout(600);
+  const secondMsg = await page.locator('#sharedPromptMessage').textContent();
+  if (secondMsg.trim() !== 'SECONDO') {
+    throw new Error(`Il dialogo in coda non e' stato mostrato: trovato "${secondMsg.trim()}"`);
+  }
+  await page.locator('#sharedPromptConfirm').click();
+  await page.waitForTimeout(300);
+  const resolved = await page.evaluate(() => window.__saQueue);
+  if (resolved.join(',') !== 'primo:true,secondo:true') {
+    throw new Error(`Risoluzioni inattese dei dialoghi: ${resolved.join(',')}`);
+  }
+
+  return { focusDopoAnnidata: afterNested.text, focusDopoEsterna: afterOuter, coda: resolved };
+}
+
 // Regressione A2: l'avanzamento differito di checkAnswer resta pendente per
 // 2200 ms. Chi esce dal gioco in quella finestra (qui: apre la classifica; in
 // produzione anche la scadenza della play window) veniva riportato dentro la
@@ -257,6 +331,7 @@ function parseArgs(argv) {
     level: '',
     ripassa: false,
     interrupt: false,
+    dialogs: false,
     headless: true,
     help: false
   };
@@ -290,6 +365,9 @@ function parseArgs(argv) {
         break;
       case '--interrupt':
         options.interrupt = true;
+        break;
+      case '--dialogs':
+        options.dialogs = true;
         break;
       case '--headed':
         options.headless = false;
@@ -333,6 +411,7 @@ function printHelp() {
     '  --level <key>        livello da selezionare se la materia usa screenLevels',
     '  --ripassa            dopo il risultato gioca la sessione "Ripassa i tuoi errori" (richiede mode mixed/worst)',
     '  --interrupt          risponde a una domanda, esce subito dal gioco e verifica che il timer di avanzamento sia annullato',
+    '  --dialogs            verifica il focus di ritorno delle modali annidate e la coda dei dialoghi condivisi',
     '  --base-url <url>     host locale del test server',
     '  --headed             avvia il browser non-headless',
     '  --help               mostra questo messaggio'

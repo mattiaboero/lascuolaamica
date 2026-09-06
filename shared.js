@@ -1,8 +1,15 @@
 (function () {
   'use strict';
 
-  let prevFocus = null;
+  // Elemento a cui restituire il focus, per modale. Era una variabile sola:
+  // aprendo un dialogo da dentro un'altra modale (Info -> "Cancella dati
+  // locali") il riferimento al primo veniva sovrascritto e poi azzerato, cosi'
+  // alla chiusura dell'esterna il focus restava su un bottone dentro un overlay
+  // ormai aria-hidden e il browser lo scaricava su <body>: chi naviga da
+  // tastiera o con screen reader tornava in cima al documento.
+  const focusReturn = new Map();
   let promptFinalize = null;
+  const promptQueue = [];
   const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
   const PLAY_WINDOW_KEY = 'scuolaAmica_play_window_v1';
   const PLAY_WINDOW_DURATION_MS = 30 * 60 * 1000;
@@ -513,7 +520,7 @@
     const overlay = document.getElementById(id);
     if (!overlay) return;
 
-    prevFocus = document.activeElement;
+    focusReturn.set(id, document.activeElement);
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     if (window.SADom && typeof window.SADom.lockScroll === 'function') {
@@ -544,10 +551,9 @@
       }
     }
 
-    if (prevFocus && typeof prevFocus.focus === 'function') {
-      prevFocus.focus();
-      prevFocus = null;
-    }
+    const back = focusReturn.get(id);
+    focusReturn.delete(id);
+    if (back && typeof back.focus === 'function') back.focus();
   }
 
   function ensurePromptModal() {
@@ -608,7 +614,22 @@
     document.body.appendChild(overlay);
   }
 
+  // Tutti i dialoghi condividono un solo overlay. Se ne arrivava un secondo
+  // mentre il primo era aperto, il primo veniva risolto come "rifiutato" e
+  // sostituito: un service worker che segnalava un aggiornamento nel momento
+  // sbagliato annullava il confirm della finestra di gioco, ensurePlayWindow
+  // tornava false e la partita non partiva, senza dire niente. Ora il secondo
+  // aspetta il suo turno.
   function showPromptDialog(options) {
+    if (typeof promptFinalize === 'function') {
+      return new Promise((resolve) => {
+        promptQueue.push({ options, resolve });
+      });
+    }
+    return runPromptDialog(options);
+  }
+
+  function runPromptDialog(options) {
     ensurePromptModal();
     const overlay = document.getElementById(PROMPT_MODAL_ID);
     const titleEl = document.getElementById('sharedPromptTitle');
@@ -643,10 +664,6 @@
       return Promise.resolve(window.confirm(message));
     }
 
-    if (typeof promptFinalize === 'function') {
-      promptFinalize(false);
-    }
-
     titleEl.textContent = title;
     messageEl.textContent = message;
     confirmBtn.textContent = confirmLabel;
@@ -672,6 +689,14 @@
         cleanup();
         closeModal(PROMPT_MODAL_ID);
         resolve(Boolean(accepted));
+
+        const next = promptQueue.shift();
+        if (next) {
+          // tick di respiro: closeModal ha appena restituito il focus
+          setTimeout(() => {
+            runPromptDialog(next.options).then(next.resolve);
+          }, 0);
+        }
       };
 
       const onConfirm = () => finalize(true);
@@ -1593,6 +1618,13 @@
         background:#2d6cdf;
         border-color:#2d6cdf;
         color:#fff;
+      }
+      /* Il dialogo condiviso viene creato al primo uso, quindi finisce nel DOM
+         prima della modale Info (creata dopo): a parita' di z-index vinceva
+         l'Info hub, che copriva il dialogo e ne intercettava i click. Con
+         "Cancella dati locali" il confirm restava sotto e non era cliccabile. */
+      #modalPromptShared{
+        z-index:600;
       }
       .sa-prompt-actions{
         display:flex;

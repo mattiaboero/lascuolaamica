@@ -1,5 +1,12 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.40",
+  "items": [
+   "Il pulsante \"Cancella dati locali\" ora funziona: la richiesta di conferma restava nascosta sotto la finestra Info e non era cliccabile.",
+   "Chi naviga con la tastiera non perde più il punto in cui si trovava quando chiude una finestra aperta da un'altra."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.39",
   "items": [
    "Le pagine informative ora rispettano l'impostazione \"riduci le animazioni\" del dispositivo, come già facevano le pagine dei quiz.",

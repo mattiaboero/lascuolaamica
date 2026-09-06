@@ -7,6 +7,7 @@
 #           bash scripts/run_e2e.sh perfect,mixed,worst
 #   il modo "ripassa" gioca una sessione mixed e poi "Ripassa i tuoi errori"
 #   il modo "interrupt" verifica che uscire dal gioco annulli l'avanzamento differito
+#   il modo "dialogs" verifica focus di ritorno delle modali e coda dei dialoghi
 #
 # Env:
 #   E2E_BASE_URL  host test server (default http://127.0.0.1:4173)
@@ -48,6 +49,11 @@ for mode in "${MODE_ARR[@]}"; do
     if [[ "$mode" == "interrupt" ]]; then
       run_mode="perfect"
       extra+=(--interrupt)
+    fi
+    # "dialogs" non gioca: verifica focus di ritorno e coda dei dialoghi
+    if [[ "$mode" == "dialogs" ]]; then
+      run_mode="perfect"
+      extra+=(--dialogs)
     fi
     echo "=== E2E: $subj mode=$mode${lvl:+ level=$lvl} ==="
     if ! node scripts/subject_quiz_test_harness.js \

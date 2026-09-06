@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.40 - 2026-09-06
+
+### Fixed
+- fix(ui): "Cancella dati locali" non era utilizzabile. `#modalPromptShared` viene creato al primo uso e finisce nel DOM **prima** di `#modalInfoHub`, creato dopo: a parità di `z-index: 500` vince l'ultimo, quindi l'Info hub copriva il dialogo di conferma e ne intercettava i click. Verificato con `elementFromPoint` sul centro del bottone "Annulla": l'elemento in cima è `.info-hub-actions`, non il bottone. Il bambino (o il genitore) vedeva la finestra Info sopra e non poteva né confermare né annullare. Trovato scrivendo il test del focus, non presente nell'audit. `#modalPromptShared` passa a `z-index: 600`.
+- fix(a11y): il focus di ritorno delle modali era una variabile sola (`prevFocus`). Aprendo un dialogo da dentro un'altra modale il riferimento al primo veniva sovrascritto e poi azzerato: alla chiusura dell'esterna il focus restava su un bottone dentro un overlay ormai `aria-hidden="true"` e il browser lo scaricava su `<body>`. Chi naviga da tastiera o con screen reader tornava in cima al documento dopo ogni cancellazione dati, e l'alert successivo partiva da lì. Sostituita con una `Map` per id di modale.
+- fix(ui): un secondo dialogo annullava silenziosamente il primo. Tutti i dialoghi condividono un overlay e `showPromptDialog()` risolveva il precedente come **rifiutato** per prendere il suo posto. Scenario reale: il bambino preme "Inizia!", si apre il confirm della finestra di gioco, e nello stesso momento il service worker rileva un aggiornamento e chiama `SA.ui.confirm('È disponibile una nuova versione…')`. Il primo confirm veniva risolto `false`, `ensurePlayWindowActive()` restituiva `false` e `startGame()` usciva senza dire niente: la partita non partiva e al suo posto compariva un dialogo che nessuno aveva chiesto. Ora i dialoghi si accodano FIFO.
+
+### Changed
+- test(e2e): `--dialogs` apre la modale Info, ne apre una annidata, la chiude e verifica che il focus torni sul bottone corretto in entrambi i livelli; poi lancia due `SA.ui.confirm` in sequenza e verifica che il primo resti a schermo, che il secondo compaia dopo, e che entrambe le promise si risolvano `true`. Ognuno dei tre fix è stato verificato reintroducendo il bug: senza la `Map` il test riporta il focus finito sul `<link>` di noscript, senza la coda riporta `SECONDO` mostrato al posto di `PRIMO`, senza lo `z-index` il click su "Annulla" va in timeout. Aggiunti il modo `dialogs` a `run_e2e.sh`, lo script `test:e2e:dialogs` e lo step nel workflow E2E.
+- chore: bump versione `4.12.39` → `4.12.40`.
+
 ## 4.12.39 - 2026-09-06
 
 ### Fixed
