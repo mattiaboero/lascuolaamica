@@ -1,5 +1,11 @@
 [
  {
+  "date": "6 settembre 2026 · Release 4.12.51",
+  "items": [
+   "Le pagine mostrano il titolo quasi subito invece di farlo comparire dal nulla: l'animazione di entrata è la stessa, ma il contenuto si vede prima."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.50",
   "items": [
    "Migliorata la scheda che descrive il sito agli assistenti AI: ora elenca le pagine come collegamenti veri, con una riga di descrizione ciascuna."

@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.51 - 2026-09-06
+
+### Fixed
+- perf(lcp): l'animazione di entrata dell'`<header>` partiva da `opacity: 0`, e un elemento a opacità zero non è candidato LCP: la metrica slittava in avanti di tutta la durata dell'animazione. Il conto tornava esatto sulla home — FCP 528 ms + 900 ms di `bounceIn` = 1428 ms, contro i 1440 ms riportati da PageSpeed. Riguardava due keyframe, `bounceIn` (`index.css`, 0,9 s) e `popIn` (`subject-quiz-theme.css`, 0,7 s), ognuno con un solo utilizzatore: la regola `header` del proprio file. I `0%` partono ora da `opacity: .35` e da una scala già visibile; durata, curva e rimbalzo sono invariati.
+- Misurato in locale prima e dopo, mediana di 3 run per pagina: home 968 → 64 ms, `/premi` 968 → 56 ms, `/faq` 756 → 40 ms, `/breakout` 732 → 44 ms. `/matematica` resta a ~490 ms perché il suo elemento LCP (`div.intro-note`) sta fuori dall'header animato, e `/tabelline` era già a 32 ms perché non ha animazioni di entrata — due controlli negativi che confermano l'attribuzione.
+- In produzione le varianti misurate davano 1304 ms con il keyframe attuale e 444 ms partendo visibili, contro i 440 ms che si otterrebbero eliminando del tutto l'animazione: il guadagno è quindi l'intero costo, senza rinunciare all'effetto.
+
+### Notes
+- metodo: il primo giro di misure era invalido e dava tutte le varianti a ~1300 ms. Iniettavo il CSS di prova con un `<style>`, che in produzione la CSP blocca (`style-src` con hash), quindi misuravo quattro volte la pagina non modificata. Rifatto applicando le varianti alla risposta di rete di `index.css` e stampando a ogni run lo stato effettivo di `animation-name`/`animation-duration` come prova che la variante fosse davvero attiva.
+- chore: bump versione `4.12.50` → `4.12.51`.
+
 ## 4.12.50 - 2026-09-06
 
 ### Fixed

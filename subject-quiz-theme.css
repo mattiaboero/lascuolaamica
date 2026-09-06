@@ -188,13 +188,17 @@ header {
   animation: popIn 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97);
 }
 
+/* Stesso motivo di bounceIn in index.css: partire da opacity 0 escludeva
+   l'header dai candidati LCP e spostava la metrica in avanti di tutta la durata
+   dell'animazione. Il movimento e' invariato, cambia il punto di partenza. */
 @keyframes popIn {
   0% {
-    transform: scale(0.6) rotate(-8deg);
-    opacity: 0;
+    transform: scale(0.72) rotate(-6deg);
+    opacity: 0.35;
   }
   70% {
     transform: scale(1.06);
+    opacity: 1;
   }
   100% {
     transform: scale(1);

@@ -85,7 +85,14 @@ body{
 
 /* HEADER */
 header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(.36,.07,.19,.97);}
-@keyframes bounceIn{0%{transform:scale(0) rotate(-8deg);opacity:0}60%{transform:scale(1.08) rotate(2deg)}80%{transform:scale(.97)}100%{transform:scale(1);opacity:1}}
+/* Il 0% parte visibile di proposito: un elemento a opacity 0 non e' un
+   candidato LCP, quindi l'header che contiene il titolo faceva slittare la
+   metrica di tutta la durata dell'animazione (FCP 528 ms + 900 ms = 1428 ms,
+   contro i 1440 ms misurati da PageSpeed). Misurato in produzione: partendo da
+   scale(.85)/opacity .35 l'LCP scende a 444 ms, quanto si otterrebbe togliendo
+   del tutto l'animazione (440 ms), che invece resta identica per durata e
+   rimbalzo. */
+@keyframes bounceIn{0%{transform:scale(.85) rotate(-6deg);opacity:.35}60%{transform:scale(1.08) rotate(2deg);opacity:1}80%{transform:scale(.97)}100%{transform:scale(1);opacity:1}}
 
 /* ===== MASCOTTE HOMEPAGE ===== */
 .mascot-home{
