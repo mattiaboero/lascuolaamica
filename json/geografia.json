@@ -24717,7 +24717,7 @@
    "area": "orientamento_mappe",
    "subarea": "percorsi",
    "difficulty": 1,
-   "question": "Su una piantina, una linea con frecce può indicare?",
+   "question": "Su una piantina, una linea con frecce può indicare...",
    "options": [
     "Un percorso",
     "Una poesia",
@@ -24749,7 +24749,7 @@
    "area": "orientamento_mappe",
    "subarea": "punti_cardinali",
    "difficulty": 1,
-   "question": "Su molte mappe il nord si trova di solito?",
+   "question": "Su molte mappe il nord si trova di solito...",
    "options": [
     "in basso",
     "a sinistra",
@@ -25101,7 +25101,7 @@
    "area": "territorio_sicurezza",
    "subarea": "percorsi",
    "difficulty": 1,
-   "question": "Per attraversare la strada in sicurezza è meglio usare?",
+   "question": "Per attraversare la strada in sicurezza è meglio usare...",
    "options": [
     "il prato",
     "le strisce pedonali",
@@ -25261,7 +25261,7 @@
    "area": "orientamento_mappe",
    "subarea": "legenda",
    "difficulty": 1,
-   "question": "Sulla piantina del parco, un piccolo albero verde può indicare?",
+   "question": "Sulla piantina del parco, un piccolo albero verde può indicare...",
    "options": [
     "una panchina",
     "un'aiuola o un albero",
@@ -25325,7 +25325,7 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 1,
-   "question": "Un ponte si costruisce spesso sopra?",
+   "question": "Un ponte si costruisce spesso sopra...",
    "options": [
     "una collina",
     "un fiume",
@@ -25549,7 +25549,7 @@
    "area": "orientamento_mappe",
    "subarea": "legenda",
    "difficulty": 1,
-   "question": "Il simbolo di una tenda sulla mappa di un parco può indicare?",
+   "question": "Il simbolo di una tenda sulla mappa di un parco può indicare...",
    "options": [
     "un campeggio",
     "una farmacia",
@@ -25965,7 +25965,7 @@
    "area": "sistema_territoriale",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Se in un territorio cambia un fiume, possono cambiare anche?",
+   "question": "Se in un territorio cambia un fiume, possono cambiare anche...",
    "options": [
     "solo i colori dei quaderni",
     "i campi e le attività delle persone",
@@ -26093,7 +26093,7 @@
    "area": "territorio_italiano",
    "subarea": "italia_regioni",
    "difficulty": 2,
-   "question": "L'Italia è circondata in gran parte da?",
+   "question": "L'Italia è circondata in gran parte da...",
    "options": [
     "deserti",
     "oceani ghiacciati",
@@ -26509,7 +26509,7 @@
    "area": "geo_graficita",
    "subarea": "legenda",
    "difficulty": 2,
-   "question": "Nelle carte fisiche, il marrone indica spesso?",
+   "question": "Nelle carte fisiche, il marrone indica spesso...",
    "options": [
     "le zone montuose",
     "i fiumi",
@@ -26605,7 +26605,7 @@
    "area": "orientamento_mappe",
    "subarea": "legenda",
    "difficulty": 1,
-   "question": "In una pianta urbana, il simbolo P indica spesso?",
+   "question": "In una pianta urbana, il simbolo P indica spesso...",
    "options": [
     "parcheggio",
     "pianura",
@@ -26861,7 +26861,7 @@
    "area": "geografia_fisica_italia",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "La Pianura Padana si trova soprattutto?",
+   "question": "La Pianura Padana si trova soprattutto...",
    "options": [
     "nel sud Italia",
     "nel centro Italia",
@@ -26957,7 +26957,7 @@
    "area": "italia_europa",
    "subarea": "europa_base",
    "difficulty": 2,
-   "question": "L'Italia confina con la Francia, la Svizzera, l'Austria e?",
+   "question": "L'Italia confina con la Francia, la Svizzera, l'Austria e...",
    "options": [
     "Portogallo",
     "Slovenia",
@@ -27117,7 +27117,7 @@
    "area": "territorio_sicurezza",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Un cartello con freccia verde e omino indica?",
+   "question": "Un cartello con freccia verde e omino indica...",
    "options": [
     "uscita di emergenza",
     "divieto di sosta",
@@ -27181,7 +27181,7 @@
    "area": "orientamento_carte",
    "subarea": "legenda",
    "difficulty": 2,
-   "question": "Nelle carte stradali, linee di diverso colore possono indicare?",
+   "question": "Nelle carte stradali, linee di diverso colore possono indicare...",
    "options": [
     "strade di tipi diversi",
     "montagne più o meno alte",
@@ -27245,7 +27245,7 @@
    "area": "paesaggi_terra",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Una valle si trova spesso?",
+   "question": "Una valle si trova spesso...",
    "options": [
     "tra due rilievi",
     "in mezzo al mare",
@@ -27341,7 +27341,7 @@
    "area": "territorio_italiano",
    "subarea": "italia_regioni",
    "difficulty": 2,
-   "question": "La Sardegna è separata dalla penisola da?",
+   "question": "La Sardegna è separata dalla penisola da...",
    "options": [
     "un deserto",
     "il mare",
@@ -27437,7 +27437,7 @@
    "area": "orientamento",
    "subarea": "percorsi",
    "difficulty": 2,
-   "question": "Per descrivere con precisione un itinerario servono soprattutto?",
+   "question": "Per descrivere con precisione un itinerario servono soprattutto...",
    "options": [
     "indicazioni ordinate",
     "solo colori vivaci",
@@ -27757,7 +27757,7 @@
    "area": "regioni_antropica",
    "subarea": "italia_regioni",
    "difficulty": 2,
-   "question": "Una regione con forte turismo balneare valorizza soprattutto?",
+   "question": "Una regione con forte turismo balneare valorizza soprattutto...",
    "options": [
     "le coste",
     "i ghiacciai equatoriali",

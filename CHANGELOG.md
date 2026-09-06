@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.57 - 2026-09-06
+
+### Fixed
+- fix(contenuti): `pro-5-divisione-9214` aveva un accordo sbagliato fra soggetto e verbo — *"Quanti libri **va** in ogni scaffale?"* → *"vanno"*.
+- fix(contenuti): altre **104 domande a frase sospesa** uniformate ai puntini, in una forma che i passaggi precedenti non coprivano: chiuse con un verbo o un avverbio invece che con una preposizione (`Il Sole scalda l'acqua e favorisce?`, `Con gli occhi possiamo?`, `La neve è acqua allo stato?`). Distribuzione: scienze 72, geografia 18, storia 12, civica 2, matematica 1.
+
+### Notes
+- lotto 3 di revisione linguistica: 60 domande fra le 6.379 a scheletro unico. 179 revisionate finora.
+- **tre tentativi prima di trovare il criterio giusto**, e vale la pena scriverlo. Il primo (nessuna parola interrogativa nella domanda) convertiva 332 domande ma includeva `Prossimo numero: 1, 4, 9, ___?` e `Probabilità di ottenere testa o croce?`. Il secondo (ultima parola in una lista di parole "sospese") ne convertiva 242 ma rompeva `Quanti libri verdi ci sono?` e `Perché questa regola è utile?`, che finiscono con quelle stesse parole. Solo la **congiunzione dei due filtri** — nessuna parola interrogativa **e** ultima parola non conclusiva, con esclusione di `___`, domande alternative con "o" e opzioni sì/no — dà le 104 corrette. Ogni tentativo è stato annullato con `git checkout` e riverificato leggendo un campione delle conversioni prodotte, non fidandosi del conteggio.
+- rilievo aperto, non corretto: **50 domande di civica hanno lo stem che non corrisponde alle opzioni**. Chiedono un comportamento (`Se parli della libertà di una persona, qual è il comportamento corretto?`) ma le opzioni sono definizioni (`non ha limiti` / `finisce quando danneggia i diritti degli altri`). Sono domande di conoscenza travestite da domande di comportamento: sistemarle vuol dire riscrivere lo stem (`Che cos'è la libertà di una persona?`), cioè riscrivere contenuto didattico, non correggere un refuso. Serve una decisione editoriale.
+
 ## 4.12.56 - 2026-09-06
 
 ### Fixed

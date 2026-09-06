@@ -26412,7 +26412,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Scrivere un messaggio gentile in chat significa?",
+   "question": "Scrivere un messaggio gentile in chat significa...",
    "options": [
     "Usare parole educate",
     "Scrivere tutto in maiuscolo",
@@ -26700,7 +26700,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Per attraversare la strada è meglio usare?",
+   "question": "Per attraversare la strada è meglio usare...",
    "options": [
     "Le strisce pedonali",
     "Il prato",

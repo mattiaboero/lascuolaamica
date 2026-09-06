@@ -24282,7 +24282,7 @@
    "area": "linea_del_tempo",
    "subarea": "cronologia",
    "difficulty": 1,
-   "question": "Su una linea del tempo, l'evento più antico si mette di solito?",
+   "question": "Su una linea del tempo, l'evento più antico si mette di solito...",
    "options": [
     "In alto",
     "A destra",
@@ -24871,7 +24871,7 @@
    "area": "metodo_storico_fonti",
    "subarea": "metodo",
    "difficulty": 2,
-   "question": "Dopo aver raccolto le fonti, lo storico deve?",
+   "question": "Dopo aver raccolto le fonti, lo storico deve...",
    "options": [
     "Metterle in ordine e confrontarle",
     "Nasconderle in un cassetto",
@@ -25181,7 +25181,7 @@
    "area": "preistoria_paleolitico",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Nel Paleolitico gli uomini erano soprattutto?",
+   "question": "Nel Paleolitico gli uomini erano soprattutto...",
    "options": [
     "Scrittori di giornali",
     "Sempre fermi nello stesso villaggio",
@@ -25615,7 +25615,7 @@
    "area": "metodo_storico_fonti",
    "subarea": "metodo",
    "difficulty": 2,
-   "question": "Per ricostruire un fatto del passato, lo storico deve usare?",
+   "question": "Per ricostruire un fatto del passato, lo storico deve usare...",
    "options": [
     "Solo una moneta nuova",
     "Più fonti diverse",
@@ -25770,7 +25770,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "fonti",
    "difficulty": 2,
-   "question": "Per conoscere la vita quotidiana di un popolo antico sono utili soprattutto?",
+   "question": "Per conoscere la vita quotidiana di un popolo antico sono utili soprattutto...",
    "options": [
     "Solo fotografie a colori",
     "Oggetti, resti e scritte",
@@ -26018,7 +26018,7 @@
    "area": "egizi",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Le piramidi erano soprattutto?",
+   "question": "Le piramidi erano soprattutto...",
    "options": [
     "Porti sul mare",
     "Mercati coperti",
@@ -26173,7 +26173,7 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "La terra verso cui si diressero gli ebrei è chiamata spesso?",
+   "question": "La terra verso cui si diressero gli ebrei è chiamata spesso...",
    "options": [
     "Isola del sole",
     "Pianura dei venti",
@@ -26328,7 +26328,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "La civiltà cretese è detta anche?",
+   "question": "La civiltà cretese è detta anche...",
    "options": [
     "Micenea romana",
     "Etrusca marina",
@@ -26359,7 +26359,7 @@
    "area": "civilta_mediterranee",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Il mare Mediterraneo per molti popoli antichi fu soprattutto?",
+   "question": "Il mare Mediterraneo per molti popoli antichi fu soprattutto...",
    "options": [
     "Una via di scambi",
     "Un deserto di sabbia",
@@ -27227,7 +27227,7 @@
    "area": "roma_impero_cristianesimo_fine",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Con l'espressione Pax Romana si indica?",
+   "question": "Con l'espressione Pax Romana si indica...",
    "options": [
     "Una nave romana",
     "Una nuova religione egizia",
@@ -27444,7 +27444,7 @@
    "area": "civilta_greca",
    "subarea": "civilta",
    "difficulty": 2,
-   "question": "Un tempio greco era spesso circondato da?",
+   "question": "Un tempio greco era spesso circondato da...",
    "options": [
     "Mura di neve",
     "Binari",
