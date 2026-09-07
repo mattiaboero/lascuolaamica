@@ -281,9 +281,7 @@ const GRAMMATICA = [
   // primo giorno di scuola"). Senza gli apici la frase si legge come se il
   // valore fosse parte del discorso, e con le risposte che sono verbi non
   // sta in piedi. Il corpus cita fra apici singoli ovunque.
-  // Dal lotto 51: anche "elemento centrale", che il lotto 39 aveva lasciato
-  // fuori guardando solo primo e ultimo.
-  { pattern: /\belemento\s+(?:primo|ultimo|centrale|di mezzo|finale|iniziale)\s+è\s+(?!['"])|\b(?:primo|ultimo|centrale)\s+elemento\s+è\s+(?!['"])|\belemento\s+centrale\s+è\s+(?!['"])|successione corretta,\s+(?!['"])/,
+  { pattern: /successione corretta,\s+(?!['"])/,
     soloSpiegazione: true,
     msg: 'valore citato senza apici nella spiegazione di una sequenza' },
   // Dal lotto 39: segno di moltiplicazione scritto con la lettera x. Il
@@ -434,6 +432,25 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
     if ((explanation || '').trim() !== atteso) {
       errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+    }
+  }
+
+  // Dal lotto 52: la famiglia delle spiegazioni di sequenza, chiusa per intero.
+  // I lotti 39, 49 e 51 l'avevano affrontata tre volte con tre regex diverse,
+  // una per ogni formulazione incontrata ("il primo elemento è", "l'elemento
+  // centrale è", "nella successione corretta"), e ogni volta ne restava
+  // fuori un'altra: "Il primo elemento della successione è mi vesto" erano
+  // le ultime sedici. Il criterio adesso non elenca piu' le formulazioni:
+  // se la spiegazione parla di un "elemento" e finisce citando esattamente
+  // la risposta senza apici, il valore va fra apici. Cosi' non serve
+  // aggiornare la regola quando compare una variante nuova.
+  if (subject !== 'inglese' && typeof answer === 'string' && /\belemento\b/.test(explanation || '')) {
+    // Niente \b davanti a "è": e' non un carattere di parola, e prima c'e' uno
+    // spazio, quindi quel confine non esiste e la regola non scatterebbe mai.
+    // Settima volta in questa campagna, la seconda in due lotti.
+    const coda = String(explanation).trim().match(/(?:^|\s)è\s+(.+?)\.?$/);
+    if (coda && coda[1].trim() === answer.trim() && !/["']/.test(coda[1])) {
+      errors.push({ level: 'error', field: 'explanation', msg: `valore citato senza apici nella spiegazione di una sequenza: "${coda[1]}"` });
     }
   }
 

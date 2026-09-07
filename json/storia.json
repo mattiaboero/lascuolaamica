@@ -1416,7 +1416,7 @@
    ],
    "answerIndex": 1,
    "answer": "mi vesto",
-   "explanation": "Il primo elemento della successione è mi vesto.",
+   "explanation": "Il primo elemento della successione è 'mi vesto'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1447,7 +1447,7 @@
    ],
    "answerIndex": 2,
    "answer": "arrivo a scuola",
-   "explanation": "L'ultimo elemento della successione è arrivo a scuola.",
+   "explanation": "L'ultimo elemento della successione è 'arrivo a scuola'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1478,7 +1478,7 @@
    ],
    "answerIndex": 3,
    "answer": "apro il libro",
-   "explanation": "Il primo elemento della successione è apro il libro.",
+   "explanation": "Il primo elemento della successione è 'apro il libro'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1509,7 +1509,7 @@
    ],
    "answerIndex": 0,
    "answer": "chiudo il libro",
-   "explanation": "L'ultimo elemento della successione è chiudo il libro.",
+   "explanation": "L'ultimo elemento della successione è 'chiudo il libro'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1540,7 +1540,7 @@
    ],
    "answerIndex": 1,
    "answer": "semino",
-   "explanation": "Il primo elemento della successione è semino.",
+   "explanation": "Il primo elemento della successione è 'semino'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1571,7 +1571,7 @@
    ],
    "answerIndex": 2,
    "answer": "vedo crescere la pianta",
-   "explanation": "L'ultimo elemento della successione è vedo crescere la pianta.",
+   "explanation": "L'ultimo elemento della successione è 'vedo crescere la pianta'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1602,7 +1602,7 @@
    ],
    "answerIndex": 3,
    "answer": "nascita",
-   "explanation": "Il primo elemento della successione è nascita.",
+   "explanation": "Il primo elemento della successione è 'nascita'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1633,7 +1633,7 @@
    ],
    "answerIndex": 0,
    "answer": "inizio la scuola",
-   "explanation": "L'ultimo elemento della successione è inizio la scuola.",
+   "explanation": "L'ultimo elemento della successione è 'inizio la scuola'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1664,7 +1664,7 @@
    ],
    "answerIndex": 1,
    "answer": "mattina",
-   "explanation": "Il primo elemento della successione è mattina.",
+   "explanation": "Il primo elemento della successione è 'mattina'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1695,7 +1695,7 @@
    ],
    "answerIndex": 2,
    "answer": "sera",
-   "explanation": "L'ultimo elemento della successione è sera.",
+   "explanation": "L'ultimo elemento della successione è 'sera'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1726,7 +1726,7 @@
    ],
    "answerIndex": 3,
    "answer": "primavera",
-   "explanation": "Il primo elemento della successione è primavera.",
+   "explanation": "Il primo elemento della successione è 'primavera'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1757,7 +1757,7 @@
    ],
    "answerIndex": 0,
    "answer": "autunno",
-   "explanation": "L'ultimo elemento della successione è autunno.",
+   "explanation": "L'ultimo elemento della successione è 'autunno'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1788,7 +1788,7 @@
    ],
    "answerIndex": 1,
    "answer": "colazione",
-   "explanation": "Il primo elemento della successione è colazione.",
+   "explanation": "Il primo elemento della successione è 'colazione'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1819,7 +1819,7 @@
    ],
    "answerIndex": 2,
    "answer": "cena",
-   "explanation": "L'ultimo elemento della successione è cena.",
+   "explanation": "L'ultimo elemento della successione è 'cena'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1850,7 +1850,7 @@
    ],
    "answerIndex": 3,
    "answer": "ieri",
-   "explanation": "Il primo elemento della successione è ieri.",
+   "explanation": "Il primo elemento della successione è 'ieri'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -1881,7 +1881,7 @@
    ],
    "answerIndex": 0,
    "answer": "domani",
-   "explanation": "L'ultimo elemento della successione è domani.",
+   "explanation": "L'ultimo elemento della successione è 'domani'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
@@ -5844,7 +5844,7 @@
    "options": [
     "capire semplici testi",
     "volare con le braccia",
-    "fermire il tempo",
+    "fermare il tempo",
     "far nevicare in casa"
    ],
    "answerIndex": 0,

@@ -74,13 +74,14 @@ const SBAGLIATE = [
   'Gli antichi egizi costruivano piramidi di pietra.',
   'Prima: 4 × 3 = 12 biscotti. Poi: i biscotti totali sono 12.',
   "Ma aspetta: sol- vs ste-: confrontiamo la seconda lettera.",
-  'Sulla linea del tempo il primo elemento è mi sveglio.',
   'Prima: 3 x 1,20 = 3,60 euro per i quaderni.',
   'Plurali irregolari: uomo/uomini, dio/dei, bue/buoi.',
   'La mamma ha comprato 32 palline e vuole distribuirli in parti uguali.',
+  'Nella successione corretta, mi sveglio è la risposta giusta.',
 ];
 
 const CORRETTE = [
+  "Nella successione corretta, 'mi sveglio' è la risposta giusta.",
   'La mamma ha comprato 32 palline e vuole distribuirle in parti uguali.',
   "'Qualche' e 'dei' indicano una quantità positiva.",
   "Sulla linea del tempo il primo elemento è 'mi sveglio'.",

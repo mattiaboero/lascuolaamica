@@ -11177,11 +11177,11 @@
    "options": [
     "completo",
     "dettagliato",
-    "che presenta lacune, incomplete",
+    "che presenta lacune, incompleto",
     "chiaro"
    ],
    "answerIndex": 2,
-   "answer": "che presenta lacune, incomplete",
+   "answer": "che presenta lacune, incompleto",
    "explanation": "'Lacunoso' descrive qualcosa di incompleto, che presenta mancanze o vuoti.",
    "active": true,
    "tag": "italiano;classe_5;lessico;primaria",
