@@ -3708,7 +3708,7 @@
    "area": "viventi_non_viventi",
    "subarea": "piante",
    "difficulty": 1,
-   "question": "Quali parti della pianta stanno sotto terra?",
+   "question": "Quale parte della pianta sta sotto terra?",
    "options": [
     "radici",
     "fiore",
@@ -3779,7 +3779,7 @@
    ],
    "answerIndex": 3,
    "answer": "foglie",
-   "explanation": "La parte corretta è 'foglie'.",
+   "explanation": "Le foglie sono spesso verdi: contengono la clorofilla.",
    "active": true,
    "tag": "piante;osservazione;classe2",
    "tags": [

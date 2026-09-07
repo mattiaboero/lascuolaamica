@@ -4615,14 +4615,14 @@
    "difficulty": 2,
    "question": "In quale frase la lettera maiuscola è usata correttamente?",
    "options": [
-    "fiiore",
-    "fiorre",
+    "la bambina corre.",
+    "Il gatto Dorme.",
     "Il cane abbaia.",
-    "fioree"
+    "LA MAESTRA SPIEGA."
    ],
    "answerIndex": 2,
    "answer": "Il cane abbaia.",
-   "explanation": "La maiuscola si usa solo a inizio frase e per i nomi propri. 'Il cane abbaia.' è corretta.",
+   "explanation": "La maiuscola si usa a inizio frase e per i nomi propri, come in 'Il cane abbaia.' Non va messa su ogni parola, né su tutta la frase, né si può ometterla in apertura.",
    "active": true,
    "tag": "italiano;classe_2;lingua;primaria",
    "tags": [
@@ -26537,11 +26537,11 @@
    "options": [
     "parole",
     "la meraviglia",
-    "Siamo (noi)",
+    "noi (sottinteso)",
     "per la meraviglia"
    ],
    "answerIndex": 2,
-   "answer": "Siamo (noi)",
+   "answer": "noi (sottinteso)",
    "explanation": "Il soggetto indica chi compie o subisce l'azione. In questa frase il soggetto è il pronome 'noi' implicito nella desinenza del verbo 'siamo'. I soggetti sottintesi si ricavano dalla forma verbale.",
    "active": true,
    "tag": "italiano;sintassi;classe_5;primaria",

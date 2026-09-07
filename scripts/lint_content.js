@@ -435,6 +435,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 48: domanda al plurale con la spiegazione canonica al singolare
+  // ("Quali parti della pianta stanno sotto terra?" spiegata con "La parte
+  // corretta e' 'radici'."). Nelle domande sorelle il numero coincide, quindi
+  // il disallineamento segnala che uno dei due e' stato cambiato da solo.
+  if (subject !== 'inglese' && /^Quali\s/.test(question || '')
+      // Niente \b dopo "è": in JavaScript una lettera accentata non e' un
+      // carattere di parola, quindi fra "è" e lo spazio non c'e' nessun
+      // confine e la regola non scatterebbe mai. Sesta volta in questa
+      // campagna (lotti 10, 14, 15, 24, 37 e ora 48).
+      // Solo i template che nominano la cosa ("La parte corretta", "La parola
+      // corretta"): "La risposta corretta" parla della risposta, non
+      // dell'oggetto, e con una domanda al plurale sta benissimo.
+      && /^L[ae]\s+(?:parte|funzione|parola|stagione|trasformazione)\s+corretta\s+è(?=\s|$)/.test(explanation || '')) {
+    errors.push({ level: 'error', field: 'explanation', msg: 'domanda al plurale e spiegazione canonica al singolare' });
+  }
+
   // Dal lotto 47: nelle domande sul soggetto la risposta deve comprendere
   // l'articolo, perche' e' quello che il corpus insegna altrove
   // ("Il soggetto include l'articolo: 'Il treno'"). ita-2-grammatica-9215
