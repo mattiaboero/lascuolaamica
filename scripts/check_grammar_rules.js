@@ -17,6 +17,8 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Distribuisci 24 adesivi a 3 bambini in uguale misura. Quanti ne riceve ognuno?',
+  'Quando starnutiamo, per non spargere i germi dovremmo?',
   'Una ricetta richiede 8 burro (in grammi).',
   'Servono 8 burro per la torta.',
   'Quante burro servono?',

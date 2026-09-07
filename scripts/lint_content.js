@@ -154,6 +154,18 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 59: "in uguale misura" vale "nella stessa proporzione", non "in
+  // parti uguali". Lo usavano 35 problemi di divisione, mentre le loro stesse
+  // spiegazioni dicevano gia' "in parti uguali".
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])in ugual[e]?\s+misura(?![a-zà-ùA-ZÀ-Ù])/i,
+    soloDomanda: true,
+    msg: `"in uguale misura" indica una proporzione: per una divisione serve "in parti uguali"` },
+  // Dal lotto 59: domanda che finisce con un verbo servile e il punto
+  // interrogativo ("...per non spargere i germi dovremmo?"): manca la cosa da
+  // fare. E' la variante con il verbo della regola del lotto 53.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:dovremmo|dovremo|dobbiamo|possiamo|potremmo|bisogna|conviene|serve)\s*\?\s*$/i,
+    soloDomanda: true,
+    msg: 'domanda che finisce con un verbo servile: manca quello che si deve fare' },
   { pattern: /\bperch[ée]\?\s*$/, soloDomanda: true,
     msg: 'domanda che termina con "perché?": se sono le opzioni a completarla, usare i puntini' },
   // Dal lotto 8: il template lasciava l'alternativa di genere da risolvere e
@@ -612,6 +624,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         if (discorde) {
           errors.push({ level: 'error', field: 'options', msg: `preposizione dell'opzione ("${discorde}") incompatibile con quella della domanda ("${fine[1]}...")` });
         }
+      }
+    }
+  }
+
+  // Dal lotto 59: stem sospeso con un avverbio di grado ("Roma controllo'
+  // territori molto...") e opzioni che dopo quell'avverbio non stanno in
+  // piedi: "molto solo italiani", "molto temporanea di un solo giorno". Due
+  // casi, risolti togliendo l'avverbio dallo stem.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const grado = String(question || '').trim()
+      .match(/(?<![a-zà-ùA-ZÀ-Ù])(molto|assai|piuttosto|parecchio)\s*\.\.\.$/i);
+    if (grado) {
+      const incoerente = options.filter((o) => typeof o === 'string')
+        .find((o) => /^\s*(?:solo|soltanto)\b/i.test(o) || /\sdi un solo\s/i.test(o));
+      if (incoerente) {
+        errors.push({ level: 'error', field: 'options', msg: `l'avverbio "${grado[1]}..." della domanda non regge l'opzione "${incoerente}"` });
       }
     }
   }

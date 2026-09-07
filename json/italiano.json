@@ -9925,16 +9925,16 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Come si chiama il suffisso in 'gentilezza' che trasforma l'aggettivo in nome?",
+   "question": "Di che tipo è il suffisso che in 'gentilezza' trasforma l'aggettivo in nome?",
    "options": [
     "prefisso",
     "infisso",
     "suffisso derivativo",
-    "-ezza"
+    "suffisso alterativo"
    ],
    "answerIndex": 2,
    "answer": "suffisso derivativo",
-   "explanation": "Il suffisso derivativo '-ezza' trasforma aggettivi in nomi astratti: gentile → gentilezza.",
+   "explanation": "Il suffisso '-ezza' è derivativo: cambia la categoria della parola e trasforma l'aggettivo 'gentile' nel nome astratto 'gentilezza'. I suffissi alterativi invece cambiano solo la sfumatura ('gatto' → 'gattino').",
    "active": true,
    "tag": "italiano;classe_5;morfologia;primaria",
    "tags": [
@@ -12366,7 +12366,7 @@
    ],
    "answerIndex": 2,
    "answer": "N",
-   "explanation": "Nell'alfabeto italiano l'ordine è:...L, M, N, O, P... Dopo la M viene la N.",
+   "explanation": "Nell'alfabeto italiano l'ordine è L, M, N, O, P: dopo la M viene la N.",
    "active": true,
    "tag": "italiano;alfabeto;classe_2;primaria",
    "tags": [
@@ -28334,7 +28334,7 @@
    ],
    "answerIndex": 1,
    "answer": "Il tempo corre veloce",
-   "explanation": "Nelle prime, terza e quarta frase 'correre' è usato in senso letterale (movimento fisico veloce). Nella seconda frase 'il tempo corre' è una metafora: il tempo non si muove fisicamente ma 'passa velocemente'. Questo uso figurato arricchisce il linguaggio esprimendo concetti astratti con immagini concrete.",
+   "explanation": "Nella prima, nella terza e nella quarta frase 'correre' è usato in senso letterale (movimento fisico veloce). Nella seconda 'il tempo corre' è una metafora: il tempo non si muove fisicamente ma 'passa velocemente'.",
    "active": true,
    "tag": "italiano;lessico;classe_5;primaria",
    "tags": [
