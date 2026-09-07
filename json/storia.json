@@ -2563,7 +2563,7 @@
    ],
    "answerIndex": 2,
    "answer": "nascita",
-   "explanation": "Sulla linea del tempo il primo elemento è nascita.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'nascita'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2594,7 +2594,7 @@
    ],
    "answerIndex": 3,
    "answer": "primo giorno di scuola",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è primo giorno di scuola.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'primo giorno di scuola'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2656,7 +2656,7 @@
    ],
    "answerIndex": 1,
    "answer": "mi sveglio",
-   "explanation": "Sulla linea del tempo il primo elemento è mi sveglio.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'mi sveglio'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2687,7 +2687,7 @@
    ],
    "answerIndex": 2,
    "answer": "vado a scuola",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è vado a scuola.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'vado a scuola'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2749,7 +2749,7 @@
    ],
    "answerIndex": 0,
    "answer": "semino",
-   "explanation": "Sulla linea del tempo il primo elemento è semino.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'semino'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2780,7 +2780,7 @@
    ],
    "answerIndex": 1,
    "answer": "la pianta cresce",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è la pianta cresce.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'la pianta cresce'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2842,7 +2842,7 @@
    ],
    "answerIndex": 3,
    "answer": "lunedì",
-   "explanation": "Sulla linea del tempo il primo elemento è lunedì.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'lunedì'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2873,7 +2873,7 @@
    ],
    "answerIndex": 0,
    "answer": "mercoledì",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è mercoledì.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'mercoledì'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2935,7 +2935,7 @@
    ],
    "answerIndex": 2,
    "answer": "gennaio",
-   "explanation": "Sulla linea del tempo il primo elemento è gennaio.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'gennaio'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2966,7 +2966,7 @@
    ],
    "answerIndex": 3,
    "answer": "marzo",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è marzo.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'marzo'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3028,7 +3028,7 @@
    ],
    "answerIndex": 1,
    "answer": "mattina",
-   "explanation": "Sulla linea del tempo il primo elemento è mattina.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'mattina'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3059,7 +3059,7 @@
    ],
    "answerIndex": 2,
    "answer": "sera",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è sera.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'sera'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3121,7 +3121,7 @@
    ],
    "answerIndex": 0,
    "answer": "ieri",
-   "explanation": "Sulla linea del tempo il primo elemento è ieri.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'ieri'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3152,7 +3152,7 @@
    ],
    "answerIndex": 1,
    "answer": "domani",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è domani.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'domani'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3214,7 +3214,7 @@
    ],
    "answerIndex": 3,
    "answer": "primavera",
-   "explanation": "Sulla linea del tempo il primo elemento è primavera.",
+   "explanation": "Sulla linea del tempo il primo elemento è 'primavera'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3245,7 +3245,7 @@
    ],
    "answerIndex": 0,
    "answer": "autunno",
-   "explanation": "Sulla linea del tempo l'ultimo elemento è autunno.",
+   "explanation": "Sulla linea del tempo l'ultimo elemento è 'autunno'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -7605,7 +7605,7 @@
    ],
    "answerIndex": 2,
    "answer": "Big Bang",
-   "explanation": "Il primo elemento è Big Bang.",
+   "explanation": "Il primo elemento è 'Big Bang'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7636,7 +7636,7 @@
    ],
    "answerIndex": 3,
    "answer": "comparsa della vita",
-   "explanation": "L'ultimo elemento è comparsa della vita.",
+   "explanation": "L'ultimo elemento è 'comparsa della vita'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7698,7 +7698,7 @@
    ],
    "answerIndex": 1,
    "answer": "Paleolitico",
-   "explanation": "Il primo elemento è Paleolitico.",
+   "explanation": "Il primo elemento è 'Paleolitico'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7729,7 +7729,7 @@
    ],
    "answerIndex": 2,
    "answer": "età dei metalli",
-   "explanation": "L'ultimo elemento è età dei metalli.",
+   "explanation": "L'ultimo elemento è 'età dei metalli'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7791,7 +7791,7 @@
    ],
    "answerIndex": 0,
    "answer": "nomadismo",
-   "explanation": "Il primo elemento è nomadismo.",
+   "explanation": "Il primo elemento è 'nomadismo'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7822,7 +7822,7 @@
    ],
    "answerIndex": 1,
    "answer": "villaggio stabile",
-   "explanation": "L'ultimo elemento è villaggio stabile.",
+   "explanation": "L'ultimo elemento è 'villaggio stabile'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7884,7 +7884,7 @@
    ],
    "answerIndex": 3,
    "answer": "seme",
-   "explanation": "Il primo elemento è seme.",
+   "explanation": "Il primo elemento è 'seme'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7915,7 +7915,7 @@
    ],
    "answerIndex": 0,
    "answer": "pane",
-   "explanation": "L'ultimo elemento è pane.",
+   "explanation": "L'ultimo elemento è 'pane'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7977,7 +7977,7 @@
    ],
    "answerIndex": 2,
    "answer": "nascita",
-   "explanation": "Il primo elemento è nascita.",
+   "explanation": "Il primo elemento è 'nascita'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -8008,7 +8008,7 @@
    ],
    "answerIndex": 3,
    "answer": "età adulta",
-   "explanation": "L'ultimo elemento è età adulta.",
+   "explanation": "L'ultimo elemento è 'età adulta'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [

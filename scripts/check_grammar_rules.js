@@ -74,9 +74,13 @@ const SBAGLIATE = [
   'Gli antichi egizi costruivano piramidi di pietra.',
   'Prima: 4 × 3 = 12 biscotti. Poi: i biscotti totali sono 12.',
   "Ma aspetta: sol- vs ste-: confrontiamo la seconda lettera.",
+  'Sulla linea del tempo il primo elemento è mi sveglio.',
+  'Prima: 3 x 1,20 = 3,60 euro per i quaderni.',
 ];
 
 const CORRETTE = [
+  "Sulla linea del tempo il primo elemento è 'mi sveglio'.",
+  'Prima: 3 × 1,20 = 3,60 euro per i quaderni.',
   'Come si chiamavano le costruzioni a gradoni che i Sumeri dedicavano agli dèi?',
   'Prima: 12 × 5 = 60 pagine. Poi: 60 + 24 = 84 pagine.',
   'Il treno aspetta in stazione e riparte alle 9.',

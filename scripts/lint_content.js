@@ -269,6 +269,18 @@ const GRAMMATICA = [
   { pattern: /\bMa aspetta\b|\bRivediamo\b|\bRicontrolliamo\b|\bCorreggo\b|\bAnzi,|\?\s*No,\s/,
     soloSpiegazione: true,
     msg: 'frammento di ragionamento rimasto nella spiegazione (ripensamento o autocorrezione)' },
+  // Dal lotto 39: nelle sequenze la spiegazione citava il valore senza
+  // virgolette ("il primo elemento è mi sveglio", "l'ultimo elemento è
+  // primo giorno di scuola"). Senza gli apici la frase si legge come se il
+  // valore fosse parte del discorso, e con le risposte che sono verbi non
+  // sta in piedi. Il corpus cita fra apici singoli ovunque.
+  { pattern: /\b(?:primo|ultimo)\s+elemento\s+è\s+(?!['"])/,
+    soloSpiegazione: true,
+    msg: 'valore citato senza apici nella spiegazione di una sequenza' },
+  // Dal lotto 39: segno di moltiplicazione scritto con la lettera x. Il
+  // corpus usa il simbolo × 2.413 volte.
+  { pattern: /\d\s*[xX]\s*\d/,
+    msg: 'moltiplicazione scritta con la lettera x invece del simbolo ×' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
