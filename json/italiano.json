@@ -11402,7 +11402,7 @@
     "sinonimo",
     "omonimo",
     "contrario/antonimo",
-    "ipernimo"
+    "iperonimo"
    ],
    "answerIndex": 2,
    "answer": "contrario/antonimo",
@@ -11461,7 +11461,7 @@
    "area": "italiano_classe5",
    "subarea": "lessico",
    "difficulty": 3,
-   "question": "Quale parola è un ipernimo di 'rosa', 'tulipano', 'margherita'?",
+   "question": "Quale parola è un iperonimo di 'rosa', 'tulipano', 'margherita'?",
    "options": [
     "pianta",
     "albero",
@@ -11470,7 +11470,7 @@
    ],
    "answerIndex": 2,
    "answer": "fiore",
-   "explanation": "'Fiore' è l'ipernimo: indica la categoria generale a cui appartengono rosa, tulipano e margherita.",
+   "explanation": "'Fiore' è l'iperonimo: indica la categoria generale a cui appartengono rosa, tulipano e margherita.",
    "active": true,
    "tag": "italiano;classe_5;lessico;primaria",
    "tags": [

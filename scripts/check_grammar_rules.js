@@ -235,6 +235,10 @@ function controllaRefusi() {
     const candidati = [];
     for (let i = 1; i < w.length; i += 1) {
       if ('bcdfglmnprstvz'.includes(w[i])) candidati.push(w.slice(0, i) + w[i] + w.slice(i));
+      // Dal lotto 36: anche la direzione opposta, una doppia di troppo
+      // ("starrebbero" per "starebbero"). Serve la simmetria, perche' il
+      // difetto nasce nello stesso modo.
+      if (w[i] === w[i - 1] && 'bcdfglmnprstvz'.includes(w[i])) candidati.push(w.slice(0, i) + w.slice(i + 1));
       candidati.push(w.slice(0, i - 1) + w[i] + w[i - 1] + w.slice(i + 1));
     }
     for (const c of candidati) {
