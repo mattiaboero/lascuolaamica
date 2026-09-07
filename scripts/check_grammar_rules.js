@@ -46,6 +46,7 @@ const SBAGLIATE = [
   'A quale apparato appartiene soprattutto il/i cuore?',
   "L'ambiente è il comportamento corretto.",
   'Secondo i Greci, gli dei abitavano sul Monte Olimpo.',
+  "Il Monte Olimpo era considerato la dimora degli dei.",
   'Un campo di 5400 mq viene diviso in 25 lotti identici.',
   '42 - 22 = 20 farfalle rimasti.',
   'Martina raccoglie 20 gomme al mattino e 22 nel pomeriggio. Quanti ne ha in tutto?',

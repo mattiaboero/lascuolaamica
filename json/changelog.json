@@ -1,5 +1,12 @@
 [
  {
+  "date": "7 settembre 2026 · Release 4.12.79",
+  "items": [
+   "Una domanda di italiano chiedeva la preposizione giusta ma non offriva la risposta corretta: ora fra le opzioni c'è \"a piedi\".",
+   "Corretti altri 8 \"dei\" senza accento nelle domande di storia."
+  ]
+ },
+ {
   "date": "7 settembre 2026 · Release 4.12.78",
   "items": [
    "Riscritte 23 spiegazioni di scienze che chiamavano \"comportamento\" o \"termine\" cose che non lo erano (\"L'ambiente è il comportamento corretto\").",

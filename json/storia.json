@@ -13871,7 +13871,7 @@
    "question": "Il codice di Hammurabi raccoglieva...",
    "options": [
     "ricette di cucina",
-    "favole sugli dei",
+    "favole sugli dèi",
     "disegni di animali",
     "leggi scritte"
    ],
@@ -20597,12 +20597,12 @@
    "options": [
     "credere soltanto nel faraone",
     "rifiutare ogni rito",
-    "interpretare i segni degli dei",
+    "interpretare i segni degli dèi",
     "adorare solo il Nilo"
    ],
    "answerIndex": 2,
-   "answer": "interpretare i segni degli dei",
-   "explanation": "La risposta corretta è interpretare i segni degli dei.",
+   "answer": "interpretare i segni degli dèi",
+   "explanation": "La risposta corretta è interpretare i segni degli dèi.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -26523,7 +26523,7 @@
    ],
    "answerIndex": 2,
    "answer": "Monte Olimpo",
-   "explanation": "Il Monte Olimpo era considerato la dimora degli dei.",
+   "explanation": "Il Monte Olimpo era considerato la dimora degli dèi.",
    "active": true,
    "tag": "civilta_greca",
    "tags": [
@@ -34093,7 +34093,7 @@
    "area": "mesopotamia",
    "subarea": "sumeri",
    "difficulty": 3,
-   "question": "Come si chiamavano le grandi costruzioni a gradoni che i Sumeri dedicavano agli dei...",
+   "question": "Come si chiamavano le grandi costruzioni a gradoni che i Sumeri dedicavano agli dèi...",
    "options": [
     "Le ziggurat",
     "Le piramidi",
@@ -34285,7 +34285,7 @@
    "area": "civilta_greca",
    "subarea": "quadro_di_civilta",
    "difficulty": 3,
-   "question": "Come si chiamavano le gare sportive che i Greci dedicavano agli dei a Olimpia?",
+   "question": "Come si chiamavano le gare sportive che i Greci dedicavano agli dèi a Olimpia?",
    "options": [
     "I Giochi Olimpici",
     "Il Palio",
@@ -34294,7 +34294,7 @@
    ],
    "answerIndex": 0,
    "answer": "I Giochi Olimpici",
-   "explanation": "I Greci organizzavano a Olimpia i Giochi Olimpici, gare sportive in onore degli dei. Da lì derivano le moderne Olimpiadi.",
+   "explanation": "I Greci organizzavano a Olimpia i Giochi Olimpici, gare sportive in onore degli dèi. Da lì derivano le moderne Olimpiadi.",
    "active": true,
    "tag": "storia;civilt_greca;classe_4;primaria",
    "tags": [

@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.12.79 - 2026-09-07
+
+### Fixed
+- fix(contenuti): **`ita-2-lingua-9129` chiedeva quale frase usa correttamente la preposizione, e la risposta giusta non era fra le opzioni.** Offriva `in piedi | di piedi | con piedi | su piedi`, e la spiegazione lo ammetteva a mezza bocca (`'Vado a scuola a piedi' è la frase corretta. Tra le opzioni, 'in piedi' è l'unica... accettabile`). `In piedi` significa in posizione verticale, non a piedi. Sostituita l'opzione con `a piedi` e riscritta la spiegazione.
+- fix(contenuti): **8 `dei` senza accento** dopo una preposizione articolata (`la dimora degli dei`, `dedicavano agli dei`, `favole sugli dei`). La regola della 4.12.76 elencava solo articoli e quantificatori.
+- fix(contenuti): `Qual è il modo e il tempo del verbo...?` → `Quali sono`: due soggetti vogliono il verbo al plurale.
+
+### Changed
+- lint(contenuti): la regola su `dèi` copre anche le preposizioni articolate.
+
+### Notes
+- **verificata e archiviata l'incoerenza sui punti cardinali**, che sembrava grossa: 264 maiuscoli contro 144 minuscoli. Non è un difetto. L'italiano vuole la maiuscola per la regione (`il Nord Italia`) e la minuscola per la direzione (`a nord del ponte`), e il corpus applica già la distinzione — anche dentro la stessa frase, dove sembrava un conflitto: `La Pianura Padana è la grande pianura del Nord Italia, delimitata a nord da...`. Uniformare a tappeto avrebbe rotto una distinzione corretta.
+
 ## 4.12.78 - 2026-09-07
 
 ### Fixed

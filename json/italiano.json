@@ -14407,14 +14407,14 @@
    "difficulty": 3,
    "question": "Quale frase usa correttamente la preposizione?",
    "options": [
-    "Vado a scuola in piedi.",
+    "Vado a scuola a piedi.",
     "Vado a scuola di piedi.",
     "Vado a scuola con piedi.",
     "Vado a scuola su piedi."
    ],
    "answerIndex": 0,
-   "answer": "Vado a scuola in piedi.",
-   "explanation": "L'espressione corretta è 'a piedi' (senza mezzo di trasporto) o 'in piedi' (in posizione verticale). 'Vado a scuola a piedi' è la frase corretta. Tra le opzioni, 'in piedi' è l'unica preposizione con un senso logico accettabile nel contesto dato.",
+   "answer": "Vado a scuola a piedi.",
+   "explanation": "Per dire che ci si sposta camminando si usa 'a piedi': 'Vado a scuola a piedi'. Le altre preposizioni ('di', 'con', 'su') non si usano in questa espressione.",
    "active": true,
    "tag": "italiano;lingua;classe_2;primaria",
    "tags": [
@@ -27109,7 +27109,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 2,
-   "question": "Qual è il modo e il tempo del verbo 'avevano cantato'?",
+   "question": "Quali sono il modo e il tempo del verbo 'avevano cantato'?",
    "options": [
     "indicativo trapassato prossimo",
     "indicativo passato prossimo",
