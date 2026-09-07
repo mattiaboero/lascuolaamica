@@ -205,7 +205,13 @@ const GRAMMATICA = [
   // greci", "gli egizi"). Come aggettivo la minuscola e' corretta ("i vasi
   // greci"), quindi la regola chiede l'articolo o la preposizione articolata
   // subito prima, che e' il segnale del sostantivo.
-  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Ii]|[Gg]li|[Dd]ei|[Dd]egli|[Aa]i|[Aa]gli|[Dd]ai|[Dd]agli|[Nn]ei|[Nn]egli|[Cc]oi)\s+(?:fenici|etruschi|sumeri|egizi|greci|romani|babilonesi|assiri|micenei|cretesi|persiani|ateniesi|spartani|ebrei|mesopotamici|minoici|cartaginesi|celti|longobardi|franchi|unni)\b/,
+  // Dal lotto 29: fra l'articolo e il nome di popolo puo' esserci un aggettivo
+  // ("Gli antichi egizi"), e li' la regola del lotto 14 non arrivava. La lista
+  // degli aggettivi e' chiusa e contiene solo quelli che in italiano stanno
+  // prima del nome: se in mezzo c'e' un sostantivo ("i mercanti fenici", "i
+  // palazzi cretesi") allora e' il popolo a fare da aggettivo, e la minuscola
+  // e' corretta.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Ii]|[Gg]li|[Dd]ei|[Dd]egli|[Aa]i|[Aa]gli|[Dd]ai|[Dd]agli|[Nn]ei|[Nn]egli|[Cc]oi)\s+(?:(?:antichi|primi|ultimi|grandi|altri|stessi|veri|nuovi|vecchi|molti|tanti|pochi|numerosi|vari|diversi|potenti|famosi|ricchi)\s+)?(?:fenici|etruschi|sumeri|egizi|greci|romani|babilonesi|assiri|micenei|cretesi|persiani|ateniesi|spartani|ebrei|mesopotamici|minoici|cartaginesi|celti|longobardi|franchi|unni)\b/,
     msg: 'nome di popolo in minuscolo usato come sostantivo (es. "gli egizi" invece di "gli Egizi")' },
   // Dal lotto 15: frase sospesa in cui "quando" o "come" sono congiunzioni, non
   // interrogativi ("L'ombra si forma quando un corpo?", "Un materiale
@@ -387,6 +393,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     if ((explanation || '').trim() !== atteso) {
       errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
     }
+  }
+
+  // Dal lotto 29: la domanda chiede quale opzione NON rientra in una categoria,
+  // ma la spiegazione afferma che ci rientrano tutte ("Quale parola NON
+  // appartiene alla famiglia di 'acqua'?" con "Tutte le parole appartengono
+  // alla famiglia di 'acqua'"). Cosi' la domanda non ha nessuna risposta
+  // giusta. E' il secondo caso del genere nella campagna, dopo quello del
+  // lotto 23, e in tutti e due il segnale era la spiegazione che si
+  // contraddiceva da sola.
+  if (subject !== 'inglese' && /\bNON\b/.test(question || '')
+      && /\b(?:Tutte|Tutti)\b[^.]{0,70}\b(?:appartengono|sono|hanno|derivano|contengono|indicano)\b/.test(explanation || '')) {
+    errors.push({ level: 'error', field: 'explanation', msg: 'domanda che chiede quale opzione NON rientra, ma la spiegazione dice che ci rientrano tutte: nessuna risposta è giusta' });
   }
 
   // Dal lotto 25: la spiegazione ammette come valido anche un distrattore

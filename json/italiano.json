@@ -24778,11 +24778,11 @@
     "acquedotto",
     "acquario",
     "acquazzone",
-    "acquerello"
+    "acquisto"
    ],
    "answerIndex": 3,
-   "answer": "acquerello",
-   "explanation": "Attenzione: 'acquerello' deriva proprio da 'acqua' (tecnica pittorica che usa acqua+colori). Tutte le parole appartengono alla famiglia di 'acqua': acquedotto (conduttura d'acqua), acquario (vasca d'acqua), acquazzone (pioggia intensa), acquerello (pittura con acqua). Le famiglie di parole condividono la stessa radice.",
+   "answer": "acquisto",
+   "explanation": "'Acquisto' non deriva da 'acqua' ma dal verbo 'acquistare' (dal latino ad + quaerere, cercare): assomiglia solo nel suono. 'Acquedotto' (conduttura d'acqua), 'acquario' (vasca d'acqua) e 'acquazzone' (pioggia intensa) hanno invece la radice di 'acqua'.",
    "active": true,
    "tag": "italiano;lingua;classe_4;primaria",
    "tags": [

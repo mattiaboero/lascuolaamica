@@ -71,9 +71,12 @@ const SBAGLIATE = [
   'Se vuoi spiegare il volontariato, qual è il comportamento corretto?',
   'In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa è meglio fare?',
   'Prima: 336 ÷ 7. Poi: 336 ÷ 7 = 48.',
+  'Gli antichi egizi costruivano piramidi di pietra.',
 ];
 
 const CORRETTE = [
+  'I mercanti fenici viaggiavano per tutto il Mediterraneo.',
+  'I palazzi cretesi erano centri di governo e di culto.',
   'Prima: 252 mele ÷ 9 scatole. Poi: 252 ÷ 9 = 28.',
   'Prima: velocità × tempo. Poi: 95 × 4 = 380 km.',
   'Se vuoi bere a scuola, qual è il comportamento corretto?',
