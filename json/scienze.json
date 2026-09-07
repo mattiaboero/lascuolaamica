@@ -6639,7 +6639,7 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 1,
-   "question": "Quale stato della materia prende la forma del recipiente?",
+   "question": "Quale stato della materia prende la forma del recipiente ma mantiene il proprio volume?",
    "options": [
     "aeriforme",
     "solido",

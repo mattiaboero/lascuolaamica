@@ -18602,7 +18602,7 @@
     "Io e te andiamo al parco.",
     "Me e te andiamo al parco.",
     "Io e te andamo al parco.",
-    "Io e te siamo andati al parco ieri domani."
+    "Mi e te andiamo al parco."
    ],
    "answerIndex": 0,
    "answer": "Io e te andiamo al parco.",
@@ -27653,16 +27653,16 @@
    "area": "italiano_classe5",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Quale delle seguenti parole vuole l'accento?",
+   "question": "In quale frase 'pero' va scritto con l'accento?",
    "options": [
-    "pero (frutto)",
-    "pero (congiunzione però)",
-    "pero (voce del verbo perdere)",
-    "pèro"
+    "Nel giardino c'è un pero carico di frutti",
+    "Volevo uscire, pero pioveva",
+    "Il pero fiorisce in primavera",
+    "Ho piantato un pero e un melo"
    ],
    "answerIndex": 1,
-   "answer": "pero (congiunzione però)",
-   "explanation": "La congiunzione avversativa 'però' porta sempre l'accento grave sulla 'o' finale. Senza accento, 'pero' indica l'albero da frutto. L'accento è indispensabile per distinguere le due parole che si pronunciano diversamente: 'pèro' (albero) e 'però' (congiunzione).",
+   "answer": "Volevo uscire, pero pioveva",
+   "explanation": "Nella seconda frase 'pero' è la congiunzione avversativa e vuole l'accento grave: 'Volevo uscire, però pioveva'. Nelle altre è l'albero da frutto e l'accento non ci va. L'accento serve proprio a distinguere le due parole.",
    "active": true,
    "tag": "italiano;ortografia;classe_5;primaria",
    "tags": [

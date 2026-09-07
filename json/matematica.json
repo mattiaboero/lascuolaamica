@@ -18933,7 +18933,7 @@
    ],
    "answerIndex": 1,
    "answer": "2",
-   "explanation": "Pietro aveva 9 palloncini e ne scoppiano 7: dobbiamo sottrarre 9 - 7 = 2. Quanti palloncini rimangono? Conto a ritroso da 9 per 7 passi: 8, 7, 6, 5, 4, 3, 2.",
+   "explanation": "Pietro aveva 9 palloncini e ne scoppiano 7: 9 - 7 = 2. Contando a ritroso da 9 per sette passi: 8, 7, 6, 5, 4, 3, 2.",
    "active": true,
    "tag": "matematica;problemi;classe_2;primaria",
    "tags": [

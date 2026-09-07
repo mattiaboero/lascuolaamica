@@ -14,7 +14,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const FILES = ['shared.js', 'subject-quiz-core.js', 'js/rewards.js', 'js/breakout.js'];
+const FILES = ['shared.js', 'subject-quiz-core.js', 'js/rewards.js', 'js/breakout.js', 'js/bosco.js'];
 const HELPERS = ['storageGet', 'storageSet'];
 
 function extract(source, name) {

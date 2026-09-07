@@ -628,6 +628,37 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 60: la glossa fra parentesi di un'opzione ne scrive la forma
+  // accentata, cioe' la risposta: "pero (congiunzione pero')" in una domanda
+  // che chiede quale parola vuole l'accento. Il confronto e' fra la parola
+  // nuda e le parole della glossa, ignorando i segni diacritici.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const senzaAccenti = (w) => w.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const rivelatrice = options.filter((o) => typeof o === 'string').find((o) => {
+      const m = o.match(/^\s*([a-zà-ùA-ZÀ-Ù']+)\s*\(([^)]*)\)\s*$/);
+      if (!m) return false;
+      return (m[2].match(/[a-zà-ùA-ZÀ-Ù']+/g) || [])
+        .some((w) => senzaAccenti(w) === senzaAccenti(m[1]) && w.toLowerCase() !== m[1].toLowerCase());
+    });
+    if (rivelatrice) {
+      errors.push({ level: 'error', field: 'options', msg: `la glossa dell'opzione "${rivelatrice}" ne scrive la forma accentata` });
+    }
+  }
+
+  // Dal lotto 60: lo stem chiede un comportamento o una scelta, cioe' un
+  // nome, e le opzioni sono all'imperativo ("Cammina sul lato sinistro").
+  // Uniformate all'infinito, come nelle altre centinaia di domande di questa
+  // forma.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const chiedeNome = /Quale (?:comportamento|scelta)|modo giusto di comportarsi/i.test(String(question || ''));
+    const IMPERATIVI = 'Cammina|Corri|Chiedi|Aspetta|Rispondi|Vai|Fai|Metti|Usa|Guarda|Chiudi|Apri|Butta|Prendi|Lascia|Spegni|Accendi|Scrivi|Leggi|Dai|Vieni';
+    const imperativa = chiedeNome && options.filter((o) => typeof o === 'string')
+      .find((o) => new RegExp(`^(?:${IMPERATIVI})(?![a-zà-ùA-ZÀ-Ù])`).test(o.trim()));
+    if (imperativa) {
+      errors.push({ level: 'error', field: 'options', msg: `la domanda chiede un comportamento ma l'opzione e' all'imperativo ("${imperativa}")` });
+    }
+  }
+
   // Dal lotto 59: stem sospeso con un avverbio di grado ("Roma controllo'
   // territori molto...") e opzioni che dopo quell'avverbio non stanno in
   // piedi: "molto solo italiani", "molto temporanea di un solo giorno". Due

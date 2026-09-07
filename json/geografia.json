@@ -34895,13 +34895,13 @@
    "difficulty": 2,
    "question": "Quale comportamento è corretto quando cammini lungo una strada di campagna senza marciapiede?",
    "options": [
-    "Cammina sul lato sinistro, di fronte alle auto",
-    "Cammina in mezzo alla strada",
-    "Corri senza guardare",
-    "Cammina al buio senza farti vedere"
+    "Camminare sul lato sinistro, di fronte alle auto",
+    "Camminare in mezzo alla strada",
+    "Correre senza guardare",
+    "Camminare al buio senza farsi vedere"
    ],
    "answerIndex": 0,
-   "answer": "Cammina sul lato sinistro, di fronte alle auto",
+   "answer": "Camminare sul lato sinistro, di fronte alle auto",
    "explanation": "Senza marciapiede si cammina sul lato sinistro, così da vedere le auto che arrivano di fronte ed essere più sicuri.",
    "active": true,
    "tag": "geografia;territorio_e_educazi;classe_3;primaria",

@@ -28333,7 +28333,7 @@
    "area": "linea_del_tempo",
    "subarea": "cronologia",
    "difficulty": 2,
-   "question": "Luca ha piantato un seme, poi lo ha innaffiato ogni giorno, poi ha visto spuntare il germoglio. Qual è la parola giusta per descrivere questo racconto?",
+   "question": "Quale espressione descrive meglio l'ordine di questo racconto?",
    "options": [
     "Contemporaneo",
     "In ordine cronologico",
@@ -31606,7 +31606,7 @@
    ],
    "answerIndex": 1,
    "answer": "Perché usava la diplomazia e offriva la cittadinanza ai popoli conquistati, oltre ad avere un esercito molto disciplinato",
-   "explanation": "Il segreto di Roma non era solo militare: dopo le conquiste, Roma spesso integrava i popoli vinti offrendogli diritti e cittadinanza. Questo creava alleati fedeli. L'esercito disciplinato e le infrastrutture (strade, acquedotti) consolidavano il dominio.",
+   "explanation": "Il segreto di Roma non era solo militare: dopo le conquiste, Roma spesso integrava i popoli vinti offrendo loro diritti e cittadinanza. Questo creava alleati fedeli. L'esercito disciplinato e le infrastrutture (strade, ponti) completavano il quadro.",
    "active": true,
    "tag": "storia;repubblica_romana;classe_5;primaria",
    "tags": [
