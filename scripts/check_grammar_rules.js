@@ -68,9 +68,13 @@ const SBAGLIATE = [
   'Fungo è un essere vivente.',
   'Le energie rinnovabili sono importanti perché?',
   'Un oggetto metallico lasciato al sole diventa…',
+  'Se vuoi spiegare il volontariato, qual è il comportamento corretto?',
+  'In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa è meglio fare?',
 ];
 
 const CORRETTE = [
+  'Se vuoi bere a scuola, qual è il comportamento corretto?',
+  'In una situazione in cui devi buttare un rifiuto, cosa è meglio fare?',
   "Il giornale è di carta e si differenzia nella raccolta corretta.",
   'Secondo i Greci, gli dèi abitavano sul Monte Olimpo.',
   'Un campo di 5400 m² viene diviso in 25 lotti identici.',

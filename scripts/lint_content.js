@@ -160,7 +160,12 @@ const GRAMMATICA = [
   // Dal lotto 9: i tre stem alternativi di civica erano stati incollati anche
   // sopra domande di definizione, dove non hanno senso ("Che cosa mostra più
   // rispetto quando vuoi ricordare su quale valore si fonda la Repubblica?").
-  { pattern: /^(?:Quale scelta è più responsabile|Che cosa mostra più rispetto|Quale risposta aiuta di più la comunità) quando (?:vuoi|devi) (?:spiegare|ricordare|dire|indicare|descrivere|capire|collegare|riconoscere|fare un esempio)\b/,
+  // Dal lotto 26: la regola vedeva tre dei cinque stem della famiglia. Gli
+  // altri due ("Se vuoi spiegare il volontariato, qual e' il comportamento
+  // corretto?", "In una situazione in cui vuoi spiegare la prudenza, cosa e'
+  // meglio fare?") avevano lo stesso difetto e nessuno li guardava: 17
+  // domande in nove temi, con le varianti 3-5 gia' sistemate accanto.
+  { pattern: /^(?:(?:Quale scelta è più responsabile|Che cosa mostra più rispetto|Quale risposta aiuta di più la comunità|In una situazione in cui) (?:quando )?|Se )(?:vuoi|devi) (?:spiegare|ricordare|dire|indicare|descrivere|capire|collegare|riconoscere|fare un esempio)\b/,
     soloDomanda: true,
     msg: 'stem di civica incollato sopra una domanda di definizione: serve una domanda diretta' },
   // Dal lotto 11: minuscola dopo il punto. Nasce dalle riscritture della 4.12.64,
@@ -316,6 +321,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const siNo = (options || []).some((o) => typeof o === 'string' && /^\s*(sì|no|vero|falso)\b/i.test(o));
     if (!interrogativa && !alternativa && !siNo) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — frase sospesa chiusa con "?" senza nessuna parola interrogativa: usare i puntini (es. "Gli animali onnivori mangiano...")' });
+    }
+  }
+
+  // Dal lotto 26: lo stem finisce con un articolo elidibile ("Il suono si
+  // propaga meglio nell'...", "La latitudine misura la distanza dall'...") e
+  // una sola opzione comincia per vocale. L'apostrofo esclude le altre tre,
+  // quindi la domanda si indovina senza saperne niente. In sci-5-fisica-008
+  // nascondeva anche un errore di fisica: la risposta suggerita era "aria",
+  // ma il suono viaggia piu' veloce nei solidi.
+  if (subject !== 'inglese' && Array.isArray(options)
+      && /\b(?:nell|dell|all|sull|dall|coll|l|un|quest|bell|grand)'\s*\.{2,}\s*$/.test(question || '')) {
+    const vocaliche = options.filter((o) => typeof o === 'string' && /^\s*[haeiouàèéìòù]/i.test(o));
+    if (vocaliche.length === 1) {
+      errors.push({ level: 'error', field: 'question', msg: `stem con l'articolo elidibile e una sola opzione che inizia per vocale ("${vocaliche[0]}"): la risposta si indovina dall'apostrofo` });
     }
   }
 

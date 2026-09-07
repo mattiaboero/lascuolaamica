@@ -7432,16 +7432,16 @@
    "area": "paesaggi_terra",
    "subarea": "montagna_collina_pianura",
    "difficulty": 2,
-   "question": "Una collina coltivata mostra l'intervento dell'...",
+   "question": "Che cosa mostra una collina coltivata?",
    "options": [
-    "uomo",
-    "vento soltanto",
-    "Sole soltanto",
-    "mare soltanto"
+    "l'intervento dell'uomo",
+    "l'azione del vento soltanto",
+    "l'azione del Sole soltanto",
+    "l'azione del mare soltanto"
    ],
    "answerIndex": 0,
-   "answer": "uomo",
-   "explanation": "La risposta corretta è 'uomo'.",
+   "answer": "l'intervento dell'uomo",
+   "explanation": "La risposta corretta è \"l'intervento dell'uomo\".",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -15978,16 +15978,16 @@
    "area": "idrografia_clima_italia",
    "subarea": "fiumi_laghi_mari_vulcani_climi",
    "difficulty": 2,
-   "question": "Le coste pugliesi e venete si affacciano spesso sull'...",
+   "question": "Su quale mare si affacciano le coste pugliesi e venete?",
    "options": [
-    "Adriatico",
-    "Tirreno",
-    "Ligure",
-    "Mar del Nord"
+    "Mare Adriatico",
+    "Mar Tirreno",
+    "Mar Ligure",
+    "Mare del Nord"
    ],
    "answerIndex": 0,
-   "answer": "Adriatico",
-   "explanation": "La risposta corretta è 'Adriatico'.",
+   "answer": "Mare Adriatico",
+   "explanation": "La risposta corretta è 'Mare Adriatico'.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -18640,7 +18640,7 @@
    "area": "orientamento_carte",
    "subarea": "carte_tematiche_e_dati",
    "difficulty": 2,
-   "question": "La latitudine misura la distanza dall'...",
+   "question": "Da quale riferimento si misura la latitudine?",
    "options": [
     "equatore",
     "meridiano di Greenwich",
@@ -20849,7 +20849,7 @@
    "area": "geografia_fisica_italia",
    "subarea": "morfologia_idrografia_coste",
    "difficulty": 2,
-   "question": "Il clima d'alta montagna è legato all'...",
+   "question": "A che cosa è legato soprattutto il clima d'alta montagna?",
    "options": [
     "altitudine",
     "numero di città",

@@ -13277,16 +13277,16 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Il suono si propaga meglio nell'...",
+   "question": "In quale di questi mezzi il suono si propaga più velocemente?",
    "options": [
-    "aria",
-    "gesso",
-    "vuoto assoluto",
-    "buio"
+    "nell'aria",
+    "nell'acqua",
+    "nel legno",
+    "nel vuoto"
    ],
-   "answerIndex": 0,
-   "answer": "aria",
-   "explanation": "La risposta corretta è 'aria'.",
+   "answerIndex": 2,
+   "answer": "nel legno",
+   "explanation": "Il suono viaggia più veloce dove le particelle sono più vicine: nei solidi come il legno più che nei liquidi, e nei liquidi più che nell'aria. Nel vuoto non si propaga affatto.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [

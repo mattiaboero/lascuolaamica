@@ -812,7 +812,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 1,
-   "question": "Se vuoi indicare un diritto dei bambini, qual è il comportamento corretto?",
+   "question": "Quale attività è un diritto di ogni bambino?",
    "options": [
     "non rispettare nessuno",
     "comandare sempre",
@@ -844,7 +844,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi indicare un diritto dei bambini, cosa è meglio fare?",
+   "question": "Che cosa può fare ogni bambino perché è un suo diritto?",
    "options": [
     "imparare e giocare",
     "comandare sempre",
@@ -2732,7 +2732,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "regole_e_convivenza",
    "difficulty": 2,
-   "question": "Se vuoi spiegare a cosa serve una regola, qual è il comportamento corretto?",
+   "question": "Qual è il risultato di una buona regola?",
    "options": [
     "far vincere sempre gli stessi",
     "far convivere bene tutti",
@@ -3052,7 +3052,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "Se vuoi descrivere un comportamento onesto, qual è il comportamento corretto?",
+   "question": "Che cosa distingue una persona onesta?",
    "options": [
     "nascondere ogni errore",
     "prendere cose non proprie",
@@ -3084,7 +3084,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi descrivere un comportamento onesto, cosa è meglio fare?",
+   "question": "Che cosa fa chi sceglie di essere onesto?",
    "options": [
     "dire la verità e comportarsi correttamente",
     "barare per vincere",
@@ -5612,7 +5612,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "Se vuoi spiegare il volontariato, qual è il comportamento corretto?",
+   "question": "Che cosa fa chi svolge volontariato?",
    "options": [
     "evitare ogni impegno",
     "decidere per tutti",
@@ -5644,7 +5644,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "partecipazione_e_solidarieta",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare il volontariato, cosa è meglio fare?",
+   "question": "Quale scelta descrive il volontariato?",
    "options": [
     "decidere per tutti",
     "ricevere sempre un premio",
@@ -7852,7 +7852,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Se vuoi spiegare a cosa serve la raccolta differenziata, qual è il comportamento corretto?",
+   "question": "In che cosa consiste la raccolta differenziata?",
    "options": [
     "separare bene i rifiuti",
     "sporcare di più",
@@ -7884,7 +7884,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "In una situazione in cui vuoi spiegare a cosa serve la raccolta differenziata, cosa è meglio fare?",
+   "question": "Che cosa bisogna fare per la raccolta differenziata?",
    "options": [
     "sporcare di più",
     "separare bene i rifiuti",
@@ -9612,7 +9612,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Se vuoi spiegare che cosa significa sostenibilità, qual è il comportamento corretto?",
+   "question": "Come si comporta chi segue la sostenibilità?",
    "options": [
     "sprecare senza limiti",
     "pensare solo a oggi",
@@ -9644,7 +9644,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa è meglio fare?",
+   "question": "Quale scelta è sostenibile?",
    "options": [
     "usare le risorse pensando anche al futuro",
     "pensare solo a oggi",
@@ -11212,7 +11212,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "Se vuoi spiegare lo sviluppo sostenibile, qual è il comportamento corretto?",
+   "question": "Quale obiettivo persegue lo sviluppo sostenibile?",
    "options": [
     "equilibrare bisogni delle persone, ambiente e futuro",
     "pensare solo al profitto",
@@ -11244,7 +11244,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "sostenibilita_e_mobilita",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare lo sviluppo sostenibile, cosa è meglio fare?",
+   "question": "Quale scelta descrive lo sviluppo sostenibile?",
    "options": [
     "equilibrare bisogni delle persone, ambiente e futuro",
     "sprecare oggi senza limiti",
@@ -17196,7 +17196,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "sicurezza_online",
    "difficulty": 3,
-   "question": "Quale scelta è più responsabile quando ricevi un messaggio che imita un servizio e chiede password?",
+   "question": "Quale scelta è più responsabile quando ricevi un messaggio che imita un servizio e chiede la password?",
    "options": [
     "scrivere subito i dati",
     "considerarlo sospetto",
@@ -20812,7 +20812,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Se devi spiegare il cartello di stop, qual è il comportamento corretto?",
+   "question": "Che cosa chiede di fare il cartello di stop?",
    "options": [
     "correre",
     "fermarsi",
@@ -20844,7 +20844,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "In una situazione in cui devi spiegare il cartello di stop, cosa è meglio fare?",
+   "question": "Quale azione indica il cartello di stop?",
    "options": [
     "svoltare sempre",
     "salire sul marciapiede",
@@ -25132,7 +25132,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "Se vuoi spiegare che cos'è la prudenza, qual è il comportamento corretto?",
+   "question": "In che cosa consiste la prudenza?",
    "options": [
     "correre più degli altri",
     "prevenire i rischi senza agire d'impulso",
@@ -25164,7 +25164,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 3,
-   "question": "In una situazione in cui vuoi spiegare che cos'è la prudenza, cosa è meglio fare?",
+   "question": "Quale atteggiamento descrive una persona prudente?",
    "options": [
     "avere paura di tutto",
     "correre più degli altri",
