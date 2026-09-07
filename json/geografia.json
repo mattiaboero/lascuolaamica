@@ -1772,7 +1772,7 @@
    "area": "orientamento",
    "subarea": "riferimenti_e_punti_cardinali",
    "difficulty": 1,
-   "question": "Il Sole sorge dalla parte dell'...",
+   "question": "Da quale parte sorge il Sole?",
    "options": [
     "est",
     "ovest",
@@ -6574,7 +6574,7 @@
    "area": "orientamento_mappe",
    "subarea": "lettura_di_mappe_e_carte",
    "difficulty": 2,
-   "question": "Quando usi punti di riferimento nel quartiere, stai lavorando sull'...",
+   "question": "Quando usi punti di riferimento nel quartiere, su che cosa stai lavorando?",
    "options": [
     "orientamento",
     "agricoltura",
@@ -15912,7 +15912,7 @@
    "area": "idrografia_clima_italia",
    "subarea": "fiumi_laghi_mari_vulcani_climi",
    "difficulty": 2,
-   "question": "Il mare che bagna Venezia è l'...",
+   "question": "Quale mare bagna Venezia?",
    "options": [
     "Adriatico",
     "Tirreno",
@@ -20291,7 +20291,7 @@
    "area": "geografia_fisica_italia",
    "subarea": "morfologia_idrografia_coste",
    "difficulty": 2,
-   "question": "Tra i principali fiumi del Nord Italia c'è l'...",
+   "question": "Quale di questi è un fiume del Nord Italia?",
    "options": [
     "Adige",
     "Volturno",
@@ -23117,7 +23117,7 @@
    "area": "italia_europa",
    "subarea": "posizione_confini_ue",
    "difficulty": 1,
-   "question": "Il Parlamento europeo è un'istituzione dell'...",
+   "question": "Di quale organizzazione è un'istituzione il Parlamento europeo?",
    "options": [
     "Unione Europea",
     "Italia soltanto",
@@ -30548,9 +30548,9 @@
     "Quattro",
     "Cinque"
    ],
-   "answerIndex": 3,
-   "answer": "Cinque",
-   "explanation": "Le coste italiane sono bagnate da cinque mari: il Mar Ligure (a Nord-Ovest), il Mar Tirreno (a Ovest), il Mar Ionio (a Sud), il Mar Adriatico (a Est) e il Mar Mediterraneo in senso stretto (tra Sicilia e Tunisia). Tutti fanno parte del bacino del Mediterraneo.",
+   "answerIndex": 2,
+   "answer": "Quattro",
+   "explanation": "Le coste italiane sono bagnate da quattro mari, tutti parte del Mar Mediterraneo: il Mar Ligure (a Nord-Ovest), il Mar Tirreno (a Ovest), il Mar Ionio (a Sud) e il Mar Adriatico (a Est).",
    "active": true,
    "tag": "geografia;l_italia_forma_e_mar;classe_3;primaria",
    "tags": [

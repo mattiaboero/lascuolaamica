@@ -8870,7 +8870,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "L'aria è composta da diversi gas: il più abbondante è l'...",
+   "question": "L'aria è composta da diversi gas: qual è il più abbondante?",
    "options": [
     "ossigeno",
     "elio",
@@ -8900,7 +8900,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "aria_acqua_suolo",
    "difficulty": 2,
-   "question": "La pressione atmosferica è la pressione esercitata dall'...",
+   "question": "Da che cosa è esercitata la pressione atmosferica?",
    "options": [
     "suolo",
     "aria",
@@ -17333,7 +17333,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Come si chiama il gruppo che comprende tutti gli animali?",
+   "question": "Come si chiama il regno di cui fanno parte il cane, l'aquila e la farfalla?",
    "options": [
     "Vegetali",
     "Animali",
@@ -29360,7 +29360,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 1,
-   "question": "Un ecosistema è formato dagli esseri viventi e dall'...",
+   "question": "Un ecosistema è formato dagli esseri viventi e da che cosa?",
    "options": [
     "ambiente in cui vivono",
     "aria soltanto",

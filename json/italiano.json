@@ -3589,7 +3589,7 @@
    "area": "italiano_classe2",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Come si scrive la parola che significa 'non c'è nessuno'?",
+   "question": "Come si scrive correttamente la parola che significa 'neanche una persona'?",
    "options": [
     "nessuno",
     "nessunno",
@@ -10917,7 +10917,7 @@
    "area": "italiano_classe5",
    "subarea": "grammatica",
    "difficulty": 3,
-   "question": "Quale parola è un pronome relativo con preposizione?",
+   "question": "Quale pronome relativo può essere preceduto da una preposizione?",
    "options": [
     "chi",
     "che",
@@ -10926,7 +10926,7 @@
    ],
    "answerIndex": 2,
    "answer": "il quale",
-   "explanation": "'Il quale' (e le sue varianti 'la quale', 'i quali', 'le quali') è un pronome relativo che può essere accompagnato da preposizione.",
+   "explanation": "'Il quale' (e le varianti 'la quale', 'i quali', 'le quali') può essere preceduto da una preposizione: 'del quale', 'al quale', 'con il quale'. 'Che' invece non ammette preposizione: in quel caso si usa 'cui'.",
    "active": true,
    "tag": "italiano;classe_5;grammatica;primaria",
    "tags": [
@@ -19205,7 +19205,7 @@
    "area": "italiano_classe3",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Come si scrive correttamente il gruppo di lettere che fa il suono /ʎʎ/ come in 'foglia'?",
+   "question": "Quale parola scrive correttamente il suono /ʎ/, come in 'figlio'?",
    "options": [
     "folia",
     "foglia",
@@ -27589,7 +27589,7 @@
    "area": "italiano_classe5",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Come si scrive correttamente la risposta alla domanda 'Quant'è il totale?'",
+   "question": "Come si scrive correttamente l'unione di 'quanto' e del verbo 'è'?",
    "options": [
     "Quant'è",
     "Quanto è",

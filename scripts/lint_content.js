@@ -612,6 +612,24 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 57: variante con i puntini della regola del lotto 53. Lo stem
+  // finisce con un articolo eliso ("Il mare che bagna Venezia e' l'...") e fra
+  // le opzioni ce n'e' almeno una che comincia per consonante: quelle non
+  // possono seguire l'elisione, quindi la domanda ne scarta due o tre prima
+  // ancora di essere capita. Otto casi, risolti riscrivendo lo stem come
+  // domanda diretta ("Quale mare bagna Venezia?").
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const eliso = String(question || '').trim()
+      .match(/(?<=\s)(un|l|dell|nell|all|sull|dall|quest)['’]\s*\.\.\.$/);
+    if (eliso) {
+      const incompatibile = options.filter((o) => typeof o === 'string')
+        .find((o) => /^[bcdfghjklmnpqrstvwxyz]/i.test(o.trim()));
+      if (incompatibile) {
+        errors.push({ level: 'error', field: 'options', msg: `l'articolo eliso della domanda ("${eliso[1]}'...") esclude l'opzione "${incompatibile}"` });
+      }
+    }
+  }
+
   // Dal lotto 56: la stessa congiunzione ripetuta dentro una domanda sola,
   // segno di due stesure sovrapposte ("Quale scelta e' piu' responsabile
   // quando cammini quando e' buio?", tre casi in civ-3-str). Le citazioni fra
