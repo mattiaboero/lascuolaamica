@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.80 - 2026-09-07
+
+### Fixed
+- fix(contenuti): **6 domande restavano a metà chiuse dal punto interrogativo** (`Gli animali che mangiano sia piante sia animali si dicono?`, `Il termometro è uno strumento che misura?`, `Il vento che fa girare le pale di una turbina produce energia?`). Il controllo della 4.12.66 le lasciava passare perché leggeva `che mangiano` come una parola interrogativa.
+
+### Changed
+- lint(contenuti): **il `che` conta come interrogativo solo dove apre la domanda** — a inizio testo, dopo un punto, dopo una virgola (`Se oggi è lunedì, che giorno sarà?`) o dopo una citazione chiusa (`Leggi: '...' Che tempo fa?`). In mezzo alla frase è un relativo e non chiude niente. È lo stesso problema di `come` e `quando` risolto nella 4.12.71: le parole che possono essere interrogative *o* congiunzioni vanno riconosciute dalla posizione, non dalla presenza.
+- il criterio nuovo ha prodotto tre falsi positivi alla prima stesura — `Che tempo fa?` dopo una citazione fra apici — ed è stato allargato prima di essere accettato.
+
 ## 4.12.79 - 2026-09-07
 
 ### Fixed

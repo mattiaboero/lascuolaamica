@@ -12912,7 +12912,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Il ghiaccio che si scioglie è un esempio di trasformazione?",
+   "question": "Il ghiaccio che si scioglie è un esempio di trasformazione...",
    "options": [
     "politica",
     "fisica",
@@ -15037,7 +15037,7 @@
    "area": "scienza_tecnologia",
    "subarea": "tecnologia_applicata",
    "difficulty": 1,
-   "question": "Il termometro è uno strumento che misura?",
+   "question": "Il termometro è uno strumento che misura...",
    "options": [
     "la fame",
     "la temperatura",
@@ -26942,7 +26942,7 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 1,
-   "question": "Il ghiaccio che si scioglie e poi ricongela è una trasformazione?",
+   "question": "Il ghiaccio che si scioglie e poi ricongela è una trasformazione...",
    "options": [
     "reversibile",
     "irreversibile",
@@ -29422,7 +29422,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Gli animali che si nutrono solo di piante sono detti?",
+   "question": "Gli animali che si nutrono solo di piante sono detti...",
    "options": [
     "erbivori",
     "carnivori",
@@ -29577,7 +29577,7 @@
    "area": "ecosistemi_ambiente",
    "subarea": "ecosistemi",
    "difficulty": 2,
-   "question": "Gli animali che mangiano sia piante sia animali si dicono?",
+   "question": "Gli animali che mangiano sia piante sia animali si dicono...",
    "options": [
     "onnivori",
     "erbivori",
@@ -30414,7 +30414,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "sostenibilita_energetica",
    "difficulty": 2,
-   "question": "Il vento che fa girare le pale di una turbina produce energia?",
+   "question": "Il vento che fa girare le pale di una turbina produce energia...",
    "options": [
     "eolica",
     "solare",
