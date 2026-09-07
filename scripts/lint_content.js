@@ -435,6 +435,19 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 47: nelle domande sul soggetto la risposta deve comprendere
+  // l'articolo, perche' e' quello che il corpus insegna altrove
+  // ("Il soggetto include l'articolo: 'Il treno'"). ita-2-grammatica-9215
+  // citava "La bambina gioca" e dava per giusta "bambina" da sola, con "La"
+  // come opzione a se'.
+  if (subject !== 'inglese' && /\bsoggetto\b|chi compie/i.test(question || '') && typeof answer === 'string') {
+    const citata = String(question).match(/'([^']+)'/);
+    const conArticolo = citata && citata[1].match(/^(?:Il|Lo|La|I|Gli|Le|Un|Una)\s+([a-zà-ù]+)/);
+    if (conArticolo && answer.trim().toLowerCase() === conArticolo[1].toLowerCase()) {
+      errors.push({ level: 'error', field: 'answer', msg: `il soggetto va indicato con l'articolo: "${conArticolo[0]}", non "${answer}"` });
+    }
+  }
+
   // Dal lotto 46: parola italiana che finisce per consonante nei problemi e in
   // matematica. In italiano quasi nessuna parola finisce per consonante: le
   // eccezioni sono i prestiti (album, tablet, croissant), le forme tronche

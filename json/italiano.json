@@ -31176,13 +31176,13 @@
    "question": "In 'La bambina gioca', chi compie l'azione?",
    "options": [
     "gioca",
-    "La",
-    "bambina",
+    "il gioco",
+    "La bambina",
     "nessuno"
    ],
    "answerIndex": 2,
-   "answer": "bambina",
-   "explanation": "Chi compie l'azione del verbo è il soggetto. Qui è 'la bambina' a giocare, quindi il soggetto è 'bambina'.",
+   "answer": "La bambina",
+   "explanation": "Chi compie l'azione è il soggetto: 'La bambina'. Il soggetto comprende anche l'articolo che accompagna il nome.",
    "active": true,
    "tag": "italiano;grammatica;classe_2;primaria",
    "tags": [
