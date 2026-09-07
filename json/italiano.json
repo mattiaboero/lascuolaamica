@@ -3104,14 +3104,14 @@
    "difficulty": 1,
    "question": "Quale gruppo di lettere contiene solo consonanti?",
    "options": [
-    "S,E,O,U,L",
-    "Z,U,C,H,R",
-    "M,R,G,T",
-    "I,E,O,A,U"
+    "S, E, O, U, L",
+    "Z, U, C, H, R",
+    "M, R, G, T",
+    "I, E, O, A, U"
    ],
    "answerIndex": 2,
-   "answer": "M,R,G,T",
-   "explanation": "'M,R,G,T' sono tutte consonanti.",
+   "answer": "M, R, G, T",
+   "explanation": "'M, R, G, T' sono tutte consonanti.",
    "active": true,
    "tag": "italiano; alfabeto; classe_2; primaria",
    "tags": [
@@ -31367,13 +31367,13 @@
    "difficulty": 1,
    "question": "Quale segno si mette alla fine di una domanda?",
    "options": [
-    "Il punto .",
-    "Il punto interrogativo ?",
-    "La virgola ,",
-    "Il punto esclamativo !"
+    "Il punto (.)",
+    "Il punto interrogativo (?)",
+    "La virgola (,)",
+    "Il punto esclamativo (!)"
    ],
    "answerIndex": 1,
-   "answer": "Il punto interrogativo ?",
+   "answer": "Il punto interrogativo (?)",
    "explanation": "Le frasi che fanno una domanda terminano con il punto interrogativo (?). Serve a capire che ci si aspetta una risposta.",
    "active": true,
    "tag": "italiano;sintassi;classe_2;primaria",
@@ -32423,13 +32423,13 @@
    "difficulty": 1,
    "question": "Quale segno mettiamo alla fine di una frase che esprime stupore o gioia?",
    "options": [
-    "Il punto .",
-    "Il punto esclamativo !",
-    "La virgola ,",
-    "I due punti :"
+    "Il punto (.)",
+    "Il punto esclamativo (!)",
+    "La virgola (,)",
+    "I due punti (:)"
    ],
    "answerIndex": 1,
-   "answer": "Il punto esclamativo !",
+   "answer": "Il punto esclamativo (!)",
    "explanation": "Il punto esclamativo (!) si usa alla fine di frasi che esprimono emozioni forti, come stupore o gioia.",
    "active": true,
    "tag": "italiano;sintassi;classe_2;primaria",

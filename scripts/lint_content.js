@@ -428,6 +428,34 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 41: spaziatura attorno alla punteggiatura. In italiano non si
+  // lascia spazio prima di un segno e se ne lascia uno dopo la virgola. Le
+  // opzioni che nominavano un segno lo scrivevano staccato ("Il punto
+  // interrogativo ?") mentre la spiegazione della stessa domanda lo metteva
+  // fra parentesi, e un gruppo di lettere era scritto "M,R,G,T".
+  {
+    // I campi si guardano uno per uno e non concatenati: in ita-2-ortografia-007
+    // le opzioni sono i segni di punteggiatura da soli ("?", "!", ","), e
+    // unendoli con un separatore si creerebbe uno spazio prima del segno che
+    // nel testo non c'e'.
+    const campiTesto = [question, explanation, answer].concat(options || [])
+      .filter((v) => typeof v === 'string' && v.trim().length > 2);
+    for (const t of campiTesto) {
+      const spazio = t.match(/\S\s+[,;:!?](?!\))/);
+      if (spazio) {
+        errors.push({ level: 'error', field: 'text', msg: `spazio prima della punteggiatura in "${spazio[0].trim()}"` });
+        break;
+      }
+    }
+    for (const t of campiTesto) {
+      const virgola = t.match(/[a-zA-ZÀ-Ùà-ù],(?=[a-zA-ZÀ-Ùà-ù])/);
+      if (virgola) {
+        errors.push({ level: 'error', field: 'text', msg: `manca lo spazio dopo la virgola in "${virgola[0]}"` });
+        break;
+      }
+    }
+  }
+
   // Dal lotto 40: stem sospeso chiuso dai due punti invece che dai puntini
   // ("Un angolo ottuso è:", "Il perimetro si misura in:"). Un lotto
   // precedente aveva lasciato correre questi 57 casi ritenendoli due punti
