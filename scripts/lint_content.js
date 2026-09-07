@@ -182,7 +182,7 @@ const GRAMMATICA = [
   // risposta era una parola sola, perche' li' il problema era l'articolo
   // mancante; ne restavano 92 in cui la risposta e' un'intera espressione, e
   // l'inversione risolve anche l'accordo ("animali è").
-  { pattern: /^(?!La risposta corretta)[^.!?]+\s+è la risposta corretta\./,
+  { pattern: /^(?!(?:La|Il|Lo|L'|Gli|Le)\s*[a-zà-ù ]*?corrett[ao][a-zà-ù ]*\s+è\b)[^.!?]+\s+è\s+(?:il|lo|la|l'|un|uno|una)?\s*(?:[a-zà-ù]+\s+){0,2}corrett[ao]\./,
     soloSpiegazione: true,
     msg: 'spiegazione con la risposta prima della copula: scrivere "La risposta corretta è \'x\'."' },
   // Dal lotto 13: clitico maschile con un oggetto femminile plurale, altro

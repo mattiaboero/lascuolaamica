@@ -1195,7 +1195,7 @@
    ],
    "answerIndex": 1,
    "answer": "ciclo dell'acqua",
-   "explanation": "Ciclo dell'acqua è il termine corretto.",
+   "explanation": "La risposta corretta è \"ciclo dell'acqua\".",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1226,7 +1226,7 @@
    ],
    "answerIndex": 1,
    "answer": "l'evaporazione",
-   "explanation": "L'evaporazione è il termine corretto.",
+   "explanation": "La risposta corretta è \"l'evaporazione\".",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1629,7 +1629,7 @@
    ],
    "answerIndex": 3,
    "answer": "non sporcare",
-   "explanation": "Non sporcare è il comportamento corretto.",
+   "explanation": "La risposta corretta è 'non sporcare'.",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -1660,7 +1660,7 @@
    ],
    "answerIndex": 3,
    "answer": "l'ambiente",
-   "explanation": "L'ambiente è il comportamento corretto.",
+   "explanation": "La risposta corretta è \"l'ambiente\".",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -1691,7 +1691,7 @@
    ],
    "answerIndex": 1,
    "answer": "risparmiare acqua",
-   "explanation": "Risparmiare acqua è il comportamento corretto.",
+   "explanation": "La risposta corretta è 'risparmiare acqua'.",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -1939,7 +1939,7 @@
    ],
    "answerIndex": 3,
    "answer": "vario ed equilibrato",
-   "explanation": "Vario ed equilibrato è la scelta corretta.",
+   "explanation": "La risposta corretta è 'vario ed equilibrato'.",
    "active": true,
    "tag": "salute;alimentazione;classe2",
    "tags": [
@@ -2001,7 +2001,7 @@
    ],
    "answerIndex": 1,
    "answer": "funzionare bene",
-   "explanation": "Funzionare bene è la scelta corretta.",
+   "explanation": "La risposta corretta è 'funzionare bene'.",
    "active": true,
    "tag": "salute;alimentazione;classe2",
    "tags": [
@@ -3086,7 +3086,7 @@
    "difficulty": 1,
    "question": "In quale stagione si va spesso al mare perché fa caldo?",
    "options": [
-    "tempo nuvola",
+    "primavera",
     "inverno",
     "autunno",
     "estate"
@@ -3306,7 +3306,7 @@
    ],
    "answerIndex": 0,
    "answer": "riusare alcuni oggetti",
-   "explanation": "Riusare alcuni oggetti è il comportamento corretto.",
+   "explanation": "La risposta corretta è 'riusare alcuni oggetti'.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3337,7 +3337,7 @@
    ],
    "answerIndex": 0,
    "answer": "rendono più sano l'ambiente",
-   "explanation": "Rendono più sano l'ambiente è il comportamento corretto.",
+   "explanation": "La risposta corretta è \"rendono più sano l'ambiente\".",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3368,7 +3368,7 @@
    ],
    "answerIndex": 0,
    "answer": "nella raccolta corretta",
-   "explanation": "Nella raccolta corretta è il comportamento corretto.",
+   "explanation": "La risposta corretta è 'nella raccolta corretta'.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3399,7 +3399,7 @@
    ],
    "answerIndex": 1,
    "answer": "risparmiare energia",
-   "explanation": "Risparmiare energia è il comportamento corretto.",
+   "explanation": "La risposta corretta è 'risparmiare energia'.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3430,7 +3430,7 @@
    ],
    "answerIndex": 0,
    "answer": "persone e animali",
-   "explanation": "Persone e animali è il comportamento corretto.",
+   "explanation": "La risposta corretta è 'persone e animali'.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -4147,7 +4147,7 @@
    ],
    "answerIndex": 2,
    "answer": "dalle nuvole",
-   "explanation": "Dalle nuvole è il termine corretto.",
+   "explanation": "La risposta corretta è 'dalle nuvole'.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -4178,7 +4178,7 @@
    ],
    "answerIndex": 0,
    "answer": "il calore del Sole",
-   "explanation": "Il calore del sole è il termine corretto.",
+   "explanation": "La risposta corretta è 'il calore del Sole'.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -5543,7 +5543,7 @@
    ],
    "answerIndex": 0,
    "answer": "osservando differenze",
-   "explanation": "Osservando differenze è l'azione corretta.",
+   "explanation": "La risposta corretta è 'osservando differenze'.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5574,7 +5574,7 @@
    ],
    "answerIndex": 0,
    "answer": "controllare meglio il risultato",
-   "explanation": "Controllare meglio il risultato è l'azione corretta.",
+   "explanation": "La risposta corretta è 'controllare meglio il risultato'.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5605,7 +5605,7 @@
    ],
    "answerIndex": 2,
    "answer": "registrare dati",
-   "explanation": "Registrare dati è l'azione corretta.",
+   "explanation": "La risposta corretta è 'registrare dati'.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5636,7 +5636,7 @@
    ],
    "answerIndex": 2,
    "answer": "domanda scientifica",
-   "explanation": "Domanda scientifica è l'azione corretta.",
+   "explanation": "La risposta corretta è 'domanda scientifica'.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5667,7 +5667,7 @@
    ],
    "answerIndex": 2,
    "answer": "raccogliere informazioni",
-   "explanation": "Raccogliere informazioni è l'azione corretta.",
+   "explanation": "La risposta corretta è 'raccogliere informazioni'.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -8603,7 +8603,7 @@
    ],
    "answerIndex": 3,
    "answer": "erba - coniglio - volpe",
-   "explanation": "erba - coniglio - volpe è l'esempio corretto.",
+   "explanation": "La risposta corretta è 'erba - coniglio - volpe'.",
    "active": true,
    "tag": "ecosistemi;classe3",
    "tags": [
@@ -8633,7 +8633,7 @@
    ],
    "answerIndex": 0,
    "answer": "pianta, insetto, uccello",
-   "explanation": "pianta, insetto, uccello è l'esempio corretto.",
+   "explanation": "La risposta corretta è 'pianta, insetto, uccello'.",
    "active": true,
    "tag": "ecosistemi;classe3",
    "tags": [
@@ -8663,7 +8663,7 @@
    ],
    "answerIndex": 0,
    "answer": "rana - stagno",
-   "explanation": "rana - stagno è l'esempio corretto.",
+   "explanation": "La risposta corretta è 'rana - stagno'.",
    "active": true,
    "tag": "ecosistemi;classe3",
    "tags": [
@@ -10688,7 +10688,7 @@
    ],
    "answerIndex": 1,
    "answer": "usare strumenti e registrare dati",
-   "explanation": "Usare strumenti e registrare dati è corretto.",
+   "explanation": "La risposta corretta è 'usare strumenti e registrare dati'.",
    "active": true,
    "tag": "metodo_scientifico;classe4",
    "tags": [

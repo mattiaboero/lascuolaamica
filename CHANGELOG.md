@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.12.78 - 2026-09-07
+
+### Fixed
+- fix(contenuti): **23 spiegazioni mettevano la risposta prima della copula, e per giunta la chiamavano con il nome sbagliato** — `L'ambiente è il comportamento corretto.`, `Dalle nuvole è il termine corretto.`, `Persone e animali è il comportamento corretto.`, `Domanda scientifica è l'azione corretta.`. Qui l'inversione secca non bastava: il nome del template era falso per la domanda, quindi `Il comportamento corretto è 'l'ambiente'` sarebbe rimasto sbagliato. Uniformate alla forma neutra `La risposta corretta è 'x'.`, come le 92 della 4.12.69.
+- fix(contenuti): `sci-2-stagioni-010` chiedeva in quale stagione si va al mare e offriva `tempo nuvola` fra le opzioni, che non è una stagione né una frase. Sostituito con `primavera`.
+
+### Changed
+- lint(contenuti): la regola della 4.12.69 copriva solo `è la risposta corretta` e lasciava fuori tutte le altre code del template (`è il comportamento corretto`, `è il termine corretto`, `è l'azione corretta`). Ora le copre. Il limite di tre parole fra `è` e `corretto` tiene fuori le spiegazioni informative che finiscono per caso con quella parola — `Il giornale è di carta e si differenzia nella raccolta corretta.` è corretta e resta.
+
 ## 4.12.77 - 2026-09-07
 
 ### Fixed

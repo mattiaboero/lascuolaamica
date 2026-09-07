@@ -44,6 +44,7 @@ const SBAGLIATE = [
   'Automobile è un essere vivente.',
   'Quale organo è legato soprattutto al senso del/della udito?',
   'A quale apparato appartiene soprattutto il/i cuore?',
+  "L'ambiente è il comportamento corretto.",
   'Secondo i Greci, gli dei abitavano sul Monte Olimpo.',
   'Un campo di 5400 mq viene diviso in 25 lotti identici.',
   '42 - 22 = 20 farfalle rimasti.',
@@ -69,6 +70,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "Il giornale è di carta e si differenzia nella raccolta corretta.",
   'Secondo i Greci, gli dèi abitavano sul Monte Olimpo.',
   'Un campo di 5400 m² viene diviso in 25 lotti identici.',
   'La risposta corretta è dei Greci.',
