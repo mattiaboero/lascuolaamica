@@ -426,6 +426,11 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // nell'elenco: in "Chi inquina un fiume danneggia..." e' un relativo.
   if (subject !== 'inglese' && /\.\.\.\s*$/.test(question || '')) {
     const ultimo = String(question).trim().split(/[,.!?]\s+|['"»]\s+/).pop().trim();
+    // Dal lotto 38: la maiuscola conta. Provata la variante che ignora
+    // maiuscole e minuscole, produce quattro falsi positivi: in "definito
+    // 'morfologicamente vario' perche'...", "diversi strati, come..." e
+    // "dove e' piu' sicuro pedalare quando c'e'..." la parola interrogativa
+    // e' minuscola perche' non apre la domanda, e i puntini sono giusti.
     if (/^(?:Cosa|Che cosa|Che|Quale|Quali|Qual|Quanto|Quanta|Quanti|Quante|Come|Dove|Perch[ée])\b/.test(ultimo)) {
       errors.push({ level: 'error', field: 'question', msg: `domanda vera chiusa dai puntini invece che dal punto interrogativo ("${ultimo}")` });
     }

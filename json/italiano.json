@@ -28421,7 +28421,7 @@
    "area": "italiano_classe5",
    "subarea": "lessico",
    "difficulty": 2,
-   "question": "Quale delle seguenti coppie sono parole omòfone (si pronunciano uguale ma si scrivono diverso)?",
+   "question": "Quale delle seguenti coppie è formata da parole omofone (si pronunciano uguale ma si scrivono diverso)?",
    "options": [
     "banco/banco",
     "hanno/anno",
@@ -34053,7 +34053,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "Nella frase 'mangio una mela', 'una mela' che complemento è...",
+   "question": "Nella frase 'Mangio una mela', che complemento è 'una mela'?",
    "options": [
     "Complemento oggetto",
     "Complemento di luogo",

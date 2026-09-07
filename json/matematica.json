@@ -61139,7 +61139,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 2,
-   "question": "Luca è più alto di Ada e Ada è più alta di Sara. Chi è la più bassa?",
+   "question": "Luca è più alto di Ada e Ada è più alta di Sara. Chi è più basso di tutti?",
    "options": [
     "Sara",
     "Ada",
