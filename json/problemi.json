@@ -29992,7 +29992,7 @@
    ],
    "answerIndex": 1,
    "answer": "1623",
-   "explanation": "Sommi le scatole iniziali e quelle arrivate: 1.275 + 348 = 1.623.",
+   "explanation": "Sommi le scatole iniziali e quelle arrivate: 1.275 + 348 = 1623.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30023,7 +30023,7 @@
    ],
    "answerIndex": 2,
    "answer": "4325",
-   "explanation": "Il totale è 2.430 + 1.895 = 4.325.",
+   "explanation": "Il totale è 2.430 + 1.895 = 4325.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30054,7 +30054,7 @@
    ],
    "answerIndex": 3,
    "answer": "5990",
-   "explanation": "Sommi i visitatori dei due mesi: 3.206 + 2.784 = 5.990.",
+   "explanation": "Sommi i visitatori dei due mesi: 3.206 + 2.784 = 5990.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30085,7 +30085,7 @@
    ],
    "answerIndex": 3,
    "answer": "1325",
-   "explanation": "Togli i quaderni venduti: 2.000 - 675 = 1.325.",
+   "explanation": "Togli i quaderni venduti: 2.000 - 675 = 1325.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -30116,7 +30116,7 @@
    ],
    "answerIndex": 3,
    "answer": "3215",
-   "explanation": "Calcoli 5.400 - 2.185 = 3.215.",
+   "explanation": "Calcoli 5.400 - 2.185 = 3215.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -30147,7 +30147,7 @@
    ],
    "answerIndex": 2,
    "answer": "7310",
-   "explanation": "Gli alberi rimasti sono 8.250 - 940 = 7.310.",
+   "explanation": "Gli alberi rimasti sono 8.250 - 940 = 7310.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -30178,7 +30178,7 @@
    ],
    "answerIndex": 3,
    "answer": "1000",
-   "explanation": "Moltiplichi la produzione giornaliera per i giorni: 125 × 8 = 1.000.",
+   "explanation": "Moltiplichi la produzione giornaliera per i giorni: 125 × 8 = 1000.",
    "active": true,
    "tag": "moltiplicazione",
    "tags": [
@@ -30426,7 +30426,7 @@
    ],
    "answerIndex": 1,
    "answer": "795",
-   "explanation": "Sommi prima 950 + 275 = 1.225. Poi fai 1.225 - 430 = 795.",
+   "explanation": "Sommi prima 950 + 275 = 1225. Poi fai 1225 - 430 = 795.",
    "active": true,
    "tag": "multi_step",
    "tags": [
@@ -30891,7 +30891,7 @@
    ],
    "answerIndex": 1,
    "answer": "1350",
-   "explanation": "Tre giri sono 3 × 400 = 1.200 m. Poi aggiungi 150 m: 1.350 m.",
+   "explanation": "Tre giri sono 3 × 400 = 1200 m. Poi aggiungi 150 m: 1350 m.",
    "active": true,
    "tag": "logica_testo",
    "tags": [
@@ -30922,7 +30922,7 @@
    ],
    "answerIndex": 0,
    "answer": "22515",
-   "explanation": "Sommi i visitatori delle due stagioni: 12.875 + 9.640 = 22.515.",
+   "explanation": "Sommi i visitatori delle due stagioni: 12.875 + 9.640 = 22515.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30984,7 +30984,7 @@
    ],
    "answerIndex": 3,
    "answer": "63995",
-   "explanation": "Sommi 45.320 + 18.675 = 63.995.",
+   "explanation": "Sommi 45.320 + 18.675 = 63995.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -31015,7 +31015,7 @@
    ],
    "answerIndex": 2,
    "answer": "6255",
-   "explanation": "La quantità rimasta è 25.000 - 18.745 = 6.255.",
+   "explanation": "La quantità rimasta è 25.000 - 18.745 = 6255.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -31077,7 +31077,7 @@
    ],
    "answerIndex": 2,
    "answer": "72150",
-   "explanation": "Fai 120.000 - 47.850 = 72.150.",
+   "explanation": "Fai 120.000 - 47.850 = 72150.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -31108,7 +31108,7 @@
    ],
    "answerIndex": 2,
    "answer": "2820",
-   "explanation": "Moltiplichi 235 × 12 = 2.820.",
+   "explanation": "Moltiplichi 235 × 12 = 2820.",
    "active": true,
    "tag": "moltiplicazione",
    "tags": [
@@ -31139,7 +31139,7 @@
    ],
    "answerIndex": 2,
    "answer": "1728",
-   "explanation": "Il totale si trova con 48 × 36 = 1.728.",
+   "explanation": "Il totale si trova con 48 × 36 = 1728.",
    "active": true,
    "tag": "moltiplicazione",
    "tags": [
@@ -31170,7 +31170,7 @@
    ],
    "answerIndex": 1,
    "answer": "3000",
-   "explanation": "Moltiplichi 125 × 24 = 3.000.",
+   "explanation": "Moltiplichi 125 × 24 = 3000.",
    "active": true,
    "tag": "moltiplicazione",
    "tags": [
@@ -31356,7 +31356,7 @@
    ],
    "answerIndex": 0,
    "answer": "1485",
-   "explanation": "Sommi prima 1.250 + 875 = 2.125. Poi togli 640: 2.125 - 640 = 1.485.",
+   "explanation": "Sommi prima 1.250 + 875 = 2125. Poi togli 640: 2125 - 640 = 1485.",
    "active": true,
    "tag": "multi_step",
    "tags": [

@@ -395,6 +395,38 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 31: nome di mare scritto in modo non uniforme. Il corpus usa
+  // "Mar" davanti al nome 125 volte contro 30 fra "mar", "mare" e "Mare", e
+  // in geo-4-fiumi_laghi_mari_vul-9140 le quattro opzioni erano tutte in
+  // minuscolo mentre la domanda accanto usava la maiuscola. "Mare del Nord"
+  // resta com'e', perche' quello e' il suo nome italiano.
+  if (subject !== 'inglese') {
+    const tutti = [question, explanation, answer].concat(options || []).filter((v) => typeof v === 'string');
+    const trovato = tutti.join(' | ').match(/\b(?:[Mm]are|mar)\s+(?:Mediterraneo|Adriatico|Tirreno|Ionio|Ligure|Rosso|Nero|Baltico|Caspio|Morto)\b/);
+    if (trovato) {
+      errors.push({ level: 'error', field: 'text', msg: `nome di mare non uniforme: "${trovato[0]}" (il corpus usa "Mar ...")` });
+    }
+    const nord = tutti.join(' | ').match(/\bMar\s+del\s+Nord\b/);
+    if (nord) {
+      errors.push({ level: 'error', field: 'text', msg: 'il nome italiano è "Mare del Nord", non "Mar del Nord"' });
+    }
+  }
+
+  // Dal lotto 31: la spiegazione scrive il risultato con il punto delle
+  // migliaia ("48 x 36 = 1.728") mentre l'opzione da scegliere e' "1728". Il
+  // bambino confronta due stringhe diverse, e in italiano il punto separa
+  // anche i decimali in altri contesti. Il controllo scatta solo quando il
+  // numero senza punto e' davvero una delle opzioni, quindi le cifre grandi
+  // che non compaiono fra le risposte (80.000 km di strade) restano libere.
+  if (subject !== 'inglese' && Array.isArray(options) && explanation) {
+    const opzioni = new Set(options.filter((o) => typeof o === 'string').map((o) => o.trim()));
+    const disallineato = (explanation.match(/\b\d{1,3}\.\d{3}\b/g) || [])
+      .find((n) => opzioni.has(n.replace(/\./g, '')));
+    if (disallineato) {
+      errors.push({ level: 'error', field: 'explanation', msg: `numero scritto "${disallineato}" nella spiegazione ma "${disallineato.replace(/\./g, '')}" fra le opzioni` });
+    }
+  }
+
   // Dal lotto 29: la domanda chiede quale opzione NON rientra in una categoria,
   // ma la spiegazione afferma che ci rientrano tutte ("Quale parola NON
   // appartiene alla famiglia di 'acqua'?" con "Tutte le parole appartengono

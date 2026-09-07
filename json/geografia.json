@@ -3746,7 +3746,7 @@
    "area": "paesaggio",
    "subarea": "trasformazioni_del_paesaggio",
    "difficulty": 2,
-   "question": "Un lago e una barca: quale dei due è naturale?",
+   "question": "Fra questi, quale elemento è naturale?",
    "options": [
     "il lago",
     "la barca",
@@ -15683,14 +15683,14 @@
    "difficulty": 2,
    "question": "Il delta del Po si trova vicino...",
    "options": [
-    "al mare Adriatico",
+    "al Mar Adriatico",
     "alle Alpi",
     "a Roma",
     "al Vesuvio"
    ],
    "answerIndex": 0,
-   "answer": "al mare Adriatico",
-   "explanation": "La risposta corretta è 'al mare Adriatico'.",
+   "answer": "al Mar Adriatico",
+   "explanation": "La risposta corretta è 'al Mar Adriatico'.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -15980,14 +15980,14 @@
    "difficulty": 2,
    "question": "Su quale mare si affacciano le coste pugliesi e venete?",
    "options": [
-    "Mare Adriatico",
+    "Mar Adriatico",
     "Mar Tirreno",
     "Mar Ligure",
     "Mare del Nord"
    ],
    "answerIndex": 0,
-   "answer": "Mare Adriatico",
-   "explanation": "La risposta corretta è 'Mare Adriatico'.",
+   "answer": "Mar Adriatico",
+   "explanation": "La risposta corretta è 'Mar Adriatico'.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -23281,7 +23281,7 @@
    "options": [
     "Mediterraneo",
     "Mar Baltico",
-    "Mar del Nord",
+    "Mare del Nord",
     "Mar Nero"
    ],
    "answerIndex": 0,
@@ -29430,7 +29430,7 @@
    ],
    "answerIndex": 1,
    "answer": "A sinistra",
-   "explanation": "La costa orientale d'Italia si affaccia sul mare Adriatico verso Est. Se guardiamo verso il mare (verso Est), il sole tramonta a Ovest, che è alla nostra sinistra.",
+   "explanation": "La costa orientale d'Italia si affaccia sul Mar Adriatico verso Est. Se guardiamo verso il mare (verso Est), il sole tramonta a Ovest, che è alla nostra sinistra.",
    "active": true,
    "tag": "geografia;punti_cardinali_base;classe_2;primaria",
    "tags": [
@@ -29617,12 +29617,12 @@
    "options": [
     "Un lago alpino",
     "Un torrente di montagna",
-    "Il mare Adriatico",
+    "Il Mar Adriatico",
     "Il fiume Po"
    ],
    "answerIndex": 2,
-   "answer": "Il mare Adriatico",
-   "explanation": "Il mare Adriatico, come tutti i mari, contiene acqua salata. Laghi alpini, torrenti e fiumi come il Po contengono invece acqua dolce. Questa differenza è fondamentale per molti organismi viventi.",
+   "answer": "Il Mar Adriatico",
+   "explanation": "Il Mar Adriatico, come tutti i mari, contiene acqua salata. Laghi alpini, torrenti e fiumi come il Po contengono invece acqua dolce. Questa differenza è fondamentale per molti organismi viventi.",
    "active": true,
    "tag": "geografia;ambienti_acquatici;classe_2;primaria",
    "tags": [
@@ -30166,7 +30166,7 @@
    ],
    "answerIndex": 2,
    "answer": "Foce",
-   "explanation": "La foce è il punto terminale del percorso di un fiume, dove si getta nel mare, in un lago o in un altro fiume. Il Tevere ha la sua foce vicino a Ostia, nel mar Tirreno.",
+   "explanation": "La foce è il punto terminale del percorso di un fiume, dove si getta nel mare, in un lago o in un altro fiume. Il Tevere ha la sua foce vicino a Ostia, nel Mar Tirreno.",
    "active": true,
    "tag": "geografia;ambienti_acquatici_a;classe_3;primaria",
    "tags": [
@@ -31471,7 +31471,7 @@
    "difficulty": 1,
    "question": "In quale mare sfocia il fiume Tevere?",
    "options": [
-    "Mare Adriatico",
+    "Mar Adriatico",
     "Mar Tirreno",
     "Mar Ligure",
     "Mar Ionio"
@@ -32368,7 +32368,7 @@
    "question": "In quale mare si trova l'Italia?",
    "options": [
     "Oceano Atlantico",
-    "Mar del Nord",
+    "Mare del Nord",
     "Mar Mediterraneo",
     "Mar Nero"
    ],
@@ -32722,7 +32722,7 @@
     "Mar Nero",
     "Mar Caspio",
     "Mar Adriatico",
-    "Mar del Nord"
+    "Mare del Nord"
    ],
    "answerIndex": 0,
    "answer": "Mar Nero",
@@ -35222,7 +35222,7 @@
    ],
    "answerIndex": 0,
    "answer": "Il Po",
-   "explanation": "Il Po è il fiume più lungo d'Italia: nasce dalle Alpi e attraversa la Pianura Padana fino al mare Adriatico.",
+   "explanation": "Il Po è il fiume più lungo d'Italia: nasce dalle Alpi e attraversa la Pianura Padana fino al Mar Adriatico.",
    "active": true,
    "tag": "geografia;fiumi_laghi_mari_vul;classe_4;primaria",
    "tags": [
@@ -35343,14 +35343,14 @@
    "difficulty": 2,
    "question": "Quale mare bagna l'Italia a ovest, tra la penisola, la Sardegna e la Corsica?",
    "options": [
-    "Il mar Tirreno",
-    "Il mar Adriatico",
-    "Il mar Ionio",
-    "Il mar Baltico"
+    "Il Mar Tirreno",
+    "Il Mar Adriatico",
+    "Il Mar Ionio",
+    "Il Mar Baltico"
    ],
    "answerIndex": 0,
-   "answer": "Il mar Tirreno",
-   "explanation": "Il mar Tirreno bagna l'Italia a ovest. L'Adriatico è a est, lo Ionio a sud-est.",
+   "answer": "Il Mar Tirreno",
+   "explanation": "Il Mar Tirreno bagna l'Italia a ovest. L'Adriatico è a est, lo Ionio a sud-est.",
    "active": true,
    "tag": "geografia;fiumi_laghi_mari_vul;classe_4;primaria",
    "tags": [
@@ -35631,14 +35631,14 @@
    "difficulty": 2,
    "question": "Quale mare bagna l'Italia lungo la costa orientale (a est)?",
    "options": [
-    "Il mar Adriatico",
-    "Il mar Tirreno",
+    "Il Mar Adriatico",
+    "Il Mar Tirreno",
     "L'oceano Atlantico",
     "Il mar Glaciale"
    ],
    "answerIndex": 0,
-   "answer": "Il mar Adriatico",
-   "explanation": "Il mar Adriatico bagna l'Italia a est, separandola dalla penisola balcanica.",
+   "answer": "Il Mar Adriatico",
+   "explanation": "Il Mar Adriatico bagna l'Italia a est, separandola dalla penisola balcanica.",
    "active": true,
    "tag": "geografia;fiumi_laghi_mari_vul;classe_4;primaria",
    "tags": [
@@ -35702,7 +35702,7 @@
    ],
    "answerIndex": 0,
    "answer": "In Europa",
-   "explanation": "L'Italia è uno Stato europeo: si trova nel continente Europa, nella parte meridionale, e si protende nel mar Mediterraneo.",
+   "explanation": "L'Italia è uno Stato europeo: si trova nel continente Europa, nella parte meridionale, e si protende nel Mar Mediterraneo.",
    "active": true,
    "tag": "geografia;posizione_confini_ue;classe_5;primaria",
    "tags": [
@@ -35862,7 +35862,7 @@
    ],
    "answerIndex": 0,
    "answer": "La Sicilia",
-   "explanation": "La Sicilia è la più grande isola d'Italia e dell'intero mar Mediterraneo.",
+   "explanation": "La Sicilia è la più grande isola d'Italia e dell'intero Mar Mediterraneo.",
    "active": true,
    "tag": "geografia;morfologia_idrografi;classe_5;primaria",
    "tags": [
@@ -36109,7 +36109,7 @@
    "area": "regioni_antropica",
    "subarea": "regioni_economia_popolazione_patrimonio",
    "difficulty": 3,
-   "question": "Quale regione italiana è un'isola circondata dal mar Tirreno, dal Mediterraneo e dal mar di Sardegna?",
+   "question": "Quale regione italiana è un'isola circondata dal Mar Tirreno, dal Mediterraneo e dal mar di Sardegna?",
    "options": [
     "La Sardegna",
     "La Calabria",
@@ -36143,14 +36143,14 @@
    "difficulty": 3,
    "question": "Quale grande mare bagna l'Italia e gran parte dell'Europa meridionale?",
    "options": [
-    "Il mar Mediterraneo",
+    "Il Mar Mediterraneo",
     "Il mar Glaciale Artico",
     "L'oceano Pacifico",
     "Il mar dei Caraibi"
    ],
    "answerIndex": 0,
-   "answer": "Il mar Mediterraneo",
-   "explanation": "Il mar Mediterraneo bagna l'Italia e i Paesi dell'Europa meridionale, dell'Africa del nord e del vicino Oriente.",
+   "answer": "Il Mar Mediterraneo",
+   "explanation": "Il Mar Mediterraneo bagna l'Italia e i Paesi dell'Europa meridionale, dell'Africa del nord e del vicino Oriente.",
    "active": true,
    "tag": "geografia;posizione_confini_ue;classe_5;primaria",
    "tags": [

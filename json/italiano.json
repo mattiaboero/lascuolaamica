@@ -22663,14 +22663,14 @@
    "difficulty": 3,
    "question": "Quale delle seguenti frasi usa correttamente i segni di punteggiatura?",
    "options": [
-    "Ho comprato: pane, latte e burro.",
+    "Ho comprato pane, latte e burro.",
     "Ho comprato pane, latte, e burro.",
     "Ho comprato pane latte e burro.",
     "Ho comprato pane: latte e burro."
    ],
    "answerIndex": 0,
-   "answer": "Ho comprato: pane, latte e burro.",
-   "explanation": "Negli elenchi, gli elementi si separano con la virgola. Prima dell'ultima 'e' che introduce l'ultimo elemento non si mette la virgola (regola italiana). I due punti si usano per introdurre un elenco quando c'è una specificazione prima: 'Ho comprato: pane, latte e burro' è anche accettabile con i due punti.",
+   "answer": "Ho comprato pane, latte e burro.",
+   "explanation": "Negli elenchi gli elementi si separano con la virgola, e prima dell'ultima 'e' la virgola non si mette: 'Ho comprato pane, latte e burro'. Senza virgole l'elenco non si distingue, e i due punti dopo il verbo separano il verbo dal suo complemento oggetto.",
    "active": true,
    "tag": "italiano;ortografia;classe_4;primaria",
    "tags": [
