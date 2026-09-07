@@ -12255,7 +12255,7 @@
    ],
    "answerIndex": 2,
    "answer": "is",
-   "explanation": "She uses is (third person singular).",
+   "explanation": "With 'she' we use 'is': it is the third person singular.",
    "active": true,
    "tag": "to_be",
    "tags": [
@@ -12288,7 +12288,7 @@
    ],
    "answerIndex": 3,
    "answer": "are",
-   "explanation": "They uses are.",
+   "explanation": "With 'they' we use 'are'.",
    "active": true,
    "tag": "to_be",
    "tags": [
@@ -12353,7 +12353,7 @@
    ],
    "answerIndex": 2,
    "answer": "am",
-   "explanation": "I uses am.",
+   "explanation": "With 'I' we use 'am'.",
    "active": true,
    "tag": "to_be",
    "tags": [
@@ -12483,7 +12483,7 @@
    ],
    "answerIndex": 1,
    "answer": "have got",
-   "explanation": "I uses have got.",
+   "explanation": "With 'I' we use 'have got'.",
    "active": true,
    "tag": "have_got",
    "tags": [
@@ -12515,7 +12515,7 @@
    ],
    "answerIndex": 2,
    "answer": "has got",
-   "explanation": "She uses has got.",
+   "explanation": "With 'she' we use 'has got'.",
    "active": true,
    "tag": "have_got",
    "tags": [
@@ -12676,7 +12676,7 @@
    ],
    "answerIndex": 2,
    "answer": "have",
-   "explanation": "We uses have got.",
+   "explanation": "With 'we' we use 'have got'.",
    "active": true,
    "tag": "have_got",
    "tags": [

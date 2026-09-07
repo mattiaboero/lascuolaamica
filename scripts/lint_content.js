@@ -435,6 +435,15 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 50: spiegazione inglese con il verbo alla terza persona dopo un
+  // soggetto che non la vuole ("They uses are.", "I uses am."). Il template
+  // incollava il pronome davanti a "uses" senza accordarlo, e il risultato e'
+  // inglese sbagliato in una domanda che insegna proprio l'accordo del verbo
+  // essere. "Painting uses brushes" resta fuori: li' il soggetto e' un nome.
+  if (subject === 'inglese' && /\b(?:I|You|We|They|He|She|It)\s+uses\b/.test(explanation || '')) {
+    errors.push({ level: 'error', field: 'explanation', msg: 'spiegazione inglese con "uses" dopo un pronome: accordo del verbo sbagliato' });
+  }
+
   // Dal lotto 49: opzione che porta fra parentesi la stessa parola con cui la
   // domanda definisce quello che cerca ("Quale dei seguenti pronomi è
   // relativo?" con l'opzione "che (relativo)"). La parentesi e' una glossa

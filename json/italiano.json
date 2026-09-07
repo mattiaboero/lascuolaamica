@@ -732,7 +732,7 @@
    "area": "italiano_classe2",
    "subarea": "morfologia",
    "difficulty": 1,
-   "question": "Quale verbo è 'essere'?",
+   "question": "Quale di queste è una voce del verbo 'essere'?",
    "options": [
     "ha",
     "gioca",
@@ -762,7 +762,7 @@
    "area": "italiano_classe2",
    "subarea": "morfologia",
    "difficulty": 1,
-   "question": "Quale verbo è 'avere'?",
+   "question": "Quale di queste è una voce del verbo 'avere'?",
    "options": [
     "è",
     "sono",
