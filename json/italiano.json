@@ -9669,7 +9669,7 @@
    "area": "italiano_classe4",
    "subarea": "scrittura",
    "difficulty": 3,
-   "question": "Quale elemento non appartiene alla struttura di un testo espositivo?",
+   "question": "Quale elemento NON appartiene alla struttura di un testo espositivo?",
    "options": [
     "introduzione al tema",
     "esposizione ordinata dei dati",
@@ -27978,11 +27978,11 @@
     "medica",
     "medicessa",
     "medichessa",
-    "dottoressa (non esiste medica)"
+    "la medico"
    ],
    "answerIndex": 0,
    "answer": "medica",
-   "explanation": "Il femminile di 'medico' è 'medica'. In italiano contemporaneo i nomi di professione si declinano al femminile regolarmente: medico→medica, avvocato→avvocata, sindaco→sindaca. Anche se un tempo si preferiva 'la medico' (invariato), oggi l'uso del femminile declinato è largamente accettato e promosso.",
+   "explanation": "Il femminile di 'medico' è 'medica'. In italiano contemporaneo i nomi di professione si formano regolarmente al femminile: medico -> medica, avvocato -> avvocata, sindaco -> sindaca. 'Medichessa' e 'medicessa' non esistono, e 'la medico' lascia il nome al maschile.",
    "active": true,
    "tag": "italiano;ortografia;classe_5;primaria",
    "tags": [

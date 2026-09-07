@@ -411,6 +411,27 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 35: nelle domande a scelta il "non" che rovescia la risposta va
+  // in maiuscolo, come gia' in quindici domande su ventisei ("Quale parola
+  // NON e' un sinonimo di 'grande'?"). In minuscolo si legge di sfuggita e la
+  // risposta si capovolge. Restano fuori i casi in cui la negazione e' solo
+  // un pezzo di una descrizione piu' lunga, riconoscibili dalla "e" che
+  // coordina prima ("e non ha sbocco al mare").
+  if (subject !== 'inglese'
+      && /^(?:Quale|Quali|Che cosa|Cosa|Chi)\b(?![^?]*\se\s[^?]*\bnon\b)[^?]*?\bnon\s+(?:appartiene|è|ha|fa|rientra|vale|serve|contiene|indica|usa|si trova|fa parte|dipende|si dovrebbe|si deve)\b/.test(question || '')) {
+    errors.push({ level: 'error', field: 'question', msg: 'domanda a scelta con la negazione in minuscolo: scrivere "NON" in maiuscolo' });
+  }
+
+  // Dal lotto 35: nota di redazione finita dentro un'opzione ("dottoressa
+  // (non esiste medica)"), che per giunta contraddiceva la risposta giusta.
+  if (Array.isArray(options)) {
+    const nota = options.filter((o) => typeof o === 'string')
+      .find((o) => /\((?:non esiste|non si dice|sbagliato|errato|forma errata|non corretto)/i.test(o));
+    if (nota) {
+      errors.push({ level: 'error', field: 'options', msg: `nota di redazione dentro un'opzione ("${nota}")` });
+    }
+  }
+
   // Dal lotto 34: la stessa domanda scrive i numeri in due formati, con e
   // senza il punto delle migliaia ("3.206 + 2.784 = 5990"). Meta' l'aveva
   // prodotta il lotto 31, che aveva tolto il punto solo ai numeri presenti

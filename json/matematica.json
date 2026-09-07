@@ -55891,7 +55891,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Quale figura non ha lati?",
+   "question": "Quale figura NON ha lati?",
    "options": [
     "triangolo",
     "quadrato",
@@ -56275,7 +56275,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 2,
-   "question": "Quale numero non appartiene alla sequenza 5, 10, 15, 22, 20?",
+   "question": "Quale numero NON appartiene alla sequenza 5, 10, 15, 22, 20?",
    "options": [
     "5",
     "10",

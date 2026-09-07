@@ -10704,7 +10704,7 @@
    "area": "preistoria_paleolitico",
    "subarea": "caccia_raccolta",
    "difficulty": 2,
-   "question": "Quale attività non appartiene al Paleolitico?",
+   "question": "Quale attività NON appartiene al Paleolitico?",
    "options": [
     "cacciare",
     "coltivare grandi campi",
@@ -11325,7 +11325,7 @@
    "area": "preistoria_neolitico_metalli",
    "subarea": "agricoltura_e_sedentarieta",
    "difficulty": 1,
-   "question": "Quale attività non appartiene al Neolitico?",
+   "question": "Quale attività NON appartiene al Neolitico?",
    "options": [
     "coltivare",
     "cacciare come unica risorsa",
@@ -13006,7 +13006,7 @@
    "area": "fonti_linea_antiche_civilta",
    "subarea": "quadro_di_civilta",
    "difficulty": 2,
-   "question": "Quale elemento non appartiene al quadro di civiltà?",
+   "question": "Quale elemento NON appartiene al quadro di civiltà?",
    "options": [
     "l'economia",
     "la religione",
@@ -15489,7 +15489,7 @@
    "area": "egizi",
    "subarea": "vita_quotidiana",
    "difficulty": 2,
-   "question": "Quale lavoro non appartiene all'antico Egitto?",
+   "question": "Quale lavoro NON appartiene all'antico Egitto?",
    "options": [
     "scriba",
     "contadino",
@@ -18082,7 +18082,7 @@
    "area": "civilta_mediterranee",
    "subarea": "confronti",
    "difficulty": 2,
-   "question": "Quale civiltà del Mediterraneo non appartiene al mondo dei fiumi?",
+   "question": "Quale civiltà del Mediterraneo NON appartiene al mondo dei fiumi?",
    "options": [
     "i Fenici",
     "gli Egizi",

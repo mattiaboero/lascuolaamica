@@ -13704,7 +13704,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 1,
-   "question": "Quale oggetto non è vivente?",
+   "question": "Quale oggetto NON è vivente?",
    "options": [
     "albero",
     "farfalla",
@@ -16308,7 +16308,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Quale elemento naturale non è vivente ma fa parte dell'ambiente?",
+   "question": "Quale elemento naturale NON è vivente ma fa parte dell'ambiente?",
    "options": [
     "fungo",
     "rocce",
