@@ -319,6 +319,54 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 25: manca la d eufonica davanti a una parola che inizia per e
+  // ("Sardegna e Elba", "indici e elenchi", "15 biscotti e Elena"). Il corpus
+  // usava gia' "ed" 82 volte contro 13: qui era rimasta indietro la minoranza.
+  // Servono almeno due lettere dopo la e, perche' "davanti a I e E" elenca due
+  // lettere dell'alfabeto, non due parole, e li' la d non va. Il controllo
+  // guarda anche le opzioni: meta' dei casi stava li' ("Sardegna e Elba"), e
+  // le regex di GRAMMATICA vedono solo domanda e spiegazione.
+  if (subject !== 'inglese') {
+    const tutti = [question, explanation, answer].concat(options || []).filter((v) => typeof v === 'string');
+    const trovato = tutti.join(' | ').match(/(?<![a-zà-ùA-ZÀ-Ù])e\s+[eE][a-zà-ùA-ZÀ-Ù]\w*/);
+    if (trovato) {
+      errors.push({ level: 'error', field: 'text', msg: `manca la d eufonica in "${trovato[0]}" (es. "indici ed elenchi")` });
+    }
+  }
+
+  // Dal lotto 25: la spiegazione canonica esisteva in tre forme incoerenti
+  // (apici singoli 854, virgolette doppie 855, risposta nuda 685). Il corpus
+  // cita fra apici singoli ovunque (2749 volte contro 6), quindi la forma
+  // canonica e' quella; le virgolette doppie restano solo quando la risposta
+  // contiene un apostrofo e gli apici si chiuderebbero nel punto sbagliato.
+  // Il confronto e' con la stringa esatta: cosi' il controllo verifica insieme
+  // il formato e il fatto che la spiegazione citi davvero la risposta giusta.
+  if (subject !== 'inglese' && /^\s*La risposta corretta è\s/.test(explanation || '')) {
+    const valore = typeof answer === 'string' && answer.includes("'") ? `"${answer}"` : `'${answer}'`;
+    // Se la risposta finisce gia' con un punto ("prima di 1000 a.C.", "Disegno
+    // la mia aula vista dall'alto."), il punto esterno lo raddoppierebbe: la
+    // regola del lotto 21 tiene solo quello interno.
+    const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
+    if ((explanation || '').trim() !== atteso) {
+      errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+    }
+  }
+
+  // Dal lotto 25: la spiegazione ammette come valido anche un distrattore
+  // ("prima vengono i nonni (o i bisnonni)" con "I bisnonni" fra le opzioni).
+  // Se la spiegazione stessa concede l'alternativa, la domanda non ha una sola
+  // risposta giusta. Serve il confronto con le opzioni, quindi sta qui e non
+  // fra le regex di GRAMMATICA.
+  if (subject !== 'inglese' && Array.isArray(options) && explanation) {
+    const senzaSegni = (s) => String(s).toLowerCase().replace(/[^a-zà-ù ]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const distrattori = options.filter((o) => o !== answer).map(senzaSegni);
+    for (const m of explanation.matchAll(/\((?:o|oppure)\s+([^)]{2,40})\)/gi)) {
+      if (distrattori.includes(senzaSegni(m[1]))) {
+        errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione ammette come valido anche il distrattore "${m[1]}"` });
+      }
+    }
+  }
+
   const isItalianText = subject !== 'inglese';
   if (isItalianText) {
     const testoIt = `${question || ''} ${explanation || ''}`;

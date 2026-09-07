@@ -8147,14 +8147,14 @@
    "difficulty": 2,
    "question": "Le attività dell'uomo possono cambiare montagna, collina e pianura con...",
    "options": [
-    "strade, coltivazioni e edifici",
+    "strade, coltivazioni ed edifici",
     "nuovi oceani",
     "lune artificiali",
     "stagioni inventate"
    ],
    "answerIndex": 0,
-   "answer": "strade, coltivazioni e edifici",
-   "explanation": "La risposta corretta è 'strade, coltivazioni e edifici'.",
+   "answer": "strade, coltivazioni ed edifici",
+   "explanation": "La risposta corretta è 'strade, coltivazioni ed edifici'.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -15652,7 +15652,7 @@
    "options": [
     "Sicilia e Sardegna",
     "Sicilia e Corsica",
-    "Sardegna e Elba",
+    "Sardegna ed Elba",
     "Capri e Ischia"
    ],
    "answerIndex": 0,
@@ -21378,14 +21378,14 @@
    "difficulty": 2,
    "question": "Studiare la geografia fisica significa conoscere...",
    "options": [
-    "forme del territorio e elementi naturali",
+    "forme del territorio ed elementi naturali",
     "solo i confini amministrativi",
     "solo il numero degli abitanti",
     "solo i grafici"
    ],
    "answerIndex": 0,
-   "answer": "forme del territorio e elementi naturali",
-   "explanation": "La risposta corretta è 'forme del territorio e elementi naturali'.",
+   "answer": "forme del territorio ed elementi naturali",
+   "explanation": "La risposta corretta è 'forme del territorio ed elementi naturali'.",
    "active": true,
    "tag": "geografia;classe_5;italia_fisica",
    "tags": [
@@ -25903,13 +25903,13 @@
    "difficulty": 1,
    "question": "Un lago è...",
    "options": [
-    "un'acqua circondata dalla terra",
+    "una distesa d'acqua circondata dalla terra",
     "una strada piena di curve",
     "una montagna molto alta",
     "un ponte sospeso"
    ],
    "answerIndex": 0,
-   "answer": "un'acqua circondata dalla terra",
+   "answer": "una distesa d'acqua circondata dalla terra",
    "explanation": "Il lago è una raccolta d'acqua circondata dalla terra.",
    "active": true,
    "tag": "paesaggi_acqua",
@@ -29677,7 +29677,7 @@
    "area": "orientamento_carte",
    "subarea": "orientamento_carte",
    "difficulty": 1,
-   "question": "Tra Nord e Est, quale punto intermedio si trova?",
+   "question": "Tra Nord ed Est, quale punto intermedio si trova?",
    "options": [
     "Nord-Ovest",
     "Sud-Est",
@@ -29686,7 +29686,7 @@
    ],
    "answerIndex": 2,
    "answer": "Nord-Est",
-   "explanation": "Il Nord-Est (NE) è il punto intermedio tra Nord e Est sulla rosa dei venti. Il Triveneto e il Friuli-Venezia Giulia si trovano nel Nord-Est dell'Italia.",
+   "explanation": "Il Nord-Est (NE) è il punto intermedio tra Nord ed Est sulla rosa dei venti. Il Triveneto e il Friuli-Venezia Giulia si trovano nel Nord-Est dell'Italia.",
    "active": true,
    "tag": "geografia;orientamento_con_car;classe_3;primaria",
    "tags": [

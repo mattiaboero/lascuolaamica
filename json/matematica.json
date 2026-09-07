@@ -57052,7 +57052,7 @@
    ],
    "answerIndex": 1,
    "answer": "triangolo",
-   "explanation": "Tre segmenti chiusi formano un triangolo.",
+   "explanation": "Tre segmenti uniti agli estremi formano una linea chiusa: il triangolo.",
    "active": true,
    "tag": "geometria",
    "tags": [

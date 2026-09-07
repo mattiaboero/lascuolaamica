@@ -2204,7 +2204,7 @@
    "difficulty": 2,
    "question": "Trasformare il discorso diretto in indiretto significa...",
    "options": [
-    "copiarle uguali",
+    "copiare le parole uguali",
     "riferire le parole senza riportarle esattamente",
     "cancellare i dialoghi",
     "mettere tutto tra virgolette"
@@ -16718,7 +16718,7 @@
    ],
    "answerIndex": 1,
    "answer": "A",
-   "explanation": "L'alfabeto italiano inizia con la lettera A. Conoscere l'ordine alfabetico è utile per usare dizionari, indici e elenchi.",
+   "explanation": "L'alfabeto italiano inizia con la lettera A. Conoscere l'ordine alfabetico è utile per usare dizionari, indici ed elenchi.",
    "active": true,
    "tag": "italiano;alfabeto;classe_3;primaria",
    "tags": [
@@ -17838,7 +17838,7 @@
    ],
    "answerIndex": 1,
    "answer": "Mattia aprì il libro sul banco.",
-   "explanation": "'Banco' è un omonimoico: può significare il mobile su cui si lavora a scuola, oppure un insieme (banco di nebbia, banco di pesci). Solo nella frase di Mattia si parla chiaramente di un contesto scolastico.",
+   "explanation": "'Banco' è un omonimo: può significare il mobile su cui si lavora a scuola, oppure un insieme (banco di nebbia, banco di pesci). Solo nella frase di Mattia si parla chiaramente di un contesto scolastico.",
    "active": true,
    "tag": "italiano;lessico;classe_3;primaria",
    "tags": [
@@ -23214,7 +23214,7 @@
    ],
    "answerIndex": 2,
    "answer": "contento",
-   "explanation": "'Contento' e 'felice' sono sinonimi: hanno significati molto simili e si possono usare l'uno al posto dell'altro. I sinonimi arricchiscono il lessico e evitano le ripetizioni nel testo. 'Triste' è il contrario (antonimo) di 'felice'.",
+   "explanation": "'Contento' e 'felice' sono sinonimi: hanno significati molto simili e si possono usare l'uno al posto dell'altro. I sinonimi arricchiscono il lessico ed evitano le ripetizioni nel testo. 'Triste' è il contrario (antonimo) di 'felice'.",
    "active": true,
    "tag": "italiano;lessico;classe_4;primaria",
    "tags": [

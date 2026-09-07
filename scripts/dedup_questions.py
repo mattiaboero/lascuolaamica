@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
+"""Segnala (e, con --apply, rimuove) le domande con lo stesso testo.
+
+Di default non tocca nulla: lo script confronta le domande solo sul testo, e
+due domande con lo stesso stem ma opzioni diverse sono legittime, quindi una
+cancellazione va sempre guardata prima. Serve --apply per riscrivere i JSON.
+"""
 import json
+import sys
 from pathlib import Path
 from collections import defaultdict
+
+APPLY = '--apply' in sys.argv
 
 JSON_DIR = Path(__file__).parent.parent / 'json'
 SUBJECTS = ['matematica', 'problemi', 'italiano', 'inglese', 'civica', 'geografia', 'storia', 'scienze']
@@ -57,6 +66,11 @@ def process_subject(subject):
         else:
             seen[question_text] = idx
 
+    if not APPLY:
+        for idx in duplicates:
+            print(f"  - {questions[idx].get('id')}: {questions[idx].get('question')}")
+        return len(duplicates)
+
     # Remove duplicates in reverse order to maintain indices
     for idx in sorted(duplicates, reverse=True):
         del questions[idx]
@@ -102,6 +116,8 @@ def update_counts():
 
 def main():
     print("\n=== Deduplicating questions ===\n")
+    if not APPLY:
+        print("(sola lettura: nessun file verra' modificato, usare --apply per rimuovere)\n")
 
     results = {}
     for subject in SUBJECTS:
@@ -122,6 +138,10 @@ def main():
 
     print("=" * 23)
     print(f"{'TOTAL':<15} {total_removed:<8}\n")
+
+    if not APPLY:
+        print("Nessuna modifica scritta. Rilanciare con --apply per rimuovere.\n")
+        return
 
     # Update counts
     total = update_counts()
