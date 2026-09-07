@@ -76,9 +76,11 @@ const SBAGLIATE = [
   "Ma aspetta: sol- vs ste-: confrontiamo la seconda lettera.",
   'Sulla linea del tempo il primo elemento è mi sveglio.',
   'Prima: 3 x 1,20 = 3,60 euro per i quaderni.',
+  'Plurali irregolari: uomo/uomini, dio/dei, bue/buoi.',
 ];
 
 const CORRETTE = [
+  "'Qualche' e 'dei' indicano una quantità positiva.",
   "Sulla linea del tempo il primo elemento è 'mi sveglio'.",
   'Prima: 3 × 1,20 = 3,60 euro per i quaderni.',
   'Come si chiamavano le costruzioni a gradoni che i Sumeri dedicavano agli dèi?',

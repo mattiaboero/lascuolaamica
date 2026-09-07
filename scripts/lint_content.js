@@ -238,8 +238,13 @@ const GRAMMATICA = [
   // dalla preposizione articolata. Il corpus usava gia' "dèi" sette volte e
   // "dei" otto. La regola chiede un quantificatore o un articolo davanti, che
   // e' il segnale del sostantivo: "dei greci" da solo resta ambiguo e fuori.
-  { pattern: /\b(?:gli|molti|tanti|questi|quegli|altri|numerosi|vari|degli|agli|dagli|sugli|negli|cogli)\s+dei\b/,
-    msg: 'plurale di "dio" senza accento: serve "dèi" (es. "gli dèi", "molti dèi")' },
+  // Dal lotto 42: la regola chiedeva un quantificatore o un articolo davanti,
+  // e non vedeva l'elenco dei plurali irregolari di ita-3-morfologia-9207
+  // ("uomo/uomini, dio/dei, bue/buoi"), dove la coppia con la barra e' il
+  // contesto che rende "dei" un sostantivo. Resta fuori l'articolo partitivo,
+  // che in ita-3-lingua-9188 e' citato correttamente senza accento.
+  { pattern: /\b(?:gli|molti|tanti|questi|quegli|altri|numerosi|vari|degli|agli|dagli|sugli|negli|cogli)\s+dei\b|\bdio\s*\/\s*dei\b/i,
+    msg: 'plurale di "dio" senza accento: serve "dèi" (es. "gli dèi", "dio/dèi")' },
   // Dal lotto 20: unita di superficie e volume scritte senza esponente. Il
   // corpus usa cm² 118 volte e cm2 16, m² 56 e mq 12: uniformate all'esponente.
   { pattern: /\b(?:cm2|m2|mq|cmq|kmq|cm3|dm3|mc)\b/,
