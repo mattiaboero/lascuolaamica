@@ -442,6 +442,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 55: nome di mestiere al maschile con un nome proprio femminile
+  // ("Il contadino Irene ha piantato..."). Il template incollava sempre "Il
+  // contadino" davanti al nome estratto, e in sei problemi su dodici quel
+  // nome era femminile. Le liste dei nomi sono le stesse usate per il
+  // pronome, e il meta-controllo verifica a ogni build che restino allineate
+  // al corpus.
+  if (subject !== 'inglese') {
+    const tutti = [question, explanation].filter((v) => typeof v === 'string').join(' | ');
+    const sbagliato = tutti.match(new RegExp(`\\b(?:Il|Un)\\s+[a-zà-ù]+o\\s+(?:${NOMI_PERSONA_F})\\b`))
+      || tutti.match(new RegExp(`\\b(?:La|Una)\\s+[a-zà-ù]+a\\s+(?:${NOMI_PERSONA_M})\\b`));
+    if (sbagliato) {
+      errors.push({ level: 'error', field: 'text', msg: `nome di mestiere e nome proprio di genere diverso: "${sbagliato[0]}"` });
+    }
+  }
+
   // Dal lotto 54: frase sospesa chiusa dal punto interrogativo in cui "come" o
   // "quando" stanno dentro un inciso fra virgole ("Anche gli animali, come le
   // persone, per vivere devono?"). Li' non sono interrogativi ma congiunzioni,

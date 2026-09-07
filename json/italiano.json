@@ -22373,16 +22373,16 @@
    "area": "italiano_classe4",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Quale parola si scrive con 'gl' e non con 'li'?",
+   "question": "Come si scrive correttamente il nome della parte verde di una pianta?",
    "options": [
     "folia",
-    "folio",
+    "folgia",
     "foglia",
-    "foglio"
+    "foglja"
    ],
    "answerIndex": 2,
    "answer": "foglia",
-   "explanation": "'Foglia' si scrive con 'gl' perché il suono /ʎ/ (elle palatale) davanti a 'i' e poi altra vocale si scrive 'gl': foglia, famiglia, tiglio, miglio. 'Foglio' invece mantiene il suono normale e si scrive diversamente. Attenzione: 'foglio' è corretto, ma non usa 'gl' nello stesso modo.",
+   "explanation": "Il suono /ʎ/ si scrive 'gl' davanti alla 'i': foglia, famiglia, tiglio. Si scrive 'li' soltanto in poche parole, come 'olio' e 'petroliera'.",
    "active": true,
    "tag": "italiano;ortografia;classe_4;primaria",
    "tags": [
