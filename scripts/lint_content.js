@@ -428,6 +428,19 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 40: stem sospeso chiuso dai due punti invece che dai puntini
+  // ("Un angolo ottuso è:", "Il perimetro si misura in:"). Un lotto
+  // precedente aveva lasciato correre questi 57 casi ritenendoli due punti
+  // che introducono un elenco, ma nessuno introduce un elenco: sono le
+  // stesse frasi sospese uniformate ai puntini nei lotti 2-6, e le opzioni
+  // sono alternative fra cui sceglierne una. Restano fuori le consegne
+  // all'imperativo ("Scegli la parola scritta in modo CORRETTO:"), dove i
+  // due punti annunciano davvero le scelte.
+  if (subject !== 'inglese' && /:\s*$/.test(question || '')
+      && !/^(?:Scegli|Indica|Completa|Leggi|Osserva|Metti|Trova|Individua|Collega)\b/.test(question || '')) {
+    errors.push({ level: 'error', field: 'question', msg: 'frase sospesa chiusa dai due punti: usare i puntini di sospensione' });
+  }
+
   // Dal lotto 37: il rovescio del difetto del lotto 24. Li' erano frasi
   // sospese chiuse dal punto interrogativo; qui sono domande vere chiuse dai
   // puntini ("Leggi: '...' Che tipo di testo e'..."). Il segnale e' di nuovo

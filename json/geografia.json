@@ -23213,7 +23213,7 @@
    "area": "italia_europa",
    "subarea": "posizione_confini_ue",
    "difficulty": 2,
-   "question": "L'Italia ha anche due piccoli Stati all'interno del suo territorio:",
+   "question": "L'Italia ha anche due piccoli Stati all'interno del suo territorio...",
    "options": [
     "San Marino e Città del Vaticano",
     "Corsica e Malta",
@@ -28397,7 +28397,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "La maestra scrive alla lavagna che è in fondo all'aula. Rispetto ai banchi degli alunni, la lavagna è:",
+   "question": "La maestra scrive alla lavagna che è in fondo all'aula. Rispetto ai banchi degli alunni, la lavagna è...",
    "options": [
     "Dentro i banchi",
     "Davanti ai banchi",
@@ -28429,7 +28429,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Giulia è in giardino. La sua casa ha un recinto tutto intorno. Giulia è:",
+   "question": "Giulia è in giardino. La sua casa ha un recinto tutto intorno. Giulia è...",
    "options": [
     "Fuori dal recinto",
     "Dentro al recinto",
@@ -28461,7 +28461,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 2,
-   "question": "Marco cammina verso la finestra. Il muro con la porta è alle sue spalle. La porta è:",
+   "question": "Marco cammina verso la finestra. Il muro con la porta è alle sue spalle. La porta è...",
    "options": [
     "Davanti a Marco",
     "A destra di Marco",
@@ -28525,7 +28525,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 2,
-   "question": "Esci di casa e giri a destra. Arrivi a una piazza. Per tornare a casa devi girare:",
+   "question": "Esci di casa e giri a destra. Arrivi a una piazza. Per tornare a casa devi girare...",
    "options": [
     "Ancora a destra",
     "A sinistra",
@@ -28909,7 +28909,7 @@
    "area": "geo_graficita",
    "subarea": "mappe_e_piante",
    "difficulty": 2,
-   "question": "Guardi la pianta della tua scuola. Sul lato Nord vedi l'ingresso principale. Il cortile è sul lato Sud. Il cortile è:",
+   "question": "Guardi la pianta della tua scuola. Sul lato Nord vedi l'ingresso principale. Il cortile è sul lato Sud. Il cortile è...",
    "options": [
     "Di fronte all'ingresso",
     "Accanto all'ingresso",
@@ -29069,7 +29069,7 @@
    "area": "paesaggio",
    "subarea": "paesaggi_base",
    "difficulty": 2,
-   "question": "Sulle Alpi italiane, in estate le mucche vengono portate a pascolare in alta quota. Questo si chiama:",
+   "question": "Sulle Alpi italiane, in estate le mucche vengono portate a pascolare in alta quota. Questo si chiama...",
    "options": [
     "Navigazione",
     "Alpeggio",
@@ -29197,7 +29197,7 @@
    "area": "paesaggi_acqua",
    "subarea": "ambienti_acquatici",
    "difficulty": 1,
-   "question": "L'acqua del mare ha un sapore:",
+   "question": "L'acqua del mare ha un sapore...",
    "options": [
     "Dolce come quella del rubinetto",
     "Amaro e salato",
@@ -30285,7 +30285,7 @@
    "area": "paesaggi_acqua",
    "subarea": "ambienti_acquatici",
    "difficulty": 3,
-   "question": "Un affluente è:",
+   "question": "Un affluente è...",
    "options": [
     "Un corso d'acqua che nasce dal mare",
     "Un corso d'acqua che si getta in un altro fiume più grande",

@@ -30252,7 +30252,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "In un rettangolo, i lati opposti sono:",
+   "question": "In un rettangolo, i lati opposti sono...",
    "options": [
     "Diversi",
     "Uguali",
@@ -30316,7 +30316,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il cerchio ha:",
+   "question": "Il cerchio ha...",
    "options": [
     "4 lati",
     "3 lati",
@@ -30444,7 +30444,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il quadrato ha tutti gli angoli:",
+   "question": "Il quadrato ha tutti gli angoli...",
    "options": [
     "Ottusi",
     "Acuti",
@@ -30540,7 +30540,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il triangolo scaleno ha:",
+   "question": "Il triangolo scaleno ha...",
    "options": [
     "Tutti i lati uguali",
     "Due lati uguali",
@@ -30572,7 +30572,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il triangolo isoscele ha:",
+   "question": "Il triangolo isoscele ha...",
    "options": [
     "Tutti i lati uguali",
     "Due lati uguali",
@@ -32396,7 +32396,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Un triangolo rettangolo ha:",
+   "question": "Un triangolo rettangolo ha...",
    "options": [
     "3 angoli retti",
     "2 angoli retti",
@@ -32492,7 +32492,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Un angolo retto misura:",
+   "question": "Un angolo retto misura...",
    "options": [
     "45°",
     "90°",
@@ -32524,7 +32524,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Un angolo ottuso è:",
+   "question": "Un angolo ottuso è...",
    "options": [
     "Minore di 90°",
     "Uguale a 90°",
@@ -32556,7 +32556,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Un angolo acuto è:",
+   "question": "Un angolo acuto è...",
    "options": [
     "Maggiore di 90°",
     "Uguale a 90°",
@@ -32652,7 +32652,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Un triangolo equilatero ha tutti i lati:",
+   "question": "Un triangolo equilatero ha tutti i lati...",
    "options": [
     "Diversi",
     "Due uguali",
@@ -32716,7 +32716,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Il perimetro si misura in:",
+   "question": "Il perimetro si misura in...",
    "options": [
     "cm²",
     "m²",
@@ -34668,7 +34668,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "L'area si misura in:",
+   "question": "L'area si misura in...",
    "options": [
     "cm",
     "cm²",
@@ -34828,7 +34828,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "L'area di un triangolo con base 10 cm e altezza 4 cm è:",
+   "question": "L'area di un triangolo con base 10 cm e altezza 4 cm è...",
    "options": [
     "20 cm²",
     "40 cm²",
@@ -34860,7 +34860,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Il perimetro di un quadrato con lato 7 cm è:",
+   "question": "Il perimetro di un quadrato con lato 7 cm è...",
    "options": [
     "14 cm",
     "21 cm",
@@ -37580,7 +37580,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Il volume si misura in:",
+   "question": "Il volume si misura in...",
    "options": [
     "cm²",
     "m",
@@ -37612,7 +37612,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Un cubo con lato 3 cm ha volume:",
+   "question": "Un cubo con lato 3 cm ha volume...",
    "options": [
     "9 cm³",
     "18 cm³",
@@ -37644,7 +37644,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 3,
-   "question": "1 dm³ è uguale a:",
+   "question": "1 dm³ è uguale a...",
    "options": [
     "100 cm³",
     "1000 cm³",
@@ -37772,7 +37772,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Un cubo con lato 4 cm ha volume:",
+   "question": "Un cubo con lato 4 cm ha volume...",
    "options": [
     "16 cm³",
     "32 cm³",
@@ -40748,7 +40748,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 3,
-   "question": "Il doppio di 6 è:",
+   "question": "Il doppio di 6 è...",
    "options": [
     "8",
     "10",
@@ -40780,7 +40780,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 3,
-   "question": "La metà di 14 è:",
+   "question": "La metà di 14 è...",
    "options": [
     "5",
     "6",
@@ -42220,7 +42220,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "La barra più alta in un grafico a barre rappresenta:",
+   "question": "La barra più alta in un grafico a barre rappresenta...",
    "options": [
     "Il valore minimo",
     "Il valore massimo",
@@ -42252,7 +42252,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Un evento impossibile ha probabilità:",
+   "question": "Un evento impossibile ha probabilità...",
    "options": [
     "1",
     "0",
@@ -42284,7 +42284,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Un evento certo ha probabilità:",
+   "question": "Un evento certo ha probabilità...",
    "options": [
     "0",
     "0,5",
@@ -44268,7 +44268,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "La probabilità si esprime come numero compreso tra:",
+   "question": "La probabilità si esprime come numero compreso tra...",
    "options": [
     "0 e 10",
     "0 e 100",
@@ -47660,7 +47660,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "Un settore di 90° in un grafico a torta (360°) rappresenta:",
+   "question": "Un settore di 90° in un grafico a torta (360°) rappresenta...",
    "options": [
     "1/2 del totale",
     "1/3 del totale",
@@ -47820,7 +47820,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "La frequenza relativa si esprime come:",
+   "question": "La frequenza relativa si esprime come...",
    "options": [
     "Numero intero",
     "Percentuale o frazione",

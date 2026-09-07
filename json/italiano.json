@@ -21669,7 +21669,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In questa frase, 'con il pennello' è:",
+   "question": "In questa frase, 'con il pennello' è...",
    "options": [
     "Complemento oggetto",
     "Complemento di mezzo",
@@ -21797,7 +21797,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In questa frase, 'a scuola' è:",
+   "question": "In questa frase, 'a scuola' è...",
    "options": [
     "Complemento di tempo",
     "Complemento oggetto",
@@ -22117,7 +22117,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In questa frase, 'per una settimana' è:",
+   "question": "In questa frase, 'per una settimana' è...",
    "options": [
     "Complemento di luogo",
     "Complemento di tempo determinato",
@@ -26501,7 +26501,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In 'Il professore spiega la lezione agli studenti', 'agli studenti' è:",
+   "question": "In 'Il professore spiega la lezione agli studenti', 'agli studenti' è...",
    "options": [
     "complemento oggetto",
     "complemento di specificazione",
@@ -26565,7 +26565,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In 'Léa suona il pianoforte da tre anni', 'da tre anni' è:",
+   "question": "In 'Léa suona il pianoforte da tre anni', 'da tre anni' è...",
    "options": [
     "complemento di tempo determinato",
     "complemento di tempo indeterminato (durata)",
@@ -26757,7 +26757,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In 'Chiamai Yusuf a gran voce', 'Yusuf' ha la funzione di:",
+   "question": "In 'Chiamai Yusuf a gran voce', 'Yusuf' ha la funzione di...",
    "options": [
     "complemento oggetto",
     "vocativo",
@@ -26789,7 +26789,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In 'La nonna ci ha preparato una torta al cioccolato', 'al cioccolato' è:",
+   "question": "In 'La nonna ci ha preparato una torta al cioccolato', 'al cioccolato' è...",
    "options": [
     "complemento di specificazione",
     "complemento di qualità",
@@ -26853,7 +26853,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In 'Andremo al parco a piedi', 'a piedi' è:",
+   "question": "In 'Andremo al parco a piedi', 'a piedi' è...",
    "options": [
     "complemento di modo",
     "complemento di mezzo",
@@ -26885,7 +26885,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In 'Questo libro parla di avventura', 'di avventura' è:",
+   "question": "In 'Questo libro parla di avventura', 'di avventura' è...",
    "options": [
     "complemento di specificazione",
     "complemento oggetto",
@@ -26949,7 +26949,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In 'Penso che tu abbia ragione', la parte 'che tu abbia ragione' è:",
+   "question": "In 'Penso che tu abbia ragione', la parte 'che tu abbia ragione' è...",
    "options": [
     "proposizione coordinata",
     "proposizione principale",
@@ -26981,7 +26981,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In 'Piove e fa freddo', le due proposizioni sono legate da:",
+   "question": "In 'Piove e fa freddo', le due proposizioni sono legate da...",
    "options": [
     "subordinazione",
     "coordinazione",
@@ -27045,7 +27045,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In 'La maestra spiega la grammatica con chiarezza', 'con chiarezza' è:",
+   "question": "In 'La maestra spiega la grammatica con chiarezza', 'con chiarezza' è...",
    "options": [
     "predicato nominale",
     "complemento di modo",
@@ -27077,7 +27077,7 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In 'Da bambina, Aisha viveva in Nigeria', 'Da bambina' è:",
+   "question": "In 'Da bambina, Aisha viveva in Nigeria', 'Da bambina' è...",
    "options": [
     "complemento di tempo determinato",
     "complemento di tempo indeterminato",
@@ -27173,7 +27173,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "In 'Il libro che ho letto era bellissimo', 'che' è:",
+   "question": "In 'Il libro che ho letto era bellissimo', 'che' è...",
    "options": [
     "congiunzione subordinante",
     "pronome relativo soggetto",
@@ -27269,7 +27269,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "In 'Telefona a chi vuoi', 'a chi' è:",
+   "question": "In 'Telefona a chi vuoi', 'a chi' è...",
    "options": [
     "pronome relativo",
     "pronome interrogativo",
@@ -27333,7 +27333,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "In 'Sei venuto tardi perché hai perso il bus', il verbo 'hai perso' è:",
+   "question": "In 'Sei venuto tardi perché hai perso il bus', il verbo 'hai perso' è...",
    "options": [
     "indicativo presente",
     "indicativo passato prossimo",
@@ -27397,7 +27397,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "In 'Vorrei che tu venissi alla festa', il modo del verbo 'venissi' è:",
+   "question": "In 'Vorrei che tu venissi alla festa', il modo del verbo 'venissi' è...",
    "options": [
     "indicativo imperfetto",
     "congiuntivo imperfetto",
@@ -27461,7 +27461,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "In 'Corro più velocemente di te', 'di te' introduce:",
+   "question": "In 'Corro più velocemente di te', 'di te' introduce...",
    "options": [
     "secondo termine di paragone",
     "complemento di specificazione",
@@ -27525,7 +27525,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Nella frase 'Il cui nome è famoso', 'cui' è:",
+   "question": "Nella frase 'Il cui nome è famoso', 'cui' è...",
    "options": [
     "pronome interrogativo",
     "pronome relativo",
@@ -28069,7 +28069,7 @@
    "area": "italiano_classe5",
    "subarea": "grammatica",
    "difficulty": 3,
-   "question": "In 'Se studiassi di più, capiresti tutto', il modo del verbo 'studiassi' è:",
+   "question": "In 'Se studiassi di più, capiresti tutto', il modo del verbo 'studiassi' è...",
    "options": [
     "indicativo imperfetto",
     "congiuntivo imperfetto",
@@ -28965,7 +28965,7 @@
    "area": "italiano_classe5",
    "subarea": "lettura",
    "difficulty": 3,
-   "question": "In un racconto, il 'flashback' è:",
+   "question": "In un racconto, il 'flashback' è...",
    "options": [
     "un salto in avanti nel tempo della narrazione",
     "un ritorno a eventi passati inserito nella narrazione",
@@ -30053,7 +30053,7 @@
    "area": "italiano_classe5",
    "subarea": "grammatica",
    "difficulty": 3,
-   "question": "In 'Né Marco né Sofia sono venuti alla festa', la congiunzione 'né...né' indica:",
+   "question": "In 'Né Marco né Sofia sono venuti alla festa', la congiunzione 'né...né' indica...",
    "options": [
     "alternativa",
     "esclusione di entrambe le possibilità",
