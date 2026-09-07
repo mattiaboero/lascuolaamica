@@ -272,9 +272,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // esercizi sul discorso diretto.
   {
     const campi = [question, explanation, answer].concat(options || []).filter((v) => typeof v === 'string');
-    const trovato = campi.join(' ').match(/[’‘“”…]/);
+    const trovato = campi.join(' ').match(/[’‘“”…−–]/);
     if (trovato) {
-      errors.push({ level: 'error', field: 'text', msg: `carattere tipografico da normalizzare: "${trovato[0]}" (usare ' " e i tre punti separati)` });
+      errors.push({ level: 'error', field: 'text', msg: `carattere tipografico da normalizzare: "${trovato[0]}" (usare ' " - e i tre punti separati)` });
+    }
+    // Dal lotto 28: lettere di altri alfabeti finite dentro parole italiane.
+    // "cilieги" aveva due caratteri cirillici al posto di "gi" e "iniziň" una
+    // enne con caron al posto della o accentata: a schermo si leggono quasi
+    // come le lettere giuste, quindi nessuno se ne accorgeva. Il greco e i
+    // simboli fonetici del corpus (etimologie, /dʒ/) restano fuori dal set.
+    const estranea = campi.join(' ').match(/[\u0400-\u04FF]|[čćďěľĺňřšťůžČĆĎĚĽĹŇŘŠŤŮŽ]/);
+    if (estranea) {
+      errors.push({ level: 'error', field: 'text', msg: `lettera estranea all'alfabeto italiano: "${estranea[0]}" (probabile carattere sostituito per errore)` });
     }
   }
 

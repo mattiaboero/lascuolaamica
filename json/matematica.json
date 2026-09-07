@@ -2261,7 +2261,7 @@
    ],
    "answerIndex": 3,
    "answer": "63",
-   "explanation": "7 × 9 = 63: conta di 7 in 7 per 9 volte, oppure ricorda che 7 × 9 = 63 (lo stesso di 9 × 7). Puoi anche calcolare 7 × 10 = 70 e togliere 7: 70 − 7 = 63.",
+   "explanation": "7 × 9 = 63: conta di 7 in 7 per 9 volte, oppure ricorda che 7 × 9 = 63 (lo stesso di 9 × 7). Puoi anche calcolare 7 × 10 = 70 e togliere 7: 70 - 7 = 63.",
    "active": true,
    "tag": "matematica;tabelline;classe_3;primaria",
    "tags": [
@@ -2357,7 +2357,7 @@
    ],
    "answerIndex": 3,
    "answer": "54",
-   "explanation": "6 × 9 = 54: usa la strategia 6 × 10 = 60, poi togli 6: 60 − 6 = 54. Oppure conta di 6 in 6 per 9 volte.",
+   "explanation": "6 × 9 = 54: usa la strategia 6 × 10 = 60, poi togli 6: 60 - 6 = 54. Oppure conta di 6 in 6 per 9 volte.",
    "active": true,
    "tag": "matematica;tabelline;classe_3;primaria",
    "tags": [
@@ -2581,7 +2581,7 @@
    ],
    "answerIndex": 1,
    "answer": "72",
-   "explanation": "8 × 9 = 72: usa la strategia 8 × 10 = 80 e togli 8: 80 − 8 = 72. Oppure conta di 8 in 8 per 9 volte.",
+   "explanation": "8 × 9 = 72: usa la strategia 8 × 10 = 80 e togli 8: 80 - 8 = 72. Oppure conta di 8 in 8 per 9 volte.",
    "active": true,
    "tag": "matematica;tabelline;classe_3;primaria",
    "tags": [
@@ -2709,7 +2709,7 @@
    ],
    "answerIndex": 3,
    "answer": "72",
-   "explanation": "9 × 8 = 72: usa la strategia 9 × 10 = 90 e togli 9 due volte: 90 − 18 = 72. Oppure ricorda che è lo stesso di 8 × 9 = 72.",
+   "explanation": "9 × 8 = 72: usa la strategia 9 × 10 = 90 e togli 9 due volte: 90 - 18 = 72. Oppure ricorda che è lo stesso di 8 × 9 = 72.",
    "active": true,
    "tag": "matematica;tabelline;classe_3;primaria",
    "tags": [
@@ -2869,7 +2869,7 @@
    ],
    "answerIndex": 0,
    "answer": "81",
-   "explanation": "9 × 9 = 81: è un quadrato perfetto da memorizzare. Puoi calcolare 9 × 10 = 90 e togliere 9: 90 − 9 = 81.",
+   "explanation": "9 × 9 = 81: è un quadrato perfetto da memorizzare. Puoi calcolare 9 × 10 = 90 e togliere 9: 90 - 9 = 81.",
    "active": true,
    "tag": "matematica;tabelline;classe_3;primaria",
    "tags": [
@@ -2965,7 +2965,7 @@
    ],
    "answerIndex": 3,
    "answer": "36",
-   "explanation": "9 × 4 = 36: conta di 9 in 9 per 4 volte: 9, 18, 27, 36. Oppure usa 9 × 5 = 45 e togli 9: 45 − 9 = 36.",
+   "explanation": "9 × 4 = 36: conta di 9 in 9 per 4 volte: 9, 18, 27, 36. Oppure usa 9 × 5 = 45 e togli 9: 45 - 9 = 36.",
    "active": true,
    "tag": "matematica;tabelline;classe_3;primaria",
    "tags": [
@@ -8341,7 +8341,7 @@
    ],
    "answerIndex": 3,
    "answer": "206",
-   "explanation": "Per sommare 13 + 193, puoi pensare 13 + 193 = 13 + 200 − 7 = 213 − 7 = 206. Oppure somma colonna per colonna partendo dalle unità.",
+   "explanation": "Per sommare 13 + 193, puoi pensare 13 + 193 = 13 + 200 - 7 = 213 - 7 = 206. Oppure somma colonna per colonna partendo dalle unità.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9045,7 +9045,7 @@
    ],
    "answerIndex": 0,
    "answer": "175",
-   "explanation": "Per sottrarre 847 − 672, sottrai colonna per colonna da destra: unità 7−2=5, decine 4−7 (prendi in prestito): 14−7=7, centinaia 7−1−6=0. Rimane 175.",
+   "explanation": "Per sottrarre 847 - 672, sottrai colonna per colonna da destra: unità 7-2=5, decine 4-7 (prendi in prestito): 14-7=7, centinaia 7-1-6=0. Rimane 175.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9077,7 +9077,7 @@
    ],
    "answerIndex": 3,
    "answer": "172",
-   "explanation": "Per sottrarre 176 − 4, sottrai solo le unità: 6−4=2, le decine e centinaia restano uguali: 172.",
+   "explanation": "Per sottrarre 176 - 4, sottrai solo le unità: 6-4=2, le decine e centinaia restano uguali: 172.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9109,7 +9109,7 @@
    ],
    "answerIndex": 0,
    "answer": "52",
-   "explanation": "Per sottrarre 98 − 46, sottrai le decine (90−40=50) e le unità (8−6=2): 50+2=52.",
+   "explanation": "Per sottrarre 98 - 46, sottrai le decine (90-40=50) e le unità (8-6=2): 50+2=52.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9141,7 +9141,7 @@
    ],
    "answerIndex": 0,
    "answer": "112",
-   "explanation": "Per sottrarre 279 − 167, sottrai colonna per colonna: unità 9−7=2, decine 7−6=1, centinaia 2−1=1. Il risultato è 112.",
+   "explanation": "Per sottrarre 279 - 167, sottrai colonna per colonna: unità 9-7=2, decine 7-6=1, centinaia 2-1=1. Il risultato è 112.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9173,7 +9173,7 @@
    ],
    "answerIndex": 1,
    "answer": "109",
-   "explanation": "Per sottrarre 155 − 46, sottrai le unità (5−6: prendi in prestito) 15−6=9, poi le decine (4−1−4=0), centinaia (1−0=1). Il risultato è 109.",
+   "explanation": "Per sottrarre 155 - 46, sottrai le unità (5-6: prendi in prestito) 15-6=9, poi le decine (4-1-4=0), centinaia (1-0=1). Il risultato è 109.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9205,7 +9205,7 @@
    ],
    "answerIndex": 1,
    "answer": "61",
-   "explanation": "Per sottrarre 386 − 325, sottrai colonna per colonna: unità 6−5=1, decine 8−2=6, centinaia 3−3=0. Il risultato è 061 = 61.",
+   "explanation": "Per sottrarre 386 - 325, sottrai colonna per colonna: unità 6-5=1, decine 8-2=6, centinaia 3-3=0. Il risultato è 061 = 61.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9237,7 +9237,7 @@
    ],
    "answerIndex": 3,
    "answer": "22",
-   "explanation": "Per sottrarre 170 − 148, sottrai colonna per colonna: unità 0−8 (prendi in prestito) 10−8=2, decine 6−1−4=1... oppure pensa: 148+22=170, quindi la differenza è 22.",
+   "explanation": "Per sottrarre 170 - 148, sottrai colonna per colonna: unità 0-8 (prendi in prestito) 10-8=2, decine 6-1-4=1... oppure pensa: 148+22=170, quindi la differenza è 22.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9269,7 +9269,7 @@
    ],
    "answerIndex": 3,
    "answer": "227",
-   "explanation": "Per sottrarre 711 − 484, sottrai colonna per colonna con i prestiti necessari. Puoi anche pensare: 484+227=711, quindi la differenza è 227.",
+   "explanation": "Per sottrarre 711 - 484, sottrai colonna per colonna con i prestiti necessari. Puoi anche pensare: 484+227=711, quindi la differenza è 227.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9301,7 +9301,7 @@
    ],
    "answerIndex": 0,
    "answer": "69",
-   "explanation": "Per sottrarre 176 − 107, sottrai colonna per colonna: unità 6−7 (prendi in prestito) 16−7=9, decine 6−1−0=5... 176−107=69. Pensa: 107+69=176.",
+   "explanation": "Per sottrarre 176 - 107, sottrai colonna per colonna: unità 6-7 (prendi in prestito) 16-7=9, decine 6-1-0=5... 176-107=69. Pensa: 107+69=176.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9333,7 +9333,7 @@
    ],
    "answerIndex": 1,
    "answer": "277",
-   "explanation": "Per sottrarre 529 − 252, sottrai colonna per colonna con i prestiti necessari: 252+277=529, quindi la differenza è 277.",
+   "explanation": "Per sottrarre 529 - 252, sottrai colonna per colonna con i prestiti necessari: 252+277=529, quindi la differenza è 277.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9365,7 +9365,7 @@
    ],
    "answerIndex": 2,
    "answer": "4",
-   "explanation": "Per sottrarre 963 − 959, i due numeri sono molto vicini: basta contare quanti passi separano 959 da 963: 959, 960, 961, 962, 963 — sono 4 passi, quindi il risultato è 4.",
+   "explanation": "Per sottrarre 963 - 959, i due numeri sono molto vicini: basta contare quanti passi separano 959 da 963: 959, 960, 961, 962, 963 — sono 4 passi, quindi il risultato è 4.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9397,7 +9397,7 @@
    ],
    "answerIndex": 2,
    "answer": "359",
-   "explanation": "Per sottrarre 411 − 52, sottrai colonna per colonna con i prestiti necessari: unità 1−2 (prendi in prestito) 11−2=9, decine 0−1−5 (prendi in prestito) 10−6=4... Pensa: 52+359=411.",
+   "explanation": "Per sottrarre 411 - 52, sottrai colonna per colonna con i prestiti necessari: unità 1-2 (prendi in prestito) 11-2=9, decine 0-1-5 (prendi in prestito) 10-6=4... Pensa: 52+359=411.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9429,7 +9429,7 @@
    ],
    "answerIndex": 0,
    "answer": "220",
-   "explanation": "Per sottrarre 326 − 106, sottrai colonna per colonna: unità 6−6=0, decine 2−0=2, centinaia 3−1=2. Il risultato è 220.",
+   "explanation": "Per sottrarre 326 - 106, sottrai colonna per colonna: unità 6-6=0, decine 2-0=2, centinaia 3-1=2. Il risultato è 220.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9461,7 +9461,7 @@
    ],
    "answerIndex": 3,
    "answer": "368",
-   "explanation": "Per sottrarre 736 − 368, i due numeri si dimezzano: 368 è esattamente la metà di 736, quindi il risultato è 368.",
+   "explanation": "Per sottrarre 736 - 368, i due numeri si dimezzano: 368 è esattamente la metà di 736, quindi il risultato è 368.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9493,7 +9493,7 @@
    ],
    "answerIndex": 0,
    "answer": "494",
-   "explanation": "Per sottrarre 529 − 35, sottrai solo decine e unità: 29−35 richiede prestito, oppure pensa 529−30=499, poi 499−5=494.",
+   "explanation": "Per sottrarre 529 - 35, sottrai solo decine e unità: 29-35 richiede prestito, oppure pensa 529-30=499, poi 499-5=494.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9525,7 +9525,7 @@
    ],
    "answerIndex": 1,
    "answer": "636",
-   "explanation": "Per sottrarre 988 − 352, sottrai colonna per colonna: unità 8−2=6, decine 8−5=3, centinaia 9−3=6. Il risultato è 636.",
+   "explanation": "Per sottrarre 988 - 352, sottrai colonna per colonna: unità 8-2=6, decine 8-5=3, centinaia 9-3=6. Il risultato è 636.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9557,7 +9557,7 @@
    ],
    "answerIndex": 0,
    "answer": "287",
-   "explanation": "Per sottrarre 371 − 84, prima sottrai 371−80=291, poi sottrai ancora 4: 291−4=287.",
+   "explanation": "Per sottrarre 371 - 84, prima sottrai 371-80=291, poi sottrai ancora 4: 291-4=287.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9589,7 +9589,7 @@
    ],
    "answerIndex": 1,
    "answer": "382",
-   "explanation": "Per sottrarre 739 − 357, sottrai colonna per colonna con i prestiti necessari: 357+382=739, quindi la differenza è 382.",
+   "explanation": "Per sottrarre 739 - 357, sottrai colonna per colonna con i prestiti necessari: 357+382=739, quindi la differenza è 382.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9621,7 +9621,7 @@
    ],
    "answerIndex": 3,
    "answer": "191",
-   "explanation": "Per sottrarre 582 − 391, sottrai colonna per colonna con i prestiti necessari: 391+191=582, quindi la differenza è 191.",
+   "explanation": "Per sottrarre 582 - 391, sottrai colonna per colonna con i prestiti necessari: 391+191=582, quindi la differenza è 191.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9653,7 +9653,7 @@
    ],
    "answerIndex": 1,
    "answer": "89",
-   "explanation": "Per sottrarre 657 − 568, i due numeri sono vicini: 568+89=657, quindi la differenza è 89.",
+   "explanation": "Per sottrarre 657 - 568, i due numeri sono vicini: 568+89=657, quindi la differenza è 89.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9685,7 +9685,7 @@
    ],
    "answerIndex": 3,
    "answer": "269",
-   "explanation": "Per sottrarre 332 − 63, prima sottrai 332−60=272, poi sottrai ancora 3: 272−3=269.",
+   "explanation": "Per sottrarre 332 - 63, prima sottrai 332-60=272, poi sottrai ancora 3: 272-3=269.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9717,7 +9717,7 @@
    ],
    "answerIndex": 2,
    "answer": "232",
-   "explanation": "Per sottrarre 629 − 397, prima sottrai 629−400=229, poi aggiungi 3 (perché hai tolto 3 in più): 229+3=232.",
+   "explanation": "Per sottrarre 629 - 397, prima sottrai 629-400=229, poi aggiungi 3 (perché hai tolto 3 in più): 229+3=232.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9749,7 +9749,7 @@
    ],
    "answerIndex": 3,
    "answer": "957",
-   "explanation": "Per sottrarre 982 − 25, prima sottrai 982−20=962, poi sottrai ancora 5: 962−5=957.",
+   "explanation": "Per sottrarre 982 - 25, prima sottrai 982-20=962, poi sottrai ancora 5: 962-5=957.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9781,7 +9781,7 @@
    ],
    "answerIndex": 3,
    "answer": "585",
-   "explanation": "Per sottrarre 717 − 132, sottrai colonna per colonna: unità 7−2=5, decine 1−3 (prendi in prestito) 11−3=8, centinaia 6−1=5... 717−132=585.",
+   "explanation": "Per sottrarre 717 - 132, sottrai colonna per colonna: unità 7-2=5, decine 1-3 (prendi in prestito) 11-3=8, centinaia 6-1=5... 717-132=585.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9813,7 +9813,7 @@
    ],
    "answerIndex": 2,
    "answer": "121",
-   "explanation": "Per sottrarre 169 − 48, prima sottrai 169−40=129, poi sottrai ancora 8: 129−8=121.",
+   "explanation": "Per sottrarre 169 - 48, prima sottrai 169-40=129, poi sottrai ancora 8: 129-8=121.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -9973,7 +9973,7 @@
    ],
    "answerIndex": 2,
    "answer": "54",
-   "explanation": "6 × 9 = 54: usa la strategia 6 × 10 = 60 e togli 6: 60 − 6 = 54. Sei gruppi di 9 fanno 54.",
+   "explanation": "6 × 9 = 54: usa la strategia 6 × 10 = 60 e togli 6: 60 - 6 = 54. Sei gruppi di 9 fanno 54.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -10421,7 +10421,7 @@
    ],
    "answerIndex": 2,
    "answer": "72",
-   "explanation": "8 × 9 = 72: usa la strategia 8 × 10 = 80 e togli 8: 80 − 8 = 72. Otto gruppi di 9 fanno 72.",
+   "explanation": "8 × 9 = 72: usa la strategia 8 × 10 = 80 e togli 8: 80 - 8 = 72. Otto gruppi di 9 fanno 72.",
    "active": true,
    "tag": "matematica;aritmetica;classe_3;primaria",
    "tags": [
@@ -22101,7 +22101,7 @@
    ],
    "answerIndex": 1,
    "answer": "59",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 89 − 30 = 59.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 89 - 30 = 59.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22133,7 +22133,7 @@
    ],
    "answerIndex": 2,
    "answer": "11",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 20 − 9 = 11.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 20 - 9 = 11.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22165,7 +22165,7 @@
    ],
    "answerIndex": 3,
    "answer": "71",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 76 − 5 = 71.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 76 - 5 = 71.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22197,7 +22197,7 @@
    ],
    "answerIndex": 2,
    "answer": "73",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 107 − 34 = 73.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 107 - 34 = 73.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22229,7 +22229,7 @@
    ],
    "answerIndex": 1,
    "answer": "78",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 113 − 35 = 78.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 113 - 35 = 78.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22261,7 +22261,7 @@
    ],
    "answerIndex": 3,
    "answer": "55",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 66 − 11 = 55.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 66 - 11 = 55.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22293,7 +22293,7 @@
    ],
    "answerIndex": 0,
    "answer": "8",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 17 − 9 = 8.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 17 - 9 = 8.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22325,7 +22325,7 @@
    ],
    "answerIndex": 2,
    "answer": "9",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 41 − 32 = 9.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 41 - 32 = 9.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22357,7 +22357,7 @@
    ],
    "answerIndex": 1,
    "answer": "8",
-   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 21 − 13 = 8.",
+   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 21 - 13 = 8.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22389,7 +22389,7 @@
    ],
    "answerIndex": 1,
    "answer": "78",
-   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 118 − 40 = 78.",
+   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 118 - 40 = 78.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22421,7 +22421,7 @@
    ],
    "answerIndex": 1,
    "answer": "38",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 48 − 10 = 38.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 48 - 10 = 38.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22453,7 +22453,7 @@
    ],
    "answerIndex": 1,
    "answer": "78",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 107 − 29 = 78.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 107 - 29 = 78.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22485,7 +22485,7 @@
    ],
    "answerIndex": 0,
    "answer": "15",
-   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 49 − 34 = 15.",
+   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 49 - 34 = 15.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22517,7 +22517,7 @@
    ],
    "answerIndex": 0,
    "answer": "22",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 36 − 14 = 22.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 36 - 14 = 22.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22549,7 +22549,7 @@
    ],
    "answerIndex": 2,
    "answer": "76",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 114 − 38 = 76.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 114 - 38 = 76.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22581,7 +22581,7 @@
    ],
    "answerIndex": 1,
    "answer": "74",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 80 − 6 = 74.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 80 - 6 = 74.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22613,7 +22613,7 @@
    ],
    "answerIndex": 0,
    "answer": "76",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 96 − 20 = 76.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 96 - 20 = 76.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22645,7 +22645,7 @@
    ],
    "answerIndex": 2,
    "answer": "46",
-   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 52 − 6 = 46.",
+   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 52 - 6 = 46.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22677,7 +22677,7 @@
    ],
    "answerIndex": 0,
    "answer": "40",
-   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 72 − 32 = 40.",
+   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 72 - 32 = 40.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22709,7 +22709,7 @@
    ],
    "answerIndex": 3,
    "answer": "79",
-   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 100 − 21 = 79.",
+   "explanation": "Per trovare quanti atleti finiscono la gara, sottrai quelli ritirati da quelli partiti. 100 - 21 = 79.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22741,7 +22741,7 @@
    ],
    "answerIndex": 0,
    "answer": "72",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 78 − 6 = 72.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 78 - 6 = 72.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22773,7 +22773,7 @@
    ],
    "answerIndex": 1,
    "answer": "79",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 88 − 9 = 79.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 88 - 9 = 79.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22805,7 +22805,7 @@
    ],
    "answerIndex": 0,
    "answer": "42",
-   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 67 − 25 = 42.",
+   "explanation": "Per trovare quanti euro rimangono a Gianni, sottrai quanto ha speso da quanto aveva. 67 - 25 = 42.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22837,7 +22837,7 @@
    ],
    "answerIndex": 3,
    "answer": "24",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 30 − 6 = 24.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 30 - 6 = 24.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -22869,7 +22869,7 @@
    ],
    "answerIndex": 2,
    "answer": "8",
-   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 45 − 37 = 8.",
+   "explanation": "Per trovare quanti prodotti restano, sottrai quelli venduti dal totale iniziale. 45 - 37 = 8.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -44273,7 +44273,7 @@
     "0 e 10",
     "0 e 100",
     "0 e 1",
-    "−1 e 1"
+    "-1 e 1"
    ],
    "answerIndex": 2,
    "answer": "0 e 1",
@@ -59763,7 +59763,7 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 2,
-   "question": "Qual è il risultato di 5,6 − 2,1?",
+   "question": "Qual è il risultato di 5,6 - 2,1?",
    "options": [
     "3,5",
     "3,4",
@@ -59772,7 +59772,7 @@
    ],
    "answerIndex": 0,
    "answer": "3,5",
-   "explanation": "5,6 meno 2,1: unità 5−2=3, decimi 6−1=5, cioè 3,5.",
+   "explanation": "5,6 meno 2,1: unità 5-2=3, decimi 6-1=5, cioè 3,5.",
    "active": true,
    "tag": "aritmetica",
    "tags": [
@@ -59932,7 +59932,7 @@
    ],
    "answerIndex": 0,
    "answer": "0,8 m",
-   "explanation": "1,5 − 0,7 = 0,8, quindi restano 0,8 metri.",
+   "explanation": "1,5 - 0,7 = 0,8, quindi restano 0,8 metri.",
    "active": true,
    "tag": "aritmetica",
    "tags": [
@@ -59996,7 +59996,7 @@
    ],
    "answerIndex": 0,
    "answer": "3,30 euro",
-   "explanation": "4,50 − 1,20 = 3,30 euro.",
+   "explanation": "4,50 - 1,20 = 3,30 euro.",
    "active": true,
    "tag": "aritmetica",
    "tags": [
@@ -60083,7 +60083,7 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 2,
-   "question": "Qual è il risultato di 7,8 − 3,45?",
+   "question": "Qual è il risultato di 7,8 - 3,45?",
    "options": [
     "4,35",
     "4,45",
@@ -60092,7 +60092,7 @@
    ],
    "answerIndex": 0,
    "answer": "4,35",
-   "explanation": "7,80 − 3,45 = 4,35 (conviene scrivere 7,80).",
+   "explanation": "7,80 - 3,45 = 4,35 (conviene scrivere 7,80).",
    "active": true,
    "tag": "aritmetica",
    "tags": [
@@ -60403,7 +60403,7 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 2,
-   "question": "Qual è il risultato di 10 − 4,6?",
+   "question": "Qual è il risultato di 10 - 4,6?",
    "options": [
     "5,4",
     "6,4",
@@ -60412,7 +60412,7 @@
    ],
    "answerIndex": 0,
    "answer": "5,4",
-   "explanation": "10,0 − 4,6 = 5,4.",
+   "explanation": "10,0 - 4,6 = 5,4.",
    "active": true,
    "tag": "aritmetica",
    "tags": [
@@ -61532,7 +61532,7 @@
    ],
    "answerIndex": 0,
    "answer": "8",
-   "explanation": "15 − 7 = 8.",
+   "explanation": "15 - 7 = 8.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [

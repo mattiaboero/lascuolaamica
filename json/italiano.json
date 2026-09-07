@@ -4462,7 +4462,7 @@
    ],
    "answerIndex": 2,
    "answer": "cinque",
-   "explanation": "Le parole sono: Il – cane – corre – nel – prato = cinque parole.",
+   "explanation": "Le parole sono: Il - cane - corre - nel - prato = cinque parole.",
    "active": true,
    "tag": "italiano;classe_2;lingua;primaria",
    "tags": [
@@ -11879,13 +11879,13 @@
    "difficulty": 3,
    "question": "Quale struttura appartiene al testo argomentativo?",
    "options": [
-    "introduzione – complicazione – scioglimento",
-    "tesi – argomenti – conclusione",
-    "descrizione – analisi – sintesi",
-    "premessa – svolgimento – rime"
+    "introduzione - complicazione - scioglimento",
+    "tesi - argomenti - conclusione",
+    "descrizione - analisi - sintesi",
+    "premessa - svolgimento - rime"
    ],
    "answerIndex": 1,
-   "answer": "tesi – argomenti – conclusione",
+   "answer": "tesi - argomenti - conclusione",
    "explanation": "Il testo argomentativo si struttura tipicamente in: tesi, argomenti a supporto, confutazione, conclusione.",
    "active": true,
    "tag": "italiano;classe_5;scrittura;primaria",
@@ -13128,13 +13128,13 @@
    "question": "Qual è il plurale di 'ciliegia'?",
    "options": [
     "ciliege",
-    "cilieги",
+    "ciliegie",
     "ciliegas",
     "ciliegias"
    ],
-   "answerIndex": 0,
-   "answer": "ciliege",
-   "explanation": "I nomi femminili che finiscono in -CIA o -GIA, se la vocale prima di -CIA/-GIA non è accentata, formano il plurale in -CE o -GE. 'Ciliegia' → 'ciliege'.",
+   "answerIndex": 1,
+   "answer": "ciliegie",
+   "explanation": "I nomi femminili in -CIA o -GIA mantengono la I al plurale quando la C o la G è preceduta da vocale: ciliegia -> ciliegie, camicia -> camicie. Se davanti c'è una consonante la I cade: arancia -> arance.",
    "active": true,
    "tag": "italiano;grammatica;classe_2;primaria",
    "tags": [

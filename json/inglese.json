@@ -17149,7 +17149,7 @@
     "a",
     "an",
     "the",
-    "—"
+    "nessun articolo"
    ],
    "answerIndex": 1,
    "answer": "an",
@@ -17180,7 +17180,7 @@
    "question": "Choose: 'This is ___ dog.'",
    "options": [
     "an",
-    "—",
+    "nessun articolo",
     "the",
     "a"
    ],
@@ -17379,7 +17379,7 @@
    "options": [
     "a",
     "the",
-    "—",
+    "nessun articolo",
     "an"
    ],
    "answerIndex": 3,
@@ -17644,7 +17644,7 @@
     "an",
     "two",
     "a",
-    "—"
+    "nessun articolo"
    ],
    "answerIndex": 2,
    "answer": "a",
@@ -24413,7 +24413,7 @@
    ],
    "answerIndex": 0,
    "answer": "15 minutes",
-   "explanation": "Il treno parte alle 2:30 (half past two). Ora sono le 2:15 (quarter past two). 2:30 − 2:15 = 15 minuti. Bisogna fare una sottrazione tra orari.",
+   "explanation": "Il treno parte alle 2:30 (half past two). Ora sono le 2:15 (quarter past two). 2:30 - 2:15 = 15 minuti. Bisogna fare una sottrazione tra orari.",
    "active": true,
    "tag": "inglese;comprensione_in_cont;classe_4;primaria",
    "tags": [
