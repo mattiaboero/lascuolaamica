@@ -276,7 +276,7 @@
    "area": "numeri",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "What number is “five”?",
+   "question": "What number is \"five\"?",
    "options": [
     "4",
     "7",
@@ -408,7 +408,7 @@
    "area": "animali",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which animal says “woof”?",
+   "question": "Which animal says \"woof\"?",
    "options": [
     "cat",
     "fish",
@@ -474,7 +474,7 @@
    "area": "animali",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which animal says “meow”?",
+   "question": "Which animal says \"meow\"?",
    "options": [
     "cat",
     "dog",
@@ -738,7 +738,7 @@
    "area": "famiglia",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Your mother’s mother is your...",
+   "question": "Your mother's mother is your...",
    "options": [
     "aunt",
     "sister",
@@ -771,7 +771,7 @@
    "area": "famiglia",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Your father’s son is your...",
+   "question": "Your father's son is your...",
    "options": [
     "brother",
     "uncle",
@@ -804,7 +804,7 @@
    "area": "famiglia",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Your mother’s daughter is your...",
+   "question": "Your mother's daughter is your...",
    "options": [
     "sister",
     "aunt",
@@ -1530,7 +1530,7 @@
    "area": "famiglia",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Your aunt’s son is your...",
+   "question": "Your aunt's son is your...",
    "options": [
     "cousin",
     "brother",
@@ -1563,7 +1563,7 @@
    "area": "famiglia",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Your mother’s husband is your...",
+   "question": "Your mother's husband is your...",
    "options": [
     "brother",
     "cousin",
@@ -1596,7 +1596,7 @@
    "area": "famiglia",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Your brother’s mother is your...",
+   "question": "Your brother's mother is your...",
    "options": [
     "aunt",
     "mother",
@@ -1629,7 +1629,7 @@
    "area": "saluti",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "“Hi, how are you?” — “I am...”",
+   "question": "\"Hi, how are you?\" — \"I am...\"",
    "options": [
     "chair",
     "blue",
@@ -1761,16 +1761,16 @@
    "area": "saluti",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "What do you say after “Thank you”?",
+   "question": "What do you say after \"Thank you\"?",
    "options": [
     "Good night",
-    "You’re welcome",
+    "You're welcome",
     "Hello",
     "See you tomorrow"
    ],
    "answerIndex": 1,
-   "answer": "You’re welcome",
-   "explanation": "The correct answer is \"You’re welcome\".",
+   "answer": "You're welcome",
+   "explanation": "The correct answer is \"You're welcome\".",
    "active": true,
    "tag": "inglese;classe_3;saluti;primaria",
    "tags": [
@@ -2322,7 +2322,7 @@
    "area": "famiglia",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Your father’s brother is your...",
+   "question": "Your father's brother is your...",
    "options": [
     "cousin",
     "uncle",
@@ -2355,7 +2355,7 @@
    "area": "famiglia",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Your mother’s sister is your...",
+   "question": "Your mother's sister is your...",
    "options": [
     "aunt",
     "mother",
@@ -2388,7 +2388,7 @@
    "area": "famiglia",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Your cousin’s mother can be your...",
+   "question": "Your cousin's mother can be your...",
    "options": [
     "teacher",
     "aunt",
@@ -2459,7 +2459,7 @@
     "Nice to meet you",
     "Good night",
     "Thanks a lot",
-    "I’m sorry"
+    "I'm sorry"
    ],
    "answerIndex": 0,
    "answer": "Nice to meet you",
@@ -2520,7 +2520,7 @@
    "area": "saluti",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer matches “Good morning”?",
+   "question": "Which answer matches \"Good morning\"?",
    "options": [
     "Good morning",
     "Good night",
@@ -2982,7 +2982,7 @@
    "area": "famiglia",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Your parents’ parents are your...",
+   "question": "Your parents' parents are your...",
    "options": [
     "cousins",
     "uncles",
@@ -3015,7 +3015,7 @@
    "area": "famiglia",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Your uncle’s daughter is your...",
+   "question": "Your uncle's daughter is your...",
    "options": [
     "sister",
     "cousin",
@@ -3052,8 +3052,8 @@
    "options": [
     "See you later",
     "Hello, my name is Sam",
-    "Good night, I’m sleeping",
-    "I’m sorry"
+    "Good night, I'm sleeping",
+    "I'm sorry"
    ],
    "answerIndex": 1,
    "answer": "Hello, my name is Sam",
@@ -3083,7 +3083,7 @@
    "difficulty": 3,
    "question": "Which sentence is a goodbye?",
    "options": [
-    "What’s your name?",
+    "What's your name?",
     "See you later",
     "Nice to meet you",
     "Thank you"
@@ -3147,16 +3147,16 @@
    "area": "saluti",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is polite for “How are you?”",
+   "question": "Which answer is polite for \"How are you?\"",
    "options": [
     "Window",
-    "I’m fine, thank you",
+    "I'm fine, thank you",
     "Blue",
     "At school"
    ],
    "answerIndex": 1,
-   "answer": "I’m fine, thank you",
-   "explanation": "The correct answer is \"I’m fine, thank you\".",
+   "answer": "I'm fine, thank you",
+   "explanation": "The correct answer is \"I'm fine, thank you\".",
    "active": true,
    "tag": "inglese;classe_5;saluti;primaria",
    "tags": [
@@ -3279,7 +3279,7 @@
    "area": "famiglia",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which family member is your mother’s father?",
+   "question": "Which family member is your mother's father?",
    "options": [
     "uncle",
     "brother",
@@ -3948,7 +3948,7 @@
    ],
    "answerIndex": 1,
    "answer": "I have got a dog.",
-   "explanation": "The correct answer is \"I have got a dog.\".",
+   "explanation": "The correct answer is \"I have got a dog.\"",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria",
    "tags": [
@@ -5457,7 +5457,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “Has she got a cat?”",
+   "question": "Which answer is correct for \"Has she got a cat?\"",
    "options": [
     "Yes, she has.",
     "Yes, she have.",
@@ -5466,7 +5466,7 @@
    ],
    "answerIndex": 0,
    "answer": "Yes, she has.",
-   "explanation": "The correct answer is \"Yes, she has.\".",
+   "explanation": "The correct answer is \"Yes, she has.\"",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria",
    "tags": [
@@ -5490,7 +5490,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “Are they at home?”",
+   "question": "Which answer is correct for \"Are they at home?\"",
    "options": [
     "Yes, they is.",
     "Yes, they are.",
@@ -5499,7 +5499,7 @@
    ],
    "answerIndex": 1,
    "answer": "Yes, they are.",
-   "explanation": "The correct answer is \"Yes, they are.\".",
+   "explanation": "The correct answer is \"Yes, they are.\"",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5523,16 +5523,16 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “Is he tired?”",
+   "question": "Which answer is correct for \"Is he tired?\"",
    "options": [
-    "No, he aren’t.",
+    "No, he aren't.",
     "No, he not.",
-    "No, he isn’t.",
+    "No, he isn't.",
     "No, he am not."
    ],
    "answerIndex": 2,
-   "answer": "No, he isn’t.",
-   "explanation": "The correct answer is \"No, he isn’t.\".",
+   "answer": "No, he isn't.",
+   "explanation": "The correct answer is \"No, he isn't.\"",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5721,7 +5721,7 @@
    "area": "meteo",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which weather matches “Take an umbrella”?",
+   "question": "Which weather matches \"Take an umbrella\"?",
    "options": [
     "rainy",
     "sunny",
@@ -5754,7 +5754,7 @@
    "area": "meteo",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which weather matches “Wear gloves and a scarf”?",
+   "question": "Which weather matches \"Wear gloves and a scarf\"?",
    "options": [
     "stormy",
     "snowy",
@@ -5952,7 +5952,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: I __ happy because it’s my birthday.",
+   "question": "Complete: I __ happy because it's my birthday.",
    "options": [
     "are",
     "am",
@@ -6051,16 +6051,16 @@
    "area": "have_got",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is correct for “Have you got a ruler?”",
+   "question": "Which answer is correct for \"Have you got a ruler?\"",
    "options": [
-    "No, I hasn’t.",
-    "No, I haven’t.",
-    "No, I isn’t.",
-    "No, I aren’t."
+    "No, I hasn't.",
+    "No, I haven't.",
+    "No, I isn't.",
+    "No, I aren't."
    ],
    "answerIndex": 1,
-   "answer": "No, I haven’t.",
-   "explanation": "The correct answer is \"No, I haven’t.\".",
+   "answer": "No, I haven't.",
+   "explanation": "The correct answer is \"No, I haven't.\"",
    "active": true,
    "tag": "inglese;classe_5;have_got;primaria",
    "tags": [
@@ -6084,7 +6084,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is correct for “Is it sunny?”",
+   "question": "Which answer is correct for \"Is it sunny?\"",
    "options": [
     "Yes, it is.",
     "Yes, it are.",
@@ -6093,7 +6093,7 @@
    ],
    "answerIndex": 0,
    "answer": "Yes, it is.",
-   "explanation": "The correct answer is \"Yes, it is.\".",
+   "explanation": "The correct answer is \"Yes, it is.\"",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -6117,7 +6117,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is correct for “Are you hungry?”",
+   "question": "Which answer is correct for \"Are you hungry?\"",
    "options": [
     "Yes, I is.",
     "Yes, I are.",
@@ -6126,7 +6126,7 @@
    ],
    "answerIndex": 2,
    "answer": "Yes, I am.",
-   "explanation": "The correct answer is \"Yes, I am.\".",
+   "explanation": "The correct answer is \"Yes, I am.\"",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -6417,13 +6417,13 @@
    "question": "Which question asks about a name?",
    "options": [
     "How old are you?",
-    "What’s your name?",
+    "What's your name?",
     "Where are you?",
     "Do you like cats?"
    ],
    "answerIndex": 1,
-   "answer": "What’s your name?",
-   "explanation": "The correct answer is \"What’s your name?\".",
+   "answer": "What's your name?",
+   "explanation": "The correct answer is \"What's your name?\".",
    "active": true,
    "tag": "inglese;classe_2;domande;primaria",
    "tags": [
@@ -6449,7 +6449,7 @@
    "difficulty": 1,
    "question": "Which question asks about age?",
    "options": [
-    "What’s your favourite colour?",
+    "What's your favourite colour?",
     "Where do you live?",
     "How old are you?",
     "What time is it?"
@@ -6681,7 +6681,7 @@
    "question": "Which question asks about well-being?",
    "options": [
     "How are you?",
-    "What’s your name?",
+    "What's your name?",
     "Where do you live?",
     "How old are you?"
    ],
@@ -7176,7 +7176,7 @@
    "question": "Which question asks about location?",
    "options": [
     "Where is the cat?",
-    "What’s your name?",
+    "What's your name?",
     "How old are you?",
     "Do you like pizza?"
    ],
@@ -7272,12 +7272,12 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Which answer matches “What’s your favourite sport?”",
+   "question": "Which answer matches \"What's your favourite sport?\"",
    "options": [
     "In Turin",
     "Basketball",
     "Ten years old",
-    "At five o’clock"
+    "At five o'clock"
    ],
    "answerIndex": 1,
    "answer": "Basketball",
@@ -7305,7 +7305,7 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Which answer matches “Where do you live?”",
+   "question": "Which answer matches \"Where do you live?\"",
    "options": [
     "In Turin",
     "Blue",
@@ -7338,7 +7338,7 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Which answer matches “Do you like music?”",
+   "question": "Which answer matches \"Do you like music?\"",
    "options": [
     "At school",
     "Yes, I do",
@@ -8064,16 +8064,16 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “What do you do after dinner?”",
+   "question": "Which answer is correct for \"What do you do after dinner?\"",
    "options": [
     "I watch TV.",
     "In the kitchen.",
-    "At eight o’clock?",
+    "At eight o'clock?",
     "Yes, I am."
    ],
    "answerIndex": 0,
    "answer": "I watch TV.",
-   "explanation": "The correct answer is \"I watch TV.\".",
+   "explanation": "The correct answer is \"I watch TV.\"",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8097,16 +8097,16 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “Where do you do your homework?”",
+   "question": "Which answer is correct for \"Where do you do your homework?\"",
    "options": [
     "I do my homework in my bedroom.",
-    "At seven o’clock.",
+    "At seven o'clock.",
     "Yes, I do.",
     "Blue."
    ],
    "answerIndex": 0,
    "answer": "I do my homework in my bedroom.",
-   "explanation": "The correct answer is \"I do my homework in my bedroom.\".",
+   "explanation": "The correct answer is \"I do my homework in my bedroom.\"",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8130,16 +8130,16 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “Do you like tennis?”",
+   "question": "Which answer is correct for \"Do you like tennis?\"",
    "options": [
     "In the park.",
     "Yes, I do.",
-    "At six o’clock.",
+    "At six o'clock.",
     "My favourite is red."
    ],
    "answerIndex": 1,
    "answer": "Yes, I do.",
-   "explanation": "The correct answer is \"Yes, I do.\".",
+   "explanation": "The correct answer is \"Yes, I do.\"",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8163,16 +8163,16 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for “What time do you go to bed?”",
+   "question": "Which answer is correct for \"What time do you go to bed?\"",
    "options": [
     "In my room.",
-    "At nine o’clock.",
+    "At nine o'clock.",
     "Yes, I do.",
     "With my brother."
    ],
    "answerIndex": 1,
-   "answer": "At nine o’clock.",
-   "explanation": "The correct answer is \"At nine o’clock.\".",
+   "answer": "At nine o'clock.",
+   "explanation": "The correct answer is \"At nine o'clock.\"",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8469,7 +8469,7 @@
    ],
    "answerIndex": 0,
    "answer": "I get up at seven.",
-   "explanation": "The correct answer is \"I get up at seven.\".",
+   "explanation": "The correct answer is \"I get up at seven.\"",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria",
    "tags": [
@@ -8502,7 +8502,7 @@
    ],
    "answerIndex": 0,
    "answer": "I do my homework and then I have dinner.",
-   "explanation": "The correct answer is \"I do my homework and then I have dinner.\".",
+   "explanation": "The correct answer is \"I do my homework and then I have dinner.\"",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria",
    "tags": [
@@ -8535,7 +8535,7 @@
    ],
    "answerIndex": 0,
    "answer": "I like painting after school.",
-   "explanation": "The correct answer is \"I like painting after school.\".",
+   "explanation": "The correct answer is \"I like painting after school.\"",
    "active": true,
    "tag": "inglese;classe_5;hobby;primaria",
    "tags": [
@@ -8568,7 +8568,7 @@
    ],
    "answerIndex": 0,
    "answer": "We play volleyball on Fridays.",
-   "explanation": "The correct answer is \"We play volleyball on Fridays.\".",
+   "explanation": "The correct answer is \"We play volleyball on Fridays.\"",
    "active": true,
    "tag": "inglese;classe_5;sport;primaria",
    "tags": [
@@ -8790,16 +8790,16 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches “How often do you read?”",
+   "question": "Which answer matches \"How often do you read?\"",
    "options": [
     "Every day.",
     "In my bedroom.",
-    "At seven o’clock.",
-    "With my sister’s book."
+    "At seven o'clock.",
+    "With my sister's book."
    ],
    "answerIndex": 0,
    "answer": "Every day.",
-   "explanation": "The correct answer is \"Every day.\".",
+   "explanation": "The correct answer is \"Every day.\"",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8823,7 +8823,7 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches “What do you do in the afternoon?”",
+   "question": "Which answer matches \"What do you do in the afternoon?\"",
    "options": [
     "I go to the park.",
     "On the table.",
@@ -8832,7 +8832,7 @@
    ],
    "answerIndex": 0,
    "answer": "I go to the park.",
-   "explanation": "The correct answer is \"I go to the park.\".",
+   "explanation": "The correct answer is \"I go to the park.\"",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8856,16 +8856,16 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches “Where is your school bag?”",
+   "question": "Which answer matches \"Where is your school bag?\"",
    "options": [
     "It is in my bedroom.",
-    "At eight o’clock.",
+    "At eight o'clock.",
     "Yes, I do.",
     "Every morning."
    ],
    "answerIndex": 0,
    "answer": "It is in my bedroom.",
-   "explanation": "The correct answer is \"It is in my bedroom.\".",
+   "explanation": "The correct answer is \"It is in my bedroom.\"",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8889,16 +8889,16 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches “Do you help at home?”",
+   "question": "Which answer matches \"Do you help at home?\"",
    "options": [
     "Yes, I do.",
     "In the kitchen.",
-    "At five o’clock.",
+    "At five o'clock.",
     "My dad."
    ],
    "answerIndex": 0,
    "answer": "Yes, I do.",
-   "explanation": "The correct answer is \"Yes, I do.\".",
+   "explanation": "The correct answer is \"Yes, I do.\"",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -25898,7 +25898,7 @@
    ],
    "answerIndex": 1,
    "answer": "Miss Green",
-   "explanation": "Il testo dice 'The teacher says: Good morning, class!' prima che i bambini rispondano. Quindi è l’insegnante (Miss Green) a salutare per prima.",
+   "explanation": "Il testo dice 'The teacher says: Good morning, class!' prima che i bambini rispondano. Quindi è l'insegnante (Miss Green) a salutare per prima.",
    "active": true,
    "tag": "inglese;comprensione_in_cont;classe_4;primaria",
    "tags": [

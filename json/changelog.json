@@ -1,5 +1,13 @@
 [
  {
+  "date": "7 settembre 2026 · Release 4.12.77",
+  "items": [
+   "Uniformati apostrofi e virgolette in 50 domande: quelle curve, entrate da copia-incolla, ora sono dritte come nel resto del sito.",
+   "Tolto il punto ripetuto dentro e fuori le virgolette in 20 spiegazioni.",
+   "Una domanda di scienze chiedeva quale pianta vive nel prato e offriva due animali fra le risposte."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.76",
   "items": [
    "Il plurale di \"dio\" ora è scritto \"dèi\" in tutte le domande di storia, come già in metà del corpus.",

@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.12.77 - 2026-09-07
+
+### Fixed
+- fix(contenuti): **102 caratteri tipografici curvi in 50 domande** — apostrofi `’` (48) e virgolette `“ ”` (54) entrate da copia-incolla, contro i 16.986 apostrofi e 2.342 virgolette dritte del resto del corpus. Normalizzati in tutti i campi, opzioni comprese. I caporali `«»` restano: sono l'oggetto degli esercizi sul discorso diretto.
+- fix(contenuti): **20 spiegazioni ripetevano il punto dentro e fuori la citazione** (`La risposta corretta è "Disegno la mia aula vista dall'alto.".`, `The correct answer is "I watch TV.".`). Il caso con `?` o `!` dentro le virgolette è invece corretto e non è stato toccato: lì il punto esterno chiude la frase che contiene la citazione (`Risponde alla domanda 'che cosa?'.`).
+- fix(contenuti): `sci-3-ecosistemi-9096` chiedeva **quale pianta è tipica del prato e offriva due animali** fra le opzioni (`Il corallo`, `La farfalla`). Sostituiti con piante di altri ambienti (`Il cactus del deserto`, `L'abete delle Alpi`), che sono distrattori veri.
+
+### Changed
+- lint(contenuti): due controlli nuovi, ed entrambi **stanno fuori dal blocco riservato all'italiano**: la punteggiatura doppia e i caratteri tipografici non sono fatti di lingua, e infatti 19 dei 20 punti ripetuti erano in domande di inglese, che nessun controllo aveva mai guardato.
+- lint(contenuti): il controllo tipografico legge **tutti i campi, opzioni comprese**. La regola sui puntini unicode esisteva dal lotto 5 ma vive fra le regex di `GRAMMATICA`, che guardano solo domanda e spiegazione: l'unico caso rimasto nel corpus stava in un'opzione, ed era invisibile.
+
 ## 4.12.76 - 2026-09-06
 
 Due incoerenze interne al corpus: in entrambe la forma giusta era già la maggioranza, e la minoranza è stata allineata.

@@ -19895,9 +19895,9 @@
    "difficulty": 1,
    "question": "Quale pianta è tipica dell'ecosistema del prato?",
    "options": [
-    "Il corallo",
+    "Il cactus del deserto",
     "Le alghe marine",
-    "La farfalla",
+    "L'abete delle Alpi",
     "L'erba e i fiori di campo"
    ],
    "answerIndex": 3,
@@ -21080,7 +21080,7 @@
    "question": "Nel bosco: quercia → bruco → tordo → falco. Se i falchi venissero eliminati, cosa accadrebbe ai bruchi?",
    "options": [
     "I bruchi diminuirebbero perché non ci sono più falchi a proteggerli",
-    "I bruchi aumenterebbero perché i tordi, senza predatori, mangerebbero meno bruchi… no, i tordi aumenterebbero e mangerebbero più bruchi",
+    "I bruchi aumenterebbero perché i tordi, senza predatori, mangerebbero meno bruchi... no, i tordi aumenterebbero e mangerebbero più bruchi",
     "I bruchi aumenterebbero perché i tordi aumenterebbero e mangerebbero più bruchi, quindi i bruchi diminuirebbero",
     "I tordi aumenterebbero non avendo predatori, e mangerebbero più bruchi, che quindi diminuirebbero"
    ],

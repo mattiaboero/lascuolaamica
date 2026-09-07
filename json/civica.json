@@ -30802,7 +30802,7 @@
    "options": [
     "Nel contenitore della plastica",
     "Nel vetro",
-    "Nell’organico",
+    "Nell'organico",
     "Per strada"
    ],
    "answerIndex": 0,
@@ -30864,7 +30864,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Bonus medio: quale scelta evita spreco d’acqua?",
+   "question": "Bonus medio: quale scelta evita spreco d'acqua?",
    "options": [
     "Chiudo il rubinetto mentre mi lavo i denti",
     "Lascio scorrere sempre",

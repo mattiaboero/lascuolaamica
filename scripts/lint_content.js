@@ -252,6 +252,27 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   if (question && DANGLING_REFERENCE.test(question)) {
     errors.push({ level: 'error', field: 'question', msg: 'dangling cross-reference in question (e.g. "domanda n.X" / "vedi sopra") — quiz questions must be self-contained' });
   }
+  // Dal lotto 21: apostrofi e virgolette tipografiche. Il corpus usa le forme
+  // dritte (16.986 apostrofi e 2.342 virgolette) e ne aveva 102 curve, entrate
+  // da copia-incolla. I caporali «» restano ammessi: sono l'oggetto degli
+  // esercizi sul discorso diretto.
+  {
+    const campi = [question, explanation, answer].concat(options || []).filter((v) => typeof v === 'string');
+    const trovato = campi.join(' ').match(/[’‘“”…]/);
+    if (trovato) {
+      errors.push({ level: 'error', field: 'text', msg: `carattere tipografico da normalizzare: "${trovato[0]}" (usare ' " e i tre punti separati)` });
+    }
+  }
+
+  // Dal lotto 21: punto dentro la citazione e un altro subito fuori ("La
+  // risposta corretta è \"Disegno la mia aula vista dall'alto.\"."). Basta
+  // quello interno. Il caso con "?" o "!" dentro le virgolette e' invece
+  // corretto e resta fuori: li' il punto esterno chiude la frase che contiene
+  // la citazione ("Risponde alla domanda 'che cosa?'.").
+  if (/\.["'»]\s*\./.test(`${question || ''} ${explanation || ''}`)) {
+    errors.push({ level: 'error', field: 'text', msg: 'punteggiatura doppia: il punto e\' ripetuto dentro e fuori la citazione' });
+  }
+
   // Dal lotto 8: 151 domande di civica chiedevano "cosa fai?" e offrivano
   // risposte all'infinito ("alzare la mano"). In italiano quella domanda vuole
   // un verbo di seconda persona; con l'infinito la consegna giusta e' "cosa e'
