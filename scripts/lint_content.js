@@ -411,6 +411,33 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 33: un'opzione che rimanda alle altre per posizione ("entrambe
+  // b e c", "tutte le precedenti"). Le opzioni vengono mescolate a ogni
+  // partita, quindi quella lettera non indica piu' niente: in
+  // ita-5-ortografia-9347 era anche la risposta giusta.
+  // sto-2-cronologia-9051 chiama A, B e C tre eventi dentro la domanda: li'
+  // "Tra A e C" indica quegli eventi, non la posizione delle opzioni, quindi
+  // le domande che introducono da sole quelle lettere restano fuori.
+  if (Array.isArray(options) && !/(?:^|[\s('"])[ABCD](?:[\s,.)'"]|$)/.test(question || '')) {
+    const posizionale = options.filter((o) => typeof o === 'string')
+      .find((o) => /\b(?:entrambe?\s+[abcd]\b|[abcd]\s+e\s+[abcd]\b|tutte le precedenti|nessuna delle precedenti|le prime due|la prima e la seconda)/i.test(o));
+    if (posizionale) {
+      errors.push({ level: 'error', field: 'options', msg: `opzione che rimanda alle altre per posizione ("${posizionale}"): le opzioni vengono mescolate` });
+    }
+  }
+
+  // Dal lotto 33: articolo o preposizione articolata non elisa davanti a
+  // vocale ("il ospedale", "nel albero"), prodotta dal template che incolla
+  // "il" davanti a qualsiasi nome. Le domande che chiedono quale forma sia
+  // corretta restano fuori: li' la forma sbagliata e' il distrattore.
+  if (subject !== 'inglese' && !/corrett|sbagliat|giust[ao]\b/i.test(question || '')) {
+    const tutti = [question, explanation, answer].concat(options || []).filter((v) => typeof v === 'string');
+    const trovato = tutti.join(' | ').match(/(?<![a-zà-ù'])\b(?:il|nel|del|al|dal|sul|col)\s+[aeiouàèéìòù][a-zà-ù]{2,}/i);
+    if (trovato) {
+      errors.push({ level: 'error', field: 'text', msg: `articolo non eliso davanti a vocale: "${trovato[0]}"` });
+    }
+  }
+
   // Dal lotto 32: in un problema con la risposta numerica, il numero della
   // risposta non compare da nessuna parte nella spiegazione. In
   // pro-4-due_operazioni-9100 la spiegazione dimostrava 84 mentre la

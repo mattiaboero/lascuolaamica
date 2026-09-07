@@ -8112,7 +8112,7 @@
    "area": "viventi_biologia",
    "subarea": "habitat_e_funzioni_vitali",
    "difficulty": 1,
-   "question": "Quale animale vive soprattutto nel albero?",
+   "question": "Quale animale scava il nido nel tronco degli alberi?",
    "options": [
     "cammello",
     "picchio",
@@ -8121,7 +8121,7 @@
    ],
    "answerIndex": 1,
    "answer": "picchio",
-   "explanation": "Picchio vive soprattutto nel albero.",
+   "explanation": "Il picchio scava il nido nel tronco battendo con il becco.",
    "active": true,
    "tag": "animali;habitat;classe3",
    "tags": [

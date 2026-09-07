@@ -29839,12 +29839,12 @@
    "question": "Perché è utile leggere i simboli o le indicazioni sui contenitori della raccolta?",
    "options": [
     "Per decorare meglio l'aula",
-    "Perché aiutano a conferire i rifiuti nel modo corretto",
+    "Per conferire i rifiuti nel modo corretto",
     "Per decidere chi svuota i cestini",
     "Per scegliere il contenitore più vicino"
    ],
    "answerIndex": 1,
-   "answer": "Perché aiutano a conferire i rifiuti nel modo corretto",
+   "answer": "Per conferire i rifiuti nel modo corretto",
    "explanation": "Le indicazioni aiutano a evitare errori nella separazione dei rifiuti.",
    "active": true,
    "tag": "raccolta_differenziata",
@@ -30159,12 +30159,12 @@
    "question": "Perché è importante controllare chi può vedere i contenuti di un profilo?",
    "options": [
     "Per avere più notifiche",
-    "Perché aiuta a limitare chi accede alle informazioni personali",
+    "Per limitare chi accede alle informazioni personali",
     "Per cambiare lingua più spesso",
     "Per usare più memoria"
    ],
    "answerIndex": 1,
-   "answer": "Perché aiuta a limitare chi accede alle informazioni personali",
+   "answer": "Per limitare chi accede alle informazioni personali",
    "explanation": "Le impostazioni di visibilità aiutano a proteggere i propri contenuti.",
    "active": true,
    "tag": "privacy_online",

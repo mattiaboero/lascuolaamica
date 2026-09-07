@@ -27813,16 +27813,16 @@
    "area": "italiano_classe5",
    "subarea": "ortografia",
    "difficulty": 3,
-   "question": "Quale coppia di parole usa correttamente l'accento per distinguere due significati diversi?",
+   "question": "In quale coppia l'accento distingue due parole monosillabe?",
    "options": [
-    "ancora (di nuovo) / àncora (del barca)",
-    "da (prep.) / dà (verbo dare)",
-    "la (articolo) / là (avv. luogo)",
-    "entrambe b e c"
+    "da (preposizione) / dà (verbo dare)",
+    "ancora (di nuovo) / àncora della barca",
+    "papa (pontefice) / papà (genitore)",
+    "casa (abitazione) / casa (famiglia)"
    ],
-   "answerIndex": 3,
-   "answer": "entrambe b e c",
-   "explanation": "L'accento sui monosillabi serve a distinguere parole identiche nella forma ma diverse nel significato: 'da' (preposizione) vs 'dà' (terza persona di 'dare'); 'la' (articolo/pronome) vs 'là' (avverbio di luogo). Anche la coppia 'ancora/àncora' è corretta ma l'accento in essa è su parola non monosillabica.",
+   "answerIndex": 0,
+   "answer": "da (preposizione) / dà (verbo dare)",
+   "explanation": "L'accento grafico sui monosillabi distingue due parole identiche nella forma: 'da' preposizione e 'dà' voce del verbo dare, come 'e'/'è' e 'la'/'là'. In 'ancora/àncora' e 'papa/papà' l'accento distingue davvero due parole, ma non sono monosillabi; 'casa' e 'casa' non si distinguono con l'accento.",
    "active": true,
    "tag": "italiano;ortografia;classe_5;primaria",
    "tags": [

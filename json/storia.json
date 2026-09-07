@@ -16774,12 +16774,12 @@
    "options": [
     "di fermare il tempo",
     "di spegnere il sole",
-    "trasporti e scambi",
+    "di trasportare merci e fare scambi",
     "di cancellare le stagioni"
    ],
    "answerIndex": 2,
-   "answer": "trasporti e scambi",
-   "explanation": "La risposta corretta è 'trasporti e scambi'.",
+   "answer": "di trasportare merci e fare scambi",
+   "explanation": "La risposta corretta è 'di trasportare merci e fare scambi'.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -18614,11 +18614,11 @@
     "re spartani",
     "consoli romani",
     "faraoni egizi",
-    "dei Greci"
+    "dèi greci"
    ],
    "answerIndex": 3,
-   "answer": "dei Greci",
-   "explanation": "La risposta corretta è 'dei Greci'.",
+   "answer": "dèi greci",
+   "explanation": "La risposta corretta è 'dèi greci'.",
    "active": true,
    "tag": "grecia;polis;classe5",
    "tags": [
