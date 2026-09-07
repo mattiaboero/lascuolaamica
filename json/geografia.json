@@ -14285,7 +14285,7 @@
    "area": "territorio_italiano",
    "subarea": "morfologia_italiana",
    "difficulty": 2,
-   "question": "L'Appennino Tosco-Emiliano è un tratto degli...",
+   "question": "Di quale catena montuosa fa parte l'Appennino Tosco-Emiliano?",
    "options": [
     "Appennini",
     "Alpi",
@@ -29905,7 +29905,7 @@
    "options": [
     "Bonifica",
     "Alpeggio",
-    "Terrazamento",
+    "Terrazzamento",
     "Irrigazione"
    ],
    "answerIndex": 1,

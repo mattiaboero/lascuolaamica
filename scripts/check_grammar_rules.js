@@ -196,6 +196,53 @@ function controllaNomiClassificati(sorgente) {
   return [...sconosciuti].sort();
 }
 
+// Dal lotto 30: refusi che nessuna regex puo' descrivere, perche' la parola
+// sbagliata e' plausibile ("Terrazamento", "Aerogramma"). Il segnale e'
+// statistico: una parola quasi assente nel corpus a un passo da una molto
+// piu' frequente. Le aree di ortografia, lessico e grammatica restano fuori
+// perche' li' le grafie sbagliate sono i distrattori, e sono volute.
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano']);
+
+function controllaRefusi() {
+  const dir = path.join(__dirname, '..', 'json');
+  const salta = /ortograf|lessic|lingua|morfolog|grammatic|riflession/i;
+  const freq = new Map();
+  const dove = new Map();
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    if (f.includes('index') || f.includes('changelog')) continue;
+    const dati = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    const domande = Array.isArray(dati) ? dati : dati.questions;
+    if (!Array.isArray(domande)) continue;
+    for (const q of domande) {
+      if (q.subject === 'inglese') continue;
+      const escluso = salta.test(`${q.area || ''} ${q.subarea || ''}`);
+      const testo = [q.question, q.explanation, q.answer].concat(q.options || [])
+        .filter((v) => typeof v === 'string').join(' ').toLowerCase();
+      for (const w of testo.match(/[a-zà-ù]{5,}/g) || []) {
+        freq.set(w, (freq.get(w) || 0) + 1);
+        if (!escluso && !dove.has(w)) dove.set(w, q.id);
+      }
+    }
+  }
+  const sospetti = [];
+  for (const [w, id] of dove) {
+    const n = freq.get(w);
+    if (n > 2 || PAROLE_LEGITTIME.has(w)) continue;
+    const candidati = [];
+    for (let i = 1; i < w.length; i += 1) {
+      if ('bcdfglmnprstvz'.includes(w[i])) candidati.push(w.slice(0, i) + w[i] + w.slice(i));
+      candidati.push(w.slice(0, i - 1) + w[i] + w[i - 1] + w.slice(i + 1));
+    }
+    for (const c of candidati) {
+      if (c !== w && (freq.get(c) || 0) >= 5 && freq.get(c) >= 5 * n) {
+        sospetti.push(`${w} (${id}) → forse "${c}", che nel corpus compare ${freq.get(c)} volte`);
+        break;
+      }
+    }
+  }
+  return sospetti.sort();
+}
+
 function main() {
   const regole = caricaRegole();
   let fallito = false;
@@ -228,8 +275,16 @@ function main() {
     sconosciuti.forEach((n) => console.error(`  - ${n} (aggiungilo alla lista giusta in lint_content.js)`));
   }
 
+  const refusi = controllaRefusi();
+  if (refusi.length) {
+    fallito = true;
+    console.error('[ERROR] parole rare a un passo da una parola frequente del corpus (probabili refusi):');
+    refusi.forEach((r) => console.error(`  - ${r}`));
+    console.error('  se la parola e\' corretta, aggiungila a PAROLE_LEGITTIME in check_grammar_rules.js');
+  }
+
   if (fallito) process.exit(1);
-  console.log(`regole grammaticali: ${regole.length} attive, ${SBAGLIATE.length} esempi intercettati, ${CORRETTE.length} frasi corrette non toccate.`);
+  console.log(`regole grammaticali: ${regole.length} attive, ${SBAGLIATE.length} esempi intercettati, ${CORRETTE.length} frasi corrette non toccate; nessun refuso statistico.`);
 }
 
 main();
