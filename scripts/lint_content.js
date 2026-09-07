@@ -591,12 +591,44 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     if (fine) {
       const base = Object.keys(BASI).find((b) => new RegExp(`^(?:${BASI[b]})$`).test(fine[1]));
       if (base) {
-        const doppia = options.filter((o) => typeof o === 'string')
-          .find((o) => new RegExp(`^\\s*(?:solo\\s+|soltanto\\s+|sempre\\s+)?(?:${BASI[base]})\\s`, 'i').test(o));
+        const testa = (o) => {
+          const m = String(o).match(/^\s*(?:solo\s+|soltanto\s+|sempre\s+)?([a-zà-ù]+)\s/i);
+          return m ? Object.keys(BASI).find((b) => new RegExp(`^(?:${BASI[b]})$`, 'i').test(m[1])) : null;
+        };
+        const doppia = options.filter((o) => typeof o === 'string').find((o) => testa(o) === base);
         if (doppia) {
           errors.push({ level: 'error', field: 'options', msg: `preposizione ripetuta fra la domanda ("${fine[1]}...") e l'opzione ("${doppia}")` });
         }
+        // Dal lotto 56: variante opposta. "La Svizzera confina con l'Italia
+        // a..." aveva fra le opzioni "solo con le isole": la preposizione
+        // dell'opzione non ripete quella dello stem, la contraddice, e letta
+        // di seguito da' "a solo con le isole".
+        const discorde = options.filter((o) => typeof o === 'string')
+          .find((o) => { const b = testa(o); return b && b !== base; });
+        if (discorde) {
+          errors.push({ level: 'error', field: 'options', msg: `preposizione dell'opzione ("${discorde}") incompatibile con quella della domanda ("${fine[1]}...")` });
+        }
       }
+    }
+  }
+
+  // Dal lotto 56: la stessa congiunzione ripetuta dentro una domanda sola,
+  // segno di due stesure sovrapposte ("Quale scelta e' piu' responsabile
+  // quando cammini quando e' buio?", tre casi in civ-3-str). Le citazioni fra
+  // apici vanno tolte prima: "Leggi: 'Quando il sole tramonto'...' Quando
+  // accade?" e' corretta.
+  if (subject !== 'inglese') {
+    const senzaCitazioni = String(question || '').replace(/'[^']*'|"[^"]*"|«[^»]*»/g, ' ');
+    // "come" e "se" sono esclusi: la prima occorrenza e' interrogativa e la
+    // seconda comparativa o completiva ("Come dobbiamo comportarci con i beni
+    // comuni, come una panchina?"), nove casi tutti legittimi.
+    const ripetuta = ['quando', 'dove', 'perche', 'mentre']
+      .find((c) => {
+        const forma = c === 'perche' ? 'perch[ée]' : c;
+        return (senzaCitazioni.match(new RegExp(`(?<![a-zà-ùA-ZÀ-Ù])${forma}(?![a-zà-ùA-ZÀ-Ù])`, 'gi')) || []).length >= 2;
+      });
+    if (ripetuta) {
+      errors.push({ level: 'error', field: 'question', msg: `congiunzione "${ripetuta}" ripetuta nella stessa domanda` });
     }
   }
 

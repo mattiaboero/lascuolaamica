@@ -22316,7 +22316,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando cammini quando è buio?",
+   "question": "Quale scelta è più responsabile quando cammini al buio?",
    "options": [
     "correre in strada",
     "cercare di essere visibile e prudente",
@@ -22348,7 +22348,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Qual è il modo giusto di comportarsi quando cammini quando è buio?",
+   "question": "Qual è il modo giusto di comportarsi quando cammini al buio?",
    "options": [
     "usare il telefono mentre cammini",
     "cercare di essere visibile e prudente",
@@ -22380,7 +22380,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "segnali_e_sicurezza",
    "difficulty": 2,
-   "question": "Qual è la scelta migliore quando cammini quando è buio?",
+   "question": "Qual è la scelta migliore quando cammini al buio?",
    "options": [
     "cercare di essere visibile e prudente",
     "usare il telefono mentre cammini",
