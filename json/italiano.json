@@ -27432,12 +27432,12 @@
    "question": "Quale dei seguenti pronomi è relativo?",
    "options": [
     "questo",
-    "chi (interrogativo)",
-    "che (relativo)",
+    "chi",
+    "che",
     "mi"
    ],
    "answerIndex": 2,
-   "answer": "che (relativo)",
+   "answer": "che",
    "explanation": "Il pronome relativo introduce una proposizione relativa e si riferisce a un nome già espresso (antecedente). 'Che' è il pronome relativo più comune in italiano. 'Questo' è dimostrativo, 'chi' (interrogativo) introduce una domanda, 'mi' è un pronome personale atono.",
    "active": true,
    "tag": "italiano;morfologia;classe_5;primaria",

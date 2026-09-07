@@ -281,7 +281,7 @@ const GRAMMATICA = [
   // primo giorno di scuola"). Senza gli apici la frase si legge come se il
   // valore fosse parte del discorso, e con le risposte che sono verbi non
   // sta in piedi. Il corpus cita fra apici singoli ovunque.
-  { pattern: /\b(?:primo|ultimo)\s+elemento\s+è\s+(?!['"])/,
+  { pattern: /\b(?:primo|ultimo)\s+elemento\s+è\s+(?!['"])|successione corretta,\s+(?!['"])/,
     soloSpiegazione: true,
     msg: 'valore citato senza apici nella spiegazione di una sequenza' },
   // Dal lotto 39: segno di moltiplicazione scritto con la lettera x. Il
@@ -432,6 +432,23 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
     if ((explanation || '').trim() !== atteso) {
       errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+    }
+  }
+
+  // Dal lotto 49: opzione che porta fra parentesi la stessa parola con cui la
+  // domanda definisce quello che cerca ("Quale dei seguenti pronomi è
+  // relativo?" con l'opzione "che (relativo)"). La parentesi e' una glossa
+  // di servizio rimasta nel testo, e indica la risposta senza che serva
+  // sapere niente.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const dom = String(question || '').toLowerCase();
+    const spia = options.filter((o) => typeof o === 'string')
+      .find((o) => (o.match(/\(([^)]{3,25})\)/g) || []).some((par) => {
+        const dentro = par.slice(1, -1).toLowerCase().trim();
+        return dentro.split(/\s+/).length <= 2 && dom.includes(dentro.slice(0, 6));
+      }));
+    if (spia) {
+      errors.push({ level: 'error', field: 'options', msg: `glossa fra parentesi che ripete la parola chiave della domanda: "${spia}"` });
     }
   }
 

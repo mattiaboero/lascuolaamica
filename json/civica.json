@@ -33943,13 +33943,13 @@
    "difficulty": 2,
    "question": "Dove vanno gettati gli avanzi di cibo (i rifiuti organici)?",
    "options": [
-    "Nell'umido (organico)",
+    "Nell'umido",
     "Nella plastica",
     "Nel vetro",
     "Nella carta"
    ],
    "answerIndex": 0,
-   "answer": "Nell'umido (organico)",
+   "answer": "Nell'umido",
    "explanation": "Gli avanzi di cibo vanno nel bidone dell'umido (organico): possono diventare compost, un concime naturale.",
    "active": true,
    "tag": "civica;raccolta_differenzia;classe_2;primaria",
