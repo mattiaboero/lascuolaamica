@@ -19260,16 +19260,16 @@
    "area": "civilta_greca",
    "subarea": "guerre_persiane_ellenismo",
    "difficulty": 2,
-   "question": "L'ellenismo nacque grazie a...",
+   "question": "L'ellenismo nacque...",
    "options": [
-    "conquiste e incontri tra popoli",
-    "soltanto alla scrittura cuneiforme",
-    "alle piene del Nilo",
-    "alla fondazione di Roma"
+    "grazie a conquiste e incontri tra popoli",
+    "soltanto grazie alla scrittura cuneiforme",
+    "grazie alle piene del Nilo",
+    "grazie alla fondazione di Roma"
    ],
    "answerIndex": 0,
-   "answer": "conquiste e incontri tra popoli",
-   "explanation": "La risposta corretta è 'conquiste e incontri tra popoli'.",
+   "answer": "grazie a conquiste e incontri tra popoli",
+   "explanation": "La risposta corretta è 'grazie a conquiste e incontri tra popoli'.",
    "active": true,
    "tag": "grecia;ellenismo;classe5",
    "tags": [
@@ -20004,16 +20004,16 @@
    "area": "italia_antica_etruschi",
    "subarea": "etruschi",
    "difficulty": 1,
-   "question": "La religione etrusca dava importanza ai...",
+   "question": "La religione etrusca dava importanza...",
    "options": [
     "solo alle olimpiadi",
-    "segni della natura e agli auspici",
+    "ai segni della natura e agli auspici",
     "solo al teatro",
     "solo alle leggi romane"
    ],
    "answerIndex": 1,
-   "answer": "segni della natura e agli auspici",
-   "explanation": "La risposta corretta è 'segni della natura e agli auspici'.",
+   "answer": "ai segni della natura e agli auspici",
+   "explanation": "La risposta corretta è 'ai segni della natura e agli auspici'.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -23212,16 +23212,16 @@
    "area": "roma_impero_cristianesimo_fine",
    "subarea": "societa_e_amministrazione",
    "difficulty": 2,
-   "question": "La cittadinanza romana col tempo fu concessa a...",
+   "question": "La cittadinanza romana col tempo fu concessa...",
    "options": [
     "solo agli Egizi",
-    "sempre più abitanti dell'impero",
+    "a sempre più abitanti dell'impero",
     "solo ai patrizi di Atene",
-    "nessuno oltre Roma"
+    "a nessuno oltre Roma"
    ],
    "answerIndex": 1,
-   "answer": "sempre più abitanti dell'impero",
-   "explanation": "La risposta corretta è \"sempre più abitanti dell'impero\".",
+   "answer": "a sempre più abitanti dell'impero",
+   "explanation": "La risposta corretta è \"a sempre più abitanti dell'impero\".",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23244,16 +23244,16 @@
    "area": "roma_impero_cristianesimo_fine",
    "subarea": "societa_e_amministrazione",
    "difficulty": 2,
-   "question": "I Romani si nutrivano di prodotti che arrivavano da...",
+   "question": "I Romani si nutrivano di prodotti che arrivavano...",
    "options": [
     "solo dal Tevere",
     "solo dall'Egitto",
-    "diverse province",
+    "da diverse province",
     "solo dalle Alpi"
    ],
    "answerIndex": 2,
-   "answer": "diverse province",
-   "explanation": "La risposta corretta è 'diverse province'.",
+   "answer": "da diverse province",
+   "explanation": "La risposta corretta è 'da diverse province'.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -26111,15 +26111,15 @@
    "area": "altre_civilta_ebrei",
    "subarea": "civilta",
    "difficulty": 1,
-   "question": "Gli Ebrei credevano in...",
+   "question": "Gli Ebrei credevano...",
    "options": [
-    "Nessuna legge",
-    "Molti dei del mare",
-    "Solo negli astri",
-    "Un solo Dio"
+    "in nessuna legge",
+    "in molti dèi del mare",
+    "solo negli astri",
+    "in un solo Dio"
    ],
    "answerIndex": 3,
-   "answer": "Un solo Dio",
+   "answer": "in un solo Dio",
    "explanation": "La religione ebraica è monoteista.",
    "active": true,
    "tag": "ebrei",

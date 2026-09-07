@@ -433,6 +433,46 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 45: lo stem finisce con una preposizione e l'opzione la ripete
+  // ("Il Po scorre principalmente nel..." con "solo nelle isole", "dipende
+  // da..." con "solo dalla Luna"). Letti insieme danno "nel solo nelle
+  // isole". In tutti e dieci i casi trovati la risposta giusta era l'unica a
+  // combaciare, quindi il difetto era anche un indizio. La soluzione adottata
+  // e' spostare la preposizione dentro tutte e quattro le opzioni.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const BASI = {
+      a: 'a|ad|al|allo|alla|ai|agli|alle',
+      da: 'da|dal|dallo|dalla|dai|dagli|dalle',
+      di: 'di|del|dello|della|dei|degli|delle',
+      in: 'in|nel|nello|nella|nei|negli|nelle',
+      su: 'su|sul|sullo|sulla|sui|sugli|sulle',
+      con: 'con|col|coi',
+    };
+    const fine = String(question || '').trim()
+      .match(/(?<![a-zà-ù])(a|ad|al|allo|alla|ai|agli|alle|da|dal|dalla|dai|dagli|di|del|della|dei|degli|delle|in|nel|nella|nei|negli|su|sul|sulla|con)\s*\.\.\.$/);
+    if (fine) {
+      const base = Object.keys(BASI).find((b) => new RegExp(`^(?:${BASI[b]})$`).test(fine[1]));
+      if (base) {
+        const doppia = options.filter((o) => typeof o === 'string')
+          .find((o) => new RegExp(`^\\s*(?:solo\\s+|soltanto\\s+|sempre\\s+)?(?:${BASI[base]})\\s`, 'i').test(o));
+        if (doppia) {
+          errors.push({ level: 'error', field: 'options', msg: `preposizione ripetuta fra la domanda ("${fine[1]}...") e l'opzione ("${doppia}")` });
+        }
+      }
+    }
+  }
+
+  // Dal lotto 45: la regola del lotto 20 sul plurale di "dio" sta fra le
+  // regex di GRAMMATICA, che vedono solo domanda e spiegazione: "Molti dei
+  // del mare" era un'opzione e nessuno la guardava.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const senzaAccento = options.filter((o) => typeof o === 'string')
+      .find((o) => /\b(?:gli|molti|tanti|questi|quegli|altri|numerosi|vari|degli|agli|dagli|sugli|negli|cogli)\s+dei\b/i.test(o));
+    if (senzaAccento) {
+      errors.push({ level: 'error', field: 'options', msg: `plurale di "dio" senza accento in un'opzione: "${senzaAccento}"` });
+    }
+  }
+
   // Dal lotto 44: punto cardinale in maiuscolo dove indica una direzione e
   // non una regione. Il criterio fissato nel lotto 23 e' quello: "il Nord
   // Italia" e' una regione e vuole la maiuscola, "a nord del ponte" e' una

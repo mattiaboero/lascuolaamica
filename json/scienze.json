@@ -8543,7 +8543,7 @@
    ],
    "answerIndex": 2,
    "answer": "passero",
-   "explanation": "Passero può mangiare semi.",
+   "explanation": "Il passero può mangiare semi.",
    "active": true,
    "tag": "catena_alimentare;classe3",
    "tags": [
@@ -16060,15 +16060,15 @@
    "area": "astronomia_terra",
    "subarea": "terra_e_movimenti",
    "difficulty": 2,
-   "question": "Il susseguirsi del giorno e della notte dipende da...",
+   "question": "Il susseguirsi del giorno e della notte dipende...",
    "options": [
-    "pioggia e vento",
-    "rotazione della Terra",
+    "da pioggia e vento",
+    "dalla rotazione della Terra",
     "solo dalla Luna",
-    "cambi di stagione"
+    "dai cambi di stagione"
    ],
    "answerIndex": 1,
-   "answer": "rotazione della Terra",
+   "answer": "dalla rotazione della Terra",
    "explanation": "La Terra ruota su se stessa e illumina zone diverse.",
    "active": true,
    "tag": "giorno_notte",

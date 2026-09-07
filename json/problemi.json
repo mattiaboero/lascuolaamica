@@ -38426,7 +38426,7 @@
    "area": "problemi",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "In un frutteto ci sono 420 alberi. 2/7 sono meli, 3/10 sono peri e il resto sono ciliegeti. Quanti sono i ciliegeti?",
+   "question": "In un frutteto ci sono 420 alberi. 2/7 sono meli, 3/10 sono peri e il resto sono ciliegi. Quanti sono i ciliegi?",
    "options": [
     "126 alberi",
     "174 alberi",
@@ -38435,7 +38435,7 @@
    ],
    "answerIndex": 1,
    "answer": "174 alberi",
-   "explanation": "Prima: 2/7 di 420 = 120 meli; 3/10 di 420 = 126 peri. Poi: 120 + 126 = 246; 420 - 246 = 174 ciliegeti.",
+   "explanation": "Prima: 2/7 di 420 = 120 meli; 3/10 di 420 = 126 peri. Poi: 120 + 126 = 246; 420 - 246 = 174 ciliegi.",
    "active": true,
    "tag": "problemi;frazioni;classe_5;primaria",
    "tags": [
