@@ -154,6 +154,15 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 62: domanda che ne incapsula un'altra ("Alla domanda 'Dove
+  // sfocia un fiume?' la risposta piu' corretta e'..."), quando basta fare la
+  // domanda interna.
+  { pattern: /Alla domanda\s*['‘“"]/, soloDomanda: true,
+    msg: 'domanda che ne incapsula un\'altra: fare direttamente la domanda interna' },
+  // Dal lotto 62: notazione oraria compatta in una spiegazione ("5h30"),
+  // mentre domande e opzioni scrivono sempre "5 ore e 30 minuti".
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù0-9])\d{1,2}h\d{2}(?![0-9])/, soloSpiegazione: true,
+    msg: 'notazione oraria compatta ("5h30"): usare "5 ore e 30 minuti"' },
   // Dal lotto 59: "in uguale misura" vale "nella stessa proporzione", non "in
   // parti uguali". Lo usavano 35 problemi di divisione, mentre le loro stesse
   // spiegazioni dicevano gia' "in parti uguali".
@@ -624,6 +633,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         if (discorde) {
           errors.push({ level: 'error', field: 'options', msg: `preposizione dell'opzione ("${discorde}") incompatibile con quella della domanda ("${fine[1]}...")` });
         }
+      }
+    }
+  }
+
+  // Dal lotto 62: rettangolo con la larghezza maggiore della lunghezza ("18 m
+  // di larghezza e 5 m di lunghezza"). Tre casi: scambiate le etichette, i
+  // numeri e quindi la risposta restano quelli.
+  if (subject !== 'inglese') {
+    const lati = String(question || '')
+      .match(/(\d+(?:[.,]\d+)?)\s*m\w*\s+di\s+larghezza\s+e\s+(\d+(?:[.,]\d+)?)\s*m\w*\s+di\s+lunghezza/i);
+    if (lati) {
+      const larga = Number(lati[1].replace(',', '.'));
+      const lunga = Number(lati[2].replace(',', '.'));
+      if (larga > lunga) {
+        errors.push({ level: 'error', field: 'question', msg: `rettangolo con la larghezza (${lati[1]}) maggiore della lunghezza (${lati[2]})` });
       }
     }
   }

@@ -10222,7 +10222,7 @@
    "area": "paesaggi_acqua",
    "subarea": "fiume_lago_mare",
    "difficulty": 2,
-   "question": "Alla domanda 'Dove sfocia un fiume?' la risposta più corretta è...",
+   "question": "Dove sfocia un fiume?",
    "options": [
     "nel mare o in un altro fiume",
     "nella vetta",

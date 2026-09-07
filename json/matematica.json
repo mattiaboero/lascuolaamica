@@ -59804,7 +59804,7 @@
    ],
    "answerIndex": 0,
    "answer": "0,9",
-   "explanation": "0,9 vale nove decimi, più di 0,29 (due decimi e nove centesimi).",
+   "explanation": "0,9 vale nove decimi. Le altre tre non arrivano a tre decimi: 0,29 è due decimi e nove centesimi, 0,19 un decimo e nove centesimi, 0,09 solo nove centesimi.",
    "active": true,
    "tag": "aritmetica",
    "tags": [

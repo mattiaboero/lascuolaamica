@@ -18823,7 +18823,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Il giardino di Carlo è rettangolare: 18 m di larghezza e 5 m di lunghezza. Qual è la sua superficie?",
+   "question": "Il giardino di Carlo è rettangolare: 18 m di lunghezza e 5 m di larghezza. Qual è la sua superficie?",
    "options": [
     "46",
     "86",
@@ -18832,7 +18832,7 @@
    ],
    "answerIndex": 3,
    "answer": "90",
-   "explanation": "Area = base × altezza: 18 × 5 = 90 m².",
+   "explanation": "Area = lunghezza × larghezza: 18 × 5 = 90 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -22047,7 +22047,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Il giardino di Elisa è rettangolare: 19 m di larghezza e 7 m di lunghezza. Qual è la sua superficie?",
+   "question": "Il giardino di Elisa è rettangolare: 19 m di lunghezza e 7 m di larghezza. Qual è la sua superficie?",
    "options": [
     "145",
     "266",
@@ -22056,7 +22056,7 @@
    ],
    "answerIndex": 3,
    "answer": "133",
-   "explanation": "Area = base × altezza: 19 × 7 = 133 m².",
+   "explanation": "Area = lunghezza × larghezza: 19 × 7 = 133 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -22729,7 +22729,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Il giardino di Sara è rettangolare: 24 m di larghezza e 13 m di lunghezza. Qual è la sua superficie?",
+   "question": "Il giardino di Sara è rettangolare: 24 m di lunghezza e 13 m di larghezza. Qual è la sua superficie?",
    "options": [
     "74",
     "300",
@@ -22738,7 +22738,7 @@
    ],
    "answerIndex": 3,
    "answer": "312",
-   "explanation": "Area = base × altezza: 24 × 13 = 312 m².",
+   "explanation": "Area = lunghezza × larghezza: 24 × 13 = 312 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -39875,7 +39875,7 @@
    ],
    "answerIndex": 0,
    "answer": "13 ore e 30 minuti",
-   "explanation": "Prima: 5h30 + 4h45 = 10h15; Poi: 10h15 + 3h15 = 13h30.",
+   "explanation": "Prima: 5 ore e 30 minuti + 4 ore e 45 minuti = 10 ore e 15 minuti. Poi: 10 ore e 15 minuti + 3 ore e 15 minuti = 13 ore e 30 minuti.",
    "active": true,
    "tag": "problemi;tempo;classe_5;primaria",
    "tags": [
