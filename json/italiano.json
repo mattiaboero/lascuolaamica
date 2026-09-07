@@ -19333,16 +19333,16 @@
    "area": "italiano_classe3",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Quale parola vuole l'accento scritto?",
+   "question": "Come si scrive la parola che significa 'tuttavia'?",
    "options": [
-    "pero (frutto)",
-    "pero (avversativa)",
+    "pero",
+    "perro",
     "però",
     "pèro"
    ],
    "answerIndex": 2,
    "answer": "però",
-   "explanation": "'Però' (che significa ma, tuttavia) porta l'accento sull'ultima sillaba e si scrive con l'accento grave: però. 'Pero' senza accento indica l'albero da frutto. L'accento cambia il significato!",
+   "explanation": "'Però' porta l'accento grave sull'ultima sillaba. 'Pero' senza accento indica l'albero da frutto: l'accento cambia il significato.",
    "active": true,
    "tag": "italiano;ortografia;classe_3;primaria",
    "tags": [
@@ -22670,7 +22670,7 @@
    ],
    "answerIndex": 0,
    "answer": "Ho comprato pane, latte e burro.",
-   "explanation": "Negli elenchi gli elementi si separano con la virgola, e prima dell'ultima 'e' la virgola non si mette: 'Ho comprato pane, latte e burro'. Senza virgole l'elenco non si distingue, e i due punti dopo il verbo separano il verbo dal suo complemento oggetto.",
+   "explanation": "Negli elenchi gli elementi si separano con la virgola, e prima dell'ultima 'e' la virgola non si mette: 'Ho comprato pane, latte e burro'. Senza virgole l'elenco non si distingue, e i due punti messi in mezzo all'elenco lo spezzano.",
    "active": true,
    "tag": "italiano;ortografia;classe_4;primaria",
    "tags": [

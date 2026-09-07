@@ -2532,7 +2532,7 @@
    ],
    "answerIndex": 1,
    "answer": "primi passi",
-   "explanation": "Sulla linea del tempo l'elemento centrale è primi passi.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'primi passi'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2625,7 +2625,7 @@
    ],
    "answerIndex": 0,
    "answer": "faccio colazione",
-   "explanation": "Sulla linea del tempo l'elemento centrale è faccio colazione.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'faccio colazione'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2718,7 +2718,7 @@
    ],
    "answerIndex": 3,
    "answer": "nasce il germoglio",
-   "explanation": "Sulla linea del tempo l'elemento centrale è nasce il germoglio.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'nasce il germoglio'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2811,7 +2811,7 @@
    ],
    "answerIndex": 2,
    "answer": "martedì",
-   "explanation": "Sulla linea del tempo l'elemento centrale è martedì.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'martedì'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2904,7 +2904,7 @@
    ],
    "answerIndex": 1,
    "answer": "febbraio",
-   "explanation": "Sulla linea del tempo l'elemento centrale è febbraio.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'febbraio'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -2997,7 +2997,7 @@
    ],
    "answerIndex": 0,
    "answer": "pomeriggio",
-   "explanation": "Sulla linea del tempo l'elemento centrale è pomeriggio.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'pomeriggio'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3090,7 +3090,7 @@
    ],
    "answerIndex": 3,
    "answer": "oggi",
-   "explanation": "Sulla linea del tempo l'elemento centrale è oggi.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'oggi'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -3183,7 +3183,7 @@
    ],
    "answerIndex": 2,
    "answer": "estate",
-   "explanation": "Sulla linea del tempo l'elemento centrale è estate.",
+   "explanation": "Sulla linea del tempo l'elemento centrale è 'estate'.",
    "active": true,
    "tag": "linea_del_tempo;cronologia;classe2",
    "tags": [
@@ -7667,7 +7667,7 @@
    ],
    "answerIndex": 0,
    "answer": "formazione della Terra",
-   "explanation": "L'elemento centrale è formazione della Terra.",
+   "explanation": "L'elemento centrale è 'formazione della Terra'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7760,7 +7760,7 @@
    ],
    "answerIndex": 3,
    "answer": "Neolitico",
-   "explanation": "L'elemento centrale è Neolitico.",
+   "explanation": "L'elemento centrale è 'Neolitico'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7853,7 +7853,7 @@
    ],
    "answerIndex": 2,
    "answer": "agricoltura",
-   "explanation": "L'elemento centrale è agricoltura.",
+   "explanation": "L'elemento centrale è 'agricoltura'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -7946,7 +7946,7 @@
    ],
    "answerIndex": 1,
    "answer": "spiga",
-   "explanation": "L'elemento centrale è spiga.",
+   "explanation": "L'elemento centrale è 'spiga'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [
@@ -8039,7 +8039,7 @@
    ],
    "answerIndex": 0,
    "answer": "infanzia",
-   "explanation": "L'elemento centrale è infanzia.",
+   "explanation": "L'elemento centrale è 'infanzia'.",
    "active": true,
    "tag": "sequenze;tempo;classe3",
    "tags": [

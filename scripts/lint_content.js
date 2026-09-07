@@ -281,7 +281,9 @@ const GRAMMATICA = [
   // primo giorno di scuola"). Senza gli apici la frase si legge come se il
   // valore fosse parte del discorso, e con le risposte che sono verbi non
   // sta in piedi. Il corpus cita fra apici singoli ovunque.
-  { pattern: /\b(?:primo|ultimo)\s+elemento\s+è\s+(?!['"])|successione corretta,\s+(?!['"])/,
+  // Dal lotto 51: anche "elemento centrale", che il lotto 39 aveva lasciato
+  // fuori guardando solo primo e ultimo.
+  { pattern: /\belemento\s+(?:primo|ultimo|centrale|di mezzo|finale|iniziale)\s+è\s+(?!['"])|\b(?:primo|ultimo|centrale)\s+elemento\s+è\s+(?!['"])|\belemento\s+centrale\s+è\s+(?!['"])|successione corretta,\s+(?!['"])/,
     soloSpiegazione: true,
     msg: 'valore citato senza apici nella spiegazione di una sequenza' },
   // Dal lotto 39: segno di moltiplicazione scritto con la lettera x. Il
