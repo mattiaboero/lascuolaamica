@@ -16878,7 +16878,7 @@
    ],
    "answerIndex": 1,
    "answer": "sole",
-   "explanation": "Entrambe iniziano con S-O, poi 'sole' ha la lettera L mentre 'stelle' ha la lettera E. Ma aspetta: sol- vs ste-: confrontiamo la seconda lettera O vs T. O viene prima di T nell'alfabeto, quindi 'sole' viene prima di 'stelle'.",
+   "explanation": "Le due parole iniziano entrambe con la S. Si confronta allora la seconda lettera: 'sole' ha la O, 'stelle' ha la T. Nell'alfabeto la O viene prima della T, quindi 'sole' viene prima di 'stelle'.",
    "active": true,
    "tag": "italiano;alfabeto;classe_3;primaria",
    "tags": [
@@ -25479,14 +25479,14 @@
    "difficulty": 2,
    "question": "Quale parola ha l'accento tonico sulla seconda sillaba?",
    "options": [
-    "càffè",
-    "màmma",
-    "lunèdì",
-    "bèllo"
+    "caffè",
+    "mamma",
+    "lunedì",
+    "bello"
    ],
-   "answerIndex": 1,
-   "answer": "màmma",
-   "explanation": "Le parole piane (o parossitone) hanno l'accento tonico sulla penultima sillaba. 'Mamma' = MAM-ma, accento sulla prima sillaba... Attenzione: 'mamma' è una parola trisillaba? No, ha due sillabe: mam-ma. L'accento è sulla prima. 'Bello' = BEL-lo, anch'essa con accento sulla penultima. In italiano la maggior parte delle parole sono piane.",
+   "answerIndex": 0,
+   "answer": "caffè",
+   "explanation": "L'accento tonico è la sillaba che si pronuncia con più forza. 'Caffè' si divide in caf-fè e l'accento cade sulla seconda sillaba. 'Mamma' (mam-ma) e 'bello' (bel-lo) hanno l'accento sulla prima; 'lunedì' (lu-ne-dì) sulla terza.",
    "active": true,
    "tag": "italiano;vari;classe_4;primaria",
    "tags": [

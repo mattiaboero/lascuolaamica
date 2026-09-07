@@ -6286,7 +6286,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni penn costa 4 euro. Elisa ne compra 9. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 4 euro. Elisa ne compra 9. Quanto spende in tutto?",
    "options": [
     "40",
     "39",
@@ -6924,7 +6924,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni penn costa 10 euro. Monica ne compra 4. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 10 euro. Monica ne compra 4. Quanto spende in tutto?",
    "options": [
     "41",
     "40",
@@ -9765,7 +9765,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni penn costa 10 euro. Matteo ne compra 9. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 10 euro. Matteo ne compra 9. Quanto spende in tutto?",
    "options": [
     "112",
     "78",
@@ -32218,16 +32218,16 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 2,
-   "question": "In una classe ci sono 28 bambini. 4 bambini portano 3 biscotti ciascuno da condividere. Quanti biscotti ci sono in totale da dividere tra tutti?",
+   "question": "In una classe ci sono 28 bambini. 4 bambini portano 3 biscotti ciascuno e altri 6 bambini ne portano 4 ciascuno. Quanti biscotti ci sono in tutto?",
    "options": [
     "12",
     "84",
     "48",
     "36"
    ],
-   "answerIndex": 0,
-   "answer": "12",
-   "explanation": "Prima: 4 × 3 = 12 biscotti. Poi: i biscotti totali sono 12.",
+   "answerIndex": 3,
+   "answer": "36",
+   "explanation": "Prima: 4 × 3 = 12 biscotti. Poi: 6 × 4 = 24 biscotti; 12 + 24 = 36 biscotti.",
    "active": true,
    "tag": "problemi;due_operazioni;classe_4;primaria",
    "tags": [
@@ -32378,7 +32378,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 2,
-   "question": "Anna legge 12 pagine al giorno per 7 giorni. Poi brucia 8 pagine accidentalmente (scherzo!). Quante pagine ha letto davvero?",
+   "question": "Anna legge 12 pagine al giorno per 5 giorni, poi 24 pagine nel fine settimana. Quante pagine ha letto in tutto?",
    "options": [
     "84",
     "76",
@@ -32387,7 +32387,7 @@
    ],
    "answerIndex": 0,
    "answer": "84",
-   "explanation": "Prima: 12 × 7 = 84 pagine lette. Poi: le pagine lette rimangono 84.",
+   "explanation": "Prima: 12 × 5 = 60 pagine. Poi: 60 + 24 = 84 pagine.",
    "active": true,
    "tag": "problemi;due_operazioni;classe_4;primaria",
    "tags": [
@@ -32412,14 +32412,14 @@
    "difficulty": 2,
    "question": "Un fruttivendolo ha 132 mele. Le mette in casse da 12. Poi vende 4 casse intere. Quante mele ha ancora?",
    "options": [
-    "44",
+    "84",
     "88",
     "96",
     "60"
    ],
    "answerIndex": 0,
-   "answer": "44",
-   "explanation": "Prima: 132 ÷ 12 = 11 casse. Poi: 11 - 4 = 7 casse rimaste; 7 × 12 = 84. Oppure: 132 - (4 × 12) = 132 - 48 = 84. Rivediamo: 132 - 48 = 84.",
+   "answer": "84",
+   "explanation": "Prima: 4 casse vendute contengono 4 × 12 = 48 mele. Poi: 132 - 48 = 84 mele rimaste.",
    "active": true,
    "tag": "problemi;due_operazioni;classe_4;primaria",
    "tags": [
@@ -33635,7 +33635,7 @@
    ],
    "answerIndex": 0,
    "answer": "600",
-   "explanation": "Prima: 24 × 25 = 600. Poi: il totale raccolto è 600.",
+   "explanation": "24 × 25 = 600 euro.",
    "active": true,
    "tag": "problemi;euro_denaro;classe_4;primaria",
    "tags": [

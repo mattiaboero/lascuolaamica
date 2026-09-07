@@ -10156,7 +10156,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Da che cosa si ottiene il compost?",
+   "question": "In che cosa consiste il compost?",
    "options": [
     "vetro tritato",
     "pile schiacciate",
@@ -10220,7 +10220,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Che cosa si ricava dai rifiuti organici?",
+   "question": "Quale materiale si ottiene con il compostaggio?",
    "options": [
     "materiale utile ottenuto dai rifiuti organici",
     "plastica fusa",
@@ -17452,7 +17452,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 3,
-   "question": "Se partecipa a una videolezione, qual è il comportamento corretto?",
+   "question": "Se partecipi a una videolezione, qual è il comportamento corretto?",
    "options": [
     "giocare mentre gli altri parlano",
     "ascoltare e rispettare i turni",

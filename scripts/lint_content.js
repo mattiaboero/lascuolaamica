@@ -248,6 +248,22 @@ const GRAMMATICA = [
   { pattern: /^Prima:\s*([^.=]+?)\.\s*Poi:\s*\1\s*=/,
     soloSpiegazione: true,
     msg: 'spiegazione a due passi in cui il primo ripete il calcolo del secondo senza aggiungere niente' },
+  // Dal lotto 32: la faccia opposta dello stesso difetto. Qui e' il secondo
+  // passo a non fare niente: "Prima: 4 x 3 = 12 biscotti. Poi: i biscotti
+  // totali sono 12." Il "Poi" non contiene nessun calcolo e ripete il numero
+  // gia' trovato, quindi il problema aveva un passo solo mentre l'area dice
+  // due operazioni.
+  { pattern: /^Prima:[^.]*\.\s*Poi:\s*[^.=]*\.?\s*$/,
+    soloSpiegazione: true,
+    msg: 'spiegazione a due passi in cui il secondo non contiene nessun calcolo' },
+  // Dal lotto 32: frammenti di ragionamento rimasti dentro la spiegazione
+  // ("Ma aspetta: sol- vs ste-", "Rivediamo: 132 - 48 = 84", "Attenzione:
+  // 'mamma' e' una parola trisillaba? No, ha due sillabe"). Sono passaggi di
+  // chi scriveva che correggeva se stesso: il bambino legge un ripensamento
+  // invece di una spiegazione.
+  { pattern: /\bMa aspetta\b|\bRivediamo\b|\bRicontrolliamo\b|\bCorreggo\b|\bAnzi,|\?\s*No,\s/,
+    soloSpiegazione: true,
+    msg: 'frammento di ragionamento rimasto nella spiegazione (ripensamento o autocorrezione)' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
@@ -392,6 +408,25 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
     if ((explanation || '').trim() !== atteso) {
       errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+    }
+  }
+
+  // Dal lotto 32: in un problema con la risposta numerica, il numero della
+  // risposta non compare da nessuna parte nella spiegazione. In
+  // pro-4-due_operazioni-9100 la spiegazione dimostrava 84 mentre la
+  // risposta segnata era 44, e 84 non era nemmeno fra le opzioni: il
+  // controllo aritmetico non se ne accorgeva, perche' tutte le uguaglianze
+  // erano giuste. Le spiegazioni in colonna restano fuori: li' il risultato
+  // si compone cifra per cifra e non compare mai intero.
+  if ((subject === 'problemi' || subject === 'matematica') && typeof answer === 'string'
+      && explanation && explanation.includes('=') && !/colonna/i.test(explanation)) {
+    const m = answer.trim().match(/^(\d[\d.]*(?:,\d+)?)(?:\s*[a-zA-Zà-ù²³°/]+\.?)?$/);
+    if (m) {
+      const valore = m[1].replace(/\./g, '');
+      const presenti = (explanation.match(/\d[\d.]*(?:,\d+)?/g) || []).map((n) => n.replace(/\./g, ''));
+      if (!presenti.includes(valore)) {
+        errors.push({ level: 'error', field: 'explanation', msg: `la risposta è ${answer} ma quel numero non compare nella spiegazione` });
+      }
     }
   }
 

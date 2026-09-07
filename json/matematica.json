@@ -14421,7 +14421,7 @@
    ],
    "answerIndex": 1,
    "answer": "142812",
-   "explanation": "Somma colonna per colonna; il risultato supera 100 000, quindi aggiungi la sesta cifra.",
+   "explanation": "Somma colonna per colonna; il risultato supera 100000, quindi aggiungi la sesta cifra.",
    "active": true,
    "tag": "matematica;aritmetica;classe_5;primaria",
    "tags": [
@@ -14549,7 +14549,7 @@
    ],
    "answerIndex": 1,
    "answer": "129947",
-   "explanation": "Somma colonna per colonna; il risultato supera 100 000, conta la sesta cifra.",
+   "explanation": "Somma colonna per colonna; il risultato supera 100000, conta la sesta cifra.",
    "active": true,
    "tag": "matematica;aritmetica;classe_5;primaria",
    "tags": [
@@ -14645,7 +14645,7 @@
    ],
    "answerIndex": 2,
    "answer": "180775",
-   "explanation": "Somma colonna per colonna; il risultato è nel range 180 000, gestisci tutti i riporti.",
+   "explanation": "Somma colonna per colonna; il risultato è nel range 180000, gestisci tutti i riporti.",
    "active": true,
    "tag": "matematica;aritmetica;classe_5;primaria",
    "tags": [
@@ -34741,7 +34741,7 @@
    ],
    "answerIndex": 2,
    "answer": "10000",
-   "explanation": "1 metro = 100 centimetri, quindi 1 m² = 100 cm × 100 cm = 10 000 cm². Quando si converte un'area bisogna moltiplicare due volte il fattore di conversione lineare.",
+   "explanation": "1 metro = 100 centimetri, quindi 1 m² = 100 cm × 100 cm = 10000 cm². Quando si converte un'area bisogna moltiplicare due volte il fattore di conversione lineare.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [

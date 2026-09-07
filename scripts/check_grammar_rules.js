@@ -72,9 +72,13 @@ const SBAGLIATE = [
   'In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa è meglio fare?',
   'Prima: 336 ÷ 7. Poi: 336 ÷ 7 = 48.',
   'Gli antichi egizi costruivano piramidi di pietra.',
+  'Prima: 4 × 3 = 12 biscotti. Poi: i biscotti totali sono 12.',
+  "Ma aspetta: sol- vs ste-: confrontiamo la seconda lettera.",
 ];
 
 const CORRETTE = [
+  'Prima: 12 × 5 = 60 pagine. Poi: 60 + 24 = 84 pagine.',
+  'Il treno aspetta in stazione e riparte alle 9.',
   'I mercanti fenici viaggiavano per tutto il Mediterraneo.',
   'I palazzi cretesi erano centri di governo e di culto.',
   'Prima: 252 mele ÷ 9 scatole. Poi: 252 ÷ 9 = 28.',
