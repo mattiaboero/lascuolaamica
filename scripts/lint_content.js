@@ -433,6 +433,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 44: punto cardinale in maiuscolo dove indica una direzione e
+  // non una regione. Il criterio fissato nel lotto 23 e' quello: "il Nord
+  // Italia" e' una regione e vuole la maiuscola, "a nord del ponte" e' una
+  // direzione e vuole la minuscola. Nella forma "a <direzione> di X" si
+  // tratta sempre di una direzione, e il corpus si divideva quasi a meta'
+  // (nove maiuscole contro otto minuscole).
+  {
+    const tutti = [question, explanation, answer].concat(options || [])
+      .filter((v) => typeof v === 'string').join(' | ');
+    const trovato = tutti.match(/\ba\s+(?:Nord|Sud|Est|Ovest)\s+(?:di|del|della|dell'|dei|degli|delle)\b/);
+    if (trovato) {
+      errors.push({ level: 'error', field: 'text', msg: `punto cardinale in maiuscolo dove indica una direzione: "${trovato[0]}"` });
+    }
+  }
+
   // Dal lotto 43: due opzioni che valgono lo stesso numero scritto in due
   // modi ("3,5" e "3,50"). Il bambino che sceglie quella giusta nel modo
   // sbagliato viene segnato in errore, e per l'aritmetica 3,5 e 3,50 sono lo

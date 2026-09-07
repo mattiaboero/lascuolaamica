@@ -13423,14 +13423,14 @@
    "difficulty": 1,
    "question": "Le Alpi si trovano soprattutto...",
    "options": [
-    "a Nord dell'Italia",
-    "a Sud dell'Italia",
+    "a nord dell'Italia",
+    "a sud dell'Italia",
     "al centro dell'Italia",
     "solo nelle isole"
    ],
    "answerIndex": 0,
-   "answer": "a Nord dell'Italia",
-   "explanation": "La risposta corretta è \"a Nord dell'Italia\".",
+   "answer": "a nord dell'Italia",
+   "explanation": "La risposta corretta è \"a nord dell'Italia\".",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -29581,7 +29581,7 @@
    "area": "geo_graficita",
    "subarea": "mappe_e_piante",
    "difficulty": 3,
-   "question": "Osservi la pianta del tuo quartiere. Il parco è a Nord della scuola e il supermercato è a Sud della scuola. Se esci dalla scuola e vai verso il parco, in quale direzione vai?",
+   "question": "Osservi la pianta del tuo quartiere. Il parco è a nord della scuola e il supermercato è a sud della scuola. Se esci dalla scuola e vai verso il parco, in quale direzione vai?",
    "options": [
     "Verso Sud",
     "Verso Nord",
@@ -29590,7 +29590,7 @@
    ],
    "answerIndex": 1,
    "answer": "Verso Nord",
-   "explanation": "Il parco è a Nord della scuola. Per andare dalla scuola al parco ci si dirige verso Nord. Le carte geografiche ci aiutano a pianificare percorsi usando i punti cardinali.",
+   "explanation": "Il parco è a nord della scuola. Per andare dalla scuola al parco ci si dirige verso Nord. Le carte geografiche ci aiutano a pianificare percorsi usando i punti cardinali.",
    "active": true,
    "tag": "geografia;mappe_e_piante;classe_2;primaria",
    "tags": [
@@ -30477,7 +30477,7 @@
    "area": "territorio_italiano",
    "subarea": "italia_forma_mari",
    "difficulty": 1,
-   "question": "Quale mare si trova a Est dell'Italia, tra la penisola e la Croazia?",
+   "question": "Quale mare si trova a est dell'Italia, tra la penisola e la Croazia?",
    "options": [
     "Mar Tirreno",
     "Mar Ionio",
@@ -30518,7 +30518,7 @@
    ],
    "answerIndex": 2,
    "answer": "Mar Tirreno",
-   "explanation": "Il Mar Tirreno si trova a Ovest dell'Italia, bagnando le coste di Toscana, Lazio, Campania, Basilicata e Calabria. Il suo nome deriva dai Tirreni, un antico popolo italico.",
+   "explanation": "Il Mar Tirreno si trova a ovest dell'Italia, bagnando le coste di Toscana, Lazio, Campania, Basilicata e Calabria. Il suo nome deriva dai Tirreni, un antico popolo italico.",
    "active": true,
    "tag": "geografia;l_italia_forma_e_mar;classe_3;primaria",
    "tags": [
