@@ -2349,7 +2349,7 @@
    ],
    "answerIndex": 3,
    "answer": "crescita del pulcino",
-   "explanation": "Dopo uovo viene crescita del pulcino.",
+   "explanation": "Dopo l'uovo viene la crescita del pulcino.",
    "active": true,
    "tag": "ciclo_vitale;successione;classe2",
    "tags": [
@@ -2411,7 +2411,7 @@
    ],
    "answerIndex": 2,
    "answer": "piantina",
-   "explanation": "Dopo seme viene piantina.",
+   "explanation": "Dopo il seme viene la piantina.",
    "active": true,
    "tag": "ciclo_vitale;successione;classe2",
    "tags": [
@@ -2442,7 +2442,7 @@
    ],
    "answerIndex": 1,
    "answer": "crescita",
-   "explanation": "Dopo cucciolo viene crescita.",
+   "explanation": "Dopo il cucciolo viene la crescita.",
    "active": true,
    "tag": "ciclo_vitale;successione;classe2",
    "tags": [
@@ -2473,7 +2473,7 @@
    ],
    "answerIndex": 0,
    "answer": "rana giovane",
-   "explanation": "Dopo girino viene rana giovane.",
+   "explanation": "Dopo il girino viene la rana giovane.",
    "active": true,
    "tag": "ciclo_vitale;successione;classe2",
    "tags": [
@@ -26415,7 +26415,7 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 3,
-   "question": "La formazione della brina, quando il vapore diventa direttamente ghiaccio, si chiama?",
+   "question": "La formazione della brina, quando il vapore diventa direttamente ghiaccio, si chiama...",
    "options": [
     "brinamento",
     "fusione",
@@ -31437,7 +31437,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Anche gli animali, come le persone, per vivere devono?",
+   "question": "Anche gli animali, come le persone, per vivere devono...",
    "options": [
     "respirare",
     "arrugginire",

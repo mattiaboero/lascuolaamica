@@ -442,6 +442,23 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 54: frase sospesa chiusa dal punto interrogativo in cui "come" o
+  // "quando" stanno dentro un inciso fra virgole ("Anche gli animali, come le
+  // persone, per vivere devono?"). Li' non sono interrogativi ma congiunzioni,
+  // e il controllo del lotto 10 le lascia passare proprio perche' cerca la
+  // presenza di quelle parole. Servono due condizioni insieme, e per questo
+  // la regola non puo' stare fra le regex di GRAMMATICA: l'inciso fra virgole,
+  // e l'assenza di qualsiasi altra parola interrogativa. Senza la seconda
+  // condizione scattava su tre domande vere ("Quale scelta ... come ... ?").
+  if (subject !== 'inglese' && /[a-zà-ù]\?\s*$/i.test(question || '')
+      && !/\b(?:chi|cosa|quale|quali|qual|quanto|quanta|quanti|quante|dove)\b|perch[ée]|cos['’]|com['’]|qual['’]/i.test(question || '')
+      && /,\s*(?:come|quando)\s[^,]*,/i.test(question || '')) {
+    const siNo = (options || []).some((o) => typeof o === 'string' && /^\s*(sì|no|vero|falso)\b/i.test(o));
+    if (!siNo) {
+      errors.push({ level: 'error', field: 'question', msg: 'frase sospesa con "come" o "quando" dentro un inciso: usare i puntini' });
+    }
+  }
+
   // Dal lotto 52: la famiglia delle spiegazioni di sequenza, chiusa per intero.
   // I lotti 39, 49 e 51 l'avevano affrontata tre volte con tre regex diverse,
   // una per ogni formulazione incontrata ("il primo elemento è", "l'elemento
