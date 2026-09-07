@@ -77,9 +77,11 @@ const SBAGLIATE = [
   'Sulla linea del tempo il primo elemento è mi sveglio.',
   'Prima: 3 x 1,20 = 3,60 euro per i quaderni.',
   'Plurali irregolari: uomo/uomini, dio/dei, bue/buoi.',
+  'La mamma ha comprato 32 palline e vuole distribuirli in parti uguali.',
 ];
 
 const CORRETTE = [
+  'La mamma ha comprato 32 palline e vuole distribuirle in parti uguali.',
   "'Qualche' e 'dei' indicano una quantità positiva.",
   "Sulla linea del tempo il primo elemento è 'mi sveglio'.",
   'Prima: 3 × 1,20 = 3,60 euro per i quaderni.',

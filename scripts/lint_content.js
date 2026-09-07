@@ -198,8 +198,10 @@ const GRAMMATICA = [
   // Dal lotto 13: clitico maschile con un oggetto femminile plurale, altro
   // effetto del template scritto per "biscotti" e riusato con "ciliegine"
   // ("Quante ciliegine riceve ogni bambino se li divide in parti uguali?").
-  { pattern: new RegExp(`\\b(?:${NOMI_FEMMINILI_PREZZO}|ciliegine|mele|pere|banane|carote|monete|conchiglie|palline|uova|fragole)\\b[^.?!]{0,140}\\bli\\s+(?:divide|dividono|distribuisce|conta|mette)\\b`, 'i'),
-    msg: 'clitico maschile "li" con un oggetto femminile plurale (es. "ciliegine ... se li divide")' },
+  // Dal lotto 46: la regola cercava il clitico staccato ("se li divide") e non
+  // vedeva quello attaccato al verbo ("32 palline e vuole distribuirli").
+  { pattern: new RegExp(`\\b(?:${NOMI_FEMMINILI_PREZZO}|ciliegine|mele|pere|banane|carote|monete|conchiglie|palline|uova|fragole)\\b[^.?!]{0,140}(?:\\bli\\s+(?:divide|dividono|distribuisce|conta|mette)\\b|[a-zà-ù]{3,}(?:r|nd)li\\b)`, 'i'),
+    msg: 'clitico maschile "li" con un oggetto femminile plurale (es. "palline ... distribuirli")' },
   // Dal lotto 14: citazione aperta con la virgoletta doppia e chiusa con
   // l'apice singolo ("Il soggetto è \"Fatima' e il predicato è 'ha comprato\".").
   // L'apostrofo vero sta fra due lettere (dell'acqua, l'ombra): qui invece
@@ -430,6 +432,29 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
     if ((explanation || '').trim() !== atteso) {
       errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+    }
+  }
+
+  // Dal lotto 46: parola italiana che finisce per consonante nei problemi e in
+  // matematica. In italiano quasi nessuna parola finisce per consonante: le
+  // eccezioni sono i prestiti (album, tablet, croissant), le forme tronche
+  // regolari (qual, nessun, vuol) e qualche nome proprio, e in queste due
+  // materie sono trentuno in tutto, elencate qui sotto. Il resto e' un
+  // troncamento del template: "ogni quadern costa" nel lotto 16, "ogni penn"
+  // nel 32, "ogni squadr" e "ogni evidenziator" adesso. Il controllo del
+  // lotto 30 non poteva vederli, perche' e' statistico e la parola giusta
+  // non compare da nessun'altra parte nel corpus.
+  if (subject === 'problemi' || subject === 'matematica') {
+    const PRESTITI = new Set(['album', 'alcun', 'ananas', 'autobus', 'basket', 'bonbon', 'brioches',
+      'budget', 'camion', 'chances', 'ciascun', 'container', 'croissant', 'dessert', 'donuts',
+      'download', 'film', 'jolly', 'krapfen', 'muffin', 'nessun', 'pullman', 'qual', 'quel',
+      'sport', 'stop', 'tablet', 'vuol', 'wafer', 'weekend', 'yogurt']);
+    const tutti = [question, explanation, answer].concat(options || [])
+      .filter((v) => typeof v === 'string').join(' ');
+    const tronca = (tutti.match(/(?<![a-zà-ùA-ZÀ-Ù'’])[a-zà-ù]{4,}(?=[\s.,;:!?)"]|$)/g) || [])
+      .find((w) => !'aeiouàèéìòù'.includes(w[w.length - 1]) && !PRESTITI.has(w));
+    if (tronca) {
+      errors.push({ level: 'error', field: 'text', msg: `parola troncata o prestito non previsto: "${tronca}" (se e' una parola vera, aggiungila all'elenco in lint_content.js)` });
     }
   }
 
