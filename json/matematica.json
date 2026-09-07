@@ -47596,7 +47596,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Qual è la mediana di: 3, 7, 1, 5, 9 (ordinati)?",
+   "question": "Qual è la mediana di: 3, 7, 1, 5, 9?",
    "options": [
     "1",
     "5",
@@ -47756,7 +47756,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 1,
-   "question": "Quante combinazioni possibili lanciando due monete?",
+   "question": "Quante combinazioni sono possibili lanciando due monete?",
    "options": [
     "2",
     "3",

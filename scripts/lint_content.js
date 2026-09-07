@@ -233,6 +233,15 @@ const GRAMMATICA = [
   // corpus usa cm² 118 volte e cm2 16, m² 56 e mq 12: uniformate all'esponente.
   { pattern: /\b(?:cm2|m2|mq|cmq|kmq|cm3|dm3|mc)\b/,
     msg: 'unita di misura senza esponente (usare cm², m², cm³)' },
+  // Dal lotto 27: spiegazione a due passi in cui il primo passo ripete
+  // l'operazione del secondo senza aggiungere niente ("Prima: 1872 / 8. Poi:
+  // 1872 / 8 = 234 km per viaggio."). Il template a due passi ha senso quando
+  // il primo passo dice qualcosa in piu' — la formula, l'unita', il dato da
+  // isolare ("Prima: 252 mele / 9 scatole.", "Prima: velocita' x tempo.") —
+  // e quei casi restano fuori perche' il testo dei due passi non coincide.
+  { pattern: /^Prima:\s*([^.=]+?)\.\s*Poi:\s*\1\s*=/,
+    soloSpiegazione: true,
+    msg: 'spiegazione a due passi in cui il primo ripete il calcolo del secondo senza aggiungere niente' },
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },

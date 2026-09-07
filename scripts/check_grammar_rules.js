@@ -70,9 +70,12 @@ const SBAGLIATE = [
   'Un oggetto metallico lasciato al sole diventa…',
   'Se vuoi spiegare il volontariato, qual è il comportamento corretto?',
   'In una situazione in cui vuoi spiegare che cosa significa sostenibilità, cosa è meglio fare?',
+  'Prima: 336 ÷ 7. Poi: 336 ÷ 7 = 48.',
 ];
 
 const CORRETTE = [
+  'Prima: 252 mele ÷ 9 scatole. Poi: 252 ÷ 9 = 28.',
+  'Prima: velocità × tempo. Poi: 95 × 4 = 380 km.',
   'Se vuoi bere a scuola, qual è il comportamento corretto?',
   'In una situazione in cui devi buttare un rifiuto, cosa è meglio fare?',
   "Il giornale è di carta e si differenzia nella raccolta corretta.",

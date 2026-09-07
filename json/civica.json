@@ -3214,14 +3214,14 @@
    "difficulty": 3,
    "question": "Che cosa troviamo scritto nella Costituzione?",
    "options": [
-    "contiene pubblicità",
-    "indica principi e diritti fondamentali",
-    "spiega solo giochi da tavolo",
-    "serve solo agli adulti famosi"
+    "solo pubblicità",
+    "i principi e i diritti fondamentali",
+    "solo giochi da tavolo",
+    "solo regole per gli adulti famosi"
    ],
    "answerIndex": 1,
-   "answer": "indica principi e diritti fondamentali",
-   "explanation": "La risposta corretta è 'indica principi e diritti fondamentali'.",
+   "answer": "i principi e i diritti fondamentali",
+   "explanation": "La risposta corretta è 'i principi e i diritti fondamentali'.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3244,16 +3244,16 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Perché è importante la Costituzione?",
+   "question": "Che cosa rende importante la Costituzione?",
    "options": [
-    "spiega solo giochi da tavolo",
-    "contiene pubblicità",
-    "serve solo agli adulti famosi",
-    "indica principi e diritti fondamentali"
+    "solo giochi da tavolo",
+    "solo pubblicità",
+    "solo regole per gli adulti famosi",
+    "i principi e i diritti fondamentali"
    ],
    "answerIndex": 3,
-   "answer": "indica principi e diritti fondamentali",
-   "explanation": "La risposta corretta è 'indica principi e diritti fondamentali'.",
+   "answer": "i principi e i diritti fondamentali",
+   "explanation": "La risposta corretta è 'i principi e i diritti fondamentali'.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3278,14 +3278,14 @@
    "difficulty": 3,
    "question": "Che cosa contiene la Costituzione?",
    "options": [
-    "serve solo agli adulti famosi",
-    "spiega solo giochi da tavolo",
-    "contiene pubblicità",
-    "indica principi e diritti fondamentali"
+    "solo regole per gli adulti famosi",
+    "solo giochi da tavolo",
+    "solo pubblicità",
+    "i principi e i diritti fondamentali"
    ],
    "answerIndex": 3,
-   "answer": "indica principi e diritti fondamentali",
-   "explanation": "La risposta corretta è 'indica principi e diritti fondamentali'.",
+   "answer": "i principi e i diritti fondamentali",
+   "explanation": "La risposta corretta è 'i principi e i diritti fondamentali'.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3308,16 +3308,16 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 3,
-   "question": "Quale funzione ha la Costituzione?",
+   "question": "Su che cosa si fonda la Costituzione?",
    "options": [
-    "contiene pubblicità",
-    "spiega solo giochi da tavolo",
-    "indica principi e diritti fondamentali",
-    "serve solo agli adulti famosi"
+    "solo pubblicità",
+    "solo giochi da tavolo",
+    "i principi e i diritti fondamentali",
+    "solo regole per gli adulti famosi"
    ],
    "answerIndex": 2,
-   "answer": "indica principi e diritti fondamentali",
-   "explanation": "La risposta corretta è 'indica principi e diritti fondamentali'.",
+   "answer": "i principi e i diritti fondamentali",
+   "explanation": "La risposta corretta è 'i principi e i diritti fondamentali'.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3342,14 +3342,14 @@
    "difficulty": 3,
    "question": "Che cosa stabilisce la Costituzione italiana?",
    "options": [
-    "contiene pubblicità",
-    "serve solo agli adulti famosi",
-    "spiega solo giochi da tavolo",
-    "indica principi e diritti fondamentali"
+    "solo pubblicità",
+    "solo regole per gli adulti famosi",
+    "solo giochi da tavolo",
+    "i principi e i diritti fondamentali"
    ],
    "answerIndex": 3,
-   "answer": "indica principi e diritti fondamentali",
-   "explanation": "La risposta corretta è 'indica principi e diritti fondamentali'.",
+   "answer": "i principi e i diritti fondamentali",
+   "explanation": "La risposta corretta è 'i principi e i diritti fondamentali'.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -16014,14 +16014,14 @@
    "difficulty": 3,
    "question": "Quale affermazione descrive le tracce digitali?",
    "options": [
-    "riguarda solo i videogiochi",
-    "sparisce sempre subito",
-    "ciò che lasci online può restare e circolare",
-    "vale solo per gli adulti"
+    "segni che riguardano solo i videogiochi",
+    "segni che spariscono sempre subito",
+    "segni che restano online e possono circolare",
+    "segni che valgono solo per gli adulti"
    ],
    "answerIndex": 2,
-   "answer": "ciò che lasci online può restare e circolare",
-   "explanation": "La risposta corretta è 'ciò che lasci online può restare e circolare'.",
+   "answer": "segni che restano online e possono circolare",
+   "explanation": "La risposta corretta è 'segni che restano online e possono circolare'.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16046,14 +16046,14 @@
    "difficulty": 3,
    "question": "Che cosa sono le tracce digitali?",
    "options": [
-    "sparisce sempre subito",
-    "vale solo per gli adulti",
-    "riguarda solo i videogiochi",
-    "ciò che lasci online può restare e circolare"
+    "segni che spariscono sempre subito",
+    "segni che valgono solo per gli adulti",
+    "segni che riguardano solo i videogiochi",
+    "segni che restano online e possono circolare"
    ],
    "answerIndex": 3,
-   "answer": "ciò che lasci online può restare e circolare",
-   "explanation": "La risposta corretta è 'ciò che lasci online può restare e circolare'.",
+   "answer": "segni che restano online e possono circolare",
+   "explanation": "La risposta corretta è 'segni che restano online e possono circolare'.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16078,14 +16078,14 @@
    "difficulty": 3,
    "question": "Che cosa sono le tracce che lasciamo online?",
    "options": [
-    "vale solo per gli adulti",
-    "ciò che lasci online può restare e circolare",
-    "riguarda solo i videogiochi",
-    "sparisce sempre subito"
+    "segni che valgono solo per gli adulti",
+    "segni che restano online e possono circolare",
+    "segni che riguardano solo i videogiochi",
+    "segni che spariscono sempre subito"
    ],
    "answerIndex": 1,
-   "answer": "ciò che lasci online può restare e circolare",
-   "explanation": "La risposta corretta è 'ciò che lasci online può restare e circolare'.",
+   "answer": "segni che restano online e possono circolare",
+   "explanation": "La risposta corretta è 'segni che restano online e possono circolare'.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16110,14 +16110,14 @@
    "difficulty": 3,
    "question": "Come si possono definire le tracce digitali?",
    "options": [
-    "ciò che lasci online può restare e circolare",
-    "vale solo per gli adulti",
-    "riguarda solo i videogiochi",
-    "sparisce sempre subito"
+    "segni che restano online e possono circolare",
+    "segni che valgono solo per gli adulti",
+    "segni che riguardano solo i videogiochi",
+    "segni che spariscono sempre subito"
    ],
    "answerIndex": 0,
-   "answer": "ciò che lasci online può restare e circolare",
-   "explanation": "La risposta corretta è 'ciò che lasci online può restare e circolare'.",
+   "answer": "segni che restano online e possono circolare",
+   "explanation": "La risposta corretta è 'segni che restano online e possono circolare'.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16140,16 +16140,16 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 3,
-   "question": "Che cosa succede a ciò che pubblichi online?",
+   "question": "Che cosa indica l'espressione 'tracce digitali'?",
    "options": [
-    "vale solo per gli adulti",
-    "ciò che lasci online può restare e circolare",
-    "sparisce sempre subito",
-    "riguarda solo i videogiochi"
+    "segni che valgono solo per gli adulti",
+    "segni che restano online e possono circolare",
+    "segni che spariscono sempre subito",
+    "segni che riguardano solo i videogiochi"
    ],
    "answerIndex": 1,
-   "answer": "ciò che lasci online può restare e circolare",
-   "explanation": "La risposta corretta è 'ciò che lasci online può restare e circolare'.",
+   "answer": "segni che restano online e possono circolare",
+   "explanation": "La risposta corretta è 'segni che restano online e possono circolare'.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
