@@ -433,6 +433,26 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 43: due opzioni che valgono lo stesso numero scritto in due
+  // modi ("3,5" e "3,50"). Il bambino che sceglie quella giusta nel modo
+  // sbagliato viene segnato in errore, e per l'aritmetica 3,5 e 3,50 sono lo
+  // stesso numero. Il confronto e' sul valore, non sulla stringa, e tiene
+  // conto dell'unita' di misura: "1 litro" e "1 kg" restano distinti.
+  if (Array.isArray(options)) {
+    const visti = new Map();
+    for (const o of options) {
+      if (typeof o !== 'string') continue;
+      const m = o.trim().match(/^(\d+(?:[.,]\d+)?)\s*([a-zA-Zà-ù²³°/ ]*)$/);
+      if (!m) continue;
+      const chiave = `${Number(m[1].replace(/\./g, '').replace(',', '.'))}|${m[2].trim().toLowerCase()}`;
+      if (visti.has(chiave)) {
+        errors.push({ level: 'error', field: 'options', msg: `due opzioni con lo stesso valore: "${visti.get(chiave)}" e "${o}"` });
+        break;
+      }
+      visti.set(chiave, o);
+    }
+  }
+
   // Dal lotto 41: spaziatura attorno alla punteggiatura. In italiano non si
   // lascia spazio prima di un segno e se ne lascia uno dopo la virgola. Le
   // opzioni che nominavano un segno lo scrivevano staccato ("Il punto

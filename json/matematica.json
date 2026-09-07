@@ -57590,7 +57590,7 @@
    "question": "Quale numero decimale rappresenta 3 euro e 50 centesimi?",
    "options": [
     "3,05",
-    "3,5",
+    "0,35",
     "3,50",
     "35,0"
    ],
@@ -60343,7 +60343,7 @@
    "options": [
     "2,05",
     "2,5",
-    "2,50",
+    "25,0",
     "0,25"
    ],
    "answerIndex": 0,
