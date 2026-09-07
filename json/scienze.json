@@ -1009,7 +1009,7 @@
    ],
    "answerIndex": 0,
    "answer": "legno",
-   "explanation": "La risposta corretta per la proprietà indicata è 'legno'.",
+   "explanation": "La risposta corretta è 'legno'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1040,7 +1040,7 @@
    ],
    "answerIndex": 1,
    "answer": "vetro",
-   "explanation": "La risposta corretta per la proprietà indicata è 'vetro'.",
+   "explanation": "La risposta corretta è 'vetro'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1071,7 +1071,7 @@
    ],
    "answerIndex": 3,
    "answer": "carta",
-   "explanation": "La risposta corretta per la proprietà indicata è 'carta'.",
+   "explanation": "La risposta corretta è 'carta'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1102,7 +1102,7 @@
    ],
    "answerIndex": 2,
    "answer": "plastica",
-   "explanation": "La risposta corretta per la proprietà indicata è 'plastica'.",
+   "explanation": "La risposta corretta è 'plastica'.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [

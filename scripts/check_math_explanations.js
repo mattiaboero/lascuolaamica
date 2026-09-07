@@ -64,6 +64,8 @@ function controlla(testo) {
   return problemi;
 }
 
+const GIORNI = ['lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato', 'domenica'];
+
 function main() {
   let sbagliate = 0; let controllate = 0;
   const errori = [];
@@ -80,6 +82,20 @@ function main() {
       if (trovati.length) {
         sbagliate += 1;
         trovati.forEach((p) => errori.push(`  [${q.id}] "${p.espressione}" — il risultato e' ${p.atteso}`));
+      }
+      // Dal lotto 34: i problemi sui giorni della settimana non contengono
+      // nessuna uguaglianza, quindi il controllo aritmetico non li guardava.
+      // pro-4-problemi-9077 chiedeva che giorno e' 18 giorni dopo giovedi' e
+      // dava per buono martedi': 18 diviso 7 da' resto 4, e giovedi' piu' 4
+      // e' lunedi'.
+      const giorno = String(q.question || '')
+        .match(/oggi è (lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica).*?dopo (\d+) giorn/i);
+      if (giorno) {
+        const atteso = GIORNI[(GIORNI.indexOf(giorno[1].toLowerCase()) + Number(giorno[2])) % 7];
+        if (String(q.answer || '').trim().toLowerCase() !== atteso) {
+          sbagliate += 1;
+          errori.push(`  [${q.id}] ${giorno[2]} giorni dopo ${giorno[1]} e' ${atteso}, non "${q.answer}"`);
+        }
       }
     }
   }

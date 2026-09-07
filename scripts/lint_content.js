@@ -411,6 +411,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 34: la stessa domanda scrive i numeri in due formati, con e
+  // senza il punto delle migliaia ("3.206 + 2.784 = 5990"). Meta' l'aveva
+  // prodotta il lotto 31, che aveva tolto il punto solo ai numeri presenti
+  // fra le opzioni lasciando gli operandi come stavano. Il criterio e' che
+  // dentro una domanda il formato sia uno solo: le famiglie che usano il
+  // punto ovunque restano come sono.
+  {
+    const tutti = [question, explanation, answer].concat(options || [])
+      .filter((v) => typeof v === 'string').join(' | ');
+    if (/\b\d{1,3}\.\d{3}\b/.test(tutti) && /(?<![\d.,:])\d{4,6}(?![\d,]|\.\d)/.test(tutti)) {
+      errors.push({ level: 'error', field: 'text', msg: 'numeri scritti in due formati nella stessa domanda (con e senza il punto delle migliaia)' });
+    }
+  }
+
   // Dal lotto 33: un'opzione che rimanda alle altre per posizione ("entrambe
   // b e c", "tutte le precedenti"). Le opzioni vengono mescolate a ogni
   // partita, quindi quella lettera non indica piu' niente: in

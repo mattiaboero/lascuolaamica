@@ -27469,7 +27469,7 @@
    "area": "geo_graficita",
    "subarea": "scala",
    "difficulty": 2,
-   "question": "In una carta in scala 1:1.000.000, 1 cm corrisponde a...",
+   "question": "In una carta in scala 1:1000.000, 1 cm corrisponde a...",
    "options": [
     "10 km",
     "100 km",
@@ -27478,7 +27478,7 @@
    ],
    "answerIndex": 0,
    "answer": "10 km",
-   "explanation": "Un centimetro sulla carta vale 1.000.000 cm reali, cioè 10 km.",
+   "explanation": "Un centimetro sulla carta vale 1000.000 cm reali, cioè 10 km.",
    "active": true,
    "tag": "geo_graficita",
    "tags": [

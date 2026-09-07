@@ -29983,7 +29983,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un magazzino ha 1.275 scatole e ne riceve altre 348. Quante scatole ha ora?",
+   "question": "Un magazzino ha 1275 scatole e ne riceve altre 348. Quante scatole ha ora?",
    "options": [
     "1613",
     "1623",
@@ -29992,7 +29992,7 @@
    ],
    "answerIndex": 1,
    "answer": "1623",
-   "explanation": "Sommi le scatole iniziali e quelle arrivate: 1.275 + 348 = 1623.",
+   "explanation": "Sommi le scatole iniziali e quelle arrivate: 1275 + 348 = 1623.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30014,7 +30014,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "In una gara di lettura, la scuola A totalizza 2.430 punti e la scuola B 1.895 punti. Quanti punti fanno insieme?",
+   "question": "In una gara di lettura, la scuola A totalizza 2430 punti e la scuola B 1895 punti. Quanti punti fanno insieme?",
    "options": [
     "4335",
     "4315",
@@ -30023,7 +30023,7 @@
    ],
    "answerIndex": 2,
    "answer": "4325",
-   "explanation": "Il totale è 2.430 + 1.895 = 4325.",
+   "explanation": "Il totale è 2430 + 1895 = 4325.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30045,7 +30045,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un museo registra 3.206 visitatori a marzo e 2.784 ad aprile. Quanti visitatori registra nei due mesi?",
+   "question": "Un museo registra 3206 visitatori a marzo e 2784 ad aprile. Quanti visitatori registra nei due mesi?",
    "options": [
     "5980",
     "6000",
@@ -30054,7 +30054,7 @@
    ],
    "answerIndex": 3,
    "answer": "5990",
-   "explanation": "Sommi i visitatori dei due mesi: 3.206 + 2.784 = 5990.",
+   "explanation": "Sommi i visitatori dei due mesi: 3206 + 2784 = 5990.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30076,7 +30076,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Una libreria ha 2.000 quaderni. Ne vende 675. Quanti quaderni restano?",
+   "question": "Una libreria ha 2000 quaderni. Ne vende 675. Quanti quaderni restano?",
    "options": [
     "1335",
     "1675",
@@ -30085,7 +30085,7 @@
    ],
    "answerIndex": 3,
    "answer": "1325",
-   "explanation": "Togli i quaderni venduti: 2.000 - 675 = 1325.",
+   "explanation": "Togli i quaderni venduti: 2000 - 675 = 1325.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -30107,7 +30107,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "In un serbatoio ci sono 5.400 litri d'acqua. Ne vengono usati 2.185 litri. Quanti litri restano?",
+   "question": "In un serbatoio ci sono 5400 litri d'acqua. Ne vengono usati 2185 litri. Quanti litri restano?",
    "options": [
     "3115",
     "3225",
@@ -30116,7 +30116,7 @@
    ],
    "answerIndex": 3,
    "answer": "3215",
-   "explanation": "Calcoli 5.400 - 2.185 = 3215.",
+   "explanation": "Calcoli 5400 - 2185 = 3215.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -30138,7 +30138,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Una città conta 8.250 alberi in un parco. Dopo un temporale se ne spezzano 940. Quanti alberi restano?",
+   "question": "Una città conta 8250 alberi in un parco. Dopo un temporale se ne spezzano 940. Quanti alberi restano?",
    "options": [
     "7340",
     "7210",
@@ -30147,7 +30147,7 @@
    ],
    "answerIndex": 2,
    "answer": "7310",
-   "explanation": "Gli alberi rimasti sono 8.250 - 940 = 7310.",
+   "explanation": "Gli alberi rimasti sono 8250 - 940 = 7310.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -30486,9 +30486,9 @@
     "giovedì",
     "lunedì"
    ],
-   "answerIndex": 0,
-   "answer": "martedì",
-   "explanation": "Dopo 14 giorni è ancora giovedì; dopo altri 4 giorni è martedì.",
+   "answerIndex": 3,
+   "answer": "lunedì",
+   "explanation": "Dopo 14 giorni è ancora giovedì; dopo altri 4 giorni è lunedì.",
    "active": true,
    "tag": "tempo",
    "tags": [
@@ -30541,7 +30541,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Un atleta corre 2 km al mattino e 1.500 m al pomeriggio. Quanti metri corre in tutto?",
+   "question": "Un atleta corre 2 km al mattino e 1500 m al pomeriggio. Quanti metri corre in tutto?",
    "options": [
     "3000 m",
     "2500 m",
@@ -30550,7 +30550,7 @@
    ],
    "answerIndex": 2,
    "answer": "3500 m",
-   "explanation": "2 km corrispondono a 2.000 m. 2.000 + 1.500 = 3.500 m.",
+   "explanation": "2 km corrispondono a 2000 m. 2000 + 1500 = 3500 m.",
    "active": true,
    "tag": "misure",
    "tags": [
@@ -30913,7 +30913,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Un parco riceve 12.875 visitatori in primavera e 9.640 in estate. Quanti visitatori riceve in totale?",
+   "question": "Un parco riceve 12875 visitatori in primavera e 9640 in estate. Quanti visitatori riceve in totale?",
    "options": [
     "22515",
     "22505",
@@ -30922,7 +30922,7 @@
    ],
    "answerIndex": 0,
    "answer": "22515",
-   "explanation": "Sommi i visitatori delle due stagioni: 12.875 + 9.640 = 22515.",
+   "explanation": "Sommi i visitatori delle due stagioni: 12875 + 9640 = 22515.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -30975,7 +30975,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Una biblioteca digitale registra 45.320 download a gennaio e 18.675 a febbraio. Quanti download registra nei due mesi?",
+   "question": "Una biblioteca digitale registra 45320 download a gennaio e 18675 a febbraio. Quanti download registra nei due mesi?",
    "options": [
     "62995",
     "64095",
@@ -30984,7 +30984,7 @@
    ],
    "answerIndex": 3,
    "answer": "63995",
-   "explanation": "Sommi 45.320 + 18.675 = 63995.",
+   "explanation": "Sommi 45320 + 18675 = 63995.",
    "active": true,
    "tag": "addizione",
    "tags": [
@@ -31006,7 +31006,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Un'azienda produce 25.000 bottiglie. Ne vende 18.745. Quante bottiglie restano in magazzino?",
+   "question": "Un'azienda produce 25000 bottiglie. Ne vende 18745. Quante bottiglie restano in magazzino?",
    "options": [
     "7255",
     "6355",
@@ -31015,7 +31015,7 @@
    ],
    "answerIndex": 2,
    "answer": "6255",
-   "explanation": "La quantità rimasta è 25.000 - 18.745 = 6255.",
+   "explanation": "La quantità rimasta è 25000 - 18745 = 6255.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -31068,7 +31068,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Una diga contiene 120.000 litri d'acqua. Ne rilascia 47.850 litri. Quanti litri restano?",
+   "question": "Una diga contiene 120000 litri d'acqua. Ne rilascia 47850 litri. Quanti litri restano?",
    "options": [
     "71150",
     "73150",
@@ -31077,7 +31077,7 @@
    ],
    "answerIndex": 2,
    "answer": "72150",
-   "explanation": "Fai 120.000 - 47.850 = 72150.",
+   "explanation": "Fai 120000 - 47850 = 72150.",
    "active": true,
    "tag": "sottrazione",
    "tags": [
@@ -31347,7 +31347,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un'associazione raccoglie 1.250 euro il primo giorno, 875 euro il secondo e spende 640 euro per il materiale. Quanti euro restano?",
+   "question": "Un'associazione raccoglie 1250 euro il primo giorno, 875 euro il secondo e spende 640 euro per il materiale. Quanti euro restano?",
    "options": [
     "1485",
     "1505",
@@ -31356,7 +31356,7 @@
    ],
    "answerIndex": 0,
    "answer": "1485",
-   "explanation": "Sommi prima 1.250 + 875 = 2125. Poi togli 640: 2125 - 640 = 1485.",
+   "explanation": "Sommi prima 1250 + 875 = 2125. Poi togli 640: 2125 - 640 = 1485.",
    "active": true,
    "tag": "multi_step",
    "tags": [
@@ -31480,7 +31480,7 @@
    ],
    "answerIndex": 0,
    "answer": "4600 m",
-   "explanation": "3,75 km corrispondono a 3.750 m. 3.750 + 850 = 4.600 m.",
+   "explanation": "3,75 km corrispondono a 3750 m. 3750 + 850 = 4600 m.",
    "active": true,
    "tag": "misure",
    "tags": [
@@ -31697,7 +31697,7 @@
    ],
    "answerIndex": 2,
    "answer": "750 ml",
-   "explanation": "Tre quarti di 1.000 ml sono 1.000 ÷ 4 × 3 = 750 ml.",
+   "explanation": "Tre quarti di 1000 ml sono 1000 ÷ 4 × 3 = 750 ml.",
    "active": true,
    "tag": "frazioni",
    "tags": [
