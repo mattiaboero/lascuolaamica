@@ -120,7 +120,12 @@ const GRAMMATICA = [
   // delle due puo' chiudere una frase italiana, quindi non servono eccezioni.
   // Il /i finale e' assente di proposito: "contiene il suono GLI?" cita un
   // gruppo di lettere in maiuscolo, non usa un articolo.
-  { pattern: /\b(?:il|lo|la|i|gli|le|un|uno|una|nel|nello|nella|nei|negli|nelle|del|dello|della|dei|degli|delle|al|allo|alla|ai|agli|alle|sul|sulla|sui|sulle|col|coi)\?\s*$/,
+  // Dal lotto 37: il \b iniziale faceva scattare la regola su "agli dèi?",
+  // perche' in JavaScript una lettera accentata non e' un carattere di parola
+  // e fra "è" e "i" c'e' un confine: l'alternativa "i" trovava l'ultima
+  // lettera di "dèi". E' la quinta volta in questa campagna che \b apre un
+  // confine dentro una parola accentata. Serve il lookbehind esplicito.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:il|lo|la|i|gli|le|un|uno|una|nel|nello|nella|nei|negli|nelle|del|dello|della|dei|degli|delle|al|allo|alla|ai|agli|alle|sul|sulla|sui|sulle|col|coi)\?\s*$/,
     soloDomanda: true,
     msg: 'domanda che termina con un articolo o una preposizione articolata: usare i puntini di sospensione' },
   { pattern: /\b(?:a|ad|da|di|in|con|su|per|tra|fra|e|o|ma|perché|più|meno|il|lo|la|i|gli|le|un|uno|una|nel|nella|nei|nelle|del|della|dei|delle|al|alla|ai|alle|dal|dalla|verso)\.\s*$/i,
@@ -408,6 +413,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
     if ((explanation || '').trim() !== atteso) {
       errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+    }
+  }
+
+  // Dal lotto 37: il rovescio del difetto del lotto 24. Li' erano frasi
+  // sospese chiuse dal punto interrogativo; qui sono domande vere chiuse dai
+  // puntini ("Leggi: '...' Che tipo di testo e'..."). Il segnale e' di nuovo
+  // la posizione: conta solo l'ultimo segmento, quello dopo l'ultima virgola,
+  // punto o citazione chiusa. "Quando disegni l'aula piu' piccola, stai
+  // facendo..." finisce con "stai facendo" e resta fuori, perche' li'
+  // "quando" apre una subordinata e la sospensione e' voluta. "Chi" non entra
+  // nell'elenco: in "Chi inquina un fiume danneggia..." e' un relativo.
+  if (subject !== 'inglese' && /\.\.\.\s*$/.test(question || '')) {
+    const ultimo = String(question).trim().split(/[,.!?]\s+|['"»]\s+/).pop().trim();
+    if (/^(?:Cosa|Che cosa|Che|Quale|Quali|Qual|Quanto|Quanta|Quanti|Quante|Come|Dove|Perch[ée])\b/.test(ultimo)) {
+      errors.push({ level: 'error', field: 'question', msg: `domanda vera chiusa dai puntini invece che dal punto interrogativo ("${ultimo}")` });
     }
   }
 

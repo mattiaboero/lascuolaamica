@@ -77,6 +77,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Come si chiamavano le costruzioni a gradoni che i Sumeri dedicavano agli dèi?',
   'Prima: 12 × 5 = 60 pagine. Poi: 60 + 24 = 84 pagine.',
   'Il treno aspetta in stazione e riparte alle 9.',
   'I mercanti fenici viaggiavano per tutto il Mediterraneo.',
