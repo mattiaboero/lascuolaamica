@@ -6916,15 +6916,15 @@
    "area": "materia_materiali",
    "subarea": "trasformazioni_ed_esperimenti",
    "difficulty": 2,
-   "question": "Quando l'acqua diventa vapore avviene l'?",
+   "question": "Quando l'acqua diventa vapore avviene...",
    "options": [
-    "condensazione",
-    "fusione",
-    "evaporazione",
-    "filtrazione"
+    "la condensazione",
+    "la fusione",
+    "l'evaporazione",
+    "la filtrazione"
    ],
    "answerIndex": 2,
-   "answer": "evaporazione",
+   "answer": "l'evaporazione",
    "explanation": "Il passaggio corretto è 'evaporazione'.",
    "active": true,
    "tag": "trasformazioni;acqua;classe3",
@@ -8483,7 +8483,7 @@
    ],
    "answerIndex": 2,
    "answer": "coniglio",
-   "explanation": "Coniglio può mangiare erba.",
+   "explanation": "Il coniglio può mangiare erba.",
    "active": true,
    "tag": "catena_alimentare;classe3",
    "tags": [
@@ -8513,7 +8513,7 @@
    ],
    "answerIndex": 3,
    "answer": "pecora",
-   "explanation": "Pecora può mangiare foglie.",
+   "explanation": "La pecora può mangiare foglie.",
    "active": true,
    "tag": "catena_alimentare;classe3",
    "tags": [
@@ -8573,7 +8573,7 @@
    ],
    "answerIndex": 3,
    "answer": "pesce erbivoro",
-   "explanation": "Pesce erbivoro può mangiare alghe.",
+   "explanation": "Un pesce erbivoro può mangiare alghe.",
    "active": true,
    "tag": "catena_alimentare;classe3",
    "tags": [
@@ -13187,16 +13187,16 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "Quando un oggetto blocca la luce si forma un'?",
+   "question": "Quando un oggetto blocca la luce si forma...",
    "options": [
-    "nuvola",
-    "ombra",
-    "onda",
-    "foschia"
+    "una nuvola",
+    "un'ombra",
+    "un'onda",
+    "una foschia"
    ],
    "answerIndex": 1,
-   "answer": "ombra",
-   "explanation": "La risposta corretta è 'ombra'.",
+   "answer": "un'ombra",
+   "explanation": "La risposta corretta è \"un'ombra\".",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -26322,15 +26322,15 @@
    "area": "aria_acqua_suolo_materia",
    "subarea": "passaggi_di_stato_e_ciclo",
    "difficulty": 1,
-   "question": "Quando l'acqua di una pozzanghera sparisce al sole, è avvenuta l'?",
+   "question": "Quando l'acqua di una pozzanghera sparisce al sole, che cosa è avvenuto?",
    "options": [
-    "evaporazione",
-    "solidificazione",
-    "condensazione",
-    "fusione"
+    "l'evaporazione",
+    "la solidificazione",
+    "la condensazione",
+    "la fusione"
    ],
    "answerIndex": 0,
-   "answer": "evaporazione",
+   "answer": "l'evaporazione",
    "explanation": "Il calore del sole trasforma l'acqua liquida in vapore: è l'evaporazione.",
    "active": true,
    "tag": "scienze;passaggi_di_stato_e_ciclo;classe4",
@@ -27562,15 +27562,15 @@
    "area": "forze_luce_suono",
    "subarea": "forze_e_movimento",
    "difficulty": 2,
-   "question": "La forza che frena un oggetto che scivola su una superficie è l'?",
+   "question": "La forza che frena un oggetto che scivola su una superficie è...",
    "options": [
-    "attrito",
-    "gravità",
-    "magnetismo",
-    "spinta"
+    "l'attrito",
+    "la gravità",
+    "il magnetismo",
+    "la spinta"
    ],
    "answerIndex": 0,
-   "answer": "attrito",
+   "answer": "l'attrito",
    "explanation": "L'attrito si oppone al movimento tra due superfici a contatto.",
    "active": true,
    "tag": "scienze;forze_e_movimento;classe4",

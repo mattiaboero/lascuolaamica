@@ -78,9 +78,12 @@ const SBAGLIATE = [
   'Plurali irregolari: uomo/uomini, dio/dei, bue/buoi.',
   'La mamma ha comprato 32 palline e vuole distribuirli in parti uguali.',
   'Nella successione corretta, mi sveglio è la risposta giusta.',
+  "Quando un oggetto blocca la luce si forma un'?",
 ];
 
 const CORRETTE = [
+  "Quale tra queste parole ha la doppia 'l'?",
+  "What is the -ing form of the verb 'run'?",
   "Nella successione corretta, 'mi sveglio' è la risposta giusta.",
   'La mamma ha comprato 32 palline e vuole distribuirle in parti uguali.',
   "'Qualche' e 'dei' indicano una quantità positiva.",

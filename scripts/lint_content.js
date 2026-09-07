@@ -128,6 +128,13 @@ const GRAMMATICA = [
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:il|lo|la|i|gli|le|un|uno|una|nel|nello|nella|nei|negli|nelle|del|dello|della|dei|degli|delle|al|allo|alla|ai|agli|alle|sul|sulla|sui|sulle|col|coi)\?\s*$/,
     soloDomanda: true,
     msg: 'domanda che termina con un articolo o una preposizione articolata: usare i puntini di sospensione' },
+  // Dal lotto 53: la stessa cosa con l'articolo eliso ("si forma un'?",
+  // "avviene l'?"). La regola sopra elenca le forme intere e non vedeva
+  // queste quattro. L'articolo deve essere preceduto da uno spazio: in
+  // "la doppia 'l'?" e "il verbo 'run'?" l'apostrofo chiude una citazione.
+  { pattern: /(?<=\s)(?:un|l|dell|nell|all|sull|dall|quest)['’]\s*\?\s*$/,
+    soloDomanda: true,
+    msg: "domanda che termina con un articolo eliso: usare i puntini di sospensione" },
   { pattern: /\b(?:a|ad|da|di|in|con|su|per|tra|fra|e|o|ma|perché|più|meno|il|lo|la|i|gli|le|un|uno|una|nel|nella|nei|nelle|del|della|dei|delle|al|alla|ai|alle|dal|dalla|verso)\.\s*$/i,
     soloDomanda: true,
     msg: 'frase sospesa chiusa con un punto: usare i puntini di sospensione' },

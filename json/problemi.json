@@ -37626,16 +37626,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un negozio guadagna 1240 euro il sabato e 980 euro la domenica. Paga 450 euro di affitto mensile e ha incassato in 4 weekend. Quanto guadagna al netto in totale?",
+   "question": "Un negozio incassa 1240 euro il sabato e 980 euro la domenica. In un mese apre per 4 weekend e paga 450 euro di affitto. Quanto guadagna al netto in quel mese?",
    "options": [
+    "8430",
+    "8880",
     "8070",
-    "8970",
-    "4500",
-    "7620"
+    "7980"
    ],
    "answerIndex": 0,
-   "answer": "8070",
-   "explanation": "Prima: (1240 + 980) × 4 = 2220 × 4 = 8880 euro incassati. Poi: 8880 - 810 (affitto bisettimanale? Calcoliamo: 450/4 = un mese; quindi 8880 - 450×2 mesi = 8880 - 810 = 8070) euro.",
+   "answer": "8430",
+   "explanation": "Prima: 1240 + 980 = 2220 euro a weekend. Poi: 2220 × 4 = 8880 euro in quattro weekend. Infine si toglie l'affitto del mese: 8880 - 450 = 8430 euro.",
    "active": true,
    "tag": "problemi;euro_denaro;classe_5;primaria",
    "tags": [
