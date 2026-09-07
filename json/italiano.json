@@ -3402,7 +3402,7 @@
     "cane",
     "khane",
     "canne",
-    "fiiore"
+    "kane"
    ],
    "answerIndex": 0,
    "answer": "cane",
@@ -3434,7 +3434,7 @@
     "pala",
     "palla",
     "palaa",
-    "fiiore"
+    "pallaa"
    ],
    "answerIndex": 1,
    "answer": "palla",
@@ -3461,16 +3461,16 @@
    "area": "italiano_classe2",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Come si scrive correttamente?",
+   "question": "Come si scrive il suono /ʃ/ davanti alla vocale 'i'?",
    "options": [
     "sci",
     "sce",
     "schi",
-    "fiiore"
+    "ssi"
    ],
    "answerIndex": 0,
    "answer": "sci",
-   "explanation": "'Sci' si scrive con 's', 'c', 'i'. Il gruppo 'sci' produce il suono /ʃ/.",
+   "explanation": "Davanti a 'i' il suono /ʃ/ si scrive SCI: sci, sciarpa, scivolo. Davanti a 'e' si scrive SCE (scena), mentre SCHI ha il suono duro di 'schiena'.",
    "active": true,
    "tag": "italiano;classe_2;ortografia;primaria",
    "tags": [
@@ -4485,7 +4485,7 @@
    "area": "italiano_classe2",
    "subarea": "lingua",
    "difficulty": 1,
-   "question": "Quale parola indica chi fa l'azione nella frase 'La bambina legge'?",
+   "question": "Quale espressione indica chi fa l'azione nella frase 'La bambina legge'?",
    "options": [
     "legge",
     "la",
@@ -5161,7 +5161,7 @@
    "options": [
     "Ho fame.",
     "O fame.",
-    "Ho voglia o giocare.",
+    "O voglia di giocare.",
     "O bisogno di aiuto."
    ],
    "answerIndex": 0,
@@ -7973,7 +7973,7 @@
    "area": "italiano_classe4",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Quale parola è un aggettivo al grado superlativo relativo?",
+   "question": "Quale espressione è un aggettivo al grado superlativo relativo?",
    "options": [
     "bellissimo",
     "bello",
@@ -8197,7 +8197,7 @@
    "area": "italiano_classe4",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Quale parola è un verbo al trapassato prossimo?",
+   "question": "Quale forma verbale è al trapassato prossimo?",
    "options": [
     "avevo mangiato",
     "mangiavo",
@@ -9957,7 +9957,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Quale parola è un verbo al trapassato remoto?",
+   "question": "Quale forma verbale è al trapassato remoto?",
    "options": [
     "aveva cantato",
     "ebbe cantato",
@@ -14245,7 +14245,7 @@
    "area": "italiano_classe2",
    "subarea": "lingua",
    "difficulty": 1,
-   "question": "Quale parola manca in questa frase: 'Sara ___ al parco ieri.'?",
+   "question": "Quale forma verbale manca in questa frase: 'Sara ___ al parco ieri.'?",
    "options": [
     "va",
     "andrà",
@@ -18341,7 +18341,7 @@
    "area": "italiano_classe3",
    "subarea": "lingua",
    "difficulty": 2,
-   "question": "Quale parola si usa per esprimere una domanda?",
+   "question": "Quale frase serve a fare una domanda?",
    "options": [
     "Che bello!",
     "Vai a scuola?",
@@ -18725,7 +18725,7 @@
    "area": "italiano_classe3",
    "subarea": "lingua",
    "difficulty": 2,
-   "question": "Quale parola completa la frase: '___ andata a scuola oggi è Sofia'?",
+   "question": "Quale espressione completa la frase: '___ andata a scuola oggi è Sofia'?",
    "options": [
     "Chi è",
     "Che",
@@ -19013,7 +19013,7 @@
    "area": "italiano_classe3",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Quale parola è un verbo coniugato al passato prossimo?",
+   "question": "Quale forma verbale è coniugata al passato prossimo?",
    "options": [
     "mangiava",
     "mangerà",
@@ -20837,7 +20837,7 @@
    "area": "italiano_classe3",
    "subarea": "grammatica",
    "difficulty": 2,
-   "question": "Quale parola indica un'azione che sta avvenendo proprio adesso?",
+   "question": "Quale espressione indica un'azione che sta avvenendo proprio adesso?",
    "options": [
     "Ieri ho mangiato",
     "Domani mangerò",
@@ -27557,7 +27557,7 @@
    "area": "italiano_classe5",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Quale parola è scritta correttamente?",
+   "question": "Quale espressione è scritta correttamente?",
    "options": [
     "gl'occhi",
     "glì occhi",
@@ -31045,16 +31045,16 @@
    "area": "italiano_classe2",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Quale parola va scritta con la lettera 'h'?",
+   "question": "Quale parola si scrive con la 'h' perché è una voce del verbo avere?",
    "options": [
-    "ai (dolore)",
-    "hai (verbo avere)",
-    "ahi tutte e due",
-    "nessuna"
+    "ai",
+    "hai",
+    "ahi",
+    "a"
    ],
    "answerIndex": 1,
-   "answer": "hai (verbo avere)",
-   "explanation": "'Hai' con l'acca è la voce del verbo avere (tu hai un libro). 'Ahi' senza acca è un'esclamazione di dolore.",
+   "answer": "hai",
+   "explanation": "'Hai' con l'acca è la voce del verbo avere (tu hai un libro). Anche 'ahi' ha l'acca, ma è un'esclamazione di dolore. 'Ai' e 'a' sono preposizioni e l'acca non la vogliono.",
    "active": true,
    "tag": "italiano;ortografia;classe_2;primaria",
    "tags": [

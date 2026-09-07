@@ -25517,7 +25517,7 @@
    "area": "orientamento",
    "subarea": "punti_cardinali",
    "difficulty": 1,
-   "question": "Tra nord, sud, est e ovest, quale punto cardinale si trova a destra del nord nelle carte?",
+   "question": "Quale punto cardinale si trova a destra del nord nelle carte?",
    "options": [
     "Est",
     "Ovest",

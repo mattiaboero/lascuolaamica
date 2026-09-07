@@ -63,7 +63,11 @@ const DANGLING_REFERENCE = /\bdomanda\s+n\.?\s*\d+|\bdomanda precedente\b|\b(com
 // rivoluzione in scienze), "zuccheri" (plurale legittimo in biologia), "caffè"
 // (numerabile: "tre caffè").
 const NOMI_MASSA = 'burro|zucchero|farina|farine|latte|olio|pane|riso|miele|marmellata|panna';
-const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo';
+// I nomi aggiunti dal lotto 58 (ghiaccio, sole, cielo...) vengono da un
+// difetto vero: "tra la neve e la ghiaccio". Dedurre il genere da una regex
+// non si puo': "moto", "foto", "radio", "mano" sono femminili nonostante la
+// finale, quindi l'elenco resta esplicito.
+const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo|ghiaccio|sole|vento|fiume|lago|monte|bosco|cielo|suolo|terreno|calore|corpo|sangue|cuore|cervello|denaro|lavoro|giorno|mese|numero|gruppo|regno|paese|popolo|pianeta|colore|peso|volume|suono|rumore|movimento|piede|braccio|naso|occhio|orecchio';
 const NOMI_FEMMINILI = 'borsa|giacca|scarpe|maglietta|penna|matita|aula|palestra|biblioteca|fattoria|figurine|caramelle|pagine|mele|cameretta|cucina|stanza|classe|scuola|finestra|porta|piscina|libreria|cartoleria';
 // Nomi propri di persona presenti nel corpus. In italiano il genere del pronome
 // dipende dal referente e nessuna regex lo deduce dal testo, quindi le due liste
@@ -86,8 +90,8 @@ const GRAMMATICA = [
   { pattern: new RegExp(`\\bquante\\s+(?:${NOMI_MASCHILI})\\b`, 'i'), msg: 'accordo: "quante" davanti a un nome maschile' },
   { pattern: new RegExp(`\\bquanti\\s+(?:${NOMI_FEMMINILI})\\b`, 'i'), msg: 'accordo: "quanti" davanti a un nome femminile' },
   { pattern: new RegExp(`\\b(?:un|il)\\s+(?:${NOMI_FEMMINILI})\\b`, 'i'), msg: 'accordo: articolo maschile davanti a un nome femminile' },
-  { pattern: new RegExp(`\\b(?:una|la)\\s+(?:${NOMI_MASCHILI})\\b`, 'i'), msg: 'accordo: articolo femminile davanti a un nome maschile' },
-  { pattern: new RegExp(`\\b(?:nella|della)\\s+(?:${NOMI_MASCHILI})\\b`, 'i'), msg: 'accordo: preposizione femminile davanti a un nome maschile' },
+  { pattern: new RegExp(`(?<![a-zà-ùA-ZÀ-Ù])(?:la|una|della|nella|alla|dalla|sulla)\\s+(?:${NOMI_MASCHILI})(?![a-zà-ùA-ZÀ-Ù])`, 'i'),
+    msg: 'accordo: articolo o preposizione femminile davanti a un nome maschile (es. "la ghiaccio")' },
   { pattern: new RegExp(`\\bnel\\s+(?:${NOMI_FEMMINILI})\\b`, 'i'), msg: 'accordo: "nel" davanti a un nome femminile' },
   { pattern: /\b(?:un)\s+(?:zaino|zucchero|studente|spazzolino|stadio)\b/i, msg: 'serve "uno" davanti a z- o s+consonante (es. "uno zaino")' },
   // Participio maschile davanti a un soggetto femminile: stessa causa, il
@@ -609,6 +613,30 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
           errors.push({ level: 'error', field: 'options', msg: `preposizione dell'opzione ("${discorde}") incompatibile con quella della domanda ("${fine[1]}...")` });
         }
       }
+    }
+  }
+
+  // Dal lotto 58: l'accordo sbagliato stava in un'opzione ("Per mimetizzarsi
+  // tra la neve e la ghiaccio"), e le regex di GRAMMATICA vedono solo domanda
+  // e spiegazione. Stessa regola, applicata alle opzioni.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const femminile = new RegExp(`(?<![a-zà-ùA-ZÀ-Ù])(?:la|una|della|nella|alla|dalla|sulla)\\s+(?:${NOMI_MASCHILI})(?![a-zà-ùA-ZÀ-Ù])`, 'i');
+    const sbagliata = options.filter((o) => typeof o === 'string').find((o) => femminile.test(o));
+    if (sbagliata) {
+      errors.push({ level: 'error', field: 'options', msg: `accordo: articolo o preposizione femminile davanti a un nome maschile nell'opzione "${sbagliata}"` });
+    }
+  }
+
+  // Dal lotto 58: lo stem promette una parola sola ma la risposta e' un
+  // sintagma ("Quale parola e' un verbo al trapassato prossimo?" con "avevo
+  // mangiato"). Undici casi, risolti cambiando il nome nello stem: "forma
+  // verbale", "espressione", "frase" secondo quello che sono le opzioni.
+  if (subject !== 'inglese' && typeof answer === 'string') {
+    const promessa = /^\s*(?:Quale|Che)\s+parola\b/i.test(String(question || ''));
+    // la glossa fra parentesi non conta: "hai (verbo avere)" resta una parola
+    const nuda = answer.replace(/\([^)]*\)/g, '').trim();
+    if (promessa && /\s/.test(nuda)) {
+      errors.push({ level: 'error', field: 'question', msg: `la domanda chiede "quale parola" ma la risposta e' un gruppo di parole ("${answer}")` });
     }
   }
 
