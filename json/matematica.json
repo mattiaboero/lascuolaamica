@@ -40501,7 +40501,7 @@
    ],
    "answerIndex": 1,
    "answer": "3",
-   "explanation": "Per trovare il numero più piccolo confrontiamo le decine: 8 e 6 hanno 0 decine, 15 ne ha 1; tra 8, 3, 15 e 6, il 3 è il più piccolo perché ha meno unità.",
+   "explanation": "Il 15 è l'unico con una decina, quindi è il più grande. Fra 8, 3 e 6 restano solo le unità: il più piccolo è 3.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_2;primaria",
    "tags": [

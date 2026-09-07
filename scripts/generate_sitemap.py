@@ -23,6 +23,7 @@ PAGES = [
     ("/scienze", "scienze.html", "weekly", "0.85"),
     ("/italiano", "italiano.html", "weekly", "0.85"),
     ("/breakout", "breakout.html", "weekly", "0.85"),
+    ("/bosco", "bosco.html", "weekly", "0.85"),
     ("/chi-siamo", "chi-siamo.html", "monthly", "0.75"),
     ("/per-insegnanti", "per-insegnanti.html", "monthly", "0.72"),
     ("/per-genitori", "per-genitori.html", "monthly", "0.72"),

@@ -34691,7 +34691,7 @@
    ],
    "answerIndex": 0,
    "answer": "360",
-   "explanation": "Prima: 15 file × 24 posti. Poi: 15 × 24 = 360.",
+   "explanation": "15 file × 24 posti = 360.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -35107,7 +35107,7 @@
    ],
    "answerIndex": 0,
    "answer": "180",
-   "explanation": "Prima: 15 righe × 12 colonne. Poi: 15 × 12 = 180.",
+   "explanation": "15 righe × 12 colonne = 180.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -35139,7 +35139,7 @@
    ],
    "answerIndex": 0,
    "answer": "28",
-   "explanation": "Prima: 252 mele ÷ 9 scatole. Poi: 252 ÷ 9 = 28.",
+   "explanation": "252 mele ÷ 9 scatole = 28.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35171,7 +35171,7 @@
    ],
    "answerIndex": 0,
    "answer": "24",
-   "explanation": "Prima: 168 biscotti ÷ 7 per sacchetto. Poi: 168 ÷ 7 = 24 sacchetti.",
+   "explanation": "168 biscotti ÷ 7 per sacchetto = 24 sacchetti.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35203,7 +35203,7 @@
    ],
    "answerIndex": 0,
    "answer": "40",
-   "explanation": "Prima: 320 mattoni ÷ 8 operai. Poi: 320 ÷ 8 = 40.",
+   "explanation": "320 mattoni ÷ 8 operai = 40.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35235,7 +35235,7 @@
    ],
    "answerIndex": 0,
    "answer": "12",
-   "explanation": "Prima: 144 rose ÷ 12 per vaso. Poi: 144 ÷ 12 = 12 vasi.",
+   "explanation": "144 rose ÷ 12 per vaso = 12 vasi.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35267,7 +35267,7 @@
    ],
    "answerIndex": 0,
    "answer": "40",
-   "explanation": "Prima: 280 bambini ÷ 7 per squadra. Poi: 280 ÷ 7 = 40 squadre.",
+   "explanation": "280 bambini ÷ 7 per squadra = 40 squadre.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35299,7 +35299,7 @@
    ],
    "answerIndex": 0,
    "answer": "60 km",
-   "explanation": "Prima: 360 km ÷ 6 ore. Poi: 360 ÷ 6 = 60 km/h.",
+   "explanation": "360 km ÷ 6 ore = 60 km ogni ora.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35331,7 +35331,7 @@
    ],
    "answerIndex": 0,
    "answer": "28 kg",
-   "explanation": "Prima: 252 kg ÷ 9 giorni. Poi: 252 ÷ 9 = 28 kg.",
+   "explanation": "252 kg ÷ 9 giorni = 28 kg.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35363,7 +35363,7 @@
    ],
    "answerIndex": 0,
    "answer": "39",
-   "explanation": "Prima: 195 fogli ÷ 5 bambini. Poi: 195 ÷ 5 = 39.",
+   "explanation": "195 fogli ÷ 5 bambini = 39.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35395,7 +35395,7 @@
    ],
    "answerIndex": 0,
    "answer": "28 km",
-   "explanation": "Prima: 224 km ÷ 8 giorni. Poi: 224 ÷ 8 = 28 km.",
+   "explanation": "224 km ÷ 8 giorni = 28 km.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35427,7 +35427,7 @@
    ],
    "answerIndex": 0,
    "answer": "26",
-   "explanation": "Prima: 156 libri ÷ 6 classi. Poi: 156 ÷ 6 = 26.",
+   "explanation": "156 libri ÷ 6 classi = 26.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35459,7 +35459,7 @@
    ],
    "answerIndex": 0,
    "answer": "50",
-   "explanation": "Prima: 400 bottiglie ÷ 8 ore. Poi: 400 ÷ 8 = 50.",
+   "explanation": "400 bottiglie ÷ 8 ore = 50.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35523,7 +35523,7 @@
    ],
    "answerIndex": 0,
    "answer": "37",
-   "explanation": "Prima: 185 piatti ÷ 5 ore. Poi: 185 ÷ 5 = 37.",
+   "explanation": "185 piatti ÷ 5 ore = 37.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35555,7 +35555,7 @@
    ],
    "answerIndex": 0,
    "answer": "30 m²",
-   "explanation": "Prima: 270 m² ÷ 9 aiuole. Poi: 270 ÷ 9 = 30 m².",
+   "explanation": "270 m² ÷ 9 aiuole = 30 m².",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [
@@ -35587,7 +35587,7 @@
    ],
    "answerIndex": 0,
    "answer": "19",
-   "explanation": "Prima: 228 libri ÷ 12 scaffali. Poi: 228 ÷ 12 = 19.",
+   "explanation": "228 libri ÷ 12 scaffali = 19.",
    "active": true,
    "tag": "problemi;divisione;classe_4;primaria",
    "tags": [

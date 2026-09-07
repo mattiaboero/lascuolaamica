@@ -1,5 +1,12 @@
 [
  {
+  "date": "7 settembre 2026 · Release 4.12.81",
+  "items": [
+   "Nuovo gioco «Il Bosco delle Lettere»: si cammina nella radura, si raccoglie la lettera che manca e si completano SOLE, MELA e LUNA. Senza timer e senza penalità.",
+   "La scena del bosco è disegnata dal codice e segue la palette del sito, compresa la modalità ad alto contrasto."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.62",
   "items": [
    "Una partita non può più proporre due volte la stessa domanda: prima poteva succedere quando le domande disponibili non bastavano a riempirla.",

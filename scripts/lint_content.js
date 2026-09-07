@@ -628,6 +628,24 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 61: spiegazione in due passi dove il primo non calcola niente e
+  // ripete solo i numeri del secondo ("Prima: 320 mattoni / 8 operai. Poi:
+  // 320 / 8 = 40."). Sedici casi, uniti in un passo solo che tiene le parole
+  // del primo e il risultato del secondo. E' la variante senza ripetizione
+  // letterale della regola del lotto 27, che confrontava i due passi con una
+  // backreference e quindi vedeva solo i testi identici.
+  if (subject !== 'inglese') {
+    const passi = String(explanation || '').trim()
+      .match(/^Prima:\s*(.+?)\.\s*Poi:\s*(.+?)\s*=\s*(.+?)\.?$/);
+    if (passi && !passi[1].includes('=')) {
+      const n1 = passi[1].match(/\d+(?:[.,]\d+)?/g) || [];
+      const n2 = passi[2].match(/\d+(?:[.,]\d+)?/g) || [];
+      if (n1.length && n1.join('|') === n2.join('|')) {
+        errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
+      }
+    }
+  }
+
   // Dal lotto 60: la glossa fra parentesi di un'opzione ne scrive la forma
   // accentata, cioe' la risposta: "pero (congiunzione pero')" in una domanda
   // che chiede quale parola vuole l'accento. Il confronto e' fra la parola

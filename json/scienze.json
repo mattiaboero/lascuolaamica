@@ -3772,8 +3772,8 @@
    "difficulty": 1,
    "question": "Quali parti della pianta sono spesso verdi?",
    "options": [
-    "fusto",
-    "fiore",
+    "fusti",
+    "fiori",
     "radici",
     "foglie"
    ],
@@ -10131,7 +10131,7 @@
    "area": "viventi_ambiente",
    "subarea": "ecosistemi_e_biodiversita",
    "difficulty": 2,
-   "question": "Quale elemento è un consumatore primario?",
+   "question": "Quale di questi è un consumatore primario?",
    "options": [
     "quercia",
     "sasso",
