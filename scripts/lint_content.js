@@ -833,6 +833,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 19: nota di redazione rimasta fra parentesi nella consegna
+    // ("(most interesting, short adj 'big')"). Le parentesi del banco danno un
+    // suggerimento al bambino — "(cat)", "(to be)", "(talking about a girl,
+    // Sofia)" — non annotazioni grammaticali per chi scrive.
+    {
+      const m = /\(([^)]*)\)/.exec(d);
+      if (m && /(?<![a-z])(?:adj|adjective|noun|verb|irreg|sing\.|plur\.)(?![a-z])/i.test(m[1])) {
+        errors.push({ level: 'error', field: 'question', msg: `nota di redazione fra parentesi nella consegna ("${m[1]}")` });
+      }
+    }
+
     // Dal lotto 17: opzione a due spazi in cui uno dei due e' un trattino, cioe'
     // "qui non va niente" ("brushes / —"). E' una convenzione che il bambino
     // non ha mai visto, e nell'unico caso in cui c'era la frase risultante era
