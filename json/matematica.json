@@ -57235,7 +57235,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "In un dado normale, quale numero non può uscire?",
+   "question": "In un dado normale, quale numero NON può uscire?",
    "options": [
     "2",
     "4",

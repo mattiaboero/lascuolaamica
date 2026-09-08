@@ -828,7 +828,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 76: conteggi sbagliati sul cubo. mat-5-geometria-012 diceva
+    // Dal lotto 77: domanda a esclusione con il "non" in minuscolo. Trenta
+  // domande del corpus scrivono "Quale ... NON ..." in maiuscolo proprio
+  // perche' la negazione, letta di fretta, sparisce; una sola sfuggiva.
+  // Il verbo va chiuso con un lookahead e non con \b: dopo "puo'" la \b non
+  // fa mai match, perche' in JavaScript le lettere accentate non sono
+  // caratteri di parola.
+  if (subject !== 'inglese') {
+    const d = String(question || '');
+    if (/(?<![a-zà-ùA-ZÀ-Ù])(?:[Qq]uale|[Qq]uali|[Cc]he cosa|[Cc]osa)(?![a-zà-ùA-ZÀ-Ù])[\s\S]{0,40}?(?<![a-zà-ùA-ZÀ-Ù])non(?![a-zà-ùA-ZÀ-Ù])\s+(?:è|appartiene|fa parte|serve|può|sono|rientra|vive|indica)(?![a-zà-ùA-ZÀ-Ù])/.test(d)
+        && /\?\s*$/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'domanda a esclusione con "non" in minuscolo: il corpus lo scrive "NON"' });
+    }
+  }
+
+  // Dal lotto 76: conteggi sbagliati sul cubo. mat-5-geometria-012 diceva
   // "8 spigoli verticali": i verticali sono 4, gli spigoli in tutto 12. Il
   // cubo ha 6 facce, 12 spigoli, 8 vertici, e sono numeri fissi: si possono
   // controllare.

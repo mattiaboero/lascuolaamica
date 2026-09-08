@@ -32282,7 +32282,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 2,
-   "question": "Un negozio vende 8 magliette al giorno per 6 giorni. Poi ne restituisce 14 difettose. Quante magliette ha venduto in netto?",
+   "question": "Un negozio vende 8 magliette al giorno per 6 giorni. Poi ne restituisce 14 difettose. Quante magliette restano vendute?",
    "options": [
     "34",
     "62",
