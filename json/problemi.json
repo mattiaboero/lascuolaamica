@@ -4821,7 +4821,7 @@
    ],
    "answerIndex": 2,
    "answer": "6",
-   "explanation": "34 - 28 = 6 api rimasti.",
+   "explanation": "34 - 28 = 6 api rimaste.",
    "active": true,
    "tag": "sottrazione,animali",
    "tags": [
@@ -34778,7 +34778,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 2,
-   "question": "Un campo rettangolare è largo 23 m e lungo 18 m. Qual è la sua area?",
+   "question": "Un campo rettangolare è lungo 23 m e largo 18 m. Qual è la sua area?",
    "options": [
     "414 m²",
     "360 m²",
@@ -34787,7 +34787,7 @@
    ],
    "answerIndex": 0,
    "answer": "414 m²",
-   "explanation": "Prima: area = lato × lato. Poi: 23 × 18 = 414 m².",
+   "explanation": "Area = lunghezza × larghezza: 23 × 18 = 414 m².",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [

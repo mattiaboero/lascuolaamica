@@ -154,6 +154,10 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 93: participio maschile con un nome femminile contato ("6 api
+  // rimasti").
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
+    msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
   // Dal lotto 92: domanda chiusa da un avverbio sospeso ("a risentirne sono
   // anche?", "quando l'acqua bolle diventa anche?"): manca la parola che
   // regge la risposta. "non cresce da solo?" resta fuori, perche' li' il
@@ -836,7 +840,8 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // numeri e quindi la risposta restano quelli.
   if (subject !== 'inglese') {
     const lati = String(question || '')
-      .match(/(\d+(?:[.,]\d+)?)\s*m\w*\s+di\s+larghezza\s+e\s+(\d+(?:[.,]\d+)?)\s*m\w*\s+di\s+lunghezza/i);
+      .match(/(\d+(?:[.,]\d+)?)\s*m\w*\s+di\s+larghezza\s+e\s+(\d+(?:[.,]\d+)?)\s*m\w*\s+di\s+lunghezza/i)
+      || String(question || '').match(/largo\s+(\d+(?:[.,]\d+)?)\s*m\w*\s+e\s+lungo\s+(\d+(?:[.,]\d+)?)\s*m/i);
     if (lati) {
       const larga = Number(lati[1].replace(',', '.'));
       const lunga = Number(lati[2].replace(',', '.'));
@@ -1038,6 +1043,14 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `il cubo non ha ${m[1]} ${m[2]}${m[3] || ''}: ne ha ${atteso}` });
       }
     }
+  }
+
+  // Dal lotto 93: area di un rettangolo spiegata con "lato × lato", che e' la
+  // formula del quadrato.
+  if (subject !== 'inglese'
+      && /rettangol/i.test(String(question || ''))
+      && /area\s*=\s*lato\s*×\s*lato/i.test(String(explanation || ''))) {
+    errors.push({ level: 'error', field: 'explanation', msg: 'area di un rettangolo spiegata con "lato × lato": è la formula del quadrato' });
   }
 
   // Dal lotto 76: area di un giardino spiegata con "base x altezza". Un
