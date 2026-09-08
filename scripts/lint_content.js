@@ -154,6 +154,16 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 72: "quale e'" al posto di "qual e'". Il troncamento davanti al
+  // verbo essere e' obbligatorio e non vuole apostrofo. Cinque domande.
+  // L'opzione "quale e'?" di ita-4-ortografia-003 e' un distrattore voluto e
+  // resta fuori: le regex di GRAMMATICA le opzioni non le vedono.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])[Qq]uale\s+è(?![a-zà-ùA-ZÀ-Ù])/,
+    msg: 'accordo: "quale è" al posto di "qual è"' },
+  // Dal lotto 72: verbo al singolare con una quantita' plurale ("mi avanza 15
+  // euro").
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:avanza|rimane|resta|manca)\s+(?:[2-9]|\d{2,})\s+(?:euro|metri|litri|chili|grammi|centesimi|punti|pagine|giorni|ore)(?![a-zà-ùA-ZÀ-Ù])/i,
+    msg: 'accordo: verbo singolare con una quantita\' plurale (es. "mi avanza 15 euro")' },
   // Dal lotto 71: risultato di un conto seguito da un nome di massa al posto
   // dell'unita' contata ("11 + 14 = 25 uva", invece di "25 acini d'uva").
   { pattern: /=\s*\d+\s+(?:uva|acqua|latte|sabbia|farina|riso|zucchero|pane)(?![a-zà-ùA-ZÀ-Ù])/i,
@@ -669,7 +679,7 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // iscritto e nessun controllo lo guardava.
   if (subject !== 'inglese') {
     const ammissione = String(explanation || '')
-      .match(/nessun[ao]\s+(?:delle\s+)?(?:opzioni|risposte)\b|nessuna\s+ha\s+un\b|la risposta corretta avrebbe\b/i);
+      .match(/nessun[ao]\s+(?:delle\s+)?(?:opzioni|risposte)\b|nessuna\s+ha\s+un\b|la risposta corretta avrebbe\b|non (?:compare|è|c'è) tra le opzioni\b/i);
     if (ammissione) {
       errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione ammette che la domanda non ha risposta ("${ammissione[0]}")` });
     }

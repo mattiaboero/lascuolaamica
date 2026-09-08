@@ -17,6 +17,8 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  "Quale è il fiume più lungo d'Europa?",
+  'Con 90 euro compro 3 magliette e mi avanza 15 euro.',
   'Sommiamo le quantità di entrambi: 11 + 14 = 25 uva.',
   'Il libro? Lo ho preso ieri.',
   'In scatola ci sono 108 matite. Ne usi 13. Quante restano?',

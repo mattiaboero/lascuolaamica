@@ -26381,7 +26381,7 @@
    "area": "italia_europa",
    "subarea": "europa_base",
    "difficulty": 2,
-   "question": "Tra questi, quale è un altro Stato europeo?",
+   "question": "Tra questi, qual è un altro Stato europeo?",
    "options": [
     "Brasile",
     "Francia",
@@ -32685,7 +32685,7 @@
    "area": "italia_europa",
    "subarea": "geografia_fisica_europea",
    "difficulty": 1,
-   "question": "Quale è il fiume più lungo d'Europa?",
+   "question": "Qual è il fiume più lungo d'Europa?",
    "options": [
     "Reno",
     "Danubio",
@@ -34253,7 +34253,7 @@
    "area": "paesaggio",
    "subarea": "elementi_naturali",
    "difficulty": 1,
-   "question": "Tra questi, quale è un elemento naturale e non costruito dall'uomo?",
+   "question": "Tra questi, qual è un elemento naturale e non costruito dall'uomo?",
    "options": [
     "Un lago",
     "Una casa",
@@ -35213,16 +35213,16 @@
    "area": "idrografia_clima_italia",
    "subarea": "fiumi_laghi_mari_vulcani_climi",
    "difficulty": 2,
-   "question": "Tra i fiumi italiani, qual è il più lungo in assoluto?",
+   "question": "Qual è il secondo fiume italiano per lunghezza, dopo il Po?",
    "options": [
-    "Il Po",
+    "Il Tanaro",
     "Il Tevere",
     "L'Arno",
     "L'Adige"
    ],
-   "answerIndex": 0,
-   "answer": "Il Po",
-   "explanation": "Il Po è il fiume più lungo d'Italia: nasce dalle Alpi e attraversa la Pianura Padana fino al Mar Adriatico.",
+   "answerIndex": 3,
+   "answer": "L'Adige",
+   "explanation": "Il fiume più lungo d'Italia è il Po (652 km); subito dopo viene l'Adige (410 km), che nasce in Alto Adige e sfocia nell'Adriatico.",
    "active": true,
    "tag": "geografia;fiumi_laghi_mari_vul;classe_4;primaria",
    "tags": [

@@ -15022,7 +15022,7 @@
    ],
    "answerIndex": 2,
    "answer": "città",
-   "explanation": "'Città' vuole l'accento sulla à finale perché l'accento cade sull'ultima sillaba (parola tronca). 'Papa' senza accento è il capo della chiesa (il papà ha l'accento), 'però' ha l'accento (ma non compare tra le opzioni), 'pero' (l'albero) non ha accento.",
+   "explanation": "'Città' vuole l'accento sulla à finale perché è una parola tronca: l'accento cade sull'ultima sillaba. Le altre tre non lo vogliono: 'papa' è il capo della Chiesa (con l'accento, 'papà', è il padre), 'pero' è l'albero da frutto e 'mele' ha l'accento sulla prima sillaba, che non si scrive.",
    "active": true,
    "tag": "italiano;ortografia;classe_2;primaria",
    "tags": [
@@ -25386,11 +25386,11 @@
     "Aspetto",
     "da",
     "mille anni",
-    "Aspetto da mille anni"
+    "il punto esclamativo"
    ],
    "answerIndex": 2,
    "answer": "mille anni",
-   "explanation": "L'iperbole è una figura retorica che consiste nell'esagerare per dare più forza all'espressione. 'Mille anni' non è letteralmente vero: si usa per esagerare il tempo di attesa e rendere l'espressione più enfatica. Le iperboli sono molto comuni nel linguaggio quotidiano: 'ho una fame da lupo', 'te l'ho detto mille volte'.",
+   "explanation": "L'iperbole è l'esagerazione voluta: 'mille anni' non è letteralmente vero, serve a dare forza all'attesa. 'Aspetto' è il verbo, 'da' una preposizione e il punto esclamativo è un segno di punteggiatura, non una figura retorica.",
    "active": true,
    "tag": "italiano;riflessione_linguist;classe_4;primaria",
    "tags": [
