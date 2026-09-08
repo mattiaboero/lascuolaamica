@@ -23701,7 +23701,7 @@
    "area": "viventi_non_viventi",
    "subarea": "viventi_e_non_viventi",
    "difficulty": 2,
-   "question": "Tra questi elementi, quale NON ha vita?",
+   "question": "Tra questi, quale NON ha vita?",
    "options": [
     "Un gatto",
     "Una farfalla",

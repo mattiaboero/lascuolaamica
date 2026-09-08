@@ -833,7 +833,25 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 80: due opzioni che sono la stessa frazione scritta in modo
+    // Dal lotto 81: domanda sul diminutivo con due opzioni diminutive
+  // ("librino" e "libretto"): la domanda ha due risposte giuste. Stesso
+  // controllo per l'accrescitivo.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const d = String(question || '');
+    const CATEGORIE = [
+      { nome: 'diminutivo', chiede: /diminutivo/i, coda: /(?:in|ett|ell|icin|olin)[oaie]$/i },
+      { nome: 'accrescitivo', chiede: /accrescitivo/i, coda: /on[aei]$/i },
+    ];
+    for (const cat of CATEGORIE) {
+      if (!cat.chiede.test(d)) continue;
+      const trovate = options.filter((o) => typeof o === 'string' && cat.coda.test(o.trim()));
+      if (trovate.length > 1) {
+        errors.push({ level: 'error', field: 'options', msg: `la domanda chiede un ${cat.nome} e fra le opzioni ce ne sono ${trovate.length}: ${trovate.join(', ')}` });
+      }
+    }
+  }
+
+  // Dal lotto 80: due opzioni che sono la stessa frazione scritta in modo
   // diverso. In mat-5-logica_e_dati-004 una delle due era la risposta
   // ("1/10" e "4/40"), quindi la domanda aveva due risposte giuste; nelle
   // altre due sprecavano un distrattore.

@@ -7081,12 +7081,12 @@
    "options": [
     "libreria",
     "librone",
-    "librino",
+    "libraio",
     "libretto"
    ],
    "answerIndex": 3,
    "answer": "libretto",
-   "explanation": "'Libretto' contiene il suffisso '-etto', che indica qualcosa di piccolo.",
+   "explanation": "'Libretto' contiene il suffisso '-etto', che indica qualcosa di piccolo. 'Librone' è accrescitivo, 'libreria' indica il luogo e 'libraio' il mestiere.",
    "active": true,
    "tag": "italiano;classe_3;morfologia;primaria",
    "tags": [
@@ -12970,11 +12970,11 @@
     "la",
     "lo",
     "il",
-    "un'"
+    "l'"
    ],
-   "answerIndex": 1,
-   "answer": "lo",
-   "explanation": "Con 'amico' si usa l'articolo 'l'' (apostrofato: l'amico). Tra le opzioni, 'lo' è l'articolo maschile usato davanti a vocale nella forma piena, da cui deriva 'l'' per apostrofe.",
+   "answerIndex": 3,
+   "answer": "l'",
+   "explanation": "'Amico' comincia per vocale: l'articolo maschile 'lo' si elide e si scrive con l'apostrofo, 'l'amico'.",
    "active": true,
    "tag": "italiano;grammatica;classe_2;primaria",
    "tags": [
