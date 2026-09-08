@@ -16311,13 +16311,13 @@
    "question": "Quale elemento naturale NON è vivente ma fa parte dell'ambiente?",
    "options": [
     "fungo",
-    "rocce",
+    "roccia",
     "muschio",
     "lucertola"
    ],
    "answerIndex": 1,
-   "answer": "rocce",
-   "explanation": "Le rocce fanno parte della natura ma non sono esseri viventi.",
+   "answer": "roccia",
+   "explanation": "La roccia fa parte della natura ma non è un essere vivente: non nasce, non cresce e non si riproduce. Fungo, muschio e lucertola invece sì.",
    "active": true,
    "tag": "natura",
    "tags": [

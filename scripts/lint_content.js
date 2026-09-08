@@ -833,7 +833,19 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 81: domanda sul diminutivo con due opzioni diminutive
+    // Dal lotto 83: domanda che risponde a se stessa. "Quale punto cardinale
+  // indica l'Ovest?" con risposta "O": il punto cardinale e' gia' scritto
+  // nella domanda e l'opzione ne e' l'iniziale. Tre casi, riscritti come
+  // "Quale lettera indica l'Ovest sulla rosa dei venti?".
+  if (subject !== 'inglese' && typeof answer === 'string') {
+    const cardinale = String(question || '')
+      .match(/Quale punto cardinale indica\s+(?:il|lo|l')\s*(Nord|Sud|Est|Ovest)/i);
+    if (cardinale && answer.trim().toUpperCase() === cardinale[1][0].toUpperCase()) {
+      errors.push({ level: 'error', field: 'question', msg: `la domanda nomina "${cardinale[1]}" e la risposta e' la sua iniziale: si risponde da sola` });
+    }
+  }
+
+  // Dal lotto 81: domanda sul diminutivo con due opzioni diminutive
   // ("librino" e "libretto"): la domanda ha due risposte giuste. Stesso
   // controllo per l'accrescitivo.
   if (subject !== 'inglese' && Array.isArray(options)) {

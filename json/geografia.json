@@ -5538,7 +5538,7 @@
    "area": "orientamento_mappe",
    "subarea": "punti_cardinali_e_carte",
    "difficulty": 1,
-   "question": "Quale punto cardinale indica il Nord?",
+   "question": "Quale lettera indica il Nord sulla rosa dei venti?",
    "options": [
     "N",
     "S",
@@ -5547,7 +5547,7 @@
    ],
    "answerIndex": 0,
    "answer": "N",
-   "explanation": "La risposta corretta è 'N'.",
+   "explanation": "Sulla rosa dei venti il Nord si indica con la lettera N; S è il Sud, E l'Est e O l'Ovest.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5634,7 +5634,7 @@
    "area": "orientamento_mappe",
    "subarea": "punti_cardinali_e_carte",
    "difficulty": 1,
-   "question": "Quale punto cardinale indica l'Ovest?",
+   "question": "Quale lettera indica l'Ovest sulla rosa dei venti?",
    "options": [
     "O",
     "N",
@@ -5643,7 +5643,7 @@
    ],
    "answerIndex": 0,
    "answer": "O",
-   "explanation": "La risposta corretta è 'O'.",
+   "explanation": "Sulla rosa dei venti l'Ovest si indica con la lettera O; N è il Nord, S il Sud ed E l'Est.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [

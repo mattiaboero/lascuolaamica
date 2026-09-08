@@ -6663,14 +6663,14 @@
    "difficulty": 2,
    "question": "Quale frase usa correttamente i segni di punteggiatura?",
    "options": [
-    "Presi la borsa, chiusi la porta, e uscii di corsa.",
+    "Presi la borsa, chiusi la porta e uscii di corsa.",
     "Presi la borsa chiusi la porta e uscii di corsa.",
     "Presi la borsa e dopo chiusi la porta uscii di corsa.",
     "Presi la borsa chiusi, la porta e uscii, di corsa."
    ],
    "answerIndex": 0,
-   "answer": "Presi la borsa, chiusi la porta, e uscii di corsa.",
-   "explanation": "Le virgole separano correttamente le azioni in sequenza all'interno della stessa frase.",
+   "answer": "Presi la borsa, chiusi la porta e uscii di corsa.",
+   "explanation": "Le virgole separano le azioni in sequenza, ma davanti alla 'e' che chiude l'elenco la virgola non ci va.",
    "active": true,
    "tag": "italiano;classe_3;scrittura;primaria",
    "tags": [
@@ -9253,7 +9253,7 @@
    "area": "italiano_classe4",
    "subarea": "lettura",
    "difficulty": 3,
-   "question": "Leggi: 'Il testo è di tipo descrittivo perché...'?",
+   "question": "Un testo è di tipo descrittivo perché...",
    "options": [
     "racconta una storia con inizio e fine",
     "presenta le opinioni dell'autore",
@@ -28165,7 +28165,7 @@
    "area": "italiano_classe5",
    "subarea": "lessico",
    "difficulty": 2,
-   "question": "La parola 'banco' è polisémica. Quale significato NON appartiene a 'banco'?",
+   "question": "La parola 'banco' è polisemica. Quale significato NON appartiene a 'banco'?",
    "options": [
     "il banco di scuola",
     "il banco di nebbia",
