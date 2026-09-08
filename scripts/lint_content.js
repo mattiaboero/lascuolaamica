@@ -824,6 +824,29 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'question', msg: 'spazio da riempire diverso da "___" (tre underscore)' });
     }
 
+    // Dal lotto 2: la spiegazione e' una consegna rivolta all'alunno ("Choose
+    // the Italian sentence with the same meaning.", "Pick the sentence that
+    // matches the time clue."). Dopo aver risposto il bambino si aspetta il
+    // perche' e trova un'istruzione. In dodici casi la consegna non stava
+    // nemmeno nella domanda, che era la sola frase inglese da tradurre.
+    if (/^(?:Choose|Pick|Select|Find|Match|Complete|Write)\b[^.?!]{0,80}\.\s*$/.test((explanation || '').trim())) {
+      errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
+    }
+
+    // Dal lotto 2: opzione in italiano fra opzioni inglesi ("nessun articolo"
+    // fra a, an e the).
+    (options || []).forEach((o) => {
+      if (typeof o === 'string' && /(?<![a-z])(?:nessun|nessuna|articolo|parola|frase|risposta|corrett[oa])(?![a-z])/i.test(o)) {
+        errors.push({ level: 'error', field: 'options', msg: `opzione in italiano ("${o}") fra opzioni inglesi` });
+      }
+    });
+
+    // Dal lotto 2: articolo "a" davanti a vocale ("a ant"). Restano fuori le
+    // parole che cominciano per vocale ma si leggono con la semiconsonante.
+    if (/(?<![A-Za-z'])a\s+(?!(?:university|uniform|unicorn|use|used|user|one|euro|european)(?![a-z]))[aeiouAEIOU][a-z]+/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'articolo "a" davanti a vocale (serve "an")' });
+    }
+
     // Dal lotto 1: la frase da completare sta fra apici singoli in 158 consegne
     // e nuda in 38. Non e' solo estetica: senza apici due esercizi identici
     // sembravano diversi e tre coppie di doppioni sono rimaste nascoste.

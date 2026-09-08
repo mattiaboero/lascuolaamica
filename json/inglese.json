@@ -9223,7 +9223,7 @@
    "area": "cibo",
    "subarea": "frasi_semplici",
    "difficulty": 1,
-   "question": "She likes apples.",
+   "question": "Choose the Italian sentence with the same meaning: 'She likes apples.'",
    "options": [
     "Lei ama le mele.",
     "Lei corre veloce.",
@@ -9232,7 +9232,7 @@
    ],
    "answerIndex": 0,
    "answer": "Lei ama le mele.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'She likes apples.' = Lei ama le mele.",
    "active": true,
    "tag": "inglese;classe_2;cibo;primaria;pilota_parametrico",
    "tags": [
@@ -9257,7 +9257,7 @@
    "area": "cibo",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "We drink water every day.",
+   "question": "Choose the Italian sentence with the same meaning: 'We drink water every day.'",
    "options": [
     "Noi beviamo acqua ogni giorno.",
     "Noi dormiamo tutto il giorno.",
@@ -9266,7 +9266,7 @@
    ],
    "answerIndex": 0,
    "answer": "Noi beviamo acqua ogni giorno.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'We drink water every day.' = Noi beviamo acqua ogni giorno.",
    "active": true,
    "tag": "inglese;classe_3;cibo;primaria;pilota_parametrico",
    "tags": [
@@ -9291,7 +9291,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "He is wearing a blue jacket.",
+   "question": "Choose the Italian sentence with the same meaning: 'He is wearing a blue jacket.'",
    "options": [
     "Lui porta una bicicletta blu.",
     "Lui mangia una giacca blu.",
@@ -9300,7 +9300,7 @@
    ],
    "answerIndex": 2,
    "answer": "Lui indossa una giacca blu.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'He is wearing a blue jacket.' = Lui indossa una giacca blu.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria;pilota_parametrico",
    "tags": [
@@ -9325,7 +9325,7 @@
    "area": "sport",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "They are playing basketball after school.",
+   "question": "Choose the Italian sentence with the same meaning: 'They are playing basketball after school.'",
    "options": [
     "Loro giocano a basket dopo scuola.",
     "Loro studiano matematica a colazione.",
@@ -9334,7 +9334,7 @@
    ],
    "answerIndex": 0,
    "answer": "Loro giocano a basket dopo scuola.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'They are playing basketball after school.' = Loro giocano a basket dopo scuola.",
    "active": true,
    "tag": "inglese;classe_5;sport;primaria;pilota_parametrico",
    "tags": [
@@ -9427,7 +9427,7 @@
    "area": "routine_quotidiana",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "I have breakfast at seven.",
+   "question": "Choose the Italian sentence with the same meaning: 'I have breakfast at seven.'",
    "options": [
     "Faccio colazione alle sette.",
     "Faccio i compiti alle sette.",
@@ -9436,7 +9436,7 @@
    ],
    "answerIndex": 0,
    "answer": "Faccio colazione alle sette.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'I have breakfast at seven.' = Faccio colazione alle sette.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -9538,7 +9538,7 @@
    ],
    "answerIndex": 0,
    "answer": "eight",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"eight\".",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -9572,7 +9572,7 @@
    ],
    "answerIndex": 1,
    "answer": "two",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"two\".",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -9606,7 +9606,7 @@
    ],
    "answerIndex": 3,
    "answer": "I wake up.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I wake up.\"",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -9640,7 +9640,7 @@
    ],
    "answerIndex": 2,
    "answer": "I have lunch.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I have lunch.\"",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -9742,7 +9742,7 @@
    ],
    "answerIndex": 0,
    "answer": "four",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"four\".",
    "active": true,
    "tag": "inglese;classe_3;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -9776,7 +9776,7 @@
    ],
    "answerIndex": 3,
    "answer": "I go to bed.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I go to bed.\"",
    "active": true,
    "tag": "inglese;classe_3;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -9810,7 +9810,7 @@
    ],
    "answerIndex": 1,
    "answer": "I go to school.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I go to school.\"",
    "active": true,
    "tag": "inglese;classe_3;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -9903,7 +9903,7 @@
    "area": "casa",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "My brother has a red bike.",
+   "question": "Choose the Italian sentence with the same meaning: 'My brother has a red bike.'",
    "options": [
     "La nostra insegnante apre la porta della classe.",
     "Lei ama le mele.",
@@ -9912,7 +9912,7 @@
    ],
    "answerIndex": 3,
    "answer": "Mio fratello ha una bici rossa.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'My brother has a red bike.' = Mio fratello ha una bici rossa.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria;pilota_parametrico",
    "tags": [
@@ -9937,7 +9937,7 @@
    "area": "domande",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Our teacher opens the classroom door.",
+   "question": "Choose the Italian sentence with the same meaning: 'Our teacher opens the classroom door.'",
    "options": [
     "So nuotare molto bene.",
     "Noi beviamo acqua ogni giorno.",
@@ -9946,7 +9946,7 @@
    ],
    "answerIndex": 2,
    "answer": "La nostra insegnante apre la porta della classe.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'Our teacher opens the classroom door.' = La nostra insegnante apre la porta della classe.",
    "active": true,
    "tag": "inglese;classe_2;domande;primaria;pilota_parametrico",
    "tags": [
@@ -10048,7 +10048,7 @@
    ],
    "answerIndex": 3,
    "answer": "two",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"two\".",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10073,7 +10073,7 @@
    "area": "have_got",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "How many legs has a ant got?",
+   "question": "How many legs has an ant got?",
    "options": [
     "six",
     "four",
@@ -10082,7 +10082,7 @@
    ],
    "answerIndex": 0,
    "answer": "six",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"six\".",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10116,7 +10116,7 @@
    ],
    "answerIndex": 3,
    "answer": "I have dinner.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I have dinner.\"",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10150,7 +10150,7 @@
    ],
    "answerIndex": 1,
    "answer": "I do homework.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I do homework.\"",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10243,7 +10243,7 @@
    "area": "meteo",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "It is sunny today.",
+   "question": "Choose the Italian sentence with the same meaning: 'It is sunny today.'",
    "options": [
     "Loro hanno due cani.",
     "Oggi c'è il sole.",
@@ -10252,7 +10252,7 @@
    ],
    "answerIndex": 1,
    "answer": "Oggi c'è il sole.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'It is sunny today.' = Oggi c'è il sole.",
    "active": true,
    "tag": "inglese;classe_3;meteo;primaria;pilota_parametrico",
    "tags": [
@@ -10277,7 +10277,7 @@
    "area": "animali",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "The cat is under the table.",
+   "question": "Choose the Italian sentence with the same meaning: 'The cat is under the table.'",
    "options": [
     "So nuotare molto bene.",
     "Lei ama le mele.",
@@ -10286,7 +10286,7 @@
    ],
    "answerIndex": 3,
    "answer": "Il gatto è sotto il tavolo.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'The cat is under the table.' = Il gatto è sotto il tavolo.",
    "active": true,
    "tag": "inglese;classe_3;animali;primaria;pilota_parametrico",
    "tags": [
@@ -10388,7 +10388,7 @@
    ],
    "answerIndex": 3,
    "answer": "four",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"four\".",
    "active": true,
    "tag": "inglese;classe_3;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10422,7 +10422,7 @@
    ],
    "answerIndex": 1,
    "answer": "two",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"two\".",
    "active": true,
    "tag": "inglese;classe_3;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10456,7 +10456,7 @@
    ],
    "answerIndex": 2,
    "answer": "I have breakfast.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I have breakfast.\"",
    "active": true,
    "tag": "inglese;classe_3;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10490,7 +10490,7 @@
    ],
    "answerIndex": 3,
    "answer": "I go to school.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I go to school.\"",
    "active": true,
    "tag": "inglese;classe_3;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10583,7 +10583,7 @@
    "area": "sport",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "I can swim very well.",
+   "question": "Choose the Italian sentence with the same meaning: 'I can swim very well.'",
    "options": [
     "Noi beviamo acqua ogni giorno.",
     "Lui indossa una giacca blu.",
@@ -10592,7 +10592,7 @@
    ],
    "answerIndex": 2,
    "answer": "So nuotare molto bene.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'I can swim very well.' = So nuotare molto bene.",
    "active": true,
    "tag": "inglese;classe_4;sport;primaria;pilota_parametrico",
    "tags": [
@@ -10617,7 +10617,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "They have got two dogs.",
+   "question": "Choose the Italian sentence with the same meaning: 'They have got two dogs.'",
    "options": [
     "Lui indossa una giacca blu.",
     "So nuotare molto bene.",
@@ -10626,7 +10626,7 @@
    ],
    "answerIndex": 3,
    "answer": "Loro hanno due cani.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'They have got two dogs.' = Loro hanno due cani.",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10728,7 +10728,7 @@
    ],
    "answerIndex": 1,
    "answer": "four",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"four\".",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10762,7 +10762,7 @@
    ],
    "answerIndex": 0,
    "answer": "four",
-   "explanation": "Choose the correct number word.",
+   "explanation": "The correct answer is \"four\".",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10796,7 +10796,7 @@
    ],
    "answerIndex": 2,
    "answer": "I have lunch.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I have lunch.\"",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10830,7 +10830,7 @@
    ],
    "answerIndex": 2,
    "answer": "I wake up.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I wake up.\"",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10923,7 +10923,7 @@
    "area": "giorni",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "We study English on Monday.",
+   "question": "Choose the Italian sentence with the same meaning: 'We study English on Monday.'",
    "options": [
     "So nuotare molto bene.",
     "Oggi c'è il sole.",
@@ -10932,7 +10932,7 @@
    ],
    "answerIndex": 2,
    "answer": "Studiamo inglese il lunedì.",
-   "explanation": "Choose the Italian sentence with the same meaning.",
+   "explanation": "'We study English on Monday.' = Studiamo inglese il lunedì.",
    "active": true,
    "tag": "inglese;classe_5;giorni;primaria;pilota_parametrico",
    "tags": [
@@ -11034,7 +11034,7 @@
    ],
    "answerIndex": 2,
    "answer": "I go to bed.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I go to bed.\"",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -11068,7 +11068,7 @@
    ],
    "answerIndex": 0,
    "answer": "I play outside.",
-   "explanation": "Pick the sentence that matches the time clue.",
+   "explanation": "The correct answer is \"I play outside.\"",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -17149,7 +17149,7 @@
     "a",
     "an",
     "the",
-    "nessun articolo"
+    "no article"
    ],
    "answerIndex": 1,
    "answer": "an",
@@ -17180,7 +17180,7 @@
    "question": "Choose: 'This is ___ dog.'",
    "options": [
     "an",
-    "nessun articolo",
+    "no article",
     "the",
     "a"
    ],
@@ -17379,7 +17379,7 @@
    "options": [
     "a",
     "the",
-    "nessun articolo",
+    "no article",
     "an"
    ],
    "answerIndex": 3,
@@ -17644,7 +17644,7 @@
     "an",
     "two",
     "a",
-    "nessun articolo"
+    "no article"
    ],
    "answerIndex": 2,
    "answer": "a",
@@ -25427,7 +25427,7 @@
    "area": "inglese",
    "subarea": "preposizioni",
    "difficulty": 2,
-   "question": "The park is ___ the school. You can see it from the classroom window.",
+   "question": "The park is ___ the school. You have to walk around the building to reach it.",
    "options": [
     "in",
     "between",
@@ -25436,7 +25436,7 @@
    ],
    "answerIndex": 2,
    "answer": "behind",
-   "explanation": "'Behind' significa 'dietro'. Se vedi il parco dalla finestra della scuola ed è dietro l'edificio, si dice 'behind the school'.",
+   "explanation": "'Behind' significa 'dietro'. Se per arrivare al parco devi girare intorno alla scuola, il parco sta dietro l'edificio: 'behind the school'.",
    "active": true,
    "tag": "inglese;preposizioni;classe_4;primaria",
    "tags": [
@@ -32918,7 +32918,7 @@
    "area": "inglese",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the comparative: 'This box is ___ than that one.' (more big)",
+   "question": "Choose the comparative: 'This box is ___ than that one.' (big)",
    "options": [
     "bigger",
     "more big",
