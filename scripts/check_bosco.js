@@ -47,7 +47,7 @@ function checkRounds(game) {
 
   game.parole.forEach(function (entry) {
     const where = entry.word;
-    assert.match(entry.word, /^[A-Z]{4,8}$/, `${where}: parola in maiuscolo, da 4 a 8 lettere`);
+    assert.match(entry.word, /^[A-ZÀÁÈÉÌÍÒÓ]{4,8}$/, `${where}: parola in maiuscolo, da 4 a 8 lettere`);
 
     const start = entry.hole[0];
     const len = entry.hole[1];
@@ -59,7 +59,7 @@ function checkRounds(game) {
 
     entry.errate.forEach(function (wrong) {
       assert.notEqual(wrong, answer, `${where}: un distrattore coincide con la risposta`);
-      assert.match(wrong, /^[A-Z]{1,4}$/, `${where}: distrattore "${wrong}" non valido`);
+      assert.match(wrong, /^[A-ZÀÁÈÉÌÍÒÓ]{1,4}$/, `${where}: distrattore "${wrong}" non valido`);
 
       // Un distrattore non deve produrre un'altra parola del banco: la scelta
       // avrebbe due risposte difendibili.
