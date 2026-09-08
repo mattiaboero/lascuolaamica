@@ -833,6 +833,13 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 10: la domanda finita dentro il brano da leggere ("Read: 'The
+    // train leaves at half past two. ... How much time does Lucy have?'"). Il
+    // brano sta fra apici e la domanda va fuori, come nelle altre 60 "Read:".
+    if (/^Read[^:]{0,20}:\s*'/.test(d) && /'\s*$/.test(d) && /\?/.test(d.slice(0, -1))) {
+      errors.push({ level: 'error', field: 'question', msg: 'la domanda e dentro il brano fra apici: va messa fuori' });
+    }
+
     // Dal lotto 9: "Which part do you clap?" con knees, hands, shoulders e toes:
     // la consegna e' al singolare e tutte e quattro le opzioni al plurale.
     // Le domande miste vanno bene (li' singolare e plurale convivono e nessuno

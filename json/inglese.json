@@ -11839,7 +11839,7 @@
    "answerIndex": 2,
    "answer": "Monday",
    "explanation": "In Italy, school starts on Monday.",
-   "active": true,
+   "active": false,
    "tag": "giorni",
    "tags": [
     "giorni",
@@ -24371,7 +24371,7 @@
    "area": "inglese",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Read: 'Mike wants a pet. His dad says they can have a cat or a fish. Mike doesn't like fish. What pet will Mike choose?'",
+   "question": "Read: 'Mike wants a pet. His dad says they can have a cat or a fish. Mike doesn't like fish.' What pet will Mike choose?",
    "options": [
     "a dog",
     "a fish",
@@ -24404,7 +24404,7 @@
    "area": "inglese",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Read: 'The train leaves at half past two. It is now quarter past two. How much time does Lucy have before the train leaves?'",
+   "question": "Read: 'The train leaves at half past two. It is now quarter past two.' How much time does Lucy have before the train leaves?",
    "options": [
     "15 minutes",
     "30 minutes",
@@ -27671,7 +27671,7 @@
    "area": "inglese",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "The Amazon is ___ river in the world.",
+   "question": "The Nile is ___ river in the world.",
    "options": [
     "long",
     "longer",
