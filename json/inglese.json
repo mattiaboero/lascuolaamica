@@ -13090,7 +13090,7 @@
    "area": "casa",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Using the same house text: What is downstairs?",
+   "question": "Read: 'Our house has two floors. Downstairs there is a kitchen and a living room. Upstairs there are three bedrooms and a bathroom.' What is downstairs?",
    "options": [
     "Three bedrooms and a bathroom",
     "A kitchen and a living room",
@@ -13099,7 +13099,7 @@
    ],
    "answerIndex": 1,
    "answer": "A kitchen and a living room",
-   "explanation": "Downstairs: kitchen and living room.",
+   "explanation": "Il testo dice 'Downstairs there is a kitchen and a living room': al piano di sotto ci sono la cucina e il soggiorno.",
    "active": true,
    "tag": "casa",
    "tags": [
@@ -18794,7 +18794,7 @@
    "area": "inglese",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "What do you call the clothes that cover both legs together, like a tube?",
+   "question": "What do you call the clothes that cover each leg separately?",
    "options": [
     "skirt",
     "dress",
@@ -18803,7 +18803,7 @@
    ],
    "answerIndex": 2,
    "answer": "trousers",
-   "explanation": "I pantaloni si chiamano 'trousers' in inglese. Coprono entrambe le gambe separatamente... attenzione: la gonna 'skirt' le copre insieme!",
+   "explanation": "I pantaloni si chiamano 'trousers' in inglese: coprono ogni gamba separatamente. La gonna ('skirt') e il vestito ('dress') invece coprono le gambe insieme.",
    "active": true,
    "tag": "inglese;lessico_base;classe_3;primaria",
    "tags": [
@@ -21667,7 +21667,7 @@
    "difficulty": 1,
    "question": "Which day comes after Thursday?",
    "options": [
-    "Thursday",
+    "Monday",
     "Friday",
     "Saturday",
     "Wednesday"
@@ -21700,7 +21700,7 @@
    "difficulty": 1,
    "question": "Which month comes after June?",
    "options": [
-    "June",
+    "March",
     "July",
     "August",
     "May"

@@ -833,6 +833,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 8: "Which day comes after Thursday?" con Thursday fra le
+    // opzioni. Un giorno non viene dopo se stesso: e' un distrattore che non
+    // puo' essere scelto da nessuno, quindi le opzioni vere diventano tre.
+    {
+      const m = /comes?\s+(?:right\s+)?(?:after|before)\s+([A-Z][a-z]+)/.exec(d);
+      if (m && (options || []).some((o) => typeof o === 'string' && o.trim().toLowerCase() === m[1].toLowerCase())) {
+        errors.push({ level: 'error', field: 'options', msg: `"${m[1]}" e sia nella consegna sia fra le opzioni: non puo' venire dopo o prima di se stesso` });
+      }
+    }
+
+    // Dal lotto 8: rimando a un testo che nella domanda non c'e' ("Using the
+    // same house text: What is downstairs?"). Ogni domanda si legge da sola.
+    if (/\bUsing the same\b|\b(?:the same|previous|above|earlier)\s+(?:\w+\s+)?(?:text|passage|story|reading)\b/i.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'rimando a un testo che nella domanda non compare' });
+    }
+
     // Dal lotto 7: opzione a frammento "X / Y?" con il punto interrogativo, che
     // pero' sta gia' in fondo alla consegna ("___ they ___ (swim) in the pool?").
     (options || []).forEach((o) => {
