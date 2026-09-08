@@ -1072,6 +1072,7 @@
     mode: 'playing',
     carry: null,
     carryFrom: -1,
+    sostaPiazzola: 0,
     target: null,
     arrivedAt: -1,
     wrong: -1,
@@ -1210,6 +1211,14 @@
 
   // Riga per l'adulto che guarda: quali gruppi il bambino sta sbagliando.
   // Non e' un punteggio e non compare al bambino come giudizio.
+  // I premi vivono in js/rewards.js, condivisi con i quiz e con Spacca-Muri:
+  // una sola bacheca, non una contabilita' separata per ogni gioco.
+  function premi(evento) {
+    if (window.SA && SA.rewards && typeof SA.rewards.recordBosco === 'function') {
+      SA.rewards.recordBosco(evento);
+    }
+  }
+
   function aggiornaRipasso() {
     if (!dom.ripasso) return;
     const gruppi = daRipassare(leggiAbilita()).slice(0, 3).map(function (s) { return ETICHETTE[s] || s; });
@@ -1494,8 +1503,10 @@
       burst(state.player.x, state.player.y - 32, 22);
       celebratePuddles();
       owlHush();
+      const primaDaRipassare = leggiAbilita().ripassa === round().skill;
       registraRisposta(round().skill, true);
       aggiornaRipasso();
+      premi({ skill: round().skill, giusta: true, recuperato: primaDaRipassare });
       setMessage('Eccola! Portala al tabellone luminoso.');
     } else {
       state.wrong = index;
@@ -1504,6 +1515,7 @@
       tone(392, 0.18);
       registraRisposta(round().skill, false);
       aggiornaRipasso();
+      premi({ skill: round().skill, giusta: false });
       setMessage('Non e’ questo. Senti cosa dice il gufo.');
       owlTeach(round(), letter);
     }
@@ -1519,6 +1531,7 @@
     state.arrivedAt = index;
     state.carry = null;
     state.carryFrom = -1;
+    state.sostaPiazzola = 0;
     state.mode = 'playing';
     state.target = null;
     tone(392, 0.1);
@@ -1534,6 +1547,12 @@
     state.mode = state.solved === state.session.length ? 'complete' : 'solved';
     state.target = null;
     state.winTime = state.time;
+    premi({
+      parolaCompletata: true,
+      skill: round().skill,
+      modalita: modalitaScelta(),
+      final: state.mode === 'complete'
+    });
     burst(400, 126, 75);
     celebratePuddles();
     [523, 659, 784, 1047].forEach(function (note, i) {
@@ -1642,9 +1661,18 @@
           if (targeted && onTile(i, state.player.x, state.player.y)) collect(i);
         });
       } else if (state.mode === 'carrying' && state.carryFrom >= 0
-                 && state.arrivedAt !== state.carryFrom
                  && onTile(state.carryFrom, state.player.x, state.player.y)) {
-        riposiziona();
+        /*
+          Rimettere giu' il cartello vuole una sosta, non un passaggio. Il
+          supporto di mezzo sta proprio sulla strada fra la radura e il
+          tabellone: raccogliendo quello e portandolo su, attraversare la sua
+          piazzola lo faceva ricadere a terra da solo. Fermarsi e' un gesto
+          deliberato, camminare no.
+        */
+        state.sostaPiazzola = length ? 0 : state.sostaPiazzola + dt;
+        if (state.sostaPiazzola > 0.35) riposiziona();
+      } else {
+        state.sostaPiazzola = 0;
       }
 
       if (state.mode === 'carrying' && state.player.y < 220 && Math.abs(state.player.x - 400) < 123) {

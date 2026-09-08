@@ -107,6 +107,12 @@
     ['breakout-barra-acciaio', 'Barra d\'Acciaio', 'reward-breakout-barra-acciaio.png', 'Completa un muro senza perdere vite.'],
     ['breakout-punteggio-oro', 'Punteggio d\'Oro', 'reward-breakout-punteggio-oro.png', 'Raggiungi 300 punti in una partita a Cervellino Spacca‑Muri.'],
     ['breakout-campione', 'Campione di Cervellino Spacca‑Muri', 'reward-breakout-campione.png', 'Raggiungi 1000 punti in una partita a Cervellino Spacca‑Muri.'],
+    ['bosco-prima-parola', 'Prima Parola', 'reward-bosco-prima-parola.png', 'Completa la tua prima parola nel Bosco delle Lettere.'],
+    ['bosco-radura-illuminata', 'Radura Illuminata', 'reward-bosco-radura-illuminata.png', 'Completa tutte e tre le parole di una partita nel Bosco delle Lettere.'],
+    ['bosco-orecchio-fino', 'Orecchio Fino', 'reward-bosco-orecchio-fino.png', 'Completa una partita alla Caccia al suono.'],
+    ['bosco-esploratore-suoni', 'Esploratore di Suoni', 'reward-bosco-esploratore-suoni.png', 'Incontra tutti i gruppi del Bosco: GN, GLI, SCE, CHI, GHE, QU, CQU, doppie e accento.'],
+    ['bosco-gruppo-domato', 'Gruppo Domato', 'reward-bosco-gruppo-domato.png', 'Indovina cinque volte di fila lo stesso gruppo di lettere.'],
+    ['bosco-ci-riprovo', 'Ci Riprovo', 'reward-bosco-ci-riprovo.png', 'Torna a indovinare un gruppo che prima avevi sbagliato.'],
     ['bacheca-piena', 'Bacheca Piena', 'reward-bacheca-piena.png', 'Sblocca tutti gli altri premi.']
   ].map((row) => ({ id: row[0], name: row[1], file: row[2], description: row[3] }));
 
@@ -186,6 +192,21 @@
     if (typeof b.bestFinal !== 'number') b.bestFinal = 0;
     if (!b.bonusTypesUsed || typeof b.bonusTypesUsed !== 'object') b.bonusTypesUsed = {};
     if (typeof b.terracottaRowCleared !== 'boolean') b.terracottaRowCleared = false;
+    return b;
+  }
+
+  // I nove gruppi ortografici del Bosco. Le vocali restano fuori: sono il giro
+  // di riscaldamento, non un'abilita' da conquistare.
+  const BOSCO_GRUPPI = ['gn', 'gli', 'sc', 'ch', 'gh', 'qu', 'cqu', 'doppie', 'accento'];
+
+  function boscoState(state) {
+    if (!state.bosco || typeof state.bosco !== 'object') state.bosco = {};
+    const b = state.bosco;
+    if (typeof b.partite !== 'number') b.partite = 0;
+    if (typeof b.parole !== 'number') b.parole = 0;
+    if (typeof b.recuperi !== 'number') b.recuperi = 0;
+    if (!b.gruppiVisti || typeof b.gruppiVisti !== 'object') b.gruppiVisti = {};
+    if (!b.filate || typeof b.filate !== 'object') b.filate = {};
     return b;
   }
 
@@ -333,6 +354,50 @@
   // Trofei dedicati al gioco Cervellino Spacca‑Muri: stessa bacheca (STORAGE_KEY) dei quiz materia,
   // ma sotto-stato e sblocchi separati (vedi breakoutState) per non alterare i
   // contatori delle materie.
+  /*
+    Il Bosco delle Lettere non ha punteggio, timer ne' vite, quindi qui non c'e'
+    niente da premiare per velocita' o record. I premi seguono l'esplorazione e
+    la padronanza: la prima parola, la partita finita, tutti i gruppi incontrati,
+    un gruppo indovinato cinque volte di fila, e il ritorno su un gruppo che si
+    era sbagliato.
+
+    js/bosco.js chiama a ogni risposta, a ogni parola consegnata e a fine
+    partita: ogni chiamata porta solo cio' che e' appena successo, quindi
+    sommare qui e' corretto.
+  */
+  function recordBosco(input) {
+    const event = input || {};
+    const state = loadState();
+    const b = boscoState(state);
+    const unlockedNow = [];
+
+    if (event.skill) {
+      b.gruppiVisti[event.skill] = true;
+      if (event.giusta) b.filate[event.skill] = safeInt(b.filate[event.skill], 0) + 1;
+      else b.filate[event.skill] = 0;
+    }
+    if (event.recuperato) b.recuperi += 1;
+    if (event.parolaCompletata) b.parole += 1;
+    if (event.final) b.partite += 1;
+
+    if (b.parole >= 1) unlock(state, 'bosco-prima-parola', unlockedNow);
+    if (event.final) unlock(state, 'bosco-radura-illuminata', unlockedNow);
+    if (event.final && event.modalita === 'suono') unlock(state, 'bosco-orecchio-fino', unlockedNow);
+    if (BOSCO_GRUPPI.every(function (g) { return b.gruppiVisti[g]; })) {
+      unlock(state, 'bosco-esploratore-suoni', unlockedNow);
+    }
+    if (BOSCO_GRUPPI.some(function (g) { return safeInt(b.filate[g], 0) >= 5; })) {
+      unlock(state, 'bosco-gruppo-domato', unlockedNow);
+    }
+    if (b.recuperi >= 1) unlock(state, 'bosco-ci-riprovo', unlockedNow);
+    maybeUnlockBachecaPiena(state, unlockedNow);
+
+    saveState(state);
+    if (unlockedNow.length) showRewardToast(unlockedNow[0], unlockedNow.length);
+    document.dispatchEvent(new CustomEvent('sa:rewards-updated', { detail: { unlocked: unlockedNow, state } }));
+    return { unlocked: unlockedNow, state };
+  }
+
   function recordBreakout(input) {
     const event = input || {};
     const state = loadState();
@@ -633,6 +698,7 @@
     definitions: REWARDS,
     recordGame,
     recordBreakout,
+    recordBosco,
     loadState,
     getProgress,
     renderBoard,
