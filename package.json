@@ -21,7 +21,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:prepublish",
+    "verify": "npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:prepublish",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -30,7 +30,8 @@
     "test:e2e:dialogs": "bash scripts/run_e2e.sh dialogs",
     "test:e2e:install": "playwright install --with-deps chromium",
     "check:math": "node scripts/check_math_explanations.js",
-    "check:plausibility": "node scripts/check_plausibility.js"
+    "check:plausibility": "node scripts/check_plausibility.js",
+    "check:bosco": "node scripts/check_bosco.js"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",

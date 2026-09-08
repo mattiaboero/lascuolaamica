@@ -49,6 +49,8 @@
   --subj-breakout-a: #993377; --subj-breakout-b: #b03b89; --subj-breakout-dec: #2f8e86; /* Fucsia/Orchidea (Wada Sanzo), calibrato per contrasto AA come le altre materie */
   --subj-tabelline-a: #96631a; --subj-tabelline-b: #9c6a1b; --subj-tabelline-dec: #2e6fa6; /* Ocra (Wada Sanzo), contrasto AA su bianco come le altre card */
   --subj-tabelline-text: #96631a; /* stesso colore di 'a': 5,13:1 su bianco */
+  --subj-bosco-a: #55742f;   --subj-bosco-b: #5c7a2e;   --subj-bosco-dec: #dd6347;   /* Olive/Andover Green (Wada Sanzo), 5,35:1 su bianco */
+  --subj-bosco-text: #55742f; /* stesso colore di 'a': gia' >=4.5:1 su bianco */
   --subj-breakout-text: #993377; /* stesso colore di 'a': gia' >=4.5:1 su bianco, nessuna variante scurita necessaria */
 
   /* ---- Scala raggi ---- */

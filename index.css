@@ -346,6 +346,11 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   box-shadow:0 12px 40px rgba(153,51,119,.5),0 0 0 4px rgba(255,255,255,.3);
 }
 
+.card-bosco{
+  background:linear-gradient(145deg,#55742f,#5c7a2e);
+  box-shadow:0 12px 40px rgba(85,116,47,.5),0 0 0 4px rgba(255,255,255,.3);
+}
+
 .card-icon{font-size:4rem;display:block;margin-bottom:12px;animation:iconBob 2.5s ease-in-out infinite;}
 .card-icon.math-icon{animation-delay:0s;}
 .card-icon.eng-icon{animation-delay:.4s;}
@@ -421,6 +426,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 .card-italiano .card-btn{color:var(--ita-a);}
 .card-tabelline .card-btn{color:#96631a;}
 .card-breakout .card-btn{color:#993377;}
+.card-bosco .card-btn{color:#55742f;}
 .card-btn:hover{transform:scale(1.05);}
 
 .seo-home{
@@ -656,6 +662,11 @@ html:not([data-palette="okabe-ito"]) .card-scienze  .card-btn{color:var(--subj-s
 html:not([data-palette="okabe-ito"]) .card-italiano .card-btn{color:var(--subj-ita-a);}
 html:not([data-palette="okabe-ito"]) .card-tabelline .card-btn{color:var(--subj-tabelline-text);}
 html:not([data-palette="okabe-ito"]) .card-breakout .card-btn{color:var(--subj-breakout-text);}
+html:not([data-palette="okabe-ito"]) .card-bosco{
+  background:linear-gradient(145deg,var(--subj-bosco-a),var(--subj-bosco-b));
+  box-shadow:0 12px 40px rgba(85 116 47 / 0.45),0 0 0 4px rgba(255 255 255 / 0.3);
+}
+html:not([data-palette="okabe-ito"]) .card-bosco .card-btn{color:var(--subj-bosco-text);}
 
 /* Cromo della home rimasto al viola legacy #9B5DE5 quando le card sono passate
    a Wada Sanzo: hover dei link del footer e titoli/link delle modali condivise
