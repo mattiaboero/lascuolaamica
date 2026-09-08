@@ -119,6 +119,37 @@ function checkCells(game) {
   });
 }
 
+/*
+  Il cartello si raccoglie dove lo si vede. Il buco copre fino a quattro
+  caratteri, quindi il cartello di SCIE e' largo piu' del doppio di quello di
+  una lettera sola: quando la larghezza disegnata e quella di raccolta erano
+  calcolate da due formule diverse, si camminava attraverso il cartello senza
+  che il gioco reagisse. Qui si verifica che l'area di raccolta contenga sempre
+  l'insegna disegnata, e che due cartelli non possano sovrapporsi.
+*/
+function checkTileHitArea(game) {
+  const gruppi = new Set();
+  game.parole.forEach(function (entry) {
+    gruppi.add(entry.word.substr(entry.hole[0], entry.hole[1]));
+    entry.errate.forEach(function (wrong) { gruppi.add(wrong); });
+  });
+
+  let widest = 0;
+  gruppi.forEach(function (group) {
+    const disegnato = game.groupWidth(group, game.groupSize(group));
+    const raccolta = game.tileHalf(group) * 2;
+    assert.ok(raccolta >= disegnato + 12,
+      `"${group}": l'area di raccolta (${raccolta}px) non contiene l'insegna disegnata (${disegnato}px)`);
+    widest = Math.max(widest, raccolta);
+  });
+
+  const xs = game.tiles.map(function (t) { return t.x; }).sort(function (a, b) { return a - b; });
+  for (let i = 1; i < xs.length; i++) {
+    assert.ok(xs[i] - xs[i - 1] > widest,
+      `due supporti distano ${xs[i] - xs[i - 1]}px ma un cartello puo' essere largo ${widest}px: si sovrapporrebbero`);
+  }
+}
+
 // Una partita: riscaldamento con disegno, poi due gruppi ortografici di
 // abilita' diverse. Il pescaggio e' casuale, quindi va provato molte volte.
 function checkSession(game) {
@@ -212,6 +243,7 @@ function main() {
     ['banco parole', checkRounds],
     ['distrattori confondibili', checkConfusability],
     ['celle del tabellone', checkCells],
+    ['area di raccolta dei cartelli', checkTileHitArea],
     ['composizione della partita', checkSession],
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],

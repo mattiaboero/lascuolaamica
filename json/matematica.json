@@ -57692,7 +57692,7 @@
    ],
    "answerIndex": 0,
    "answer": "0,7",
-   "explanation": "0,7 è maggiore degli altri numeri proposti.",
+   "explanation": "0,7 vale sette decimi. Gli altri valgono meno: 0,5 è cinque decimi, 0,17 un decimo e sette centesimi, 0,07 solo sette centesimi.",
    "active": true,
    "tag": "aritmetica",
    "tags": [
@@ -59836,7 +59836,7 @@
    ],
    "answerIndex": 0,
    "answer": "0,04",
-   "explanation": "0,04 sono solo quattro centesimi, meno di 0,14 e 0,4.",
+   "explanation": "0,04 sono solo quattro centesimi. Gli altri valgono di più: 0,14 è un decimo e quattro centesimi, 0,4 è quattro decimi, 0,44 quattro decimi e quattro centesimi.",
    "active": true,
    "tag": "aritmetica",
    "tags": [

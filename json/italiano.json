@@ -27525,7 +27525,7 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Nella frase 'Il cui nome è famoso', 'cui' è...",
+   "question": "Nella frase 'Ho conosciuto lo scrittore il cui nome è famoso', 'cui' è...",
    "options": [
     "pronome interrogativo",
     "pronome relativo",
@@ -27534,7 +27534,7 @@
    ],
    "answerIndex": 1,
    "answer": "pronome relativo",
-   "explanation": "'Cui' è un pronome relativo invariabile usato in combinazione con le preposizioni o come complemento di specificazione (preceduto dall'articolo: 'il cui'). In 'il cui nome' il pronome relativo 'cui' fa riferimento all'antecedente e sostituisce un complemento di specificazione ('il nome del quale').",
+   "explanation": "'Cui' è un pronome relativo invariabile. Preceduto dall'articolo ('il cui nome') vale come complemento di specificazione: 'il nome del quale'. L'antecedente qui è 'lo scrittore'.",
    "active": true,
    "tag": "italiano;morfologia;classe_5;primaria",
    "tags": [

@@ -645,6 +645,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 68: domanda che chiede il numero maggiore o minore fra quattro
+  // numeri, con la spiegazione che ne confronta solo una parte ("0,7 e'
+  // maggiore degli altri numeri proposti"). Chi sbaglia scegliendo un numero
+  // che la spiegazione non nomina non trova scritto perche' e' sbagliato.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const confronto = /(?:più piccolo|più grande|maggiore|minore)\b/i.test(String(question || ''));
+    const numeri = options.filter((o) => typeof o === 'string' && /^[\d.,]+\s*\w{0,4}$/.test(o.trim()));
+    if (confronto && numeri.length === options.length && numeri.length >= 3) {
+      const fuori = numeri.filter((o) => !String(explanation || '').includes(o.trim()));
+      if (fuori.length) {
+        errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione del confronto non nomina ${fuori.join(', ')}` });
+      }
+    }
+  }
+
   // Dal lotto 67: la domanda dice "In questa frase" ma la frase non c'e': le
   // uniche virgolette racchiudono il pezzo da analizzare ("'con il pennello'
   // e'..."), e l'esempio sta solo nella spiegazione. Le altre trenta domande
