@@ -44620,7 +44620,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Qual è la probabilità di ottenere testa o croce?",
+   "question": "Lanciando una moneta, qual è la probabilità di ottenere testa?",
    "options": [
     "1/4",
     "1/2",

@@ -159,6 +159,11 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 101: "qual e' la probabilita' di ottenere testa o croce?" ha per
+  // risposta 1, non 1/2: la disgiunzione copre tutti gli esiti possibili.
+  { pattern: /probabilit[aà][^?.]{0,50}(?:testa\s+o\s+croce|croce\s+o\s+testa|pari\s+o\s+dispari)/i,
+    soloDomanda: true,
+    msg: 'errore di contenuto: la probabilita di una disgiunzione esaustiva e 1 ("testa o croce")' },
   // Dal lotto 100: "solo il quadrato ha 4 lati" e' falso, i lati di un
   // poligono non sono esclusivi di una sola figura (anche rettangolo, rombo,
   // trapezio e parallelogramma ne hanno 4).
@@ -506,6 +511,30 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const infinito = (o) => /^(?:non\s+|mai\s+)?[a-zà-ù']+(?:are|ere|ire|urre|orre)(?:l[oaie]|gli|gliel[oaie]|ne|si|ti|mi|ci|vi|tene|sene)?\b/i.test(o.trim());
     if (opts.length && opts.every(infinito)) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — "cosa fai?" con opzioni all\'infinito: la consegna giusta e\' "cosa e\' meglio fare?"' });
+    }
+  }
+
+  // Dal lotto 101: "Quale delle seguenti e' una parola polisemica?" con le
+  // opzioni che sono definizioni ("Una parola con piu' significati"): la
+  // consegna chiede un esempio, le opzioni danno una definizione.
+  if (/^Quale\s+(?:delle seguenti|di queste)\s+(?:è|e')\s+(?:una|un|un')/.test((question || '').trim())) {
+    const def = (options || []).filter((o) => typeof o === 'string'
+      && /^(?:Una|Un|Un'|Il|La|Lo)\s+[a-zà-ù]+\s+(?:con|senza|che|di|da)(?![a-zà-ù])/.test(o.trim()));
+    if (def.length >= 3) {
+      errors.push({ level: 'error', field: 'question', msg: 'consegna — chiede un esempio ("Quale delle seguenti e\' una...") ma le opzioni sono definizioni' });
+    }
+  }
+
+  // Dal lotto 101: opzioni parallele che iniziano tutte con la stessa parola
+  // ma una sola in minuscola ("Di altri animali | di piante | Di rocce").
+  {
+    const opts = (options || []).filter((o) => typeof o === 'string' && o.trim());
+    if (opts.length >= 3) {
+      const prime = opts.map((o) => o.trim().split(/\s+/)[0].toLowerCase().replace(/'$/, ''));
+      const iniziali = new Set(opts.map((o) => o.trim()[0]));
+      if (new Set(prime).size === 1 && iniziali.size > 1) {
+        errors.push({ level: 'error', field: 'options', msg: 'opzioni parallele con la maiuscola incoerente (iniziano tutte con la stessa parola)' });
+      }
     }
   }
 

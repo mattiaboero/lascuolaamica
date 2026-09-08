@@ -24568,12 +24568,12 @@
    "question": "In una catena alimentare, di cosa si nutre soprattutto un erbivoro?",
    "options": [
     "Di altri animali",
-    "di piante",
+    "Di piante",
     "Di rocce",
     "Di acqua salata"
    ],
    "answerIndex": 1,
-   "answer": "di piante",
+   "answer": "Di piante",
    "explanation": "Nella catena alimentare l'erbivoro mangia le piante (i produttori). A sua volta può essere mangiato da un carnivoro.",
    "active": true,
    "tag": "scienze;applicazione;classe_3;primaria",
