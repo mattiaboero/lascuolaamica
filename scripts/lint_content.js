@@ -833,6 +833,19 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 11: opzione con due stanze incollate senza niente in mezzo
+    // ("study garden", "dining room garden"): sono due luoghi diversi, non un
+    // luogo dal nome lungo.
+    {
+      const STANZE = '(?:kitchen|bedroom|bathroom|garage|garden|study|hall|attic|basement|living room|dining room|playground|office|roof|library|classroom|gym)';
+      const doppia = new RegExp(`^${STANZE}\\s+${STANZE}$`, 'i');
+      (options || []).forEach((o) => {
+        if (typeof o === 'string' && doppia.test(o.trim())) {
+          errors.push({ level: 'error', field: 'options', msg: `opzione con due stanze incollate ("${o}")` });
+        }
+      });
+    }
+
     // Dal lotto 10: la domanda finita dentro il brano da leggere ("Read: 'The
     // train leaves at half past two. ... How much time does Lucy have?'"). Il
     // brano sta fra apici e la domanda va fuori, come nelle altre 60 "Read:".
@@ -855,7 +868,10 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     // opzioni. Un giorno non viene dopo se stesso: e' un distrattore che non
     // puo' essere scelto da nessuno, quindi le opzioni vere diventano tre.
     {
-      const m = /comes?\s+(?:right\s+)?(?:after|before)\s+([A-Z][a-z]+)/.exec(d);
+      // Minuscole comprese: giorni e mesi sono maiuscoli in inglese, le
+      // stagioni no, e "Which season comes after summer?" aveva summer fra
+      // le opzioni proprio come i giorni del lotto 8.
+      const m = /comes?\s+(?:right\s+)?(?:after|before)\s+([A-Za-z]+)/.exec(d);
       if (m && (options || []).some((o) => typeof o === 'string' && o.trim().toLowerCase() === m[1].toLowerCase())) {
         errors.push({ level: 'error', field: 'options', msg: `"${m[1]}" e sia nella consegna sia fra le opzioni: non puo' venire dopo o prima di se stesso` });
       }
