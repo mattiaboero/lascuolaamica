@@ -15336,13 +15336,13 @@
    "question": "Quale parola è scritta CORRETTAMENTE?",
    "options": [
     "citta",
-    "pane",
+    "cittá",
     "città",
-    "mela"
+    "cità"
    ],
    "answerIndex": 2,
    "answer": "città",
-   "explanation": "'Città' vuole l'accento sulla à finale perché è una parola tronca: l'accento cade sull'ultima sillaba. Scrivere 'citta' senza accento è sbagliato. 'Pane' e 'mela' sono scritte correttamente senza accento perché non ne hanno bisogno.",
+   "explanation": "'Città' è una parola tronca: l'accento cade sull'ultima sillaba e va scritto, con l'accento grave (à). 'Citta' non ne ha, 'cittá' usa l'accento acuto e 'cità' perde una t.",
    "active": true,
    "tag": "italiano;ortografia;classe_2;primaria",
    "tags": [

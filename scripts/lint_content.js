@@ -867,7 +867,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 95: domanda di confronto con i dati in linea ("lunedi' 12
+    // Dal lotto 96: la domanda chiede quale parola e' scritta correttamente e
+  // la spiegazione ammette che lo sono anche altre opzioni ("'Pane' e 'mela'
+  // sono scritte correttamente"). Erano tre risposte giuste su quattro.
+  if (subject !== 'inglese' && typeof answer === 'string' && Array.isArray(options)) {
+    if (/scritt[ao]\s+(?:in modo\s+)?corrett/i.test(String(question || ''))) {
+      const e = String(explanation || '');
+      const altra = options.filter((o) => typeof o === 'string' && o.trim().toLowerCase() !== answer.trim().toLowerCase())
+        .find((o) => new RegExp(`${o.trim()}['’]?\\s*(?:e\\s+['‘]?[a-zà-ù]+['’]?\\s*)?son[oe]\\s+scritt[ei]\\s+corrett`, 'i').test(e));
+      if (altra) {
+        errors.push({ level: 'error', field: 'options', msg: `la spiegazione dice che anche "${altra}" e' scritta correttamente: la domanda ha piu' di una risposta` });
+      }
+    }
+  }
+
+  // Dal lotto 95: domanda di confronto con i dati in linea ("lunedi' 12
   // presenze, martedi' 15, mercoledi' 9") e spiegazione che si ferma al
   // numero ("15 e' il numero maggiore") senza dire a quale giorno
   // corrisponde: chi sbaglia non trova la risposta, trova solo il conto.

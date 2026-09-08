@@ -58396,7 +58396,7 @@
    ],
    "answerIndex": 1,
    "answer": "martedì",
-   "explanation": "15 è il numero maggiore.",
+   "explanation": "Fra 12, 15 e 9 il numero maggiore è 15: martedì ha più presenze.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [

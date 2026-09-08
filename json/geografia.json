@@ -31245,7 +31245,7 @@
    "area": "geografia_fisica_italia",
    "subarea": "morfologia_italiana",
    "difficulty": 1,
-   "question": "Quale catena montuosa percorre l'Italia da nord a sud come una 'spina dorsale'?",
+   "question": "In quale catena montuosa si trova il Gran Sasso?",
    "options": [
     "Alpi",
     "Appennini",
@@ -31254,7 +31254,7 @@
    ],
    "answerIndex": 1,
    "answer": "Appennini",
-   "explanation": "Gli Appennini attraversano la penisola italiana per tutta la sua lunghezza, come una spina dorsale. Iniziano in Liguria e arrivano fino alla Calabria, dove si collegano all'Etna attraverso la Sicilia.",
+   "explanation": "Il Gran Sasso d'Italia è la cima più alta degli Appennini: si trova in Abruzzo e il Corno Grande arriva a 2.912 metri.",
    "active": true,
    "tag": "geografia;morfologia_italiana;classe_4;primaria",
    "tags": [
