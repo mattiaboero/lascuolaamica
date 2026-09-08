@@ -159,6 +159,13 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 102: "una" non elisa davanti a nome o aggettivo che inizia per
+  // vocale ("una aula", "una informazione", "una enorme sfera"). Restano
+  // fuori i verbi, dove "una" e' pronome ("una usa solo il blu"), e i testi
+  // che mostrano di proposito le due forme, riconoscibili perche' contengono
+  // anche "un'<stessa parola>".
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])una\s+(?!(?:usa|usava|ha|aveva|era|entra|esce|arriva|apre|aiuta|indica|occupa|offre|ospita|illumina|evita|elimina|esiste|inizia|impara|insegna|esprime|unisce|ordina|ama|abita)(?![a-zà-ù]))([aeiouAEIOU][a-zà-ùA-ZÀ-Ù]{3,})(?![a-zà-ùA-ZÀ-Ù])(?![\s\S]*un'\1)/,
+    msg: 'elisione mancante: "una" davanti a vocale vuole l\'apostrofo (es. "un\'aula")' },
   // Dal lotto 101: "qual e' la probabilita' di ottenere testa o croce?" ha per
   // risposta 1, non 1/2: la disgiunzione copre tutti gli esiti possibili.
   { pattern: /probabilit[aà][^?.]{0,50}(?:testa\s+o\s+croce|croce\s+o\s+testa|pari\s+o\s+dispari)/i,

@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  "La rappresentazione vista dall'alto di una aula si chiama...",
   "Qual è la probabilità di ottenere testa o croce?",
   'Solo il quadrato ha certamente 4 lati.',
   'Il fornaio ha sfornato 42 biscotti. Le mette in confezioni da 6.',
@@ -111,6 +112,9 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "La rappresentazione vista dall'alto di un'aula si chiama...",
+  'Una carta fisica e una politica sono diverse: una usa solo il blu.',
+  "Si dice 'una arancia' oppure 'un'arancia' con l'apostrofo.",
   'Lanciando una moneta, qual è la probabilità di ottenere testa?',
   "Fra le quattro frasi solo 'Ogni quadrato ha 4 lati' è vera: i triangoli hanno 3 lati.",
   'Solo il 2,5% dell\'acqua sulla Terra è dolce, e la maggior parte è congelata nei ghiacciai.',

@@ -14572,7 +14572,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Se vuoi verificare se una informazione è vera, qual è il comportamento corretto?",
+   "question": "Se vuoi verificare se un'informazione è vera, qual è il comportamento corretto?",
    "options": [
     "guardare solo la prima immagine",
     "scrivere la tua opinione e basta",
@@ -14604,7 +14604,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "In una situazione in cui vuoi verificare se una informazione è vera, cosa è meglio fare?",
+   "question": "In una situazione in cui vuoi verificare se un'informazione è vera, cosa è meglio fare?",
    "options": [
     "guardare solo la prima immagine",
     "fidarti dei commenti",
@@ -14636,7 +14636,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Quale scelta è più responsabile quando vuoi verificare se una informazione è vera?",
+   "question": "Quale scelta è più responsabile quando vuoi verificare se un'informazione è vera?",
    "options": [
     "guardare solo la prima immagine",
     "scrivere la tua opinione e basta",
@@ -14668,7 +14668,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Qual è il modo giusto di comportarsi quando vuoi verificare se una informazione è vera?",
+   "question": "Qual è il modo giusto di comportarsi quando vuoi verificare se un'informazione è vera?",
    "options": [
     "fidarti dei commenti",
     "guardare solo la prima immagine",
@@ -14700,7 +14700,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "diritti_e_informazione",
    "difficulty": 2,
-   "question": "Qual è la scelta migliore quando vuoi verificare se una informazione è vera?",
+   "question": "Qual è la scelta migliore quando vuoi verificare se un'informazione è vera?",
    "options": [
     "scrivere la tua opinione e basta",
     "confrontare più fonti",
