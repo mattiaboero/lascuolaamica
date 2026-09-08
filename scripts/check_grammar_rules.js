@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Prima: 47 conchiglie al giorno. Poi: 47 × 6 = 282.',
   'Questo si chiama complemento di durata (o tempo continuato).',
   'L\'articolo determinativo maschile plurale davanti a consonante è "i\'. Si dice \'i libri".',
   "In 'Ho comprato il libro per mia sorella', qual è il complemento di termine?",
@@ -115,6 +116,9 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  '47 conchiglie al giorno: 47 × 6 = 282.',
+  'Prima: dalle 20:15 alle 22:00 passano 1 ora e 45 minuti. Poi: dalle 22:00 alle 22:40 altri 40 minuti. In tutto: 1 ora e 45 minuti + 40 minuti = 2 ore e 25 minuti.',
+  'Prima: verifica 47 > 30, quindi sconto applicabile. Poi: 47 - 5 = 42.',
   "'Per una settimana' è il complemento di tempo continuato.",
   'L\'articolo determinativo maschile plurale davanti a consonante è \'i\'. Si dice \'i libri\'.',
   "In 'Ho regalato il libro a mia sorella', qual è il complemento di termine?",

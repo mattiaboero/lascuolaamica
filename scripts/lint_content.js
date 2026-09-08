@@ -159,6 +159,14 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 106: spiegazione in due passi dove il primo non calcola niente,
+  // ripete solo un dato della domanda ("Prima: 47 conchiglie al giorno. Poi:
+  // 47 x 6 = 282"). Restano fuori i primi passi che un conto lo fanno davvero,
+  // anche a parole ("dalle 20:15 alle 22:00 passano 1 ora e 45 minuti") o che
+  // verificano una condizione ("verifica 47 > 30").
+  { pattern: /^\s*(?:Prima|Passo 1)\s*:\s*(?!(?:[^.]*(?:passano|verifica|restano|mancano|rimangono|\d{1,2}:\d{2})))[^.=+×÷–−]*\.\s*(?:Poi|Passo 2)\s*:/,
+    soloSpiegazione: true,
+    msg: 'primo passo che non calcola niente: ripete un dato della domanda' },
   // Dal lotto 105: nomi non standard del complemento che risponde a "per
   // quanto tempo?". Nella grammatica scolastica i due complementi di tempo
   // sono "determinato" e "continuato": "durata" e "indeterminato" erano usati

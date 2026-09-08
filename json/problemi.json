@@ -34019,7 +34019,7 @@
    ],
    "answerIndex": 0,
    "answer": "3",
-   "explanation": "Prima: la pizza ha 8 fette. Poi: 8 × 3/8 = 3 fette.",
+   "explanation": "La pizza ha 8 fette: 8 × 3/8 = 3 fette.",
    "active": true,
    "tag": "problemi;frazioni;classe_4;primaria",
    "tags": [
@@ -34659,7 +34659,7 @@
    ],
    "answerIndex": 0,
    "answer": "96",
-   "explanation": "Prima: ogni pacco ha 8 matite. Poi: 12 × 8 = 96 matite.",
+   "explanation": "Ogni pacco ha 8 matite: 12 × 8 = 96 matite.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34755,7 +34755,7 @@
    ],
    "answerIndex": 0,
    "answer": "84",
-   "explanation": "Prima: 6 uova per confezione. Poi: 6 × 14 = 84 uova.",
+   "explanation": "6 uova per confezione: 6 × 14 = 84 uova.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34819,7 +34819,7 @@
    ],
    "answerIndex": 0,
    "answer": "1825",
-   "explanation": "Prima: 365 pezzi al giorno. Poi: 365 × 5 = 1825.",
+   "explanation": "365 pezzi al giorno: 365 × 5 = 1825.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34851,7 +34851,7 @@
    ],
    "answerIndex": 0,
    "answer": "282",
-   "explanation": "Prima: 47 conchiglie al giorno. Poi: 47 × 6 = 282.",
+   "explanation": "47 conchiglie al giorno: 47 × 6 = 282.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34883,7 +34883,7 @@
    ],
    "answerIndex": 0,
    "answer": "600 cl",
-   "explanation": "Prima: 75 cl per bottiglia. Poi: 8 × 75 = 600 cl.",
+   "explanation": "75 cl per bottiglia: 8 × 75 = 600 cl.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34915,7 +34915,7 @@
    ],
    "answerIndex": 0,
    "answer": "84",
-   "explanation": "Prima: 3 pennarelli a bambino. Poi: 28 × 3 = 84.",
+   "explanation": "3 pennarelli a bambino: 28 × 3 = 84.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34947,7 +34947,7 @@
    ],
    "answerIndex": 0,
    "answer": "378 km",
-   "explanation": "Prima: 42 km per gara. Poi: 9 × 42 = 378 km.",
+   "explanation": "42 km per gara: 9 × 42 = 378 km.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -34979,7 +34979,7 @@
    ],
    "answerIndex": 0,
    "answer": "91",
-   "explanation": "Prima: 13 magliette al giorno. Poi: 13 × 7 = 91.",
+   "explanation": "13 magliette al giorno: 13 × 7 = 91.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -35011,7 +35011,7 @@
    ],
    "answerIndex": 0,
    "answer": "400",
-   "explanation": "Prima: 25 alunni per classe. Poi: 16 × 25 = 400.",
+   "explanation": "25 alunni per classe: 16 × 25 = 400.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -35043,7 +35043,7 @@
    ],
    "answerIndex": 0,
    "answer": "612",
-   "explanation": "Prima: 18 pagine per capitolo. Poi: 34 × 18 = 612.",
+   "explanation": "18 pagine per capitolo: 34 × 18 = 612.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -35075,7 +35075,7 @@
    ],
    "answerIndex": 0,
    "answer": "455",
-   "explanation": "Prima: 65 pezzi per operaio. Poi: 7 × 65 = 455.",
+   "explanation": "65 pezzi per operaio: 7 × 65 = 455.",
    "active": true,
    "tag": "problemi;moltiplicazione;classe_4;primaria",
    "tags": [
@@ -35747,7 +35747,7 @@
    ],
    "answerIndex": 0,
    "answer": "168",
-   "explanation": "Prima: 7 giorni in una settimana. Poi: 7 × 24 = 168 ore.",
+   "explanation": "7 giorni in una settimana: 7 × 24 = 168 ore.",
    "active": true,
    "tag": "problemi;tempo;classe_4;primaria",
    "tags": [
@@ -35779,7 +35779,7 @@
    ],
    "answerIndex": 0,
    "answer": "63",
-   "explanation": "Prima: 9 ore per notte. Poi: 9 × 7 = 63 ore.",
+   "explanation": "9 ore per notte: 9 × 7 = 63 ore.",
    "active": true,
    "tag": "problemi;tempo;classe_4;primaria",
    "tags": [
@@ -37123,7 +37123,7 @@
    ],
    "answerIndex": 0,
    "answer": "22680",
-   "explanation": "Prima: 24360 biglietti venduti. Poi: 24360 - 1680 = 22680 biglietti validi.",
+   "explanation": "24360 biglietti venduti: 24360 - 1680 = 22680 biglietti validi.",
    "active": true,
    "tag": "problemi;due_operazioni;classe_5;primaria",
    "tags": [
