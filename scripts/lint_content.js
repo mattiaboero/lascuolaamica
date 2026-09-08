@@ -159,6 +159,12 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 105: nomi non standard del complemento che risponde a "per
+  // quanto tempo?". Nella grammatica scolastica i due complementi di tempo
+  // sono "determinato" e "continuato": "durata" e "indeterminato" erano usati
+  // nel corpus come sinonimi, con tre nomi diversi per la stessa cosa.
+  { pattern: /complemento di (?:tempo indeterminato|durata)/i,
+    msg: 'terminologia: il complemento di tempo si dice "continuato", non "durata" o "indeterminato"' },
   // Dal lotto 103: apertura con le virgolette doppie e chiusura con l'apice
   // ("l'articolo e' \"i'. Si dice 'i libri\"."). L'apostrofo dell'elisione non
   // conta, perche' li' l'apice e' seguito da una lettera.
@@ -527,6 +533,36 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const infinito = (o) => /^(?:non\s+|mai\s+)?[a-zà-ù']+(?:are|ere|ire|urre|orre)(?:l[oaie]|gli|gliel[oaie]|ne|si|ti|mi|ci|vi|tene|sene)?\b/i.test(o.trim());
     if (opts.length && opts.every(infinito)) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — "cosa fai?" con opzioni all\'infinito: la consegna giusta e\' "cosa e\' meglio fare?"' });
+    }
+  }
+
+  // Dal lotto 105: gli stessi nomi non standard del complemento di tempo, ma
+  // dentro le opzioni, dove le regex di GRAMMATICA non arrivano.
+  (options || []).forEach((o) => {
+    if (typeof o === 'string' && /complemento di (?:tempo indeterminato|durata)/i.test(o)) {
+      errors.push({ level: 'error', field: 'options', msg: `terminologia — "${o}": il complemento di tempo si dice "continuato"` });
+    }
+  });
+
+  // Dal lotto 105: elenco di una domanda sulla successione che mescola nomi e
+  // verbi coniugati alla prima persona ("nascita, primi passi, inizio la
+  // scuola"): le voci devono essere tutte dello stesso tipo.
+  {
+    const d = (question || '').trim();
+    const m = /(?:successione|sequenza)[^:?]*:\s*([^?]+)\?/i.exec(d);
+    if (m) {
+      const voci = m[1].split(',').map((v) => v.trim()).filter(Boolean);
+      // Verbale = comincia con un verbo alla prima persona non seguito da un
+      // complemento di specificazione: "inizio la scuola" e' un verbo,
+      // "inizio della scuola" e' il nome.
+      const verbale = (v) => /^(?:mi\s+)?(?:inizio|finisco|mangio|vado|torno|esco|entro|apro|chiudo|metto|prendo|lavo|bevo|dormo|gioco|scrivo|leggo|vesto|sveglio|alzo|arrivo|parto|corro)(?![a-zà-ù])(?!\s+(?:di|del|dello|della|dei|degli|delle)(?![a-zà-ù]))/i.test(v);
+      // Nome nudo = una parola sola, che quindi non puo' essere un'azione.
+      const nomeNudo = (v) => !verbale(v) && !/\s/.test(v);
+      const verbi = voci.filter(verbale);
+      const nomi = voci.filter(nomeNudo);
+      if (verbi.length > 0 && nomi.length > 0) {
+        errors.push({ level: 'error', field: 'question', msg: `elenco disomogeneo: "${verbi[0]}" e un verbo alla prima persona accanto al nome "${nomi[0]}"` });
+      }
     }
   }
 

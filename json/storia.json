@@ -1593,10 +1593,10 @@
    "area": "successione_contemporaneita",
    "subarea": "ordine_di_eventi",
    "difficulty": 1,
-   "question": "Quale elemento viene per primo in questa successione: nascita, primi passi, inizio la scuola?",
+   "question": "Quale elemento viene per primo in questa successione: nascita, primi passi, inizio della scuola?",
    "options": [
     "primi passi",
-    "inizio la scuola",
+    "inizio della scuola",
     "nessuno",
     "nascita"
    ],
@@ -1624,16 +1624,16 @@
    "area": "successione_contemporaneita",
    "subarea": "ordine_di_eventi",
    "difficulty": 1,
-   "question": "Quale elemento viene per ultimo in questa successione: nascita, primi passi, inizio la scuola?",
+   "question": "Quale elemento viene per ultimo in questa successione: nascita, primi passi, inizio della scuola?",
    "options": [
-    "inizio la scuola",
+    "inizio della scuola",
     "nascita",
     "primi passi",
     "nessuno"
    ],
    "answerIndex": 0,
-   "answer": "inizio la scuola",
-   "explanation": "L'ultimo elemento della successione è 'inizio la scuola'.",
+   "answer": "inizio della scuola",
+   "explanation": "L'ultimo elemento della successione è 'inizio della scuola'.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [

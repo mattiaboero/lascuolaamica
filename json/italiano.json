@@ -22121,12 +22121,12 @@
    "options": [
     "Complemento di luogo",
     "Complemento di tempo determinato",
-    "Complemento di durata",
+    "Complemento di tempo continuato",
     "Complemento di mezzo"
    ],
    "answerIndex": 2,
-   "answer": "Complemento di durata",
-   "explanation": "'Per una settimana' risponde alla domanda 'per quanto tempo?'. Non indica QUANDO avviene qualcosa, ma PER QUANTO TEMPO dura l'azione. Questo si chiama complemento di durata (o tempo continuato).",
+   "answer": "Complemento di tempo continuato",
+   "explanation": "'Per una settimana' risponde alla domanda 'per quanto tempo?'. Non indica QUANDO avviene qualcosa, ma PER QUANTO TEMPO dura l'azione: è il complemento di tempo continuato.",
    "active": true,
    "tag": "italiano;sintassi;classe_4;primaria",
    "tags": [
@@ -26568,13 +26568,13 @@
    "question": "In 'Léa suona il pianoforte da tre anni', 'da tre anni' è...",
    "options": [
     "complemento di tempo determinato",
-    "complemento di tempo indeterminato (durata)",
+    "complemento di tempo continuato",
     "complemento di causa",
     "complemento di modo"
    ],
    "answerIndex": 1,
-   "answer": "complemento di tempo indeterminato (durata)",
-   "explanation": "Il complemento di tempo indeterminato (o continuato) indica per quanto tempo si prolunga un'azione o uno stato. 'Da tre anni' non indica un momento preciso ma la durata continuata di un'azione. Diverso è il complemento di tempo determinato, che indica un preciso istante.",
+   "answer": "complemento di tempo continuato",
+   "explanation": "Il complemento di tempo continuato indica per quanto tempo si prolunga un'azione o uno stato. 'Da tre anni' non indica un momento preciso ma la durata continuata dell'azione. Il complemento di tempo determinato risponde invece a 'quando?'.",
    "active": true,
    "tag": "italiano;sintassi;classe_5;primaria",
    "tags": [
@@ -27080,13 +27080,13 @@
    "question": "In 'Da bambina, Aisha viveva in Nigeria', 'Da bambina' è...",
    "options": [
     "complemento di tempo determinato",
-    "complemento di tempo indeterminato",
+    "complemento di tempo continuato",
     "complemento di modo",
     "apposizione"
    ],
-   "answerIndex": 1,
-   "answer": "complemento di tempo indeterminato",
-   "explanation": "'Da bambina' indica un periodo della vita, non un momento preciso. È un complemento di tempo indeterminato (o continuato) che indica la fase temporale durante la quale si svolgeva l'azione. Non risponde a 'quando esattamente?' ma a 'in quale periodo?'.",
+   "answerIndex": 0,
+   "answer": "complemento di tempo determinato",
+   "explanation": "'Da bambina' risponde alla domanda 'quando?': colloca l'azione in un periodo della vita, quindi è un complemento di tempo determinato. Il complemento di tempo continuato risponde invece a 'per quanto tempo?', come in 'ha vissuto in Nigeria per dieci anni'.",
    "active": true,
    "tag": "italiano;sintassi;classe_5;primaria",
    "tags": [

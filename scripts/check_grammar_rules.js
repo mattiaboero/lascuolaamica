@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Questo si chiama complemento di durata (o tempo continuato).',
   'L\'articolo determinativo maschile plurale davanti a consonante è "i\'. Si dice \'i libri".',
   "In 'Ho comprato il libro per mia sorella', qual è il complemento di termine?",
   "La rappresentazione vista dall'alto di una aula si chiama...",
@@ -114,6 +115,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "'Per una settimana' è il complemento di tempo continuato.",
   'L\'articolo determinativo maschile plurale davanti a consonante è \'i\'. Si dice \'i libri\'.',
   "In 'Ho regalato il libro a mia sorella', qual è il complemento di termine?",
   'La risposta corretta è "l\'effetto delle abitudini sull\'ambiente".',
