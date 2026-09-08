@@ -12376,7 +12376,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Read: 'Tom and Lucy are in the garden. It is sunny.' Who are in the garden?",
+   "question": "Read: 'Tom and Lucy are in the garden. It is sunny.' Who is in the garden?",
    "options": [
     "Tom only",
     "Lucy only",
@@ -16979,7 +16979,7 @@
    "area": "inglese",
    "subarea": "comprensione_in_contesto",
    "difficulty": 2,
-   "question": "Choose the right word: 'I use a ___ to cut paper.'",
+   "question": "Choose the right word: 'I use ___ to cut paper.'",
    "options": [
     "pencil",
     "ruler",

@@ -833,6 +833,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 13: "Who are in the garden?". In inglese "who" come soggetto
+    // vuole il verbo al singolare, anche quando la risposta e' plurale.
+    if (/(?<![a-zA-Z])Who\s+are\b/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: '"who" soggetto vuole il verbo al singolare ("Who is...?")' });
+    }
+
+    // Dal lotto 13: articolo "a"/"an" davanti allo spazio da riempire con una
+    // risposta plurale ("I use a ___ to cut paper" con 'scissors').
+    if (/(?<![a-zA-Z])an?\s+___/.test(d) && typeof answer === 'string' && /[a-rt-z]s$/.test(answer.trim())) {
+      errors.push({ level: 'error', field: 'question', msg: `articolo singolare davanti allo spazio, ma la risposta e plurale ("${answer}")` });
+    }
+
     // Dal lotto 12: il pronome inglese "I" scritto minuscolo fra apici. In
     // inglese si scrive sempre maiuscolo, anche in mezzo alla frase. Il difetto
     // l'ho introdotto io nel lotto 3, generando le spiegazioni del verbo "to
