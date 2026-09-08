@@ -7078,7 +7078,7 @@
    "options": [
     "bathroom",
     "living room",
-    "kitchen sink",
+    "kitchen",
     "garage"
    ],
    "answerIndex": 1,
@@ -7936,7 +7936,7 @@
    "options": [
     "living room",
     "bathroom",
-    "kitchen cupboard",
+    "kitchen",
     "attic"
    ],
    "answerIndex": 0,
@@ -8627,7 +8627,7 @@
    "difficulty": 3,
    "question": "Which room is the best place to sleep?",
    "options": [
-    "living room floor",
+    "living room",
     "kitchen",
     "bedroom",
     "garden"
@@ -30146,7 +30146,7 @@
    "area": "famiglia",
    "subarea": "lessico_base",
    "difficulty": 2,
-   "question": "Your father's son, who is also you, is your parents'...",
+   "question": "A boy is his parents'...",
    "options": [
     "sister",
     "son",

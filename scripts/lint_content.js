@@ -869,10 +869,13 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     // luogo dal nome lungo.
     {
       const STANZE = '(?:kitchen|bedroom|bathroom|garage|garden|study|hall|attic|basement|living room|dining room|playground|office|roof|library|classroom|gym)';
-      const doppia = new RegExp(`^${STANZE}\\s+${STANZE}$`, 'i');
+      // Dal lotto 15: anche stanza + arredo ("kitchen sink", "living room
+      // floor"). La domanda chiede una stanza e quella non lo e'.
+      const ARREDO = '(?:cupboard|sink|floor|door|window|table|shelf|wall|roof|garden)';
+      const doppia = new RegExp(`^${STANZE}\\s+(?:${STANZE}|${ARREDO})$`, 'i');
       (options || []).forEach((o) => {
         if (typeof o === 'string' && doppia.test(o.trim())) {
-          errors.push({ level: 'error', field: 'options', msg: `opzione con due stanze incollate ("${o}")` });
+          errors.push({ level: 'error', field: 'options', msg: `opzione con due luoghi incollati ("${o}"): la domanda chiede una stanza sola` });
         }
       });
     }
