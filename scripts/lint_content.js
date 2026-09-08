@@ -154,6 +154,11 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 79: "avere bisogno" regge "di", che nell'interrogativa sparisce
+  // ("Quante ore di sonno ha bisogno un bambino?").
+  { pattern: /(?<![Dd]i\s)(?<![a-zà-ùA-ZÀ-Ù])[Qq]uant[ie]\s+[a-zà-ù]+(?:\s+[a-zà-ù]+){0,3}\s+ha(?:nno)?\s+bisogno(?![a-zà-ùA-ZÀ-Ù])/,
+    soloDomanda: true,
+    msg: '"avere bisogno" regge "di": serve "Di quante ore ha bisogno...?"' },
   // Dal lotto 75: "Come sono i colori...?" dove la domanda chiede quali sono,
   // non come sono fatti.
   { pattern: /^Come (?:sono|è)\s+(?:i|le|gli|il|la|lo)\s+[a-zà-ù]+\s+(?:della|del|dei|delle|di)\b/,
@@ -828,7 +833,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 78: la notazione oraria compatta stava nelle opzioni ("2h
+    // Dal lotto 79: due domande messe in fila, la prima chiusa dai due punti
+  // ("Dove va l'accento: quale parola e' scritta giusta?"). Gli altri stem
+  // con i due punti aprono con un elenco o con un'ambientazione, non con
+  // un'interrogativa, e restano fuori.
+  if (subject !== 'inglese') {
+    const d = String(question || '').trim();
+    if (/^(?:Dove|Come|Quando|Perch[ée]|Quale|Quali|Chi|Che cosa|Cosa)\b[^:?]{0,50}:\s*(?:qual|quale|quali|chi|come|dove|quando|perch[ée]|che cosa|cosa)\b/i.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'due domande in fila nello stesso stem: tenerne una sola' });
+    }
+  }
+
+  // Dal lotto 78: la notazione oraria compatta stava nelle opzioni ("2h
   // 25min"), che le regex di GRAMMATICA non vedono. Stessa regola, applicata
   // alle opzioni.
   if (subject !== 'inglese' && Array.isArray(options)) {
