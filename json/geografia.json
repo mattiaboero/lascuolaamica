@@ -27053,7 +27053,7 @@
    "area": "antropico_ambiente",
    "subarea": "paesaggio_fisico",
    "difficulty": 2,
-   "question": "Quando si inquina un fiume, a risentirne sono anche?",
+   "question": "Quando si inquina un fiume, chi ne risente?",
    "options": [
     "solo i libri di geografia",
     "animali e persone",
@@ -35277,16 +35277,16 @@
    "area": "idrografia_clima_italia",
    "subarea": "fiumi_laghi_mari_vulcani_climi",
    "difficulty": 3,
-   "question": "Qual è il lago più grande d'Italia?",
+   "question": "Qual è il lago più profondo d'Italia?",
    "options": [
     "Il Lago di Garda",
     "Il Lago di Como",
     "Il Lago Maggiore",
     "Il Lago Trasimeno"
    ],
-   "answerIndex": 0,
-   "answer": "Il Lago di Garda",
-   "explanation": "Il Lago di Garda, nel nord Italia, è il lago più grande del Paese per superficie.",
+   "answerIndex": 1,
+   "answer": "Il Lago di Como",
+   "explanation": "Il Lago di Como è il più profondo d'Italia: arriva a 425 metri. Il più grande per superficie è invece il Lago di Garda.",
    "active": true,
    "tag": "geografia;fiumi_laghi_mari_vul;classe_4;primaria",
    "tags": [

@@ -154,6 +154,19 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 92: domanda chiusa da un avverbio sospeso ("a risentirne sono
+  // anche?", "quando l'acqua bolle diventa anche?"): manca la parola che
+  // regge la risposta. "non cresce da solo?" resta fuori, perche' li' il
+  // "solo" e' un aggettivo del soggetto.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:sono|diventa|resta|rimane|serve)\s+anche\s*\?\s*$/i,
+    soloDomanda: true,
+    msg: 'domanda chiusa da un avverbio sospeso ("...sono anche?")' },
+  // Dal lotto 92: riferimento alla classe scolastica dentro la domanda
+  // ("Studiare gli Ebrei in quarta serve a..."): la domanda parla al
+  // programma, non all'alunno.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])in (?:seconda|terza|quarta|quinta)(?![a-zà-ùA-ZÀ-Ù])/i,
+    soloDomanda: true,
+    msg: 'riferimento alla classe scolastica dentro la domanda' },
   // Dal lotto 89: complemento di tempo senza preposizione all'inizio della
   // frase ("La notte nel cielo si vedono le stelle" invece di "Di notte").
   { pattern: /^(?:La notte|Il giorno|La mattina|La sera|Il pomeriggio)\s+(?:in|nel|nella|sul|sulla|al|alla)(?![a-zà-ùA-ZÀ-Ù])/,
