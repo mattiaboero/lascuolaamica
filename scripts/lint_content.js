@@ -814,7 +814,7 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     // interrogativo resta appeso dopo il punto della frase da completare.
     // Quando la consegna comincia davvero con una parola interrogativa il "?"
     // e' suo e va tenuto ("Which question matches the answer 'Yes, I have.'?").
-    if (/[.!](?:'|\)|")?\s*\?\s*$/.test(d) && !/^(?:Which|What|Where|When|Who|Whose|How|Why)(?![a-z])/.test(d)) {
+    if (/[.!?](?:'|\)|")?\s*\?\s*$/.test(d) && !/^(?:Which|What|Where|When|Who|Whose|How|Why)(?![a-z])/.test(d)) {
       errors.push({ level: 'error', field: 'question', msg: 'consegna imperativa chiusa dal punto interrogativo ("Complete: \'...\'?")' });
     }
 
@@ -829,8 +829,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     // matches the time clue."). Dopo aver risposto il bambino si aspetta il
     // perche' e trova un'istruzione. In dodici casi la consegna non stava
     // nemmeno nella domanda, che era la sola frase inglese da tradurre.
-    if (/^(?:Choose|Pick|Select|Find|Match|Complete|Write)\b[^.?!]{0,80}\.\s*$/.test((explanation || '').trim())) {
+    if (/^(?:Choose|Pick|Select|Find|Match|Complete|Write|Use|Remember)\b[^.?!]{0,80}\.\s*$/.test((explanation || '').trim())) {
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
+    }
+
+    // Dal lotto 3: parola italiana senza accento dentro una domanda di inglese
+    // ("What is the English word for 'papa'?" invece di 'papà'). L'italiano
+    // qui e' la lingua di partenza della traduzione e va scritto giusto.
+    if (/(?<![a-zà-ù])(?:papa|perche|piu|citta|caffe|puo|cosi|gia|pero|liberta|verita)(?![a-zà-ù])/.test(d + ' ' + (explanation || ''))) {
+      errors.push({ level: 'error', field: 'question', msg: 'parola italiana senza accento (papà, perché, più...)' });
+    }
+
+    // Dal lotto 3: "often" e "every day" nella stessa consegna si contraddicono
+    // ("Where do you often eat lunch every day?").
+    if (/\boften\b/.test(d) && /\bevery day\b/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: '"often" e "every day" nella stessa domanda' });
     }
 
     // Dal lotto 2: opzione in italiano fra opzioni inglesi ("nessun articolo"

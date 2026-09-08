@@ -9470,7 +9470,7 @@
    ],
    "answerIndex": 2,
    "answer": "is",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'it' we use 'is': It is a sunny day.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -9504,7 +9504,7 @@
    ],
    "answerIndex": 2,
    "answer": "are",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'we' we use 'are': We are ready.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -9708,7 +9708,7 @@
    ],
    "answerIndex": 2,
    "answer": "are",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'they' we use 'are': They are in class.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -9835,7 +9835,7 @@
    "area": "cibo",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Where do you often eat lunch every day?",
+   "question": "Where do you often eat lunch?",
    "options": [
     "in the basement",
     "in the kitchen",
@@ -9980,7 +9980,7 @@
    ],
    "answerIndex": 1,
    "answer": "am",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'i' we use 'am': I am quiet.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -10014,7 +10014,7 @@
    ],
    "answerIndex": 1,
    "answer": "is",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'he' we use 'is': He is brave.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -10320,7 +10320,7 @@
    ],
    "answerIndex": 1,
    "answer": "are",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'we' we use 'are': We are quiet.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -10354,7 +10354,7 @@
    ],
    "answerIndex": 2,
    "answer": "is",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'he' we use 'is': He is kind.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -10660,7 +10660,7 @@
    ],
    "answerIndex": 1,
    "answer": "is",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'he' we use 'is': He is happy.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -10694,7 +10694,7 @@
    ],
    "answerIndex": 1,
    "answer": "are",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'we' we use 'are': We are hungry.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -10855,7 +10855,7 @@
    "area": "sport",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Where do you often play football every day?",
+   "question": "Where do you often play football?",
    "options": [
     "in the basement",
     "in the playground",
@@ -10966,7 +10966,7 @@
    ],
    "answerIndex": 1,
    "answer": "is",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'she' we use 'is': She is brave.",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -11000,7 +11000,7 @@
    ],
    "answerIndex": 2,
    "answer": "are",
-   "explanation": "Use the correct form of the verb to be.",
+   "explanation": "With 'you' we use 'are': You are hungry.",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria;pilota_parametrico",
    "tags": [
@@ -11701,7 +11701,7 @@
    "area": "famiglia",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "What is the English word for 'papa'?",
+   "question": "What is the English word for 'papà'?",
    "options": [
     "uncle",
     "dad",
@@ -11710,7 +11710,7 @@
    ],
    "answerIndex": 1,
    "answer": "dad",
-   "explanation": "Dad = papa.",
+   "explanation": "Dad = papà.",
    "active": true,
    "tag": "famiglia",
    "tags": [
@@ -13227,7 +13227,7 @@
    ],
    "answerIndex": 3,
    "answer": "Why",
-   "explanation": "Why = perche (reason).",
+   "explanation": "Why = perché (reason).",
    "active": true,
    "tag": "domande",
    "tags": [
@@ -13250,7 +13250,7 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 3,
-   "question": "Complete the question: '___ do you go to school?'?",
+   "question": "Complete the question: '___ do you go to school?'",
    "options": [
     "Who",
     "Why",
@@ -13282,7 +13282,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: '___ is your favourite colour?'?",
+   "question": "Complete: '___ is your favourite colour?'",
    "options": [
     "Who",
     "When",
@@ -13573,7 +13573,7 @@
    "area": "sport",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: 'Do you ___ any sports?'?",
+   "question": "Complete: 'Do you ___ any sports?'",
    "options": [
     "plays",
     "playing",
@@ -19025,7 +19025,7 @@
    "area": "inglese",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "What do you call the piece of furniture in a classroom where the teacher writes?",
+   "question": "What do you call the big board in a classroom where the teacher writes?",
    "options": [
     "desk",
     "blackboard",
