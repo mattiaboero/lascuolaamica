@@ -154,6 +154,11 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 89: complemento di tempo senza preposizione all'inizio della
+  // frase ("La notte nel cielo si vedono le stelle" invece di "Di notte").
+  { pattern: /^(?:La notte|Il giorno|La mattina|La sera|Il pomeriggio)\s+(?:in|nel|nella|sul|sulla|al|alla)(?![a-zà-ùA-ZÀ-Ù])/,
+    soloDomanda: true,
+    msg: 'complemento di tempo senza preposizione (es. "La notte nel cielo": serve "Di notte")' },
   // Dal lotto 86: participio passato al posto del verbo coniugato ("le strade
   // collegate tutto l'impero" invece di "collegavano"): il participio non
   // regge l'oggetto che segue.

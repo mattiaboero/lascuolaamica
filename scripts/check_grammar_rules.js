@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'La notte nel cielo si possono vedere spesso le stelle.',
   "Le strade collegate tutto l'impero, facilitando gli scambi.",
   'Quale muscolo abbassa e sale per permettere la respirazione?',
   'Quante ore di sonno ha bisogno un bambino di 10 anni circa?',
