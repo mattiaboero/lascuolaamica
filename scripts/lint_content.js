@@ -867,7 +867,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 91: "Come si chiama la densita' di popolazione?" — il termine
+    // Dal lotto 94: opzione che elenca piu' voci e ne ripete una ("Liguria,
+  // Emilia-Romagna, Marche, Umbria, Lazio, Liguria"): l'elenco sembra lungo
+  // sei ma di regioni ne nomina cinque.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    for (const o of options) {
+      if (typeof o !== 'string' || (o.match(/,/g) || []).length < 2) continue;
+      const pezzi = o.split(',').map((x) => x.trim().toLowerCase()).filter(Boolean);
+      const ripetuto = pezzi.find((x, i) => pezzi.indexOf(x) !== i);
+      if (ripetuto) {
+        errors.push({ level: 'error', field: 'options', msg: `l'opzione "${o}" ripete "${ripetuto}" nell'elenco` });
+      }
+    }
+  }
+
+  // Dal lotto 91: "Come si chiama la densita' di popolazione?" — il termine
   // e' gia' scritto nella domanda e la risposta e' la sua definizione: la
   // domanda giusta e' "Che cos'e'". Restano fuori le domande che il concetto
   // lo descrivono invece di nominarlo ("Come si chiama la parte piu' alta di

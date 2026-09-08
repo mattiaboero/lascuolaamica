@@ -31981,16 +31981,16 @@
    "area": "regioni_antropica",
    "subarea": "regioni_italiane",
    "difficulty": 3,
-   "question": "La Toscana confina con ben sei regioni. Quale dei seguenti insiemi è corretto?",
+   "question": "La Toscana confina con cinque regioni. Quale insieme è corretto?",
    "options": [
-    "Liguria, Emilia-Romagna, Marche, Umbria, Lazio, Liguria",
-    "Piemonte, Liguria, Umbria, Lazio, Campania, Sardegna",
-    "Liguria, Emilia-Romagna, Marche, Umbria, Lazio, con sbocco sul Tirreno",
-    "Lombardia, Emilia-Romagna, Veneto, Umbria, Lazio, Campania"
+    "Liguria, Emilia-Romagna, Marche, Umbria, Veneto",
+    "Piemonte, Liguria, Umbria, Lazio, Campania",
+    "Liguria, Emilia-Romagna, Marche, Umbria, Lazio",
+    "Lombardia, Emilia-Romagna, Veneto, Umbria, Lazio"
    ],
    "answerIndex": 2,
-   "answer": "Liguria, Emilia-Romagna, Marche, Umbria, Lazio, con sbocco sul Tirreno",
-   "explanation": "La Toscana confina a nord con Liguria ed Emilia-Romagna, a est con Marche e Umbria, a sud con il Lazio. Ha inoltre un lungo affaccio sul Mar Tirreno a ovest. Questa posizione centrale la rende un crocevia geografico della penisola.",
+   "answer": "Liguria, Emilia-Romagna, Marche, Umbria, Lazio",
+   "explanation": "La Toscana confina a nord con Liguria ed Emilia-Romagna, a est con Marche e Umbria, a sud con il Lazio: cinque regioni in tutto. A ovest ha un lungo affaccio sul Mar Tirreno.",
    "active": true,
    "tag": "geografia;regioni_italiane;classe_4;primaria",
    "tags": [
