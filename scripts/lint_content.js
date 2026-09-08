@@ -867,7 +867,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 94: opzione che elenca piu' voci e ne ripete una ("Liguria,
+    // Dal lotto 95: domanda di confronto con i dati in linea ("lunedi' 12
+  // presenze, martedi' 15, mercoledi' 9") e spiegazione che si ferma al
+  // numero ("15 e' il numero maggiore") senza dire a quale giorno
+  // corrisponde: chi sbaglia non trova la risposta, trova solo il conto.
+  // I nomi vanno cercati con [a-zà-ù] e non con \w: in JavaScript \w le lettere
+  // accentate non le prende, e "lunedi'" restava fuori.
+  if (subject !== 'inglese' && typeof answer === 'string') {
+    const d = String(question || '');
+    const dati = /[a-zà-ùA-ZÀ-Ù]+\s+\d+[^,]{0,15},\s*[a-zà-ùA-ZÀ-Ù]+\s+\d+/.test(d);
+    const confronto = /(?:più|meno|maggiore|minore|probabile)/i.test(d);
+    if (dati && confronto && !String(explanation || '').toLowerCase().includes(answer.trim().toLowerCase())) {
+      errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione del confronto non nomina la risposta ("${answer}")` });
+    }
+  }
+
+  // Dal lotto 94: opzione che elenca piu' voci e ne ripete una ("Liguria,
   // Emilia-Romagna, Marche, Umbria, Lazio, Liguria"): l'elenco sembra lungo
   // sei ma di regioni ne nomina cinque.
   if (subject !== 'inglese' && Array.isArray(options)) {

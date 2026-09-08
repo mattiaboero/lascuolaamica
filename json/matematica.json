@@ -57308,7 +57308,7 @@
    ],
    "answerIndex": 1,
    "answer": "calcio",
-   "explanation": "12 è il valore maggiore.",
+   "explanation": "Fra 9, 12 e 7 il valore maggiore è 12: lo sport più votato è il calcio.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
@@ -59452,7 +59452,7 @@
    ],
    "answerIndex": 2,
    "answer": "verde",
-   "explanation": "Le verdi sono solo 2.",
+   "explanation": "Le palline verdi sono 2, contro 4 blu e 4 rosse: il verde è il colore meno probabile.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
