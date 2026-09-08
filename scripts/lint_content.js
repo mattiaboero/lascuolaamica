@@ -833,6 +833,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 9: "Which part do you clap?" con knees, hands, shoulders e toes:
+    // la consegna e' al singolare e tutte e quattro le opzioni al plurale.
+    // Le domande miste vanno bene (li' singolare e plurale convivono e nessuno
+    // dei due regala la risposta): il difetto e' l'accordo con tutte.
+    if (/^Which (?:body )?parts?\b/.test(d) && !/\bparts\b/.test(d)) {
+      const opts = (options || []).filter((o) => typeof o === 'string' && o.trim());
+      if (opts.length && opts.every((o) => /[a-rt-z]s$/.test(o.trim()))) {
+        errors.push({ level: 'error', field: 'question', msg: 'consegna al singolare ("Which part") con tutte le opzioni al plurale' });
+      }
+    }
+
     // Dal lotto 8: "Which day comes after Thursday?" con Thursday fra le
     // opzioni. Un giorno non viene dopo se stesso: e' un distrattore che non
     // puo' essere scelto da nessuno, quindi le opzioni vere diventano tre.

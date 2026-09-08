@@ -672,7 +672,7 @@
    "area": "corpo_umano",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which part do you clap?",
+   "question": "Which parts do you clap together?",
    "options": [
     "knees",
     "hands",
@@ -30245,7 +30245,7 @@
    "area": "giorni",
    "subarea": "lessico_base",
    "difficulty": 2,
-   "question": "Which is the first day of the school week in English?",
+   "question": "Which is the first day of the school week?",
    "options": [
     "Sunday",
     "Monday",
