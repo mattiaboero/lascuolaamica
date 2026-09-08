@@ -849,7 +849,21 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 90: lo stem sospeso, unito all'opzione, produce una
+    // Dal lotto 91: "Come si chiama la densita' di popolazione?" — il termine
+  // e' gia' scritto nella domanda e la risposta e' la sua definizione: la
+  // domanda giusta e' "Che cos'e'". Restano fuori le domande che il concetto
+  // lo descrivono invece di nominarlo ("Come si chiama la parte piu' alta di
+  // una montagna?"), riconoscibili perche' il gruppo dopo l'articolo e' piu'
+  // lungo di due parole.
+  if (subject !== 'inglese' && typeof answer === 'string') {
+    const nome = String(question || '').trim()
+      .match(/^Come si chiama\s+(?:il|la|lo|l'|i|le|gli)\s+([a-zà-ù]+(?:\s+(?:di|del|della|dei|delle)\s+[a-zà-ù]+)?)\s*\?$/);
+    if (nome && answer.trim().split(/\s+/).length >= 4) {
+      errors.push({ level: 'error', field: 'question', msg: `la domanda nomina gia' "${nome[1]}" e la risposta ne e' la definizione: chiedere "che cos'e'"` });
+    }
+  }
+
+  // Dal lotto 90: lo stem sospeso, unito all'opzione, produce una
   // contraddizione. "Il sasso e' un essere..." con l'opzione "non vivente"
   // dava "un essere non vivente", che e' un ossimoro: un essere, per
   // definizione, vive. Il controllo ricompone la frase e cerca le formule
