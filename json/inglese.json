@@ -3875,10 +3875,10 @@
    "difficulty": 1,
    "question": "Complete: 'I have got two ___.'",
    "options": [
-    "nose",
+    "noses",
     "eyes",
-    "mouth",
-    "head"
+    "mouths",
+    "heads"
    ],
    "answerIndex": 1,
    "answer": "eyes",
@@ -8036,7 +8036,7 @@
     "bedroom",
     "bathroom",
     "garage",
-    "dining room garden"
+    "dining room"
    ],
    "answerIndex": 1,
    "answer": "bathroom",
@@ -12088,10 +12088,10 @@
    "difficulty": 2,
    "question": "Complete: 'I have two ___.'",
    "options": [
-    "nose",
-    "mouth",
+    "noses",
+    "mouths",
     "hands",
-    "head"
+    "heads"
    ],
    "answerIndex": 2,
    "answer": "hands",
@@ -35330,7 +35330,7 @@
    "question": "Complete: 'A bird has got two ___.'",
    "options": [
     "wings",
-    "legs only",
+    "tails",
     "fins",
     "horns"
    ],

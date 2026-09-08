@@ -833,6 +833,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 5: consegna con "two/three ___" dove la risposta e' l'unica
+    // opzione al plurale ("I have two ___" fra nose, mouth, hands e head).
+    // Il bambino non deve sapere che le mani sono due: gli basta cercare la -s.
+    if (/(?<![a-z])(?:two|three|four|five)\s+___/.test(d)) {
+      const opts = (options || []).filter((o) => typeof o === 'string' && o.trim());
+      const plurali = opts.filter((o) => /[a-rt-z]s$/.test(o.trim()));
+      if (plurali.length === 1 && plurali[0] === answer) {
+        errors.push({ level: 'error', field: 'options', msg: `la risposta ("${answer}") e l'unica opzione al plurale: la grammatica la regala` });
+      }
+    }
+
     // Dal lotto 4: clausola imperativa chiusa dal punto interrogativo, senza
     // che di mezzo ci sia una citazione ("Choose the correct English word?",
     // "Choose the correct sentence:?"). Quando fra l'imperativo e il "?" c'e'
