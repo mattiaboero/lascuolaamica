@@ -43,18 +43,100 @@ function loadGame() {
 }
 
 function checkRounds(game) {
-  // Una sola risposta giusta per parola: due lettere corrette renderebbero
-  // impossibile spiegare l'errore al bambino.
-  game.rounds.forEach(function (round) {
-    const correct = round.choices.filter(function (letter) {
-      return game.isCorrect(round, letter);
+  const words = new Set(game.parole.map(function (w) { return w.word; }));
+
+  game.parole.forEach(function (entry) {
+    const where = entry.word;
+    assert.match(entry.word, /^[A-Z]{4,8}$/, `${where}: parola in maiuscolo, da 4 a 8 lettere`);
+
+    const start = entry.hole[0];
+    const len = entry.hole[1];
+    assert.ok(start >= 0 && len >= 1 && start + len <= entry.word.length, `${where}: buco fuori dalla parola`);
+
+    const answer = entry.word.substr(start, len);
+    assert.equal(entry.errate.length, 2, `${where}: servono esattamente due distrattori (i supporti nella radura sono tre)`);
+    assert.equal(new Set(entry.errate).size, entry.errate.length, `${where}: distrattori ripetuti`);
+
+    entry.errate.forEach(function (wrong) {
+      assert.notEqual(wrong, answer, `${where}: un distrattore coincide con la risposta`);
+      assert.match(wrong, /^[A-Z]{1,4}$/, `${where}: distrattore "${wrong}" non valido`);
+
+      // Un distrattore non deve produrre un'altra parola del banco: la scelta
+      // avrebbe due risposte difendibili.
+      const other = entry.word.slice(0, start) + wrong + entry.word.slice(start + len);
+      assert.ok(!words.has(other), `${where}: il distrattore "${wrong}" produce ${other}, che e' un'altra parola del banco`);
     });
-    assert.equal(correct.length, 1, `${round.word}: deve avere una sola scelta corretta`);
-    assert.equal(round.word.length, 4, `${round.word}: le parole sono di quattro lettere`);
-    assert.equal(new Set(round.choices).size, 3, `${round.word}: le tre scelte devono essere diverse`);
-    assert.ok(round.missing >= 0 && round.missing < round.word.length, `${round.word}: indice della lettera mancante fuori dalla parola`);
-    assert.ok(round.clue.trim().length > 0, `${round.word}: manca l'indizio letto da "Ascolta"`);
+
+    assert.ok(entry.clue.trim().length > 0, `${where}: manca l'indizio letto da "Ascolta"`);
+    assert.ok(game.regole[entry.skill], `${where}: l'abilita' "${entry.skill}" non ha una regola che il gufo possa dire`);
+    assert.ok(entry.diff >= 1 && entry.diff <= 3, `${where}: difficolta' fuori scala`);
   });
+}
+
+/*
+  Il cuore didattico: i distrattori devono restare CONFONDIBILI. Fra RAGNO e
+  RANIO si discrimina; fra RAGNO e RATNO si tira a indovinare. Senza questo
+  controllo il banco scivola verso lettere a caso appena qualcuno aggiunge
+  parole, e il gioco torna a essere un indovinello senza che nulla si rompa.
+*/
+function checkConfusability(game) {
+  game.parole.forEach(function (entry) {
+    const answer = entry.word.substr(entry.hole[0], entry.hole[1]);
+    const famiglia = game.confusioni[entry.skill];
+
+    if (famiglia) {
+      assert.ok(famiglia.includes(answer), `${entry.word}: la risposta "${answer}" non e' nella famiglia "${entry.skill}"`);
+      entry.errate.forEach(function (wrong) {
+        assert.ok(famiglia.includes(wrong), `${entry.word}: "${wrong}" non e' un errore plausibile per "${entry.skill}"`);
+      });
+      return;
+    }
+
+    // doppie: la risposta e' una consonante raddoppiata; ogni distrattore e' o
+    // la scempia corrispondente, o un'altra doppia (confusione sorda/sonora o
+    // di luogo, entrambe reali nei primi anni di scuola).
+    assert.match(answer, /^([B-DF-HJ-NP-TV-Z])\1$/, `${entry.word}: "${answer}" non e' una doppia`);
+    entry.errate.forEach(function (wrong) {
+      const plausibile = wrong === answer[0] || /^([B-DF-HJ-NP-TV-Z])\1$/.test(wrong);
+      assert.ok(plausibile, `${entry.word}: "${wrong}" non e' ne' la scempia ne' un'altra doppia`);
+    });
+  });
+}
+
+// Le celle del tabellone devono ricomporre esattamente la parola, con il buco
+// in un'unica cella larga quanto il gruppo che ci va dentro.
+function checkCells(game) {
+  game.parole.forEach(function (entry) {
+    const round = game.buildRound(entry);
+    const cells = game.cellsOf(round);
+    assert.equal(cells.map(function (c) { return c.text; }).join(''), entry.word,
+      `${entry.word}: le celle non ricompongono la parola`);
+    const holes = cells.filter(function (c) { return c.hole; });
+    assert.equal(holes.length, 1, `${entry.word}: deve esserci un buco solo`);
+    assert.equal(holes[0].text, round.answer, `${entry.word}: il buco non contiene la risposta`);
+    assert.equal(cells.reduce(function (n, c) { return n + c.units; }, 0), entry.word.length,
+      `${entry.word}: la larghezza delle celle non torna`);
+  });
+}
+
+// Una partita: riscaldamento con disegno, poi due gruppi ortografici di
+// abilita' diverse. Il pescaggio e' casuale, quindi va provato molte volte.
+function checkSession(game) {
+  for (let run = 0; run < 300; run++) {
+    const session = game.buildSession();
+    assert.equal(session.length, 3, "la partita e' di tre parole");
+    assert.equal(session[0].skill, 'vocali', "la prima parola e' un riscaldamento");
+    assert.ok(session[0].picture, 'la parola di riscaldamento ha il disegno sul tabellone');
+    assert.notEqual(session[1].skill, session[2].skill, "le due parole ortografiche allenano abilita' diverse");
+    assert.ok(session[2].diff >= 2, "l'ultima parola non e' la piu' facile");
+
+    session.forEach(function (r) {
+      assert.equal(r.choices.length, 3, `${r.word}: tre scelte, una per supporto nella radura`);
+      assert.equal(new Set(r.choices).size, 3, `${r.word}: scelte ripetute`);
+      assert.equal(r.choices.filter(function (c) { return game.isCorrect(r, c); }).length, 1,
+        `${r.word}: deve esserci una sola scelta corretta`);
+    });
+  }
 }
 
 // Ogni lettera disegnata sul tabellone e sulle tessere passa dal font 5x7
@@ -62,12 +144,13 @@ function checkRounds(game) {
 function checkGlyphs(game) {
   const source = fs.readFileSync(SOURCE, 'utf8');
   const block = source.slice(source.indexOf('const LETTERS = {'), source.indexOf('const PUDDLE_W'));
-  const needed = new Set();
-  game.rounds.forEach(function (round) {
-    round.word.split('').forEach(function (l) { needed.add(l); });
-    round.choices.forEach(function (l) { needed.add(l); });
+  const needed = new Set(['?']);
+  game.parole.forEach(function (entry) {
+    entry.word.split('').forEach(function (l) { needed.add(l); });
+    entry.errate.forEach(function (wrong) {
+      wrong.split('').forEach(function (l) { needed.add(l); });
+    });
   });
-  needed.add('?');
   needed.forEach(function (letter) {
     const key = /[A-Z]/.test(letter) ? letter : `'${letter}'`;
     assert.ok(block.includes(`${key}: [`), `manca il glifo per "${letter}" in LETTERS`);
@@ -126,7 +209,10 @@ function checkWater(game) {
 function main() {
   const game = loadGame();
   const checks = [
-    ['parole e scelte', checkRounds],
+    ['banco parole', checkRounds],
+    ['distrattori confondibili', checkConfusability],
+    ['celle del tabellone', checkCells],
+    ['composizione della partita', checkSession],
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],
     ['centro asciutto', checkDryCenter],

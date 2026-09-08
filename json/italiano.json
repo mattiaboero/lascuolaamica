@@ -10857,12 +10857,12 @@
    "options": [
     "ieri",
     "lì",
-    "molto bello: 'molto'",
+    "molto",
     "velocemente"
    ],
    "answerIndex": 2,
-   "answer": "molto bello: 'molto'",
-   "explanation": "'Molto' è un avverbio di quantità che modifica l'aggettivo 'bello' in 'molto bello'.",
+   "answer": "molto",
+   "explanation": "'Molto' è un avverbio di quantità: in 'molto bello' modifica l'aggettivo 'bello'. 'Ieri' e 'lì' modificano il verbo (tempo e luogo), 'velocemente' indica il modo.",
    "active": true,
    "tag": "italiano;classe_5;grammatica;primaria",
    "tags": [

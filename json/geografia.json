@@ -28530,11 +28530,11 @@
     "Ancora a destra",
     "A sinistra",
     "Dritto",
-    "Indietro e poi a sinistra"
+    "Verso il centro della piazza"
    ],
    "answerIndex": 1,
    "answer": "A sinistra",
-   "explanation": "Quando si percorre un tratto girando a destra, per tornare indietro sullo stesso percorso bisogna girare nella direzione opposta, cioè a sinistra.",
+   "explanation": "All'andata hai girato a destra, quindi al ritorno lo stesso angolo si gira dalla parte opposta, cioè a sinistra.",
    "active": true,
    "tag": "geografia;orientamento_e_indic;classe_2;primaria",
    "tags": [

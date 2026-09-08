@@ -57171,7 +57171,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "Osserva la tabella: lunedì 4 assenze, martedì 2, mercoledì 5. In quale giorno ci sono meno assenze?",
+   "question": "Guarda i dati delle assenze: lunedì 4, martedì 2, mercoledì 5. In quale giorno ci sono meno assenze?",
    "options": [
     "lunedì",
     "martedì",
@@ -57180,7 +57180,7 @@
    ],
    "answerIndex": 1,
    "answer": "martedì",
-   "explanation": "2 è il numero minore.",
+   "explanation": "Fra 4, 2 e 5 il numero minore è 2: martedì è il giorno con meno assenze.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [

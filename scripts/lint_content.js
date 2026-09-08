@@ -641,6 +641,26 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 66: opzione con l'esempio d'uso incollato dentro, nella forma
+  // "molto bello: 'molto'". La risposta e' la parola fra apici, il resto e'
+  // una nota di redazione finita fra le opzioni.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const nota = options.filter((o) => typeof o === 'string')
+      .find((o) => /:\s*['‘“].+['’”]\s*$/.test(o));
+    if (nota) {
+      errors.push({ level: 'error', field: 'options', msg: `opzione con una nota d'uso incollata dentro: "${nota}"` });
+    }
+  }
+
+  // Dal lotto 66: la domanda dice "Osserva la tabella" ma la tabella non c'e',
+  // i dati sono in linea nel testo.
+  if (subject !== 'inglese') {
+    const d = String(question || '');
+    if (/Osserva (?:la tabella|il grafico|il diagramma)/i.test(d) && !/[|\n]/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'la domanda rimanda a una tabella o a un grafico che non ci sono: i dati sono in linea' });
+    }
+  }
+
   // Dal lotto 65: la domanda chiede quale parola "vuole l'apostrofo" e la
   // risposta e' l'unica che l'apostrofo ce l'ha gia' scritto: alla domanda
   // com'e' posta rispondono semmai le altre tre. Stesso difetto della regola

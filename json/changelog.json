@@ -2,7 +2,9 @@
  {
   "date": "7 settembre 2026 · Release 4.12.81",
   "items": [
-   "Nuovo gioco «Il Bosco delle Lettere»: si cammina nella radura, si raccoglie la lettera che manca e si completano SOLE, MELA e LUNA. Senza timer e senza penalità.",
+   "Nuovo gioco «Il Bosco delle Lettere»: si cammina nella radura e si porta al tabellone il gruppo di lettere giusto — GN o NI, GLI o LI, ACQUA o AQUA, PALLA o PALA. Senza timer e senza penalità.",
+   "Le tre alternative si somigliano di proposito, e sbagliando parla il gufo: dice la regola su quella parola e la pronuncia ad alta voce.",
+   "Le parole cambiano a ogni partita e vengono dal vocabolario dei quiz di italiano.",
    "La scena del bosco è disegnata dal codice e segue la palette del sito, compresa la modalità ad alto contrasto."
   ]
  },
