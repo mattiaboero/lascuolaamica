@@ -833,6 +833,14 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 12: il pronome inglese "I" scritto minuscolo fra apici. In
+    // inglese si scrive sempre maiuscolo, anche in mezzo alla frase. Il difetto
+    // l'ho introdotto io nel lotto 3, generando le spiegazioni del verbo "to
+    // be" da una lista di soggetti messi tutti in minuscolo.
+    if (/'i'/.test(d + ' ' + (explanation || ''))) {
+      errors.push({ level: 'error', field: 'explanation', msg: 'il pronome inglese "I" va sempre maiuscolo' });
+    }
+
     // Dal lotto 11: opzione con due stanze incollate senza niente in mezzo
     // ("study garden", "dining room garden"): sono due luoghi diversi, non un
     // luogo dal nome lungo.
