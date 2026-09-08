@@ -641,6 +641,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 65: la domanda chiede quale parola "vuole l'apostrofo" e la
+  // risposta e' l'unica che l'apostrofo ce l'ha gia' scritto: alla domanda
+  // com'e' posta rispondono semmai le altre tre. Stesso difetto della regola
+  // del lotto 63 sull'accento. Due casi, riscritti come "quale di queste
+  // espressioni e' scritta correttamente".
+  if (subject !== 'inglese' && typeof answer === 'string') {
+    if (/(?:vuole|richiede|serve)\s+l'apostrofo/i.test(String(question || '')) && /['’]/.test(answer)) {
+      errors.push({ level: 'error', field: 'question', msg: `la domanda chiede quale parola vuole l'apostrofo ma la risposta ("${answer}") ce l'ha gia'` });
+    }
+  }
+
   // Dal lotto 64: stem che finisce con "c'e'..." o "ci sono..." e opzioni che
   // cominciano per preposizione, cioe' complementi che dopo quel verbo non
   // stanno: "dove e' piu' sicuro pedalare quando c'e'..." con "Sulla pista

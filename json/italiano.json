@@ -5125,7 +5125,7 @@
    "area": "italiano_classe3",
    "subarea": "ortografia",
    "difficulty": 2,
-   "question": "Quale parola vuole l'apostrofo?",
+   "question": "Quale di queste espressioni è scritta correttamente?",
    "options": [
     "lo amico",
     "l'amico",
@@ -19109,7 +19109,7 @@
    "area": "italiano_classe3",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Quale parola richiede l'apostrofo?",
+   "question": "Quale di queste espressioni usa correttamente l'apostrofo?",
    "options": [
     "lo amico",
     "la amica",
