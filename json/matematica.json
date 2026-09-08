@@ -58428,7 +58428,7 @@
    ],
    "answerIndex": 1,
    "answer": "Ogni quadrato ha 4 lati",
-   "explanation": "Solo il quadrato ha certamente 4 lati.",
+   "explanation": "Fra le quattro frasi solo 'Ogni quadrato ha 4 lati' è vera: i triangoli hanno 3 lati, i cerchi non hanno angoli e i rettangoli non sono cerchi.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [

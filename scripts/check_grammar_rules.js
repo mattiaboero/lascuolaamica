@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Solo il quadrato ha certamente 4 lati.',
   'Il fornaio ha sfornato 42 biscotti. Le mette in confezioni da 6.',
   'Giulia ha 20 pesche e Monica ne ha 24. Sommiamo le quantità di entrambi: 20 + 24 = 44 pesche.',
   "Il Mediterraneo è il mare in cui si affaccia gran parte dell'Italia?",
@@ -109,6 +110,8 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "Fra le quattro frasi solo 'Ogni quadrato ha 4 lati' è vera: i triangoli hanno 3 lati.",
+  'Solo il 2,5% dell\'acqua sulla Terra è dolce, e la maggior parte è congelata nei ghiacciai.',
   'Il fornaio ha sfornato 42 biscotti. Li mette in confezioni da 6.',
   'Giulia ha 20 pesche e Monica ne ha 24. Sommiamo le quantità di entrambe: 20 + 24 = 44 pesche.',
   'Marco ha 20 pesche e Luca ne ha 24. Sommiamo le quantità di entrambi: 20 + 24 = 44 pesche.',

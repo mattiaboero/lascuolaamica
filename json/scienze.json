@@ -2934,7 +2934,7 @@
     "estate",
     "primavera",
     "autunno",
-    "dicembre"
+    "inverno"
    ],
    "answerIndex": 1,
    "answer": "primavera",
@@ -2962,10 +2962,10 @@
    "difficulty": 1,
    "question": "Quale stagione viene dopo la primavera?",
    "options": [
-    "neve",
+    "primavera",
     "inverno",
     "estate",
-    "ottobre"
+    "autunno"
    ],
    "answerIndex": 2,
    "answer": "estate",
@@ -2994,8 +2994,8 @@
    "question": "Quale stagione viene dopo l'estate?",
    "options": [
     "primavera",
-    "vento",
-    "gennaio",
+    "estate",
+    "inverno",
     "autunno"
    ],
    "answerIndex": 3,
@@ -3024,10 +3024,10 @@
    "difficulty": 1,
    "question": "Quale stagione viene dopo l'autunno?",
    "options": [
-    "pioggia",
+    "primavera",
     "inverno",
     "estate",
-    "marzo"
+    "autunno"
    ],
    "answerIndex": 1,
    "answer": "inverno",
@@ -3057,7 +3057,7 @@
    "options": [
     "primavera",
     "inverno",
-    "notte",
+    "estate",
     "autunno"
    ],
    "answerIndex": 0,
@@ -3119,7 +3119,7 @@
    "options": [
     "autunno",
     "estate",
-    "mattina",
+    "inverno",
     "primavera"
    ],
    "answerIndex": 0,
@@ -3149,7 +3149,7 @@
    "question": "In quale stagione si usa spesso la sciarpa?",
    "options": [
     "inverno",
-    "agosto",
+    "autunno",
     "estate",
     "primavera"
    ],
@@ -4296,7 +4296,7 @@
    "question": "In quale stagione può nevicare più facilmente?",
    "options": [
     "inverno",
-    "settembre",
+    "autunno",
     "estate",
     "primavera"
    ],
@@ -4897,8 +4897,8 @@
    "options": [
     "primavera",
     "inverno",
-    "notte",
-    "dicembre"
+    "estate",
+    "autunno"
    ],
    "answerIndex": 0,
    "answer": "primavera",
@@ -4927,9 +4927,9 @@
    "question": "Quale stagione è spesso collegata al freddo?",
    "options": [
     "estate",
-    "mezzogiorno",
+    "primavera",
     "inverno",
-    "aprile"
+    "autunno"
    ],
    "answerIndex": 2,
    "answer": "inverno",

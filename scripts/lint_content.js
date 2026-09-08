@@ -159,6 +159,11 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 100: "solo il quadrato ha 4 lati" e' falso, i lati di un
+  // poligono non sono esclusivi di una sola figura (anche rettangolo, rombo,
+  // trapezio e parallelogramma ne hanno 4).
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])[Ss]olo\s+il\s+(?:quadrato|rettangolo|rombo|trapezio|parallelogramma|triangolo)\b[^.]{0,30}\b\d+\s+lati/,
+    msg: 'errore di contenuto: il numero di lati non e\' esclusivo di una sola figura ("solo il quadrato ha 4 lati")' },
   // Dal lotto 99: pronome atono di genere sbagliato, ereditato da un template
   // scritto per un nome femminile ("42 biscotti. Le mette in confezioni").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:biscotti|panini|libri|quaderni|pastelli|palloni|fogli|cioccolatini|gelati|bicchieri|sassi|fiori|alberi|dolci|mattoni|lamponi|pennarelli)\b[^.!?]{0,40}[.!?]\s*[Ll]e\s+(?:mette|divide|distribuisce|sistema|conta|dispone|ripone|confeziona)(?![a-zà-ùA-ZÀ-Ù])/,
@@ -501,6 +506,42 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     const infinito = (o) => /^(?:non\s+|mai\s+)?[a-zà-ù']+(?:are|ere|ire|urre|orre)(?:l[oaie]|gli|gliel[oaie]|ne|si|ti|mi|ci|vi|tene|sene)?\b/i.test(o.trim());
     if (opts.length && opts.every(infinito)) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — "cosa fai?" con opzioni all\'infinito: la consegna giusta e\' "cosa e\' meglio fare?"' });
+    }
+  }
+
+  // Dal lotto 100: domanda che chiede una stagione con un distrattore che
+  // stagione non e' (un momento del giorno o un mese): l'errore di categoria
+  // rende il distrattore inutile. Serve guardare le opzioni.
+  {
+    const STAGIONI = ['primavera', 'estate', 'autunno', 'inverno'];
+    const NON_STAGIONI = ['mattina', 'sera', 'notte', 'pomeriggio', 'alba', 'tramonto', 'mezzogiorno',
+      'gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto',
+      'settembre', 'ottobre', 'novembre', 'dicembre',
+      'neve', 'vento', 'pioggia', 'nebbia', 'sole', 'caldo', 'freddo'];
+    const opts = (options || []).filter((o) => typeof o === 'string').map((o) => o.trim().toLowerCase());
+    const stag = opts.filter((o) => STAGIONI.includes(o)).length;
+    if (/stagione/i.test(question || '') && stag >= 2) {
+      opts.filter((o) => NON_STAGIONI.includes(o)).forEach((o) => {
+        errors.push({ level: 'error', field: 'options', msg: `contenuto — "${o}" non e' una stagione, in una domanda che chiede una stagione` });
+      });
+    }
+  }
+
+  // Dal lotto 100: consegna "Che cosa <verbo coniugato>...?" con un'opzione
+  // che e' l'infinito dello stesso verbo ("Che cosa mettono a disposizione i
+  // volontari?" / "mettere tempo ed energie a disposizione"): l'opzione
+  // ripete la domanda invece di rispondere.
+  {
+    const m = /^(?:Che cosa|Cosa)\s+([a-zà-ù]{3,})(?![a-zà-ù])/.exec((question || '').trim());
+    if (m) {
+      const rad = m[1].slice(0, 4);
+      (options || []).forEach((o) => {
+        if (typeof o !== 'string') return;
+        const inf = /^([a-zà-ù']{4,}(?:are|ere|ire))(?![a-zà-ù])/i.exec(o.trim());
+        if (inf && inf[1].toLowerCase().startsWith(rad) && inf[1].toLowerCase() !== m[1].toLowerCase()) {
+          errors.push({ level: 'error', field: 'options', msg: `consegna — l'opzione ripete all'infinito il verbo della domanda ("${m[1]}" / "${inf[1]}")` });
+        }
+      });
     }
   }
 
