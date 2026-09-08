@@ -833,6 +833,25 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 17: opzione a due spazi in cui uno dei due e' un trattino, cioe'
+    // "qui non va niente" ("brushes / —"). E' una convenzione che il bambino
+    // non ha mai visto, e nell'unico caso in cui c'era la frase risultante era
+    // pure sbagliata ("She brushes always her teeth").
+    (options || []).forEach((o) => {
+      if (typeof o === 'string' && /\s\/\s*[—–-]\s*$|^\s*[—–-]\s*\/\s/.test(o)) {
+        errors.push({ level: 'error', field: 'options', msg: `opzione con un trattino al posto di uno dei due riempimenti ("${o}")` });
+      }
+    });
+
+    // Dal lotto 17: la consegna dice gia' la risposta ("Count and choose: six
+    // apples are drawn. How many apples?"). Restano fuori le domande di
+    // comprensione, dove trovare il numero dentro il brano e' l'esercizio.
+    if (/\bhow many\b|\bwhat number\b|\bhow much\b/i.test(d) && !/^\s*Read\b/i.test(d)
+        && typeof answer === 'string' && answer.trim()
+        && new RegExp(`(?<![a-z])${answer.trim().toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![a-z])`).test(d.toLowerCase())) {
+      errors.push({ level: 'error', field: 'question', msg: `la consegna contiene gia la risposta ("${answer}")` });
+    }
+
     // Dal lotto 15+16: comparativo in una consegna che offre piu' di due
     // opzioni ("Which number is bigger?" con quattro numeri). Il comparativo
     // confronta due cose, per un gruppo ci vuole il superlativo — ed e' una

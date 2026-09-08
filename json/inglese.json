@@ -11349,7 +11349,7 @@
    "area": "numeri",
    "subarea": "frasi_semplici",
    "difficulty": 1,
-   "question": "Count and choose: six apples are drawn. How many apples?",
+   "question": "Count: two apples and four apples. How many apples?",
    "options": [
     "five",
     "six",
@@ -11358,7 +11358,7 @@
    ],
    "answerIndex": 1,
    "answer": "six",
-   "explanation": "There are six apples.",
+   "explanation": "Two plus four makes six apples.",
    "active": true,
    "tag": "numeri",
    "tags": [
@@ -29156,16 +29156,16 @@
    "area": "inglese",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "She ___ always ___ her teeth before going to bed.",
+   "question": "She always ___ her teeth before going to bed.",
    "options": [
-    "does / brush",
-    "brushes / —",
-    "is / brushing",
-    "do / brush"
+    "brush",
+    "brushes",
+    "is brushing",
+    "brushing"
    ],
    "answerIndex": 1,
-   "answer": "brushes / —",
-   "explanation": "Al presente semplice con soggetto di terza persona singolare (she) si aggiunge -s: 'brushes'. 'Always' è un avverbio di frequenza che si mette tra soggetto e verbo.",
+   "answer": "brushes",
+   "explanation": "Al presente semplice con un soggetto di terza persona singolare (she) il verbo aggiunge la -s: 'brushes'. 'Always' è un avverbio di frequenza e sta fra il soggetto e il verbo: 'She always brushes her teeth'.",
    "active": true,
    "tag": "inglese;vari;classe_5;primaria",
    "tags": [
