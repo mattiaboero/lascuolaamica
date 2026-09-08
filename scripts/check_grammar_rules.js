@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Quando una sostanza cambia stato ma resta la stessa sostanza, avviene una trasformazione?',
   'Calcoliamo 1/2 di 28: 28 ÷ 2 = 14; poi 14 × 1 = 14.',
   "Quale è il fiume più lungo d'Europa?",
   'Con 90 euro compro 3 magliette e mi avanza 15 euro.',

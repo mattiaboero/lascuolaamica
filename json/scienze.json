@@ -4777,12 +4777,12 @@
    "options": [
     "radice",
     "sasso",
-    "corteccia di quaderno",
+    "corteccia",
     "foglia"
    ],
    "answerIndex": 3,
    "answer": "foglia",
-   "explanation": "La risposta corretta è 'foglia'.",
+   "explanation": "La foglia è la parte verde: contiene la clorofilla. La radice sta sotto terra e la corteccia è marrone.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -12881,7 +12881,7 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 2,
-   "question": "Quando una sostanza cambia stato ma resta la stessa sostanza, avviene una trasformazione?",
+   "question": "Quando una sostanza cambia stato ma resta la stessa sostanza, avviene una trasformazione...",
    "options": [
     "geografica",
     "artistica",

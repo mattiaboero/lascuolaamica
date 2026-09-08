@@ -154,6 +154,15 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 74: frase sospesa chiusa dal punto interrogativo invece che dai
+  // puntini ("...avviene una trasformazione?" con opzioni 'fisica',
+  // 'chimica'): le opzioni completano la frase, non rispondono a una
+  // domanda. Il pattern nomina i verbi che introducono il nome da
+  // qualificare, cosi' le centocinquanta domande vere della forma "Quale
+  // parola e' un nome?" restano fuori.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:avviene|si ha|si verifica|si tratta di)\s+(?:una|un|uno)\s+[a-zà-ù]+\?\s*$/,
+    soloDomanda: true,
+    msg: 'frase sospesa chiusa con il punto interrogativo: usare i puntini di sospensione' },
   // Dal lotto 73: passo moltiplicativo inutile nel calcolo di una frazione
   // unitaria ("1/2 di 28: 28 / 2 = 14; poi 14 x 1 = 14"). Quaranta
   // spiegazioni. Le tabelline dell'uno e le scomposizioni tipo 19 = 20 - 1
