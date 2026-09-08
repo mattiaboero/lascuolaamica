@@ -132,6 +132,8 @@ function checkTileHitArea(game) {
   game.parole.forEach(function (entry) {
     gruppi.add(entry.word.substr(entry.hole[0], entry.hole[1]));
     entry.errate.forEach(function (wrong) { gruppi.add(wrong); });
+    // Nella caccia al suono sul cartello va la parola intera, non il gruppo.
+    gruppi.add(entry.word);
   });
 
   let widest = 0;
@@ -245,6 +247,49 @@ function checkMemoria(game) {
   assert.deepEqual(game.daRipassare(due), ['sc'], 'le vocali non entrano nel ripasso');
 }
 
+/*
+  Caccia al suono: sul tabellone il gruppo, nella radura tre parole intere. La
+  cosa da difendere e' che i due distrattori quel gruppo non ce l'abbiano
+  davvero, altrimenti la domanda avrebbe due risposte giuste.
+*/
+function checkCacciaAlSuono(game) {
+  for (let run = 0; run < 300; run++) {
+    const session = game.buildSession({ modalita: 'suono', classe: 3, stats: { skills: {}, ripassa: null } });
+    assert.equal(session.length, 3, 'anche la caccia al suono e\' di tre giri');
+
+    const skills = session.map(function (r) { return r.skill; });
+    assert.equal(new Set(skills).size, 3, 'i tre giri allenano gruppi diversi');
+
+    session.forEach(function (r) {
+      assert.equal(r.tipo, 'suono');
+      assert.equal(r.choices.length, 3, `${r.target}: tre parole nella radura`);
+      assert.equal(new Set(r.choices).size, 3, `${r.target}: parole ripetute`);
+      assert.ok(r.choices.indexOf(r.answer) >= 0, `${r.target}: la risposta non e' fra le scelte`);
+      assert.ok(r.answer.indexOf(r.target) >= 0, `${r.answer} non contiene ${r.target}`);
+
+      const sbagliate = r.choices.filter(function (w) { return w !== r.answer; });
+      sbagliate.forEach(function (w) {
+        assert.equal(w.indexOf(r.target), -1,
+          `${r.target}: anche il distrattore ${w} contiene il gruppo, la domanda avrebbe due risposte`);
+      });
+
+      const cells = game.cellsOf(r);
+      assert.equal(cells.map(function (c) { return c.text; }).join(''), r.target,
+        'il tabellone deve mostrare il gruppo da cercare');
+      assert.equal(cells.filter(function (c) { return c.hole; }).length, 0,
+        'nella caccia al suono il tabellone non ha buchi');
+    });
+  }
+
+  // La classe filtra anche qui.
+  for (let run = 0; run < 100; run++) {
+    game.buildSession({ modalita: 'suono', classe: 2, stats: { skills: {}, ripassa: null } })
+      .forEach(function (r) {
+        assert.ok(r.cls <= 2, `classe 2: e' uscita ${r.word} di classe ${r.cls}`);
+      });
+  }
+}
+
 // Ogni lettera disegnata sul tabellone e sulle tessere passa dal font 5x7
 // interno: una lettera senza glifo verrebbe disegnata come "?" senza errori.
 function checkGlyphs(game) {
@@ -321,6 +366,7 @@ function main() {
     ['area di raccolta dei cartelli', checkTileHitArea],
     ['composizione della partita', checkSession],
     ['adattamento e classe', checkAdattamento],
+    ['caccia al suono', checkCacciaAlSuono],
     ['memoria delle abilita', checkMemoria],
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],

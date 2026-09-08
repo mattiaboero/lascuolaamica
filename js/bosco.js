@@ -15,6 +15,7 @@
   const KEY_MUTED = 'lascuolaamica_bosco_muted_v1';
   const KEY_CLASSE = 'lascuolaamica_bosco_classe_v1';
   const KEY_ABILITA = 'lascuolaamica_bosco_abilita_v1';
+  const KEY_MODALITA = 'lascuolaamica_bosco_modalita_v1';
   const DEBUG_MODE = (() => {
     try {
       const host = window.location.hostname;
@@ -293,6 +294,10 @@
     return Number(storageGet(KEY_CLASSE)) === 3 ? 3 : 2;
   }
 
+  function modalitaScelta() {
+    return storageGet(KEY_MODALITA) === 'suono' ? 'suono' : 'parola';
+  }
+
   // I gruppi su cui il bambino e' sotto il 70%, dopo almeno due tentativi: due
   // tentativi sono pochi per una statistica, ma abbastanza per non dire a un
   // adulto che il figlio "deve ripassare GN" dopo un solo errore.
@@ -448,6 +453,11 @@
   // sola largha quanto il gruppo che ci va dentro.
   function cellsOf(round) {
     const cells = [];
+    if (round.tipo === 'suono') {
+      return round.target.split('').map(function (ch) {
+        return { text: ch, hole: false, units: 1 };
+      });
+    }
     const word = round.word;
     for (let i = 0; i < word.length;) {
       if (i === round.hole[0]) {
@@ -480,6 +490,50 @@
   }
 
   /*
+    Caccia al suono: nella radura ci sono tre PAROLE intere e sul tabellone il
+    gruppo da trovare. Il compito e' rovesciato rispetto all'altra modalita' —
+    li' si va dal suono al segno, qui dal segno al suono — e allena il
+    riconoscimento del gruppo dentro una parola invece della sua scrittura.
+
+    I distrattori sono parole del banco che quel gruppo non ce l'hanno: cosi'
+    restano parole vere, gia' controllate, e non stringhe inventate.
+  */
+  function buildRoundSuono(entry, distrattori) {
+    return {
+      tipo: 'suono',
+      skill: entry.skill,
+      target: entry.word.substr(entry.hole[0], entry.hole[1]),
+      word: entry.word,
+      cls: entry.cls,
+      diff: entry.diff,
+      clue: entry.clue,
+      answer: entry.word,
+      choices: shuffle([entry.word].concat(distrattori.map(function (w) { return w.word; })))
+    };
+  }
+
+  function buildSessionSuono(eleggibili, dati) {
+    const rest = eleggibili.filter(function (w) { return w.skill !== 'vocali'; });
+    const session = [];
+    const usati = [];
+
+    for (let giro = 0; giro < 3; giro++) {
+      const candidati = shuffle(rest.filter(function (w) {
+        return usati.indexOf(w.skill) === -1 && (giro === 0 ? w.diff <= 2 : true);
+      }));
+      const scelta = pescaPesata(candidati.length ? candidati : shuffle(rest), dati);
+      const target = scelta.word.substr(scelta.hole[0], scelta.hole[1]);
+      usati.push(scelta.skill);
+
+      const altri = shuffle(eleggibili.filter(function (w) {
+        return w.word !== scelta.word && w.word.indexOf(target) === -1;
+      }));
+      session.push(buildRoundSuono(scelta, altri.slice(0, 2)));
+    }
+    return session;
+  }
+
+  /*
     Una partita: riscaldamento con il disegno, poi due gruppi ortografici di
     abilita' diverse e difficolta' crescente.
 
@@ -494,6 +548,8 @@
     const dati = o.stats || leggiAbilita();
 
     const eleggibili = PAROLE.filter(function (w) { return w.cls <= classe; });
+    if ((o.modalita || modalitaScelta()) === 'suono') return buildSessionSuono(eleggibili, dati);
+
     const warmups = eleggibili.filter(function (w) { return w.skill === 'vocali'; });
     const rest = eleggibili.filter(function (w) { return w.skill !== 'vocali'; });
     const session = [warmups[Math.floor(Math.random() * warmups.length)]];
@@ -907,6 +963,7 @@
     solved: 0,
     mode: 'playing',
     carry: null,
+    carryFrom: -1,
     target: null,
     arrivedAt: -1,
     wrong: -1,
@@ -998,7 +1055,15 @@
   }
 
   function speak() {
-    say(round().word.toLowerCase() + '. ' + round().clue, 0.8);
+    const r = round();
+    // Nella caccia al suono legge le tre parole in fila: chi non sa ancora
+    // leggere puo' comunque sentire quale contiene il gruppo. Non pronuncia il
+    // gruppo da solo, che la sintesi vocale direbbe come nome di lettere.
+    if (r.tipo === 'suono') {
+      say(r.choices.join('. ') + '.', 0.75);
+      return;
+    }
+    say(r.word.toLowerCase() + '. ' + r.clue, 0.8);
   }
 
   /* -------------------------------------------------------------------- DOM */
@@ -1015,14 +1080,20 @@
     vocale legge "GN" come «gi enne», cioe' il nome delle lettere, che per la
     fonetica e' il contrario di quello che serve al bambino.
   */
-  function owlTeach(round) {
+  function owlTeach(round, scelto) {
     if (!dom.owl) return;
     const regola = REGOLE[round.skill];
     if (!regola) return;
-    dom.owlText.textContent = regola + ' Ascolta: ' + round.word.toLowerCase() + '.';
+    // Nella caccia al suono si pronuncia la parola SCELTA, non quella giusta:
+    // dirla svelerebbe la risposta invece di spiegare l'errore.
+    const parola = (round.tipo === 'suono' ? scelto : round.word).toLowerCase();
+    const testo = round.tipo === 'suono'
+      ? 'In ' + parola + ' il gruppo ' + (ETICHETTE[round.skill] || round.target) + ' non c’e’. ' + regola
+      : regola + ' Ascolta: ' + parola + '.';
+    dom.owlText.textContent = testo;
     dom.owl.hidden = false;
-    announce(regola);
-    say(round.word.toLowerCase(), 0.65);
+    announce(testo);
+    say(parola, 0.65);
   }
 
   function owlHush() {
@@ -1036,6 +1107,19 @@
     const gruppi = daRipassare(leggiAbilita()).slice(0, 3).map(function (s) { return ETICHETTE[s] || s; });
     dom.ripasso.hidden = gruppi.length === 0;
     dom.ripasso.textContent = gruppi.length ? 'Da ripassare: ' + gruppi.join(', ') + '.' : '';
+  }
+
+  function scegliModalita(modalita) {
+    storageSet(KEY_MODALITA, modalita);
+    aggiornaBottoniModalita();
+    restart();
+  }
+
+  function aggiornaBottoniModalita() {
+    const attuale = modalitaScelta();
+    dom.modalita.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-modalita') === attuale ? 'true' : 'false');
+    });
   }
 
   function scegliClasse(classe) {
@@ -1101,7 +1185,11 @@
     if (dom.label) {
       dom.label.textContent = done
         ? 'Avventura completata'
-        : (won ? 'Che bella scoperta!' : (state.carry ? 'Portalo al tabellone' : 'Quale gruppo manca?'));
+        : (won
+          ? 'Che bella scoperta!'
+          : (state.carry
+            ? 'Portalo al tabellone'
+            : (r.tipo === 'suono' ? 'Quale parola contiene ' + r.target + '?' : 'Quale gruppo manca?')));
     }
     if (dom.note) {
       dom.note.textContent = done
@@ -1110,7 +1198,9 @@
           ? 'La radura brilla grazie a te.'
           : (state.carry
             ? 'Segui la luce dorata.'
-            : (r.picture ? 'Guarda il disegno, ascolta ed esplora.' : 'Premi «Ascolta» e senti come suona.')));
+            : (r.tipo === 'suono'
+              ? 'Premi «Ascolta» e senti le tre parole.'
+              : (r.picture ? 'Guarda il disegno, ascolta ed esplora.' : 'Premi «Ascolta» e senti come suona.'))));
     }
     if (dom.listen) dom.listen.hidden = won || done;
     if (dom.deliver) dom.deliver.hidden = !state.carry;
@@ -1288,6 +1378,7 @@
     const letter = round().choices[index];
     if (isCorrect(round(), letter)) {
       state.carry = letter;
+      state.carryFrom = index;
       state.mode = 'carrying';
       state.target = null;
       tone(659);
@@ -1306,14 +1397,32 @@
       registraRisposta(round().skill, false);
       aggiornaRipasso();
       setMessage('Non e’ questo. Senti cosa dice il gufo.');
-      owlTeach(round());
+      owlTeach(round(), letter);
     }
+    render();
+  }
+
+  // Tornare sulla propria piazzola rimette giu' il cartello. Serve a chi si
+  // accorge di aver sbagliato: senza, l'unico modo di disfare la scelta sarebbe
+  // portare al tabellone un gruppo che si e' capito essere sbagliato.
+  function riposiziona() {
+    const index = state.carryFrom;
+    if (index < 0) return;
+    state.arrivedAt = index;
+    state.carry = null;
+    state.carryFrom = -1;
+    state.mode = 'playing';
+    state.target = null;
+    tone(392, 0.1);
+    splash(state.player.x, state.player.y, 0.5);
+    setMessage('Rimesso a posto. Puoi sceglierne un altro.');
     render();
   }
 
   function complete() {
     state.solved++;
     state.carry = null;
+    state.carryFrom = -1;
     state.mode = state.solved === state.session.length ? 'complete' : 'solved';
     state.target = null;
     state.winTime = state.time;
@@ -1334,6 +1443,7 @@
     state.roundIndex++;
     state.mode = 'playing';
     state.carry = null;
+    state.carryFrom = -1;
     state.target = null;
     state.arrivedAt = -1;
     state.wrong = -1;
@@ -1348,6 +1458,7 @@
     state.solved = 0;
     state.mode = 'playing';
     state.carry = null;
+    state.carryFrom = -1;
     state.target = null;
     state.arrivedAt = -1;
     state.wrong = -1;
@@ -1422,6 +1533,10 @@
           const targeted = !state.target || state.target.tile === undefined || state.target.tile === i;
           if (targeted && onTile(i, state.player.x, state.player.y)) collect(i);
         });
+      } else if (state.mode === 'carrying' && state.carryFrom >= 0
+                 && state.arrivedAt !== state.carryFrom
+                 && onTile(state.carryFrom, state.player.x, state.player.y)) {
+        riposiziona();
       }
 
       if (state.mode === 'carrying' && state.player.y < 220 && Math.abs(state.player.x - 400) < 123) {
@@ -1533,7 +1648,10 @@
     return text.length * size * 6 - size;
   }
 
+  // Nella caccia al suono i cartelli portano parole intere, non gruppi di due o
+  // tre lettere: senza rimpicciolire il glifo due cartelli si sovrapporrebbero.
   function groupSize(group) {
+    if (group.length >= 5) return 2;
     return group.length > 1 ? 3 : 4;
   }
 
@@ -1599,7 +1717,7 @@
 
     // Il disegno c'e' solo per le parole di riscaldamento: le altre si
     // riconoscono dall'indizio, letto ad alta voce da «Ascolta».
-    if (r.picture) picture(c, r.picture, 400, 57);
+    if (r.picture && r.tipo !== 'suono') picture(c, r.picture, 400, 57);
     else {
       // Senza disegno l'arco tiene una lanterna accesa. Un secondo "?" sopra il
       // tabellone duplicherebbe quello gia' presente nella casella vuota.
@@ -1622,12 +1740,40 @@
     }
   }
 
+  /*
+    L'impronta a terra: la piazzola dove il cartello stava. Resta visibile anche
+    quando il cartello e' in mano, perche' e' li' che si torna per rimetterlo
+    giu'. Senza un segno, un bambino che capisce di aver preso il gruppo
+    sbagliato non ha modo di disfare la scelta se non finendo la parola.
+  */
+  function drawPad(c, p, vuota, t) {
+    // Terra battuta piu' larga della pietra, se no la pietra la coprirebbe e
+    // l'impronta non si vedrebbe.
+    const half = 38;
+    oval(c, p.x, p.y + 10, half, half * 0.40, shade(raw.ground, -0.22));
+    oval(c, p.x, p.y + 8, half - 3, half * 0.35, shade(raw.ground, -0.05));
+    oval(c, p.x, p.y + 7, half - 8, half * 0.28, shade(raw.ground, 0.10));
+    if (!vuota) return;
+    // Piazzola libera: alone che respira, per farsi notare da lontano.
+    const pulse = motionReduced() ? 0.55 : 0.44 + Math.sin(t * 2.4) * 0.14;
+    c.save();
+    c.globalAlpha = pulse;
+    c.strokeStyle = paint.glowSoft;
+    c.lineWidth = 2;
+    c.beginPath();
+    c.ellipse(p.x, p.y + 8, half - 2, (half - 2) * 0.38, 0, 0, Math.PI * 2);
+    c.stroke();
+    c.restore();
+    glow(c, p.x, p.y + 8, 42, paint.glow, 0.28);
+  }
+
   function drawTile(index, t) {
     if (state.mode === 'solved' || state.mode === 'complete') return;
     const c = ctx;
     const p = TILE_POSITIONS[index];
-    const collected = state.carry === round().choices[index];
+    const collected = state.carryFrom === index;
 
+    drawPad(c, p, collected, t);
     stone(c, p.x, p.y + 7, 26, collected);
     if (collected) return;
 
@@ -1841,6 +1987,7 @@
     dom.mute = document.getElementById('boscoMute');
     dom.ripasso = document.getElementById('boscoRipasso');
     dom.classe = Array.prototype.slice.call(document.querySelectorAll('[data-classe]'));
+    dom.modalita = Array.prototype.slice.call(document.querySelectorAll('[data-modalita]'));
     dom.owl = document.getElementById('boscoOwl');
     dom.owlText = document.getElementById('boscoOwlText');
     dom.overlay = document.getElementById('boscoOverlay');
@@ -1866,7 +2013,13 @@
     bindInput();
     bindActions();
     aggiornaBottoniClasse();
+    aggiornaBottoniModalita();
     aggiornaRipasso();
+    dom.modalita.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        scegliModalita(btn.getAttribute('data-modalita'));
+      });
+    });
     dom.classe.forEach(function (btn) {
       btn.addEventListener('click', function () {
         scegliClasse(Number(btn.getAttribute('data-classe')));
@@ -1890,6 +2043,7 @@
     regole: REGOLE,
     buildRound: buildRound,
     buildSession: buildSession,
+    modalitaScelta: modalitaScelta,
     leggiAbilita: leggiAbilita,
     registraRisposta: registraRisposta,
     daRipassare: daRipassare,

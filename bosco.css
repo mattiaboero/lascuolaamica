@@ -252,6 +252,8 @@ html:not([data-palette="okabe-ito"]) body.subject-bosco {
 .bosco-classe {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 12px;
 }
@@ -264,7 +266,8 @@ html:not([data-palette="okabe-ito"]) body.subject-bosco {
   color: var(--muted, #6e6357);
 }
 
-.bosco-classe .icon-btn[aria-pressed="true"] {
+.bosco-classe .icon-btn[aria-pressed="true"],
+.bosco-classe .icon-btn[data-modalita][aria-pressed="true"] {
   background: var(--accent-1);
   border-color: var(--accent-1);
   color: #fff;

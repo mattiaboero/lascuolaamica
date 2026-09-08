@@ -122,6 +122,14 @@
     },
     {
       "@type": "Question",
+      "name": "Che differenza c'è fra i due giochi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In «Completa la parola» il tabellone mostra una parola con un buco e nella radura ci sono tre gruppi di lettere: si porta al tabellone quello giusto. In «Caccia al suono» è il contrario: il tabellone mostra un gruppo, per esempio GN, e nella radura ci sono tre parole intere fra cui trovare quella che lo contiene. Il primo allena a scrivere il gruppo, il secondo a riconoscerlo dentro una parola."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Cosa succede se il bambino sbaglia?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -187,6 +195,12 @@
     <a class="icon-btn" href="/italiano" aria-label="Vai ai quiz di italiano">📚 Quiz di italiano</a>
   </div>
 
+  <div class="bosco-classe" role="group" aria-label="Scegli il gioco">
+    <span class="bosco-classe-label" id="boscoModoLabel">Gioco</span>
+    <button type="button" class="icon-btn" data-modalita="parola" aria-pressed="true" aria-describedby="boscoModoLabel">Completa la parola</button>
+    <button type="button" class="icon-btn" data-modalita="suono" aria-pressed="false" aria-describedby="boscoModoLabel">Caccia al suono</button>
+  </div>
+
   <div class="bosco-classe" role="group" aria-label="Scegli la classe">
     <span class="bosco-classe-label" id="boscoClasseLabel">Classe</span>
     <button type="button" class="icon-btn" data-classe="2" aria-pressed="true" aria-describedby="boscoClasseLabel">2ª</button>
@@ -205,7 +219,7 @@
   <main id="contenuto-principale" aria-labelledby="mainTitle">
     <div class="bosco-stage">
       <canvas class="bosco-canvas" id="boscoCanvas" width="800" height="500" tabindex="0"
-              aria-label="Bosco delle Lettere. Muoviti con le frecce o WASD, oppure tocca una destinazione. Scegli il gruppo di lettere giusto e portalo al tabellone. Puoi anche usare i pulsanti sotto la scena."></canvas>
+              aria-label="Bosco delle Lettere. Muoviti con le frecce o WASD, oppure tocca una destinazione. Porta al tabellone il cartello giusto; tornando sulla sua impronta a terra lo rimetti a posto. Puoi anche usare i pulsanti sotto la scena."></canvas>
 
       <div class="bosco-overlay" id="boscoOverlay" role="dialog" aria-modal="true" aria-labelledby="boscoOverlayTitle">
         <div class="bosco-overlay-card">
@@ -253,9 +267,12 @@
       <li>Le tre alternative si somigliano di proposito: RAGNO o RANIO, FAMIGLIA o FAMILIA, ACQUA o AQUA, PALLA o PALA. Scegliere fra alternative confondibili è un esercizio; scegliere fra tre lettere a caso è un indovinello.</li>
       <li>Sbagliando parla il <strong>gufo</strong>: dice la regola su quella parola precisa e la pronuncia ad alta voce. L'errore diventa la parte che insegna.</li>
       <li>Le parole cambiano a ogni partita: prima una facile con il disegno, poi due gruppi ortografici di tipo diverso.</li>
+      <li>Due giochi nella stessa radura. In <strong>Completa la parola</strong> si porta al tabellone il gruppo che manca; in <strong>Caccia al suono</strong> il tabellone mostra un gruppo e nella radura ci sono tre parole intere, fra cui trovare quella che lo contiene.</li>
+      <li>Ogni cartello ha la sua <strong>impronta a terra</strong>: chi si accorge di aver preso quello sbagliato torna sulla piazzola e lo rimette a posto, senza dover finire la parola.</li>
       <li>Nessun timer, nessun punteggio, nessuna vita da perdere. Sbagliare non toglie niente.</li>
     </ul>
-    <p>Il pulsante <strong>Ascolta</strong> legge parola e indizio con la voce del browser. Sentire la parola intera non è un aiuto di troppo: il compito non è indovinare di quale parola si tratti, ma scegliere come si scrive il gruppo che si sente. Per questo il gioco funziona anche prima di saper leggere una consegna scritta, e sta accanto ai quiz invece di ripeterli.</p>
+    <p>Si sceglie anche la classe, 2ª o 3ª: cambia la lunghezza delle parole, non quali gruppi si allenano. Il gioco ricorda quali gruppi vengono sbagliati e li ripropone più spesso, facendoli tornare nella partita successiva invece che subito dopo l'errore.</p>
+    <p>Il pulsante <strong>Ascolta</strong> legge parola e indizio con la voce del browser; nella caccia al suono legge invece le tre parole in fila. Sentire la parola intera non è un aiuto di troppo: il compito non è indovinare di quale parola si tratti, ma scegliere come si scrive il gruppo che si sente. Per questo il gioco funziona anche prima di saper leggere una consegna scritta, e sta accanto ai quiz invece di ripeterli.</p>
     <p>Tutta la scena è disegnata in pixel art dal codice, non da immagini: per questo cambia colore insieme al resto del sito quando si attiva la <a href="/accessibilita">palette ad alto contrasto</a>. Si gioca da computer con le frecce o con i tasti WASD, e da tablet e smartphone toccando il punto della radura dove si vuole andare.</p>
     <p>Per continuare con la grammatica e la lettura ci sono i <a href="/italiano">quiz di italiano</a> divisi per classe, e per chi preferisce un gioco più movimentato c'è <a href="/breakout">Cervellino Spacca-Muri</a>.</p>
   </section>
@@ -269,6 +286,10 @@
     <details class="seo-faq-item">
       <summary>Che cosa si impara?</summary>
       <p>I gruppi di lettere su cui in italiano si sbaglia davvero: GN, GLI, SCE e SCI, CHE e CHI, GHE e GHI, QU e CQU, e le consonanti doppie. Le tre alternative si somigliano di proposito, come RAGNO e RANIO o FAMIGLIA e FAMILIA, perche' il compito e' distinguere e non tirare a indovinare.</p>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Che differenza c'è fra i due giochi?</summary>
+      <p>In «Completa la parola» il tabellone mostra una parola con un buco e nella radura ci sono tre gruppi di lettere: si porta al tabellone quello giusto. In «Caccia al suono» è il contrario: il tabellone mostra un gruppo, per esempio GN, e nella radura ci sono tre parole intere fra cui trovare quella che lo contiene. Il primo allena a scrivere il gruppo, il secondo a riconoscerlo dentro una parola.</p>
     </details>
     <details class="seo-faq-item">
       <summary>Cosa succede se il bambino sbaglia?</summary>
