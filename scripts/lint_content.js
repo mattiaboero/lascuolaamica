@@ -637,6 +637,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 63: la domanda chiede quale parola "ha l'accento scritto", cioe'
+  // la presenza dell'accento, e piu' di un'opzione ce l'ha: "pero'" con
+  // l'accento sbagliato ('pero') risponde alla domanda quanto la risposta
+  // giusta. Le domande sull'accento *corretto* o sulla sua *posizione* non
+  // rientrano: li' piu' opzioni accentate sono il punto dell'esercizio.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    if (/l'accento (?:scritto|grafico)/i.test(String(question || ''))) {
+      const accentate = options.filter((o) => typeof o === 'string' && /[àèéìòóù]/.test(o));
+      if (accentate.length > 1) {
+        errors.push({ level: 'error', field: 'options', msg: `la domanda chiede quale parola ha l'accento scritto ma ce l'hanno in ${accentate.length}: ${accentate.join(', ')}` });
+      }
+    }
+  }
+
   // Dal lotto 62: rettangolo con la larghezza maggiore della lunghezza ("18 m
   // di larghezza e 5 m di lunghezza"). Tre casi: scambiate le etichette, i
   // numeri e quindi la risposta restano quelli.

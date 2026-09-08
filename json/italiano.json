@@ -22277,7 +22277,7 @@
    "area": "italiano_classe4",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Quale delle seguenti parole ha l'accento scritto?",
+   "question": "Quale di queste è la grafia corretta della congiunzione che significa 'ma'?",
    "options": [
     "pero",
     "pero'",
@@ -22286,7 +22286,7 @@
    ],
    "answerIndex": 3,
    "answer": "però",
-   "explanation": "'Però' (congiunzione avversativa, significa 'ma') vuole l'accento grave sulla 'o' finale. 'Pero' senza accento è l'albero da frutto. L'accento cambia il significato della parola!",
+   "explanation": "La congiunzione 'però' vuole l'accento grave sulla 'o' finale. 'Pero' senza accento è l'albero da frutto; la grafia con l'apostrofo e quella con l'accento sulla 'e' non sono ammesse.",
    "active": true,
    "tag": "italiano;ortografia;classe_4;primaria",
    "tags": [

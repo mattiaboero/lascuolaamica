@@ -27213,16 +27213,16 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 2,
-   "question": "Il fiume Tevere attraversa la città di...",
+   "question": "In quale mare sfocia il Tevere?",
    "options": [
-    "Milano",
-    "Roma",
-    "Torino",
-    "Bari"
+    "Mar Ligure",
+    "Mar Tirreno",
+    "Mar Ionio",
+    "Mar Adriatico"
    ],
    "answerIndex": 1,
-   "answer": "Roma",
-   "explanation": "Il Tevere attraversa Roma.",
+   "answer": "Mar Tirreno",
+   "explanation": "Il Tevere nasce in Emilia-Romagna, attraversa Roma e sfocia nel Mar Tirreno, a Fiumicino.",
    "active": true,
    "tag": "paesaggi_acqua",
    "tags": [
