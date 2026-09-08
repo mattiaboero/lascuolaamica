@@ -1,5 +1,14 @@
 [
  {
+  "date": "8 settembre 2026 · Release 4.13.0",
+  "items": [
+   "Rilette una per una 6.382 domande di matematica, problemi, italiano, storia, geografia, scienze ed educazione civica. Corretti errori di grammatica e di accordo, apostrofi e accenti sbagliati, domande che restavano a metà, spiegazioni che non tornavano con la risposta e alcune domande che avevano più di una risposta giusta o nessuna.",
+   "In educazione civica ogni domanda tornava cinque volte con le stesse risposte e solo la consegna riscritta in modo diverso: ora ne resta una per gruppo, così una partita non ripropone più lo stesso quesito travestito.",
+   "Aggiunti controlli automatici che impediscono a questi errori di rientrare quando si scrivono domande nuove.",
+   "Nuovo gioco «Il bosco delle parole» per allenare l'ortografia, con la sua bacheca dei premi."
+  ]
+ },
+ {
   "date": "6 settembre 2026 · Release 4.12.62",
   "items": [
    "Una partita non può più proporre due volte la stessa domanda: prima poteva succedere quando le domande disponibili non bastavano a riempirla.",

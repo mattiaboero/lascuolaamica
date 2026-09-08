@@ -1,5 +1,24 @@
 # Changelog Repo
 
+## 4.13.0 - 2026-09-08
+
+### Fixed
+- fix(contenuti): **revisione linguistica dell'intero banco campionabile — 107 lotti, 6.382 domande lette una per una.** Il bacino del campionatore (domande non inglesi, attive, con la consegna non ripetuta a meno di nomi e numeri) e' esaurito: 5.496 su 5.496. Le famiglie di difetti chiuse in questa tornata, ognuna enumerata su tutto il corpus prima di correggerla, comprendono: accordi di genere e numero (`Quante lamponi`, `Le mette` riferito a `biscotti`, `entrambi` con due soggetti femminili, `viene mangiato 3/4`), elisioni mancanti (`una aula`, `una informazione`), reggenze sbagliate (`il mare in cui si affaccia`), preposizioni non ripetute nel coordinato (`sulle Alpi e gli Appennini`), frasi sospese chiuse dal punto interrogativo o da un verbo nudo, spiegazioni in due passi con un passo che non calcola niente (su entrambi i lati, primo e secondo), spiegazioni che non nominano la risposta o che ammettono che nessuna opzione e' giusta, opzioni ambigue (`aglio` accanto ad `agli` per il gruppo `gli`), distrattori di un'altra categoria (`mattina` fra le stagioni), errori di merito (la probabilita' di `testa o croce` e' 1, `per mia sorella` non e' complemento di termine, `solo il quadrato ha 4 lati`, `Da bambina` e' tempo determinato) e terminologia incoerente (tre nomi diversi per il complemento di tempo continuato).
+- fix(contenuti): **civica, 640 domande disattivate.** 800 domande su 1.121 stavano in 160 gruppi da 5 con le stesse quattro opzioni, la stessa risposta e solo la consegna riscritta. Tenuta una domanda per gruppo con un criterio deterministico: dove esiste, la consegna diretta `Se ..., qual è il comportamento corretto?`; altrove la piu' breve. Civica passa da 1.121 a 481 domande attive, con un minimo di 22 per incrocio classe x area contro le 10 che servono per una sessione.
+
+### Added
+- feat(bosco): **`/bosco`, gioco di ortografia in vanilla dentro il sito**, con banco da 129 parole, caccia al suono, memoria dei gruppi deboli, recupero spaziato e sei premi nella bacheca condivisa.
+- lint(contenuti): **il linter passa da 42 a 77 regole di GRAMMATICA** piu' una trentina di controlli programmatici sulle opzioni, che le regex non vedono. Ogni regola e' stata verificata reintroducendo il difetto nel corpus e confermando che scatta — disciplina che in questa tornata ha smascherato piu' di una regola inerte.
+
+### Changed
+- `scripts/sample_review_batch.py` salta le domande con `active: false`: dopo la potatura di civica, rileggerle sarebbe lavoro sprecato.
+- `scripts/audit_questions_json.js` non pretende piu' il genere femminile per `lamponi`.
+
+### Notes
+- **Restano fuori dal campionamento** 2.649 domande non inglesi la cui consegna si ripete identica a meno di nomi e numeri (matematica 1.673, problemi 834, poche decine altrove: sono gli esercizi a ripetizione tipo `Quanto fa 7 x 8?`), piu' le 1.094 di inglese, escluse dal campionatore fin dall'inizio.
+- **Segnalate e non corrette**, perche' sono riscritture e non correzioni: ~195 domande in cui tutti e tre i distrattori iniziano con `Solo`, ~44 in cui la risposta e' molto piu' lunga dei distrattori.
+- Il changelog del sito (`json/changelog.json`) porta **una sola voce** per tutta la revisione, non 107.
+
 ## 4.12.80 - 2026-09-07
 
 ### Fixed
