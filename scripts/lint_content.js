@@ -159,6 +159,15 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 103: apertura con le virgolette doppie e chiusura con l'apice
+  // ("l'articolo e' \"i'. Si dice 'i libri\"."). L'apostrofo dell'elisione non
+  // conta, perche' li' l'apice e' seguito da una lettera.
+  { pattern: /"[^"\n]{0,40}[a-zà-ùA-ZÀ-Ù]'(?![a-zà-ùA-ZÀ-Ù])/,
+    msg: 'virgolette incrociate: aperte con " e chiuse con \'' },
+  // Dal lotto 103: "per mia sorella" non e' un complemento di termine, che e'
+  // introdotto da "a"; con "per" e' complemento di fine o di vantaggio.
+  { pattern: /complemento di termine[\s\S]{0,120}?(?<![a-zà-ùA-ZÀ-Ù])[Pp]er\s+(?:mia|mio|il|la|lo|un|una|i|le|gli)(?![a-zà-ù])|(?<![a-zà-ùA-ZÀ-Ù])[Pp]er\s+(?:mia|mio|il|la|lo|un|una|i|le|gli)\s+[a-zà-ù]+[\s\S]{0,120}?complemento di termine/,
+    msg: 'errore di contenuto: il complemento di termine e introdotto da "a", non da "per"' },
   // Dal lotto 102: "una" non elisa davanti a nome o aggettivo che inizia per
   // vocale ("una aula", "una informazione", "una enorme sfera"). Restano
   // fuori i verbi, dove "una" e' pronome ("una usa solo il blu"), e i testi
@@ -618,7 +627,10 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // accentata non e' un carattere di parola e quel confine non fa mai match.
   if (subject !== 'inglese' && /[a-zà-ù]\?\s*$/i.test(question || '')) {
     const interrogativa = /\b(?:chi|cosa|quale|quali|qual|quanto|quanta|quanti|quante|come|dove|quando)\b|perch[ée]|cos['’]|com['’]|qual['’]|\bqual\s+è|(?:^|[.!?,]\s*|['"»]\s+)che\s+[a-zà-ù]+|\b(?:in|di|a|con|per|da|su)\s+(?:che|quale|quali)\b/i.test(question);
-    const alternativa = /\s+o\s+[^?]{0,40}\?\s*$/i.test(question);
+    // L'alternativa vale solo se non e' dentro il soggetto: "a piedi o in bici
+    // invece che in auto fa?" finisce comunque con un verbo senza complemento.
+    const verboFinale = /(?<![a-zà-ùA-ZÀ-Ù])(?:fa|fanno|serve|servono|aiuta|aiutano|rende|rendono|provoca|provocano|causa|causano|produce|producono|comporta|comportano)\s*\?\s*$/i.test(question || '');
+    const alternativa = !verboFinale && /\s+o\s+[^?]{0,40}\?\s*$/i.test(question);
     const siNo = (options || []).some((o) => typeof o === 'string' && /^\s*(sì|no|vero|falso)\b/i.test(o));
     if (!interrogativa && !alternativa && !siNo) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — frase sospesa chiusa con "?" senza nessuna parola interrogativa: usare i puntini (es. "Gli animali onnivori mangiano...")' });

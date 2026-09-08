@@ -14574,7 +14574,7 @@
    ],
    "answerIndex": 2,
    "answer": "i",
-   "explanation": "'Libri' è un nome maschile plurale che inizia con consonante. L'articolo determinativo maschile plurale davanti a consonante è \"i'. Si dice 'i libri\".",
+   "explanation": "'Libri' è un nome maschile plurale che inizia con consonante. L'articolo determinativo maschile plurale davanti a consonante è 'i'. Si dice 'i libri'.",
    "active": true,
    "tag": "italiano;morfologia;classe_2;primaria",
    "tags": [
@@ -26341,16 +26341,16 @@
    "area": "italiano_classe5",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In 'Ho comprato il libro per mia sorella', qual è il complemento di termine?",
+   "question": "In 'Ho regalato il libro a mia sorella', qual è il complemento di termine?",
    "options": [
-    "Ho comprato",
+    "Ho regalato",
     "il libro",
-    "per mia sorella",
+    "a mia sorella",
     "mia sorella"
    ],
    "answerIndex": 2,
-   "answer": "per mia sorella",
-   "explanation": "Il complemento di termine indica a chi o a che cosa è destinata l'azione. Risponde alla domanda 'a chi? a che cosa?'. 'Per mia sorella' indica la destinataria del libro.",
+   "answer": "a mia sorella",
+   "explanation": "Il complemento di termine indica a chi o a che cosa è destinata l'azione. Risponde alla domanda 'a chi? a che cosa?' ed è introdotto dalla preposizione 'a'. 'A mia sorella' indica la destinataria del libro.",
    "active": true,
    "tag": "italiano;sintassi;classe_5;primaria",
    "tags": [

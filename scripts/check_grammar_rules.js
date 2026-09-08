@@ -17,6 +17,8 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'L\'articolo determinativo maschile plurale davanti a consonante è "i\'. Si dice \'i libri".',
+  "In 'Ho comprato il libro per mia sorella', qual è il complemento di termine?",
   "La rappresentazione vista dall'alto di una aula si chiama...",
   "Qual è la probabilità di ottenere testa o croce?",
   'Solo il quadrato ha certamente 4 lati.',
@@ -112,6 +114,9 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'L\'articolo determinativo maschile plurale davanti a consonante è \'i\'. Si dice \'i libri\'.',
+  "In 'Ho regalato il libro a mia sorella', qual è il complemento di termine?",
+  'La risposta corretta è "l\'effetto delle abitudini sull\'ambiente".',
   "La rappresentazione vista dall'alto di un'aula si chiama...",
   'Una carta fisica e una politica sono diverse: una usa solo il blu.',
   "Si dice 'una arancia' oppure 'un'arancia' con l'apostrofo.",
