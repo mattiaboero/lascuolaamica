@@ -16494,7 +16494,7 @@
    ],
    "answerIndex": 2,
    "answer": "I bambini corrono.",
-   "explanation": "Il verbo deve concordare con il soggetto in numero (singolare/plurale) e genere. 'I bambini' è maschile plurale, quindi il verbo è 'corrono' (plurale). 'Corre' sarebbe singolare, 'bambino' è maschile singolare.",
+   "explanation": "Il verbo deve concordare con il soggetto nel numero (singolare/plurale). 'I bambini' è plurale, quindi il verbo è 'corrono'. 'Corre' sarebbe singolare, e anche l'articolo deve concordare: si dice 'il bambino', non 'le bambino'.",
    "active": true,
    "tag": "italiano;sintassi;classe_2;primaria",
    "tags": [

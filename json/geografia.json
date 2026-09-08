@@ -28077,7 +28077,7 @@
    "area": "paesaggi_acqua",
    "subarea": "acque",
    "difficulty": 2,
-   "question": "Il Mediterraneo è il mare in cui si affaccia gran parte dell'Italia?",
+   "question": "Il Mediterraneo è il mare su cui si affaccia gran parte dell'Italia?",
    "options": [
     "Vero",
     "Falso",
@@ -30006,7 +30006,7 @@
    ],
    "answerIndex": 1,
    "answer": "Nelle colline del Centro-Sud e sulle coste del Mediterraneo",
-   "explanation": "L'ulivo ama il clima mite, secco e soleggiato del Mediterraneo. Lo si trova soprattutto sulle colline e le coste del Centro e Sud Italia: Toscana, Umbria, Puglia, Calabria e Sicilia sono le principali regioni produttrici di olio.",
+   "explanation": "L'ulivo ama il clima mite, secco e soleggiato del Mediterraneo. Lo si trova soprattutto sulle colline e sulle coste del Centro e Sud Italia: Toscana, Umbria, Puglia, Calabria e Sicilia sono le principali regioni produttrici di olio.",
    "active": true,
    "tag": "geografia;paesaggi_collina;classe_3;primaria",
    "tags": [
@@ -30358,7 +30358,7 @@
    ],
    "answerIndex": 1,
    "answer": "Clima alpino di alta montagna",
-   "explanation": "Il clima alpino è tipico delle zone di alta montagna sulle Alpi e gli Appennini. Le temperature scendono molto sotto zero in inverno, le estati sono brevi e fresche e le precipitazioni cadono spesso sotto forma di neve.",
+   "explanation": "Il clima alpino è tipico delle zone di alta montagna sulle Alpi e sugli Appennini. Le temperature scendono molto sotto zero in inverno, le estati sono brevi e fresche e le precipitazioni cadono spesso sotto forma di neve.",
    "active": true,
    "tag": "geografia;clima_e_ambiente;classe_3;primaria",
    "tags": [

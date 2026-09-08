@@ -831,7 +831,7 @@
    ],
    "answerIndex": 2,
    "answer": "51",
-   "explanation": "Sommiamo le quantità di entrambi: 32 + 19 = 51 ciliegie.",
+   "explanation": "Sommiamo le quantità di entrambe: 32 + 19 = 51 ciliegie.",
    "active": true,
    "tag": "addizione,condivisione",
    "tags": [
@@ -861,7 +861,7 @@
    ],
    "answerIndex": 2,
    "answer": "49",
-   "explanation": "Sommiamo le quantità di entrambi: 26 + 23 = 49 cioccolatini.",
+   "explanation": "Sommiamo le quantità di entrambe: 26 + 23 = 49 cioccolatini.",
    "active": true,
    "tag": "addizione,condivisione",
    "tags": [
@@ -1551,7 +1551,7 @@
    ],
    "answerIndex": 2,
    "answer": "28",
-   "explanation": "Sommiamo le quantità di entrambi: 12 + 16 = 28 carote.",
+   "explanation": "Sommiamo le quantità di entrambe: 12 + 16 = 28 carote.",
    "active": true,
    "tag": "addizione,condivisione",
    "tags": [
@@ -2451,7 +2451,7 @@
    ],
    "answerIndex": 0,
    "answer": "33",
-   "explanation": "Sommiamo le quantità di entrambi: 25 + 8 = 33 lamponi.",
+   "explanation": "Sommiamo le quantità di entrambe: 25 + 8 = 33 lamponi.",
    "active": true,
    "tag": "addizione,condivisione",
    "tags": [
@@ -3351,7 +3351,7 @@
    ],
    "answerIndex": 2,
    "answer": "44",
-   "explanation": "Sommiamo le quantità di entrambi: 20 + 24 = 44 pesche.",
+   "explanation": "Sommiamo le quantità di entrambe: 20 + 24 = 44 pesche.",
    "active": true,
    "tag": "addizione,condivisione",
    "tags": [
@@ -5421,7 +5421,7 @@
    ],
    "answerIndex": 3,
    "answer": "25",
-   "explanation": "Sommiamo le quantità di entrambi: 11 + 14 = 25 acini d'uva.",
+   "explanation": "Sommiamo le quantità di entrambe: 11 + 14 = 25 acini d'uva.",
    "active": true,
    "tag": "addizione,condivisione",
    "tags": [
@@ -6833,7 +6833,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 36 panini. Le mette in confezioni da 6. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 36 panini. Li mette in confezioni da 6. Quante confezioni riesce a fare?",
    "options": [
     "16",
     "4",
@@ -7981,7 +7981,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 40 panini. Le mette in confezioni da 5. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 40 panini. Li mette in confezioni da 5. Quante confezioni riesce a fare?",
    "options": [
     "12",
     "8",
@@ -8436,7 +8436,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 42 biscotti. Le mette in confezioni da 6. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 42 biscotti. Li mette in confezioni da 6. Quante confezioni riesce a fare?",
    "options": [
     "3",
     "17",
@@ -33722,7 +33722,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In un negozio di dolci 4 amici dividono ugualmente il conto di 48 euro. Ognuno aveva 15 euro. Quanto gli rimane a ciascuno?",
+   "question": "In un negozio di dolci 4 amici dividono ugualmente il conto di 48 euro. Ognuno aveva 15 euro. Quanto rimane a ciascuno?",
    "options": [
     "3",
     "15",

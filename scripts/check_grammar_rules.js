@@ -17,6 +17,11 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Il fornaio ha sfornato 42 biscotti. Le mette in confezioni da 6.',
+  'Giulia ha 20 pesche e Monica ne ha 24. Sommiamo le quantità di entrambi: 20 + 24 = 44 pesche.',
+  "Il Mediterraneo è il mare in cui si affaccia gran parte dell'Italia?",
+  "Il clima alpino è tipico delle zone di alta montagna sulle Alpi e gli Appennini.",
+  'Il verbo deve concordare con il soggetto in numero (singolare/plurale) e genere.',
   'Quando il corpo ha bisogno di acqua, sentiamo?',
   'Una torta è divisa in 12 fette. Viene mangiato 3/4 della torta.',
   '34 - 28 = 6 api rimasti.',
@@ -104,6 +109,13 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Il fornaio ha sfornato 42 biscotti. Li mette in confezioni da 6.',
+  'Giulia ha 20 pesche e Monica ne ha 24. Sommiamo le quantità di entrambe: 20 + 24 = 44 pesche.',
+  'Marco ha 20 pesche e Luca ne ha 24. Sommiamo le quantità di entrambi: 20 + 24 = 44 pesche.',
+  "Il Mediterraneo è il mare su cui si affaccia gran parte dell'Italia?",
+  "Il clima alpino è tipico delle zone di alta montagna sulle Alpi e sugli Appennini.",
+  'In biblioteca ci sono 31 libri sul tavolo e la maestra ne porta altri 16.',
+  'Il verbo deve concordare con il soggetto nel numero e nella persona.',
   "Quale tra queste parole ha la doppia 'l'?",
   "What is the -ing form of the verb 'run'?",
   "Nella successione corretta, 'mi sveglio' è la risposta giusta.",

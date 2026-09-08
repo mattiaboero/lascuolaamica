@@ -69,6 +69,7 @@ const NOMI_MASSA = 'burro|zucchero|farina|farine|latte|olio|pane|riso|miele|marm
 // finale, quindi l'elenco resta esplicito.
 const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo|ghiaccio|sole|vento|fiume|lago|monte|bosco|cielo|suolo|terreno|calore|corpo|sangue|cuore|cervello|denaro|lavoro|giorno|mese|numero|gruppo|regno|paese|popolo|pianeta|colore|peso|volume|suono|rumore|movimento|piede|braccio|naso|occhio|orecchio|lamponi|mirtilli|acini|evidenziatori|pennarelli|pastelli|adesivi|palloncini|uccellini|cioccolatini|bonbon';
 const NOMI_FEMMINILI = 'borsa|giacca|scarpe|maglietta|penna|matita|aula|palestra|biblioteca|fattoria|figurine|caramelle|pagine|mele|cameretta|cucina|stanza|classe|scuola|finestra|porta|piscina|libreria|cartoleria';
+const NOMI_PROPRI_F = 'Giulia|Monica|Sara|Anna|Chiara|Elena|Marta|Sofia|Alice|Beatrice|Laura|Giorgia|Ilaria|Martina|Valentina|Francesca|Paola|Silvia|Carla|Nadia|Aisha|Fatima|Lucia|Irene|Camilla|Emma|Noemi|Greta|Viola|Rita|Luisa|Giada|Elisa|Sara';
 // Nomi propri di persona presenti nel corpus. In italiano il genere del pronome
 // dipende dal referente e nessuna regex lo deduce dal testo, quindi le due liste
 // vanno enumerate: check_grammar_rules.js rilegge il corpus a ogni build e
@@ -158,6 +159,28 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 99: pronome atono di genere sbagliato, ereditato da un template
+  // scritto per un nome femminile ("42 biscotti. Le mette in confezioni").
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:biscotti|panini|libri|quaderni|pastelli|palloni|fogli|cioccolatini|gelati|bicchieri|sassi|fiori|alberi|dolci|mattoni|lamponi|pennarelli)\b[^.!?]{0,40}[.!?]\s*[Ll]e\s+(?:mette|divide|distribuisce|sistema|conta|dispone|ripone|confeziona)(?![a-zà-ùA-ZÀ-Ù])/,
+    msg: 'accordo: pronome femminile "le" riferito a un nome maschile plurale (es. "42 biscotti. Le mette")' },
+  // Dal lotto 99: "entrambi" nella spiegazione quando i due soggetti della
+  // domanda sono entrambi femminili ("Giulia... e Monica... di entrambi").
+  { pattern: new RegExp(`(?<![a-zà-ùA-ZÀ-Ù])(?:${NOMI_PROPRI_F})\\s+ha\\s+[^.?]{0,60}\\se\\s+(?:${NOMI_PROPRI_F})\\s+(?:ne\\s+)?ha\\s+[\\s\\S]{0,200}?(?<![a-zà-ùA-ZÀ-Ù])entrambi(?![a-zà-ùA-ZÀ-Ù])`),
+    msg: 'accordo: "entrambi" con due soggetti femminili (serve "entrambe")' },
+  // Dal lotto 99: "affacciarsi" regge "su", non "in"/"a".
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:in|a)\s+cui\s+si\s+affacci|(?<![a-zà-ùA-ZÀ-Ù])si\s+affaccia(?:no)?\s+(?:in|a)\s+(?!cui)/i,
+    msg: 'reggenza: "affacciarsi" vuole "su" ("il mare su cui si affaccia")' },
+  // Dal lotto 99: preposizione articolata non ripetuta nel secondo membro del
+  // coordinato ("sulle Alpi e gli Appennini"): il secondo nome resta senza
+  // preposizione e si legge come un altro complemento. Solo articolo plurale:
+  // al singolare ("sul tavolo e la maestra ne porta...") il secondo membro e'
+  // quasi sempre il soggetto di una nuova proposizione, non un coordinato.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])su(?:lle|lla|llo|gli|lo|i|l)\s+[a-zà-ùA-ZÀ-Ù][a-zà-ùA-ZÀ-Ù']+\s+e\s+(?:i|gli|le)\s+[a-zà-ùA-ZÀ-Ù]/,
+    msg: 'preposizione non ripetuta nel coordinato (es. "sulle Alpi e gli Appennini")' },
+  // Dal lotto 99: in italiano il verbo concorda con il soggetto nel numero e
+  // nella persona, non nel genere.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])verbo\s+(?:deve\s+)?concord[a-zà-ù]+[^.]{0,60}genere/i,
+    msg: 'errore di contenuto: il verbo non concorda in genere con il soggetto' },
   // Dal lotto 98: domanda che finisce con un verbo coniugato e il punto
   // interrogativo, senza la cosa da rispondere ("Quando il corpo ha bisogno
   // di acqua, sentiamo?").
@@ -479,6 +502,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     if (opts.length && opts.every(infinito)) {
       errors.push({ level: 'error', field: 'question', msg: 'grammatica — "cosa fai?" con opzioni all\'infinito: la consegna giusta e\' "cosa e\' meglio fare?"' });
     }
+  }
+
+  // Dal lotto 99: opzione lasciata in inglese in una domanda di un'altra
+  // materia ("Punic wars" fra Maratona, Azio e Troia). Le regex di GRAMMATICA
+  // le opzioni non le vedono.
+  if (subject !== 'inglese') {
+    (options || []).forEach((o) => {
+      if (typeof o !== 'string') return;
+      if (/(?<![a-zà-ùA-ZÀ-Ù'])(?:the|and|of|wars|war|kings|king|queen|city|with)(?![a-zà-ùA-ZÀ-Ù'])/i.test(o)) {
+        errors.push({ level: 'error', field: 'options', msg: `lingua — opzione in inglese ("${o}") in una domanda di ${subject}` });
+      }
+    });
   }
 
   // Dal lotto 11: un solo distrattore all'indicativo dentro un elenco di
