@@ -833,6 +833,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 14: dopo "a bowl of ___" o "a glass of ___" nessuna opzione
+    // puo' cominciare con un articolo: "a bowl of a table" non e' sbagliato,
+    // e' malformato, e la risposta finiva per essere l'unica senza articolo.
+    if (/\bof\s+___/.test(d)) {
+      (options || []).forEach((o) => {
+        if (typeof o === 'string' && /^(?:an?|the)\s+/i.test(o.trim())) {
+          errors.push({ level: 'error', field: 'options', msg: `opzione con articolo dopo "of ___" ("${o}")` });
+        }
+      });
+    }
+
     // Dal lotto 13: "Who are in the garden?". In inglese "who" come soggetto
     // vuole il verbo al singolare, anche quando la risposta e' plurale.
     if (/(?<![a-zA-Z])Who\s+are\b/.test(d)) {

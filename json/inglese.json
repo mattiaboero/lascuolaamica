@@ -35363,9 +35363,9 @@
    "question": "Complete: 'I have a bowl of ___ for breakfast.'",
    "options": [
     "cereal",
-    "a table",
-    "a spoon",
-    "a plate"
+    "table",
+    "spoon",
+    "plate"
    ],
    "answerIndex": 0,
    "answer": "cereal",
