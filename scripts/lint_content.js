@@ -154,6 +154,11 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 75: "Come sono i colori...?" dove la domanda chiede quali sono,
+  // non come sono fatti.
+  { pattern: /^Come (?:sono|è)\s+(?:i|le|gli|il|la|lo)\s+[a-zà-ù]+\s+(?:della|del|dei|delle|di)\b/,
+    soloDomanda: true,
+    msg: '"Come sono/è" dove la domanda chiede quali sono: usare "Quali/Quale"' },
   // Dal lotto 74: frase sospesa chiusa dal punto interrogativo invece che dai
   // puntini ("...avviene una trasformazione?" con opzioni 'fisica',
   // 'chimica'): le opzioni completano la frase, non rispondono a una
@@ -823,7 +828,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 73: variante con i conti diversi ma lo stesso risultato
+    // Dal lotto 75: la domanda chiede un valore approssimativo e la spiegazione
+  // risponde "esattamente", contraddicendola; in sto-5-linea_del_tempo-9152
+  // l'opzione giusta era anche l'unica precisa (324) fra tre numeri tondi, e
+  // si riconosceva senza fare il conto.
+  if (subject !== 'inglese') {
+    const approssima = /approssimativamente|all'incirca|(?<![a-zà-ùA-ZÀ-Ù])circa(?![a-zà-ùA-ZÀ-Ù])/i.test(String(question || ''));
+    if (approssima && /(?<![a-zà-ùA-ZÀ-Ù])esattamente(?![a-zà-ùA-ZÀ-Ù])/i.test(String(explanation || ''))) {
+      errors.push({ level: 'error', field: 'explanation', msg: 'la domanda chiede un valore approssimativo ma la spiegazione dice "esattamente"' });
+    }
+  }
+
+  // Dal lotto 73: variante con i conti diversi ma lo stesso risultato
     // ("Prima: 52 / 4 = 13. Poi: 1/4 di 52 = 13 carte."): il secondo passo
     // riscrive il primo in un'altra notazione, non aggiunge un calcolo.
     const stessoRisultato = String(explanation || '').trim()

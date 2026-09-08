@@ -32461,16 +32461,16 @@
    "area": "roma_monarchia",
    "subarea": "linea_del_tempo",
    "difficulty": 3,
-   "question": "Quanto tempo passa, approssimativamente, dalla caduta di Roma (476 d.C.) all'incoronazione di Carlo Magno (800 d.C.)?",
+   "question": "Quanto tempo passa, all'incirca, dalla caduta di Roma (476 d.C.) all'incoronazione di Carlo Magno (800 d.C.)?",
    "options": [
     "Circa 100 anni",
-    "Circa 324 anni",
+    "Circa 300 anni",
     "Circa 500 anni",
-    "Circa 1000 anni"
+    "Circa 200 anni"
    ],
    "answerIndex": 1,
-   "answer": "Circa 324 anni",
-   "explanation": "Tra il 476 d.C. (caduta dell'Impero Romano d'Occidente) e l'800 d.C. (incoronazione di Carlo Magno) passano esattamente 324 anni. In questo periodo, l'Alto Medioevo, l'Europa fu attraversata da grandi cambiamenti: invasioni, regni germanici, diffusione del cristianesimo.",
+   "answer": "Circa 300 anni",
+   "explanation": "Fra il 476 d.C. (caduta dell'Impero romano d'Occidente) e l'800 d.C. (incoronazione di Carlo Magno) passano 324 anni, cioè poco più di tre secoli. È l'Alto Medioevo, attraversato in Europa da invasioni e da grandi cambiamenti.",
    "active": true,
    "tag": "storia;linea_del_tempo;classe_5;primaria",
    "tags": [
