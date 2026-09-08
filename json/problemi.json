@@ -18491,7 +18491,7 @@
    ],
    "answerIndex": 2,
    "answer": "108",
-   "explanation": "Area = base × altezza: 6 × 18 = 108 m².",
+   "explanation": "Area = lunghezza × larghezza: 18 × 6 = 108 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -19204,7 +19204,7 @@
    ],
    "answerIndex": 1,
    "answer": "342",
-   "explanation": "Area = base × altezza: 18 × 19 = 342 m².",
+   "explanation": "Area = lunghezza × larghezza: 19 × 18 = 342 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -20196,7 +20196,7 @@
    ],
    "answerIndex": 0,
    "answer": "132",
-   "explanation": "Area = base × altezza: 11 × 12 = 132 m².",
+   "explanation": "Area = lunghezza × larghezza: 12 × 11 = 132 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -21002,7 +21002,7 @@
    ],
    "answerIndex": 1,
    "answer": "60",
-   "explanation": "Area = base × altezza: 6 × 10 = 60 m².",
+   "explanation": "Area = lunghezza × larghezza: 10 × 6 = 60 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [
@@ -22304,7 +22304,7 @@
    ],
    "answerIndex": 3,
    "answer": "108",
-   "explanation": "Area = base × altezza: 6 × 18 = 108 m².",
+   "explanation": "Area = lunghezza × larghezza: 18 × 6 = 108 m².",
    "active": true,
    "tag": "geometria,area,rettangolo",
    "tags": [

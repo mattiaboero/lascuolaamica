@@ -828,7 +828,29 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 75: la domanda chiede un valore approssimativo e la spiegazione
+    // Dal lotto 76: conteggi sbagliati sul cubo. mat-5-geometria-012 diceva
+  // "8 spigoli verticali": i verticali sono 4, gli spigoli in tutto 12. Il
+  // cubo ha 6 facce, 12 spigoli, 8 vertici, e sono numeri fissi: si possono
+  // controllare.
+  if (subject !== 'inglese' && /(?<![a-zà-ùA-ZÀ-Ù])cubo(?![a-zà-ùA-ZÀ-Ù])/i.test(String(explanation || ''))) {
+    const ATTESI = { facce: 6, spigoli: 12, vertici: 8 };
+    for (const m of String(explanation).matchAll(/(\d+)\s+(facce|spigoli|vertici)(\s+verticali)?/gi)) {
+      const atteso = m[3] ? 4 : ATTESI[m[2].toLowerCase()];
+      if (Number(m[1]) !== atteso) {
+        errors.push({ level: 'error', field: 'explanation', msg: `il cubo non ha ${m[1]} ${m[2]}${m[3] || ''}: ne ha ${atteso}` });
+      }
+    }
+  }
+
+  // Dal lotto 76: area di un giardino spiegata con "base x altezza". Un
+  // giardino ha lunghezza e larghezza, e le domande le nominano cosi'.
+  if (subject !== 'inglese'
+      && /(?:giardino|campo|terreno|orto)\b[\s\S]{0,60}rettangolare/i.test(String(question || ''))
+      && /Area\s*=\s*base\s*×\s*altezza/i.test(String(explanation || ''))) {
+    errors.push({ level: 'error', field: 'explanation', msg: 'area di un giardino spiegata con "base × altezza": usare "lunghezza × larghezza"' });
+  }
+
+  // Dal lotto 75: la domanda chiede un valore approssimativo e la spiegazione
   // risponde "esattamente", contraddicendola; in sto-5-linea_del_tempo-9152
   // l'opzione giusta era anche l'unica precisa (324) fra tre numeri tondi, e
   // si riconosceva senza fare il conto.
