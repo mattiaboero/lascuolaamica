@@ -6,6 +6,9 @@ node_modules/
 .vscode/
 .idea/
 *.swp
+# Config locale di Claude Code: launch.json del server di anteprima,
+# preferenze e worktree temporanei. Nulla di condivisibile.
+.claude/
 
 # Python
 __pycache__/
