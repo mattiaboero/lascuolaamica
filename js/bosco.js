@@ -13,6 +13,8 @@
 
   const SA = window.SA = window.SA || {};
   const KEY_MUTED = 'lascuolaamica_bosco_muted_v1';
+  const KEY_CLASSE = 'lascuolaamica_bosco_classe_v1';
+  const KEY_ABILITA = 'lascuolaamica_bosco_abilita_v1';
   const DEBUG_MODE = (() => {
     try {
       const host = window.location.hostname;
@@ -127,6 +129,19 @@
     sintesi vocale legge "GN" come «gi enne», cioe' il nome delle lettere, che
     per la fonetica e' esattamente il contrario di quello che serve.
   */
+  // Come si chiama un gruppo quando lo si scrive all'adulto che guarda.
+  const ETICHETTE = {
+    vocali: 'vocali',
+    gn: 'GN',
+    gli: 'GLI',
+    sc: 'SCE e SCI',
+    ch: 'CHE e CHI',
+    gh: 'GHE e GHI',
+    qu: 'QU',
+    cqu: 'CQU',
+    doppie: 'doppie'
+  };
+
   const REGOLE = {
     vocali: 'Ascolta la parola e senti quale vocale manca in mezzo.',
     gn: 'Il gruppo GN si scrive con la G davanti alla N, mai con la I in mezzo.',
@@ -201,6 +216,94 @@
     '!': [4, 4, 4, 4, 4, 0, 4],
     '+': [0, 4, 4, 31, 4, 4, 0]
   };
+
+  /* ------------------------------------------------------- memoria e classe */
+
+  /*
+    Cosa il bambino ha gia' fatto, per gruppo: {skills: {gn: {visti, ok}}, ripassa}.
+    Serve a decidere COSA chiedere, mai quanto essere severi: niente timer, niente
+    punteggio, niente vite. L'adattamento cambia il contenuto della partita, non
+    la pressione.
+  */
+  function leggiAbilita() {
+    try {
+      const raw = storageGet(KEY_ABILITA);
+      const dati = raw ? JSON.parse(raw) : null;
+      if (!dati || typeof dati !== 'object' || typeof dati.skills !== 'object' || !dati.skills) {
+        return { skills: {}, ripassa: null };
+      }
+      return { skills: dati.skills, ripassa: dati.ripassa || null };
+    } catch (e) {
+      debugWarn('leggiAbilita', e);
+      return { skills: {}, ripassa: null };
+    }
+  }
+
+  function scriviAbilita(dati) {
+    storageSet(KEY_ABILITA, JSON.stringify(dati));
+  }
+
+  // Una risposta sbagliata segna il gruppo da ripassare; indovinarlo lo libera.
+  function registraRisposta(skill, giusta) {
+    const dati = leggiAbilita();
+    const voce = dati.skills[skill] || { visti: 0, ok: 0 };
+    voce.visti++;
+    if (giusta) voce.ok++;
+    dati.skills[skill] = voce;
+    if (giusta) {
+      if (dati.ripassa === skill) dati.ripassa = null;
+    } else {
+      dati.ripassa = skill;
+    }
+    scriviAbilita(dati);
+    return dati;
+  }
+
+  function precisione(skill, dati) {
+    const voce = dati.skills[skill];
+    if (!voce || !voce.visti) return null;
+    return voce.ok / voce.visti;
+  }
+
+  // Quanto spesso un gruppo deve ricomparire. Mai visto: va proposto. Sbagliato
+  // spesso: torna piu' spesso. Consolidato: si fa da parte per lasciare posto
+  // agli altri, senza sparire del tutto.
+  function peso(skill, dati) {
+    const acc = precisione(skill, dati);
+    if (acc === null) return 3;
+    if (acc < 0.5) return 5;
+    if (acc < 0.7) return 4;
+    if (acc < 0.9) return 2;
+    return 1;
+  }
+
+  function pescaPesata(lista, dati) {
+    if (!lista.length) return null;
+    const pesi = lista.map(function (w) { return peso(w.skill, dati); });
+    const totale = pesi.reduce(function (a, b) { return a + b; }, 0);
+    let soglia = Math.random() * totale;
+    for (let i = 0; i < lista.length; i++) {
+      soglia -= pesi[i];
+      if (soglia <= 0) return lista[i];
+    }
+    return lista[lista.length - 1];
+  }
+
+  function classeScelta() {
+    return Number(storageGet(KEY_CLASSE)) === 3 ? 3 : 2;
+  }
+
+  // I gruppi su cui il bambino e' sotto il 70%, dopo almeno due tentativi: due
+  // tentativi sono pochi per una statistica, ma abbastanza per non dire a un
+  // adulto che il figlio "deve ripassare GN" dopo un solo errore.
+  function daRipassare(dati) {
+    return Object.keys(dati.skills)
+      .filter(function (skill) {
+        const voce = dati.skills[skill];
+        return skill !== 'vocali' && voce.visti >= 2 && voce.ok / voce.visti < 0.7;
+      })
+      .sort(function (a, b) { return precisione(a, dati) - precisione(b, dati); });
+  }
 
   const PUDDLE_W = 48;
   const PUDDLE_H = 32;
@@ -376,23 +479,40 @@
     });
   }
 
-  // Una partita: prima una parola di riscaldamento con il disegno sul tabellone,
-  // poi due gruppi ortografici di abilita' diverse e difficolta' crescente. Le
-  // parole cambiano a ogni partita: la vecchia terna fissa si imparava a memoria
-  // per posizione dopo un giro solo.
-  function buildSession() {
-    const warmups = PAROLE.filter(function (w) { return w.skill === 'vocali'; });
-    const rest = PAROLE.filter(function (w) { return w.skill !== 'vocali'; });
+  /*
+    Una partita: riscaldamento con il disegno, poi due gruppi ortografici di
+    abilita' diverse e difficolta' crescente.
+
+    Cosa esce non e' piu' casuale uniforme. La classe filtra le parole; i gruppi
+    piu' deboli pesano di piu'; e il gruppo sbagliato l'ultima volta torna nella
+    partita SUCCESSIVA, non subito dopo l'errore: ripetere una cosa appena
+    sbagliata allena la memoria a breve, ripeterla dopo una pausa la fissa.
+  */
+  function buildSession(opts) {
+    const o = opts || {};
+    const classe = o.classe || classeScelta();
+    const dati = o.stats || leggiAbilita();
+
+    const eleggibili = PAROLE.filter(function (w) { return w.cls <= classe; });
+    const warmups = eleggibili.filter(function (w) { return w.skill === 'vocali'; });
+    const rest = eleggibili.filter(function (w) { return w.skill !== 'vocali'; });
     const session = [warmups[Math.floor(Math.random() * warmups.length)]];
 
-    const easy = shuffle(rest.filter(function (w) { return w.diff <= 2; }));
-    const second = easy[0];
-    session.push(second);
+    let primo = null;
+    if (dati.ripassa) {
+      const stessoGruppo = rest.filter(function (w) { return w.skill === dati.ripassa; });
+      const facili = stessoGruppo.filter(function (w) { return w.diff <= 2; });
+      const scelta = facili.length ? facili : stessoGruppo;
+      if (scelta.length) primo = scelta[Math.floor(Math.random() * scelta.length)];
+    }
+    if (!primo) {
+      primo = pescaPesata(shuffle(rest.filter(function (w) { return w.diff <= 2; })), dati);
+    }
+    session.push(primo);
 
-    const hard = shuffle(rest.filter(function (w) {
-      return w.skill !== second.skill && w.diff >= 2;
-    }));
-    session.push(hard[0]);
+    const diversi = rest.filter(function (w) { return w.skill !== primo.skill; });
+    const difficili = diversi.filter(function (w) { return w.diff >= 2; });
+    session.push(pescaPesata(shuffle(difficili.length ? difficili : diversi), dati));
 
     return session.map(buildRound);
   }
@@ -909,6 +1029,28 @@
     if (dom.owl) dom.owl.hidden = true;
   }
 
+  // Riga per l'adulto che guarda: quali gruppi il bambino sta sbagliando.
+  // Non e' un punteggio e non compare al bambino come giudizio.
+  function aggiornaRipasso() {
+    if (!dom.ripasso) return;
+    const gruppi = daRipassare(leggiAbilita()).slice(0, 3).map(function (s) { return ETICHETTE[s] || s; });
+    dom.ripasso.hidden = gruppi.length === 0;
+    dom.ripasso.textContent = gruppi.length ? 'Da ripassare: ' + gruppi.join(', ') + '.' : '';
+  }
+
+  function scegliClasse(classe) {
+    storageSet(KEY_CLASSE, String(classe));
+    aggiornaBottoniClasse();
+    restart();
+  }
+
+  function aggiornaBottoniClasse() {
+    const attuale = classeScelta();
+    dom.classe.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', Number(btn.getAttribute('data-classe')) === attuale ? 'true' : 'false');
+    });
+  }
+
   function setMessage(text) {
     if (dom.message) dom.message.textContent = text;
     announce(text);
@@ -1153,12 +1295,16 @@
       burst(state.player.x, state.player.y - 32, 22);
       celebratePuddles();
       owlHush();
+      registraRisposta(round().skill, true);
+      aggiornaRipasso();
       setMessage('Eccola! Portala al tabellone luminoso.');
     } else {
       state.wrong = index;
       state.wrongUntil = state.time + 1.5;
       state.target = null;
       tone(392, 0.18);
+      registraRisposta(round().skill, false);
+      aggiornaRipasso();
       setMessage('Non e’ questo. Senti cosa dice il gufo.');
       owlTeach(round());
     }
@@ -1216,6 +1362,7 @@
     });
     closeOverlay();
     owlHush();
+    aggiornaRipasso();
     setMessage('Esplora la radura e scegli il gruppo mancante.');
     render();
   }
@@ -1692,6 +1839,8 @@
     dom.next = document.getElementById('boscoNext');
     dom.pause = document.getElementById('boscoPause');
     dom.mute = document.getElementById('boscoMute');
+    dom.ripasso = document.getElementById('boscoRipasso');
+    dom.classe = Array.prototype.slice.call(document.querySelectorAll('[data-classe]'));
     dom.owl = document.getElementById('boscoOwl');
     dom.owlText = document.getElementById('boscoOwlText');
     dom.overlay = document.getElementById('boscoOverlay');
@@ -1716,6 +1865,13 @@
     readPalette();
     bindInput();
     bindActions();
+    aggiornaBottoniClasse();
+    aggiornaRipasso();
+    dom.classe.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        scegliClasse(Number(btn.getAttribute('data-classe')));
+      });
+    });
 
     if (muted && dom.mute) {
       dom.mute.textContent = '🔇 Audio';
@@ -1734,6 +1890,10 @@
     regole: REGOLE,
     buildRound: buildRound,
     buildSession: buildSession,
+    leggiAbilita: leggiAbilita,
+    registraRisposta: registraRisposta,
+    daRipassare: daRipassare,
+    peso: peso,
     cellsOf: cellsOf,
     tileHalf: tileHalf,
     groupWidth: groupWidth,

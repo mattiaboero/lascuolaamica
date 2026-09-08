@@ -170,6 +170,81 @@ function checkSession(game) {
   }
 }
 
+/*
+  Adattamento (fase 6). L'unica cosa che cambia e' COSA viene chiesto: la classe
+  filtra le parole, i gruppi piu' deboli tornano piu' spesso, e quello sbagliato
+  torna nella partita successiva. Niente di tutto questo tocca timer, punteggi o
+  penalita', che nel gioco non esistono.
+*/
+function checkAdattamento(game) {
+  const vuote = { skills: {}, ripassa: null };
+
+  // La classe filtra: la 2a non deve mai proporre parole di terza.
+  for (let i = 0; i < 200; i++) {
+    game.buildSession({ classe: 2, stats: vuote }).forEach(function (r) {
+      assert.ok(r.cls <= 2, `classe 2: e' uscita ${r.word}, che e' di classe ${r.cls}`);
+    });
+  }
+  const terze = new Set();
+  for (let i = 0; i < 300; i++) {
+    game.buildSession({ classe: 3, stats: vuote }).forEach(function (r) { terze.add(r.cls); });
+  }
+  assert.ok(terze.has(3), 'classe 3: le parole di terza non escono mai');
+
+  // Il peso segue la precisione, non il caso.
+  const forte = { skills: { gn: { visti: 10, ok: 10 } }, ripassa: null };
+  const debole = { skills: { gn: { visti: 10, ok: 2 } }, ripassa: null };
+  assert.ok(game.peso('gn', debole) > game.peso('gn', forte),
+    'un gruppo sbagliato spesso deve pesare piu\' di uno consolidato');
+  assert.ok(game.peso('mai_visto', vuote) > game.peso('gn', forte),
+    'un gruppo mai visto deve pesare piu\' di uno consolidato');
+
+  // Con un gruppo debole e uno consolidato, il debole deve uscire di piu'.
+  const misto = { skills: { gn: { visti: 8, ok: 1 }, doppie: { visti: 8, ok: 8 } }, ripassa: null };
+  let deboli = 0;
+  let consolidati = 0;
+  for (let i = 0; i < 800; i++) {
+    game.buildSession({ classe: 3, stats: misto }).forEach(function (r) {
+      if (r.skill === 'gn') deboli++;
+      if (r.skill === 'doppie') consolidati++;
+    });
+  }
+  assert.ok(deboli > consolidati,
+    `il gruppo debole deve ricomparire piu' spesso (gn ${deboli}, doppie ${consolidati})`);
+
+  // Recupero spaziato: il gruppo sbagliato l'ultima volta torna nella partita dopo.
+  const daRipassare = { skills: { gli: { visti: 3, ok: 1 } }, ripassa: 'gli' };
+  for (let i = 0; i < 200; i++) {
+    const session = game.buildSession({ classe: 3, stats: daRipassare });
+    assert.ok(session.some(function (r) { return r.skill === 'gli'; }),
+      'il gruppo segnato da ripassare deve tornare nella partita successiva');
+  }
+}
+
+// La memoria per gruppo si aggiorna sulle risposte e si azzera quando il gruppo
+// viene indovinato. Gira sul fallback in memoria dei wrapper storage.
+function checkMemoria(game) {
+  game.registraRisposta('gn', false);
+  let dati = game.leggiAbilita();
+  assert.equal(dati.skills.gn.visti, 1);
+  assert.equal(dati.skills.gn.ok, 0);
+  assert.equal(dati.ripassa, 'gn', 'una risposta sbagliata segna il gruppo da ripassare');
+
+  game.registraRisposta('gn', true);
+  dati = game.leggiAbilita();
+  assert.equal(dati.skills.gn.visti, 2);
+  assert.equal(dati.skills.gn.ok, 1);
+  assert.equal(dati.ripassa, null, 'indovinare il gruppo lo libera dal ripasso');
+
+  // "Da ripassare" chiede almeno due tentativi: un errore solo non basta per
+  // dire a un adulto che il bambino deve ripassare un gruppo.
+  const unSolo = { skills: { sc: { visti: 1, ok: 0 } }, ripassa: 'sc' };
+  assert.deepEqual(game.daRipassare(unSolo), [], 'un tentativo solo non fa scattare il ripasso');
+
+  const due = { skills: { sc: { visti: 4, ok: 1 }, vocali: { visti: 6, ok: 0 } }, ripassa: null };
+  assert.deepEqual(game.daRipassare(due), ['sc'], 'le vocali non entrano nel ripasso');
+}
+
 // Ogni lettera disegnata sul tabellone e sulle tessere passa dal font 5x7
 // interno: una lettera senza glifo verrebbe disegnata come "?" senza errori.
 function checkGlyphs(game) {
@@ -245,6 +320,8 @@ function main() {
     ['celle del tabellone', checkCells],
     ['area di raccolta dei cartelli', checkTileHitArea],
     ['composizione della partita', checkSession],
+    ['adattamento e classe', checkAdattamento],
+    ['memoria delle abilita', checkMemoria],
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],
     ['centro asciutto', checkDryCenter],

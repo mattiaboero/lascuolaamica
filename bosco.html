@@ -187,6 +187,12 @@
     <a class="icon-btn" href="/italiano" aria-label="Vai ai quiz di italiano">📚 Quiz di italiano</a>
   </div>
 
+  <div class="bosco-classe" role="group" aria-label="Scegli la classe">
+    <span class="bosco-classe-label" id="boscoClasseLabel">Classe</span>
+    <button type="button" class="icon-btn" data-classe="2" aria-pressed="true" aria-describedby="boscoClasseLabel">2ª</button>
+    <button type="button" class="icon-btn" data-classe="3" aria-pressed="false" aria-describedby="boscoClasseLabel">3ª</button>
+  </div>
+
   <div class="score-bar is-visible">
     <div class="bosco-journey" role="group" aria-labelledby="boscoJourneyLabel">
       <span class="sr-only" id="boscoJourneyLabel">0 parole completate su 3</span>
@@ -235,6 +241,7 @@
       </div>
 
       <p class="intro-note" id="boscoMessage">Esplora la radura e scegli il gruppo mancante.</p>
+      <p class="bosco-ripasso" id="boscoRipasso" hidden></p>
     </div>
   </main>
 

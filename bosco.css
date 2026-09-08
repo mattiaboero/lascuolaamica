@@ -246,6 +246,40 @@ html:not([data-palette="okabe-ito"]) body.subject-bosco {
   align-items: center;
 }
 
+/* ---- Scelta della classe ----
+   Cambia quali parole possono uscire, non quanto il gioco e' severo: la classe
+   3ª aggiunge le parole piu' lunghe, non toglie tempo ne' aggiunge penalita'. */
+.bosco-classe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.bosco-classe-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted, #6e6357);
+}
+
+.bosco-classe .icon-btn[aria-pressed="true"] {
+  background: var(--accent-1);
+  border-color: var(--accent-1);
+  color: #fff;
+}
+
+/* ---- Riga per l'adulto che guarda ----
+   Quali gruppi il bambino sta sbagliando. Non e' un punteggio e non e' rivolta
+   a lui: nel gioco non compaiono voti ne' classifiche. */
+.bosco-ripasso {
+  margin-top: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--muted, #6e6357);
+}
+
 /* ---- Il gufo che spiega ----
    Compare solo dopo una scelta sbagliata, con la regola sul caso concreto.
    Sta nel flusso della pagina e non sopra la scena: il testo resta selezionabile
