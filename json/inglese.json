@@ -8068,7 +8068,7 @@
    "options": [
     "I watch TV.",
     "In the kitchen.",
-    "At eight o'clock?",
+    "At eight o'clock.",
     "Yes, I am."
    ],
    "answerIndex": 0,
@@ -15692,7 +15692,7 @@
    "area": "inglese",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Choose the correct sentence about a pencil:",
+   "question": "Choose the correct sentence about a pencil.",
    "options": [
     "This is pencil a.",
     "This a pencil is.",
@@ -17837,7 +17837,7 @@
    "area": "inglese",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the correct sentence about a puppy:",
+   "question": "Choose the correct sentence about a puppy.",
    "options": [
     "The puppy are cute.",
     "The puppy am cute.",
@@ -24670,13 +24670,13 @@
    "difficulty": 2,
    "question": "___ they ___ (swim) in the pool?",
    "options": [
-    "Do / swim?",
-    "Are / swimming?",
-    "Is / swimming?",
-    "Do / swimming?"
+    "Do / swim",
+    "Are / swimming",
+    "Is / swimming",
+    "Do / swimming"
    ],
    "answerIndex": 1,
-   "answer": "Are / swimming?",
+   "answer": "Are / swimming",
    "explanation": "Le domande al present continuous si formano invertendo 'to be' e il soggetto: Are + they + swimming? Con 'they' si usa 'Are'.",
    "active": true,
    "tag": "inglese;present_continuous;classe_4;primaria",
@@ -28496,7 +28496,7 @@
    "area": "inglese",
    "subarea": "simple_past",
    "difficulty": 3,
-   "question": "Choose the sentence in the simple past:",
+   "question": "Choose the sentence in the simple past.",
    "options": [
     "She is going to the market",
     "She goes to the market every day",
@@ -29057,7 +29057,7 @@
    "area": "inglese",
    "subarea": "future_going_to",
    "difficulty": 3,
-   "question": "Choose the sentence that uses 'will' for a prediction:",
+   "question": "Choose the sentence that uses 'will' for a prediction.",
    "options": [
     "I am going to visit my aunt tomorrow",
     "Look! That cat is going to jump!",

@@ -833,6 +833,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 7: opzione a frammento "X / Y?" con il punto interrogativo, che
+    // pero' sta gia' in fondo alla consegna ("___ they ___ (swim) in the pool?").
+    (options || []).forEach((o) => {
+      if (typeof o === 'string' && /^[A-Za-z]+\s*\/\s*[A-Za-z]+\?$/.test(o.trim())) {
+        errors.push({ level: 'error', field: 'options', msg: `frammento con il punto interrogativo di troppo ("${o}")` });
+      }
+    });
+
+    // Dal lotto 7: consegna chiusa dai due punti invece che dal punto
+    // ("Choose the correct sentence about a pencil:").
+    if (/:\s*$/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'consegna chiusa dai due punti: usare il punto' });
+    }
+
     // Dal lotto 6: consegna che chiede la parola che comincia con una lettera,
     // ma piu' di un'opzione comincia con quella lettera ("Which month starts
     // with J and comes after May?" con July, January e June fra le opzioni:
