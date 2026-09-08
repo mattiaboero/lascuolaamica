@@ -11317,7 +11317,7 @@
    "area": "numeri",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "How many legs does a cat have? Choose the correct English word?",
+   "question": "How many legs does a cat have? Choose the correct English word.",
    "options": [
     "two",
     "three",
@@ -12602,7 +12602,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the correct sentence:?",
+   "question": "Choose the correct sentence.",
    "options": [
     "I have got brown eyes",
     "I has got brown eyes",
@@ -32961,7 +32961,7 @@
    "answerIndex": 2,
    "answer": "better",
    "explanation": "'Good' è irregolare: il comparativo è 'better' (migliore).",
-   "active": true,
+   "active": false,
    "tag": "inglese;uso_guidato;classe_5;primaria",
    "tags": [
     "inglese",

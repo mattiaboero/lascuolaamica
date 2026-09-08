@@ -833,6 +833,15 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 4: clausola imperativa chiusa dal punto interrogativo, senza
+    // che di mezzo ci sia una citazione ("Choose the correct English word?",
+    // "Choose the correct sentence:?"). Quando fra l'imperativo e il "?" c'e'
+    // una citazione il punto interrogativo e' della frase citata e va tenuto
+    // ("Complete: '___ are you from?'").
+    if (/(?:^|[.?!]\s+)(?:Choose|Pick|Select|Complete|Fill|Match|Write|Find)\b[^'"?]*:?\?/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'clausola imperativa chiusa dal punto interrogativo ("Choose the correct word?")' });
+    }
+
     // Dal lotto 3: parola italiana senza accento dentro una domanda di inglese
     // ("What is the English word for 'papa'?" invece di 'papà'). L'italiano
     // qui e' la lingua di partenza della traduzione e va scritto giusto.
