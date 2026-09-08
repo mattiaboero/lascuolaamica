@@ -154,6 +154,11 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 85: verbo pronominale privato del "si" e coordinato con un
+  // intransitivo ("il muscolo abbassa e sale"): il primo verbo cosi' regge un
+  // oggetto che non c'e'.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?<!si )(?:abbassa|alza|solleva|muove|sposta|piega|gira|riempie|svuota)\s+e\s+(?:sale|scende|torna|risale|cade|resta)(?![a-zà-ùA-ZÀ-Ù])/i,
+    msg: 'verbo pronominale senza "si" ("abbassa e sale": serve "si abbassa e si alza")' },
   // Dal lotto 79: "avere bisogno" regge "di", che nell'interrogativa sparisce
   // ("Quante ore di sonno ha bisogno un bambino?").
   { pattern: /(?<![Dd]i\s)(?<![a-zà-ùA-ZÀ-Ù])[Qq]uant[ie]\s+[a-zà-ù]+(?:\s+[a-zà-ù]+){0,3}\s+ha(?:nno)?\s+bisogno(?![a-zà-ùA-ZÀ-Ù])/,
