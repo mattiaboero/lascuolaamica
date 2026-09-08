@@ -154,6 +154,12 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 86: participio passato al posto del verbo coniugato ("le strade
+  // collegate tutto l'impero" invece di "collegavano"): il participio non
+  // regge l'oggetto che segue.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:collegate|attraversate|governate|coperte|circondate|toccate)\s+(?:tutto|tutta|tutti|tutte|il|la|lo|i|gli|le)\s+[a-zà-ù]/,
+    soloSpiegazione: true,
+    msg: 'participio passato al posto del verbo coniugato (es. "le strade collegate tutto l\'impero")' },
   // Dal lotto 85: verbo pronominale privato del "si" e coordinato con un
   // intransitivo ("il muscolo abbassa e sale"): il primo verbo cosi' regge un
   // oggetto che non c'e'.

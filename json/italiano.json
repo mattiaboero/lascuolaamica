@@ -17930,11 +17930,11 @@
     "pomeriggio",
     "giorno",
     "sera",
-    "notte"
+    "settimana"
    ],
-   "answerIndex": 3,
-   "answer": "notte",
-   "explanation": "Il contrario di 'mattina' è 'notte' perché si oppongono come inizio e fine della giornata di luce. 'Pomeriggio' e 'sera' sono momenti intermedi della giornata.",
+   "answerIndex": 2,
+   "answer": "sera",
+   "explanation": "La giornata comincia con la mattina e finisce con la sera: sono i due momenti opposti. 'Pomeriggio' sta in mezzo, mentre 'giorno' e 'settimana' indicano periodi di tempo, non momenti della giornata.",
    "active": true,
    "tag": "italiano;lessico;classe_3;primaria",
    "tags": [
