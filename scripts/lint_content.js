@@ -645,6 +645,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 70: stem che chiede di identificare un ente gia' nominato
+  // ("Qual e' il Parlamento Europeo e chi lo elegge?"): la prima meta' non e'
+  // una domanda sensata e le opzioni rispondono solo alla seconda. La regola
+  // e' stretta di proposito: le altre domande doppie del corpus ("Chi era
+  // Giulio Cesare e perche' e' importante?") hanno opzioni che rispondono a
+  // tutte e due le meta', e restano fuori.
+  if (subject !== 'inglese') {
+    if (/^Qual è (?:il|la|lo|l')\s+[A-ZÀ-Ù]/.test(String(question || ''))) {
+      errors.push({ level: 'error', field: 'question', msg: 'lo stem chiede "qual e\'" di un ente gia\' nominato: serve "che cos\'e\'" o la domanda vera' });
+    }
+  }
+
   // Dal lotto 69: spiegazione che ammette che nessuna opzione risponde alla
   // domanda. ita-4-lingua-9322 chiedeva quale parola della frase avesse un
   // prefisso negativo e la sua stessa spiegazione diceva "Tra le opzioni
