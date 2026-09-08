@@ -158,6 +158,16 @@ const GRAMMATICA = [
   // rimasti").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:api|mele|pere|caramelle|figurine|palline|matite|penne|galline|arance|banane|fragole|pesche|uova|monete|foglie|scatole|torte)\s+(?:rimasti|restati|contati|venduti|mangiati|usati|distribuiti)(?![a-zà-ùA-ZÀ-Ù])/i,
     msg: 'accordo: participio maschile con un nome femminile (es. "6 api rimasti")' },
+  // Dal lotto 98: domanda che finisce con un verbo coniugato e il punto
+  // interrogativo, senza la cosa da rispondere ("Quando il corpo ha bisogno
+  // di acqua, sentiamo?").
+  { pattern: /,\s*(?:sentiamo|facciamo|vediamo|usiamo|diciamo|troviamo|abbiamo|succede|serve)\s*\?\s*$/i,
+    soloDomanda: true,
+    msg: 'domanda che finisce con un verbo senza complemento ("..., sentiamo?")' },
+  // Dal lotto 98: verbo al singolare con una frazione plurale ("viene
+  // mangiato 3/4 della torta": tre quarti sono plurale).
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])viene\s+[a-zà-ù]+[oa]\s+\d+\/\d+/i,
+    msg: 'accordo: verbo singolare con una frazione plurale (es. "viene mangiato 3/4")' },
   // Dal lotto 92: domanda chiusa da un avverbio sospeso ("a risentirne sono
   // anche?", "quando l'acqua bolle diventa anche?"): manca la parola che
   // regge la risposta. "non cresce da solo?" resta fuori, perche' li' il

@@ -17,6 +17,8 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Quando il corpo ha bisogno di acqua, sentiamo?',
+  'Una torta è divisa in 12 fette. Viene mangiato 3/4 della torta.',
   '34 - 28 = 6 api rimasti.',
   'Quando si inquina un fiume, a risentirne sono anche?',
   'Studiare gli Ebrei in quarta serve soprattutto a conoscere...',

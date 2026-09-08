@@ -1868,7 +1868,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quando il corpo ha bisogno di acqua, sentiamo?",
+   "question": "Quando il corpo ha bisogno di acqua, che cosa sentiamo?",
    "options": [
     "vapore",
     "luce",
@@ -1899,7 +1899,7 @@
    "area": "corpo_umano_salute",
    "subarea": "sensi",
    "difficulty": 1,
-   "question": "Quando il corpo ha bisogno di cibo, sentiamo?",
+   "question": "Quando il corpo ha bisogno di cibo, che cosa sentiamo?",
    "options": [
     "vento",
     "ghiaccio",
