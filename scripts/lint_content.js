@@ -645,6 +645,19 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 69: spiegazione che ammette che nessuna opzione risponde alla
+  // domanda. ita-4-lingua-9322 chiedeva quale parola della frase avesse un
+  // prefisso negativo e la sua stessa spiegazione diceva "Tra le opzioni
+  // date, nessuna ha un prefisso negativo". Il difetto era documentato per
+  // iscritto e nessun controllo lo guardava.
+  if (subject !== 'inglese') {
+    const ammissione = String(explanation || '')
+      .match(/nessun[ao]\s+(?:delle\s+)?(?:opzioni|risposte)\b|nessuna\s+ha\s+un\b|la risposta corretta avrebbe\b/i);
+    if (ammissione) {
+      errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione ammette che la domanda non ha risposta ("${ammissione[0]}")` });
+    }
+  }
+
   // Dal lotto 68: domanda che chiede il numero maggiore o minore fra quattro
   // numeri, con la spiegazione che ne confronta solo una parte ("0,7 e'
   // maggiore degli altri numeri proposti"). Chi sbaglia scegliendo un numero

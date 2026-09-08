@@ -1002,7 +1002,7 @@
    "area": "italiano_classe2",
    "subarea": "scrittura",
    "difficulty": 1,
-   "question": "Quale parola indica il tempo corretto in una sequenza?",
+   "question": "Quale di queste parole è un indicatore di tempo?",
    "options": [
     "azzurro",
     "prima",
@@ -1011,7 +1011,7 @@
    ],
    "answerIndex": 1,
    "answer": "prima",
-   "explanation": "'Prima' è un indicatore temporale.",
+   "explanation": "'Prima' dice quando avviene un fatto rispetto a un altro: è un indicatore di tempo. 'Azzurro' indica un colore, 'grande' una dimensione, 'vicino' un luogo.",
    "active": true,
    "tag": "scrittura;sequenze",
    "tags": [
@@ -24581,16 +24581,16 @@
    "area": "italiano_classe4",
    "subarea": "lingua",
    "difficulty": 2,
-   "question": "Quale parola della frase 'Il bambino coraggioso affrontò il buio' è formata dal prefisso negativo + aggettivo?",
+   "question": "Quale parola della frase 'Il bambino insicuro affrontò il buio' è formata dal prefisso negativo + aggettivo?",
    "options": [
     "bambino",
-    "coraggioso",
+    "insicuro",
     "affrontò",
     "buio"
    ],
    "answerIndex": 1,
-   "answer": "coraggioso",
-   "explanation": "Attenzione: 'coraggioso' non ha un prefisso negativo. La risposta corretta avrebbe richiesto una parola come 'impaurito' (im-paurito) o 'insicuro'. Tra le opzioni date, nessuna ha un prefisso negativo. 'Coraggioso' = coraggio + -oso (suffisso che indica 'pieno di'). Questa domanda allena a riconoscere la struttura delle parole.",
+   "answer": "insicuro",
+   "explanation": "'Insicuro' è formato dal prefisso negativo 'in-' più l'aggettivo 'sicuro': il prefisso ne rovescia il significato. Lo stesso schema vale per 'impaurito', 'infelice', 'incapace'. 'Bambino' e 'buio' sono nomi, 'affrontò' è un verbo.",
    "active": true,
    "tag": "italiano;lingua;classe_4;primaria",
    "tags": [
