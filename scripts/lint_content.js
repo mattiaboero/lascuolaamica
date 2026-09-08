@@ -154,6 +154,10 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 67: pronome non eliso davanti a "ho" ("Lo ho preso ieri"),
+  // per giunta in una domanda che insegna i pronomi.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:lo|la)\s+ho(?![a-zà-ùA-ZÀ-Ù])/i,
+    msg: 'pronome non eliso davanti a "ho": si scrive "l\'ho", non "lo ho"' },
   // Dal lotto 64: nome contenitore senza articolo dopo la preposizione
   // semplice ("estrarre un asso da mazzo di 40 carte").
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:da|in|con|su)\s+(?:mazzo|sacchetto|cesto|scatola|urna|cestino|barattolo)(?![a-zà-ùA-ZÀ-Ù])/i,
@@ -638,6 +642,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
           errors.push({ level: 'error', field: 'options', msg: `preposizione dell'opzione ("${discorde}") incompatibile con quella della domanda ("${fine[1]}...")` });
         }
       }
+    }
+  }
+
+  // Dal lotto 67: la domanda dice "In questa frase" ma la frase non c'e': le
+  // uniche virgolette racchiudono il pezzo da analizzare ("'con il pennello'
+  // e'..."), e l'esempio sta solo nella spiegazione. Le altre trenta domande
+  // della stessa famiglia la frase la citano, chiusa dalla punteggiatura.
+  if (subject !== 'inglese') {
+    const d = String(question || '').trim();
+    if (/^In questa frase\b/.test(d) && !/['‘][^'’]*[.!?]['’]/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'la domanda dice "In questa frase" ma la frase non e\' citata' });
     }
   }
 

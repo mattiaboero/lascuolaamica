@@ -2246,14 +2246,14 @@
    "difficulty": 2,
    "question": "Se rompo un giocattolo e lo riparo, che cosa succede dopo?",
    "options": [
-    "torna a funzionare meglio di prima o di nuovo",
+    "torna a funzionare come prima",
     "diventa un albero",
     "si scioglie sempre",
     "sparisce dal passato"
    ],
    "answerIndex": 0,
-   "answer": "torna a funzionare meglio di prima o di nuovo",
-   "explanation": "La risposta corretta è 'torna a funzionare meglio di prima o di nuovo'.",
+   "answer": "torna a funzionare come prima",
+   "explanation": "La risposta corretta è 'torna a funzionare come prima'.",
    "active": true,
    "tag": "causa_effetto;storia;classe2",
    "tags": [

@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Il libro? Lo ho preso ieri.',
   'In scatola ci sono 108 matite. Ne usi 13. Quante restano?',
   "Alla domanda 'Dove sfocia un fiume?' la risposta più corretta è...",
   'Prima: 5h30 + 4h45 = 10h15.',

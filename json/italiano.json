@@ -21669,7 +21669,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 3,
-   "question": "In questa frase, 'con il pennello' è...",
+   "question": "In questa frase, che cos'è 'con il pennello'? 'Dipinge con il pennello.'",
    "options": [
     "Complemento oggetto",
     "Complemento di mezzo",
@@ -21797,7 +21797,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In questa frase, 'a scuola' è...",
+   "question": "In questa frase, che cos'è 'a scuola'? 'Vado a scuola.'",
    "options": [
     "Complemento di tempo",
     "Complemento oggetto",
@@ -22117,7 +22117,7 @@
    "area": "italiano_classe4",
    "subarea": "sintassi",
    "difficulty": 2,
-   "question": "In questa frase, 'per una settimana' è...",
+   "question": "In questa frase, che cos'è 'per una settimana'? 'Ho studiato per una settimana.'",
    "options": [
     "Complemento di luogo",
     "Complemento di tempo determinato",
@@ -22853,7 +22853,7 @@
    "area": "italiano_classe4",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "In questa frase, che tipo di pronome è 'lo'? 'Il libro? Lo ho preso ieri.'",
+   "question": "In questa frase, che tipo di pronome è 'lo'? 'Il libro? L'ho preso ieri.'",
    "options": [
     "Pronome personale soggetto",
     "Pronome personale complemento diretto",
@@ -22862,7 +22862,7 @@
    ],
    "answerIndex": 1,
    "answer": "Pronome personale complemento diretto",
-   "explanation": "'Lo' sostituisce 'il libro' e svolge la funzione di complemento oggetto (diretto): sostituisce qualcosa che è già stato nominato. È un pronome personale atono di terza persona singolare maschile con funzione di complemento diretto.",
+   "explanation": "In 'L'ho preso' l'apostrofo nasconde il pronome 'lo', che sostituisce 'il libro' e fa da complemento oggetto: è un pronome personale atono di terza persona singolare maschile. Davanti al verbo 'ho' questo pronome si elide sempre e si scrive con l'apostrofo.",
    "active": true,
    "tag": "italiano;morfologia;classe_4;primaria",
    "tags": [
