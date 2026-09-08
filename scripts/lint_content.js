@@ -844,7 +844,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 87: contenitore e contenuto incompatibili, segno che il
+    // Dal lotto 88: divisione scritta con i due punti invece di ÷ ("Divisione:
+  // 28: 4 = 7"), mentre 694 spiegazioni usano il segno. Gli orari restano
+  // fuori: "dalle 16:10 alle 17:10" non ha lo spazio dopo i due punti, e la
+  // prima forma pretende la parola "Divisione".
+  if (subject !== 'inglese') {
+    const e = String(explanation || '');
+    if (/Divisione:\s*\d+\s*:\s*\d+/.test(e) || /(?<!\d)\d+:\s+\d+\s*=/.test(e)) {
+      errors.push({ level: 'error', field: 'explanation', msg: 'divisione scritta con i due punti: usare il segno ÷' });
+    }
+  }
+
+  // Dal lotto 87: contenitore e contenuto incompatibili, segno che il
   // generatore ha combinato due modelli ("In un astuccio ci sono 7 libri").
   // La tabella e' volutamente stretta: elenca solo le coppie impossibili
   // viste davvero, perche' "astuccio con 26 adesivi" o "libreria con 32

@@ -61564,7 +61564,7 @@
    ],
    "answerIndex": 0,
    "answer": "10 euro",
-   "explanation": "Ogni quaderno costa 6:3 = 2 euro, quindi 5 quaderni costano 2×5 = 10 euro.",
+   "explanation": "Ogni quaderno costa 6 ÷ 3 = 2 euro, quindi 5 quaderni costano 2×5 = 10 euro.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
