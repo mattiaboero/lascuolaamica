@@ -154,6 +154,10 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 64: nome contenitore senza articolo dopo la preposizione
+  // semplice ("estrarre un asso da mazzo di 40 carte").
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:da|in|con|su)\s+(?:mazzo|sacchetto|cesto|scatola|urna|cestino|barattolo)(?![a-zà-ùA-ZÀ-Ù])/i,
+    msg: 'nome contenitore senza articolo dopo la preposizione (es. "da mazzo di 40 carte")' },
   // Dal lotto 62: domanda che ne incapsula un'altra ("Alla domanda 'Dove
   // sfocia un fiume?' la risposta piu' corretta e'..."), quando basta fare la
   // domanda interna.
@@ -633,6 +637,23 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         if (discorde) {
           errors.push({ level: 'error', field: 'options', msg: `preposizione dell'opzione ("${discorde}") incompatibile con quella della domanda ("${fine[1]}...")` });
         }
+      }
+    }
+  }
+
+  // Dal lotto 64: stem che finisce con "c'e'..." o "ci sono..." e opzioni che
+  // cominciano per preposizione, cioe' complementi che dopo quel verbo non
+  // stanno: "dove e' piu' sicuro pedalare quando c'e'..." con "Sulla pista
+  // ciclabile". La stessa forma con opzioni che sono sintagmi nominali va
+  // bene ("dove ci sono... trasporti, energia e manodopera") e resta fuori.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const sospeso = /(?<![a-zà-ùA-ZÀ-Ù])(?:c'è|ci sono)\s*\.\.\.$/i.test(String(question || '').trim());
+    if (sospeso) {
+      const PREP = 'a|ad|in|su|con|da|per|tra|fra|al|allo|alla|ai|agli|alle|nel|nello|nella|nei|negli|nelle|sul|sullo|sulla|sui|sugli|sulle|dal|dalla|dai|dagli|dalle';
+      const complemento = options.filter((o) => typeof o === 'string')
+        .find((o) => new RegExp(`^\\s*(?:${PREP})\\s`, 'i').test(o));
+      if (complemento) {
+        errors.push({ level: 'error', field: 'options', msg: `la domanda finisce con un verbo che vuole un nome ma l'opzione e' un complemento ("${complemento}")` });
       }
     }
   }

@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'In scatola ci sono 108 matite. Ne usi 13. Quante restano?',
   "Alla domanda 'Dove sfocia un fiume?' la risposta più corretta è...",
   'Prima: 5h30 + 4h45 = 10h15.',
   'Distribuisci 24 adesivi a 3 bambini in uguale misura. Quanti ne riceve ognuno?',

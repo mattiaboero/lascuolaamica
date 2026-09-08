@@ -47532,7 +47532,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "Qual è la probabilità di estrarre un asso da mazzo di 40 carte (4 assi)?",
+   "question": "Qual è la probabilità di estrarre un asso da un mazzo di 40 carte (4 assi)?",
    "options": [
     "1/10",
     "1/40",
@@ -47724,7 +47724,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "Qual è la probabilità di pallina rossa: 3 rosse, 3 blu, 4 verdi?",
+   "question": "In un sacchetto ci sono 3 palline rosse, 3 blu e 4 verdi. Qual è la probabilità di estrarne una rossa?",
    "options": [
     "3/10",
     "1/3",

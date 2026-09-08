@@ -25997,7 +25997,7 @@
    "area": "territorio_sicurezza",
    "subarea": "percorsi",
    "difficulty": 1,
-   "question": "In bicicletta, dove è più sicuro pedalare quando c'è...",
+   "question": "In bicicletta, dove è più sicuro pedalare?",
    "options": [
     "Sulla pista ciclabile",
     "Sul marciapiede affollato",
@@ -32310,7 +32310,7 @@
    ],
    "answerIndex": 2,
    "answer": "Parigi",
-   "explanation": "Parigi è la capitale della Francia. È una delle città più grandi e importanti d'Europa ed è confinante con l'Italia attraverso le Alpi. Il confine italo-francese attraversa il Monte Bianco e il Colle del Moncenisio.",
+   "explanation": "Parigi è la capitale della Francia ed è una delle città più grandi e importanti d'Europa. La Francia confina con l'Italia lungo le Alpi, dove si trova il Monte Bianco.",
    "active": true,
    "tag": "geografia;italia_nel_contesto_;classe_5;primaria",
    "tags": [

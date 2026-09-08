@@ -1314,7 +1314,7 @@
    "area": "successione_contemporaneita",
    "subarea": "ordine_di_eventi",
    "difficulty": 1,
-   "question": "Quale azione avviene dopo essermi svegliato?",
+   "question": "Quale azione avviene subito dopo essermi svegliato?",
    "options": [
     "mi sveglio",
     "vado a scuola",
@@ -1323,7 +1323,7 @@
    ],
    "answerIndex": 2,
    "answer": "faccio colazione",
-   "explanation": "Nella successione corretta, 'faccio colazione' è la risposta giusta.",
+   "explanation": "Ci si sveglia, poi si fa colazione e solo dopo si va a scuola: subito dopo il risveglio viene la colazione.",
    "active": true,
    "tag": "successione;ordine;classe2",
    "tags": [
