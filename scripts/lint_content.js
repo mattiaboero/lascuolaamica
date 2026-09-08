@@ -67,7 +67,7 @@ const NOMI_MASSA = 'burro|zucchero|farina|farine|latte|olio|pane|riso|miele|marm
 // difetto vero: "tra la neve e la ghiaccio". Dedurre il genere da una regex
 // non si puo': "moto", "foto", "radio", "mano" sono femminili nonostante la
 // finale, quindi l'elenco resta esplicito.
-const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo|ghiaccio|sole|vento|fiume|lago|monte|bosco|cielo|suolo|terreno|calore|corpo|sangue|cuore|cervello|denaro|lavoro|giorno|mese|numero|gruppo|regno|paese|popolo|pianeta|colore|peso|volume|suono|rumore|movimento|piede|braccio|naso|occhio|orecchio';
+const NOMI_MASCHILI = 'biscotti|cioccolatini|panini|euro|libri|quaderni|grammi|millilitri|litri|alunni|bambini|laboratorio|parco|negozio|cortile|magazzino|giardino|astuccio|frutteto|campo|ghiaccio|sole|vento|fiume|lago|monte|bosco|cielo|suolo|terreno|calore|corpo|sangue|cuore|cervello|denaro|lavoro|giorno|mese|numero|gruppo|regno|paese|popolo|pianeta|colore|peso|volume|suono|rumore|movimento|piede|braccio|naso|occhio|orecchio|lamponi|mirtilli|acini|evidenziatori|pennarelli|pastelli|adesivi|palloncini|uccellini|cioccolatini|bonbon';
 const NOMI_FEMMINILI = 'borsa|giacca|scarpe|maglietta|penna|matita|aula|palestra|biblioteca|fattoria|figurine|caramelle|pagine|mele|cameretta|cucina|stanza|classe|scuola|finestra|porta|piscina|libreria|cartoleria';
 // Nomi propri di persona presenti nel corpus. In italiano il genere del pronome
 // dipende dal referente e nessuna regex lo deduce dal testo, quindi le due liste
@@ -206,8 +206,8 @@ const GRAMMATICA = [
     msg: 'domanda che ne incapsula un\'altra: fare direttamente la domanda interna' },
   // Dal lotto 62: notazione oraria compatta in una spiegazione ("5h30"),
   // mentre domande e opzioni scrivono sempre "5 ore e 30 minuti".
-  { pattern: /(?<![a-zà-ùA-ZÀ-Ù0-9])\d{1,2}h\d{2}(?![0-9])/, soloSpiegazione: true,
-    msg: 'notazione oraria compatta ("5h30"): usare "5 ore e 30 minuti"' },
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù0-9])\d{1,2}\s*h\s*\d{2}(?:min)?(?![0-9])/,
+    msg: 'notazione oraria compatta ("5h30", "2h 25min"): usare "5 ore e 30 minuti"' },
   // Dal lotto 59: "in uguale misura" vale "nella stessa proporzione", non "in
   // parti uguali". Lo usavano 35 problemi di divisione, mentre le loro stesse
   // spiegazioni dicevano gia' "in parti uguali".
@@ -828,7 +828,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 77: domanda a esclusione con il "non" in minuscolo. Trenta
+    // Dal lotto 78: la notazione oraria compatta stava nelle opzioni ("2h
+  // 25min"), che le regex di GRAMMATICA non vedono. Stessa regola, applicata
+  // alle opzioni.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const compatta = options.filter((o) => typeof o === 'string')
+      .find((o) => /(?<![a-zà-ùA-ZÀ-Ù0-9])\d{1,2}\s*h\s*\d{2}(?:min)?(?![0-9])/.test(o));
+    if (compatta) {
+      errors.push({ level: 'error', field: 'options', msg: `notazione oraria compatta nell'opzione "${compatta}": usare "2 ore e 25 minuti"` });
+    }
+  }
+
+  // Dal lotto 77: domanda a esclusione con il "non" in minuscolo. Trenta
   // domande del corpus scrivono "Quale ... NON ..." in maiuscolo proprio
   // perche' la negazione, letta di fretta, sparisce; una sola sfuggiva.
   // Il verbo va chiuso con un lookahead e non con \b: dopo "puo'" la \b non

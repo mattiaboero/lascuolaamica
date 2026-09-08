@@ -12,7 +12,9 @@ const files = fs.readdirSync(JSON_DIR)
 
 const TECHNICAL_TEXT = /\(\s*ambito\b|\bvariante\s+\d+\b|\b(TODO|FIXME|placeholder|undefined|null|NaN|lorem ipsum)\b|\$\{[^}]+\}|\{[^}]+\}|\b(di la|di il|di lo|a il|a la)\b|depenendo/i;
 const PROBLEMI_BAD_PATTERNS = [
-  /\bQuanti\s+(api|arance|banane|capre|caramelle|carote|ciliegie|ciliegine|coccinelle|farfalle|figurine|fragole|galline|gomme|lamponi|lumache|matite|mele|merendine|nocciole|palline|pesche|squadre|uva)\b/i,
+  // "lamponi" e' maschile: stava per errore fra i nomi femminili e faceva
+  // fallire l'audit sulla forma corretta "Quanti lamponi" (lotto 78).
+  /\bQuanti\s+(api|arance|banane|capre|caramelle|carote|ciliegie|ciliegine|coccinelle|farfalle|figurine|fragole|galline|gomme|lumache|matite|mele|merendine|nocciole|palline|pesche|squadre|uva)\b/i,
   /\bQuante\s+(\w+)\s+sono rimasti\?/i,
   /\bQuante\s+(figurine|matite|gomme|squadre)\s+restano inutilizzati\?/i,
   /\b(caramelle|figurine)\b[^.?!]*\bdistribuirli\b/i,

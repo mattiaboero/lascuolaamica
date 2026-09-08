@@ -2442,7 +2442,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Paola ha 25 lamponi e Beatrice ne ha 8. Quante lamponi hanno insieme?",
+   "question": "Paola ha 25 lamponi e Beatrice ne ha 8. Quanti lamponi hanno insieme?",
    "options": [
     "33",
     "38",
@@ -5442,7 +5442,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Lorenzo ha 23 lamponi. Ne mangia 11. Quante lamponi gli rimangono?",
+   "question": "Lorenzo ha 23 lamponi. Ne mangia 11. Quanti lamponi gli rimangono?",
    "options": [
     "7",
     "10",
@@ -35676,14 +35676,14 @@
    "difficulty": 2,
    "question": "Un film inizia alle 20:15 e finisce alle 22:40. Quanto dura il film?",
    "options": [
-    "2h 25min",
-    "2h 15min",
-    "2h 35min",
-    "2h 20min"
+    "2 ore e 25 minuti",
+    "2 ore e 15 minuti",
+    "2 ore e 35 minuti",
+    "2 ore e 20 minuti"
    ],
    "answerIndex": 0,
-   "answer": "2h 25min",
-   "explanation": "Prima: dalle 20:15 alle 22:00 = 1h 45min. Poi: dalle 22:00 alle 22:40 = 40min; totale: 1h 45min + 40min = 2h 25min.",
+   "answer": "2 ore e 25 minuti",
+   "explanation": "Prima: dalle 20:15 alle 22:00 passano 1 ora e 45 minuti. Poi: dalle 22:00 alle 22:40 altri 40 minuti. In tutto: 1 ora e 45 minuti + 40 minuti = 2 ore e 25 minuti.",
    "active": true,
    "tag": "problemi;tempo;classe_4;primaria",
    "tags": [
@@ -35836,14 +35836,14 @@
    "difficulty": 2,
    "question": "Un negozio apre alle 9:00 e chiude alle 19:30. Quante ore e minuti è aperto?",
    "options": [
-    "10h 30min",
-    "9h 30min",
-    "11h 00min",
-    "10h 00min"
+    "10 ore e 30 minuti",
+    "9 ore e 30 minuti",
+    "11 ore",
+    "10 ore"
    ],
    "answerIndex": 0,
-   "answer": "10h 30min",
-   "explanation": "Prima: dalle 9:00 alle 19:00 = 10 ore. Poi: dalle 19:00 alle 19:30 = 30 min; totale: 10h 30min.",
+   "answer": "10 ore e 30 minuti",
+   "explanation": "Prima: dalle 9:00 alle 19:00 passano 10 ore. Poi: dalle 19:00 alle 19:30 altri 30 minuti. In tutto: 10 ore e 30 minuti.",
    "active": true,
    "tag": "problemi;tempo;classe_4;primaria",
    "tags": [
