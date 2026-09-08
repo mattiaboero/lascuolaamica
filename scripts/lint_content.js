@@ -530,6 +530,25 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 104: domanda di ortografia che chiede quale parola contenga un
+  // gruppo di lettere, con piu' di un'opzione che lo contiene ("Quale parola
+  // contiene il gruppo 'gli'?" fra aglio, alio, alioh e agli). Restano fuori
+  // le consegne che aggiungono un criterio ("scritto in modo corretto", "con
+  // suono /ʃ/"), dove le altre occorrenze non rendono la risposta ambigua.
+  {
+    const d = (question || '').trim();
+    const m = /(?:contiene|ha)\s+(?:il gruppo\s+|la doppia\s+|la lettera\s+)?'([a-zà-ù]{1,4})'/i.exec(d);
+    const qualificata = /corrett[oa]|suono|\/[^/]{1,6}\//i.test(d);
+    if (m && !qualificata) {
+      // Con "la doppia 'l'" il criterio e' la lettera raddoppiata, non la lettera.
+      const g = /doppia/i.test(d) ? m[1].toLowerCase().repeat(2) : m[1].toLowerCase();
+      const con = (options || []).filter((o) => typeof o === 'string' && o.toLowerCase().includes(g));
+      if (con.length > 1) {
+        errors.push({ level: 'error', field: 'options', msg: `ortografia — piu' di un'opzione contiene "${g}" (${con.join(', ')}): la risposta non e' unica` });
+      }
+    }
+  }
+
   // Dal lotto 101: "Quale delle seguenti e' una parola polisemica?" con le
   // opzioni che sono definizioni ("Una parola con piu' significati"): la
   // consegna chiede un esempio, le opzioni danno una definizione.

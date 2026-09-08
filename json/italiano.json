@@ -136,8 +136,8 @@
    "options": [
     "pala",
     "palla",
-    "palaa",
-    "pallaa"
+    "palua",
+    "palea"
    ],
    "answerIndex": 1,
    "answer": "palla",
@@ -3369,7 +3369,7 @@
    "options": [
     "gnomo",
     "nomo",
-    "gnuomo",
+    "nuomo",
     "nomog"
    ],
    "answerIndex": 0,
@@ -3433,8 +3433,8 @@
    "options": [
     "pala",
     "palla",
-    "palaa",
-    "pallaa"
+    "palua",
+    "palea"
    ],
    "answerIndex": 1,
    "answer": "palla",
@@ -3498,7 +3498,7 @@
     "aglio",
     "alio",
     "alioh",
-    "agli"
+    "ailo"
    ],
    "answerIndex": 0,
    "answer": "aglio",
@@ -3689,7 +3689,7 @@
    "options": [
     "quando",
     "cuando",
-    "quuando",
+    "cuandu",
     "cwando"
    ],
    "answerIndex": 0,
@@ -5097,7 +5097,7 @@
    "options": [
     "tempo",
     "tepmo",
-    "tmpo",
+    "tnpo",
     "tmepo"
    ],
    "answerIndex": 0,
