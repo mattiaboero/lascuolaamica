@@ -154,6 +154,11 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 71: risultato di un conto seguito da un nome di massa al posto
+  // dell'unita' contata ("11 + 14 = 25 uva", invece di "25 acini d'uva").
+  { pattern: /=\s*\d+\s+(?:uva|acqua|latte|sabbia|farina|riso|zucchero|pane)(?![a-zà-ùA-ZÀ-Ù])/i,
+    soloSpiegazione: true,
+    msg: 'risultato seguito da un nome di massa: manca l\'unita\' contata (es. "25 acini d\'uva")' },
   // Dal lotto 67: pronome non eliso davanti a "ho" ("Lo ho preso ieri"),
   // per giunta in una domanda che insegna i pronomi.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:lo|la)\s+ho(?![a-zà-ùA-ZÀ-Ù])/i,
@@ -711,7 +716,9 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // i dati sono in linea nel testo.
   if (subject !== 'inglese') {
     const d = String(question || '');
-    if (/Osserva (?:la tabella|il grafico|il diagramma)/i.test(d) && !/[|\n]/.test(d)) {
+    const rimanda = /Osserva (?:la tabella|il grafico|il diagramma)/i.test(d)
+      || /^In un (?:grafico|istogramma|diagramma)\b|^In una tabella\b/i.test(d);
+    if (rimanda && !/[|\n]/.test(d)) {
       errors.push({ level: 'error', field: 'question', msg: 'la domanda rimanda a una tabella o a un grafico che non ci sono: i dati sono in linea' });
     }
   }

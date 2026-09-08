@@ -14853,16 +14853,16 @@
    "area": "italiano_classe2",
    "subarea": "ortografia",
    "difficulty": 1,
-   "question": "Quale parola vuole 'mb' e non 'nb'?",
+   "question": "Quale di queste parole scrive correttamente il gruppo 'mb'?",
    "options": [
     "tanbo",
-    "zamba",
+    "banbino",
     "gamba",
     "anbire"
    ],
    "answerIndex": 2,
    "answer": "gamba",
-   "explanation": "Davanti a 'b' si scrive sempre 'm' e non 'n'. Questa è la stessa regola del 'mp': prima di B e P si scrive M. Quindi 'gamba', non 'ganba'.",
+   "explanation": "Davanti a 'b' si scrive sempre 'm' e non 'n', come davanti a 'p': per questo si scrive 'gamba'. Le altre tre sbagliano proprio qui: 'tanbo', 'banbino' e 'anbire' vogliono la m.",
    "active": true,
    "tag": "italiano;ortografia;classe_2;primaria",
    "tags": [
@@ -21994,11 +21994,11 @@
     "Soggetto: la nonna / Predicato: prepara / Oggetto: il ragù / Tempo: ogni domenica / Spec.: di Soren",
     "Soggetto: Soren / Predicato: prepara / Oggetto: il ragù",
     "Soggetto: la nonna di Soren / Predicato: prepara il ragù",
-    "Soggetto: la nonna / Predicato: prepara / Oggetto: il ragù"
+    "Soggetto: il ragù / Predicato: prepara / Oggetto: la nonna"
    ],
    "answerIndex": 0,
    "answer": "Soggetto: la nonna / Predicato: prepara / Oggetto: il ragù / Tempo: ogni domenica / Spec.: di Soren",
-   "explanation": "Il soggetto è 'la nonna' (con specificazione 'di Soren'), il predicato verbale è 'prepara', il complemento oggetto è 'il ragù', il complemento di tempo è 'ogni domenica'.",
+   "explanation": "Il soggetto è 'la nonna', con la specificazione 'di Soren'; il predicato verbale è 'prepara'; il complemento oggetto è 'il ragù'; 'ogni domenica' è complemento di tempo. Solo la prima analisi li elenca tutti.",
    "active": true,
    "tag": "italiano;sintassi;classe_4;primaria",
    "tags": [

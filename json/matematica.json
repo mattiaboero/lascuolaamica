@@ -58259,7 +58259,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "In un grafico a barre, il cane ha 14 voti, il gatto 11, il pesce 6. Quale animale ha meno voti?",
+   "question": "I voti per l'animale preferito sono: cane 14, gatto 11, pesce 6. Quale animale ha meno voti?",
    "options": [
     "cane",
     "gatto",
@@ -58268,7 +58268,7 @@
    ],
    "answerIndex": 2,
    "answer": "pesce",
-   "explanation": "6 è il valore minore.",
+   "explanation": "Fra 14, 11 e 6 il numero minore è 6: il pesce è l'animale con meno voti.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
@@ -59475,7 +59475,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 1,
-   "question": "In un grafico, gennaio 120 libri letti, febbraio 95, marzo 140. In quale mese se ne leggono di più?",
+   "question": "I libri letti sono: gennaio 120, febbraio 95, marzo 140. In quale mese se ne leggono di più?",
    "options": [
     "gennaio",
     "febbraio",
@@ -59484,7 +59484,7 @@
    ],
    "answerIndex": 2,
    "answer": "marzo",
-   "explanation": "140 è il valore maggiore.",
+   "explanation": "Fra 120, 95 e 140 il numero maggiore è 140: a marzo se ne leggono di più.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
