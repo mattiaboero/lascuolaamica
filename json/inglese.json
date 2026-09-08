@@ -1827,7 +1827,7 @@
    "area": "colori",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "What colour is the Italian flag section on the left?",
+   "question": "The Italian flag has three vertical stripes. What colour is on the left?",
    "options": [
     "red",
     "blue",
@@ -1836,7 +1836,7 @@
    ],
    "answerIndex": 2,
    "answer": "green",
-   "explanation": "The correct answer is \"green\".",
+   "explanation": "Le tre strisce della bandiera italiana sono verde, bianca e rossa: quella a sinistra è verde, in inglese 'green'.",
    "active": true,
    "tag": "inglese;classe_4;colori;primaria",
    "tags": [
