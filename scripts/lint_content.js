@@ -849,7 +849,27 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 88: divisione scritta con i due punti invece di ÷ ("Divisione:
+    // Dal lotto 90: lo stem sospeso, unito all'opzione, produce una
+  // contraddizione. "Il sasso e' un essere..." con l'opzione "non vivente"
+  // dava "un essere non vivente", che e' un ossimoro: un essere, per
+  // definizione, vive. Il controllo ricompone la frase e cerca le formule
+  // impossibili.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const IMPOSSIBILI = [/esser[ei]\s+non\s+vivent[ei]/i, /vivente\s+non\s+vivo/i];
+    const tronco = String(question || '').trim().replace(/\.\.\.$/, '').trim();
+    if (tronco !== String(question || '').trim()) {
+      for (const o of options) {
+        if (typeof o !== 'string') continue;
+        const frase = `${tronco} ${o.trim()}`;
+        const brutta = IMPOSSIBILI.find((r) => r.test(frase));
+        if (brutta) {
+          errors.push({ level: 'error', field: 'options', msg: `la domanda unita all'opzione "${o}" da' una frase contraddittoria: "${frase}"` });
+        }
+      }
+    }
+  }
+
+  // Dal lotto 88: divisione scritta con i due punti invece di ÷ ("Divisione:
   // 28: 4 = 7"), mentre 694 spiegazioni usano il segno. Gli orari restano
   // fuori: "dalle 16:10 alle 17:10" non ha lo spazio dopo i due punti, e la
   // prima forma pretende la parola "Divisione".
