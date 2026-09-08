@@ -1,27 +1,5 @@
 [
  {
-  "date": "8 settembre 2026 · Release 4.12.83",
-  "items": [
-   "Titoli e descrizioni delle pagine di geografia, italiano, matematica e scienze riscritti per farsi trovare meglio da chi cerca domande e quiz per la scuola primaria."
-  ]
- },
- {
-  "date": "8 settembre 2026 · Release 4.12.82",
-  "items": [
-   "Il Bosco delle Lettere: i cartelli con le lettere si raccolgono in tutta la loro larghezza. Quelli con i gruppi lunghi come SCIE erano larghi il doppio dell'area che li raccoglieva, e ci si passava attraverso senza che il gioco reagisse.",
-   "Chi aveva già aperto il gioco riceve la versione aggiornata: la precedente restava in cache sul dispositivo."
-  ]
- },
- {
-  "date": "7 settembre 2026 · Release 4.12.81",
-  "items": [
-   "Nuovo gioco «Il Bosco delle Lettere»: si cammina nella radura e si porta al tabellone il gruppo di lettere giusto — GN o NI, GLI o LI, ACQUA o AQUA, PALLA o PALA. Senza timer e senza penalità.",
-   "Le tre alternative si somigliano di proposito, e sbagliando parla il gufo: dice la regola su quella parola e la pronuncia ad alta voce.",
-   "Le parole cambiano a ogni partita e vengono dal vocabolario dei quiz di italiano.",
-   "La scena del bosco è disegnata dal codice e segue la palette del sito, compresa la modalità ad alto contrasto."
-  ]
- },
- {
   "date": "6 settembre 2026 · Release 4.12.62",
   "items": [
    "Una partita non può più proporre due volte la stessa domanda: prima poteva succedere quando le domande disponibili non bastavano a riempirla.",
