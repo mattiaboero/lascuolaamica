@@ -20871,14 +20871,14 @@
    "difficulty": 3,
    "question": "Quale frase usa correttamente 'sé' con accento?",
    "options": [
-    "Lui pensa solo a se stesso.",
+    "Lui pensa solo a se.",
     "Lui pensa solo a sé.",
-    "Se lui pensa a sé, sbaglia.",
-    "Se pensa a sé è giusto."
+    "Sé piove, restiamo a casa.",
+    "Non so sé verrà."
    ],
    "answerIndex": 1,
    "answer": "Lui pensa solo a sé.",
-   "explanation": "'Sé' con accento è il pronome riflessivo di terza persona usato da solo: 'pensa a sé'. Quando è seguito da 'stesso/stessa' non vuole l'accento: 'se stesso'. 'Se' senza accento è congiunzione (se + verbo).",
+   "explanation": "'Sé' vuole l'accento quando è il pronome riflessivo di terza persona: 'pensa solo a sé'. 'Se' senza accento è la congiunzione che introduce una condizione ('se piove') o una domanda indiretta ('non so se verrà').",
    "active": true,
    "tag": "italiano;vari;classe_3;primaria",
    "tags": [
