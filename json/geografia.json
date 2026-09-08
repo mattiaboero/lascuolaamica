@@ -35181,16 +35181,16 @@
    "area": "territorio_italiano",
    "subarea": "morfologia_italiana",
    "difficulty": 3,
-   "question": "Qual è la montagna più alta delle Alpi e d'Europa?",
+   "question": "Qual è la montagna più alta degli Appennini?",
    "options": [
     "Il Monte Bianco",
     "Il Vesuvio",
     "L'Etna",
     "Il Gran Sasso"
    ],
-   "answerIndex": 0,
-   "answer": "Il Monte Bianco",
-   "explanation": "Il Monte Bianco, sulle Alpi, è la montagna più alta d'Europa, con oltre 4800 metri di altezza.",
+   "answerIndex": 3,
+   "answer": "Il Gran Sasso",
+   "explanation": "Il Gran Sasso d'Italia, in Abruzzo, è la cima più alta degli Appennini: il Corno Grande arriva a 2.912 metri. Il Monte Bianco è invece la più alta delle Alpi.",
    "active": true,
    "tag": "geografia;morfologia_italiana;classe_4;primaria",
    "tags": [

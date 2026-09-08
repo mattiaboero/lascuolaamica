@@ -833,7 +833,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 83: domanda che risponde a se stessa. "Quale punto cardinale
+    // Dal lotto 84: due opzioni che dicono la stessa cosa, una col
+  // quantificatore e una senza ("Diversi" e "Tutti diversi" fra i lati di un
+  // triangolo): il secondo distrattore non aggiunge niente.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const nude = options.filter((o) => typeof o === 'string')
+      .map((o) => o.trim().toLowerCase().replace(/^(?:tutti|tutte|tutto|tutta)\s+/, ''));
+    for (let i = 0; i < nude.length; i += 1) {
+      for (let j = i + 1; j < nude.length; j += 1) {
+        if (nude[i] && nude[i] === nude[j]) {
+          errors.push({ level: 'error', field: 'options', msg: `due opzioni dicono la stessa cosa: "${options[i]}" e "${options[j]}"` });
+        }
+      }
+    }
+  }
+
+  // Dal lotto 83: domanda che risponde a se stessa. "Quale punto cardinale
   // indica l'Ovest?" con risposta "O": il punto cardinale e' gia' scritto
   // nella domanda e l'opzione ne e' l'iniziale. Tre casi, riscritti come
   // "Quale lettera indica l'Ovest sulla rosa dei venti?".

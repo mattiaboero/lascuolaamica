@@ -32654,14 +32654,14 @@
    "difficulty": 1,
    "question": "Un triangolo equilatero ha tutti i lati...",
    "options": [
-    "Diversi",
+    "Perpendicolari fra loro",
     "Due uguali",
     "Tutti uguali",
     "Tutti diversi"
    ],
    "answerIndex": 2,
    "answer": "Tutti uguali",
-   "explanation": "Il triangolo equilatero ha tutti e tre i lati della stessa lunghezza. 'Equilatero' significa proprio 'lati uguali'.",
+   "explanation": "Il triangolo equilatero ha tutti e tre i lati della stessa lunghezza: 'equilatero' significa proprio 'lati uguali'. Con due lati uguali è isoscele, con tutti diversi è scaleno.",
    "active": true,
    "tag": "matematica;geometria;classe_3;primaria",
    "tags": [
