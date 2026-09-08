@@ -11045,7 +11045,7 @@
    "area": "italiano_classe5",
    "subarea": "grammatica",
    "difficulty": 3,
-   "question": "Come si chiama la ripetizione del soggetto con un pronome nella stessa frase?",
+   "question": "Come si chiama la ripetizione ridondante di un elemento già espresso nella frase?",
    "options": [
     "pleonasmo",
     "ellissi",
@@ -11054,7 +11054,7 @@
    ],
    "answerIndex": 0,
    "answer": "pleonasmo",
-   "explanation": "Il pleonasmo è una ripetizione ridondante, come 'A me mi piace' (ridondante, ma comune nel parlato).",
+   "explanation": "Il pleonasmo è una ripetizione ridondante di un elemento già presente, come 'A me mi piace' (comune nel parlato, ma da evitare nello scritto).",
    "active": true,
    "tag": "italiano;classe_5;grammatica;primaria",
    "tags": [

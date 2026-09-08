@@ -885,12 +885,14 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // presenze, martedi' 15, mercoledi' 9") e spiegazione che si ferma al
   // numero ("15 e' il numero maggiore") senza dire a quale giorno
   // corrisponde: chi sbaglia non trova la risposta, trova solo il conto.
+  // Dal lotto 97 la regola vale anche per le domande di posizione ("quale
+  // colore e' al secondo posto?"), che hanno lo stesso difetto.
   // I nomi vanno cercati con [a-zà-ù] e non con \w: in JavaScript \w le lettere
   // accentate non le prende, e "lunedi'" restava fuori.
   if (subject !== 'inglese' && typeof answer === 'string') {
     const d = String(question || '');
     const dati = /[a-zà-ùA-ZÀ-Ù]+\s+\d+[^,]{0,15},\s*[a-zà-ùA-ZÀ-Ù]+\s+\d+/.test(d);
-    const confronto = /(?:più|meno|maggiore|minore|probabile)/i.test(d);
+    const confronto = /(?:più|meno|maggiore|minore|probabile|posto|primo|second[oa]|ultim[oa])/i.test(d);
     if (dati && confronto && !String(explanation || '').toLowerCase().includes(answer.trim().toLowerCase())) {
       errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione del confronto non nomina la risposta ("${answer}")` });
     }

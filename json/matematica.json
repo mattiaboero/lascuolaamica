@@ -59612,7 +59612,7 @@
    ],
    "answerIndex": 2,
    "answer": "verde",
-   "explanation": "18 è primo, 15 è secondo, 12 è terzo.",
+   "explanation": "In ordine: rosso 18, verde 15, blu 12. Al secondo posto c'è il verde.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
