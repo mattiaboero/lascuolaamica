@@ -833,6 +833,26 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 6: consegna che chiede la parola che comincia con una lettera,
+    // ma piu' di un'opzione comincia con quella lettera ("Which month starts
+    // with J and comes after May?" con July, January e June fra le opzioni:
+    // anche July comincia per J e viene dopo maggio).
+    {
+      const m = /starts? with ([A-Z])(?![a-z])/.exec(d);
+      if (m) {
+        const ok = (options || []).filter((o) => typeof o === 'string' && o.trim().toUpperCase().startsWith(m[1]));
+        if (ok.length > 1) {
+          errors.push({ level: 'error', field: 'options', msg: `piu' di un'opzione comincia con "${m[1]}" (${ok.join(', ')})` });
+        }
+      }
+    }
+
+    // Dal lotto 6: puntini di sospensione al posto dello spazio da riempire
+    // ("January is the ... month of the year.").
+    if (/\S\s+\.\.\.\s+\S/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'puntini al posto dello spazio da riempire: usare "___"' });
+    }
+
     // Dal lotto 5: consegna con "two/three ___" dove la risposta e' l'unica
     // opzione al plurale ("I have two ___" fra nose, mouth, hands e head).
     // Il bambino non deve sapere che le mani sono due: gli basta cercare la -s.

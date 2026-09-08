@@ -3642,7 +3642,7 @@
    "area": "mesi",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "January is the ... month of the year.",
+   "question": "January is the ___ month of the year.",
    "options": [
     "first",
     "second",
@@ -4929,7 +4929,7 @@
    "area": "mesi",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which month starts with J and comes after May?",
+   "question": "Which month comes right after May?",
    "options": [
     "July",
     "January",
@@ -26747,7 +26747,7 @@
    "area": "inglese",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "She studies every day ___ she wants to pass the exam.",
+   "question": "She wants to pass the exam, ___ she studies every day.",
    "options": [
     "so",
     "although",
@@ -26756,7 +26756,7 @@
    ],
    "answerIndex": 0,
    "answer": "so",
-   "explanation": "'So' introduce la conseguenza o lo scopo: 'She studies every day so she wants to pass' = studia ogni giorno perché vuole superare l'esame. Indica causa-effetto.",
+   "explanation": "'So' introduce la conseguenza: vuole superare l'esame, quindi studia ogni giorno. Attenzione a non confonderlo con 'because', che introduce invece la causa: 'She studies every day because she wants to pass the exam'.",
    "active": true,
    "tag": "inglese;frasi_semplici;classe_5;primaria",
    "tags": [
