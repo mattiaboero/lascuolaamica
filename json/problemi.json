@@ -12011,7 +12011,7 @@
    ],
    "answerIndex": 1,
    "answer": "5",
-   "explanation": "Calcoliamo 1/2 di 10: 10 ÷ 2 = 5; poi 5 × 1 = 5.",
+   "explanation": "Calcoliamo 1/2 di 10: 10 ÷ 2 = 5.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -12165,7 +12165,7 @@
    ],
    "answerIndex": 3,
    "answer": "12",
-   "explanation": "Calcoliamo 1/10 di 120: 120 ÷ 10 = 12; poi 12 × 1 = 12.",
+   "explanation": "Calcoliamo 1/10 di 120: 120 ÷ 10 = 12.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -12195,7 +12195,7 @@
    ],
    "answerIndex": 3,
    "answer": "11",
-   "explanation": "Calcoliamo 1/4 di 44: 44 ÷ 4 = 11; poi 11 × 1 = 11.",
+   "explanation": "Calcoliamo 1/4 di 44: 44 ÷ 4 = 11.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -12441,7 +12441,7 @@
    ],
    "answerIndex": 1,
    "answer": "14",
-   "explanation": "Calcoliamo 1/2 di 28: 28 ÷ 2 = 14; poi 14 × 1 = 14.",
+   "explanation": "Calcoliamo 1/2 di 28: 28 ÷ 2 = 14.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -12655,7 +12655,7 @@
    ],
    "answerIndex": 1,
    "answer": "4",
-   "explanation": "Calcoliamo 1/5 di 20: 20 ÷ 5 = 4; poi 4 × 1 = 4.",
+   "explanation": "Calcoliamo 1/5 di 20: 20 ÷ 5 = 4.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -12746,7 +12746,7 @@
    ],
    "answerIndex": 0,
    "answer": "7",
-   "explanation": "Calcoliamo 1/4 di 28: 28 ÷ 4 = 7; poi 7 × 1 = 7.",
+   "explanation": "Calcoliamo 1/4 di 28: 28 ÷ 4 = 7.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -12993,7 +12993,7 @@
    ],
    "answerIndex": 3,
    "answer": "7",
-   "explanation": "1/5 di 35: 35 ÷ 5 = 7; poi × 1 = 7.",
+   "explanation": "1/5 di 35: 35 ÷ 5 = 7.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -13023,7 +13023,7 @@
    ],
    "answerIndex": 2,
    "answer": "14",
-   "explanation": "1/4 di 56: 56 ÷ 4 = 14; poi × 1 = 14.",
+   "explanation": "1/4 di 56: 56 ÷ 4 = 14.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -13177,7 +13177,7 @@
    ],
    "answerIndex": 2,
    "answer": "12",
-   "explanation": "1/10 di 120: 120 ÷ 10 = 12; poi × 1 = 12.",
+   "explanation": "1/10 di 120: 120 ÷ 10 = 12.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -13361,7 +13361,7 @@
    ],
    "answerIndex": 3,
    "answer": "11",
-   "explanation": "1/2 di 22: 22 ÷ 2 = 11; poi × 1 = 11.",
+   "explanation": "1/2 di 22: 22 ÷ 2 = 11.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -13575,7 +13575,7 @@
    ],
    "answerIndex": 3,
    "answer": "10",
-   "explanation": "Calcoliamo 1/4 di 40: 40 ÷ 4 = 10; poi 10 × 1 = 10.",
+   "explanation": "Calcoliamo 1/4 di 40: 40 ÷ 4 = 10.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -13667,7 +13667,7 @@
    ],
    "answerIndex": 0,
    "answer": "10",
-   "explanation": "Calcoliamo 1/2 di 20: 20 ÷ 2 = 10; poi 10 × 1 = 10.",
+   "explanation": "Calcoliamo 1/2 di 20: 20 ÷ 2 = 10.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -13697,7 +13697,7 @@
    ],
    "answerIndex": 0,
    "answer": "14",
-   "explanation": "Calcoliamo 1/2 di 28: 28 ÷ 2 = 14; poi 14 × 1 = 14.",
+   "explanation": "Calcoliamo 1/2 di 28: 28 ÷ 2 = 14.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -13851,7 +13851,7 @@
    ],
    "answerIndex": 2,
    "answer": "7",
-   "explanation": "Calcoliamo 1/4 di 28: 28 ÷ 4 = 7; poi 7 × 1 = 7.",
+   "explanation": "Calcoliamo 1/4 di 28: 28 ÷ 4 = 7.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -14127,7 +14127,7 @@
    ],
    "answerIndex": 0,
    "answer": "11",
-   "explanation": "Calcoliamo 1/4 di 44: 44 ÷ 4 = 11; poi 11 × 1 = 11.",
+   "explanation": "Calcoliamo 1/4 di 44: 44 ÷ 4 = 11.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -14280,7 +14280,7 @@
    ],
    "answerIndex": 2,
    "answer": "17",
-   "explanation": "1/10 di 170: 170 ÷ 10 = 17; poi × 1 = 17.",
+   "explanation": "1/10 di 170: 170 ÷ 10 = 17.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -14619,7 +14619,7 @@
    ],
    "answerIndex": 3,
    "answer": "19",
-   "explanation": "1/4 di 76: 76 ÷ 4 = 19; poi × 1 = 19.",
+   "explanation": "1/4 di 76: 76 ÷ 4 = 19.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -14804,7 +14804,7 @@
    ],
    "answerIndex": 1,
    "answer": "8",
-   "explanation": "1/4 di 32: 32 ÷ 4 = 8; poi × 1 = 8.",
+   "explanation": "1/4 di 32: 32 ÷ 4 = 8.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -14865,7 +14865,7 @@
    ],
    "answerIndex": 0,
    "answer": "8",
-   "explanation": "Calcoliamo 1/10 di 80: 80 ÷ 10 = 8; poi 8 × 1 = 8.",
+   "explanation": "Calcoliamo 1/10 di 80: 80 ÷ 10 = 8.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -15141,7 +15141,7 @@
    ],
    "answerIndex": 2,
    "answer": "13",
-   "explanation": "Calcoliamo 1/5 di 65: 65 ÷ 5 = 13; poi 13 × 1 = 13.",
+   "explanation": "Calcoliamo 1/5 di 65: 65 ÷ 5 = 13.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -15417,7 +15417,7 @@
    ],
    "answerIndex": 2,
    "answer": "5",
-   "explanation": "Calcoliamo 1/10 di 50: 50 ÷ 10 = 5; poi 5 × 1 = 5.",
+   "explanation": "Calcoliamo 1/10 di 50: 50 ÷ 10 = 5.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -15569,7 +15569,7 @@
    ],
    "answerIndex": 0,
    "answer": "19",
-   "explanation": "1/5 di 95: 95 ÷ 5 = 19; poi × 1 = 19.",
+   "explanation": "1/5 di 95: 95 ÷ 5 = 19.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -15630,7 +15630,7 @@
    ],
    "answerIndex": 0,
    "answer": "5",
-   "explanation": "1/5 di 25: 25 ÷ 5 = 5; poi × 1 = 5.",
+   "explanation": "1/5 di 25: 25 ÷ 5 = 5.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -16367,7 +16367,7 @@
    ],
    "answerIndex": 3,
    "answer": "11",
-   "explanation": "Calcoliamo 1/5 di 55: 55 ÷ 5 = 11; poi 11 × 1 = 11.",
+   "explanation": "Calcoliamo 1/5 di 55: 55 ÷ 5 = 11.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -16459,7 +16459,7 @@
    ],
    "answerIndex": 0,
    "answer": "13",
-   "explanation": "Calcoliamo 1/2 di 26: 26 ÷ 2 = 13; poi 13 × 1 = 13.",
+   "explanation": "Calcoliamo 1/2 di 26: 26 ÷ 2 = 13.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -16858,7 +16858,7 @@
    ],
    "answerIndex": 1,
    "answer": "5",
-   "explanation": "1/2 di 10: 10 ÷ 2 = 5; poi × 1 = 5.",
+   "explanation": "1/2 di 10: 10 ÷ 2 = 5.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -17290,7 +17290,7 @@
    ],
    "answerIndex": 1,
    "answer": "5",
-   "explanation": "Calcoliamo 1/5 di 25: 25 ÷ 5 = 5; poi 5 × 1 = 5.",
+   "explanation": "Calcoliamo 1/5 di 25: 25 ÷ 5 = 5.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -17382,7 +17382,7 @@
    ],
    "answerIndex": 3,
    "answer": "10",
-   "explanation": "Calcoliamo 1/10 di 100: 100 ÷ 10 = 10; poi 10 × 1 = 10.",
+   "explanation": "Calcoliamo 1/10 di 100: 100 ÷ 10 = 10.",
    "active": true,
    "tag": "frazioni,cibo",
    "tags": [
@@ -17535,7 +17535,7 @@
    ],
    "answerIndex": 1,
    "answer": "8",
-   "explanation": "1/5 di 40: 40 ÷ 5 = 8; poi × 1 = 8.",
+   "explanation": "1/5 di 40: 40 ÷ 5 = 8.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -17903,7 +17903,7 @@
    ],
    "answerIndex": 3,
    "answer": "6",
-   "explanation": "1/2 di 12: 12 ÷ 2 = 6; poi × 1 = 6.",
+   "explanation": "1/2 di 12: 12 ÷ 2 = 6.",
    "active": true,
    "tag": "frazioni,scuola",
    "tags": [
@@ -32195,7 +32195,7 @@
    ],
    "answerIndex": 0,
    "answer": "30",
-   "explanation": "Prima: 6 × 5 = 30. Poi: i 2 giorni di stop non aggiungono km, totale = 30.",
+   "explanation": "i 2 giorni di stop non aggiungono km, totale = 30.",
    "active": true,
    "tag": "problemi;due_operazioni;classe_4;primaria",
    "tags": [
@@ -34051,7 +34051,7 @@
    ],
    "answerIndex": 0,
    "answer": "6",
-   "explanation": "Prima: 24 ÷ 4 = 6. Poi: 1/4 di 24 = 6.",
+   "explanation": "1/4 di 24 = 6.",
    "active": true,
    "tag": "problemi;frazioni;classe_4;primaria",
    "tags": [
@@ -34179,7 +34179,7 @@
    ],
    "answerIndex": 0,
    "answer": "24",
-   "explanation": "Prima: 72 ÷ 3 = 24. Poi: 1/3 di 72 = 24 pagine.",
+   "explanation": "1/3 di 72 = 24 pagine.",
    "active": true,
    "tag": "problemi;frazioni;classe_4;primaria",
    "tags": [
@@ -34435,7 +34435,7 @@
    ],
    "answerIndex": 0,
    "answer": "13",
-   "explanation": "Prima: 52 ÷ 4 = 13. Poi: 1/4 di 52 = 13 carte.",
+   "explanation": "1/4 di 52 = 13 carte.",
    "active": true,
    "tag": "problemi;frazioni;classe_4;primaria",
    "tags": [

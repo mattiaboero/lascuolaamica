@@ -154,6 +154,14 @@ const GRAMMATICA = [
     msg: 'pronome maschile "gli" con un soggetto femminile comune (es. "Una famiglia ... gli rimane")' },
   { pattern: new RegExp(`\\b\\d+\\s+(?:${NOMI_FEMMINILI_PREZZO})\\s+a\\s+[\\d,]+\\s+euro\\s+l'uno\\b`, 'i'),
     msg: `accordo: "l'uno" con un nome femminile (serve "l'una", es. "4 magliette a 18 euro l'una")` },
+  // Dal lotto 73: passo moltiplicativo inutile nel calcolo di una frazione
+  // unitaria ("1/2 di 28: 28 / 2 = 14; poi 14 x 1 = 14"). Quaranta
+  // spiegazioni. Le tabelline dell'uno e le scomposizioni tipo 19 = 20 - 1
+  // restano fuori: il "x 1" li' e' il punto dell'esercizio, e infatti non
+  // nominano nessuna frazione.
+  { pattern: /1\/\d[\s\S]{0,120}?×\s*1\s*=/,
+    soloSpiegazione: true,
+    msg: 'passo "× 1" inutile nel calcolo di una frazione unitaria' },
   // Dal lotto 72: "quale e'" al posto di "qual e'". Il troncamento davanti al
   // verbo essere e' obbligatorio e non vuole apostrofo. Cinque domande.
   // L'opzione "quale e'?" di ita-4-ortografia-003 e' un distrattore voluto e
@@ -805,6 +813,14 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       if (n1.length && n1.join('|') === n2.join('|')) {
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
+    }
+    // Dal lotto 73: variante con i conti diversi ma lo stesso risultato
+    // ("Prima: 52 / 4 = 13. Poi: 1/4 di 52 = 13 carte."): il secondo passo
+    // riscrive il primo in un'altra notazione, non aggiunge un calcolo.
+    const stessoRisultato = String(explanation || '').trim()
+      .match(/^Prima:\s*.+?\s*=\s*([\d.,]+)\.\s*Poi:\s*.+?\s*=\s*([\d.,]+)\s*\w*\.$/);
+    if (stessoRisultato && stessoRisultato[1] === stessoRisultato[2]) {
+      errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi che arrivano tutti e due a ${stessoRisultato[1]}` });
     }
   }
 

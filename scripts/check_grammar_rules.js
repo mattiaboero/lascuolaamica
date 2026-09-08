@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Calcoliamo 1/2 di 28: 28 ÷ 2 = 14; poi 14 × 1 = 14.',
   "Quale è il fiume più lungo d'Europa?",
   'Con 90 euro compro 3 magliette e mi avanza 15 euro.',
   'Sommiamo le quantità di entrambi: 11 + 14 = 25 uva.',
@@ -227,7 +228,7 @@ function controllaNomiClassificati(sorgente) {
 // statistico: una parola quasi assente nel corpus a un passo da una molto
 // piu' frequente. Le aree di ortografia, lessico e grammatica restano fuori
 // perche' li' le grafie sbagliate sono i distrattori, e sono volute.
-const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano']);
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa']);
 
 function controllaRefusi() {
   const dir = path.join(__dirname, '..', 'json');
