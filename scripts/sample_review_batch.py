@@ -35,7 +35,9 @@ def carica():
         if not isinstance(qs, list):
             continue
         for q in qs:
-            if q.get('subject') != 'inglese':
+            # le domande disattivate non arrivano piu' ai bambini: rileggerle
+            # in un lotto sarebbe lavoro sprecato.
+            if q.get('subject') != 'inglese' and q.get('active') is not False:
                 tutte.append(q)
     conta = collections.Counter(scheletro(q.get('question')) for q in tutte)
     return [q for q in tutte if conta[scheletro(q.get('question'))] == 1]
