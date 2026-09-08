@@ -31759,14 +31759,14 @@
    "difficulty": 3,
    "question": "Perché il Sud Italia ha un clima più caldo e secco rispetto al Nord?",
    "options": [
-    "Perché è più vicino all'equatore e al mare, con meno montagne a proteggerlo dai venti caldi",
+    "Perché si trova a una latitudine più bassa, più vicina all'equatore, e riceve i raggi del Sole più diretti",
     "Perché ha più industrie che producono calore",
     "Perché gli Appennini bloccano i venti freddi del nord e il sole splende di più",
     "Perché il Vesuvio riscalda tutta la regione meridionale"
    ],
    "answerIndex": 0,
-   "answer": "Perché è più vicino all'equatore e al mare, con meno montagne a proteggerlo dai venti caldi",
-   "explanation": "Il Sud Italia si trova a latitudini più basse, più vicino all'equatore, ed è circondato da mari che mitigano le temperature ma portano anche siccità estiva. Le Alpi, invece, proteggono il Nord dai venti artici.",
+   "answer": "Perché si trova a una latitudine più bassa, più vicina all'equatore, e riceve i raggi del Sole più diretti",
+   "explanation": "Il Sud Italia si trova a latitudini più basse, più vicino all'equatore: i raggi del Sole arrivano più diretti e scaldano di più. È inoltre circondato da mari che mitigano le temperature ma lasciano estati secche. Le Alpi, invece, riparano il Nord dai venti freddi.",
    "active": true,
    "tag": "geografia;clima_italiano;classe_4;primaria",
    "tags": [

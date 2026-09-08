@@ -844,7 +844,27 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 84: due opzioni che dicono la stessa cosa, una col
+    // Dal lotto 87: contenitore e contenuto incompatibili, segno che il
+  // generatore ha combinato due modelli ("In un astuccio ci sono 7 libri").
+  // La tabella e' volutamente stretta: elenca solo le coppie impossibili
+  // viste davvero, perche' "astuccio con 26 adesivi" o "libreria con 32
+  // scaffali" sono verosimili e non vanno segnalate.
+  if (subject !== 'inglese') {
+    const IMPOSSIBILI = {
+      astuccio: /(?:libri|palloni|biciclette|sedie|scatoloni)/i,
+      portamonete: /(?:libri|matite|palloni)/i,
+      pollaio: /(?:libri|matite|automobili)/i,
+    };
+    const d = String(question || '');
+    for (const [contenitore, vietati] of Object.entries(IMPOSSIBILI)) {
+      const m = d.match(new RegExp(`(?<![a-zà-ù])${contenitore}(?![a-zà-ù])[^.?!]{0,40}?\\d+\\s+([a-zà-ù]+)`, 'i'));
+      if (m && vietati.test(m[1])) {
+        errors.push({ level: 'error', field: 'question', msg: `contenitore e contenuto incompatibili: "${contenitore}" con "${m[1]}"` });
+      }
+    }
+  }
+
+  // Dal lotto 84: due opzioni che dicono la stessa cosa, una col
   // quantificatore e una senza ("Diversi" e "Tutti diversi" fra i lati di un
   // triangolo): il secondo distrattore non aggiunge niente.
   if (subject !== 'inglese' && Array.isArray(options)) {
