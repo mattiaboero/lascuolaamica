@@ -276,7 +276,7 @@
    "area": "numeri",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "What number is \"five\"?",
+   "question": "What number is 'five'?",
    "options": [
     "4",
     "7",
@@ -408,7 +408,7 @@
    "area": "animali",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which animal says \"woof\"?",
+   "question": "Which animal says 'woof'?",
    "options": [
     "cat",
     "fish",
@@ -418,7 +418,7 @@
    "answerIndex": 2,
    "answer": "dog",
    "explanation": "The correct answer is \"dog\".",
-   "active": true,
+   "active": false,
    "tag": "inglese;classe_2;animali;primaria",
    "tags": [
     "inglese",
@@ -474,7 +474,7 @@
    "area": "animali",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Which animal says \"meow\"?",
+   "question": "Which animal says 'meow'?",
    "options": [
     "cat",
     "dog",
@@ -1629,7 +1629,7 @@
    "area": "saluti",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "\"Hi, how are you?\" — \"I am...\"",
+   "question": "'Hi, how are you?' — 'I am...'",
    "options": [
     "chair",
     "blue",
@@ -1761,7 +1761,7 @@
    "area": "saluti",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "What do you say after \"Thank you\"?",
+   "question": "What do you say after 'Thank you'?",
    "options": [
     "Good night",
     "You're welcome",
@@ -2520,7 +2520,7 @@
    "area": "saluti",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer matches \"Good morning\"?",
+   "question": "Which answer matches 'Good morning'?",
    "options": [
     "Good morning",
     "Good night",
@@ -3147,7 +3147,7 @@
    "area": "saluti",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is polite for \"How are you?\"",
+   "question": "Which answer is polite for 'How are you?'",
    "options": [
     "Window",
     "I'm fine, thank you",
@@ -3213,7 +3213,7 @@
    "area": "numeri",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which number completes the sequence? 2, 4, 6, __",
+   "question": "Which number completes the sequence? 2, 4, 6, ___",
    "options": [
     "7",
     "8",
@@ -3774,7 +3774,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: I __ happy.",
+   "question": "Complete: 'I ___ happy.'",
    "options": [
     "is",
     "are",
@@ -3807,7 +3807,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: She __ my friend.",
+   "question": "Complete: 'She ___ my friend.'",
    "options": [
     "am",
     "is",
@@ -3840,7 +3840,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: We __ at school.",
+   "question": "Complete: 'We ___ at school.'",
    "options": [
     "are",
     "is",
@@ -3873,7 +3873,7 @@
    "area": "have_got",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: I have got two __.",
+   "question": "Complete: 'I have got two ___.'",
    "options": [
     "nose",
     "eyes",
@@ -3906,7 +3906,7 @@
    "area": "have_got",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: He has got a __.",
+   "question": "Complete: 'He has got a ___.'",
    "options": [
     "ears",
     "noses",
@@ -4500,7 +4500,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: It __ cold today.",
+   "question": "Complete: 'It ___ cold today.'",
    "options": [
     "am",
     "are",
@@ -4533,7 +4533,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: They __ hungry.",
+   "question": "Complete: 'They ___ hungry.'",
    "options": [
     "is",
     "are",
@@ -4566,7 +4566,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: My name __ Luca.",
+   "question": "Complete: 'The cat ___ under the table.'",
    "options": [
     "are",
     "am",
@@ -4599,7 +4599,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: You __ my best friend.",
+   "question": "Complete: 'You ___ very kind.'",
    "options": [
     "is",
     "am",
@@ -4632,7 +4632,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: I __ ten years old.",
+   "question": "Complete: 'I ___ ready for school.'",
    "options": [
     "am",
     "is",
@@ -4665,7 +4665,7 @@
    "area": "have_got",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: She has got long __.",
+   "question": "Complete: 'She has got long ___.'",
    "options": [
     "hair",
     "hairs",
@@ -4698,7 +4698,7 @@
    "area": "have_got",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: We have got two __.",
+   "question": "Complete: 'We have got two ___.'",
    "options": [
     "bike",
     "bikes",
@@ -4731,7 +4731,7 @@
    "area": "have_got",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: The cat has got four __.",
+   "question": "Complete: 'The cat has got four ___.'",
    "options": [
     "leg",
     "legs",
@@ -4764,7 +4764,7 @@
    "area": "have_got",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: My brother __ got a blue bag.",
+   "question": "Complete: 'My brother ___ got a blue bag.'",
    "options": [
     "have",
     "has",
@@ -4797,7 +4797,7 @@
    "area": "have_got",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: Anna and Tom __ got a kite.",
+   "question": "Complete: 'Anna and Tom ___ got a kite.'",
    "options": [
     "has",
     "is",
@@ -5193,7 +5193,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: She __ in the garden.",
+   "question": "Complete: 'She ___ in the garden.'",
    "options": [
     "am",
     "are",
@@ -5226,7 +5226,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: They __ my cousins.",
+   "question": "Complete: 'They ___ my cousins.'",
    "options": [
     "are",
     "is",
@@ -5259,7 +5259,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: I __ not sad today.",
+   "question": "Complete: 'I ___ not sad today.'",
    "options": [
     "is",
     "are",
@@ -5292,7 +5292,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: It __ my sandwich.",
+   "question": "Complete: 'It ___ my sandwich.'",
    "options": [
     "are",
     "am",
@@ -5325,7 +5325,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: We __ ready for lunch.",
+   "question": "Complete: 'We ___ ready for lunch.'",
    "options": [
     "is",
     "am",
@@ -5358,7 +5358,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: I have got a sandwich, but my sister __ got pasta.",
+   "question": "Complete: 'I have got a sandwich, but my sister ___ got pasta.'",
    "options": [
     "have",
     "has",
@@ -5391,7 +5391,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: My friends __ got new notebooks.",
+   "question": "Complete: 'My friends ___ got new notebooks.'",
    "options": [
     "has",
     "is",
@@ -5457,7 +5457,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Has she got a cat?\"",
+   "question": "Which answer is correct for 'Has she got a cat?'",
    "options": [
     "Yes, she has.",
     "Yes, she have.",
@@ -5490,7 +5490,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Are they at home?\"",
+   "question": "Which answer is correct for 'Are they at home?'",
    "options": [
     "Yes, they is.",
     "Yes, they are.",
@@ -5523,7 +5523,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Is he tired?\"",
+   "question": "Which answer is correct for 'Is he tired?'",
    "options": [
     "No, he aren't.",
     "No, he not.",
@@ -5721,7 +5721,7 @@
    "area": "meteo",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which weather matches \"Take an umbrella\"?",
+   "question": "Which weather matches 'Take an umbrella'?",
    "options": [
     "rainy",
     "sunny",
@@ -5754,7 +5754,7 @@
    "area": "meteo",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which weather matches \"Wear gloves and a scarf\"?",
+   "question": "Which weather matches 'Wear gloves and a scarf'?",
    "options": [
     "stormy",
     "snowy",
@@ -5886,7 +5886,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: My friends __ at the park now.",
+   "question": "Complete: 'My friends ___ at the park now.'",
    "options": [
     "is",
     "are",
@@ -5919,7 +5919,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: The book __ on the desk.",
+   "question": "Complete: 'The book ___ on the desk.'",
    "options": [
     "am",
     "are",
@@ -5952,7 +5952,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: I __ happy because it's my birthday.",
+   "question": "Complete: 'I ___ happy because it's my birthday.'",
    "options": [
     "are",
     "am",
@@ -5985,7 +5985,7 @@
    "area": "have_got",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: My sister and I __ got two bikes.",
+   "question": "Complete: 'My sister and I ___ got two bikes.'",
    "options": [
     "has",
     "is",
@@ -6018,7 +6018,7 @@
    "area": "have_got",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: Peter __ got a red cap.",
+   "question": "Complete: 'Peter ___ got a red cap.'",
    "options": [
     "have",
     "has",
@@ -6051,7 +6051,7 @@
    "area": "have_got",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Have you got a ruler?\"",
+   "question": "Which answer is correct for 'Have you got a ruler?'",
    "options": [
     "No, I hasn't.",
     "No, I haven't.",
@@ -6084,7 +6084,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Is it sunny?\"",
+   "question": "Which answer is correct for 'Is it sunny?'",
    "options": [
     "Yes, it is.",
     "Yes, it are.",
@@ -6117,7 +6117,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Are you hungry?\"",
+   "question": "Which answer is correct for 'Are you hungry?'",
    "options": [
     "Yes, I is.",
     "Yes, I are.",
@@ -6480,7 +6480,7 @@
    "area": "routine_quotidiana",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "After school I __ my homework.",
+   "question": "After school I ___ my homework.",
    "options": [
     "do",
     "go",
@@ -6513,7 +6513,7 @@
    "area": "routine_quotidiana",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "In the evening I __ to bed.",
+   "question": "In the evening I ___ to bed.",
    "options": [
     "do",
     "play",
@@ -7272,7 +7272,7 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Which answer matches \"What's your favourite sport?\"",
+   "question": "Which answer matches 'What is your favourite sport?'",
    "options": [
     "In Turin",
     "Basketball",
@@ -7305,7 +7305,7 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Which answer matches \"Where do you live?\"",
+   "question": "Which answer matches 'Where do you live?'",
    "options": [
     "In Turin",
     "Blue",
@@ -7338,7 +7338,7 @@
    "area": "domande",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Which answer matches \"Do you like music?\"",
+   "question": "Which answer matches 'Do you like music?'",
    "options": [
     "At school",
     "Yes, I do",
@@ -8064,7 +8064,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"What do you do after dinner?\"",
+   "question": "Which answer is correct for 'What do you do after dinner?'",
    "options": [
     "I watch TV.",
     "In the kitchen.",
@@ -8097,7 +8097,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Where do you do your homework?\"",
+   "question": "Which answer is correct for 'Where do you do your homework?'",
    "options": [
     "I do my homework in my bedroom.",
     "At seven o'clock.",
@@ -8130,7 +8130,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"Do you like tennis?\"",
+   "question": "Which answer is correct for 'Do you like tennis?'",
    "options": [
     "In the park.",
     "Yes, I do.",
@@ -8163,7 +8163,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Which answer is correct for \"What time do you go to bed?\"",
+   "question": "Which answer is correct for 'What time do you go to bed?'",
    "options": [
     "In my room.",
     "At nine o'clock.",
@@ -8790,7 +8790,7 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches \"How often do you read?\"",
+   "question": "Which answer matches 'How often do you read?'",
    "options": [
     "Every day.",
     "In my bedroom.",
@@ -8823,7 +8823,7 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches \"What do you do in the afternoon?\"",
+   "question": "Which answer matches 'What do you do in the afternoon?'",
    "options": [
     "I go to the park.",
     "On the table.",
@@ -8856,7 +8856,7 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches \"Where is your school bag?\"",
+   "question": "Which answer matches 'Where is your school bag?'",
    "options": [
     "It is in my bedroom.",
     "At eight o'clock.",
@@ -8889,7 +8889,7 @@
    "area": "domande",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Which answer matches \"Do you help at home?\"",
+   "question": "Which answer matches 'Do you help at home?'",
    "options": [
     "Yes, I do.",
     "In the kitchen.",
@@ -9461,7 +9461,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: It ___ a sunny day.",
+   "question": "Complete: 'It ___ a sunny day.'",
    "options": [
     "am",
     "be",
@@ -9495,7 +9495,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: We ___ ready.",
+   "question": "Complete: 'We ___ ready.'",
    "options": [
     "is",
     "be",
@@ -9699,7 +9699,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: They ___ in class.",
+   "question": "Complete: 'They ___ in class.'",
    "options": [
     "am",
     "be",
@@ -9971,7 +9971,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: I ___ quiet.",
+   "question": "Complete: 'I ___ quiet.'",
    "options": [
     "are",
     "am",
@@ -10005,7 +10005,7 @@
    "area": "to_be",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Complete: He ___ brave.",
+   "question": "Complete: 'He ___ brave.'",
    "options": [
     "are",
     "is",
@@ -10311,7 +10311,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: We ___ quiet.",
+   "question": "Complete: 'We ___ quiet.'",
    "options": [
     "am",
     "are",
@@ -10345,7 +10345,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: He ___ kind.",
+   "question": "Complete: 'He ___ kind.'",
    "options": [
     "am",
     "are",
@@ -10651,7 +10651,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: He ___ happy.",
+   "question": "Complete: 'He ___ happy.'",
    "options": [
     "am",
     "is",
@@ -10685,7 +10685,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: We ___ hungry.",
+   "question": "Complete: 'We ___ hungry.'",
    "options": [
     "be",
     "are",
@@ -10957,7 +10957,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: She ___ brave.",
+   "question": "Complete: 'She ___ brave.'",
    "options": [
     "am",
     "is",
@@ -10991,7 +10991,7 @@
    "area": "to_be",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "Complete: You ___ hungry.",
+   "question": "Complete: 'You ___ hungry.'",
    "options": [
     "am",
     "be",
@@ -11221,7 +11221,7 @@
    "area": "colori",
    "subarea": "frasi_semplici",
    "difficulty": 1,
-   "question": "Complete: 'My pencil is ___.' (Choose the colour word.)?",
+   "question": "Complete: 'My pencil is ___.' (Choose the colour word.)",
    "options": [
     "quickly",
     "orange",
@@ -11509,7 +11509,7 @@
    "area": "animali",
    "subarea": "frasi_semplici",
    "difficulty": 1,
-   "question": "Complete: 'A ___ can fly.'?",
+   "question": "Complete: 'A ___ can fly.'",
    "options": [
     "fish",
     "dog",
@@ -11765,7 +11765,7 @@
    "area": "cibo",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: 'I like ___ for breakfast.'?",
+   "question": "Complete: 'I like ___ for breakfast.'",
    "options": [
     "cereal",
     "table",
@@ -11861,7 +11861,7 @@
    "area": "giorni",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'I go to school on ___.'?",
+   "question": "Complete: 'I go to school on ___.'",
    "options": [
     "Monday",
     "Saturday",
@@ -11990,7 +11990,7 @@
    "area": "mesi",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'My birthday is in ___.'?",
+   "question": "Complete: 'My birthday is in ___.'",
    "options": [
     "Monday",
     "summer",
@@ -12086,7 +12086,7 @@
    "area": "corpo_umano",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: 'I have two ___.'?",
+   "question": "Complete: 'I have two ___.'",
    "options": [
     "nose",
     "mouth",
@@ -12214,7 +12214,7 @@
    "area": "meteo",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: 'It is ___ today. Let's go to the beach!'?",
+   "question": "Complete: 'It is ___ today. Let's go to the beach!'",
    "options": [
     "foggy",
     "cold",
@@ -12246,7 +12246,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Choose the correct form: 'She ___ my best friend.'?",
+   "question": "Choose the correct form: 'She ___ my best friend.'",
    "options": [
     "am",
     "are",
@@ -12279,7 +12279,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Choose the correct form: 'They ___ very happy today.'?",
+   "question": "Choose the correct form: 'They ___ very happy today.'",
    "options": [
     "is",
     "am",
@@ -12312,7 +12312,7 @@
    "area": "to_be",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Make the sentence negative: 'He is tired.'?",
+   "question": "Make the sentence negative: 'He is tired.'",
    "options": [
     "He not is tired",
     "He is no tired",
@@ -12344,7 +12344,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'I ___ ten years old.'?",
+   "question": "Complete: 'I ___ ten years old.'",
    "options": [
     "is",
     "are",
@@ -12408,7 +12408,7 @@
    "area": "to_be",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Change to question: 'You are ready.'?",
+   "question": "Change to question: 'You are ready.'",
    "options": [
     "Are you ready?",
     "Is you ready?",
@@ -12474,7 +12474,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'I ___ a new bike.'?",
+   "question": "Complete: 'I ___ a new bike.'",
    "options": [
     "has got",
     "have got",
@@ -12506,7 +12506,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'She ___ two brothers.'?",
+   "question": "Complete: 'She ___ two brothers.'",
    "options": [
     "have got",
     "am got",
@@ -12538,7 +12538,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Make the question: 'He has got a dog.'?",
+   "question": "Make the question: 'He has got a dog.'",
    "options": [
     "Has he got a dog?",
     "Have he got a dog?",
@@ -12667,7 +12667,7 @@
    "area": "have_got",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'We ___ got three cats at home.'?",
+   "question": "Complete: 'We ___ got three cats at home.'",
    "options": [
     "has",
     "is",
@@ -12731,7 +12731,7 @@
    "area": "routine_quotidiana",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: 'Every morning I ___ my teeth.'?",
+   "question": "Complete: 'Every morning I ___ my teeth.'",
    "options": [
     "brush",
     "brushes",
@@ -12895,7 +12895,7 @@
    "area": "routine_quotidiana",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'She ___ to bed at 9 o'clock.'?",
+   "question": "Complete: 'She ___ to bed at 9 o'clock.'",
    "options": [
     "go",
     "goes",
@@ -12959,7 +12959,7 @@
    "area": "casa",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: 'The sofa is in the ___.'?",
+   "question": "Complete: 'The sofa is in the ___.'",
    "options": [
     "kitchen",
     "garage",
@@ -12991,7 +12991,7 @@
    "area": "casa",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the correct preposition: 'The lamp is ___ the table.'?",
+   "question": "Choose the correct preposition: 'The lamp is ___ the table.'",
    "options": [
     "in",
     "on",
@@ -13024,7 +13024,7 @@
    "area": "casa",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Where is the cat? 'The cat is ___ the box.'?",
+   "question": "Where is the cat? 'The cat is ___ the box.'",
    "options": [
     "on",
     "under",
@@ -13314,7 +13314,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the correct question for: 'I play football on Saturdays.'?",
+   "question": "Choose the correct question for: 'I play football on Saturdays.'",
    "options": [
     "Where do you play?",
     "When do you play football?",
@@ -13347,7 +13347,7 @@
    "area": "domande",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the correct question for: 'My teacher is Mrs Brown.'?",
+   "question": "Choose the correct question for: 'My teacher is Mrs Brown.'",
    "options": [
     "What is your teacher?",
     "Where is your teacher?",
@@ -13540,7 +13540,7 @@
    "area": "sport",
    "subarea": "frasi_semplici",
    "difficulty": 3,
-   "question": "Complete: 'My brother ___ football every weekend.'?",
+   "question": "Complete: 'My brother ___ football every weekend.'",
    "options": [
     "play",
     "plays",
@@ -13606,7 +13606,7 @@
    "area": "sport",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Choose the correct preposition: 'She is good ___ swimming.'?",
+   "question": "Choose the correct preposition: 'She is good ___ swimming.'",
    "options": [
     "in",
     "on",
@@ -13802,7 +13802,7 @@
    "area": "hobby",
    "subarea": "frasi_semplici",
    "difficulty": 3,
-   "question": "Complete: 'I enjoy ___ music.'?",
+   "question": "Complete: 'I enjoy ___ music.'",
    "options": [
     "listen",
     "listens",
@@ -13868,7 +13868,7 @@
    "area": "hobby",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: 'In my free time, I love ___ videos online.'?",
+   "question": "Complete: 'In my free time, I love ___ videos online.'",
    "options": [
     "watch",
     "watches",
@@ -14033,7 +14033,7 @@
    "area": "hobby",
    "subarea": "uso_guidato",
    "difficulty": 3,
-   "question": "Complete: 'My hobby is ___. I play it every day online.'?",
+   "question": "Complete: 'My hobby is ___. I play it every day online.'",
    "options": [
     "reading",
     "football",
@@ -14726,7 +14726,7 @@
    "area": "animali",
    "subarea": "bonus_easy",
    "difficulty": 1,
-   "question": "Bonus easy: \"gatto\" in inglese?",
+   "question": "Bonus easy: 'gatto' in inglese?",
    "options": [
     "cat",
     "dog",
@@ -14760,7 +14760,7 @@
    "area": "colori",
    "subarea": "bonus_easy",
    "difficulty": 1,
-   "question": "Bonus easy: \"rosso\" in inglese?",
+   "question": "Bonus easy: 'rosso' in inglese?",
    "options": [
     "red",
     "blue",
@@ -14794,7 +14794,7 @@
    "area": "saluti",
    "subarea": "bonus_easy",
    "difficulty": 1,
-   "question": "Bonus easy: \"ciao\" in inglese?",
+   "question": "Bonus easy: 'ciao' in inglese?",
    "options": [
     "hello",
     "goodbye",
@@ -14828,7 +14828,7 @@
    "area": "to_be",
    "subarea": "bonus_medium",
    "difficulty": 2,
-   "question": "Bonus medium: completa \"She ___ happy.\"",
+   "question": "Bonus medium: completa 'She ___ happy.'",
    "options": [
     "is",
     "am",
@@ -14862,7 +14862,7 @@
    "area": "giorni",
    "subarea": "bonus_medium",
    "difficulty": 2,
-   "question": "Bonus medium: \"venerdì\" in inglese?",
+   "question": "Bonus medium: 'venerdì' in inglese?",
    "options": [
     "Friday",
     "Thursday",
@@ -14896,7 +14896,7 @@
    "area": "cibo",
    "subarea": "bonus_medium",
    "difficulty": 2,
-   "question": "Bonus medium: \"acqua\" in inglese?",
+   "question": "Bonus medium: 'acqua' in inglese?",
    "options": [
     "water",
     "milk",
@@ -14930,7 +14930,7 @@
    "area": "routine_quotidiana",
    "subarea": "bonus_hard",
    "difficulty": 3,
-   "question": "Bonus hard: traduci \"I wake up at seven\".",
+   "question": "Bonus hard: traduci 'I wake up at seven'.",
    "options": [
     "Mi sveglio alle sette",
     "Vado a letto alle sette",
@@ -14964,7 +14964,7 @@
    "area": "domande",
    "subarea": "bonus_hard",
    "difficulty": 3,
-   "question": "Bonus hard: traduci \"Where do you live?\"",
+   "question": "Bonus hard: traduci 'Where do you live?'",
    "options": [
     "Dove abiti?",
     "Come ti chiami?",
@@ -14998,7 +14998,7 @@
    "area": "sport",
    "subarea": "bonus_hard",
    "difficulty": 3,
-   "question": "Bonus hard: traduci \"I can swim\".",
+   "question": "Bonus hard: traduci 'I can swim'.",
    "options": [
     "So nuotare",
     "Voglio nuotare",

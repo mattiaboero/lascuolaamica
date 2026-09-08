@@ -803,6 +803,45 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // incollava il pronome davanti a "uses" senza accordarlo, e il risultato e'
   // inglese sbagliato in una domanda che insegna proprio l'accordo del verbo
   // essere. "Painting uses brushes" resta fuori: li' il soggetto e' un nome.
+  // --- Lotti di inglese ---------------------------------------------------
+  // Le regex di GRAMMATICA sono scritte per l'italiano e sull'inglese non
+  // guardano quasi niente: i controlli sulle domande di inglese stanno qui.
+  if (subject === 'inglese') {
+    const d = question || '';
+
+    // Dal lotto 1: consegna imperativa chiusa dal punto interrogativo
+    // ("Complete: 'A ___ can fly.'?"). "Complete" non e' una domanda: il punto
+    // interrogativo resta appeso dopo il punto della frase da completare.
+    // Quando la consegna comincia davvero con una parola interrogativa il "?"
+    // e' suo e va tenuto ("Which question matches the answer 'Yes, I have.'?").
+    if (/[.!](?:'|\)|")?\s*\?\s*$/.test(d) && !/^(?:Which|What|Where|When|Who|Whose|How|Why)(?![a-z])/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'consegna imperativa chiusa dal punto interrogativo ("Complete: \'...\'?")' });
+    }
+
+    // Dal lotto 1: lo spazio da riempire e' tre underscore in 358 consegne e
+    // due in 30. Una lunghezza sola, altrimenti sembrano esercizi diversi.
+    if (/(?<!_)_{1,2}(?!_)/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: 'spazio da riempire diverso da "___" (tre underscore)' });
+    }
+
+    // Dal lotto 1: la frase da completare sta fra apici singoli in 158 consegne
+    // e nuda in 38. Non e' solo estetica: senza apici due esercizi identici
+    // sembravano diversi e tre coppie di doppioni sono rimaste nascoste.
+    // Nota: il lookahead deve saltare gli spazi da solo. Con /:\s*(?!')/ la
+    // regex fa backtracking, \s* si accontenta di zero spazi e il lookahead
+    // finisce per guardare lo spazio invece dell'apice: scattava su tutte e
+    // 196 le consegne, anche quelle gia' a posto.
+    if (/^(?:Complete|Fill in|Fill in the blank|Choose the correct form|Choose the right word)\s*:\s*(?!\s*')/.test(d)) {
+      errors.push({ level: 'error', field: 'question', msg: "frase da completare senza apici (\"Complete: 'I ___ happy.'\")" });
+    }
+
+    // Dal lotto 1: la parola o la frase citata nella consegna sta fra apici
+    // singoli in 500 domande e fra virgolette doppie in 35.
+    if (d.includes('"')) {
+      errors.push({ level: 'error', field: 'question', msg: 'virgolette doppie nella consegna: il corpus cita fra apici singoli' });
+    }
+  }
+
   if (subject === 'inglese' && /\b(?:I|You|We|They|He|She|It)\s+uses\b/.test(explanation || '')) {
     errors.push({ level: 'error', field: 'explanation', msg: 'spiegazione inglese con "uses" dopo un pronome: accordo del verbo sbagliato' });
   }
