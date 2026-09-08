@@ -3300,7 +3300,7 @@
    "area": "ortografia",
    "subarea": "alfabeto",
    "difficulty": 1,
-   "question": "Quale parola ha il suono g duro davanti a vocale?",
+   "question": "In quale parola la lettera G ha il suono duro davanti alla 'i'?",
    "options": [
     "gelo",
     "gelato",
@@ -3309,7 +3309,7 @@
    ],
    "answerIndex": 2,
    "answer": "ghiro",
-   "explanation": "gh- davanti alle vocali 'i' ed 'e' produce suono duro.",
+   "explanation": "Davanti a 'i' ed 'e' la G da sola ha suono dolce (gelo, gioco): per il suono duro serve la H, come in 'ghiro'.",
    "active": true,
    "tag": "italiano; suono_g; classe_2; primaria",
    "tags": [

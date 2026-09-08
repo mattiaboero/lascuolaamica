@@ -28902,7 +28902,7 @@
    "options": [
     "1/4",
     "2/4",
-    "1/2",
+    "4/4",
     "3/4"
    ],
    "answerIndex": 0,
@@ -30792,13 +30792,13 @@
    "question": "Quale frazione è maggiore?",
    "options": [
     "2/4",
-    "1/2",
+    "1/8",
     "1/4",
     "3/4"
    ],
    "answerIndex": 3,
    "answer": "3/4",
-   "explanation": "Con lo stesso denominatore 4, è maggiore la frazione con numeratore più grande.",
+   "explanation": "3/4 è la maggiore: vale tre quarti, più di 2/4 (cioè un mezzo), di 1/4 e di 1/8.",
    "active": true,
    "tag": "frazioni",
    "tags": [

@@ -833,7 +833,25 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
         errors.push({ level: 'error', field: 'explanation', msg: `spiegazione in due passi dove il primo ripete i numeri del secondo senza calcolare ("${passi[1]}")` });
       }
     }
-    // Dal lotto 79: due domande messe in fila, la prima chiusa dai due punti
+    // Dal lotto 80: due opzioni che sono la stessa frazione scritta in modo
+  // diverso. In mat-5-logica_e_dati-004 una delle due era la risposta
+  // ("1/10" e "4/40"), quindi la domanda aveva due risposte giuste; nelle
+  // altre due sprecavano un distrattore.
+  if (subject !== 'inglese' && Array.isArray(options)) {
+    const valori = new Map();
+    for (const o of options) {
+      if (typeof o !== 'string') continue;
+      const m = o.trim().match(/^(\d+)\s*\/\s*(\d+)$/);
+      if (!m || Number(m[2]) === 0) continue;
+      const v = Number(m[1]) / Number(m[2]);
+      if (valori.has(v)) {
+        errors.push({ level: 'error', field: 'options', msg: `due opzioni valgono la stessa frazione: "${valori.get(v)}" e "${o.trim()}"` });
+      }
+      valori.set(v, o.trim());
+    }
+  }
+
+  // Dal lotto 79: due domande messe in fila, la prima chiusa dai due punti
   // ("Dove va l'accento: quale parola e' scritta giusta?"). Gli altri stem
   // con i due punti aprono con un elenco o con un'ambientazione, non con
   // un'interrogativa, e restano fuori.

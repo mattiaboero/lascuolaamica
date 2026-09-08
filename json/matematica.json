@@ -47536,12 +47536,12 @@
    "options": [
     "1/10",
     "1/40",
-    "4/40",
+    "4/10",
     "1/4"
    ],
    "answerIndex": 0,
    "answer": "1/10",
-   "explanation": "Ci sono 4 assi in 40 carte: P = 4÷40 = 1÷10 = 1/10. Semplifica dividendo numeratore e denominatore per 4.",
+   "explanation": "Ci sono 4 assi su 40 carte: 4 ÷ 40 = 1/10. Si semplifica dividendo numeratore e denominatore per 4.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_5;primaria",
    "tags": [
