@@ -833,6 +833,15 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       errors.push({ level: 'error', field: 'explanation', msg: 'la spiegazione e una consegna, non spiega niente' });
     }
 
+    // Dal lotto 15+16: comparativo in una consegna che offre piu' di due
+    // opzioni ("Which number is bigger?" con quattro numeri). Il comparativo
+    // confronta due cose, per un gruppo ci vuole il superlativo — ed e' una
+    // distinzione che il banco insegna altrove, in eng-5-uso_guidato-9165.
+    if (/\bWhich\b[^?]*\b(?:is|are)\s+(?:bigger|smaller|longer|shorter|taller|faster|slower|older|newer|higher|lower|heavier|lighter|better|worse)\b/i.test(d)
+        && (options || []).length > 2) {
+      errors.push({ level: 'error', field: 'question', msg: 'comparativo con piu di due opzioni: per un gruppo ci vuole il superlativo' });
+    }
+
     // Dal lotto 14: dopo "a bowl of ___" o "a glass of ___" nessuna opzione
     // puo' cominciare con un articolo: "a bowl of a table" non e' sbagliato,
     // e' malformato, e la risposta finiva per essere l'unica senza articolo.
