@@ -1,5 +1,25 @@
 # Changelog Repo
 
+## 4.13.4 - 2026-09-09
+
+### Changed
+- **Chiusa la revisione delle 2.649 domande escluse dai campionamenti precedenti**, quelle che ripetevano lo scheletro di un'altra domanda e che il campionatore saltava per non far rileggere cinque volte lo stesso testo. Raggruppate in 299 famiglie e lette in 5 lotti da 60. Difetti corretti, per lotto:
+  - **lotto 1** — 38 domande: indici progressivi lasciati nella consegna (`osservazione n.27`), dimensioni invertite (`larga 24 m e lunga 16 m`), 8 sequenze geometriche la cui risposta era un termine oltre il giusto, con i distrattori costruiti attorno al valore sbagliato: nessuna delle quattro opzioni era corretta.
+  - **lotto 2** — 18 domande: grandezze fuori scala che le 8 regole di plausibilita' esistenti non guardavano, perche' coprivano solo velocita' e capienze (un allenatore con 912 atleti, una scuola con 197 classi, una ricetta con 8 millilitri di latte per tre persone).
+  - **lotto 3** — classi da 30+ alunni e treni da 165 vagoni.
+  - **lotto 4** — 7 triangoli che non possono esistere (disuguaglianza triangolare, base isoscele >= 2x il lato): l'aritmetica tornava, la figura no. Piu' 16 ricette con 5-12 grammi di farina, zucchero o burro per quattro persone.
+  - **lotto 5** — 19 domande: etichette `maggiore`/`minore` scambiate nella spiegazione del rombo, `Un bicicletta ... il bicicletta scontato`, 8 distrattori che erano lo sconto troncato dei decimali (`27` accanto alla risposta `82,50`), 3 problemi con i pesciolini nel cortile o sul prato, 6 prezzi fuori scala (un libro da 190 euro, uno zaino da 210).
+
+- **Controlli aggiunti in questa campagna, tutti verificati reintroducendo il difetto** e poi rimettendo a posto: le regex di `GRAMMATICA` passano da 65 a 82; `scripts/check_plausibility.js` da 8 regole a 16, e da sole velocita'/capienze a conteggi, quantita' delle ricette e prezzi; in `checkQuestion` i controlli programmatici che devono guardare le opzioni (sequenze, disuguaglianza triangolare, distrattore troncato), dove le regex di `GRAMMATICA` non arrivano perche' vedono solo consegna e spiegazione.
+
+- `scripts/sample_review_batch.py`: modo `--famiglie` (campiona scheletri invece di singole domande, registro suo in `reports/revisione-famiglie.json`) e filtro che salta le domande con `active: false` — rileggerle sarebbe lavoro sprecato, ai bambini non arrivano.
+
+- `scripts/audit_questions_json.js`: il controllo sui doppioni salta le domande disattivate. Una domanda che non viene mai servita non puo' essere un doppione per chi gioca.
+
+### Notes
+- Con questo lotto il banco e' letto per intero: 6.382 domande italiane (107 lotti), 1.094 inglesi (19 lotti), 2.649 in famiglia (5 lotti). Doppioni residui: 12 firme, 1 sola nella stessa classe.
+- Essendo ancora il 9 settembre, l'etichetta del changelog del sito si allarga a `Release 4.13.1 - 4.13.4` con una riga in piu', invece di aprire una voce nuova.
+
 ## 4.13.3 - 2026-09-09
 
 ### Changed
