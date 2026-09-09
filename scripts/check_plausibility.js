@@ -23,6 +23,13 @@ const REGOLE = [
   { re: /\b(piscina)\b[^.?!]{0,50}?(\d[\d.]*)\s*litri/gi, min: 1000, max: 1e9, cosa: 'capienza di una piscina' },
   { re: /\b(bottiglia|bottiglietta|bicchiere)\b[^.?!]{0,40}?(\d[\d.]*)\s*litri/gi, min: 0, max: 10, cosa: 'capienza di una bottiglia' },
   { re: /\b(maratona)\b[^.?!]{0,40}?(\d[\d.]*)\s*km\b/gi, min: 40, max: 44, cosa: 'lunghezza di una maratona' },
+  // Dal lotto 2 delle famiglie: le prime regole sui conteggi. Le otto di sopra
+  // guardano velocita' e capienze, e i numeri assurdi di questi tre template
+  // ci passavano sotto — un allenatore con 912 atleti, una scuola con 197
+  // classi, una ricetta con 8 millilitri di latte per tre persone.
+  { re: /\b(allenatore)\b[^.?!]{0,40}?(\d[\d.]*)\s*atleti/gi, min: 1, max: 60, cosa: 'atleti di un allenatore' },
+  { re: /\b(una scuola)\b[^.?!]{0,40}?(\d[\d.]*)\s*classi/gi, min: 1, max: 60, cosa: 'classi di una scuola' },
+  { re: /\b(ricetta)\b[^.?!]{0,60}?(\d[\d.]*)\s*millilitri/gi, min: 50, max: 5000, cosa: 'millilitri in una ricetta' },
 ];
 
 function main() {

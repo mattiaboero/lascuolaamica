@@ -18668,7 +18668,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 8 millilitri di latte. Quanti millilitri di latte servono per 9 persone?",
+   "question": "Una ricetta per 3 persone richiede 8 cucchiai di latte. Quanti cucchiai di latte servono per 9 persone?",
    "options": [
     "8",
     "3",
@@ -18677,7 +18677,7 @@
    ],
    "answerIndex": 2,
    "answer": "24",
-   "explanation": "Per 3 persone → 8 millilitri di latte. Per 9 persone (3 volte tanto): 8 × 3 = 24.",
+   "explanation": "Per 3 persone → 8 cucchiai di latte. Per 9 persone (3 volte tanto): 8 × 3 = 24.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19784,7 +19784,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 5 millilitri di latte. Quanti millilitri di latte servono per 12 persone?",
+   "question": "Una ricetta per 3 persone richiede 5 cucchiai di latte. Quanti cucchiai di latte servono per 12 persone?",
    "options": [
     "8",
     "3",
@@ -19793,7 +19793,7 @@
    ],
    "answerIndex": 2,
    "answer": "20",
-   "explanation": "Per 3 persone → 5 millilitri di latte. Per 12 persone (4 volte tanto): 5 × 4 = 20.",
+   "explanation": "Per 3 persone → 5 cucchiai di latte. Per 12 persone (4 volte tanto): 5 × 4 = 20.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20001,7 +20001,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 382 atleti. Il 50% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 382 atleti. Il 50% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "201",
     "191",
@@ -20900,7 +20900,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 246 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 246 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "52",
     "61",
@@ -21427,7 +21427,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 375 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 375 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "93",
     "186",
@@ -21613,7 +21613,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 565 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 565 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "452",
     "113",
@@ -21830,7 +21830,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 554 atleti. Il 10% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 554 atleti. Il 10% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "55",
     "70",
@@ -22481,7 +22481,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 676 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 676 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "135",
     "134",
@@ -23225,7 +23225,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 748 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 748 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "224",
     "236",
@@ -23380,7 +23380,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 697 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 697 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "558",
     "141",
@@ -23783,7 +23783,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 575 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 575 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "143",
     "155",
@@ -23845,7 +23845,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un allenatore ha 912 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 912 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "639",
     "819",
