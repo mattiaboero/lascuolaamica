@@ -1,6 +1,6 @@
 [
  {
-  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.5",
+  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.6",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e spiegazioni che invece di spiegare ripetevano la consegna.",
    "Tolti di mezzo alcuni casi in cui la risposta si trovava senza sapere l'inglese: bastava cercare l'unica opzione al plurale, o l'unica senza articolo.",
@@ -110,7 +110,7 @@
    "Il gioco adatta gradualmente la difficoltà delle domande al livello di ogni bambina/o.",
    "Nuovo pulsante \"Ripassa i tuoi errori\" per rivedere solo le domande sbagliate in precedenza.",
    "Nuovo filtro per sotto-argomento dopo aver scelto l'ambito, e un pannello \"Progressi\" con le statistiche delle ultime partite.",
-   "Il dataset ha raggiunto le 9.900 domande totali, con controlli di qualità automatici più rigorosi su ogni nuovo contenuto."
+   "Il dataset ha superato le 9.800 domande totali, con controlli di qualità automatici più rigorosi su ogni nuovo contenuto."
   ]
  },
  {
@@ -217,17 +217,16 @@
   "date": "1 maggio 2026",
   "items": [
    "Rilasciata la versione 4.5.5 con allineamento completo della numerazione applicativa su tutte le pagine.",
-   "Migliorata l’ergonomia dei toggle Palette/Animazioni con target touch minimo 44px e testi più leggibili.",
-   "Allineati i testi Privacy e FAQ con il nuovo flusso di cancellazione dati locali.",
-   "Versione portale aggiornata alla 4.5.5."
+   "Migliorata l'ergonomia dei toggle Palette/Animazioni con target touch minimo 44px e testi più leggibili.",
+   "Allineati i testi Privacy e FAQ con il nuovo flusso di cancellazione dati locali."
   ]
  },
  {
   "date": "30 aprile 2026",
   "items": [
    "Completata la sostituzione dei dialog nativi con finestre integrate più coerenti nei flussi principali.",
-   "Allineata la preferenza “Meno animazioni” anche lato JavaScript su home e motori quiz dedicati.",
-   "Disattivata l’esplosione confetti in inglese quando la riduzione movimento è attiva.",
+   "Allineata la preferenza «Meno animazioni» anche lato JavaScript su home e motori quiz dedicati.",
+   "Disattivata l'esplosione confetti in inglese quando la riduzione movimento è attiva.",
    "Automatizzati gli aggiornamenti dei contenuti strutturati e della sitemap prima della pubblicazione.",
    "Sincronizzata la documentazione tecnica repository/wiki con gli ultimi fix operativi."
   ]
@@ -235,7 +234,7 @@
  {
   "date": "29 aprile 2026",
   "items": [
-   "Migliorata la stabilità offline delle pagine con URL puliti e continuità d’uso anche senza connessione.",
+   "Migliorata la stabilità offline delle pagine con URL puliti e continuità d'uso anche senza connessione.",
    "Allineato il meta `mobile-web-app-capable` su tutte le pagine pubbliche.",
    "Completato il caricamento locale dei font principali per rendere più stabile la prima visita.",
    "Aggiornata documentazione tecnica (README + wiki) con gli ultimi fix di runtime e deploy.",
@@ -245,10 +244,10 @@
  {
   "date": "28 aprile 2026",
   "items": [
-   "Aggiornato il profilo GEO/SEO: founder e foundingDate nell’Organization JSON-LD.",
+   "Aggiornato il profilo GEO/SEO: founder e foundingDate nell'Organization JSON-LD.",
    "Aggiunto numberOfQuestions nei JSON-LD delle 8 materie con conteggi reali.",
    "Aggiornate FAQ e llms.txt con dati quantitativi progetto (oltre 7.300 / totale 7.348 domande).",
-   "Esteso il supporto “Meno animazioni” a FAQ e pagine informative.",
+   "Esteso il supporto «Meno animazioni» a FAQ e pagine informative.",
    "Versione portale aggiornata alla 4.5.1."
   ]
  },
@@ -275,7 +274,7 @@
  {
   "date": "20 aprile 2026",
   "items": [
-   "Potenziato l’algoritmo di selezione domande con planner stocastico area+difficoltà.",
+   "Potenziato l'algoritmo di selezione domande con planner stocastico area+difficoltà.",
    "Migliorata la logica anti-ripetizione multi-sessione con cooldown e softmax sui candidati.",
    "Aggiunte metriche locali di qualità sessione (repeat rate, copertura, entropia, novità).",
    "Esteso il generatore parametrico e introdotti report CSV automatici di copertura."
@@ -320,7 +319,7 @@
   "date": "12 aprile 2026",
   "items": [
    "Revisione linguistica completa dei testi in italiano su quiz, FAQ, informazioni e pagina supporto.",
-   "Corretti accenti e apostrofi nelle domande e nei testi (es. è, qual è, cos’è, l’Italia, l’ambiente, probabilità).",
+   "Corretti accenti e apostrofi nelle domande e nei testi (es. è, qual è, cos'è, l'Italia, l'ambiente, probabilità).",
    "Risolti errori di sintassi JavaScript causati da stringhe con apostrofi non escapati in alcune domande.",
    "Aggiornati i dataset JSON per coerenza ortografica, inclusa la correzione delle forme interrogative.",
    "Versione portale confermata alla 4.1 e contenuti sincronizzati nella cartella export."
@@ -332,9 +331,9 @@
    "Introdotta palette accessibile Okabe-Ito con fallback rapido alla palette standard.",
    "Aggiunta gestione persistente della palette (Standard/Accessibile) con preferenza salvata nel browser.",
    "Migliorata la visibilità dei pallini di avanzamento non ancora completati.",
-   "Inserito toggle visibile nel footer: “Palette: Standard / Accessibile”.",
+   "Inserito toggle visibile nel footer: «Palette: Standard / Accessibile».",
    "Reso più compatto il collegamento supporto nel footer con cuore rosso e tag dedicato.",
-   "Footer ottimizzato: elementi aggregati in un unico pulsante “Info” con privacy, cookie, FAQ, aggiornamenti e palette.",
+   "Footer ottimizzato: elementi aggregati in un unico pulsante «Info» con privacy, cookie, FAQ, aggiornamenti e palette.",
    "Versione portale spostata nel pannello Info come prima voce (es. Versione 4.1)."
   ]
  },

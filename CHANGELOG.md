@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.13.6 - 2026-09-09
+
+### Fixed
+Rilette tutte e 42 le voci del changelog del sito, non solo quella di oggi. Tre errori oggettivi:
+
+- **`1 maggio 2026` diceva la stessa cosa due volte**: apriva con "Rilasciata la versione 4.5.5 con allineamento completo della numerazione" e chiudeva con "Versione portale aggiornata alla 4.5.5". Tolta la riga di coda.
+- **`30 giugno 2026` dichiarava "9.900 domande totali"**, mentre tre voci piu' in alto il `3 luglio 2026` dice che il conteggio reale e' 9.879 e che quelli mostrati prima erano "numeri superati". Chi leggeva l'elenco dall'alto trovava la smentita prima dell'affermazione. Ora dice "ha superato le 9.800", che e' vero e non contraddice.
+- **Apostrofi e virgolette tipografiche (`’ “ ”`) in 7 voci fra aprile e maggio**, dove le altre 35 usano l'apostrofo dritto e le virgolette basse. Uniformate.
+
+### Notes
+- Bump perche' `json/changelog.json` e' in precache. Ancora il 9 settembre: etichetta a `Release 4.13.1 - 4.13.6`.
+- Due cose viste durante la rilettura che **non** ho toccato, perche' sono decisioni editoriali o di prodotto, non errori: il registro delle 17 voci di aprile (scritte in gergo tecnico, mentre le 25 piu' recenti parlano ai genitori) e il conteggio pubblico delle domande, che oggi mostra 9.879 mentre quelle davvero servite sono 9.223.
+
 ## 4.13.5 - 2026-09-09
 
 ### Fixed
