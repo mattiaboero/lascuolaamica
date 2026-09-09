@@ -1935,7 +1935,7 @@
    ],
    "answerIndex": 3,
    "answer": "30",
-   "explanation": "The correct answer is \"30\".",
+   "explanation": "Fra 29 e 31 c'è 30: i numeri si susseguono di uno in uno.",
    "active": true,
    "tag": "inglese;classe_4;numeri;primaria",
    "tags": [
@@ -1968,7 +1968,7 @@
    ],
    "answerIndex": 0,
    "answer": "34",
-   "explanation": "The correct answer is \"34\".",
+   "explanation": "'Thirty-four' è 34: 'thirty' vale 30 e 'four' vale 4. Attenzione a non confonderlo con 43, 'forty-three'.",
    "active": true,
    "tag": "inglese;classe_4;numeri;primaria",
    "tags": [
@@ -2001,7 +2001,7 @@
    ],
    "answerIndex": 1,
    "answer": "7",
-   "explanation": "The correct answer is \"7\".",
+   "explanation": "La settimana ha sette giorni, da Monday a Sunday.",
    "active": true,
    "tag": "inglese;classe_4;numeri;primaria",
    "tags": [
@@ -2430,7 +2430,7 @@
    ],
    "answerIndex": 1,
    "answer": "Hello",
-   "explanation": "The correct answer is \"Hello\".",
+   "explanation": "'Hello' si dice arrivando. Goodbye, see you e good night si dicono invece andando via.",
    "active": true,
    "tag": "inglese;classe_4;saluti;primaria",
    "tags": [
@@ -2463,7 +2463,7 @@
    ],
    "answerIndex": 2,
    "answer": "Nice to meet you",
-   "explanation": "The correct answer is \"Nice to meet you\".",
+   "explanation": "'Nice to meet you' è la formula per la prima presentazione: piacere di conoscerti.",
    "active": true,
    "tag": "inglese;classe_4;saluti;primaria",
    "tags": [
@@ -2496,7 +2496,7 @@
    ],
    "answerIndex": 3,
    "answer": "Sorry",
-   "explanation": "The correct answer is \"Sorry\".",
+   "explanation": "'Sorry' significa scusa e si dice quando ci si dispiace o si chiede scusa.",
    "active": true,
    "tag": "inglese;classe_4;saluti;primaria",
    "tags": [
@@ -2529,7 +2529,7 @@
    ],
    "answerIndex": 0,
    "answer": "Good morning",
-   "explanation": "The correct answer is \"Good morning\".",
+   "explanation": "A 'Good morning' si risponde con lo stesso saluto, 'Good morning': i saluti del giorno si ricambiano uguali.",
    "active": true,
    "tag": "inglese;classe_4;saluti;primaria",
    "tags": [
@@ -2661,7 +2661,7 @@
    ],
    "answerIndex": 1,
    "answer": "white",
-   "explanation": "The correct answer is \"white\".",
+   "explanation": "La neve ('snow') è bianca: il colore è 'white'.",
    "active": true,
    "tag": "inglese;classe_5;colori;primaria",
    "tags": [
@@ -2793,7 +2793,7 @@
    ],
    "answerIndex": 0,
    "answer": "hamster",
-   "explanation": "The correct answer is \"hamster\".",
+   "explanation": "'Hamster' è il criceto, un animale domestico ('pet'). Leone, balena e zebra sono selvatici.",
    "active": true,
    "tag": "inglese;classe_5;animali;primaria",
    "tags": [
@@ -2826,7 +2826,7 @@
    ],
    "answerIndex": 1,
    "answer": "polar bear",
-   "explanation": "The correct answer is \"polar bear\".",
+   "explanation": "'Polar bear' è l'orso polare: vive nell'Artide e ha il pelo bianco.",
    "active": true,
    "tag": "inglese;classe_5;animali;primaria",
    "tags": [
@@ -2859,7 +2859,7 @@
    ],
    "answerIndex": 2,
    "answer": "puppy",
-   "explanation": "The correct answer is \"puppy\".",
+   "explanation": "'Puppy' è il cucciolo di cane. 'Kitten' è il gattino, 'chick' il pulcino, 'calf' il vitello.",
    "active": true,
    "tag": "inglese;classe_5;animali;primaria",
    "tags": [
@@ -2892,7 +2892,7 @@
    ],
    "answerIndex": 1,
    "answer": "head",
-   "explanation": "The correct answer is \"head\".",
+   "explanation": "La testa ('head') contiene il cranio, che protegge il cervello ('brain').",
    "active": true,
    "tag": "inglese;classe_5;corpo_umano;primaria",
    "tags": [
@@ -2925,7 +2925,7 @@
    ],
    "answerIndex": 2,
    "answer": "nose",
-   "explanation": "The correct answer is \"nose\".",
+   "explanation": "'Nose' è il naso, con cui si annusano i fiori. 'Smell' significa annusare.",
    "active": true,
    "tag": "inglese;classe_5;corpo_umano;primaria",
    "tags": [
@@ -2958,7 +2958,7 @@
    ],
    "answerIndex": 3,
    "answer": "eye",
-   "explanation": "The correct answer is \"eye\".",
+   "explanation": "'Wink' significa fare l'occhiolino: si usa l'occhio, 'eye'.",
    "active": true,
    "tag": "inglese;classe_5;corpo_umano;primaria",
    "tags": [
@@ -3189,7 +3189,7 @@
    ],
    "answerIndex": 2,
    "answer": "blue",
-   "explanation": "The correct answer is \"blue\".",
+   "explanation": "Nei disegni il mare si colora di blu, 'blue'.",
    "active": true,
    "tag": "inglese;classe_5;colori;primaria",
    "tags": [
@@ -3255,7 +3255,7 @@
    ],
    "answerIndex": 3,
    "answer": "elephant",
-   "explanation": "The correct answer is \"elephant\".",
+   "explanation": "'Trunk' è la proboscide: l'animale che ce l'ha è l'elefante, 'elephant'.",
    "active": true,
    "tag": "inglese;classe_5;animali;primaria",
    "tags": [
@@ -4905,7 +4905,7 @@
    ],
    "answerIndex": 2,
    "answer": "May",
-   "explanation": "The correct answer is \"May\".",
+   "explanation": "Fra April (aprile) e June (giugno) c'è May (maggio).",
    "active": true,
    "tag": "inglese;classe_4;mesi;primaria",
    "tags": [
@@ -4938,7 +4938,7 @@
    ],
    "answerIndex": 3,
    "answer": "June",
-   "explanation": "The correct answer is \"June\".",
+   "explanation": "Subito dopo May (maggio) viene June (giugno).",
    "active": true,
    "tag": "inglese;classe_4;mesi;primaria",
    "tags": [
@@ -4971,7 +4971,7 @@
    ],
    "answerIndex": 0,
    "answer": "snowy",
-   "explanation": "The correct answer is \"snowy\".",
+   "explanation": "Per fare un pupazzo di neve ('snowman') serve la neve: il tempo deve essere 'snowy', nevoso.",
    "active": true,
    "tag": "inglese;classe_4;meteo;primaria",
    "tags": [
@@ -5004,7 +5004,7 @@
    ],
    "answerIndex": 1,
    "answer": "windy",
-   "explanation": "The correct answer is \"windy\".",
+   "explanation": "L'aquilone ('kite') vola con il vento: serve tempo 'windy', ventoso.",
    "active": true,
    "tag": "inglese;classe_4;meteo;primaria",
    "tags": [
@@ -5037,7 +5037,7 @@
    ],
    "answerIndex": 2,
    "answer": "sunny",
-   "explanation": "The correct answer is \"sunny\".",
+   "explanation": "Gli occhiali da sole ('sunglasses') servono quando c'è il sole: tempo 'sunny'.",
    "active": true,
    "tag": "inglese;classe_4;meteo;primaria",
    "tags": [
@@ -5202,7 +5202,7 @@
    ],
    "answerIndex": 0,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "Con 'she' il verbo 'to be' fa 'is': She is in the garden.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5235,7 +5235,7 @@
    ],
    "answerIndex": 1,
    "answer": "are",
-   "explanation": "The correct answer is \"are\".",
+   "explanation": "Con 'they', soggetto plurale, il verbo 'to be' fa 'are': They are my cousins.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5268,7 +5268,7 @@
    ],
    "answerIndex": 2,
    "answer": "am",
-   "explanation": "The correct answer is \"am\".",
+   "explanation": "Con 'I' il verbo 'to be' fa 'am'. Nella forma negativa 'not' va dopo il verbo: I am not sad.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5301,7 +5301,7 @@
    ],
    "answerIndex": 3,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "Con 'it' il verbo 'to be' fa 'is', come per he e she.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5334,7 +5334,7 @@
    ],
    "answerIndex": 0,
    "answer": "are",
-   "explanation": "The correct answer is \"are\".",
+   "explanation": "Con 'we' il verbo 'to be' fa 'are': We are ready.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5499,7 +5499,7 @@
    ],
    "answerIndex": 1,
    "answer": "Yes, they are.",
-   "explanation": "The correct answer is \"Yes, they are.\"",
+   "explanation": "Nella risposta breve si riprende il verbo della domanda: 'Are they...?' → 'Yes, they are.'",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5532,7 +5532,7 @@
    ],
    "answerIndex": 2,
    "answer": "No, he isn't.",
-   "explanation": "The correct answer is \"No, he isn't.\"",
+   "explanation": "Nella risposta breve negativa con 'he' si usa 'isn't', contrazione di 'is not': No, he isn't.",
    "active": true,
    "tag": "inglese;classe_4;to_be;primaria",
    "tags": [
@@ -5796,7 +5796,7 @@
    ],
    "answerIndex": 0,
    "answer": "juice",
-   "explanation": "The correct answer is \"juice\".",
+   "explanation": "'Juice' è il succo di frutta, una bevanda: si beve, non si mangia.",
    "active": true,
    "tag": "inglese;classe_5;cibo;primaria",
    "tags": [
@@ -5829,7 +5829,7 @@
    ],
    "answerIndex": 1,
    "answer": "fruit",
-   "explanation": "The correct answer is \"fruit\".",
+   "explanation": "'Fruit' è la frutta: ricca di vitamine e spesso raccolta dagli alberi. In inglese è di solito non numerabile e resta al singolare.",
    "active": true,
    "tag": "inglese;classe_5;cibo;primaria",
    "tags": [
@@ -5862,7 +5862,7 @@
    ],
    "answerIndex": 2,
    "answer": "sweets",
-   "explanation": "The correct answer is \"sweets\".",
+   "explanation": "'Sweets' sono i dolciumi: vanno mangiati ogni tanto, non tutti i giorni. Insalata, acqua e frutta si possono consumare ogni giorno.",
    "active": true,
    "tag": "inglese;classe_5;cibo;primaria",
    "tags": [
@@ -7611,7 +7611,7 @@
    ],
    "answerIndex": 0,
    "answer": "get dressed",
-   "explanation": "The correct answer is \"get dressed\".",
+   "explanation": "Dopo essersi svegliati ci si veste: 'get dressed'. Le altre azioni appartengono alla sera.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria",
    "tags": [
@@ -7644,7 +7644,7 @@
    ],
    "answerIndex": 1,
    "answer": "have breakfast",
-   "explanation": "The correct answer is \"have breakfast\".",
+   "explanation": "Prima della scuola si fa colazione: 'have breakfast'.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria",
    "tags": [
@@ -7677,7 +7677,7 @@
    ],
    "answerIndex": 2,
    "answer": "do homework",
-   "explanation": "The correct answer is \"do homework\".",
+   "explanation": "Dopo la scuola si fanno i compiti: 'do homework'. In inglese i compiti si 'fanno' con il verbo 'do'.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria",
    "tags": [
@@ -7710,7 +7710,7 @@
    ],
    "answerIndex": 3,
    "answer": "brush your teeth",
-   "explanation": "The correct answer is \"brush your teeth\".",
+   "explanation": "Prima di andare a letto ci si lava i denti: 'brush your teeth'. 'Teeth' è il plurale irregolare di 'tooth'.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria",
    "tags": [
@@ -7743,7 +7743,7 @@
    ],
    "answerIndex": 1,
    "answer": "cycling",
-   "explanation": "The correct answer is \"cycling\".",
+   "explanation": "'Cycling' è il ciclismo: si pratica in bicicletta ('bike') con il casco ('helmet').",
    "active": true,
    "tag": "inglese;classe_4;sport;primaria",
    "tags": [
@@ -7776,7 +7776,7 @@
    ],
    "answerIndex": 2,
    "answer": "baseball",
-   "explanation": "The correct answer is \"baseball\".",
+   "explanation": "'Baseball' si gioca con una mazza ('bat') e una palla ('ball').",
    "active": true,
    "tag": "inglese;classe_4;sport;primaria",
    "tags": [
@@ -7809,7 +7809,7 @@
    ],
    "answerIndex": 3,
    "answer": "basketball",
-   "explanation": "The correct answer is \"basketball\".",
+   "explanation": "'Basketball' è la pallacanestro: si gioca con la palla e il canestro ('basket'). Il nome unisce le due parole.",
    "active": true,
    "tag": "inglese;classe_4;sport;primaria",
    "tags": [
@@ -7842,7 +7842,7 @@
    ],
    "answerIndex": 3,
    "answer": "crafts",
-   "explanation": "The correct answer is \"crafts\".",
+   "explanation": "'Crafts' sono i lavoretti manuali, che si fanno con carta ('paper') e colla ('glue').",
    "active": true,
    "tag": "inglese;classe_4;hobby;primaria",
    "tags": [
@@ -7875,7 +7875,7 @@
    ],
    "answerIndex": 0,
    "answer": "playing the guitar",
-   "explanation": "The correct answer is \"playing the guitar\".",
+   "explanation": "'Playing the guitar' è suonare la chitarra, uno strumento musicale. In inglese davanti allo strumento si mette l'articolo: 'play the guitar'.",
    "active": true,
    "tag": "inglese;classe_4;hobby;primaria",
    "tags": [
@@ -7908,7 +7908,7 @@
    ],
    "answerIndex": 1,
    "answer": "gardening",
-   "explanation": "The correct answer is \"gardening\".",
+   "explanation": "'Gardening' è il giardinaggio: servono semi ('seeds'), terra ('soil') e acqua ('water').",
    "active": true,
    "tag": "inglese;classe_4;hobby;primaria",
    "tags": [
@@ -8205,7 +8205,7 @@
    ],
    "answerIndex": 0,
    "answer": "brush your teeth",
-   "explanation": "The correct answer is \"brush your teeth\".",
+   "explanation": "Lavarsi i denti ogni giorno fa bene. Le altre opzioni descrivono abitudini poco sane.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria",
    "tags": [
@@ -8238,7 +8238,7 @@
    ],
    "answerIndex": 2,
    "answer": "reading",
-   "explanation": "The correct answer is \"reading\".",
+   "explanation": "'Reading' è la lettura: un'attività silenziosa che si fa anche da soli. Gli sport di squadra elencati richiedono altri giocatori.",
    "active": true,
    "tag": "inglese;classe_4;hobby;primaria",
    "tags": [
@@ -8271,7 +8271,7 @@
    ],
    "answerIndex": 0,
    "answer": "basketball",
-   "explanation": "The correct answer is \"basketball\".",
+   "explanation": "'Basketball' si gioca in squadra ('team'): servono più giocatori. Disegnare e leggere sono attività individuali.",
    "active": true,
    "tag": "inglese;classe_4;sport;primaria",
    "tags": [
@@ -8304,7 +8304,7 @@
    ],
    "answerIndex": 1,
    "answer": "running",
-   "explanation": "The correct answer is \"running\".",
+   "explanation": "'Running' è la corsa e si pratica da soli. Calcio, pallavolo e pallacanestro sono sport di squadra.",
    "active": true,
    "tag": "inglese;classe_4;sport;primaria",
    "tags": [
@@ -8601,7 +8601,7 @@
    ],
    "answerIndex": 2,
    "answer": "kitchen",
-   "explanation": "The correct answer is \"kitchen\".",
+   "explanation": "La pasta si cuoce in cucina, il 'kitchen': è la stanza con i fornelli.",
    "active": true,
    "tag": "inglese;classe_5;casa;primaria",
    "tags": [
@@ -8634,7 +8634,7 @@
    ],
    "answerIndex": 3,
    "answer": "bedroom",
-   "explanation": "The correct answer is \"bedroom\".",
+   "explanation": "'Bedroom' è la camera da letto, la stanza fatta per dormire.",
    "active": true,
    "tag": "inglese;classe_5;casa;primaria",
    "tags": [
@@ -8667,7 +8667,7 @@
    ],
    "answerIndex": 0,
    "answer": "bathroom",
-   "explanation": "The correct answer is \"bathroom\".",
+   "explanation": "Ci si lava la faccia in bagno, il 'bathroom': è la stanza con il lavandino.",
    "active": true,
    "tag": "inglese;classe_5;casa;primaria",
    "tags": [
@@ -10796,7 +10796,7 @@
    ],
    "answerIndex": 1,
    "answer": "I have lunch.",
-   "explanation": "The correct answer is \"I have lunch.\"",
+   "explanation": "'Have lunch' significa pranzare: la frase dice che alle 13:00 pranzo.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10830,7 +10830,7 @@
    ],
    "answerIndex": 2,
    "answer": "I wake up.",
-   "explanation": "The correct answer is \"I wake up.\"",
+   "explanation": "'Wake up' significa svegliarsi: la frase dice che alle 7:00 mi sveglio.",
    "active": true,
    "tag": "inglese;classe_4;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
