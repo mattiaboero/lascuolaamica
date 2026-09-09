@@ -1,6 +1,6 @@
 [
  {
-  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.2",
+  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.3",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e spiegazioni che invece di spiegare ripetevano la consegna.",
    "Tolti di mezzo alcuni casi in cui la risposta si trovava senza sapere l'inglese: bastava cercare l'unica opzione al plurale, o l'unica senza articolo.",
@@ -254,17 +254,11 @@
  {
   "date": "27 aprile 2026",
   "items": [
-   "Audit UX/UI completato: testi piccoli aumentati, contrasti migliorati e touch target principali allineati.",
-   "Aggiunta mascotte \"Gufo Cervellino\" (🦉) nelle pagine quiz con reazioni durante le risposte.",
-   "Introdotto toggle “Meno animazioni” nel pannello Info con preferenza salvata nel browser.",
-   "Ridotte animazioni decorative per migliorare concentrazione durante il gioco.",
-   "Spostate le sezioni SEO descrittive fuori dalla card interattiva principale nelle materie.",
-   "Aggiunte le pagine Per insegnanti, Per genitori e Informazioni AI con metadata SEO/JSON-LD dedicati.",
-   "Aggiornati sitemap e redirect con le nuove rotte pubbliche.",
-   "Migliorata la semantica FAQ usando struttura lista ul/li con details nativi.",
-   "Aggiunti skip link anche alle pagine statiche di supporto e accessibilità.",
-   "Introdotte Open Graph image dedicate per FAQ, Supporto, Accessibilità e nuove pagine informative.",
-   "Aggiunta licenza MIT nel repository."
+   "Audit di accessibilità e interfaccia: testi piccoli ingranditi, contrasti migliorati, aree da toccare allineate e collegamenti «salta al contenuto» aggiunti anche alle pagine di supporto e accessibilità.",
+   "Arrivata la mascotte Gufo Cervellino nelle pagine dei quiz, con le sue reazioni durante le risposte. Insieme a lei l'interruttore «Meno animazioni» nel pannello Info, con la preferenza salvata nel browser, e meno animazioni decorative durante il gioco.",
+   "Tre pagine nuove — Per insegnanti, Per genitori e Informazioni AI — con le loro descrizioni per i motori di ricerca e i collegamenti aggiornati in sitemap e reindirizzamenti. Anteprime social dedicate anche per FAQ, Supporto e Accessibilità.",
+   "Nelle pagine materia i testi descrittivi sono stati spostati fuori dalla card del quiz, e le domande frequenti usano ora una struttura a lista con i pannelli richiudibili nativi del browser.",
+   "Aggiunta la licenza MIT al progetto."
   ]
  },
  {
@@ -346,14 +340,10 @@
  {
   "date": "10 aprile 2026",
   "items": [
-   "Creata la nuova pagina FAQ con accordion e markup FAQPage per AEO/SEO.",
-   "Aggiunto il link FAQ vicino al badge “Piattaforma Educativa” nella home.",
-   "Migliorato il linking interno SEO con collegamento FAQ anche nel footer delle pagine.",
-   "Implementati gli step 1-4 su tutte le materie: classi 2ª-5ª, progressione, anti-ripetizione e maggiore varietà.",
-   "Aggiornato il motore condiviso delle materie con selezione classe e classifica estesa con la classe.",
-   "Allineate anche le pagine dedicate (inglese, problemi, civica) alla logica per classe.",
-   "Rimossa la dicitura “Aggiornata: …” da Privacy Policy e Cookie Policy in tutte le pagine.",
-   "Aggiunta CTA footer “Supporta il progetto” con pagina dedicata e placeholder QR Satispay."
+   "Le domande si scelgono ora per classe, dalla seconda alla quinta, su tutte le materie: con progressione, meno ripetizioni e più varietà. La classe compare anche nella classifica, e le pagine di inglese, problemi ed educazione civica sono state allineate alla stessa logica.",
+   "Nuova pagina delle domande frequenti, a pannelli richiudibili, raggiungibile dalla home accanto al badge «Piattaforma Educativa» e dal footer di tutte le pagine.",
+   "Aggiunto in fondo alle pagine il collegamento «Supporta il progetto», con una pagina dedicata.",
+   "Tolta la dicitura «Aggiornata: …» da Privacy Policy e Cookie Policy."
   ]
  },
  {

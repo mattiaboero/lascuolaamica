@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.13.3 - 2026-09-09
+
+### Changed
+- **Accorciate le due voci del changelog del sito che erano rimaste lunghe**, e che nella 4.13.2 avevo lasciato stare perche' una voce al giorno la rispettavano gia': `27 aprile 2026` da 11 righe a 5, `10 aprile 2026` da 8 a 4. Stesso criterio usato per i quindici giorni uniti nella 4.13.2 — raggruppare per tema, non tagliare: la mascotte Gufo Cervellino sta ora nella stessa riga dell'interruttore "Meno animazioni" e delle animazioni decorative ridotte, perche' erano lo stesso lavoro; le tre pagine nuove del 27 aprile stanno con la sitemap e le anteprime social che le riguardano; la selezione per classe del 10 aprile tiene insieme progressione, anti-ripetizione, classifica e allineamento delle pagine dedicate.
+- Nessuna voce del changelog supera piu' le 7 righe. Le due etichette restano senza numero di release: quei giorni sono anteriori all'uso delle etichette versionate, e non ho inventato numeri.
+
+### Notes
+- Bump per lo stesso motivo della 4.13.2: `json/changelog.json` e' in precache. Essendo ancora il 9 settembre, l'etichetta di oggi si allarga a `Release 4.13.1 – 4.13.3` invece di aprire una voce nuova, e la riga che descrive il riordino e' quella gia' scritta nella 4.13.2 — copre anche questo giro.
+
 ## 4.13.2 - 2026-09-09
 
 ### Changed
