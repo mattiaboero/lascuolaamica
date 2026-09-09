@@ -2015,6 +2015,24 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione non dice mai il risultato (${answer})` });
   }
 
+  // Dal lotto 6 delle istanze: "Se la palla e' sopra la sedia, quale
+  // espressione descrive bene la posizione?" con risposta "sopra la sedia".
+  // Erano 52, tutte di geografia classe 2: la consegna conteneva gia' la
+  // risposta parola per parola e bastava ricopiarla. Il controllo guarda
+  // solo le domande sulla posizione: in quelle di comprensione ("Read: '...'
+  // Why does she...?") la risposta sta nel testo per costruzione.
+  // "Leggi: 'Il libro di Giulia e' sul banco.' Dove si trova il libro?" e' una
+  // domanda di comprensione: la risposta sta nel brano perche' e' quello
+  // l'esercizio, e va lasciata stare.
+  if (subject !== 'inglese' && question && answer
+      && /Dove si trova|descrive bene la posizione/.test(question)
+      && !/^\s*(?:Leggi|Read)\s*:/.test(question)) {
+    const a = String(answer).trim();
+    if (a.length > 3 && new RegExp(`(?<![\\wàèéìòù])${a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\wàèéìòù])`, 'i').test(question)) {
+      errors.push({ level: 'error', field: 'text', msg: `la consegna contiene gia la risposta ("${a}"): basta ricopiarla` });
+    }
+  }
+
   // Dal lotto 3 delle istanze: "In un paese vivono 295 persone. Il 30% ha
   // meno di 18 anni" fa 88,5, e la spiegazione scriveva "30% di 295 = 88".
   // L'uguaglianza e' falsa e fra le quattro opzioni la risposta esatta non

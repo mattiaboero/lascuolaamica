@@ -12,7 +12,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è sopra la sedia, quale espressione descrive bene la posizione?",
+   "question": "La palla è appoggiata sul piano della sedia, più in alto. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto la sedia",
     "sopra la sedia",
@@ -44,7 +44,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è sotto la sedia, quale espressione descrive bene la posizione?",
+   "question": "La palla è rotolata nello spazio fra il pavimento e la sedia. Quale espressione descrive bene la posizione?",
    "options": [
     "sopra la sedia",
     "molto alta",
@@ -76,7 +76,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è dentro la scatola, quale espressione descrive bene la posizione?",
+   "question": "La palla è finita all'interno della scatola e ci è rimasta. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dalla scatola",
     "molto alta",
@@ -108,7 +108,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è fuori dalla scatola, quale espressione descrive bene la posizione?",
+   "question": "La palla è rimasta all'esterno della scatola. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dalla scatola",
     "dentro la scatola",
@@ -140,7 +140,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è davanti alla sedia, quale espressione descrive bene la posizione?",
+   "question": "La palla è fra te e la sedia, e te la copre in parte. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro la sedia",
     "davanti alla sedia",
@@ -172,7 +172,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è dietro la sedia, quale espressione descrive bene la posizione?",
+   "question": "La sedia nasconde la palla alla tua vista. Quale espressione descrive bene la posizione?",
    "options": [
     "davanti alla sedia",
     "molto alta",
@@ -204,7 +204,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è vicino alla sedia, quale espressione descrive bene la posizione?",
+   "question": "La palla è a pochi centimetri dalla sedia. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dalla sedia",
     "molto alta",
@@ -236,7 +236,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è lontano dalla sedia, quale espressione descrive bene la posizione?",
+   "question": "La palla è all'altro capo della stanza rispetto alla sedia. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dalla sedia",
     "vicino alla sedia",
@@ -268,7 +268,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è a destra della sedia, quale espressione descrive bene la posizione?",
+   "question": "Guardi la sedia e la palla è dal lato della tua mano destra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra della sedia",
     "a destra della sedia",
@@ -300,7 +300,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la palla è a sinistra della sedia, quale espressione descrive bene la posizione?",
+   "question": "Guardi la sedia e la palla è dal lato della tua mano sinistra. Quale espressione descrive bene la posizione?",
    "options": [
     "a destra della sedia",
     "molto alta",
@@ -332,7 +332,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è sopra il quaderno, quale espressione descrive bene la posizione?",
+   "question": "Il libro è appoggiato sul piano del quaderno, più in alto. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto il quaderno",
     "molto alta",
@@ -364,7 +364,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è sotto il quaderno, quale espressione descrive bene la posizione?",
+   "question": "Il libro è rotolato nello spazio fra il pavimento e il quaderno. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto il quaderno",
     "sopra il quaderno",
@@ -396,7 +396,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è dentro lo zaino, quale espressione descrive bene la posizione?",
+   "question": "Il libro è finito all'interno dello zaino e ci è rimasto. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dallo zaino",
     "dentro lo zaino",
@@ -428,7 +428,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è fuori dallo zaino, quale espressione descrive bene la posizione?",
+   "question": "Il libro è rimasto all'esterno dello zaino. Quale espressione descrive bene la posizione?",
    "options": [
     "dentro lo zaino",
     "molto alta",
@@ -460,7 +460,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è davanti al quaderno, quale espressione descrive bene la posizione?",
+   "question": "Il libro è fra te e il quaderno, e te lo copre in parte. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro il quaderno",
     "molto alta",
@@ -492,7 +492,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è dietro il quaderno, quale espressione descrive bene la posizione?",
+   "question": "Il quaderno nasconde il libro alla tua vista. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro il quaderno",
     "davanti al quaderno",
@@ -524,7 +524,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è vicino al quaderno, quale espressione descrive bene la posizione?",
+   "question": "Il libro è a pochi centimetri dal quaderno. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dal quaderno",
     "vicino al quaderno",
@@ -556,7 +556,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è lontano dal quaderno, quale espressione descrive bene la posizione?",
+   "question": "Il libro è all'altro capo della stanza rispetto al quaderno. Quale espressione descrive bene la posizione?",
    "options": [
     "vicino al quaderno",
     "molto alta",
@@ -588,7 +588,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è a destra del quaderno, quale espressione descrive bene la posizione?",
+   "question": "Guardi il quaderno e il libro è dal lato della tua mano destra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra del quaderno",
     "molto alta",
@@ -620,7 +620,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il libro è a sinistra del quaderno, quale espressione descrive bene la posizione?",
+   "question": "Guardi il quaderno e il libro è dal lato della tua mano sinistra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra del quaderno",
     "a destra del quaderno",
@@ -652,7 +652,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è sopra la porta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è appoggiato sul piano della porta, più in alto. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto la porta",
     "sopra la porta",
@@ -684,7 +684,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è sotto la porta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è rotolato nello spazio fra il pavimento e la porta. Quale espressione descrive bene la posizione?",
    "options": [
     "sopra la porta",
     "molto alta",
@@ -716,7 +716,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è dentro la cesta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è finito all'interno della cesta e ci è rimasto. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dalla cesta",
     "molto alta",
@@ -748,7 +748,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è fuori dalla cesta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è rimasto all'esterno della cesta. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dalla cesta",
     "dentro la cesta",
@@ -780,7 +780,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è davanti alla porta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è fra te e la porta, e te lo copre in parte. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro la porta",
     "davanti alla porta",
@@ -812,7 +812,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è dietro la porta, quale espressione descrive bene la posizione?",
+   "question": "La porta nasconde il gatto alla tua vista. Quale espressione descrive bene la posizione?",
    "options": [
     "davanti alla porta",
     "molto alta",
@@ -844,7 +844,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è vicino alla porta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è a pochi centimetri dalla porta. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dalla porta",
     "molto alta",
@@ -876,7 +876,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è lontano dalla porta, quale espressione descrive bene la posizione?",
+   "question": "Il gatto è all'altro capo della stanza rispetto alla porta. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dalla porta",
     "vicino alla porta",
@@ -908,7 +908,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è a destra della porta, quale espressione descrive bene la posizione?",
+   "question": "Guardi la porta e il gatto è dal lato della tua mano destra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra della porta",
     "a destra della porta",
@@ -940,7 +940,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se il gatto è a sinistra della porta, quale espressione descrive bene la posizione?",
+   "question": "Guardi la porta e il gatto è dal lato della tua mano sinistra. Quale espressione descrive bene la posizione?",
    "options": [
     "a destra della porta",
     "molto alta",
@@ -972,7 +972,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è sopra il cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è appoggiata sul piano del cancello, più in alto. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto il cancello",
     "molto alta",
@@ -1004,7 +1004,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è sotto il cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è rotolata nello spazio fra il pavimento e il cancello. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto il cancello",
     "sopra il cancello",
@@ -1036,7 +1036,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è dentro il cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è finita all'interno del cancello e ci è rimasta. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dal cancello",
     "dentro il cancello",
@@ -1068,7 +1068,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è fuori dal cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è rimasta all'esterno del cancello. Quale espressione descrive bene la posizione?",
    "options": [
     "dentro il cancello",
     "molto alta",
@@ -1100,7 +1100,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è davanti al cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è fra te e il cancello, e te la copre in parte. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro il cancello",
     "molto alta",
@@ -1132,7 +1132,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è dietro il cancello, quale espressione descrive bene la posizione?",
+   "question": "Il cancello nasconde la bicicletta alla tua vista. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro il cancello",
     "davanti al cancello",
@@ -1164,7 +1164,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è vicino al cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è a pochi centimetri dal cancello. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dal cancello",
     "vicino al cancello",
@@ -1196,7 +1196,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è lontano dal cancello, quale espressione descrive bene la posizione?",
+   "question": "La bicicletta è all'altro capo della stanza rispetto al cancello. Quale espressione descrive bene la posizione?",
    "options": [
     "vicino al cancello",
     "molto alta",
@@ -1228,7 +1228,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è a destra del cancello, quale espressione descrive bene la posizione?",
+   "question": "Guardi il cancello e la bicicletta è dal lato della tua mano destra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra del cancello",
     "molto alta",
@@ -1260,7 +1260,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se la bicicletta è a sinistra del cancello, quale espressione descrive bene la posizione?",
+   "question": "Guardi il cancello e la bicicletta è dal lato della tua mano sinistra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra del cancello",
     "a destra del cancello",
@@ -1292,7 +1292,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è sopra il banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è appoggiato sul piano del banco, più in alto. Quale espressione descrive bene la posizione?",
    "options": [
     "sotto il banco",
     "sopra il banco",
@@ -1324,7 +1324,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è sotto il banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è rotolato nello spazio fra il pavimento e il banco. Quale espressione descrive bene la posizione?",
    "options": [
     "sopra il banco",
     "molto alta",
@@ -1356,7 +1356,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è dentro il banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è finito all'interno del banco e ci è rimasto. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dal banco",
     "molto alta",
@@ -1388,7 +1388,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è fuori dal banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è rimasto all'esterno del banco. Quale espressione descrive bene la posizione?",
    "options": [
     "fuori dal banco",
     "dentro il banco",
@@ -1420,7 +1420,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è davanti al banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è fra te e il banco, e te lo copre in parte. Quale espressione descrive bene la posizione?",
    "options": [
     "dietro il banco",
     "davanti al banco",
@@ -1452,7 +1452,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è dietro il banco, quale espressione descrive bene la posizione?",
+   "question": "Il banco nasconde lo zaino alla tua vista. Quale espressione descrive bene la posizione?",
    "options": [
     "davanti al banco",
     "molto alta",
@@ -1484,7 +1484,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è vicino al banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è a pochi centimetri dal banco. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dal banco",
     "molto alta",
@@ -1516,7 +1516,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è lontano dal banco, quale espressione descrive bene la posizione?",
+   "question": "Lo zaino è all'altro capo della stanza rispetto al banco. Quale espressione descrive bene la posizione?",
    "options": [
     "lontano dal banco",
     "vicino al banco",
@@ -1548,7 +1548,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è a destra del banco, quale espressione descrive bene la posizione?",
+   "question": "Guardi il banco e lo zaino è dal lato della tua mano destra. Quale espressione descrive bene la posizione?",
    "options": [
     "a sinistra del banco",
     "a destra del banco",
@@ -1580,7 +1580,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "Se lo zaino è a sinistra del banco, quale espressione descrive bene la posizione?",
+   "question": "Guardi il banco e lo zaino è dal lato della tua mano sinistra. Quale espressione descrive bene la posizione?",
    "options": [
     "a destra del banco",
     "molto alta",
@@ -33645,7 +33645,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "La maestra appoggia il libro sopra la cattedra. Dove si trova il libro rispetto alla cattedra?",
+   "question": "La maestra finisce di leggere e posa il libro sul piano della cattedra. Dove si trova il libro rispetto alla cattedra?",
    "options": [
     "Sotto la cattedra",
     "Dentro la cattedra",
@@ -33965,7 +33965,7 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 1,
-   "question": "La palla è sotto il tavolo. Dove si trova la palla rispetto al tavolo?",
+   "question": "La palla è rotolata nello spazio fra il pavimento e il tavolo. Dove si trova la palla rispetto al tavolo?",
    "options": [
     "Sopra",
     "Sotto",

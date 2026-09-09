@@ -26828,7 +26828,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta corre 101 giri di una pista di 11 m. Quanti m percorre?",
+   "question": "Un atleta ripete 101 scatti di 11 m. Quanti m percorre?",
    "options": [
     "1110",
     "1109",
@@ -26837,7 +26837,7 @@
    ],
    "answerIndex": 3,
    "answer": "1111",
-   "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 101×11=1111 m.",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 101×11=1111 m.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27052,7 +27052,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Un atleta corre 24 giri di una pista di 8 m. Quanti m percorre?",
+   "question": "Un atleta ripete 24 scatti di 8 m. Quanti m percorre?",
    "options": [
     "189",
     "190",
@@ -27061,7 +27061,7 @@
    ],
    "answerIndex": 2,
    "answer": "192",
-   "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 24×8=192 m.",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 24×8=192 m.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27180,7 +27180,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta corre 140 giri di una pista di 8 m. Quanti m percorre?",
+   "question": "Un atleta ripete 140 scatti di 8 m. Quanti m percorre?",
    "options": [
     "1119",
     "1117",
@@ -27189,7 +27189,7 @@
    ],
    "answerIndex": 2,
    "answer": "1120",
-   "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 140×8=1120 m.",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 140×8=1120 m.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27244,7 +27244,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Un atleta corre 135 giri di una pista di 4 m. Quanti m percorre?",
+   "question": "Un atleta ripete 135 scatti di 4 m. Quanti m percorre?",
    "options": [
     "540",
     "538",
@@ -27253,7 +27253,7 @@
    ],
    "answerIndex": 0,
    "answer": "540",
-   "explanation": "Moltiplica il numero di giri per la lunghezza di ogni giro: 135×4=540 m.",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 135×4=540 m.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27564,7 +27564,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta corre 106 giri di una pista di 15 m. Quanti m percorre?",
+   "question": "Un atleta ripete 106 scatti di 15 m. Quanti m percorre?",
    "options": [
     "1588",
     "1587",
@@ -27573,7 +27573,7 @@
    ],
    "answerIndex": 2,
    "answer": "1590",
-   "explanation": "Moltiplica il numero di giri per la lunghezza: 106×15=1590 m (106×10=1060, 106×5=530, somma 1590).",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza: 106×15=1590 m (106×10=1060, 106×5=530, somma 1590).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27724,7 +27724,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta corre 192 giri di una pista di 17 m. Quanti m percorre?",
+   "question": "Un atleta ripete 192 scatti di 17 m. Quanti m percorre?",
    "options": [
     "3263",
     "3262",
@@ -27756,7 +27756,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta corre 77 giri di una pista di 16 m. Quanti m percorre?",
+   "question": "Un atleta ripete 77 scatti di 16 m. Quanti m percorre?",
    "options": [
     "1232",
     "1231",
@@ -27765,7 +27765,7 @@
    ],
    "answerIndex": 0,
    "answer": "1232",
-   "explanation": "Moltiplica il numero di giri per la lunghezza: 77×16=1232 m (77×10=770, 77×6=462, somma 1232).",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza: 77×16=1232 m (77×10=770, 77×6=462, somma 1232).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27788,7 +27788,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta corre 143 giri di una pista di 20 m. Quanti m percorre?",
+   "question": "Un atleta ripete 143 scatti di 20 m. Quanti m percorre?",
    "options": [
     "2858",
     "2860",
@@ -27797,7 +27797,7 @@
    ],
    "answerIndex": 1,
    "answer": "2860",
-   "explanation": "Moltiplica il numero di giri per la lunghezza: 143×20=2860 m (moltiplica per 2 e aggiungi uno zero).",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza: 143×20=2860 m (moltiplica per 2 e aggiungi uno zero).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
