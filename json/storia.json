@@ -858,7 +858,7 @@
    ],
    "answerIndex": 2,
    "answer": "estate",
-   "explanation": "La risposta corretta è 'estate'.",
+   "explanation": "D'estate il Sole resta alto e per molte ore: i suoi raggi arrivano più diretti e scaldano di più.",
    "active": true,
    "tag": "tempo;stagioni;classe2",
    "tags": [
@@ -889,7 +889,7 @@
    ],
    "answerIndex": 3,
    "answer": "primavera",
-   "explanation": "La risposta corretta è 'primavera'.",
+   "explanation": "In primavera le giornate si allungano e la temperatura sale: le piante ricevono più luce e calore, ed è allora che fioriscono.",
    "active": true,
    "tag": "tempo;stagioni;classe2",
    "tags": [
@@ -920,7 +920,7 @@
    ],
    "answerIndex": 0,
    "answer": "autunno",
-   "explanation": "La risposta corretta è 'autunno'.",
+   "explanation": "In autunno la pianta smette di nutrire le foglie per prepararsi al freddo: perdono il verde e cadono.",
    "active": true,
    "tag": "tempo;stagioni;classe2",
    "tags": [
@@ -951,7 +951,7 @@
    ],
    "answerIndex": 1,
    "answer": "inverno",
-   "explanation": "La risposta corretta è 'inverno'.",
+   "explanation": "Perché nevichi la temperatura deve stare intorno o sotto lo zero: succede soprattutto d'inverno, quando il Sole scalda meno.",
    "active": true,
    "tag": "tempo;stagioni;classe2",
    "tags": [
@@ -982,7 +982,7 @@
    ],
    "answerIndex": 2,
    "answer": "primavera",
-   "explanation": "La risposta corretta è 'primavera'.",
+   "explanation": "Le stagioni si susseguono sempre nello stesso ordine: inverno, primavera, estate, autunno. Dopo l'inverno viene la primavera.",
    "active": true,
    "tag": "tempo;stagioni;classe2",
    "tags": [
@@ -1013,7 +1013,7 @@
    ],
    "answerIndex": 3,
    "answer": "autunno",
-   "explanation": "La risposta corretta è 'autunno'.",
+   "explanation": "Nel ciclo delle stagioni l'estate è seguita dall'autunno, quando le giornate si accorciano e la temperatura scende.",
    "active": true,
    "tag": "tempo;stagioni;classe2",
    "tags": [
@@ -1044,7 +1044,7 @@
    ],
    "answerIndex": 0,
    "answer": "mattina",
-   "explanation": "La risposta corretta è 'mattina'.",
+   "explanation": "La colazione è il primo pasto dopo il sonno: si fa al mattino, appena svegli.",
    "active": true,
    "tag": "tempo;giornata;classe2",
    "tags": [
@@ -1075,7 +1075,7 @@
    ],
    "answerIndex": 1,
    "answer": "notte",
-   "explanation": "La risposta corretta è 'notte'.",
+   "explanation": "Si dorme di notte, quando è buio: il corpo segue l'alternarsi della luce e del buio.",
    "active": true,
    "tag": "tempo;giornata;classe2",
    "tags": [
@@ -1106,7 +1106,7 @@
    ],
    "answerIndex": 2,
    "answer": "sera",
-   "explanation": "La risposta corretta è 'sera'.",
+   "explanation": "Il tramonto è il momento in cui il Sole scende sotto l'orizzonte: segna il passaggio dalla sera alla notte.",
    "active": true,
    "tag": "tempo;giornata;classe2",
    "tags": [
@@ -1137,7 +1137,7 @@
    ],
    "answerIndex": 3,
    "answer": "pomeriggio",
-   "explanation": "La risposta corretta è 'pomeriggio'.",
+   "explanation": "Il pranzo si fa nelle prime ore del pomeriggio, dopo la mattina di scuola o di lavoro.",
    "active": true,
    "tag": "tempo;giornata;classe2",
    "tags": [
@@ -1168,7 +1168,7 @@
    ],
    "answerIndex": 0,
    "answer": "calendario",
-   "explanation": "La risposta corretta è 'calendario'.",
+   "explanation": "Il calendario elenca i giorni in ordine, raggruppati in settimane e mesi: si guarda per sapere che giorno è.",
    "active": true,
    "tag": "tempo;strumenti;classe2",
    "tags": [
@@ -1199,7 +1199,7 @@
    ],
    "answerIndex": 1,
    "answer": "orologio",
-   "explanation": "La risposta corretta è 'orologio'.",
+   "explanation": "L'orologio divide la giornata in ore e minuti: dice a che punto della giornata ci si trova.",
    "active": true,
    "tag": "tempo;strumenti;classe2",
    "tags": [
@@ -1230,7 +1230,7 @@
    ],
    "answerIndex": 2,
    "answer": "giorni, settimane e mesi",
-   "explanation": "La risposta corretta è 'giorni, settimane e mesi'.",
+   "explanation": "Il calendario misura il tempo lungo: i giorni, le settimane, i mesi e l'anno intero.",
    "active": true,
    "tag": "tempo;strumenti;classe2",
    "tags": [
@@ -1261,7 +1261,7 @@
    ],
    "answerIndex": 3,
    "answer": "il tempo della giornata",
-   "explanation": "La risposta corretta è 'il tempo della giornata'.",
+   "explanation": "L'orologio misura il tempo breve, quello dentro una giornata: ore, minuti e secondi.",
    "active": true,
    "tag": "tempo;strumenti;classe2",
    "tags": [
@@ -1974,7 +1974,7 @@
    ],
    "answerIndex": 1,
    "answer": "mi preparo per la notte",
-   "explanation": "La risposta corretta è 'mi preparo per la notte'.",
+   "explanation": "Prima di dormire ci si lava, si mette il pigiama, si spegne la luce: sono le azioni che preparano la notte, e vengono tutte prima del sonno.",
    "active": true,
    "tag": "successione;prima_dopo;classe2",
    "tags": [
@@ -2005,7 +2005,7 @@
    ],
    "answerIndex": 2,
    "answer": "lo innaffio",
-   "explanation": "La risposta corretta è 'lo innaffio'.",
+   "explanation": "Il seme ha bisogno d'acqua per germogliare: innaffiare è l'azione che viene subito dopo averlo messo nella terra.",
    "active": true,
    "tag": "successione;prima_dopo;classe2",
    "tags": [
@@ -2036,7 +2036,7 @@
    ],
    "answerIndex": 3,
    "answer": "io leggo mentre la pioggia cade",
-   "explanation": "La risposta corretta è 'io leggo mentre la pioggia cade'.",
+   "explanation": "Leggere e la pioggia che cade sono azioni indipendenti: possono succedere nello stesso momento, perché nessuna delle due impedisce l'altra.",
    "active": true,
    "tag": "contemporaneità;lessico;classe2",
    "tags": [
@@ -2067,7 +2067,7 @@
    ],
    "answerIndex": 0,
    "answer": "due fatti nello stesso momento",
-   "explanation": "La risposta corretta è 'due fatti nello stesso momento'.",
+   "explanation": "«Mentre» collega due fatti che avvengono insieme: non dice quale viene prima, dice che accadono nello stesso tempo.",
    "active": true,
    "tag": "contemporaneità;lessico;classe2",
    "tags": [
@@ -2098,7 +2098,7 @@
    ],
    "answerIndex": 1,
    "answer": "nello stesso momento",
-   "explanation": "La risposta corretta è 'nello stesso momento'.",
+   "explanation": "Contemporaneamente significa «nello stesso tempo»: i due fatti si sovrappongono invece di succedersi.",
    "active": true,
    "tag": "contemporaneità;lessico;classe2",
    "tags": [
@@ -2129,7 +2129,7 @@
    ],
    "answerIndex": 2,
    "answer": "due azioni insieme",
-   "explanation": "La risposta corretta è 'due azioni insieme'.",
+   "explanation": "Anna e Luca fanno cose diverse ma nello stesso momento: le due azioni sono contemporanee, non una dopo l'altra.",
    "active": true,
    "tag": "contemporaneità;lessico;classe2",
    "tags": [
@@ -2160,7 +2160,7 @@
    ],
    "answerIndex": 3,
    "answer": "la pianta si secca",
-   "explanation": "La risposta corretta è 'la pianta si secca'.",
+   "explanation": "Senza acqua la pianta non riesce più a portare nutrimento alle foglie: appassisce e poi si secca. È la conseguenza di quella dimenticanza.",
    "active": true,
    "tag": "causa_effetto;storia;classe2",
    "tags": [
@@ -2191,7 +2191,7 @@
    ],
    "answerIndex": 0,
    "answer": "si formano pozzanghere",
-   "explanation": "La risposta corretta è 'si formano pozzanghere'.",
+   "explanation": "L'acqua che cade si raccoglie dove il terreno non la assorbe abbastanza in fretta: si formano pozzanghere. È l'effetto della pioggia.",
    "active": true,
    "tag": "causa_effetto;storia;classe2",
    "tags": [
@@ -2222,7 +2222,7 @@
    ],
    "answerIndex": 1,
    "answer": "capisco meglio",
-   "explanation": "La risposta corretta è 'capisco meglio'.",
+   "explanation": "Studiare con attenzione è la causa, capire meglio è l'effetto: fra i due c'è un legame, non una semplice successione.",
    "active": true,
    "tag": "causa_effetto;storia;classe2",
    "tags": [
@@ -2253,7 +2253,7 @@
    ],
    "answerIndex": 2,
    "answer": "torna a funzionare come prima",
-   "explanation": "La risposta corretta è 'torna a funzionare come prima'.",
+   "explanation": "Prima funzionava, poi si è rotto, poi è stato riparato: la riparazione è l'azione che riporta l'oggetto allo stato di partenza.",
    "active": true,
    "tag": "causa_effetto;storia;classe2",
    "tags": [
@@ -2284,7 +2284,7 @@
    ],
    "answerIndex": 3,
    "answer": "prima",
-   "explanation": "La risposta corretta è 'prima'.",
+   "explanation": "«Prima» indica il fatto che apre la sequenza: quello che accade all'inizio, con gli altri che seguono.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2315,7 +2315,7 @@
    ],
    "answerIndex": 0,
    "answer": "infine",
-   "explanation": "La risposta corretta è 'infine'.",
+   "explanation": "«Infine» chiude la sequenza: segnala l'ultimo fatto, quello dopo il quale non c'è altro.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2346,7 +2346,7 @@
    ],
    "answerIndex": 1,
    "answer": "due azioni contemporanee",
-   "explanation": "La risposta corretta è 'due azioni contemporanee'.",
+   "explanation": "Mangiare e ascoltare si possono fare insieme: «mentre» dice proprio che le due azioni si sovrappongono nel tempo.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2377,7 +2377,7 @@
    ],
    "answerIndex": 2,
    "answer": "indosso il cappotto",
-   "explanation": "La risposta corretta è 'indosso il cappotto'.",
+   "explanation": "Il cappotto si indossa dentro casa, prima di aprire la porta: uscire è l'azione che viene dopo.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2408,7 +2408,7 @@
    ],
    "answerIndex": 3,
    "answer": "lo innaffio",
-   "explanation": "La risposta corretta è 'lo innaffio'.",
+   "explanation": "Dopo aver messo il seme nella terra bisogna bagnarlo: senza acqua non germoglia. È l'azione successiva della sequenza.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2439,7 +2439,7 @@
    ],
    "answerIndex": 0,
    "answer": "due fatti nello stesso momento",
-   "explanation": "La risposta corretta è 'due fatti nello stesso momento'.",
+   "explanation": "Il campanello suona e la maestra sta parlando nello stesso istante: due fatti contemporanei, non uno dopo l'altro.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2470,7 +2470,7 @@
    ],
    "answerIndex": 1,
    "answer": "prima, dopo, infine",
-   "explanation": "La risposta corretta è 'prima, dopo, infine'.",
+   "explanation": "Prima, dopo, infine sono le tre parole che ordinano una sequenza dall'inizio alla fine: seguono l'ordine in cui i fatti accadono.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -2501,7 +2501,7 @@
    ],
    "answerIndex": 2,
    "answer": "contemporanei",
-   "explanation": "La risposta corretta è 'contemporanei'.",
+   "explanation": "La torta cuoce e tu apparecchi nello stesso lasso di tempo: i due fatti sono contemporanei, anche se durano in modo diverso.",
    "active": true,
    "tag": "successione;contemporaneità;classe2",
    "tags": [
@@ -6097,7 +6097,7 @@
    ],
    "answerIndex": 3,
    "answer": "lo storico",
-   "explanation": "La risposta corretta è 'lo storico'.",
+   "explanation": "Lo storico non inventa: raccoglie fonti di tipo diverso, le confronta fra loro e da lì ricostruisce che cosa è successo.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6129,7 +6129,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'archeologo",
-   "explanation": "La risposta corretta è \"l'archeologo\".",
+   "explanation": "L'archeologo scava perché i resti delle civiltà antiche sono sepolti sotto strati di terra accumulati nei secoli.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6161,7 +6161,7 @@
    ],
    "answerIndex": 1,
    "answer": "il paleontologo",
-   "explanation": "La risposta corretta è 'il paleontologo'.",
+   "explanation": "Il paleontologo studia i fossili: resti di piante e animali vissuti milioni di anni fa, molto prima dell'uomo.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6193,7 +6193,7 @@
    ],
    "answerIndex": 2,
    "answer": "le fonti",
-   "explanation": "La risposta corretta è 'le fonti'.",
+   "explanation": "Il passato non si può osservare direttamente: le fonti sono le tracce che ha lasciato, e sono l'unico materiale su cui lo storico lavora.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6225,7 +6225,7 @@
    ],
    "answerIndex": 3,
    "answer": "materiale",
-   "explanation": "La risposta corretta è 'materiale'.",
+   "explanation": "La moneta è un oggetto concreto arrivato fino a noi: è una fonte materiale, e dice chi comandava e come si commerciava.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6257,7 +6257,7 @@
    ],
    "answerIndex": 0,
    "answer": "scritta",
-   "explanation": "La risposta corretta è 'scritta'.",
+   "explanation": "L'iscrizione è fatta di parole incise: si legge, quindi è una fonte scritta, anche se il supporto è la pietra invece della carta.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6289,7 +6289,7 @@
    ],
    "answerIndex": 1,
    "answer": "visiva",
-   "explanation": "La risposta corretta è 'visiva'.",
+   "explanation": "L'affresco è un'immagine dipinta: si guarda, quindi è una fonte visiva, e mostra come le persone rappresentavano il loro mondo.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6321,7 +6321,7 @@
    ],
    "answerIndex": 2,
    "answer": "orale",
-   "explanation": "La risposta corretta è 'orale'.",
+   "explanation": "Un racconto passato di bocca in bocca è una fonte orale: non è mai stato scritto, e vive nella memoria di chi lo tramanda.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6353,7 +6353,7 @@
    ],
    "answerIndex": 3,
    "answer": "lo osserva e lo studia",
-   "explanation": "La risposta corretta è 'lo osserva e lo studia'.",
+   "explanation": "L'archeologo non si limita a raccogliere: annota dove il reperto è stato trovato e insieme a che cosa, perché è il contesto a dargli significato.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6385,7 +6385,7 @@
    ],
    "answerIndex": 0,
    "answer": "lo studia per capire la vita del passato",
-   "explanation": "La risposta corretta è 'lo studia per capire la vita del passato'.",
+   "explanation": "Dal fossile il paleontologo ricava com'era fatto l'organismo, di che cosa si nutriva e in che ambiente viveva.",
    "active": true,
    "tag": "storia;metodo;fonti;classe3",
    "tags": [
@@ -6417,7 +6417,7 @@
    ],
    "answerIndex": 1,
    "answer": "la linea del tempo",
-   "explanation": "La risposta corretta è 'la linea del tempo'.",
+   "explanation": "Sapere che cosa è successo non basta: la linea del tempo mette i fatti in ordine e mostra quali sono venuti prima e quali dopo.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6449,7 +6449,7 @@
    ],
    "answerIndex": 2,
    "answer": "ricostruire il passato",
-   "explanation": "La risposta corretta è 'ricostruire il passato'.",
+   "explanation": "Le fonti sono le tracce lasciate dal passato: confrontandole si ricostruisce ciò che è accaduto, come si fa con gli indizi.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6481,7 +6481,7 @@
    ],
    "answerIndex": 3,
    "answer": "un documento",
-   "explanation": "La risposta corretta è 'un documento'.",
+   "explanation": "Il documento è scritto: riporta parole registrate nel momento dei fatti, ed è per questo che se ne può ricavare un racconto preciso.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6513,7 +6513,7 @@
    ],
    "answerIndex": 0,
    "answer": "un vaso antico",
-   "explanation": "La risposta corretta è 'un vaso antico'.",
+   "explanation": "Il vaso è un oggetto vero: si può prendere in mano, misurare, osservarne il materiale. È una fonte materiale.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6545,7 +6545,7 @@
    ],
    "answerIndex": 1,
    "answer": "l'archeologo",
-   "explanation": "La risposta corretta è \"l'archeologo\".",
+   "explanation": "L'archeologo lavora sugli scavi perché è lì che si trovano i resti sepolti delle civiltà antiche.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6577,7 +6577,7 @@
    ],
    "answerIndex": 2,
    "answer": "il paleontologo",
-   "explanation": "La risposta corretta è 'il paleontologo'.",
+   "explanation": "I dinosauri sono vissuti milioni di anni prima dell'uomo: se ne occupa il paleontologo, che studia i fossili, non lo storico.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6609,7 +6609,7 @@
    ],
    "answerIndex": 3,
    "answer": "Che cosa mi dice del passato?",
-   "explanation": "La risposta corretta è 'Che cosa mi dice del passato?'.",
+   "explanation": "Davanti a una fonte lo storico non si chiede se è bella: si chiede che cosa può dirgli di quel tempo, e se è affidabile.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6641,7 +6641,7 @@
    ],
    "answerIndex": 0,
    "answer": "un oggetto o resto utile per conoscere il passato",
-   "explanation": "La risposta corretta è 'un oggetto o resto utile per conoscere il passato'.",
+   "explanation": "Il reperto è ciò che si trova durante uno scavo: un oggetto, un frammento, un resto, utile a capire come si viveva allora.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [

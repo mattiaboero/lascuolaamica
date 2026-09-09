@@ -9,6 +9,9 @@ const JSON_DIR = path.join(__dirname, '..', 'json');
 // Italian linguistic patterns to check
 const COMMON_MISTAKES = {
   accents: [
+  // Attenzione ai falsi positivi: "una" e' pronome quando precede un verbo
+  // ("nessuna delle due impedisce l'altra", "senza che una impedisca"), e li'
+  // l'elisione non si fa. Capitato scrivendo le spiegazioni: si gira la frase.
     { pattern: /\bperche\b/gi, message: 'missing accent: "perche" → "perché"' },
     { pattern: /\bpoiche\b/gi, message: 'missing accent: "poiche" → "poiché"' },
     { pattern: /\bbenche\b/gi, message: 'missing accent: "benche" → "benché"' },
