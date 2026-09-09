@@ -1,5 +1,37 @@
 # Changelog Repo
 
+## 4.13.13 - 2026-09-09
+
+**Nessuna domanda del banco spiega piu' se stessa ripetendo la risposta.** Erano
+2.056: 911 riscritte prima di 4.13.12 (civica, scienze, parte di geografia), le
+altre 1.145 in questa release — geografia finita, storia 492, inglese 962.
+
+### Fixed
+- **Storia (492 spiegazioni).** Al posto di "La risposta corretta è X" il motivo
+  storico: perche' chi vive di caccia e raccolta deve spostarsi, perche'
+  l'agricoltura obbliga a fermarsi vicino al campo, da dove viene il nome
+  cuneiforme, che cosa segnava il Rubicone, perche' il 476 chiude l'eta' antica.
+- **Inglese (962 spiegazioni).** Scritte in italiano, come vuole la convenzione
+  del banco: traduzione del termine e regola che lo governa (hair non
+  numerabile, has/have got alla terza singolare, risposta breve che riprende
+  l'ausiliare, can per la capacita').
+- **Geografia**, chiusa nei primi lotti della serie.
+
+### Added
+- **`lint_content.js`: la formula e' ora un errore.** La regola precedente ne
+  normalizzava il formato, cioe' la dava per ammessa. Ora "La risposta corretta
+  è X" / "The correct answer is X" come intera spiegazione fallisce il lint. Le
+  domande disattivate restano escluse: il sito non le mostra.
+- **`lint_content.js`: caratteri invisibili nel testo** (soft hyphen,
+  zero-width, BOM). Un soft hyphen mi era finito dentro "Dagli Etruschi"
+  scrivendo un lotto: a schermo la parola sembra intera e nessun controllo lo
+  vedeva, perche' non e' ne' una lettera estranea ne' un segno tipografico.
+  Entrambe le regole verificate reintroducendo il difetto.
+- Quattro parole in `PAROLE_LEGITTIME` di `check_grammar_rules.js` (`presso`,
+  `spesse`, `mesos`, `publica`): falsi positivi del rilevatore statistico dei
+  refusi su testo mio corretto. Su `contato`, vicino di "contatto", ho riscritto
+  la frase invece di allargare la lista.
+
 ## 4.13.12 - 2026-09-09
 
 **Con questa release il banco e' letto per intero, domanda per domanda.** Le
