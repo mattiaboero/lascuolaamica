@@ -572,7 +572,7 @@ const GRAMMATICA = [
     msg: 'pesci in un luogo senza acqua ("nel cortile ci sono 11 pesciolini")' },
 ];
 
-function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
+function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty, active) {
   const errors = [];
 
   // Check field presence and type
@@ -883,14 +883,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // contiene un apostrofo e gli apici si chiuderebbero nel punto sbagliato.
   // Il confronto e' con la stringa esatta: cosi' il controllo verifica insieme
   // il formato e il fatto che la spiegazione citi davvero la risposta giusta.
-  if (subject !== 'inglese' && /^\s*La risposta corretta è\s/.test(explanation || '')) {
-    const valore = typeof answer === 'string' && answer.includes("'") ? `"${answer}"` : `'${answer}'`;
-    // Se la risposta finisce gia' con un punto ("prima di 1000 a.C.", "Disegno
-    // la mia aula vista dall'alto."), il punto esterno lo raddoppierebbe: la
-    // regola del lotto 21 tiene solo quello interno.
-    const atteso = `La risposta corretta è ${valore}${/\.$/.test(String(answer)) ? '' : '.'}`;
-    if ((explanation || '').trim() !== atteso) {
-      errors.push({ level: 'error', field: 'explanation', msg: `spiegazione canonica in forma non uniforme: scrivere ${atteso}` });
+  // La spiegazione che ripete la risposta e basta ("La risposta corretta è
+  // 'x'.", "The correct answer is \"x\".") non insegna nulla: chi sbaglia
+  // rilegge l'opzione che ha gia' scartato. Erano 2.056, riscritte tutte a
+  // blocchi di cinquanta; questa regola impedisce che la formula rientri.
+  // Il confronto e' sulla stringa intera: una spiegazione che cita la risposta
+  // e poi spiega perche' e' giusta passa senza problemi.
+  {
+    const testo = (explanation || '').trim();
+    const val = String(answer).trim().replace(/[.]$/, '');
+    const citato = val.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const vuota = new RegExp(`^(?:La risposta corretta è|The correct answer is)\\s*["'\u201c\u2018]?${citato}["'\u201d\u2019]?\\.?$`, 'i');
+    // Le domande disattivate (640 civica, doppioni tolti dal banco) restano nel
+    // file ma non arrivano a nessuno: riscriverle sarebbe lavoro per un testo
+    // che il sito non mostra.
+    if (active !== false && vuota.test(testo)) {
+      errors.push({ level: 'error', field: 'explanation', msg: 'spiegazione che ripete solo la risposta: dire perché è giusta, non ripetere l\'opzione' });
     }
   }
 
@@ -2258,7 +2266,8 @@ function processSubject(subject) {
       q.options,
       q.answer,
       q.explanation,
-      q.difficulty
+      q.difficulty,
+      q.active
     );
 
     errs.forEach(err => {

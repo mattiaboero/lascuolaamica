@@ -306,7 +306,7 @@ function controllaNomiClassificati(sorgente) {
 // vicine di una parola frequente. Sono cresciute scrivendo le spiegazioni: un
 // testo con lessico piu' ricco incontra piu' spesso questo caso, e ogni voce
 // qui e' stata verificata a mano prima di entrare.
-const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini', 'impresse', 'presso', 'spesse', 'mesos']);
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini', 'impresse', 'presso', 'spesse', 'mesos', 'publica']);
 
 function controllaRefusi() {
   const dir = path.join(__dirname, '..', 'json');
