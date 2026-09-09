@@ -1,5 +1,61 @@
 # Changelog Repo
 
+## 4.13.12 - 2026-09-09
+
+**Con questa release il banco e' letto per intero, domanda per domanda.** Le
+quattro campagne sono tutte chiuse:
+
+| campagna  | lotti | unita'          |
+|-----------|------:|-----------------|
+| italiano  |   108 | 6.384 domande   |
+| inglese   |    19 | 1.094 domande   |
+| famiglie  |     5 | 300 scheletri   |
+| istanze   |    40 | 2.389 domande   |
+
+### Fixed
+Dai lotti 17-40 delle istanze, difetti che nessuna soglia su un singolo numero
+avrebbe intercettato:
+
+- **5 automobili che percorrevano fino a 99 km con un litro.** Il difetto non
+  sta in un numero ma nel rapporto fra due: 891 km e 9 litri sono valori
+  normalissimi, e' la loro divisione a essere impossibile. Per questo la regola
+  non poteva stare in `check_plausibility`, che confronta un numero con un
+  intervallo: sta in `GRAMMATICA` con un `controllo` che fa la divisione.
+- **4 vagoni ferroviari da 7, 17, 165 e 175 posti**; **9 campi da calcetto da
+  8x4 metri**; **17 articoli di cartoleria** a 10-12 euro (righelli, quaderni,
+  penne); **10 famiglie** che spendevano 12-98 euro al mese, diventate
+  abbonamenti; **2 alberghi** con 8 e 10 persone in una camera; **2 atleti** a
+  0,66 km/h.
+- **6 problemi di seconda ambigui**: distinguevano bambine e bambini e poi
+  chiedevano "Quanti bambini in tutto?". La stessa parola valeva prima 'i
+  maschi' e subito dopo 'tutti quanti', proprio nell'anno in cui quella
+  distinzione si impara: chi rispondeva 24 invece di 39 aveva letto bene.
+- **3 accordi con il numerale 1**: "arrivano altri 1", "ne ho lette 1". La
+  regola scritta per il primo caso e' stata allargata ai participi invece di
+  scriverne una seconda.
+
+### Changed
+- **911 spiegazioni riscritte a mano**, fra le 1.753 che si limitavano a
+  ripetere la risposta. **Educazione civica e scienze non ne hanno piu'
+  nessuna.** Restano 842 fra geografia (157) e storia (685). Dove la risposta
+  era un'etichetta ho messo il meccanismo: la clorofilla verde perche' riflette
+  quel colore, l'argilla che trattiene l'acqua per la dimensione dei granelli,
+  il tetto spiovente che scarica il peso della neve.
+
+### Notes
+- Regole: `GRAMMATICA` da 87 a 90, `check_plausibility` da 23 a 27. Tutte
+  verificate reintroducendo il difetto e poi rimettendo a posto.
+- Tre volte i controlli hanno fermato me: una regola inserita nel punto
+  sbagliato del file (`SyntaxError` immediato), un `una unita'` senza elisione
+  in una spiegazione nuova, e un `altri 1.` che la mia stessa regex non
+  prendeva perche' escludevo il punto finale.
+- Il rilevatore di refusi ha segnalato `latitudini` come possibile
+  `altitudini`. La parola e' corretta: era diventata sospetta solo perche' le
+  mie spiegazioni avevano reso frequente `altitudini`, che le sta a un
+  carattere. Scrivendo avevo spostato io la soglia del controllo.
+- Voce del changelog del sito ancora a sette righe: le due sull'inglese sono
+  state unite per fare posto a quella sulle spiegazioni.
+
 ## 4.13.11 - 2026-09-09
 
 Rilascio della campagna sulle istanze: 16 lotti, 960 domande lette su 2.388.
