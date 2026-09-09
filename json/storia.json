@@ -12894,7 +12894,7 @@
    ],
    "answerIndex": 3,
    "answer": "somiglianze e differenze",
-   "explanation": "La risposta corretta è 'somiglianze e differenze'.",
+   "explanation": "Confrontare significa cercare che cosa due civiltà hanno in comune e in che cosa si distinguono: somiglianze e differenze insieme.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12925,7 +12925,7 @@
    ],
    "answerIndex": 0,
    "answer": "più antico",
-   "explanation": "La risposta corretta è 'più antico'.",
+   "explanation": "Gli anni avanti Cristo si contano all'indietro: 2000 a.C. è più antico di 500 a.C.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -12955,7 +12955,7 @@
    ],
    "answerIndex": 1,
    "answer": "dopo 200 a.C.",
-   "explanation": "La risposta corretta è 'dopo 200 a.C.'",
+   "explanation": "Gli anni d.C. vengono tutti dopo quelli a.C.: 500 d.C. è successivo a 200 a.C.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -12985,7 +12985,7 @@
    ],
    "answerIndex": 2,
    "answer": "vari aspetti di un popolo",
-   "explanation": "La risposta corretta è 'vari aspetti di un popolo'.",
+   "explanation": "Il quadro di civiltà raccoglie più aspetti insieme: territorio, economia, società, religione e cultura di un popolo.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13015,7 +13015,7 @@
    ],
    "answerIndex": 3,
    "answer": "il gusto del gelato",
-   "explanation": "La risposta corretta è 'il gusto del gelato'.",
+   "explanation": "Economia, religione e organizzazione sociale sono aspetti del quadro di civiltà. I gusti personali di oggi non c'entrano nulla.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13045,7 +13045,7 @@
    ],
    "answerIndex": 0,
    "answer": "mare e commerci",
-   "explanation": "La risposta corretta è 'mare e commerci'.",
+   "explanation": "Le civiltà del Mediterraneo, come Cretesi e Fenici, vivevano di navigazione e commerci: il mare era la loro via.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13075,7 +13075,7 @@
    ],
    "answerIndex": 1,
    "answer": "campi irrigati",
-   "explanation": "La risposta corretta è 'campi irrigati'.",
+   "explanation": "Le civiltà dei fiumi vivevano dei campi irrigati con l'acqua del fiume, portata fin nei terreni per mezzo dei canali.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13105,7 +13105,7 @@
    ],
    "answerIndex": 2,
    "answer": "come produce e scambia beni",
-   "explanation": "La risposta corretta è 'come produce e scambia beni'.",
+   "explanation": "L'economia riguarda il modo in cui un popolo produce ciò che gli serve e lo scambia con altri.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13135,7 +13135,7 @@
    ],
    "answerIndex": 3,
    "answer": "come sono divise e coordinate le persone nella società",
-   "explanation": "La risposta corretta è 'come sono divise e coordinate le persone nella società'.",
+   "explanation": "L'organizzazione sociale descrive i gruppi in cui una società si divide e i ruoli che ciascuno ha.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13165,7 +13165,7 @@
    ],
    "answerIndex": 0,
    "answer": "perché irrigavano i campi",
-   "explanation": "La risposta corretta è 'perché irrigavano i campi'.",
+   "explanation": "Nelle terre calde la pioggia non basta: l'acqua dei fiumi, portata nei campi con i canali, permetteva di coltivare.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13195,7 +13195,7 @@
    ],
    "answerIndex": 1,
    "answer": "lì era più facile vivere e lavorare",
-   "explanation": "La risposta corretta è 'lì era più facile vivere e lavorare'.",
+   "explanation": "Dove c'erano acqua, terra fertile e clima mite, nutrire molte persone era possibile: per questo lì nacquero le prime grandi civiltà.",
    "active": true,
    "tag": "quadro_di_civilta;classe4",
    "tags": [
@@ -13225,7 +13225,7 @@
    ],
    "answerIndex": 2,
    "answer": "oggetti, edifici e utensili",
-   "explanation": "La risposta corretta è 'oggetti, edifici e utensili'.",
+   "explanation": "Le fonti materiali sono cose concrete lasciate dagli uomini: utensili, vasi, armi, edifici.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13256,7 +13256,7 @@
    ],
    "answerIndex": 3,
    "answer": "norme scritte di un popolo",
-   "explanation": "La risposta corretta è 'norme scritte di un popolo'.",
+   "explanation": "Una stele con una legge incisa mostra quali norme regolavano quel popolo e che le aveva messe per iscritto.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13287,7 +13287,7 @@
    ],
    "answerIndex": 0,
    "answer": "religione e architettura",
-   "explanation": "La risposta corretta è 'religione e architettura'.",
+   "explanation": "Un tempio dice a quali dèi si rivolgeva un popolo e insieme quali tecniche costruttive conosceva.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13318,7 +13318,7 @@
    ],
    "answerIndex": 1,
    "answer": "navi, porti e merci rappresentate",
-   "explanation": "La risposta corretta è 'navi, porti e merci rappresentate'.",
+   "explanation": "Navi, porti e merci raffigurate nei rilievi e nei dipinti raccontano che cosa si scambiava e con chi.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13349,7 +13349,7 @@
    ],
    "answerIndex": 2,
    "answer": "tempo, spazio e attività umane",
-   "explanation": "La risposta corretta è 'tempo, spazio e attività umane'.",
+   "explanation": "Studiare una civiltà vuol dire collocarla nel tempo, nello spazio e capire che cosa facevano le persone che la formavano.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13380,7 +13380,7 @@
    ],
    "answerIndex": 3,
    "answer": "confrontarle con il presente",
-   "explanation": "La risposta corretta è 'confrontarle con il presente'.",
+   "explanation": "Confrontare passato e presente aiuta a capire che cosa è cambiato e che cosa invece è rimasto, e perché.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13411,7 +13411,7 @@
    ],
    "answerIndex": 0,
    "answer": "fiumi, città e territori antichi",
-   "explanation": "La risposta corretta è 'fiumi, città e territori antichi'.",
+   "explanation": "La carta geo-storica rappresenta il territorio come era in una certa epoca: i fiumi, le città e i confini di allora.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13442,7 +13442,7 @@
    ],
    "answerIndex": 1,
    "answer": "un periodo di cento anni",
-   "explanation": "La risposta corretta è 'un periodo di cento anni'.",
+   "explanation": "Un secolo è un periodo di cento anni: il Novecento, per esempio, va dal 1901 al 2000.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13473,7 +13473,7 @@
    ],
    "answerIndex": 2,
    "answer": "più fonti diverse",
-   "explanation": "La risposta corretta è 'più fonti diverse'.",
+   "explanation": "Una fonte sola può ingannare o essere parziale: incrociando fonti diverse lo storico ne verifica le informazioni.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13504,7 +13504,7 @@
    ],
    "answerIndex": 3,
    "answer": "somiglianze e differenze tra civiltà",
-   "explanation": "La risposta corretta è 'somiglianze e differenze tra civiltà'.",
+   "explanation": "Sumeri ed Egizi hanno molto in comune, i fiumi e la scrittura, ma anche differenze: il confronto le fa emergere entrambe.",
    "active": true,
    "tag": "fonti;mappe;classe4",
    "tags": [
@@ -13535,7 +13535,7 @@
    ],
    "answerIndex": 1,
    "answer": "Tigri ed Eufrate",
-   "explanation": "La risposta corretta è 'Tigri ed Eufrate'.",
+   "explanation": "La Mesopotamia occupava la pianura fra il Tigri e l'Eufrate, nell'attuale Iraq.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13566,7 +13566,7 @@
    ],
    "answerIndex": 2,
    "answer": "terra fra i fiumi",
-   "explanation": "La risposta corretta è 'terra fra i fiumi'.",
+   "explanation": "Mesopotamia è parola greca: 'mesos' vuol dire in mezzo e 'potamos' fiume. Significa terra fra i fiumi.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13597,7 +13597,7 @@
    ],
    "answerIndex": 3,
    "answer": "città-stato",
-   "explanation": "La risposta corretta è 'città-stato'.",
+   "explanation": "I Sumeri non formarono un unico regno: ogni città, come Ur o Uruk, governava da sé il territorio circostante.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13628,7 +13628,7 @@
    ],
    "answerIndex": 0,
    "answer": "una città con il territorio intorno e un proprio governo",
-   "explanation": "La risposta corretta è 'una città con il territorio intorno e un proprio governo'.",
+   "explanation": "La città-stato è una città indipendente che governa anche le campagne intorno, con le proprie leggi e il proprio re.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13659,7 +13659,7 @@
    ],
    "answerIndex": 1,
    "answer": "cuneiforme",
-   "explanation": "La risposta corretta è 'cuneiforme'.",
+   "explanation": "I Sumeri inventarono il cuneiforme, così chiamato perché i segni hanno forma di cuneo, incisi con uno stilo appuntito.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13690,7 +13690,7 @@
    ],
    "answerIndex": 2,
    "answer": "tavolette di argilla",
-   "explanation": "La risposta corretta è 'tavolette di argilla'.",
+   "explanation": "In Mesopotamia mancava la pietra ma abbondava l'argilla dei fiumi: si scriveva su tavolette d'argilla, poi fatte seccare.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13721,7 +13721,7 @@
    ],
    "answerIndex": 3,
    "answer": "un grande tempio a gradoni",
-   "explanation": "La risposta corretta è 'un grande tempio a gradoni'.",
+   "explanation": "La ziggurat è il tempio mesopotamico: una torre a gradoni sovrapposti, con il santuario in cima.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13752,7 +13752,7 @@
    ],
    "answerIndex": 0,
    "answer": "irrigare i campi",
-   "explanation": "La risposta corretta è 'irrigare i campi'.",
+   "explanation": "Le piogge erano scarse: i canali portavano l'acqua dei fiumi nei campi, rendendo possibile l'agricoltura.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13783,7 +13783,7 @@
    ],
    "answerIndex": 1,
    "answer": "fiumi e irrigazione",
-   "explanation": "La risposta corretta è 'fiumi e irrigazione'.",
+   "explanation": "Tigri ed Eufrate fornivano l'acqua, e i canali la distribuivano nei campi: senza irrigazione la pianura sarebbe stata arida.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13814,7 +13814,7 @@
    ],
    "answerIndex": 2,
    "answer": "un re o un capo",
-   "explanation": "La risposta corretta è 'un re o un capo'.",
+   "explanation": "Ogni città-stato sumera aveva il proprio re o capo, che governava anche in nome del dio della città.",
    "active": true,
    "tag": "mesopotamia;sumeri;classe4",
    "tags": [
@@ -13845,7 +13845,7 @@
    ],
    "answerIndex": 3,
    "answer": "le leggi di Hammurabi",
-   "explanation": "La risposta corretta è 'le leggi di Hammurabi'.",
+   "explanation": "Hammurabi, re di Babilonia, fece incidere su una stele una grande raccolta di leggi: è il codice che porta il suo nome.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -13877,7 +13877,7 @@
    ],
    "answerIndex": 0,
    "answer": "leggi scritte",
-   "explanation": "La risposta corretta è 'leggi scritte'.",
+   "explanation": "Il codice di Hammurabi è una raccolta di leggi scritte, incise nella pietra perché tutti sapessero quali erano le regole e le pene.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -13909,7 +13909,7 @@
    ],
    "answerIndex": 1,
    "answer": "l'esercito potente",
-   "explanation": "La risposta corretta è \"l'esercito potente\".",
+   "explanation": "Gli Assiri costruirono un impero grazie a un esercito potente, con carri da guerra e macchine d'assedio.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -13941,7 +13941,7 @@
    ],
    "answerIndex": 2,
    "answer": "i Babilonesi",
-   "explanation": "La risposta corretta è 'i Babilonesi'.",
+   "explanation": "Il codice di Hammurabi è babilonese: Hammurabi fu re di Babilonia.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -13973,7 +13973,7 @@
    ],
    "answerIndex": 3,
    "answer": "gli Assiri",
-   "explanation": "La risposta corretta è 'gli Assiri'.",
+   "explanation": "Gli Assiri sono ricordati per la potenza militare, che permise loro di dominare gran parte del Vicino Oriente.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -14005,7 +14005,7 @@
    ],
    "answerIndex": 0,
    "answer": "fiumi e carovane",
-   "explanation": "La risposta corretta è 'fiumi e carovane'.",
+   "explanation": "Le merci viaggiavano sui fiumi con le barche e via terra con le carovane di asini, verso le regioni vicine.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -14037,7 +14037,7 @@
    ],
    "answerIndex": 1,
    "answer": "i depositi dei fiumi",
-   "explanation": "La risposta corretta è 'i depositi dei fiumi'.",
+   "explanation": "Le piene di Tigri ed Eufrate lasciavano sui campi il limo, un deposito ricco che rendeva fertile la pianura.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -14069,7 +14069,7 @@
    ],
    "answerIndex": 2,
    "answer": "templi, artigiani, contadini e governanti",
-   "explanation": "La risposta corretta è 'templi, artigiani, contadini e governanti'.",
+   "explanation": "Nella città-stato ciascuno aveva il suo ruolo: i contadini producevano, gli artigiani lavoravano, i sacerdoti curavano il tempio e i governanti decidevano.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -14101,7 +14101,7 @@
    ],
    "answerIndex": 3,
    "answer": "scrivere",
-   "explanation": "La risposta corretta è 'scrivere'.",
+   "explanation": "Lo scriba conosceva il cuneiforme: sapeva scrivere, e teneva i registri del tempio e del palazzo.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -14133,7 +14133,7 @@
    ],
    "answerIndex": 0,
    "answer": "registrare merci e raccolti",
-   "explanation": "La risposta corretta è 'registrare merci e raccolti'.",
+   "explanation": "La scrittura nasce proprio per contare: le prime tavolette registrano sacchi di grano, capi di bestiame e merci di magazzino.",
    "active": true,
    "tag": "mesopotamia;babilonesi;assiri;classe4",
    "tags": [
@@ -14165,7 +14165,7 @@
    ],
    "answerIndex": 1,
    "answer": "portavano acqua ai campi",
-   "explanation": "La risposta corretta è 'portavano acqua ai campi'.",
+   "explanation": "I canali portavano l'acqua del fiume fin dentro i campi lontani dalla riva, permettendo di coltivarli.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14196,7 +14196,7 @@
    ],
    "answerIndex": 2,
    "answer": "argilla, metalli e tessuti",
-   "explanation": "La risposta corretta è 'argilla, metalli e tessuti'.",
+   "explanation": "Gli artigiani mesopotamici modellavano l'argilla, fondevano i metalli e tessevano la lana.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14227,7 +14227,7 @@
    ],
    "answerIndex": 3,
    "answer": "scritta e materiale",
-   "explanation": "La risposta corretta è 'scritta e materiale'.",
+   "explanation": "Una tavoletta è insieme un oggetto, quindi fonte materiale, e un testo da leggere, quindi fonte scritta.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14258,7 +14258,7 @@
    ],
    "answerIndex": 0,
    "answer": "combattere tra loro",
-   "explanation": "La risposta corretta è 'combattere tra loro'.",
+   "explanation": "Le città-stato erano indipendenti e rivali: si combattevano per il controllo dell'acqua e delle terre.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14289,7 +14289,7 @@
    ],
    "answerIndex": 1,
    "answer": "Vicino Oriente",
-   "explanation": "La risposta corretta è 'Vicino Oriente'.",
+   "explanation": "La Mesopotamia corrisponde all'attuale Iraq, nel Vicino Oriente.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14320,7 +14320,7 @@
    ],
    "answerIndex": 2,
    "answer": "religione e potere",
-   "explanation": "La risposta corretta è 'religione e potere'.",
+   "explanation": "La ziggurat torreggiava sulla città: mostrava quanto contassero il dio e chi ne amministrava il tempio.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14351,7 +14351,7 @@
    ],
    "answerIndex": 3,
    "answer": "regolare la vita della società",
-   "explanation": "La risposta corretta è 'regolare la vita della società'.",
+   "explanation": "Le leggi di Hammurabi stabilivano diritti, doveri e pene: servivano a regolare i rapporti fra le persone.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14382,7 +14382,7 @@
    ],
    "answerIndex": 0,
    "answer": "trasportare merci",
-   "explanation": "La risposta corretta è 'trasportare merci'.",
+   "explanation": "Con la ruota si costruirono i carri, che permettevano di trasportare merci pesanti più in fretta.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
@@ -14413,7 +14413,7 @@
    ],
    "answerIndex": 1,
    "answer": "potevano fertilizzare e danneggiare i campi",
-   "explanation": "La risposta corretta è 'potevano fertilizzare e danneggiare i campi'.",
+   "explanation": "La piena lasciava il limo fertile, ma se era troppo forte allagava i campi e distruggeva il raccolto: da qui argini e canali.",
    "active": true,
    "tag": "mesopotamia;economia;classe4",
    "tags": [
