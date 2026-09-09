@@ -20664,7 +20664,7 @@
    ],
    "answerIndex": 2,
    "answer": "Romolo e Remo",
-   "explanation": "La risposta corretta è 'Romolo e Remo'.",
+   "explanation": "La leggenda attribuisce la fondazione di Roma ai gemelli Romolo e Remo, discendenti di Enea.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20695,7 +20695,7 @@
    ],
    "answerIndex": 3,
    "answer": "lupa",
-   "explanation": "La risposta corretta è 'lupa'.",
+   "explanation": "Il mito racconta che i gemelli, abbandonati sul Tevere, furono allattati da una lupa: è l'immagine simbolo di Roma.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20726,7 +20726,7 @@
    ],
    "answerIndex": 0,
    "answer": "Romolo",
-   "explanation": "La risposta corretta è 'Romolo'.",
+   "explanation": "Secondo la tradizione fu Romolo a fondare la città nel 753 a.C. e a darle il proprio nome.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20757,7 +20757,7 @@
    ],
    "answerIndex": 1,
    "answer": "monarchia",
-   "explanation": "La risposta corretta è 'monarchia'.",
+   "explanation": "Roma fu prima una monarchia, poi una repubblica e infine un impero: sono le tre fasi della sua storia.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20788,7 +20788,7 @@
    ],
    "answerIndex": 2,
    "answer": "il re",
-   "explanation": "La risposta corretta è 'il re'.",
+   "explanation": "Nel periodo monarchico Roma era governata dal re, affiancato dal senato. Consoli e imperatori vennero dopo.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20819,7 +20819,7 @@
    ],
    "answerIndex": 3,
    "answer": "sette",
-   "explanation": "La risposta corretta è 'sette'.",
+   "explanation": "La tradizione elenca sette re, da Romolo a Tarquinio il Superbo.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20850,7 +20850,7 @@
    ],
    "answerIndex": 0,
    "answer": "Tevere",
-   "explanation": "La risposta corretta è 'Tevere'.",
+   "explanation": "Roma nacque sulle rive del Tevere, che le dava acqua, pesce e una via verso il mare.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20881,7 +20881,7 @@
    ],
    "answerIndex": 1,
    "answer": "era vicino a un fiume e a colli",
-   "explanation": "La risposta corretta è 'era vicino a un fiume e a colli'.",
+   "explanation": "I colli erano facili da difendere e il fiume permetteva commerci e rifornimenti: due vantaggi insieme.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20912,7 +20912,7 @@
    ],
    "answerIndex": 2,
    "answer": "Palatino",
-   "explanation": "La risposta corretta è 'Palatino'.",
+   "explanation": "Il Palatino è il colle su cui, secondo la tradizione, Romolo tracciò il solco della città.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20943,7 +20943,7 @@
    ],
    "answerIndex": 3,
    "answer": "anziani e capi delle famiglie importanti",
-   "explanation": "La risposta corretta è 'anziani e capi delle famiglie importanti'.",
+   "explanation": "Il senato era formato dai capi delle famiglie più importanti, i patres: da qui il nome, che viene da 'senex', anziano.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -20974,7 +20974,7 @@
    ],
    "answerIndex": 0,
    "answer": "racconta in forma leggendaria le origini di Roma",
-   "explanation": "La risposta corretta è 'racconta in forma leggendaria le origini di Roma'.",
+   "explanation": "Il mito non è cronaca: racconta in forma leggendaria come i Romani stessi immaginavano le proprie origini.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21005,7 +21005,7 @@
    ],
    "answerIndex": 1,
    "answer": "i reperti e le fonti documentarie",
-   "explanation": "La risposta corretta è 'i reperti e le fonti documentarie'.",
+   "explanation": "Le leggende tramandano racconti, non prove. Lo storico si fonda su reperti e documenti, che si possono verificare.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21036,7 +21036,7 @@
    ],
    "answerIndex": 2,
    "answer": "senato e assemblee",
-   "explanation": "La risposta corretta è 'senato e assemblee'.",
+   "explanation": "Il re governava affiancato dal senato, che consigliava, e dalle assemblee dei cittadini.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21067,7 +21067,7 @@
    ],
    "answerIndex": 3,
    "answer": "latini e sabini",
-   "explanation": "La risposta corretta è 'latini e sabini'.",
+   "explanation": "Roma nacque dall'incontro fra Latini e Sabini, i popoli che abitavano i colli e le terre intorno al Tevere.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21098,7 +21098,7 @@
    ],
    "answerIndex": 0,
    "answer": "gli Etruschi",
-   "explanation": "La risposta corretta è 'gli Etruschi'.",
+   "explanation": "Gli Etruschi dominavano l'Italia centrale e diedero a Roma anche alcuni re: la loro influenza sulla monarchia fu forte.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21129,7 +21129,7 @@
    ],
    "answerIndex": 1,
    "answer": "opere e simboli di potere",
-   "explanation": "La risposta corretta è 'opere e simboli di potere'.",
+   "explanation": "Con i re etruschi arrivarono a Roma grandi opere, come la Cloaca Massima, e i simboli del potere, come i fasci littori.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21160,7 +21160,7 @@
    ],
    "answerIndex": 2,
    "answer": "luogo di incontro e scambio",
-   "explanation": "La risposta corretta è 'luogo di incontro e scambio'.",
+   "explanation": "Il foro nacque nella valle fra i colli come spazio comune di incontro e di mercato, e divenne poi il centro della città.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21191,7 +21191,7 @@
    ],
    "answerIndex": 3,
    "answer": "difesa naturale",
-   "explanation": "La risposta corretta è 'difesa naturale'.",
+   "explanation": "Sui colli si sta in alto rispetto a chi attacca e si controlla il territorio: erano una difesa naturale.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21222,7 +21222,7 @@
    ],
    "answerIndex": 0,
    "answer": "i Romani cacciarono l'ultimo re",
-   "explanation": "La risposta corretta è \"i Romani cacciarono l'ultimo re\".",
+   "explanation": "La monarchia finì quando i Romani cacciarono Tarquinio il Superbo e istituirono la repubblica.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21253,7 +21253,7 @@
    ],
    "answerIndex": 1,
    "answer": "Tarquinio il Superbo",
-   "explanation": "La risposta corretta è 'Tarquinio il Superbo'.",
+   "explanation": "Tarquinio il Superbo fu, secondo la tradizione, il settimo e ultimo re: la sua cacciata segna l'inizio della repubblica.",
    "active": true,
    "tag": "roma;origini;classe5",
    "tags": [
@@ -21284,7 +21284,7 @@
    ],
    "answerIndex": 2,
    "answer": "il mito racconta in forma leggendaria, la storia cerca prove",
-   "explanation": "La risposta corretta è 'il mito racconta in forma leggendaria, la storia cerca prove'.",
+   "explanation": "Il mito spiega le origini con racconti leggendari; la storia cerca prove nei reperti e nei documenti.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -21315,7 +21315,7 @@
    ],
    "answerIndex": 3,
    "answer": "perché il fiume favoriva scambi e vita",
-   "explanation": "La risposta corretta è 'perché il fiume favoriva scambi e vita'.",
+   "explanation": "Il Tevere dava acqua, permetteva di navigare verso il mare e offriva un guado dove le strade si incrociavano: da qui gli scambi.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -21346,7 +21346,7 @@
    ],
    "answerIndex": 0,
    "answer": "monarchia",
-   "explanation": "La risposta corretta è 'monarchia'.",
+   "explanation": "I sette re appartengono alla fase monarchica, la prima della storia di Roma.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -21377,7 +21377,7 @@
    ],
    "answerIndex": 1,
    "answer": "una città organizzata",
-   "explanation": "La risposta corretta è 'una città organizzata'.",
+   "explanation": "Ai re si attribuiscono mura, templi e opere di drenaggio: segno che Roma stava diventando una città organizzata e non più un gruppo di villaggi.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -21408,7 +21408,7 @@
    ],
    "answerIndex": 2,
    "answer": "le origini della città e delle sue istituzioni",
-   "explanation": "La risposta corretta è 'le origini della città e delle sue istituzioni'.",
+   "explanation": "Nella monarchia nascono il senato e le assemblee, che resteranno anche nella repubblica: da lì vengono le istituzioni romane.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -21439,7 +21439,7 @@
    ],
    "answerIndex": 3,
    "answer": "riti, simboli e costruzioni",
-   "explanation": "La risposta corretta è 'riti, simboli e costruzioni'.",
+   "explanation": "Dagli Etruschi Roma prese riti religiosi, simboli del potere e tecniche costruttive, come l'arco e le opere di drenaggio.",
    "active": true,
    "tag": "roma;monarchia;classe5",
    "tags": [
@@ -23285,7 +23285,7 @@
    ],
    "answerIndex": 1,
    "answer": "governatori e funzionari",
-   "explanation": "La risposta corretta è 'governatori e funzionari'.",
+   "explanation": "Le province erano rette da governatori nominati da Roma, affiancati da funzionari che riscuotevano le tasse e amministravano la giustizia.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23317,7 +23317,7 @@
    ],
    "answerIndex": 2,
    "answer": "molti poteri",
-   "explanation": "La risposta corretta è 'molti poteri'.",
+   "explanation": "L'imperatore comandava l'esercito, proponeva le leggi, controllava le province e presiedeva i culti: molti poteri in una sola persona.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23349,7 +23349,7 @@
    ],
    "answerIndex": 3,
    "answer": "c'erano differenze tra ricchi e poveri",
-   "explanation": "La risposta corretta è \"c'erano differenze tra ricchi e poveri\".",
+   "explanation": "Nelle città romane convivevano famiglie ricchissime nelle domus e poveri ammassati nelle insulae: le differenze sociali erano grandi.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23381,7 +23381,7 @@
    ],
    "answerIndex": 0,
    "answer": "case delle famiglie ricche",
-   "explanation": "La risposta corretta è 'case delle famiglie ricche'.",
+   "explanation": "La domus era la casa delle famiglie benestanti, con atrio, giardino e stanze affrescate. I più poveri vivevano nelle insulae, i caseggiati a più piani.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23413,7 +23413,7 @@
    ],
    "answerIndex": 1,
    "answer": "Palestina",
-   "explanation": "La risposta corretta è 'Palestina'.",
+   "explanation": "Il cristianesimo nacque in Palestina, provincia dell'impero, dalla predicazione di Gesù.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23444,7 +23444,7 @@
    ],
    "answerIndex": 2,
    "answer": "un solo Dio e nel messaggio di Gesù",
-   "explanation": "La risposta corretta è 'un solo Dio e nel messaggio di Gesù'.",
+   "explanation": "I cristiani credono in un solo Dio e nel messaggio di Gesù: un monoteismo che si distingueva dal politeismo romano.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23475,7 +23475,7 @@
    ],
    "answerIndex": 3,
    "answer": "perseguitati",
-   "explanation": "La risposta corretta è 'perseguitati'.",
+   "explanation": "I cristiani rifiutavano di sacrificare agli dèi e all'imperatore: per questo furono a lungo considerati nemici dello Stato e perseguitati.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23506,7 +23506,7 @@
    ],
    "answerIndex": 0,
    "answer": "libertà di culto",
-   "explanation": "La risposta corretta è 'libertà di culto'.",
+   "explanation": "L'editto di Milano del 313 d.C. concesse a tutti la libertà di culto: da quel momento i cristiani poterono professare la loro fede apertamente.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23537,7 +23537,7 @@
    ],
    "answerIndex": 1,
    "answer": "Costantino",
-   "explanation": "La risposta corretta è 'Costantino'.",
+   "explanation": "L'editto di Milano fu emanato da Costantino nel 313 d.C.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23568,7 +23568,7 @@
    ],
    "answerIndex": 2,
    "answer": "molte parti dell'impero",
-   "explanation": "La risposta corretta è \"molte parti dell'impero\".",
+   "explanation": "Seguendo le strade e i porti dell'impero, il cristianesimo si diffuse dalle province orientali fino a Roma e all'Occidente.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23599,7 +23599,7 @@
    ],
    "answerIndex": 3,
    "answer": "erano luoghi di sepoltura e memoria",
-   "explanation": "La risposta corretta è 'erano luoghi di sepoltura e memoria'.",
+   "explanation": "Le catacombe erano gallerie sotterranee dove i cristiani seppellivano i morti e ne onoravano la memoria.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23630,7 +23630,7 @@
    ],
    "answerIndex": 0,
    "answer": "uguaglianza e speranza",
-   "explanation": "La risposta corretta è 'uguaglianza e speranza'.",
+   "explanation": "Il messaggio cristiano affermava che tutti gli uomini sono uguali davanti a Dio e prometteva la salvezza: parlava soprattutto agli umili.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23661,7 +23661,7 @@
    ],
    "answerIndex": 1,
    "answer": "religioso e culturale",
-   "explanation": "La risposta corretta è 'religioso e culturale'.",
+   "explanation": "Con il cristianesimo cambiarono i culti, le feste e i valori dell'impero: fu una trasformazione religiosa e insieme culturale.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23692,7 +23692,7 @@
    ],
    "answerIndex": 2,
    "answer": "cristianesimo",
-   "explanation": "La risposta corretta è 'cristianesimo'.",
+   "explanation": "Il cristianesimo, con il suo Dio unico, mise in crisi il politeismo romano e il culto dell'imperatore.",
    "active": true,
    "tag": "roma;cristianesimo;classe5",
    "tags": [
@@ -23723,7 +23723,7 @@
    ],
    "answerIndex": 3,
    "answer": "crisi economiche e difficoltà politiche",
-   "explanation": "La risposta corretta è 'crisi economiche e difficoltà politiche'.",
+   "explanation": "Negli ultimi secoli l'impero soffrì per le tasse pesanti, il commercio in calo e i continui cambi di imperatore: crisi economica e instabilità politica insieme.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23755,7 +23755,7 @@
    ],
    "answerIndex": 0,
    "answer": "ingressi di popoli nei territori dell'impero",
-   "explanation": "La risposta corretta è \"ingressi di popoli nei territori dell'impero\".",
+   "explanation": "Le invasioni barbariche furono l'ingresso di popoli esterni nei territori dell'impero, in parte con la forza e in parte come migrazioni.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23787,7 +23787,7 @@
    ],
    "answerIndex": 1,
    "answer": "Impero d'Occidente e Impero d'Oriente",
-   "explanation": "La risposta corretta è \"Impero d'Occidente e Impero d'Oriente\".",
+   "explanation": "L'impero fu diviso in una parte d'Occidente, con capitale in Italia, e una d'Oriente, con capitale Costantinopoli: era troppo vasto per un solo governo.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23819,7 +23819,7 @@
    ],
    "answerIndex": 2,
    "answer": "d'Occidente",
-   "explanation": "La risposta corretta è \"d'Occidente\".",
+   "explanation": "Nel 476 d.C. cadde l'Impero d'Occidente. Quello d'Oriente proseguì ancora per quasi mille anni.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23851,7 +23851,7 @@
    ],
    "answerIndex": 3,
    "answer": "la fine del mondo antico",
-   "explanation": "La risposta corretta è 'la fine del mondo antico'.",
+   "explanation": "Gli storici usano il 476 d.C. come data convenzionale che chiude l'età antica e apre il Medioevo.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23883,7 +23883,7 @@
    ],
    "answerIndex": 0,
    "answer": "Costantinopoli",
-   "explanation": "La risposta corretta è 'Costantinopoli'.",
+   "explanation": "La capitale d'Oriente era Costantinopoli, fondata da Costantino sul Bosforo, l'attuale Istanbul.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23915,7 +23915,7 @@
    ],
    "answerIndex": 1,
    "answer": "problemi interni e pressioni esterne",
-   "explanation": "La risposta corretta è 'problemi interni e pressioni esterne'.",
+   "explanation": "L'impero fu indebolito insieme da crisi interne, economiche e politiche, e dalla pressione dei popoli ai confini: le due cause si sommarono.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23947,7 +23947,7 @@
    ],
    "answerIndex": 2,
    "answer": "più difficile",
-   "explanation": "La risposta corretta è 'più difficile'.",
+   "explanation": "Un territorio enorme richiede eserciti, funzionari e comunicazioni su distanze grandissime: governarlo diventa più difficile, non più facile.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -23979,7 +23979,7 @@
    ],
    "answerIndex": 3,
    "answer": "popoli esterni al loro mondo",
-   "explanation": "La risposta corretta è 'popoli esterni al loro mondo'.",
+   "explanation": "Barbaro per i Romani era chi viveva fuori dai confini e non parlava latino o greco: indicava l'estraneità, non la ferocia.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
@@ -24011,7 +24011,7 @@
    ],
    "answerIndex": 0,
    "answer": "tutte le eredità di Roma",
-   "explanation": "La risposta corretta è 'tutte le eredità di Roma'.",
+   "explanation": "Caduto l'impero restarono la lingua latina, il diritto, le strade e gli edifici: l'eredità di Roma sopravvisse al suo Stato.",
    "active": true,
    "tag": "roma;crisi;caduta;classe5",
    "tags": [
