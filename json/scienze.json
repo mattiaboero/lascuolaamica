@@ -11318,7 +11318,7 @@
    ],
    "answerIndex": 1,
    "answer": "cellule",
-   "explanation": "La risposta corretta è 'cellule'.",
+   "explanation": "Il sangue è il sistema di trasporto del corpo: porta alle cellule l'ossigeno preso nei polmoni e i nutrienti assorbiti nell'intestino, e ne porta via gli scarti.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11348,7 +11348,7 @@
    ],
    "answerIndex": 2,
    "answer": "masticazione",
-   "explanation": "La risposta corretta è 'masticazione'.",
+   "explanation": "La masticazione è il primo passo della digestione: riduce il cibo in pezzi piccoli e lo mescola alla saliva, che comincia già a scomporre gli amidi.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11378,7 +11378,7 @@
    ],
    "answerIndex": 3,
    "answer": "respiratorio e locomotore",
-   "explanation": "La risposta corretta è 'respiratorio e locomotore'.",
+   "explanation": "Il movimento fa lavorare insieme polmoni, cuore, muscoli e ossa: li rinforza tutti, e l'uno allena l'altro.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11408,7 +11408,7 @@
    ],
    "answerIndex": 0,
    "answer": "recuperare energie",
-   "explanation": "La risposta corretta è 'recuperare energie'.",
+   "explanation": "Durante il sonno il corpo ripara i tessuti, produce gli ormoni della crescita e fissa nella memoria quello che hai imparato di giorno.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11438,7 +11438,7 @@
    ],
    "answerIndex": 1,
    "answer": "trasmettere germi",
-   "explanation": "La risposta corretta è 'trasmettere germi'.",
+   "explanation": "Sulle mani si raccolgono i germi di tutto ciò che tocchiamo, e da lì arrivano a bocca, naso e occhi. Lavarle interrompe proprio quel passaggio.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11468,7 +11468,7 @@
    ],
    "answerIndex": 2,
    "answer": "funzionare bene",
-   "explanation": "La risposta corretta è 'funzionare bene'.",
+   "explanation": "Il corpo è per la maggior parte acqua e ne perde di continuo con sudore, urina e respiro: va reintegrata ogni giorno perché tutto continui a funzionare.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11498,7 +11498,7 @@
    ],
    "answerIndex": 3,
    "answer": "riposo",
-   "explanation": "La risposta corretta è 'riposo'.",
+   "explanation": "Mangiare bene e muoversi non bastano se manca il riposo: è durante il sonno che il corpo recupera dallo sforzo e si ricostruisce.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11528,7 +11528,7 @@
    ],
    "answerIndex": 0,
    "answer": "movimenti e risposte agli stimoli",
-   "explanation": "La risposta corretta è 'movimenti e risposte agli stimoli'.",
+   "explanation": "Il sistema nervoso riceve i segnali dai sensi, li elabora e invia gli ordini ai muscoli: è ciò che coordina il corpo in un insieme unico.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11558,7 +11558,7 @@
    ],
    "answerIndex": 1,
    "answer": "cervello",
-   "explanation": "La risposta corretta è 'cervello'.",
+   "explanation": "I nervi sono i cavi del corpo: portano al cervello quello che i sensi rilevano e riportano indietro i comandi per i muscoli, in frazioni di secondo.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -11588,7 +11588,7 @@
    ],
    "answerIndex": 2,
    "answer": "le ossa",
-   "explanation": "La risposta corretta è 'le ossa'.",
+   "explanation": "Le articolazioni sono i punti in cui due ossa si incontrano: permettono il movimento dello scheletro, che altrimenti sarebbe un blocco rigido.",
    "active": true,
    "tag": "salute;classe5",
    "tags": [
@@ -12529,7 +12529,7 @@
    ],
    "answerIndex": 0,
    "answer": "i corpi celesti",
-   "explanation": "La risposta corretta è 'i corpi celesti'.",
+   "explanation": "Il telescopio raccoglie molta più luce dell'occhio e la concentra: rende visibili corpi troppo deboli o troppo lontani per essere visti a occhio nudo.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12590,7 +12590,7 @@
    ],
    "answerIndex": 0,
    "answer": "cambiamenti",
-   "explanation": "La risposta corretta è 'cambiamenti'.",
+   "explanation": "L'energia è la capacità di produrre un cambiamento: muovere, scaldare, illuminare. Senza energia nulla si trasforma.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12620,7 +12620,7 @@
    ],
    "answerIndex": 1,
    "answer": "Sole",
-   "explanation": "La risposta corretta è 'Sole'.",
+   "explanation": "Il Sole è rinnovabile perché continuerà a splendere per miliardi di anni: usarne l'energia oggi non ne toglie a domani.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12650,7 +12650,7 @@
    ],
    "answerIndex": 2,
    "answer": "petrolio",
-   "explanation": "La risposta corretta è 'petrolio'.",
+   "explanation": "Il petrolio si è formato in milioni di anni da resti di organismi: una volta bruciato non si riforma, per questo è una fonte non rinnovabile.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12680,7 +12680,7 @@
    ],
    "answerIndex": 3,
    "answer": "luce e calore",
-   "explanation": "La risposta corretta è 'luce e calore'.",
+   "explanation": "L'energia non si crea né si distrugge, si trasforma: quella elettrica diventa luce in una lampadina, calore in una stufa, movimento in un motore.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12710,7 +12710,7 @@
    ],
    "answerIndex": 0,
    "answer": "energia luminosa",
-   "explanation": "La risposta corretta è 'energia luminosa'.",
+   "explanation": "La lampadina trasforma l'energia elettrica in luminosa, e in parte anche in calore: per questo dopo un po' scotta.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12740,7 +12740,7 @@
    ],
    "answerIndex": 1,
    "answer": "termica",
-   "explanation": "La risposta corretta è 'termica'.",
+   "explanation": "Il termosifone trasferisce energia termica all'aria della stanza: l'aria calda sale, quella fredda scende e si scalda a sua volta, e la stanza si riscalda tutta.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12770,7 +12770,7 @@
    ],
    "answerIndex": 2,
    "answer": "si rigenerano più facilmente in natura",
-   "explanation": "La risposta corretta è 'si rigenerano più facilmente in natura'.",
+   "explanation": "Le rinnovabili si rigenerano in tempi brevi — il Sole splende ogni giorno, il vento soffia, l'acqua scorre — mentre carbone e petrolio, una volta usati, non tornano.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12800,7 +12800,7 @@
    ],
    "answerIndex": 3,
    "answer": "usarla senza sprechi",
-   "explanation": "La risposta corretta è 'usarla senza sprechi'.",
+   "explanation": "Risparmiare energia non vuol dire rinunciare: vuol dire non consumarla quando non serve a niente, come una luce accesa in una stanza vuota.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12830,7 +12830,7 @@
    ],
    "answerIndex": 0,
    "answer": "pale eoliche",
-   "explanation": "La risposta corretta è 'pale eoliche'.",
+   "explanation": "Il vento spinge le pale, che ruotando fanno girare un generatore: il movimento viene trasformato in corrente elettrica.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12860,7 +12860,7 @@
    ],
    "answerIndex": 1,
    "answer": "idroelettrica",
-   "explanation": "La risposta corretta è 'idroelettrica'.",
+   "explanation": "L'acqua che cade dall'alto fa girare una turbina collegata a un generatore: l'energia del movimento diventa energia elettrica.",
    "active": true,
    "tag": "energia;classe5",
    "tags": [
@@ -12890,7 +12890,7 @@
    ],
    "answerIndex": 2,
    "answer": "fisica",
-   "explanation": "La risposta corretta è 'fisica'.",
+   "explanation": "Nella trasformazione fisica cambia l'aspetto o lo stato, non la sostanza: l'acqua ghiacciata è sempre acqua e tornando liquida è identica a prima.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -12921,7 +12921,7 @@
    ],
    "answerIndex": 3,
    "answer": "fisica",
-   "explanation": "La risposta corretta è 'fisica'.",
+   "explanation": "Il ghiaccio che si scioglie passa da solido a liquido, ma resta acqua: nessuna sostanza nuova si forma, quindi è una trasformazione fisica.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -12952,7 +12952,7 @@
    ],
    "answerIndex": 0,
    "answer": "caldo o freddo",
-   "explanation": "La risposta corretta è 'caldo o freddo'.",
+   "explanation": "La temperatura misura quanto sono agitate le particelle di un corpo: più si muovono, più il corpo è caldo.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -12983,7 +12983,7 @@
    ],
    "answerIndex": 1,
    "answer": "termometro",
-   "explanation": "La risposta corretta è 'termometro'.",
+   "explanation": "Il termometro contiene una sostanza che si dilata col calore: l'altezza raggiunta nel tubicino indica la temperatura su una scala uguale per tutti.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -13014,7 +13014,7 @@
    ],
    "answerIndex": 2,
    "answer": "materiali",
-   "explanation": "La risposta corretta è 'materiali'.",
+   "explanation": "Scaldandosi le particelle si muovono di più e si allontanano fra loro: per questo binari, ponti e cavi si allungano d'estate e si accorciano d'inverno.",
    "active": true,
    "tag": "materia;calore;classe5",
    "tags": [
@@ -13076,7 +13076,7 @@
    ],
    "answerIndex": 0,
    "answer": "la Terra",
-   "explanation": "La risposta corretta è 'la Terra'.",
+   "explanation": "La gravità è l'attrazione fra le masse. Sulla Terra la massa del pianeta attira tutto verso il basso: è per questo che le cose cadono.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13106,7 +13106,7 @@
    ],
    "answerIndex": 1,
    "answer": "ferro",
-   "explanation": "La risposta corretta è 'ferro'.",
+   "explanation": "Il magnete attira ferro, nichel e cobalto. Alluminio, rame, plastica e legno non risentono del campo magnetico e restano fermi.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13136,7 +13136,7 @@
    ],
    "answerIndex": 2,
    "answer": "sollevare o spostare pesi con meno fatica",
-   "explanation": "La risposta corretta è 'sollevare o spostare pesi con meno fatica'.",
+   "explanation": "La leva non riduce il lavoro ma lo distribuisce: si applica una forza minore lungo un tratto più lungo, e il peso si solleva con meno sforzo.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13166,7 +13166,7 @@
    ],
    "answerIndex": 3,
    "answer": "retta",
-   "explanation": "La risposta corretta è 'retta'.",
+   "explanation": "In un mezzo uniforme la luce si propaga in linea retta: è per questo che le ombre hanno i contorni netti e che si vede attraverso un tubo dritto.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13196,7 +13196,7 @@
    ],
    "answerIndex": 0,
    "answer": "un'ombra",
-   "explanation": "La risposta corretta è \"un'ombra\".",
+   "explanation": "L'ombra è la zona in cui la luce non arriva perché un oggetto opaco la blocca: la sua forma dipende da quella dell'oggetto e dalla posizione della sorgente.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13226,7 +13226,7 @@
    ],
    "answerIndex": 1,
    "answer": "luce",
-   "explanation": "La risposta corretta è 'luce'.",
+   "explanation": "Lo specchio è liscio e riflette la luce tutta nella stessa direzione: per questo restituisce un'immagine invece di una luce diffusa.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13256,7 +13256,7 @@
    ],
    "answerIndex": 2,
    "answer": "vibrazione",
-   "explanation": "La risposta corretta è 'vibrazione'.",
+   "explanation": "Il suono nasce da un corpo che vibra: la vibrazione mette in movimento l'aria e l'onda arriva fino all'orecchio. Nel vuoto, senza aria, non si propaga.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13316,7 +13316,7 @@
    ],
    "answerIndex": 0,
    "answer": "dannoso",
-   "explanation": "La risposta corretta è 'dannoso'.",
+   "explanation": "Un suono molto forte fa vibrare troppo le cellule sensibili dell'orecchio interno e può danneggiarle. Quelle cellule non si rigenerano.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13346,7 +13346,7 @@
    ],
    "answerIndex": 1,
    "answer": "vedere gli oggetti",
-   "explanation": "La risposta corretta è 'vedere gli oggetti'.",
+   "explanation": "Vediamo gli oggetti perché la luce del Sole li colpisce e da essi rimbalza fino ai nostri occhi. Al buio gli oggetti ci sono ma non li vediamo.",
    "active": true,
    "tag": "fisica;classe5",
    "tags": [
@@ -13376,7 +13376,7 @@
    ],
    "answerIndex": 2,
    "answer": "gravità",
-   "explanation": "La risposta corretta è 'gravità'.",
+   "explanation": "La mela cade perché la Terra la attira con la sua gravità. La mela attira anche la Terra, ma la sua massa è così piccola che l'effetto non si vede.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13406,7 +13406,7 @@
    ],
    "answerIndex": 3,
    "answer": "respingersi",
-   "explanation": "La risposta corretta è 'respingersi'.",
+   "explanation": "Due poli uguali — nord con nord, sud con sud — si respingono. È una proprietà del magnetismo che si sente anche senza contatto.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13436,7 +13436,7 @@
    ],
    "answerIndex": 0,
    "answer": "attrarsi",
-   "explanation": "La risposta corretta è 'attrarsi'.",
+   "explanation": "Poli diversi si attraggono: il nord di un magnete e il sud dell'altro si avvicinano da soli, tanto più forte quanto più sono vicini.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13466,7 +13466,7 @@
    ],
    "answerIndex": 1,
    "answer": "tra forza e resistenza",
-   "explanation": "La risposta corretta è 'tra forza e resistenza'.",
+   "explanation": "Nella leva di primo genere il fulcro sta in mezzo, fra la forza applicata e il peso da sollevare: sono così le forbici, l'altalena e la tenaglia.",
    "active": true,
    "tag": "forze;classe5",
    "tags": [
@@ -13496,7 +13496,7 @@
    ],
    "answerIndex": 2,
    "answer": "ruvida",
-   "explanation": "La risposta corretta è 'ruvida'.",
+   "explanation": "Su una superficie liscia i raggi riflessi restano paralleli e formano un'immagine; su una ruvida rimbalzano in tutte le direzioni e l'immagine si perde.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13527,7 +13527,7 @@
    ],
    "answerIndex": 3,
    "answer": "molta luce",
-   "explanation": "La risposta corretta è 'molta luce'.",
+   "explanation": "Un materiale trasparente lascia passare quasi tutta la luce e permette di vedere attraverso; uno traslucido ne fa passare una parte, uno opaco la ferma.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13558,7 +13558,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'ombra",
-   "explanation": "La risposta corretta è \"l'ombra\".",
+   "explanation": "Se la sorgente è dietro l'oggetto, davanti la luce non arriva: si forma l'ombra, tanto più grande quanto più la luce è vicina all'oggetto.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13589,7 +13589,7 @@
    ],
    "answerIndex": 1,
    "answer": "sgradevole o troppo forte",
-   "explanation": "La risposta corretta è 'sgradevole o troppo forte'.",
+   "explanation": "Il rumore è un suono disordinato o troppo intenso: disturba, affatica e a lungo andare può danneggiare l'udito.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [
@@ -13620,7 +13620,7 @@
    ],
    "answerIndex": 2,
    "answer": "suoni troppo forti per lungo tempo",
-   "explanation": "La risposta corretta è 'suoni troppo forti per lungo tempo'.",
+   "explanation": "Il danno all'udito dipende da quanto è forte il suono e da quanto a lungo lo si ascolta: anche un volume medio, per ore, può fare male.",
    "active": true,
    "tag": "luce;suono;classe5",
    "tags": [

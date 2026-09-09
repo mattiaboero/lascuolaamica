@@ -2901,7 +2901,7 @@
    ],
    "answerIndex": 3,
    "answer": "una pianta",
-   "explanation": "La risposta corretta è 'una pianta'.",
+   "explanation": "La pianta è il disegno di uno spazio visto dall'alto, come se si togliesse il soffitto: mostra dove stanno le cose una rispetto all'altra.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -2934,7 +2934,7 @@
    ],
    "answerIndex": 0,
    "answer": "la legenda",
-   "explanation": "La risposta corretta è 'la legenda'.",
+   "explanation": "La legenda spiega che cosa significa ogni simbolo: senza, i segni sul foglio restano macchie e la pianta non si può leggere.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -2967,7 +2967,7 @@
    ],
    "answerIndex": 1,
    "answer": "un simbolo",
-   "explanation": "La risposta corretta è 'un simbolo'.",
+   "explanation": "Sulla pianta non si disegna la porta com'è: si usa un simbolo, cioè un segno convenzionale che tutti sanno interpretare grazie alla legenda.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3000,7 +3000,7 @@
    ],
    "answerIndex": 2,
    "answer": "frecce e linee",
-   "explanation": "La risposta corretta è 'frecce e linee'.",
+   "explanation": "Le frecce indicano la direzione e le linee il tracciato: insieme raccontano il percorso, che in un disegno fermo non si vedrebbe.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3033,7 +3033,7 @@
    ],
    "answerIndex": 3,
    "answer": "nello spazio",
-   "explanation": "La risposta corretta è 'nello spazio'.",
+   "explanation": "La pianta non dice quando o perché: dice dove. Serve a mostrare la posizione degli oggetti l'uno rispetto all'altro.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3066,7 +3066,7 @@
    ],
    "answerIndex": 0,
    "answer": "ridotto",
-   "explanation": "La risposta corretta è 'ridotto'.",
+   "explanation": "Sul foglio non ci sta un tavolo vero: si disegna ridotto, mantenendo le proporzioni, così che i rapporti fra le misure restino giusti.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3099,7 +3099,7 @@
    ],
    "answerIndex": 1,
    "answer": "una pianta",
-   "explanation": "La risposta corretta è 'una pianta'.",
+   "explanation": "La vista dall'alto di un giardino è proprio una pianta: mostra la disposizione di aiuole, alberi e vialetti come se li guardassi da sopra.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3132,7 +3132,7 @@
    ],
    "answerIndex": 2,
    "answer": "un simbolo",
-   "explanation": "La risposta corretta è 'un simbolo'.",
+   "explanation": "Un segno che sta al posto di una cosa vera è un simbolo: il quadratino non assomiglia a un banco, ma la legenda dice che quello significa.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
