@@ -77,6 +77,11 @@ const REGOLE = [
   // Dal lotto 31 delle istanze: vagoni da 7 posti e vagoni da 175. Un vagone
   // passeggeri ne ha 60-90, un piano doppio arriva a 120.
   { re: /\b(vagoni) con\s+(\d[\d.]*)\s*posti/gi, min: 40, max: 130, cosa: 'posti in un vagone' },
+  // Dal lotto 33 delle istanze: righelli da 12 euro e quaderni da 11. In
+  // cartoleria costano 1-3 euro. Il compasso resta fuori: 4-11 e' il suo
+  // prezzo vero, e infatti non e' nell'elenco.
+  { re: /\bogni (righello|quaderno|penna|evidenziatore|gomma|matita) costa\s+(\d[\d.]*)\s*euro/gi,
+    min: 1, max: 3, cosa: 'prezzo di un articolo di cartoleria' },
 ];
 
 function main() {

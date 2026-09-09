@@ -6164,16 +6164,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni quaderno costa 11 euro. Anna ne compra 4. Quanto spende in tutto?",
+   "question": "In cartoleria ogni quaderno costa 3 euro. Anna ne compra 4. Quanto spende in tutto?",
    "options": [
-    "44",
-    "56",
-    "42",
-    "35"
+    "12",
+    "24",
+    "10",
+    "3"
    ],
    "answerIndex": 0,
-   "answer": "44",
-   "explanation": "Costo totale: 11 euro × 4 = 44 euro.",
+   "answer": "12",
+   "explanation": "Costo totale: 3 euro × 4 = 12 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -6286,16 +6286,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni penna costa 4 euro. Elisa ne compra 9. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 2 euro. Elisa ne compra 9. Quanto spende in tutto?",
    "options": [
-    "36",
-    "40",
-    "39",
-    "54"
+    "18",
+    "22",
+    "21",
+    "36"
    ],
    "answerIndex": 0,
-   "answer": "36",
-   "explanation": "Costo totale: 4 euro × 9 = 36 euro.",
+   "answer": "18",
+   "explanation": "Costo totale: 2 euro × 9 = 18 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -6773,16 +6773,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni quaderno costa 10 euro. Sara ne compra 12. Quanto spende in tutto?",
+   "question": "In cartoleria ogni quaderno costa 2 euro. Sara ne compra 12. Quanto spende in tutto?",
    "options": [
-    "120",
-    "121",
-    "124",
-    "116"
+    "24",
+    "25",
+    "28",
+    "20"
    ],
    "answerIndex": 0,
-   "answer": "120",
-   "explanation": "Costo totale: 10 euro × 12 = 120 euro.",
+   "answer": "24",
+   "explanation": "Costo totale: 2 euro × 12 = 24 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -6924,16 +6924,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni penna costa 10 euro. Monica ne compra 4. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 2 euro. Monica ne compra 4. Quanto spende in tutto?",
    "options": [
-    "41",
-    "40",
-    "52",
-    "46"
+    "9",
+    "8",
+    "20",
+    "14"
    ],
    "answerIndex": 1,
-   "answer": "40",
-   "explanation": "Costo totale: 10 euro × 4 = 40 euro.",
+   "answer": "8",
+   "explanation": "Costo totale: 2 euro × 4 = 8 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -7135,16 +7135,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni quaderno costa 9 euro. Roberta ne compra 10. Quanto spende in tutto?",
+   "question": "In cartoleria ogni quaderno costa 1 euro. Roberta ne compra 10. Quanto spende in tutto?",
    "options": [
-    "90",
-    "270",
-    "95",
-    "135"
+    "10",
+    "190",
+    "15",
+    "55"
    ],
    "answerIndex": 0,
-   "answer": "90",
-   "explanation": "Costo totale: 9 euro × 10 = 90 euro.",
+   "answer": "10",
+   "explanation": "Costo totale: 1 euro × 10 = 10 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -7408,16 +7408,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 5 euro. Matteo ne compra 10. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 3 euro. Matteo ne compra 10. Quanto spende in tutto?",
    "options": [
-    "54",
-    "50",
-    "58",
-    "45"
+    "34",
+    "30",
+    "38",
+    "25"
    ],
    "answerIndex": 1,
-   "answer": "50",
-   "explanation": "Costo totale: 5 euro × 10 = 50 euro.",
+   "answer": "30",
+   "explanation": "Costo totale: 3 euro × 10 = 30 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -7559,16 +7559,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 12 euro. Giulia ne compra 11. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 1 euro. Giulia ne compra 11. Quanto spende in tutto?",
    "options": [
-    "99",
-    "264",
-    "132",
-    "142"
+    "12",
+    "13",
+    "11",
+    "14"
    ],
    "answerIndex": 2,
-   "answer": "132",
-   "explanation": "Costo totale: 12 euro × 11 = 132 euro.",
+   "answer": "11",
+   "explanation": "Costo totale: 1 euro × 11 = 11 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -8739,16 +8739,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni quaderno costa 8 euro. Giorgia ne compra 6. Quanto spende in tutto?",
+   "question": "In cartoleria ogni quaderno costa 3 euro. Giorgia ne compra 6. Quanto spende in tutto?",
    "options": [
-    "72",
-    "48",
-    "56",
-    "39"
+    "42",
+    "18",
+    "26",
+    "9"
    ],
    "answerIndex": 1,
-   "answer": "48",
-   "explanation": "Costo totale: 8 euro × 6 = 48 euro.",
+   "answer": "18",
+   "explanation": "Costo totale: 3 euro × 6 = 18 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -8920,16 +8920,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 4 euro. Andrea ne compra 14. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 2 euro. Andrea ne compra 14. Quanto spende in tutto?",
    "options": [
-    "63",
-    "41",
-    "84",
-    "56"
+    "35",
+    "13",
+    "56",
+    "28"
    ],
    "answerIndex": 3,
-   "answer": "56",
-   "explanation": "Costo totale: 4 euro × 14 = 56 euro.",
+   "answer": "28",
+   "explanation": "Costo totale: 2 euro × 14 = 28 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -9313,16 +9313,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni quaderno costa 9 euro. Monica ne compra 12. Quanto spende in tutto?",
+   "question": "In cartoleria ogni quaderno costa 1 euro. Monica ne compra 12. Quanto spende in tutto?",
    "options": [
-    "108",
-    "106",
-    "54",
-    "109"
+    "12",
+    "14",
+    "15",
+    "16"
    ],
    "answerIndex": 0,
-   "answer": "108",
-   "explanation": "Costo totale: 9 euro × 12 = 108 euro.",
+   "answer": "12",
+   "explanation": "Costo totale: 1 euro × 12 = 12 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -9615,16 +9615,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni quaderno costa 9 euro. Matteo ne compra 6. Quanto spende in tutto?",
+   "question": "In cartoleria ogni quaderno costa 1 euro. Matteo ne compra 6. Quanto spende in tutto?",
    "options": [
-    "55",
-    "51",
-    "54",
-    "27"
+    "8",
+    "7",
+    "6",
+    "9"
    ],
    "answerIndex": 2,
-   "answer": "54",
-   "explanation": "Costo totale: 9 euro × 6 = 54 euro.",
+   "answer": "6",
+   "explanation": "Costo totale: 1 euro × 6 = 6 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -9765,16 +9765,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni penna costa 10 euro. Matteo ne compra 9. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 2 euro. Matteo ne compra 9. Quanto spende in tutto?",
    "options": [
-    "112",
-    "78",
-    "96",
-    "90"
+    "40",
+    "6",
+    "24",
+    "18"
    ],
    "answerIndex": 3,
-   "answer": "90",
-   "explanation": "Costo totale: 10 euro × 9 = 90 euro.",
+   "answer": "18",
+   "explanation": "Costo totale: 2 euro × 9 = 18 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -10639,16 +10639,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 7 euro. Giorgio ne compra 7. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 2 euro. Giorgio ne compra 7. Quanto spende in tutto?",
    "options": [
-    "49",
-    "45",
-    "57",
-    "51"
+    "14",
+    "10",
+    "22",
+    "16"
    ],
    "answerIndex": 0,
-   "answer": "49",
-   "explanation": "Costo totale: 7 euro × 7 = 49 euro.",
+   "answer": "14",
+   "explanation": "Costo totale: 2 euro × 7 = 14 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -10759,16 +10759,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 7 euro. Beatrice ne compra 12. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 2 euro. Beatrice ne compra 12. Quanto spende in tutto?",
    "options": [
-    "84",
-    "96",
-    "94",
-    "77"
+    "24",
+    "36",
+    "34",
+    "17"
    ],
    "answerIndex": 0,
-   "answer": "84",
-   "explanation": "Costo totale: 7 euro × 12 = 84 euro.",
+   "answer": "24",
+   "explanation": "Costo totale: 2 euro × 12 = 24 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -11275,16 +11275,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 9 euro. Sara ne compra 8. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 1 euro. Sara ne compra 8. Quanto spende in tutto?",
    "options": [
-    "87",
-    "72",
-    "70",
-    "60"
+    "9",
+    "8",
+    "10",
+    "11"
    ],
    "answerIndex": 1,
-   "answer": "72",
-   "explanation": "Costo totale: 9 euro × 8 = 72 euro.",
+   "answer": "8",
+   "explanation": "Costo totale: 1 euro × 8 = 8 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -11365,16 +11365,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni righello costa 5 euro. Nicola ne compra 9. Quanto spende in tutto?",
+   "question": "In cartoleria ogni righello costa 3 euro. Nicola ne compra 9. Quanto spende in tutto?",
    "options": [
-    "45",
-    "55",
-    "46",
-    "43"
+    "27",
+    "37",
+    "28",
+    "25"
    ],
    "answerIndex": 0,
-   "answer": "45",
-   "explanation": "Costo totale: 5 euro × 9 = 45 euro.",
+   "answer": "27",
+   "explanation": "Costo totale: 3 euro × 9 = 27 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -11667,16 +11667,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni evidenziatore costa 11 euro. Daniele ne compra 6. Quanto spende in tutto?",
+   "question": "In cartoleria ogni evidenziatore costa 3 euro. Daniele ne compra 6. Quanto spende in tutto?",
    "options": [
-    "58",
-    "82",
-    "66",
-    "132"
+    "10",
+    "34",
+    "18",
+    "84"
    ],
    "answerIndex": 2,
-   "answer": "66",
-   "explanation": "Costo totale: 11 euro × 6 = 66 euro.",
+   "answer": "18",
+   "explanation": "Costo totale: 3 euro × 6 = 18 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -22264,16 +22264,16 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 12 uova. Quante uova servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 4 uova. Quante uova servono per 6 persone?",
    "options": [
-    "36",
     "12",
-    "2",
-    "18"
+    "13",
+    "14",
+    "15"
    ],
    "answerIndex": 0,
-   "answer": "36",
-   "explanation": "Per 2 persone → 12 uova. Per 6 persone (3 volte tanto): 12 × 3 = 36.",
+   "answer": "12",
+   "explanation": "Per 2 persone → 4 uova. Per 6 persone (3 volte tanto): 4 × 3 = 12.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
