@@ -18699,7 +18699,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 8 grammi di zucchero. Quanti grammi di zucchero servono per 15 persone?",
+   "question": "Una ricetta per 5 persone richiede 8 cucchiai di zucchero. Quanti cucchiai di zucchero servono per 15 persone?",
    "options": [
     "5",
     "9",
@@ -18708,7 +18708,7 @@
    ],
    "answerIndex": 2,
    "answer": "24",
-   "explanation": "Per 5 persone → 8 grammi di zucchero. Per 15 persone (3 volte tanto): 8 × 3 = 24.",
+   "explanation": "Per 5 persone → 8 cucchiai di zucchero. Per 15 persone (3 volte tanto): 8 × 3 = 24.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19102,7 +19102,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 12 grammi di farina. Quanti grammi di farina servono per 12 persone?",
+   "question": "Una ricetta per 4 persone richiede 12 cucchiai di farina. Quanti cucchiai di farina servono per 12 persone?",
    "options": [
     "12",
     "18",
@@ -19111,7 +19111,7 @@
    ],
    "answerIndex": 2,
    "answer": "36",
-   "explanation": "Per 4 persone → 12 grammi di farina. Per 12 persone (3 volte tanto): 12 × 3 = 36.",
+   "explanation": "Per 4 persone → 12 cucchiai di farina. Per 12 persone (3 volte tanto): 12 × 3 = 36.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19164,7 +19164,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 10 grammi di farina. Quanti grammi di farina servono per 12 persone?",
+   "question": "Una ricetta per 4 persone richiede 10 cucchiai di farina. Quanti cucchiai di farina servono per 12 persone?",
    "options": [
     "4",
     "30",
@@ -19173,7 +19173,7 @@
    ],
    "answerIndex": 1,
    "answer": "30",
-   "explanation": "Per 4 persone → 10 grammi di farina. Per 12 persone (3 volte tanto): 10 × 3 = 30.",
+   "explanation": "Per 4 persone → 10 cucchiai di farina. Per 12 persone (3 volte tanto): 10 × 3 = 30.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19443,7 +19443,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 11 grammi di farina. Quanti grammi di farina servono per 15 persone?",
+   "question": "Una ricetta per 5 persone richiede 11 cucchiai di farina. Quanti cucchiai di farina servono per 15 persone?",
    "options": [
     "11",
     "5",
@@ -19452,7 +19452,7 @@
    ],
    "answerIndex": 2,
    "answer": "33",
-   "explanation": "Per 5 persone → 11 grammi di farina. Per 15 persone (3 volte tanto): 11 × 3 = 33.",
+   "explanation": "Per 5 persone → 11 cucchiai di farina. Per 15 persone (3 volte tanto): 11 × 3 = 33.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19505,7 +19505,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 9 grammi di burro. Quanti grammi di burro servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 9 cucchiai di burro. Quanti cucchiai di burro servono per 6 persone?",
    "options": [
     "2",
     "27",
@@ -19514,7 +19514,7 @@
    ],
    "answerIndex": 1,
    "answer": "27",
-   "explanation": "Per 2 persone → 9 grammi di burro. Per 6 persone (3 volte tanto): 9 × 3 = 27.",
+   "explanation": "Per 2 persone → 9 cucchiai di burro. Per 6 persone (3 volte tanto): 9 × 3 = 27.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -19970,7 +19970,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 8 grammi di zucchero. Quanti grammi di zucchero servono per 20 persone?",
+   "question": "Una ricetta per 5 persone richiede 8 cucchiai di zucchero. Quanti cucchiai di zucchero servono per 20 persone?",
    "options": [
     "32",
     "5",
@@ -19979,7 +19979,7 @@
    ],
    "answerIndex": 0,
    "answer": "32",
-   "explanation": "Per 5 persone → 8 grammi di zucchero. Per 20 persone (4 volte tanto): 8 × 4 = 32.",
+   "explanation": "Per 5 persone → 8 cucchiai di zucchero. Per 20 persone (4 volte tanto): 8 × 4 = 32.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20559,7 +20559,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 10 grammi di zucchero. Quanti grammi di zucchero servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 10 cucchiai di zucchero. Quanti cucchiai di zucchero servono per 6 persone?",
    "options": [
     "2",
     "15",
@@ -20568,7 +20568,7 @@
    ],
    "answerIndex": 2,
    "answer": "30",
-   "explanation": "Per 2 persone → 10 grammi di zucchero. Per 6 persone (3 volte tanto): 10 × 3 = 30.",
+   "explanation": "Per 2 persone → 10 cucchiai di zucchero. Per 6 persone (3 volte tanto): 10 × 3 = 30.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20621,7 +20621,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 10 grammi di zucchero. Quanti grammi di zucchero servono per 8 persone?",
+   "question": "Una ricetta per 4 persone richiede 10 cucchiai di zucchero. Quanti cucchiai di zucchero servono per 8 persone?",
    "options": [
     "4",
     "10",
@@ -20630,7 +20630,7 @@
    ],
    "answerIndex": 2,
    "answer": "20",
-   "explanation": "Per 4 persone → 10 grammi di zucchero. Per 8 persone (2 volte tanto): 10 × 2 = 20.",
+   "explanation": "Per 4 persone → 10 cucchiai di zucchero. Per 8 persone (2 volte tanto): 10 × 2 = 20.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20714,7 +20714,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 6 grammi di burro. Quanti grammi di burro servono per 6 persone?",
+   "question": "Una ricetta per 2 persone richiede 6 cucchiai di burro. Quanti cucchiai di burro servono per 6 persone?",
    "options": [
     "2",
     "9",
@@ -20723,7 +20723,7 @@
    ],
    "answerIndex": 3,
    "answer": "18",
-   "explanation": "Per 2 persone → 6 grammi di burro. Per 6 persone (3 volte tanto): 6 × 3 = 18.",
+   "explanation": "Per 2 persone → 6 cucchiai di burro. Per 6 persone (3 volte tanto): 6 × 3 = 18.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -20776,7 +20776,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 8 grammi di burro. Quanti grammi di burro servono per 10 persone?",
+   "question": "Una ricetta per 5 persone richiede 8 cucchiai di burro. Quanti cucchiai di burro servono per 10 persone?",
    "options": [
     "8",
     "5",
@@ -20785,7 +20785,7 @@
    ],
    "answerIndex": 2,
    "answer": "16",
-   "explanation": "Per 5 persone → 8 grammi di burro. Per 10 persone (2 volte tanto): 8 × 2 = 16.",
+   "explanation": "Per 5 persone → 8 cucchiai di burro. Per 10 persone (2 volte tanto): 8 × 2 = 16.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -21365,7 +21365,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 11 grammi di farina. Quanti grammi di farina servono per 9 persone?",
+   "question": "Una ricetta per 3 persone richiede 11 cucchiai di farina. Quanti cucchiai di farina servono per 9 persone?",
    "options": [
     "11",
     "3",
@@ -21374,7 +21374,7 @@
    ],
    "answerIndex": 3,
    "answer": "33",
-   "explanation": "Per 3 persone → 11 grammi di farina. Per 9 persone (3 volte tanto): 11 × 3 = 33.",
+   "explanation": "Per 3 persone → 11 cucchiai di farina. Per 9 persone (3 volte tanto): 11 × 3 = 33.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -21768,7 +21768,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 5 persone richiede 9 grammi di zucchero. Quanti grammi di zucchero servono per 10 persone?",
+   "question": "Una ricetta per 5 persone richiede 9 cucchiai di zucchero. Quanti cucchiai di zucchero servono per 10 persone?",
    "options": [
     "5",
     "9",
@@ -21777,7 +21777,7 @@
    ],
    "answerIndex": 2,
    "answer": "18",
-   "explanation": "Per 5 persone → 9 grammi di zucchero. Per 10 persone (2 volte tanto): 9 × 2 = 18.",
+   "explanation": "Per 5 persone → 9 cucchiai di zucchero. Per 10 persone (2 volte tanto): 9 × 2 = 18.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -22605,7 +22605,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 8 grammi di burro. Quanti grammi di burro servono per 16 persone?",
+   "question": "Una ricetta per 4 persone richiede 8 cucchiai di burro. Quanti cucchiai di burro servono per 16 persone?",
    "options": [
     "8",
     "32",
@@ -22614,7 +22614,7 @@
    ],
    "answerIndex": 1,
    "answer": "32",
-   "explanation": "Per 4 persone → 8 grammi di burro. Per 16 persone (4 volte tanto): 8 × 4 = 32.",
+   "explanation": "Per 4 persone → 8 cucchiai di burro. Per 16 persone (4 volte tanto): 8 × 4 = 32.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -22977,7 +22977,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 4 persone richiede 5 grammi di burro. Quanti grammi di burro servono per 8 persone?",
+   "question": "Una ricetta per 4 persone richiede 5 cucchiai di burro. Quanti cucchiai di burro servono per 8 persone?",
    "options": [
     "10",
     "5",
@@ -22986,7 +22986,7 @@
    ],
    "answerIndex": 0,
    "answer": "10",
-   "explanation": "Per 4 persone → 5 grammi di burro. Per 8 persone (2 volte tanto): 5 × 2 = 10.",
+   "explanation": "Per 4 persone → 5 cucchiai di burro. Per 8 persone (2 volte tanto): 5 × 2 = 10.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -23256,7 +23256,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 3 persone richiede 6 grammi di zucchero. Quanti grammi di zucchero servono per 12 persone?",
+   "question": "Una ricetta per 3 persone richiede 6 cucchiai di zucchero. Quanti cucchiai di zucchero servono per 12 persone?",
    "options": [
     "6",
     "9",
@@ -23265,7 +23265,7 @@
    ],
    "answerIndex": 2,
    "answer": "24",
-   "explanation": "Per 3 persone → 6 grammi di zucchero. Per 12 persone (4 volte tanto): 6 × 4 = 24.",
+   "explanation": "Per 3 persone → 6 cucchiai di zucchero. Per 12 persone (4 volte tanto): 6 × 4 = 24.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [
@@ -23349,7 +23349,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Una ricetta per 2 persone richiede 11 grammi di burro. Quanti grammi di burro servono per 8 persone?",
+   "question": "Una ricetta per 2 persone richiede 11 cucchiai di burro. Quanti cucchiai di burro servono per 8 persone?",
    "options": [
     "132",
     "11",
@@ -23358,7 +23358,7 @@
    ],
    "answerIndex": 3,
    "answer": "44",
-   "explanation": "Per 2 persone → 11 grammi di burro. Per 8 persone (4 volte tanto): 11 × 4 = 44.",
+   "explanation": "Per 2 persone → 11 cucchiai di burro. Per 8 persone (4 volte tanto): 11 × 4 = 44.",
    "active": true,
    "tag": "proporzione,ricette,rapporto",
    "tags": [

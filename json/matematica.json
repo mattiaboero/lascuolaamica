@@ -33324,16 +33324,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 11 cm, lati 2 cm. Qual è il perimetro?",
+   "question": "Triangolo isoscele: base 2 cm, lati 11 cm. Qual è il perimetro?",
    "options": [
-    "14",
-    "15",
-    "12",
-    "13"
+    "23",
+    "24",
+    "21",
+    "22"
    ],
    "answerIndex": 1,
-   "answer": "15",
-   "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 11 + 2 + 2 = 15 cm.",
+   "answer": "24",
+   "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 2 + 11 + 11 = 24 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_3;primaria",
    "tags": [
@@ -33708,16 +33708,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 7 cm, lati 3 cm. Qual è il perimetro?",
+   "question": "Triangolo isoscele: base 3 cm, lati 7 cm. Qual è il perimetro?",
    "options": [
-    "11",
-    "13",
-    "10",
-    "12"
+    "15",
+    "17",
+    "14",
+    "16"
    ],
    "answerIndex": 1,
-   "answer": "13",
-   "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 7 + 3 + 3 = 13 cm.",
+   "answer": "17",
+   "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 3 + 7 + 7 = 17 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_3;primaria",
    "tags": [
@@ -34540,16 +34540,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Triangolo isoscele: base 9 cm, lati 3 cm. Qual è il perimetro?",
+   "question": "Triangolo isoscele: base 3 cm, lati 9 cm. Qual è il perimetro?",
    "options": [
-    "14",
-    "15",
-    "12",
-    "13"
+    "20",
+    "21",
+    "18",
+    "19"
    ],
    "answerIndex": 1,
-   "answer": "15",
-   "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 9 + 3 + 3 = 15 cm.",
+   "answer": "21",
+   "explanation": "Il triangolo isoscele ha 2 lati uguali e 1 base: somma base + lato + lato. 3 + 9 + 9 = 21 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_3;primaria",
    "tags": [
@@ -35276,16 +35276,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 7 cm, 14 cm, 3 cm. Qual è il perimetro?",
+   "question": "Triangolo con lati 7 cm, 9 cm, 3 cm. Qual è il perimetro?",
    "options": [
-    "23",
-    "21",
-    "22",
-    "24"
+    "18",
+    "16",
+    "17",
+    "19"
    ],
    "answerIndex": 3,
-   "answer": "24",
-   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 7 + 14 + 3 = 24 cm.",
+   "answer": "19",
+   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 7 + 9 + 3 = 19 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [
@@ -36300,16 +36300,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 7 cm, 13 cm, 6 cm. Qual è il perimetro?",
+   "question": "Triangolo con lati 7 cm, 12 cm, 6 cm. Qual è il perimetro?",
    "options": [
-    "24",
     "23",
-    "26",
-    "25"
+    "22",
+    "25",
+    "24"
    ],
    "answerIndex": 2,
-   "answer": "26",
-   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 7 + 13 + 6 = 26 cm.",
+   "answer": "25",
+   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 7 + 12 + 6 = 25 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [
@@ -36972,16 +36972,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 11 cm, 6 cm, 5 cm. Qual è il perimetro?",
+   "question": "Triangolo con lati 10 cm, 6 cm, 5 cm. Qual è il perimetro?",
    "options": [
-    "21",
     "20",
     "19",
-    "22"
+    "18",
+    "21"
    ],
    "answerIndex": 3,
-   "answer": "22",
-   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 11 + 6 + 5 = 22 cm.",
+   "answer": "21",
+   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 10 + 6 + 5 = 21 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [
@@ -37324,16 +37324,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Triangolo con lati 6 cm, 4 cm, 10 cm. Qual è il perimetro?",
+   "question": "Triangolo con lati 6 cm, 4 cm, 9 cm. Qual è il perimetro?",
    "options": [
-    "19",
-    "17",
     "18",
-    "20"
+    "16",
+    "17",
+    "19"
    ],
    "answerIndex": 3,
-   "answer": "20",
-   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 6 + 4 + 10 = 20 cm.",
+   "answer": "19",
+   "explanation": "Il perimetro del triangolo è la somma dei tre lati: 6 + 4 + 9 = 19 cm.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [

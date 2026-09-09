@@ -33,6 +33,9 @@ const REGOLE = [
   // Dal lotto 3 delle famiglie.
   { re: /\b(treno)\b[^.?!]{0,40}?(\d[\d.]*)\s*vagoni/gi, min: 1, max: 30, cosa: 'vagoni di un treno' },
   { re: /\b(classe)\b[^.?!]{0,20}?(\d[\d.]*)\s*alunni/gi, min: 12, max: 30, cosa: 'alunni di una classe' },
+  // Dal lotto 4 delle famiglie: 5-12 grammi di farina, zucchero o burro per
+  // quattro persone sono un cucchiaino.
+  { re: /\b(ricetta)\b[^.?!]{0,60}?(\d[\d.]*)\s*grammi/gi, min: 50, max: 5000, cosa: 'grammi in una ricetta' },
 ];
 
 function main() {

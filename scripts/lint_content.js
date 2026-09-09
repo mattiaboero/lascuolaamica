@@ -587,6 +587,28 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     }
   }
 
+  // Dal lotto 4 delle famiglie: triangolo che non si chiude. Sette domande
+  // chiedevano il perimetro di un triangolo impossibile — "lati 7, 14 e 3 cm"
+  // non sta in piedi, perche' 7 + 3 non arriva a 14, e un isoscele con base 11
+  // e lati 2 nemmeno. Il conto tornava, la figura no: nessun controllo lo
+  // vedeva, perche' guardavano tutti l'aritmetica.
+  {
+    const d = (question || '').trim();
+    let lati = null;
+    let m = /Triangolo con lati (\d+)\s*cm,\s*(\d+)\s*cm,\s*(\d+)\s*cm/.exec(d);
+    if (m) lati = [Number(m[1]), Number(m[2]), Number(m[3])];
+    if (!lati) {
+      m = /isoscele:?\s*base (\d+)\s*cm,?\s*lati (\d+)\s*cm/.exec(d);
+      if (m) lati = [Number(m[1]), Number(m[2]), Number(m[2])];
+    }
+    if (lati) {
+      const [a, b, c] = [...lati].sort((x, y) => x - y);
+      if (a + b <= c) {
+        errors.push({ level: 'error', field: 'question', msg: `triangolo impossibile: con i lati ${lati.join(', ')} la figura non si chiude` });
+      }
+    }
+  }
+
   // Dal lotto 1 delle famiglie: sequenza numerica la cui risposta non e' il
   // termine successivo. Tutte e otto le sequenze geometriche del banco avevano
   // per risposta il termine DOPO quello richiesto (2, 8, 32, 128 -> 2048 invece
