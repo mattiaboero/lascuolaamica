@@ -1005,12 +1005,70 @@
     rect(c, x + 9, y - 46, 6, 10, paint.trunkLight);
     oval(c, x - 8, y - 33, 9, 11, paint.tileLight);
     oval(c, x + 8, y - 33, 9, 11, paint.tileLight);
-    const blink = Math.sin(t * 0.7) > 0.997;
-    rect(c, x - 10, y - 36, 4, blink ? 1 : 6, paint.ink);
-    rect(c, x + 6, y - 36, 4, blink ? 1 : 6, paint.ink);
+    /*
+      Il gufo guarda il bambino. Le pupille seguono il giocatore di un paio di
+      pixel: basta pochissimo perche' smetta di sembrare un disegno appeso e
+      cominci a sembrare qualcuno che ti sta accanto. Prima si limitava a
+      sbattere le palpebre una volta ogni tanto, e apriva bocca solo per dire
+      che avevi sbagliato.
+    */
+    const verso = clamp((state.player.x - x) / 260, -1, 1);
+    const dx = Math.round(verso * 2);
+    const dy = Math.round(clamp((state.player.y - y) / 300, -1, 1) * 2);
+    // Due battiti ravvicinati ogni circa otto secondi, come un occhio vero.
+    const ciclo = (t % 8.2);
+    const blink = ciclo < 0.12 || (ciclo > 0.3 && ciclo < 0.42);
+    rect(c, x - 10 + dx, y - 36 + (blink ? 2 : dy), 4, blink ? 2 : 6, paint.ink);
+    rect(c, x + 6 + dx, y - 36 + (blink ? 2 : dy), 4, blink ? 2 : 6, paint.ink);
     rect(c, x - 2, y - 28, 4, 5, paint.glow);
     rect(c, x - 10, y - 5, 5, 4, paint.glow);
     rect(c, x + 5, y - 5, 5, 4, paint.glow);
+  }
+
+  /*
+    Lo scoiattolo arriva quando la radura ha gia' due parole: non e' un premio
+    da sbloccare e non chiede niente, sta li' e guarda. Serve a far sentire il
+    bambino accompagnato invece che esaminato — il gufo, l'unico personaggio che
+    c'era, compare solo quando si sbaglia.
+
+    Sta fuori dalla zona calpestabile (clampPosition ferma il giocatore a 682),
+    cosi' non finisce mai sotto ai piedi ne' copre un cartello.
+  */
+  // Dalla seconda parola in poi. Regola in una funzione perche' il controllo la
+  // possa interrogare senza disegnare niente.
+  function ospiteVisibile(risolte) {
+    return risolte >= 2;
+  }
+
+  /*
+    Sul bordo della radura, dove la terra e' ancora chiara. Il primo posto che
+    avevo scelto era piu' in fuori, sul sottobosco scuro: lo scoiattolo veniva
+    disegnato — 966 pixel cambiavano — ma marrone su marrone non lo vedeva
+    nessuno. Un personaggio che non si vede non e' un personaggio.
+  */
+  const POSTO_OSPITE = { x: 663, y: 214 };
+
+  function squirrel(c, x, y, t, festeggia) {
+    const salto = festeggia ? Math.abs(Math.sin(t * 6)) * 7 : 0;
+    const b = y - salto;
+    const pelo = shade(raw.trunk, 0.25);
+    const peloScuro = shade(raw.trunk, -0.1);
+
+    oval(c, x, y + 3, 13, 4, paint.trunkShadow);
+    // Coda: tre ovali sovrapposti che salgono dietro la schiena.
+    const guizzo = festeggia ? Math.sin(t * 8) * 4 : Math.sin(t * 1.4) * 2;
+    oval(c, x + 11, b - 6, 6, 8, peloScuro);
+    oval(c, x + 14 + guizzo * 0.4, b - 16, 7, 9, pelo);
+    oval(c, x + 12 + guizzo, b - 26, 6, 7, pelo);
+    // Corpo e testa.
+    oval(c, x, b - 8, 9, 11, pelo);
+    oval(c, x - 1, b - 6, 5, 7, paint.tileLight);
+    oval(c, x - 2, b - 20, 8, 8, pelo);
+    rect(c, x - 8, b - 27, 3, 5, pelo);
+    rect(c, x - 1, b - 28, 3, 5, pelo);
+    rect(c, x - 5, b - 21, 3, 3, paint.ink);
+    rect(c, x - 8, b - 19, 3, 2, shade(raw.accent, -0.1));
+    rect(c, x - 3, b - 12, 4, 4, paint.tileLight);
   }
 
   function snail(c, x, y) {
@@ -1277,6 +1335,20 @@
     if (dom.owl) dom.owl.hidden = true;
   }
 
+  /*
+    Il gufo saluta a inizio partita. Non dice niente della parola — sarebbe un
+    aiuto e soprattutto un anticipo — dice solo che c'e' e che lo si puo'
+    interrogare. Prima l'unica volta in cui apriva bocca era per dire che avevi
+    sbagliato: un personaggio che parla solo per correggerti non e' compagnia.
+  */
+  const SALUTO_GUFO = 'Sono il gufo del bosco. Se una parola non ti torna, sbaglia pure: te la spiego io.';
+
+  function owlSaluta() {
+    if (!dom.owl || !dom.owlText) return;
+    dom.owlText.textContent = SALUTO_GUFO;
+    dom.owl.hidden = false;
+  }
+
   // Riga per l'adulto che guarda: quali gruppi il bambino sta sbagliando.
   // Non e' un punteggio e non compare al bambino come giudizio.
   // I premi vivono in js/rewards.js, condivisi con i quiz e con Spacca-Muri:
@@ -1528,6 +1600,27 @@
     if (touched) plip();
   }
 
+  /*
+    Sull'acqua il passo si vedeva (le pozze si increspano), sull'asciutto no: il
+    personaggio scivolava sul terreno senza lasciare traccia. Due granelli di
+    terra per passo bastano a dare peso ai piedi.
+  */
+  function polvere(x, y) {
+    if (motionReduced()) return;
+    for (let i = 0; i < 2; i++) {
+      state.particles.push({
+        x: x + (Math.random() - 0.5) * 8,
+        y: y - 2,
+        vx: (Math.random() - 0.5) * 26,
+        vy: -12 - Math.random() * 14,
+        age: 0,
+        life: 0.35 + Math.random() * 0.25,
+        color: i ? paint.groundMid : shade(raw.ground, -0.12),
+        size: 2
+      });
+    }
+  }
+
   function celebratePuddles() {
     state.puddles.forEach(function (p, index) {
       ripplePuddle(index, p.x, p.y, 0.85, true);
@@ -1708,7 +1801,7 @@
       p.water.back.fill(0);
     });
     closeOverlay();
-    owlHush();
+    owlSaluta();
     aggiornaRipasso();
     setMessage('Esplora la radura e scegli il gruppo mancante.');
     render();
@@ -1756,6 +1849,7 @@
           : (dy > 0 ? 'down' : 'up');
         if (state.time - state.lastStep > 0.35) {
           splash(state.player.x, state.player.y, 0.55);
+          polvere(state.player.x, state.player.y);
           state.lastStep = state.time;
         }
       }
@@ -2088,6 +2182,9 @@
     drawBoard(t);
     owl(c, 161, 230, t);
     snail(c, 643, 312);
+    if (ospiteVisibile(state.solved)) {
+      squirrel(c, POSTO_OSPITE.x, POSTO_OSPITE.y, t, state.mode === 'complete');
+    }
     drawFioriCrescita(c, t, calm);
 
     const actors = TILE_POSITIONS.map(function (p, i) {
@@ -2315,6 +2412,7 @@
       dom.mute.setAttribute('aria-pressed', 'true');
     }
 
+    owlSaluta();
     setMessage('Esplora la radura e scegli il gruppo mancante.');
     render();
     raf = requestAnimationFrame(frame);
@@ -2344,6 +2442,9 @@
     parolaCon: parolaCon,
     messaggioErrore: messaggioErrore,
     elencoParole: elencoParole,
+    ospiteVisibile: ospiteVisibile,
+    POSTO_OSPITE: POSTO_OSPITE,
+    SALUTO_GUFO: SALUTO_GUFO,
     FIORI_CRESCITA: FIORI_CRESCITA,
     LUCCIOLE: LUCCIOLE,
     readPalette: readPalette,

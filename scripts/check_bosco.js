@@ -368,6 +368,42 @@ function checkCrescita(game) {
   assert.equal(chiavi.size, fiori.length + lucciole.length, 'due decorazioni sullo stesso punto');
 }
 
+/*
+  Lo scoiattolo e il saluto del gufo. Il rischio di un personaggio che parla non
+  e' che dica una cosa brutta: e' che dica la risposta. Il saluto va detto prima
+  di sapere quale parola uscira', quindi non puo' contenere nessuna parola del
+  banco ne' nessun gruppo ortografico.
+*/
+function checkOspiti(game) {
+  assert.equal(game.ospiteVisibile(0), false, 'lo scoiattolo non c\'e\' a inizio partita');
+  assert.equal(game.ospiteVisibile(1), false, 'lo scoiattolo arriva dopo la prima parola, non subito');
+  assert.equal(game.ospiteVisibile(2), true, 'lo scoiattolo arriva con la seconda parola');
+  assert.equal(game.ospiteVisibile(3), true, 'lo scoiattolo resta fino alla fine');
+
+  const saluto = game.SALUTO_GUFO;
+  assert.ok(typeof saluto === 'string' && saluto.length > 20, 'il gufo deve dire qualcosa');
+
+  const maiuscolo = saluto.toUpperCase();
+  game.parole.forEach(function (entry) {
+    assert.equal(maiuscolo.indexOf(entry.word), -1,
+      `il saluto del gufo nomina ${entry.word}: e' un anticipo sulla parola che uscira'`);
+  });
+
+  // Lo scoiattolo occupa un posto come i fiori: non deve finire sotto un
+  // cartello, dentro una pozza o sotto il tabellone.
+  const posto = game.POSTO_OSPITE;
+  game.puddles.forEach(function (p) {
+    const dx = (posto.x - p.x) / (p.rx + 12);
+    const dy = (posto.y - p.y) / (p.ry + 12);
+    assert.ok(dx * dx + dy * dy > 1, `lo scoiattolo sta dentro la pozza (${p.x}, ${p.y})`);
+  });
+  game.tiles.forEach(function (t) {
+    assert.ok(Math.abs(posto.x - t.x) > 46 || Math.abs(posto.y - t.y) > 56,
+      `lo scoiattolo sta sotto il cartello (${t.x}, ${t.y})`);
+  });
+  assert.ok(!(posto.y < 232 && Math.abs(posto.x - 400) < 140), 'lo scoiattolo sta sotto il tabellone');
+}
+
 function checkParoleVicine(game) {
   const vicine = game.PAROLE_VICINE;
   assert.ok(vicine && vicine.size > 0, 'PAROLE_VICINE e\' vuoto');
@@ -512,6 +548,7 @@ function main() {
     ['caccia al suono', checkCacciaAlSuono],
     ['finale della partita', checkFinale],
     ['crescita della radura', checkCrescita],
+    ['ospiti della radura', checkOspiti],
     ['parole vicine', checkParoleVicine],
     ['ciclo raccolta e consegna', checkCicloRaccoltaConsegna],
     ['memoria delle abilita', checkMemoria],
