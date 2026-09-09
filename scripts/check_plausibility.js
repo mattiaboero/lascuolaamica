@@ -60,6 +60,10 @@ const REGOLE = [
   // La resa vera sta sui 3.000-8.000 kg, cioe' 30-80 quintali.
   { re: /\b(produce)\s+(\d[\d.]*)\s*kg di grano per ettaro/gi,
     min: 3000, max: 9000, cosa: 'resa di grano per ettaro' },
+  // Dal lotto 8 delle istanze: nove "campi da calcetto" da 8x4 a 23x12 metri.
+  // Un campo da calcetto sta sui 25-42 m di lunghezza: quelli erano orti.
+  { re: /\b(campo da calcetto) misura\s+(\d[\d.]*)\s*m per/gi,
+    min: 25, max: 45, cosa: 'lunghezza di un campo da calcetto' },
 ];
 
 function main() {
