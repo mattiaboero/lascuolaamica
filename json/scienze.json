@@ -9209,7 +9209,7 @@
    ],
    "answerIndex": 2,
    "answer": "argilloso",
-   "explanation": "La risposta corretta è 'argilloso'.",
+   "explanation": "L'argilla è fatta di granelli piccolissimi e appiattiti: gli spazi fra loro sono minuscoli e l'acqua fatica a passare, così resta trattenuta.",
    "active": true,
    "tag": "suolo;classe4",
    "tags": [
@@ -9239,7 +9239,7 @@
    ],
    "answerIndex": 3,
    "answer": "sabbioso",
-   "explanation": "La risposta corretta è 'sabbioso'.",
+   "explanation": "I granelli di sabbia sono grossi e lasciano fra loro spazi larghi: l'acqua scende in fretta e il terreno si asciuga presto.",
    "active": true,
    "tag": "suolo;classe4",
    "tags": [
@@ -9269,7 +9269,7 @@
    ],
    "answerIndex": 0,
    "answer": "fornisce sostegno e sali minerali",
-   "explanation": "La risposta corretta è 'fornisce sostegno e sali minerali'.",
+   "explanation": "Nel suolo le radici trovano l'ancoraggio che tiene su la pianta e i sali minerali sciolti nell'acqua, che servono a costruire i suoi tessuti.",
    "active": true,
    "tag": "suolo;classe4",
    "tags": [
@@ -9450,7 +9450,7 @@
    ],
    "answerIndex": 1,
    "answer": "cellula",
-   "explanation": "La risposta corretta è 'cellula'.",
+   "explanation": "Tutti gli esseri viventi sono fatti di cellule: alcuni ne hanno una sola, altri miliardi. È l'unità più piccola capace di vivere da sola.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9480,7 +9480,7 @@
    ],
    "answerIndex": 2,
    "answer": "produrre nutrimento",
-   "explanation": "La risposta corretta è 'produrre nutrimento'.",
+   "explanation": "Con la fotosintesi la pianta trasforma acqua e anidride carbonica in zuccheri usando l'energia della luce: si costruisce il cibo da sé, senza mangiare.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9510,7 +9510,7 @@
    ],
    "answerIndex": 3,
    "answer": "si riproducono",
-   "explanation": "La risposta corretta è 'si riproducono'.",
+   "explanation": "Le piante fanno tutto quello che fanno i viventi: respirano, si nutrono, crescono e si riproducono con semi o spore. Non essendo mobili si nota di meno.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9540,7 +9540,7 @@
    ],
    "answerIndex": 0,
    "answer": "riproduzione delle piante",
-   "explanation": "La risposta corretta è 'riproduzione delle piante'.",
+   "explanation": "Il polline contiene le cellule maschili. Portato da vento o insetti fino al pistillo di un altro fiore, permette la fecondazione e la formazione dei semi.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9570,7 +9570,7 @@
    ],
    "answerIndex": 1,
    "answer": "semi",
-   "explanation": "La risposta corretta è 'semi'.",
+   "explanation": "Il frutto si forma dal fiore fecondato e protegge i semi. Spesso è dolce proprio per farsi mangiare dagli animali, che così trasportano i semi lontano.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9600,7 +9600,7 @@
    ],
    "answerIndex": 2,
    "answer": "sali minerali",
-   "explanation": "La risposta corretta è 'sali minerali'.",
+   "explanation": "Dal terreno le radici assorbono acqua e sali minerali disciolti: sono le sostanze che, insieme agli zuccheri della fotosintesi, permettono alla pianta di crescere.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9630,7 +9630,7 @@
    ],
    "answerIndex": 3,
    "answer": "foglie",
-   "explanation": "La risposta corretta è 'foglie'.",
+   "explanation": "Nel fusto corrono due vie: una porta acqua e sali dalle radici alle foglie, l'altra distribuisce gli zuccheri prodotti dalle foglie a tutta la pianta.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -9660,7 +9660,7 @@
    ],
    "answerIndex": 2,
    "answer": "colonna vertebrale",
-   "explanation": "La risposta corretta è 'colonna vertebrale'.",
+   "explanation": "La colonna vertebrale è una fila di ossa che protegge il midollo spinale e sostiene il corpo: è ciò che distingue i vertebrati da tutti gli altri animali.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9690,7 +9690,7 @@
    ],
    "answerIndex": 3,
    "answer": "polmoni",
-   "explanation": "La risposta corretta è 'polmoni'.",
+   "explanation": "I mammiferi respirano aria con i polmoni, anche quelli che vivono in mare: la balena e il delfino devono risalire in superficie per respirare.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9720,7 +9720,7 @@
    ],
    "answerIndex": 0,
    "answer": "branchie",
-   "explanation": "La risposta corretta è 'branchie'.",
+   "explanation": "Le branchie catturano l'ossigeno disciolto nell'acqua che le attraversa: fanno il lavoro che i polmoni fanno con l'aria.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9750,7 +9750,7 @@
    ],
    "answerIndex": 1,
    "answer": "becco",
-   "explanation": "La risposta corretta è 'becco'.",
+   "explanation": "Gli uccelli non hanno denti: il becco, leggero e di forma diversa a seconda del cibo, li sostituisce. Insieme alle piume è il loro tratto distintivo.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9780,7 +9780,7 @@
    ],
    "answerIndex": 2,
    "answer": "sei zampe",
-   "explanation": "La risposta corretta è 'sei zampe'.",
+   "explanation": "Gli insetti hanno tre paia di zampe attaccate al torace, quindi sei. È il carattere che li distingue dai ragni, che ne hanno otto.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9810,7 +9810,7 @@
    ],
    "answerIndex": 3,
    "answer": "ricavare energia dal cibo",
-   "explanation": "La risposta corretta è 'ricavare energia dal cibo'.",
+   "explanation": "Il cibo contiene energia chimica. Digerendolo l'animale la libera e la usa per muoversi, crescere e tenere il corpo alla temperatura giusta.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9840,7 +9840,7 @@
    ],
    "answerIndex": 0,
    "answer": "generare nuovi individui",
-   "explanation": "La risposta corretta è 'generare nuovi individui'.",
+   "explanation": "La riproduzione non serve al singolo individuo ma alla specie: è ciò che permette a una specie di continuare a esistere quando gli individui muoiono.",
    "active": true,
    "tag": "zoologia;classe4",
    "tags": [
@@ -9900,7 +9900,7 @@
    ],
    "answerIndex": 2,
    "answer": "relazioni",
-   "explanation": "La risposta corretta è 'relazioni'.",
+   "explanation": "Un ecosistema non è solo un elenco di viventi: conta soprattutto come sono legati fra loro e all'ambiente. Cambiando una relazione cambia tutto il resto.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -9930,7 +9930,7 @@
    ],
    "answerIndex": 3,
    "answer": "esseri viventi",
-   "explanation": "La risposta corretta è 'esseri viventi'.",
+   "explanation": "La biodiversità è la varietà di specie di un ambiente. Più è alta, più l'ecosistema resiste: se una specie sparisce, altre possono farne le veci.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -9960,7 +9960,7 @@
    ],
    "answerIndex": 0,
    "answer": "la pianta",
-   "explanation": "La risposta corretta è 'la pianta'.",
+   "explanation": "I produttori sono i soli capaci di fabbricare nutrimento dal nulla, con la fotosintesi. Tutta l'energia della catena entra da lì.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -9990,7 +9990,7 @@
    ],
    "answerIndex": 1,
    "answer": "vegetali",
-   "explanation": "La risposta corretta è 'vegetali'.",
+   "explanation": "Gli erbivori mangiano i produttori e sono il primo anello a consumare: trasformano i vegetali in materia animale, che passerà ai carnivori.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10020,7 +10020,7 @@
    ],
    "answerIndex": 2,
    "answer": "sostanze utili al suolo",
-   "explanation": "La risposta corretta è 'sostanze utili al suolo'.",
+   "explanation": "Funghi e batteri scompongono foglie morte e resti di animali in sostanze semplici che tornano nel suolo, dove le radici le riprendono. Chiudono il ciclo.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10050,7 +10050,7 @@
    ],
    "answerIndex": 3,
    "answer": "soffrire o scomparire",
-   "explanation": "La risposta corretta è 'soffrire o scomparire'.",
+   "explanation": "L'inquinamento colpisce prima le specie più sensibili, e la loro scomparsa toglie cibo o riparo alle altre: il danno si allarga oltre il punto inquinato.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10080,7 +10080,7 @@
    ],
    "answerIndex": 0,
    "answer": "biodiversità",
-   "explanation": "La risposta corretta è 'biodiversità'.",
+   "explanation": "Molte specie diverse significano molta biodiversità: un bosco così ha più legami e più modi di reagire a una malattia o a un cambiamento del clima.",
    "active": true,
    "tag": "ecosistemi;classe4",
    "tags": [
@@ -10110,7 +10110,7 @@
    ],
    "answerIndex": 1,
    "answer": "erba - cavalletta - rana - airone",
-   "explanation": "La risposta corretta è 'erba - cavalletta - rana - airone'.",
+   "explanation": "La catena parte dal produttore e sale di consumatore in consumatore: l'erba è mangiata dalla cavalletta, la rana mangia la cavalletta, l'airone mangia la rana.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10140,7 +10140,7 @@
    ],
    "answerIndex": 2,
    "answer": "coniglio",
-   "explanation": "La risposta corretta è 'coniglio'.",
+   "explanation": "Il consumatore primario è il primo a nutrirsi dei produttori: il coniglio mangia l'erba. Chi mangia lui sarà un consumatore secondario.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10170,7 +10170,7 @@
    ],
    "answerIndex": 3,
    "answer": "alga",
-   "explanation": "La risposta corretta è 'alga'.",
+   "explanation": "L'alga fa la fotosintesi come le piante terrestri: si produce il nutrimento da sé, quindi è un produttore. Nel mare è la base di quasi tutte le catene.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10200,7 +10200,7 @@
    ],
    "answerIndex": 0,
    "answer": "fungo",
-   "explanation": "La risposta corretta è 'fungo'.",
+   "explanation": "Il fungo non fa fotosintesi e non caccia: decompone i resti di piante e animali, restituendo al suolo le sostanze che li componevano.",
    "active": true,
    "tag": "catene_alimentari;classe4",
    "tags": [
@@ -10380,7 +10380,7 @@
    ],
    "answerIndex": 1,
    "answer": "esperimento",
-   "explanation": "La risposta corretta è 'esperimento'.",
+   "explanation": "L'ipotesi è una risposta possibile, non ancora verificata. L'esperimento serve proprio a metterla alla prova e a scoprire se regge.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10411,7 +10411,7 @@
    ],
    "answerIndex": 2,
    "answer": "dati raccolti",
-   "explanation": "La risposta corretta è 'dati raccolti'.",
+   "explanation": "Una conclusione vale se poggia sui dati raccolti, non su quello che ci si aspettava. Se i dati dicono il contrario dell'ipotesi, è l'ipotesi a cambiare.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10442,7 +10442,7 @@
    ],
    "answerIndex": 3,
    "answer": "microscopio",
-   "explanation": "La risposta corretta è 'microscopio'.",
+   "explanation": "Il microscopio ingrandisce centinaia di volte con un sistema di lenti: rende visibili cellule e microrganismi, che a occhio nudo non esistono per noi.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10473,7 +10473,7 @@
    ],
    "answerIndex": 0,
    "answer": "termometro",
-   "explanation": "La risposta corretta è 'termometro'.",
+   "explanation": "Il termometro contiene una sostanza che si dilata col calore: l'altezza raggiunta nel tubicino indica la temperatura su una scala uguale per tutti.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10504,7 +10504,7 @@
    ],
    "answerIndex": 1,
    "answer": "osservare e misurare meglio",
-   "explanation": "La risposta corretta è 'osservare e misurare meglio'.",
+   "explanation": "Gli strumenti estendono i sensi: si vede più piccolo e più lontano, si misura più preciso. Molte scoperte sono arrivate quando è arrivato lo strumento.",
    "active": true,
    "tag": "metodo;strumenti;classe4",
    "tags": [
@@ -10595,7 +10595,7 @@
    ],
    "answerIndex": 0,
    "answer": "ridurre gli sprechi",
-   "explanation": "La risposta corretta è 'ridurre gli sprechi'.",
+   "explanation": "L'elettricità si produce in gran parte bruciando combustibili, che inquinano. Ridurre i consumi inutili è il modo più diretto di ridurre quell'impatto.",
    "active": true,
    "tag": "dati;ambiente;classe4",
    "tags": [
@@ -10626,7 +10626,7 @@
    ],
    "answerIndex": 1,
    "answer": "riutilizzare alcuni oggetti",
-   "explanation": "La risposta corretta è 'riutilizzare alcuni oggetti'.",
+   "explanation": "Riutilizzare un oggetto evita due cose insieme: produrne uno nuovo, con le risorse che serve, e smaltire quello vecchio.",
    "active": true,
    "tag": "dati;ambiente;classe4",
    "tags": [
@@ -10657,7 +10657,7 @@
    ],
    "answerIndex": 2,
    "answer": "interpretare meglio i dati",
-   "explanation": "La risposta corretta è 'interpretare meglio i dati'.",
+   "explanation": "In tabella i dati si confrontano, in un grafico si vede subito l'andamento. Sono modi di far emergere quello che in un elenco di numeri resterebbe nascosto.",
    "active": true,
    "tag": "dati;ambiente;classe4",
    "tags": [
@@ -10688,7 +10688,7 @@
    ],
    "answerIndex": 3,
    "answer": "usare strumenti e registrare dati",
-   "explanation": "La risposta corretta è 'usare strumenti e registrare dati'.",
+   "explanation": "Il metodo scientifico chiede misure fatte con strumenti e annotate: così chiunque può ripetere la prova e controllare se ottiene lo stesso risultato.",
    "active": true,
    "tag": "metodo_scientifico;classe4",
    "tags": [
@@ -12109,7 +12109,7 @@
    ],
    "answerIndex": 2,
    "answer": "Sole",
-   "explanation": "La risposta corretta è 'Sole'.",
+   "explanation": "Il Sole contiene quasi tutta la massa del Sistema Solare: la sua gravità è ciò che tiene i pianeti in orbita invece di lasciarli andare via.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12139,7 +12139,7 @@
    ],
    "answerIndex": 3,
    "answer": "rotazione",
-   "explanation": "La risposta corretta è 'rotazione'.",
+   "explanation": "La rotazione è il giro che la Terra fa su se stessa attorno al proprio asse, e dura circa 24 ore.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12169,7 +12169,7 @@
    ],
    "answerIndex": 0,
    "answer": "alternanza di giorno e notte",
-   "explanation": "La risposta corretta è 'alternanza di giorno e notte'.",
+   "explanation": "Ruotando, la Terra espone al Sole una faccia alla volta: dove batte il Sole è giorno, dall'altra parte è notte. Per questo si alternano ogni 24 ore.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12199,7 +12199,7 @@
    ],
    "answerIndex": 1,
    "answer": "rivoluzione",
-   "explanation": "La risposta corretta è 'rivoluzione'.",
+   "explanation": "La rivoluzione è il giro che la Terra compie intorno al Sole, lungo un'orbita quasi circolare.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12229,7 +12229,7 @@
    ],
    "answerIndex": 2,
    "answer": "un anno",
-   "explanation": "La risposta corretta è 'un anno'.",
+   "explanation": "Un giro completo intorno al Sole dura 365 giorni e un quarto: proprio quel quarto, sommato in quattro anni, dà il giorno in più dell'anno bisestile.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12259,7 +12259,7 @@
    ],
    "answerIndex": 3,
    "answer": "le stagioni",
-   "explanation": "La risposta corretta è 'le stagioni'.",
+   "explanation": "L'asse terrestre è inclinato: nel giro intorno al Sole un emisfero riceve i raggi più diretti e l'altro più inclinati, e si alternano nei sei mesi. Da qui le stagioni.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12289,7 +12289,7 @@
    ],
    "answerIndex": 0,
    "answer": "Terra",
-   "explanation": "La risposta corretta è 'Terra'.",
+   "explanation": "Un satellite è un corpo che gira attorno a un pianeta. La Luna gira attorno alla Terra, ed è l'unico satellite naturale che abbiamo.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12319,7 +12319,7 @@
    ],
    "answerIndex": 1,
    "answer": "riflette quella del Sole",
-   "explanation": "La risposta corretta è 'riflette quella del Sole'.",
+   "explanation": "La Luna è un corpo roccioso e spento: la vediamo perché la sua superficie rimanda verso di noi la luce che riceve dal Sole.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12349,7 +12349,7 @@
    ],
    "answerIndex": 2,
    "answer": "Sole",
-   "explanation": "La risposta corretta è 'Sole'.",
+   "explanation": "La gravità del Sole attira i pianeti e li tiene in orbita: senza, proseguirebbero dritti e si allontanerebbero per sempre.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12379,7 +12379,7 @@
    ],
    "answerIndex": 3,
    "answer": "emette luce propria",
-   "explanation": "La risposta corretta è 'emette luce propria'.",
+   "explanation": "Una stella produce luce ed energia dalle reazioni nucleari nel suo interno. I pianeti invece non ne producono: li vediamo solo perché riflettono.",
    "active": true,
    "tag": "astronomia;classe5",
    "tags": [
@@ -12439,7 +12439,7 @@
    ],
    "answerIndex": 1,
    "answer": "fasi lunari",
-   "explanation": "La risposta corretta è 'fasi lunari'.",
+   "explanation": "Le fasi dipendono da quanta parte della metà illuminata della Luna riusciamo a vedere dalla Terra, e cambiano man mano che la Luna gira attorno a noi.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12469,7 +12469,7 @@
    ],
    "answerIndex": 2,
    "answer": "Luna nuova",
-   "explanation": "La risposta corretta è 'Luna nuova'.",
+   "explanation": "Nella Luna nuova la faccia illuminata è rivolta dalla parte opposta alla Terra: verso di noi resta quella in ombra, e la Luna quasi non si vede.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
@@ -12499,7 +12499,7 @@
    ],
    "answerIndex": 3,
    "answer": "Luna piena",
-   "explanation": "La risposta corretta è 'Luna piena'.",
+   "explanation": "Nella Luna piena la Terra sta fra Sole e Luna: la faccia illuminata è tutta rivolta verso di noi, e la vediamo come un disco intero.",
    "active": true,
    "tag": "luna;classe5",
    "tags": [
