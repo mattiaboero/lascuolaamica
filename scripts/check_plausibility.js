@@ -64,6 +64,11 @@ const REGOLE = [
   // Un campo da calcetto sta sui 25-42 m di lunghezza: quelli erano orti.
   { re: /\b(campo da calcetto) misura\s+(\d[\d.]*)\s*m per/gi,
     min: 25, max: 45, cosa: 'lunghezza di un campo da calcetto' },
+  // Dal lotto 9 delle istanze: "Un atleta percorre 11 m al minuto", cioe'
+  // 0,66 km/h. Un atleta cammina a 5-6 km/h (un centinaio di metri al
+  // minuto) e corre a 12-20.
+  { re: /\b(atleta) percorre\s+(\d[\d.]*)\s*m al minuto/gi,
+    min: 80, max: 500, cosa: 'metri al minuto di un atleta' },
 ];
 
 function main() {
