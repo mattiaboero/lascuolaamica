@@ -1,5 +1,29 @@
 # Changelog Repo
 
+## 4.13.14 - 2026-09-09
+
+**Le quattro campagne di revisione sono a zero rimanenti.** Lotto 109 del
+campionatore di default (4 domande) e lotto 6 delle famiglie (16): default,
+inglese, famiglie e istanze dicono tutti `rimanenti: 0`.
+
+### Fixed
+- **7 problemi su 8 della famiglia "Un atleta ripete # scatti di # m"**
+  avevano da 77 a 192 ripetizioni. Il prodotto era corretto e la lunghezza del
+  singolo scatto plausibile, quindi ne' `check_math_explanations` ne'
+  `check_plausibility` vedevano nulla: fuori scala era il numero di
+  ripetizioni, che nessuna regola guardava. Riportate a 12-17, opzioni
+  ricostruite mantenendo gli scarti dei distrattori e `answerIndex`.
+- **"5 + 1 = 6. Bastano le dita di una mano!"**: su una mano ce ne sono cinque.
+  Il conto era giusto, il difetto stava fra il risultato e il consiglio che lo
+  accompagna. Unico caso nel corpus; "contiamoli sulle dita" senza "una" resta
+  valido, le mani sono due.
+
+### Added
+- `check_plausibility.js`: ripetizioni di scatti fuori dall'intervallo 1-30.
+- `lint_content.js`: aiuto di conteggio a una mano con risultato maggiore di 5.
+
+Entrambe verificate reintroducendo il difetto.
+
 ## 4.13.13 - 2026-09-09
 
 **Nessuna domanda del banco spiega piu' se stessa ripetendo la risposta.** Erano
