@@ -136,6 +136,20 @@ Riferimento storico: `CHANGELOG.md` release 4.11.0 e 4.12.0.
 - **Grafica**: mattoni/pallina/barra disegnati su canvas con gradienti pre-renderizzati (sprite offscreen riusati via `drawImage`, non ridisegnati ogni frame). Palette mattoni più vivace dei token testo del sito (lecito: sono grafica di gioco, soglia WCAG 1.4.11 non-text 3:1, non 4.5:1), con token separati (`--breakout-feedback-ok`/`-ko`) per gli usi testuali (overlay risposta, punteggio volante, simbolo capsula) che restano a 4.5:1. Effetti decorativi (particelle, squash/stretch, wobble capsula) rispettano il toggle "riduci animazioni" e `prefers-reduced-motion`; la fisica di gioco non ne è mai influenzata. Modalità Okabe-Ito: stessi 4 colori mattone certificati, nessuna differenza.
 - **Accessibilità**: overlay domanda con focus trap dedicato (Tab/Shift+Tab intrappolati nel dialog, focus iniziale sulla prima opzione, ripristino del focus precedente alla chiusura) — `aria-modal` da solo non impedisce a Tab di uscire dal dialog nei browser.
 
+## Gioco di ortografia: Il Bosco delle Lettere
+
+`/bosco` (`bosco.html` + `bosco.css` + `js/bosco.js`) è un gioco di ortografia per la 2ª e la 3ª, motore Canvas 2D vanilla **indipendente da `subject-quiz-core.js`**, come il gioco arcade.
+
+**Differenze rispetto a Spacca-Muri:**
+
+- **Dati propri.** Non usa `questions-loader.js`: il banco di 129 parole vive dentro `js/bosco.js` (`PAROLE`), con `skill`, classe, difficoltà, indizio e distrattori per parola. È l'unico contenuto del sito che non sta in `json/`, perché non è una domanda a risposta multipla ma una parola con un buco.
+- **Modello verificabile senza canvas.** `init()` esce subito se non trova `#boscoCanvas` e il modello è esposto su `SA.bosco`: `scripts/check_bosco.js` lo carica con `window`/`document` finti e verifica banco parole, confini della radura e simulazione dell'acqua. È in `npm run verify`.
+- **Distrattori confondibili per costruzione.** `CONFUSIONI` elenca, per ciascuna delle 10 famiglie ortografiche, gli errori che i bambini fanno davvero (`GNI` per `GN`, `CU` per `QU`, la vocale nuda al posto di quella accentata). Il controllo verifica che i distrattori del banco restino dentro quelle famiglie invece di scivolare verso lettere a caso quando si aggiungono parole.
+- **Due modalità sullo stesso banco.** `parola` va dal suono al segno (parola bucata sul tabellone, cartelli nella radura), `suono` fa il contrario (gruppo sul tabellone, tre parole intere nella radura). La modalità scelta è in `localStorage` (`lascuolaamica_bosco_modalita_v1`), insieme a classe, audio e memoria delle abilità.
+- **Memoria per abilità e recupero spaziato.** `lascuolaamica_bosco_abilita_v1` tiene precisione e ultimo incontro per famiglia; `pescaPesata()` ripropone più spesso le famiglie deboli, `daRipassare()` le riporta dopo un intervallo.
+
+**In comune con il resto del sito:** palette letta dai token CSS via `readPalette()` (quindi la modalità accessibile Okabe-Ito ridipinge il bosco senza toccare il JS), premi nella bacheca condivisa (`js/rewards.js`, sei premi dedicati), precache opzionale nel Service Worker, `storageGet`/`storageSet` con fallback in memoria quando `localStorage` non è disponibile.
+
 ## Dati
 
 ```

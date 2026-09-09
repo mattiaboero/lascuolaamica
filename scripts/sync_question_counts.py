@@ -77,7 +77,7 @@ def sostituzioni(attive: dict[str, int]) -> list[tuple[Path, str, str]]:
     lavori.append((ROOT / 'llms.txt', r'Domande totali: [\d.]+ \([^)]*verificate[^)]*\)',
                    f'Domande totali: {_it(totale)} (solo quelle attive, verificate a settembre 2026)'))
     lavori.append((ROOT / 'README.md', r'badge/domande-[\d.]+-orange', f'badge/domande-{_it(totale)}-orange'))
-    lavori.append((ROOT / 'README.md', r'[\d.]+ domande, più un gioco', f'{_it(totale)} domande, più un gioco'))
+    lavori.append((ROOT / 'README.md', r'[\d.]+ domande, più due giochi', f'{_it(totale)} domande, più due giochi'))
     lavori.append((ROOT / 'README.md', r'\*\*[\d.]+ domande\*\* su 8 materie', f'**{_it(totale)} domande** su 8 materie'))
     lavori.append((ROOT / 'CONTRIBUTING.md', r'conta oggi [\d.]+ domande', f'conta oggi {_it(totale)} domande'))
     lavori.append((ROOT / 'docs/wiki/Home.md', r'\*\*[\d.]+ domande\*\* validate', f'**{_it(totale)} domande** validate'))

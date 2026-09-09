@@ -6,7 +6,7 @@
 [![Domande](https://img.shields.io/badge/domande-9.223-orange.svg)](https://lascuolaamica.it)
 [![Gratuito](https://img.shields.io/badge/accesso-gratuito%20%26%20senza%20registrazione-yellow.svg)](https://lascuolaamica.it)
 
-Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 9.223 domande, più un gioco arcade — senza registrazione, senza tracciamento, accessibile anche offline.
+Piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie, 4 classi, 9.223 domande, più due giochi — senza registrazione, senza tracciamento, accessibile anche offline.
 
 🌐 **[lascuolaamica.it](https://lascuolaamica.it)**
 
@@ -40,6 +40,21 @@ La Scuola Amica parte da un presupposto diverso: un bambino di 8 anni non dovreb
 Un rompi-mattoni ispirato a Breakout/Arkanoid, su [/breakout](https://lascuolaamica.it/breakout). Motore Canvas 2D vanilla indipendente (`js/breakout.js`), nessuna dipendenza dal quiz engine condiviso.
 
 Le domande dei bonus e del salvataggio pallina pescano dallo stesso pool delle 8 materie, filtrato per la classe scelta a inizio partita. 4 bonus (barra larga, +1 vita, distruggi un colore, pallina appiccicosa) si attivano solo rispondendo bene a una domanda — raccogliere la capsula non basta. Se la pallina cade, una domanda a sorpresa può salvarla prima di perdere una vita. 10 trofei dedicati, visibili nella bacheca premi insieme a quelli dei quiz.
+
+---
+
+## Gioco di ortografia: Il Bosco delle Lettere
+
+Un gioco di ortografia su [/bosco](https://lascuolaamica.it/bosco), per la 2ª e la 3ª. Motore Canvas 2D vanilla indipendente (`js/bosco.js`), scena disegnata interamente via codice: nessuno sprite, nessuno sfondo raster.
+
+Il bambino esplora una radura, raccoglie il cartello con il gruppo di lettere giusto e lo porta al tabellone. Due modi di giocare:
+
+- **Completa la parola** — sul tabellone c'è la parola bucata (`CAMPA_A`), nella radura i cartelli con i gruppi possibili. Si va dal suono al segno.
+- **Caccia al suono** — sul tabellone c'è il gruppo (`GN`), nella radura tre parole intere. Il compito è rovesciato: dal segno al suono.
+
+Il banco è di 129 parole su 10 famiglie ortografiche — GN, GLI, SCE/SCI, CHE/CHI, GHE/GHI, QU, CQU, doppie, accento, vocale in mezzo — ciascuna con la sua regola in parole semplici e distrattori scelti fra gli errori che i bambini fanno davvero (`GNI` per `GN`, `CU` per `QU`, la vocale nuda al posto di quella accentata). Il gioco ricorda quali famiglie vanno meno bene e le ripropone più spesso, con recupero spaziato. Sintesi vocale per ascoltare la parola, sei premi dedicati nella bacheca condivisa.
+
+Il modello (parole, confini della radura, simulazione dell'acqua) è verificato da `scripts/check_bosco.js`, che carica `js/bosco.js` senza canvas.
 
 ---
 
@@ -104,13 +119,16 @@ Nessun framework frontend. Nessuna dipendenza NPM a runtime.
 ├── index.html              # Home
 ├── *.html                  # Pagine materia
 ├── breakout.html           # Gioco arcade "Cervellino Spacca-Muri"
-├── breakout.css            # Stili dedicati al gioco
+├── breakout.css            # Stili dedicati al gioco arcade
+├── bosco.html              # Gioco di ortografia "Il Bosco delle Lettere"
+├── bosco.css               # Stili dedicati al gioco di ortografia
 ├── premi.html              # Bacheca premi locale
 ├── rewards.css             # Stili bacheca premi
 ├── shared.js               # Componenti e logica condivisa
 ├── subject-quiz-core.js    # Motore quiz condiviso per tutte le 8 materie
 ├── js/
 │   ├── breakout.js         # Motore Canvas 2D del gioco arcade
+│   ├── bosco.js            # Motore Canvas 2D del gioco di ortografia
 │   ├── rewards.js          # Motore premi locale
 │   └── <subject>-page.js   # Config materia dichiarativa
 ├── questions-loader.js     # Loader dataset JSON
@@ -152,10 +170,24 @@ Poi apri [http://localhost:8080](http://localhost:8080).
 ## Qualità prima del deploy
 
 ```bash
-./prepublish-check.sh
+npm run verify
 ```
 
-Lo script verifica integrità JSON, assenza di riferimenti a `questions.json` legacy, sitemap e robots.txt.
+Incatena i controlli che devono passare prima di ogni pubblicazione:
+
+| comando | che cosa verifica |
+|---|---|
+| `lint:js` / `lint:css` | ESLint e Stylelint |
+| `audit:json` | integrità e schema dei dataset |
+| `lint:content` | 93 regole su testo, opzioni e spiegazioni delle domande |
+| `check:math` | ogni uguaglianza scritta in una spiegazione |
+| `check:plausibility` | 28 regole sulla scala dei dati nei problemi |
+| `check:bosco` | banco parole, confini della radura e acqua del gioco di ortografia |
+| `check:balance` | che la risposta giusta non si concentri in una posizione |
+| `check:counts` | che i numeri di domande pubblicati coincidano con i dataset |
+| `check:prepublish` | `prepublish-check.sh`: sitemap, robots.txt, header PWA, contratti del quiz engine |
+
+`npm run freshness` riallinea invece i numeri e i file generati (conteggi, dati strutturati, sitemap, hash CSP).
 
 ---
 

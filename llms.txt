@@ -24,6 +24,7 @@
 
 ## Giochi arcade
 - [Cervellino Spacca-Muri](https://lascuolaamica.it/breakout) — gioco arcade ispirato a Breakout/Arkanoid. Rispondere correttamente alle domande (pescate dal pool delle 8 materie) attiva bonus di gioco o salva la pallina persa. Include trofei dedicati nella bacheca premi.
+- [Il Bosco delle Lettere](https://lascuolaamica.it/bosco) — gioco di ortografia per la 2ª e la 3ª. Si esplora una radura e si porta al tabellone il cartello con il gruppo di lettere giusto, in due modi: completare la parola bucata (dal suono al segno) oppure trovare la parola che contiene un gruppo dato (dal segno al suono). Banco di 129 parole su 10 famiglie ortografiche (GN, GLI, SCE/SCI, CHE/CHI, GHE/GHI, QU, CQU, doppie, accento, vocale interna), con ripasso più frequente delle famiglie più deboli e sintesi vocale.
 
 ## Canale YouTube
 - Nome: Cecilia e il Papà Mattone
