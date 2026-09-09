@@ -21,7 +21,7 @@
    ],
    "answerIndex": 2,
    "answer": "green",
-   "explanation": "The correct answer is \"green\".",
+   "explanation": "'Green' è il verde, il colore dell'erba ('grass'). Le foglie sono verdi per la clorofilla che contengono.",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -54,7 +54,7 @@
    ],
    "answerIndex": 3,
    "answer": "yellow",
-   "explanation": "The correct answer is \"yellow\".",
+   "explanation": "'Yellow' è il giallo: è il colore con cui il sole viene quasi sempre disegnato, anche se la sua luce è bianca.",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -87,7 +87,7 @@
    ],
    "answerIndex": 0,
    "answer": "white",
-   "explanation": "The correct answer is \"white\".",
+   "explanation": "'White' è il bianco, il colore del latte ('milk').",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -120,7 +120,7 @@
    ],
    "answerIndex": 1,
    "answer": "red",
-   "explanation": "The correct answer is \"red\".",
+   "explanation": "'Red' è il rosso, il colore della fragola matura ('strawberry').",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -153,7 +153,7 @@
    ],
    "answerIndex": 2,
    "answer": "green",
-   "explanation": "The correct answer is \"green\".",
+   "explanation": "'Green' è il verde: le foglie ('leaves') lo sono grazie alla clorofilla. 'Leaves' è il plurale irregolare di 'leaf'.",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -186,7 +186,7 @@
    ],
    "answerIndex": 3,
    "answer": "black",
-   "explanation": "The correct answer is \"black\".",
+   "explanation": "'Black' è il nero, il colore del carbone ('coal').",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -219,7 +219,7 @@
    ],
    "answerIndex": 0,
    "answer": "white",
-   "explanation": "The correct answer is \"white\".",
+   "explanation": "'White' è il bianco, il colore della neve ('snow').",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -252,7 +252,7 @@
    ],
    "answerIndex": 1,
    "answer": "orange",
-   "explanation": "The correct answer is \"orange\".",
+   "explanation": "'Orange' in inglese è sia il frutto sia il colore arancione: la stessa parola per tutti e due, come succede anche in italiano.",
    "active": true,
    "tag": "inglese;classe_2;colori;primaria",
    "tags": [
@@ -450,7 +450,7 @@
    ],
    "answerIndex": 0,
    "answer": "giraffe",
-   "explanation": "The correct answer is \"giraffe\".",
+   "explanation": "'Giraffe' è la giraffa: l'animale con il collo lunghissimo, che le serve a mangiare le foglie in cima agli alberi.",
    "active": true,
    "tag": "inglese;classe_2;animali;primaria",
    "tags": [
@@ -483,7 +483,7 @@
    ],
    "answerIndex": 1,
    "answer": "cat",
-   "explanation": "The correct answer is \"cat\".",
+   "explanation": "'Cat' è il gatto. In inglese il suo verso si scrive 'meow', in italiano 'miao': i suoni delle lingue cambiano anche per gli animali.",
    "active": true,
    "tag": "inglese;classe_2;animali;primaria",
    "tags": [
@@ -516,7 +516,7 @@
    ],
    "answerIndex": 2,
    "answer": "bird",
-   "explanation": "The correct answer is \"bird\".",
+   "explanation": "'Bird' è l'uccello: fra gli animali proposti è l'unico con le ali e in grado di volare.",
    "active": true,
    "tag": "inglese;classe_2;animali;primaria",
    "tags": [
@@ -549,7 +549,7 @@
    ],
    "answerIndex": 3,
    "answer": "rabbit",
-   "explanation": "The correct answer is \"rabbit\".",
+   "explanation": "'Rabbit' è il coniglio, riconoscibile per le orecchie lunghe che gli servono a sentire i pericoli da lontano.",
    "active": true,
    "tag": "inglese;classe_2;animali;primaria",
    "tags": [
@@ -582,7 +582,7 @@
    ],
    "answerIndex": 0,
    "answer": "eyes",
-   "explanation": "The correct answer is \"eyes\".",
+   "explanation": "'Eyes' sono gli occhi, con cui si vede. È il plurale di 'eye', perché gli occhi sono due.",
    "active": true,
    "tag": "inglese;classe_2;corpo_umano;primaria",
    "tags": [
@@ -615,7 +615,7 @@
    ],
    "answerIndex": 1,
    "answer": "ears",
-   "explanation": "The correct answer is \"ears\".",
+   "explanation": "'Ears' sono le orecchie, con cui si sente. Plurale di 'ear'.",
    "active": true,
    "tag": "inglese;classe_2;corpo_umano;primaria",
    "tags": [
@@ -648,7 +648,7 @@
    ],
    "answerIndex": 2,
    "answer": "nose",
-   "explanation": "The correct answer is \"nose\".",
+   "explanation": "'Nose' è il naso: sta al centro del viso ('face') ed è l'organo dell'olfatto.",
    "active": true,
    "tag": "inglese;classe_2;corpo_umano;primaria",
    "tags": [
@@ -681,7 +681,7 @@
    ],
    "answerIndex": 3,
    "answer": "hands",
-   "explanation": "The correct answer is \"hands\".",
+   "explanation": "'Hands' sono le mani: si battono insieme per applaudire ('clap'). Plurale di 'hand'.",
    "active": true,
    "tag": "inglese;classe_2;corpo_umano;primaria",
    "tags": [
@@ -714,7 +714,7 @@
    ],
    "answerIndex": 0,
    "answer": "feet",
-   "explanation": "The correct answer is \"feet\".",
+   "explanation": "'Feet' sono i piedi, con cui si cammina. È un plurale irregolare: 'foot' al singolare, 'feet' al plurale.",
    "active": true,
    "tag": "inglese;classe_2;corpo_umano;primaria",
    "tags": [
@@ -747,7 +747,7 @@
    ],
    "answerIndex": 2,
    "answer": "grandmother",
-   "explanation": "The correct answer is \"grandmother\".",
+   "explanation": "'Grandmother' è la nonna: la madre di tua madre o di tuo padre. Si forma da 'grand' più 'mother'.",
    "active": true,
    "tag": "inglese;classe_2;famiglia;primaria",
    "tags": [
@@ -780,7 +780,7 @@
    ],
    "answerIndex": 3,
    "answer": "brother",
-   "explanation": "The correct answer is \"brother\".",
+   "explanation": "'Brother' è il fratello: il figlio ('son') dei tuoi genitori.",
    "active": true,
    "tag": "inglese;classe_2;famiglia;primaria",
    "tags": [
@@ -813,7 +813,7 @@
    ],
    "answerIndex": 0,
    "answer": "sister",
-   "explanation": "The correct answer is \"sister\".",
+   "explanation": "'Sister' è la sorella: la figlia ('daughter') dei tuoi genitori.",
    "active": true,
    "tag": "inglese;classe_2;famiglia;primaria",
    "tags": [
@@ -3321,7 +3321,7 @@
    ],
    "answerIndex": 1,
    "answer": "Tuesday",
-   "explanation": "The correct answer is \"Tuesday\".",
+   "explanation": "Dopo 'Monday' (lunedì) viene 'Tuesday' (martedì): i giorni inglesi seguono lo stesso ordine di quelli italiani.",
    "active": true,
    "tag": "inglese;classe_2;giorni;primaria",
    "tags": [
@@ -3354,7 +3354,7 @@
    ],
    "answerIndex": 2,
    "answer": "Thursday",
-   "explanation": "The correct answer is \"Thursday\".",
+   "explanation": "Prima di 'Friday' (venerdì) viene 'Thursday' (giovedì).",
    "active": true,
    "tag": "inglese;classe_2;giorni;primaria",
    "tags": [
@@ -3387,7 +3387,7 @@
    ],
    "answerIndex": 3,
    "answer": "Wednesday",
-   "explanation": "The correct answer is \"Wednesday\".",
+   "explanation": "Fra 'Tuesday' (martedì) e 'Thursday' (giovedì) sta 'Wednesday', il mercoledì: si scrive con una 'd' che non si pronuncia.",
    "active": true,
    "tag": "inglese;classe_2;giorni;primaria",
    "tags": [
@@ -3519,7 +3519,7 @@
    ],
    "answerIndex": 0,
    "answer": "apple",
-   "explanation": "The correct answer is \"apple\".",
+   "explanation": "'Apple' è la mela, un frutto. 'Fruit' significa frutta, e la mela è l'unico frutto fra le opzioni.",
    "active": true,
    "tag": "inglese;classe_2;cibo;primaria",
    "tags": [
@@ -3552,7 +3552,7 @@
    ],
    "answerIndex": 1,
    "answer": "milk",
-   "explanation": "The correct answer is \"milk\".",
+   "explanation": "'Milk' è il latte: un liquido, quindi una bevanda ('drink'), non un cibo solido.",
    "active": true,
    "tag": "inglese;classe_2;cibo;primaria",
    "tags": [
@@ -3585,7 +3585,7 @@
    ],
    "answerIndex": 2,
    "answer": "eggs",
-   "explanation": "The correct answer is \"eggs\".",
+   "explanation": "'Eggs' sono le uova: è il plurale di 'egg', e sono ciò che le galline ('hens') ci danno.",
    "active": true,
    "tag": "inglese;classe_2;cibo;primaria",
    "tags": [
@@ -3618,7 +3618,7 @@
    ],
    "answerIndex": 3,
    "answer": "milk",
-   "explanation": "The correct answer is \"milk\".",
+   "explanation": "'Milk' è il latte: bianco e prodotto dalle mucche ('cows'). Le due informazioni insieme portano a una sola risposta.",
    "active": true,
    "tag": "inglese;classe_2;cibo;primaria",
    "tags": [
@@ -3651,7 +3651,7 @@
    ],
    "answerIndex": 2,
    "answer": "first",
-   "explanation": "The correct answer is \"first\".",
+   "explanation": "'First' significa primo: gennaio ('January') apre l'anno. I numeri ordinali inglesi finiscono spesso in -th, ma i primi tre sono irregolari.",
    "active": true,
    "tag": "inglese;classe_2;mesi;primaria",
    "tags": [
@@ -3684,7 +3684,7 @@
    ],
    "answerIndex": 3,
    "answer": "December",
-   "explanation": "The correct answer is \"December\".",
+   "explanation": "'December' è dicembre, l'ultimo mese dell'anno.",
    "active": true,
    "tag": "inglese;classe_2;mesi;primaria",
    "tags": [
@@ -3717,7 +3717,7 @@
    ],
    "answerIndex": 0,
    "answer": "April",
-   "explanation": "The correct answer is \"April\".",
+   "explanation": "Dopo 'March' (marzo) viene 'April' (aprile).",
    "active": true,
    "tag": "inglese;classe_2;mesi;primaria",
    "tags": [
@@ -3882,7 +3882,7 @@
    ],
    "answerIndex": 0,
    "answer": "eyes",
-   "explanation": "The correct answer is \"eyes\".",
+   "explanation": "'I have got two eyes' significa 'Ho due occhi'. Dopo 'two' ci vuole il plurale: 'eyes', non 'eye'.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria",
    "tags": [
@@ -3915,7 +3915,7 @@
    ],
    "answerIndex": 1,
    "answer": "nose",
-   "explanation": "The correct answer is \"nose\".",
+   "explanation": "'He has got a nose' significa 'Lui ha un naso'. Con 'he' si usa 'has got', non 'have got'.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria",
    "tags": [
@@ -3948,7 +3948,7 @@
    ],
    "answerIndex": 2,
    "answer": "I have got a dog.",
-   "explanation": "The correct answer is \"I have got a dog.\"",
+   "explanation": "'I have got a dog' è corretto: con 'I' si usa 'have got'. Sarebbe sbagliato 'I has got'.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria",
    "tags": [
@@ -6192,7 +6192,7 @@
    ],
    "answerIndex": 1,
    "answer": "bedroom",
-   "explanation": "The correct answer is \"bedroom\".",
+   "explanation": "'Bedroom' è la camera da letto: viene da 'bed', letto, più 'room', stanza. Molti nomi delle stanze in inglese si formano così.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria",
    "tags": [
@@ -6225,7 +6225,7 @@
    ],
    "answerIndex": 2,
    "answer": "kitchen",
-   "explanation": "The correct answer is \"kitchen\".",
+   "explanation": "'Kitchen' è la cucina, la stanza dove si preparano i pasti.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria",
    "tags": [
@@ -6258,7 +6258,7 @@
    ],
    "answerIndex": 3,
    "answer": "bathroom",
-   "explanation": "The correct answer is \"bathroom\".",
+   "explanation": "'Bathroom' è il bagno: da 'bath', vasca, più 'room', stanza. È lì che ci si lava i denti.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria",
    "tags": [
@@ -6357,7 +6357,7 @@
    ],
    "answerIndex": 3,
    "answer": "drawing",
-   "explanation": "The correct answer is \"drawing\".",
+   "explanation": "'Drawing' è il disegno: viene dal verbo 'to draw', disegnare. La terminazione -ing trasforma il verbo nel nome dell'attività.",
    "active": true,
    "tag": "inglese;classe_2;hobby;primaria",
    "tags": [
@@ -6390,7 +6390,7 @@
    ],
    "answerIndex": 0,
    "answer": "reading",
-   "explanation": "The correct answer is \"reading\".",
+   "explanation": "'Reading' è la lettura: dal verbo 'to read', leggere, con la stessa terminazione -ing.",
    "active": true,
    "tag": "inglese;classe_2;hobby;primaria",
    "tags": [
@@ -6423,7 +6423,7 @@
    ],
    "answerIndex": 1,
    "answer": "What's your name?",
-   "explanation": "The correct answer is \"What's your name?\".",
+   "explanation": "'What's your name?' significa 'Come ti chiami?': è la domanda con cui si chiede il nome.",
    "active": true,
    "tag": "inglese;classe_2;domande;primaria",
    "tags": [
@@ -6456,7 +6456,7 @@
    ],
    "answerIndex": 2,
    "answer": "How old are you?",
-   "explanation": "The correct answer is \"How old are you?\".",
+   "explanation": "'How old are you?' significa 'Quanti anni hai?'. Letteralmente sarebbe 'quanto vecchio sei': in inglese l'età si chiede così.",
    "active": true,
    "tag": "inglese;classe_2;domande;primaria",
    "tags": [
@@ -6555,7 +6555,7 @@
    ],
    "answerIndex": 0,
    "answer": "living room",
-   "explanation": "The correct answer is \"living room\".",
+   "explanation": "'Living room' è il soggiorno: la stanza dove si sta insieme, con il divano ('sofa') e la televisione.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria",
    "tags": [
@@ -6588,7 +6588,7 @@
    ],
    "answerIndex": 1,
    "answer": "kitchen",
-   "explanation": "The correct answer is \"kitchen\".",
+   "explanation": "'Kitchen' è la cucina: oltre a cucinare, è spesso la stanza dove si mangia, con tavolo e sedie.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria",
    "tags": [
@@ -6621,7 +6621,7 @@
    ],
    "answerIndex": 1,
    "answer": "singing",
-   "explanation": "The correct answer is \"singing\".",
+   "explanation": "'Singing' è il canto: dal verbo 'to sing', cantare. Si fa con la voce, senza bisogno di strumenti.",
    "active": true,
    "tag": "inglese;classe_2;hobby;primaria",
    "tags": [
@@ -6687,7 +6687,7 @@
    ],
    "answerIndex": 3,
    "answer": "How are you?",
-   "explanation": "The correct answer is \"How are you?\".",
+   "explanation": "'How are you?' significa 'Come stai?': si chiede a qualcuno come si sente.",
    "active": true,
    "tag": "inglese;classe_2;domande;primaria",
    "tags": [
@@ -6720,7 +6720,7 @@
    ],
    "answerIndex": 0,
    "answer": "What colour is it?",
-   "explanation": "The correct answer is \"What colour is it?\".",
+   "explanation": "'What colour is it?' significa 'Di che colore è?': serve a chiedere il colore di una cosa.",
    "active": true,
    "tag": "inglese;classe_2;domande;primaria",
    "tags": [
@@ -6753,7 +6753,7 @@
    ],
    "answerIndex": 2,
    "answer": "read",
-   "explanation": "The correct answer is \"read\".",
+   "explanation": "'Read' significa leggere: è ciò che si fa con un libro ('book').",
    "active": true,
    "tag": "inglese;classe_2;hobby;primaria",
    "tags": [
@@ -9538,7 +9538,7 @@
    ],
    "answerIndex": 3,
    "answer": "eight",
-   "explanation": "The correct answer is \"eight\".",
+   "explanation": "'Eight' è otto: il ragno ha otto zampe, ed è questo a distinguerlo dagli insetti, che ne hanno sei.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -9572,7 +9572,7 @@
    ],
    "answerIndex": 0,
    "answer": "two",
-   "explanation": "The correct answer is \"two\".",
+   "explanation": "'Two' è due: abbiamo due occhi. 'Have got' si usa con 'we', mentre con 'he' e 'she' diventa 'has got'.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10048,7 +10048,7 @@
    ],
    "answerIndex": 1,
    "answer": "two",
-   "explanation": "The correct answer is \"two\".",
+   "explanation": "'Two' è due: l'anatra è un uccello e come tutti gli uccelli ha due zampe.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10082,7 +10082,7 @@
    ],
    "answerIndex": 2,
    "answer": "six",
-   "explanation": "The correct answer is \"six\".",
+   "explanation": "'Six' è sei: la formica è un insetto, e tutti gli insetti hanno sei zampe.",
    "active": true,
    "tag": "inglese;classe_2;have_got;primaria;pilota_parametrico",
    "tags": [
