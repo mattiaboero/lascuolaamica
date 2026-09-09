@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Un campo è lungo 21 m e largo 48 m. Qual è il suo perimetro?',
   'Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (13 × 18) ÷ 2 = 117 cm².',
   'Un bicicletta costa 120 euro. Quanto costa il bicicletta scontato?',
   'Nel cortile di Alice ci sono 11 pesciolini. Arrivano altri 21.',
@@ -121,6 +122,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Un campo è lungo 48 m e largo 21 m. Qual è il suo perimetro?',
   'Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (18 × 13) ÷ 2 = 117 cm².',
   'Una bicicletta costa 120 euro. Quanto costa la bicicletta scontata?',
   "Nell'acquario di Alice ci sono 11 pesciolini. Arrivano altri 21.",

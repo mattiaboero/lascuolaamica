@@ -41,6 +41,11 @@ const REGOLE = [
   // zaino da 210.
   { re: /\b(libro)\s+costa\s+(\d[\d.]*)\s*euro/gi, min: 1, max: 60, cosa: 'prezzo di un libro' },
   { re: /\b(zaino)\s+costa\s+(\d[\d.]*)\s*euro/gi, min: 5, max: 150, cosa: 'prezzo di uno zaino' },
+  // Dal lotto 1 delle istanze: "una scuola con 42 classi con 5 alunni
+  // ciascuna". La regola sugli alunni guardava "classe ... alunni" e questa
+  // forma al plurale le sfuggiva.
+  { re: /\b(classi con)\s*(\d[\d.]*)\s*alunni\s+(?:ciascuna|ognuna|l'una|per classe)/gi,
+    min: 15, max: 28, cosa: 'alunni per classe' },
 ];
 
 function main() {

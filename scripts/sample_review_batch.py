@@ -11,6 +11,13 @@ traccia in reports/revisione-linguistica.json.
   python3 scripts/sample_review_batch.py --registra # lo segna come revisionato
   python3 scripts/sample_review_batch.py --inglese  # lotto di inglese, registro separato
   python3 scripts/sample_review_batch.py --famiglie # lotto di famiglie a scheletro ripetuto
+  python3 scripts/sample_review_batch.py --istanze  # le singole istanze dentro le famiglie
+
+Il modo --famiglie stampa due istanze per famiglia: bastano a giudicare la
+forma, che nella famiglia e' identica. Non bastano per i numeri, che cambiano
+da un'istanza all'altra ed e' li' che stavano quasi tutti i difetti trovati
+(912 atleti per un allenatore, triangoli impossibili, un libro da 190 euro).
+Il modo --istanze legge quelle rimaste: 1.793 domande mai mostrate.
 
 In inglese non si scarta niente per scheletro ricorrente: le regole di
 lint_content.js sono scritte per l'italiano e sull'inglese non guardano quasi
@@ -25,9 +32,11 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRO = ROOT / 'reports' / 'revisione-linguistica.json'
 REGISTRO_EN = ROOT / 'reports' / 'revisione-inglese.json'
 REGISTRO_FAM = ROOT / 'reports' / 'revisione-famiglie.json'
+REGISTRO_IST = ROOT / 'reports' / 'revisione-istanze.json'
 DIMENSIONE = 60
 INGLESE = '--inglese' in sys.argv
 FAMIGLIE = '--famiglie' in sys.argv
+ISTANZE = '--istanze' in sys.argv
 
 NOMI = re.compile(r'\b(Marco|Luca|Anna|Sara|Giulia|Matteo|Sofia|Priya|Ahmed|Chen|Elena|Paolo|Maria|Giovanni|Laura|Marta|Davide|Chiara|Simone|Alice|Serena|Stefano|Martina|Tommaso|Arianna|Pietro|Gianni|Claudia|Mario|Nicola|Giacomo|Daniele|Amir)\b')
 
@@ -64,10 +73,16 @@ def carica():
             if conta[k] > 1:
                 fam.setdefault(k, []).append(q)
         return [{'scheletro': k, 'istanze': v} for k, v in fam.items()]
+    if ISTANZE:
+        # tutte le domande che vivono in una famiglia, non un rappresentante:
+        # la forma e' gia' stata giudicata, qui si guardano i numeri.
+        return [q for q in tutte if conta[scheletro(q.get('question'))] > 1]
     return [q for q in tutte if conta[scheletro(q.get('question'))] == 1]
 
 
 def percorso_registro():
+    if ISTANZE:
+        return REGISTRO_IST
     if FAMIGLIE:
         return REGISTRO_FAM
     return REGISTRO_EN if INGLESE else REGISTRO
@@ -91,7 +106,8 @@ def main():
     random.seed(20260906 + numero)
     campione = random.sample(da_vedere, min(DIMENSIONE, len(da_vedere)))
 
-    etichetta = 'famiglie' if FAMIGLIE else ('bacino' if INGLESE else 'scheletro unico')
+    etichetta = 'famiglie' if FAMIGLIE else ('istanze in famiglia' if ISTANZE
+                else ('bacino' if INGLESE else 'scheletro unico'))
     print(f"lotto {numero} — {len(campione)} domande")
     print(f"{etichetta}: {len(uniche)} | gia' revisionate: {len(viste)} | rimanenti: {len(da_vedere)}\n")
     for i, q in enumerate(campione, 1):

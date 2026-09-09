@@ -6917,6 +6917,13 @@
     "geo-3-territorio_sicurezza-049",
     "sto-3-metodo_storico_fon-013"
    ]
+  },
+  {
+   "numero": 108,
+   "domande": [
+    "pro-5-problemi-095",
+    "sci-3-metodo-027"
+   ]
   }
  ],
  "revisionate": [
@@ -11142,6 +11149,7 @@
   "pro-5-problemi-057",
   "pro-5-problemi-065",
   "pro-5-problemi-070",
+  "pro-5-problemi-095",
   "pro-5-problemi-099",
   "pro-5-problemi-125",
   "pro-5-problemi-131",
@@ -11670,6 +11678,7 @@
   "sci-3-metodo-024",
   "sci-3-metodo-025",
   "sci-3-metodo-026",
+  "sci-3-metodo-027",
   "sci-3-metodo_scientifico-9045",
   "sci-3-metodo_scientifico-9046",
   "sci-3-pratica-9161",

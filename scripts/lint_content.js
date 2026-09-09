@@ -504,6 +504,13 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 1 delle istanze: "Un campo e' lungo 21 m e largo 48 m". Stessa
+  // inversione gia' vista tre volte con altri aggettivi (lotti 62, 93 e 1
+  // delle famiglie), qui con lungo prima di largo: nessuna delle regole
+  // scritte allora guardava quest'ordine.
+  { pattern: /lung[oa]\s+(\d+)\s*m\b[^.?!]{0,12}e\s+larg[oa]\s+(\d+)\s*m\b/,
+    controllo: (m) => Number(m[1]) < Number(m[2]),
+    msg: 'la lunghezza e minore della larghezza' },
   // Dal lotto 5 delle famiglie: "Nel cortile di Alice ci sono 11 pesciolini",
   // "Sul prato ci sono 39 pesciolini". Il template abbinava un luogo e un
   // animale a caso, e i pesci finivano all'asciutto.
@@ -1978,6 +1985,16 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     if (disallineato) {
       errors.push({ level: 'error', field: 'explanation', msg: `numero scritto "${disallineato}" nella spiegazione ma "${disallineato.replace(/\./g, '')}" fra le opzioni` });
     }
+  }
+
+  // Dal lotto 1 delle istanze: 41 spiegazioni non contenevano il risultato.
+  // "Qual e' il risultato di 88757 + 49966?" era spiegata con "Allinea le
+  // cifre per colonne e somma da destra": il metodo c'e', il numero no, e il
+  // bambino che ha sbagliato resta senza risposta. Le altre 392 di aritmetica
+  // il risultato lo dicono, quindi erano loro l'eccezione.
+  if (subject !== 'inglese' && explanation && /^\d{2,}$/.test(String(answer || '').trim())
+      && !explanation.includes(String(answer).trim())) {
+    errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione non dice mai il risultato (${answer})` });
   }
 
   // Dal lotto 5 delle famiglie: fra le opzioni di "Un casco costa 110 euro,
