@@ -7162,7 +7162,7 @@
    ],
    "answerIndex": 2,
    "answer": "montagna",
-   "explanation": "La risposta corretta è 'montagna'.",
+   "explanation": "La montagna supera i 600 metri e ha pendii ripidi e cime aguzze: è il rilievo più alto e più aspro.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7193,7 +7193,7 @@
    ],
    "answerIndex": 3,
    "answer": "collina",
-   "explanation": "La risposta corretta è 'collina'.",
+   "explanation": "La collina sta fra la pianura e la montagna: i rilievi sono più bassi e i fianchi più dolci, quindi più facili da coltivare e da percorrere.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7224,7 +7224,7 @@
    ],
    "answerIndex": 0,
    "answer": "pianura",
-   "explanation": "La risposta corretta è 'pianura'.",
+   "explanation": "La pianura è un territorio quasi piatto e a bassa quota: senza dislivelli è il più adatto a campi, strade e città.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7255,7 +7255,7 @@
    ],
    "answerIndex": 1,
    "answer": "più fresca",
-   "explanation": "La risposta corretta è 'più fresca'.",
+   "explanation": "Salendo, l'aria si dirada e trattiene meno calore: la temperatura scende di circa mezzo grado ogni cento metri di quota.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7286,7 +7286,7 @@
    ],
    "answerIndex": 2,
    "answer": "rilievi dolci",
-   "explanation": "La risposta corretta è 'rilievi dolci'.",
+   "explanation": "I rilievi collinari sono arrotondati e con pendenze leggere: l'erosione li ha smussati e non hanno le pareti ripide della montagna.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7317,7 +7317,7 @@
    ],
    "answerIndex": 3,
    "answer": "campi coltivati e strade",
-   "explanation": "La risposta corretta è 'campi coltivati e strade'.",
+   "explanation": "In pianura il terreno piatto rende facile arare i campi e tracciare strade dritte: per questo è il paesaggio più trasformato dall'uomo.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7348,7 +7348,7 @@
    ],
    "answerIndex": 0,
    "answer": "il fianco della montagna",
-   "explanation": "La risposta corretta è 'il fianco della montagna'.",
+   "explanation": "Il versante è il fianco inclinato della montagna, dalla base alla cima: ogni montagna ne ha più di uno, esposti a direzioni diverse.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7379,7 +7379,7 @@
    ],
    "answerIndex": 1,
    "answer": "la parte più alta della montagna",
-   "explanation": "La risposta corretta è 'la parte più alta della montagna'.",
+   "explanation": "La vetta è il punto più alto della montagna, quello di cui si misura l'altitudine.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7410,7 +7410,7 @@
    ],
    "answerIndex": 2,
    "answer": "tra i monti",
-   "explanation": "La risposta corretta è 'tra i monti'.",
+   "explanation": "La valle è la zona più bassa compresa fra due rilievi: spesso è stata scavata da un fiume o da un ghiacciaio.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7441,7 +7441,7 @@
    ],
    "answerIndex": 3,
    "answer": "l'intervento dell'uomo",
-   "explanation": "La risposta corretta è \"l'intervento dell'uomo\".",
+   "explanation": "Una collina coltivata non è più paesaggio naturale: qualcuno ha ripulito il terreno, piantato e curato le colture.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7472,7 +7472,7 @@
    ],
    "answerIndex": 0,
    "answer": "gallerie e strade",
-   "explanation": "La risposta corretta è 'gallerie e strade'.",
+   "explanation": "Le montagne interrompono le strade, ma l'uomo le supera scavando gallerie e tracciando strade a tornanti: l'ostacolo resta, il passaggio si costruisce.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7503,7 +7503,7 @@
    ],
    "answerIndex": 1,
    "answer": "ha terreni ampi e facili da lavorare",
-   "explanation": "La risposta corretta è 'ha terreni ampi e facili da lavorare'.",
+   "explanation": "In pianura il terreno è piatto, profondo e spesso ricco di acqua: si può arare, irrigare e usare le macchine, cosa difficile in pendenza.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7534,7 +7534,7 @@
    ],
    "answerIndex": 2,
    "answer": "del paesaggio naturale",
-   "explanation": "La risposta corretta è 'del paesaggio naturale'.",
+   "explanation": "Boschi e pascoli crescono da soli in montagna, senza che nessuno li costruisca: sono elementi del paesaggio naturale.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7565,7 +7565,7 @@
    ],
    "answerIndex": 3,
    "answer": "pianura",
-   "explanation": "La risposta corretta è 'pianura'.",
+   "explanation": "L'altitudine è l'altezza sul livello del mare: la pianura sta sotto i 200 metri, la collina fra 200 e 600, la montagna sopra.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7596,7 +7596,7 @@
    ],
    "answerIndex": 0,
    "answer": "vigneti e oliveti",
-   "explanation": "La risposta corretta è 'vigneti e oliveti'.",
+   "explanation": "I pendii collinari sono soleggiati e ben drenati: sono le condizioni che vite e olivo preferiscono, e per questo lì si trovano vigneti e oliveti.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7627,7 +7627,7 @@
    ],
    "answerIndex": 1,
    "answer": "pianura",
-   "explanation": "La risposta corretta è 'pianura'.",
+   "explanation": "La pianura è per definizione un terreno quasi piatto, con dislivelli minimi e bassa altitudine.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7658,7 +7658,7 @@
    ],
    "answerIndex": 2,
    "answer": "un punto di passaggio tra rilievi",
-   "explanation": "La risposta corretta è 'un punto di passaggio tra rilievi'.",
+   "explanation": "Il passo è il punto più basso di una cresta: è lì che si costruiscono le strade, perché è dove la montagna si attraversa con meno fatica.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7689,7 +7689,7 @@
    ],
    "answerIndex": 3,
    "answer": "far scivolare via neve e pioggia",
-   "explanation": "La risposta corretta è 'far scivolare via neve e pioggia'.",
+   "explanation": "In montagna nevica molto e la neve accumulata pesa: il tetto spiovente la fa scivolare a terra invece di lasciarla accumulare.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7720,7 +7720,7 @@
    ],
    "answerIndex": 0,
    "answer": "gli spazi sono più accessibili",
-   "explanation": "La risposta corretta è 'gli spazi sono più accessibili'.",
+   "explanation": "In pianura non ci sono dislivelli da superare: costruire strade, ferrovie e quartieri costa meno e per questo le città crescono più facilmente.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7751,7 +7751,7 @@
    ],
    "answerIndex": 1,
    "answer": "paesaggi di terra",
-   "explanation": "La risposta corretta è 'paesaggi di terra'.",
+   "explanation": "Collina, monte e pianura sono i paesaggi di terra: si distinguono per la forma e l'altezza del terreno, non per l'acqua.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7782,7 +7782,7 @@
    ],
    "answerIndex": 2,
    "answer": "montano",
-   "explanation": "La risposta corretta è 'montano'.",
+   "explanation": "Molte cime e pochi spazi piani sono la firma del paesaggio montano: è la forma del terreno a definirlo.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7813,7 +7813,7 @@
    ],
    "answerIndex": 3,
    "answer": "pianura",
-   "explanation": "La risposta corretta è 'pianura'.",
+   "explanation": "Campi estesi e strade dritte si possono fare solo dove non ci sono dislivelli: è il segno tipico della pianura.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7844,7 +7844,7 @@
    ],
    "answerIndex": 0,
    "answer": "più dolci",
-   "explanation": "La risposta corretta è 'più dolci'.",
+   "explanation": "Le colline hanno pendii dolci perché sono più antiche e l'erosione le ha smussate: si salgono senza attrezzatura, a differenza delle montagne.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7875,7 +7875,7 @@
    ],
    "answerIndex": 1,
    "answer": "rifugi e funivie",
-   "explanation": "La risposta corretta è 'rifugi e funivie'.",
+   "explanation": "Rifugi e funivie sono costruzioni pensate per la montagna: permettono di dormire in quota e di superare i dislivelli senza salire a piedi.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7906,7 +7906,7 @@
    ],
    "answerIndex": 2,
    "answer": "naturale",
-   "explanation": "La risposta corretta è 'naturale'.",
+   "explanation": "Il bosco cresce da solo dove il clima lo permette: nessuno lo costruisce, quindi è un elemento naturale.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7937,7 +7937,7 @@
    ],
    "answerIndex": 3,
    "answer": "antropico",
-   "explanation": "La risposta corretta è 'antropico'.",
+   "explanation": "L'autostrada è stata progettata e costruita dall'uomo: è un elemento antropico che attraversa un paesaggio naturale.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7968,7 +7968,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'uomo adatta il paesaggio alle proprie attività",
-   "explanation": "La risposta corretta è \"l'uomo adatta il paesaggio alle proprie attività\".",
+   "explanation": "I terrazzamenti sono gradoni scavati nel pendio per poterci coltivare: mostrano che l'uomo, dove il terreno non gli va bene, lo modifica.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -7999,7 +7999,7 @@
    ],
    "answerIndex": 1,
    "answer": "il terreno è più facilmente coltivabile",
-   "explanation": "La risposta corretta è 'il terreno è più facilmente coltivabile'.",
+   "explanation": "Il terreno piano si ara facilmente, trattiene l'acqua e permette l'uso delle macchine: per questo in pianura l'agricoltura è più diffusa.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8030,7 +8030,7 @@
    ],
    "answerIndex": 2,
    "answer": "montagna",
-   "explanation": "La risposta corretta è 'montagna'.",
+   "explanation": "Per sciare servono pendenza, neve e freddo per mesi: condizioni che si trovano solo in montagna, sopra una certa quota.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8061,7 +8061,7 @@
    ],
    "answerIndex": 3,
    "answer": "coltivazioni e piccoli centri",
-   "explanation": "La risposta corretta è 'coltivazioni e piccoli centri'.",
+   "explanation": "In collina il clima è mite e i pendii sono coltivabili, ma lo spazio piano è poco: nascono coltivazioni e centri abitati piccoli.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8092,7 +8092,7 @@
    ],
    "answerIndex": 0,
    "answer": "montagna",
-   "explanation": "La risposta corretta è 'montagna'.",
+   "explanation": "La valle è la parte bassa fra due rilievi: fa parte del paesaggio montano, di cui è l'elemento in cui si vive e si passa.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8123,7 +8123,7 @@
    ],
    "answerIndex": 1,
    "answer": "pianeggiante",
-   "explanation": "La risposta corretta è 'pianeggiante'.",
+   "explanation": "Pianeggiante vuol dire senza dislivelli apprezzabili: è la caratteristica che definisce la pianura.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8154,7 +8154,7 @@
    ],
    "answerIndex": 2,
    "answer": "strade, coltivazioni ed edifici",
-   "explanation": "La risposta corretta è 'strade, coltivazioni ed edifici'.",
+   "explanation": "Strade, coltivazioni ed edifici cambiano tutti e tre i paesaggi: l'uomo interviene in montagna, in collina e in pianura, con mezzi diversi.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8185,7 +8185,7 @@
    ],
    "answerIndex": 3,
    "answer": "forma del terreno",
-   "explanation": "La risposta corretta è 'forma del terreno'.",
+   "explanation": "Montagna, collina e pianura si distinguono per la forma del terreno e l'altitudine: è quella la caratteristica che li definisce.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8216,7 +8216,7 @@
    ],
    "answerIndex": 0,
    "answer": "rilievi",
-   "explanation": "La risposta corretta è 'rilievi'.",
+   "explanation": "Sia la montagna sia la collina si elevano sulla pianura circostante: sono entrambe rilievi, e cambia solo quanto sono alte e ripide.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -8247,7 +8247,7 @@
    ],
    "answerIndex": 1,
    "answer": "una vetta alpina altissima",
-   "explanation": "La risposta corretta è 'una vetta alpina altissima'.",
+   "explanation": "Una collina bassa e tondeggiante è un rilievo modesto: la vetta alpina è tutt'altra cosa per altezza, pendenza e clima.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_terra",
    "tags": [
@@ -9828,7 +9828,7 @@
    ],
    "answerIndex": 2,
    "answer": "collina o montagna",
-   "explanation": "La risposta corretta è 'collina o montagna'.",
+   "explanation": "La sorgente sta in alto perché l'acqua deve poi scendere: nasce dove la falda affiora dal terreno, in collina o in montagna.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9859,7 +9859,7 @@
    ],
    "answerIndex": 3,
    "answer": "basso",
-   "explanation": "La risposta corretta è 'basso'.",
+   "explanation": "Il fiume si divide in tre tratti: alto corso, ripido e veloce vicino alla sorgente; medio corso; basso corso, lento e sinuoso vicino alla foce.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9890,7 +9890,7 @@
    ],
    "answerIndex": 0,
    "answer": "dighe e canali",
-   "explanation": "La risposta corretta è 'dighe e canali'.",
+   "explanation": "Dighe e canali cambiano il percorso e la quantità d'acqua: creano laghi dove non c'erano e portano l'acqua dove serve.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9921,7 +9921,7 @@
    ],
    "answerIndex": 1,
    "answer": "fiume/lago e mare",
-   "explanation": "La risposta corretta è 'fiume/lago e mare'.",
+   "explanation": "L'acqua dolce è quella di fiumi e laghi, la salata quella del mare: è il modo più semplice di distinguere le acque interne da quelle marine.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9952,7 +9952,7 @@
    ],
    "answerIndex": 2,
    "answer": "circondato dalla terra",
-   "explanation": "La risposta corretta è 'circondato dalla terra'.",
+   "explanation": "Il mare è aperto e collegato agli oceani; il lago è chiuso in una conca, con la terra tutt'intorno.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9983,7 +9983,7 @@
    ],
    "answerIndex": 3,
    "answer": "acqua stagnante e terreno umido",
-   "explanation": "La risposta corretta è 'acqua stagnante e terreno umido'.",
+   "explanation": "Nella palude l'acqua ristagna perché non ha via di scolo: il terreno resta sempre umido e ci vivono piante e animali adatti a quelle condizioni.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10014,7 +10014,7 @@
    ],
    "answerIndex": 0,
    "answer": "antropici della costa",
-   "explanation": "La risposta corretta è 'antropici della costa'.",
+   "explanation": "Porto, darsena e faro sono tutti costruiti dall'uomo per servire la navigazione: sono elementi antropici, non forme naturali della costa.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10045,7 +10045,7 @@
    ],
    "answerIndex": 1,
    "answer": "navigazione e turismo",
-   "explanation": "La risposta corretta è 'navigazione e turismo'.",
+   "explanation": "Il mare permette di spostarsi via nave e attira visitatori sulle spiagge: da qui nascono navigazione, commercio e turismo.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10076,7 +10076,7 @@
    ],
    "answerIndex": 2,
    "answer": "piogge abbondanti",
-   "explanation": "La risposta corretta è 'piogge abbondanti'.",
+   "explanation": "Dopo piogge abbondanti il fiume raccoglie molta più acqua e il livello sale: la piena mostra che il paesaggio d'acqua non è mai fermo.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10107,7 +10107,7 @@
    ],
    "answerIndex": 3,
    "answer": "interne",
-   "explanation": "La risposta corretta è 'interne'.",
+   "explanation": "Le acque interne sono quelle dentro le terre emerse — fiumi, laghi, torrenti — in contrapposizione alle acque marine.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10138,7 +10138,7 @@
    ],
    "answerIndex": 0,
    "answer": "acqua e vie di comunicazione",
-   "explanation": "La risposta corretta è 'acqua e vie di comunicazione'.",
+   "explanation": "Vicino a un fiume c'è acqua da bere e per i campi, e il fiume stesso è una via per spostare merci: per questo molte città sono nate lì.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10169,7 +10169,7 @@
    ],
    "answerIndex": 1,
    "answer": "la navigazione in mare",
-   "explanation": "La risposta corretta è 'la navigazione in mare'.",
+   "explanation": "Il faro emette una luce visibile da lontano che segnala la costa e i punti pericolosi: serve alle navi a orientarsi di notte e con la nebbia.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10200,7 +10200,7 @@
    ],
    "answerIndex": 2,
    "answer": "costa",
-   "explanation": "La risposta corretta è 'costa'.",
+   "explanation": "La costa può essere alta e rocciosa, con scogliere a picco, oppure bassa e sabbiosa: sono due forme diverse dello stesso incontro fra terra e mare.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -10231,7 +10231,7 @@
    ],
    "answerIndex": 3,
    "answer": "nel mare o in un altro fiume",
-   "explanation": "La risposta corretta è 'nel mare o in un altro fiume'.",
+   "explanation": "Il fiume termina dove consegna la sua acqua: nel mare, in un lago, o in un altro fiume più grande di cui diventa affluente.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [

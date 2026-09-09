@@ -504,6 +504,13 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 27 delle istanze: "arrivano altri 1". Uno e' singolare e
+  // vuole l'accordo al singolare: "ne arriva un altro". Il generatore
+  // sostituiva il numero nel template senza guardare se era 1.
+  // il numero puo' chiudere la frase ("altri 1."), quindi il punto non va
+  // escluso: fuori restano solo le altre cifre e i separatori seguiti da cifra.
+  { pattern: /(?<![a-zà-ù])(altri|altre|nuovi|nuove)\s+1(?!\d)(?![.,]\d)/,
+    msg: 'numerale 1 con l\'aggettivo al plurale ("arrivano altri 1")' },
   // Dal lotto 23 delle istanze: "In un cortile ci sono 15 bambine e 24
   // bambini. Quanti bambini in tutto?". La stessa parola vale prima 'i
   // maschi' e poi 'tutti quanti', e in seconda la distinzione fra bambine e

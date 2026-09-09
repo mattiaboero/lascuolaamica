@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'In palestra ci sono 5 bambini e arrivano altri 1. Quanti sono in tutto?',
   'In un cortile ci sono 15 bambine e 24 bambini. Quanti bambini in tutto?',
   'Puoi usare la proprietà distributiva: 10 × 70 = 10 × (70 + 0) se utile.',
   'Area del trapezio = (bM+bm)×h÷2 = (15+4)×11÷2 = 209÷2 = 104,5 cm²; arrotondata a 104.',
@@ -127,6 +128,8 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'In palestra ci sono 5 bambini e ne arriva un altro. Quanti sono in tutto?',
+  'In palestra ci sono 5 bambini e arrivano altri 12. Quanti sono in tutto?',
   'In un cortile ci sono 15 bambine e 24 bambini. Quanti sono in tutto?',
   'Con un multiplo di 10 conviene moltiplicare per le decine: 10 × 7 = 70, poi aggiungere uno zero.',
   'Area del trapezio = (bM+bm)×h÷2 = (15+4)×12÷2 = 228÷2 = 114 cm².',
