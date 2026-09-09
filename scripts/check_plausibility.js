@@ -85,6 +85,12 @@ const REGOLE = [
   // Dal lotto 35 delle istanze: camere d'albergo con 8 e 10 posti letto.
   { re: /\b(In ogni camera) dormono\s+(\d[\d.]*)\s*persone/gi,
     min: 1, max: 4, cosa: "persone in una camera d'albergo" },
+  // Dal lotto 6 delle famiglie: atleti che ripetevano 77, 101, 135, 140, 143 e
+  // 192 scatti. Sette istanze su otto. Il prodotto era giusto e la lunghezza
+  // del singolo scatto plausibile, quindi nessun altro controllo vedeva nulla:
+  // fuori scala e' il numero di ripetizioni. Una serie di scatti in allenamento
+  // ne conta una decina, non centonovanta.
+  { re: /\b(ripete)\s+(\d[\d.]*)\s*scatti/gi, min: 1, max: 30, cosa: 'scatti ripetuti in allenamento' },
 ];
 
 function main() {

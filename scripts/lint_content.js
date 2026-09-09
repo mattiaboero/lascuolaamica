@@ -889,6 +889,18 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // blocchi di cinquanta; questa regola impedisce che la formula rientri.
   // Il confronto e' sulla stringa intera: una spiegazione che cita la risposta
   // e poi spiega perche' e' giusta passa senza problemi.
+  // Dal lotto 109: "5 + 1 = 6. Bastano le dita di una mano!". L'aiuto suggerito
+  // non regge il risultato: su una mano ci sono cinque dita, e sei non ci
+  // stanno. Il conto era giusto, quindi check_math_explanations non vedeva
+  // nulla; il difetto sta fra il numero e il consiglio che lo accompagna.
+  // "Contiamoli sulle dita" senza "una" resta ammesso: le mani sono due.
+  if (/dita di una mano|dita della mano|su una mano/i.test(explanation || '')) {
+    const n = Number(String(answer).replace(',', '.'));
+    if (Number.isFinite(n) && n > 5) {
+      errors.push({ level: 'error', field: 'explanation', msg: `l'aiuto di conteggio non regge il risultato: una mano ha cinque dita, la risposta è ${answer}` });
+    }
+  }
+
   {
     const testo = (explanation || '').trim();
     const val = String(answer).trim().replace(/[.]$/, '');

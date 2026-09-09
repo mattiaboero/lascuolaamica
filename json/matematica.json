@@ -17493,7 +17493,7 @@
    ],
    "answerIndex": 0,
    "answer": "6",
-   "explanation": "In palestra ci sono 5 bambini e ne arriva 1 in più: dobbiamo sommare 5 + 1 = 6. Bastano le dita di una mano!",
+   "explanation": "In palestra ci sono 5 bambini e ne arriva 1 in più: dobbiamo sommare 5 + 1 = 6. Contare in avanti di uno basta: dopo il 5 viene il 6.",
    "active": true,
    "tag": "matematica;problemi;classe_2;primaria",
    "tags": [
@@ -26828,16 +26828,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta ripete 101 scatti di 11 m. Quanti m percorre?",
+   "question": "Un atleta ripete 13 scatti di 11 m. Quanti m percorre?",
    "options": [
-    "1110",
-    "1109",
-    "1108",
-    "1111"
+    "142",
+    "141",
+    "140",
+    "143"
    ],
    "answerIndex": 3,
-   "answer": "1111",
-   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 101×11=1111 m.",
+   "answer": "143",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni scatto: 13×11=143 m (13×10=130, più 13).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27180,16 +27180,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta ripete 140 scatti di 8 m. Quanti m percorre?",
+   "question": "Un atleta ripete 14 scatti di 8 m. Quanti m percorre?",
    "options": [
-    "1119",
-    "1117",
-    "1120",
-    "1118"
+    "111",
+    "109",
+    "112",
+    "110"
    ],
    "answerIndex": 2,
-   "answer": "1120",
-   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 140×8=1120 m.",
+   "answer": "112",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni scatto: 14×8=112 m.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27244,16 +27244,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Un atleta ripete 135 scatti di 4 m. Quanti m percorre?",
+   "question": "Un atleta ripete 15 scatti di 40 m. Quanti m percorre?",
    "options": [
-    "540",
-    "538",
-    "537",
-    "539"
+    "600",
+    "598",
+    "597",
+    "599"
    ],
    "answerIndex": 0,
-   "answer": "540",
-   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni giro: 135×4=540 m.",
+   "answer": "600",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza di ogni scatto: 15×40=600 m (15×4=60, poi aggiungi uno zero).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27564,16 +27564,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta ripete 106 scatti di 15 m. Quanti m percorre?",
+   "question": "Un atleta ripete 16 scatti di 15 m. Quanti m percorre?",
    "options": [
-    "1588",
-    "1587",
-    "1590",
-    "1589"
+    "238",
+    "237",
+    "240",
+    "239"
    ],
    "answerIndex": 2,
-   "answer": "1590",
-   "explanation": "Moltiplica il numero di scatti per la lunghezza: 106×15=1590 m (106×10=1060, 106×5=530, somma 1590).",
+   "answer": "240",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza: 16×15=240 m (16×10=160, 16×5=80, somma 240).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27724,16 +27724,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta ripete 192 scatti di 17 m. Quanti m percorre?",
+   "question": "Un atleta ripete 12 scatti di 17 m. Quanti m percorre?",
    "options": [
-    "3263",
-    "3262",
-    "3261",
-    "3264"
+    "203",
+    "202",
+    "201",
+    "204"
    ],
    "answerIndex": 3,
-   "answer": "3264",
-   "explanation": "Moltiplica 192×17: 192×10=1920, 192×7=1344, poi 1920+1344=3264.",
+   "answer": "204",
+   "explanation": "Moltiplica 12×17: 12×10=120, 12×7=84, poi 120+84=204.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27756,16 +27756,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta ripete 77 scatti di 16 m. Quanti m percorre?",
+   "question": "Un atleta ripete 17 scatti di 16 m. Quanti m percorre?",
    "options": [
-    "1232",
-    "1231",
-    "1230",
-    "1229"
+    "272",
+    "271",
+    "270",
+    "269"
    ],
    "answerIndex": 0,
-   "answer": "1232",
-   "explanation": "Moltiplica il numero di scatti per la lunghezza: 77×16=1232 m (77×10=770, 77×6=462, somma 1232).",
+   "answer": "272",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza: 17×16=272 m (17×10=170, 17×6=102, somma 272).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27788,16 +27788,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un atleta ripete 143 scatti di 20 m. Quanti m percorre?",
+   "question": "Un atleta ripete 13 scatti di 20 m. Quanti m percorre?",
    "options": [
-    "2858",
-    "2860",
-    "2859",
-    "2857"
+    "258",
+    "260",
+    "259",
+    "257"
    ],
    "answerIndex": 1,
-   "answer": "2860",
-   "explanation": "Moltiplica il numero di scatti per la lunghezza: 143×20=2860 m (moltiplica per 2 e aggiungi uno zero).",
+   "answer": "260",
+   "explanation": "Moltiplica il numero di scatti per la lunghezza: 13×20=260 m (moltiplica per 2 e aggiungi uno zero).",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [

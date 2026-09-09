@@ -6924,6 +6924,15 @@
     "pro-5-problemi-095",
     "sci-3-metodo-027"
    ]
+  },
+  {
+   "numero": 109,
+   "domande": [
+    "mat-4-problemi-014",
+    "mat-2-problemi-006",
+    "mat-4-problemi-028",
+    "mat-4-problemi-027"
+   ]
   }
  ],
  "revisionate": [
@@ -10275,6 +10284,7 @@
   "mat-2-logica_e_dati-9038",
   "mat-2-logica_e_dati-9039",
   "mat-2-logica_e_dati-9040",
+  "mat-2-problemi-006",
   "mat-2-problemi-051",
   "mat-2-problemi-9018",
   "mat-2-problemi-9019",
@@ -10416,6 +10426,9 @@
   "mat-4-logica_e_dati-9509",
   "mat-4-logica_e_dati-9510",
   "mat-4-logica_e_dati-9511",
+  "mat-4-problemi-014",
+  "mat-4-problemi-027",
+  "mat-4-problemi-028",
   "mat-4-problemi-031",
   "mat-4-problemi-036",
   "mat-4-problemi-039",
