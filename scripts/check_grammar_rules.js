@@ -300,7 +300,7 @@ function controllaNomiClassificati(sorgente) {
 // statistico: una parola quasi assente nel corpus a un passo da una molto
 // piu' frequente. Le aree di ortografia, lessico e grammatica restano fuori
 // perche' li' le grafie sbagliate sono i distrattori, e sono volute.
-const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa']);
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini']);
 
 function controllaRefusi() {
   const dir = path.join(__dirname, '..', 'json');

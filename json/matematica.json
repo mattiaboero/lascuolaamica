@@ -26956,16 +26956,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un treno ha 11 vagoni con 17 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 11 vagoni con 70 posti ciascuno. Quanti posti in tutto?",
    "options": [
-    "186",
-    "185",
-    "184",
-    "187"
+    "769",
+    "768",
+    "767",
+    "770"
    ],
    "answerIndex": 3,
-   "answer": "187",
-   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 11×17=187 posti.",
+   "answer": "770",
+   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 11×70=770 posti.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27116,16 +27116,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un treno ha 4 vagoni con 165 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 4 vagoni con 90 posti ciascuno. Quanti posti in tutto?",
    "options": [
-    "660",
-    "659",
-    "657",
-    "658"
+    "360",
+    "359",
+    "357",
+    "358"
    ],
    "answerIndex": 0,
-   "answer": "660",
-   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 4×165=660 posti.",
+   "answer": "360",
+   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 4×90=360 posti.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27276,16 +27276,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un treno ha 20 vagoni con 7 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 20 vagoni con 60 posti ciascuno. Quanti posti in tutto?",
    "options": [
-    "138",
-    "140",
-    "139",
-    "137"
+    "1198",
+    "1200",
+    "1199",
+    "1197"
    ],
    "answerIndex": 1,
-   "answer": "140",
-   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 20×7=140 posti.",
+   "answer": "1200",
+   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 20×60=1200 posti.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27596,16 +27596,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Un treno ha 10 vagoni con 175 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 10 vagoni con 80 posti ciascuno. Quanti posti in tutto?",
    "options": [
-    "1748",
-    "1749",
-    "1747",
-    "1750"
+    "798",
+    "799",
+    "797",
+    "800"
    ],
    "answerIndex": 3,
-   "answer": "1750",
-   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 10×175=1750 posti.",
+   "answer": "800",
+   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 10×80=800 posti.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [

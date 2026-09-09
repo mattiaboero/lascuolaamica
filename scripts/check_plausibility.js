@@ -74,6 +74,9 @@ const REGOLE = [
   // abbonamento, non di un bilancio familiare.
   { re: /\b(famiglia) spende\s+(\d[\d.]*)\s*euro al mese/gi,
     min: 500, max: 9000, cosa: 'spesa mensile di una famiglia' },
+  // Dal lotto 31 delle istanze: vagoni da 7 posti e vagoni da 175. Un vagone
+  // passeggeri ne ha 60-90, un piano doppio arriva a 120.
+  { re: /\b(vagoni) con\s+(\d[\d.]*)\s*posti/gi, min: 40, max: 130, cosa: 'posti in un vagone' },
 ];
 
 function main() {
