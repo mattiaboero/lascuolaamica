@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.13.8 - 2026-09-09
+
+### Fixed
+Riletta la riscrittura della 4.13.7 contro il testo originale, riga per riga. Cinque cose sbagliate, tutte introdotte da me nel riscrivere, piu' un recupero:
+
+- **`29 aprile` annunciava gli indirizzi senza `.html` come novita' del giorno.** Erano arrivati il **13 aprile**, e quella voce lo dice gia'. La riga originale parlava della continuita' offline *di* quegli indirizzi, non della loro introduzione: due annunci della stessa cosa a sedici giorni di distanza.
+- **`23 aprile` diceva domande "controllate una a una prima di pubblicarle".** L'originale parlava di pacchetti *validati* e di una verifica automatica post-merge: una promessa di lettura a mano che nessuno aveva fatto quel giorno.
+- **`18 aprile` aveva perso "WCAG 2.1 AA".** Lo standard e' un'informazione verificabile — la pagina Accessibilita' lo cita — non gergo da togliere.
+- **`9 aprile` elencava i quattro ambiti di civica per nome.** I nomi li avevo presi da `json/civica.json` di oggi: non ho modo di sapere come si chiamassero ad aprile. Tolti. Recuperate invece le "dieci domande a partita" e la riga sui lavori tecnici, che avevo lasciato cadere.
+- **`7 aprile` aveva perso "nelle materie principali"** sulla domanda bonus, facendola sembrare attiva ovunque.
+
+- **Recuperate le versioni cancellate.** Sette voci le portavano dentro il testo ("Versione portale aggiornata alla 4.5.2"), e togliendo quella formula le avevo perse. Ora stanno nell'etichetta come per tutti i giorni piu' recenti: `1 maggio 2026 · Release 4.5.5`, e cosi' 29 e 28 aprile, 23, 18, 13 e 12. `scripts/check_update_log.js` guarda solo la prima voce, quindi non cambia nulla per lui.
+
+### Notes
+- Verificate anche le altre 10 riscritture: quello che ho tolto e' solo interno (chiavi di storage, misure degli screenshot, `meta mobile-web-app-capable`, rinumerazione degli id). Nessun altro fatto visibile all'utente e' andato perso.
+
 ## 4.13.7 - 2026-09-09
 
 ### Changed

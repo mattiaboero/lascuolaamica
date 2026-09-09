@@ -1,6 +1,6 @@
 [
  {
-  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.7",
+  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.8",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e spiegazioni che invece di spiegare ripetevano la consegna.",
    "Tolti di mezzo alcuni casi in cui la risposta si trovava senza sapere l'inglese: bastava cercare l'unica opzione al plurale, o l'unica senza articolo.",
@@ -214,7 +214,7 @@
   ]
  },
  {
-  "date": "1 maggio 2026",
+  "date": "1 maggio 2026 · Release 4.5.5",
   "items": [
    "Gli interruttori dei colori e delle animazioni nel pannello Info sono più grandi e più facili da centrare col dito, con testi più leggibili.",
    "Aggiornati i testi di Privacy e FAQ per descrivere il nuovo modo di cancellare i dati salvati sul dispositivo.",
@@ -230,15 +230,15 @@
   ]
  },
  {
-  "date": "29 aprile 2026",
+  "date": "29 aprile 2026 · Release 4.5.2",
   "items": [
-   "Le pagine restano raggiungibili anche senza connessione dopo la prima visita, e i loro indirizzi sono più puliti, senza «.html» in fondo.",
+   "Le pagine restano raggiungibili anche senza connessione dopo la prima visita, compresi i loro indirizzi senza «.html».",
    "I caratteri tipografici arrivano ora dal sito stesso invece che da un servizio esterno: la prima visita è più stabile.",
    "Lavori interni: allineate le impostazioni per l'installazione come app e aggiornata la documentazione tecnica."
   ]
  },
  {
-  "date": "28 aprile 2026",
+  "date": "28 aprile 2026 · Release 4.5.1",
   "items": [
    "L'interruttore «Meno animazioni» arriva anche nelle FAQ e nelle pagine informative.",
    "Aggiornate le schede che descrivono il sito ai motori di ricerca e agli assistenti AI: chi lo ha fondato, da quando esiste e quante domande ha ogni materia (allora 7.348 in tutto)."
@@ -255,9 +255,9 @@
   ]
  },
  {
-  "date": "23 aprile 2026",
+  "date": "23 aprile 2026 · Release 4.3",
   "items": [
-   "Aggiunte nuove domande su tutte e 8 le materie, controllate una a una prima di pubblicarle.",
+   "Aggiunte nuove domande su tutte e 8 le materie, passate dai controlli automatici su struttura, coerenza e risposte prima e dopo la pubblicazione.",
    "Corretta una domanda di ortografia in italiano che aveva due risposte identiche."
   ]
  },
@@ -269,9 +269,9 @@
   ]
  },
  {
-  "date": "18 aprile 2026",
+  "date": "18 aprile 2026 · Release 4.2.1",
   "items": [
-   "Controllo completo di accessibilità su tutte le pagine principali, verificato anche a mano: navigazione da tastiera, finestre, ingrandimento del testo, lettore di schermo VoiceOver e riduzione del movimento.",
+   "Controllo completo di accessibilità su tutte le pagine principali secondo lo standard WCAG 2.1 AA, verificato anche a mano: navigazione da tastiera, finestre, ingrandimento del testo, lettore di schermo VoiceOver e riduzione del movimento.",
    "A ingrandimento 200% la home non taglia più il testo dentro le card.",
    "Nuova pagina Accessibilità, con la dichiarazione di conformità, il modo in cui sono stati fatti i test e un contatto per segnalare problemi."
   ]
@@ -290,14 +290,14 @@
   ]
  },
  {
-  "date": "13 aprile 2026",
+  "date": "13 aprile 2026 · Release 4.1.1",
   "items": [
    "Gli indirizzi delle pagine perdono il «.html»: /matematica, /faq, /supporta. Collegamenti interni e sitemap allineati.",
    "Nella pagina «Supporta il progetto» aggiunto il contatto diretto supporto@lascuolaamica.it."
   ]
  },
  {
-  "date": "12 aprile 2026",
+  "date": "12 aprile 2026 · Release 4.1",
   "items": [
    "Revisione dei testi italiani di quiz, FAQ, pagine informative e supporto: corretti accenti e apostrofi (è, qual è, cos'è, l'Italia, probabilità) e uniformate le forme interrogative.",
    "Risolti alcuni blocchi del gioco causati da apostrofi scritti male dentro le domande."
@@ -323,9 +323,10 @@
  {
   "date": "9 aprile 2026",
   "items": [
-   "Nuova materia Educazione Civica, con quattro ambiti: Costituzione e regole di comunità, ambiente, cittadinanza digitale, strada e sicurezza.",
+   "Nuova materia Educazione Civica, con quattro ambiti e dieci domande a partita.",
    "Corretta la domanda bonus difficile di civica sul semaforo rosso.",
-   "Home più ordinata: card allineate, testi su più righe e bottoni coerenti, senza emoji, con i colori a distinguere le materie."
+   "Home più ordinata: card allineate, testi su più righe e bottoni coerenti, senza emoji, con i colori a distinguere le materie.",
+   "Lavori interni: miglioramenti per i motori di ricerca e l'accessibilità, e controlli su velocità e struttura delle pagine."
   ]
  },
  {
@@ -338,7 +339,7 @@
   "date": "7 aprile 2026",
   "items": [
    "In matematica si vede chiaramente quale tabellina è selezionata, e la modalità si sceglie in due passaggi: prima la tabellina (una sola o tutte), poi classico o a tempo.",
-   "Nuova domanda bonus a fine partita, che moltiplica il punteggio per 5, 10 o 25.",
+   "Nuova domanda bonus a fine partita nelle materie principali, che moltiplica il punteggio per 5, 10 o 25.",
    "I messaggi di risposta corretta non si rivolgono più a un solo genere.",
    "Aggiunte nuove pagine per le singole materie, tutte con la stessa struttura."
   ]
