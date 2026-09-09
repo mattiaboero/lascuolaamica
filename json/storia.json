@@ -8070,7 +8070,7 @@
    ],
    "answerIndex": 3,
    "answer": "dividere il passato in grandi periodi",
-   "explanation": "La risposta corretta è 'dividere il passato in grandi periodi'.",
+   "explanation": "Periodizzare vuol dire dividere il passato in grandi periodi, come preistoria, antichità e Medioevo: serve a orientarsi in un tempo lunghissimo.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8101,7 +8101,7 @@
    ],
    "answerIndex": 0,
    "answer": "molto lunga",
-   "explanation": "La risposta corretta è 'molto lunga'.",
+   "explanation": "Un milione di anni è una durata enorme: per confronto, la storia scritta dell'umanità copre poco più di cinquemila anni.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8132,7 +8132,7 @@
    ],
    "answerIndex": 1,
    "answer": "contemporaneità",
-   "explanation": "La risposta corretta è 'contemporaneità'.",
+   "explanation": "Contemporaneità significa che due fatti avvengono nello stesso periodo, anche in luoghi lontani fra loro.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8163,7 +8163,7 @@
    ],
    "answerIndex": 2,
    "answer": "successione",
-   "explanation": "La risposta corretta è 'successione'.",
+   "explanation": "La successione è l'ordine con cui i fatti si susseguono: prima uno, poi l'altro.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8194,7 +8194,7 @@
    ],
    "answerIndex": 3,
    "answer": "si ripete",
-   "explanation": "La risposta corretta è 'si ripete'.",
+   "explanation": "Il giorno e la notte tornano sempre nello stesso ordine: è un ciclo, cioè una sequenza che si ripete.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8225,7 +8225,7 @@
    ],
    "answerIndex": 0,
    "answer": "ciclo temporale",
-   "explanation": "La risposta corretta è 'ciclo temporale'.",
+   "explanation": "Primavera, estate, autunno e inverno tornano ogni anno nello stesso ordine: sono un ciclo temporale, come il giorno e la notte.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8256,7 +8256,7 @@
    ],
    "answerIndex": 1,
    "answer": "eventi in ordine",
-   "explanation": "La risposta corretta è 'eventi in ordine'.",
+   "explanation": "La linea del tempo dispone gli eventi in ordine cronologico, dal più antico al più recente.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8287,7 +8287,7 @@
    ],
    "answerIndex": 2,
    "answer": "quando inizia e quando finisce",
-   "explanation": "La risposta corretta è 'quando inizia e quando finisce'.",
+   "explanation": "La durata è la distanza fra l'inizio e la fine: per calcolarla servono la data di partenza e quella di conclusione.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8318,7 +8318,7 @@
    ],
    "answerIndex": 3,
    "answer": "quali fatti vengono prima e dopo",
-   "explanation": "La risposta corretta è 'quali fatti vengono prima e dopo'.",
+   "explanation": "Mettendo i fatti in fila sulla linea del tempo si vede subito quali vengono prima e quali dopo: è la successione.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8349,7 +8349,7 @@
    ],
    "answerIndex": 0,
    "answer": "eventi che si svolgono in un certo arco di tempo",
-   "explanation": "La risposta corretta è 'eventi che si svolgono in un certo arco di tempo'.",
+   "explanation": "Un periodo storico raccoglie i fatti avvenuti in un certo arco di tempo, che condividono caratteristiche comuni.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8380,7 +8380,7 @@
    ],
    "answerIndex": 1,
    "answer": "passato",
-   "explanation": "La risposta corretta è 'passato'.",
+   "explanation": "Il passato è ciò che è già avvenuto. Il presente è adesso, il futuro deve ancora venire.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8411,7 +8411,7 @@
    ],
    "answerIndex": 2,
    "answer": "presente",
-   "explanation": "La risposta corretta è 'presente'.",
+   "explanation": "Il presente è il tempo in cui ci troviamo ora, fra il passato e il futuro.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8442,7 +8442,7 @@
    ],
    "answerIndex": 3,
    "answer": "futuro",
-   "explanation": "La risposta corretta è 'futuro'.",
+   "explanation": "Il futuro è il tempo che deve ancora arrivare: non è ancora accaduto.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8473,7 +8473,7 @@
    ],
    "answerIndex": 0,
    "answer": "eventi importanti della vita di una persona",
-   "explanation": "La risposta corretta è 'eventi importanti della vita di una persona'.",
+   "explanation": "Una linea del tempo personale mette in ordine i fatti importanti della vita di una persona: nascita, primo giorno di scuola, traslochi.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -8504,7 +8504,7 @@
    ],
    "answerIndex": 1,
    "answer": "breve",
-   "explanation": "La risposta corretta è 'breve'.",
+   "explanation": "Se un fatto occupa poco tempo la sua durata è breve: un temporale dura poco, un'era geologica moltissimo.",
    "active": true,
    "tag": "tempo;concetti;classe3",
    "tags": [
@@ -15963,7 +15963,7 @@
    ],
    "answerIndex": 3,
    "answer": "Indo",
-   "explanation": "La risposta corretta è 'Indo'.",
+   "explanation": "La civiltà dell'Indo prende il nome dal fiume Indo, lungo il quale sorsero le sue città, nell'attuale Pakistan.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -15995,7 +15995,7 @@
    ],
    "answerIndex": 0,
    "answer": "Huang He",
-   "explanation": "La risposta corretta è 'Huang He'.",
+   "explanation": "La civiltà cinese antica nacque lungo lo Huang He, il Fiume Giallo, le cui piene depositavano terra fertile.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16027,7 +16027,7 @@
    ],
    "answerIndex": 1,
    "answer": "fluviali",
-   "explanation": "La risposta corretta è 'fluviali'.",
+   "explanation": "Come Egitto e Mesopotamia, anche Indo e Cina nacquero lungo grandi fiumi: sono civiltà fluviali.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16059,7 +16059,7 @@
    ],
    "answerIndex": 2,
    "answer": "grande organizzazione urbana",
-   "explanation": "La risposta corretta è 'grande organizzazione urbana'.",
+   "explanation": "Le città dell'Indo, come Mohenjo-daro, avevano strade diritte, case in mattoni e canali di scarico: segno di una grande organizzazione urbana.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16091,7 +16091,7 @@
    ],
    "answerIndex": 3,
    "answer": "l'importanza dell'acqua per agricoltura e vita",
-   "explanation": "La risposta corretta è \"l'importanza dell'acqua per agricoltura e vita\".",
+   "explanation": "Il fiume dava acqua da bere, terra fertile con le piene e una via per gli scambi: l'acqua è l'elemento comune a tutte le civiltà fluviali.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16123,7 +16123,7 @@
    ],
    "answerIndex": 0,
    "answer": "il monoteismo",
-   "explanation": "La risposta corretta è 'il monoteismo'.",
+   "explanation": "Gli Ebrei credevano in un solo Dio, mentre quasi tutti i popoli antichi erano politeisti: il monoteismo è la loro caratteristica più nota.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16155,7 +16155,7 @@
    ],
    "answerIndex": 1,
    "answer": "un solo Dio",
-   "explanation": "La risposta corretta è 'un solo Dio'.",
+   "explanation": "Monoteismo viene dal greco 'monos', uno solo, e 'theos', dio: è la fede in un unico Dio.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16187,7 +16187,7 @@
    ],
    "answerIndex": 2,
    "answer": "credono in un unico Dio",
-   "explanation": "La risposta corretta è 'credono in un unico Dio'.",
+   "explanation": "Egizi, Mesopotamici e Greci adoravano molti dèi. Gli Ebrei si distinguono perché credono in un Dio unico.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16219,7 +16219,7 @@
    ],
    "answerIndex": 3,
    "answer": "introduce il monoteismo",
-   "explanation": "La risposta corretta è 'introduce il monoteismo'.",
+   "explanation": "Con gli Ebrei entra nella storia il monoteismo, una novità rispetto ai culti politeisti dei popoli vicini.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16251,7 +16251,7 @@
    ],
    "answerIndex": 0,
    "answer": "fertili e vicini all'acqua",
-   "explanation": "La risposta corretta è \"fertili e vicini all'acqua\".",
+   "explanation": "Le civiltà fluviali si stabiliscono dove la terra è fertile e l'acqua vicina: sono le condizioni che permettono raccolti abbondanti.",
    "active": true,
    "tag": "indo;cina;ebrei;classe4",
    "tags": [
@@ -16283,7 +16283,7 @@
    ],
    "answerIndex": 1,
    "answer": "ordinate e regolari",
-   "explanation": "La risposta corretta è 'ordinate e regolari'.",
+   "explanation": "Nelle città dell'Indo le strade si incrociavano ad angolo retto, secondo un piano regolare: non erano cresciute a caso.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16314,7 +16314,7 @@
    ],
    "answerIndex": 2,
    "answer": "capacità di pianificazione",
-   "explanation": "La risposta corretta è 'capacità di pianificazione'.",
+   "explanation": "Strade regolari, magazzini e fognature non nascono per caso: qualcuno aveva progettato la città prima di costruirla.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16345,7 +16345,7 @@
    ],
    "answerIndex": 3,
    "answer": "irrigare e coltivare",
-   "explanation": "La risposta corretta è 'irrigare e coltivare'.",
+   "explanation": "L'acqua dei fiumi veniva portata nei campi con i canali: irrigare permetteva di coltivare anche nei periodi senza pioggia.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16376,7 +16376,7 @@
    ],
    "answerIndex": 0,
    "answer": "tutte dipendono molto dai fiumi",
-   "explanation": "La risposta corretta è 'tutte dipendono molto dai fiumi'.",
+   "explanation": "Nilo, Tigri, Eufrate e Indo: in tutti e tre i casi la civiltà nasce e vive grazie al fiume, che dà acqua, terra fertile e vie di trasporto.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16407,7 +16407,7 @@
    ],
    "answerIndex": 1,
    "answer": "la storia religiosa dei popoli successivi",
-   "explanation": "La risposta corretta è 'la storia religiosa dei popoli successivi'.",
+   "explanation": "Dal monoteismo ebraico derivano anche il cristianesimo e l'islam: la sua influenza sulla storia religiosa successiva è enorme.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16438,7 +16438,7 @@
    ],
    "answerIndex": 2,
    "answer": "il bisogno di organizzare lavoro e regole",
-   "explanation": "La risposta corretta è 'il bisogno di organizzare lavoro e regole'.",
+   "explanation": "Quando molte persone vivono insieme bisogna dividere i compiti e stabilire regole: è un bisogno comune a tutte le civiltà antiche.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16469,7 +16469,7 @@
    ],
    "answerIndex": 3,
    "answer": "i grandi fiumi favorirono società complesse",
-   "explanation": "La risposta corretta è 'i grandi fiumi favorirono società complesse'.",
+   "explanation": "Dove il fiume garantiva raccolti abbondanti nacquero città, mestieri e governi: i grandi fiumi favorirono società complesse.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16500,7 +16500,7 @@
    ],
    "answerIndex": 0,
    "answer": "la loro religione era monoteista",
-   "explanation": "La risposta corretta è 'la loro religione era monoteista'.",
+   "explanation": "La religione ebraica è monoteista: un solo Dio, senza immagini. Il faraone era invece un dio per gli Egizi.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16531,7 +16531,7 @@
    ],
    "answerIndex": 1,
    "answer": "acqua e irrigazione",
-   "explanation": "La risposta corretta è 'acqua e irrigazione'.",
+   "explanation": "Nei territori aridi la pioggia non basta: i raccolti dipendono dall'acqua del fiume portata nei campi con i canali di irrigazione.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16562,7 +16562,7 @@
    ],
    "answerIndex": 2,
    "answer": "non solo vicino al Mediterraneo nacquero civiltà importanti",
-   "explanation": "La risposta corretta è 'non solo vicino al Mediterraneo nacquero civiltà importanti'.",
+   "explanation": "Indo e Cina mostrano che civiltà importanti nacquero anche lontano dal Mediterraneo, in Asia, nello stesso periodo.",
    "active": true,
    "tag": "civiltà_fluviali;confronti;classe4",
    "tags": [
@@ -16593,7 +16593,7 @@
    ],
    "answerIndex": 3,
    "answer": "testi religiosi",
-   "explanation": "La risposta corretta è 'testi religiosi'.",
+   "explanation": "Gli Ebrei affidarono a testi religiosi la memoria della loro storia, delle leggi e delle tradizioni.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16624,7 +16624,7 @@
    ],
    "answerIndex": 0,
    "answer": "centrale della comunità",
-   "explanation": "La risposta corretta è 'centrale della comunità'.",
+   "explanation": "Per gli Ebrei la fede regolava le leggi, le feste e la vita quotidiana: era l'elemento centrale della comunità.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16655,7 +16655,7 @@
    ],
    "answerIndex": 1,
    "answer": "prevede un solo Dio invece di molti",
-   "explanation": "La risposta corretta è 'prevede un solo Dio invece di molti'.",
+   "explanation": "Il politeismo prevede molti dèi, ciascuno con un compito; il monoteismo un solo Dio. È questa la differenza principale.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16686,7 +16686,7 @@
    ],
    "answerIndex": 2,
    "answer": "esistevano capacità tecniche e sociali",
-   "explanation": "La risposta corretta è 'esistevano capacità tecniche e sociali'.",
+   "explanation": "Fognature, magazzini e case in mattoni cotti richiedono conoscenze tecniche e un'organizzazione che decide e coordina i lavori.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16717,7 +16717,7 @@
    ],
    "answerIndex": 3,
    "answer": "reperti e resti di città",
-   "explanation": "La risposta corretta è 'reperti e resti di città'.",
+   "explanation": "Di queste civiltà restano i resti delle città e gli oggetti che vi si trovano: sono fonti materiali, che gli archeologi studiano.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16748,7 +16748,7 @@
    ],
    "answerIndex": 0,
    "answer": "produzione agricola favorita dall'acqua",
-   "explanation": "La risposta corretta è \"produzione agricola favorita dall'acqua\".",
+   "explanation": "L'acqua del fiume rendeva i campi produttivi: il raccolto abbondante è ciò che accomuna le civiltà dei fiumi.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16779,7 +16779,7 @@
    ],
    "answerIndex": 1,
    "answer": "di trasportare merci e fare scambi",
-   "explanation": "La risposta corretta è 'di trasportare merci e fare scambi'.",
+   "explanation": "Sul fiume si naviga: le barche portavano merci da un villaggio all'altro, favorendo gli scambi.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16810,7 +16810,7 @@
    ],
    "answerIndex": 2,
    "answer": "regole e ruoli diversi",
-   "explanation": "La risposta corretta è 'regole e ruoli diversi'.",
+   "explanation": "In una società numerosa non tutti fanno la stessa cosa: servono ruoli diversi, contadini, artigiani, sacerdoti, e regole che li coordinino.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16841,7 +16841,7 @@
    ],
    "answerIndex": 3,
    "answer": "religione",
-   "explanation": "La risposta corretta è 'religione'.",
+   "explanation": "Credenze, divinità e riti appartengono all'aspetto religioso del quadro di civiltà. L'economia riguarda invece il lavoro e gli scambi.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16872,7 +16872,7 @@
    ],
    "answerIndex": 0,
    "answer": "il ruolo maggiore del fiume o del mare",
-   "explanation": "La risposta corretta è 'il ruolo maggiore del fiume o del mare'.",
+   "explanation": "In una civiltà fluviale la vita ruota attorno al fiume, in una mediterranea attorno al mare e alla navigazione: cambia l'elemento centrale.",
    "active": true,
    "tag": "ebrei;religione;classe4",
    "tags": [
@@ -16903,7 +16903,7 @@
    ],
    "answerIndex": 1,
    "answer": "città ben pianificate",
-   "explanation": "La risposta corretta è 'città ben pianificate'.",
+   "explanation": "Le città pianificate, con strade regolari e fognature, sono il tratto distintivo della civiltà dell'Indo. Le ziggurat sono mesopotamiche, le piramidi egizie.",
    "active": true,
    "tag": "confronti;classe4",
    "tags": [
@@ -16933,7 +16933,7 @@
    ],
    "answerIndex": 2,
    "answer": "monoteismo",
-   "explanation": "La risposta corretta è 'monoteismo'.",
+   "explanation": "Il monoteismo è il tratto distintivo degli Ebrei. Il cuneiforme è mesopotamico, la mummificazione egizia, le olimpiadi greche.",
    "active": true,
    "tag": "confronti;classe4",
    "tags": [
@@ -16963,7 +16963,7 @@
    ],
    "answerIndex": 3,
    "answer": "campi irrigati",
-   "explanation": "La risposta corretta è 'campi irrigati'.",
+   "explanation": "I campi irrigati con l'acqua del fiume sono tipici delle civiltà fluviali. Porti e triremi appartengono alle civiltà marinare.",
    "active": true,
    "tag": "confronti;classe4",
    "tags": [
@@ -16993,7 +16993,7 @@
    ],
    "answerIndex": 0,
    "answer": "varia e diffusa in aree diverse",
-   "explanation": "La risposta corretta è 'varia e diffusa in aree diverse'.",
+   "explanation": "Civiltà importanti nacquero in Asia, in Africa e nel Mediterraneo: la storia antica è varia e diffusa in aree diverse.",
    "active": true,
    "tag": "confronti;classe4",
    "tags": [
@@ -17023,7 +17023,7 @@
    ],
    "answerIndex": 1,
    "answer": "una religione monoteista dell'antichità",
-   "explanation": "La risposta corretta è \"una religione monoteista dell'antichità\".",
+   "explanation": "Gli Ebrei sono l'esempio antico di una religione monoteista, in un mondo in cui quasi tutti i popoli adoravano molti dèi.",
    "active": true,
    "tag": "confronti;classe4",
    "tags": [
