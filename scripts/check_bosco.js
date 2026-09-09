@@ -252,6 +252,93 @@ function checkMemoria(game) {
   cosa da difendere e' che i due distrattori quel gruppo non ce l'abbiano
   davvero, altrimenti la domanda avrebbe due risposte giuste.
 */
+/*
+  PAROLE_VICINE elenca le parole italiane vere che nascono da un gruppo
+  sbagliato (CASA da CASSA, PALA da PALLA). Il gufo le riconosce invece di
+  liquidarle come errori di ortografia. Due modi di sbagliare l'elenco: metterci
+  una parola che nessuna scelta del banco produce — resta li' per sempre senza
+  che nessuno se ne accorga — oppure, molto peggio, una parola che coincide con
+  una risposta giusta, e allora il gufo darebbe della "quasi giusta" alla parola
+  esatta.
+*/
+/*
+  Il ciclo raccogli -> consegna. Regressione da cui nasce questo controllo: si
+  poteva prendere solo il cartello giusto, quindi bastava camminare sui tre
+  supporti per trovare la risposta senza leggere la parola, e la consegna non
+  decideva niente. Qui si verifica che in mano finisca qualunque cartello e che
+  a giudicare sia la consegna.
+*/
+function checkCicloRaccoltaConsegna(game) {
+  const s = game.state;
+  // I coriandoli leggono la tavolozza, che init() qui non ha mai riempito:
+  // senza canvas il gioco non disegna, ma burst() gira lo stesso.
+  game.readPalette();
+
+  s.session = [game.buildRound(game.parole.find(function (p) { return p.word === 'CASSA'; }))];
+  s.roundIndex = 0;
+  s.solved = 0;
+  s.mode = 'playing';
+  s.carry = null;
+  s.carryFrom = -1;
+  s.arrivedAt = -1;
+
+  const round = s.session[0];
+  const sbagliato = round.choices.findIndex(function (g) { return !game.isCorrect(round, g); });
+  const giusto = round.choices.findIndex(function (g) { return game.isCorrect(round, g); });
+
+  game.collect(sbagliato);
+  assert.equal(s.mode, 'carrying', 'il cartello sbagliato deve poter finire in mano');
+  assert.equal(s.carry, round.choices[sbagliato]);
+  assert.equal(s.solved, 0, 'raccogliere non e\' rispondere');
+
+  game.consegna();
+  assert.equal(s.mode, 'playing', 'consegnato quello sbagliato si torna a esplorare');
+  assert.equal(s.carry, null, 'il cartello sbagliato torna a terra');
+  assert.equal(s.solved, 0, 'la parola non e\' risolta');
+  assert.equal(s.wrong, sbagliato, 'il cartello sbagliato resta segnato');
+
+  s.arrivedAt = -1;
+  game.collect(giusto);
+  assert.equal(s.carry, round.choices[giusto]);
+  game.consegna();
+  assert.equal(s.solved, 1, 'consegnando quello giusto la parola si chiude');
+
+  // CASSA/CASA: il gufo deve riconoscere la parola vera prima di correggere.
+  const casa = game.messaggioErrore(round, round.choices[sbagliato] === 'S' ? 'S' : round.choices[sbagliato]);
+  assert.ok(typeof casa === 'string' && casa.length > 0);
+  assert.ok(/^CASA e/.test(game.messaggioErrore(round, 'S')),
+    'CASA deve essere riconosciuta come parola vera, non liquidata come errore');
+  assert.ok(/^Non e/.test(game.messaggioErrore(round, 'ZZ')),
+    'una non-parola resta un errore normale');
+}
+
+function checkParoleVicine(game) {
+  const vicine = game.PAROLE_VICINE;
+  assert.ok(vicine && vicine.size > 0, 'PAROLE_VICINE e\' vuoto');
+
+  const producibili = new Set();
+  const risposte = new Set();
+  game.parole.forEach(function (entry) {
+    const round = { word: entry.word, hole: entry.hole };
+    risposte.add(entry.word);
+    entry.errate.forEach(function (gruppo) {
+      producibili.add(game.parolaCon(round, gruppo));
+    });
+  });
+
+  vicine.forEach(function (w) {
+    assert.ok(producibili.has(w),
+      `${w} e' in PAROLE_VICINE ma nessun distrattore del banco la produce`);
+    assert.ok(!risposte.has(w),
+      `${w} e' in PAROLE_VICINE ed e' anche una parola del banco: il gufo la tratterebbe da errore`);
+  });
+
+  // Nella caccia al suono i cartelli portano parole intere: infilare il gruppo
+  // nel buco non ha senso e la premessa del gufo non deve scattare.
+  assert.equal(game.parolaCon({ tipo: 'suono', word: 'CASSA', hole: [2, 2] }, 'S'), null,
+    'parolaCon deve tacere nella caccia al suono');
+}
+
 function checkCacciaAlSuono(game) {
   for (let run = 0; run < 300; run++) {
     const session = game.buildSession({ modalita: 'suono', classe: 3, stats: { skills: {}, ripassa: null } });
@@ -367,6 +454,8 @@ function main() {
     ['composizione della partita', checkSession],
     ['adattamento e classe', checkAdattamento],
     ['caccia al suono', checkCacciaAlSuono],
+    ['parole vicine', checkParoleVicine],
+    ['ciclo raccolta e consegna', checkCicloRaccoltaConsegna],
     ['memoria delle abilita', checkMemoria],
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],
@@ -382,6 +471,7 @@ function main() {
     } catch (error) {
       failed = true;
       console.error(`[ERROR] bosco: ${entry[0]} — ${error.message}`);
+      if (process.env.BOSCO_TRACE) console.error(error.stack);
     }
   });
 

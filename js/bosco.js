@@ -263,6 +263,38 @@
   };
 
 
+  /*
+    Parole vere che nascono infilando nel buco un gruppo sbagliato. Non sono
+    refusi del banco: sono il banco che funziona. PALLA/PALA, CASSA/CASA,
+    NONNO/NONO, PAPA'/PAPA sono proprio le coppie su cui l'ortografia si gioca,
+    e toglierle svuoterebbe l'esercizio. Il problema era un altro: il gioco
+    rispondeva "non e' questo" a chi aveva scritto una parola italiana
+    verissima, semplicemente non quella dell'indizio. Qui il gufo lo riconosce
+    prima di spiegare, e la scelta smette di sembrare un errore di ortografia.
+
+    Solo parole che un bambino di seconda o terza puo' conoscere: "stela",
+    "roso", "camma", "amice" restano fuori anche se esistono.
+  */
+  const PAROLE_VICINE = new Set([
+    'SOLA', 'SOLO', 'MILA', 'MOLA', 'LANA', 'GIRO', 'MAGI', 'GIOCI',
+    'PALA', 'NONO', 'PENA', 'CASA', 'CARO', 'CALLO', 'NOTE', 'CAPELLO',
+    'GONNA', 'MANNA', 'BULLO', 'PERO', 'PAPA', 'META'
+  ]);
+
+  // La parola che verrebbe fuori infilando nel buco il gruppo scelto.
+  function parolaCon(round, gruppo) {
+    if (round.tipo === 'suono' || !round.hole) return null;
+    return round.word.slice(0, round.hole[0]) + gruppo + round.word.slice(round.hole[0] + round.hole[1]);
+  }
+
+  function messaggioErrore(round, scelto) {
+    const vicina = parolaCon(round, scelto);
+    if (vicina && PAROLE_VICINE.has(vicina)) {
+      return vicina + ' e’ una parola vera, ma non e’ questa. Senti cosa dice il gufo.';
+    }
+    return 'Non e’ questo. Senti cosa dice il gufo.';
+  }
+
   const TILE_POSITIONS = [
     { x: 265, y: 290 },
     { x: 411, y: 254 },
@@ -1196,9 +1228,17 @@
     // Nella caccia al suono si pronuncia la parola SCELTA, non quella giusta:
     // dirla svelerebbe la risposta invece di spiegare l'errore.
     const parola = (round.tipo === 'suono' ? scelto : round.word).toLowerCase();
+    // Se la scelta forma comunque una parola italiana, il gufo lo dice prima
+    // della regola: chi ha scritto CASA al posto di CASSA non ha sbagliato a
+    // scrivere, ha scritto un'altra parola, e sentirsi rispondere solo "non e'
+    // questo" e' la cosa che fa perdere fiducia nel gioco.
+    const vicina = parolaCon(round, scelto);
+    const premessa = vicina && PAROLE_VICINE.has(vicina)
+      ? vicina.charAt(0) + vicina.slice(1).toLowerCase() + ' esiste davvero, ma l’indizio dice un’altra cosa. '
+      : '';
     const testo = round.tipo === 'suono'
       ? 'In ' + parola + ' il gruppo ' + (ETICHETTE[round.skill] || round.target) + ' non c’e’. ' + regola
-      : regola + ' Ascolta: ' + parola + '.';
+      : premessa + regola + ' Ascolta: ' + parola + '.';
     dom.owlText.textContent = testo;
     dom.owl.hidden = false;
     announce(testo);
@@ -1324,7 +1364,7 @@
     if (dom.next) dom.next.hidden = !won;
     if (dom.pause) dom.pause.disabled = done || state.paused;
 
-    dom.steps.forEach(function (node, i) {
+    (dom.steps || []).forEach(function (node, i) {
       node.className = 'bosco-step' + (i < state.solved ? ' finished' : (i === state.solved ? ' current' : ''));
       node.textContent = i < state.solved ? '✓' : String(i + 1);
       node.setAttribute('aria-label', 'Parola ' + (i + 1) + (i < state.solved ? ': completata' : ''));
@@ -1489,36 +1529,55 @@
     state.arrivedAt = -1;
   }
 
+  /*
+    Si raccoglie qualunque cartello, giusto o sbagliato. Prima il gioco lasciava
+    prendere solo quello esatto: chi ci passava sopra o rimbalzava via o se lo
+    ritrovava in mano, e bastava camminare sui tre supporti per sapere qual era
+    la risposta senza guardare la parola. In piu' la meta' delle regole gia'
+    scritte — l'impronta a terra su cui si rimette giu' il cartello, il pulsante
+    "Al tabellone", il ripensamento — erano irraggiungibili, perche' in mano non
+    poteva finire niente di sbagliato. La scelta ora si dichiara consegnando.
+  */
   function collect(index) {
     if (state.mode !== 'playing' || state.arrivedAt === index) return;
     state.arrivedAt = index;
-    const letter = round().choices[index];
-    if (isCorrect(round(), letter)) {
-      state.carry = letter;
-      state.carryFrom = index;
-      state.mode = 'carrying';
-      state.target = null;
-      tone(659);
-      tone(880, 0.25, 0.12);
-      burst(state.player.x, state.player.y - 32, 22);
-      celebratePuddles();
-      owlHush();
-      const primaDaRipassare = leggiAbilita().ripassa === round().skill;
-      registraRisposta(round().skill, true);
-      aggiornaRipasso();
-      premi({ skill: round().skill, giusta: true, recuperato: primaDaRipassare });
-      setMessage('Eccola! Portala al tabellone luminoso.');
-    } else {
-      state.wrong = index;
-      state.wrongUntil = state.time + 1.5;
-      state.target = null;
-      tone(392, 0.18);
-      registraRisposta(round().skill, false);
-      aggiornaRipasso();
-      premi({ skill: round().skill, giusta: false });
-      setMessage('Non e’ questo. Senti cosa dice il gufo.');
-      owlTeach(round(), letter);
+    state.carry = round().choices[index];
+    state.carryFrom = index;
+    state.mode = 'carrying';
+    state.target = null;
+    state.wrong = -1;
+    tone(659);
+    burst(state.player.x, state.player.y - 32, 14);
+    owlHush();
+    setMessage('Portala al tabellone luminoso. Se cambi idea, rimettila sulla sua impronta.');
+    render();
+  }
+
+  /*
+    La consegna e' la risposta. Sbagliando, il cartello torna sulla sua piazzola
+    e il gufo spiega: il round non si chiude e non si perde niente, si riprova.
+  */
+  function consegna() {
+    const scelto = state.carry;
+    if (!scelto) return;
+    if (isCorrect(round(), scelto)) {
+      complete();
+      return;
     }
+    const tornaA = state.carryFrom;
+    state.carry = null;
+    state.carryFrom = -1;
+    state.mode = 'playing';
+    state.arrivedAt = -1;
+    state.target = null;
+    state.wrong = tornaA;
+    state.wrongUntil = state.time + 1.5;
+    tone(392, 0.18);
+    registraRisposta(round().skill, false);
+    aggiornaRipasso();
+    premi({ skill: round().skill, giusta: false });
+    setMessage(messaggioErrore(round(), scelto));
+    owlTeach(round(), scelto);
     render();
   }
 
@@ -1541,6 +1600,10 @@
   }
 
   function complete() {
+    const primaDaRipassare = leggiAbilita().ripassa === round().skill;
+    registraRisposta(round().skill, true);
+    aggiornaRipasso();
+    premi({ skill: round().skill, giusta: true, recuperato: primaDaRipassare });
     state.solved++;
     state.carry = null;
     state.carryFrom = -1;
@@ -1676,7 +1739,7 @@
       }
 
       if (state.mode === 'carrying' && state.player.y < 220 && Math.abs(state.player.x - 400) < 123) {
-        complete();
+        consegna();
       }
     }
 
@@ -2192,6 +2255,12 @@
     tiles: TILE_POSITIONS,
     Water: Water,
     isCorrect: isCorrect,
+    PAROLE_VICINE: PAROLE_VICINE,
+    parolaCon: parolaCon,
+    messaggioErrore: messaggioErrore,
+    readPalette: readPalette,
+    collect: collect,
+    consegna: consegna,
     nearPuddle: nearPuddle,
     clampPosition: clampPosition,
     choose: choose,

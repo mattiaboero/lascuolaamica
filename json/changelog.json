@@ -1,6 +1,6 @@
 [
  {
-  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.14",
+  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.15",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e casi in cui la risposta si trovava senza sapere l'inglese, cercando l'unica opzione al plurale. Aggiunti controlli automatici anche per l'inglese, che prima non ne aveva nessuno.",
    "Rilette anche le 2.649 domande che la revisione precedente aveva lasciato da parte perché ripetevano lo schema di un'altra: raggruppate in 299 famiglie e controllate una famiglia alla volta. Corretti triangoli impossibili da disegnare, problemi in cui nessuna delle quattro risposte era giusta, e numeri che non stavano in piedi — un allenatore con 912 atleti, una scuola con 197 classi, una ricetta con 8 grammi di farina per quattro persone, un libro da 190 euro.",
