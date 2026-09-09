@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## Non rilasciato - 2026-09-09
+
+### Notes
+- **Gli errori CSP in console non sono analytics di Cloudflare: sono bot detection, e non c'e' niente da sistemare in questo repo.** Avevo scritto che il beacon bloccato erano le Web Analytics. Sbagliato: lo script iniettato carica `/cdn-cgi/challenge-platform/scripts/jsd/main.js`, cioe' le JS Detections di **Bot Fight Mode**, che profilano il browser per classificare i bot. Di Web Analytics non c'e' traccia — nessun `cloudflareinsights`, nessun `beacon.min.js`, ne' nelle pagine servite ne' nel repo.
+
+- **L'hash in `_headers` non e' una via percorribile.** Lo script iniettato contiene il ray id della richiesta (`r:'a384b1076dc15273'`), quindi il suo sha256 cambia a ogni caricamento — verificato su tre richieste consecutive, tre hash diversi. Nessun valore statico puo' corrispondere.
+
+- **E non sarebbe comunque il caso di farlo passare.** La Cookie Policy dice "non installa cookie di terze parti" e la pagina Privacy "non usiamo strumenti di analisi, tracciamento o pubblicita'". Uno script che fa fingerprinting del browser contraddice tutte e due. La CSP che lo blocca sta facendo esattamente il suo lavoro.
+
+- Scritto tutto questo come commento in testa a `_headers`, dove finirebbe chi provasse ad aggiungere l'hash. Nessun bump: non cambia nessun file servito al browser.
+
 ## 4.13.10 - 2026-09-09
 
 ### Fixed
