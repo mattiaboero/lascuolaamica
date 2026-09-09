@@ -5543,7 +5543,7 @@
    ],
    "answerIndex": 3,
    "answer": "osservando differenze",
-   "explanation": "La risposta corretta è 'osservando differenze'.",
+   "explanation": "Confrontare due risultati serve a vedere che cosa cambia e che cosa resta uguale: è così che si capisce quale fattore ha prodotto l'effetto.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5574,7 +5574,7 @@
    ],
    "answerIndex": 0,
    "answer": "controllare meglio il risultato",
-   "explanation": "La risposta corretta è 'controllare meglio il risultato'.",
+   "explanation": "Una prova sola può andare bene o male per caso. Ripetendola più volte si distingue il risultato vero da quello capitato per sbaglio.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5605,7 +5605,7 @@
    ],
    "answerIndex": 1,
    "answer": "registrare dati",
-   "explanation": "La risposta corretta è 'registrare dati'.",
+   "explanation": "Scrivere subito quello che succede evita di doversi fidare della memoria: i dati annotati si possono confrontare anche dopo giorni.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5636,7 +5636,7 @@
    ],
    "answerIndex": 2,
    "answer": "domanda scientifica",
-   "explanation": "La risposta corretta è 'domanda scientifica'.",
+   "explanation": "È scientifica una domanda a cui si può rispondere osservando o facendo una prova. 'Perché il ghiaccio si scioglie?' si può verificare; 'qual è il colore più bello?' no.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -5667,7 +5667,7 @@
    ],
    "answerIndex": 3,
    "answer": "raccogliere informazioni",
-   "explanation": "La risposta corretta è 'raccogliere informazioni'.",
+   "explanation": "Guardare, toccare e descrivere sono modi di raccogliere informazioni sul mondo: è il primo passo, prima di formulare qualsiasi spiegazione.",
    "active": true,
    "tag": "metodo;osservazione;classe3",
    "tags": [
@@ -6029,7 +6029,7 @@
    ],
    "answerIndex": 3,
    "answer": "strumenti adatti",
-   "explanation": "La risposta corretta è 'strumenti adatti'.",
+   "explanation": "A occhio si sbaglia facilmente. Righello, bilancia e termometro danno un numero che chiunque può controllare e ripetere.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6060,7 +6060,7 @@
    ],
    "answerIndex": 0,
    "answer": "ripetere la prova",
-   "explanation": "La risposta corretta è 'ripetere la prova'.",
+   "explanation": "Un risultato poco chiaro può dipendere da un errore o da un caso. Ripetere la prova nelle stesse condizioni è il modo di scoprirlo.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6091,7 +6091,7 @@
    ],
    "answerIndex": 1,
    "answer": "organizzare i dati",
-   "explanation": "La risposta corretta è 'organizzare i dati'.",
+   "explanation": "Nella tabella ogni dato ha il suo posto: si confrontano le colonne a colpo d'occhio e si notano andamenti che in un elenco sfuggirebbero.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6122,7 +6122,7 @@
    ],
    "answerIndex": 2,
    "answer": "capire i cambiamenti",
-   "explanation": "La risposta corretta è 'capire i cambiamenti'.",
+   "explanation": "Confrontare la situazione prima e dopo è ciò che permette di attribuire il cambiamento a quello che hai fatto in mezzo.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -6153,7 +6153,7 @@
    ],
    "answerIndex": 3,
    "answer": "osservare meglio piccoli dettagli",
-   "explanation": "La risposta corretta è 'osservare meglio piccoli dettagli'.",
+   "explanation": "La lente fa apparire più grandi i dettagli troppo piccoli per l'occhio: le zampe di un insetto, le nervature di una foglia, i granelli di sabbia.",
    "active": true,
    "tag": "metodo;pratica;classe3",
    "tags": [
@@ -7169,7 +7169,7 @@
    ],
    "answerIndex": 1,
    "answer": "respirazione",
-   "explanation": "La risposta corretta è 'respirazione'.",
+   "explanation": "Respirando prendiamo dall'aria l'ossigeno, che serve alle cellule per ricavare energia dal cibo. Senza, il corpo si ferma in pochi minuti.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7200,7 +7200,7 @@
    ],
    "answerIndex": 2,
    "answer": "aria",
-   "explanation": "La risposta corretta è 'aria'.",
+   "explanation": "Fra i granelli di terra restano spazi vuoti pieni d'aria: servono alle radici e agli animaletti del suolo, che respirano anche sottoterra.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7231,7 +7231,7 @@
    ],
    "answerIndex": 3,
    "answer": "organismi",
-   "explanation": "La risposta corretta è 'organismi'.",
+   "explanation": "Lombrichi, insetti, funghi e batteri vivono nel suolo e decompongono i resti di piante e animali, trasformandoli in sostanze che nutrono le piante.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7262,7 +7262,7 @@
    ],
    "answerIndex": 0,
    "answer": "aria",
-   "explanation": "La risposta corretta è 'aria'.",
+   "explanation": "Perché ci sia fiamma servono tre cose: un combustibile, il calore e l'ossigeno dell'aria. Coprendo una candela con un bicchiere l'ossigeno finisce e si spegne.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7293,7 +7293,7 @@
    ],
    "answerIndex": 1,
    "answer": "humus",
-   "explanation": "La risposta corretta è 'humus'.",
+   "explanation": "L'humus è lo strato scuro in superficie, fatto di resti di piante e animali decomposti: è la parte più fertile, quella da cui le piante traggono nutrimento.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7355,7 +7355,7 @@
    ],
    "answerIndex": 0,
    "answer": "radice",
-   "explanation": "La risposta corretta è 'radice'.",
+   "explanation": "Le radici assorbono dal terreno acqua e sali minerali e li portano al fusto. Tengono anche ferma la pianta contro il vento.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7385,7 +7385,7 @@
    ],
    "answerIndex": 1,
    "answer": "fiore",
-   "explanation": "La risposta corretta è 'fiore'.",
+   "explanation": "Il fiore è l'organo della riproduzione: dopo l'impollinazione si trasforma in frutto e al suo interno maturano i semi.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7415,7 +7415,7 @@
    ],
    "answerIndex": 2,
    "answer": "foglie",
-   "explanation": "La risposta corretta è 'foglie'.",
+   "explanation": "Le foglie sono larghe e piatte per raccogliere più luce, e contengono la clorofilla: è lì che avviene la fotosintesi.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7445,7 +7445,7 @@
    ],
    "answerIndex": 3,
    "answer": "verde",
-   "explanation": "La risposta corretta è 'verde'.",
+   "explanation": "La clorofilla è verde perché assorbe la luce rossa e blu e riflette quella verde. È il pigmento che cattura l'energia del Sole.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7475,7 +7475,7 @@
    ],
    "answerIndex": 0,
    "answer": "aria",
-   "explanation": "La risposta corretta è 'aria'.",
+   "explanation": "Nella fotosintesi la pianta usa la luce come energia, l'acqua presa dalle radici e l'anidride carbonica presa dall'aria.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7505,7 +7505,7 @@
    ],
    "answerIndex": 1,
    "answer": "fotosintesi",
-   "explanation": "La risposta corretta è 'fotosintesi'.",
+   "explanation": "Le piante non mangiano: si costruiscono il nutrimento da sole, trasformando acqua e anidride carbonica in zuccheri grazie alla luce.",
    "active": true,
    "tag": "piante;classe3",
    "tags": [
@@ -7752,7 +7752,7 @@
    ],
    "answerIndex": 2,
    "answer": "seme - germoglio - pianta adulta",
-   "explanation": "La risposta corretta è 'seme - germoglio - pianta adulta'.",
+   "explanation": "Il seme contiene l'embrione e una riserva di nutrimento: germoglia, mette radici e foglie e cresce fino a diventare pianta adulta capace di fiorire.",
    "active": true,
    "tag": "ciclo_vitale;classe3",
    "tags": [
@@ -7782,7 +7782,7 @@
    ],
    "answerIndex": 3,
    "answer": "nascita - crescita - riproduzione",
-   "explanation": "La risposta corretta è 'nascita - crescita - riproduzione'.",
+   "explanation": "Ogni essere vivente nasce, cresce fino a diventare adulto e solo allora può riprodursi: è quel passaggio che permette alla specie di continuare.",
    "active": true,
    "tag": "ciclo_vitale;classe3",
    "tags": [
@@ -7812,7 +7812,7 @@
    ],
    "answerIndex": 0,
    "answer": "muore",
-   "explanation": "La risposta corretta è 'muore'.",
+   "explanation": "Nascere, crescere, riprodursi e morire sono le quattro tappe che valgono per tutti i viventi e li distinguono dagli oggetti.",
    "active": true,
    "tag": "ciclo_vitale;classe3",
    "tags": [
@@ -8152,7 +8152,7 @@
    ],
    "answerIndex": 1,
    "answer": "piante",
-   "explanation": "La risposta corretta è 'piante'.",
+   "explanation": "Gli erbivori hanno denti piatti per macinare i vegetali e un intestino lungo, perché le fibre delle piante sono difficili da digerire.",
    "active": true,
    "tag": "nutrizione;classe3",
    "tags": [
@@ -8182,7 +8182,7 @@
    ],
    "answerIndex": 2,
    "answer": "altri animali",
-   "explanation": "La risposta corretta è 'altri animali'.",
+   "explanation": "I carnivori hanno denti aguzzi per afferrare e strappare e un intestino corto: la carne si digerisce più in fretta dei vegetali.",
    "active": true,
    "tag": "nutrizione;classe3",
    "tags": [
@@ -8212,7 +8212,7 @@
    ],
    "answerIndex": 3,
    "answer": "sia vegetali sia animali",
-   "explanation": "La risposta corretta è 'sia vegetali sia animali'.",
+   "explanation": "Gli onnivori hanno una dentatura mista, adatta sia a tagliare sia a macinare: possono nutrirsi di quello che trovano, vegetale o animale.",
    "active": true,
    "tag": "nutrizione;classe3",
    "tags": [
@@ -8273,7 +8273,7 @@
    ],
    "answerIndex": 3,
    "answer": "un erbivoro",
-   "explanation": "La risposta corretta è 'un erbivoro'.",
+   "explanation": "L'erba è un produttore: fabbrica il proprio nutrimento con la fotosintesi. Chi se ne ciba per primo è un erbivoro, il primo consumatore della catena.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8303,7 +8303,7 @@
    ],
    "answerIndex": 0,
    "answer": "onnivoro",
-   "explanation": "La risposta corretta è 'onnivoro'.",
+   "explanation": "Onnivoro vuol dire che si nutre di entrambe le cose. È un vantaggio: quando un tipo di cibo scarseggia può passare all'altro.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8333,7 +8333,7 @@
    ],
    "answerIndex": 1,
    "answer": "chi mangia chi",
-   "explanation": "La risposta corretta è 'chi mangia chi'.",
+   "explanation": "La catena alimentare disegna il passaggio dell'energia da un vivente all'altro: ogni freccia indica chi viene mangiato da chi.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8363,7 +8363,7 @@
    ],
    "answerIndex": 2,
    "answer": "ecosistema",
-   "explanation": "La risposta corretta è 'ecosistema'.",
+   "explanation": "L'ecosistema comprende sia i viventi sia l'ambiente non vivente — acqua, aria, suolo, luce — perché gli uni dipendono dagli altri.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8393,7 +8393,7 @@
    ],
    "answerIndex": 3,
    "answer": "piante e animali",
-   "explanation": "La risposta corretta è 'piante e animali'.",
+   "explanation": "Nell'acqua vivono piante e animali, e l'acqua di un fiume arriva ai campi e al mare. Una sostanza inquinante entra nella catena alimentare e risale fino ai predatori.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8423,7 +8423,7 @@
    ],
    "answerIndex": 0,
    "answer": "gli equilibri dell'ecosistema",
-   "explanation": "La risposta corretta è \"gli equilibri dell'ecosistema\".",
+   "explanation": "Se sparisce una specie, chi la mangiava resta senza cibo e ciò che lei mangiava cresce senza controllo. L'effetto si propaga a tutta la catena.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8453,7 +8453,7 @@
    ],
    "answerIndex": 1,
    "answer": "riparo",
-   "explanation": "La risposta corretta è 'riparo'.",
+   "explanation": "Il bosco offre agli animali frutti, semi e insetti da mangiare, e insieme tane, nidi e ombra dove ripararsi da predatori e intemperie.",
    "active": true,
    "tag": "ecosistema;classe3",
    "tags": [
@@ -8603,7 +8603,7 @@
    ],
    "answerIndex": 2,
    "answer": "erba - coniglio - volpe",
-   "explanation": "La risposta corretta è 'erba - coniglio - volpe'.",
+   "explanation": "La catena parte sempre da un produttore e sale ai consumatori: l'erba è mangiata dal coniglio, erbivoro, che è preda della volpe, carnivora.",
    "active": true,
    "tag": "ecosistemi;classe3",
    "tags": [
@@ -8633,7 +8633,7 @@
    ],
    "answerIndex": 3,
    "answer": "pianta, insetto, uccello",
-   "explanation": "La risposta corretta è 'pianta, insetto, uccello'.",
+   "explanation": "La rete alimentare collega organismi viventi: la pianta produce, l'insetto se ne nutre, l'uccello mangia l'insetto. Ogni anello è un essere vivente.",
    "active": true,
    "tag": "ecosistemi;classe3",
    "tags": [
@@ -8663,7 +8663,7 @@
    ],
    "answerIndex": 0,
    "answer": "rana - stagno",
-   "explanation": "La risposta corretta è 'rana - stagno'.",
+   "explanation": "La rana dipende dallo stagno: ci depone le uova, ci vive da girino e da adulta ha bisogno di umidità perché respira anche con la pelle.",
    "active": true,
    "tag": "ecosistemi;classe3",
    "tags": [
@@ -8693,7 +8693,7 @@
    ],
    "answerIndex": 1,
    "answer": "ridurre i rifiuti",
-   "explanation": "La risposta corretta è 'ridurre i rifiuti'.",
+   "explanation": "Carta e plastica riciclate tornano materia prima per oggetti nuovi: così non diventano rifiuto e non serve estrarre nuove risorse.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8724,7 +8724,7 @@
    ],
    "answerIndex": 2,
    "answer": "risparmiare energia",
-   "explanation": "La risposta corretta è 'risparmiare energia'.",
+   "explanation": "L'energia elettrica si produce in gran parte bruciando combustibili, che inquinano. Ogni luce spenta a vuoto è energia che non serve produrre.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8755,7 +8755,7 @@
    ],
    "answerIndex": 3,
    "answer": "proteggere l'acqua",
-   "explanation": "La risposta corretta è \"proteggere l'acqua\".",
+   "explanation": "Un rifiuto nel fiume avvelena l'acqua di piante e animali e viaggia fino al mare. Nessuno lo recupera più: si evita solo non buttandolo.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8786,7 +8786,7 @@
    ],
    "answerIndex": 0,
    "answer": "offrono ossigeno e habitat",
-   "explanation": "La risposta corretta è 'offrono ossigeno e habitat'.",
+   "explanation": "Con la fotosintesi gli alberi liberano ossigeno e assorbono anidride carbonica, e con rami e tronchi offrono casa a uccelli, insetti e funghi.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -8817,7 +8817,7 @@
    ],
    "answerIndex": 1,
    "answer": "inquinare meno",
-   "explanation": "La risposta corretta è 'inquinare meno'.",
+   "explanation": "Un oggetto di plastica usato una volta resta nell'ambiente per centinaia di anni. Usarne meno riduce il rifiuto prima ancora di doverlo smaltire.",
    "active": true,
    "tag": "ambiente;tutela;classe3",
    "tags": [
@@ -9299,7 +9299,7 @@
    ],
    "answerIndex": 1,
    "answer": "barometro",
-   "explanation": "La risposta corretta è 'barometro'.",
+   "explanation": "Il barometro misura il peso dell'aria sopra di noi. Quando la pressione scende sta spesso arrivando il maltempo, quando sale il tempo migliora.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9329,7 +9329,7 @@
    ],
    "answerIndex": 2,
    "answer": "termometro",
-   "explanation": "La risposta corretta è 'termometro'.",
+   "explanation": "Il termometro sfrutta una sostanza che si dilata col calore: quanto sale nel tubicino indica la temperatura su una scala graduata.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9359,7 +9359,7 @@
    ],
    "answerIndex": 3,
    "answer": "respirazione",
-   "explanation": "La risposta corretta è 'respirazione'.",
+   "explanation": "L'ossigeno è circa un quinto dell'aria. Le cellule lo usano per ricavare energia dal cibo: è per questo che respiriamo senza mai smettere.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -9389,7 +9389,7 @@
    ],
    "answerIndex": 0,
    "answer": "fotosintesi",
-   "explanation": "La risposta corretta è 'fotosintesi'.",
+   "explanation": "Nella fotosintesi la pianta prende l'anidride carbonica dall'aria e, con acqua e luce, la trasforma in zuccheri, liberando ossigeno.",
    "active": true,
    "tag": "aria;classe4",
    "tags": [
@@ -10230,7 +10230,7 @@
    ],
    "answerIndex": 3,
    "answer": "tutelare una risorsa preziosa",
-   "explanation": "La risposta corretta è 'tutelare una risorsa preziosa'.",
+   "explanation": "L'acqua dolce utilizzabile è una piccolissima parte di quella del pianeta e in molte zone scarseggia. Non sprecarla è il modo più diretto di tutelarla.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10260,7 +10260,7 @@
    ],
    "answerIndex": 0,
    "answer": "riciclo",
-   "explanation": "La risposta corretta è 'riciclo'.",
+   "explanation": "Separati, carta, vetro e plastica si possono trattare e trasformare in materia prima nuova. Mescolati, quel valore si perde e restano solo rifiuti.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10290,7 +10290,7 @@
    ],
    "answerIndex": 1,
    "answer": "comprare e usare solo ciò che serve",
-   "explanation": "La risposta corretta è 'comprare e usare solo ciò che serve'.",
+   "explanation": "Ogni oggetto prodotto consuma materiali ed energia, anche quello che non userai. Comprare solo ciò che serve agisce prima che il rifiuto esista.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
@@ -10320,7 +10320,7 @@
    ],
    "answerIndex": 2,
    "answer": "flora e fauna",
-   "explanation": "La risposta corretta è 'flora e fauna'.",
+   "explanation": "Nel parco naturale sono vietate le attività che distruggono l'ambiente: così piante e animali hanno uno spazio dove vivere e riprodursi.",
    "active": true,
    "tag": "educazione_ambientale;classe4",
    "tags": [
