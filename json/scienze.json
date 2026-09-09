@@ -1195,7 +1195,7 @@
    ],
    "answerIndex": 2,
    "answer": "ciclo dell'acqua",
-   "explanation": "La risposta corretta è \"ciclo dell'acqua\".",
+   "explanation": "L'acqua evapora dal mare, sale, forma le nuvole e ricade come pioggia: è sempre la stessa acqua che gira. La pioggia è il momento in cui torna a terra.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1226,7 +1226,7 @@
    ],
    "answerIndex": 3,
    "answer": "l'evaporazione",
-   "explanation": "La risposta corretta è \"l'evaporazione\".",
+   "explanation": "Il calore fa muovere più in fretta le particelle d'acqua, finché alcune si staccano e diventano vapore. Per questo una pozzanghera sparisce prima al sole che all'ombra.",
    "active": true,
    "tag": "acqua;ciclo_acqua;classe2",
    "tags": [
@@ -1629,7 +1629,7 @@
    ],
    "answerIndex": 1,
    "answer": "non sporcare",
-   "explanation": "La risposta corretta è 'non sporcare'.",
+   "explanation": "Una carta lasciata a terra resta lì per mesi, viene mangiata dagli animali o portata via dal vento. Non sporcare è più semplice che rimediare dopo.",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -1660,7 +1660,7 @@
    ],
    "answerIndex": 2,
    "answer": "l'ambiente",
-   "explanation": "La risposta corretta è \"l'ambiente\".",
+   "explanation": "Nel fiume vivono pesci, insetti e piante, e la sua acqua arriva ai campi e al mare. Inquinarlo in un punto rovina tutta la catena, anche molto lontano.",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -1691,7 +1691,7 @@
    ],
    "answerIndex": 3,
    "answer": "risparmiare acqua",
-   "explanation": "La risposta corretta è 'risparmiare acqua'.",
+   "explanation": "Il rubinetto aperto mentre ti lavi i denti lascia scorrere litri d'acqua che finiscono nello scarico senza essere usati. Chiuderlo li fa risparmiare tutti.",
    "active": true,
    "tag": "ambiente;riciclo;classe2",
    "tags": [
@@ -2125,7 +2125,7 @@
    ],
    "answerIndex": 2,
    "answer": "nell'acqua",
-   "explanation": "La risposta corretta è \"nell'acqua\".",
+   "explanation": "Il pesce prende l'ossigeno dall'acqua con le branchie: fuori non riesce a respirare. Il suo corpo affusolato è fatto per nuotare, non per camminare.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2157,7 +2157,7 @@
    ],
    "answerIndex": 3,
    "answer": "nel deserto",
-   "explanation": "La risposta corretta è 'nel deserto'.",
+   "explanation": "La gobba del cammello è una riserva di grasso che gli permette di stare molti giorni senza mangiare, e i piedi larghi non affondano nella sabbia.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2189,7 +2189,7 @@
    ],
    "answerIndex": 0,
    "answer": "vicino all'acqua",
-   "explanation": "La risposta corretta è \"vicino all'acqua\".",
+   "explanation": "La rana depone le uova nell'acqua e da piccola, come girino, ci vive dentro. Da adulta respira anche con la pelle, che deve restare umida.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2221,7 +2221,7 @@
    ],
    "answerIndex": 1,
    "answer": "in ambienti freddi",
-   "explanation": "La risposta corretta è 'in ambienti freddi'.",
+   "explanation": "L'orso polare ha un grosso strato di grasso e una pelliccia fitta che trattengono il calore: è fatto apposta per il freddo e soffrirebbe al caldo.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2253,7 +2253,7 @@
    ],
    "answerIndex": 2,
    "answer": "tra gli alberi",
-   "explanation": "La risposta corretta è 'tra gli alberi'.",
+   "explanation": "Lo scoiattolo ha unghie adatte ad aggrapparsi alla corteccia e una coda che gli fa da bilanciere: sui rami è più sicuro che a terra.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2285,7 +2285,7 @@
    ],
    "answerIndex": 3,
    "answer": "respirare nell'acqua",
-   "explanation": "La risposta corretta è \"respirare nell'acqua\".",
+   "explanation": "Nell'acqua c'è ossigeno disciolto. Le branchie lo catturano al passaggio dell'acqua, facendo il lavoro che nei mammiferi fanno i polmoni con l'aria.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -2317,7 +2317,7 @@
    ],
    "answerIndex": 0,
    "answer": "muoversi",
-   "explanation": "La risposta corretta è 'muoversi'.",
+   "explanation": "Le zampe sostengono il corpo e lo spingono: cambiano forma secondo l'ambiente — lunghe per correre, palmate per nuotare, con unghie per arrampicarsi.",
    "active": true,
    "tag": "animali;habitat;adattamento;classe2",
    "tags": [
@@ -3306,7 +3306,7 @@
    ],
    "answerIndex": 0,
    "answer": "riusare alcuni oggetti",
-   "explanation": "La risposta corretta è 'riusare alcuni oggetti'.",
+   "explanation": "Un oggetto riusato non diventa rifiuto e non ne serve uno nuovo al suo posto: si risparmiano due volte, materiali ed energia.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3337,7 +3337,7 @@
    ],
    "answerIndex": 1,
    "answer": "rendono più sano l'ambiente",
-   "explanation": "La risposta corretta è \"rendono più sano l'ambiente\".",
+   "explanation": "Le piante prendono anidride carbonica e liberano ossigeno, fanno ombra e trattengono il terreno. Un posto con alberi è più fresco e più pulito.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3368,7 +3368,7 @@
    ],
    "answerIndex": 2,
    "answer": "nella raccolta corretta",
-   "explanation": "La risposta corretta è 'nella raccolta corretta'.",
+   "explanation": "La plastica raccolta nel contenitore giusto viene lavata e trasformata in oggetti nuovi. Nell'indifferenziato invece quel materiale è perso.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3399,7 +3399,7 @@
    ],
    "answerIndex": 3,
    "answer": "risparmiare energia",
-   "explanation": "La risposta corretta è 'risparmiare energia'.",
+   "explanation": "Una lampadina accesa consuma energia anche se non la sta usando nessuno. Spegnerla è il gesto più semplice per non sprecarla.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3430,7 +3430,7 @@
    ],
    "answerIndex": 0,
    "answer": "persone e animali",
-   "explanation": "La risposta corretta è 'persone e animali'.",
+   "explanation": "In un parco pulito i bambini possono giocare per terra e gli animali non mangiano rifiuti. Vetri e plastica rovinano il posto per tutti e due.",
    "active": true,
    "tag": "ambiente;sostenibilita;classe2",
    "tags": [
@@ -3461,7 +3461,7 @@
    ],
    "answerIndex": 3,
    "answer": "toccare",
-   "explanation": "La risposta corretta è 'toccare'.",
+   "explanation": "Nella pelle delle mani ci sono moltissimi recettori del tatto, molti più che altrove: per questo con le mani distinguiamo forme e superfici così bene.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3493,7 +3493,7 @@
    ],
    "answerIndex": 0,
    "answer": "caldo e freddo",
-   "explanation": "La risposta corretta è 'caldo e freddo'.",
+   "explanation": "La pelle è il nostro organo di senso più esteso: ha recettori diversi per il caldo, il freddo, la pressione e il dolore, distribuiti su tutto il corpo.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3525,7 +3525,7 @@
    ],
    "answerIndex": 1,
    "answer": "il corpo",
-   "explanation": "La risposta corretta è 'il corpo'.",
+   "explanation": "Il cuore sta nel petto, protetto dalle costole, e spinge il sangue in tutto il corpo. Il battito che senti è il rumore delle sue valvole che si chiudono.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3557,7 +3557,7 @@
    ],
    "answerIndex": 2,
    "answer": "masticare",
-   "explanation": "La risposta corretta è 'masticare'.",
+   "explanation": "I denti tagliano e triturano il cibo in pezzi piccoli: così lo stomaco fa meno fatica e le sostanze nutritive si assorbono meglio.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3589,7 +3589,7 @@
    ],
    "answerIndex": 3,
    "answer": "verdura",
-   "explanation": "La risposta corretta è 'verdura'.",
+   "explanation": "La verdura porta vitamine, sali minerali e fibre che il corpo non produce da solo e che servono a crescere e a difendersi dalle malattie.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3621,7 +3621,7 @@
    ],
    "answerIndex": 0,
    "answer": "stare in salute",
-   "explanation": "La risposta corretta è 'stare in salute'.",
+   "explanation": "Il movimento rinforza muscoli, ossa e cuore, e aiuta anche a dormire e a concentrarsi meglio il giorno dopo.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3653,7 +3653,7 @@
    ],
    "answerIndex": 1,
    "answer": "riposare",
-   "explanation": "La risposta corretta è 'riposare'.",
+   "explanation": "Durante il sonno il corpo ripara i tessuti, cresce e fissa nella memoria quello che hai imparato di giorno. Dormire poco si sente subito a scuola.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -3685,7 +3685,7 @@
    ],
    "answerIndex": 2,
    "answer": "tenerli puliti",
-   "explanation": "La risposta corretta è 'tenerli puliti'.",
+   "explanation": "Dopo i pasti restano fra i denti residui di cibo di cui si nutrono i batteri, che producono acidi e formano la carie. Lo spazzolino li rimuove.",
    "active": true,
    "tag": "corpo;salute;igiene;classe2",
    "tags": [
@@ -4147,7 +4147,7 @@
    ],
    "answerIndex": 3,
    "answer": "dalle nuvole",
-   "explanation": "La risposta corretta è 'dalle nuvole'.",
+   "explanation": "Nelle nuvole il vapore si raffredda e torna liquido in gocce piccolissime. Quando diventano troppo pesanti per restare sospese, cadono: è la pioggia.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -4178,7 +4178,7 @@
    ],
    "answerIndex": 0,
    "answer": "il calore del Sole",
-   "explanation": "La risposta corretta è 'il calore del Sole'.",
+   "explanation": "Il Sole scalda l'acqua e il calore è ciò che la fa evaporare. Con il freddo l'evaporazione rallenta, per questo il bucato asciuga più lentamente d'inverno.",
    "active": true,
    "tag": "acqua;ciclo;classe2",
    "tags": [
@@ -4602,7 +4602,7 @@
    ],
    "answerIndex": 1,
    "answer": "pianta",
-   "explanation": "La risposta corretta è 'pianta'.",
+   "explanation": "Tutti gli esseri viventi hanno bisogno d'acqua. La pianta la assorbe dal terreno con le radici e la usa per crescere e per nutrirsi.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4632,7 +4632,7 @@
    ],
    "answerIndex": 2,
    "answer": "gattino",
-   "explanation": "La risposta corretta è 'gattino'.",
+   "explanation": "Crescere è una cosa che fanno solo gli esseri viventi: il gattino nasce, cresce, si nutre e un giorno potrà avere dei cuccioli.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4662,7 +4662,7 @@
    ],
    "answerIndex": 3,
    "answer": "banco",
-   "explanation": "La risposta corretta è 'banco'.",
+   "explanation": "Il banco è un oggetto: non nasce, non si nutre e non cresce. Può essere costruito più grande, ma non diventa grande da solo.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4692,7 +4692,7 @@
    ],
    "answerIndex": 0,
    "answer": "mucca",
-   "explanation": "La risposta corretta è 'mucca'.",
+   "explanation": "La mucca è un animale da allevamento: vive nella stalla, che la ripara dal freddo, e viene nutrita dall'uomo con fieno e mangime.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4722,7 +4722,7 @@
    ],
    "answerIndex": 1,
    "answer": "uccello",
-   "explanation": "La risposta corretta è 'uccello'.",
+   "explanation": "Gli uccelli costruiscono il nido per deporre le uova e proteggere i piccoli finché non sanno volare. Non ci vivono tutto l'anno.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4752,7 +4752,7 @@
    ],
    "answerIndex": 2,
    "answer": "radici",
-   "explanation": "La risposta corretta è 'radici'.",
+   "explanation": "Le radici assorbono acqua e sali minerali dal terreno e li portano al fusto. Tengono anche ferma la pianta quando c'è vento.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4812,7 +4812,7 @@
    ],
    "answerIndex": 0,
    "answer": "acqua",
-   "explanation": "La risposta corretta è 'acqua'.",
+   "explanation": "L'acqua diventa vapore quando viene scaldata: è il passaggio dallo stato liquido a quello gassoso, lo stesso che vedi sopra una pentola che bolle.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -4842,7 +4842,7 @@
    ],
    "answerIndex": 1,
    "answer": "ghiaccio",
-   "explanation": "La risposta corretta è 'ghiaccio'.",
+   "explanation": "Sotto zero l'acqua passa allo stato solido e diventa ghiaccio. È sempre la stessa sostanza: se la riscaldi torna liquida.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -4872,7 +4872,7 @@
    ],
    "answerIndex": 2,
    "answer": "attenzione",
-   "explanation": "La risposta corretta è 'attenzione'.",
+   "explanation": "Osservare bene vuol dire guardare con attenzione e più volte, notando i particolari e i cambiamenti. È il primo passo di ogni esperimento.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4902,7 +4902,7 @@
    ],
    "answerIndex": 3,
    "answer": "primavera",
-   "explanation": "La risposta corretta è 'primavera'.",
+   "explanation": "In primavera le giornate si allungano e la temperatura sale: le piante riprendono a crescere ed è il momento in cui la maggior parte fiorisce.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -4933,7 +4933,7 @@
    ],
    "answerIndex": 0,
    "answer": "inverno",
-   "explanation": "La risposta corretta è 'inverno'.",
+   "explanation": "In inverno il Sole resta basso e per poche ore: la Terra riceve meno calore e le temperature scendono.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -4964,7 +4964,7 @@
    ],
    "answerIndex": 1,
    "answer": "separare i rifiuti",
-   "explanation": "La risposta corretta è 'separare i rifiuti'.",
+   "explanation": "Separare i rifiuti serve perché ogni materiale venga trattato nel modo giusto. Mescolati non si possono più recuperare, divisi diventano oggetti nuovi.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -4995,7 +4995,7 @@
    ],
    "answerIndex": 2,
    "answer": "quello della raccolta della carta",
-   "explanation": "La risposta corretta è 'quello della raccolta della carta'.",
+   "explanation": "La carta raccolta a parte viene sminuzzata e trasformata in carta nuova. Se è sporca di cibo o mescolata ad altro, però, non si può riciclare.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -5025,7 +5025,7 @@
    ],
    "answerIndex": 3,
    "answer": "cambiano colore e cadono",
-   "explanation": "La risposta corretta è 'cambiano colore e cadono'.",
+   "explanation": "In autunno le giornate si accorciano e la pianta smette di nutrire le foglie: la clorofilla verde sparisce, restano i colori gialli e rossi e poi le foglie cadono.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5056,7 +5056,7 @@
    ],
    "answerIndex": 0,
    "answer": "denti",
-   "explanation": "La risposta corretta è 'denti'.",
+   "explanation": "I denti tagliano e triturano il cibo: gli incisivi davanti tagliano, i molari in fondo macinano.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5087,7 +5087,7 @@
    ],
    "answerIndex": 1,
    "answer": "orecchie",
-   "explanation": "La risposta corretta è 'orecchie'.",
+   "explanation": "L'orecchio raccoglie le vibrazioni dell'aria e le trasforma in segnali che il cervello riconosce come suoni.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5118,7 +5118,7 @@
    ],
    "answerIndex": 2,
    "answer": "gambe",
-   "explanation": "La risposta corretta è 'gambe'.",
+   "explanation": "Le gambe sostengono il peso del corpo e lo spingono in avanti: i muscoli tirano le ossa che fanno da leva.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5149,7 +5149,7 @@
    ],
    "answerIndex": 3,
    "answer": "frutta",
-   "explanation": "La risposta corretta è 'frutta'.",
+   "explanation": "La frutta dà zuccheri naturali, acqua e vitamine, e sazia senza appesantire: è una merenda che dà energia senza i grassi delle merendine confezionate.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -5180,7 +5180,7 @@
    ],
    "answerIndex": 0,
    "answer": "aspettare alcuni giorni",
-   "explanation": "La risposta corretta è 'aspettare alcuni giorni'.",
+   "explanation": "Il seme non germoglia in un'ora: bisogna dargli acqua, luce e tempo, e osservarlo per giorni. Avere pazienza fa parte del metodo scientifico.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
