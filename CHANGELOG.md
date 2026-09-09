@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.13.5 - 2026-09-09
+
+### Fixed
+- **Il changelog del sito chiamava il gioco «Il bosco delle parole»**, ma ovunque altro — carta in home, `<title>`, sitemap, dati strutturati — si chiama **«Il Bosco delle Lettere»** (25 occorrenze contro 1). Chi leggeva la voce dell'8 settembre cercava in home un gioco con un nome che non esiste.
+- **La riga sulla revisione delle famiglie, aggiunta nella 4.13.4, era finita in seconda posizione** e spezzava in due il blocco dell'inglese: inglese, famiglie, inglese, inglese. Spostata dopo le tre righe sull'inglese, prima della riga di coda sul riordino dell'elenco.
+
+### Notes
+- Trovati rileggendo il changelog nella finestra Info sul sito in produzione, non nel file: il primo si vede solo confrontando il nome col resto delle pagine, il secondo solo leggendo le cinque righe di fila.
+- Bump perche' `json/changelog.json` e' in precache. Ancora il 9 settembre, quindi l'etichetta si allarga a `Release 4.13.1 - 4.13.5` senza aprire una voce nuova.
+
 ## 4.13.4 - 2026-09-09
 
 ### Changed
