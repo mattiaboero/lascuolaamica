@@ -285,7 +285,7 @@
    ],
    "answerIndex": 1,
    "answer": "5",
-   "explanation": "The correct answer is \"5\".",
+   "explanation": "'Five' è il nome inglese del numero 5. Gli altri sarebbero four (4), seven (7) ed eight (8).",
    "active": true,
    "tag": "inglese;classe_2;numeri;primaria",
    "tags": [
@@ -318,7 +318,7 @@
    ],
    "answerIndex": 2,
    "answer": "8",
-   "explanation": "The correct answer is \"8\".",
+   "explanation": "Dopo seven (7) viene eight (8): si conta six, seven, eight, nine.",
    "active": true,
    "tag": "inglese;classe_2;numeri;primaria",
    "tags": [
@@ -351,7 +351,7 @@
    ],
    "answerIndex": 3,
    "answer": "3",
-   "explanation": "The correct answer is \"3\".",
+   "explanation": "Prima di four (4) viene three (3): si conta two, three, four, five.",
    "active": true,
    "tag": "inglese;classe_2;numeri;primaria",
    "tags": [
@@ -384,7 +384,7 @@
    ],
    "answerIndex": 0,
    "answer": "4",
-   "explanation": "The correct answer is \"4\".",
+   "explanation": "Il gatto ha quattro zampe, 'four legs'. 'Legs' è il plurale di 'leg', zampa o gamba.",
    "active": true,
    "tag": "inglese;classe_2;numeri;primaria",
    "tags": [
@@ -846,7 +846,7 @@
    ],
    "answerIndex": 2,
    "answer": "Good morning",
-   "explanation": "The correct answer is \"Good morning\".",
+   "explanation": "'Good morning' è il saluto del mattino, fino a mezzogiorno. 'Good night' si dice solo quando ci si separa per andare a dormire.",
    "active": true,
    "tag": "inglese;classe_2;saluti;primaria",
    "tags": [
@@ -879,7 +879,7 @@
    ],
    "answerIndex": 3,
    "answer": "Good night",
-   "explanation": "The correct answer is \"Good night\".",
+   "explanation": "'Good night' si usa quando si va a dormire: non è un saluto di incontro, ma di congedo per la notte.",
    "active": true,
    "tag": "inglese;classe_2;saluti;primaria",
    "tags": [
@@ -912,7 +912,7 @@
    ],
    "answerIndex": 0,
    "answer": "Hello",
-   "explanation": "The correct answer is \"Hello\".",
+   "explanation": "'Hello' è il saluto che si usa quando si incontra qualcuno. 'Goodbye' e 'good night' si dicono invece quando ci si separa.",
    "active": true,
    "tag": "inglese;classe_2;saluti;primaria",
    "tags": [
@@ -945,7 +945,7 @@
    ],
    "answerIndex": 1,
    "answer": "Goodbye",
-   "explanation": "The correct answer is \"Goodbye\".",
+   "explanation": "'Goodbye' significa arrivederci e si dice quando si va via. 'Hello' serve per arrivare, non per andarsene.",
    "active": true,
    "tag": "inglese;classe_2;saluti;primaria",
    "tags": [
@@ -978,7 +978,7 @@
    ],
    "answerIndex": 2,
    "answer": "Thank you",
-   "explanation": "The correct answer is \"Thank you\".",
+   "explanation": "'Thank you' significa grazie e si dice a chi ci aiuta. 'Please' sarebbe per favore, quando invece si chiede qualcosa.",
    "active": true,
    "tag": "inglese;classe_2;saluti;primaria",
    "tags": [
@@ -1011,7 +1011,7 @@
    ],
    "answerIndex": 3,
    "answer": "purple",
-   "explanation": "The correct answer is \"purple\".",
+   "explanation": "'Purple' è il viola: mescolando la tempera rossa e quella blu si ottiene il viola. 'Green' è il verde e nasce da giallo e blu.",
    "active": true,
    "tag": "inglese;classe_3;colori;primaria",
    "tags": [
@@ -1044,7 +1044,7 @@
    ],
    "answerIndex": 0,
    "answer": "brown",
-   "explanation": "The correct answer is \"brown\".",
+   "explanation": "'Brown' è il marrone, il colore della cioccolata.",
    "active": true,
    "tag": "inglese;classe_3;colori;primaria",
    "tags": [
@@ -1077,7 +1077,7 @@
    ],
    "answerIndex": 1,
    "answer": "white",
-   "explanation": "The correct answer is \"white\".",
+   "explanation": "'White' è il bianco, il colore che di solito hanno le nuvole ('clouds').",
    "active": true,
    "tag": "inglese;classe_3;colori;primaria",
    "tags": [
@@ -1275,7 +1275,7 @@
    ],
    "answerIndex": 3,
    "answer": "cow",
-   "explanation": "The correct answer is \"cow\".",
+   "explanation": "'Cow' è la mucca, che vive in fattoria. Balena ('whale'), tigre ('tiger') e scimmia ('monkey') vivono invece allo stato selvatico.",
    "active": true,
    "tag": "inglese;classe_3;animali;primaria",
    "tags": [
@@ -1308,7 +1308,7 @@
    ],
    "answerIndex": 0,
    "answer": "pig",
-   "explanation": "The correct answer is \"pig\".",
+   "explanation": "'Pig' è il maiale: è rosa e vive in fattoria. 'Horse' è il cavallo, anch'esso da fattoria ma non rosa.",
    "active": true,
    "tag": "inglese;classe_3;animali;primaria",
    "tags": [
@@ -1341,7 +1341,7 @@
    ],
    "answerIndex": 1,
    "answer": "sheep",
-   "explanation": "The correct answer is \"sheep\".",
+   "explanation": "'Sheep' è la pecora, da cui si ricava la lana ('wool'). Attenzione: 'sheep' è uguale al singolare e al plurale.",
    "active": true,
    "tag": "inglese;classe_3;animali;primaria",
    "tags": [
@@ -1374,7 +1374,7 @@
    ],
    "answerIndex": 2,
    "answer": "rabbit",
-   "explanation": "The correct answer is \"rabbit\".",
+   "explanation": "'Rabbit' è il coniglio, che ha orecchie lunghe e mangia le carote ('carrots').",
    "active": true,
    "tag": "inglese;classe_3;animali;primaria",
    "tags": [
@@ -1407,7 +1407,7 @@
    ],
    "answerIndex": 3,
    "answer": "zebra",
-   "explanation": "The correct answer is \"zebra\".",
+   "explanation": "'Zebra' è la zebra, l'animale a strisce: 'stripes' significa proprio strisce.",
    "active": true,
    "tag": "inglese;classe_3;animali;primaria",
    "tags": [
@@ -1440,7 +1440,7 @@
    ],
    "answerIndex": 0,
    "answer": "tongue",
-   "explanation": "The correct answer is \"tongue\".",
+   "explanation": "'Tongue' è la lingua, l'organo con cui si sente il sapore del cibo. 'Elbow' è il gomito, 'knee' il ginocchio.",
    "active": true,
    "tag": "inglese;classe_3;corpo_umano;primaria",
    "tags": [
@@ -1473,7 +1473,7 @@
    ],
    "answerIndex": 1,
    "answer": "leg",
-   "explanation": "The correct answer is \"leg\".",
+   "explanation": "'Leg' è la gamba: è con la gamba e il piede che si calcia il pallone.",
    "active": true,
    "tag": "inglese;classe_3;corpo_umano;primaria",
    "tags": [
@@ -1506,7 +1506,7 @@
    ],
    "answerIndex": 2,
    "answer": "mouth",
-   "explanation": "The correct answer is \"mouth\".",
+   "explanation": "'Mouth' è la bocca, dove si trovano i denti ('teeth', plurale irregolare di 'tooth').",
    "active": true,
    "tag": "inglese;classe_3;corpo_umano;primaria",
    "tags": [
@@ -3420,7 +3420,7 @@
    ],
    "answerIndex": 2,
    "answer": "sunny",
-   "explanation": "The correct answer is \"sunny\".",
+   "explanation": "'Sunny' significa soleggiato e descrive il tempo. Le altre sono cose: 'pencil' matita, 'window' finestra, 'rabbit' coniglio.",
    "active": true,
    "tag": "inglese;classe_2;meteo;primaria",
    "tags": [
@@ -3453,7 +3453,7 @@
    ],
    "answerIndex": 3,
    "answer": "snowy",
-   "explanation": "The correct answer is \"snowy\".",
+   "explanation": "'Snowy' viene da 'snow', la neve: quando fuori fa molto freddo e tutto è bianco, sta nevicando. 'Windy' è ventoso, 'rainy' piovoso, 'cloudy' nuvoloso.",
    "active": true,
    "tag": "inglese;classe_2;meteo;primaria",
    "tags": [
@@ -3486,7 +3486,7 @@
    ],
    "answerIndex": 0,
    "answer": "rainy",
-   "explanation": "The correct answer is \"rainy\".",
+   "explanation": "'Rain' è la pioggia e 'rainy' vuol dire piovoso: in inglese si aggiunge -y al nome per formare l'aggettivo del tempo, come sun → sunny.",
    "active": true,
    "tag": "inglese;classe_2;meteo;primaria",
    "tags": [
@@ -3750,7 +3750,7 @@
    ],
    "answerIndex": 1,
    "answer": "May",
-   "explanation": "The correct answer is \"May\".",
+   "explanation": "I mesi in ordine sono April, May, June: 'May' (maggio) viene subito prima di June (giugno). I nomi dei mesi in inglese si scrivono sempre con la maiuscola.",
    "active": true,
    "tag": "inglese;classe_2;mesi;primaria",
    "tags": [
@@ -3783,7 +3783,7 @@
    ],
    "answerIndex": 3,
    "answer": "am",
-   "explanation": "The correct answer is \"am\".",
+   "explanation": "Con 'I' il verbo 'to be' fa 'am': I am happy. 'Is' va con he, she, it e 'are' con you, we, they.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria",
    "tags": [
@@ -3816,7 +3816,7 @@
    ],
    "answerIndex": 0,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "Con 'she' il verbo 'to be' fa 'is': She is my friend. La stessa forma vale per 'he' e 'it'.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria",
    "tags": [
@@ -3849,7 +3849,7 @@
    ],
    "answerIndex": 1,
    "answer": "are",
-   "explanation": "The correct answer is \"are\".",
+   "explanation": "Con 'we' il verbo 'to be' fa 'are': We are at school. La stessa forma vale per 'you' e 'they'.",
    "active": true,
    "tag": "inglese;classe_2;to_be;primaria",
    "tags": [
@@ -4212,7 +4212,7 @@
    ],
    "answerIndex": 0,
    "answer": "cake",
-   "explanation": "The correct answer is \"cake\".",
+   "explanation": "'Cake' è la torta, un dolce. Riso ('rice'), pesce ('fish') e uovo ('egg') non sono dolci.",
    "active": true,
    "tag": "inglese;classe_3;cibo;primaria",
    "tags": [
@@ -4245,7 +4245,7 @@
    ],
    "answerIndex": 1,
    "answer": "yogurt",
-   "explanation": "The correct answer is \"yogurt\".",
+   "explanation": "'Yogurt' è lo yogurt, sano a colazione. Patatine ('crisps'), caramelle ('sweets') e cola sono cibi molto zuccherati o salati.",
    "active": true,
    "tag": "inglese;classe_3;cibo;primaria",
    "tags": [
@@ -4278,7 +4278,7 @@
    ],
    "answerIndex": 2,
    "answer": "bread",
-   "explanation": "The correct answer is \"bread\".",
+   "explanation": "'Bread' è il pane, che si fa con la farina di grano ('wheat').",
    "active": true,
    "tag": "inglese;classe_3;cibo;primaria",
    "tags": [
@@ -4311,7 +4311,7 @@
    ],
    "answerIndex": 3,
    "answer": "banana",
-   "explanation": "The correct answer is \"banana\".",
+   "explanation": "'Banana' è la banana: gialla e allungata. La carota ('carrot') è lunga ma arancione, il pomodoro ('tomato') è rosso e tondo.",
    "active": true,
    "tag": "inglese;classe_3;cibo;primaria",
    "tags": [
@@ -4344,7 +4344,7 @@
    ],
    "answerIndex": 0,
    "answer": "breakfast",
-   "explanation": "The correct answer is \"breakfast\".",
+   "explanation": "'Breakfast' è la colazione, il pasto del mattino. 'Lunch' è il pranzo e 'dinner' la cena.",
    "active": true,
    "tag": "inglese;classe_3;cibo;primaria",
    "tags": [
@@ -6159,7 +6159,7 @@
    ],
    "answerIndex": 2,
    "answer": "wake up",
-   "explanation": "The correct answer is \"wake up\".",
+   "explanation": "'Wake up' significa svegliarsi ed è la prima cosa che si fa la mattina. 'Go to bed' andare a letto e 'have dinner' cenare sono azioni della sera.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria",
    "tags": [
@@ -6291,7 +6291,7 @@
    ],
    "answerIndex": 2,
    "answer": "football",
-   "explanation": "The correct answer is \"football\".",
+   "explanation": "'Football' è il calcio: si gioca con una palla ('ball') e si segna in porta ('goal'). Nuoto, tennis e ciclismo non hanno porta.",
    "active": true,
    "tag": "inglese;classe_2;sport;primaria",
    "tags": [
@@ -6324,7 +6324,7 @@
    ],
    "answerIndex": 3,
    "answer": "swimming",
-   "explanation": "The correct answer is \"swimming\".",
+   "explanation": "'Swimming' è il nuoto, lo sport che si pratica in piscina ('pool'). Viene dal verbo 'swim', nuotare.",
    "active": true,
    "tag": "inglese;classe_2;sport;primaria",
    "tags": [
@@ -6489,7 +6489,7 @@
    ],
    "answerIndex": 3,
    "answer": "do",
-   "explanation": "The correct answer is \"do\".",
+   "explanation": "In inglese i compiti si 'fanno': 'do my homework'. È un'espressione fissa, non si dice 'make homework'.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria",
    "tags": [
@@ -6522,7 +6522,7 @@
    ],
    "answerIndex": 0,
    "answer": "go",
-   "explanation": "The correct answer is \"go\".",
+   "explanation": "'Go to bed' significa andare a letto: è il verbo 'go' seguito da 'to', che indica dove si va.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria",
    "tags": [
@@ -6654,7 +6654,7 @@
    ],
    "answerIndex": 0,
    "answer": "tennis",
-   "explanation": "The correct answer is \"tennis\".",
+   "explanation": "'Tennis' si gioca con una racchetta ('racket'). Calcio, nuoto e corsa non usano attrezzi da impugnare.",
    "active": true,
    "tag": "inglese;classe_2;sport;primaria",
    "tags": [
@@ -6786,7 +6786,7 @@
    ],
    "answerIndex": 1,
    "answer": "kick",
-   "explanation": "The correct answer is \"kick\".",
+   "explanation": "'Kick' significa calciare, cioè colpire la palla con il piede: è proprio quello che si fa nel calcio.",
    "active": true,
    "tag": "inglese;classe_2;sport;primaria",
    "tags": [
@@ -7083,7 +7083,7 @@
    ],
    "answerIndex": 1,
    "answer": "living room",
-   "explanation": "The correct answer is \"living room\".",
+   "explanation": "'Living room' è il salotto, la stanza dove di solito si guarda la televisione. 'Kitchen' è la cucina, 'bathroom' il bagno.",
    "active": true,
    "tag": "inglese;classe_3;casa;primaria",
    "tags": [
@@ -7116,7 +7116,7 @@
    ],
    "answerIndex": 2,
    "answer": "kitchen",
-   "explanation": "The correct answer is \"kitchen\".",
+   "explanation": "Il cibo si tiene al fresco nel frigorifero, che sta in cucina: 'kitchen'.",
    "active": true,
    "tag": "inglese;classe_3;casa;primaria",
    "tags": [
@@ -7149,7 +7149,7 @@
    ],
    "answerIndex": 3,
    "answer": "bathroom",
-   "explanation": "The correct answer is \"bathroom\".",
+   "explanation": "'Bathroom' è il bagno, dove ci si lava le mani. La parola unisce 'bath', bagno, e 'room', stanza.",
    "active": true,
    "tag": "inglese;classe_3;casa;primaria",
    "tags": [
@@ -7182,7 +7182,7 @@
    ],
    "answerIndex": 2,
    "answer": "Where is the cat?",
-   "explanation": "The correct answer is \"Where is the cat?\".",
+   "explanation": "'Where' significa dove: è la parola che si usa per chiedere un luogo. 'What' chiede una cosa, 'how old' l'età.",
    "active": true,
    "tag": "inglese;classe_3;domande;primaria",
    "tags": [
@@ -7215,7 +7215,7 @@
    ],
    "answerIndex": 3,
    "answer": "Have you got a pet?",
-   "explanation": "The correct answer is \"Have you got a pet?\".",
+   "explanation": "'Have you got...?' chiede se possiedi qualcosa: in inglese il possesso si esprime con 'have got'.",
    "active": true,
    "tag": "inglese;classe_3;domande;primaria",
    "tags": [
@@ -7479,7 +7479,7 @@
    ],
    "answerIndex": 0,
    "answer": "bedroom",
-   "explanation": "The correct answer is \"bedroom\".",
+   "explanation": "'Bedroom' è la camera da letto: unisce 'bed', letto, e 'room', stanza. È quindi la stanza per dormire.",
    "active": true,
    "tag": "inglese;classe_3;casa;primaria",
    "tags": [
@@ -7512,7 +7512,7 @@
    ],
    "answerIndex": 1,
    "answer": "shower",
-   "explanation": "The correct answer is \"shower\".",
+   "explanation": "'Shower' è la doccia e si trova in bagno. 'Oven' è il forno, 'bed' il letto, 'sofa' il divano: stanno in altre stanze.",
    "active": true,
    "tag": "inglese;classe_3;casa;primaria",
    "tags": [
@@ -9606,7 +9606,7 @@
    ],
    "answerIndex": 2,
    "answer": "I wake up.",
-   "explanation": "The correct answer is \"I wake up.\"",
+   "explanation": "'Wake up' significa svegliarsi: la frase dice 'I wake up at seven', quindi alle sette mi sveglio.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -9640,7 +9640,7 @@
    ],
    "answerIndex": 3,
    "answer": "I have lunch.",
-   "explanation": "The correct answer is \"I have lunch.\"",
+   "explanation": "'Have lunch' significa pranzare: la frase dice 'I have lunch at one', quindi all'una pranzo. 'Have breakfast' sarebbe fare colazione.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10116,7 +10116,7 @@
    ],
    "answerIndex": 0,
    "answer": "I have dinner.",
-   "explanation": "The correct answer is \"I have dinner.\"",
+   "explanation": "'Have dinner' significa cenare: la frase dice che alle 19:30 ceno. In inglese i pasti si accompagnano al verbo 'have'.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -10150,7 +10150,7 @@
    ],
    "answerIndex": 1,
    "answer": "I do homework.",
-   "explanation": "The correct answer is \"I do homework.\"",
+   "explanation": "'Do homework' significa fare i compiti: la frase dice 'I do homework at 16:00', quindi alle 16 faccio i compiti.",
    "active": true,
    "tag": "inglese;classe_2;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
