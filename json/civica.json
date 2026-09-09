@@ -6421,7 +6421,7 @@
    ],
    "answerIndex": 0,
    "answer": "usare il cestino giusto",
-   "explanation": "La risposta corretta è 'usare il cestino giusto'.",
+   "explanation": "Ogni cestino raccoglie un materiale diverso. Se il rifiuto finisce in quello giusto può diventare qualcosa di nuovo; se finiscono mescolati, tutto il sacco va sprecato.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -6581,7 +6581,7 @@
    ],
    "answerIndex": 1,
    "answer": "spegnere la luce",
-   "explanation": "La risposta corretta è 'spegnere la luce'.",
+   "explanation": "Una lampadina accesa in una stanza vuota consuma energia senza servire a nessuno. Spegnerla è il gesto più semplice per non sprecarla.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -6741,7 +6741,7 @@
    ],
    "answerIndex": 2,
    "answer": "chiudere il rubinetto",
-   "explanation": "La risposta corretta è 'chiudere il rubinetto'.",
+   "explanation": "L'acqua che scorre nel lavandino mentre non la usi va direttamente nello scarico. Chiudere il rubinetto costa un secondo e ne risparmia litri.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -6901,7 +6901,7 @@
    ],
    "answerIndex": 3,
    "answer": "rispettare piante e fiori",
-   "explanation": "La risposta corretta è 'rispettare piante e fiori'.",
+   "explanation": "Un fiore strappato non ricresce e un ramo spezzato lascia la pianta ferita. Il parco resta bello solo se tutti lo lasciano come l'hanno trovato.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -7061,7 +7061,7 @@
    ],
    "answerIndex": 0,
    "answer": "usare una borraccia riutilizzabile",
-   "explanation": "La risposta corretta è 'usare una borraccia riutilizzabile'.",
+   "explanation": "Una borraccia si riempie e si riusa mille volte; ogni bottiglietta usa e getta diventa subito un rifiuto. Cambia la quantità di plastica che produci in un anno.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -7221,7 +7221,7 @@
    ],
    "answerIndex": 1,
    "answer": "riusarlo",
-   "explanation": "La risposta corretta è 'riusarlo'.",
+   "explanation": "Il retro bianco di un foglio è carta perfettamente buona: usarlo per disegnare o per gli appunti significa un albero in meno tagliato per fare la stessa cosa.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -7381,7 +7381,7 @@
    ],
    "answerIndex": 2,
    "answer": "prendere solo quello che riesci a mangiare",
-   "explanation": "La risposta corretta è 'prendere solo quello che riesci a mangiare'.",
+   "explanation": "Il cibo lasciato nel piatto viene buttato: nessuno può più mangiarlo. Prendere poco e semmai tornare a prenderne ancora evita lo spreco.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -7541,7 +7541,7 @@
    ],
    "answerIndex": 3,
    "answer": "lasciarlo pulito",
-   "explanation": "La risposta corretta è 'lasciarlo pulito'.",
+   "explanation": "Le carte lasciate a terra restano lì per mesi e finiscono mangiate dagli animali o portate via dal vento. Portarle via è la sola cosa che le fa sparire davvero.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -7701,7 +7701,7 @@
    ],
    "answerIndex": 0,
    "answer": "rispettarli",
-   "explanation": "La risposta corretta è 'rispettarli'.",
+   "explanation": "Insetti, lucertole e piccoli animali del giardino non sono pericolosi e fanno il loro lavoro nell'ambiente. Guardarli senza toccarli è il modo giusto di conoscerli.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -7989,7 +7989,7 @@
    ],
    "answerIndex": 1,
    "answer": "separare bene i rifiuti",
-   "explanation": "La risposta corretta è 'separare bene i rifiuti'.",
+   "explanation": "Separare i rifiuti serve perché ogni materiale venga trattato nel modo giusto: carta, vetro e plastica puliti diventano oggetti nuovi, mescolati diventano solo spazzatura.",
    "active": true,
    "tag": "educazione_civica;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8021,7 +8021,7 @@
    ],
    "answerIndex": 1,
    "answer": "metterla nel contenitore corretto",
-   "explanation": "La risposta corretta è 'metterla nel contenitore corretto'.",
+   "explanation": "La plastica raccolta bene viene lavata e trasformata in nuovi oggetti. Se finisce nell'indifferenziato quel materiale è perso e va bruciato o in discarica.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8213,7 +8213,7 @@
    ],
    "answerIndex": 2,
    "answer": "bucce e resti di frutta",
-   "explanation": "La risposta corretta è 'bucce e resti di frutta'.",
+   "explanation": "L'organico è tutto ciò che è stato vivo e può marcire: bucce, resti di frutta e verdura, avanzi di cibo. Diventa compost, cioè terra buona per le piante.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8341,7 +8341,7 @@
    ],
    "answerIndex": 3,
    "answer": "spegnerlo se non serve più",
-   "explanation": "La risposta corretta è 'spegnerlo se non serve più'.",
+   "explanation": "Un computer o una LIM accesi a vuoto consumano corrente per ore. Spegnerli quando la lezione è finita è la differenza fra usare l'energia e sprecarla.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8501,7 +8501,7 @@
    ],
    "answerIndex": 0,
    "answer": "andare a piedi o in bici quando possibile",
-   "explanation": "La risposta corretta è 'andare a piedi o in bici quando possibile'.",
+   "explanation": "Un'auto accesa per pochi minuti inquina quanto un tragitto lungo, perché il motore freddo è quello che sporca di più. Per un percorso breve piedi e bici sono più veloci e non inquinano.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8661,7 +8661,7 @@
    ],
    "answerIndex": 1,
    "answer": "dirlo a un adulto",
-   "explanation": "La risposta corretta è 'dirlo a un adulto'.",
+   "explanation": "Una fontanella che perde spreca acqua giorno e notte, anche quando la scuola è chiusa. Solo un adulto può farla riparare, quindi dirglielo è ciò che ferma la perdita.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8821,7 +8821,7 @@
    ],
    "answerIndex": 2,
    "answer": "portarla in un punto di raccolta adatto",
-   "explanation": "La risposta corretta è 'portarla in un punto di raccolta adatto'.",
+   "explanation": "Le pile contengono metalli che inquinano il terreno e l'acqua se finiscono nella spazzatura normale. Nei punti di raccolta vengono aperte e i materiali recuperati.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -8981,7 +8981,7 @@
    ],
    "answerIndex": 3,
    "answer": "non buttare rifiuti nei tombini e nei fiumi",
-   "explanation": "La risposta corretta è 'non buttare rifiuti nei tombini e nei fiumi'.",
+   "explanation": "I tombini e i fiumi finiscono in mare: un rifiuto buttato in strada in città può arrivare sulla spiaggia in pochi giorni. Il mare si protegge lontano dal mare.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -9141,7 +9141,7 @@
    ],
    "answerIndex": 0,
    "answer": "preferire pochi imballaggi",
-   "explanation": "La risposta corretta è 'preferire pochi imballaggi'.",
+   "explanation": "Una merendina confezionata singolarmente produce più imballaggio che cibo. Scegliere confezioni grandi o cibo sfuso riduce i rifiuti prima ancora di produrli.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -9429,7 +9429,7 @@
    ],
    "answerIndex": 1,
    "answer": "proteggerli",
-   "explanation": "La risposta corretta è 'proteggerli'.",
+   "explanation": "Le api impollinano i fiori: senza di loro molta frutta e verdura non nascerebbe. Proteggerle, evitando veleni e lasciando fiorire i prati, conviene anche a noi.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -9461,7 +9461,7 @@
    ],
    "answerIndex": 2,
    "answer": "prenderti cura delle piante",
-   "explanation": "La risposta corretta è 'prenderti cura delle piante'.",
+   "explanation": "Le piante dell'orto hanno bisogno di acqua e cure regolari, non solo il giorno in cui si semina. Prendersene cura è ciò che porta al raccolto.",
    "active": true,
    "tag": "educazione_civica;classe_3;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -9653,7 +9653,7 @@
    ],
    "answerIndex": 0,
    "answer": "usare le risorse pensando anche al futuro",
-   "explanation": "La risposta corretta è 'usare le risorse pensando anche al futuro'.",
+   "explanation": "Sostenibile vuol dire usare una risorsa senza consumarla più in fretta di quanto si rigeneri, così che ci sia anche per chi viene dopo.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -9781,7 +9781,7 @@
    ],
    "answerIndex": 1,
    "answer": "la varietà di esseri viventi",
-   "explanation": "La risposta corretta è 'la varietà di esseri viventi'.",
+   "explanation": "La biodiversità è la varietà di piante, animali e altri viventi in un ambiente. Più è ricca, più quell'ambiente resiste a malattie e cambiamenti.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -9941,7 +9941,7 @@
    ],
    "answerIndex": 2,
    "answer": "usare mezzi pubblici, bici o piedi quando possibile",
-   "explanation": "La risposta corretta è 'usare mezzi pubblici, bici o piedi quando possibile'.",
+   "explanation": "Un autobus pieno inquina per persona molto meno di tante auto con una persona a bordo. Bici e piedi non inquinano affatto.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -10133,7 +10133,7 @@
    ],
    "answerIndex": 3,
    "answer": "materiale utile ottenuto dai rifiuti organici",
-   "explanation": "La risposta corretta è 'materiale utile ottenuto dai rifiuti organici'.",
+   "explanation": "Il compost si ottiene lasciando decomporre i rifiuti organici: diventa terriccio ricco che nutre le piante. Così uno scarto torna a essere una risorsa.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -10261,7 +10261,7 @@
    ],
    "answerIndex": 0,
    "answer": "preferire prodotti locali o di stagione quando possibile",
-   "explanation": "La risposta corretta è 'preferire prodotti locali o di stagione quando possibile'.",
+   "explanation": "Un prodotto locale e di stagione fa pochi chilometri e cresce senza serre riscaldate: costa meno energia della stessa cosa arrivata dall'altra parte del mondo.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -10421,7 +10421,7 @@
    ],
    "answerIndex": 1,
    "answer": "smaltirlo come rifiuto elettronico",
-   "explanation": "La risposta corretta è 'smaltirlo come rifiuto elettronico'.",
+   "explanation": "Telefoni e computer contengono metalli preziosi da recuperare e sostanze che inquinano. La raccolta dei rifiuti elettronici serve a separare le une dagli altri.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -10581,7 +10581,7 @@
    ],
    "answerIndex": 2,
    "answer": "evitare usi inutili di mezzi inquinanti",
-   "explanation": "La risposta corretta è 'evitare usi inutili di mezzi inquinanti'.",
+   "explanation": "L'aria di una città peggiora soprattutto per i motori accesi. Evitare gli spostamenti inutili in auto è la scelta che pesa di più sulla qualità dell'aria che respiri.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -10741,7 +10741,7 @@
    ],
    "answerIndex": 3,
    "answer": "partecipare con impegno",
-   "explanation": "La risposta corretta è 'partecipare con impegno'.",
+   "explanation": "Una giornata ecologica funziona se le persone la fanno davvero: partecipare con impegno è ciò che la distingue da un'iniziativa solo annunciata.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -10901,7 +10901,7 @@
    ],
    "answerIndex": 0,
    "answer": "provare a ripararlo o riusarlo",
-   "explanation": "La risposta corretta è 'provare a ripararlo o riusarlo'.",
+   "explanation": "Riparare un oggetto costa meno risorse che produrne uno nuovo e buttarne uno che poteva ancora servire. È il primo passo prima di pensare a comprare.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -11061,7 +11061,7 @@
    ],
    "answerIndex": 1,
    "answer": "scegliere ciò che serve davvero",
-   "explanation": "La risposta corretta è 'scegliere ciò che serve davvero'.",
+   "explanation": "Il consumo responsabile comincia prima dell'acquisto: chiedersi se serve davvero evita l'oggetto inutile, che è quello che diventa rifiuto più in fretta.",
    "active": true,
    "tag": "educazione_civica;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -11285,7 +11285,7 @@
    ],
    "answerIndex": 2,
    "answer": "equilibrare bisogni delle persone, ambiente e futuro",
-   "explanation": "La risposta corretta è 'equilibrare bisogni delle persone, ambiente e futuro'.",
+   "explanation": "Lo sviluppo sostenibile tiene insieme tre cose: i bisogni delle persone di oggi, la tutela dell'ambiente e le possibilità di chi verrà dopo. Se ne salti una, non è sostenibile.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -11381,7 +11381,7 @@
    ],
    "answerIndex": 3,
    "answer": "riutilizzare e recuperare materiali",
-   "explanation": "La risposta corretta è 'riutilizzare e recuperare materiali'.",
+   "explanation": "Nell'economia circolare un materiale non diventa rifiuto ma torna nel ciclo: si ripara, si riusa, si ricicla. È il contrario del produci-usa-getta.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -11605,7 +11605,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'effetto delle abitudini sull'ambiente",
-   "explanation": "La risposta corretta è \"l'effetto delle abitudini sull'ambiente\".",
+   "explanation": "L'impronta ecologica misura quante risorse naturali servono per sostenere le abitudini di una persona o di un paese: viaggi, cibo, energia, oggetti.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -11701,7 +11701,7 @@
    ],
    "answerIndex": 1,
    "answer": "sole e vento",
-   "explanation": "La risposta corretta è 'sole e vento'.",
+   "explanation": "Sole e vento sono rinnovabili perché non si esauriscono con l'uso: domani ci saranno ancora. Carbone e petrolio invece si consumano e non si riformano.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -11861,7 +11861,7 @@
    ],
    "answerIndex": 2,
    "answer": "evita di produrre scarti inutili",
-   "explanation": "La risposta corretta è 'evita di produrre scarti inutili'.",
+   "explanation": "Il rifiuto che non produci non va né riciclato né smaltito: è l'unico che non costa niente all'ambiente. Per questo ridurre viene prima di riciclare.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -12021,7 +12021,7 @@
    ],
    "answerIndex": 3,
    "answer": "è essenziale per la vita di tutti",
-   "explanation": "La risposta corretta è 'è essenziale per la vita di tutti'.",
+   "explanation": "L'acqua è un bene comune perché senza non vive nessuno e nessuno può dirsene padrone: va garantita a tutti e per questo si tutela insieme.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -12213,7 +12213,7 @@
    ],
    "answerIndex": 0,
    "answer": "aria, acqua e cibo puliti aiutano il benessere",
-   "explanation": "La risposta corretta è 'aria, acqua e cibo puliti aiutano il benessere'.",
+   "explanation": "Respirare aria inquinata, bere acqua sporca o mangiare cibo contaminato fa ammalare. Tutelare l'ambiente è anche un modo di tutelare la salute delle persone.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -12341,7 +12341,7 @@
    ],
    "answerIndex": 1,
    "answer": "proteggere qualcosa che appartiene a tutti",
-   "explanation": "La risposta corretta è 'proteggere qualcosa che appartiene a tutti'.",
+   "explanation": "Spiagge e parchi non sono di chi ci va quel giorno: sono di tutti, comprese le persone che ci andranno dopo di te. Averne cura è la conseguenza di questo.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -12501,7 +12501,7 @@
    ],
    "answerIndex": 2,
    "answer": "pensare anche a chi vivrà dopo di noi",
-   "explanation": "La risposta corretta è 'pensare anche a chi vivrà dopo di noi'.",
+   "explanation": "Le scelte di oggi su energia, rifiuti e territorio arrivano a chi nascerà fra trent'anni. Pensare a loro significa non consumare tutto adesso.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -12661,7 +12661,7 @@
    ],
    "answerIndex": 3,
    "answer": "trasformare i valori in gesti quotidiani",
-   "explanation": "La risposta corretta è 'trasformare i valori in gesti quotidiani'.",
+   "explanation": "I valori contano se cambiano i gesti: differenziare, spegnere, non sprecare, muoversi a piedi. Un cittadino attento si riconosce da quello che fa ogni giorno.",
    "active": true,
    "tag": "educazione_civica;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -12821,7 +12821,7 @@
    ],
    "answerIndex": 2,
    "answer": "tenerla segreta",
-   "explanation": "La risposta corretta è 'tenerla segreta'.",
+   "explanation": "La password è come la chiave di casa: serve a far entrare solo te. Anche un amico può perderla o dirla a qualcun altro senza volerlo, e allora non protegge più niente.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -12981,7 +12981,7 @@
    ],
    "answerIndex": 3,
    "answer": "chiedere prima a un adulto",
-   "explanation": "La risposta corretta è 'chiedere prima a un adulto'.",
+   "explanation": "Le app non sono tutte uguali: alcune chiedono dati o costano soldi senza dirlo chiaramente. Un adulto sa controllare prima di installare.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -13141,7 +13141,7 @@
    ],
    "answerIndex": 0,
    "answer": "non condividerlo",
-   "explanation": "La risposta corretta è 'non condividerlo'.",
+   "explanation": "L'indirizzo di casa dice a uno sconosciuto dove trovarti. È un'informazione che non serve a nessun sito per farti giocare o guardare un video.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -13301,7 +13301,7 @@
    ],
    "answerIndex": 1,
    "answer": "usare parole gentili",
-   "explanation": "La risposta corretta è 'usare parole gentili'.",
+   "explanation": "In chat mancano la faccia e il tono di voce, e una frase brusca sembra più cattiva di quanto volevi. Scegliere parole gentili evita litigi nati da un malinteso.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -13461,7 +13461,7 @@
    ],
    "answerIndex": 2,
    "answer": "chiedere il permesso",
-   "explanation": "La risposta corretta è 'chiedere il permesso'.",
+   "explanation": "Una foto riguarda anche chi ci sta dentro, non solo chi la scatta. Chiedere il permesso è il modo di rispettare la scelta del tuo compagno.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -13621,7 +13621,7 @@
    ],
    "answerIndex": 3,
    "answer": "mostrarlo a un adulto",
-   "explanation": "La risposta corretta è 'mostrarlo a un adulto'.",
+   "explanation": "Un messaggio che spaventa è un problema da adulti, non da bambini. Mostrarlo subito è ciò che lo ferma: tenerlo per sé lo fa solo durare di più.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -13781,7 +13781,7 @@
    ],
    "answerIndex": 0,
    "answer": "avvisare un adulto",
-   "explanation": "La risposta corretta è 'avvisare un adulto'.",
+   "explanation": "Online non si vede chi c'è dall'altra parte: uno sconosciuto può fingersi chiunque. Avvisare un adulto è la protezione più semplice che hai.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -13941,7 +13941,7 @@
    ],
    "answerIndex": 1,
    "answer": "fare pause e usare il tempo con equilibrio",
-   "explanation": "La risposta corretta è 'fare pause e usare il tempo con equilibrio'.",
+   "explanation": "Stare troppo davanti a uno schermo stanca gli occhi e toglie tempo a gioco, sport e riposo. Le pause servono al corpo, non sono una punizione.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -14101,7 +14101,7 @@
    ],
    "answerIndex": 2,
    "answer": "non inoltrarla",
-   "explanation": "La risposta corretta è 'non inoltrarla'.",
+   "explanation": "Inoltrare una foto che prende in giro qualcuno la fa arrivare a molte più persone: chi la gira fa parte del problema, anche se non l'ha scattata.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -14261,7 +14261,7 @@
    ],
    "answerIndex": 3,
    "answer": "riporlo con cura",
-   "explanation": "La risposta corretta è 'riporlo con cura'.",
+   "explanation": "I dispositivi della scuola li usano tutte le classi. Riporli con cura è quello che li tiene funzionanti anche per chi viene dopo di te.",
    "active": true,
    "tag": "educazione_civica;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -14421,7 +14421,7 @@
    ],
    "answerIndex": 2,
    "answer": "controllarla con un adulto o con fonti affidabili",
-   "explanation": "La risposta corretta è 'controllarla con un adulto o con fonti affidabili'.",
+   "explanation": "Online chiunque può pubblicare qualsiasi cosa: essere scritto non vuol dire essere vero. Controllare con un adulto o con fonti affidabili è ciò che distingue una notizia da una voce.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -14581,7 +14581,7 @@
    ],
    "answerIndex": 3,
    "answer": "confrontare più fonti",
-   "explanation": "La risposta corretta è 'confrontare più fonti'.",
+   "explanation": "Se più fonti indipendenti dicono la stessa cosa è probabile che sia vera. Se la trovi solo in un posto, o solo copiata uguale ovunque, conviene dubitare.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -14741,7 +14741,7 @@
    ],
    "answerIndex": 0,
    "answer": "usare un nickname invece del nome completo",
-   "explanation": "La risposta corretta è 'usare un nickname invece del nome completo'.",
+   "explanation": "Un nickname ti fa giocare senza dire a sconosciuti come ti chiami davvero. Il nome completo permette di risalire a te, alla scuola, alla famiglia.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -14901,7 +14901,7 @@
    ],
    "answerIndex": 1,
    "answer": "dire no e avvisare un adulto",
-   "explanation": "La risposta corretta è 'dire no e avvisare un adulto'.",
+   "explanation": "Nessun adulto per bene chiede foto private a un bambino. È un segnale d'allarme: dire no e parlarne subito è esattamente la cosa giusta.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -15061,7 +15061,7 @@
    ],
    "answerIndex": 2,
    "answer": "non partecipare e chiedere aiuto",
-   "explanation": "La risposta corretta è 'non partecipare e chiedere aiuto'.",
+   "explanation": "Restare a guardare fa sentire chi prende in giro più forte e chi è preso in giro più solo. Non partecipare e chiedere aiuto è ciò che interrompe la cosa.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -15221,7 +15221,7 @@
    ],
    "answerIndex": 3,
    "answer": "valutarla con un adulto",
-   "explanation": "La risposta corretta è 'valutarla con un adulto'.",
+   "explanation": "Un profilo si crea in due minuti e può contenere foto e nome falsi. Valutare la richiesta con un adulto serve proprio perché da soli non si può capire chi c'è dietro.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -15381,7 +15381,7 @@
    ],
    "answerIndex": 0,
    "answer": "restare sul tema e usare toni educati",
-   "explanation": "La risposta corretta è 'restare sul tema e usare toni educati'.",
+   "explanation": "La chat di classe serve a organizzarsi. Restare sul tema e usare toni educati la tiene utile: fuori tema e litigi la rendono un posto che nessuno legge più.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -15541,7 +15541,7 @@
    ],
    "answerIndex": 1,
    "answer": "non aprirlo e chiedere aiuto",
-   "explanation": "La risposta corretta è 'non aprirlo e chiedere aiuto'.",
+   "explanation": "Un link inatteso può installare programmi dannosi o rubare le password con una pagina che imita quella vera. Non aprirlo è l'unico modo sicuro di gestirlo.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -15701,7 +15701,7 @@
    ],
    "answerIndex": 2,
    "answer": "non copiarlo come se fosse tuo",
-   "explanation": "La risposta corretta è 'non copiarlo come se fosse tuo'.",
+   "explanation": "Copiare un testo trovato online e consegnarlo come tuo non è un compito fatto: è un compito di qualcun altro. Serve capirlo, riscriverlo con parole tue e dire da dove viene.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -15861,7 +15861,7 @@
    ],
    "answerIndex": 3,
    "answer": "evitare tempi lunghi e fare attenzione al sonno",
-   "explanation": "La risposta corretta è 'evitare tempi lunghi e fare attenzione al sonno'.",
+   "explanation": "La luce dello schermo la sera rende più difficile addormentarsi, e dormire poco si sente il giorno dopo a scuola. Spegnere prima aiuta il sonno.",
    "active": true,
    "tag": "educazione_civica;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16053,7 +16053,7 @@
    ],
    "answerIndex": 3,
    "answer": "segni che restano online e possono circolare",
-   "explanation": "La risposta corretta è 'segni che restano online e possono circolare'.",
+   "explanation": "Ogni cosa che fai online — ricerche, foto, commenti — lascia una traccia che può restare e circolare anche dopo che l'hai cancellata dal tuo dispositivo.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16181,7 +16181,7 @@
    ],
    "answerIndex": 0,
    "answer": "sceglierla difficile da indovinare e non condividerla",
-   "explanation": "La risposta corretta è 'sceglierla difficile da indovinare e non condividerla'.",
+   "explanation": "Una password lunga, con numeri e simboli, non si indovina provando nomi e date. E vale solo se resta tua: condivisa, protegge quanto una porta lasciata aperta.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16341,7 +16341,7 @@
    ],
    "answerIndex": 1,
    "answer": "valutare con attenzione e chiedere aiuto se serve",
-   "explanation": "La risposta corretta è 'valutare con attenzione e chiedere aiuto se serve'.",
+   "explanation": "Un'app che chiede più permessi di quanti gliene servano probabilmente raccoglie dati per altri scopi. La posizione in particolare dice dove sei in ogni momento.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16501,7 +16501,7 @@
    ],
    "answerIndex": 2,
    "answer": "verificare autore, data e più fonti",
-   "explanation": "La risposta corretta è 'verificare autore, data e più fonti'.",
+   "explanation": "Le notizie false sono scritte apposta per sorprendere: è così che si fanno condividere. Controllare chi l'ha scritta, quando, e se lo dicono anche altri smonta quasi tutte.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16661,7 +16661,7 @@
    ],
    "answerIndex": 3,
    "answer": "rispettare il diritto d'autore e citare la fonte",
-   "explanation": "La risposta corretta è \"rispettare il diritto d'autore e citare la fonte\".",
+   "explanation": "Testi e immagini online hanno un autore che ha dei diritti: usarli senza citarli è come firmare un lavoro non tuo. Citare la fonte è corretto e rende il tuo lavoro più solido.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16821,7 +16821,7 @@
    ],
    "answerIndex": 0,
    "answer": "segnalarlo e non partecipare",
-   "explanation": "La risposta corretta è 'segnalarlo e non partecipare'.",
+   "explanation": "Il cyberbullismo si regge sul pubblico. Chi assiste e segnala toglie quel pubblico; chi ride o rilancia lo alimenta anche senza scrivere nulla di offensivo.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -16981,7 +16981,7 @@
    ],
    "answerIndex": 1,
    "answer": "fermarsi e cercare aiuto",
-   "explanation": "La risposta corretta è 'fermarsi e cercare aiuto'.",
+   "explanation": "Quando una chat diventa offensiva, rispondere allo stesso modo la fa solo peggiorare. Fermarsi e coinvolgere un adulto è ciò che la interrompe.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -17141,7 +17141,7 @@
    ],
    "answerIndex": 2,
    "answer": "considerarlo sospetto",
-   "explanation": "La risposta corretta è 'considerarlo sospetto'.",
+   "explanation": "Nessun servizio serio chiede la password via messaggio. Un messaggio che imita la grafica di una banca o di un social e chiede di accedere è quasi sempre un tentativo di truffa.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -17301,7 +17301,7 @@
    ],
    "answerIndex": 3,
    "answer": "non dare tutto senza riflettere",
-   "explanation": "La risposta corretta è 'non dare tutto senza riflettere'.",
+   "explanation": "Microfono e fotocamera permettono di ascoltare e vedere. Un gioco o una torcia non ne hanno bisogno: se li chiedono senza motivo, è un buon momento per fermarsi.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -17461,7 +17461,7 @@
    ],
    "answerIndex": 0,
    "answer": "ascoltare e rispettare i turni",
-   "explanation": "La risposta corretta è 'ascoltare e rispettare i turni'.",
+   "explanation": "In videolezione parlano tutti nello stesso canale: se si accavallano non si capisce nessuno. Rispettare i turni è ciò che rende la lezione seguibile.",
    "active": true,
    "tag": "educazione_civica;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -17621,7 +17621,7 @@
    ],
    "answerIndex": 2,
    "answer": "pensare se rispetta privacy e reputazione digitale",
-   "explanation": "La risposta corretta è 'pensare se rispetta privacy e reputazione digitale'.",
+   "explanation": "Quello che pubblichi su di te può essere salvato, copiato e ritrovato anni dopo, anche da chi non avevi in mente. Pensarci prima è più facile che rimediare dopo.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -17781,7 +17781,7 @@
    ],
    "answerIndex": 3,
    "answer": "usare anche l'autenticazione a due fattori",
-   "explanation": "La risposta corretta è \"usare anche l'autenticazione a due fattori\".",
+   "explanation": "L'autenticazione a due fattori chiede una seconda prova oltre alla password: così, anche se qualcuno la scopre, da solo non riesce a entrare.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -17941,7 +17941,7 @@
    ],
    "answerIndex": 0,
    "answer": "fermarti e pensare a privacy e rispetto",
-   "explanation": "La risposta corretta è 'fermarti e pensare a privacy e rispetto'.",
+   "explanation": "Uno screenshot di una chat privata riguarda anche l'altra persona, che non ha scelto di renderlo pubblico. Inoltrarlo può fare un danno reale a chi ha scritto.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -18101,7 +18101,7 @@
    ],
    "answerIndex": 1,
    "answer": "sospettare che possa essere poco affidabile e verificare",
-   "explanation": "La risposta corretta è 'sospettare che possa essere poco affidabile e verificare'.",
+   "explanation": "I titoli costruiti per indignare o stupire servono a farti cliccare e condividere prima che tu legga. È proprio quell'emozione forte il segnale che conviene verificare.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -18261,7 +18261,7 @@
    ],
    "answerIndex": 2,
    "answer": "verificare i risultati con senso critico",
-   "explanation": "La risposta corretta è 'verificare i risultati con senso critico'.",
+   "explanation": "Gli strumenti automatici sbagliano e a volte inventano, con un tono che sembra sicuro. Verificare i risultati è ciò che distingue usarli dal fidarsene ciecamente.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -18421,7 +18421,7 @@
    ],
    "answerIndex": 3,
    "answer": "dare solo i dati davvero necessari",
-   "explanation": "La risposta corretta è 'dare solo i dati davvero necessari'.",
+   "explanation": "Ogni dato che scrivi in un modulo viene conservato da qualcuno. Dare solo quelli davvero necessari riduce quello che di te può essere perso o rivenduto.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -18581,7 +18581,7 @@
    ],
    "answerIndex": 0,
    "answer": "bloccarlo e segnalarlo",
-   "explanation": "La risposta corretta è 'bloccarlo e segnalarlo'.",
+   "explanation": "Bloccare ferma i messaggi, segnalare permette alla piattaforma di intervenire anche verso altri. Rispondere invece è esattamente ciò che chi molesta cerca.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -18741,7 +18741,7 @@
    ],
    "answerIndex": 1,
    "answer": "unire competenze, rispetto e responsabilità",
-   "explanation": "La risposta corretta è 'unire competenze, rispetto e responsabilità'.",
+   "explanation": "Usare bene il digitale non è solo saper premere i tasti: serve rispetto per le altre persone e responsabilità per le conseguenze di quello che pubblichi.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -18901,7 +18901,7 @@
    ],
    "answerIndex": 2,
    "answer": "gestire tempi e momenti di disconnessione",
-   "explanation": "La risposta corretta è 'gestire tempi e momenti di disconnessione'.",
+   "explanation": "Ogni notifica interrompe quello che stai facendo e ci vuole tempo per riprendere il filo. Sceglierne i tempi, invece di subirle, restituisce attenzione.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -19061,7 +19061,7 @@
    ],
    "answerIndex": 3,
    "answer": "argomentare senza insultare",
-   "explanation": "La risposta corretta è 'argomentare senza insultare'.",
+   "explanation": "In una discussione l'insulto chiude il confronto: chi lo riceve smette di ascoltare. Argomentare, cioè spiegare perché la pensi così, è l'unico modo per convincere qualcuno.",
    "active": true,
    "tag": "educazione_civica;classe_5;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -30807,7 +30807,7 @@
    ],
    "answerIndex": 2,
    "answer": "Nel contenitore della plastica",
-   "explanation": "La risposta corretta è 'Nel contenitore della plastica'.",
+   "explanation": "La plastica va nel suo contenitore perché lì viene raccolta, lavata e trasformata in nuovi oggetti. Se finisce nell'indifferenziato quel materiale è perso.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -30840,7 +30840,7 @@
    ],
    "answerIndex": 2,
    "answer": "Non la invio e avviso un adulto",
-   "explanation": "La risposta corretta è 'Non la invio e avviso un adulto'.",
+   "explanation": "Nessun adulto per bene chiede foto private a un ragazzo. Non inviarla e parlarne subito con un adulto è la risposta giusta: da soli quella situazione non si gestisce.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_3;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -30873,7 +30873,7 @@
    ],
    "answerIndex": 3,
    "answer": "Chiudo il rubinetto mentre mi lavo i denti",
-   "explanation": "La risposta corretta è 'Chiudo il rubinetto mentre mi lavo i denti'.",
+   "explanation": "Il rubinetto aperto mentre ti lavi i denti lascia scorrere diversi litri d'acqua che finiscono nello scarico senza essere usati. Chiuderlo è il gesto che ne risparmia di più.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_4;ambiente_rispetto_terra;primaria",
    "tags": [
@@ -30939,7 +30939,7 @@
    ],
    "answerIndex": 3,
    "answer": "Resto gentile, non rispondo male e avviso un adulto",
-   "explanation": "La risposta corretta è 'Resto gentile, non rispondo male e avviso un adulto'.",
+   "explanation": "Rispondere male alimenta il litigio e ti mette dalla stessa parte. Restare gentile, non alimentare lo scambio e avvisare un adulto è ciò che ferma davvero un commento offensivo.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_4;cittadinanza_digitale_online;primaria",
    "tags": [
@@ -30972,7 +30972,7 @@
    ],
    "answerIndex": 0,
    "answer": "Li raccolgo se posso in sicurezza o avviso un adulto",
-   "explanation": "La risposta corretta è 'Li raccolgo se posso in sicurezza o avviso un adulto'.",
+   "explanation": "Raccogliere quei rifiuti evita che il vento li sparpagli, ma solo se puoi farlo senza pericolo: vetri rotti o oggetti taglienti vanno segnalati a un adulto, non toccati.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_5;ambiente_rispetto_terra;primaria",
    "tags": [
