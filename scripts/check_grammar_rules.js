@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Area del trapezio = (bM+bm)×h÷2 = (15+4)×11÷2 = 209÷2 = 104,5 cm²; arrotondata a 104.',
   'Rettangolo: lati 20 cm e 20 cm. Qual è il perimetro?',
   "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 799.",
   'Un campo è lungo 21 m e largo 48 m. Qual è il suo perimetro?',
@@ -124,6 +125,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Area del trapezio = (bM+bm)×h÷2 = (15+4)×12÷2 = 228÷2 = 114 cm².',
   'Rettangolo: lati 20 cm e 17 cm. Qual è il perimetro?',
   'Un quadrato ha il lato di 20 cm. Qual è il suo perimetro?',
   'Un campo è lungo 48 m e largo 21 m. Qual è il suo perimetro?',

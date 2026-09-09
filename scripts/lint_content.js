@@ -504,18 +504,12 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
-  // Dal lotto 2 delle istanze: "Rettangolo: lati 20 cm e 20 cm". E' un
-  // quadrato, e in seconda si sta appena imparando a distinguerli: chiamarlo
-  // rettangolo insegna il contrario di quel che c'e' scritto nel programma.
-  { pattern: /[Rr]ettangolo[^.?!]{0,40}?(?<![\d,.])(\d+)\s*cm[^.?!]{0,12}?(?<![\d,.])(\d+)\s*cm/,
-    controllo: (m) => m[1] === m[2],
-    msg: 'un rettangolo con i due lati uguali e un quadrato' },
-  // Dal lotto 2 delle istanze: "Leggiamo il problema, identifichiamo i dati e
-  // l'operazione giusta: il risultato e' 799". Non dice quale sia
-  // l'operazione ne' mostra il calcolo: e' una spiegazione solo di forma.
-  { pattern: /identifichiamo i dati e l'operazione giusta/,
+  // Dal lotto 4 delle istanze: "Area = 209÷2 = 104,5 cm2; arrotondata a 104".
+  // La spiegazione ammetteva l'arrotondamento, ma fra le quattro opzioni
+  // l'area esatta non c'era: chi calcolava bene restava senza risposta.
+  { pattern: /arrotondat[ao]\s+(?:a\s+\d|per (?:difetto|eccesso))|la risposta \d+ è arrotondata/,
     soloSpiegazione: true,
-    msg: 'spiegazione generica che non mostra ne l\'operazione ne il calcolo' },
+    msg: 'la spiegazione arrotonda il risultato: fra le opzioni manca la risposta esatta' },
   // Dal lotto 2 delle istanze: "Rettangolo: lati 20 cm e 20 cm". E' un
   // quadrato, e in seconda si sta appena imparando a distinguerli: chiamarlo
   // rettangolo insegna il contrario di quel che dice il programma.
@@ -2026,8 +2020,11 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // L'uguaglianza e' falsa e fra le quattro opzioni la risposta esatta non
   // c'era: chi calcolava bene non trovava il proprio numero. Erano 15.
   if (subject !== 'inglese' && question) {
-    const perc = question.match(/(\d+)\s*(?:persone|alunni|abitanti|studenti|bambini)[\s\S]{0,45}?(\d+)\s*%/);
-    if (perc && (Number(perc[1]) * Number(perc[2])) % 100 !== 0) {
+    // Dal lotto 4: la prima versione elencava solo persone e alunni, e "554
+    // atleti, il 10%" le passava sotto. Gli sconti in euro restano fuori:
+    // li' la risposta e' decimale ("82,50") ed e' giusta cosi'.
+    const perc = question.match(/(\d+)\s*(?:persone|alunni|abitanti|studenti|bambini|atleti|spettatori|iscritti)[\s\S]{0,50}?(\d+)\s*%/);
+    if (perc && !/,\d/.test(String(answer || '')) && (Number(perc[1]) * Number(perc[2])) % 100 !== 0) {
       errors.push({ level: 'error', field: 'text', msg: `il ${perc[2]}% di ${perc[1]} non e un numero intero: nessuna opzione puo essere esatta` });
     }
   }

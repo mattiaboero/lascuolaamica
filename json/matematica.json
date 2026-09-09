@@ -38988,16 +38988,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=14cm, bm=5cm, h=9cm. Qual è l'area?",
+   "question": "Trapezio: bM=14cm, bm=5cm, h=10cm. Qual è l'area?",
    "options": [
-    "83",
-    "85",
-    "84",
-    "82"
+    "93",
+    "95",
+    "94",
+    "92"
    ],
    "answerIndex": 1,
-   "answer": "85",
-   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (14+5)×9÷2 = 19×9÷2 = 171÷2 = 85,5 cm²; la risposta 85 è arrotondata.",
+   "answer": "95",
+   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (14+5)×10÷2 = 19×10÷2 = 190÷2 = 95 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_5;primaria",
    "tags": [
@@ -39148,16 +39148,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=11cm, bm=6cm, h=9cm. Qual è l'area?",
+   "question": "Trapezio: bM=11cm, bm=6cm, h=10cm. Qual è l'area?",
    "options": [
-    "73",
-    "74",
-    "76",
-    "75"
+    "82",
+    "83",
+    "85",
+    "84"
    ],
    "answerIndex": 2,
-   "answer": "76",
-   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (11+6)×9÷2 = 17×9÷2 = 153÷2 = 76,5 cm²; arrotondata a 76.",
+   "answer": "85",
+   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (11+6)×10÷2 = 17×10÷2 = 170÷2 = 85 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_5;primaria",
    "tags": [
@@ -39628,16 +39628,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Trapezio: bM=15cm, bm=4cm, h=11cm. Qual è l'area?",
+   "question": "Trapezio: bM=15cm, bm=4cm, h=12cm. Qual è l'area?",
    "options": [
-    "102",
-    "101",
-    "103",
-    "104"
+    "112",
+    "111",
+    "113",
+    "114"
    ],
    "answerIndex": 3,
-   "answer": "104",
-   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (15+4)×11÷2 = 19×11÷2 = 209÷2 = 104,5 cm²; arrotondata a 104.",
+   "answer": "114",
+   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (15+4)×12÷2 = 19×12÷2 = 228÷2 = 114 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_5;primaria",
    "tags": [
@@ -39660,16 +39660,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=8cm, bm=3cm, h=11cm. Qual è l'area?",
+   "question": "Trapezio: bM=8cm, bm=3cm, h=12cm. Qual è l'area?",
    "options": [
-    "57",
-    "58",
-    "59",
-    "60"
+    "63",
+    "64",
+    "65",
+    "66"
    ],
    "answerIndex": 3,
-   "answer": "60",
-   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (8+3)×11÷2 = 11×11÷2 = 121÷2 = 60,5 cm²; arrotondata a 60 (per difetto).",
+   "answer": "66",
+   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (8+3)×12÷2 = 11×12÷2 = 132÷2 = 66 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_5;primaria",
    "tags": [
@@ -39852,16 +39852,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Trapezio: bM=18cm, bm=7cm, h=5cm. Qual è l'area?",
+   "question": "Trapezio: bM=18cm, bm=7cm, h=6cm. Qual è l'area?",
    "options": [
-    "61",
-    "62",
-    "59",
-    "60"
+    "74",
+    "75",
+    "72",
+    "73"
    ],
    "answerIndex": 1,
-   "answer": "62",
-   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (18+7)×5÷2 = 25×5÷2 = 125÷2 = 62,5 cm²; arrotondata a 62.",
+   "answer": "75",
+   "explanation": "Area del trapezio = (bM+bm)×h÷2 = (18+7)×6÷2 = 25×6÷2 = 150÷2 = 75 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_5;primaria",
    "tags": [

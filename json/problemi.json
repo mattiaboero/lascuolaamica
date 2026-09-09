@@ -20900,16 +20900,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 246 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 248 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
-    "52",
-    "61",
-    "122",
-    "185"
+    "53",
+    "62",
+    "123",
+    "186"
    ],
    "answerIndex": 1,
-   "answer": "61",
-   "explanation": "25% di 246 = 61 atleti.",
+   "answer": "62",
+   "explanation": "25% di 248 = 62 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -21427,16 +21427,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 375 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 376 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
-    "93",
-    "186",
-    "103",
-    "282"
+    "94",
+    "187",
+    "104",
+    "283"
    ],
    "answerIndex": 0,
-   "answer": "93",
-   "explanation": "25% di 375 = 93 atleti.",
+   "answer": "94",
+   "explanation": "25% di 376 = 94 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -21830,7 +21830,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 554 atleti. Il 10% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 550 atleti. Il 10% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "55",
     "70",
@@ -21839,7 +21839,7 @@
    ],
    "answerIndex": 0,
    "answer": "55",
-   "explanation": "10% di 554 = 55 atleti.",
+   "explanation": "10% di 550 = 55 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22481,7 +22481,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 676 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 675 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "135",
     "134",
@@ -22490,7 +22490,7 @@
    ],
    "answerIndex": 0,
    "answer": "135",
-   "explanation": "20% di 676 = 135 atleti.",
+   "explanation": "20% di 675 = 135 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23225,16 +23225,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 748 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 750 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
-    "224",
-    "236",
-    "214",
-    "524"
+    "225",
+    "237",
+    "215",
+    "525"
    ],
    "answerIndex": 0,
-   "answer": "224",
-   "explanation": "30% di 748 = 224 atleti.",
+   "answer": "225",
+   "explanation": "30% di 750 = 225 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23380,7 +23380,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 697 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 695 atleti. Il 20% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "558",
     "141",
@@ -23389,7 +23389,7 @@
    ],
    "answerIndex": 3,
    "answer": "139",
-   "explanation": "20% di 697 = 139 atleti.",
+   "explanation": "20% di 695 = 139 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23783,16 +23783,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 575 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 576 atleti. Il 25% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
-    "143",
-    "155",
-    "432",
-    "131"
+    "144",
+    "156",
+    "433",
+    "132"
    ],
    "answerIndex": 0,
-   "answer": "143",
-   "explanation": "25% di 575 = 143 atleti.",
+   "answer": "144",
+   "explanation": "25% di 576 = 144 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23845,7 +23845,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una società sportiva ha 912 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
+   "question": "Una società sportiva ha 910 atleti. Il 30% si è infortunato. Quanti atleti si sono infortunati?",
    "options": [
     "639",
     "819",
@@ -23854,7 +23854,7 @@
    ],
    "answerIndex": 3,
    "answer": "273",
-   "explanation": "30% di 912 = 273 atleti.",
+   "explanation": "30% di 910 = 273 atleti.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
