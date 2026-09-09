@@ -7357,7 +7357,7 @@
    ],
    "answerIndex": 0,
    "answer": "il passare del tempo",
-   "explanation": "La risposta corretta è 'il passare del tempo'.",
+   "explanation": "La clessidra fa scorrere la sabbia da un'ampolla all'altra sempre nello stesso tempo: serve a misurare quanto tempo passa.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7388,7 +7388,7 @@
    ],
    "answerIndex": 1,
    "answer": "giorni, mesi e anni",
-   "explanation": "La risposta corretta è 'giorni, mesi e anni'.",
+   "explanation": "Il calendario divide il tempo in giorni, mesi e anni, seguendo il ritorno delle stagioni.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7419,7 +7419,7 @@
    ],
    "answerIndex": 2,
    "answer": "durata è grande",
-   "explanation": "La risposta corretta è 'durata è grande'.",
+   "explanation": "La durata è quanto tempo un fatto occupa: se il fatto dura a lungo, la sua durata è grande.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7450,7 +7450,7 @@
    ],
    "answerIndex": 3,
    "answer": "prima e dopo",
-   "explanation": "La risposta corretta è 'prima e dopo'.",
+   "explanation": "La successione è l'ordine in cui i fatti si susseguono: 'prima' e 'dopo' sono le parole che la indicano.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7481,7 +7481,7 @@
    ],
    "answerIndex": 0,
    "answer": "contemporaneamente",
-   "explanation": "La risposta corretta è 'contemporaneamente'.",
+   "explanation": "Contemporaneamente significa nello stesso tempo: indica fatti che avvengono insieme, non uno dopo l'altro.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7512,7 +7512,7 @@
    ],
    "answerIndex": 1,
    "answer": "verso la fine",
-   "explanation": "La risposta corretta è 'verso la fine'.",
+   "explanation": "Sulla linea del tempo si procede dal passato al presente: gli eventi più recenti stanno verso la fine, cioè a destra.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7543,7 +7543,7 @@
    ],
    "answerIndex": 2,
    "answer": "prima",
-   "explanation": "La risposta corretta è 'prima'.",
+   "explanation": "La preistoria viene prima: si chiude con l'invenzione della scrittura, da cui inizia la storia.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -7574,7 +7574,7 @@
    ],
    "answerIndex": 3,
    "answer": "la scrittura",
-   "explanation": "La risposta corretta è 'la scrittura'.",
+   "explanation": "Per convenzione la storia inizia con la scrittura, perché da quel momento restano documenti scritti che possiamo leggere.",
    "active": true,
    "tag": "tempo;periodizzazione;classe3",
    "tags": [
@@ -9795,7 +9795,7 @@
    ],
    "answerIndex": 2,
    "answer": "nomadi",
-   "explanation": "La risposta corretta è 'nomadi'.",
+   "explanation": "Vivendo di caccia e raccolta, gli uomini del Paleolitico seguivano gli animali e le piante di stagione: erano nomadi, cioè si spostavano di continuo.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -9826,7 +9826,7 @@
    ],
    "answerIndex": 3,
    "answer": "spostarsi da un luogo all'altro",
-   "explanation": "La risposta corretta è \"spostarsi da un luogo all'altro\".",
+   "explanation": "Nomade è chi non ha una dimora fissa e si sposta da un luogo all'altro seguendo il cibo. Il contrario è sedentario.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -9857,7 +9857,7 @@
    ],
    "answerIndex": 0,
    "answer": "caccia e raccolta",
-   "explanation": "La risposta corretta è 'caccia e raccolta'.",
+   "explanation": "Nel Paleolitico il cibo non si produceva: si cacciavano gli animali e si raccoglievano frutti, radici e semi che la natura offriva.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -9888,7 +9888,7 @@
    ],
    "answerIndex": 1,
    "answer": "capanne semplici o grotte",
-   "explanation": "La risposta corretta è 'capanne semplici o grotte'.",
+   "explanation": "Chi si sposta spesso non costruisce case solide: si usavano le grotte come riparo naturale oppure capanne semplici, fatte di rami e pelli.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -9919,7 +9919,7 @@
    ],
    "answerIndex": 2,
    "answer": "scaldarsi e cuocere il cibo",
-   "explanation": "La risposta corretta è 'scaldarsi e cuocere il cibo'.",
+   "explanation": "Il fuoco dava calore nelle notti fredde e permetteva di cuocere il cibo, rendendolo più digeribile e conservabile più a lungo.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -9950,7 +9950,7 @@
    ],
    "answerIndex": 3,
    "answer": "pietra",
-   "explanation": "La risposta corretta è 'pietra'.",
+   "explanation": "Il nome Paleolitico significa età della pietra antica: gli strumenti si ottenevano scheggiando pietre dure come la selce.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -9981,7 +9981,7 @@
    ],
    "answerIndex": 0,
    "answer": "li cacciavano per nutrirsi",
-   "explanation": "La risposta corretta è 'li cacciavano per nutrirsi'.",
+   "explanation": "La carne era la risorsa principale: quando i branchi si spostavano, i gruppi umani li seguivano per continuare a cacciarli.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -10012,7 +10012,7 @@
    ],
    "answerIndex": 1,
    "answer": "frutti, radici e semi",
-   "explanation": "La risposta corretta è 'frutti, radici e semi'.",
+   "explanation": "La raccolta consisteva nel prendere ciò che cresceva spontaneamente: frutti, radici, semi e bacche. Insieme alla caccia forniva il cibo del gruppo.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -10043,7 +10043,7 @@
    ],
    "answerIndex": 2,
    "answer": "piccoli",
-   "explanation": "La risposta corretta è 'piccoli'.",
+   "explanation": "Un territorio offre cibo spontaneo per poche persone: i gruppi erano piccoli, poche decine di individui, per non esaurire le risorse.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -10074,7 +10074,7 @@
    ],
    "answerIndex": 3,
    "answer": "sulle pareti delle grotte",
-   "explanation": "La risposta corretta è 'sulle pareti delle grotte'.",
+   "explanation": "Le pitture rupestri sono dipinte sulle pareti delle grotte: al riparo dalla pioggia e dal sole si sono conservate per decine di migliaia di anni.",
    "active": true,
    "tag": "preistoria;paleolitico;classe3",
    "tags": [
@@ -10105,7 +10105,7 @@
    ],
    "answerIndex": 0,
    "answer": "perché dava luce, calore e protezione",
-   "explanation": "La risposta corretta è 'perché dava luce, calore e protezione'.",
+   "explanation": "Il fuoco illuminava la grotta, scaldava nelle stagioni fredde e teneva lontani gli animali: tre vantaggi insieme.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10137,7 +10137,7 @@
    ],
    "answerIndex": 1,
    "answer": "procurava cibo al gruppo",
-   "explanation": "La risposta corretta è 'procurava cibo al gruppo'.",
+   "explanation": "Il cacciatore procurava carne e pelli per tutto il gruppo: la caccia non era un'attività individuale ma un lavoro per la comunità.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10169,7 +10169,7 @@
    ],
    "answerIndex": 2,
    "answer": "per cercare cibo e riparo",
-   "explanation": "La risposta corretta è 'per cercare cibo e riparo'.",
+   "explanation": "Quando in un luogo finivano gli animali da cacciare e i frutti da raccogliere, bisognava cercarne altrove: da qui gli spostamenti continui.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10201,7 +10201,7 @@
    ],
    "answerIndex": 3,
    "answer": "bacche, frutti e radici",
-   "explanation": "La risposta corretta è 'bacche, frutti e radici'.",
+   "explanation": "La raccolta era spesso compito di donne e bambini: bacche, frutti e radici si trovavano vicino all'accampamento e non richiedevano lunghi inseguimenti.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10233,7 +10233,7 @@
    ],
    "answerIndex": 0,
    "answer": "bisonte",
-   "explanation": "La risposta corretta è 'bisonte'.",
+   "explanation": "Il bisonte era una delle grandi prede del Paleolitico, insieme al cervo e al mammut: compare spesso anche nelle pitture rupestri.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10265,7 +10265,7 @@
    ],
    "answerIndex": 1,
    "answer": "tagliare e lavorare materiali",
-   "explanation": "La risposta corretta è 'tagliare e lavorare materiali'.",
+   "explanation": "La selce si scheggia formando bordi taglienti: se ne ricavavano lame, raschiatoi e punte per tagliare carne, pelli e legno.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10297,7 +10297,7 @@
    ],
    "answerIndex": 2,
    "answer": "fatto o dipinto sulla roccia",
-   "explanation": "La risposta corretta è 'fatto o dipinto sulla roccia'.",
+   "explanation": "Rupestre viene da 'rupe', la roccia: indica ciò che è inciso o dipinto sulla pietra.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10329,7 +10329,7 @@
    ],
    "answerIndex": 3,
    "answer": "animali e scene di caccia",
-   "explanation": "La risposta corretta è 'animali e scene di caccia'.",
+   "explanation": "Le pitture raffigurano soprattutto gli animali cacciati e le scene di caccia: erano il centro della vita di quei gruppi.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10361,7 +10361,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'agricoltura",
-   "explanation": "La risposta corretta è \"l'agricoltura\".",
+   "explanation": "L'agricoltura nasce solo nel Neolitico. Nel Paleolitico esistevano già la caccia, la raccolta e il fuoco.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10393,7 +10393,7 @@
    ],
    "answerIndex": 1,
    "answer": "ambiente e animali",
-   "explanation": "La risposta corretta è 'ambiente e animali'.",
+   "explanation": "Bisognava sapere dove crescevano i frutti, quando maturavano e dove passavano i branchi: la sopravvivenza dipendeva dall'osservazione dell'ambiente e degli animali.",
    "active": true,
    "tag": "paleolitico;fuoco;strumenti;classe3",
    "tags": [
@@ -10425,7 +10425,7 @@
    ],
    "answerIndex": 2,
    "answer": "si collaborava per sopravvivere",
-   "explanation": "La risposta corretta è 'si collaborava per sopravvivere'.",
+   "explanation": "Da soli era difficile cacciare grandi prede o difendersi: nel piccolo gruppo si collaborava e i compiti si dividevano.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10457,7 +10457,7 @@
    ],
    "answerIndex": 3,
    "answer": "selce",
-   "explanation": "La risposta corretta è 'selce'.",
+   "explanation": "La selce era il materiale più usato: dura, comune e facile da scheggiare in schegge taglienti.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10489,7 +10489,7 @@
    ],
    "answerIndex": 0,
    "answer": "pelli di animali",
-   "explanation": "La risposta corretta è 'pelli di animali'.",
+   "explanation": "Dagli animali cacciati si ricavavano le pelli, che conciate servivano da vestiti e coperte contro il freddo.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10521,7 +10521,7 @@
    ],
    "answerIndex": 1,
    "answer": "cuocere i cibi",
-   "explanation": "La risposta corretta è 'cuocere i cibi'.",
+   "explanation": "Oltre a scaldare, il fuoco serviva a cuocere: la carne cotta si mastica e si digerisce meglio e dura più a lungo.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10553,7 +10553,7 @@
    ],
    "answerIndex": 2,
    "answer": "solo per un periodo limitato",
-   "explanation": "La risposta corretta è 'solo per un periodo limitato'.",
+   "explanation": "L'accampamento durava finché il territorio offriva cibo: qualche settimana o qualche mese, poi il gruppo ripartiva.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10585,7 +10585,7 @@
    ],
    "answerIndex": 3,
    "answer": "teneva lontani anche alcuni animali",
-   "explanation": "La risposta corretta è 'teneva lontani anche alcuni animali'.",
+   "explanation": "Gli animali selvatici temono le fiamme: un fuoco acceso all'ingresso del riparo teneva lontani i predatori durante la notte.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10617,7 +10617,7 @@
    ],
    "answerIndex": 0,
    "answer": "no, non ancora",
-   "explanation": "La risposta corretta è 'no, non ancora'.",
+   "explanation": "No: l'allevamento comincia nel Neolitico. Nel Paleolitico gli animali erano solo prede da cacciare.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10649,7 +10649,7 @@
    ],
    "answerIndex": 1,
    "answer": "sono fonti sul passato",
-   "explanation": "La risposta corretta è 'sono fonti sul passato'.",
+   "explanation": "Chi le dipinse non sapeva scrivere: quelle immagini sono per noi una fonte, cioè una testimonianza che racconta come vivevano.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10681,7 +10681,7 @@
    ],
    "answerIndex": 2,
    "answer": "prima della scrittura",
-   "explanation": "La risposta corretta è 'prima della scrittura'.",
+   "explanation": "Preistoria significa 'prima della storia': indica il lunghissimo periodo precedente l'invenzione della scrittura, di cui non restano documenti scritti.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10713,7 +10713,7 @@
    ],
    "answerIndex": 3,
    "answer": "coltivare grandi campi",
-   "explanation": "La risposta corretta è 'coltivare grandi campi'.",
+   "explanation": "Coltivare grandi campi appartiene al Neolitico. Caccia, raccolta e uso del fuoco sono invece del Paleolitico.",
    "active": true,
    "tag": "paleolitico;caccia;raccolta;classe3",
    "tags": [
@@ -10745,7 +10745,7 @@
    ],
    "answerIndex": 0,
    "answer": "la presenza di acqua e cibo",
-   "explanation": "La risposta corretta è 'la presenza di acqua e cibo'.",
+   "explanation": "Un accampamento aveva bisogno di acqua da bere e di cibo vicino: si sceglievano luoghi presso corsi d'acqua e zone ricche di prede.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10776,7 +10776,7 @@
    ],
    "answerIndex": 1,
    "answer": "utile e semplice",
-   "explanation": "La risposta corretta è 'utile e semplice'.",
+   "explanation": "Il riparo doveva proteggere dal freddo e dagli animali, ma anche essere veloce da costruire e da abbandonare: utile e semplice.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10807,7 +10807,7 @@
    ],
    "answerIndex": 2,
    "answer": "si spostavano",
-   "explanation": "La risposta corretta è 'si spostavano'.",
+   "explanation": "Esaurite le risorse di un territorio, restare significava fame: il gruppo si spostava verso zone ancora ricche di cibo.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10838,7 +10838,7 @@
    ],
    "answerIndex": 3,
    "answer": "natura e clima",
-   "explanation": "La risposta corretta è 'natura e clima'.",
+   "explanation": "Senza scorte né coltivazioni, tutto dipendeva da ciò che la natura offriva e dal clima: un inverno duro poteva mettere in pericolo il gruppo.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10869,7 +10869,7 @@
    ],
    "answerIndex": 0,
    "answer": "rendeva più facile prendere prede grandi",
-   "explanation": "La risposta corretta è 'rendeva più facile prendere prede grandi'.",
+   "explanation": "Un bisonte o un mammut non si abbattono da soli: cacciando insieme si potevano circondare e catturare prede grandi.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10900,7 +10900,7 @@
    ],
    "answerIndex": 1,
    "answer": "una punta di lancia in pietra",
-   "explanation": "La risposta corretta è 'una punta di lancia in pietra'.",
+   "explanation": "Una punta di lancia in pietra è un oggetto lasciato dagli uomini del Paleolitico: è una fonte materiale, l'unica possibile in un tempo senza scrittura.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10931,7 +10931,7 @@
    ],
    "answerIndex": 2,
    "answer": "no",
-   "explanation": "La risposta corretta è 'no'.",
+   "explanation": "No: la ceramica nasce nel Neolitico, quando si comincia a conservare le scorte. Serviva a chi viveva stabilmente in un villaggio.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10962,7 +10962,7 @@
    ],
    "answerIndex": 3,
    "answer": "vita di caccia e raccolta",
-   "explanation": "La risposta corretta è 'vita di caccia e raccolta'.",
+   "explanation": "Il Paleolitico è l'età dei cacciatori-raccoglitori nomadi. Città, democrazia e imperi appartengono a epoche molto successive.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -10993,7 +10993,7 @@
    ],
    "answerIndex": 0,
    "answer": "osservando gli adulti e partecipando alla vita del gruppo",
-   "explanation": "La risposta corretta è 'osservando gli adulti e partecipando alla vita del gruppo'.",
+   "explanation": "Non esistevano scuole: si imparava guardando gli adulti e partecipando via via alla caccia, alla raccolta e alla lavorazione degli utensili.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -11024,7 +11024,7 @@
    ],
    "answerIndex": 1,
    "answer": "perché gli uomini vissero per tanto tempo come cacciatori-raccoglitori",
-   "explanation": "La risposta corretta è 'perché gli uomini vissero per tanto tempo come cacciatori-raccoglitori'.",
+   "explanation": "Il Paleolitico copre centinaia di migliaia di anni perché per tutto quel tempo il modo di vivere restò lo stesso: caccia, raccolta e nomadismo.",
    "active": true,
    "tag": "paleolitico;vita_quotidiana;classe3",
    "tags": [
@@ -12233,7 +12233,7 @@
    ],
    "answerIndex": 3,
    "answer": "stagioni e tempi della semina",
-   "explanation": "La risposta corretta è 'stagioni e tempi della semina'.",
+   "explanation": "Seminare troppo presto o troppo tardi rovina il raccolto: chi coltiva deve conoscere il ritorno delle stagioni e i tempi giusti della semina.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12264,7 +12264,7 @@
    ],
    "answerIndex": 0,
    "answer": "vicini e controllati",
-   "explanation": "La risposta corretta è 'vicini e controllati'.",
+   "explanation": "Gli animali addomesticati vivono accanto al villaggio, nei recinti: si possono usare quando servono, senza doverli inseguire e cacciare.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
