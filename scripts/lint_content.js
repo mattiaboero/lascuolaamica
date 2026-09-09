@@ -518,8 +518,8 @@ const GRAMMATICA = [
   // sostituiva il numero nel template senza guardare se era 1.
   // il numero puo' chiudere la frase ("altri 1."), quindi il punto non va
   // escluso: fuori restano solo le altre cifre e i separatori seguiti da cifra.
-  { pattern: /(?<![a-zà-ù])(altri|altre|nuovi|nuove)\s+1(?!\d)(?![.,]\d)/,
-    msg: 'numerale 1 con l\'aggettivo al plurale ("arrivano altri 1")' },
+  { pattern: /(?<![a-zà-ù])(altri|altre|nuovi|nuove|lette|letti|usate|usati|prese|presi|mangiate|mangiati)\s+1(?!\d)(?![.,]\d)/,
+    msg: 'numerale 1 con la parola al plurale ("arrivano altri 1", "ne ho lette 1")' },
   // Dal lotto 23 delle istanze: "In un cortile ci sono 15 bambine e 24
   // bambini. Quanti bambini in tutto?". La stessa parola vale prima 'i
   // maschi' e poi 'tutti quanti', e in seconda la distinzione fra bambine e

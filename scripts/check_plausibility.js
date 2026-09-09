@@ -82,6 +82,9 @@ const REGOLE = [
   // prezzo vero, e infatti non e' nell'elenco.
   { re: /\bogni (righello|quaderno|penna|evidenziatore|gomma|matita) costa\s+(\d[\d.]*)\s*euro/gi,
     min: 1, max: 3, cosa: 'prezzo di un articolo di cartoleria' },
+  // Dal lotto 35 delle istanze: camere d'albergo con 8 e 10 posti letto.
+  { re: /\b(In ogni camera) dormono\s+(\d[\d.]*)\s*persone/gi,
+    min: 1, max: 4, cosa: "persone in una camera d'albergo" },
 ];
 
 function main() {

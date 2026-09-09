@@ -11862,7 +11862,7 @@
    ],
    "answerIndex": 0,
    "answer": "Nord",
-   "explanation": "La risposta corretta è 'Nord'.",
+   "explanation": "Per convenzione le carte si disegnano con il Nord in alto: così chiunque le legga sa subito come sono orientate.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -11894,7 +11894,7 @@
    ],
    "answerIndex": 1,
    "answer": "monti, pianure, fiumi e laghi",
-   "explanation": "La risposta corretta è 'monti, pianure, fiumi e laghi'.",
+   "explanation": "La carta fisica mostra il territorio come lo ha fatto la natura: rilievi, pianure e acque, con i colori che indicano le altitudini.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -11926,7 +11926,7 @@
    ],
    "answerIndex": 2,
    "answer": "regioni, confini e città",
-   "explanation": "La risposta corretta è 'regioni, confini e città'.",
+   "explanation": "La carta politica mostra le divisioni decise dall'uomo: i confini fra le regioni, i capoluoghi e le città principali.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -11958,7 +11958,7 @@
    ],
    "answerIndex": 3,
    "answer": "un argomento specifico, come clima o popolazione",
-   "explanation": "La risposta corretta è 'un argomento specifico, come clima o popolazione'.",
+   "explanation": "La carta tematica sceglie un solo argomento — il clima, la popolazione, le colture — e mostra come si distribuisce sul territorio.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -11990,7 +11990,7 @@
    ],
    "answerIndex": 0,
    "answer": "spiegare i simboli",
-   "explanation": "La risposta corretta è 'spiegare i simboli'.",
+   "explanation": "La legenda è la chiave di lettura: elenca ogni simbolo e colore con accanto il suo significato.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12022,7 +12022,7 @@
    ],
    "answerIndex": 1,
    "answer": "la riduzione rispetto alla realtà",
-   "explanation": "La risposta corretta è 'la riduzione rispetto alla realtà'.",
+   "explanation": "La scala dice di quanto la realtà è stata rimpicciolita: 1:100.000 significa che un centimetro sulla carta vale un chilometro sul terreno.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12054,7 +12054,7 @@
    ],
    "answerIndex": 2,
    "answer": "localizzare un punto sulla Terra",
-   "explanation": "La risposta corretta è 'localizzare un punto sulla Terra'.",
+   "explanation": "Latitudine e longitudine danno a ogni punto della Terra una coppia di numeri unica: è così che si indica una posizione senza ambiguità.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12086,7 +12086,7 @@
    ],
    "answerIndex": 3,
    "answer": "la Terra in forma sferica",
-   "explanation": "La risposta corretta è 'la Terra in forma sferica'.",
+   "explanation": "Il mappamondo è sferico come la Terra: per questo non deforma le proporzioni, a differenza di qualsiasi carta piana.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12118,7 +12118,7 @@
    ],
    "answerIndex": 0,
    "answer": "osservare il territorio dall'alto",
-   "explanation": "La risposta corretta è \"osservare il territorio dall'alto\".",
+   "explanation": "Il satellite fotografa dall'alto grandi porzioni di territorio: permette di vedere insieme cose che da terra si osserverebbero solo un pezzo per volta.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12150,7 +12150,7 @@
    ],
    "answerIndex": 1,
    "answer": "consultare percorsi e luoghi con strumenti tecnologici",
-   "explanation": "La risposta corretta è 'consultare percorsi e luoghi con strumenti tecnologici'.",
+   "explanation": "Le mappe digitali si aggiornano, si ingrandiscono e calcolano percorsi: fanno cose che una carta stampata non può fare.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12182,7 +12182,7 @@
    ],
    "answerIndex": 2,
    "answer": "pianure e basse colline",
-   "explanation": "La risposta corretta è 'pianure e basse colline'.",
+   "explanation": "Sulle carte fisiche i colori indicano l'altitudine: il verde è riservato alle quote più basse, cioè pianure e colline basse.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12214,7 +12214,7 @@
    ],
    "answerIndex": 3,
    "answer": "acque",
-   "explanation": "La risposta corretta è 'acque'.",
+   "explanation": "Il blu è il colore convenzionale dell'acqua: linee blu per i fiumi, macchie blu per laghi e mari.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12246,7 +12246,7 @@
    ],
    "answerIndex": 0,
    "answer": "un aeroporto",
-   "explanation": "La risposta corretta è 'un aeroporto'.",
+   "explanation": "I simboli sulle carte richiamano la cosa che rappresentano: la sagoma di un aereo indica un aeroporto, come spiegato dalla legenda.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12278,7 +12278,7 @@
    ],
    "answerIndex": 1,
    "answer": "titolo, legenda e rosa dei venti",
-   "explanation": "La risposta corretta è 'titolo, legenda e rosa dei venti'.",
+   "explanation": "Prima di leggere una carta servono tre cose: il titolo per sapere che cosa mostra, la legenda per i simboli, la rosa dei venti per l'orientamento.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12310,7 +12310,7 @@
    ],
    "answerIndex": 2,
    "answer": "la distribuzione delle precipitazioni",
-   "explanation": "La risposta corretta è 'la distribuzione delle precipitazioni'.",
+   "explanation": "Una carta tematica sulle piogge colora il territorio secondo la quantità di precipitazioni: si vede a colpo d'occhio dove piove di più.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12342,7 +12342,7 @@
    ],
    "answerIndex": 3,
    "answer": "mettere in rapporto distanza reale e distanza sulla carta",
-   "explanation": "La risposta corretta è 'mettere in rapporto distanza reale e distanza sulla carta'.",
+   "explanation": "La scala numerica è un rapporto: 1:25.000 vuol dire che un'unità sulla carta corrisponde a 25.000 unità nella realtà.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12374,7 +12374,7 @@
    ],
    "answerIndex": 0,
    "answer": "muoversi e trovare collegamenti",
-   "explanation": "La risposta corretta è 'muoversi e trovare collegamenti'.",
+   "explanation": "La carta stradale mostra strade, svincoli e distanze: è pensata per chi deve spostarsi, non per studiare la forma del territorio.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12406,7 +12406,7 @@
    ],
    "answerIndex": 1,
    "answer": "paralleli e meridiani",
-   "explanation": "La risposta corretta è 'paralleli e meridiani'.",
+   "explanation": "Il reticolato è la griglia formata dai paralleli, orizzontali, e dai meridiani, verticali: serve a individuare ogni punto con due coordinate.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12438,7 +12438,7 @@
    ],
    "answerIndex": 2,
    "answer": "l'intera superficie terrestre su un piano",
-   "explanation": "La risposta corretta è \"l'intera superficie terrestre su un piano\".",
+   "explanation": "Il planisfero rappresenta tutta la Terra su un foglio piano: proprio per questo deforma le proporzioni, soprattutto vicino ai poli.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12470,7 +12470,7 @@
    ],
    "answerIndex": 3,
    "answer": "mappe digitali e immagini satellitari",
-   "explanation": "La risposta corretta è 'mappe digitali e immagini satellitari'.",
+   "explanation": "Oggi la geografia usa anche satelliti e mappe digitali: strumenti che aggiornano i dati in continuazione, cosa che una carta stampata non fa.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;carte",
    "tags": [
@@ -12502,7 +12502,7 @@
    ],
    "answerIndex": 0,
    "answer": "mappamondo",
-   "explanation": "La risposta corretta è 'mappamondo'.",
+   "explanation": "Il mappamondo è una sfera come la Terra: nessuna proiezione, quindi nessuna deformazione. Una carta piana deve per forza distorcere qualcosa.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12534,7 +12534,7 @@
    ],
    "answerIndex": 1,
    "answer": "dall'alto",
-   "explanation": "La risposta corretta è \"dall'alto\".",
+   "explanation": "Il satellite osserva dall'alto, dallo spazio: restituisce un'immagine del territorio come nessun punto di vista da terra potrebbe dare.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12566,7 +12566,7 @@
    ],
    "answerIndex": 2,
    "answer": "amministrativi",
-   "explanation": "La risposta corretta è 'amministrativi'.",
+   "explanation": "I confini regionali non esistono in natura: sono linee decise dall'uomo per organizzare l'amministrazione, quindi elementi amministrativi.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12598,7 +12598,7 @@
    ],
    "answerIndex": 3,
    "answer": "mettono in evidenza aspetti diversi del territorio",
-   "explanation": "La risposta corretta è 'mettono in evidenza aspetti diversi del territorio'.",
+   "explanation": "Le due carte rappresentano lo stesso territorio scegliendo cosa mostrare: una la forma naturale, l'altra le divisioni amministrative.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12630,7 +12630,7 @@
    ],
    "answerIndex": 0,
    "answer": "che cosa è rappresentato",
-   "explanation": "La risposta corretta è 'che cosa è rappresentato'.",
+   "explanation": "Il titolo dice quale territorio la carta rappresenta e da quale punto di vista: senza, non si saprebbe nemmeno cosa si sta guardando.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12662,7 +12662,7 @@
    ],
    "answerIndex": 1,
    "answer": "fisica",
-   "explanation": "La risposta corretta è 'fisica'.",
+   "explanation": "I monti sono un elemento naturale del territorio, quindi si cercano sulla carta fisica, dove i rilievi sono indicati con i colori dell'altitudine.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12694,7 +12694,7 @@
    ],
    "answerIndex": 2,
    "answer": "politica",
-   "explanation": "La risposta corretta è 'politica'.",
+   "explanation": "Le regioni sono divisioni amministrative: si trovano sulla carta politica, quella che mostra confini e capoluoghi.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12726,7 +12726,7 @@
    ],
    "answerIndex": 3,
    "answer": "tematica",
-   "explanation": "La risposta corretta è 'tematica'.",
+   "explanation": "Il clima è un tema specifico: si rappresenta con una carta tematica, che colora il territorio secondo i valori di quel solo argomento.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12758,7 +12758,7 @@
    ],
    "answerIndex": 0,
    "answer": "meno territorio ma più dettagli",
-   "explanation": "La risposta corretta è 'meno territorio ma più dettagli'.",
+   "explanation": "Scala grande vuol dire riduzione piccola: si vede una porzione ristretta di territorio, ma con molti dettagli, come in una pianta di città.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12790,7 +12790,7 @@
    ],
    "answerIndex": 1,
    "answer": "molto territorio con pochi dettagli",
-   "explanation": "La risposta corretta è 'molto territorio con pochi dettagli'.",
+   "explanation": "Scala piccola vuol dire riduzione forte: entra tutto un continente nel foglio, ma i particolari spariscono.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12822,7 +12822,7 @@
    ],
    "answerIndex": 2,
    "answer": "individuare coordinate",
-   "explanation": "La risposta corretta è 'individuare coordinate'.",
+   "explanation": "Il parallelo dà la latitudine e il meridiano la longitudine: incrociandoli si ottengono le coordinate esatte di un punto.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12854,7 +12854,7 @@
    ],
    "answerIndex": 3,
    "answer": "un parallelo fondamentale",
-   "explanation": "La risposta corretta è 'un parallelo fondamentale'.",
+   "explanation": "L'equatore è il parallelo di riferimento, a latitudine zero: divide la Terra nei due emisferi e da lì si contano tutti gli altri paralleli.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12886,7 +12886,7 @@
    ],
    "answerIndex": 0,
    "answer": "un meridiano fondamentale",
-   "explanation": "La risposta corretta è 'un meridiano fondamentale'.",
+   "explanation": "Il meridiano di Greenwich è quello di riferimento, a longitudine zero: da lì si contano i gradi verso est e verso ovest.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12918,7 +12918,7 @@
    ],
    "answerIndex": 1,
    "answer": "orientarsi e cercare luoghi",
-   "explanation": "La risposta corretta è 'orientarsi e cercare luoghi'.",
+   "explanation": "Le mappe sul telefono sanno dove sei e ricalcolano il percorso mentre ti muovi: è quello che una carta di carta non può fare.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12950,7 +12950,7 @@
    ],
    "answerIndex": 2,
    "answer": "rilievi più elevati",
-   "explanation": "La risposta corretta è 'rilievi più elevati'.",
+   "explanation": "Sulle carte fisiche il colore segue l'altitudine: il marrone è riservato alle quote alte, cioè alle montagne.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -12982,7 +12982,7 @@
    ],
    "answerIndex": 3,
    "answer": "pianure e colline basse",
-   "explanation": "La risposta corretta è 'pianure e colline basse'.",
+   "explanation": "Verde e giallo chiaro stanno in fondo alla scala delle altitudini: indicano le terre basse, pianure e colline poco elevate.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13014,7 +13014,7 @@
    ],
    "answerIndex": 0,
    "answer": "una sua rappresentazione ridotta e simbolica",
-   "explanation": "La risposta corretta è 'una sua rappresentazione ridotta e simbolica'.",
+   "explanation": "La carta riduce, sceglie e traduce in simboli: è un modello del territorio, utile proprio perché non mostra tutto.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -16251,7 +16251,7 @@
    ],
    "answerIndex": 0,
    "answer": "turismo e pesca",
-   "explanation": "La risposta corretta è 'turismo e pesca'.",
+   "explanation": "Il lago offre acqua pescosa e paesaggi che attirano visitatori: attorno nascono pesca, alberghi e attività per il tempo libero.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16284,7 +16284,7 @@
    ],
    "answerIndex": 1,
    "answer": "legati al mare",
-   "explanation": "La risposta corretta è 'legati al mare'.",
+   "explanation": "Un'isola è circondata dall'acqua: ha molta costa in proporzione alla superficie e un clima addolcito dal mare su tutti i lati.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16317,7 +16317,7 @@
    ],
    "answerIndex": 2,
    "answer": "più mite",
-   "explanation": "La risposta corretta è 'più mite'.",
+   "explanation": "L'acqua si scalda e si raffredda molto più lentamente della terra: d'inverno restituisce calore e d'estate lo assorbe, smussando gli estremi.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16350,7 +16350,7 @@
    ],
    "answerIndex": 3,
    "answer": "entra nel mare o in un altro fiume",
-   "explanation": "La risposta corretta è 'entra nel mare o in un altro fiume'.",
+   "explanation": "La foce è il punto d'arrivo del fiume: lì consegna la propria acqua al mare, a un lago o a un fiume più grande.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16383,7 +16383,7 @@
    ],
    "answerIndex": 0,
    "answer": "montagna",
-   "explanation": "La risposta corretta è 'montagna'.",
+   "explanation": "L'acqua scende sempre verso il basso: i fiumi nascono in alto, dove piove e nevica di più e la falda affiora.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16416,7 +16416,7 @@
    ],
    "answerIndex": 1,
    "answer": "fiumi, laghi e mari",
-   "explanation": "La risposta corretta è 'fiumi, laghi e mari'.",
+   "explanation": "L'idrografia è lo studio delle acque di un territorio: comprende i corsi d'acqua, i bacini chiusi e i mari che lo bagnano.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16449,7 +16449,7 @@
    ],
    "answerIndex": 2,
    "answer": "mediterraneo",
-   "explanation": "La risposta corretta è 'mediterraneo'.",
+   "explanation": "La Sardegna è al centro del Mediterraneo, circondata dal mare: ha estati calde e secche e inverni miti e piovosi.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16482,7 +16482,7 @@
    ],
    "answerIndex": 3,
    "answer": "mediterraneo",
-   "explanation": "La risposta corretta è 'mediterraneo'.",
+   "explanation": "La Sicilia è la regione più meridionale e completamente circondata dal mare: il clima mediterraneo vi è particolarmente marcato.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16515,7 +16515,7 @@
    ],
    "answerIndex": 0,
    "answer": "in montagna",
-   "explanation": "La risposta corretta è 'in montagna'.",
+   "explanation": "Perché nevichi serve una temperatura vicina allo zero: salendo di quota fa più freddo, quindi la neve è molto più frequente in montagna.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16548,7 +16548,7 @@
    ],
    "answerIndex": 1,
    "answer": "è una penisola con molte isole",
-   "explanation": "La risposta corretta è 'è una penisola con molte isole'.",
+   "explanation": "L'Italia è una penisola stretta e lunga, con due grandi isole e centinaia di isole minori: quasi ogni sua parte è vicina al mare.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16581,7 +16581,7 @@
    ],
    "answerIndex": 2,
    "answer": "Pianura Padana",
-   "explanation": "La risposta corretta è 'Pianura Padana'.",
+   "explanation": "Il Po scorre in fondo alla Pianura Padana e riceve i fiumi che scendono sia dalle Alpi sia dagli Appennini: raccoglie l'acqua di tutta la pianura.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16614,7 +16614,7 @@
    ],
    "answerIndex": 3,
    "answer": "Mar Mediterraneo",
-   "explanation": "La risposta corretta è 'Mar Mediterraneo'.",
+   "explanation": "Adriatico, Tirreno, Ionio e Ligure non sono mari separati: sono parti del Mediterraneo, il mare chiuso fra Europa, Africa e Asia.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [
@@ -16647,7 +16647,7 @@
    ],
    "answerIndex": 0,
    "answer": "come acqua e atmosfera influenzano il territorio",
-   "explanation": "La risposta corretta è 'come acqua e atmosfera influenzano il territorio'.",
+   "explanation": "Acqua e clima decidono dove si può coltivare, dove conviene abitare e quali attività sono possibili: sono la base per capire un territorio.",
    "active": true,
    "tag": "geografia;classe_4;italia;idrografia;clima",
    "tags": [

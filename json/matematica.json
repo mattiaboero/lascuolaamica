@@ -19692,7 +19692,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "In un libro ci sono 26 pagine. Ne ho lette 1. Quante pagine mancano?",
+   "question": "In un libro ci sono 26 pagine. Ne ho letta una. Quante pagine mancano?",
    "options": [
     "23",
     "25",
@@ -20076,7 +20076,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "In un libro ci sono 11 pagine. Ne ho lette 1. Quante pagine mancano?",
+   "question": "In un libro ci sono 11 pagine. Ne ho letta una. Quante pagine mancano?",
    "options": [
     "7",
     "10",
@@ -20716,16 +20716,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un albergo ha 6 camere. In ogni camera dormono 10 persone. Quante persone?",
+   "question": "Un albergo ha 6 camere. In ogni camera dormono 4 persone. Quante persone?",
    "options": [
-    "58",
-    "57",
-    "60",
-    "59"
+    "22",
+    "21",
+    "24",
+    "23"
    ],
    "answerIndex": 2,
-   "answer": "60",
-   "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 6 × 10 = 60.",
+   "answer": "24",
+   "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 6 × 4 = 24.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [
@@ -20844,16 +20844,16 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un albergo ha 10 camere. In ogni camera dormono 8 persone. Quante persone?",
+   "question": "Un albergo ha 10 camere. In ogni camera dormono 3 persone. Quante persone?",
    "options": [
-    "77",
-    "78",
-    "80",
-    "79"
+    "27",
+    "28",
+    "30",
+    "29"
    ],
    "answerIndex": 2,
-   "answer": "80",
-   "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 10 × 8 = 80.",
+   "answer": "30",
+   "explanation": "Per trovare quante persone dormono in tutto, moltiplica il numero di camere per le persone in ciascuna. 10 × 3 = 30.",
    "active": true,
    "tag": "matematica;problemi;classe_3;primaria",
    "tags": [

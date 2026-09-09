@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'In un libro ci sono 26 pagine. Ne ho lette 1. Quante pagine mancano?',
   "Un'auto percorre 891 km con 9 litri. Quanti km percorre con 1 litro?",
   'In palestra ci sono 5 bambini e arrivano altri 1. Quanti sono in tutto?',
   'In un cortile ci sono 15 bambine e 24 bambini. Quanti bambini in tutto?',
@@ -129,6 +130,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'In un libro ci sono 26 pagine. Ne ho letta una. Quante pagine mancano?',
   "Un'auto percorre 108 km con 9 litri. Quanti km percorre con 1 litro?",
   'In palestra ci sono 5 bambini e ne arriva un altro. Quanti sono in tutto?',
   'In palestra ci sono 5 bambini e arrivano altri 12. Quanti sono in tutto?',
@@ -300,7 +302,7 @@ function controllaNomiClassificati(sorgente) {
 // statistico: una parola quasi assente nel corpus a un passo da una molto
 // piu' frequente. Le aree di ortografia, lessico e grammatica restano fuori
 // perche' li' le grafie sbagliate sono i distrattori, e sono volute.
-const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini']);
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini']);
 
 function controllaRefusi() {
   const dir = path.join(__dirname, '..', 'json');
