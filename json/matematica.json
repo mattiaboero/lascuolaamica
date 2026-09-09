@@ -23628,7 +23628,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un campo produce 13 kg di grano per ettaro. Su 12 ettari quanti kg?",
+   "question": "Un campo produce 13 quintali di grano per ettaro. Su 12 ettari quanti quintali?",
    "options": [
     "155",
     "154",
@@ -23724,7 +23724,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un campo produce 33 kg di grano per ettaro. Su 5 ettari quanti kg?",
+   "question": "Un campo produce 33 quintali di grano per ettaro. Su 5 ettari quanti quintali?",
    "options": [
     "165",
     "162",
@@ -23756,7 +23756,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un campo produce 79 kg di grano per ettaro. Su 7 ettari quanti kg?",
+   "question": "Un campo produce 79 quintali di grano per ettaro. Su 7 ettari quanti quintali?",
    "options": [
     "552",
     "550",
@@ -23884,7 +23884,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un campo produce 90 kg di grano per ettaro. Su 11 ettari quanti kg?",
+   "question": "Un campo produce 90 quintali di grano per ettaro. Su 11 ettari quanti quintali?",
    "options": [
     "987",
     "989",
@@ -23948,7 +23948,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un campo produce 35 kg di grano per ettaro. Su 7 ettari quanti kg?",
+   "question": "Un campo produce 35 quintali di grano per ettaro. Su 7 ettari quanti quintali?",
    "options": [
     "244",
     "245",
@@ -24236,7 +24236,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un campo produce 32 kg di grano per ettaro. Su 3 ettari quanti kg?",
+   "question": "Un campo produce 32 quintali di grano per ettaro. Su 3 ettari quanti quintali?",
    "options": [
     "93",
     "95",
@@ -24428,7 +24428,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un campo produce 30 kg di grano per ettaro. Su 3 ettari quanti kg?",
+   "question": "Un campo produce 30 quintali di grano per ettaro. Su 3 ettari quanti quintali?",
    "options": [
     "88",
     "89",
@@ -24524,7 +24524,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un campo produce 57 kg di grano per ettaro. Su 13 ettari quanti kg?",
+   "question": "Un campo produce 57 quintali di grano per ettaro. Su 13 ettari quanti quintali?",
    "options": [
     "740",
     "738",
@@ -25205,7 +25205,7 @@
    ],
    "answerIndex": 2,
    "answer": "799",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 799.",
+   "explanation": "Ai 253 pacchi già in magazzino se ne aggiungono altri 546: si sommano. 253 + 546 = 799 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25365,7 +25365,7 @@
    ],
    "answerIndex": 3,
    "answer": "819",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 819.",
+   "explanation": "Ai 554 pacchi già in magazzino se ne aggiungono altri 265: si sommano. 554 + 265 = 819 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25397,7 +25397,7 @@
    ],
    "answerIndex": 3,
    "answer": "745",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 745.",
+   "explanation": "Ai 401 pacchi già in magazzino se ne aggiungono altri 344: si sommano. 401 + 344 = 745 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25461,7 +25461,7 @@
    ],
    "answerIndex": 3,
    "answer": "970",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 970.",
+   "explanation": "Ai 824 pacchi già in magazzino se ne aggiungono altri 146: si sommano. 824 + 146 = 970 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25493,7 +25493,7 @@
    ],
    "answerIndex": 0,
    "answer": "892",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 892.",
+   "explanation": "Ai 586 pacchi già in magazzino se ne aggiungono altri 306: si sommano. 586 + 306 = 892 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25525,7 +25525,7 @@
    ],
    "answerIndex": 0,
    "answer": "711",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 711.",
+   "explanation": "Ai 447 pacchi già in magazzino se ne aggiungono altri 264: si sommano. 447 + 264 = 711 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25557,7 +25557,7 @@
    ],
    "answerIndex": 1,
    "answer": "991",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 991.",
+   "explanation": "Ai 307 pacchi già in magazzino se ne aggiungono altri 684: si sommano. 307 + 684 = 991 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25685,7 +25685,7 @@
    ],
    "answerIndex": 1,
    "answer": "444",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 444.",
+   "explanation": "Ai 286 pacchi già in magazzino se ne aggiungono altri 158: si sommano. 286 + 158 = 444 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25717,7 +25717,7 @@
    ],
    "answerIndex": 2,
    "answer": "1723",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 1723.",
+   "explanation": "Ai 937 pacchi già in magazzino se ne aggiungono altri 786: si sommano. 937 + 786 = 1723 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -25813,7 +25813,7 @@
    ],
    "answerIndex": 1,
    "answer": "1320",
-   "explanation": "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 1320.",
+   "explanation": "Ai 540 pacchi già in magazzino se ne aggiungono altri 780: si sommano. 540 + 780 = 1320 pacchi.",
    "active": true,
    "tag": "matematica;problemi;classe_4;primaria",
    "tags": [
@@ -31244,16 +31244,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Un rettangolo ha i lati di 16 cm e 16 cm. Qual è il perimetro?",
+   "question": "Un rettangolo ha i lati di 16 cm e 13 cm. Qual è il perimetro?",
    "options": [
-    "62",
-    "61",
-    "63",
-    "64"
+    "56",
+    "55",
+    "57",
+    "58"
    ],
    "answerIndex": 3,
-   "answer": "64",
-   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (16+16) × 2 = 32 × 2 = 64 cm, perché i lati opposti sono uguali.",
+   "answer": "58",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (16+13) × 2 = 29 × 2 = 58 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_2;primaria",
    "tags": [
@@ -31820,16 +31820,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Un rettangolo ha i lati di 10 cm e 10 cm. Qual è il perimetro?",
+   "question": "Un rettangolo ha i lati di 10 cm e 7 cm. Qual è il perimetro?",
    "options": [
-    "38",
-    "37",
-    "39",
-    "40"
+    "32",
+    "31",
+    "33",
+    "34"
    ],
    "answerIndex": 3,
-   "answer": "40",
-   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (10+10) × 2 = 20 × 2 = 40 cm, perché i lati opposti sono uguali.",
+   "answer": "34",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (10+7) × 2 = 17 × 2 = 34 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_2;primaria",
    "tags": [
@@ -31884,16 +31884,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Un rettangolo ha i lati di 12 cm e 12 cm. Qual è il perimetro?",
+   "question": "Un rettangolo ha i lati di 12 cm e 9 cm. Qual è il perimetro?",
    "options": [
-    "48",
-    "47",
-    "46",
-    "45"
+    "42",
+    "41",
+    "40",
+    "39"
    ],
    "answerIndex": 0,
-   "answer": "48",
-   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (12+12) × 2 = 24 × 2 = 48 cm, perché i lati opposti sono uguali.",
+   "answer": "42",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (12+9) × 2 = 21 × 2 = 42 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_2;primaria",
    "tags": [
@@ -34060,16 +34060,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Un rettangolo con lati 2 cm e 2 cm. Qual è il perimetro?",
+   "question": "Un rettangolo con lati 2 cm e 5 cm. Qual è il perimetro?",
    "options": [
-    "8",
-    "6",
-    "5",
-    "7"
+    "14",
+    "12",
+    "11",
+    "13"
    ],
    "answerIndex": 0,
-   "answer": "8",
-   "explanation": "Il perimetro del rettangolo si calcola con la formula (base + altezza) × 2. (2 + 2) × 2 = 4 × 2 = 8 cm. Con lati uguali si comporta come un quadrato: 2 × 4 = 8.",
+   "answer": "14",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (2+5) × 2 = 7 × 2 = 14 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_3;primaria",
    "tags": [
@@ -35820,16 +35820,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 3,
-   "question": "Rettangolo: base 14 cm, altezza 14 cm. Qual è l'area?",
+   "question": "Rettangolo: base 14 cm, altezza 11 cm. Qual è l'area?",
    "options": [
-    "195",
-    "193",
-    "196",
-    "194"
+    "153",
+    "151",
+    "154",
+    "152"
    ],
    "answerIndex": 2,
-   "answer": "196",
-   "explanation": "Area del rettangolo = base × altezza = 14 × 14 = 196 cm².",
+   "answer": "154",
+   "explanation": "Area del rettangolo = base × altezza = 14 × 11 = 154 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [
@@ -37004,16 +37004,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 3 cm e 3 cm. Qual è il perimetro?",
+   "question": "Rettangolo: lati 3 cm e 6 cm. Qual è il perimetro?",
    "options": [
-    "9",
-    "12",
-    "10",
-    "11"
+    "15",
+    "18",
+    "16",
+    "17"
    ],
    "answerIndex": 1,
-   "answer": "12",
-   "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (3 + 3) × 2 = 6 × 2 = 12 cm.",
+   "answer": "18",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (3+6) × 2 = 9 × 2 = 18 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [
@@ -37260,16 +37260,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 2,
-   "question": "Rettangolo: lati 20 cm e 20 cm. Qual è il perimetro?",
+   "question": "Rettangolo: lati 20 cm e 17 cm. Qual è il perimetro?",
    "options": [
-    "79",
-    "80",
-    "78",
-    "77"
+    "73",
+    "74",
+    "72",
+    "71"
    ],
    "answerIndex": 1,
-   "answer": "80",
-   "explanation": "Perimetro del rettangolo = (base + altezza) × 2 = (20 + 20) × 2 = 40 × 2 = 80 cm.",
+   "answer": "74",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (20+17) × 2 = 37 × 2 = 74 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria",
    "tags": [
@@ -53409,16 +53409,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Qual è il perimetro di un rettangolo con lati 9 cm e 9 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 9 cm e 6 cm?",
    "options": [
-    "43",
-    "36",
-    "40",
-    "37"
+    "37",
+    "30",
+    "34",
+    "31"
    ],
    "answerIndex": 1,
-   "answer": "36",
-   "explanation": "Perimetro = 2 × (9 + 9) = 36.",
+   "answer": "30",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (9+6) × 2 = 15 × 2 = 30 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_2;primaria;pilota_parametrico",
    "tags": [
@@ -53937,16 +53937,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Qual è il perimetro di un rettangolo con lati 6 cm e 6 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 6 cm e 3 cm?",
    "options": [
+    "18",
+    "22",
     "24",
-    "28",
-    "30",
-    "21"
+    "15"
    ],
    "answerIndex": 0,
-   "answer": "24",
-   "explanation": "Perimetro = 2 × (6 + 6) = 24.",
+   "answer": "18",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (6+3) × 2 = 9 × 2 = 18 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_3;primaria;pilota_parametrico",
    "tags": [
@@ -54498,16 +54498,16 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Qual è il perimetro di un rettangolo con lati 10 cm e 10 cm?",
+   "question": "Qual è il perimetro di un rettangolo con lati 10 cm e 7 cm?",
    "options": [
-    "44",
-    "40",
+    "38",
     "34",
-    "42"
+    "28",
+    "36"
    ],
    "answerIndex": 1,
-   "answer": "40",
-   "explanation": "Perimetro = 2 × (10 + 10) = 40.",
+   "answer": "34",
+   "explanation": "Il perimetro del rettangolo si calcola sommando tutti i lati: (10+7) × 2 = 17 × 2 = 34 cm, perché i lati opposti sono uguali.",
    "active": true,
    "tag": "matematica;geometria;classe_4;primaria;pilota_parametrico",
    "tags": [

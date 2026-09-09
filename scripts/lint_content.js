@@ -504,6 +504,30 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 2 delle istanze: "Rettangolo: lati 20 cm e 20 cm". E' un
+  // quadrato, e in seconda si sta appena imparando a distinguerli: chiamarlo
+  // rettangolo insegna il contrario di quel che c'e' scritto nel programma.
+  { pattern: /[Rr]ettangolo[^.?!]{0,40}?(?<![\d,.])(\d+)\s*cm[^.?!]{0,12}?(?<![\d,.])(\d+)\s*cm/,
+    controllo: (m) => m[1] === m[2],
+    msg: 'un rettangolo con i due lati uguali e un quadrato' },
+  // Dal lotto 2 delle istanze: "Leggiamo il problema, identifichiamo i dati e
+  // l'operazione giusta: il risultato e' 799". Non dice quale sia
+  // l'operazione ne' mostra il calcolo: e' una spiegazione solo di forma.
+  { pattern: /identifichiamo i dati e l'operazione giusta/,
+    soloSpiegazione: true,
+    msg: 'spiegazione generica che non mostra ne l\'operazione ne il calcolo' },
+  // Dal lotto 2 delle istanze: "Rettangolo: lati 20 cm e 20 cm". E' un
+  // quadrato, e in seconda si sta appena imparando a distinguerli: chiamarlo
+  // rettangolo insegna il contrario di quel che dice il programma.
+  { pattern: /[Rr]ettangolo[^.?!]{0,40}?(?<![\d,.])(\d+)\s*cm[^.?!]{0,12}?(?<![\d,.])(\d+)\s*cm/,
+    controllo: (m) => m[1] === m[2],
+    msg: 'un rettangolo con i due lati uguali e un quadrato' },
+  // Dal lotto 2 delle istanze: "Leggiamo il problema, identifichiamo i dati e
+  // l'operazione giusta: il risultato e' 799". Non dice quale sia
+  // l'operazione ne' mostra il calcolo: spiega solo di essere una spiegazione.
+  { pattern: /identifichiamo i dati e l'operazione giusta/,
+    soloSpiegazione: true,
+    msg: 'spiegazione generica che non mostra ne l\'operazione ne il calcolo' },
   // Dal lotto 1 delle istanze: "Un campo e' lungo 21 m e largo 48 m". Stessa
   // inversione gia' vista tre volte con altri aggettivi (lotti 62, 93 e 1
   // delle famiglie), qui con lungo prima di largo: nessuna delle regole

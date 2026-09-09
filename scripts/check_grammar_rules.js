@@ -17,6 +17,8 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Rettangolo: lati 20 cm e 20 cm. Qual è il perimetro?',
+  "Leggiamo il problema, identifichiamo i dati e l'operazione giusta: il risultato è 799.",
   'Un campo è lungo 21 m e largo 48 m. Qual è il suo perimetro?',
   'Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (13 × 18) ÷ 2 = 117 cm².',
   'Un bicicletta costa 120 euro. Quanto costa il bicicletta scontato?',
@@ -122,6 +124,8 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Rettangolo: lati 20 cm e 17 cm. Qual è il perimetro?',
+  'Un quadrato ha il lato di 20 cm. Qual è il suo perimetro?',
   'Un campo è lungo 48 m e largo 21 m. Qual è il suo perimetro?',
   'Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (18 × 13) ÷ 2 = 117 cm².',
   'Una bicicletta costa 120 euro. Quanto costa la bicicletta scontata?',

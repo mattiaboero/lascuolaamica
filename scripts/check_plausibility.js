@@ -46,6 +46,17 @@ const REGOLE = [
   // forma al plurale le sfuggiva.
   { re: /\b(classi con)\s*(\d[\d.]*)\s*alunni\s+(?:ciascuna|ognuna|l'una|per classe)/gi,
     min: 15, max: 28, cosa: 'alunni per classe' },
+  // Dal lotto 2 delle istanze: 13 euro per un chilo di banane, e biscotti
+  // venduti a 23 euro l'uno. Il numero da guardare e' sempre il secondo
+  // gruppo catturato, come nelle altre regole.
+  { re: /kg di (banane|arance|mele|pere|pesche|kiwi|mandarini|ananas)\s+a\s+(\d[\d.]*)\s*euro al kg/gi,
+    min: 1, max: 8, cosa: 'prezzo della frutta al kg' },
+  { re: /(biscotti|caramelle|merendine) possibile a\s+(\d[\d.]*)\s*euro l'uno/gi,
+    min: 1, max: 3, cosa: "prezzo di un dolcetto" },
+  // Dal lotto 2 delle istanze: un campo che rende 13 kg di grano per ettaro.
+  // La resa vera sta sui 3.000-8.000 kg, cioe' 30-80 quintali.
+  { re: /\b(produce)\s+(\d[\d.]*)\s*kg di grano per ettaro/gi,
+    min: 3000, max: 9000, cosa: 'resa di grano per ettaro' },
 ];
 
 function main() {

@@ -12032,7 +12032,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Anna ha 175 euro e vuole comprare quanti più biscotti possibile a 17 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Anna ha 175 euro e vuole comprare quanti più astucci possibile a 17 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "170",
     "5",
@@ -12041,7 +12041,7 @@
    ],
    "answerIndex": 2,
    "answer": "10",
-   "explanation": "175 ÷ 17 = 10 (con resto 5). Riesce a comprare 10 biscotti.",
+   "explanation": "175 ÷ 17 = 10 (con resto 5). Riesce a comprare 10 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -12063,16 +12063,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Giorgio compra 5 kg di arance a 4 euro al kg e 5 kg di ananas a 9 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Giorgio compra 5 kg di arance a 3 euro al kg e 5 kg di ananas a 4 euro al kg. Quanto spende in tutto?",
    "options": [
-    "72",
-    "45",
-    "65",
-    "20"
+    "42",
+    "20",
+    "35",
+    "15"
    ],
    "answerIndex": 2,
-   "answer": "65",
-   "explanation": "Arance: 5 × 4 = 20 euro. Ananas: 5 × 9 = 45 euro. Totale: 20 + 45 = 65 euro.",
+   "answer": "35",
+   "explanation": "Arance: 5 × 3 = 15 euro. Ananas: 5 × 4 = 20 euro. Totale: 15 + 20 = 35 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -12401,16 +12401,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Martina compra 2 kg di mandarini a 9 euro al kg e 4 kg di ciliegie a 6 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Martina compra 2 kg di mandarini a 3 euro al kg e 4 kg di ciliegie a 6 euro al kg. Quanto spende in tutto?",
    "options": [
-    "44",
-    "42",
-    "18",
+    "32",
+    "30",
+    "6",
     "24"
    ],
    "answerIndex": 1,
-   "answer": "42",
-   "explanation": "Mandarini: 2 × 9 = 18 euro. Ciliegie: 4 × 6 = 24 euro. Totale: 18 + 24 = 42 euro.",
+   "answer": "30",
+   "explanation": "Mandarini: 2 × 3 = 6 euro. Ciliegie: 4 × 6 = 24 euro. Totale: 6 + 24 = 30 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -12462,16 +12462,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Pietro compra 3 kg di arance a 11 euro al kg e 5 kg di kiwi a 2 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Pietro compra 3 kg di arance a 3 euro al kg e 5 kg di kiwi a 2 euro al kg. Quanto spende in tutto?",
    "options": [
-    "43",
-    "33",
+    "19",
+    "9",
     "10",
-    "47"
+    "23"
    ],
    "answerIndex": 0,
-   "answer": "43",
-   "explanation": "Arance: 3 × 11 = 33 euro. Kiwi: 5 × 2 = 10 euro. Totale: 33 + 10 = 43 euro.",
+   "answer": "19",
+   "explanation": "Arance: 3 × 3 = 9 euro. Kiwi: 5 × 2 = 10 euro. Totale: 9 + 10 = 19 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -12615,16 +12615,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Pietro compra 5 kg di mandarini a 12 euro al kg e 4 kg di ananas a 8 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Pietro compra 5 kg di mandarini a 3 euro al kg e 4 kg di ananas a 4 euro al kg. Quanto spende in tutto?",
    "options": [
-    "32",
-    "60",
-    "92",
-    "90"
+    "16",
+    "15",
+    "31",
+    "29"
    ],
    "answerIndex": 2,
-   "answer": "92",
-   "explanation": "Mandarini: 5 × 12 = 60 euro. Ananas: 4 × 8 = 32 euro. Totale: 60 + 32 = 92 euro.",
+   "answer": "31",
+   "explanation": "Mandarini: 5 × 3 = 15 euro. Ananas: 4 × 4 = 16 euro. Totale: 15 + 16 = 31 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -12860,16 +12860,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Elisa compra 2 kg di pere a 4 euro al kg e 4 kg di kiwi a 10 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Elisa compra 2 kg di pere a 3 euro al kg e 4 kg di kiwi a 3 euro al kg. Quanto spende in tutto?",
    "options": [
-    "40",
-    "57",
-    "48",
-    "8"
+    "12",
+    "27",
+    "18",
+    "6"
    ],
    "answerIndex": 2,
-   "answer": "48",
-   "explanation": "Pere: 2 × 4 = 8 euro. Kiwi: 4 × 10 = 40 euro. Totale: 8 + 40 = 48 euro.",
+   "answer": "18",
+   "explanation": "Pere: 2 × 3 = 6 euro. Kiwi: 4 × 3 = 12 euro. Totale: 6 + 12 = 18 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -12922,7 +12922,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Giulia ha 142 euro e vuole comprare quanti più biscotti possibile a 16 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Giulia ha 142 euro e vuole comprare quanti più astucci possibile a 16 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "14",
     "4",
@@ -12931,7 +12931,7 @@
    ],
    "answerIndex": 2,
    "answer": "8",
-   "explanation": "142 ÷ 16 = 8 (con resto 14). Riesce a comprare 8 biscotti.",
+   "explanation": "142 ÷ 16 = 8 (con resto 14). Riesce a comprare 8 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -13198,7 +13198,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Marco ha 186 euro e vuole comprare quanti più biscotti possibile a 23 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Marco ha 186 euro e vuole comprare quanti più astucci possibile a 23 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "8",
     "184",
@@ -13207,7 +13207,7 @@
    ],
    "answerIndex": 0,
    "answer": "8",
-   "explanation": "186 ÷ 23 = 8 (con resto 2). Riesce a comprare 8 biscotti.",
+   "explanation": "186 ÷ 23 = 8 (con resto 2). Riesce a comprare 8 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -13504,16 +13504,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Roberto compra 5 kg di mandarini a 11 euro al kg e 4 kg di fragole a 9 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Roberto compra 5 kg di mandarini a 3 euro al kg e 4 kg di fragole a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "36",
-    "91",
-    "55",
-    "76"
+    "32",
+    "47",
+    "15",
+    "48"
    ],
    "answerIndex": 1,
-   "answer": "91",
-   "explanation": "Mandarini: 5 × 11 = 55 euro. Fragole: 4 × 9 = 36 euro. Totale: 55 + 36 = 91 euro.",
+   "answer": "47",
+   "explanation": "Mandarini: 5 × 3 = 15 euro. Fragole: 4 × 8 = 32 euro. Totale: 15 + 32 = 47 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -13872,16 +13872,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Giacomo compra 4 kg di banane a 13 euro al kg e 5 kg di kiwi a 10 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Giacomo compra 4 kg di banane a 2 euro al kg e 5 kg di kiwi a 3 euro al kg. Quanto spende in tutto?",
    "options": [
-    "50",
-    "52",
-    "111",
-    "102"
+    "15",
+    "8",
+    "32",
+    "23"
    ],
    "answerIndex": 3,
-   "answer": "102",
-   "explanation": "Banane: 4 × 13 = 52 euro. Kiwi: 5 × 10 = 50 euro. Totale: 52 + 50 = 102 euro.",
+   "answer": "23",
+   "explanation": "Banane: 4 × 2 = 8 euro. Kiwi: 5 × 3 = 15 euro. Totale: 8 + 15 = 23 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -14148,7 +14148,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Serena ha 153 euro e vuole comprare quanti più biscotti possibile a 13 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Serena ha 153 euro e vuole comprare quanti più astucci possibile a 13 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "143",
     "11",
@@ -14157,7 +14157,7 @@
    ],
    "answerIndex": 1,
    "answer": "11",
-   "explanation": "153 ÷ 13 = 11 (con resto 10). Riesce a comprare 11 biscotti.",
+   "explanation": "153 ÷ 13 = 11 (con resto 10). Riesce a comprare 11 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -14363,16 +14363,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Simone compra 2 kg di mele a 5 euro al kg e 2 kg di ciliegie a 10 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Simone compra 2 kg di mele a 3 euro al kg e 2 kg di ciliegie a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "10",
-    "20",
-    "30",
-    "34"
+    "6",
+    "16",
+    "22",
+    "26"
    ],
    "answerIndex": 2,
-   "answer": "30",
-   "explanation": "Mele: 2 × 5 = 10 euro. Ciliegie: 2 × 10 = 20 euro. Totale: 10 + 20 = 30 euro.",
+   "answer": "22",
+   "explanation": "Mele: 2 × 3 = 6 euro. Ciliegie: 2 × 8 = 16 euro. Totale: 6 + 16 = 22 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -14425,16 +14425,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Matteo compra 5 kg di banane a 7 euro al kg e 2 kg di ciliegie a 9 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Matteo compra 5 kg di banane a 2 euro al kg e 2 kg di ciliegie a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "35",
-    "18",
-    "53",
-    "63"
+    "10",
+    "16",
+    "26",
+    "36"
    ],
    "answerIndex": 2,
-   "answer": "53",
-   "explanation": "Banane: 5 × 7 = 35 euro. Ciliegie: 2 × 9 = 18 euro. Totale: 35 + 18 = 53 euro.",
+   "answer": "26",
+   "explanation": "Banane: 5 × 2 = 10 euro. Ciliegie: 2 × 8 = 16 euro. Totale: 10 + 16 = 26 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -14548,16 +14548,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Giulia compra 2 kg di pere a 6 euro al kg e 4 kg di fragole a 9 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Giulia compra 2 kg di pere a 3 euro al kg e 4 kg di fragole a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "48",
-    "36",
-    "56",
-    "12"
+    "38",
+    "32",
+    "46",
+    "6"
    ],
    "answerIndex": 0,
-   "answer": "48",
-   "explanation": "Pere: 2 × 6 = 12 euro. Fragole: 4 × 9 = 36 euro. Totale: 12 + 36 = 48 euro.",
+   "answer": "38",
+   "explanation": "Pere: 2 × 3 = 6 euro. Fragole: 4 × 8 = 32 euro. Totale: 6 + 32 = 38 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -14764,7 +14764,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Monica ha 114 euro e vuole comprare quanti più biscotti possibile a 7 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Monica ha 114 euro e vuole comprare quanti più astucci possibile a 7 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "112",
     "2",
@@ -14773,7 +14773,7 @@
    ],
    "answerIndex": 2,
    "answer": "16",
-   "explanation": "114 ÷ 7 = 16 (con resto 2). Riesce a comprare 16 biscotti.",
+   "explanation": "114 ÷ 7 = 16 (con resto 2). Riesce a comprare 16 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -14886,16 +14886,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Beatrice compra 5 kg di banane a 8 euro al kg e 2 kg di ciliegie a 11 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Beatrice compra 5 kg di banane a 2 euro al kg e 2 kg di ciliegie a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "62",
-    "93",
-    "22",
-    "40"
+    "26",
+    "57",
+    "16",
+    "10"
    ],
    "answerIndex": 0,
-   "answer": "62",
-   "explanation": "Banane: 5 × 8 = 40 euro. Ciliegie: 2 × 11 = 22 euro. Totale: 40 + 22 = 62 euro.",
+   "answer": "26",
+   "explanation": "Banane: 5 × 2 = 10 euro. Ciliegie: 2 × 8 = 16 euro. Totale: 10 + 16 = 26 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -15254,16 +15254,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Anna compra 3 kg di arance a 13 euro al kg e 5 kg di ciliegie a 8 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Anna compra 3 kg di arance a 3 euro al kg e 5 kg di ciliegie a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "94",
-    "39",
-    "79",
+    "64",
+    "9",
+    "49",
     "40"
    ],
    "answerIndex": 2,
-   "answer": "79",
-   "explanation": "Arance: 3 × 13 = 39 euro. Ciliegie: 5 × 8 = 40 euro. Totale: 39 + 40 = 79 euro.",
+   "answer": "49",
+   "explanation": "Arance: 3 × 3 = 9 euro. Ciliegie: 5 × 8 = 40 euro. Totale: 9 + 40 = 49 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -15989,16 +15989,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Valentina compra 6 kg di mele a 4 euro al kg e 5 kg di pesche a 9 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Valentina compra 6 kg di mele a 3 euro al kg e 5 kg di pesche a 3 euro al kg. Quanto spende in tutto?",
    "options": [
-    "59",
-    "69",
-    "24",
-    "45"
+    "23",
+    "33",
+    "18",
+    "15"
    ],
    "answerIndex": 1,
-   "answer": "69",
-   "explanation": "Mele: 6 × 4 = 24 euro. Pesche: 5 × 9 = 45 euro. Totale: 24 + 45 = 69 euro.",
+   "answer": "33",
+   "explanation": "Mele: 6 × 3 = 18 euro. Pesche: 5 × 3 = 15 euro. Totale: 18 + 15 = 33 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -16050,16 +16050,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Elena compra 3 kg di arance a 4 euro al kg e 5 kg di pesche a 10 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Elena compra 3 kg di arance a 3 euro al kg e 5 kg di pesche a 3 euro al kg. Quanto spende in tutto?",
    "options": [
-    "64",
-    "12",
-    "62",
-    "50"
+    "26",
+    "9",
+    "24",
+    "15"
    ],
    "answerIndex": 2,
-   "answer": "62",
-   "explanation": "Arance: 3 × 4 = 12 euro. Pesche: 5 × 10 = 50 euro. Totale: 12 + 50 = 62 euro.",
+   "answer": "24",
+   "explanation": "Arance: 3 × 3 = 9 euro. Pesche: 5 × 3 = 15 euro. Totale: 9 + 15 = 24 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -16112,16 +16112,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Alice compra 4 kg di banane a 10 euro al kg e 3 kg di fragole a 8 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Alice compra 4 kg di banane a 2 euro al kg e 3 kg di fragole a 8 euro al kg. Quanto spende in tutto?",
    "options": [
-    "73",
+    "41",
     "24",
-    "64",
-    "40"
+    "32",
+    "8"
    ],
    "answerIndex": 2,
-   "answer": "64",
-   "explanation": "Banane: 4 × 10 = 40 euro. Fragole: 3 × 8 = 24 euro. Totale: 40 + 24 = 64 euro.",
+   "answer": "32",
+   "explanation": "Banane: 4 × 2 = 8 euro. Fragole: 3 × 8 = 24 euro. Totale: 8 + 24 = 32 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -16327,7 +16327,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Riccardo ha 150 euro e vuole comprare quanti più biscotti possibile a 10 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Riccardo ha 150 euro e vuole comprare quanti più astucci possibile a 10 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "15",
     "45",
@@ -16336,7 +16336,7 @@
    ],
    "answerIndex": 0,
    "answer": "15",
-   "explanation": "150 ÷ 10 = 15 (con resto 0). Riesce a comprare 15 biscotti.",
+   "explanation": "150 ÷ 10 = 15 (con resto 0). Riesce a comprare 15 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -16726,16 +16726,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Daniele compra 5 kg di pere a 10 euro al kg e 5 kg di kiwi a 12 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Daniele compra 5 kg di pere a 3 euro al kg e 5 kg di kiwi a 2 euro al kg. Quanto spende in tutto?",
    "options": [
-    "60",
-    "50",
-    "110",
-    "113"
+    "10",
+    "15",
+    "25",
+    "28"
    ],
    "answerIndex": 2,
-   "answer": "110",
-   "explanation": "Pere: 5 × 10 = 50 euro. Kiwi: 5 × 12 = 60 euro. Totale: 50 + 60 = 110 euro.",
+   "answer": "25",
+   "explanation": "Pere: 5 × 3 = 15 euro. Kiwi: 5 × 2 = 10 euro. Totale: 15 + 10 = 25 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -16757,16 +16757,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Alice compra 2 kg di mele a 12 euro al kg e 2 kg di pesche a 4 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Alice compra 2 kg di mele a 3 euro al kg e 2 kg di pesche a 2 euro al kg. Quanto spende in tutto?",
    "options": [
-    "32",
-    "33",
-    "24",
-    "8"
+    "10",
+    "11",
+    "6",
+    "4"
    ],
    "answerIndex": 0,
-   "answer": "32",
-   "explanation": "Mele: 2 × 12 = 24 euro. Pesche: 2 × 4 = 8 euro. Totale: 24 + 8 = 32 euro.",
+   "answer": "10",
+   "explanation": "Mele: 2 × 3 = 6 euro. Pesche: 2 × 2 = 4 euro. Totale: 6 + 4 = 10 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -16879,16 +16879,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Chiara compra 2 kg di arance a 12 euro al kg e 5 kg di pesche a 12 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Chiara compra 2 kg di arance a 3 euro al kg e 5 kg di pesche a 3 euro al kg. Quanto spende in tutto?",
    "options": [
-    "24",
-    "60",
-    "84",
-    "86"
+    "6",
+    "15",
+    "21",
+    "23"
    ],
    "answerIndex": 2,
-   "answer": "84",
-   "explanation": "Arance: 2 × 12 = 24 euro. Pesche: 5 × 12 = 60 euro. Totale: 24 + 60 = 84 euro.",
+   "answer": "21",
+   "explanation": "Arance: 2 × 3 = 6 euro. Pesche: 5 × 3 = 15 euro. Totale: 6 + 15 = 21 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -17003,16 +17003,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Giacomo compra 4 kg di arance a 13 euro al kg e 4 kg di ananas a 2 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Giacomo compra 4 kg di arance a 3 euro al kg e 4 kg di ananas a 2 euro al kg. Quanto spende in tutto?",
    "options": [
-    "64",
-    "60",
-    "52",
+    "24",
+    "20",
+    "12",
     "8"
    ],
    "answerIndex": 1,
-   "answer": "60",
-   "explanation": "Arance: 4 × 13 = 52 euro. Ananas: 4 × 2 = 8 euro. Totale: 52 + 8 = 60 euro.",
+   "answer": "20",
+   "explanation": "Arance: 4 × 3 = 12 euro. Ananas: 4 × 2 = 8 euro. Totale: 12 + 8 = 20 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -17034,16 +17034,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Al mercato Daniele compra 4 kg di banane a 13 euro al kg e 2 kg di pesche a 11 euro al kg. Quanto spende in tutto?",
+   "question": "Al mercato Daniele compra 4 kg di banane a 2 euro al kg e 2 kg di pesche a 3 euro al kg. Quanto spende in tutto?",
    "options": [
-    "77",
-    "74",
-    "52",
-    "22"
+    "17",
+    "14",
+    "8",
+    "6"
    ],
    "answerIndex": 1,
-   "answer": "74",
-   "explanation": "Banane: 4 × 13 = 52 euro. Pesche: 2 × 11 = 22 euro. Totale: 52 + 22 = 74 euro.",
+   "answer": "14",
+   "explanation": "Banane: 4 × 2 = 8 euro. Pesche: 2 × 3 = 6 euro. Totale: 8 + 6 = 14 euro.",
    "active": true,
    "tag": "moltiplicazione,addizione,mercato",
    "tags": [
@@ -17556,7 +17556,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Beatrice ha 105 euro e vuole comprare quanti più biscotti possibile a 13 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Beatrice ha 105 euro e vuole comprare quanti più astucci possibile a 13 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "8",
     "104",
@@ -17565,7 +17565,7 @@
    ],
    "answerIndex": 0,
    "answer": "8",
-   "explanation": "105 ÷ 13 = 8 (con resto 1). Riesce a comprare 8 biscotti.",
+   "explanation": "105 ÷ 13 = 8 (con resto 1). Riesce a comprare 8 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -17617,7 +17617,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Lorenzo ha 147 euro e vuole comprare quanti più biscotti possibile a 14 euro l'uno. Quanti biscotti riesce a comprare?",
+   "question": "Lorenzo ha 147 euro e vuole comprare quanti più astucci possibile a 14 euro l'uno. Quanti astucci riesce a comprare?",
    "options": [
     "10",
     "5",
@@ -17626,7 +17626,7 @@
    ],
    "answerIndex": 0,
    "answer": "10",
-   "explanation": "147 ÷ 14 = 10 (con resto 7). Riesce a comprare 10 biscotti.",
+   "explanation": "147 ÷ 14 = 10 (con resto 7). Riesce a comprare 10 astucci.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -38650,7 +38650,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 3,
-   "question": "Un campo di grano produce 2340 kg di grano per ettaro. Quanti kg si raccolgono da 8 ettari?",
+   "question": "Un campo di grano produce 2340 quintali di grano per ettaro. Quanti kg si raccolgono da 8 ettari?",
    "options": [
     "18720",
     "16380",
