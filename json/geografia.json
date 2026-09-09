@@ -1621,7 +1621,7 @@
    ],
    "answerIndex": 3,
    "answer": "un punto di riferimento",
-   "explanation": "La risposta corretta è 'un punto di riferimento'.",
+   "explanation": "Un punto di riferimento è qualcosa di fisso e riconoscibile — un albero, il portone, la rete del campo — rispetto a cui si capisce dove ci si trova.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1653,7 +1653,7 @@
    ],
    "answerIndex": 0,
    "answer": "destra e sinistra",
-   "explanation": "La risposta corretta è 'destra e sinistra'.",
+   "explanation": "Destra e sinistra sono una coppia di opposti che indica la posizione rispetto a chi guarda: insieme coprono i due lati e non lasciano dubbi.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1685,7 +1685,7 @@
    ],
    "answerIndex": 1,
    "answer": "un indicatore topologico",
-   "explanation": "La risposta corretta è 'un indicatore topologico'.",
+   "explanation": "Gli indicatori topologici sono le parole che dicono dove sta una cosa rispetto a un'altra: sopra, sotto, dentro, davanti, a destra.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1717,7 +1717,7 @@
    ],
    "answerIndex": 2,
    "answer": "vicino",
-   "explanation": "La risposta corretta è 'vicino'.",
+   "explanation": "'Vicino' indica poca distanza fra due cose. Il suo opposto è 'lontano', che indica invece molta distanza.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1749,7 +1749,7 @@
    ],
    "answerIndex": 3,
    "answer": "dentro",
-   "explanation": "La risposta corretta è 'dentro'.",
+   "explanation": "'Dentro' indica che una cosa si trova nello spazio racchiuso da un'altra. Il suo opposto è 'fuori'.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1781,7 +1781,7 @@
    ],
    "answerIndex": 0,
    "answer": "est",
-   "explanation": "La risposta corretta è 'est'.",
+   "explanation": "Il Sole sorge sempre a est e tramonta a ovest: è il riferimento più antico per orientarsi, e funziona ovunque nel mondo.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1813,7 +1813,7 @@
    ],
    "answerIndex": 1,
    "answer": "orientarsi",
-   "explanation": "La risposta corretta è 'orientarsi'.",
+   "explanation": "I punti cardinali danno alla carta un verso fisso, uguale per tutti: così due persone che la leggono capiscono la stessa direzione.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1845,7 +1845,7 @@
    ],
    "answerIndex": 2,
    "answer": "punti cardinali",
-   "explanation": "La risposta corretta è 'punti cardinali'.",
+   "explanation": "Nord, Sud, Est e Ovest sono i quattro punti cardinali: le direzioni di riferimento con cui si orienta qualunque carta.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1877,7 +1877,7 @@
    ],
    "answerIndex": 3,
    "answer": "seguire riferimenti e indicazioni",
-   "explanation": "La risposta corretta è 'seguire riferimenti e indicazioni'.",
+   "explanation": "Nel quartiere ci si orienta con quello che resta fermo — insegne, incroci, edifici riconoscibili — e con i cartelli che indicano le direzioni.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -1909,7 +1909,7 @@
    ],
    "answerIndex": 0,
    "answer": "poco distante",
-   "explanation": "La risposta corretta è 'poco distante'.",
+   "explanation": "'Vicino' vuol dire che la distanza da percorrere è breve: ci si arriva a piedi in poco tempo.",
    "active": true,
    "tag": "geografia;classe_2;orientamento;riferimenti",
    "tags": [
@@ -3165,7 +3165,7 @@
    ],
    "answerIndex": 3,
    "answer": "un percorso",
-   "explanation": "La risposta corretta è 'un percorso'.",
+   "explanation": "Il percorso è la linea che collega un punto di partenza a uno di arrivo: sulla pianta si traccia per mostrare la strada da fare, non gli oggetti.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3198,7 +3198,7 @@
    ],
    "answerIndex": 0,
    "answer": "capire com'è organizzato lo spazio",
-   "explanation": "La risposta corretta è \"capire com'è organizzato lo spazio\".",
+   "explanation": "Muri e stanze disegnati dall'alto fanno vedere come lo spazio è diviso: quante stanze ci sono, quanto sono grandi e come si passa dall'una all'altra.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3231,7 +3231,7 @@
    ],
    "answerIndex": 1,
    "answer": "più piccoli",
-   "explanation": "La risposta corretta è 'più piccoli'.",
+   "explanation": "Sul foglio non ci sta una stanza vera: tutto viene rimpicciolito nella stessa proporzione, così i rapporti fra le misure restano giusti.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3264,7 +3264,7 @@
    ],
    "answerIndex": 2,
    "answer": "spiegare i simboli",
-   "explanation": "La risposta corretta è 'spiegare i simboli'.",
+   "explanation": "La legenda è la chiave di lettura: dice che cosa significa ogni simbolo. Senza, i segni sul foglio non si possono interpretare.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3297,7 +3297,7 @@
    ],
    "answerIndex": 3,
    "answer": "dalla porta al banco",
-   "explanation": "La risposta corretta è 'dalla porta al banco'.",
+   "explanation": "Un percorso ha un punto di partenza e uno di arrivo: 'dalla porta al banco' li ha entrambi, e si può tracciare sulla pianta.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3330,7 +3330,7 @@
    ],
    "answerIndex": 0,
    "answer": "una pianta",
-   "explanation": "La risposta corretta è 'una pianta'.",
+   "explanation": "La pianta è per definizione la vista dall'alto. Guardando di lato si vedono le pareti e le altezze, non la disposizione degli oggetti nello spazio.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3363,7 +3363,7 @@
    ],
    "answerIndex": 1,
    "answer": "frecce",
-   "explanation": "La risposta corretta è 'frecce'.",
+   "explanation": "Le frecce mostrano in che direzione si va e in che ordine: senza, la linea del percorso non direbbe da dove si parte e dove si arriva.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3396,7 +3396,7 @@
    ],
    "answerIndex": 2,
    "answer": "riconoscerlo sulla pianta",
-   "explanation": "La risposta corretta è 'riconoscerlo sulla pianta'.",
+   "explanation": "La legenda associa un simbolo a un luogo: una volta imparato quel simbolo, lo si riconosce ovunque compaia sulla pianta.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3429,7 +3429,7 @@
    ],
    "answerIndex": 3,
    "answer": "rappresentare le stanze",
-   "explanation": "La risposta corretta è 'rappresentare le stanze'.",
+   "explanation": "La pianta di una casa mostra dall'alto come sono disposte le stanze: quante sono, dove si trovano le porte e come si collegano fra loro.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3462,7 +3462,7 @@
    ],
    "answerIndex": 0,
    "answer": "più in alto nella pianta",
-   "explanation": "La risposta corretta è 'più in alto nella pianta'.",
+   "explanation": "Nella pianta la posizione sul foglio corrisponde alla posizione nello spazio: più in alto sul foglio significa più lontano da chi guarda dall'ingresso.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3495,7 +3495,7 @@
    ],
    "answerIndex": 1,
    "answer": "Disegno la mia aula vista dall'alto.",
-   "explanation": "La risposta corretta è \"Disegno la mia aula vista dall'alto.\"",
+   "explanation": "Disegnare l'aula vista dall'alto è esattamente fare una carta: si rappresenta uno spazio reale su un foglio, ridotto e visto da sopra.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3528,7 +3528,7 @@
    ],
    "answerIndex": 2,
    "answer": "lo stesso tipo di oggetto o luogo",
-   "explanation": "La risposta corretta è 'lo stesso tipo di oggetto o luogo'.",
+   "explanation": "I simboli sono convenzioni: lo stesso segno significa sempre la stessa cosa, così chi legge la pianta non deve indovinare ogni volta.",
    "active": true,
    "tag": "geografia;classe_2;pianta;legenda;percorsi",
    "tags": [
@@ -3627,7 +3627,7 @@
    ],
    "answerIndex": 1,
    "answer": "trasformato dall'uomo",
-   "explanation": "La risposta corretta è \"trasformato dall'uomo\".",
+   "explanation": "Il paesaggio naturale è quello che l'uomo non ha toccato. Costruendo una strada in un prato l'uomo lo modifica: da lì in poi è un paesaggio trasformato.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3659,7 +3659,7 @@
    ],
    "answerIndex": 2,
    "answer": "modificato dall'uomo",
-   "explanation": "La risposta corretta è \"modificato dall'uomo\".",
+   "explanation": "Un campo coltivato sembra natura, ma è stato arato, seminato e irrigato dall'uomo: senza il suo lavoro tornerebbe prato o bosco.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3691,7 +3691,7 @@
    ],
    "answerIndex": 3,
    "answer": "interviene sul paesaggio",
-   "explanation": "La risposta corretta è 'interviene sul paesaggio'.",
+   "explanation": "Anche piantare alberi è un intervento: l'uomo decide dove e quali, e il parco che ne risulta non sarebbe nato da solo in quel modo.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3723,7 +3723,7 @@
    ],
    "answerIndex": 0,
    "answer": "antropico",
-   "explanation": "La risposta corretta è 'antropico'.",
+   "explanation": "Antropico viene dal greco 'anthropos', uomo: indica tutto ciò che è stato costruito dalle persone, come una casa, anche se sta in mezzo alla natura.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3755,7 +3755,7 @@
    ],
    "answerIndex": 1,
    "answer": "il lago",
-   "explanation": "La risposta corretta è 'il lago'.",
+   "explanation": "Il lago si forma per cause naturali — acqua raccolta in una conca — senza che nessuno lo costruisca. Per questo è un elemento naturale.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3787,7 +3787,7 @@
    ],
    "answerIndex": 2,
    "answer": "la galleria",
-   "explanation": "La risposta corretta è 'la galleria'.",
+   "explanation": "La montagna si è formata in milioni di anni per forze naturali; la galleria è stata scavata dall'uomo per farci passare una strada.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3819,7 +3819,7 @@
    ],
    "answerIndex": 3,
    "answer": "ponte",
-   "explanation": "La risposta corretta è 'ponte'.",
+   "explanation": "Bosco, fiume e collina si formano da soli. Il ponte no: qualcuno lo ha progettato e costruito per attraversare, quindi è antropico.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3851,7 +3851,7 @@
    ],
    "answerIndex": 0,
    "answer": "piazza",
-   "explanation": "La risposta corretta è 'piazza'.",
+   "explanation": "Albero, prato e lago nascono per conto loro. La piazza invece è stata disegnata e pavimentata dall'uomo per farci incontrare le persone.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3883,7 +3883,7 @@
    ],
    "answerIndex": 1,
    "answer": "parco giochi",
-   "explanation": "La risposta corretta è 'parco giochi'.",
+   "explanation": "Mare, isola e montagna sono formazioni naturali. Il parco giochi è stato costruito: qualcuno ha scelto il posto e installato le attrezzature.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3915,7 +3915,7 @@
    ],
    "answerIndex": 2,
    "answer": "fabbrica",
-   "explanation": "La risposta corretta è 'fabbrica'.",
+   "explanation": "Bosco, cascata e fiume esistono senza l'uomo. La fabbrica è un edificio costruito per produrre: è un elemento antropico.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3947,7 +3947,7 @@
    ],
    "answerIndex": 3,
    "answer": "cambiato",
-   "explanation": "La risposta corretta è 'cambiato'.",
+   "explanation": "Il paesaggio non è fisso: quando si costruiscono nuove case cambiano gli spazi, le strade e la vista. È una trasformazione fatta dall'uomo.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -3979,7 +3979,7 @@
    ],
    "answerIndex": 0,
    "answer": "albero e ponte",
-   "explanation": "La risposta corretta è 'albero e ponte'.",
+   "explanation": "L'albero cresce da solo, il ponte lo ha costruito qualcuno: insieme formano una coppia con un elemento naturale e uno antropico.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4011,7 +4011,7 @@
    ],
    "answerIndex": 1,
    "answer": "antropico",
-   "explanation": "La risposta corretta è 'antropico'.",
+   "explanation": "La diga è una grande costruzione che sbarra un corso d'acqua per formare un bacino: è opera dell'uomo, quindi un elemento antropico.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4043,7 +4043,7 @@
    ],
    "answerIndex": 2,
    "answer": "organizzare lo spazio",
-   "explanation": "La risposta corretta è 'organizzare lo spazio'.",
+   "explanation": "Il sentiero segnato mostra che l'uomo interviene anche senza costruire: sceglie dove si passa e lo indica, dando un ordine allo spazio.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4075,7 +4075,7 @@
    ],
    "answerIndex": 3,
    "answer": "antropici",
-   "explanation": "La risposta corretta è 'antropici'.",
+   "explanation": "Marciapiedi e case sono stati costruiti dalle persone per abitare e circolare: sono gli elementi antropici che riempiono un quartiere.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4107,7 +4107,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'uomo costruisce o modifica luoghi",
-   "explanation": "La risposta corretta è \"l'uomo costruisce o modifica luoghi\".",
+   "explanation": "Il paesaggio cambia sia per cause naturali sia per opera dell'uomo, ma le trasformazioni umane sono in genere molto più rapide e visibili.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4139,7 +4139,7 @@
    ],
    "answerIndex": 1,
    "answer": "le trasformazioni del paesaggio",
-   "explanation": "La risposta corretta è 'le trasformazioni del paesaggio'.",
+   "explanation": "Confrontare due foto dello stesso luogo a distanza di anni fa vedere che cosa è stato costruito, tolto o modificato: è il modo più diretto di leggere una trasformazione.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4171,7 +4171,7 @@
    ],
    "answerIndex": 2,
    "answer": "organizzato dall'uomo",
-   "explanation": "La risposta corretta è \"organizzato dall'uomo\".",
+   "explanation": "Panchine e giochi non crescono da soli: qualcuno ha deciso dove metterli e a che scopo. Il giardino pubblico è uno spazio organizzato dall'uomo.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4203,7 +4203,7 @@
    ],
    "answerIndex": 3,
    "answer": "cascata",
-   "explanation": "La risposta corretta è 'cascata'.",
+   "explanation": "La cascata si forma dove un corso d'acqua incontra un salto di roccia: è un fenomeno naturale, nessuno la costruisce.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4235,7 +4235,7 @@
    ],
    "answerIndex": 0,
    "answer": "ospedale",
-   "explanation": "La risposta corretta è 'ospedale'.",
+   "explanation": "L'ospedale è un edificio progettato e costruito dalle persone per curare: è un elemento antropico, come la scuola o la stazione.",
    "active": true,
    "tag": "geografia;classe_2;paesaggio;trasformazioni",
    "tags": [
@@ -4747,7 +4747,7 @@
    ],
    "answerIndex": 3,
    "answer": "accoglie bambini e insegnanti",
-   "explanation": "La risposta corretta è 'accoglie bambini e insegnanti'.",
+   "explanation": "La scuola è un servizio del quartiere: è il luogo dove i bambini della zona vanno a imparare, e per questo raccoglie ogni giorno molte persone.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4779,7 +4779,7 @@
    ],
    "answerIndex": 0,
    "answer": "giocare e stare insieme",
-   "explanation": "La risposta corretta è 'giocare e stare insieme'.",
+   "explanation": "Il parco è uno spazio aperto e gratuito vicino alle case: serve a giocare, muoversi e incontrare gli altri senza doversi spostare lontano.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4811,7 +4811,7 @@
    ],
    "answerIndex": 1,
    "answer": "incontrarsi e partecipare a eventi",
-   "explanation": "La risposta corretta è 'incontrarsi e partecipare a eventi'.",
+   "explanation": "La piazza è lo spazio pubblico al centro del paese: ci si passa, ci si ferma, e ci si fanno mercati, feste e incontri.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4843,7 +4843,7 @@
    ],
    "answerIndex": 2,
    "answer": "le strisce pedonali",
-   "explanation": "La risposta corretta è 'le strisce pedonali'.",
+   "explanation": "Sulle strisce chi guida si aspetta di trovare pedoni e rallenta: attraversare lì è più sicuro che in un punto qualsiasi.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4875,7 +4875,7 @@
    ],
    "answerIndex": 3,
    "answer": "i pedoni",
-   "explanation": "La risposta corretta è 'i pedoni'.",
+   "explanation": "Il marciapiede è rialzato e separato dalla carreggiata proprio per tenere chi cammina fuori dallo spazio dei veicoli.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4907,7 +4907,7 @@
    ],
    "answerIndex": 0,
    "answer": "la fermata",
-   "explanation": "La risposta corretta è 'la fermata'.",
+   "explanation": "L'autobus si ferma solo nei punti stabiliti: alla fermata, dove c'è il cartello con le linee e gli orari.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4939,7 +4939,7 @@
    ],
    "answerIndex": 1,
    "answer": "casa, scuola e quartiere",
-   "explanation": "La risposta corretta è 'casa, scuola e quartiere'.",
+   "explanation": "Il territorio vicino è quello che si attraversa ogni giorno: la casa, la scuola, le strade e i servizi del quartiere.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -4971,7 +4971,7 @@
    ],
    "answerIndex": 2,
    "answer": "luoghi vicini in cui viviamo",
-   "explanation": "La risposta corretta è 'luoghi vicini in cui viviamo'.",
+   "explanation": "Descrivere il proprio ambiente di residenza vuol dire raccontare i luoghi in cui si vive davvero, non un posto qualsiasi visto in fotografia.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
