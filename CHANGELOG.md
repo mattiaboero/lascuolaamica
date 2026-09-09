@@ -1,5 +1,54 @@
 # Changelog Repo
 
+## 4.13.16 - 2026-09-09
+
+Include 4.13.15, mai pubblicata: `js/bosco.js` e' in precache e il guard PWA
+obbliga al bump a ogni modifica, quindi due bump per un solo rilascio.
+
+**Il Bosco delle Lettere si gioca come la sua pagina dice che si gioca.**
+
+### Fixed
+- **`collect()` lasciava raccogliere solo il cartello giusto.** Tre conseguenze,
+  tutte trovate giocando: camminare sui tre supporti rivelava la risposta senza
+  leggere la parola; la consegna al tabellone non decideva niente; e meta' delle
+  regole gia' scritte nella pagina — l'impronta a terra su cui rimettere giu' il
+  cartello, il ripensamento, il pulsante "Al tabellone" — erano irraggiungibili,
+  perche' in mano non poteva finire niente di sbagliato. Ora si raccoglie
+  qualunque cartello e la nuova `consegna()` giudica: se e' sbagliato torna sulla
+  sua piazzola, parla il gufo, il round non si chiude.
+- **Parole che con un gruppo diverso restano parole vere** (CASSA/CASA,
+  PALLA/PALA, NONNO/NONO, PAPA'/PAPA, e altre 12). Sono le coppie su cui
+  l'ortografia si gioca e vanno tenute, ma rispondere "non e' questo" a chi ha
+  scritto una parola verissima e' quello che fa perdere fiducia nel gioco.
+  `PAROLE_VICINE` le elenca e il gufo le riconosce prima di correggere.
+- **Il finale nominava tre parole fisse** ("SOLE, MELA e LUNA") mentre la partita
+  le estrae a caso: quasi ogni bambino chiudeva sentendosi elencare parole mai
+  viste. Ora elenca le parole della partita giocata.
+- `dom.steps` era l'unica riga di `render()` a non difendersi dal dom mancante.
+
+### Added
+- **La radura fiorisce mentre si gioca.** Ogni parola completata accende cinque
+  lucciole; i fiori spuntano alla seconda parola e si allargano alla terza; alla
+  fine la radura e' illuminata. Derivato da `state.solved`, che esisteva gia':
+  **nessuna chiave nuova in `localStorage`**, nessuna riga da aggiungere alla
+  privacy policy. Misurato leggendo i pixel del canvas in pagina — 2.011 cambiati
+  alla prima parola, 3.295 alla seconda, 5.305 alla terza; la prima stesura ne
+  cambiava 320 e a occhio non si vedeva niente. Posizioni fisse e verificate:
+  nessun fiore sotto un cartello o dentro una pozza. Con "riduci animazioni" le
+  lucciole restano ferme invece di sparire.
+- `check_bosco.js`: quattro controlli nuovi — ciclo raccogli/consegna, coerenza
+  di `PAROLE_VICINE` col banco, testo del finale, distanze delle decorazioni.
+  Tutti verificati reintroducendo il difetto.
+
+### Docs
+- **/bosco entra in README, wiki e `llms.txt`**: il gioco era in sitemap e
+  service worker ma non in nessun documento, quindi chi arrivava dal repo o da un
+  crawler LLM vedeva solo il gioco arcade.
+- **Runbook di release allineato**: citava `prepublish-check.sh` da solo, il log
+  aggiornamenti dentro `shared.js` e l'aggiornamento a mano dei conteggi. Ora
+  elenca la catena vera di `npm run verify` e i guard rail di release, PWA e
+  sicurezza.
+
 ## 4.13.14 - 2026-09-09
 
 **Le quattro campagne di revisione sono a zero rimanenti.** Lotto 109 del
