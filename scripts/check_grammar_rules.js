@@ -17,6 +17,9 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  'Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (13 × 18) ÷ 2 = 117 cm².',
+  'Un bicicletta costa 120 euro. Quanto costa il bicicletta scontato?',
+  'Nel cortile di Alice ci sono 11 pesciolini. Arrivano altri 21.',
   "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.27?",
   'Una stanza è larga 24 m e lunga 16 m. Quanti m² di moquette servono per coprirla?',
   'Prima: 47 conchiglie al giorno. Poi: 47 × 6 = 282.',
@@ -118,6 +121,10 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  'Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (18 × 13) ÷ 2 = 117 cm².',
+  'Una bicicletta costa 120 euro. Quanto costa la bicicletta scontata?',
+  "Nell'acquario di Alice ci sono 11 pesciolini. Arrivano altri 21.",
+  'Nel laghetto ci sono 39 pesciolini. 19 se ne vanno.',
   "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
   'Una stanza è larga 16 m e lunga 24 m. Quanti m² di moquette servono per coprirla?',
   '47 conchiglie al giorno: 47 × 6 = 282.',

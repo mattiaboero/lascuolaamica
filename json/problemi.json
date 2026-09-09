@@ -732,7 +732,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Sul prato ci sono 39 pesciolini. 19 se ne vanno. Quanti pesciolini rimangono?",
+   "question": "Nel laghetto ci sono 39 pesciolini. 19 se ne vanno. Quanti pesciolini rimangono?",
    "options": [
     "35",
     "27",
@@ -972,7 +972,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Nel cortile di Alice ci sono 11 pesciolini. Arrivano altri 21. Quanti pesciolini ci sono in tutto?",
+   "question": "Nell'acquario di Alice ci sono 11 pesciolini. Arrivano altri 21. Quanti pesciolini ci sono in tutto?",
    "options": [
     "32",
     "24",
@@ -1962,7 +1962,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Nel cortile di Davide ci sono 15 pesciolini. Arrivano altri 13. Quanti pesciolini ci sono in tutto?",
+   "question": "Nell'acquario di Davide ci sono 15 pesciolini. Arrivano altri 13. Quanti pesciolini ci sono in tutto?",
    "options": [
     "28",
     "29",
@@ -18890,7 +18890,7 @@
     "130",
     "294",
     "97,50",
-    "32"
+    "32,50"
    ],
    "answerIndex": 2,
    "answer": "97,50",
@@ -19292,7 +19292,7 @@
    "options": [
     "77",
     "110",
-    "27",
+    "27,50",
     "82,50"
    ],
    "answerIndex": 3,
@@ -19319,7 +19319,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un bicicletta costa 120 euro. Il negozio applica uno sconto del 10%. Quanto costa il bicicletta scontato?",
+   "question": "Una bicicletta costa 120 euro. Il negozio applica uno sconto del 10%. Quanto costa la bicicletta scontata?",
    "options": [
     "120",
     "12",
@@ -20065,7 +20065,7 @@
    "difficulty": 3,
    "question": "Una giacca costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa la giacca scontata?",
    "options": [
-    "42",
+    "42,50",
     "170",
     "143",
     "127,50"
@@ -20223,7 +20223,7 @@
     "127,50",
     "170",
     "133",
-    "42"
+    "42,50"
    ],
    "answerIndex": 0,
    "answer": "127,50",
@@ -20373,11 +20373,11 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Uno zaino costa 210 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
+   "question": "Uno smartphone costa 210 euro. Il negozio applica uno sconto del 25%. Quanto costa lo smartphone scontato?",
    "options": [
     "157,50",
     "210",
-    "52",
+    "52,50",
     "151"
    ],
    "answerIndex": 0,
@@ -20931,7 +20931,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un bicicletta costa 130 euro. Il negozio applica uno sconto del 10%. Quanto costa il bicicletta scontato?",
+   "question": "Una bicicletta costa 130 euro. Il negozio applica uno sconto del 10%. Quanto costa la bicicletta scontata?",
    "options": [
     "117",
     "130",
@@ -21396,7 +21396,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un libro costa 190 euro. Il negozio applica uno sconto del 10%. Quanto costa il libro scontato?",
+   "question": "Un tablet costa 190 euro. Il negozio applica uno sconto del 10%. Quanto costa il tablet scontato?",
    "options": [
     "19",
     "171",
@@ -21460,7 +21460,7 @@
    "difficulty": 3,
    "question": "Un casco costa 170 euro. Il negozio applica uno sconto del 25%. Quanto costa il casco scontato?",
    "options": [
-    "42",
+    "42,50",
     "122",
     "127,50",
     "170"
@@ -21706,9 +21706,9 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un libro costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa il libro scontato?",
+   "question": "Un tablet costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa il tablet scontato?",
    "options": [
-    "47",
+    "47,50",
     "151",
     "142,50",
     "190"
@@ -22512,7 +22512,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Un libro costa 150 euro. Il negozio applica uno sconto del 20%. Quanto costa il libro scontato?",
+   "question": "Un tablet costa 150 euro. Il negozio applica uno sconto del 20%. Quanto costa il tablet scontato?",
    "options": [
     "120",
     "30",
@@ -23101,11 +23101,11 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Uno zaino costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa lo zaino scontato?",
+   "question": "Uno smartphone costa 190 euro. Il negozio applica uno sconto del 25%. Quanto costa lo smartphone scontato?",
    "options": [
     "142,50",
     "190",
-    "47",
+    "47,50",
     "150"
    ],
    "answerIndex": 0,
@@ -23194,7 +23194,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Uno zaino costa 190 euro. Il negozio applica uno sconto del 50%. Quanto costa lo zaino scontato?",
+   "question": "Uno smartphone costa 190 euro. Il negozio applica uno sconto del 50%. Quanto costa lo smartphone scontato?",
    "options": [
     "95",
     "91",

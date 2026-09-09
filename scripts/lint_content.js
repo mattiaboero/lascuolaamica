@@ -492,6 +492,23 @@ const GRAMMATICA = [
   { pattern: /…/, msg: 'puntini di sospensione in carattere unicode: usare tre punti separati' },
   { pattern: /[a-zàèéìòù]$/, soloDomanda: true,
     msg: 'domanda senza punteggiatura finale: serve "?" oppure i puntini di sospensione' },
+  // Dal lotto 5 delle famiglie: la spiegazione del rombo dice "diagonale
+  // maggiore × diagonale minore" e poi sostituisce i numeri nell'ordine in
+  // cui stanno nella consegna, che era 13 e 18. L'area veniva giusta lo
+  // stesso, ma le due etichette risultavano scambiate.
+  { pattern: /maggiore\s*×\s*[^=]{0,40}?minore[^=]{0,40}=\s*\((\d+)\s*×\s*(\d+)\)/,
+    controllo: (m) => Number(m[1]) < Number(m[2]),
+    msg: 'la spiegazione dice "maggiore × minore" ma sostituisce prima il numero minore' },
+  // Dal lotto 5 delle famiglie: "Un bicicletta costa 120 euro... Quanto costa
+  // il bicicletta scontato?". Il template degli sconti pescava il nome
+  // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
+    msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 5 delle famiglie: "Nel cortile di Alice ci sono 11 pesciolini",
+  // "Sul prato ci sono 39 pesciolini". Il template abbinava un luogo e un
+  // animale a caso, e i pesci finivano all'asciutto.
+  { pattern: /(?:cortile|prato|giardino|aula|classe|bosco|cielo)[^.?!]{0,30}?pescioli/,
+    msg: 'pesci in un luogo senza acqua ("nel cortile ci sono 11 pesciolini")' },
 ];
 
 function checkQuestion(subject, classNum, area, question, options, answer, explanation, difficulty) {
@@ -1960,6 +1977,20 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       .find((n) => opzioni.has(n.replace(/\./g, '')));
     if (disallineato) {
       errors.push({ level: 'error', field: 'explanation', msg: `numero scritto "${disallineato}" nella spiegazione ma "${disallineato.replace(/\./g, '')}" fra le opzioni` });
+    }
+  }
+
+  // Dal lotto 5 delle famiglie: fra le opzioni di "Un casco costa 110 euro,
+  // sconto del 25%" c'era 27, cioe' lo sconto 27,50 troncato. Il distrattore
+  // non corrisponde a nessun errore che un bambino possa fare: e' solo il
+  // numero giusto con i decimali buttati via, e accanto a una risposta con la
+  // virgola sembra un refuso.
+  if (subject !== 'inglese' && Array.isArray(options) && explanation && /,\d/.test(String(answer || ''))) {
+    const troncato = options
+      .map((o) => String(o).trim())
+      .find((o) => /^\d+$/.test(o) && new RegExp('(?<!\\d)' + o + ',\\d').test(explanation));
+    if (troncato) {
+      errors.push({ level: 'error', field: 'options', msg: `distrattore "${troncato}" è un valore della spiegazione troncato dei decimali` });
     }
   }
 

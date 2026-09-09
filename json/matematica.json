@@ -38604,7 +38604,7 @@
    "area": "geometria",
    "subarea": "perimetro_area",
    "difficulty": 1,
-   "question": "Rombo con diagonali 13 cm e 18 cm. Qual è l'area?",
+   "question": "Rombo con diagonali 18 cm e 13 cm. Qual è l'area?",
    "options": [
     "116",
     "117",
@@ -38613,7 +38613,7 @@
    ],
    "answerIndex": 1,
    "answer": "117",
-   "explanation": "Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (13 × 18) ÷ 2 = 234 ÷ 2 = 117 cm².",
+   "explanation": "Area del rombo = (diagonale maggiore × diagonale minore) ÷ 2 = (18 × 13) ÷ 2 = 234 ÷ 2 = 117 cm².",
    "active": true,
    "tag": "matematica;geometria;classe_5;primaria",
    "tags": [

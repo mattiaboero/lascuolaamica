@@ -36,6 +36,11 @@ const REGOLE = [
   // Dal lotto 4 delle famiglie: 5-12 grammi di farina, zucchero o burro per
   // quattro persone sono un cucchiaino.
   { re: /\b(ricetta)\b[^.?!]{0,60}?(\d[\d.]*)\s*grammi/gi, min: 50, max: 5000, cosa: 'grammi in una ricetta' },
+  // Dal lotto 5 delle famiglie: il template degli sconti sceglieva il prezzo
+  // a caso senza guardare l'oggetto, e ne uscivano un libro da 190 euro e uno
+  // zaino da 210.
+  { re: /\b(libro)\s+costa\s+(\d[\d.]*)\s*euro/gi, min: 1, max: 60, cosa: 'prezzo di un libro' },
+  { re: /\b(zaino)\s+costa\s+(\d[\d.]*)\s*euro/gi, min: 5, max: 150, cosa: 'prezzo di uno zaino' },
 ];
 
 function main() {
