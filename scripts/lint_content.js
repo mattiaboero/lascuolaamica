@@ -2015,6 +2015,22 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione non dice mai il risultato (${answer})` });
   }
 
+  // Dal lotto 7 delle istanze: "Completa la sequenza: 10, 11, 12, 13, ___"
+  // con le opzioni 14, 11, 12, 13. Tre numeri su quattro erano gia' scritti
+  // nella consegna: si vede a colpo d'occhio che l'unico nuovo e' il 14, e
+  // si risponde senza aver capito la regola. Erano 46, otto delle quali con
+  // tre distrattori gia' visibili.
+  if (subject !== 'inglese' && question && Array.isArray(options)
+      && /[Cc]ompleta|prossimo numero|numero manca|numero completa|Continua la sequenza/.test(question)) {
+    const termini = new Set((question.match(/\d+/g) || []));
+    const ripetuto = options
+      .map((o) => String(o).trim())
+      .find((o) => o !== String(answer).trim() && termini.has(o));
+    if (ripetuto) {
+      errors.push({ level: 'error', field: 'options', msg: `il distrattore "${ripetuto}" e gia fra i termini della sequenza: non e una scelta` });
+    }
+  }
+
   // Dal lotto 6 delle istanze: "Se la palla e' sopra la sedia, quale
   // espressione descrive bene la posizione?" con risposta "sopra la sedia".
   // Erano 52, tutte di geografia classe 2: la consegna conteneva gia' la
