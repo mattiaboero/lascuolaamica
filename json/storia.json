@@ -12295,7 +12295,7 @@
    ],
    "answerIndex": 0,
    "answer": "con la scrittura",
-   "explanation": "La risposta corretta è 'con la scrittura'.",
+   "explanation": "Per convenzione la storia inizia con la scrittura: da quel momento restano documenti scritti che possiamo leggere.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12327,7 +12327,7 @@
    ],
    "answerIndex": 1,
    "answer": "avanti Cristo",
-   "explanation": "La risposta corretta è 'avanti Cristo'.",
+   "explanation": "a.C. significa avanti Cristo: indica gli anni precedenti la nascita di Cristo, che si contano all'indietro.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12359,7 +12359,7 @@
    ],
    "answerIndex": 2,
    "answer": "dopo Cristo",
-   "explanation": "La risposta corretta è 'dopo Cristo'.",
+   "explanation": "d.C. significa dopo Cristo: indica gli anni successivi alla nascita di Cristo, che si contano in avanti.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12391,7 +12391,7 @@
    ],
    "answerIndex": 3,
    "answer": "prima di 1000 a.C.",
-   "explanation": "La risposta corretta è 'prima di 1000 a.C.'",
+   "explanation": "Gli anni avanti Cristo si contano all'indietro: più il numero è grande, più la data è antica. Quindi 3000 a.C. viene prima di 1000 a.C.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12423,7 +12423,7 @@
    ],
    "answerIndex": 0,
    "answer": "grandi corsi d'acqua",
-   "explanation": "La risposta corretta è \"grandi corsi d'acqua\".",
+   "explanation": "Egizi, Sumeri, Indo e Cinesi nacquero tutti lungo grandi corsi d'acqua, che davano acqua, terra fertile e vie di trasporto.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12455,7 +12455,7 @@
    ],
    "answerIndex": 1,
    "answer": "capire dove vivevano i popoli",
-   "explanation": "La risposta corretta è 'capire dove vivevano i popoli'.",
+   "explanation": "La carta geo-storica mostra su una mappa il territorio occupato da un popolo in una certa epoca: unisce spazio e tempo.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12487,7 +12487,7 @@
    ],
    "answerIndex": 2,
    "answer": "vita, lavoro e credenze dei popoli antichi",
-   "explanation": "La risposta corretta è 'vita, lavoro e credenze dei popoli antichi'.",
+   "explanation": "Dalle fonti ricaviamo come si viveva, che lavori si facevano e in che cosa si credeva: sono le tracce che il passato ha lasciato.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12519,7 +12519,7 @@
    ],
    "answerIndex": 3,
    "answer": "materiale",
-   "explanation": "La risposta corretta è 'materiale'.",
+   "explanation": "Un vaso, un'arma o un muro riportati alla luce in uno scavo sono fonti materiali: oggetti concreti, non testi.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12551,7 +12551,7 @@
    ],
    "answerIndex": 0,
    "answer": "scritta",
-   "explanation": "La risposta corretta è 'scritta'.",
+   "explanation": "Un'iscrizione è un testo inciso: essendo formata da parole, è una fonte scritta.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12583,7 +12583,7 @@
    ],
    "answerIndex": 1,
    "answer": "visiva",
-   "explanation": "La risposta corretta è 'visiva'.",
+   "explanation": "Affreschi e bassorilievi comunicano con le immagini: sono fonti visive, e raccontano scene di vita che i testi non riportano.",
    "active": true,
    "tag": "storia;fonti;cronologia;classe4",
    "tags": [
@@ -12615,7 +12615,7 @@
    ],
    "answerIndex": 2,
    "answer": "luogo, tempo, lavoro e religione",
-   "explanation": "La risposta corretta è 'luogo, tempo, lavoro e religione'.",
+   "explanation": "Il quadro di civiltà si costruisce guardando dove e quando visse un popolo, di che cosa viveva e in che cosa credeva.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12646,7 +12646,7 @@
    ],
    "answerIndex": 3,
    "answer": "comparsa della scrittura",
-   "explanation": "La risposta corretta è 'comparsa della scrittura'.",
+   "explanation": "Con la scrittura compaiono i primi documenti: finisce la preistoria e comincia la storia.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12677,7 +12677,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'acqua del fiume",
-   "explanation": "La risposta corretta è \"l'acqua del fiume\".",
+   "explanation": "La civiltà fluviale vive dell'acqua del fiume: la usa per bere, per irrigare i campi e per navigare.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12708,7 +12708,7 @@
    ],
    "answerIndex": 1,
    "answer": "portavano acqua e terreni fertili",
-   "explanation": "La risposta corretta è 'portavano acqua e terreni fertili'.",
+   "explanation": "Il fiume dava acqua tutto l'anno e, con le piene, depositava terra fertile: due condizioni indispensabili per l'agricoltura.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12739,7 +12739,7 @@
    ],
    "answerIndex": 2,
    "answer": "il modo di vivere organizzato di un popolo",
-   "explanation": "La risposta corretta è 'il modo di vivere organizzato di un popolo'.",
+   "explanation": "Una civiltà è il modo organizzato in cui un popolo vive: il suo lavoro, le sue leggi, la sua religione e la sua arte.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12770,7 +12770,7 @@
    ],
    "answerIndex": 3,
    "answer": "la linea del tempo",
-   "explanation": "La risposta corretta è 'la linea del tempo'.",
+   "explanation": "La linea del tempo dispone i popoli e gli eventi in ordine cronologico: si vede subito chi viene prima e chi dopo.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12801,7 +12801,7 @@
    ],
    "answerIndex": 0,
    "answer": "dove si trovava una civiltà",
-   "explanation": "La risposta corretta è 'dove si trovava una civiltà'.",
+   "explanation": "La carta geo-storica mostra il territorio di una civiltà: fiumi, città e confini di quell'epoca.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12832,7 +12832,7 @@
    ],
    "answerIndex": 1,
    "answer": "inventare il passato",
-   "explanation": "La risposta corretta è 'inventare il passato'.",
+   "explanation": "Le fonti servono a ricostruire il passato basandosi su prove, e proprio per questo impediscono di inventarlo.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -12863,7 +12863,7 @@
    ],
    "answerIndex": 2,
    "answer": "gli eventi nel tempo",
-   "explanation": "La risposta corretta è 'gli eventi nel tempo'.",
+   "explanation": "Cronologia viene dal greco 'chronos', tempo: è la disposizione degli eventi in ordine di tempo.",
    "active": true,
    "tag": "storia;metodo;classe4",
    "tags": [
@@ -15002,7 +15002,7 @@
    ],
    "answerIndex": 3,
    "answer": "una piramide sociale",
-   "explanation": "La risposta corretta è 'una piramide sociale'.",
+   "explanation": "La società egizia si rappresenta come una piramide: pochi al vertice, il faraone e i sacerdoti, e alla base la moltitudine dei contadini.",
    "active": true,
    "tag": "egizi;nilo;classe4",
    "tags": [
@@ -15033,7 +15033,7 @@
    ],
    "answerIndex": 0,
    "answer": "leggere e scrivere",
-   "explanation": "La risposta corretta è 'leggere e scrivere'.",
+   "explanation": "Gli scribi conoscevano i geroglifici: sapevano leggere e scrivere, cosa rara, e per questo occupavano posti importanti.",
    "active": true,
    "tag": "egizi;nilo;classe4",
    "tags": [
@@ -15064,7 +15064,7 @@
    ],
    "answerIndex": 1,
    "answer": "le piene del Nilo",
-   "explanation": "La risposta corretta è 'le piene del Nilo'.",
+   "explanation": "Ogni estate il Nilo straripava e, ritirandosi, lasciava sui campi il limo, un fango ricco che li rendeva fertili.",
    "active": true,
    "tag": "egizi;nilo;classe4",
    "tags": [
@@ -15095,7 +15095,7 @@
    ],
    "answerIndex": 2,
    "answer": "nei campi lungo il Nilo",
-   "explanation": "La risposta corretta è 'nei campi lungo il Nilo'.",
+   "explanation": "La maggior parte degli Egizi erano contadini che lavoravano la stretta striscia di terra fertile lungo il Nilo.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15126,7 +15126,7 @@
    ],
    "answerIndex": 3,
    "answer": "la religione era centrale",
-   "explanation": "La risposta corretta è 'la religione era centrale'.",
+   "explanation": "In Egitto la religione regolava la vita e legittimava il potere del faraone: i sacerdoti, che curavano templi e riti, erano perciò molto influenti.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15157,7 +15157,7 @@
    ],
    "answerIndex": 0,
    "answer": "dopo la morte",
-   "explanation": "La risposta corretta è 'dopo la morte'.",
+   "explanation": "Gli Egizi credevano che dopo la morte l'esistenza continuasse: per questo conservavano il corpo e ponevano oggetti nella tomba.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15188,7 +15188,7 @@
    ],
    "answerIndex": 1,
    "answer": "credevano che servissero anche nell'aldilà",
-   "explanation": "La risposta corretta è \"credevano che servissero anche nell'aldilà\".",
+   "explanation": "Cibo, gioielli e mobili nelle tombe si spiegano con la fede nell'aldilà: dovevano servire al defunto nella vita dopo la morte.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15219,7 +15219,7 @@
    ],
    "answerIndex": 2,
    "answer": "la piramide",
-   "explanation": "La risposta corretta è 'la piramide'.",
+   "explanation": "La piramide è il monumento egizio per eccellenza. La ziggurat è mesopotamica, l'anfiteatro romano, il tempio dorico greco.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15250,7 +15250,7 @@
    ],
    "answerIndex": 3,
    "answer": "barche",
-   "explanation": "La risposta corretta è 'barche'.",
+   "explanation": "Il Nilo era la via di comunicazione principale: si viaggiava e si trasportavano merci e blocchi di pietra con le barche.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15281,7 +15281,7 @@
    ],
    "answerIndex": 0,
    "answer": "una figura sacra",
-   "explanation": "La risposta corretta è 'una figura sacra'.",
+   "explanation": "Il faraone non era solo un re: era considerato figlio degli dèi, quindi una figura sacra, e il suo potere ne derivava.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15312,7 +15312,7 @@
    ],
    "answerIndex": 1,
    "answer": "gli Egizi organizzati dal potere del faraone",
-   "explanation": "La risposta corretta è 'gli Egizi organizzati dal potere del faraone'.",
+   "explanation": "Dighe, canali e bacini richiedevano migliaia di lavoratori coordinati: solo un potere forte come quello del faraone poteva organizzarli.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15343,7 +15343,7 @@
    ],
    "answerIndex": 2,
    "answer": "culto religioso",
-   "explanation": "La risposta corretta è 'culto religioso'.",
+   "explanation": "Il tempio era la casa del dio: vi si celebravano i riti e vi lavoravano i sacerdoti.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15374,7 +15374,7 @@
    ],
    "answerIndex": 3,
    "answer": "segni e simboli",
-   "explanation": "La risposta corretta è 'segni e simboli'.",
+   "explanation": "I geroglifici uniscono segni che rappresentano oggetti e simboli che indicano suoni: non sono soltanto disegni.",
    "active": true,
    "tag": "egizi;religione;classe4",
    "tags": [
@@ -15405,7 +15405,7 @@
    ],
    "answerIndex": 0,
    "answer": "perché rendeva difficili gli attacchi da molti lati",
-   "explanation": "La risposta corretta è 'perché rendeva difficili gli attacchi da molti lati'.",
+   "explanation": "L'Egitto era circondato dal deserto su entrambi i lati della valle: attraversarlo con un esercito era difficilissimo, e questo lo proteggeva.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15436,7 +15436,7 @@
    ],
    "answerIndex": 1,
    "answer": "valle del Nilo",
-   "explanation": "La risposta corretta è 'valle del Nilo'.",
+   "explanation": "L'Egitto antico occupava la valle del Nilo, una striscia verde lunga e stretta in mezzo al deserto.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15467,7 +15467,7 @@
    ],
    "answerIndex": 2,
    "answer": "scrivere",
-   "explanation": "La risposta corretta è 'scrivere'.",
+   "explanation": "Dal fusto della pianta di papiro si ricavavano fogli leggeri su cui gli scribi scrivevano.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15498,7 +15498,7 @@
    ],
    "answerIndex": 3,
    "answer": "console della repubblica",
-   "explanation": "La risposta corretta è 'console della repubblica'.",
+   "explanation": "Il console è una carica della repubblica romana. Scribi, contadini e artigiani sono invece mestieri egizi.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15529,7 +15529,7 @@
    ],
    "answerIndex": 0,
    "answer": "opere pubbliche e raccolti",
-   "explanation": "La risposta corretta è 'opere pubbliche e raccolti'.",
+   "explanation": "Il faraone faceva costruire canali, dighe e templi e faceva raccogliere e conservare parte dei raccolti nei magazzini dello Stato.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15560,7 +15560,7 @@
    ],
    "answerIndex": 1,
    "answer": "informazioni sui sovrani e sulla religione",
-   "explanation": "La risposta corretta è 'informazioni sui sovrani e sulla religione'.",
+   "explanation": "Le iscrizioni sui monumenti celebrano le imprese dei sovrani e i culti degli dèi: sono una fonte scritta su potere e religione.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15591,7 +15591,7 @@
    ],
    "answerIndex": 2,
    "answer": "architettura e credenze egizie",
-   "explanation": "La risposta corretta è 'architettura e credenze egizie'.",
+   "explanation": "Le piramidi ci dicono come gli Egizi costruivano e in che cosa credevano riguardo alla morte: sono una fonte doppia.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15622,7 +15622,7 @@
    ],
    "answerIndex": 3,
    "answer": "acqua e limo del Nilo",
-   "explanation": "La risposta corretta è 'acqua e limo del Nilo'.",
+   "explanation": "La piena portava acqua e limo: bastava seminare sul terreno appena scoperto per ottenere raccolti abbondanti di grano.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15653,7 +15653,7 @@
    ],
    "answerIndex": 0,
    "answer": "registrare raccolti e tasse",
-   "explanation": "La risposta corretta è 'registrare raccolti e tasse'.",
+   "explanation": "Gli scribi tenevano i conti dello Stato: annotavano quanto si raccoglieva nei campi e quanto si doveva versare come tasse.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15684,7 +15684,7 @@
    ],
    "answerIndex": 1,
    "answer": "fanno capire riti e conoscenze degli Egizi",
-   "explanation": "La risposta corretta è 'fanno capire riti e conoscenze degli Egizi'.",
+   "explanation": "Le mummie mostrano come venivano preparati i corpi e quali conoscenze avevano gli Egizi del corpo umano e delle sostanze conservanti.",
    "active": true,
    "tag": "egizi;vita_quotidiana;classe4",
    "tags": [
@@ -15715,7 +15715,7 @@
    ],
    "answerIndex": 2,
    "answer": "faraone-Egitto",
-   "explanation": "La risposta corretta è 'faraone-Egitto'.",
+   "explanation": "Il faraone è il sovrano dell'Egitto. La ziggurat è mesopotamica, il console romano, la democrazia ateniese.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15746,7 +15746,7 @@
    ],
    "answerIndex": 3,
    "answer": "grandi opere e amministrazione dei raccolti",
-   "explanation": "La risposta corretta è 'grandi opere e amministrazione dei raccolti'.",
+   "explanation": "Piramidi, canali e magazzini pieni richiedono progetti, contabilità e migliaia di lavoratori coordinati: segno di un'amministrazione efficiente.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15777,7 +15777,7 @@
    ],
    "answerIndex": 0,
    "answer": "delle piene del Nilo",
-   "explanation": "La risposta corretta è 'delle piene del Nilo'.",
+   "explanation": "Il calendario agricolo egizio seguiva il Nilo: piena, semina sul limo, raccolto. Tutto dipendeva dal ritmo delle piene.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15808,7 +15808,7 @@
    ],
    "answerIndex": 1,
    "answer": "era presente in riti, templi e potere del faraone",
-   "explanation": "La risposta corretta è 'era presente in riti, templi e potere del faraone'.",
+   "explanation": "La religione era ovunque: nei templi, nei riti funebri e nella figura stessa del faraone, considerato divino.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15839,7 +15839,7 @@
    ],
    "answerIndex": 2,
    "answer": "che i gruppi sociali avevano ruoli diversi",
-   "explanation": "La risposta corretta è 'che i gruppi sociali avevano ruoli diversi'.",
+   "explanation": "La piramide sociale mostra che i gruppi avevano ruoli e poteri diversi: il faraone al vertice, poi sacerdoti e scribi, alla base contadini e schiavi.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15870,7 +15870,7 @@
    ],
    "answerIndex": 3,
    "answer": "vicino al Nilo",
-   "explanation": "La risposta corretta è 'vicino al Nilo'.",
+   "explanation": "Fuori dalla valle c'è solo deserto: gli Egizi abitavano nella fascia fertile vicino al Nilo.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15901,7 +15901,7 @@
    ],
    "answerIndex": 0,
    "answer": "i trasporti",
-   "explanation": "La risposta corretta è 'i trasporti'.",
+   "explanation": "Il Nilo non serviva solo a irrigare: era anche la strada su cui viaggiavano persone e merci.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
@@ -15932,7 +15932,7 @@
    ],
    "answerIndex": 1,
    "answer": "organizzare lavoro, religione e potere",
-   "explanation": "La risposta corretta è 'organizzare lavoro, religione e potere'.",
+   "explanation": "L'Egitto mostra come una civiltà fluviale organizza il lavoro attorno all'acqua, la religione attorno agli dèi e il potere attorno a un sovrano unico.",
    "active": true,
    "tag": "egizi;quadro_di_civilta;classe4",
    "tags": [
