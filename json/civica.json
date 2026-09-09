@@ -21,7 +21,7 @@
    ],
    "answerIndex": 2,
    "answer": "alzare la mano",
-   "explanation": "La risposta corretta è 'alzare la mano'.",
+   "explanation": "Alzando la mano parla una persona alla volta: la maestra sa chi vuole intervenire e tutti riescono a farsi ascoltare. Se si urla insieme non si capisce più niente.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -181,7 +181,7 @@
    ],
    "answerIndex": 3,
    "answer": "parlare piano",
-   "explanation": "La risposta corretta è 'parlare piano'.",
+   "explanation": "In biblioteca chi legge o studia ha bisogno di silenzio. Parlare piano è un modo di rispettare il lavoro degli altri, anche se non li conosci.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -341,7 +341,7 @@
    ],
    "answerIndex": 0,
    "answer": "accoglierlo con gentilezza",
-   "explanation": "La risposta corretta è 'accoglierlo con gentilezza'.",
+   "explanation": "Chi arriva in una classe nuova non conosce nessuno e si sente a disagio. Accoglierlo con gentilezza gli fa capire subito che quel posto è anche suo.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -501,7 +501,7 @@
    ],
    "answerIndex": 1,
    "answer": "aiutarlo o chiamare un adulto",
-   "explanation": "La risposta corretta è 'aiutarlo o chiamare un adulto'.",
+   "explanation": "Chi cade può essersi fatto male sul serio. Aiutarlo o chiamare un adulto è la sola cosa che serve davvero: ridere o andarsene lo lascia solo nel momento peggiore.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -661,7 +661,7 @@
    ],
    "answerIndex": 2,
    "answer": "fare a turno",
-   "explanation": "La risposta corretta è 'fare a turno'.",
+   "explanation": "Il gioco è uno e i bambini sono due: fare a turno è la regola che permette a tutti e due di giocare. Strappare il gioco lo rompe e basta.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -885,7 +885,7 @@
    ],
    "answerIndex": 3,
    "answer": "imparare e giocare",
-   "explanation": "La risposta corretta è 'imparare e giocare'.",
+   "explanation": "Imparare e giocare sono diritti: valgono per ogni bambino e nessuno può toglierli. Comandare sempre non è un diritto, è una prepotenza.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1109,7 +1109,7 @@
    ],
    "answerIndex": 0,
    "answer": "verde, bianco e rosso",
-   "explanation": "La risposta corretta è 'verde, bianco e rosso'.",
+   "explanation": "La bandiera italiana ha tre bande verticali della stessa misura: verde vicino all'asta, poi bianco, poi rosso. Si chiama tricolore proprio per questo.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1141,7 +1141,7 @@
    ],
    "answerIndex": 1,
    "answer": "averne cura",
-   "explanation": "La risposta corretta è 'averne cura'.",
+   "explanation": "Il materiale della classe non è di nessuno in particolare: è di tutti. Averne cura vuol dire che ci sarà ancora domani, per te e per i tuoi compagni.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1301,7 +1301,7 @@
    ],
    "answerIndex": 2,
    "answer": "aspettare il proprio turno",
-   "explanation": "La risposta corretta è 'aspettare il proprio turno'.",
+   "explanation": "La fila serve a stabilire un ordine chiaro. Aspettare il proprio turno fa arrivare tutti, saltare avanti fa solo passare avanti te a spese di qualcun altro.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1461,7 +1461,7 @@
    ],
    "answerIndex": 3,
    "answer": "consegnarlo a un adulto",
-   "explanation": "La risposta corretta è 'consegnarlo a un adulto'.",
+   "explanation": "Un oggetto trovato appartiene a qualcuno che lo sta cercando. Consegnarlo a un adulto è il modo più veloce perché torni al suo proprietario.",
    "active": true,
    "tag": "educazione_civica;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1621,7 +1621,7 @@
    ],
    "answerIndex": 1,
    "answer": "rispettare il risultato",
-   "explanation": "La risposta corretta è 'rispettare il risultato'.",
+   "explanation": "Il voto serve a decidere insieme quando le opinioni sono diverse. Rispettare il risultato anche quando non è quello che volevi è ciò che rende il voto utile: altrimenti non si deciderebbe mai.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1813,7 +1813,7 @@
    ],
    "answerIndex": 2,
    "answer": "aiuta ad amministrare il Comune",
-   "explanation": "La risposta corretta è 'aiuta ad amministrare il Comune'.",
+   "explanation": "Il sindaco è eletto dai cittadini e amministra il Comune: si occupa di scuole, strade, verde pubblico e servizi del territorio.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -1973,7 +1973,7 @@
    ],
    "answerIndex": 3,
    "answer": "un luogo pubblico per leggere e prendere libri",
-   "explanation": "La risposta corretta è 'un luogo pubblico per leggere e prendere libri'.",
+   "explanation": "La biblioteca comunale è un servizio pubblico: i libri sono pagati da tutti e chiunque può leggerli o prenderli in prestito, gratis.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -2165,7 +2165,7 @@
    ],
    "answerIndex": 0,
    "answer": "le regole valgono per tutti",
-   "explanation": "La risposta corretta è 'le regole valgono per tutti'.",
+   "explanation": "Uguaglianza vuol dire che la stessa regola vale per chiunque, senza eccezioni per i più forti, i più ricchi o i più simpatici.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -2261,7 +2261,7 @@
    ],
    "answerIndex": 1,
    "answer": "restituirlo integro",
-   "explanation": "La risposta corretta è 'restituirlo integro'.",
+   "explanation": "Il libro della biblioteca dopo di te va a un altro lettore. Restituirlo integro e nei tempi è ciò che tiene in piedi il prestito per tutti.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -2421,7 +2421,7 @@
    ],
    "answerIndex": 2,
    "answer": "ascoltare più opinioni",
-   "explanation": "La risposta corretta è 'ascoltare più opinioni'.",
+   "explanation": "In un gruppo le idee sono tante e nessuno le ha tutte giuste. Ascoltare più opinioni fa scegliere meglio: decidere urlando fa vincere la voce più forte, non l'idea migliore.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -2581,7 +2581,7 @@
    ],
    "answerIndex": 3,
    "answer": "aiutarlo se puoi",
-   "explanation": "La risposta corretta è 'aiutarlo se puoi'.",
+   "explanation": "A tutti capita di dimenticare qualcosa. Aiutare chi è in difficoltà costa poco e crea un clima in cui, il giorno che tocca a te, qualcuno aiuterà te.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -2773,7 +2773,7 @@
    ],
    "answerIndex": 0,
    "answer": "far convivere bene tutti",
-   "explanation": "La risposta corretta è 'far convivere bene tutti'.",
+   "explanation": "Le regole servono a far stare insieme persone diverse senza che si facciano male o si ostacolino: sono uno strumento di convivenza, non una punizione.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -2901,7 +2901,7 @@
    ],
    "answerIndex": 1,
    "answer": "rispettare giochi e spazi",
-   "explanation": "La risposta corretta è 'rispettare giochi e spazi'.",
+   "explanation": "Il parco pubblico è di tutti e nessuno lo ripara al posto tuo. Rispettare giochi, piante e spazi vuol dire lasciarlo utilizzabile a chi arriva dopo.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3157,7 +3157,7 @@
    ],
    "answerIndex": 2,
    "answer": "dire la verità e comportarsi correttamente",
-   "explanation": "La risposta corretta è 'dire la verità e comportarsi correttamente'.",
+   "explanation": "L'onestà si vede dai comportamenti, non dalle parole: dire la verità anche quando costa, e non prendere ciò che non è tuo.",
    "active": true,
    "tag": "educazione_civica;classe_3;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3285,7 +3285,7 @@
    ],
    "answerIndex": 0,
    "answer": "i principi e i diritti fondamentali",
-   "explanation": "La risposta corretta è 'i principi e i diritti fondamentali'.",
+   "explanation": "La Costituzione è la legge fondamentale dello Stato: contiene i principi su cui si regge la Repubblica e i diritti e i doveri di chi ci vive. Le altre leggi non possono contraddirla.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3445,7 +3445,7 @@
    ],
    "answerIndex": 1,
    "answer": "tutte le persone hanno la stessa dignità",
-   "explanation": "La risposta corretta è 'tutte le persone hanno la stessa dignità'.",
+   "explanation": "Il principio di uguaglianza dice che tutte le persone hanno la stessa dignità davanti alla legge, indipendentemente da lingua, religione, condizione economica o opinioni.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3573,7 +3573,7 @@
    ],
    "answerIndex": 2,
    "answer": "finisce quando danneggia i diritti degli altri",
-   "explanation": "La risposta corretta è 'finisce quando danneggia i diritti degli altri'.",
+   "explanation": "La libertà di ciascuno è ampia ma non illimitata: si ferma dove comincerebbe a togliere agli altri i loro diritti. È il modo per far convivere le libertà di tutti.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3701,7 +3701,7 @@
    ],
    "answerIndex": 3,
    "answer": "confrontarsi su problemi e proposte",
-   "explanation": "La risposta corretta è 'confrontarsi su problemi e proposte'.",
+   "explanation": "L'assemblea di classe è il momento in cui si mettono in comune problemi e proposte e si decide insieme: funziona solo se ci si parla davvero.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -3893,7 +3893,7 @@
    ],
    "answerIndex": 0,
    "answer": "gestisce servizi vicini ai cittadini",
-   "explanation": "La risposta corretta è 'gestisce servizi vicini ai cittadini'.",
+   "explanation": "Il Comune è l'ente più vicino ai cittadini: gestisce servizi di ogni giorno come scuole, rifiuti, strade, acqua e trasporti locali.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4021,7 +4021,7 @@
    ],
    "answerIndex": 1,
    "answer": "averne cura",
-   "explanation": "La risposta corretta è 'averne cura'.",
+   "explanation": "Piazze e giardini sono beni comuni: nessuno ne è il proprietario e tutti ne hanno diritto. Averne cura è la condizione perché restino usabili.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4181,7 +4181,7 @@
    ],
    "answerIndex": 2,
    "answer": "accoglierle con rispetto",
-   "explanation": "La risposta corretta è 'accoglierle con rispetto'.",
+   "explanation": "Abitudini diverse non sono abitudini sbagliate. Accogliere con rispetto permette di conoscersi, e una classe che sa farlo impara più cose di una che esclude.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4373,7 +4373,7 @@
    ],
    "answerIndex": 3,
    "answer": "una persona che aiuta la comunità",
-   "explanation": "La risposta corretta è 'una persona che aiuta la comunità'.",
+   "explanation": "Il volontario mette gratuitamente tempo e capacità al servizio della comunità: non lo fa per guadagno, ma perché quel bisogno riguarda anche lui.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4501,7 +4501,7 @@
    ],
    "answerIndex": 0,
    "answer": "ascoltare e confrontarsi",
-   "explanation": "La risposta corretta è 'ascoltare e confrontarsi'.",
+   "explanation": "Una decisione condivisa regge nel tempo perché tutti l'hanno costruita. Ascoltare e confrontarsi costa più fatica dell'imporre, ma il risultato dura.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4661,7 +4661,7 @@
    ],
    "answerIndex": 1,
    "answer": "segnalarlo in modo corretto",
-   "explanation": "La risposta corretta è 'segnalarlo in modo corretto'.",
+   "explanation": "Segnalare un problema nel modo giusto — a chi se ne occupa e con precisione — è ciò che lo fa risolvere. Lamentarsi soltanto lo lascia dov'è.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4885,7 +4885,7 @@
    ],
    "answerIndex": 2,
    "answer": "il lavoro",
-   "explanation": "La risposta corretta è 'il lavoro'.",
+   "explanation": "L'articolo 1 della Costituzione dice che l'Italia è una Repubblica democratica fondata sul lavoro: il lavoro è riconosciuto come ciò che dà dignità alla persona e regge la comunità.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4981,7 +4981,7 @@
    ],
    "answerIndex": 3,
    "answer": "rispettare regole, diritti e partecipazione",
-   "explanation": "La risposta corretta è 'rispettare regole, diritti e partecipazione'.",
+   "explanation": "Democrazia non è solo votare: è rispettare le regole condivise, riconoscere i diritti di tutti e partecipare alla vita comune anche fra un'elezione e l'altra.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5205,7 +5205,7 @@
    ],
    "answerIndex": 0,
    "answer": "ai diritti corrispondono responsabilità verso la comunità",
-   "explanation": "La risposta corretta è 'ai diritti corrispondono responsabilità verso la comunità'.",
+   "explanation": "Diritti e doveri sono due facce della stessa cosa: se hai diritto all'istruzione o a un ambiente pulito, hai anche la responsabilità di rispettare la scuola e l'ambiente degli altri.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5333,7 +5333,7 @@
    ],
    "answerIndex": 1,
    "answer": "approva le leggi",
-   "explanation": "La risposta corretta è 'approva le leggi'.",
+   "explanation": "Il Parlamento è composto da Camera e Senato, eletti dai cittadini, e ha il compito di discutere e approvare le leggi.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5493,7 +5493,7 @@
    ],
    "answerIndex": 2,
    "answer": "il Presidente della Repubblica",
-   "explanation": "La risposta corretta è 'il Presidente della Repubblica'.",
+   "explanation": "Il Presidente della Repubblica rappresenta l'unità nazionale: non governa e non fa parte di un partito, ma garantisce che le istituzioni rispettino la Costituzione.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5685,7 +5685,7 @@
    ],
    "answerIndex": 3,
    "answer": "mettere tempo ed energie a disposizione degli altri",
-   "explanation": "La risposta corretta è 'mettere tempo ed energie a disposizione degli altri'.",
+   "explanation": "Il volontariato è tempo ed energie messe a disposizione degli altri senza compenso: tiene in piedi servizi che nessuno pagherebbe e crea legami nella comunità.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5845,7 +5845,7 @@
    ],
    "answerIndex": 0,
    "answer": "tutelarlo come patrimonio di tutti",
-   "explanation": "La risposta corretta è 'tutelarlo come patrimonio di tutti'.",
+   "explanation": "Un monumento non appartiene a chi ci abita accanto ma a tutti, comprese le persone che verranno dopo: per questo si tutela invece di usarlo come si vuole.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5941,7 +5941,7 @@
    ],
    "answerIndex": 1,
    "answer": "cercare dialogo e regole",
-   "explanation": "La risposta corretta è 'cercare dialogo e regole'.",
+   "explanation": "Un conflitto in un gruppo non si risolve zittendo qualcuno: servono dialogo e regole condivise, perché è l'unico modo perché la soluzione regga anche dopo.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -6101,7 +6101,7 @@
    ],
    "answerIndex": 2,
    "answer": "rispettare la dignità di ogni persona",
-   "explanation": "La risposta corretta è 'rispettare la dignità di ogni persona'.",
+   "explanation": "Contrastare una discriminazione parte dal riconoscere che ogni persona ha la stessa dignità: è il principio che rende la differenza di trattamento ingiustificabile.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -6261,7 +6261,7 @@
    ],
    "answerIndex": 3,
    "answer": "ricordare valori e storia comune",
-   "explanation": "La risposta corretta è 'ricordare valori e storia comune'.",
+   "explanation": "Le ricorrenze civili — come il 25 aprile o il 2 giugno — servono a ricordare insieme fatti e valori su cui si fonda la convivenza, perché non vengano dati per scontati.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -30741,7 +30741,7 @@
    ],
    "answerIndex": 0,
    "answer": "Verde, bianco e rosso",
-   "explanation": "La risposta corretta è 'Verde, bianco e rosso'.",
+   "explanation": "Il tricolore ha tre bande verticali uguali: verde, bianco e rosso. È la bandiera della Repubblica italiana dal 1946, ma i tre colori risalgono al 1797.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_2;costituzione_regole_comunita;primaria",
    "tags": [
@@ -30906,7 +30906,7 @@
    ],
    "answerIndex": 0,
    "answer": "Tutti i bambini possono andare a scuola",
-   "explanation": "La risposta corretta è 'Tutti i bambini possono andare a scuola'.",
+   "explanation": "Il diritto allo studio significa che ogni bambino può andare a scuola: non dipende da quanto guadagna la famiglia, e per questo la scuola dell'obbligo è gratuita.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
