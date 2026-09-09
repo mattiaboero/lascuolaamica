@@ -3648,7 +3648,7 @@
    ],
    "answerIndex": 0,
    "answer": "iconografica",
-   "explanation": "La risposta corretta è 'iconografica'.",
+   "explanation": "Le fonti iconografiche sono immagini: fotografie, dipinti, disegni. Mostrano com'era una cosa, senza bisogno di parole.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3679,7 +3679,7 @@
    ],
    "answerIndex": 1,
    "answer": "orale",
-   "explanation": "La risposta corretta è 'orale'.",
+   "explanation": "Le fonti orali sono i racconti di chi ricorda: la memoria di una persona diventa una testimonianza del passato.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3710,7 +3710,7 @@
    ],
    "answerIndex": 2,
    "answer": "scritta",
-   "explanation": "La risposta corretta è 'scritta'.",
+   "explanation": "Le fonti scritte sono quelle fatte di parole su carta: lettere, diari, documenti. Si leggono per sapere che cosa è stato scritto e da chi.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3741,7 +3741,7 @@
    ],
    "answerIndex": 3,
    "answer": "materiale",
-   "explanation": "La risposta corretta è 'materiale'.",
+   "explanation": "Le fonti materiali sono oggetti veri: un giocattolo, un utensile, un vestito. Si osservano per capire come si viveva.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3772,7 +3772,7 @@
    ],
    "answerIndex": 0,
    "answer": "scritta",
-   "explanation": "La risposta corretta è 'scritta'.",
+   "explanation": "Il diario è scritto a mano da chi ha vissuto i fatti: è una fonte scritta, e per di più diretta.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3803,7 +3803,7 @@
    ],
    "answerIndex": 1,
    "answer": "orale",
-   "explanation": "La risposta corretta è 'orale'.",
+   "explanation": "L'intervista raccoglie la voce e i ricordi di una persona: anche se registrata, resta una fonte orale.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3834,7 +3834,7 @@
    ],
    "answerIndex": 2,
    "answer": "iconografica",
-   "explanation": "La risposta corretta è 'iconografica'.",
+   "explanation": "Il disegno è un'immagine: appartiene alle fonti iconografiche, come le fotografie e i dipinti.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3865,7 +3865,7 @@
    ],
    "answerIndex": 3,
    "answer": "scritta",
-   "explanation": "La risposta corretta è 'scritta'.",
+   "explanation": "La pagella è un documento fatto di parole e voti scritti: è una fonte scritta, e dice come funzionava la scuola di allora.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3896,7 +3896,7 @@
    ],
    "answerIndex": 0,
    "answer": "materiale",
-   "explanation": "La risposta corretta è 'materiale'.",
+   "explanation": "La moneta è un oggetto che si può tenere in mano: è una fonte materiale, e racconta chi comandava e come si commerciava.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3927,7 +3927,7 @@
    ],
    "answerIndex": 1,
    "answer": "iconografica",
-   "explanation": "La risposta corretta è 'iconografica'.",
+   "explanation": "La cartolina porta un'immagine di un luogo com'era: per questo è una fonte iconografica.",
    "active": true,
    "tag": "fonti;storia;classe2",
    "tags": [
@@ -3958,7 +3958,7 @@
    ],
    "answerIndex": 2,
    "answer": "il giocattolo conservato",
-   "explanation": "La risposta corretta è 'il giocattolo conservato'.",
+   "explanation": "Per sapere com'era fatto un oggetto, l'oggetto stesso è la fonte migliore: si vedono materiali, dimensioni e segni d'uso che nessun racconto restituisce.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -3989,7 +3989,7 @@
    ],
    "answerIndex": 3,
    "answer": "un racconto di chi l'ha conosciuta",
-   "explanation": "La risposta corretta è \"un racconto di chi l'ha conosciuta\".",
+   "explanation": "Il modo di parlare non lascia tracce scritte: solo chi ha ascoltato quella persona può raccontarlo.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4020,7 +4020,7 @@
    ],
    "answerIndex": 0,
    "answer": "una vecchia fotografia",
-   "explanation": "La risposta corretta è 'una vecchia fotografia'.",
+   "explanation": "La fotografia mostra la casa com'era davvero in quel momento: nessuna descrizione a parole è altrettanto precisa.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4051,7 +4051,7 @@
    ],
    "answerIndex": 1,
    "answer": "un diario",
-   "explanation": "La risposta corretta è 'un diario'.",
+   "explanation": "Il diario è scritto il giorno stesso da chi c'era: racconta i fatti prima che la memoria li cambi.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4082,7 +4082,7 @@
    ],
    "answerIndex": 2,
    "answer": "ricostruire il passato",
-   "explanation": "La risposta corretta è 'ricostruire il passato'.",
+   "explanation": "Il passato non si può osservare direttamente: le fonti sono le tracce che ha lasciato, e servono a ricostruirlo.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4113,7 +4113,7 @@
    ],
    "answerIndex": 3,
    "answer": "conoscere fatti accaduti",
-   "explanation": "La risposta corretta è 'conoscere fatti accaduti'.",
+   "explanation": "Lo storico non inventa: parte dalle tracce, le confronta e da lì ricava che cosa è successo davvero.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
