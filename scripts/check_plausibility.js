@@ -53,6 +53,9 @@ const REGOLE = [
     min: 1, max: 8, cosa: 'prezzo della frutta al kg' },
   { re: /(biscotti|caramelle|merendine) possibile a\s+(\d[\d.]*)\s*euro l'uno/gi,
     min: 1, max: 3, cosa: "prezzo di un dolcetto" },
+  // Dal lotto 3 delle istanze: figurine vendute a 24 euro l'una.
+  { re: /(figurine|caramelle|adesivi) possibile a\s+(\d[\d.]*)\s*euro l'un[ao]/gi,
+    min: 1, max: 3, cosa: 'prezzo di una figurina' },
   // Dal lotto 2 delle istanze: un campo che rende 13 kg di grano per ettaro.
   // La resa vera sta sui 3.000-8.000 kg, cioe' 30-80 quintali.
   { re: /\b(produce)\s+(\d[\d.]*)\s*kg di grano per ettaro/gi,

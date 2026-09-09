@@ -13075,7 +13075,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Chiara ha 104 euro e vuole comprare quante più figurine possibile a 15 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Chiara ha 104 euro e vuole comprare quante più magliette possibile a 15 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "6",
     "90",
@@ -13084,7 +13084,7 @@
    ],
    "answerIndex": 0,
    "answer": "6",
-   "explanation": "104 ÷ 15 = 6 (con resto 14). Riesce a comprare 6 figurine.",
+   "explanation": "104 ÷ 15 = 6 (con resto 14). Riesce a comprare 6 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -13535,7 +13535,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Riccardo ha 77 euro e vuole comprare quante più figurine possibile a 7 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Riccardo ha 77 euro e vuole comprare quante più magliette possibile a 7 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "11",
     "10",
@@ -13544,7 +13544,7 @@
    ],
    "answerIndex": 0,
    "answer": "11",
-   "explanation": "77 ÷ 7 = 11 (con resto 0). Riesce a comprare 11 figurine.",
+   "explanation": "77 ÷ 7 = 11 (con resto 0). Riesce a comprare 11 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -13780,7 +13780,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Lorenzo ha 154 euro e vuole comprare quante più figurine possibile a 15 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Lorenzo ha 154 euro e vuole comprare quante più magliette possibile a 15 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "4",
     "10",
@@ -13789,7 +13789,7 @@
    ],
    "answerIndex": 1,
    "answer": "10",
-   "explanation": "154 ÷ 15 = 10 (con resto 4). Riesce a comprare 10 figurine.",
+   "explanation": "154 ÷ 15 = 10 (con resto 4). Riesce a comprare 10 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -13934,7 +13934,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Matteo ha 140 euro e vuole comprare quante più figurine possibile a 21 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Matteo ha 140 euro e vuole comprare quante più magliette possibile a 21 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "14",
     "6",
@@ -13943,7 +13943,7 @@
    ],
    "answerIndex": 1,
    "answer": "6",
-   "explanation": "140 ÷ 21 = 6 (con resto 14). Riesce a comprare 6 figurine.",
+   "explanation": "140 ÷ 21 = 6 (con resto 14). Riesce a comprare 6 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -14671,7 +14671,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Luca ha 94 euro e vuole comprare quante più figurine possibile a 24 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Luca ha 94 euro e vuole comprare quante più magliette possibile a 24 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "9",
     "72",
@@ -14680,7 +14680,7 @@
    ],
    "answerIndex": 2,
    "answer": "3",
-   "explanation": "94 ÷ 24 = 3 (con resto 22). Riesce a comprare 3 figurine.",
+   "explanation": "94 ÷ 24 = 3 (con resto 22). Riesce a comprare 3 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -15101,7 +15101,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Chiara ha 78 euro e vuole comprare quante più figurine possibile a 20 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Chiara ha 78 euro e vuole comprare quante più magliette possibile a 20 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "60",
     "18",
@@ -15110,7 +15110,7 @@
    ],
    "answerIndex": 2,
    "answer": "3",
-   "explanation": "78 ÷ 20 = 3 (con resto 18). Riesce a comprare 3 figurine.",
+   "explanation": "78 ÷ 20 = 3 (con resto 18). Riesce a comprare 3 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -15803,7 +15803,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Fabio ha 171 euro e vuole comprare quante più figurine possibile a 12 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Fabio ha 171 euro e vuole comprare quante più magliette possibile a 12 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "3",
     "14",
@@ -15812,7 +15812,7 @@
    ],
    "answerIndex": 1,
    "answer": "14",
-   "explanation": "171 ÷ 12 = 14 (con resto 3). Riesce a comprare 14 figurine.",
+   "explanation": "171 ÷ 12 = 14 (con resto 3). Riesce a comprare 14 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -16972,7 +16972,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Sara ha 191 euro e vuole comprare quante più figurine possibile a 22 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Sara ha 191 euro e vuole comprare quante più magliette possibile a 22 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "8",
     "15",
@@ -16981,7 +16981,7 @@
    ],
    "answerIndex": 0,
    "answer": "8",
-   "explanation": "191 ÷ 22 = 8 (con resto 15). Riesce a comprare 8 figurine.",
+   "explanation": "191 ÷ 22 = 8 (con resto 15). Riesce a comprare 8 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -17158,7 +17158,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Alessandro ha 184 euro e vuole comprare quante più figurine possibile a 22 euro l'una. Quante figurine riesce a comprare?",
+   "question": "Alessandro ha 184 euro e vuole comprare quante più magliette possibile a 22 euro l'una. Quante magliette riesce a comprare?",
    "options": [
     "10",
     "176",
@@ -17167,7 +17167,7 @@
    ],
    "answerIndex": 2,
    "answer": "8",
-   "explanation": "184 ÷ 22 = 8 (con resto 8). Riesce a comprare 8 figurine.",
+   "explanation": "184 ÷ 22 = 8 (con resto 8). Riesce a comprare 8 magliette.",
    "active": true,
    "tag": "divisione,resto,denaro",
    "tags": [
@@ -17955,16 +17955,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In una scuola ci sono 783 alunni. Il 25% è iscritto al corso di musica. Quanti alunni fanno musica?",
+   "question": "In una scuola ci sono 784 alunni. Il 25% è iscritto al corso di musica. Quanti alunni fanno musica?",
    "options": [
-    "588",
-    "210",
-    "585",
-    "195"
+    "589",
+    "211",
+    "586",
+    "196"
    ],
    "answerIndex": 3,
-   "answer": "195",
-   "explanation": "25% di 783: 783 × 25 ÷ 100 = 195.",
+   "answer": "196",
+   "explanation": "25% di 784: 784 × 25 ÷ 100 = 196.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -18017,16 +18017,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In una scuola ci sono 408 alunni. Il 30% è iscritto al corso di musica. Quanti alunni fanno musica?",
+   "question": "In una scuola ci sono 410 alunni. Il 30% è iscritto al corso di musica. Quanti alunni fanno musica?",
    "options": [
-    "286",
-    "134",
-    "122",
-    "126"
+    "287",
+    "135",
+    "123",
+    "127"
    ],
    "answerIndex": 2,
-   "answer": "122",
-   "explanation": "30% di 408: 408 × 30 ÷ 100 = 122.",
+   "answer": "123",
+   "explanation": "30% di 410: 410 × 30 ÷ 100 = 123.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -19567,16 +19567,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 508 persone. Il 40% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 510 persone. Il 40% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
-    "609",
-    "211",
-    "305",
-    "203"
+    "610",
+    "212",
+    "306",
+    "204"
    ],
    "answerIndex": 3,
-   "answer": "203",
-   "explanation": "40% di 508 = 203 minori.",
+   "answer": "204",
+   "explanation": "40% di 510 = 204 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -20745,7 +20745,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 353 persone. Il 25% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 352 persone. Il 25% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
     "94",
     "265",
@@ -20754,7 +20754,7 @@
    ],
    "answerIndex": 3,
    "answer": "88",
-   "explanation": "25% di 353 = 88 minori.",
+   "explanation": "25% di 352 = 88 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -21148,16 +21148,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In una scuola ci sono 583 alunni. Il 40% è iscritto al corso di musica. Quanti alunni fanno musica?",
+   "question": "In una scuola ci sono 585 alunni. Il 40% è iscritto al corso di musica. Quanti alunni fanno musica?",
    "options": [
-    "350",
-    "233",
-    "237",
-    "223"
+    "351",
+    "234",
+    "238",
+    "224"
    ],
    "answerIndex": 1,
-   "answer": "233",
-   "explanation": "40% di 583: 583 × 40 ÷ 100 = 233.",
+   "answer": "234",
+   "explanation": "40% di 585: 585 × 40 ÷ 100 = 234.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22109,16 +22109,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 693 persone. Il 40% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 695 persone. Il 40% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
-    "267",
-    "277",
-    "416",
-    "554"
+    "268",
+    "278",
+    "417",
+    "555"
    ],
    "answerIndex": 1,
-   "answer": "277",
-   "explanation": "40% di 693 = 277 minori.",
+   "answer": "278",
+   "explanation": "40% di 695 = 278 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22140,16 +22140,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In una scuola ci sono 496 alunni. Il 30% è iscritto al corso di musica. Quanti alunni fanno musica?",
+   "question": "In una scuola ci sono 500 alunni. Il 30% è iscritto al corso di musica. Quanti alunni fanno musica?",
    "options": [
-    "141",
-    "348",
-    "140",
-    "148"
+    "143",
+    "350",
+    "142",
+    "150"
    ],
    "answerIndex": 3,
-   "answer": "148",
-   "explanation": "30% di 496: 496 × 30 ÷ 100 = 148.",
+   "answer": "150",
+   "explanation": "30% di 500: 500 × 30 ÷ 100 = 150.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22326,7 +22326,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In una scuola ci sono 496 alunni. Il 20% è iscritto al corso di musica. Quanti alunni fanno musica?",
+   "question": "In una scuola ci sono 495 alunni. Il 20% è iscritto al corso di musica. Quanti alunni fanno musica?",
    "options": [
     "99",
     "98",
@@ -22335,7 +22335,7 @@
    ],
    "answerIndex": 0,
    "answer": "99",
-   "explanation": "20% di 496: 496 × 20 ÷ 100 = 99.",
+   "explanation": "20% di 495: 495 × 20 ÷ 100 = 99.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22450,16 +22450,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 295 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 300 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
+    "92",
     "90",
-    "88",
-    "81",
-    "207"
+    "83",
+    "209"
    ],
    "answerIndex": 1,
-   "answer": "88",
-   "explanation": "30% di 295 = 88 minori.",
+   "answer": "90",
+   "explanation": "30% di 300 = 90 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22574,7 +22574,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In una scuola ci sono 581 alunni. Il 10% è iscritto al corso di musica. Quanti alunni fanno musica?",
+   "question": "In una scuola ci sono 580 alunni. Il 10% è iscritto al corso di musica. Quanti alunni fanno musica?",
    "options": [
     "70",
     "523",
@@ -22583,7 +22583,7 @@
    ],
    "answerIndex": 2,
    "answer": "58",
-   "explanation": "10% di 581: 581 × 10 ÷ 100 = 58.",
+   "explanation": "10% di 580: 580 × 10 ÷ 100 = 58.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -22822,7 +22822,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 652 persone. Il 10% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 650 persone. Il 10% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
     "587",
     "32",
@@ -22831,7 +22831,7 @@
    ],
    "answerIndex": 3,
    "answer": "65",
-   "explanation": "10% di 652 = 65 minori.",
+   "explanation": "10% di 650 = 65 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23132,16 +23132,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 406 persone. Il 10% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 410 persone. Il 10% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
-    "55",
-    "366",
-    "45",
-    "40"
+    "56",
+    "367",
+    "46",
+    "41"
    ],
    "answerIndex": 3,
-   "answer": "40",
-   "explanation": "10% di 406 = 40 minori.",
+   "answer": "41",
+   "explanation": "10% di 410 = 41 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23597,16 +23597,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 666 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 670 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
-    "196",
-    "199",
-    "467",
-    "202"
+    "198",
+    "201",
+    "469",
+    "204"
    ],
    "answerIndex": 1,
-   "answer": "199",
-   "explanation": "30% di 666 = 199 minori.",
+   "answer": "201",
+   "explanation": "30% di 670 = 201 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23628,16 +23628,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 574 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 570 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
-    "172",
-    "402",
-    "169",
-    "344"
+    "171",
+    "401",
+    "168",
+    "343"
    ],
    "answerIndex": 0,
-   "answer": "172",
-   "explanation": "30% di 574 = 172 minori.",
+   "answer": "171",
+   "explanation": "30% di 570 = 171 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [
@@ -23876,7 +23876,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "In un paese vivono 472 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
+   "question": "In un paese vivono 470 persone. Il 30% ha meno di 18 anni. Quanti sono i minori?",
    "options": [
     "150",
     "331",
@@ -23885,7 +23885,7 @@
    ],
    "answerIndex": 2,
    "answer": "141",
-   "explanation": "30% di 472 = 141 minori.",
+   "explanation": "30% di 470 = 141 minori.",
    "active": true,
    "tag": "percentuale,scuola,statistica",
    "tags": [

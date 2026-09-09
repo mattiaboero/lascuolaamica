@@ -2021,6 +2021,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     errors.push({ level: 'error', field: 'explanation', msg: `la spiegazione non dice mai il risultato (${answer})` });
   }
 
+  // Dal lotto 3 delle istanze: "In un paese vivono 295 persone. Il 30% ha
+  // meno di 18 anni" fa 88,5, e la spiegazione scriveva "30% di 295 = 88".
+  // L'uguaglianza e' falsa e fra le quattro opzioni la risposta esatta non
+  // c'era: chi calcolava bene non trovava il proprio numero. Erano 15.
+  if (subject !== 'inglese' && question) {
+    const perc = question.match(/(\d+)\s*(?:persone|alunni|abitanti|studenti|bambini)[\s\S]{0,45}?(\d+)\s*%/);
+    if (perc && (Number(perc[1]) * Number(perc[2])) % 100 !== 0) {
+      errors.push({ level: 'error', field: 'text', msg: `il ${perc[2]}% di ${perc[1]} non e un numero intero: nessuna opzione puo essere esatta` });
+    }
+  }
+
   // Dal lotto 5 delle famiglie: fra le opzioni di "Un casco costa 110 euro,
   // sconto del 25%" c'era 27, cioe' lo sconto 27,50 troncato. Il distrattore
   // non corrisponde a nessun errore che un bambino possa fare: e' solo il
