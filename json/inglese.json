@@ -1770,7 +1770,7 @@
    ],
    "answerIndex": 0,
    "answer": "You're welcome",
-   "explanation": "The correct answer is \"You're welcome\".",
+   "explanation": "A 'Thank you' si risponde 'You're welcome', prego. È la formula fissa di cortesia dopo un ringraziamento.",
    "active": true,
    "tag": "inglese;classe_3;saluti;primaria",
    "tags": [
@@ -1869,7 +1869,7 @@
    ],
    "answerIndex": 1,
    "answer": "yellow",
-   "explanation": "The correct answer is \"yellow\".",
+   "explanation": "'Yellow' è il giallo, il colore delle banane mature.",
    "active": true,
    "tag": "inglese;classe_4;colori;primaria",
    "tags": [
@@ -1902,7 +1902,7 @@
    ],
    "answerIndex": 2,
    "answer": "red",
-   "explanation": "The correct answer is \"red\".",
+   "explanation": "'Red' è il rosso, il colore del segnale di stop.",
    "active": true,
    "tag": "inglese;classe_4;colori;primaria",
    "tags": [
@@ -2034,7 +2034,7 @@
    ],
    "answerIndex": 1,
    "answer": "lion",
-   "explanation": "The correct answer is \"lion\".",
+   "explanation": "'Lion' è il leone, chiamato nelle storie il re della giungla per la sua forza e la criniera.",
    "active": true,
    "tag": "inglese;classe_4;animali;primaria",
    "tags": [
@@ -2067,7 +2067,7 @@
    ],
    "answerIndex": 2,
    "answer": "mouse",
-   "explanation": "The correct answer is \"mouse\".",
+   "explanation": "'Mouse' è il topo: piccolo, grigio e ghiotto di formaggio nelle storie. Il plurale è irregolare: 'mice'.",
    "active": true,
    "tag": "inglese;classe_4;animali;primaria",
    "tags": [
@@ -2100,7 +2100,7 @@
    ],
    "answerIndex": 3,
    "answer": "turtle",
-   "explanation": "The correct answer is \"turtle\".",
+   "explanation": "'Turtle' è la tartaruga, che porta il guscio ('shell') sulla schiena.",
    "active": true,
    "tag": "inglese;classe_4;animali;primaria",
    "tags": [
@@ -2133,7 +2133,7 @@
    ],
    "answerIndex": 0,
    "answer": "monkey",
-   "explanation": "The correct answer is \"monkey\".",
+   "explanation": "'Monkey' è la scimmia, che si dondola fra i rami. 'Swing' significa dondolarsi.",
    "active": true,
    "tag": "inglese;classe_4;animali;primaria",
    "tags": [
@@ -2166,7 +2166,7 @@
    ],
    "answerIndex": 1,
    "answer": "whale",
-   "explanation": "The correct answer is \"whale\".",
+   "explanation": "'Whale' è la balena, il più grande animale marino. 'Sea' significa mare.",
    "active": true,
    "tag": "inglese;classe_4;animali;primaria",
    "tags": [
@@ -2199,7 +2199,7 @@
    ],
    "answerIndex": 1,
    "answer": "neck",
-   "explanation": "The correct answer is \"neck\".",
+   "explanation": "'Neck' è il collo, la parte fra la testa ('head') e le spalle ('shoulders').",
    "active": true,
    "tag": "inglese;classe_4;corpo_umano;primaria",
    "tags": [
@@ -2232,7 +2232,7 @@
    ],
    "answerIndex": 2,
    "answer": "knee",
-   "explanation": "The correct answer is \"knee\".",
+   "explanation": "'Knee' è il ginocchio, l'articolazione che si piega quando ci si siede. 'Elbow' è il gomito, nel braccio.",
    "active": true,
    "tag": "inglese;classe_4;corpo_umano;primaria",
    "tags": [
@@ -2265,7 +2265,7 @@
    ],
    "answerIndex": 3,
    "answer": "hand",
-   "explanation": "The correct answer is \"hand\".",
+   "explanation": "'Hand' è la mano, che sta all'estremità del braccio ('arm').",
    "active": true,
    "tag": "inglese;classe_4;corpo_umano;primaria",
    "tags": [
@@ -2298,7 +2298,7 @@
    ],
    "answerIndex": 0,
    "answer": "nail",
-   "explanation": "The correct answer is \"nail\".",
+   "explanation": "'Nail' è l'unghia, all'estremità del dito ('finger'). 'Toe' è il dito del piede.",
    "active": true,
    "tag": "inglese;classe_4;corpo_umano;primaria",
    "tags": [
@@ -2331,7 +2331,7 @@
    ],
    "answerIndex": 1,
    "answer": "uncle",
-   "explanation": "The correct answer is \"uncle\".",
+   "explanation": "'Uncle' è lo zio: il fratello ('brother') del padre. 'Nephew' sarebbe il nipote.",
    "active": true,
    "tag": "inglese;classe_4;famiglia;primaria",
    "tags": [
@@ -2364,7 +2364,7 @@
    ],
    "answerIndex": 2,
    "answer": "aunt",
-   "explanation": "The correct answer is \"aunt\".",
+   "explanation": "'Aunt' è la zia: la sorella ('sister') della madre.",
    "active": true,
    "tag": "inglese;classe_4;famiglia;primaria",
    "tags": [
@@ -2397,7 +2397,7 @@
    ],
    "answerIndex": 3,
    "answer": "aunt",
-   "explanation": "The correct answer is \"aunt\".",
+   "explanation": "La madre di tuo cugino può essere tua zia, 'aunt': è la sorella di uno dei tuoi genitori.",
    "active": true,
    "tag": "inglese;classe_4;famiglia;primaria",
    "tags": [
@@ -2562,7 +2562,7 @@
    ],
    "answerIndex": 3,
    "answer": "rabbit",
-   "explanation": "The correct answer is \"rabbit\".",
+   "explanation": "'Rabbit' è il coniglio, un animale: non è un colore. Purple, yellow e green sono viola, giallo e verde.",
    "active": true,
    "tag": "inglese;classe_4;colori;primaria",
    "tags": [
@@ -2595,7 +2595,7 @@
    ],
    "answerIndex": 0,
    "answer": "teacher",
-   "explanation": "The correct answer is \"teacher\".",
+   "explanation": "'Teacher' è l'insegnante: sta a scuola, non in famiglia. Zia, cugino e fratello sono parenti.",
    "active": true,
    "tag": "inglese;classe_4;famiglia;primaria",
    "tags": [
@@ -2628,7 +2628,7 @@
    ],
    "answerIndex": 1,
    "answer": "table",
-   "explanation": "The correct answer is \"table\".",
+   "explanation": "'Table' è il tavolo, un mobile: non è una parte del corpo. Bocca, mano e braccio lo sono.",
    "active": true,
    "tag": "inglese;classe_4;corpo_umano;primaria",
    "tags": [
@@ -4509,7 +4509,7 @@
    ],
    "answerIndex": 0,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "Con 'it' il verbo 'to be' fa 'is'. In inglese il tempo atmosferico vuole sempre un soggetto: si dice 'It is cold', non solo 'is cold'.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria",
    "tags": [
@@ -4542,7 +4542,7 @@
    ],
    "answerIndex": 1,
    "answer": "are",
-   "explanation": "The correct answer is \"are\".",
+   "explanation": "Con 'they', soggetto plurale, il verbo 'to be' fa 'are': They are hungry.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria",
    "tags": [
@@ -4575,7 +4575,7 @@
    ],
    "answerIndex": 2,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "'The cat' è un soggetto singolare di terza persona, come 'it': il verbo fa 'is'.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria",
    "tags": [
@@ -4608,7 +4608,7 @@
    ],
    "answerIndex": 3,
    "answer": "are",
-   "explanation": "The correct answer is \"are\".",
+   "explanation": "Con 'you' il verbo 'to be' fa sempre 'are', sia rivolgendosi a una persona sia a molte.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria",
    "tags": [
@@ -4641,7 +4641,7 @@
    ],
    "answerIndex": 0,
    "answer": "am",
-   "explanation": "The correct answer is \"am\".",
+   "explanation": "Con 'I' il verbo 'to be' fa 'am': I am ready. È l'unica persona che usa questa forma.",
    "active": true,
    "tag": "inglese;classe_3;to_be;primaria",
    "tags": [
@@ -4839,7 +4839,7 @@
    ],
    "answerIndex": 2,
    "answer": "Thursday",
-   "explanation": "The correct answer is \"Thursday\".",
+   "explanation": "Dopo Wednesday (mercoledì) viene Thursday (giovedì). L'ordine è Tuesday, Wednesday, Thursday, Friday.",
    "active": true,
    "tag": "inglese;classe_4;giorni;primaria",
    "tags": [
@@ -4872,7 +4872,7 @@
    ],
    "answerIndex": 3,
    "answer": "Monday",
-   "explanation": "The correct answer is \"Monday\".",
+   "explanation": "Prima di Tuesday (martedì) viene Monday (lunedì), il primo giorno della settimana lavorativa.",
    "active": true,
    "tag": "inglese;classe_4;giorni;primaria",
    "tags": [
@@ -5070,7 +5070,7 @@
    ],
    "answerIndex": 0,
    "answer": "cheese",
-   "explanation": "The correct answer is \"cheese\".",
+   "explanation": "'Dairy' indica i latticini, i cibi ricavati dal latte: fra questi il formaggio, 'cheese'.",
    "active": true,
    "tag": "inglese;classe_4;cibo;primaria",
    "tags": [
@@ -5103,7 +5103,7 @@
    ],
    "answerIndex": 1,
    "answer": "ice cream",
-   "explanation": "The correct answer is \"ice cream\".",
+   "explanation": "'Dessert' è il dolce di fine pasto: fra le opzioni il gelato, 'ice cream'. Zuppa, pane e insalata non sono dolci.",
    "active": true,
    "tag": "inglese;classe_4;cibo;primaria",
    "tags": [
@@ -5136,7 +5136,7 @@
    ],
    "answerIndex": 2,
    "answer": "pizza",
-   "explanation": "The correct answer is \"pizza\".",
+   "explanation": "'Pizza' si prepara con pomodoro ('tomatoes') e formaggio ('cheese').",
    "active": true,
    "tag": "inglese;classe_4;cibo;primaria",
    "tags": [
@@ -5169,7 +5169,7 @@
    ],
    "answerIndex": 3,
    "answer": "carrot",
-   "explanation": "The correct answer is \"carrot\".",
+   "explanation": "'Carrot' è la carota: arancione e croccante. 'Crunchy' significa proprio croccante.",
    "active": true,
    "tag": "inglese;classe_4;cibo;primaria",
    "tags": [
@@ -5367,7 +5367,7 @@
    ],
    "answerIndex": 0,
    "answer": "has",
-   "explanation": "The correct answer is \"has\".",
+   "explanation": "'My sister' è un soggetto singolare di terza persona: vuole 'has got'. 'Have got' resta per I, you, we, they.",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria",
    "tags": [
@@ -5400,7 +5400,7 @@
    ],
    "answerIndex": 1,
    "answer": "have",
-   "explanation": "The correct answer is \"have\".",
+   "explanation": "'My friends' è plurale, quindi 'have got'. Il verbo cambia solo alla terza persona singolare.",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria",
    "tags": [
@@ -5433,7 +5433,7 @@
    ],
    "answerIndex": 2,
    "answer": "Have you got a brother?",
-   "explanation": "The correct answer is \"Have you got a brother?\".",
+   "explanation": "Nella domanda con 'have got' il verbo 'have' va prima del soggetto: 'Have you got a brother?'. Con 'you' non si usa mai 'has'.",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria",
    "tags": [
@@ -5466,7 +5466,7 @@
    ],
    "answerIndex": 3,
    "answer": "Yes, she has.",
-   "explanation": "The correct answer is \"Yes, she has.\"",
+   "explanation": "Nella risposta breve si ripete l'ausiliare della domanda: 'Has she...?' → 'Yes, she has.'",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria",
    "tags": [
@@ -6951,7 +6951,7 @@
    ],
    "answerIndex": 1,
    "answer": "cycling",
-   "explanation": "The correct answer is \"cycling\".",
+   "explanation": "'Cycling' è il ciclismo, lo sport che si fa in bicicletta ('bike'). Viene da 'cycle', bicicletta.",
    "active": true,
    "tag": "inglese;classe_3;sport;primaria",
    "tags": [
@@ -6984,7 +6984,7 @@
    ],
    "answerIndex": 2,
    "answer": "skating",
-   "explanation": "The correct answer is \"skating\".",
+   "explanation": "'Skating' è il pattinaggio: si fa con i pattini ('skates'). Viene dal verbo 'skate', pattinare.",
    "active": true,
    "tag": "inglese;classe_3;sport;primaria",
    "tags": [
@@ -7446,7 +7446,7 @@
    ],
    "answerIndex": 3,
    "answer": "tennis",
-   "explanation": "The correct answer is \"tennis\".",
+   "explanation": "'Tennis' si gioca su un campo ('court') diviso da una rete ('net'). Nuoto e corsa non hanno rete.",
    "active": true,
    "tag": "inglese;classe_3;sport;primaria",
    "tags": [
@@ -7941,7 +7941,7 @@
    ],
    "answerIndex": 2,
    "answer": "living room",
-   "explanation": "The correct answer is \"living room\".",
+   "explanation": "In molte case gli ospiti ('guests') entrano prima in salotto, il 'living room': è la stanza dove si ricevono.",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria",
    "tags": [
@@ -7974,7 +7974,7 @@
    ],
    "answerIndex": 3,
    "answer": "kitchen",
-   "explanation": "The correct answer is \"kitchen\".",
+   "explanation": "'Kitchen' è la cucina, la stanza dove si cucina. 'Cook' significa cucinare.",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria",
    "tags": [
@@ -8007,7 +8007,7 @@
    ],
    "answerIndex": 0,
    "answer": "bedroom",
-   "explanation": "The correct answer is \"bedroom\".",
+   "explanation": "'Bedroom' è la camera da letto, la stanza per dormire: unisce 'bed', letto, e 'room', stanza.",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria",
    "tags": [
@@ -8040,7 +8040,7 @@
    ],
    "answerIndex": 1,
    "answer": "bathroom",
-   "explanation": "The correct answer is \"bathroom\".",
+   "explanation": "'Bathroom' è il bagno, dove si fa la doccia ('shower').",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria",
    "tags": [
@@ -8073,7 +8073,7 @@
    ],
    "answerIndex": 2,
    "answer": "I watch TV.",
-   "explanation": "The correct answer is \"I watch TV.\"",
+   "explanation": "'What do you do...?' chiede un'azione: la risposta è una frase con un verbo, 'I watch TV'. Le altre indicano luogo, ora o sono una risposta breve.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8106,7 +8106,7 @@
    ],
    "answerIndex": 3,
    "answer": "I do my homework in my bedroom.",
-   "explanation": "The correct answer is \"I do my homework in my bedroom.\"",
+   "explanation": "'Where' chiede il luogo: la risposta indica dove, 'in my bedroom'. 'At seven o'clock' risponderebbe a 'when'.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8139,7 +8139,7 @@
    ],
    "answerIndex": 0,
    "answer": "Yes, I do.",
-   "explanation": "The correct answer is \"Yes, I do.\"",
+   "explanation": "'Do you like...?' è una domanda chiusa: si risponde con 'Yes, I do' oppure 'No, I don't', riprendendo l'ausiliare.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8172,7 +8172,7 @@
    ],
    "answerIndex": 1,
    "answer": "At nine o'clock.",
-   "explanation": "The correct answer is \"At nine o'clock.\"",
+   "explanation": "'What time' chiede l'ora: la risposta è 'At nine o'clock', con la preposizione 'at' davanti all'orario.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8337,7 +8337,7 @@
    ],
    "answerIndex": 2,
    "answer": "bedroom",
-   "explanation": "The correct answer is \"bedroom\".",
+   "explanation": "Letto ('bed'), armadio ('wardrobe') e scrivania ('desk') stanno in camera: il 'bedroom'.",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria",
    "tags": [
@@ -8370,7 +8370,7 @@
    ],
    "answerIndex": 3,
    "answer": "kitchen",
-   "explanation": "The correct answer is \"kitchen\".",
+   "explanation": "Cucina economica ('cooker') e frigorifero ('fridge') stanno in cucina, il 'kitchen'.",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria",
    "tags": [
@@ -8403,7 +8403,7 @@
    ],
    "answerIndex": 2,
    "answer": "What do you like doing in your free time?",
-   "explanation": "The correct answer is \"What do you like doing in your free time?\".",
+   "explanation": "'Free time' è il tempo libero: la domanda chiede cosa piace fare, quindi parla di hobby.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -8436,7 +8436,7 @@
    ],
    "answerIndex": 3,
    "answer": "Is your bedroom big?",
-   "explanation": "The correct answer is \"Is your bedroom big?\".",
+   "explanation": "'Bedroom' è una stanza della casa: la domanda chiede se la camera è grande, quindi riguarda l'abitazione.",
    "active": true,
    "tag": "inglese;classe_4;domande;primaria",
    "tags": [
@@ -10728,7 +10728,7 @@
    ],
    "answerIndex": 1,
    "answer": "four",
-   "explanation": "The correct answer is \"four\".",
+   "explanation": "Il cane ha quattro zampe: 'four legs'.",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria;pilota_parametrico",
    "tags": [
@@ -10762,7 +10762,7 @@
    ],
    "answerIndex": 2,
    "answer": "four",
-   "explanation": "The correct answer is \"four\".",
+   "explanation": "Il cavallo ha quattro zampe: 'four legs'. È un quadrupede come il cane.",
    "active": true,
    "tag": "inglese;classe_4;have_got;primaria;pilota_parametrico",
    "tags": [
