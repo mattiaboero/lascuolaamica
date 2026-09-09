@@ -3276,7 +3276,7 @@
    ],
    "answerIndex": 2,
    "answer": "a mettere gli eventi in ordine",
-   "explanation": "La risposta corretta è 'a mettere gli eventi in ordine'.",
+   "explanation": "La linea del tempo dispone i fatti in ordine da sinistra a destra: si vede subito che cosa è venuto prima e che cosa dopo.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3307,7 +3307,7 @@
    ],
    "answerIndex": 3,
    "answer": "all'inizio",
-   "explanation": "La risposta corretta è \"all'inizio\".",
+   "explanation": "Sulla linea del tempo si procede dal passato verso il presente: l'evento più antico è quello più a sinistra, all'inizio.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3338,7 +3338,7 @@
    ],
    "answerIndex": 0,
    "answer": "la foto di quando ero neonato",
-   "explanation": "La risposta corretta è 'la foto di quando ero neonato'.",
+   "explanation": "Sei stato neonato prima di essere come sei ora: la foto da neonato viene prima, perché la linea segue l'ordine in cui i fatti sono accaduti.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -4144,7 +4144,7 @@
    ],
    "answerIndex": 0,
    "answer": "com'era in quel momento",
-   "explanation": "La risposta corretta è \"com'era in quel momento\".",
+   "explanation": "La fotografia ferma un istante: mostra com'era davvero quella persona in quel giorno, non come la si ricorda oggi.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4175,7 +4175,7 @@
    ],
    "answerIndex": 1,
    "answer": "come si studiava nel passato",
-   "explanation": "La risposta corretta è 'come si studiava nel passato'.",
+   "explanation": "Un quaderno vecchio conserva la calligrafia, gli esercizi e le correzioni: dice come si insegnava e che cosa si chiedeva ai bambini di allora.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4206,7 +4206,7 @@
    ],
    "answerIndex": 2,
    "answer": "la testimonianza di un nonno",
-   "explanation": "La risposta corretta è 'la testimonianza di un nonno'.",
+   "explanation": "Le fonti orali sono i racconti di chi ha vissuto o sentito raccontare: il nonno è una fonte orale perché la sua memoria è la testimonianza.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4237,7 +4237,7 @@
    ],
    "answerIndex": 3,
    "answer": "un telefono antico",
-   "explanation": "La risposta corretta è 'un telefono antico'.",
+   "explanation": "Le fonti materiali sono oggetti che si possono osservare e toccare: un telefono di cinquant'anni fa dice come si comunicava allora.",
    "active": true,
    "tag": "fonti;ricostruzione;classe2",
    "tags": [
@@ -4268,7 +4268,7 @@
    ],
    "answerIndex": 0,
    "answer": "intervista e lettera",
-   "explanation": "La risposta corretta è 'intervista e lettera'.",
+   "explanation": "L'intervista si ascolta, la lettera si legge: la prima è una fonte orale, la seconda una fonte scritta.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4299,7 +4299,7 @@
    ],
    "answerIndex": 1,
    "answer": "moneta e giocattolo",
-   "explanation": "La risposta corretta è 'moneta e giocattolo'.",
+   "explanation": "Moneta e giocattolo sono entrambi oggetti concreti, arrivati fino a noi: due fonti materiali.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4330,7 +4330,7 @@
    ],
    "answerIndex": 2,
    "answer": "lettera e diario",
-   "explanation": "La risposta corretta è 'lettera e diario'.",
+   "explanation": "Lettera e diario sono entrambi fatti di parole scritte su carta: due fonti scritte, e per di più dirette.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4361,7 +4361,7 @@
    ],
    "answerIndex": 3,
    "answer": "fotografia e disegno",
-   "explanation": "La risposta corretta è 'fotografia e disegno'.",
+   "explanation": "Fotografia e disegno sono entrambi immagini: appartengono alle fonti iconografiche, quelle che si guardano invece di leggerle.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4392,7 +4392,7 @@
    ],
    "answerIndex": 0,
    "answer": "una tua foto all'asilo",
-   "explanation": "La risposta corretta è \"una tua foto all'asilo\".",
+   "explanation": "La tua foto all'asilo mostra proprio quell'edificio in quegli anni: nessun racconto è altrettanto preciso su com'era.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4423,7 +4423,7 @@
    ],
    "answerIndex": 1,
    "answer": "una persona che ti conosceva allora",
-   "explanation": "La risposta corretta è 'una persona che ti conosceva allora'.",
+   "explanation": "Di quando eri piccolo non hai ricordi affidabili: chi ti conosceva allora è l'unico a poterlo raccontare.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4454,7 +4454,7 @@
    ],
    "answerIndex": 2,
    "answer": "un certificato scritto",
-   "explanation": "La risposta corretta è 'un certificato scritto'.",
+   "explanation": "Il certificato registra la data per iscritto nel momento in cui il fatto accade: è più preciso di qualunque ricordo.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4485,7 +4485,7 @@
    ],
    "answerIndex": 3,
    "answer": "una fonte materiale",
-   "explanation": "La risposta corretta è 'una fonte materiale'.",
+   "explanation": "Solo le fonti materiali sono oggetti veri: si possono prendere in mano, misurare, girare. Le altre si leggono, si guardano o si ascoltano.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4516,7 +4516,7 @@
    ],
    "answerIndex": 0,
    "answer": "una fonte iconografica",
-   "explanation": "La risposta corretta è 'una fonte iconografica'.",
+   "explanation": "Le fonti iconografiche sono immagini: fotografie, dipinti, disegni. Sono quelle che mostrano com'era una cosa.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4547,7 +4547,7 @@
    ],
    "answerIndex": 1,
    "answer": "una fonte orale",
-   "explanation": "La risposta corretta è 'una fonte orale'.",
+   "explanation": "Le fonti orali si ascoltano: sono voci e racconti, non testi né oggetti.",
    "active": true,
    "tag": "fonti;confronto;classe2",
    "tags": [
@@ -4578,7 +4578,7 @@
    ],
    "answerIndex": 2,
    "answer": "foto e racconti",
-   "explanation": "La risposta corretta è 'foto e racconti'.",
+   "explanation": "Le foto mostrano com'era, i racconti dicono che cosa è successo: due tipi di fonte che si completano a vicenda.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4609,7 +4609,7 @@
    ],
    "answerIndex": 3,
    "answer": "una vecchia cartolina",
-   "explanation": "La risposta corretta è 'una vecchia cartolina'.",
+   "explanation": "La cartolina porta un'immagine del quartiere com'era allora: si può confrontare con quello di oggi e vedere che cosa è cambiato.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4640,7 +4640,7 @@
    ],
    "answerIndex": 0,
    "answer": "cambiamenti nel tempo",
-   "explanation": "La risposta corretta è 'cambiamenti nel tempo'.",
+   "explanation": "Due foto della stessa persona in momenti diversi mostrano che cosa è cambiato e che cosa è rimasto: è il modo più diretto di vedere il tempo passare.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4671,7 +4671,7 @@
    ],
    "answerIndex": 1,
    "answer": "vecchi quaderni e foto",
-   "explanation": "La risposta corretta è 'vecchi quaderni e foto'.",
+   "explanation": "I quaderni dicono che cosa si studiava, le foto come erano fatte le aule: insieme ricostruiscono la scuola di allora.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4702,7 +4702,7 @@
    ],
    "answerIndex": 2,
    "answer": "aiuta a conoscere il passato",
-   "explanation": "La risposta corretta è 'aiuta a conoscere il passato'.",
+   "explanation": "Il passato non si può osservare direttamente: le fonti sono le tracce che ha lasciato, e senza di esse non si saprebbe nulla.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4733,7 +4733,7 @@
    ],
    "answerIndex": 3,
    "answer": "una fonte orale",
-   "explanation": "La risposta corretta è 'una fonte orale'.",
+   "explanation": "Il racconto dei nonni è una voce che riferisce ricordi: per definizione è una fonte orale.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4764,7 +4764,7 @@
    ],
    "answerIndex": 0,
    "answer": "una fonte scritta",
-   "explanation": "La risposta corretta è 'una fonte scritta'.",
+   "explanation": "La pagella è un documento fatto di parole e voti scritti: si legge, quindi è una fonte scritta.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4795,7 +4795,7 @@
    ],
    "answerIndex": 1,
    "answer": "una fonte materiale",
-   "explanation": "La risposta corretta è 'una fonte materiale'.",
+   "explanation": "La bambola è un oggetto che ha attraversato il tempo: si osserva e si tocca, quindi è una fonte materiale.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4826,7 +4826,7 @@
    ],
    "answerIndex": 2,
    "answer": "una fonte iconografica",
-   "explanation": "La risposta corretta è 'una fonte iconografica'.",
+   "explanation": "La foto è un'immagine che mostra la casa com'era: è una fonte iconografica.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
@@ -4857,7 +4857,7 @@
    ],
    "answerIndex": 3,
    "answer": "chi la osserva con attenzione",
-   "explanation": "La risposta corretta è 'chi la osserva con attenzione'.",
+   "explanation": "Una fonte non parla da sola: dice qualcosa solo a chi la guarda con attenzione, si fa domande e la confronta con altre.",
    "active": true,
    "tag": "fonti;ricerca;classe2",
    "tags": [
