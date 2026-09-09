@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.13.10 - 2026-09-09
+
+### Fixed
+- **Il contatore nel footer scriveva "9223 domande disponibili"** mentre la riga in home, a pochi centimetri, dice "9.200+ domande". `Intl.NumberFormat('it-IT')` usa `useGrouping: "auto"`, che sui numeri di quattro cifre omette il separatore delle migliaia: finche' il totale e' stato di cinque cifre non si vedeva, poi la 4.13.7 lo ha portato a 9.223. Passato a `useGrouping: true` (`shared.js:1249`).
+
+### Notes
+- Segnalato dal loro stesso `reports/ux-audit-2026.md` come "bassissima priorita'", quando pero' il numero era ancora 9.879 e il difetto era invisibile.
+- Nessuna voce nuova nel changelog del sito: e' un dettaglio tipografico, non un aggiornamento da raccontare a un genitore. L'etichetta di oggi si allarga a `Release 4.13.1 - 4.13.10`.
+
 ## 4.13.9 - 2026-09-09
 
 ### Changed

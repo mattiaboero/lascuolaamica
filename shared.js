@@ -1246,7 +1246,10 @@
         el.hidden = true;
         return null;
       }
-      el.textContent = `${new Intl.NumberFormat('it-IT').format(total)} domande disponibili`;
+      // useGrouping esplicito: sui numeri di quattro cifre il default ("auto")
+      // omette il punto, e il footer scriveva "9223 domande" mentre la home
+      // accanto dice "9.200+ domande".
+      el.textContent = `${new Intl.NumberFormat('it-IT', { useGrouping: true }).format(total)} domande disponibili`;
       el.hidden = false;
       return total;
     } catch (err) {
