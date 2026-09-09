@@ -312,6 +312,62 @@ function checkCicloRaccoltaConsegna(game) {
     'una non-parola resta un errore normale');
 }
 
+/*
+  Il finale nominava tre parole fisse nel sorgente mentre la partita le estrae a
+  caso: quasi ogni bambino chiudeva sentendosi elencare parole mai viste.
+*/
+function checkFinale(game) {
+  assert.equal(game.elencoParole(['SOLE', 'MELA', 'LUNA']), 'SOLE, MELA e LUNA');
+  assert.equal(game.elencoParole(['SOLE', 'MELA']), 'SOLE e MELA');
+  assert.equal(game.elencoParole(['SOLE']), 'SOLE');
+  assert.equal(game.elencoParole([]), '');
+
+  // Nessuna parola del banco deve restare scritta a mano nel testo del finale.
+  const sorgente = fs.readFileSync(SOURCE, 'utf8');
+  const finale = sorgente.match(/function showVictoryOverlay\(\)[\s\S]*?\n  }/)[0];
+  game.parole.forEach(function (entry) {
+    assert.equal(finale.indexOf(entry.word), -1,
+      `showVictoryOverlay nomina ${entry.word} nel sorgente: il finale deve dire le parole della partita giocata`);
+  });
+}
+
+/*
+  I fiori della crescita stanno a terra: uno sotto un cartello sarebbe coperto,
+  uno dentro una pozza sarebbe un fiore in acqua. Sono coordinate scelte a mano
+  e a occhio le distanze si sbagliano, quindi le misura il controllo.
+*/
+function checkCrescita(game) {
+  const fiori = game.FIORI_CRESCITA;
+  const lucciole = game.LUCCIOLE;
+  assert.ok(fiori.length >= 4, 'servono abbastanza fiori perche\' la crescita si veda');
+  assert.ok(lucciole.length >= 4, 'servono abbastanza lucciole');
+
+  fiori.forEach(function (f) {
+    const dove = `fiore (${f.x}, ${f.y})`;
+    const dentro = game.clampPosition(f.x, f.y);
+    assert.equal(dentro.x, f.x, `${dove}: fuori dalla radura in orizzontale`);
+    assert.equal(dentro.y, f.y, `${dove}: fuori dalla radura in verticale`);
+
+    game.puddles.forEach(function (p) {
+      const dx = (f.x - p.x) / (p.rx + 12);
+      const dy = (f.y - p.y) / (p.ry + 12);
+      assert.ok(dx * dx + dy * dy > 1, `${dove}: finisce dentro la pozza (${p.x}, ${p.y})`);
+    });
+
+    game.tiles.forEach(function (t) {
+      assert.ok(Math.abs(f.x - t.x) > 46 || Math.abs(f.y - t.y) > 56,
+        `${dove}: finisce sotto il cartello (${t.x}, ${t.y})`);
+    });
+
+    // Il tabellone occupa la fascia alta al centro: e' anche l'area in cui si
+    // consegna, dove il personaggio passa sempre.
+    assert.ok(!(f.y < 232 && Math.abs(f.x - 400) < 140), `${dove}: finisce sotto il tabellone`);
+  });
+
+  const chiavi = new Set(fiori.concat(lucciole).map(function (p) { return p.x + ':' + p.y; }));
+  assert.equal(chiavi.size, fiori.length + lucciole.length, 'due decorazioni sullo stesso punto');
+}
+
 function checkParoleVicine(game) {
   const vicine = game.PAROLE_VICINE;
   assert.ok(vicine && vicine.size > 0, 'PAROLE_VICINE e\' vuoto');
@@ -454,6 +510,8 @@ function main() {
     ['composizione della partita', checkSession],
     ['adattamento e classe', checkAdattamento],
     ['caccia al suono', checkCacciaAlSuono],
+    ['finale della partita', checkFinale],
+    ['crescita della radura', checkCrescita],
     ['parole vicine', checkParoleVicine],
     ['ciclo raccolta e consegna', checkCicloRaccoltaConsegna],
     ['memoria delle abilita', checkMemoria],

@@ -301,6 +301,34 @@
     { x: 552, y: 302 }
   ];
 
+  /*
+    La radura cresce mentre si gioca. Alla prima parola si accendono le
+    lucciole, alla seconda spuntano i fiori lungo il sentiero: alla terza il
+    bosco e' illuminato. Prima le tre parole si somigliavano tutte — stessa
+    scena dall'inizio alla fine — e non si vedeva di essere arrivati da qualche
+    parte.
+
+    Posizioni fisse e scelte a mano, non estratte a caso: cosi' la crescita e'
+    la stessa a ogni partita e nessun fiore finisce sotto un cartello o dentro
+    una pozza. check_bosco.js verifica le distanze, che a occhio si sbagliano.
+  */
+  const FIORI_CRESCITA = [
+    { x: 196, y: 336, da: 2 }, { x: 208, y: 262, da: 2 }, { x: 330, y: 322, da: 2 },
+    { x: 356, y: 386, da: 2 }, { x: 466, y: 300, da: 2 }, { x: 492, y: 350, da: 2 },
+    { x: 596, y: 366, da: 2 }, { x: 610, y: 330, da: 2 },
+    { x: 232, y: 400, da: 3 }, { x: 318, y: 358, da: 3 }, { x: 420, y: 340, da: 3 },
+    { x: 455, y: 385, da: 3 }, { x: 560, y: 212, da: 3 }, { x: 640, y: 300, da: 3 }
+  ];
+
+  // Le lucciole volano sopra il terreno: possono passare ovunque, anche sopra
+  // l'acqua, e non hanno bisogno dei vincoli dei fiori.
+  const LUCCIOLE = [
+    { x: 240, y: 240 }, { x: 300, y: 300 }, { x: 380, y: 232 }, { x: 450, y: 268 },
+    { x: 520, y: 240 }, { x: 560, y: 330 }, { x: 300, y: 360 }, { x: 200, y: 290 },
+    { x: 350, y: 290 }, { x: 430, y: 220 }, { x: 490, y: 320 }, { x: 600, y: 270 },
+    { x: 250, y: 330 }, { x: 410, y: 300 }
+  ];
+
   // Pozze piccole e sparse: il centro della radura resta asciutto, cosi' il
   // personaggio, il tabellone e i tre supporti delle lettere non ci finiscono sopra.
   const PUDDLES = [
@@ -1411,11 +1439,29 @@
     else openOverlay('Il bosco ti aspetta', ['Riparti quando vuoi. Qui non c’e’ fretta.'], 'Torniamo a esplorare');
   }
 
+  // Elenco all'italiana: "SOLE, MELA e LUNA".
+  function elencoParole(parole) {
+    const lista = (parole || []).filter(Boolean);
+    if (!lista.length) return '';
+    if (lista.length === 1) return lista[0];
+    return lista.slice(0, -1).join(', ') + ' e ' + lista[lista.length - 1];
+  }
+
+  /*
+    Il finale nomina le parole della partita appena giocata. Prima erano tre
+    parole fisse nel sorgente, SOLE MELA e LUNA, mentre la partita le estrae a
+    caso: quasi ogni bambino chiudeva sentendosi elencare parole che non aveva
+    mai visto. Il finale che dice le TUE parole vale piu' di qualunque effetto.
+  */
   function showVictoryOverlay() {
-    openOverlay('Hai illuminato il bosco!', [
-      'SOLE, MELA e LUNA: ogni lettera ha trovato il suo posto.',
-      'Tre parole scoperte in una sola passeggiata.'
-    ], 'Giochiamo ancora');
+    const parole = state.session.map(function (r) { return r.word; });
+    const righe = [];
+    const elenco = elencoParole(parole);
+    if (elenco) righe.push(elenco + ': ogni lettera ha trovato il suo posto.');
+    righe.push(parole.length === 1
+      ? 'Una parola scoperta in una passeggiata.'
+      : parole.length + ' parole scoperte in una sola passeggiata.');
+    openOverlay('Hai illuminato il bosco!', righe, 'Giochiamo ancora');
   }
 
   /* ------------------------------------------------------------------ gioco */
@@ -1996,6 +2042,38 @@
     star(c, p.x + 14, p.y - 49 + Math.sin(t * 2 + index) * 3, 2, paint.glowSoft);
   }
 
+  // Fiori a terra: stanno sotto ai personaggi, come il resto del terreno.
+  function drawFioriCrescita(c, t, calm) {
+    if (state.solved < 2) return;
+    FIORI_CRESCITA.filter(function (f) { return state.solved >= f.da; }).forEach(function (f, i) {
+      const dondolo = calm ? 0 : Math.sin(t * 1.6 + i) * 0.6;
+      // Un ciuffo, non un fiore solo: a misura singola la crescita cambiava
+      // trecento pixel su quattrocentomila e nessun bambino la notava.
+      flower(c, f.x + dondolo, f.y, paint.blooms[i % paint.blooms.length], 3);
+      flower(c, f.x + 11 + dondolo, f.y + 6, paint.blooms[(i + 2) % paint.blooms.length], 2);
+      flower(c, f.x - 9 + dondolo, f.y + 4, paint.blooms[(i + 1) % paint.blooms.length], 2);
+    });
+  }
+
+  // Lucciole: volano, quindi si disegnano davanti a tutto. Con "riduci
+  // animazioni" restano ferme sul loro punto invece di sparire: la radura deve
+  // crescere anche per chi le animazioni non le vuole.
+  function drawLucciole(c, t, calm) {
+    if (state.solved < 1) return;
+    const quante = Math.min(LUCCIOLE.length, state.solved * 5);
+    for (let i = 0; i < quante; i++) {
+      const l = LUCCIOLE[i];
+      const x = calm ? l.x : l.x + Math.sin(t * 0.9 + i * 1.7) * 16;
+      const y = calm ? l.y : l.y + Math.cos(t * 0.7 + i * 2.3) * 11;
+      const pulsa = calm ? 0.5 : 0.32 + (Math.sin(t * 3 + i) + 1) * 0.24;
+      c.save();
+      c.globalAlpha = pulsa;
+      glow(c, x, y, 22, paint.glow, 0.62);
+      star(c, x, y, 3, paint.glowSoft);
+      c.restore();
+    }
+  }
+
   function draw() {
     const c = ctx;
     const t = state.time;
@@ -2010,6 +2088,7 @@
     drawBoard(t);
     owl(c, 161, 230, t);
     snail(c, 643, 312);
+    drawFioriCrescita(c, t, calm);
 
     const actors = TILE_POSITIONS.map(function (p, i) {
       return { y: p.y, draw: function () { drawTile(i, t); } };
@@ -2059,10 +2138,16 @@
       glow(c, 140 + i * 13, 434 - i * 25, 27, paint.glow, 0.31);
     }
 
+    drawLucciole(c, t, calm);
+
     c.drawImage(scene.foreground, 0, 0);
     if (!calm) {
       glow(c, 285, 42, 245, paint.glowSoft, 0.09);
       glow(c, 481, 310, 170, shade(raw.accent, 0.5), 0.075);
+    }
+    // Terza parola: la radura e' illuminata davvero, non solo festeggiata.
+    if (state.solved >= 3) {
+      glow(c, 400, 300, 300, paint.glow, calm ? 0.1 : 0.14);
     }
   }
 
@@ -2258,6 +2343,9 @@
     PAROLE_VICINE: PAROLE_VICINE,
     parolaCon: parolaCon,
     messaggioErrore: messaggioErrore,
+    elencoParole: elencoParole,
+    FIORI_CRESCITA: FIORI_CRESCITA,
+    LUCCIOLE: LUCCIOLE,
     readPalette: readPalette,
     collect: collect,
     consegna: consegna,
