@@ -1912,7 +1912,7 @@
    ],
    "answerIndex": 3,
    "answer": "mi vesto",
-   "explanation": "La risposta corretta è 'mi vesto'.",
+   "explanation": "Vestirsi viene prima di uscire: non si esce in pigiama. È la successione delle azioni della mattina.",
    "active": true,
    "tag": "successione;prima_dopo;classe2",
    "tags": [
@@ -1943,7 +1943,7 @@
    ],
    "answerIndex": 0,
    "answer": "ripongo il quaderno",
-   "explanation": "La risposta corretta è 'ripongo il quaderno'.",
+   "explanation": "Finito il compito, il quaderno si ripone: è l'azione che chiude quella sequenza e prepara la successiva.",
    "active": true,
    "tag": "successione;prima_dopo;classe2",
    "tags": [
@@ -3369,7 +3369,7 @@
    ],
    "answerIndex": 1,
    "answer": "prima",
-   "explanation": "La risposta corretta è 'prima'.",
+   "explanation": "«Prima» colloca un fatto rispetto a un altro: insieme a «dopo» e «infine» sono le parole che dicono l'ordine, non l'orologio.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3400,7 +3400,7 @@
    ],
    "answerIndex": 2,
    "answer": "infine",
-   "explanation": "La risposta corretta è 'infine'.",
+   "explanation": "«Infine» segnala l'ultimo posto della sequenza: dice che dopo di quello non c'è altro.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3431,7 +3431,7 @@
    ],
    "answerIndex": 3,
    "answer": "quello di oggi",
-   "explanation": "La risposta corretta è 'quello di oggi'.",
+   "explanation": "Oggi viene dopo ieri: sulla linea del tempo si va sempre dal passato verso il presente, quindi l'ultimo evento è quello di oggi.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3462,7 +3462,7 @@
    ],
    "answerIndex": 0,
    "answer": "eventi importanti della tua vita",
-   "explanation": "La risposta corretta è 'eventi importanti della tua vita'.",
+   "explanation": "La linea del tempo personale raccoglie i fatti che hanno segnato la tua vita: nascita, primi passi, primo giorno di scuola.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3493,7 +3493,7 @@
    ],
    "answerIndex": 1,
    "answer": "ho imparato a leggere",
-   "explanation": "La risposta corretta è 'ho imparato a leggere'.",
+   "explanation": "Imparare a leggere è un fatto avvenuto in un momento preciso della tua vita: si può collocare sulla linea, a differenza di una cosa che fai ogni giorno.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3524,7 +3524,7 @@
    ],
    "answerIndex": 2,
    "answer": "prima di B",
-   "explanation": "La risposta corretta è 'prima di B'.",
+   "explanation": "La linea del tempo rispetta l'ordine in cui i fatti sono accaduti: se A è successo prima, sta più a sinistra di B.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3555,7 +3555,7 @@
    ],
    "answerIndex": 3,
    "answer": "prima di oggi",
-   "explanation": "La risposta corretta è 'prima di oggi'.",
+   "explanation": "Ieri è già passato, oggi è adesso: sulla linea il passato sta sempre a sinistra del presente.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3586,7 +3586,7 @@
    ],
    "answerIndex": 0,
    "answer": "dopo oggi",
-   "explanation": "La risposta corretta è 'dopo oggi'.",
+   "explanation": "Domani non è ancora arrivato: sta nel futuro, cioè dopo oggi, a destra sulla linea del tempo.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -3617,7 +3617,7 @@
    ],
    "answerIndex": 1,
    "answer": "neonato, bambino, adulto",
-   "explanation": "La risposta corretta è 'neonato, bambino, adulto'.",
+   "explanation": "Si nasce, si cresce e si diventa adulti: è l'ordine in cui la vita procede, e nessuna delle tre fasi può scambiarsi di posto.",
    "active": true,
    "tag": "linea_del_tempo;tempo;classe2",
    "tags": [
@@ -4888,7 +4888,7 @@
    ],
    "answerIndex": 3,
    "answer": "un giocattolo semplice o un libro",
-   "explanation": "La risposta corretta è 'un giocattolo semplice o un libro'.",
+   "explanation": "Prima dei giochi elettronici i bambini avevano oggetti semplici: bambole di pezza, trottole, palle, libri illustrati.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -4919,7 +4919,7 @@
    ],
    "answerIndex": 0,
    "answer": "sei cambiato nel tempo",
-   "explanation": "La risposta corretta è 'sei cambiato nel tempo'.",
+   "explanation": "Le due foto mostrano la stessa persona in momenti diversi: la differenza fra loro è la prova visibile che sei cambiato.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -4950,7 +4950,7 @@
    ],
    "answerIndex": 1,
    "answer": "gli eventi della tua vita",
-   "explanation": "La risposta corretta è 'gli eventi della tua vita'.",
+   "explanation": "La storia personale è la tua: i fatti che sono capitati a te, nell'ordine in cui sono avvenuti.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -4981,7 +4981,7 @@
    ],
    "answerIndex": 2,
    "answer": "gli eventi importanti della famiglia",
-   "explanation": "La risposta corretta è 'gli eventi importanti della famiglia'.",
+   "explanation": "La storia familiare raccoglie i fatti che riguardano tutta la famiglia: nascite, matrimoni, traslochi, lavori.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5012,7 +5012,7 @@
    ],
    "answerIndex": 3,
    "answer": "ricordare momenti del passato",
-   "explanation": "La risposta corretta è 'ricordare momenti del passato'.",
+   "explanation": "L'album conserva le immagini di momenti che altrimenti si dimenticherebbero: è la memoria della famiglia messa in ordine.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5043,7 +5043,7 @@
    ],
    "answerIndex": 0,
    "answer": "che gli oggetti cambiano nel tempo",
-   "explanation": "La risposta corretta è 'che gli oggetti cambiano nel tempo'.",
+   "explanation": "Mettendo i due giocattoli uno accanto all'altro si vedono materiali e forme diverse: gli oggetti cambiano con il tempo e con la tecnica.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5074,7 +5074,7 @@
    ],
    "answerIndex": 1,
    "answer": "la tua crescita nel tempo",
-   "explanation": "La risposta corretta è 'la tua crescita nel tempo'.",
+   "explanation": "Il passeggino era adatto al tuo corpo di allora, la bicicletta a quello di oggi: la differenza fra i due misura quanto sei cresciuto.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5105,7 +5105,7 @@
    ],
    "answerIndex": 2,
    "answer": "che lo stile cambia nel tempo",
-   "explanation": "La risposta corretta è 'che lo stile cambia nel tempo'.",
+   "explanation": "Gli abiti seguono le mode e i materiali disponibili: confrontando quelli di epoche diverse si vede come cambia il modo di vestirsi.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5136,7 +5136,7 @@
    ],
    "answerIndex": 3,
    "answer": "nel tempo cambiano bisogni e oggetti",
-   "explanation": "La risposta corretta è 'nel tempo cambiano bisogni e oggetti'.",
+   "explanation": "Le case si costruiscono per rispondere ai bisogni di chi ci vive: cambiando i bisogni, cambiano stanze, impianti e oggetti.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5167,7 +5167,7 @@
    ],
    "answerIndex": 0,
    "answer": "conoscere la storia familiare",
-   "explanation": "La risposta corretta è 'conoscere la storia familiare'.",
+   "explanation": "I nonni hanno vissuto fatti che tu non puoi ricordare: il loro racconto è l'unico modo per conoscerli davvero.",
    "active": true,
    "tag": "storia_personale;famiglia;classe2",
    "tags": [
@@ -5198,7 +5198,7 @@
    ],
    "answerIndex": 1,
    "answer": "telefono a disco e smartphone",
-   "explanation": "La risposta corretta è 'telefono a disco e smartphone'.",
+   "explanation": "Il telefono a disco e lo smartphone fanno la stessa cosa in modi lontanissimi: sono l'esempio più chiaro di un oggetto che si è trasformato.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5229,7 +5229,7 @@
    ],
    "answerIndex": 2,
    "answer": "smartphone",
-   "explanation": "La risposta corretta è 'smartphone'.",
+   "explanation": "Lo smartphone esiste da meno di vent'anni: fra gli oggetti proposti è il più recente.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5260,7 +5260,7 @@
    ],
    "answerIndex": 3,
    "answer": "giradischi",
-   "explanation": "La risposta corretta è 'giradischi'.",
+   "explanation": "Il giradischi leggeva i dischi in vinile con una puntina: era il modo di ascoltare musica in casa prima delle cassette e del digitale.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5291,7 +5291,7 @@
    ],
    "answerIndex": 0,
    "answer": "email",
-   "explanation": "La risposta corretta è 'email'.",
+   "explanation": "L'email arriva in un istante e non ha bisogno di carta né di francobolli: ha preso il posto della lettera per la maggior parte dei messaggi.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5322,7 +5322,7 @@
    ],
    "answerIndex": 1,
    "answer": "osservare i cambiamenti",
-   "explanation": "La risposta corretta è 'osservare i cambiamenti'.",
+   "explanation": "Confrontare due foto dello stesso luogo a distanza di anni fa vedere che cosa è stato aggiunto, tolto o spostato.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5353,7 +5353,7 @@
    ],
    "answerIndex": 2,
    "answer": "calamaio",
-   "explanation": "La risposta corretta è 'calamaio'.",
+   "explanation": "Il calamaio conteneva l'inchiostro in cui si intingeva il pennino: era sul banco di ogni scolaro prima della penna a sfera.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5384,7 +5384,7 @@
    ],
    "answerIndex": 3,
    "answer": "gli strumenti cambiano nel tempo",
-   "explanation": "La risposta corretta è 'gli strumenti cambiano nel tempo'.",
+   "explanation": "Il pennino andava intinto nell'inchiostro a ogni riga, la biro scrive da sola: cambiando lo strumento è cambiato anche il modo di scrivere.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5415,7 +5415,7 @@
    ],
    "answerIndex": 0,
    "answer": "come giocavano i bambini nel passato",
-   "explanation": "La risposta corretta è 'come giocavano i bambini nel passato'.",
+   "explanation": "Un giocattolo di legno dice di che materiali si disponeva e con che cosa si giocava: era costruito per durare, spesso a mano.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5446,7 +5446,7 @@
    ],
    "answerIndex": 1,
    "answer": "somiglianze e differenze",
-   "explanation": "La risposta corretta è 'somiglianze e differenze'.",
+   "explanation": "Confrontando due biciclette si vede che cosa è rimasto — due ruote, i pedali — e che cosa è cambiato: materiali, freni, cambio.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5477,7 +5477,7 @@
    ],
    "answerIndex": 2,
    "answer": "il telefono",
-   "explanation": "La risposta corretta è 'il telefono'.",
+   "explanation": "Il telefono è passato da fare solo telefonate a fare foto, mappe e messaggi: è l'oggetto quotidiano che è cambiato di più.",
    "active": true,
    "tag": "oggetti;confronto;classe2",
    "tags": [
@@ -5508,7 +5508,7 @@
    ],
    "answerIndex": 3,
    "answer": "la nascita",
-   "explanation": "La risposta corretta è 'la nascita'.",
+   "explanation": "La nascita è il primo fatto della vita di una persona: tutto il resto viene necessariamente dopo.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5539,7 +5539,7 @@
    ],
    "answerIndex": 0,
    "answer": "i primi passi",
-   "explanation": "La risposta corretta è 'i primi passi'.",
+   "explanation": "I primi passi arrivano intorno all'anno di età: sono uno dei primi fatti della vita, subito dopo la nascita.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5570,7 +5570,7 @@
    ],
    "answerIndex": 1,
    "answer": "un trasloco importante",
-   "explanation": "La risposta corretta è 'un trasloco importante'.",
+   "explanation": "Il trasloco è un fatto avvenuto in un momento preciso e ha riguardato tutta la famiglia: sta bene su una linea del tempo familiare.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5601,7 +5601,7 @@
    ],
    "answerIndex": 2,
    "answer": "una piccola linea del tempo",
-   "explanation": "La risposta corretta è 'una piccola linea del tempo'.",
+   "explanation": "Ordinare le foto per anno è già costruire una linea del tempo: gli eventi sono disposti nell'ordine in cui sono accaduti.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5632,7 +5632,7 @@
    ],
    "answerIndex": 3,
    "answer": "foto con le date",
-   "explanation": "La risposta corretta è 'foto con le date'.",
+   "explanation": "La data scritta sulla foto dice quando è stata scattata: senza, l'ordine si potrebbe solo indovinare.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5663,7 +5663,7 @@
    ],
    "answerIndex": 0,
    "answer": "dopo di te",
-   "explanation": "La risposta corretta è 'dopo di te'.",
+   "explanation": "Chi nasce dopo occupa un posto più avanti sulla linea del tempo: l'ordine segue quello in cui i fatti sono avvenuti.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5694,7 +5694,7 @@
    ],
    "answerIndex": 1,
    "answer": "prima della tua nascita",
-   "explanation": "La risposta corretta è 'prima della tua nascita'.",
+   "explanation": "Se il matrimonio è avvenuto prima, sulla linea sta a sinistra della tua nascita: prima nel tempo, prima sulla linea.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5725,7 +5725,7 @@
    ],
    "answerIndex": 2,
    "answer": "ordinare gli eventi della famiglia",
-   "explanation": "La risposta corretta è 'ordinare gli eventi della famiglia'.",
+   "explanation": "La linea del tempo familiare dispone in ordine i fatti della famiglia: si vede a colpo d'occhio che cosa è venuto prima e che cosa dopo.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5756,7 +5756,7 @@
    ],
    "answerIndex": 3,
    "answer": "la data o il momento in cui sono avvenuti",
-   "explanation": "La risposta corretta è 'la data o il momento in cui sono avvenuti'.",
+   "explanation": "Per ordinare due fatti serve sapere quando sono avvenuti: senza la data o il momento, l'ordine non si può stabilire.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5787,7 +5787,7 @@
    ],
    "answerIndex": 0,
    "answer": "dopo la nascita",
-   "explanation": "La risposta corretta è 'dopo la nascita'.",
+   "explanation": "Si comincia la scuola intorno ai sei anni: viene per forza dopo la nascita, e dopo molti altri fatti della prima infanzia.",
    "active": true,
    "tag": "linea_del_tempo;famiglia;classe2",
    "tags": [
@@ -5818,7 +5818,7 @@
    ],
    "answerIndex": 1,
    "answer": "i vestiti di quando eri piccolo non ti vanno più",
-   "explanation": "La risposta corretta è 'i vestiti di quando eri piccolo non ti vanno più'.",
+   "explanation": "I vestiti sono fatti su una certa taglia: crescendo il corpo cambia misura e quelli di prima non vanno più bene.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -5849,7 +5849,7 @@
    ],
    "answerIndex": 2,
    "answer": "capire semplici testi",
-   "explanation": "La risposta corretta è 'capire semplici testi'.",
+   "explanation": "Saper leggere apre l'accesso a tutto ciò che è scritto: cartelli, libri, istruzioni. È un cambiamento che resta.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -5880,7 +5880,7 @@
    ],
    "answerIndex": 3,
    "answer": "alcune abitudini e luoghi quotidiani",
-   "explanation": "La risposta corretta è 'alcune abitudini e luoghi quotidiani'.",
+   "explanation": "Cambiando casa cambiano il percorso per la scuola, i negozi vicini e le persone che si incontrano: la vita quotidiana si riorganizza.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -5911,7 +5911,7 @@
    ],
    "answerIndex": 0,
    "answer": "un cambiamento dopo un fatto",
-   "explanation": "La risposta corretta è 'un cambiamento dopo un fatto'.",
+   "explanation": "L'oggetto riparato non è più come prima ma funziona di nuovo: si osserva un cambiamento avvenuto in seguito a un fatto preciso.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -5942,7 +5942,7 @@
    ],
    "answerIndex": 1,
    "answer": "possono cambiare nel tempo",
-   "explanation": "La risposta corretta è 'possono cambiare nel tempo'.",
+   "explanation": "Crescendo cambiano capacità e interessi: giochi che prima erano difficili diventano facili, e altri smettono di divertire.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -5973,7 +5973,7 @@
    ],
    "answerIndex": 2,
    "answer": "che alcune cose cambiano e altre restano",
-   "explanation": "La risposta corretta è 'che alcune cose cambiano e altre restano'.",
+   "explanation": "Il banco di oggi ha forme e materiali diversi, ma serve ancora a scrivere e appoggiare i libri: alcune cose cambiano, altre restano.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -6004,7 +6004,7 @@
    ],
    "answerIndex": 3,
    "answer": "un cambiamento nelle abitudini",
-   "explanation": "La risposta corretta è 'un cambiamento nelle abitudini'.",
+   "explanation": "Andare a piedi o in autobus è la stessa azione — raggiungere la scuola — fatta in un modo diverso: è cambiata l'abitudine, non lo scopo.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -6035,7 +6035,7 @@
    ],
    "answerIndex": 0,
    "answer": "Com'era prima e com'è adesso?",
-   "explanation": "La risposta corretta è \"Com'era prima e com'è adesso?\".",
+   "explanation": "Per riconoscere un cambiamento servono due momenti da confrontare: chiedersi com'era prima e com'è adesso è il modo di metterli a confronto.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
@@ -6066,7 +6066,7 @@
    ],
    "answerIndex": 1,
    "answer": "scarpe di quando eri piccolo e scarpe di oggi",
-   "explanation": "La risposta corretta è 'scarpe di quando eri piccolo e scarpe di oggi'.",
+   "explanation": "Le scarpe hanno una misura che segue il piede: confrontarle è il modo più diretto e concreto di misurare quanto sei cresciuto.",
    "active": true,
    "tag": "cambiamenti;causa_effetto;classe2",
    "tags": [
