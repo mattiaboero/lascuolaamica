@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.13.2 - 2026-09-09
+
+### Changed
+- **`json/changelog.json` consolidato a una voce per giorno: da 98 voci a 42, una per ciascuno dei 42 giorni.** L'elenco mostrato nella finestra Info aveva fino a 16 voci per lo stesso giorno (6 settembre), ognuna con una o due righe: chi lo apriva vedeva sedici blocchi identici nell'intestazione e doveva ricostruirsi da solo cosa fosse successo quel giorno.
+
+  I quindici giorni con piu' di una release sono stati riscritti a mano, non concatenati: le 22 righe del 6 settembre diventano 7, le 23 del 24 maggio diventano 6, le 13 del 25 maggio diventano 5. Niente e' stato buttato — le correzioni imparentate sono unite in una riga sola ("«Cancella dati locali» ora funziona davvero" tiene insieme il bug della conferma nascosta e i dati di Spacca-Muri che restavano sul dispositivo), e i lavori interni di un'intera giornata stanno in una riga di coda.
+
+  L'etichetta di un giorno con piu' release ora porta l'intervallo (`6 settembre 2026 · Release 4.12.38 – 4.12.62`). `scripts/check_update_log.js` legge la versione massima dell'etichetta, quindi continua a funzionare.
+
+### Notes
+- Bump necessario, non cosmetico: `json/changelog.json` e' un asset in precache, e senza cambio di versione chi ha gia' l'app installata avrebbe continuato a vedere l'elenco vecchio.
+- Il bump e' dello stesso giorno del 4.13.1, quindi non apre una voce nuova: l'etichetta di oggi diventa `Release 4.13.1 – 4.13.2`, coerente con la regola di una voce al giorno.
+- **Non toccati** i giorni che avevano gia' una voce sola, anche quando lunghi (27 aprile ha 11 righe, 10 aprile ne ha 8): erano gia' conformi alla regola, e riscriverli sarebbe stato rimaneggiare contenuto che nessuno ha segnalato.
+
 ## 4.13.1 - 2026-09-09
 
 ### Fixed

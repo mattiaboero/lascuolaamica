@@ -74,7 +74,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-09-07",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-09",
   "publisher": {
     "@id": "https://lascuolaamica.it/#organization"
   }
@@ -155,7 +155,7 @@
     }
   ],
   "datePublished": "2026-09-07",
-  "dateModified": "2026-09-08"
+  "dateModified": "2026-09-09"
 }
 </script>
 </head>
@@ -219,8 +219,12 @@
 
   <main id="contenuto-principale" aria-labelledby="mainTitle">
     <div class="bosco-stage">
-      <canvas class="bosco-canvas" id="boscoCanvas" width="800" height="500" tabindex="0"
-              aria-label="Bosco delle Lettere. Muoviti con le frecce o WASD, oppure tocca una destinazione. Porta al tabellone il cartello giusto; tornando sulla sua impronta a terra lo rimetti a posto. Puoi anche usare i pulsanti sotto la scena."></canvas>
+      <div class="bosco-scene">
+        <canvas class="bosco-canvas" id="boscoCanvas" width="800" height="500" tabindex="0"
+                aria-label="Bosco delle Lettere. Muoviti con le frecce o WASD, oppure tocca una destinazione. Porta al tabellone il cartello giusto; tornando sulla sua impronta a terra lo rimetti a posto. Puoi anche usare i pulsanti sotto la scena."></canvas>
+        <button type="button" class="bosco-btn bosco-onstage" id="boscoDeliver" data-action="deliver" hidden>Al tabellone →</button>
+        <button type="button" class="bosco-btn bosco-onstage" id="boscoNext" data-action="next-word" hidden>La prossima parola →</button>
+      </div>
 
       <div class="bosco-overlay" id="boscoOverlay" role="dialog" aria-modal="true" aria-labelledby="boscoOverlayTitle">
         <div class="bosco-overlay-card">
@@ -250,8 +254,6 @@
         <div class="bosco-actions">
           <button type="button" class="bosco-btn" id="boscoListen" data-action="listen">🔈 Ascolta</button>
           <div class="bosco-choices" id="boscoChoices" role="group" aria-label="Gruppi da scegliere"></div>
-          <button type="button" class="bosco-btn" id="boscoDeliver" data-action="deliver" hidden>Al tabellone →</button>
-          <button type="button" class="bosco-btn" id="boscoNext" data-action="next-word" hidden>La prossima parola →</button>
         </div>
       </div>
 
