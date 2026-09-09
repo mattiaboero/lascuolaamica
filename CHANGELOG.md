@@ -1,5 +1,55 @@
 # Changelog Repo
 
+## 4.13.11 - 2026-09-09
+
+Rilascio della campagna sulle istanze: 16 lotti, 960 domande lette su 2.388.
+Il modo `--famiglie` stampava due istanze per famiglia — bastano a giudicare la
+forma, identica dentro la famiglia, non i numeri, che cambiano da un'istanza
+all'altra. Il modo `--istanze` legge quelle rimaste.
+
+### Fixed
+- **La posizione della risposta non era casuale, ed e' il difetto peggiore
+  trovato in tutta la revisione.** In geografia la risposta era la prima opzione
+  nel **79%** delle domande: chi toccava sempre il primo pulsante passava la
+  materia senza saperne niente. In italiano il 46% in seconda, il 4% in quarta.
+  Sul banco intero 33,6 / 30,1 / 23,2 / 13,1% contro il 25% atteso, e fra le
+  domande numeriche la risposta era il numero piu' grande nel 48% dei casi.
+  Rimescolate le opzioni di tutte le 9.223 domande servite; ora ogni materia e'
+  al 25,0% esatto. Nuovo `scripts/check_answer_balance.js` in `npm run verify`.
+
+- **Domande senza nessuna risposta esatta fra le quattro.** 15 percentuali che
+  non davano un intero (`30% di 295 = 88` quando fa 88,5) e 5 trapezi la cui
+  area finiva con `,5` e la cui spiegazione ammetteva l'arrotondamento.
+
+- **Domande risolvibili senza sapere la materia.** 52 di geografia con la
+  risposta gia' scritta nella consegna ("Se la palla e' sopra la sedia, quale
+  espressione descrive la posizione?"), riscritte sul modello delle 49 buone
+  della stessa area; 46 sequenze con distrattori gia' visibili fra i termini,
+  otto delle quali con tre su tre.
+
+- **Dati fuori scala**: 9 campi da calcetto da 8x4 metri, 8 campi che rendevano
+  13-90 kg di grano per ettaro, 20 problemi con la frutta a 9-13 euro al kg, 5
+  scuole con classi da 5 alunni, atleti a 0,66 km/h, figurine e biscotti venduti
+  a 24 euro l'uno, prezzi di libri e zaini da 190-210 euro.
+
+- **Spiegazioni che non spiegavano**: 41 che non dicevano mai il risultato, 10
+  che dicevano solo "identifichiamo i dati e l'operazione giusta", 2 che
+  scomponevano un numero in se stesso piu' zero.
+
+### Changed
+- **309 spiegazioni riscritte a mano**, fra le 1.753 che si limitavano a
+  ripetere la risposta (il 19% del banco). Educazione civica e' la prima materia
+  a non averne piu' nessuna. Restano 1.444: scienze 94, geografia 665, storia
+  685, e continuano a blocchi nei lotti successivi.
+
+### Notes
+- Regole: GRAMMATICA da 83 a 87, `check_plausibility` da 17 a 23, piu' i
+  controlli programmatici sulle opzioni e il nuovo controllo sull'equilibrio
+  delle risposte. Tutte verificate reintroducendo il difetto.
+- Due errori miei, trovati e corretti: due regole finite in doppio in
+  `lint_content.js` dopo uno script fallito a meta', e una regola inserita
+  dentro `checkQuestion` invece che nell'array (`SyntaxError` al primo lint).
+
 ## Non rilasciato - 2026-09-09
 
 ### Notes
