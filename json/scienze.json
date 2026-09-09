@@ -1009,7 +1009,7 @@
    ],
    "answerIndex": 2,
    "answer": "legno",
-   "explanation": "La risposta corretta è 'legno'.",
+   "explanation": "Il legno galleggia perché a parità di volume pesa meno dell'acqua: l'acqua lo spinge verso l'alto più di quanto lui prema verso il basso.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1040,7 +1040,7 @@
    ],
    "answerIndex": 3,
    "answer": "vetro",
-   "explanation": "La risposta corretta è 'vetro'.",
+   "explanation": "Il vetro lascia passare la luce quasi tutta: per questo da una finestra si vede fuori e dentro entra chiarore anche a porte chiuse.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1071,7 +1071,7 @@
    ],
    "answerIndex": 0,
    "answer": "carta",
-   "explanation": "La risposta corretta è 'carta'.",
+   "explanation": "La carta si ottiene dalle fibre del legno: è leggera, si piega, si taglia e trattiene l'inchiostro, tutto quello che serve a un quaderno.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1102,7 +1102,7 @@
    ],
    "answerIndex": 1,
    "answer": "plastica",
-   "explanation": "La risposta corretta è 'plastica'.",
+   "explanation": "La plastica è leggera e non si rompe cadendo: per una bottiglia da portare in giro conta più del vetro, che pesa e si spezza.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -1350,7 +1350,7 @@
    ],
    "answerIndex": 3,
    "answer": "fioriscono",
-   "explanation": "La risposta corretta è 'fioriscono'.",
+   "explanation": "In primavera le giornate si allungano e la temperatura sale: le piante ricevono più luce e calore e questo fa aprire i fiori.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1381,7 +1381,7 @@
    ],
    "answerIndex": 0,
    "answer": "caldo",
-   "explanation": "La risposta corretta è 'caldo'.",
+   "explanation": "D'estate il Sole resta alto e per molte ore: i suoi raggi arrivano più diretti e scaldano di più la stessa porzione di terreno.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1412,7 +1412,7 @@
    ],
    "answerIndex": 1,
    "answer": "cadono",
-   "explanation": "La risposta corretta è 'cadono'.",
+   "explanation": "In autunno la pianta smette di nutrire le foglie per prepararsi al freddo: la clorofilla sparisce, restano i colori gialli e rossi e poi le foglie cadono.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1443,7 +1443,7 @@
    ],
    "answerIndex": 2,
    "answer": "freddo",
-   "explanation": "La risposta corretta è 'freddo'.",
+   "explanation": "D'inverno il Sole resta basso e per poche ore, e i suoi raggi arrivano inclinati: la stessa luce si distribuisce su più superficie e scalda meno.",
    "active": true,
    "tag": "stagioni;ambiente;classe2",
    "tags": [
@@ -1939,7 +1939,7 @@
    ],
    "answerIndex": 0,
    "answer": "vario ed equilibrato",
-   "explanation": "La risposta corretta è 'vario ed equilibrato'.",
+   "explanation": "Nessun alimento contiene tutto quello che serve. Mangiare vario fa arrivare sostanze diverse; equilibrato vuol dire nelle giuste quantità.",
    "active": true,
    "tag": "salute;alimentazione;classe2",
    "tags": [
@@ -2001,7 +2001,7 @@
    ],
    "answerIndex": 2,
    "answer": "funzionare bene",
-   "explanation": "La risposta corretta è 'funzionare bene'.",
+   "explanation": "L'acqua trasporta le sostanze nutritive, elimina gli scarti e regola la temperatura del corpo: senza, nessuno di questi lavori funziona bene.",
    "active": true,
    "tag": "salute;alimentazione;classe2",
    "tags": [
@@ -2504,7 +2504,7 @@
    ],
    "answerIndex": 2,
    "answer": "giornale",
-   "explanation": "La risposta corretta è 'giornale'.",
+   "explanation": "Il giornale è di carta perché deve costare poco, essere leggero e stamparsi in fretta in tantissime copie.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2535,7 +2535,7 @@
    ],
    "answerIndex": 3,
    "answer": "tavolo",
-   "explanation": "La risposta corretta è 'tavolo'.",
+   "explanation": "Il legno è resistente e si lavora facilmente: regge il peso di un tavolo e si può tagliare e incollare nella forma che serve.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2566,7 +2566,7 @@
    ],
    "answerIndex": 0,
    "answer": "bottiglietta",
-   "explanation": "La risposta corretta è 'bottiglietta'.",
+   "explanation": "La bottiglietta è di plastica perché deve essere leggera da portare, non rompersi se cade e costare poco.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2597,7 +2597,7 @@
    ],
    "answerIndex": 1,
    "answer": "metallo",
-   "explanation": "La risposta corretta è 'metallo'.",
+   "explanation": "I metalli sono duri e resistenti: un chiodo di metallo entra nel legno senza piegarsi, cosa che una scheggia di legno non farebbe.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2628,7 +2628,7 @@
    ],
    "answerIndex": 2,
    "answer": "lana",
-   "explanation": "La risposta corretta è 'lana'.",
+   "explanation": "La lana è fatta di fibre sottili e ricce che trattengono l'aria: è quell'aria a tenere caldo, e a renderla morbida al tatto.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -2659,7 +2659,7 @@
    ],
    "answerIndex": 3,
    "answer": "spugna",
-   "explanation": "La risposta corretta è 'spugna'.",
+   "explanation": "La spugna è piena di piccoli fori comunicanti: l'acqua vi entra e ci resta, per questo ne trattiene molte volte il proprio peso.",
    "active": true,
    "tag": "materiali;proprieta;classe2",
    "tags": [
@@ -4302,7 +4302,7 @@
    ],
    "answerIndex": 2,
    "answer": "inverno",
-   "explanation": "La risposta corretta è 'inverno'.",
+   "explanation": "Perché nevichi la temperatura deve stare intorno o sotto lo zero: in inverno il Sole resta basso, scalda poco e succede più spesso.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4332,7 +4332,7 @@
    ],
    "answerIndex": 3,
    "answer": "udito",
-   "explanation": "La risposta corretta è 'udito'.",
+   "explanation": "L'udito raccoglie le vibrazioni dell'aria prodotte dalla campanella e le trasforma in suoni che il cervello riconosce.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4362,7 +4362,7 @@
    ],
    "answerIndex": 0,
    "answer": "vista",
-   "explanation": "La risposta corretta è 'vista'.",
+   "explanation": "La vista raccoglie la luce con gli occhi. L'arcobaleno si vede perché le gocce d'acqua separano la luce del Sole nei suoi colori.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4392,7 +4392,7 @@
    ],
    "answerIndex": 1,
    "answer": "olfatto",
-   "explanation": "La risposta corretta è 'olfatto'.",
+   "explanation": "L'olfatto sente le sostanze profumate che il fiore libera nell'aria e che arrivano al naso in piccolissime quantità.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4422,7 +4422,7 @@
    ],
    "answerIndex": 2,
    "answer": "tatto",
-   "explanation": "La risposta corretta è 'tatto'.",
+   "explanation": "Il tatto, attraverso i recettori della pelle, avverte anche la temperatura: per questo la mano capisce subito se l'acqua è fredda.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4452,7 +4452,7 @@
    ],
    "answerIndex": 3,
    "answer": "gusto",
-   "explanation": "La risposta corretta è 'gusto'.",
+   "explanation": "Il gusto riconosce i sapori con la lingua, ma lavora insieme all'olfatto: con il naso chiuso una mela sa di molto meno.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4482,7 +4482,7 @@
    ],
    "answerIndex": 0,
    "answer": "mangiare frutta",
-   "explanation": "La risposta corretta è 'mangiare frutta'.",
+   "explanation": "La frutta porta vitamine, acqua e fibre che il corpo non produce da solo: aiuta a crescere e a difendersi dalle malattie.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4512,7 +4512,7 @@
    ],
    "answerIndex": 1,
    "answer": "acqua",
-   "explanation": "La risposta corretta è 'acqua'.",
+   "explanation": "Il corpo è fatto per la maggior parte d'acqua e ne perde in continuazione con il sudore e il respiro: bisogna rimetterla ogni giorno.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4542,7 +4542,7 @@
    ],
    "answerIndex": 2,
    "answer": "chiudere il rubinetto",
-   "explanation": "La risposta corretta è 'chiudere il rubinetto'.",
+   "explanation": "Il rubinetto lasciato aperto mentre non lo usi manda litri d'acqua direttamente nello scarico. Chiuderlo è il gesto che ne risparmia di più.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -4572,7 +4572,7 @@
    ],
    "answerIndex": 3,
    "answer": "raccogliere un rifiuto da terra",
-   "explanation": "La risposta corretta è 'raccogliere un rifiuto da terra'.",
+   "explanation": "Un rifiuto raccolto non viene mangiato dagli animali e non finisce nei fiumi. È un gesto piccolo che toglie un danno già in corso.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -5210,7 +5210,7 @@
    ],
    "answerIndex": 1,
    "answer": "nuvole",
-   "explanation": "La risposta corretta è 'nuvole'.",
+   "explanation": "Le nuvole si vedono a occhio nudo dalla finestra e cambiano in fretta: sono l'indizio più semplice per capire che tempo sta arrivando.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5241,7 +5241,7 @@
    ],
    "answerIndex": 2,
    "answer": "piova",
-   "explanation": "La risposta corretta è 'piova'.",
+   "explanation": "Le nuvole scure sono cariche d'acqua e lasciano passare poca luce. Se cadono già delle gocce, la pioggia è cominciata.",
    "active": true,
    "tag": "scienze;classe2",
    "tags": [
@@ -5271,7 +5271,7 @@
    ],
    "answerIndex": 3,
    "answer": "rispettare il loro ambiente",
-   "explanation": "La risposta corretta è 'rispettare il loro ambiente'.",
+   "explanation": "Un animale selvatico ha bisogno del suo ambiente per mangiare e nascondersi. Rispettarlo aiuta più che dargli da mangiare o portarlo via.",
    "active": true,
    "tag": "ambiente;stagioni;classe2",
    "tags": [
@@ -5302,7 +5302,7 @@
    ],
    "answerIndex": 0,
    "answer": "vetro",
-   "explanation": "La risposta corretta è 'vetro'.",
+   "explanation": "Il vetro è rigido: non si piega per assorbire il colpo, quindi tutta la forza dell'urto lo spezza. Plastica e legno invece cedono un poco.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -5332,7 +5332,7 @@
    ],
    "answerIndex": 1,
    "answer": "gomma",
-   "explanation": "La risposta corretta è 'gomma'.",
+   "explanation": "La gomma è morbida e appiccicosa quanto basta: strofinandola stacca dalla carta i granelli di grafite lasciati dalla matita e se li porta via.",
    "active": true,
    "tag": "materia;classe2",
    "tags": [
@@ -5362,7 +5362,7 @@
    ],
    "answerIndex": 2,
    "answer": "lavarsi spesso le mani",
-   "explanation": "La risposta corretta è 'lavarsi spesso le mani'.",
+   "explanation": "Sulle mani si raccolgono i germi di tutto ciò che tocchiamo, e da lì arrivano a bocca e occhi. Lavarle spesso interrompe quel passaggio.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -7018,7 +7018,7 @@
    ],
    "answerIndex": 2,
    "answer": "serve alla vita",
-   "explanation": "La risposta corretta è 'serve alla vita'.",
+   "explanation": "L'acqua entra nelle cellule di ogni essere vivente, trasporta le sostanze nutritive e porta via gli scarti. Senza acqua nessun organismo funziona.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7048,7 +7048,7 @@
    ],
    "answerIndex": 3,
    "answer": "precipitazione",
-   "explanation": "La risposta corretta è 'precipitazione'.",
+   "explanation": "Il ciclo è un giro chiuso: l'acqua evapora, in alto si condensa in nuvole e infine ricade come pioggia, neve o grandine. Poi ricomincia.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7078,7 +7078,7 @@
    ],
    "answerIndex": 0,
    "answer": "adatta da bere",
-   "explanation": "La risposta corretta è 'adatta da bere'.",
+   "explanation": "Potabile vuol dire che si può bere senza ammalarsi: è acqua controllata, senza microbi pericolosi né sostanze nocive. Non basta che sia limpida.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7108,7 +7108,7 @@
    ],
    "answerIndex": 1,
    "answer": "il mare",
-   "explanation": "La risposta corretta è 'il mare'.",
+   "explanation": "L'acqua scorre sempre verso il basso: i fiumi seguono la pendenza dalla montagna alla pianura e finiscono in mare o in un lago.",
    "active": true,
    "tag": "acqua;classe3",
    "tags": [
@@ -7138,7 +7138,7 @@
    ],
    "answerIndex": 0,
    "answer": "spazio",
-   "explanation": "La risposta corretta è 'spazio'.",
+   "explanation": "L'aria sembra non esserci ma occupa spazio: un bicchiere capovolto immerso nell'acqua non si riempie, perché l'aria dentro non lascia entrare l'acqua.",
    "active": true,
    "tag": "aria;suolo;classe3",
    "tags": [
@@ -7535,7 +7535,7 @@
    ],
    "answerIndex": 1,
    "answer": "cane",
-   "explanation": "La risposta corretta è 'cane'.",
+   "explanation": "I vertebrati hanno uno scheletro interno con la colonna vertebrale. Il cane ce l'ha, e per questo può crescere grande restando in piedi.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7566,7 +7566,7 @@
    ],
    "answerIndex": 2,
    "answer": "farfalla",
-   "explanation": "La risposta corretta è 'farfalla'.",
+   "explanation": "Gli invertebrati non hanno colonna vertebrale. La farfalla è protetta da un rivestimento esterno rigido, non da uno scheletro interno.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7597,7 +7597,7 @@
    ],
    "answerIndex": 3,
    "answer": "piume",
-   "explanation": "La risposta corretta è 'piume'.",
+   "explanation": "Le piume sono leggere e trattengono l'aria: servono a volare e a tenere il calore. Nessun altro gruppo di animali le possiede.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7628,7 +7628,7 @@
    ],
    "answerIndex": 0,
    "answer": "branchie",
-   "explanation": "La risposta corretta è 'branchie'.",
+   "explanation": "Nell'acqua c'è ossigeno disciolto. Le branchie lo catturano al passaggio dell'acqua, facendo il lavoro che i polmoni fanno con l'aria.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7659,7 +7659,7 @@
    ],
    "answerIndex": 1,
    "answer": "latte",
-   "explanation": "La risposta corretta è 'latte'.",
+   "explanation": "Il latte prodotto dalla madre è ciò che definisce i mammiferi: nutre i piccoli finché non sono capaci di procurarsi il cibo da soli.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7690,7 +7690,7 @@
    ],
    "answerIndex": 2,
    "answer": "in acqua e sulla terra",
-   "explanation": "La risposta corretta è 'in acqua e sulla terra'.",
+   "explanation": "Gli anfibi nascono in acqua e respirano con le branchie; da adulti sviluppano i polmoni e vivono anche a terra, ma con la pelle sempre umida.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
@@ -7721,7 +7721,7 @@
    ],
    "answerIndex": 3,
    "answer": "squame",
-   "explanation": "La risposta corretta è 'squame'.",
+   "explanation": "Le squame dei rettili sono impermeabili e proteggono dalla disidratazione: è ciò che permette a molti di vivere in ambienti secchi.",
    "active": true,
    "tag": "animali;classificazione;classe3",
    "tags": [
