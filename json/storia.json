@@ -19610,7 +19610,7 @@
    ],
    "answerIndex": 1,
    "answer": "scambi commerciali e discussioni",
-   "explanation": "La risposta corretta è 'scambi commerciali e discussioni'.",
+   "explanation": "Nell'agorà si teneva il mercato e insieme si discuteva degli affari della polis: era piazza commerciale e politica allo stesso tempo.",
    "active": true,
    "tag": "grecia;eredità;classe5",
    "tags": [
@@ -19641,7 +19641,7 @@
    ],
    "answerIndex": 2,
    "answer": "risposte religiose e sacre",
-   "explanation": "La risposta corretta è 'risposte religiose e sacre'.",
+   "explanation": "L'oracolo, come quello di Delfi, dava le risposte del dio a chi lo interrogava: era un luogo sacro, non un tribunale né un mercato.",
    "active": true,
    "tag": "grecia;eredità;classe5",
    "tags": [
@@ -19672,7 +19672,7 @@
    ],
    "answerIndex": 3,
    "answer": "teatro",
-   "explanation": "La risposta corretta è 'teatro'.",
+   "explanation": "Tragedie e commedie si rappresentavano nel teatro, costruito a gradinate sul pendio di una collina.",
    "active": true,
    "tag": "grecia;eredità;classe5",
    "tags": [
@@ -19703,7 +19703,7 @@
    ],
    "answerIndex": 0,
    "answer": "contatti e commerci",
-   "explanation": "La risposta corretta è 'contatti e commerci'.",
+   "explanation": "La Grecia è fatta di coste e isole: il mare permetteva di raggiungere altre polis e altri popoli, favorendo scambi e contatti.",
    "active": true,
    "tag": "grecia;eredità;classe5",
    "tags": [
@@ -19734,7 +19734,7 @@
    ],
    "answerIndex": 1,
    "answer": "viaggiavano e fondavano nuove città",
-   "explanation": "La risposta corretta è 'viaggiavano e fondavano nuove città'.",
+   "explanation": "Le città della Magna Grecia furono fondate da coloni partiti dalla madrepatria: i Greci navigavano e fondavano nuove città lontane.",
    "active": true,
    "tag": "grecia;eredità;classe5",
    "tags": [
@@ -19765,7 +19765,7 @@
    ],
    "answerIndex": 2,
    "answer": "incontri e mescolanze",
-   "explanation": "La risposta corretta è 'incontri e mescolanze'.",
+   "explanation": "Nei territori conquistati Greci e popoli orientali vissero insieme: lingue, culti e arti si mescolarono, ed è questo l'ellenismo.",
    "active": true,
    "tag": "grecia;eredità;classe5",
    "tags": [
@@ -19796,7 +19796,7 @@
    ],
    "answerIndex": 1,
    "answer": "popoli italici",
-   "explanation": "La risposta corretta è 'popoli italici'.",
+   "explanation": "Prima di Roma la penisola era abitata da molti popoli italici: Latini, Sabini, Sanniti, Umbri e altri, ciascuno con lingua e usanze proprie.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -19827,7 +19827,7 @@
    ],
    "answerIndex": 2,
    "answer": "Magna Grecia",
-   "explanation": "La risposta corretta è 'Magna Grecia'.",
+   "explanation": "Le colonie greche del sud Italia e della Sicilia erano tante e prospere: quell'area fu detta Magna Grecia, Grecia grande.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -19858,7 +19858,7 @@
    ],
    "answerIndex": 3,
    "answer": "Etruria",
-   "explanation": "La risposta corretta è 'Etruria'.",
+   "explanation": "L'Etruria corrisponde all'incirca all'attuale Toscana con parti di Lazio e Umbria: è la terra degli Etruschi.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -19889,7 +19889,7 @@
    ],
    "answerIndex": 0,
    "answer": "artigiani e commercianti",
-   "explanation": "La risposta corretta è 'artigiani e commercianti'.",
+   "explanation": "Gli Etruschi lavoravano i metalli delle loro miniere e li commerciavano per mare: erano artigiani e mercanti.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -19920,7 +19920,7 @@
    ],
    "answerIndex": 1,
    "answer": "romana",
-   "explanation": "La risposta corretta è 'romana'.",
+   "explanation": "Roma ereditò dagli Etruschi opere idrauliche, simboli del potere e riti religiosi: la loro influenza fu profonda.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -19951,7 +19951,7 @@
    ],
    "answerIndex": 2,
    "answer": "indipendente e ben organizzata",
-   "explanation": "La risposta corretta è 'indipendente e ben organizzata'.",
+   "explanation": "Le città etrusche, come Tarquinia e Veio, erano indipendenti l'una dall'altra, con mura, strade e sistemi di scolo delle acque.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -19982,7 +19982,7 @@
    ],
    "answerIndex": 3,
    "answer": "metalli",
-   "explanation": "La risposta corretta è 'metalli'.",
+   "explanation": "L'Etruria era ricca di miniere, soprattutto di ferro e rame: gli Etruschi divennero abilissimi nel lavorare i metalli.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -20013,7 +20013,7 @@
    ],
    "answerIndex": 0,
    "answer": "ai segni della natura e agli auspici",
-   "explanation": "La risposta corretta è 'ai segni della natura e agli auspici'.",
+   "explanation": "Gli Etruschi credevano che gli dèi manifestassero la loro volontà con segni: il volo degli uccelli, i fulmini, le viscere degli animali.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -20044,7 +20044,7 @@
    ],
    "answerIndex": 1,
    "answer": "città dei morti con tombe",
-   "explanation": "La risposta corretta è 'città dei morti con tombe'.",
+   "explanation": "Necropoli significa città dei morti: erano vere aree funerarie, con tombe disposte lungo strade come in un abitato.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -20075,7 +20075,7 @@
    ],
    "answerIndex": 2,
    "answer": "greco",
-   "explanation": "La risposta corretta è 'greco'.",
+   "explanation": "Gli Etruschi adottarono l'alfabeto greco, appreso dalle colonie del sud, adattandolo alla loro lingua. Da lì derivò anche quello latino.",
    "active": true,
    "tag": "etruschi;italia_antica;classe5",
    "tags": [
@@ -20106,7 +20106,7 @@
    ],
    "answerIndex": 3,
    "answer": "colline",
-   "explanation": "La risposta corretta è 'colline'.",
+   "explanation": "Le città etrusche sorgevano su colline e alture: posizioni facili da difendere e al riparo dalle acque stagnanti.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20137,7 +20137,7 @@
    ],
    "answerIndex": 0,
    "answer": "buone capacità tecniche",
-   "explanation": "La risposta corretta è 'buone capacità tecniche'.",
+   "explanation": "Strade, canali di drenaggio e opere di bonifica mostrano che gli Etruschi padroneggiavano tecniche costruttive avanzate.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20168,7 +20168,7 @@
    ],
    "answerIndex": 1,
    "answer": "mare",
-   "explanation": "La risposta corretta è 'mare'.",
+   "explanation": "Gli Etruschi commerciavano per mare, lungo il Tirreno, scambiando metalli con Greci e Fenici.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20199,7 +20199,7 @@
    ],
    "answerIndex": 2,
    "answer": "la vita e le credenze dei defunti",
-   "explanation": "La risposta corretta è 'la vita e le credenze dei defunti'.",
+   "explanation": "Nelle tombe si trovano oggetti d'uso e affreschi con banchetti e danze: raccontano come vivevano gli Etruschi e che cosa credevano della morte.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20230,7 +20230,7 @@
    ],
    "answerIndex": 3,
    "answer": "Latini",
-   "explanation": "La risposta corretta è 'Latini'.",
+   "explanation": "I Latini abitavano il Lazio e da loro nacque Roma. Egizi, Fenici e Persiani non erano popoli italici.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20261,7 +20261,7 @@
    ],
    "answerIndex": 0,
    "answer": "cultura e commerci greci",
-   "explanation": "La risposta corretta è 'cultura e commerci greci'.",
+   "explanation": "Con i coloni greci arrivarono in Italia la loro lingua, i loro dèi, l'arte e le rotte commerciali.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20292,7 +20292,7 @@
    ],
    "answerIndex": 1,
    "answer": "gli Etruschi",
-   "explanation": "La risposta corretta è 'gli Etruschi'.",
+   "explanation": "Dagli Etruschi Roma prese i simboli del potere, come i fasci littori, e pratiche religiose come l'interpretazione dei presagi.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20323,7 +20323,7 @@
    ],
    "answerIndex": 2,
    "answer": "segni e presagi",
-   "explanation": "La risposta corretta è 'segni e presagi'.",
+   "explanation": "L'aruspice era il sacerdote che leggeva la volontà degli dèi nei segni, soprattutto nelle viscere degli animali sacrificati.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20354,7 +20354,7 @@
    ],
    "answerIndex": 3,
    "answer": "tombe ricche e decorate",
-   "explanation": "La risposta corretta è 'tombe ricche e decorate'.",
+   "explanation": "Le tombe ricche, decorate con affreschi e piene di oggetti, sono il segno più caratteristico degli Etruschi.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20385,7 +20385,7 @@
    ],
    "answerIndex": 0,
    "answer": "aiuta a capire le radici di Roma",
-   "explanation": "La risposta corretta è 'aiuta a capire le radici di Roma'.",
+   "explanation": "Roma nacque in un'Italia già abitata dagli Etruschi e ne ereditò tecniche, riti e simboli: studiarli spiega da dove viene Roma.",
    "active": true,
    "tag": "etruschi;cultura;classe5",
    "tags": [
@@ -20416,7 +20416,7 @@
    ],
    "answerIndex": 1,
    "answer": "entrambi partecipano a scambi nel Mediterraneo",
-   "explanation": "La risposta corretta è 'entrambi partecipano a scambi nel Mediterraneo'.",
+   "explanation": "Greci d'Italia ed Etruschi navigavano entrambi e commerciavano nel Mediterraneo: talvolta come partner, talvolta come rivali.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20447,7 +20447,7 @@
    ],
    "answerIndex": 2,
    "answer": "luogo di incontri tra popoli",
-   "explanation": "La risposta corretta è 'luogo di incontri tra popoli'.",
+   "explanation": "In pochi secoli la penisola ospitò Italici, Etruschi, Greci e Fenici: era un crocevia di popoli che si incontravano e si scambiavano tecniche e culti.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20478,7 +20478,7 @@
    ],
    "answerIndex": 3,
    "answer": "centrale",
-   "explanation": "La risposta corretta è 'centrale'.",
+   "explanation": "L'Etruria occupava l'Italia centrale, fra il Tirreno, l'Arno e il Tevere.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20509,7 +20509,7 @@
    ],
    "answerIndex": 0,
    "answer": "visiva e materiale",
-   "explanation": "La risposta corretta è 'visiva e materiale'.",
+   "explanation": "La tomba è un oggetto concreto, quindi fonte materiale, e i suoi affreschi comunicano con le immagini, quindi fonte visiva.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20540,7 +20540,7 @@
    ],
    "answerIndex": 1,
    "answer": "precede e influenza Roma",
-   "explanation": "La risposta corretta è 'precede e influenza Roma'.",
+   "explanation": "Gli Etruschi dominavano l'Italia centrale prima che Roma crescesse, e Roma ne assorbì tecniche, riti e simboli.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20571,7 +20571,7 @@
    ],
    "answerIndex": 2,
    "answer": "città indipendenti",
-   "explanation": "La risposta corretta è 'città indipendenti'.",
+   "explanation": "Le città etrusche erano autonome, ciascuna con il proprio governo, e si univano solo in leghe per motivi religiosi o militari.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20602,7 +20602,7 @@
    ],
    "answerIndex": 3,
    "answer": "interpretare i segni degli dèi",
-   "explanation": "La risposta corretta è 'interpretare i segni degli dèi'.",
+   "explanation": "La religione etrusca si fondava sull'interpretazione dei segni con cui gli dèi manifestavano la loro volontà: era compito degli aruspici.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -20633,7 +20633,7 @@
    ],
    "answerIndex": 0,
    "answer": "sviluppare artigianato e commercio",
-   "explanation": "La risposta corretta è 'sviluppare artigianato e commercio'.",
+   "explanation": "Il ferro e il rame estratti dalle miniere alimentavano le botteghe artigiane e diventavano merce da vendere via mare.",
    "active": true,
    "tag": "etruschi;sintesi;classe5",
    "tags": [
@@ -22783,7 +22783,7 @@
    ],
    "answerIndex": 1,
    "answer": "Augusto",
-   "explanation": "La risposta corretta è 'Augusto'.",
+   "explanation": "Augusto fu il primo imperatore: Cesare fu ucciso prima di diventarlo, e Romolo appartiene alle origini leggendarie della città.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -22814,7 +22814,7 @@
    ],
    "answerIndex": 2,
    "answer": "Impero",
-   "explanation": "La risposta corretta è 'Impero'.",
+   "explanation": "Con Augusto la repubblica finisce e comincia l'impero, in cui il potere è concentrato in un solo uomo.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -22845,7 +22845,7 @@
    ],
    "answerIndex": 3,
    "answer": "un lungo periodo di relativa pace interna",
-   "explanation": "La risposta corretta è 'un lungo periodo di relativa pace interna'.",
+   "explanation": "La pax romana fu il lungo periodo, iniziato con Augusto, in cui l'impero conobbe pace interna, commerci fiorenti e poche guerre civili.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -22876,7 +22876,7 @@
    ],
    "answerIndex": 0,
    "answer": "strade e acquedotti",
-   "explanation": "La risposta corretta è 'strade e acquedotti'.",
+   "explanation": "Strade e acquedotti tenevano insieme l'impero: le prime muovevano eserciti e merci, i secondi rifornivano d'acqua le città.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -22907,7 +22907,7 @@
    ],
    "answerIndex": 1,
    "answer": "portare l'acqua alle città",
-   "explanation": "La risposta corretta è \"portare l'acqua alle città\".",
+   "explanation": "L'acquedotto portava l'acqua dalle sorgenti fino alle fontane e alle terme delle città, sfruttando una lievissima pendenza.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -22938,7 +22938,7 @@
    ],
    "answerIndex": 2,
    "answer": "bagno, incontro e svago",
-   "explanation": "La risposta corretta è 'bagno, incontro e svago'.",
+   "explanation": "Le terme non erano solo bagni: vi si andava a incontrarsi, fare esercizio e conversare. Erano il centro della vita sociale.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -22969,7 +22969,7 @@
    ],
    "answerIndex": 3,
    "answer": "anfiteatro romano",
-   "explanation": "La risposta corretta è 'anfiteatro romano'.",
+   "explanation": "Il Colosseo è l'anfiteatro Flavio: un edificio romano a pianta ellittica per i giochi e i combattimenti.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -23000,7 +23000,7 @@
    ],
    "answerIndex": 0,
    "answer": "vasti",
-   "explanation": "La risposta corretta è 'vasti'.",
+   "explanation": "L'impero arrivò a comprendere tutto il Mediterraneo, dalla Britannia all'Egitto: territori vastissimi.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -23031,7 +23031,7 @@
    ],
    "answerIndex": 1,
    "answer": "Roma",
-   "explanation": "La risposta corretta è 'Roma'.",
+   "explanation": "Il latino era la lingua di Roma e si diffuse in tutto l'impero: da esso derivano italiano, francese, spagnolo e altre lingue.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -23062,7 +23062,7 @@
    ],
    "answerIndex": 2,
    "answer": "soldati dell'esercito romano",
-   "explanation": "La risposta corretta è \"soldati dell'esercito romano\".",
+   "explanation": "La legione era l'unità dell'esercito romano, formata da alcune migliaia di soldati.",
    "active": true,
    "tag": "roma;impero;classe5",
    "tags": [
@@ -23093,7 +23093,7 @@
    ],
    "answerIndex": 3,
    "answer": "strade, porti e ordine nei territori",
-   "explanation": "La risposta corretta è 'strade, porti e ordine nei territori'.",
+   "explanation": "Strade sicure, porti attrezzati e un'unica autorità che garantiva l'ordine rendevano facile spostare merci in tutto l'impero.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23125,7 +23125,7 @@
    ],
    "answerIndex": 0,
    "answer": "foro, terme e anfiteatro",
-   "explanation": "La risposta corretta è 'foro, terme e anfiteatro'.",
+   "explanation": "Foro, terme e anfiteatro erano gli edifici tipici di ogni città romana, ripetuti dalla Britannia all'Africa.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23157,7 +23157,7 @@
    ],
    "answerIndex": 1,
    "answer": "vita pubblica, politica e commerciale",
-   "explanation": "La risposta corretta è 'vita pubblica, politica e commerciale'.",
+   "explanation": "Il foro era la piazza principale: vi si trovavano i templi, i tribunali e i mercati, cioè la vita pubblica, politica e commerciale.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23189,7 +23189,7 @@
    ],
    "answerIndex": 2,
    "answer": "ponti, strade e acquedotti",
-   "explanation": "La risposta corretta è 'ponti, strade e acquedotti'.",
+   "explanation": "Ponti, strade lastricate e acquedotti su arcate mostrano l'ingegneria romana: molte di quelle opere reggono ancora oggi.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23221,7 +23221,7 @@
    ],
    "answerIndex": 3,
    "answer": "a sempre più abitanti dell'impero",
-   "explanation": "La risposta corretta è \"a sempre più abitanti dell'impero\".",
+   "explanation": "La cittadinanza fu estesa via via a nuovi popoli, fino all'editto del 212 d.C. che la concesse a quasi tutti gli abitanti liberi dell'impero.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [
@@ -23253,7 +23253,7 @@
    ],
    "answerIndex": 0,
    "answer": "da diverse province",
-   "explanation": "La risposta corretta è 'da diverse province'.",
+   "explanation": "Roma si nutriva del grano dell'Egitto e dell'Africa, dell'olio della Spagna, del vino della Gallia: i prodotti arrivavano da tutte le province.",
    "active": true,
    "tag": "roma;impero;vita_quotidiana;classe5",
    "tags": [

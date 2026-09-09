@@ -610,6 +610,17 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
     if (estranea) {
       errors.push({ level: 'error', field: 'text', msg: `lettera estranea all'alfabeto italiano: "${estranea[0]}" (probabile carattere sostituito per errore)` });
     }
+    // Scrivendo le spiegazioni di storia mi e' finito dentro un soft hyphen
+    // (U+00AD) in "Dagli Etruschi": a schermo la parola sembra intera, ma nel
+    // testo c'e' un carattere in piu' che spezza le ricerche e la lettura
+    // vocale. Nessun altro controllo lo vedeva, perche' non e' ne' una lettera
+    // estranea ne' un segno tipografico. Stesso trattamento per gli zero-width
+    // e il BOM, che arrivano dallo stesso copia-incolla.
+    const invisibile = campi.join(' ').match(/[\u00AD\u200B-\u200D\u2060\uFEFF]/);
+    if (invisibile) {
+      const nome = { '\u00AD': 'soft hyphen', '\u200B': 'zero-width space', '\u200C': 'zero-width non-joiner', '\u200D': 'zero-width joiner', '\u2060': 'word joiner', '\uFEFF': 'BOM' }[invisibile[0]];
+      errors.push({ level: 'error', field: 'text', msg: `carattere invisibile nel testo: ${nome} (U+${invisibile[0].codePointAt(0).toString(16).toUpperCase().padStart(4, '0')})` });
+    }
   }
 
   // Dal lotto 21: punto dentro la citazione e un altro subito fuori ("La
