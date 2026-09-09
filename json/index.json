@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 9879,
+ "totalQuestions": 9223,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
@@ -22,7 +22,8 @@
      "4": 506,
      "5": 526
     }
-   }
+   },
+   "activeRows": 1934
   },
   "problemi": {
    "path": "problemi.json",
@@ -39,7 +40,8 @@
      "4": 262,
      "5": 262
     }
-   }
+   },
+   "activeRows": 1361
   },
   "inglese": {
    "path": "inglese.json",
@@ -72,7 +74,8 @@
      "4": 118,
      "5": 119
     }
-   }
+   },
+   "activeRows": 1091
   },
   "civica": {
    "path": "civica.json",
@@ -92,7 +95,8 @@
      "4": 243,
      "5": 243
     }
-   }
+   },
+   "activeRows": 481
   },
   "geografia": {
    "path": "geografia.json",
@@ -124,7 +128,8 @@
      "4": 228,
      "5": 225
     }
-   }
+   },
+   "activeRows": 1132
   },
   "storia": {
    "path": "storia.json",
@@ -160,7 +165,8 @@
      "4": 226,
      "5": 211
     }
-   }
+   },
+   "activeRows": 1120
   },
   "scienze": {
    "path": "scienze.json",
@@ -190,7 +196,8 @@
      "4": 250,
      "5": 250
     }
-   }
+   },
+   "activeRows": 1011
   },
   "italiano": {
    "path": "italiano.json",
@@ -211,7 +218,8 @@
      "4": 100,
      "5": 100
     }
-   }
+   },
+   "activeRows": 1093
   }
  }
 }

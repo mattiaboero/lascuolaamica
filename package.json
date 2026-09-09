@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.13.6",
+  "version": "4.13.7",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -10,7 +10,7 @@
     "check:grammar-rules": "node scripts/check_grammar_rules.js",
     "check:update-log": "node scripts/check_update_log.js",
     "audit:csp": "python3 scripts/sync_csp_hashes.py --check",
-    "freshness": "python3 scripts/refresh_structured_data.py && python3 scripts/generate_sitemap.py && python3 scripts/sync_csp_hashes.py",
+    "freshness": "python3 scripts/sync_question_counts.py && python3 scripts/refresh_structured_data.py && python3 scripts/generate_sitemap.py && python3 scripts/sync_csp_hashes.py",
     "lint:content": "node scripts/lint_content.js",
     "ingest": "python3 scripts/ingest_generated.py",
     "ingest:dry": "python3 scripts/ingest_generated.py --dry-run",
@@ -21,7 +21,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:prepublish",
+    "verify": "npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:counts && npm run check:prepublish",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -31,7 +31,9 @@
     "test:e2e:install": "playwright install --with-deps chromium",
     "check:math": "node scripts/check_math_explanations.js",
     "check:plausibility": "node scripts/check_plausibility.js",
-    "check:bosco": "node scripts/check_bosco.js"
+    "check:bosco": "node scripts/check_bosco.js",
+    "sync:counts": "python3 scripts/sync_question_counts.py",
+    "check:counts": "python3 scripts/sync_question_counts.py --check"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",

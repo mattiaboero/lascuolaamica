@@ -1,6 +1,6 @@
 [
  {
-  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.6",
+  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.7",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e spiegazioni che invece di spiegare ripetevano la consegna.",
    "Tolti di mezzo alcuni casi in cui la risposta si trovava senza sapere l'inglese: bastava cercare l'unica opzione al plurale, o l'unica senza articolo.",
@@ -131,7 +131,7 @@
   "items": [
    "Alleggerita la bacheca premi: 46 immagini compresse mantenendo la qualità visiva, circa 10 MB in meno, più il formato WebP per lo sfondo con fallback PNG. I file restano caricati solo quando servono e disponibili offline dopo la prima visita.",
    "Caricamento iniziale più rapido, con effetto più evidente su mobile e connessione lenta.",
-   "Lavori interni sugli strumenti di sviluppo: script unificati per lint e verifiche, configurazione ESLint aggiornata al formato nuovo, dipendenze bloccate per rendere riproducibile il setup."
+   "Lavori interni sugli strumenti di sviluppo: controlli di qualità unificati in un comando solo e versioni delle dipendenze bloccate, così l'ambiente di lavoro è sempre lo stesso."
   ]
  },
  {
@@ -216,39 +216,32 @@
  {
   "date": "1 maggio 2026",
   "items": [
-   "Rilasciata la versione 4.5.5 con allineamento completo della numerazione applicativa su tutte le pagine.",
-   "Migliorata l'ergonomia dei toggle Palette/Animazioni con target touch minimo 44px e testi più leggibili.",
-   "Allineati i testi Privacy e FAQ con il nuovo flusso di cancellazione dati locali."
+   "Gli interruttori dei colori e delle animazioni nel pannello Info sono più grandi e più facili da centrare col dito, con testi più leggibili.",
+   "Aggiornati i testi di Privacy e FAQ per descrivere il nuovo modo di cancellare i dati salvati sul dispositivo.",
+   "Il numero di versione mostrato è ora lo stesso su tutte le pagine."
   ]
  },
  {
   "date": "30 aprile 2026",
   "items": [
-   "Completata la sostituzione dei dialog nativi con finestre integrate più coerenti nei flussi principali.",
-   "Allineata la preferenza «Meno animazioni» anche lato JavaScript su home e motori quiz dedicati.",
-   "Disattivata l'esplosione confetti in inglese quando la riduzione movimento è attiva.",
-   "Automatizzati gli aggiornamenti dei contenuti strutturati e della sitemap prima della pubblicazione.",
-   "Sincronizzata la documentazione tecnica repository/wiki con gli ultimi fix operativi."
+   "Al posto delle finestre di avviso del browser il sito usa ora finestre sue, coerenti con il resto della grafica.",
+   "La preferenza «Meno animazioni» vale anche in home e nei quiz: in inglese l'esplosione di coriandoli non parte più quando è attiva.",
+   "Lavori interni: sitemap e schede per i motori di ricerca aggiornate in automatico prima di ogni pubblicazione, e documentazione tecnica allineata."
   ]
  },
  {
   "date": "29 aprile 2026",
   "items": [
-   "Migliorata la stabilità offline delle pagine con URL puliti e continuità d'uso anche senza connessione.",
-   "Allineato il meta `mobile-web-app-capable` su tutte le pagine pubbliche.",
-   "Completato il caricamento locale dei font principali per rendere più stabile la prima visita.",
-   "Aggiornata documentazione tecnica (README + wiki) con gli ultimi fix di runtime e deploy.",
-   "Versione portale aggiornata alla 4.5.2."
+   "Le pagine restano raggiungibili anche senza connessione dopo la prima visita, e i loro indirizzi sono più puliti, senza «.html» in fondo.",
+   "I caratteri tipografici arrivano ora dal sito stesso invece che da un servizio esterno: la prima visita è più stabile.",
+   "Lavori interni: allineate le impostazioni per l'installazione come app e aggiornata la documentazione tecnica."
   ]
  },
  {
   "date": "28 aprile 2026",
   "items": [
-   "Aggiornato il profilo GEO/SEO: founder e foundingDate nell'Organization JSON-LD.",
-   "Aggiunto numberOfQuestions nei JSON-LD delle 8 materie con conteggi reali.",
-   "Aggiornate FAQ e llms.txt con dati quantitativi progetto (oltre 7.300 / totale 7.348 domande).",
-   "Esteso il supporto «Meno animazioni» a FAQ e pagine informative.",
-   "Versione portale aggiornata alla 4.5.1."
+   "L'interruttore «Meno animazioni» arriva anche nelle FAQ e nelle pagine informative.",
+   "Aggiornate le schede che descrivono il sito ai motori di ricerca e agli assistenti AI: chi lo ha fondato, da quando esiste e quante domande ha ogni materia (allora 7.348 in tutto)."
   ]
  },
  {
@@ -264,77 +257,58 @@
  {
   "date": "23 aprile 2026",
   "items": [
-   "Integrati nuovi pacchetti domande validati per tutte le 8 materie.",
-   "Aggiornato index aggregato con conteggi sincronizzati per materia e totale domande.",
-   "Eseguita validazione post-merge con esito PASS su struttura, coerenza e risposte.",
-   "Corretto un duplicato opzioni nel dataset di Italiano (voce ortografia).",
-   "Versione portale aggiornata alla 4.3."
+   "Aggiunte nuove domande su tutte e 8 le materie, controllate una a una prima di pubblicarle.",
+   "Corretta una domanda di ortografia in italiano che aveva due risposte identiche."
   ]
  },
  {
   "date": "20 aprile 2026",
   "items": [
-   "Potenziato l'algoritmo di selezione domande con planner stocastico area+difficoltà.",
-   "Migliorata la logica anti-ripetizione multi-sessione con cooldown e softmax sui candidati.",
-   "Aggiunte metriche locali di qualità sessione (repeat rate, copertura, entropia, novità).",
-   "Esteso il generatore parametrico e introdotti report CSV automatici di copertura."
+   "Le domande di una partita vengono scelte meglio: più varietà di argomenti e di difficoltà, e meno probabilità di rivedere una domanda già fatta nelle sessioni precedenti.",
+   "Lavori interni: strumenti per misurare quanto una partita ripete e quanta parte del programma copre."
   ]
  },
  {
   "date": "18 aprile 2026",
   "items": [
-   "Eseguito audit WCAG 2.1 AA automatico su tutte le pagine principali (tag wcag2a/wcag2aa).",
-   "Completata la validazione manuale: tastiera, modali, zoom/reflow, VoiceOver e riduzione movimento.",
-   "Corretto il layout della home a zoom 200% per evitare tagli di testo nelle card.",
-   "Aggiunta la pagina pubblica Accessibilità con dichiarazione WCAG, metodologia di test e contatto diretto.",
-   "Versione portale aggiornata alla 4.2.1."
+   "Controllo completo di accessibilità su tutte le pagine principali, verificato anche a mano: navigazione da tastiera, finestre, ingrandimento del testo, lettore di schermo VoiceOver e riduzione del movimento.",
+   "A ingrandimento 200% la home non taglia più il testo dentro le card.",
+   "Nuova pagina Accessibilità, con la dichiarazione di conformità, il modo in cui sono stati fatti i test e un contatto per segnalare problemi."
   ]
  },
  {
   "date": "16 aprile 2026",
   "items": [
-   "Impostata la palette standard come tema predefinito del sito.",
-   "Aggiornata la persistenza preferenze palette con nuova chiave di storage.",
-   "Rigenerati gli screenshot social della home (390x844, 1280x720, 1200x630) senza footer."
+   "La palette standard è ora quella predefinita, e la scelta dei colori resta salvata nel browser.",
+   "Rifatte le immagini di anteprima che compaiono quando si condivide la home."
   ]
  },
  {
   "date": "14 aprile 2026",
   "items": [
-   "Deduplicati i dataset domande per tutte le materie con rinumerazione ID coerente.",
-   "Ridotto il rischio di ripetizione tra sessioni con filtro anti-repeat testuale nel motore quiz.",
-   "Allineati metadati e conteggi nei file json per materia e index aggregato."
+   "Tolte le domande ripetute dagli archivi di tutte le materie, e aggiunto un filtro che evita di riproporre lo stesso testo in partite diverse."
   ]
  },
  {
   "date": "13 aprile 2026",
   "items": [
-   "Aggiornate canonical, URL Open Graph e JSON-LD sulle rotte senza estensione .html.",
-   "Allineati i link interni e la sitemap ai percorsi canonici (es. /matematica, /faq, /supporta).",
-   "Aggiornato il copy della pagina Supporta con contatto diretto supporto@lascuolaamica.it.",
-   "Versione portale aggiornata alla 4.1.1."
+   "Gli indirizzi delle pagine perdono il «.html»: /matematica, /faq, /supporta. Collegamenti interni e sitemap allineati.",
+   "Nella pagina «Supporta il progetto» aggiunto il contatto diretto supporto@lascuolaamica.it."
   ]
  },
  {
   "date": "12 aprile 2026",
   "items": [
-   "Revisione linguistica completa dei testi in italiano su quiz, FAQ, informazioni e pagina supporto.",
-   "Corretti accenti e apostrofi nelle domande e nei testi (es. è, qual è, cos'è, l'Italia, l'ambiente, probabilità).",
-   "Risolti errori di sintassi JavaScript causati da stringhe con apostrofi non escapati in alcune domande.",
-   "Aggiornati i dataset JSON per coerenza ortografica, inclusa la correzione delle forme interrogative.",
-   "Versione portale confermata alla 4.1 e contenuti sincronizzati nella cartella export."
+   "Revisione dei testi italiani di quiz, FAQ, pagine informative e supporto: corretti accenti e apostrofi (è, qual è, cos'è, l'Italia, probabilità) e uniformate le forme interrogative.",
+   "Risolti alcuni blocchi del gioco causati da apostrofi scritti male dentro le domande."
   ]
  },
  {
   "date": "11 aprile 2026",
   "items": [
-   "Introdotta palette accessibile Okabe-Ito con fallback rapido alla palette standard.",
-   "Aggiunta gestione persistente della palette (Standard/Accessibile) con preferenza salvata nel browser.",
-   "Migliorata la visibilità dei pallini di avanzamento non ancora completati.",
-   "Inserito toggle visibile nel footer: «Palette: Standard / Accessibile».",
-   "Reso più compatto il collegamento supporto nel footer con cuore rosso e tag dedicato.",
-   "Footer ottimizzato: elementi aggregati in un unico pulsante «Info» con privacy, cookie, FAQ, aggiornamenti e palette.",
-   "Versione portale spostata nel pannello Info come prima voce (es. Versione 4.1)."
+   "Nuova palette accessibile Okabe-Ito, pensata per chi distingue male i colori, con ritorno rapido a quella standard. La scelta resta salvata nel browser.",
+   "Più visibili i pallini che segnano le domande ancora da fare.",
+   "Footer riordinato: privacy, cookie, FAQ, aggiornamenti e colori stanno ora dentro un unico pulsante «Info», dove compare anche il numero di versione. Il collegamento per sostenere il progetto è più compatto, con il cuore rosso."
   ]
  },
  {
@@ -349,27 +323,24 @@
  {
   "date": "9 aprile 2026",
   "items": [
-   "Aggiunta e rifinita la materia Educazione Civica con 4 ambiti e 10 domande variabili.",
-   "Aggiornata la domanda bonus difficile di civica sulla sicurezza stradale (semaforo rosso).",
-   "Uniformata la grafica della home: card allineate, testi su più righe e bottoni coerenti.",
-   "Rimosse le emoji dai bottoni principali mantenendo i colori differenziati.",
-   "Miglioramenti SEO/accessibilità e controlli tecnici su performance e struttura."
+   "Nuova materia Educazione Civica, con quattro ambiti: Costituzione e regole di comunità, ambiente, cittadinanza digitale, strada e sicurezza.",
+   "Corretta la domanda bonus difficile di civica sul semaforo rosso.",
+   "Home più ordinata: card allineate, testi su più righe e bottoni coerenti, senza emoji, con i colori a distinguere le materie."
   ]
  },
  {
   "date": "8 aprile 2026",
   "items": [
-   "Aggiornati dati e nomi nei problemi (es. Luciana, Emma)."
+   "Aggiornati alcuni nomi e dati dentro i problemi."
   ]
  },
  {
   "date": "7 aprile 2026",
   "items": [
-   "Matematica: migliorata selezione tabelline con stato visivo evidente.",
-   "Matematica: riorganizzata la scelta modalità (prima tabellina/tutte, poi classico o tempo).",
-   "Uniformati i messaggi di risposta corretta con formule neutre (senza genere).",
-   "Introdotta la domanda bonus finale con moltiplicatore x5/x10/x25 nelle materie principali.",
-   "Aggiunte nuove pagine disciplinari e consolidata la struttura comune dei quiz."
+   "In matematica si vede chiaramente quale tabellina è selezionata, e la modalità si sceglie in due passaggi: prima la tabellina (una sola o tutte), poi classico o a tempo.",
+   "Nuova domanda bonus a fine partita, che moltiplica il punteggio per 5, 10 o 25.",
+   "I messaggi di risposta corretta non si rivolgono più a un solo genere.",
+   "Aggiunte nuove pagine per le singole materie, tutte con la stessa struttura."
   ]
  }
 ]

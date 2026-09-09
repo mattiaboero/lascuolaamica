@@ -2,7 +2,7 @@
 > Piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª).
 > Offre quiz interattivi su 8 materie, senza registrazione e senza raccolta di dati personali.
 > Funziona offline come Progressive Web App dopo il primo caricamento.
-> Versione corrente: 4.13.6.
+> Versione corrente: 4.13.7.
 
 ## Identità
 - Nome: La Scuola Amica
@@ -33,10 +33,10 @@
 - Relazione con il sito: i video spiegano, i quiz di [matematica](https://lascuolaamica.it/matematica) servono a esercitarsi dopo la visione.
 
 ## Dati quantitativi
-- Domande totali: 9.879 (verificate a luglio 2026).
+- Domande totali: 9.223 (solo quelle attive, verificate a settembre 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria.
-- Versione corrente: 4.13.6.
+- Versione corrente: 4.13.7.
 
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.

@@ -1,6 +1,6 @@
 # Contenuti e domande
 
-Il dataset conta **9.879 domande** su 8 materie, per classi dalla 2ª alla 5ª. Questa pagina descrive come sono strutturate, come vengono generate e come mantenerle.
+Il dataset conta **9.223 domande** su 8 materie, per classi dalla 2ª alla 5ª. Questa pagina descrive come sono strutturate, come vengono generate e come mantenerle.
 
 ---
 

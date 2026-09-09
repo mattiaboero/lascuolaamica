@@ -8,7 +8,7 @@ Grazie per l'interesse. Le contribuzioni più frequenti e utili sono nuove doman
 
 ### Nuove domande (contributo più utile)
 
-Il dataset conta oggi 9.879 domande su 8 materie. Le aree meno coperte sono scienze e inglese (vedi `reports/coverage.md` per il dettaglio aggiornato).
+Il dataset conta oggi 9.223 domande su 8 materie. Le aree meno coperte sono scienze e inglese (vedi `reports/coverage.md` per il dettaglio aggiornato).
 
 **Se hai accesso all'ambiente editoriale riservato:**
 

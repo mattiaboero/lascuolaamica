@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.13.7 - 2026-09-09
+
+### Changed
+- **Ogni conteggio pubblico di domande conta ora solo quelle attive: 9.223, non 9.879.** Le 656 con `active: false` non vengono mai servite — il loader le scarta (`questions-loader.js:208`) e cosi' fa Spacca-Muri (`js/breakout.js:294`) — ma il sito continuava ad annunciarle. Sono 640 di civica (la deduplicazione della 4.13.0), 13 di scienze e 3 di inglese.
+
+  Allineati: contatore nel footer (via `json/index.json`), `numberOfQuestions` nei JSON-LD delle 8 pagine materia — che erano fermi ai numeri di aprile, `scienze` diceva 843 contro 1.011 reali e `inglese` 454 contro 1.091 — la riga dei punti forti in home, le FAQ, l'elenco per materia in `per-insegnanti.html`, `llms.txt`, `README.md`, `CONTRIBUTING.md` e le due pagine wiki.
+
+- **Nuovo `scripts/sync_question_counts.py`, unica fonte di quei numeri.** Senza argomenti riscrive, con `--check` verifica. Aggiunto a `npm run freshness` (prima del resto) e a `npm run verify` (`check:counts`, prima di prepublish). I conteggi erano gia' andati fuori sincrono tre volte — 4.12.6, 4.12.64 e adesso — sempre perche' vivevano scritti a mano in una dozzina di posti diversi.
+
+- **Riscritte le 15 voci di aprile e 1 maggio del changelog del sito**, che parlavano da sviluppatore mentre le 26 piu' recenti parlano ai genitori: `planner stocastico area+difficolta'`, `cooldown e softmax sui candidati`, `canonical, URL Open Graph e JSON-LD sulle rotte senza estensione .html`, `audit WCAG 2.1 AA (tag wcag2a/wcag2aa)`, `Versione portale aggiornata alla 4.5.5`. Chi scorreva l'elenco arrivava a meta' e smetteva di capire.
+
+  Riscritte per contenuto, non accorciate a caso: i fatti restano tutti, verificati prima di riformularli dove erano verificabili (i moltiplicatori bonus 5/10/25 in `subject-quiz-core.js:180`, i quattro ambiti di civica in `json/civica.json`). Sparita anche la formula "Versione portale aggiornata alla X", che non corrisponde a niente di visibile nell'interfaccia.
+
+### Notes
+- Nessuna domanda e' stata toccata: cambia solo il numero dichiarato. Le 656 disattivate restano nei file, dove servono a non riproporre lo stesso quesito travestito.
+
 ## 4.13.6 - 2026-09-09
 
 ### Fixed
