@@ -302,7 +302,11 @@ function controllaNomiClassificati(sorgente) {
 // statistico: una parola quasi assente nel corpus a un passo da una molto
 // piu' frequente. Le aree di ortografia, lessico e grammatica restano fuori
 // perche' li' le grafie sbagliate sono i distrattori, e sono volute.
-const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini']);
+// Parole rare ma corrette, che il controllo statistico sui refusi scambia per
+// vicine di una parola frequente. Sono cresciute scrivendo le spiegazioni: un
+// testo con lessico piu' ricco incontra piu' spesso questo caso, e ogni voce
+// qui e' stata verificata a mano prima di entrare.
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini', 'impresse']);
 
 function controllaRefusi() {
   const dir = path.join(__dirname, '..', 'json');

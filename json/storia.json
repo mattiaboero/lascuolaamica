@@ -6673,7 +6673,7 @@
    ],
    "answerIndex": 1,
    "answer": "dividere il tempo in periodi",
-   "explanation": "La risposta corretta è 'dividere il tempo in periodi'.",
+   "explanation": "Periodizzare vuol dire tagliare il tempo in blocchi con caratteristiche comuni: preistoria, età antica, medioevo. Serve a orientarsi in millenni di fatti.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6705,7 +6705,7 @@
    ],
    "answerIndex": 2,
    "answer": "per avere informazioni più sicure",
-   "explanation": "La risposta corretta è 'per avere informazioni più sicure'.",
+   "explanation": "Una fonte sola può sbagliare o mentire. Se più fonti indipendenti dicono la stessa cosa, quella cosa è molto probabilmente vera.",
    "active": true,
    "tag": "storia;metodo;ricerca;classe3",
    "tags": [
@@ -6737,7 +6737,7 @@
    ],
    "answerIndex": 3,
    "answer": "vaso e punta di lancia",
-   "explanation": "La risposta corretta è 'vaso e punta di lancia'.",
+   "explanation": "Vaso e punta di lancia sono entrambi oggetti concreti arrivati fino a noi: due fonti materiali, che si osservano e si toccano.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6768,7 +6768,7 @@
    ],
    "answerIndex": 0,
    "answer": "legge e diario",
-   "explanation": "La risposta corretta è 'legge e diario'.",
+   "explanation": "Legge e diario sono entrambi testi: si leggono, quindi sono fonti scritte, anche se una è pubblica e l'altro privato.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6799,7 +6799,7 @@
    ],
    "answerIndex": 1,
    "answer": "dipinto e fotografia",
-   "explanation": "La risposta corretta è 'dipinto e fotografia'.",
+   "explanation": "Dipinto e fotografia sono entrambi immagini: si guardano, quindi sono fonti visive.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6830,7 +6830,7 @@
    ],
    "answerIndex": 2,
    "answer": "intervista e racconto",
-   "explanation": "La risposta corretta è 'intervista e racconto'.",
+   "explanation": "Intervista e racconto sono entrambi parole dette e ascoltate: due fonti orali.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6861,7 +6861,7 @@
    ],
    "answerIndex": 3,
    "answer": "il paleontologo",
-   "explanation": "La risposta corretta è 'il paleontologo'.",
+   "explanation": "Le ossa di dinosauro sono fossili di esseri viventi antichissimi: se ne occupa il paleontologo, non l'archeologo.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6892,7 +6892,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'archeologo",
-   "explanation": "La risposta corretta è \"l'archeologo\".",
+   "explanation": "I resti di una casa sono opera dell'uomo e stanno sepolti: è l'archeologo a scavarli e a studiarli.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6923,7 +6923,7 @@
    ],
    "answerIndex": 1,
    "answer": "uno storico",
-   "explanation": "La risposta corretta è 'uno storico'.",
+   "explanation": "Il testo scritto è una fonte da leggere e interpretare: è il lavoro dello storico, che da lì ricostruisce come si viveva.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6954,7 +6954,7 @@
    ],
    "answerIndex": 2,
    "answer": "la linea del tempo",
-   "explanation": "La risposta corretta è 'la linea del tempo'.",
+   "explanation": "La linea del tempo dispone i fatti nell'ordine in cui sono accaduti: si vede subito che cosa è venuto prima e che cosa dopo.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -6985,7 +6985,7 @@
    ],
    "answerIndex": 3,
    "answer": "osservata con attenzione",
-   "explanation": "La risposta corretta è 'osservata con attenzione'.",
+   "explanation": "Una fonte non parla da sola: dice qualcosa solo a chi la osserva con attenzione e si fa le domande giuste.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -7016,7 +7016,7 @@
    ],
    "answerIndex": 0,
    "answer": "informazioni",
-   "explanation": "La risposta corretta è 'informazioni'.",
+   "explanation": "Dalle fonti gli studiosi ricavano informazioni: come si viveva, che cosa si mangiava, chi comandava, che cosa è successo.",
    "active": true,
    "tag": "fonti;confronto;classe3",
    "tags": [
@@ -7047,7 +7047,7 @@
    ],
    "answerIndex": 1,
    "answer": "prima di un fatto più recente",
-   "explanation": "La risposta corretta è 'prima di un fatto più recente'.",
+   "explanation": "La linea del tempo va dal passato al presente: più un fatto è antico, più sta a sinistra.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7078,7 +7078,7 @@
    ],
    "answerIndex": 2,
    "answer": "un fatto dopo l'altro",
-   "explanation": "La risposta corretta è \"un fatto dopo l'altro\".",
+   "explanation": "La successione riguarda l'ordine: un fatto viene dopo l'altro, e fra i due c'è un prima e un dopo.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7109,7 +7109,7 @@
    ],
    "answerIndex": 3,
    "answer": "fatti nello stesso periodo o momento",
-   "explanation": "La risposta corretta è 'fatti nello stesso periodo o momento'.",
+   "explanation": "La contemporaneità riguarda la sovrapposizione: due fatti avvengono nello stesso periodo, anche se in luoghi lontani.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7140,7 +7140,7 @@
    ],
    "answerIndex": 0,
    "answer": "quanto tempo continua un fatto",
-   "explanation": "La risposta corretta è 'quanto tempo continua un fatto'.",
+   "explanation": "La durata dice per quanto tempo un fatto continua: un giorno, un anno o un intero periodo storico.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7171,7 +7171,7 @@
    ],
    "answerIndex": 1,
    "answer": "si ripete regolarmente",
-   "explanation": "La risposta corretta è 'si ripete regolarmente'.",
+   "explanation": "Il ciclo torna sempre uguale a intervalli regolari: dopo l'ultima fase ricomincia la prima, e così all'infinito.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7202,7 +7202,7 @@
    ],
    "answerIndex": 2,
    "answer": "cicli temporali",
-   "explanation": "La risposta corretta è 'cicli temporali'.",
+   "explanation": "Giorno, mese e stagioni si ripetono sempre nello stesso ordine e con la stessa durata: sono cicli, non fatti unici.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7233,7 +7233,7 @@
    ],
    "answerIndex": 3,
    "answer": "criterio cronologico",
-   "explanation": "La risposta corretta è 'criterio cronologico'.",
+   "explanation": "Il criterio cronologico ordina i fatti secondo il tempo in cui sono avvenuti: è il criterio proprio della storia.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7264,7 +7264,7 @@
    ],
    "answerIndex": 0,
    "answer": "una cronologia",
-   "explanation": "La risposta corretta è 'una cronologia'.",
+   "explanation": "La cronologia è l'elenco dei fatti in ordine di tempo: è il primo passo prima di spiegare perché sono successi.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7295,7 +7295,7 @@
    ],
    "answerIndex": 1,
    "answer": "le date o il periodo",
-   "explanation": "La risposta corretta è 'le date o il periodo'.",
+   "explanation": "Per dire se due fatti sono contemporanei bisogna sapere quando sono avvenuti: servono le date, o almeno il periodo.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -7326,7 +7326,7 @@
    ],
    "answerIndex": 2,
    "answer": "quando è accaduto",
-   "explanation": "La risposta corretta è 'quando è accaduto'.",
+   "explanation": "Sapere quando è accaduto un fatto permette di collegarlo a ciò che succedeva intorno: senza la data, resta un episodio isolato.",
    "active": true,
    "tag": "tempo;cronologia;classe3",
    "tags": [
@@ -8535,7 +8535,7 @@
    ],
    "answerIndex": 0,
    "answer": "Big Bang",
-   "explanation": "La risposta corretta è 'Big Bang'.",
+   "explanation": "Secondo la spiegazione scientifica l'universo nasce circa 13,8 miliardi di anni fa da uno stato caldissimo e densissimo che comincia a espandersi.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8567,7 +8567,7 @@
    ],
    "answerIndex": 1,
    "answer": "la Terra",
-   "explanation": "La risposta corretta è 'la Terra'.",
+   "explanation": "La Terra si forma circa 4,5 miliardi di anni fa, molto dopo il Big Bang: nasce dalla materia che gira attorno al Sole appena formato.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8599,7 +8599,7 @@
    ],
    "answerIndex": 2,
    "answer": "lunghissimi periodi della storia della Terra",
-   "explanation": "La risposta corretta è 'lunghissimi periodi della storia della Terra'.",
+   "explanation": "Le ere geologiche durano centinaia di milioni di anni: servono a dividere una storia troppo lunga per essere misurata in secoli.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8631,7 +8631,7 @@
    ],
    "answerIndex": 3,
    "answer": "resti o tracce di esseri viventi del passato",
-   "explanation": "La risposta corretta è 'resti o tracce di esseri viventi del passato'.",
+   "explanation": "Il fossile è ciò che resta di un essere vivente antico, o la traccia che ha lasciato: ossa, conchiglie, impronte, foglie impresse nella roccia.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8663,7 +8663,7 @@
    ],
    "answerIndex": 0,
    "answer": "un fossile",
-   "explanation": "La risposta corretta è 'un fossile'.",
+   "explanation": "Sepolto rapidamente e coperto da sedimenti, l'osso si impregna di minerali e diventa pietra conservando la sua forma: è la fossilizzazione.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8695,7 +8695,7 @@
    ],
    "answerIndex": 1,
    "answer": "molto prima dell'uomo",
-   "explanation": "La risposta corretta è \"molto prima dell'uomo\".",
+   "explanation": "I dinosauri si estinsero circa 66 milioni di anni fa; l'uomo compare da poche centinaia di migliaia: non si sono mai incontrati.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8727,7 +8727,7 @@
    ],
    "answerIndex": 2,
    "answer": "paleontologi",
-   "explanation": "La risposta corretta è 'paleontologi'.",
+   "explanation": "Il paleontologo studia gli esseri viventi del passato attraverso i fossili: i dinosauri rientrano nel suo campo.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8759,7 +8759,7 @@
    ],
    "answerIndex": 3,
    "answer": "molto tempo fa nella storia della Terra",
-   "explanation": "La risposta corretta è 'molto tempo fa nella storia della Terra'.",
+   "explanation": "Le prime forme di vita compaiono circa 3,5 miliardi di anni fa: erano organismi microscopici, nell'acqua.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8791,7 +8791,7 @@
    ],
    "answerIndex": 0,
    "answer": "un fossile",
-   "explanation": "La risposta corretta è 'un fossile'.",
+   "explanation": "Anche un'impronta è un fossile: non è il corpo dell'animale ma la traccia che ha lasciato, indurita nella roccia.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8823,7 +8823,7 @@
    ],
    "answerIndex": 1,
    "answer": "i cambiamenti degli esseri viventi nel tempo",
-   "explanation": "La risposta corretta è 'i cambiamenti degli esseri viventi nel tempo'.",
+   "explanation": "L'evoluzione studia come le specie si trasformano di generazione in generazione: alcune cambiano, altre si estinguono, altre nascono.",
    "active": true,
    "tag": "origine;terra;vita;classe3",
    "tags": [
@@ -8855,7 +8855,7 @@
    ],
    "answerIndex": 2,
    "answer": "gli esseri umani",
-   "explanation": "La risposta corretta è 'gli esseri umani'.",
+   "explanation": "Fra l'estinzione dei dinosauri e la comparsa dell'uomo passano decine di milioni di anni: le due specie non hanno mai convissuto.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -8886,7 +8886,7 @@
    ],
    "answerIndex": 3,
    "answer": "come poteva essere l'essere vivente",
-   "explanation": "La risposta corretta è \"come poteva essere l'essere vivente\".",
+   "explanation": "Dalla forma di un fossile si ricava come era fatto l'organismo: quanto era grande, come si muoveva, che denti aveva e quindi di che cosa si nutriva.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -8917,7 +8917,7 @@
    ],
    "answerIndex": 0,
    "answer": "una traccia fossile",
-   "explanation": "La risposta corretta è 'una traccia fossile'.",
+   "explanation": "L'impronta non è la foglia: è il segno che la foglia ha lasciato prima di decomporsi. Per questo si parla di traccia fossile.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -8948,7 +8948,7 @@
    ],
    "answerIndex": 1,
    "answer": "tracce del passato della Terra",
-   "explanation": "La risposta corretta è 'tracce del passato della Terra'.",
+   "explanation": "Le rocce si formano a strati, uno sopra l'altro: ogni strato conserva ciò che c'era in quel momento, come le pagine di un libro.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -8979,7 +8979,7 @@
    ],
    "answerIndex": 2,
    "answer": "non esistono più vivi oggi",
-   "explanation": "La risposta corretta è 'non esistono più vivi oggi'.",
+   "explanation": "Estinguersi significa che non ne resta nessun individuo vivo: la specie è scomparsa e non tornerà.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -9010,7 +9010,7 @@
    ],
    "answerIndex": 3,
    "answer": "i fossili",
-   "explanation": "La risposta corretta è 'i fossili'.",
+   "explanation": "I fossili sono le uniche prove dirette della vita del passato: senza di essi si potrebbe solo immaginare che cosa c'era.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -9041,7 +9041,7 @@
    ],
    "answerIndex": 0,
    "answer": "diverse ere geologiche",
-   "explanation": "La risposta corretta è 'diverse ere geologiche'.",
+   "explanation": "La storia della Terra è divisa in ere: i dinosauri occupano solo una parte del Mesozoico, e prima e dopo ce ne sono altre.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -9072,7 +9072,7 @@
    ],
    "answerIndex": 1,
    "answer": "è cambiata nel tempo",
-   "explanation": "La risposta corretta è 'è cambiata nel tempo'.",
+   "explanation": "In miliardi di anni continenti, oceani, atmosfera e clima si sono trasformati: la Terra di allora non somigliava a quella di oggi.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -9103,7 +9103,7 @@
    ],
    "answerIndex": 2,
    "answer": "che in quel luogo c'era acqua",
-   "explanation": "La risposta corretta è \"che in quel luogo c'era acqua\".",
+   "explanation": "Un pesce vive solo in acqua: se il suo fossile si trova in un luogo, quel luogo un tempo era sommerso.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -9134,7 +9134,7 @@
    ],
    "answerIndex": 3,
    "answer": "un animale vivo di oggi",
-   "explanation": "La risposta corretta è 'un animale vivo di oggi'.",
+   "explanation": "Il fossile è ciò che resta di un organismo vissuto moltissimo tempo fa: un animale vivo oggi non è un fossile, per definizione.",
    "active": true,
    "tag": "fossili;dinosauri;classe3",
    "tags": [
@@ -9165,7 +9165,7 @@
    ],
    "answerIndex": 0,
    "answer": "evoluzione",
-   "explanation": "La risposta corretta è 'evoluzione'.",
+   "explanation": "L'evoluzione è il cambiamento delle specie nel corso di molte generazioni: avviene troppo lentamente per essere visto in una vita umana.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9197,7 +9197,7 @@
    ],
    "answerIndex": 1,
    "answer": "fornisce una prova concreta del passato",
-   "explanation": "La risposta corretta è 'fornisce una prova concreta del passato'.",
+   "explanation": "Il fossile è una prova che si può osservare e misurare: non un'ipotesi, ma un resto reale di ciò che è esistito.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9229,7 +9229,7 @@
    ],
    "answerIndex": 2,
    "answer": "attenzione e confronto",
-   "explanation": "La risposta corretta è 'attenzione e confronto'.",
+   "explanation": "Trovare un fossile richiede guardare con metodo e confrontare: si osservano gli strati, si cercano forme regolari, si paragona con reperti noti.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9261,7 +9261,7 @@
    ],
    "answerIndex": 3,
    "answer": "molto prima della comparsa dell'uomo",
-   "explanation": "La risposta corretta è \"molto prima della comparsa dell'uomo\".",
+   "explanation": "La vita compare miliardi di anni fa, l'uomo poche centinaia di migliaia: nella storia della Terra siamo arrivati all'ultimo momento.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9293,7 +9293,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'inizio dell'universo",
-   "explanation": "La risposta corretta è \"l'inizio dell'universo\".",
+   "explanation": "Il Big Bang è il modello con cui la scienza spiega l'inizio dell'universo: non un'esplosione dentro lo spazio, ma l'inizio dello spazio stesso.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9325,7 +9325,7 @@
    ],
    "answerIndex": 1,
    "answer": "quel luogo in passato fosse coperto dall'acqua",
-   "explanation": "La risposta corretta è \"quel luogo in passato fosse coperto dall'acqua\".",
+   "explanation": "Le conchiglie vivono in mare: se se ne trovano in montagna, quelle rocce si sono formate sott'acqua e sono state sollevate dopo.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9357,7 +9357,7 @@
    ],
    "answerIndex": 2,
    "answer": "per capire i grandi cambiamenti della Terra",
-   "explanation": "La risposta corretta è 'per capire i grandi cambiamenti della Terra'.",
+   "explanation": "Le ere segnano i grandi passaggi: comparsa della vita, estinzioni di massa, formazione dei continenti. Servono a dare ordine a una storia lunghissima.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9389,7 +9389,7 @@
    ],
    "answerIndex": 3,
    "answer": "lunghissimi",
-   "explanation": "La risposta corretta è 'lunghissimi'.",
+   "explanation": "Montagne che si sollevano, continenti che si spostano, climi che cambiano: sono processi di milioni di anni, invisibili in una vita umana.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
