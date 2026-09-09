@@ -2694,7 +2694,7 @@
    ],
    "answerIndex": 0,
    "answer": "20",
-   "explanation": "The correct answer is \"20\".",
+   "explanation": "18 conigli più 2 cani fanno 20 animali: 18 + 2 = 20.",
    "active": true,
    "tag": "inglese;classe_5;numeri;primaria",
    "tags": [
@@ -2727,7 +2727,7 @@
    ],
    "answerIndex": 1,
    "answer": "11",
-   "explanation": "The correct answer is \"11\".",
+   "explanation": "Fra 17, 11, 20 e 14 il più piccolo è 11.",
    "active": true,
    "tag": "inglese;classe_5;numeri;primaria",
    "tags": [
@@ -2760,7 +2760,7 @@
    ],
    "answerIndex": 2,
    "answer": "eight",
-   "explanation": "The correct answer is \"eight\".",
+   "explanation": "Il ragno ha otto zampe: in inglese 'eight'.",
    "active": true,
    "tag": "inglese;classe_5;numeri;primaria",
    "tags": [
@@ -2991,7 +2991,7 @@
    ],
    "answerIndex": 3,
    "answer": "grandparents",
-   "explanation": "The correct answer is \"grandparents\".",
+   "explanation": "'Grandparents' sono i nonni: i genitori dei tuoi genitori. La parola unisce 'grand' e 'parents'.",
    "active": true,
    "tag": "inglese;classe_5;famiglia;primaria",
    "tags": [
@@ -3024,7 +3024,7 @@
    ],
    "answerIndex": 0,
    "answer": "cousin",
-   "explanation": "The correct answer is \"cousin\".",
+   "explanation": "La figlia dello zio è la cugina: in inglese 'cousin', parola che vale per maschile e femminile. 'Niece' sarebbe la nipote.",
    "active": true,
    "tag": "inglese;classe_5;famiglia;primaria",
    "tags": [
@@ -3057,7 +3057,7 @@
    ],
    "answerIndex": 1,
    "answer": "Hello, my name is Sam",
-   "explanation": "The correct answer is \"Hello, my name is Sam\".",
+   "explanation": "'Hello, my name is Sam' è un saluto di incontro, seguito dalla presentazione. 'See you later' e 'good night' servono invece per congedarsi.",
    "active": true,
    "tag": "inglese;classe_5;saluti;primaria",
    "tags": [
@@ -3090,7 +3090,7 @@
    ],
    "answerIndex": 2,
    "answer": "See you later",
-   "explanation": "The correct answer is \"See you later\".",
+   "explanation": "'See you later' significa a dopo: si dice andando via. 'Nice to meet you' si dice invece incontrando qualcuno.",
    "active": true,
    "tag": "inglese;classe_5;saluti;primaria",
    "tags": [
@@ -3123,7 +3123,7 @@
    ],
    "answerIndex": 3,
    "answer": "Excuse me",
-   "explanation": "The correct answer is \"Excuse me\".",
+   "explanation": "'Excuse me' significa scusa, permesso: si usa per chiedere il turno di parola in modo educato. 'Sorry' serve invece per scusarsi di un errore.",
    "active": true,
    "tag": "inglese;classe_5;saluti;primaria",
    "tags": [
@@ -3156,7 +3156,7 @@
    ],
    "answerIndex": 0,
    "answer": "I'm fine, thank you",
-   "explanation": "The correct answer is \"I'm fine, thank you\".",
+   "explanation": "A 'How are you?' si risponde dicendo come si sta e ringraziando: 'I'm fine, thank you'.",
    "active": true,
    "tag": "inglese;classe_5;saluti;primaria",
    "tags": [
@@ -3222,7 +3222,7 @@
    ],
    "answerIndex": 3,
    "answer": "8",
-   "explanation": "The correct answer is \"8\".",
+   "explanation": "La sequenza 2, 4, 6 sale di due in due: il numero seguente è 8.",
    "active": true,
    "tag": "inglese;classe_5;numeri;primaria",
    "tags": [
@@ -3288,7 +3288,7 @@
    ],
    "answerIndex": 1,
    "answer": "grandfather",
-   "explanation": "The correct answer is \"grandfather\".",
+   "explanation": "Il padre della madre è il nonno: 'grandfather'.",
    "active": true,
    "tag": "inglese;classe_5;famiglia;primaria",
    "tags": [
@@ -5565,7 +5565,7 @@
    ],
    "answerIndex": 1,
    "answer": "Saturday",
-   "explanation": "The correct answer is \"Saturday\".",
+   "explanation": "'Tomorrow' significa domani: dopo Friday (venerdì) viene Saturday (sabato).",
    "active": true,
    "tag": "inglese;classe_5;giorni;primaria",
    "tags": [
@@ -5598,7 +5598,7 @@
    ],
    "answerIndex": 2,
    "answer": "Saturday",
-   "explanation": "The correct answer is \"Saturday\".",
+   "explanation": "'Yesterday' significa ieri: prima di Sunday (domenica) viene Saturday (sabato).",
    "active": true,
    "tag": "inglese;classe_5;giorni;primaria",
    "tags": [
@@ -5631,7 +5631,7 @@
    ],
    "answerIndex": 0,
    "answer": "February",
-   "explanation": "The correct answer is \"February\".",
+   "explanation": "Il secondo mese dell'anno è February (febbraio): January è il primo.",
    "active": true,
    "tag": "inglese;classe_5;mesi;primaria",
    "tags": [
@@ -5664,7 +5664,7 @@
    ],
    "answerIndex": 1,
    "answer": "September",
-   "explanation": "The correct answer is \"September\".",
+   "explanation": "Il nono mese dell'anno è September (settembre). August è l'ottavo, October il decimo.",
    "active": true,
    "tag": "inglese;classe_5;mesi;primaria",
    "tags": [
@@ -5697,7 +5697,7 @@
    ],
    "answerIndex": 2,
    "answer": "February",
-   "explanation": "The correct answer is \"February\".",
+   "explanation": "February (febbraio) è il mese più corto: 28 giorni, 29 negli anni bisestili.",
    "active": true,
    "tag": "inglese;classe_5;mesi;primaria",
    "tags": [
@@ -5730,7 +5730,7 @@
    ],
    "answerIndex": 0,
    "answer": "rainy",
-   "explanation": "The correct answer is \"rainy\".",
+   "explanation": "L'ombrello ('umbrella') serve quando piove: il tempo è 'rainy'.",
    "active": true,
    "tag": "inglese;classe_5;meteo;primaria",
    "tags": [
@@ -5763,7 +5763,7 @@
    ],
    "answerIndex": 1,
    "answer": "snowy",
-   "explanation": "The correct answer is \"snowy\".",
+   "explanation": "Guanti ('gloves') e sciarpa ('scarf') servono con il freddo e la neve: il tempo è 'snowy'.",
    "active": true,
    "tag": "inglese;classe_5;meteo;primaria",
    "tags": [
@@ -5895,7 +5895,7 @@
    ],
    "answerIndex": 3,
    "answer": "are",
-   "explanation": "The correct answer is \"are\".",
+   "explanation": "'My friends' è un soggetto plurale: il verbo 'to be' fa 'are'.",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -5928,7 +5928,7 @@
    ],
    "answerIndex": 0,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "'The book' è un soggetto singolare di terza persona, come 'it': il verbo fa 'is'.",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -5961,7 +5961,7 @@
    ],
    "answerIndex": 1,
    "answer": "am",
-   "explanation": "The correct answer is \"am\".",
+   "explanation": "Con 'I' il verbo 'to be' fa 'am': I am happy.",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -5994,7 +5994,7 @@
    ],
    "answerIndex": 1,
    "answer": "have",
-   "explanation": "The correct answer is \"have\".",
+   "explanation": "'My sister and I' equivale a 'we', soggetto plurale: si usa 'have got'.",
    "active": true,
    "tag": "inglese;classe_5;have_got;primaria",
    "tags": [
@@ -6027,7 +6027,7 @@
    ],
    "answerIndex": 2,
    "answer": "has",
-   "explanation": "The correct answer is \"has\".",
+   "explanation": "'Peter' è un soggetto singolare di terza persona, come 'he': si usa 'has got'.",
    "active": true,
    "tag": "inglese;classe_5;have_got;primaria",
    "tags": [
@@ -6060,7 +6060,7 @@
    ],
    "answerIndex": 3,
    "answer": "No, I haven't.",
-   "explanation": "The correct answer is \"No, I haven't.\"",
+   "explanation": "Nella risposta breve negativa si riprende l'ausiliare della domanda: 'Have you...?' → 'No, I haven't', contrazione di 'have not'.",
    "active": true,
    "tag": "inglese;classe_5;have_got;primaria",
    "tags": [
@@ -6093,7 +6093,7 @@
    ],
    "answerIndex": 2,
    "answer": "Yes, it is.",
-   "explanation": "The correct answer is \"Yes, it is.\"",
+   "explanation": "Nella risposta breve si riprende il verbo della domanda: 'Is it...?' → 'Yes, it is.'",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -6126,7 +6126,7 @@
    ],
    "answerIndex": 3,
    "answer": "Yes, I am.",
-   "explanation": "The correct answer is \"Yes, I am.\"",
+   "explanation": "La domanda usa 'are you', ma nella risposta il soggetto diventa 'I' e il verbo 'am': Yes, I am.",
    "active": true,
    "tag": "inglese;classe_5;to_be;primaria",
    "tags": [
@@ -8469,7 +8469,7 @@
    ],
    "answerIndex": 1,
    "answer": "I get up at seven.",
-   "explanation": "The correct answer is \"I get up at seven.\"",
+   "explanation": "'I get up at seven' descrive un'azione che si ripete ogni giorno a un'ora fissa: è una routine. Le altre frasi descrivono un colore, un luogo o il tempo.",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria",
    "tags": [
@@ -8502,7 +8502,7 @@
    ],
    "answerIndex": 2,
    "answer": "I do my homework and then I have dinner.",
-   "explanation": "The correct answer is \"I do my homework and then I have dinner.\"",
+   "explanation": "Compiti e cena sono azioni della sera, unite da 'and then', e poi: la frase racconta una sequenza serale.",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria",
    "tags": [
@@ -8535,7 +8535,7 @@
    ],
    "answerIndex": 0,
    "answer": "I like painting after school.",
-   "explanation": "The correct answer is \"I like painting after school.\"",
+   "explanation": "Un hobby è un'attività che si fa per piacere: 'I like painting' dice proprio questo. Le altre frasi descrivono un luogo, una data o l'età.",
    "active": true,
    "tag": "inglese;classe_5;hobby;primaria",
    "tags": [
@@ -8568,7 +8568,7 @@
    ],
    "answerIndex": 1,
    "answer": "We play volleyball on Fridays.",
-   "explanation": "The correct answer is \"We play volleyball on Fridays.\"",
+   "explanation": "'We play volleyball on Fridays' parla di pallavolo, uno sport. In inglese davanti ai giorni si usa 'on'.",
    "active": true,
    "tag": "inglese;classe_5;sport;primaria",
    "tags": [
@@ -8700,7 +8700,7 @@
    ],
    "answerIndex": 2,
    "answer": "How often do you play tennis?",
-   "explanation": "The correct answer is \"How often do you play tennis?\".",
+   "explanation": "'How often' chiede ogni quanto si fa una cosa, cioè la frequenza. 'Where' chiede il luogo, 'who' la persona.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8733,7 +8733,7 @@
    ],
    "answerIndex": 3,
    "answer": "Which sport do you prefer?",
-   "explanation": "The correct answer is \"Which sport do you prefer?\".",
+   "explanation": "'Prefer' significa preferire: la domanda con 'which' chiede di scegliere fra più cose, quindi indaga la preferenza.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8766,7 +8766,7 @@
    ],
    "answerIndex": 0,
    "answer": "When do you have breakfast?",
-   "explanation": "The correct answer is \"When do you have breakfast?\".",
+   "explanation": "'When' chiede quando: nella routine indica il momento della giornata. 'What' chiede la cosa, 'who' la persona, 'where' il luogo.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8799,7 +8799,7 @@
    ],
    "answerIndex": 1,
    "answer": "Every day.",
-   "explanation": "The correct answer is \"Every day.\"",
+   "explanation": "'How often' chiede la frequenza: si risponde con espressioni come 'every day', ogni giorno, o 'twice a week'.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8832,7 +8832,7 @@
    ],
    "answerIndex": 2,
    "answer": "I go to the park.",
-   "explanation": "The correct answer is \"I go to the park.\"",
+   "explanation": "'What do you do...?' chiede un'azione: la risposta è una frase con un verbo, 'I go to the park'.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8865,7 +8865,7 @@
    ],
    "answerIndex": 3,
    "answer": "It is in my bedroom.",
-   "explanation": "The correct answer is \"It is in my bedroom.\"",
+   "explanation": "'Where' chiede il luogo: si risponde con 'It is in my bedroom', usando 'it' per riprendere l'oggetto.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8898,7 +8898,7 @@
    ],
    "answerIndex": 0,
    "answer": "Yes, I do.",
-   "explanation": "The correct answer is \"Yes, I do.\"",
+   "explanation": "'Do you...?' è una domanda chiusa: si risponde 'Yes, I do' oppure 'No, I don't', riprendendo l'ausiliare.",
    "active": true,
    "tag": "inglese;classe_5;domande;primaria",
    "tags": [
@@ -8931,7 +8931,7 @@
    ],
    "answerIndex": 1,
    "answer": "painting",
-   "explanation": "The correct answer is \"painting\".",
+   "explanation": "'Painting' è la pittura, un'attività creativa: si produce qualcosa di nuovo. Dormire e aspettare non creano nulla.",
    "active": true,
    "tag": "inglese;classe_5;hobby;primaria",
    "tags": [
@@ -8964,7 +8964,7 @@
    ],
    "answerIndex": 2,
    "answer": "cycling",
-   "explanation": "The correct answer is \"cycling\".",
+   "explanation": "'Cycling' è andare in bicicletta: attività di movimento all'aperto ('outdoors'). Leggere e disegnare si fanno da fermi.",
    "active": true,
    "tag": "inglese;classe_5;hobby;primaria",
    "tags": [
@@ -8997,7 +8997,7 @@
    ],
    "answerIndex": 2,
    "answer": "football",
-   "explanation": "The correct answer is \"football\".",
+   "explanation": "Il calcio ('football') si gioca in squadra, con compagni ('teammates') e allenatore ('coach'). Pittura, lettura e giardinaggio si fanno da soli.",
    "active": true,
    "tag": "inglese;classe_5;sport;primaria",
    "tags": [
@@ -9030,7 +9030,7 @@
    ],
    "answerIndex": 3,
    "answer": "study",
-   "explanation": "The correct answer is \"study\".",
+   "explanation": "Nei giorni di scuola si studia la mattina, quindi prima di pranzo. Andare a letto e cenare sono azioni serali.",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria",
    "tags": [
@@ -9063,7 +9063,7 @@
    ],
    "answerIndex": 0,
    "answer": "brush your teeth",
-   "explanation": "The correct answer is \"brush your teeth\".",
+   "explanation": "Prima di dormire ci si lava i denti: 'brush your teeth'. Colazione e scuola sono del mattino.",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria",
    "tags": [
@@ -11034,7 +11034,7 @@
    ],
    "answerIndex": 1,
    "answer": "I go to bed.",
-   "explanation": "The correct answer is \"I go to bed.\"",
+   "explanation": "'Go to bed' significa andare a letto: la frase dice che alle 21:00 vado a letto.",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -11068,7 +11068,7 @@
    ],
    "answerIndex": 2,
    "answer": "I play outside.",
-   "explanation": "The correct answer is \"I play outside.\"",
+   "explanation": "'Play outside' significa giocare fuori: la frase dice che alle 17:00 gioco all'aperto.",
    "active": true,
    "tag": "inglese;classe_5;routine_quotidiana;primaria;pilota_parametrico",
    "tags": [
@@ -14735,7 +14735,7 @@
    ],
    "answerIndex": 2,
    "answer": "cat",
-   "explanation": "The correct answer is \"cat\".",
+   "explanation": "'Cat' è il gatto. 'Dog' è il cane, 'fish' il pesce, 'bird' l'uccello.",
    "active": true,
    "tag": "inglese;bonus;classe_2;animali;primaria",
    "tags": [
@@ -14769,7 +14769,7 @@
    ],
    "answerIndex": 3,
    "answer": "red",
-   "explanation": "The correct answer is \"red\".",
+   "explanation": "'Red' è il rosso. 'Blue' è blu, 'green' verde, 'yellow' giallo.",
    "active": true,
    "tag": "inglese;bonus;classe_3;colori;primaria",
    "tags": [
@@ -14803,7 +14803,7 @@
    ],
    "answerIndex": 0,
    "answer": "hello",
-   "explanation": "The correct answer is \"hello\".",
+   "explanation": "'Hello' è il saluto che corrisponde a ciao quando si arriva. Per ciao nel senso di arrivederci si usa 'goodbye'.",
    "active": true,
    "tag": "inglese;bonus;classe_4;saluti;primaria",
    "tags": [
@@ -14837,7 +14837,7 @@
    ],
    "answerIndex": 0,
    "answer": "is",
-   "explanation": "The correct answer is \"is\".",
+   "explanation": "Con 'she' il verbo 'to be' fa 'is': She is happy.",
    "active": true,
    "tag": "inglese;bonus;classe_3;to_be;primaria",
    "tags": [
@@ -14871,7 +14871,7 @@
    ],
    "answerIndex": 1,
    "answer": "Friday",
-   "explanation": "The correct answer is \"Friday\".",
+   "explanation": "'Friday' è venerdì. 'Thursday' è giovedì, 'Saturday' sabato, 'Monday' lunedì.",
    "active": true,
    "tag": "inglese;bonus;classe_4;giorni;primaria",
    "tags": [
@@ -14905,7 +14905,7 @@
    ],
    "answerIndex": 2,
    "answer": "water",
-   "explanation": "The correct answer is \"water\".",
+   "explanation": "'Water' è l'acqua. 'Milk' è il latte, 'juice' il succo, 'tea' il tè.",
    "active": true,
    "tag": "inglese;bonus;classe_5;cibo;primaria",
    "tags": [
@@ -14939,7 +14939,7 @@
    ],
    "answerIndex": 1,
    "answer": "Mi sveglio alle sette",
-   "explanation": "The correct answer is \"Mi sveglio alle sette\".",
+   "explanation": "'Wake up' significa svegliarsi e 'at seven' alle sette: la frase vuol dire mi sveglio alle sette.",
    "active": true,
    "tag": "inglese;bonus;classe_4;routine_quotidiana;primaria",
    "tags": [
@@ -14973,7 +14973,7 @@
    ],
    "answerIndex": 2,
    "answer": "Dove abiti?",
-   "explanation": "The correct answer is \"Dove abiti?\".",
+   "explanation": "'Where' significa dove e 'live' abitare: la domanda chiede dove abiti. L'ausiliare 'do' non si traduce.",
    "active": true,
    "tag": "inglese;bonus;classe_5;domande;primaria",
    "tags": [
@@ -15007,7 +15007,7 @@
    ],
    "answerIndex": 3,
    "answer": "So nuotare",
-   "explanation": "The correct answer is \"So nuotare\".",
+   "explanation": "'Can' esprime la capacità di fare qualcosa: 'I can swim' vuol dire so nuotare, non mi piace nuotare.",
    "active": true,
    "tag": "inglese;bonus;classe_5;sport;primaria",
    "tags": [
