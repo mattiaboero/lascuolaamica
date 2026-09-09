@@ -3,6 +3,14 @@
 ## Non rilasciato - 2026-09-09
 
 ### Notes
+- **In produzione la pagina Supporta mostra `[email protected]` al posto di `supporto@lascuolaamica.it`, in quattro punti** — nel testo "Per segnalazioni e riscontri scrivi a ...", nel bottone "Scrivi a ..." e nei due `<span>` corrispondenti. Nessuno puo' scrivere.
+
+  Causa: **Email Address Obfuscation** di Cloudflare riscrive l'indirizzo in `<a href="/cdn-cgi/l/email-protection#..." data-cfemail="...">` e lo rimette a posto lato client con `/cdn-cgi/scripts/.../email-decode.min.js`. Quello script fa `innerHTML`, e la nostra CSP ha `require-trusted-types-for 'script'`: la scrittura viene bloccata e il segnaposto resta. In console: `Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment. at email-decode.min.js:1:1236`.
+
+  Non e' un difetto del repo — `supporta.html` contiene l'indirizzo giusto in tutti e due i punti. Si risolve spegnendo Email Address Obfuscation dal pannello Cloudflare (Security -> Client side abuse). Nessuna modifica al codice.
+
+- **Sul JSD non c'e' piu' niente da fare.** La lista "Bot traffic" del loro pannello non ha nessuna voce "JS detections" — conferma che il piano non la espone separatamente — e Bot Fight Mode e' spento. L'iniezione continua, quindi arriva dal livello di sicurezza automatico, che il pannello segna come "Always active". La CSP lo blocca, il sito funziona, ed e' il comportamento coerente con quel che promettiamo ai genitori: smettere di inseguirlo.
+
 - **Gli errori CSP in console non sono analytics di Cloudflare: sono bot detection, e non c'e' niente da sistemare in questo repo.** Avevo scritto che il beacon bloccato erano le Web Analytics. Sbagliato: lo script iniettato carica `/cdn-cgi/challenge-platform/scripts/jsd/main.js`, cioe' le JS Detections di **Bot Fight Mode**, che profilano il browser per classificare i bot. Di Web Analytics non c'e' traccia — nessun `cloudflareinsights`, nessun `beacon.min.js`, ne' nelle pagine servite ne' nel repo.
 
 - **L'hash in `_headers` non e' una via percorribile.** Lo script iniettato contiene il ray id della richiesta (`r:'a384b1076dc15273'`), quindi il suo sha256 cambia a ogni caricamento — verificato su tre richieste consecutive, tre hash diversi. Nessun valore statico puo' corrispondere.
