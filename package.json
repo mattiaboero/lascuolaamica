@@ -21,7 +21,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:counts && npm run check:prepublish",
+    "verify": "npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:balance && npm run check:counts && npm run check:prepublish",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -33,7 +33,8 @@
     "check:plausibility": "node scripts/check_plausibility.js",
     "check:bosco": "node scripts/check_bosco.js",
     "sync:counts": "python3 scripts/sync_question_counts.py",
-    "check:counts": "python3 scripts/sync_question_counts.py --check"
+    "check:counts": "python3 scripts/sync_question_counts.py --check",
+    "check:balance": "node scripts/check_answer_balance.js"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
