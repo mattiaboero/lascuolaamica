@@ -18297,7 +18297,7 @@
    ],
    "answerIndex": 1,
    "answer": "rappresentare dati geografici",
-   "explanation": "La risposta corretta è 'rappresentare dati geografici'.",
+   "explanation": "I grafici traducono i numeri in forme: una colonna alta o uno spicchio grande si confrontano a colpo d'occhio, un elenco di cifre no.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18329,7 +18329,7 @@
    ],
    "answerIndex": 2,
    "answer": "quantità",
-   "explanation": "La risposta corretta è 'quantità'.",
+   "explanation": "Nell'istogramma l'altezza delle colonne è proporzionale alla quantità: due valori si confrontano guardando quale colonna è più alta.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18361,7 +18361,7 @@
    ],
    "answerIndex": 3,
    "answer": "parti di un totale",
-   "explanation": "La risposta corretta è 'parti di un totale'.",
+   "explanation": "L'areogramma divide un cerchio in spicchi: ogni spicchio è una parte del totale, e la sua ampiezza dice quanto pesa sul tutto.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18393,7 +18393,7 @@
    ],
    "answerIndex": 0,
    "answer": "rilievi, fiumi e pianure",
-   "explanation": "La risposta corretta è 'rilievi, fiumi e pianure'.",
+   "explanation": "La carta fisica mostra il territorio come lo ha fatto la natura: si usa per trovare monti, fiumi e pianure.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18425,7 +18425,7 @@
    ],
    "answerIndex": 1,
    "answer": "regioni e capoluoghi",
-   "explanation": "La risposta corretta è 'regioni e capoluoghi'.",
+   "explanation": "La carta politica mostra le divisioni amministrative: confini regionali, capoluoghi e città principali.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18457,7 +18457,7 @@
    ],
    "answerIndex": 2,
    "answer": "la distribuzione degli abitanti",
-   "explanation": "La risposta corretta è 'la distribuzione degli abitanti'.",
+   "explanation": "La carta della popolazione colora il territorio secondo quanti abitanti ci sono: si vede subito dove la gente si concentra e dove no.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18489,7 +18489,7 @@
    ],
    "answerIndex": 3,
    "answer": "geografiche",
-   "explanation": "La risposta corretta è 'geografiche'.",
+   "explanation": "Nord, Centro, Sud e Isole sono ripartizioni geografiche: raggruppano le regioni per posizione, non per confini amministrativi.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18521,7 +18521,7 @@
    ],
    "answerIndex": 0,
    "answer": "titolo, legenda e simboli",
-   "explanation": "La risposta corretta è 'titolo, legenda e simboli'.",
+   "explanation": "Prima di leggere i colori servono tre cose: il titolo dice di che tema si tratta, la legenda cosa significano i simboli, la scala quanto è ridotto tutto.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18553,7 +18553,7 @@
    ],
    "answerIndex": 1,
    "answer": "zone climatiche e fenomeni atmosferici",
-   "explanation": "La risposta corretta è 'zone climatiche e fenomeni atmosferici'.",
+   "explanation": "La carta climatica divide il territorio in zone secondo temperature e precipitazioni: mostra dove fa più caldo, più freddo, dove piove di più.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18585,7 +18585,7 @@
    ],
    "answerIndex": 2,
    "answer": "attività produttive e risorse",
-   "explanation": "La risposta corretta è 'attività produttive e risorse'.",
+   "explanation": "La carta economica mostra dove si trovano le attività e le risorse: industrie, colture, miniere, porti.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18617,7 +18617,7 @@
    ],
    "answerIndex": 3,
    "answer": "coordinate geografiche",
-   "explanation": "La risposta corretta è 'coordinate geografiche'.",
+   "explanation": "Le coordinate danno a ogni punto della Terra una coppia di numeri unica: è così che si indica una posizione senza ambiguità.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18649,7 +18649,7 @@
    ],
    "answerIndex": 0,
    "answer": "equatore",
-   "explanation": "La risposta corretta è 'equatore'.",
+   "explanation": "L'equatore è il parallelo a latitudine zero: da lì si contano i gradi verso nord e verso sud, fino a 90 ai poli.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18681,7 +18681,7 @@
    ],
    "answerIndex": 1,
    "answer": "meridiano di Greenwich",
-   "explanation": "La risposta corretta è 'meridiano di Greenwich'.",
+   "explanation": "Il meridiano di Greenwich è quello a longitudine zero: da lì si contano i gradi verso est e verso ovest, fino a 180.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18713,7 +18713,7 @@
    ],
    "answerIndex": 2,
    "answer": "il significato dei colori o delle parti",
-   "explanation": "La risposta corretta è 'il significato dei colori o delle parti'.",
+   "explanation": "Nell'areogramma ogni spicchio ha un colore: la legenda dice a quale categoria corrisponde, altrimenti i colori non direbbero nulla.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18745,7 +18745,7 @@
    ],
    "answerIndex": 3,
    "answer": "tematica",
-   "explanation": "La risposta corretta è 'tematica'.",
+   "explanation": "La densità di popolazione è un tema specifico rappresentato sul territorio: è la definizione di carta tematica.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18777,7 +18777,7 @@
    ],
    "answerIndex": 0,
    "answer": "stimare le distanze",
-   "explanation": "La risposta corretta è 'stimare le distanze'.",
+   "explanation": "Con la scala si passa dai centimetri sul foglio ai chilometri sul terreno: si misura la distanza sulla carta e si moltiplica.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18809,7 +18809,7 @@
    ],
    "answerIndex": 1,
    "answer": "mari più profondi",
-   "explanation": "La risposta corretta è 'mari più profondi'.",
+   "explanation": "Sulle carte fisiche il blu si scurisce con la profondità: le zone più scure indicano i fondali marini più profondi.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18841,7 +18841,7 @@
    ],
    "answerIndex": 2,
    "answer": "strade, rilievi e traffico",
-   "explanation": "La risposta corretta è 'strade, rilievi e traffico'.",
+   "explanation": "Le mappe digitali sovrappongono livelli che si accendono e si spengono: la stessa area può mostrare le strade, i rilievi o il traffico in tempo reale.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18873,7 +18873,7 @@
    ],
    "answerIndex": 3,
    "answer": "spostarsi lungo la rete dei trasporti",
-   "explanation": "La risposta corretta è 'spostarsi lungo la rete dei trasporti'.",
+   "explanation": "La carta stradale mostra strade, svincoli e distanze: è pensata per chi deve andare da un posto a un altro.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18905,7 +18905,7 @@
    ],
    "answerIndex": 0,
    "answer": "dati",
-   "explanation": "La risposta corretta è 'dati'.",
+   "explanation": "La carta tematica unisce due informazioni: dove si trova un luogo e quanto vale lì un certo dato. È il collegamento fra spazio e numeri.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18937,7 +18937,7 @@
    ],
    "answerIndex": 1,
    "answer": "climatica o tematica",
-   "explanation": "La risposta corretta è 'climatica o tematica'.",
+   "explanation": "Le precipitazioni sono un dato climatico: si leggono su una carta climatica, che colora il territorio secondo quanto piove.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -18969,7 +18969,7 @@
    ],
    "answerIndex": 2,
    "answer": "un istogramma",
-   "explanation": "La risposta corretta è 'un istogramma'.",
+   "explanation": "Per confrontare due quantità l'istogramma è il grafico giusto: le colonne si mettono fianco a fianco e la differenza si vede subito.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19001,7 +19001,7 @@
    ],
    "answerIndex": 3,
    "answer": "percentuali o parti di un totale",
-   "explanation": "La risposta corretta è 'percentuali o parti di un totale'.",
+   "explanation": "Il grafico a torta rappresenta un intero diviso in parti: ogni spicchio è una percentuale, e insieme fanno il 100%.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -23670,7 +23670,7 @@
    ],
    "answerIndex": 2,
    "answer": "Nord",
-   "explanation": "La risposta corretta è 'Nord'.",
+   "explanation": "La Svizzera confina con l'Italia lungo le Alpi centrali, in corrispondenza di Piemonte e Lombardia: è un confine settentrionale.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23702,7 +23702,7 @@
    ],
    "answerIndex": 3,
    "answer": "la penisola italiana",
-   "explanation": "La risposta corretta è 'la penisola italiana'.",
+   "explanation": "L'Europa è il continente cui l'Italia appartiene: la penisola ne è una delle tre grandi propaggini meridionali, con quella iberica e quella balcanica.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23734,7 +23734,7 @@
    ],
    "answerIndex": 0,
    "answer": "Sud",
-   "explanation": "La risposta corretta è 'Sud'.",
+   "explanation": "L'Europa meridionale è la fascia affacciata sul Mediterraneo: vi rientrano Italia, Spagna, Portogallo, Grecia e i Balcani costieri.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23766,7 +23766,7 @@
    ],
    "answerIndex": 1,
    "answer": "scambi culturali e commerciali",
-   "explanation": "La risposta corretta è 'scambi culturali e commerciali'.",
+   "explanation": "Stando in mezzo al Mediterraneo, per millenni l'Italia ha visto passare merci, persone e idee fra Europa, Africa e Oriente.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23798,7 +23798,7 @@
    ],
    "answerIndex": 2,
    "answer": "strade, ferrovie, porti e aeroporti",
-   "explanation": "La risposta corretta è 'strade, ferrovie, porti e aeroporti'.",
+   "explanation": "L'Italia è collegata all'Europa da autostrade e ferrovie che valicano le Alpi, e al resto del mondo da porti e aeroporti.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23830,7 +23830,7 @@
    ],
    "answerIndex": 3,
    "answer": "collaborazione tra Stati",
-   "explanation": "La risposta corretta è 'collaborazione tra Stati'.",
+   "explanation": "L'Unione nasce per far collaborare Stati che si erano combattuti: mercato comune, regole condivise e decisioni prese insieme.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23862,7 +23862,7 @@
    ],
    "answerIndex": 0,
    "answer": "condividere alcuni diritti e opportunità",
-   "explanation": "La risposta corretta è 'condividere alcuni diritti e opportunità'.",
+   "explanation": "Chi è cittadino di uno Stato membro è anche cittadino europeo: può viaggiare, studiare e lavorare negli altri Paesi dell'Unione.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23894,7 +23894,7 @@
    ],
    "answerIndex": 1,
    "answer": "in tutti i Paesi del mondo",
-   "explanation": "La risposta corretta è 'in tutti i Paesi del mondo'.",
+   "explanation": "L'euro è la moneta di venti Paesi dell'Unione: fuori da lì servono altre valute, dal dollaro alla sterlina.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23926,7 +23926,7 @@
    ],
    "answerIndex": 2,
    "answer": "Adriatico",
-   "explanation": "La risposta corretta è 'Adriatico'.",
+   "explanation": "L'Adriatico è un mare stretto: dalla costa pugliese all'Albania ci sono meno di cento chilometri, e i Balcani sono lì di fronte.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23958,7 +23958,7 @@
    ],
    "answerIndex": 3,
    "answer": "collega tre continenti",
-   "explanation": "La risposta corretta è 'collega tre continenti'.",
+   "explanation": "Il Mediterraneo tocca Europa, Africa e Asia: è il mare che le mette in comunicazione, e l'Italia sta proprio nel mezzo.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -23990,7 +23990,7 @@
    ],
    "answerIndex": 0,
    "answer": "rotte e collegamenti marittimi",
-   "explanation": "La risposta corretta è 'rotte e collegamenti marittimi'.",
+   "explanation": "Sicilia e Sardegna stanno sulle rotte che attraversano il Mediterraneo: da sempre punti di scalo fra le sue due sponde.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24022,7 +24022,7 @@
    ],
    "answerIndex": 1,
    "answer": "capitale dell'Italia",
-   "explanation": "La risposta corretta è \"capitale dell'Italia\".",
+   "explanation": "A Roma hanno sede il governo italiano e le rappresentanze diplomatiche: è da lì che l'Italia parla con gli altri Stati.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24054,7 +24054,7 @@
    ],
    "answerIndex": 2,
    "answer": "Nord Italia",
-   "explanation": "La risposta corretta è 'Nord Italia'.",
+   "explanation": "Milano e Torino sono nella Pianura Padana, in Lombardia e Piemonte: sono fra le principali città del Nord.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24086,7 +24086,7 @@
    ],
    "answerIndex": 3,
    "answer": "Mezzogiorno o Sud Italia",
-   "explanation": "La risposta corretta è 'Mezzogiorno o Sud Italia'.",
+   "explanation": "Napoli, Bari e Palermo sono in Campania, Puglia e Sicilia: appartengono al Mezzogiorno, cioè all'Italia meridionale e insulare.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24118,7 +24118,7 @@
    ],
    "answerIndex": 0,
    "answer": "scambi e relazioni",
-   "explanation": "La risposta corretta è 'scambi e relazioni'.",
+   "explanation": "Le regioni non commerciano solo fra loro: esportano e importano dall'Europa, e molte imprese lavorano con partner di altri Stati.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24150,7 +24150,7 @@
    ],
    "answerIndex": 1,
    "answer": "Mediterraneo",
-   "explanation": "La risposta corretta è 'Mediterraneo'.",
+   "explanation": "L'Italia è l'unico Paese che scende dall'Europa continentale fino al centro del Mediterraneo: fa da collegamento fra i due mondi.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24182,7 +24182,7 @@
    ],
    "answerIndex": 2,
    "answer": "commerci, turismo e migrazioni",
-   "explanation": "La risposta corretta è 'commerci, turismo e migrazioni'.",
+   "explanation": "Stare al centro del Mediterraneo significa vedere passare merci, turisti e persone in movimento: la posizione decide molto di ciò che accade.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24214,7 +24214,7 @@
    ],
    "answerIndex": 3,
    "answer": "trafori e valichi",
-   "explanation": "La risposta corretta è 'trafori e valichi'.",
+   "explanation": "Le Alpi sarebbero una barriera, ma valichi e trafori le attraversano: il Brennero, il Frejus, il Monte Bianco, il Gottardo.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24246,7 +24246,7 @@
    ],
    "answerIndex": 0,
    "answer": "confini, climi e reti di trasporto",
-   "explanation": "La risposta corretta è 'confini, climi e reti di trasporto'.",
+   "explanation": "Confrontando confini, climi e trasporti si capisce perché l'Italia somiglia ad alcuni Paesi europei e differisce da altri.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24278,7 +24278,7 @@
    ],
    "answerIndex": 1,
    "answer": "economico e politico",
-   "explanation": "La risposta corretta è 'economico e politico'.",
+   "explanation": "Gli Stati membri collaborano su due piani: economico, con il mercato unico e l'euro, e politico, con leggi e decisioni comuni.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24310,7 +24310,7 @@
    ],
    "answerIndex": 2,
    "answer": "commercio, lavoro e cultura",
-   "explanation": "La risposta corretta è 'commercio, lavoro e cultura'.",
+   "explanation": "I rapporti con l'Europa passano da tre canali: le merci che si scambiano, le persone che si spostano per lavoro e gli scambi culturali.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24342,7 +24342,7 @@
    ],
    "answerIndex": 3,
    "answer": "asiatici",
-   "explanation": "La risposta corretta è 'asiatici'.",
+   "explanation": "Sul Mediterraneo si affacciano Paesi di tre continenti: europei come Spagna e Grecia, africani come Egitto e Tunisia, asiatici come Turchia e Libano.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24374,7 +24374,7 @@
    ],
    "answerIndex": 0,
    "answer": "agli altri Stati",
-   "explanation": "La risposta corretta è 'agli altri Stati'.",
+   "explanation": "Una carta dell'Europa mostra dove sta l'Italia rispetto agli altri Stati: quali confina, quali le stanno di fronte, quali sono lontani.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24406,7 +24406,7 @@
    ],
    "answerIndex": 1,
    "answer": "collegano merci e persone",
-   "explanation": "La risposta corretta è 'collegano merci e persone'.",
+   "explanation": "Genova, Trieste e Gioia Tauro ricevono navi da tutto il mondo: le merci arrivano lì e da lì risalgono verso l'Europa centrale.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24438,7 +24438,7 @@
    ],
    "answerIndex": 2,
    "answer": "forma allungata e stretta",
-   "explanation": "La risposta corretta è 'forma allungata e stretta'.",
+   "explanation": "L'Italia è lunga oltre mille chilometri e larga poche centinaia: è questa forma stretta e allungata a farla entrare così tanto nel mare.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24470,7 +24470,7 @@
    ],
    "answerIndex": 3,
    "answer": "africano",
-   "explanation": "La risposta corretta è 'africano'.",
+   "explanation": "La Sicilia dista poco più di 140 km dalla Tunisia: è il punto d'Europa più vicino all'Africa, dopo le isole spagnole.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
@@ -24502,7 +24502,7 @@
    ],
    "answerIndex": 0,
    "answer": "relazioni tra posizione geografica e vita umana",
-   "explanation": "La risposta corretta è 'relazioni tra posizione geografica e vita umana'.",
+   "explanation": "Studiare l'Italia in Europa serve a capire un legame: dove si trova un Paese influenza come vivono, lavorano e si spostano le persone.",
    "active": true,
    "tag": "geografia;classe_5;italia;europa",
    "tags": [
