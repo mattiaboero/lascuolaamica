@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## 4.13.9 - 2026-09-09
+
+### Changed
+- **Il changelog del sito dice ora perche' il numero di domande e' sceso.** La 4.13.7 ha portato la home da "9.800+ domande" a "9.200+" senza una riga che lo spiegasse: chi lo avesse notato avrebbe visto solo un sito che si rimpicciolisce. Ora la voce di oggi dice che il conteggio riguarda le domande che escono davvero in una partita, e che le 656 di differenza sono i doppioni disattivati in questi giorni.
+- La riga di coda sul riordino dell'elenco copre anche la riscrittura delle voci di aprile (4.13.7 e 4.13.8).
+
+### Notes
+- Nessuna modifica al codice o alle domande: la 4.13.8 era gia' in produzione. Questo bump serve solo a distribuire `json/changelog.json`, che e' in precache.
+- Ancora il 9 settembre: etichetta a `Release 4.13.1 - 4.13.9`, sei righe, sotto il limite di sette.
+
 ## 4.13.8 - 2026-09-09
 
 ### Fixed

@@ -1,12 +1,13 @@
 [
  {
-  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.8",
+  "date": "9 settembre 2026 · Release 4.13.1 – 4.13.9",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e spiegazioni che invece di spiegare ripetevano la consegna.",
    "Tolti di mezzo alcuni casi in cui la risposta si trovava senza sapere l'inglese: bastava cercare l'unica opzione al plurale, o l'unica senza articolo.",
    "Aggiunti controlli automatici anche per l'inglese, che prima non ne aveva nessuno.",
    "Rilette anche le 2.649 domande che la revisione precedente aveva lasciato da parte perché ripetevano lo schema di un'altra: raggruppate in 299 famiglie e controllate una famiglia alla volta. Corretti triangoli impossibili da disegnare, problemi in cui nessuna delle quattro risposte era giusta, e numeri che non stavano in piedi — un allenatore con 912 atleti, una scuola con 197 classi, una ricetta con 8 grammi di farina per quattro persone, un libro da 190 euro.",
-   "Riordinato questo elenco: una voce per giorno, che riassume tutti gli aggiornamenti di quella giornata invece di elencarli uno per uno."
+   "Il numero di domande dichiarato sul sito conta ora solo quelle che escono davvero in una partita: 9.223 invece di 9.879. Le 656 di differenza sono i doppioni disattivati in questi giorni — restano negli archivi, ma un bambino non li incontra.",
+   "Riordinato questo elenco: una voce per giorno che riassume la giornata, e le voci di aprile riscritte in italiano corrente, come sono già quelle più recenti."
   ]
  },
  {
