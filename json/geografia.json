@@ -13046,7 +13046,7 @@
    ],
    "answerIndex": 1,
    "answer": "mettere in relazione informazioni diverse",
-   "explanation": "La risposta corretta è 'mettere in relazione informazioni diverse'.",
+   "explanation": "La carta fisica dice com'è fatto il territorio, la tematica dice cosa ci succede: sovrapponendole si capisce perché un fenomeno sta proprio lì.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13078,7 +13078,7 @@
    ],
    "answerIndex": 2,
    "answer": "latitudine e longitudine",
-   "explanation": "La risposta corretta è 'latitudine e longitudine'.",
+   "explanation": "La latitudine dice quanto si è a nord o a sud dell'equatore, la longitudine quanto a est o a ovest di Greenwich: due numeri e il punto è unico.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13110,7 +13110,7 @@
    ],
    "answerIndex": 3,
    "answer": "trovare con precisione un punto",
-   "explanation": "La risposta corretta è 'trovare con precisione un punto'.",
+   "explanation": "Con le coordinate ogni punto della Terra ha un indirizzo numerico: è il modo di indicare una posizione senza dipendere da riferimenti locali.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13142,7 +13142,7 @@
    ],
    "answerIndex": 0,
    "answer": "esercitarsi a localizzare nomi e luoghi",
-   "explanation": "La risposta corretta è 'esercitarsi a localizzare nomi e luoghi'.",
+   "explanation": "La carta muta ha i contorni ma non i nomi: costringe a ricordarli invece di leggerli, e per questo si usa per esercitarsi.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13174,7 +13174,7 @@
    ],
    "answerIndex": 1,
    "answer": "tematica",
-   "explanation": "La risposta corretta è 'tematica'.",
+   "explanation": "Mostra un solo argomento — dove stanno le industrie — distribuito sul territorio: è la definizione di carta tematica.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13206,7 +13206,7 @@
    ],
    "answerIndex": 2,
    "answer": "molti simboli diversi",
-   "explanation": "La risposta corretta è 'molti simboli diversi'.",
+   "explanation": "Più simboli ci sono, più è facile confonderli: la legenda è l'unico posto dove il loro significato è scritto una volta per tutte.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13238,7 +13238,7 @@
    ],
    "answerIndex": 3,
    "answer": "forme e trasformazioni dei luoghi",
-   "explanation": "La risposta corretta è 'forme e trasformazioni dei luoghi'.",
+   "explanation": "Dal satellite si vedono la forma dei luoghi e come cambia nel tempo: confrontando immagini di anni diversi si misurano le trasformazioni.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13270,7 +13270,7 @@
    ],
    "answerIndex": 0,
    "answer": "appiattisce la superficie terrestre",
-   "explanation": "La risposta corretta è 'appiattisce la superficie terrestre'.",
+   "explanation": "La Terra è una sfera e un foglio è piatto: per appiattirla bisogna per forza stirare qualcosa, e le proporzioni si deformano.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13302,7 +13302,7 @@
    ],
    "answerIndex": 1,
    "answer": "navigare",
-   "explanation": "La risposta corretta è 'navigare'.",
+   "explanation": "La carta nautica riporta fondali, correnti, fari e rotte: serve a chi naviga, e mostra il mare invece della terra.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13334,7 +13334,7 @@
    ],
    "answerIndex": 2,
    "answer": "rocce e struttura del sottosuolo",
-   "explanation": "La risposta corretta è 'rocce e struttura del sottosuolo'.",
+   "explanation": "La carta geologica colora il territorio secondo il tipo di roccia del sottosuolo: dice di che cosa è fatto, non che forma ha in superficie.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13366,7 +13366,7 @@
    ],
    "answerIndex": 3,
    "answer": "la posizione sulla carta",
-   "explanation": "La risposta corretta è 'la posizione sulla carta'.",
+   "explanation": "Per capire dove sta un'isola rispetto al resto non serve andarci: basta la sua posizione sulla carta rispetto alla penisola e agli altri luoghi.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13398,7 +13398,7 @@
    ],
    "answerIndex": 0,
    "answer": "osservare, descrivere e localizzare luoghi",
-   "explanation": "La risposta corretta è 'osservare, descrivere e localizzare luoghi'.",
+   "explanation": "Carte, coordinate e immagini servono a tre cose: guardare un territorio, descriverlo con parole precise e dire esattamente dove si trova.",
    "active": true,
    "tag": "geografia;classe_4;strumenti;orientamento",
    "tags": [
@@ -13430,7 +13430,7 @@
    ],
    "answerIndex": 3,
    "answer": "a nord dell'Italia",
-   "explanation": "La risposta corretta è \"a nord dell'Italia\".",
+   "explanation": "Le Alpi formano un grande arco lungo tutto il confine settentrionale, dalla Liguria alla Slovenia: separano l'Italia dal resto d'Europa.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13462,7 +13462,7 @@
    ],
    "answerIndex": 0,
    "answer": "da Nord a Sud",
-   "explanation": "La risposta corretta è 'da Nord a Sud'.",
+   "explanation": "Gli Appennini percorrono la penisola per tutta la sua lunghezza, dalla Liguria alla Calabria: sono la spina dorsale dell'Italia.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13494,7 +13494,7 @@
    ],
    "answerIndex": 1,
    "answer": "nel Nord Italia",
-   "explanation": "La risposta corretta è 'nel Nord Italia'.",
+   "explanation": "La Pianura Padana occupa il Nord fra le Alpi e gli Appennini: è la pianura più estesa d'Italia, formata dai detriti portati dai fiumi.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13526,7 +13526,7 @@
    ],
    "answerIndex": 2,
    "answer": "la Pianura Padana",
-   "explanation": "La risposta corretta è 'la Pianura Padana'.",
+   "explanation": "Il Po attraversa la Pianura Padana da ovest a est, dalle Alpi piemontesi all'Adriatico: è la pianura ad aver preso il nome da lui.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13558,7 +13558,7 @@
    ],
    "answerIndex": 3,
    "answer": "Alpi",
-   "explanation": "La risposta corretta è 'Alpi'.",
+   "explanation": "Le Alpi chiudono l'Italia a nord: contengono le cime più alte d'Europa, fra cui il Monte Bianco.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13590,7 +13590,7 @@
    ],
    "answerIndex": 0,
    "answer": "Appennini",
-   "explanation": "La risposta corretta è 'Appennini'.",
+   "explanation": "Gli Appennini attraversano la penisola da nord a sud per circa 1.200 km: nessun'altra catena la percorre tutta.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13622,7 +13622,7 @@
    ],
    "answerIndex": 1,
    "answer": "pianura",
-   "explanation": "La risposta corretta è 'pianura'.",
+   "explanation": "La Pianura Padana è un territorio pianeggiante molto esteso, formato nel tempo dai detriti che i fiumi hanno depositato scendendo dai monti.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13654,7 +13654,7 @@
    ],
    "answerIndex": 2,
    "answer": "mari e coste",
-   "explanation": "La risposta corretta è 'mari e coste'.",
+   "explanation": "L'Italia ha circa 7.500 km di coste bagnate da mari diversi: il paesaggio costiero è fatto proprio dall'incontro fra questi mari e la terra.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13686,7 +13686,7 @@
    ],
    "answerIndex": 3,
    "answer": "in molte regioni della penisola",
-   "explanation": "La risposta corretta è 'in molte regioni della penisola'.",
+   "explanation": "La collina è il paesaggio più diffuso d'Italia: si trova quasi ovunque lungo la penisola, fra le montagne e le pianure.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13718,7 +13718,7 @@
    ],
    "answerIndex": 0,
    "answer": "è circondata dal mare su tre lati",
-   "explanation": "La risposta corretta è 'è circondata dal mare su tre lati'.",
+   "explanation": "Una penisola è una terra circondata dal mare su tre lati e unita alla terraferma sul quarto: l'Italia lo è, con le Alpi a fare da collegamento.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13750,7 +13750,7 @@
    ],
    "answerIndex": 1,
    "answer": "le maggiori isole italiane",
-   "explanation": "La risposta corretta è 'le maggiori isole italiane'.",
+   "explanation": "Sicilia e Sardegna sono le due isole più grandi d'Italia e dell'intero Mediterraneo, e sono anche due regioni a statuto speciale.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13782,7 +13782,7 @@
    ],
    "answerIndex": 2,
    "answer": "collina",
-   "explanation": "La risposta corretta è 'collina'.",
+   "explanation": "La collina copre circa il 40% del territorio italiano: più della montagna e molto più della pianura.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13814,7 +13814,7 @@
    ],
    "answerIndex": 3,
    "answer": "alte o basse",
-   "explanation": "La risposta corretta è 'alte o basse'.",
+   "explanation": "Le coste alte sono rocciose e scendono a picco sul mare; quelle basse sono sabbiose e digradano dolcemente. In Italia ci sono entrambe.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13846,7 +13846,7 @@
    ],
    "answerIndex": 0,
    "answer": "un'insenatura del mare nella terra",
-   "explanation": "La risposta corretta è \"un'insenatura del mare nella terra\".",
+   "explanation": "Il golfo è un rientro del mare nella terra, ampio e aperto: il golfo di Napoli e quello di Taranto sono fra i più noti.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13878,7 +13878,7 @@
    ],
    "answerIndex": 1,
    "answer": "circondata dal mare su tre lati",
-   "explanation": "La risposta corretta è 'circondata dal mare su tre lati'.",
+   "explanation": "La penisola è quasi un'isola: il mare la circonda su tre lati, ma un lato resta attaccato alla terraferma.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13910,7 +13910,7 @@
    ],
    "answerIndex": 2,
    "answer": "montagne, colline, pianure, fiumi, laghi e coste",
-   "explanation": "La risposta corretta è 'montagne, colline, pianure, fiumi, laghi e coste'.",
+   "explanation": "In poco più di mille chilometri l'Italia passa dai ghiacciai alpini alle coste mediterranee: pochi paesi hanno tanta varietà in così poco spazio.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13942,7 +13942,7 @@
    ],
    "answerIndex": 3,
    "answer": "Alpi",
-   "explanation": "La risposta corretta è 'Alpi'.",
+   "explanation": "Le Alpi formano una barriera continua lungo tutto il nord: sono il confine naturale con Francia, Svizzera, Austria e Slovenia.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -13974,7 +13974,7 @@
    ],
    "answerIndex": 0,
    "answer": "numerosi affluenti del Po",
-   "explanation": "La risposta corretta è 'numerosi affluenti del Po'.",
+   "explanation": "Nella Pianura Padana confluiscono nel Po decine di affluenti, che scendono sia dalle Alpi sia dagli Appennini: è la loro acqua a renderla fertile.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14006,7 +14006,7 @@
    ],
    "answerIndex": 1,
    "answer": "Alpi",
-   "explanation": "La risposta corretta è 'Alpi'.",
+   "explanation": "Il Monte Bianco è nelle Alpi occidentali, al confine con la Francia: con 4.808 metri è la vetta più alta della catena e d'Europa.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14038,7 +14038,7 @@
    ],
    "answerIndex": 2,
    "answer": "adriatico",
-   "explanation": "La risposta corretta è 'adriatico'.",
+   "explanation": "Gli Appennini corrono al centro della penisola: le acque che scendono a ovest vanno al Tirreno, quelle a est all'Adriatico.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14070,7 +14070,7 @@
    ],
    "answerIndex": 3,
    "answer": "Francia e Svizzera",
-   "explanation": "La risposta corretta è 'Francia e Svizzera'.",
+   "explanation": "Le Alpi occidentali vanno dalla Liguria alla Valle d'Aosta, lungo il confine con Francia e Svizzera: vi si trovano le cime più alte.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14102,7 +14102,7 @@
    ],
    "answerIndex": 0,
    "answer": "Alpi",
-   "explanation": "La risposta corretta è 'Alpi'.",
+   "explanation": "Le Dolomiti sono un settore delle Alpi orientali, in Trentino-Alto Adige e Veneto: la loro roccia chiara le rende inconfondibili.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14134,7 +14134,7 @@
    ],
    "answerIndex": 1,
    "answer": "dorsale della penisola",
-   "explanation": "La risposta corretta è 'dorsale della penisola'.",
+   "explanation": "Gli Appennini percorrono la penisola per tutta la sua lunghezza come una spina dorsale: da qui il nome di dorsale.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14166,7 +14166,7 @@
    ],
    "answerIndex": 2,
    "answer": "Po",
-   "explanation": "La risposta corretta è 'Po'.",
+   "explanation": "Padana viene da Padus, il nome latino del Po: è il fiume che la attraversa e che l'ha formata con i suoi depositi.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14198,7 +14198,7 @@
    ],
    "answerIndex": 3,
    "answer": "vigneti e oliveti",
-   "explanation": "La risposta corretta è 'vigneti e oliveti'.",
+   "explanation": "I pendii collinari sono soleggiati e ben drenati: sono le condizioni che vite e olivo preferiscono, e per questo le colline italiane ne sono coperte.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14230,7 +14230,7 @@
    ],
    "answerIndex": 0,
    "answer": "agricoltura e insediamenti",
-   "explanation": "La risposta corretta è 'agricoltura e insediamenti'.",
+   "explanation": "In pianura il terreno è piano e fertile e i collegamenti sono facili: si coltiva con le macchine e si costruisce senza dislivelli.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14262,7 +14262,7 @@
    ],
    "answerIndex": 1,
    "answer": "nelle Alpi",
-   "explanation": "La risposta corretta è 'nelle Alpi'.",
+   "explanation": "Le Alpi sono più giovani e meno erose degli Appennini: conservano cime oltre i 4.000 metri, che in Appennino non esistono.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14294,7 +14294,7 @@
    ],
    "answerIndex": 2,
    "answer": "Appennini",
-   "explanation": "La risposta corretta è 'Appennini'.",
+   "explanation": "L'Appennino Tosco-Emiliano è il tratto della catena appenninica fra Toscana ed Emilia-Romagna: separa il versante tirrenico da quello adriatico.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14326,7 +14326,7 @@
    ],
    "answerIndex": 3,
    "answer": "molte coste",
-   "explanation": "La risposta corretta è 'molte coste'.",
+   "explanation": "L'Italia si protende nel Mediterraneo ed è bagnata da quattro mari: per questo ha uno sviluppo costiero enorme rispetto alla sua superficie.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14358,7 +14358,7 @@
    ],
    "answerIndex": 0,
    "answer": "acque basse separate in parte dal mare aperto",
-   "explanation": "La risposta corretta è 'acque basse separate in parte dal mare aperto'.",
+   "explanation": "La laguna è uno specchio d'acqua bassa separato dal mare aperto da cordoni di sabbia, con qualche apertura: Venezia sorge proprio su una laguna.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14390,7 +14390,7 @@
    ],
    "answerIndex": 1,
    "answer": "intorno alla penisola e alle isole maggiori",
-   "explanation": "La risposta corretta è 'intorno alla penisola e alle isole maggiori'.",
+   "explanation": "Le isole minori sono sparse attorno alla penisola e alle due maggiori: Eolie, Egadi, Tremiti, Elba, Capri e molte altre.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14422,7 +14422,7 @@
    ],
    "answerIndex": 2,
    "answer": "coste, colline e rilievi",
-   "explanation": "La risposta corretta è 'coste, colline e rilievi'.",
+   "explanation": "Il Sud Italia non è solo mare: ha lunghe coste, colline interne e rilievi appenninici che superano i 2.000 metri.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14454,7 +14454,7 @@
    ],
    "answerIndex": 3,
    "answer": "rilievi e acque",
-   "explanation": "La risposta corretta è 'rilievi e acque'.",
+   "explanation": "Il paesaggio cambia con la forma del terreno e con la presenza dell'acqua: sono questi due elementi a distinguere una zona dall'altra.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14486,7 +14486,7 @@
    ],
    "answerIndex": 0,
    "answer": "le Alpi",
-   "explanation": "La risposta corretta è 'le Alpi'.",
+   "explanation": "Le Alpi chiudono l'Italia a nord, gli Appennini scendono lungo la penisola: fra le due, sono le Alpi a stare più a settentrione.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14518,7 +14518,7 @@
    ],
    "answerIndex": 1,
    "answer": "la fascia dove terra e mare si incontrano",
-   "explanation": "La risposta corretta è 'la fascia dove terra e mare si incontrano'.",
+   "explanation": "La costa non è né solo terra né solo mare: è la fascia in cui i due si incontrano, e per questo ha piante, animali e attività proprie.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14550,7 +14550,7 @@
    ],
    "answerIndex": 2,
    "answer": "tratti di mare",
-   "explanation": "La risposta corretta è 'tratti di mare'.",
+   "explanation": "Un'isola è separata dalla terraferma dall'acqua: per raggiungere Sicilia e Sardegna serve attraversare un tratto di mare.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14582,7 +14582,7 @@
    ],
    "answerIndex": 3,
    "answer": "presenta forme diverse del rilievo",
-   "explanation": "La risposta corretta è 'presenta forme diverse del rilievo'.",
+   "explanation": "Morfologicamente vario significa che il rilievo cambia forma continuamente: montagne, colline e pianure si alternano in poco spazio.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
@@ -14614,7 +14614,7 @@
    ],
    "answerIndex": 0,
    "answer": "è unita alla terraferma da un lato",
-   "explanation": "La risposta corretta è 'è unita alla terraferma da un lato'.",
+   "explanation": "L'isola è circondata dall'acqua da tutti i lati; la penisola resta attaccata alla terraferma da uno. È l'unica differenza fra le due.",
    "active": true,
    "tag": "geografia;classe_4;italia;morfologia",
    "tags": [
