@@ -69,6 +69,11 @@ const REGOLE = [
   // minuto) e corre a 12-20.
   { re: /\b(atleta) percorre\s+(\d[\d.]*)\s*m al minuto/gi,
     min: 80, max: 500, cosa: 'metri al minuto di un atleta' },
+  // Dal lotto 25 delle istanze: "Una famiglia spende 12 euro al mese". Le
+  // spese di una famiglia stanno sulle migliaia: quelle cifre sono di un
+  // abbonamento, non di un bilancio familiare.
+  { re: /\b(famiglia) spende\s+(\d[\d.]*)\s*euro al mese/gi,
+    min: 500, max: 9000, cosa: 'spesa mensile di una famiglia' },
 ];
 
 function main() {

@@ -6714,7 +6714,7 @@
    ],
    "answerIndex": 2,
    "answer": "Ovest",
-   "explanation": "La risposta corretta è 'Ovest'.",
+   "explanation": "Est e Ovest sono opposti: se il parco sta a est della scuola, dal parco la scuola si vede guardando a ovest.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6746,7 +6746,7 @@
    ],
    "answerIndex": 3,
    "answer": "Sud",
-   "explanation": "La risposta corretta è 'Sud'.",
+   "explanation": "Nord e Sud sono opposti: se il fiume è a nord del ponte, dal fiume il ponte si trova verso sud.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6778,7 +6778,7 @@
    ],
    "answerIndex": 0,
    "answer": "una legenda chiara",
-   "explanation": "La risposta corretta è 'una legenda chiara'.",
+   "explanation": "Più simboli ci sono, più è facile confonderli: la legenda è l'unico posto in cui il loro significato è scritto una volta per tutte.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6810,7 +6810,7 @@
    ],
    "answerIndex": 1,
    "answer": "scegliere i colori della carta",
-   "explanation": "La risposta corretta è 'scegliere i colori della carta'.",
+   "explanation": "La scala riguarda solo le misure: dice di quanto la realtà è stata ridotta. I colori sono una scelta grafica, spiegata semmai dalla legenda.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6842,7 +6842,7 @@
    ],
    "answerIndex": 2,
    "answer": "la posizione dei mobili",
-   "explanation": "La risposta corretta è 'la posizione dei mobili'.",
+   "explanation": "La pianta è la vista dall'alto: della cameretta mostra dove stanno letto, armadio e scrivania, non come sono fatti o di che colore.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6874,7 +6874,7 @@
    ],
    "answerIndex": 3,
    "answer": "punti cardinali e punti di riferimento",
-   "explanation": "La risposta corretta è 'punti cardinali e punti di riferimento'.",
+   "explanation": "Nel territorio reale si usano due cose insieme: i punti cardinali per la direzione generale e i riferimenti visibili per capire dove si è di preciso.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6906,7 +6906,7 @@
    ],
    "answerIndex": 0,
    "answer": "strade, case e servizi",
-   "explanation": "La risposta corretta è 'strade, case e servizi'.",
+   "explanation": "La mappa del quartiere rappresenta ciò che serve a muoversi: il tracciato delle strade, gli edifici e i luoghi utili come scuole e fermate.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6938,7 +6938,7 @@
    ],
    "answerIndex": 1,
    "answer": "i confini",
-   "explanation": "La risposta corretta è 'i confini'.",
+   "explanation": "La carta politica esiste per mostrare le divisioni fra stati o regioni: i confini sono il suo elemento principale.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -6970,7 +6970,7 @@
    ],
    "answerIndex": 2,
    "answer": "i rilievi",
-   "explanation": "La risposta corretta è 'i rilievi'.",
+   "explanation": "La carta fisica rappresenta la natura del territorio, e i rilievi sono l'elemento che ne determina la forma: monti e colline con i loro colori.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -7002,7 +7002,7 @@
    ],
    "answerIndex": 3,
    "answer": "rappresentare elementi reali in modo semplice",
-   "explanation": "La risposta corretta è 'rappresentare elementi reali in modo semplice'.",
+   "explanation": "Sulla carta non si può disegnare un ospedale com'è: si usa un segno semplice, uguale ovunque, che la legenda traduce.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -7034,7 +7034,7 @@
    ],
    "answerIndex": 0,
    "answer": "la direzione",
-   "explanation": "La risposta corretta è 'la direzione'.",
+   "explanation": "La linea dice dove passa il percorso, la freccia in quale verso si percorre: senza freccia non si saprebbe da dove si parte.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -7066,7 +7066,7 @@
    ],
    "answerIndex": 1,
    "answer": "la posizione reciproca",
-   "explanation": "La risposta corretta è 'la posizione reciproca'.",
+   "explanation": "La pianta mostra la posizione reciproca, cioè dove sta ogni cosa rispetto alle altre: è così che si capisce se due luoghi sono vicini.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -7098,7 +7098,7 @@
    ],
    "answerIndex": 2,
    "answer": "conoscere i luoghi",
-   "explanation": "La risposta corretta è 'conoscere i luoghi'.",
+   "explanation": "La carta permette di conoscere luoghi senza andarci: dove sono, come sono fatti e che rapporto hanno con quelli intorno.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -7130,7 +7130,7 @@
    ],
    "answerIndex": 3,
    "answer": "geo-graficità",
-   "explanation": "La risposta corretta è 'geo-graficità'.",
+   "explanation": "La geo-graficità è il linguaggio con cui la geografia rappresenta lo spazio: piante, mappe e carte usano tutte simboli, scala e orientamento.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
@@ -8712,7 +8712,7 @@
    ],
    "answerIndex": 2,
    "answer": "fiume",
-   "explanation": "La risposta corretta è 'fiume'.",
+   "explanation": "Il fiume è un corso d'acqua che scorre sempre nella stessa direzione, dalla sorgente in alto fino alla foce, seguendo la pendenza del terreno.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8743,7 +8743,7 @@
    ],
    "answerIndex": 3,
    "answer": "il punto in cui nasce il fiume",
-   "explanation": "La risposta corretta è 'il punto in cui nasce il fiume'.",
+   "explanation": "La sorgente è il punto in cui l'acqua esce dal terreno e il fiume comincia: sta in genere in montagna o in collina.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8774,7 +8774,7 @@
    ],
    "answerIndex": 0,
    "answer": "il punto in cui il fiume finisce",
-   "explanation": "La risposta corretta è 'il punto in cui il fiume finisce'.",
+   "explanation": "La foce è dove il fiume termina il suo percorso, sfociando nel mare, in un lago o in un altro fiume.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8805,7 +8805,7 @@
    ],
    "answerIndex": 1,
    "answer": "una massa d'acqua circondata da terre",
-   "explanation": "La risposta corretta è \"una massa d'acqua circondata da terre\".",
+   "explanation": "Il lago è una massa d'acqua ferma raccolta in una conca e circondata da terra: a differenza del mare non comunica liberamente con gli oceani.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8836,7 +8836,7 @@
    ],
    "answerIndex": 2,
    "answer": "una grande distesa d'acqua salata",
-   "explanation": "La risposta corretta è \"una grande distesa d'acqua salata\".",
+   "explanation": "Il mare è una distesa d'acqua salata molto estesa, collegata agli oceani: il sale viene dalle rocce sciolte e portate dai fiumi in milioni di anni.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8867,7 +8867,7 @@
    ],
    "answerIndex": 3,
    "answer": "un fiume più piccolo che entra in uno più grande",
-   "explanation": "La risposta corretta è 'un fiume più piccolo che entra in uno più grande'.",
+   "explanation": "L'affluente è un fiume che si getta in un altro più grande: gli porta la sua acqua e ne aumenta la portata.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8898,7 +8898,7 @@
    ],
    "answerIndex": 0,
    "answer": "fiume o lago",
-   "explanation": "La risposta corretta è 'fiume o lago'.",
+   "explanation": "Le rive sono le due fasce di terra che delimitano l'acqua di un fiume o di un lago: sul mare si parla invece di costa.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8929,7 +8929,7 @@
    ],
    "answerIndex": 1,
    "answer": "la costa del mare",
-   "explanation": "La risposta corretta è 'la costa del mare'.",
+   "explanation": "La spiaggia è la fascia di sabbia o ghiaia che sta fra la terra e l'acqua lungo la costa, modellata dal moto delle onde.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8960,7 +8960,7 @@
    ],
    "answerIndex": 2,
    "answer": "antropico vicino spesso a un corso d'acqua",
-   "explanation": "La risposta corretta è \"antropico vicino spesso a un corso d'acqua\".",
+   "explanation": "Il ponte è costruito dall'uomo per superare un ostacolo: molto spesso è proprio un corso d'acqua, che altrimenti bloccherebbe il passaggio.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -8991,7 +8991,7 @@
    ],
    "answerIndex": 3,
    "answer": "quella del mare",
-   "explanation": "La risposta corretta è 'quella del mare'.",
+   "explanation": "L'acqua del mare è salata; quella di fiumi e laghi è dolce. Il sale arriva al mare portato dai fiumi e lì si accumula, perché evapora solo l'acqua.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9022,7 +9022,7 @@
    ],
    "answerIndex": 0,
    "answer": "lo spazio in cui scorrono le acque",
-   "explanation": "La risposta corretta è 'lo spazio in cui scorrono le acque'.",
+   "explanation": "Il letto è il solco scavato dal fiume in cui l'acqua scorre: quando piove molto l'acqua sale e può uscirne.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9053,7 +9053,7 @@
    ],
    "answerIndex": 1,
    "answer": "sulla costa",
-   "explanation": "La risposta corretta è 'sulla costa'.",
+   "explanation": "Il porto è il luogo attrezzato dove le navi attraccano: si costruisce sulla costa, in un punto riparato dalle onde e dal vento.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9084,7 +9084,7 @@
    ],
    "answerIndex": 2,
    "answer": "lago",
-   "explanation": "La risposta corretta è 'lago'.",
+   "explanation": "Il lago è molto più piccolo del mare ed è chiuso fra le terre: dalla riva se ne vede in genere la sponda opposta.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9115,7 +9115,7 @@
    ],
    "answerIndex": 3,
    "answer": "un fiume",
-   "explanation": "La risposta corretta è 'un fiume'.",
+   "explanation": "La corrente è l'acqua che si muove in una direzione: nel fiume c'è sempre, perché l'acqua scende verso la foce, mentre nel lago l'acqua è quasi ferma.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9146,7 +9146,7 @@
    ],
    "answerIndex": 0,
    "answer": "agricoltura e insediamenti",
-   "explanation": "La risposta corretta è 'agricoltura e insediamenti'.",
+   "explanation": "Vicino a un fiume la terra è fertile e l'acqua è disponibile per bere e irrigare: per questo lungo i fiumi in pianura nascono campi e paesi.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9177,7 +9177,7 @@
    ],
    "answerIndex": 1,
    "answer": "foce",
-   "explanation": "La risposta corretta è 'foce'.",
+   "explanation": "Il delta è una foce a più rami: il fiume, rallentando, deposita i detriti e si divide in canali che formano una figura a ventaglio.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9208,7 +9208,7 @@
    ],
    "answerIndex": 2,
    "answer": "nel mare",
-   "explanation": "La risposta corretta è 'nel mare'.",
+   "explanation": "Le onde sono prodotte dal vento che soffia sulla superficie dell'acqua: sul mare, essendo aperto e vasto, diventano molto più grandi.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9239,7 +9239,7 @@
    ],
    "answerIndex": 3,
    "answer": "artificiale",
-   "explanation": "La risposta corretta è 'artificiale'.",
+   "explanation": "Un lago è naturale se la conca si è formata da sola; è artificiale se è stato creato dall'uomo, di solito sbarrando un fiume con una diga.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9270,7 +9270,7 @@
    ],
    "answerIndex": 0,
    "answer": "un lago artificiale",
-   "explanation": "La risposta corretta è 'un lago artificiale'.",
+   "explanation": "La diga blocca il corso del fiume: l'acqua si accumula a monte e forma un bacino, cioè un lago artificiale, usato per l'energia o per l'irrigazione.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9301,7 +9301,7 @@
    ],
    "answerIndex": 1,
    "answer": "paesaggi d'acqua",
-   "explanation": "La risposta corretta è \"paesaggi d'acqua\".",
+   "explanation": "Fiume, lago e mare sono i paesaggi d'acqua: ambienti in cui l'elemento che determina la forma del territorio e la vita è l'acqua.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9332,7 +9332,7 @@
    ],
    "answerIndex": 2,
    "answer": "la terra incontra il mare",
-   "explanation": "La risposta corretta è 'la terra incontra il mare'.",
+   "explanation": "La costa è la linea in cui la terra incontra il mare: può essere alta e rocciosa oppure bassa e sabbiosa.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9363,7 +9363,7 @@
    ],
    "answerIndex": 3,
    "answer": "un fiume",
-   "explanation": "La risposta corretta è 'un fiume'.",
+   "explanation": "Il lungofiume è la strada o il camminamento che l'uomo costruisce lungo la riva: serve a passeggiare e a contenere l'acqua.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9394,7 +9394,7 @@
    ],
    "answerIndex": 0,
    "answer": "al mare",
-   "explanation": "La risposta corretta è 'al mare'.",
+   "explanation": "Il molo è un braccio di pietra o cemento che si allunga in mare: ripara le barche dalle onde e permette di attraccare.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9425,7 +9425,7 @@
    ],
    "answerIndex": 1,
    "answer": "ponti",
-   "explanation": "La risposta corretta è 'ponti'.",
+   "explanation": "Il ponte scavalca il fiume e collega le due rive: senza, per passare bisognerebbe usare una barca o cercare un guado.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9456,7 +9456,7 @@
    ],
    "answerIndex": 2,
    "answer": "sul mare o sul lago",
-   "explanation": "La risposta corretta è 'sul mare o sul lago'.",
+   "explanation": "La vela ha bisogno di vento e di uno specchio d'acqua ampio: mare e laghi grandi lo offrono, un fiume stretto no.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9487,7 +9487,7 @@
    ],
    "answerIndex": 3,
    "answer": "tra le montagne",
-   "explanation": "La risposta corretta è 'tra le montagne'.",
+   "explanation": "I laghi alpini occupano conche scavate dai ghiacciai fra le montagne: per questo sono profondi e circondati da rilievi.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9518,7 +9518,7 @@
    ],
    "answerIndex": 0,
    "answer": "la foce",
-   "explanation": "La risposta corretta è 'la foce'.",
+   "explanation": "L'acqua scende sempre verso il basso: dalla sorgente segue la pendenza fino alla foce, dove il fiume termina.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9549,7 +9549,7 @@
    ],
    "answerIndex": 1,
    "answer": "costruita dall'uomo",
-   "explanation": "La risposta corretta è \"costruita dall'uomo\".",
+   "explanation": "Il canale è scavato dall'uomo per portare l'acqua dove serve — a irrigare i campi o a far navigare le barche — seguendo un tracciato deciso a tavolino.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9580,7 +9580,7 @@
    ],
    "answerIndex": 2,
    "answer": "mare",
-   "explanation": "La risposta corretta è 'mare'.",
+   "explanation": "Il mare offre pesce, spiagge e approdi: attorno a questo nascono la pesca, il turismo e i porti, le attività tipiche delle zone costiere.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9611,7 +9611,7 @@
    ],
    "answerIndex": 3,
    "answer": "valle e foce",
-   "explanation": "La risposta corretta è 'valle e foce'.",
+   "explanation": "Il fiume raccoglie l'acqua in montagna e la porta verso il basso: attraversa la valle e la consegna alla foce.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9642,7 +9642,7 @@
    ],
    "answerIndex": 0,
    "answer": "terra e acqua",
-   "explanation": "La risposta corretta è 'terra e acqua'.",
+   "explanation": "La riva è il bordo del lago: la fascia in cui la terra finisce e comincia l'acqua.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9673,7 +9673,7 @@
    ],
    "answerIndex": 1,
    "answer": "trasformato",
-   "explanation": "La risposta corretta è 'trasformato'.",
+   "explanation": "Costruire un porto cambia la forma della costa: si scavano fondali, si costruiscono moli e la spiaggia naturale lascia il posto a banchine.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9704,7 +9704,7 @@
    ],
    "answerIndex": 2,
    "answer": "costiero",
-   "explanation": "La risposta corretta è 'costiero'.",
+   "explanation": "La spiaggia sta lungo la costa, quindi appartiene al paesaggio costiero: quello in cui la terra confina con il mare.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9735,7 +9735,7 @@
    ],
    "answerIndex": 3,
    "answer": "un'alluvione",
-   "explanation": "La risposta corretta è \"un'alluvione\".",
+   "explanation": "Quando piove molto il fiume può uscire dal suo letto e allagare le zone intorno: è l'alluvione, e per questo si costruiscono argini.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9766,7 +9766,7 @@
    ],
    "answerIndex": 0,
    "answer": "fiume",
-   "explanation": "La risposta corretta è 'fiume'.",
+   "explanation": "Nel lago l'acqua è chiusa in una conca e resta quasi ferma; nel fiume scorre sempre verso la foce. È la differenza principale fra i due.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
@@ -9797,7 +9797,7 @@
    ],
    "answerIndex": 1,
    "answer": "il mare",
-   "explanation": "La risposta corretta è 'il mare'.",
+   "explanation": "La maggior parte dei fiumi termina in mare: alla foce l'acqua dolce del fiume si mescola a quella salata.",
    "active": true,
    "tag": "geografia;classe_3;paesaggi_acqua",
    "tags": [
