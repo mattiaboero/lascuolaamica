@@ -17,6 +17,8 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.27?",
+  'Una stanza è larga 24 m e lunga 16 m. Quanti m² di moquette servono per coprirla?',
   'Prima: 47 conchiglie al giorno. Poi: 47 × 6 = 282.',
   'Questo si chiama complemento di durata (o tempo continuato).',
   'L\'articolo determinativo maschile plurale davanti a consonante è "i\'. Si dice \'i libri".',
@@ -116,6 +118,8 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
+  'Una stanza è larga 16 m e lunga 24 m. Quanti m² di moquette servono per coprirla?',
   '47 conchiglie al giorno: 47 × 6 = 282.',
   'Prima: dalle 20:15 alle 22:00 passano 1 ora e 45 minuti. Poi: dalle 22:00 alle 22:40 altri 40 minuti. In tutto: 1 ora e 45 minuti + 40 minuti = 2 ore e 25 minuti.',
   'Prima: verifica 47 > 30, quindi sconto applicabile. Poi: 47 - 5 = 42.',
@@ -318,29 +322,38 @@ function controllaRefusi() {
   return sospetti.sort();
 }
 
+// Una regola puo' portare un `controllo` sui gruppi del match: "larga 24 m e
+// lunga 16 m" e' sbagliata solo perche' 24 > 16, e la regex da sola non lo sa.
+// Senza questo, il meta-check segnalerebbe come falso positivo anche la frase
+// giusta, che la regex la matcha ma il controllo la scarta.
+function scatta(regola, testo) {
+  const m = testo.match(regola.pattern);
+  return Boolean(m) && (!regola.controllo || regola.controllo(m));
+}
+
 function main() {
   const regole = caricaRegole();
   let fallito = false;
 
-  const mai = regole.filter((r) => !SBAGLIATE.some((t) => r.pattern.test(t)));
+  const mai = regole.filter((r) => !SBAGLIATE.some((t) => scatta(r, t)));
   if (mai.length) {
     fallito = true;
     console.error(`[ERROR] ${mai.length} regole non scattano su nessun esempio (regex rotta o esempio mancante):`);
     mai.forEach((r) => console.error(`  - ${r.msg}`));
   }
 
-  const scoperte = SBAGLIATE.filter((t) => !regole.some((r) => r.pattern.test(t)));
+  const scoperte = SBAGLIATE.filter((t) => !regole.some((r) => scatta(r, t)));
   if (scoperte.length) {
     fallito = true;
     console.error('[ERROR] frasi sbagliate non intercettate da nessuna regola:');
     scoperte.forEach((t) => console.error(`  - ${t}`));
   }
 
-  const falsi = CORRETTE.filter((t) => regole.some((r) => r.pattern.test(t)));
+  const falsi = CORRETTE.filter((t) => regole.some((r) => scatta(r, t)));
   if (falsi.length) {
     fallito = true;
     console.error('[ERROR] falsi positivi su frasi corrette:');
-    falsi.forEach((t) => console.error(`  - ${t} → ${regole.find((r) => r.pattern.test(t)).msg}`));
+    falsi.forEach((t) => console.error(`  - ${t} → ${regole.find((r) => scatta(r, t)).msg}`));
   }
 
   const sconosciuti = controllaNomiClassificati(fs.readFileSync(LINT, 'utf8'));

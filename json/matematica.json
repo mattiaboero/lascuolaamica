@@ -42478,14 +42478,14 @@
    "difficulty": 3,
    "question": "Completa: 2, 8, 32, 128, ___",
    "options": [
-    "2047",
-    "2048",
-    "2046",
-    "2045"
+    "511",
+    "512",
+    "510",
+    "509"
    ],
    "answerIndex": 1,
-   "answer": "2048",
-   "explanation": "La sequenza 2, 8, 32, 128 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo.",
+   "answer": "512",
+   "explanation": "La sequenza 2, 8, 32, 128 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo. Quindi 128 × 4 = 512.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -42542,14 +42542,14 @@
    "difficulty": 3,
    "question": "Completa: 1, 4, 16, 64, ___",
    "options": [
-    "1021",
-    "1022",
-    "1024",
-    "1023"
+    "253",
+    "254",
+    "256",
+    "255"
    ],
    "answerIndex": 2,
-   "answer": "1024",
-   "explanation": "La sequenza 1, 4, 16, 64 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo.",
+   "answer": "256",
+   "explanation": "La sequenza 1, 4, 16, 64 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo. Quindi 64 × 4 = 256.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -42606,14 +42606,14 @@
    "difficulty": 3,
    "question": "Completa: 3, 6, 12, 24, ___",
    "options": [
-    "96",
-    "95",
-    "94",
-    "93"
+    "48",
+    "47",
+    "46",
+    "45"
    ],
    "answerIndex": 0,
-   "answer": "96",
-   "explanation": "La sequenza 3, 6, 12, 24 cresce moltiplicando ogni termine per 2. La regola è ×2 ad ogni passo.",
+   "answer": "48",
+   "explanation": "La sequenza 3, 6, 12, 24 cresce moltiplicando ogni termine per 2. La regola è ×2 ad ogni passo. Quindi 24 × 2 = 48.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -42926,14 +42926,14 @@
    "difficulty": 3,
    "question": "Completa: 1, 3, 9, 27, ___",
    "options": [
-    "242",
-    "243",
-    "241",
-    "240"
+    "80",
+    "81",
+    "79",
+    "78"
    ],
    "answerIndex": 1,
-   "answer": "243",
-   "explanation": "La sequenza 1, 3, 9, 27 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo.",
+   "answer": "81",
+   "explanation": "La sequenza 1, 3, 9, 27 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo. Quindi 27 × 3 = 81.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -43758,14 +43758,14 @@
    "difficulty": 3,
    "question": "Completa: 3, 9, 27, 81, ___",
    "options": [
-    "727",
-    "729",
-    "726",
-    "728"
+    "241",
+    "243",
+    "240",
+    "242"
    ],
    "answerIndex": 1,
-   "answer": "729",
-   "explanation": "La sequenza 3, 9, 27, 81 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo.",
+   "answer": "243",
+   "explanation": "La sequenza 3, 9, 27, 81 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo. Quindi 81 × 3 = 243.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -43790,14 +43790,14 @@
    "difficulty": 3,
    "question": "Completa: 2, 6, 18, 54, ___",
    "options": [
-    "483",
-    "486",
-    "485",
-    "484"
+    "159",
+    "162",
+    "161",
+    "160"
    ],
    "answerIndex": 1,
-   "answer": "486",
-   "explanation": "La sequenza 2, 6, 18, 54 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo.",
+   "answer": "162",
+   "explanation": "La sequenza 2, 6, 18, 54 cresce moltiplicando ogni termine per 3. La regola è ×3 ad ogni passo. Quindi 54 × 3 = 162.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -43854,14 +43854,14 @@
    "difficulty": 3,
    "question": "Completa: 1, 2, 4, 8, ___",
    "options": [
-    "30",
-    "31",
-    "32",
-    "29"
+    "14",
+    "15",
+    "16",
+    "13"
    ],
    "answerIndex": 2,
-   "answer": "32",
-   "explanation": "La sequenza 1, 2, 4, 8 cresce moltiplicando ogni termine per 2. La regola è ×2 ad ogni passo.",
+   "answer": "16",
+   "explanation": "La sequenza 1, 2, 4, 8 cresce moltiplicando ogni termine per 2. La regola è ×2 ad ogni passo. Quindi 8 × 2 = 16.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [
@@ -44078,14 +44078,14 @@
    "difficulty": 3,
    "question": "Completa: 3, 12, 48, 192, ___",
    "options": [
-    "3071",
-    "3072",
-    "3069",
-    "3070"
+    "767",
+    "768",
+    "765",
+    "766"
    ],
    "answerIndex": 1,
-   "answer": "3072",
-   "explanation": "La sequenza 3, 12, 48, 192 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo.",
+   "answer": "768",
+   "explanation": "La sequenza 3, 12, 48, 192 cresce moltiplicando ogni termine per 4. La regola è ×4 ad ogni passo. Quindi 192 × 4 = 768.",
    "active": true,
    "tag": "matematica;logica_e_dati;classe_3;primaria",
    "tags": [

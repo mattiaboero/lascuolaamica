@@ -199,9 +199,22 @@ const GRAMMATICA = [
   // trapezio e parallelogramma ne hanno 4).
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])[Ss]olo\s+il\s+(?:quadrato|rettangolo|rombo|trapezio|parallelogramma|triangolo)\b[^.]{0,30}\b\d+\s+lati/,
     msg: 'errore di contenuto: il numero di lati non e\' esclusivo di una sola figura ("solo il quadrato ha 4 lati")' },
+  // Dal lotto 1 delle famiglie: "larga 24 m e lunga 16 m". E' la stessa cosa
+  // vista nel lotto 62 ("X m di larghezza e Y m di lunghezza") e nel 93
+  // ("largo X e lungo Y"), ma con l'aggettivo al femminile e l'unita' in mezzo,
+  // e le due regole scritte allora non la prendevano.
+  { pattern: /larg[ao]\s+(\d+)\s*m\s+e\s+lung[ao]\s+(\d+)\s*m/,
+    controllo: (m) => Number(m[1]) > Number(m[2]),
+    msg: 'la larghezza e maggiore della lunghezza' },
+  // Dal lotto 1 delle famiglie: indice nudo lasciato nella consegna
+  // ("migliorare l'osservazione n.27"). Era il numero progressivo con cui la
+  // domanda e' stata generata, e per il bambino non vuol dire niente.
+  { pattern: /(?<![a-zà-ù])n\.\s*\d+/,
+    soloDomanda: true,
+    msg: 'indice progressivo lasciato nella consegna ("osservazione n.27")' },
   // Dal lotto 99: pronome atono di genere sbagliato, ereditato da un template
   // scritto per un nome femminile ("42 biscotti. Le mette in confezioni").
-  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:biscotti|panini|libri|quaderni|pastelli|palloni|fogli|cioccolatini|gelati|bicchieri|sassi|fiori|alberi|dolci|mattoni|lamponi|pennarelli)\b[^.!?]{0,40}[.!?]\s*[Ll]e\s+(?:mette|divide|distribuisce|sistema|conta|dispone|ripone|confeziona)(?![a-zà-ùA-ZÀ-Ù])/,
+  { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:biscotti|panini|libri|quaderni|pastelli|palloni|fogli|cioccolatini|gelati|bicchieri|sassi|fiori|alberi|dolci|mattoni|lamponi|pennarelli|donuts|croissant|muffin|krapfen)\b[^.!?]{0,40}[.!?]\s*[Ll]e\s+(?:mette|divide|distribuisce|sistema|conta|dispone|ripone|confeziona)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'accordo: pronome femminile "le" riferito a un nome maschile plurale (es. "42 biscotti. Le mette")' },
   // Dal lotto 99: "entrambi" nella spiegazione quando i due soggetti della
   // domanda sono entrambi femminili ("Giulia... e Monica... di entrambi").
@@ -570,6 +583,29 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       const nomi = voci.filter(nomeNudo);
       if (verbi.length > 0 && nomi.length > 0) {
         errors.push({ level: 'error', field: 'question', msg: `elenco disomogeneo: "${verbi[0]}" e un verbo alla prima persona accanto al nome "${nomi[0]}"` });
+      }
+    }
+  }
+
+  // Dal lotto 1 delle famiglie: sequenza numerica la cui risposta non e' il
+  // termine successivo. Tutte e otto le sequenze geometriche del banco avevano
+  // per risposta il termine DOPO quello richiesto (2, 8, 32, 128 -> 2048 invece
+  // di 512), e i distrattori erano costruiti attorno al valore sbagliato: non
+  // c'era nessuna opzione giusta. Il controllo sui calcoli non se ne accorgeva,
+  // perche' nella spiegazione non c'era nessuna uguaglianza da verificare.
+  {
+    const m = /^(?:Completa|Qual è il prossimo numero)\s*:?\s*((?:-?\d+\s*,\s*){2,6})___/.exec((question || '').trim());
+    if (m && typeof answer === 'string' && /^-?\d+$/.test(answer.trim())) {
+      const nums = (m[1].match(/-?\d+/g) || []).map(Number);
+      if (nums.length >= 3) {
+        const dif = new Set(nums.slice(1).map((v, i) => v - nums[i]));
+        const rap = new Set(nums.slice(1).map((v, i) => nums[i] ? v / nums[i] : NaN));
+        let atteso = null;
+        if (dif.size === 1) atteso = nums[nums.length - 1] + [...dif][0];
+        else if (rap.size === 1 && Number.isFinite([...rap][0])) atteso = nums[nums.length - 1] * [...rap][0];
+        if (atteso !== null && Number(answer) !== atteso) {
+          errors.push({ level: 'error', field: 'answer', msg: `sequenza: il termine successivo e ${atteso}, la risposta dice ${answer}` });
+        }
       }
     }
   }
@@ -1945,7 +1981,11 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
       const bersaglio = regola.soloDomanda ? (question || '')
         : regola.soloSpiegazione ? (explanation || '')
         : testoIt;
-      if (regola.pattern.test(bersaglio)) {
+      // Alcune regole non si esauriscono nella forma: "larga 24 m e lunga 16 m"
+      // e' sbagliata solo perche' 24 > 16, e un confronto fra numeri una regex
+      // non lo sa fare. Quelle regole portano un `controllo` che riceve il match.
+      const m = bersaglio.match(regola.pattern);
+      if (m && (!regola.controllo || regola.controllo(m))) {
         errors.push({ level: 'error', field: 'text', msg: `grammatica — ${regola.msg}` });
       }
     }

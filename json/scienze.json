@@ -2087,7 +2087,7 @@
    "difficulty": 1,
    "question": "Quale di questi NON è un essere vivente?",
    "options": [
-    "erbadi prato",
+    "erba di prato",
     "sedia",
     "tartaruga",
     "rosa"
@@ -6175,7 +6175,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.27?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "indovinare senza guardare",
     "osservare e annotare con cura",
@@ -6206,7 +6206,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.28?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "indovinare senza guardare",
     "cambiare argomento",
@@ -6216,7 +6216,7 @@
    "answerIndex": 2,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6237,7 +6237,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.29?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "cambiare argomento",
     "osservare e annotare con cura",
@@ -6247,7 +6247,7 @@
    "answerIndex": 1,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6268,7 +6268,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.30?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "indovinare senza guardare",
     "cambiare argomento",
@@ -6278,7 +6278,7 @@
    "answerIndex": 3,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6299,7 +6299,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.31?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "osservare e annotare con cura",
     "indovinare senza guardare",
@@ -6309,7 +6309,7 @@
    "answerIndex": 0,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6330,7 +6330,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.32?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "cambiare argomento",
     "indovinare senza guardare",
@@ -6340,7 +6340,7 @@
    "answerIndex": 2,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6361,7 +6361,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.33?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "osservare e annotare con cura",
     "indovinare senza guardare",
@@ -6371,7 +6371,7 @@
    "answerIndex": 0,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6392,7 +6392,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.34?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "osservare e annotare con cura",
     "indovinare senza guardare",
@@ -6402,7 +6402,7 @@
    "answerIndex": 0,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6423,7 +6423,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.35?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "indovinare senza guardare",
     "cambiare argomento",
@@ -6433,7 +6433,7 @@
    "answerIndex": 2,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6454,7 +6454,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.36?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "osservare e annotare con cura",
     "indovinare senza guardare",
@@ -6464,7 +6464,7 @@
    "answerIndex": 0,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6485,7 +6485,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.37?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "indovinare senza guardare",
     "saltare la prova",
@@ -6495,7 +6495,7 @@
    "answerIndex": 2,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6516,7 +6516,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.38?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "saltare la prova",
     "osservare e annotare con cura",
@@ -6526,7 +6526,7 @@
    "answerIndex": 1,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6547,7 +6547,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.39?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "indovinare senza guardare",
     "osservare e annotare con cura",
@@ -6557,7 +6557,7 @@
    "answerIndex": 1,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",
@@ -6578,7 +6578,7 @@
    "area": "metodo_scientifico",
    "subarea": "lessico_e_pratica_scientifica",
    "difficulty": 2,
-   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione n.40?",
+   "question": "In una prova semplice di classe, che cosa è utile fare per migliorare l'osservazione?",
    "options": [
     "osservare e annotare con cura",
     "cambiare argomento",
@@ -6588,7 +6588,7 @@
    "answerIndex": 0,
    "answer": "osservare e annotare con cura",
    "explanation": "Osservare e annotare aiuta a capire meglio il risultato.",
-   "active": true,
+   "active": false,
    "tag": "metodo;pratica;classe3",
    "tags": [
     "metodo",

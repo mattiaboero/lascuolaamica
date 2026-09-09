@@ -10,6 +10,7 @@ traccia in reports/revisione-linguistica.json.
   python3 scripts/sample_review_batch.py            # mostra il prossimo lotto
   python3 scripts/sample_review_batch.py --registra # lo segna come revisionato
   python3 scripts/sample_review_batch.py --inglese  # lotto di inglese, registro separato
+  python3 scripts/sample_review_batch.py --famiglie # lotto di famiglie a scheletro ripetuto
 
 In inglese non si scarta niente per scheletro ricorrente: le regole di
 lint_content.js sono scritte per l'italiano e sull'inglese non guardano quasi
@@ -23,8 +24,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRO = ROOT / 'reports' / 'revisione-linguistica.json'
 REGISTRO_EN = ROOT / 'reports' / 'revisione-inglese.json'
+REGISTRO_FAM = ROOT / 'reports' / 'revisione-famiglie.json'
 DIMENSIONE = 60
 INGLESE = '--inglese' in sys.argv
+FAMIGLIE = '--famiglie' in sys.argv
 
 NOMI = re.compile(r'\b(Marco|Luca|Anna|Sara|Giulia|Matteo|Sofia|Priya|Ahmed|Chen|Elena|Paolo|Maria|Giovanni|Laura|Marta|Davide|Chiara|Simone|Alice|Serena|Stefano|Martina|Tommaso|Arianna|Pietro|Gianni|Claudia|Mario|Nicola|Giacomo|Daniele|Amir)\b')
 
@@ -52,10 +55,21 @@ def carica():
     if INGLESE:
         return tutte
     conta = collections.Counter(scheletro(q.get('question')) for q in tutte)
+    if FAMIGLIE:
+        # Una domanda per famiglia: se il template e' rotto lo sono tutte le sue
+        # istanze, e leggerle una per una sarebbe rileggere la stessa frase.
+        fam = collections.OrderedDict()
+        for q in tutte:
+            k = scheletro(q.get('question'))
+            if conta[k] > 1:
+                fam.setdefault(k, []).append(q)
+        return [{'scheletro': k, 'istanze': v} for k, v in fam.items()]
     return [q for q in tutte if conta[scheletro(q.get('question'))] == 1]
 
 
 def percorso_registro():
+    if FAMIGLIE:
+        return REGISTRO_FAM
     return REGISTRO_EN if INGLESE else REGISTRO
 
 
@@ -70,16 +84,29 @@ def main():
     uniche = carica()
     reg = registro()
     viste = set(reg['revisionate'])
-    da_vedere = [q for q in uniche if q['id'] not in viste]
+    chiave = (lambda f: f['scheletro']) if FAMIGLIE else (lambda q: q['id'])
+    da_vedere = [q for q in uniche if chiave(q) not in viste]
 
     numero = len(reg['lotti']) + 1
     random.seed(20260906 + numero)
     campione = random.sample(da_vedere, min(DIMENSIONE, len(da_vedere)))
 
-    etichetta = 'bacino' if INGLESE else 'scheletro unico'
+    etichetta = 'famiglie' if FAMIGLIE else ('bacino' if INGLESE else 'scheletro unico')
     print(f"lotto {numero} — {len(campione)} domande")
     print(f"{etichetta}: {len(uniche)} | gia' revisionate: {len(viste)} | rimanenti: {len(da_vedere)}\n")
     for i, q in enumerate(campione, 1):
+        if FAMIGLIE:
+            ist = q['istanze']
+            cls = sorted({x.get('class') for x in ist})
+            print(f"--- {i}. famiglia di {len(ist)} ({ist[0]['subject']}, classi {cls})")
+            print(f"T: {q['scheletro'][:160]}")
+            for x in ist[:2]:
+                print(f"  [{x['id']}] D: {x['question']}")
+                print(f"       O: {' | '.join(str(o) for o in x.get('options', []))}")
+                e = (x.get('explanation') or '').strip()
+                if e:
+                    print(f"       S: {e[:200]}")
+            continue
         print(f"--- {i}. [{q['id']}] ({q['subject']}, classe {q['class']})")
         print(f"D: {q['question']}")
         print(f"O: {' | '.join(str(o) for o in q.get('options', []))}")
@@ -88,8 +115,8 @@ def main():
             print(f"S: {e[:220]}")
 
     if '--registra' in sys.argv:
-        reg['lotti'].append({'numero': numero, 'domande': [q['id'] for q in campione]})
-        reg['revisionate'] = sorted(viste | {q['id'] for q in campione})
+        reg['lotti'].append({'numero': numero, 'domande': [chiave(q) for q in campione]})
+        reg['revisionate'] = sorted(viste | {chiave(q) for q in campione})
         p = percorso_registro()
         p.parent.mkdir(exist_ok=True)
         p.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding='utf-8')

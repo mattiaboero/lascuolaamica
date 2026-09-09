@@ -6103,7 +6103,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 20 krapfen. Le mette in confezioni da 2. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 20 krapfen. Li mette in confezioni da 2. Quante confezioni riesce a fare?",
    "options": [
     "2",
     "9",
@@ -6408,7 +6408,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 20 donuts. Le mette in confezioni da 4. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 20 donuts. Li mette in confezioni da 4. Quante confezioni riesce a fare?",
    "options": [
     "5",
     "7",
@@ -7438,7 +7438,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 30 croissant. Le mette in confezioni da 5. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 30 croissant. Li mette in confezioni da 5. Quante confezioni riesce a fare?",
    "options": [
     "15",
     "4",
@@ -7861,7 +7861,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 18 donuts. Le mette in confezioni da 2. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 18 donuts. Li mette in confezioni da 2. Quante confezioni riesce a fare?",
    "options": [
     "19",
     "21",
@@ -7921,7 +7921,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 36 krapfen. Le mette in confezioni da 3. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 36 krapfen. Li mette in confezioni da 3. Quante confezioni riesce a fare?",
    "options": [
     "12",
     "15",
@@ -8679,7 +8679,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 8 croissant. Le mette in confezioni da 2. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 8 croissant. Li mette in confezioni da 2. Quante confezioni riesce a fare?",
    "options": [
     "11",
     "8",
@@ -9040,7 +9040,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 16 muffin. Le mette in confezioni da 2. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 16 muffin. Li mette in confezioni da 2. Quante confezioni riesce a fare?",
    "options": [
     "5",
     "12",
@@ -9555,7 +9555,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 48 krapfen. Le mette in confezioni da 6. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 48 krapfen. Li mette in confezioni da 6. Quante confezioni riesce a fare?",
    "options": [
     "11",
     "8",
@@ -9795,7 +9795,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 24 croissant. Le mette in confezioni da 2. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 24 croissant. Li mette in confezioni da 2. Quante confezioni riesce a fare?",
    "options": [
     "13",
     "15",
@@ -10037,7 +10037,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Il fornaio ha sfornato 15 muffin. Le mette in confezioni da 3. Quante confezioni riesce a fare?",
+   "question": "Il fornaio ha sfornato 15 muffin. Li mette in confezioni da 3. Quante confezioni riesce a fare?",
    "options": [
     "15",
     "17",
@@ -19257,7 +19257,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una stanza è larga 24 m e lunga 16 m. Quanti m² di moquette servono per coprirla?",
+   "question": "Una stanza è larga 16 m e lunga 24 m. Quanti m² di moquette servono per coprirla?",
    "options": [
     "380",
     "384",
@@ -19753,7 +19753,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una stanza è larga 20 m e lunga 11 m. Quanti m² di moquette servono per coprirla?",
+   "question": "Una stanza è larga 11 m e lunga 20 m. Quanti m² di moquette servono per coprirla?",
    "options": [
     "220",
     "230",
@@ -20838,7 +20838,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una stanza è larga 20 m e lunga 4 m. Quanti m² di moquette servono per coprirla?",
+   "question": "Una stanza è larga 4 m e lunga 20 m. Quanti m² di moquette servono per coprirla?",
    "options": [
     "48",
     "87",
@@ -21241,7 +21241,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una stanza è larga 23 m e lunga 18 m. Quanti m² di moquette servono per coprirla?",
+   "question": "Una stanza è larga 18 m e lunga 23 m. Quanti m² di moquette servono per coprirla?",
    "options": [
     "421",
     "424",
@@ -23907,7 +23907,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Una stanza è larga 24 m e lunga 6 m. Quanti m² di moquette servono per coprirla?",
+   "question": "Una stanza è larga 6 m e lunga 24 m. Quanti m² di moquette servono per coprirla?",
    "options": [
     "60",
     "180",

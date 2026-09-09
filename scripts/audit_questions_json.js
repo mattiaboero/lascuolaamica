@@ -89,8 +89,14 @@ for (const file of files) {
 
     const textKey = normText(q.question);
     if (textKey) {
-      if (!byText.has(textKey)) byText.set(textKey, []);
-      byText.get(textKey).push(q);
+      // Le domande disattivate non arrivano a nessuno, quindi non possono essere
+      // un doppione per il bambino: restano fuori dal confronto. Il linter
+      // continua invece a controllarle, perche' una domani potrebbe tornare
+      // attiva e deve essere gia' a posto.
+      if (q.active !== false) {
+        if (!byText.has(textKey)) byText.set(textKey, []);
+        byText.get(textKey).push(q);
+      }
     }
 
     const options = Array.isArray(q.options) ? q.options.map(String) : [];
