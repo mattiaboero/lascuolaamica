@@ -504,6 +504,15 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 29 delle istanze: "Un'auto percorre 891 km con 9 litri", cioe'
+  // 99 km con un litro. Un'auto ne fa 10-25. Il rapporto fra i due numeri una
+  // regex non lo sa fare da sola, quindi il confronto sta nel controllo.
+  { pattern: /auto percorre (\d+) km con (\d+) litri/,
+    controllo: (m) => {
+      const r = Number(m[1]) / Number(m[2]);
+      return r > 25 || r < 7;
+    },
+    msg: 'consumo impossibile per un\'automobile (10-25 km con un litro)' },
   // Dal lotto 27 delle istanze: "arrivano altri 1". Uno e' singolare e
   // vuole l'accordo al singolare: "ne arriva un altro". Il generatore
   // sostituiva il numero nel template senza guardare se era 1.

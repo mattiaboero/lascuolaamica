@@ -28556,16 +28556,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un'auto percorre 174 km con 6 litri. Quanti km percorre con 1 litro?",
+   "question": "Un'auto percorre 108 km con 6 litri. Quanti km percorre con 1 litro?",
    "options": [
-    "28",
-    "29",
-    "27",
-    "26"
+    "17",
+    "18",
+    "16",
+    "15"
    ],
    "answerIndex": 1,
-   "answer": "29",
-   "explanation": "Per trovare km per litro dividi i km totali per i litri: 174÷6=29 km/litro.",
+   "answer": "18",
+   "explanation": "Per trovare km per litro dividi i km totali per i litri: 108 ÷ 6 = 18 km/litro.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -28748,16 +28748,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un'auto percorre 630 km con 15 litri. Quanti km percorre con 1 litro?",
+   "question": "Un'auto percorre 270 km con 15 litri. Quanti km percorre con 1 litro?",
    "options": [
-    "40",
-    "39",
-    "41",
-    "42"
+    "16",
+    "15",
+    "17",
+    "18"
    ],
    "answerIndex": 3,
-   "answer": "42",
-   "explanation": "Per trovare km per litro dividi i km totali per i litri: 630÷15=42 km/litro.",
+   "answer": "18",
+   "explanation": "Per trovare km per litro dividi i km totali per i litri: 270 ÷ 15 = 18 km/litro.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -28812,16 +28812,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un'auto percorre 148 km con 4 litri. Quanti km percorre con 1 litro?",
+   "question": "Un'auto percorre 64 km con 4 litri. Quanti km percorre con 1 litro?",
    "options": [
-    "35",
-    "37",
-    "36",
-    "34"
+    "14",
+    "16",
+    "15",
+    "13"
    ],
    "answerIndex": 1,
-   "answer": "37",
-   "explanation": "Per trovare km per litro dividi i km totali per i litri: 148÷4=37 km/litro.",
+   "answer": "16",
+   "explanation": "Per trovare km per litro dividi i km totali per i litri: 64 ÷ 4 = 16 km/litro.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -28876,16 +28876,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un'auto percorre 864 km con 12 litri. Quanti km percorre con 1 litro?",
+   "question": "Un'auto percorre 180 km con 12 litri. Quanti km percorre con 1 litro?",
    "options": [
-    "69",
-    "70",
-    "71",
-    "72"
+    "12",
+    "13",
+    "14",
+    "15"
    ],
    "answerIndex": 3,
-   "answer": "72",
-   "explanation": "Per trovare km per litro dividi i km totali per i litri: 864÷12=72 km/litro.",
+   "answer": "15",
+   "explanation": "Per trovare km per litro dividi i km totali per i litri: 180 ÷ 12 = 15 km/litro.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -29132,16 +29132,16 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Un'auto percorre 891 km con 9 litri. Quanti km percorre con 1 litro?",
+   "question": "Un'auto percorre 108 km con 9 litri. Quanti km percorre con 1 litro?",
    "options": [
-    "96",
-    "97",
-    "98",
-    "99"
+    "9",
+    "10",
+    "11",
+    "12"
    ],
    "answerIndex": 3,
-   "answer": "99",
-   "explanation": "Per trovare km per litro dividi i km totali per i litri: 891÷9=99 km/litro.",
+   "answer": "12",
+   "explanation": "Per trovare km per litro dividi i km totali per i litri: 108 ÷ 9 = 12 km/litro.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [

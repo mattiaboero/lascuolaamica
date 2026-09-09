@@ -17,6 +17,7 @@ const vm = require('vm');
 const LINT = path.join(__dirname, 'lint_content.js');
 
 const SBAGLIATE = [
+  "Un'auto percorre 891 km con 9 litri. Quanti km percorre con 1 litro?",
   'In palestra ci sono 5 bambini e arrivano altri 1. Quanti sono in tutto?',
   'In un cortile ci sono 15 bambine e 24 bambini. Quanti bambini in tutto?',
   'Puoi usare la proprietà distributiva: 10 × 70 = 10 × (70 + 0) se utile.',
@@ -128,6 +129,7 @@ const SBAGLIATE = [
 ];
 
 const CORRETTE = [
+  "Un'auto percorre 108 km con 9 litri. Quanti km percorre con 1 litro?",
   'In palestra ci sono 5 bambini e ne arriva un altro. Quanti sono in tutto?',
   'In palestra ci sono 5 bambini e arrivano altri 12. Quanti sono in tutto?',
   'In un cortile ci sono 15 bambine e 24 bambini. Quanti sono in tutto?',
