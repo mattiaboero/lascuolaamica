@@ -26476,7 +26476,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 8 alunni raccoglie 400 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 8 alunni raccoglie 400 euro. Quanto paga ogni alunno?",
    "options": [
     "47",
     "48",
@@ -26540,7 +26540,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 6 alunni raccoglie 192 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 6 alunni raccoglie 192 euro. Quanto paga ogni alunno?",
    "options": [
     "30",
     "32",
@@ -26572,7 +26572,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Una classe di 9 alunni raccoglie 54 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 9 alunni raccoglie 54 euro. Quanto paga ogni alunno?",
    "options": [
     "3",
     "6",
@@ -26604,7 +26604,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 11 alunni raccoglie 187 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 11 alunni raccoglie 187 euro. Quanto paga ogni alunno?",
    "options": [
     "16",
     "15",
@@ -26636,7 +26636,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 11 alunni raccoglie 495 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 11 alunni raccoglie 495 euro. Quanto paga ogni alunno?",
    "options": [
     "43",
     "42",
@@ -26668,7 +26668,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 11 alunni raccoglie 165 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 11 alunni raccoglie 165 euro. Quanto paga ogni alunno?",
    "options": [
     "13",
     "12",
@@ -26700,7 +26700,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 12 alunni raccoglie 192 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 12 alunni raccoglie 192 euro. Quanto paga ogni alunno?",
    "options": [
     "13",
     "14",
@@ -26732,7 +26732,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Una classe di 10 alunni raccoglie 90 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 10 alunni raccoglie 90 euro. Quanto paga ogni alunno?",
    "options": [
     "7",
     "9",
@@ -26764,7 +26764,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Una classe di 14 alunni raccoglie 350 euro. Quanto paga ogni alunno?",
+   "question": "Un gruppo di 14 alunni raccoglie 350 euro. Quanto paga ogni alunno?",
    "options": [
     "23",
     "22",
@@ -27116,7 +27116,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Un treno ha 165 vagoni con 4 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 4 vagoni con 165 posti ciascuno. Quanti posti in tutto?",
    "options": [
     "659",
     "660",
@@ -27125,7 +27125,7 @@
    ],
    "answerIndex": 1,
    "answer": "660",
-   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 165×4=660 posti.",
+   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 4×165=660 posti.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27500,7 +27500,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Un treno ha 116 vagoni con 17 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 17 vagoni con 116 posti ciascuno. Quanti posti in tutto?",
    "options": [
     "1972",
     "1971",
@@ -27509,7 +27509,7 @@
    ],
    "answerIndex": 0,
    "answer": "1972",
-   "explanation": "Moltiplica 116×17: 116×10=1160, 116×7=812, poi 1160+812=1972.",
+   "explanation": "Moltiplica 17×116: 116×10=1160, 116×7=812, poi 1160+812=1972.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
@@ -27596,7 +27596,7 @@
    "area": "problemi",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Un treno ha 175 vagoni con 10 posti ciascuno. Quanti posti in tutto?",
+   "question": "Un treno ha 10 vagoni con 175 posti ciascuno. Quanti posti in tutto?",
    "options": [
     "1748",
     "1749",
@@ -27605,7 +27605,7 @@
    ],
    "answerIndex": 3,
    "answer": "1750",
-   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 175×10=1750 posti.",
+   "explanation": "Moltiplica il numero di vagoni per i posti per vagone: 10×175=1750 posti.",
    "active": true,
    "tag": "matematica;problemi;classe_5;primaria",
    "tags": [
