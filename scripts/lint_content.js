@@ -228,6 +228,9 @@ const GRAMMATICA = [
   // preposizione e si legge come un altro complemento. Solo articolo plurale:
   // al singolare ("sul tavolo e la maestra ne porta...") il secondo membro e'
   // quasi sempre il soggetto di una nuova proposizione, non un coordinato.
+  // Resta un falso positivo possibile quando "le"/"i"/"gli" e' pronome e non
+  // articolo ("le colora sulla mappa e le rende visibili"): capitato una volta
+  // scrivendo le spiegazioni, si risolve girando la frase.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])su(?:lle|lla|llo|gli|lo|i|l)\s+[a-zà-ùA-ZÀ-Ù][a-zà-ùA-ZÀ-Ù']+\s+e\s+(?:i|gli|le)\s+[a-zà-ùA-ZÀ-Ù]/,
     msg: 'preposizione non ripetuta nel coordinato (es. "sulle Alpi e gli Appennini")' },
   // Dal lotto 99: in italiano il verbo concorda con il soggetto nel numero e

@@ -19033,7 +19033,7 @@
    ],
    "answerIndex": 0,
    "answer": "attività economiche",
-   "explanation": "La risposta corretta è 'attività economiche'.",
+   "explanation": "Le attività economiche non si vedono guardando il territorio: la carta tematica le colora sulla mappa, e così diventano visibili tutte insieme.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19065,7 +19065,7 @@
    ],
    "answerIndex": 1,
    "answer": "simboli o segni convenzionali",
-   "explanation": "La risposta corretta è 'simboli o segni convenzionali'.",
+   "explanation": "Sulle carte i capoluoghi si indicano con simboli convenzionali — un cerchio, una stella, un carattere diverso — spiegati dalla legenda.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19097,7 +19097,7 @@
    ],
    "answerIndex": 2,
    "answer": "localizzare e interpretare informazioni",
-   "explanation": "La risposta corretta è 'localizzare e interpretare informazioni'.",
+   "explanation": "La carta serve a due cose insieme: trovare dove sta un luogo, e capire che rapporto ha con quelli intorno.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19129,7 +19129,7 @@
    ],
    "answerIndex": 3,
    "answer": "comprendere meglio il territorio",
-   "explanation": "La risposta corretta è 'comprendere meglio il territorio'.",
+   "explanation": "La carta dice dove, il grafico dice quanto: messi accanto rispondono a domande che nessuno dei due, da solo, potrebbe chiudere.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19161,7 +19161,7 @@
    ],
    "answerIndex": 0,
    "answer": "individuare la posizione esatta dei luoghi",
-   "explanation": "La risposta corretta è 'individuare la posizione esatta dei luoghi'.",
+   "explanation": "Il reticolato è la griglia di paralleli e meridiani: incrociandoli si ottiene la posizione esatta di qualunque punto della Terra.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19193,7 +19193,7 @@
    ],
    "answerIndex": 1,
    "answer": "territori molto estesi",
-   "explanation": "La risposta corretta è 'territori molto estesi'.",
+   "explanation": "Scala piccola vuol dire riduzione forte: entra tutto un continente nel foglio, ma i particolari spariscono.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19225,7 +19225,7 @@
    ],
    "answerIndex": 2,
    "answer": "territori più piccoli con più dettagli",
-   "explanation": "La risposta corretta è 'territori più piccoli con più dettagli'.",
+   "explanation": "Scala grande vuol dire riduzione lieve: si vede poco territorio ma con molti dettagli, come in una pianta di città.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19257,7 +19257,7 @@
    ],
    "answerIndex": 3,
    "answer": "dove si coltiva di più",
-   "explanation": "La risposta corretta è 'dove si coltiva di più'.",
+   "explanation": "La carta tematica dell'agricoltura colora il territorio secondo le colture: si vede subito dove si coltiva che cosa, e dove non si coltiva affatto.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19289,7 +19289,7 @@
    ],
    "answerIndex": 0,
    "answer": "il numero degli abitanti",
-   "explanation": "La risposta corretta è 'il numero degli abitanti'.",
+   "explanation": "La carta della popolazione associa a ogni zona un numero di abitanti: mette insieme un luogo e un dato che quel luogo da solo non mostra.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19321,7 +19321,7 @@
    ],
    "answerIndex": 1,
    "answer": "titolo, assi e legenda",
-   "explanation": "La risposta corretta è 'titolo, assi e legenda'.",
+   "explanation": "Prima dei numeri servono tre cose: il titolo per sapere di che parla, gli assi per capire cosa misura, la legenda per i colori.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19353,7 +19353,7 @@
    ],
    "answerIndex": 2,
    "answer": "valori diversi",
-   "explanation": "La risposta corretta è 'valori diversi'.",
+   "explanation": "Nell'istogramma l'altezza è proporzionale al valore: mettendo le montagne fianco a fianco si vede a colpo d'occhio quale supera le altre.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19385,7 +19385,7 @@
    ],
    "answerIndex": 3,
    "answer": "quanto pesa ogni settore sul totale",
-   "explanation": "La risposta corretta è 'quanto pesa ogni settore sul totale'.",
+   "explanation": "L'areogramma divide il totale in spicchi: si vede quanto pesa ciascun settore sull'economia di una regione, non quanto vale in assoluto.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19417,7 +19417,7 @@
    ],
    "answerIndex": 0,
    "answer": "si possono zoomare e consultare",
-   "explanation": "La risposta corretta è 'si possono zoomare e consultare'.",
+   "explanation": "Una carta digitale si ingrandisce, si sposta e si aggiorna: mostra il dettaglio solo quando serve, cosa che la carta stampata non può fare.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19449,7 +19449,7 @@
    ],
    "answerIndex": 1,
    "answer": "relazioni con mari e confini",
-   "explanation": "La risposta corretta è 'relazioni con mari e confini'.",
+   "explanation": "La posizione non si capisce guardando l'Italia da sola: serve vedere quali mari la bagnano e con quali Stati confina.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19481,7 +19481,7 @@
    ],
    "answerIndex": 2,
    "answer": "distinguere funzioni o dimensioni",
-   "explanation": "La risposta corretta è 'distinguere funzioni o dimensioni'.",
+   "explanation": "Un simbolo più grande o diverso distingue una capitale da un capoluogo o da un paese: la carta dice così anche quanto conta una città.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19513,7 +19513,7 @@
    ],
    "answerIndex": 3,
    "answer": "dati su città, industrie e natura",
-   "explanation": "La risposta corretta è 'dati su città, industrie e natura'.",
+   "explanation": "Sovrapponendo dove stanno le città, le industrie e le aree naturali si vede dove l'uomo ha trasformato di più e dove meno.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19545,7 +19545,7 @@
    ],
    "answerIndex": 0,
    "answer": "trasforma dati in informazioni sul territorio",
-   "explanation": "La risposta corretta è 'trasforma dati in informazioni sul territorio'.",
+   "explanation": "Un elenco di numeri non dice niente sul territorio: interpretarli su una carta li trasforma in informazioni su dove e perché.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19577,7 +19577,7 @@
    ],
    "answerIndex": 1,
    "answer": "gradi",
-   "explanation": "La risposta corretta è 'gradi'.",
+   "explanation": "Latitudine e longitudine si misurano in gradi, primi e secondi: sono angoli, misurati dal centro della Terra.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19609,7 +19609,7 @@
    ],
    "answerIndex": 2,
    "answer": "Greenwich",
-   "explanation": "La risposta corretta è 'Greenwich'.",
+   "explanation": "Il meridiano di Greenwich è quello a longitudine zero: fu scelto per convenzione internazionale nel 1884.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19641,7 +19641,7 @@
    ],
    "answerIndex": 3,
    "answer": "emisfero Sud",
-   "explanation": "La risposta corretta è 'emisfero Sud'.",
+   "explanation": "L'equatore è il parallelo a metà strada fra i poli: divide la Terra nell'emisfero boreale, a nord, e in quello australe, a sud.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19673,7 +19673,7 @@
    ],
    "answerIndex": 0,
    "answer": "interpretare simboli e colori",
-   "explanation": "La risposta corretta è 'interpretare simboli e colori'.",
+   "explanation": "Senza legenda i colori di un grafico sono solo colori: la legenda dice a quale categoria corrisponde ciascuno.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19705,7 +19705,7 @@
    ],
    "answerIndex": 1,
    "answer": "carte, grafici e dati",
-   "explanation": "La risposta corretta è 'carte, grafici e dati'.",
+   "explanation": "Carte, grafici e dati rispondono a domande diverse — dove, quanto, come cambia — e solo insieme danno il quadro completo di un territorio.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19737,7 +19737,7 @@
    ],
    "answerIndex": 2,
    "answer": "clima, popolazione ed economia",
-   "explanation": "La risposta corretta è 'clima, popolazione ed economia'.",
+   "explanation": "Clima, popolazione ed economia sono fenomeni fatti di numeri che variano nello spazio: il grafico li rende confrontabili a colpo d'occhio.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19769,7 +19769,7 @@
    ],
    "answerIndex": 3,
    "answer": "capire meglio il territorio",
-   "explanation": "La risposta corretta è 'capire meglio il territorio'.",
+   "explanation": "I dati statistici misurano quello che a occhio si può solo intuire: quanti abitanti, quanta pioggia, quanta produzione.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19801,7 +19801,7 @@
    ],
    "answerIndex": 0,
    "answer": "collegamenti e mobilità",
-   "explanation": "La risposta corretta è 'collegamenti e mobilità'.",
+   "explanation": "La carta dei trasporti mostra strade, ferrovie e porti: si vede dove ci si muove facilmente e dove i collegamenti mancano.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19833,7 +19833,7 @@
    ],
    "answerIndex": 1,
    "answer": "vedere dove si concentra la popolazione",
-   "explanation": "La risposta corretta è 'vedere dove si concentra la popolazione'.",
+   "explanation": "Colorando le zone secondo la densità si vede subito dove la popolazione si addensa e dove il territorio resta quasi vuoto.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -19865,7 +19865,7 @@
    ],
    "answerIndex": 2,
    "answer": "leggere simboli, scale e dati",
-   "explanation": "La risposta corretta è 'leggere simboli, scale e dati'.",
+   "explanation": "Una carta non parla da sola: serve saper leggere i simboli, capire la scala e interpretare i dati. Senza, resta un disegno colorato.",
    "active": true,
    "tag": "geografia;classe_5;orientamento;carte_tematiche",
    "tags": [
@@ -21416,7 +21416,7 @@
    ],
    "answerIndex": 0,
    "answer": "capoluogo",
-   "explanation": "La risposta corretta è 'capoluogo'.",
+   "explanation": "Il capoluogo è la città in cui hanno sede gli uffici amministrativi della regione: è il centro del suo governo.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21449,7 +21449,7 @@
    ],
    "answerIndex": 1,
    "answer": "sindaco",
-   "explanation": "La risposta corretta è 'sindaco'.",
+   "explanation": "Il sindaco è eletto dai cittadini del comune e ne guida l'amministrazione, dai servizi alle scuole al territorio.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21482,7 +21482,7 @@
    ],
    "answerIndex": 2,
    "answer": "primario, secondario e terziario",
-   "explanation": "La risposta corretta è 'primario, secondario e terziario'.",
+   "explanation": "I tre settori distinguono come si produce: il primario prende dalla natura, il secondario trasforma, il terziario offre servizi.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21515,7 +21515,7 @@
    ],
    "answerIndex": 3,
    "answer": "terziario",
-   "explanation": "La risposta corretta è 'terziario'.",
+   "explanation": "Il turismo non produce oggetti: offre ospitalità, trasporto e visite. È un servizio, quindi settore terziario.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21548,7 +21548,7 @@
    ],
    "answerIndex": 0,
    "answer": "l'insieme degli abitanti",
-   "explanation": "La risposta corretta è \"l'insieme degli abitanti\".",
+   "explanation": "La popolazione è il numero di persone che vivono in un territorio: si conta con il censimento e cambia nel tempo.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21581,7 +21581,7 @@
    ],
    "answerIndex": 1,
    "answer": "abitanti e superficie",
-   "explanation": "La risposta corretta è 'abitanti e superficie'.",
+   "explanation": "La densità si ottiene dividendo gli abitanti per i chilometri quadrati: dice quanto è affollato un territorio, non quanto è grande.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21614,7 +21614,7 @@
    ],
    "answerIndex": 2,
    "answer": "molti servizi",
-   "explanation": "La risposta corretta è 'molti servizi'.",
+   "explanation": "Dove vivono molte persone conviene aprire ospedali, università, uffici e negozi: la domanda concentrata rende possibili servizi che altrove non reggerebbero.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21647,7 +21647,7 @@
    ],
    "answerIndex": 3,
    "answer": "un monumento storico",
-   "explanation": "La risposta corretta è 'un monumento storico'.",
+   "explanation": "I beni culturali sono le opere fatte dall'uomo che vanno conservate: monumenti, chiese, quadri, siti archeologici.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21680,7 +21680,7 @@
    ],
    "answerIndex": 0,
    "answer": "un parco nazionale",
-   "explanation": "La risposta corretta è 'un parco nazionale'.",
+   "explanation": "I beni naturali sono gli ambienti da conservare così come sono: parchi, riserve, aree protette.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21713,7 +21713,7 @@
    ],
    "answerIndex": 1,
    "answer": "conservare ricchezze naturali e culturali",
-   "explanation": "La risposta corretta è 'conservare ricchezze naturali e culturali'.",
+   "explanation": "Un monumento distrutto o un ambiente rovinato non si rifanno: la tutela serve a lasciarli a chi verrà dopo.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21746,7 +21746,7 @@
    ],
    "answerIndex": 2,
    "answer": "morfologia, economia e cultura",
-   "explanation": "La risposta corretta è 'morfologia, economia e cultura'.",
+   "explanation": "Due regioni si confrontano su tre piani: com'è fatto il territorio, di cosa vivono le persone, quali tradizioni hanno.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21779,7 +21779,7 @@
    ],
    "answerIndex": 3,
    "answer": "pesca e turismo",
-   "explanation": "La risposta corretta è 'pesca e turismo'.",
+   "explanation": "La costa offre pesce, spiagge e approdi: da queste tre cose nascono la pesca e il turismo balneare.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21812,7 +21812,7 @@
    ],
    "answerIndex": 0,
    "answer": "turismo montano e idroelettrico",
-   "explanation": "La risposta corretta è 'turismo montano e idroelettrico'.",
+   "explanation": "In montagna la neve e i panorami attirano turisti, e i dislivelli fanno funzionare le centrali idroelettriche.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21845,7 +21845,7 @@
    ],
    "answerIndex": 1,
    "answer": "agricoltura, industrie e trasporti",
-   "explanation": "La risposta corretta è 'agricoltura, industrie e trasporti'.",
+   "explanation": "In pianura il terreno è piano e fertile e i collegamenti sono facili: ci stanno insieme campi, fabbriche e strade.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21878,7 +21878,7 @@
    ],
    "answerIndex": 2,
    "answer": "vigneti e oliveti",
-   "explanation": "La risposta corretta è 'vigneti e oliveti'.",
+   "explanation": "I pendii collinari sono soleggiati e ben drenati: sono le condizioni che vite e olivo preferiscono.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21911,7 +21911,7 @@
    ],
    "answerIndex": 3,
    "answer": "un grande centro urbano",
-   "explanation": "La risposta corretta è 'un grande centro urbano'.",
+   "explanation": "Un grande centro urbano non si misura solo dagli abitanti: conta quante funzioni ospita — università, ospedali, uffici, trasporti.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21944,7 +21944,7 @@
    ],
    "answerIndex": 0,
    "answer": "chiese, palazzi, musei e siti archeologici",
-   "explanation": "La risposta corretta è 'chiese, palazzi, musei e siti archeologici'.",
+   "explanation": "L'Italia ha il maggior numero di siti riconosciuti patrimonio dell'umanità: chiese, palazzi, musei e resti archeologici sparsi in tutte le regioni.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -21977,7 +21977,7 @@
    ],
    "answerIndex": 1,
    "answer": "nascite, morti e migrazioni",
-   "explanation": "La risposta corretta è 'nascite, morti e migrazioni'.",
+   "explanation": "La popolazione cambia per tre cause: chi nasce, chi muore e chi si sposta da o verso quel territorio.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -22010,7 +22010,7 @@
    ],
    "answerIndex": 2,
    "answer": "lo spostamento di persone",
-   "explanation": "La risposta corretta è 'lo spostamento di persone'.",
+   "explanation": "Migrare significa spostarsi da un luogo a un altro per viverci: può avvenire dentro un Paese o fra Paesi diversi.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -22043,7 +22043,7 @@
    ],
    "answerIndex": 3,
    "answer": "forte presenza industriale e di servizi",
-   "explanation": "La risposta corretta è 'forte presenza industriale e di servizi'.",
+   "explanation": "Nel Nord la Pianura Padana ha offerto terreno, acqua e collegamenti: qui si sono concentrate le fabbriche e, dopo, i servizi.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -22076,7 +22076,7 @@
    ],
    "answerIndex": 0,
    "answer": "agricoltura, turismo e servizi",
-   "explanation": "La risposta corretta è 'agricoltura, turismo e servizi'.",
+   "explanation": "Nel Sud il clima e le coste favoriscono agricoltura e turismo, e attorno a questi si sviluppano i servizi.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -22109,7 +22109,7 @@
    ],
    "answerIndex": 1,
    "answer": "diverse e ricche",
-   "explanation": "La risposta corretta è 'diverse e ricche'.",
+   "explanation": "Ogni regione ha una storia diversa, spesso di Stati separati fino al 1861: da lì dialetti, feste e cucine così differenti.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
@@ -22142,7 +22142,7 @@
    ],
    "answerIndex": 2,
    "answer": "grandi città e territori vicini collegati",
-   "explanation": "La risposta corretta è 'grandi città e territori vicini collegati'.",
+   "explanation": "L'area metropolitana comprende una grande città e i comuni vicini che ci gravitano attorno per lavoro, studio e servizi.",
    "active": true,
    "tag": "geografia;classe_5;regioni;economia;popolazione",
    "tags": [
