@@ -9421,7 +9421,7 @@
    ],
    "answerIndex": 0,
    "answer": "rocce e fossili di età diverse",
-   "explanation": "La risposta corretta è 'rocce e fossili di età diverse'.",
+   "explanation": "Le rocce si depositano a strati, uno sopra l'altro, e i fossili che contengono hanno età diverse: quelli negli strati profondi sono più antichi. Questa successione mostra che la Terra ha una storia lunghissima.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9453,7 +9453,7 @@
    ],
    "answerIndex": 1,
    "answer": "modi diversi di raccontare le origini",
-   "explanation": "La risposta corretta è 'modi diversi di raccontare le origini'.",
+   "explanation": "Il mito racconta le origini con immagini e personaggi, la scienza con prove che si possono controllare, come le rocce e i fossili. Sono due modi diversi di rispondere alla stessa domanda, non la stessa cosa.",
    "active": true,
    "tag": "origini;miti;scienza;classe3",
    "tags": [
@@ -9485,7 +9485,7 @@
    ],
    "answerIndex": 2,
    "answer": "i fossili",
-   "explanation": "La risposta corretta è 'i fossili'.",
+   "explanation": "I fossili sono resti o impronte di esseri viventi conservati nella roccia: sono prove concrete, che si possono osservare e datare.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9516,7 +9516,7 @@
    ],
    "answerIndex": 3,
    "answer": "preistoria della Terra",
-   "explanation": "La risposta corretta è 'preistoria della Terra'.",
+   "explanation": "I dinosauri vissero milioni di anni prima della scrittura, quindi appartengono alla preistoria della Terra. Roma e l'età moderna sono periodi della storia dell'uomo.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9547,7 +9547,7 @@
    ],
    "answerIndex": 0,
    "answer": "molto semplici",
-   "explanation": "La risposta corretta è 'molto semplici'.",
+   "explanation": "Le prime forme di vita erano organismi semplicissimi, formati da una sola cellula, comparsi nel mare. Gli animali complessi arrivarono molto più tardi.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9578,7 +9578,7 @@
    ],
    "answerIndex": 1,
    "answer": "si sono trasformati",
-   "explanation": "La risposta corretta è 'si sono trasformati'.",
+   "explanation": "Nel corso di tempi lunghissimi gli esseri viventi si sono trasformati: alcune specie sono scomparse, altre nuove sono comparse. È quello che i fossili documentano strato dopo strato.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9609,7 +9609,7 @@
    ],
    "answerIndex": 2,
    "answer": "l'impronta di un animale",
-   "explanation": "La risposta corretta è \"l'impronta di un animale\".",
+   "explanation": "Non si fossilizzano solo ossa e conchiglie: anche un'impronta lasciata nel fango, poi indurito in roccia, è un fossile. Si chiama fossile di traccia.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9640,7 +9640,7 @@
    ],
    "answerIndex": 3,
    "answer": "fasi molto lontane della storia della Terra",
-   "explanation": "La risposta corretta è 'fasi molto lontane della storia della Terra'.",
+   "explanation": "Più una roccia è antica, più lontano nel tempo risale ciò che racconta: le rocce più antiche riguardano le prime fasi della storia della Terra.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9671,7 +9671,7 @@
    ],
    "answerIndex": 0,
    "answer": "servono condizioni particolari per conservarli",
-   "explanation": "La risposta corretta è 'servono condizioni particolari per conservarli'.",
+   "explanation": "Perché un resto diventi fossile deve essere coperto in fretta da sabbia o fango e restare al riparo dall'aria. Sono condizioni rare, quindi i fossili si trovano solo in certi luoghi.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9702,7 +9702,7 @@
    ],
    "answerIndex": 1,
    "answer": "che sulla Terra la vita è cambiata",
-   "explanation": "La risposta corretta è 'che sulla Terra la vita è cambiata'.",
+   "explanation": "I dinosauri dominavano la Terra e poi si sono estinti: la loro vicenda mostra che la vita sul pianeta è cambiata nel tempo.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9733,7 +9733,7 @@
    ],
    "answerIndex": 2,
    "answer": "i dinosauri vissero molto prima",
-   "explanation": "La risposta corretta è 'i dinosauri vissero molto prima'.",
+   "explanation": "I dinosauri si estinsero circa 65 milioni di anni fa, molto prima della comparsa degli esseri umani: non hanno mai convissuto.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -9764,7 +9764,7 @@
    ],
    "answerIndex": 3,
    "answer": "non più esistente come specie vivente",
-   "explanation": "La risposta corretta è 'non più esistente come specie vivente'.",
+   "explanation": "Una specie estinta è una specie di cui non vive più nessun individuo. Se ne conoscono solo i resti fossili.",
    "active": true,
    "tag": "origine;evoluzione;classe3",
    "tags": [
@@ -11055,7 +11055,7 @@
    ],
    "answerIndex": 1,
    "answer": "agricoltura",
-   "explanation": "La risposta corretta è 'agricoltura'.",
+   "explanation": "Nel Neolitico l'uomo imparò a seminare e raccogliere: l'agricoltura è la novità che dà il nome a questo periodo, chiamato anche rivoluzione neolitica.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11086,7 +11086,7 @@
    ],
    "answerIndex": 2,
    "answer": "cibo e aiuto nel lavoro",
-   "explanation": "La risposta corretta è 'cibo e aiuto nel lavoro'.",
+   "explanation": "Gli animali allevati davano carne, latte, lana e pelli, e i più grandi aiutavano a trasportare pesi e a lavorare i campi.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11117,7 +11117,7 @@
    ],
    "answerIndex": 3,
    "answer": "sedentario",
-   "explanation": "La risposta corretta è 'sedentario'.",
+   "explanation": "Sedentario significa che resta stabilmente in un luogo. È il contrario di nomade, che si sposta continuamente.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11148,7 +11148,7 @@
    ],
    "answerIndex": 0,
    "answer": "Neolitico",
-   "explanation": "La risposta corretta è 'Neolitico'.",
+   "explanation": "Il passaggio avvenne nel Neolitico: chi coltiva deve restare vicino al campo per curarlo e raccogliere, e così nascono le prime abitazioni stabili.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11179,7 +11179,7 @@
    ],
    "answerIndex": 1,
    "answer": "si fermarono vicino ai campi",
-   "explanation": "La risposta corretta è 'si fermarono vicino ai campi'.",
+   "explanation": "Un campo va seminato, curato e sorvegliato fino al raccolto: per questo gli uomini costruirono le case vicino ai campi, dando origine ai villaggi.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11210,7 +11210,7 @@
    ],
    "answerIndex": 2,
    "answer": "produrre il cibo",
-   "explanation": "La risposta corretta è 'produrre il cibo'.",
+   "explanation": "Prima il cibo si cercava dove capitava, con la caccia e la raccolta. Con l'agricoltura l'uomo comincia a produrlo, decidendo che cosa seminare e dove.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11241,7 +11241,7 @@
    ],
    "answerIndex": 3,
    "answer": "mangiarlo in seguito",
-   "explanation": "La risposta corretta è 'mangiarlo in seguito'.",
+   "explanation": "Il grano essiccato si conserva a lungo nei silos e nei vasi: si poteva così mangiare anche nei mesi senza raccolto.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11272,7 +11272,7 @@
    ],
    "answerIndex": 0,
    "answer": "la ceramica",
-   "explanation": "La risposta corretta è 'la ceramica'.",
+   "explanation": "Nel Neolitico si imparò a modellare l'argilla e a cuocerla: nasce la ceramica, utile a chi vive in un luogo fisso e deve conservare le scorte.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11303,7 +11303,7 @@
    ],
    "answerIndex": 1,
    "answer": "villaggi stabili",
-   "explanation": "La risposta corretta è 'villaggi stabili'.",
+   "explanation": "Chi resta nello stesso luogo costruisce case solide, di legno, fango e paglia, raccolte in villaggi stabili.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11334,7 +11334,7 @@
    ],
    "answerIndex": 2,
    "answer": "cacciare come unica risorsa",
-   "explanation": "La risposta corretta è 'cacciare come unica risorsa'.",
+   "explanation": "Nel Neolitico si cacciava ancora, ma non era più l'unica risorsa: il cibo veniva soprattutto dai campi e dagli animali allevati.",
    "active": true,
    "tag": "neolitico;agricoltura;classe3",
    "tags": [
@@ -11365,7 +11365,7 @@
    ],
    "answerIndex": 3,
    "answer": "perché rese possibile fermarsi in un luogo",
-   "explanation": "La risposta corretta è 'perché rese possibile fermarsi in un luogo'.",
+   "explanation": "Coltivare significa legarsi alla terra: chi semina deve restare fino al raccolto. Da qui nascono villaggi, scorte e una vita del tutto nuova.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11396,7 +11396,7 @@
    ],
    "answerIndex": 0,
    "answer": "acqua e terreni fertili",
-   "explanation": "La risposta corretta è 'acqua e terreni fertili'.",
+   "explanation": "Servivano acqua per bere e irrigare e terreni fertili da coltivare: per questo i villaggi sorgevano lungo i fiumi e nelle pianure.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11427,7 +11427,7 @@
    ],
    "answerIndex": 1,
    "answer": "latte, carne e aiuto nei campi",
-   "explanation": "La risposta corretta è 'latte, carne e aiuto nei campi'.",
+   "explanation": "Gli animali allevati fornivano latte e carne senza doverli cacciare, e buoi e asini aiutavano nei lavori dei campi.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11458,7 +11458,7 @@
    ],
    "answerIndex": 2,
    "answer": "fare tessuti",
-   "explanation": "La risposta corretta è 'fare tessuti'.",
+   "explanation": "Tessere significa intrecciare fili per ottenere tessuti. Si usavano la lana delle pecore e le fibre del lino.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11489,7 +11489,7 @@
    ],
    "answerIndex": 3,
    "answer": "conservare cibi e liquidi",
-   "explanation": "La risposta corretta è 'conservare cibi e liquidi'.",
+   "explanation": "I vasi di ceramica sono impermeabili e chiusi: proteggono cereali, acqua e olio da umidità e animali.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11520,7 +11520,7 @@
    ],
    "answerIndex": 0,
    "answer": "schiacciare i cereali",
-   "explanation": "La risposta corretta è 'schiacciare i cereali'.",
+   "explanation": "La macina è formata da due pietre: sfregandole si schiacciano i chicchi di cereale fino a ottenere la farina.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11551,7 +11551,7 @@
    ],
    "answerIndex": 1,
    "answer": "regole di convivenza nei villaggi",
-   "explanation": "La risposta corretta è 'regole di convivenza nei villaggi'.",
+   "explanation": "Vivendo stabilmente insieme bisogna decidere come dividere i campi, l'acqua e le scorte: nascono così le prime regole di convivenza del villaggio.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11582,7 +11582,7 @@
    ],
    "answerIndex": 2,
    "answer": "si produceva e si conservava",
-   "explanation": "La risposta corretta è 'si produceva e si conservava'.",
+   "explanation": "L'agricoltura dà raccolti abbondanti in un solo periodo dell'anno, e la conservazione permette di tenerli da parte: insieme rendono possibile l'accumulo.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11613,7 +11613,7 @@
    ],
    "answerIndex": 3,
    "answer": "pecora",
-   "explanation": "La risposta corretta è 'pecora'.",
+   "explanation": "La pecora è uno dei primi animali addomesticati, insieme a capra, maiale e bue: dava lana, latte e carne.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11644,7 +11644,7 @@
    ],
    "answerIndex": 0,
    "answer": "la tessitura",
-   "explanation": "La risposta corretta è 'la tessitura'.",
+   "explanation": "La tessitura trasforma la lana e il lino in stoffa, con cui si confezionavano i vestiti.",
    "active": true,
    "tag": "neolitico;villaggi;classe3",
    "tags": [
@@ -11675,7 +11675,7 @@
    ],
    "answerIndex": 1,
    "answer": "metalli",
-   "explanation": "La risposta corretta è 'metalli'.",
+   "explanation": "Dopo il Neolitico si impara a fondere e lavorare i metalli: inizia l'età dei metalli, con rame, bronzo e ferro.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11706,7 +11706,7 @@
    ],
    "answerIndex": 2,
    "answer": "resistenti",
-   "explanation": "La risposta corretta è 'resistenti'.",
+   "explanation": "Il metallo non si scheggia come la pietra: gli utensili durano di più e si possono affilare di nuovo.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11737,7 +11737,7 @@
    ],
    "answerIndex": 3,
    "answer": "il Neolitico",
-   "explanation": "La risposta corretta è 'il Neolitico'.",
+   "explanation": "L'età dei metalli segue il Neolitico e chiude la preistoria, prima della nascita della scrittura.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11768,7 +11768,7 @@
    ],
    "answerIndex": 0,
    "answer": "la maggiore robustezza",
-   "explanation": "La risposta corretta è 'la maggiore robustezza'.",
+   "explanation": "Un'ascia di pietra si spezza sotto i colpi, una di metallo resiste: la maggiore robustezza è il vantaggio principale.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11799,7 +11799,7 @@
    ],
    "answerIndex": 1,
    "answer": "rame",
-   "explanation": "La risposta corretta è 'rame'.",
+   "explanation": "Dopo la pietra si lavorò il rame, il primo metallo usato: si trova quasi puro in natura ed è tenero, quindi facile da modellare.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11830,7 +11830,7 @@
    ],
    "answerIndex": 2,
    "answer": "lavorare e difendersi",
-   "explanation": "La risposta corretta è 'lavorare e difendersi'.",
+   "explanation": "Con il metallo si fecero asce, zappe e falci per il lavoro, ma anche punte e lame per la difesa.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11861,7 +11861,7 @@
    ],
    "answerIndex": 3,
    "answer": "oggetti con nuove forme",
-   "explanation": "La risposta corretta è 'oggetti con nuove forme'.",
+   "explanation": "Il metallo fuso è liquido e si versa negli stampi: raffreddandosi prende forme che con la pietra erano impossibili.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11892,7 +11892,7 @@
    ],
    "answerIndex": 0,
    "answer": "metalli",
-   "explanation": "La risposta corretta è 'metalli'.",
+   "explanation": "Rame, bronzo e ferro sono metalli; il bronzo si ottiene mescolando rame e stagno. Danno il nome alle tre età dei metalli.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11923,7 +11923,7 @@
    ],
    "answerIndex": 1,
    "answer": "potevano lavorare meglio la terra",
-   "explanation": "La risposta corretta è 'potevano lavorare meglio la terra'.",
+   "explanation": "Zappe e falci di metallo tagliano e smuovono la terra meglio degli attrezzi di legno e pietra, e si rompono meno.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11954,7 +11954,7 @@
    ],
    "answerIndex": 2,
    "answer": "abilità e calore",
-   "explanation": "La risposta corretta è 'abilità e calore'.",
+   "explanation": "Per fondere il metallo serve un fuoco molto caldo, e per colarlo negli stampi serve esperienza: nacquero artigiani specializzati.",
    "active": true,
    "tag": "metalli;preistoria;classe3",
    "tags": [
@@ -11985,7 +11985,7 @@
    ],
    "answerIndex": 3,
    "answer": "sedentari",
-   "explanation": "La risposta corretta è 'sedentari'.",
+   "explanation": "Nel Paleolitico si seguivano gli animali e le piante spontanee; con l'agricoltura del Neolitico gli uomini diventano sedentari, cioè restano in un luogo.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12016,7 +12016,7 @@
    ],
    "answerIndex": 0,
    "answer": "agricoltura e allevamento",
-   "explanation": "La risposta corretta è 'agricoltura e allevamento'.",
+   "explanation": "Il Paleolitico vive di ciò che trova, il Neolitico di ciò che produce: agricoltura e allevamento sono la differenza principale.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12047,7 +12047,7 @@
    ],
    "answerIndex": 1,
    "answer": "Paleolitico-nomadismo, Neolitico-sedentarietà",
-   "explanation": "La risposta corretta è 'Paleolitico-nomadismo, Neolitico-sedentarietà'.",
+   "explanation": "Il Paleolitico è l'età del nomadismo, il Neolitico quella della sedentarietà. Piramidi, senato, impero e teatro appartengono a epoche successive.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12078,7 +12078,7 @@
    ],
    "answerIndex": 2,
    "answer": "il modo di procurarsi il cibo",
-   "explanation": "La risposta corretta è 'il modo di procurarsi il cibo'.",
+   "explanation": "Cambia il modo di procurarsi il cibo: non più solo caccia e raccolta, ma coltivazione e allevamento. Da qui derivano tutti gli altri cambiamenti.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12109,7 +12109,7 @@
    ],
    "answerIndex": 3,
    "answer": "restavano più a lungo nello stesso luogo",
-   "explanation": "La risposta corretta è 'restavano più a lungo nello stesso luogo'.",
+   "explanation": "Un villaggio con case solide e magazzini non si costruisce per pochi giorni: mostra che gli uomini restavano a lungo nello stesso luogo.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12140,7 +12140,7 @@
    ],
    "answerIndex": 0,
    "answer": "seminare un campo",
-   "explanation": "La risposta corretta è 'seminare un campo'.",
+   "explanation": "Seminare un campo ha senso solo se si resta ad aspettare il raccolto: è un'attività del Neolitico. Inseguire i branchi e dipingere nelle grotte appartengono al Paleolitico.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12171,7 +12171,7 @@
    ],
    "answerIndex": 1,
    "answer": "nel Neolitico",
-   "explanation": "La risposta corretta è 'nel Neolitico'.",
+   "explanation": "I primi villaggi compaiono nel Neolitico, quando l'agricoltura lega gli uomini alla terra che coltivano.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
@@ -12202,7 +12202,7 @@
    ],
    "answerIndex": 2,
    "answer": "in un villaggio neolitico",
-   "explanation": "La risposta corretta è 'in un villaggio neolitico'.",
+   "explanation": "La macina serve a macinare i cereali coltivati: si trova dove si pratica l'agricoltura, cioè in un villaggio neolitico.",
    "active": true,
    "tag": "confronto;preistoria;classe3",
    "tags": [
