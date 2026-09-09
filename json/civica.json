@@ -19221,7 +19221,7 @@
    ],
    "answerIndex": 1,
    "answer": "usare il passaggio pedonale",
-   "explanation": "La risposta corretta è 'usare il passaggio pedonale'.",
+   "explanation": "Sulle strisce chi guida si aspetta di trovare pedoni e rallenta. Attraversando altrove sei dove nessuno ti cerca con lo sguardo.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -19381,7 +19381,7 @@
    ],
    "answerIndex": 2,
    "answer": "aspettare",
-   "explanation": "La risposta corretta è 'aspettare'.",
+   "explanation": "Il rosso per i pedoni vuol dire che in quel momento tocca alle auto passare. Aspettare pochi secondi è ciò che rende l'attraversamento prevedibile per tutti.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -19541,7 +19541,7 @@
    ],
    "answerIndex": 3,
    "answer": "allacciare la cintura",
-   "explanation": "La risposta corretta è 'allacciare la cintura'.",
+   "explanation": "In una frenata improvvisa il corpo continua ad andare avanti. La cintura è ciò che lo trattiene: senza, ci si ferma contro il sedile davanti o il parabrezza.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -19701,7 +19701,7 @@
    ],
    "answerIndex": 0,
    "answer": "indossare il casco",
-   "explanation": "La risposta corretta è 'indossare il casco'.",
+   "explanation": "Cadendo in bici la testa è la parte che si fa più male e l'unica che non guarisce da sola. Il casco assorbe il colpo al posto tuo.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -19861,7 +19861,7 @@
    ],
    "answerIndex": 1,
    "answer": "chiamare un adulto",
-   "explanation": "La risposta corretta è 'chiamare un adulto'.",
+   "explanation": "Correre dietro a un pallone fa uscire in strada senza guardare, ed è così che succedono gli incidenti. Un adulto può recuperarlo in sicurezza.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20021,7 +20021,7 @@
    ],
    "answerIndex": 2,
    "answer": "lasciare salire e scendere con ordine",
-   "explanation": "La risposta corretta è 'lasciare salire e scendere con ordine'.",
+   "explanation": "Se si sale mentre altri scendono ci si blocca a vicenda sulla porta. Lasciare prima scendere fa perdere meno tempo a tutti, compreso a te.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20181,7 +20181,7 @@
    ],
    "answerIndex": 3,
    "answer": "non spingere e lasciare spazio",
-   "explanation": "La risposta corretta è 'non spingere e lasciare spazio'.",
+   "explanation": "Il marciapiede è stretto e ci passano anche persone anziane, carrozzine e passeggini. Lasciare spazio evita che qualcuno debba scendere sulla strada.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20341,7 +20341,7 @@
    ],
    "answerIndex": 0,
    "answer": "aspettare con rispetto",
-   "explanation": "La risposta corretta è 'aspettare con rispetto'.",
+   "explanation": "Chi cammina lentamente non può fare in fretta, e mettergli pressione lo fa solo sentire in colpa o lo mette in difficoltà. Qualche secondo non cambia la tua giornata.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20501,7 +20501,7 @@
    ],
    "answerIndex": 1,
    "answer": "non giocare in carreggiata",
-   "explanation": "La risposta corretta è 'non giocare in carreggiata'.",
+   "explanation": "La carreggiata è lo spazio delle auto: chi guida non si aspetta di trovarci un bambino e non fa in tempo a fermarsi. Per giocare servono cortile, parco o area pedonale.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20661,7 +20661,7 @@
    ],
    "answerIndex": 2,
    "answer": "tenere lo zaino senza intralciare",
-   "explanation": "La risposta corretta è 'tenere lo zaino senza intralciare'.",
+   "explanation": "Uno zaino portato sulle spalle in mezzo alla gente urta chi ti sta dietro e blocca il passaggio. Tenerlo basso o davanti libera spazio.",
    "active": true,
    "tag": "educazione_civica;classe_2;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20885,7 +20885,7 @@
    ],
    "answerIndex": 0,
    "answer": "fermarsi",
-   "explanation": "La risposta corretta è 'fermarsi'.",
+   "explanation": "Lo stop non chiede di rallentare ma di fermarsi completamente: serve a guardare bene in tutte le direzioni prima di immettersi, dove la visuale è scarsa.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -20981,7 +20981,7 @@
    ],
    "answerIndex": 1,
    "answer": "cercare un punto sicuro e ben visibile",
-   "explanation": "La risposta corretta è 'cercare un punto sicuro e ben visibile'.",
+   "explanation": "Fra le auto parcheggiate il pedone non si vede fino all'ultimo momento. Spostarsi in un punto libero e ben visibile dà a chi guida il tempo di frenare.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -21141,7 +21141,7 @@
    ],
    "answerIndex": 2,
    "answer": "restare negli spazi adatti e con prudenza",
-   "explanation": "La risposta corretta è 'restare negli spazi adatti e con prudenza'.",
+   "explanation": "In città la bici condivide lo spazio con auto e pedoni. Restare nelle piste o a destra e prevedere le mosse degli altri è ciò che evita i contatti.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -21301,7 +21301,7 @@
    ],
    "answerIndex": 3,
    "answer": "lasciare prima scendere chi è a bordo",
-   "explanation": "La risposta corretta è 'lasciare prima scendere chi è a bordo'.",
+   "explanation": "Chi è a bordo deve uscire prima che lo spazio si riempia, altrimenti resta bloccato e il bus perde tempo alla fermata. È una regola pratica prima che di cortesia.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -21461,7 +21461,7 @@
    ],
    "answerIndex": 0,
    "answer": "essere ancora più attento",
-   "explanation": "La risposta corretta è 'essere ancora più attento'.",
+   "explanation": "Con la pioggia le auto frenano in più metri e chi guida vede peggio attraverso i vetri. Le stesse distanze che di solito bastano, in quelle condizioni non bastano più.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -21621,7 +21621,7 @@
    ],
    "answerIndex": 1,
    "answer": "usare seggiolino o rialzo quando serve",
-   "explanation": "La risposta corretta è 'usare seggiolino o rialzo quando serve'.",
+   "explanation": "La cintura dell'auto è pensata per il corpo di un adulto: su un bambino passa sul collo invece che sulla spalla. Il seggiolino o il rialzo la riportano al punto giusto.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -21781,7 +21781,7 @@
    ],
    "answerIndex": 2,
    "answer": "dargli il buon esempio",
-   "explanation": "La risposta corretta è 'dargli il buon esempio'.",
+   "explanation": "Un bambino più piccolo guarda cosa fai tu, non cosa gli dici. Se attraversi con attenzione impara quello; se corri, impara a correre.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -21941,7 +21941,7 @@
    ],
    "answerIndex": 3,
    "answer": "non distrarre chi guida",
-   "explanation": "La risposta corretta è 'non distrarre chi guida'.",
+   "explanation": "Chi guida deve tenere gli occhi sulla strada e la mente su quello che succede. Un passeggero che chiama o litiga toglie proprio i secondi che servono a reagire.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -22101,7 +22101,7 @@
    ],
    "answerIndex": 0,
    "answer": "mantenere calma e ordine",
-   "explanation": "La risposta corretta è 'mantenere calma e ordine'.",
+   "explanation": "Nelle file lunghe la fretta di uno crea spinte a catena. Mantenere ordine fa avanzare tutti più in fretta di quanto farebbe scavalcare.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -22261,7 +22261,7 @@
    ],
    "answerIndex": 1,
    "answer": "cercare di essere visibile e prudente",
-   "explanation": "La risposta corretta è 'cercare di essere visibile e prudente'.",
+   "explanation": "Al buio un pedone vestito di scuro si vede a pochi metri. Colori chiari, catarifrangenti o una luce ti rendono visibili molto prima che l'auto arrivi.",
    "active": true,
    "tag": "educazione_civica;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -22421,7 +22421,7 @@
    ],
    "answerIndex": 2,
    "answer": "metterlo via e guardare bene",
-   "explanation": "La risposta corretta è 'metterlo via e guardare bene'.",
+   "explanation": "Guardando lo schermo si attraversa senza vedere né sentire cosa arriva. I pochi secondi dell'attraversamento sono proprio quelli in cui serve tutta l'attenzione.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -22709,7 +22709,7 @@
    ],
    "answerIndex": 3,
    "answer": "segnala un pericolo",
-   "explanation": "La risposta corretta è 'segnala un pericolo'.",
+   "explanation": "I cartelli triangolari con bordo rosso annunciano un pericolo più avanti — una curva, un dosso, un attraversamento — e chiedono di rallentare prima di arrivarci.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -22741,7 +22741,7 @@
    ],
    "answerIndex": 0,
    "answer": "rispettare segnali e turni di passaggio",
-   "explanation": "La risposta corretta è 'rispettare segnali e turni di passaggio'.",
+   "explanation": "Agli incroci le precedenze servono a stabilire chi passa prima, così nessuno deve indovinare. Rispettarle rende prevedibile il movimento di tutti.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -22901,7 +22901,7 @@
    ],
    "answerIndex": 1,
    "answer": "muoverti con grande prudenza e negli spazi adatti",
-   "explanation": "La risposta corretta è 'muoverti con grande prudenza e negli spazi adatti'.",
+   "explanation": "Fra i pedoni bici e monopattini sono i mezzi più veloci e i più silenziosi: chi cammina non li sente arrivare. Andare piano e negli spazi giusti compensa questo.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -23061,7 +23061,7 @@
    ],
    "answerIndex": 2,
    "answer": "tenere libero il corridoio",
-   "explanation": "La risposta corretta è 'tenere libero il corridoio'.",
+   "explanation": "Il corridoio è la via di uscita per tutti, anche in caso di emergenza. Zaini e persone ferme in mezzo lo trasformano in un ostacolo.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -23221,7 +23221,7 @@
    ],
    "answerIndex": 3,
    "answer": "cedere il posto",
-   "explanation": "La risposta corretta è 'cedere il posto'.",
+   "explanation": "Su un mezzo che frena e curva stare in piedi richiede equilibrio e forza. Cedere il posto a chi ne ha meno è una piccola cosa che evita una caduta.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -23381,7 +23381,7 @@
    ],
    "answerIndex": 0,
    "answer": "seguire le indicazioni degli adulti",
-   "explanation": "La risposta corretta è 'seguire le indicazioni degli adulti'.",
+   "explanation": "All'uscita di scuola escono centinaia di persone insieme in mezzo al traffico. Gli adulti vedono l'insieme, e le loro indicazioni servono a non creare confusione.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -23541,7 +23541,7 @@
    ],
    "answerIndex": 1,
    "answer": "chiedere subito aiuto a un adulto",
-   "explanation": "La risposta corretta è 'chiedere subito aiuto a un adulto'.",
+   "explanation": "Un pericolo in strada — una perdita, un tombino aperto, un incidente — va segnalato subito a un adulto: può avvisare chi interviene, cosa che tu da solo non puoi fare.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -23701,7 +23701,7 @@
    ],
    "answerIndex": 2,
    "answer": "preferire quando possibile piedi, bici o mezzi pubblici in sicurezza",
-   "explanation": "La risposta corretta è 'preferire quando possibile piedi, bici o mezzi pubblici in sicurezza'.",
+   "explanation": "Piedi, bici e mezzi pubblici occupano meno spazio, inquinano meno e in città spesso arrivano prima. La sicurezza però viene sempre prima della scelta.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -23861,7 +23861,7 @@
    ],
    "answerIndex": 3,
    "answer": "lasciare il passaggio libero",
-   "explanation": "La risposta corretta è 'lasciare il passaggio libero'.",
+   "explanation": "Su un marciapiede stretto due persone affiancate non lasciano passare nessuno. Mettersi in fila per un momento è ciò che permette all'altro di passare senza scendere in strada.",
    "active": true,
    "tag": "educazione_civica;classe_4;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24149,7 +24149,7 @@
    ],
    "answerIndex": 3,
    "answer": "protegge la vita e la convivenza di tutti",
-   "explanation": "La risposta corretta è 'protegge la vita e la convivenza di tutti'.",
+   "explanation": "Le regole della strada esistono perché in quello spazio convivono mezzi molto diversi per peso e velocità. Servono a proteggere la vita, non a complicarla.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24181,7 +24181,7 @@
    ],
    "answerIndex": 0,
    "answer": "funzionano meglio se tutti le rispettano",
-   "explanation": "La risposta corretta è 'funzionano meglio se tutti le rispettano'.",
+   "explanation": "Le regole della strada funzionano perché rendono prevedibile il comportamento degli altri: se una parte non le rispetta, tutti gli altri perdono quella prevedibilità.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24405,7 +24405,7 @@
    ],
    "answerIndex": 1,
    "answer": "anche il pedone fa parte del traffico e deve fare attenzione",
-   "explanation": "La risposta corretta è 'anche il pedone fa parte del traffico e deve fare attenzione'.",
+   "explanation": "Anche chi cammina è parte del traffico e ha responsabilità: attraversare dove si deve, guardare, farsi vedere. La sicurezza non è solo compito di chi guida.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24501,7 +24501,7 @@
    ],
    "answerIndex": 2,
    "answer": "pensare a essere visto e a vedere bene",
-   "explanation": "La risposta corretta è 'pensare a essere visto e a vedere bene'.",
+   "explanation": "Con poca luce servono due cose insieme: vedere bene tu, e farti vedere dagli altri. Una sola delle due non basta.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24661,7 +24661,7 @@
    ],
    "answerIndex": 3,
    "answer": "rispettare spazi, file e tempi degli altri",
-   "explanation": "La risposta corretta è 'rispettare spazi, file e tempi degli altri'.",
+   "explanation": "Sui mezzi pubblici lo spazio è poco e condiviso. Rispettare file, spazi e tempi degli altri è ciò che permette a molte persone di stare nello stesso posto senza attriti.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24821,7 +24821,7 @@
    ],
    "answerIndex": 0,
    "answer": "lasciare spazio e mostrare cortesia",
-   "explanation": "La risposta corretta è 'lasciare spazio e mostrare cortesia'.",
+   "explanation": "Bambini, anziani e persone con disabilità si muovono più lentamente o vedono e sentono meno. Lasciare spazio e avere pazienza compensa quella differenza.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -24981,7 +24981,7 @@
    ],
    "answerIndex": 1,
    "answer": "seguire un percorso sicuro e condiviso con gli adulti",
-   "explanation": "La risposta corretta è 'seguire un percorso sicuro e condiviso con gli adulti'.",
+   "explanation": "Il percorso più corto non è sempre il più sicuro: contano attraversamenti, marciapiedi e traffico. Sceglierlo insieme a un adulto è il modo di valutarli davvero.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -25205,7 +25205,7 @@
    ],
    "answerIndex": 2,
    "answer": "prevenire i rischi senza agire d'impulso",
-   "explanation": "La risposta corretta è \"prevenire i rischi senza agire d'impulso\".",
+   "explanation": "La prudenza non è paura: è prevedere cosa potrebbe andare storto e agire prima, invece di reagire d'istinto quando ormai è successo.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -25365,7 +25365,7 @@
    ],
    "answerIndex": 3,
    "answer": "libertà e regole devono stare insieme",
-   "explanation": "La risposta corretta è 'libertà e regole devono stare insieme'.",
+   "explanation": "Sulla strada la libertà di muoversi c'è per tutti solo finché ci sono regole condivise: senza, si muoverebbe liberamente solo il più veloce e il più forte.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -25493,7 +25493,7 @@
    ],
    "answerIndex": 0,
    "answer": "la cortesia riduce tensioni e rischi",
-   "explanation": "La risposta corretta è 'la cortesia riduce tensioni e rischi'.",
+   "explanation": "Cedere il passo, ringraziare, non forzare un sorpasso: la cortesia abbassa la tensione, e la maggior parte degli incidenti nasce da fretta e nervosismo.",
    "active": true,
    "tag": "educazione_civica;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -30774,7 +30774,7 @@
    ],
    "answerIndex": 1,
    "answer": "Mi fermo e aspetto",
-   "explanation": "La risposta corretta è 'Mi fermo e aspetto'.",
+   "explanation": "Il rosso pedonale significa che in quel momento passano i veicoli. Fermarsi e aspettare il verde è l'unico comportamento che chi guida si aspetta da te.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -31005,7 +31005,7 @@
    ],
    "answerIndex": 1,
    "answer": "Aspetto il verde e attraverso con attenzione",
-   "explanation": "La risposta corretta è 'Aspetto il verde e attraverso con attenzione'.",
+   "explanation": "Attraversare col rosso perché lo fanno gli altri non lo rende sicuro: le auto hanno via libera e non si aspettano nessuno. Aspettare il verde vale anche quando il gruppo va avanti.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [

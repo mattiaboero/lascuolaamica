@@ -504,6 +504,12 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 12 delle istanze: "10 × 70 = 10 × (70 + 0) se utile".
+  // Scomporre un numero in se stesso piu' zero non e' una scomposizione:
+  // la frase ha la forma di una spiegazione e il contenuto di niente.
+  { pattern: /\(\s*\d+\s*\+\s*0\s*\)|\(\s*0\s*\+\s*\d+\s*\)/,
+    soloSpiegazione: true,
+    msg: 'scomposizione a vuoto: "+ 0" non spiega niente' },
   // Dal lotto 4 delle istanze: "Area = 209÷2 = 104,5 cm2; arrotondata a 104".
   // La spiegazione ammetteva l'arrotondamento, ma fra le quattro opzioni
   // l'area esatta non c'era: chi calcolava bene restava senza risposta.
