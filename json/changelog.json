@@ -1,5 +1,13 @@
 [
  {
+  "date": "9 settembre 2026 · Release 4.13.1",
+  "items": [
+   "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e spiegazioni che invece di spiegare ripetevano la consegna.",
+   "Tolti di mezzo alcuni casi in cui la risposta si trovava senza sapere l'inglese: bastava cercare l'unica opzione al plurale, o l'unica senza articolo.",
+   "Aggiunti controlli automatici anche per l'inglese, che prima non ne aveva nessuno."
+  ]
+ },
+ {
   "date": "8 settembre 2026 · Release 4.13.0",
   "items": [
    "Rilette una per una 6.382 domande di matematica, problemi, italiano, storia, geografia, scienze ed educazione civica. Corretti errori di grammatica e di accordo, apostrofi e accenti sbagliati, domande che restavano a metà, spiegazioni che non tornavano con la risposta e alcune domande che avevano più di una risposta giusta o nessuna.",

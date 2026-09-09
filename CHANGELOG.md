@@ -1,5 +1,32 @@
 # Changelog Repo
 
+## 4.13.1 - 2026-09-09
+
+### Fixed
+- fix(contenuti): **revisione del banco di inglese, 19 lotti, 1.094 domande su 1.094.** L'inglese era l'unica materia mai passata: il campionatore lo escludeva dall'inizio, e le regex di `lint_content.js`, scritte per l'italiano, su quelle domande non guardavano quasi niente. Qui non e' stato scartato niente per scheletro ricorrente — senza controlli a copertura, una consegna ripetuta non e' coperta da nessuno e va letta come le altre.
+
+  Le cose piu' gravi trovate:
+  - `eng-5-frasi_semplici-9146` (`She studies every day ___ she wants to pass the exam`) **non aveva nessuna risposta giusta**: ci voleva `because`, che fra le opzioni non c'era, e con `so` il rapporto di causa si rovesciava. La spiegazione se ne accorgeva a meta', traducendo `so` con "perche'";
+  - `eng-5-vari-9219` dava per buono `brushes / —`, da cui usciva `She brushes always her teeth`, sbagliata e contraddetta dalla spiegazione stessa;
+  - `eng-3-lessico_base-9045` descriveva una gonna (`cover both legs together, like a tube`) e dava per buoni i pantaloni;
+  - `Who are in the garden?` e `I use a ___ to cut paper` con risposta `scissors`: errori di inglese dentro domande che l'inglese lo insegnano;
+  - 33 domande avevano una consegna al posto della spiegazione, e in 12 di queste la consegna nella domanda non c'era affatto: il campo domanda conteneva la sola frase da tradurre.
+
+  Chiuse inoltre le famiglie meccaniche: 28 consegne imperative chiuse dal punto interrogativo, 38 frasi da completare senza apici, 35 citazioni fra virgolette doppie invece che apici singoli, 30 spazi da riempire a due underscore invece di tre. L'uniformazione degli apici ha fatto emergere **tre doppioni esatti** che le differenze di punteggiatura tenevano nascosti.
+
+- fix(contenuti): **risposte che si trovavano senza sapere l'inglese.** `I have got two ___` aveva la risposta come unica opzione al plurale; `a bowl of ___` come unica senza articolo; `A bird has got two ___` aveva `legs only`, una toppa messa perche' anche le zampe sono due.
+
+### Added
+- lint(contenuti): **24 controlli nuovi, i primi scritti per l'inglese** — consegna imperativa chiusa dal `?`, spiegazione che e' una consegna, articolo `a` davanti a vocale, opzione in italiano fra opzioni inglesi, pronome `I` minuscolo, `who` con il verbo al plurale, comparativo con piu' di due opzioni, rimando a un testo che non c'e', nota di redazione fra parentesi, e altri. Ognuno verificato reintroducendo il difetto nel corpus.
+
+### Changed
+- 3 domande disattivate perche' doppioni esatti di altre nella stessa classe (`eng-2-animali-001`, `eng-3-giorni-9027`, `eng-5-uso_guidato-9247`). Inglese passa da 1.094 a 1.091 domande attive.
+- Fra le domande attive di tutto il corpus restano 12 firme duplicate e **una sola coppia nella stessa classe e materia**, in scienze: era da 13/2 dall'inizio della revisione.
+
+### Notes
+- Una regressione introdotta da me e trovata sette lotti dopo: nel lotto 3 avevo riscritto le undici spiegazioni del verbo `to be` generandole da una lista di soggetti in minuscolo, e il pronome inglese `I`, che la maiuscola la vuole sempre, era rimasto `'i'`. Corretto nel lotto 12, con la regola che d'ora in poi lo prende.
+- **Restano fuori da ogni revisione** 2.649 domande di matematica e problemi la cui consegna si ripete identica a meno di nomi e numeri (gli esercizi a ripetizione tipo `Quanto fa 7 x 8?`). Il campionatore le esclude per non far rileggere cento volte la stessa frase.
+
 ## 4.13.0 - 2026-09-08
 
 ### Fixed
