@@ -504,6 +504,14 @@ const GRAMMATICA = [
   // dell'oggetto da una lista e ci metteva davanti sempre l'articolo maschile.
   { pattern: /(?<![a-zà-ùA-ZÀ-Ù])(?:[Uu]n|[Ii]l|[Qq]uel|[Dd]el|[Nn]el|[Aa]l)\s+(?:bicicletta|maglietta|felpa|penna|borsa|giacca|racchetta|sciarpa|gonna|tuta|chitarra|torta|scatola|matita|gomma)(?![a-zà-ùA-ZÀ-Ù])/,
     msg: 'articolo maschile davanti a un nome femminile ("un bicicletta")' },
+  // Dal lotto 23 delle istanze: "In un cortile ci sono 15 bambine e 24
+  // bambini. Quanti bambini in tutto?". La stessa parola vale prima 'i
+  // maschi' e poi 'tutti quanti', e in seconda la distinzione fra bambine e
+  // bambini si e' appena imparata: chi risponde 24 non ha sbagliato a leggere.
+  { pattern: /\d+\s+bambine e \d+\s+bambini[^?]*\?[\s\S]{0,10}|\d+\s+bambine e \d+\s+bambini\.\s*Quant[ei] bambini/,
+    soloDomanda: true,
+    controllo: (m) => /Quant[ei] bambini/.test(m[0]),
+    msg: 'la domanda distingue bambine e bambini e poi chiede "quanti bambini in tutto": ambiguo' },
   // Dal lotto 12 delle istanze: "10 × 70 = 10 × (70 + 0) se utile".
   // Scomporre un numero in se stesso piu' zero non e' una scomposizione:
   // la frase ha la forma di una spiegazione e il contenuto di niente.

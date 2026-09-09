@@ -5003,7 +5003,7 @@
    ],
    "answerIndex": 3,
    "answer": "funzioni diverse",
-   "explanation": "La risposta corretta è 'funzioni diverse'.",
+   "explanation": "Ogni luogo risponde a un bisogno diverso: nel giardino si sta all'aperto e si gioca, in biblioteca si legge in silenzio. Sono spazi con funzioni diverse.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5035,7 +5035,7 @@
    ],
    "answerIndex": 0,
    "answer": "capire il territorio",
-   "explanation": "La risposta corretta è 'capire il territorio'.",
+   "explanation": "Sapere a che cosa serve ogni luogo permette di leggere il territorio come un insieme organizzato, e non come un elenco di edifici a caso.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5067,7 +5067,7 @@
    ],
    "answerIndex": 1,
    "answer": "comune",
-   "explanation": "La risposta corretta è 'comune'.",
+   "explanation": "Il municipio è la sede del Comune: è lì che lavora il sindaco e che si fanno i documenti come la carta d'identità.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5099,7 +5099,7 @@
    ],
    "answerIndex": 2,
    "answer": "spazio vissuto",
-   "explanation": "La risposta corretta è 'spazio vissuto'.",
+   "explanation": "Lo spazio vissuto è quello che percorri e conosci davvero ogni giorno: la strada di casa, il tragitto per la scuola, i luoghi in cui ti muovi.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5131,7 +5131,7 @@
    ],
    "answerIndex": 3,
    "answer": "punto di riferimento",
-   "explanation": "La risposta corretta è 'punto di riferimento'.",
+   "explanation": "Un luogo fisso e riconoscibile che usi spesso diventa un punto di riferimento: serve a spiegare dove sei e a orientare gli altri.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5163,7 +5163,7 @@
    ],
    "answerIndex": 0,
    "answer": "muoversi meglio",
-   "explanation": "La risposta corretta è 'muoversi meglio'.",
+   "explanation": "Chi conosce il quartiere sa quali strade portano dove, dove sono i negozi e le fermate: si sposta più in fretta e si perde di meno.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5195,7 +5195,7 @@
    ],
    "answerIndex": 1,
    "answer": "persone e attività",
-   "explanation": "La risposta corretta è 'persone e attività'.",
+   "explanation": "Panchine, giochi e vialetti non ci sono per caso: qualcuno li ha disposti pensando a chi ci va e a cosa ci fa. È uno spazio organizzato per persone e attività.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5227,7 +5227,7 @@
    ],
    "answerIndex": 2,
    "answer": "far mangiare gli alunni",
-   "explanation": "La risposta corretta è 'far mangiare gli alunni'.",
+   "explanation": "La mensa è lo spazio della scuola attrezzato per i pasti: ha cucina, tavoli e personale, cose che in aula non ci sono.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5259,7 +5259,7 @@
    ],
    "answerIndex": 3,
    "answer": "fare movimento",
-   "explanation": "La risposta corretta è 'fare movimento'.",
+   "explanation": "La palestra è ampia, con pavimento adatto e attrezzi: è pensata per il movimento, che in un'aula con i banchi non sarebbe possibile.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5291,7 +5291,7 @@
    ],
    "answerIndex": 0,
    "answer": "un negozio",
-   "explanation": "La risposta corretta è 'un negozio'.",
+   "explanation": "Il negozio è il luogo dove si vendono le cose: per il pane si va in panetteria o al supermercato, non in biblioteca o in municipio.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5323,7 +5323,7 @@
    ],
    "answerIndex": 1,
    "answer": "la chiesa o la piazza",
-   "explanation": "La risposta corretta è 'la chiesa o la piazza'.",
+   "explanation": "Chiesa e piazza sono grandi, fisse e conosciute da tutti: proprio per questo funzionano come punti di riferimento quando si danno indicazioni.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5355,7 +5355,7 @@
    ],
    "answerIndex": 2,
    "answer": "servono a bisogni diversi",
-   "explanation": "La risposta corretta è 'servono a bisogni diversi'.",
+   "explanation": "Le persone hanno bisogni diversi — curarsi, studiare, comprare, muoversi — e a ognuno corrisponde un luogo attrezzato per quello.",
    "active": true,
    "tag": "geografia;classe_2;territorio;funzioni",
    "tags": [
@@ -5387,7 +5387,7 @@
    ],
    "answerIndex": 3,
    "answer": "il territorio vicino",
-   "explanation": "La risposta corretta è 'il territorio vicino'.",
+   "explanation": "Osservare i luoghi vicini è il primo modo di conoscere il territorio: si parte da quello che si può vedere e percorrere di persona.",
    "active": true,
    "tag": "geografia;classe_2;territorio;quartiere",
    "tags": [
@@ -5419,7 +5419,7 @@
    ],
    "answerIndex": 0,
    "answer": "vissuto e organizzato",
-   "explanation": "La risposta corretta è 'vissuto e organizzato'.",
+   "explanation": "Una piazza con negozi, strade e persone mostra due cose insieme: che lo spazio è stato organizzato, e che qualcuno lo usa davvero.",
    "active": true,
    "tag": "geografia;classe_2;territorio;quartiere",
    "tags": [
@@ -5451,7 +5451,7 @@
    ],
    "answerIndex": 1,
    "answer": "la funzione",
-   "explanation": "La risposta corretta è 'la funzione'.",
+   "explanation": "La funzione di un luogo è il compito che svolge: capirla vuol dire sapere perché quel luogo esiste e a chi serve.",
    "active": true,
    "tag": "geografia;classe_2;territorio;quartiere",
    "tags": [
@@ -5483,7 +5483,7 @@
    ],
    "answerIndex": 2,
    "answer": "spazi del territorio vicino",
-   "explanation": "La risposta corretta è 'spazi del territorio vicino'.",
+   "explanation": "Strada, parco e scuola sono spazi del territorio vicino: quelli che fanno parte della vita di ogni giorno di chi abita lì.",
    "active": true,
    "tag": "geografia;classe_2;territorio;quartiere",
    "tags": [
@@ -5515,7 +5515,7 @@
    ],
    "answerIndex": 3,
    "answer": "luoghi, funzioni e percorsi",
-   "explanation": "La risposta corretta è 'luoghi, funzioni e percorsi'.",
+   "explanation": "Per descrivere un quartiere servono tre cose: quali luoghi ci sono, a che cosa servono, e come ci si muove da uno all'altro.",
    "active": true,
    "tag": "geografia;classe_2;territorio;quartiere",
    "tags": [
@@ -5611,7 +5611,7 @@
    ],
    "answerIndex": 0,
    "answer": "E",
-   "explanation": "La risposta corretta è 'E'.",
+   "explanation": "Sulla rosa dei venti ogni punto cardinale ha l'iniziale del proprio nome: E sta per Est, dove sorge il Sole.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5675,7 +5675,7 @@
    ],
    "answerIndex": 2,
    "answer": "Est",
-   "explanation": "La risposta corretta è 'Est'.",
+   "explanation": "Il Sole sorge sempre a est, in qualunque parte del mondo: è il riferimento più antico e più semplice per orientarsi.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5707,7 +5707,7 @@
    ],
    "answerIndex": 3,
    "answer": "Ovest",
-   "explanation": "La risposta corretta è 'Ovest'.",
+   "explanation": "Il Sole tramonta a ovest, dalla parte opposta a dove è sorto: guardando il tramonto si sa subito dov'è l'ovest.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5739,7 +5739,7 @@
    ],
    "answerIndex": 0,
    "answer": "in alto",
-   "explanation": "La risposta corretta è 'in alto'.",
+   "explanation": "Per convenzione le carte si disegnano con il Nord in alto: così chiunque le legga sa subito come sono orientate.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5771,7 +5771,7 @@
    ],
    "answerIndex": 1,
    "answer": "i punti cardinali",
-   "explanation": "La risposta corretta è 'i punti cardinali'.",
+   "explanation": "I punti cardinali danno alla carta un verso: senza sapere dov'è il Nord, non si può capire in che direzione si sta guardando.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5803,7 +5803,7 @@
    ],
    "answerIndex": 2,
    "answer": "alle tue spalle",
-   "explanation": "La risposta corretta è 'alle tue spalle'.",
+   "explanation": "Nord e Sud sono opposti: se guardi verso Nord, il Sud è esattamente dietro di te, l'Est a destra e l'Ovest a sinistra.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5835,7 +5835,7 @@
    ],
    "answerIndex": 3,
    "answer": "alla tua sinistra",
-   "explanation": "La risposta corretta è 'alla tua sinistra'.",
+   "explanation": "Girando in senso orario l'ordine è Nord, Est, Sud, Ovest: quindi guardando a Est il Nord resta a sinistra.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5867,7 +5867,7 @@
    ],
    "answerIndex": 0,
    "answer": "la rosa dei venti",
-   "explanation": "La risposta corretta è 'la rosa dei venti'.",
+   "explanation": "La rosa dei venti è la stella disegnata sulla carta che indica i punti cardinali: serve a capire come è orientata la carta.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5899,7 +5899,7 @@
    ],
    "answerIndex": 1,
    "answer": "orientarsi",
-   "explanation": "La risposta corretta è 'orientarsi'.",
+   "explanation": "I quattro punti cardinali sono direzioni fisse e uguali per tutti: permettono di indicare una direzione senza dipendere da dove si trova chi parla.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5931,7 +5931,7 @@
    ],
    "answerIndex": 2,
    "answer": "ridotta dello spazio",
-   "explanation": "La risposta corretta è 'ridotta dello spazio'.",
+   "explanation": "La pianta riduce lo spazio reale mantenendo le proporzioni: sul foglio la scuola è molto più piccola, ma i rapporti fra le misure restano gli stessi.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5963,7 +5963,7 @@
    ],
    "answerIndex": 3,
    "answer": "il significato dei simboli",
-   "explanation": "La risposta corretta è 'il significato dei simboli'.",
+   "explanation": "La legenda è la tabella che spiega i simboli usati: senza, i segni sulla carta non si potrebbero interpretare.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -5995,7 +5995,7 @@
    ],
    "answerIndex": 0,
    "answer": "un monte",
-   "explanation": "La risposta corretta è 'un monte'.",
+   "explanation": "Sulle carte fisiche i rilievi si indicano con un triangolino, spesso accompagnato dal nome e dall'altitudine della cima.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -6027,7 +6027,7 @@
    ],
    "answerIndex": 1,
    "answer": "elementi naturali",
-   "explanation": "La risposta corretta è 'elementi naturali'.",
+   "explanation": "La carta fisica mostra come è fatto il territorio in natura: monti, pianure, fiumi, mari. I colori indicano le altitudini.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -6059,7 +6059,7 @@
    ],
    "answerIndex": 2,
    "answer": "confini e città",
-   "explanation": "La risposta corretta è 'confini e città'.",
+   "explanation": "La carta politica mostra le divisioni decise dall'uomo: confini di stati o regioni, capoluoghi e città.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -6091,7 +6091,7 @@
    ],
    "answerIndex": 3,
    "answer": "quanto la realtà è stata ridotta",
-   "explanation": "La risposta corretta è 'quanto la realtà è stata ridotta'.",
+   "explanation": "La scala dice di quanto la realtà è stata rimpicciolita: serve a risalire dalle distanze sul foglio a quelle vere sul terreno.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -6123,7 +6123,7 @@
    ],
    "answerIndex": 0,
    "answer": "lo stesso tipo di elemento",
-   "explanation": "La risposta corretta è 'lo stesso tipo di elemento'.",
+   "explanation": "I simboli sono convenzioni: lo stesso segno indica sempre lo stesso tipo di elemento, in tutti i punti della carta.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -6155,7 +6155,7 @@
    ],
    "answerIndex": 1,
    "answer": "la rappresentazione dello spazio",
-   "explanation": "La risposta corretta è 'la rappresentazione dello spazio'.",
+   "explanation": "Entrambe rappresentano uno spazio su un foglio, riducendolo e usando segni: cambia lo scopo, non il modo di funzionare.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;mappe",
    "tags": [
@@ -6187,7 +6187,7 @@
    ],
    "answerIndex": 2,
    "answer": "un corso d'acqua",
-   "explanation": "La risposta corretta è \"un corso d'acqua\".",
+   "explanation": "Sulle carte l'acqua si disegna in blu: le linee blu sono fiumi e torrenti, le macchie blu laghi e mari.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6220,7 +6220,7 @@
    ],
    "answerIndex": 3,
    "answer": "la legenda",
-   "explanation": "La risposta corretta è 'la legenda'.",
+   "explanation": "La legenda è la chiave della carta: elenca ogni simbolo con accanto il suo significato.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6253,7 +6253,7 @@
    ],
    "answerIndex": 0,
    "answer": "capire dove si trovano i luoghi",
-   "explanation": "La risposta corretta è 'capire dove si trovano i luoghi'.",
+   "explanation": "La pianta del quartiere mostra dall'alto dove stanno le cose: permette di capire le distanze e come arrivare da un punto all'altro.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6286,7 +6286,7 @@
    ],
    "answerIndex": 1,
    "answer": "disegnare uno spazio grande su un foglio",
-   "explanation": "La risposta corretta è 'disegnare uno spazio grande su un foglio'.",
+   "explanation": "Un territorio vero è troppo grande per un foglio: riducendolo in scala si può rappresentarlo tutto senza deformare i rapporti fra le distanze.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6319,7 +6319,7 @@
    ],
    "answerIndex": 2,
    "answer": "usa simboli e legenda",
-   "explanation": "La risposta corretta è 'usa simboli e legenda'.",
+   "explanation": "La fotografia mostra tutto quello che c'è, com'è. La carta sceglie che cosa mostrare e lo traduce in simboli spiegati dalla legenda.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6352,7 +6352,7 @@
    ],
    "answerIndex": 3,
    "answer": "linee e frecce",
-   "explanation": "La risposta corretta è 'linee e frecce'.",
+   "explanation": "La linea traccia il tracciato e le frecce dicono in che verso si percorre: insieme raccontano il percorso, non solo il disegno.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6385,7 +6385,7 @@
    ],
    "answerIndex": 0,
    "answer": "i punti cardinali",
-   "explanation": "La risposta corretta è 'i punti cardinali'.",
+   "explanation": "L'ago della bussola è una calamita che si allinea al campo magnetico terrestre e indica sempre il Nord: da lì si ricavano gli altri tre punti.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6418,7 +6418,7 @@
    ],
    "answerIndex": 1,
    "answer": "controllare orientamento e legenda",
-   "explanation": "La risposta corretta è 'controllare orientamento e legenda'.",
+   "explanation": "'A destra' dipende da come tieni il foglio: per dire dove si trova davvero un luogo servono l'orientamento della carta e la legenda.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6451,7 +6451,7 @@
    ],
    "answerIndex": 2,
    "answer": "fisiche e politiche",
-   "explanation": "La risposta corretta è 'fisiche e politiche'.",
+   "explanation": "Le carte si distinguono per quello che rappresentano: le fisiche mostrano la natura del territorio, le politiche le divisioni fatte dall'uomo.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6484,7 +6484,7 @@
    ],
    "answerIndex": 3,
    "answer": "regioni e confini",
-   "explanation": "La risposta corretta è 'regioni e confini'.",
+   "explanation": "Sulla carta politica ogni regione ha un colore diverso e i confini sono linee marcate: si riconoscono a colpo d'occhio.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6517,7 +6517,7 @@
    ],
    "answerIndex": 0,
    "answer": "monti, pianure e fiumi",
-   "explanation": "La risposta corretta è 'monti, pianure e fiumi'.",
+   "explanation": "Sulla carta fisica il verde indica le pianure, il marrone i rilievi e il blu le acque: la forma del territorio si legge dai colori.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6550,7 +6550,7 @@
    ],
    "answerIndex": 1,
    "answer": "rappresentare gli spazi interni",
-   "explanation": "La risposta corretta è 'rappresentare gli spazi interni'.",
+   "explanation": "La pianta della classe rappresenta uno spazio interno visto dall'alto: banchi, cattedra, porte e finestre nella loro posizione reale.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6583,7 +6583,7 @@
    ],
    "answerIndex": 2,
    "answer": "orientamento",
-   "explanation": "La risposta corretta è 'orientamento'.",
+   "explanation": "Usare punti di riferimento è un modo di orientarsi: al posto dei punti cardinali si usa quello che si vede e si riconosce sul posto.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6616,7 +6616,7 @@
    ],
    "answerIndex": 3,
    "answer": "trovare l'uscita o i giochi",
-   "explanation": "La risposta corretta è \"trovare l'uscita o i giochi\".",
+   "explanation": "Una carta del parco mostra dove sono ingressi, vialetti e attrezzature: serve proprio a raggiungere un punto senza girare a caso.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6649,7 +6649,7 @@
    ],
    "answerIndex": 0,
    "answer": "che cosa rappresenta",
-   "explanation": "La risposta corretta è 'che cosa rappresenta'.",
+   "explanation": "Il titolo dice quale territorio la carta rappresenta e da che punto di vista: senza, non si saprebbe nemmeno che cosa si sta guardando.",
    "active": true,
    "tag": "geografia;classe_3;mappe;legenda;scala",
    "tags": [
@@ -6682,7 +6682,7 @@
    ],
    "answerIndex": 1,
    "answer": "in basso",
-   "explanation": "La risposta corretta è 'in basso'.",
+   "explanation": "Nord e Sud sono opposti: se il Nord è in alto sulla carta, il Sud è necessariamente in basso, l'Est a destra e l'Ovest a sinistra.",
    "active": true,
    "tag": "geografia;classe_3;orientamento;carte",
    "tags": [
