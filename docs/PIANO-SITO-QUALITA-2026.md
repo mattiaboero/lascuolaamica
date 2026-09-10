@@ -75,6 +75,7 @@ Sei un copywriter SEO italiano per un sito educativo per bambini. Individua in t
 - **Perché non rompe nulla:** esbuild tocca solo i file ESTERNI (`script-src 'self'`, nessun hash); gli script inline in HTML non vengono toccati → hash CSP invariati; i nomi file restano identici → precache SW intatto.
 - **Guadagno reale misurato** (poi ulteriormente ridotto da brotli all'edge): shared.js 90→64KB (gzip 21.6→18.2), subject-quiz-core.js 91→45KB (gzip 22.1→15.1), subject-quiz-theme.css 50→39KB, index.css 23→19KB.
 - **Nota:** la voce originale di questo piano nasceva da analisi incompleta (letto `prepublish-check.sh`/`package.json` ma non `export_for_cloudflare.sh`). Nessuna azione richiesta.
+- **Correzione del 10/09/2026:** l'esito qui sopra era sbagliato. La minificazione esisteva nello script ma **non era mai andata in produzione**: Cloudflare pubblicava la radice del repo, non `export/`, e i JS serviti erano identici ai sorgenti (stesso numero di righe). In più usava `npx --yes esbuild`, cioè l'ultima versione scaricata a ogni build. Ora esbuild è una devDependency a versione esatta, l'export è a lista di inclusione e verificato da `scripts/check_export.js`; misurato: JS e CSS da 150 a 110 KB in transito dopo Brotli. Diventa effettiva quando il pannello pubblica `export/`.
 
 #### B2 — Ridurre l'over-preload dei font
 - **Persona:** Performance engineer · **subagent:** `general-purpose` · **modello:** `sonnet` · **effort:** Medium

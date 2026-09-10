@@ -177,6 +177,7 @@ Incatena i controlli che devono passare prima di ogni pubblicazione:
 
 | comando | che cosa verifica |
 |---|---|
+| `check:materialized` | che ogni file tracciato sia davvero sul disco (il repo vive in iCloud) |
 | `lint:js` / `lint:css` | ESLint e Stylelint |
 | `audit:json` | integrità e schema dei dataset |
 | `lint:content` | 93 regole su testo, opzioni e spiegazioni delle domande |
@@ -186,6 +187,7 @@ Incatena i controlli che devono passare prima di ogni pubblicazione:
 | `check:balance` | che la risposta giusta non si concentri in una posizione |
 | `check:counts` | che i numeri di domande pubblicati coincidano con i dataset |
 | `check:prepublish` | `prepublish-check.sh`: sitemap, robots.txt, header PWA, contratti del quiz engine |
+| `export` | costruisce `export/` e la verifica: niente di mancante, niente di interno |
 
 `npm run freshness` riallinea invece i numeri e i file generati (conteggi, dati strutturati, sitemap, hash CSP).
 
@@ -193,11 +195,13 @@ Incatena i controlli che devono passare prima di ogni pubblicazione:
 
 ## Build e deploy
 
-**Export locale** (`export/`):
+**Export** (`export/`, la cartella che Cloudflare pubblica):
 
 ```bash
-bash scripts/export_for_cloudflare.sh
+npm run export
 ```
+
+Costruisce `export/` a partire dai file tracciati da git, con una **lista di inclusione**: pagine, stili, script del sito, `js/`, `json/`, immagini, `_headers` e `_redirects`. Tutto il resto — `scripts/`, `docs/`, `reports/`, `package.json`, i file `.md` — resta fuori. Le domande disattivate non vengono spedite, e JS e CSS vengono minificati con esbuild a versione fissata (−27% in transito anche dopo Brotli). Alla fine `scripts/check_export.js` verifica che non manchi niente di ciò che il sito usa (URL del service worker, riferimenti nelle pagine, sitemap, sintassi dei JS minificati, conteggio delle domande) e che non ci sia niente di interno. È l'ultimo passo di `npm run verify`.
 
 **Backup deploy fuori repo** (default: `../export-backup`):
 
@@ -212,6 +216,9 @@ bash scripts/export_backup_outside_repo.sh "/percorso/assoluto/export-backup"
 - Repository GitHub collegata a una piattaforma di hosting statico
 - Build command: `bash scripts/export_for_cloudflare.sh`
 - Build output directory: `export`
+- Variabile d'ambiente `NODE_VERSION`: `20` (o superiore, come in `engines`)
+
+Se l'output directory non è `export`, Cloudflare pubblica la radice del repo: è successo fino al 10/09/2026, con `scripts/`, `reports/` e `package.json` raggiungibili dal sito.
 - Regole di sicurezza e instradamento gestite nella configurazione di hosting del progetto
 
 ---

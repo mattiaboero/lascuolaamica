@@ -11,7 +11,7 @@ Checklist da seguire ad ogni release. L'ordine conta.
 3. Aggiorna `json/changelog.json`, che alimenta il popup "Ultimi aggiornamenti" del sito (non più `shared.js`, che si limita a leggerlo). Convenzione: **una voce per giornata**, massimo 7 righe, e l'etichetta `date` deve citare la versione corrente — `check_update_log` lo verifica.
 4. Esegui `npm run freshness`: riallinea da solo i conteggi di domande in ogni pagina, i dati strutturati, la sitemap e gli hash CSP. Non serve più aggiornare a mano FAQ e `llms.txt`.
 5. Esegui `npm run verify` — deve passare senza errori. Include `prepublish-check.sh` come ultimo anello.
-6. Sincronizza `export/` con `bash scripts/export_for_cloudflare.sh`
+6. `export/` si costruisce da sola come ultimo passo di `npm run verify`, e Cloudflare la ricostruisce allo stesso modo al deploy
 7. Aggiorna `CHANGELOG.md` con le voci della release
 
 ---
@@ -20,6 +20,7 @@ Checklist da seguire ad ogni release. L'ordine conta.
 
 | comando | che cosa verifica |
 |---|---|
+| `check:materialized` | che ogni file tracciato sia davvero sul disco: il repo vive in iCloud, e un file sfrattato legge vuoto e fa passare i controlli senza eseguirli |
 | `lint:js` / `lint:css` | ESLint e Stylelint |
 | `audit:json` | integrità e schema dei dataset |
 | `lint:content` | 93 regole su testo, opzioni e spiegazioni delle domande |
@@ -29,6 +30,7 @@ Checklist da seguire ad ogni release. L'ordine conta.
 | `check:balance` | che la risposta giusta non si concentri in una posizione |
 | `check:counts` | che i numeri di domande pubblicati coincidano con i dataset |
 | `check:prepublish` | `prepublish-check.sh` |
+| `export` | costruisce `export/` e la verifica con `check_export.js`: niente di mancante, niente di interno |
 
 Fuori dalla catena, da lanciare quando si toccano le regole di lint: `npm run check:grammar-rules`, un meta-controllo che verifica che ogni regola grammaticale intercetti ancora il suo esempio e non tocchi le frasi corrette.
 

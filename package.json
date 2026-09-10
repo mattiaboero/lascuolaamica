@@ -21,7 +21,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:balance && npm run check:counts && npm run check:prepublish",
+    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:bosco && npm run check:balance && npm run check:counts && npm run check:prepublish && npm run export",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -35,14 +35,16 @@
     "sync:counts": "python3 scripts/sync_question_counts.py",
     "check:counts": "python3 scripts/sync_question_counts.py --check",
     "check:balance": "node scripts/check_answer_balance.js",
-    "check:materialized": "node scripts/check_files_materialized.js"
+    "check:materialized": "node scripts/check_files_materialized.js",
+    "export": "bash scripts/export_for_cloudflare.sh"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
+    "esbuild": "0.24.2",
     "eslint": "^9.0.0",
+    "playwright": "^1.48.0",
     "stylelint": "^16.0.0",
-    "stylelint-config-standard": "^36.0.0",
-    "playwright": "^1.48.0"
+    "stylelint-config-standard": "^36.0.0"
   },
   "engines": {
     "node": ">=20"

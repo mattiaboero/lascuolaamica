@@ -37,10 +37,15 @@ Il deploy non dovrebbe partire senza che questo passi.
 **Export per l’ambiente di hosting:**
 
 ```bash
-bash scripts/export_for_cloudflare.sh
+npm run export
 ```
 
-Produce la directory `export/` con tutti i file pronti al deploy. `export/` è generata — non va versionata.
+Produce la directory `export/` con i soli file che il sito serve. `export/` è generata — non va versionata.
+
+- **Lista di inclusione, non di esclusione.** Si parte da `git ls-files` e si tiene solo ciò che è nominato in `INCLUDI` dentro lo script. Una cartella nuova non finisce online per dimenticanza: per pubblicarla bisogna aggiungerla lì.
+- **Copia pura.** Niente viene rigenerato durante la build: sitemap e dati strutturati si aggiornano con `npm run freshness` prima del rilascio. Così ciò che `npm run verify` controlla è esattamente ciò che va online.
+- **Due trasformazioni**, entrambe sulle copie: le domande con `active: false` non vengono spedite, e JS e CSS vengono minificati da esbuild, fissato in `package.json` alla versione esatta.
+- **Verifica finale** con `scripts/check_export.js`: file obbligatori presenti (`_headers` e `_redirects` compresi), ogni URL del service worker e ogni riferimento nelle pagine risolto, sitemap coerente, JS minificati sintatticamente validi, domande pubblicate uguali alle attive del repo, nessun file interno.
 
 ### Vincolo PWA: deploy in root
 
@@ -76,6 +81,9 @@ Parametri essenziali della build automatica:
 |---|---|
 | Build command | `bash scripts/export_for_cloudflare.sh` |
 | Build output directory | `export` |
+| `NODE_VERSION` | `20` o superiore |
+
+> Controllare nel pannello che l'output directory sia davvero `export`. Fino al 10/09/2026 non lo era: Cloudflare pubblicava la radice del repo, e dal sito si raggiungevano `package.json`, `scripts/`, `reports/`, `CHANGELOG.md` e l'audit SEO. Un segno per riconoscerlo: se i JS in produzione hanno lo stesso numero di righe dei sorgenti, non sono passati dall'export.
 
 ---
 
