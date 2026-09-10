@@ -1,5 +1,49 @@
 # Changelog Repo
 
+## 4.13.18 - 2026-09-10
+
+**Il sito pubblica solo i suoi file, minificati e verificati.** Il bump serve
+soprattutto ai visitatori di ritorno: il loro service worker aveva in cache
+le copie non minificate sotto `lascuolaamica-v41317`, e senza versione nuova
+avrebbe continuato a usarle.
+
+### Fixed
+- **Il sito serviva gli interni del repo.** Cloudflare Pages pubblicava la
+  radice, non `export/`, anche se README e wiki dicevano il contrario: dal sito
+  si raggiungevano `package.json`, `scripts/`, `prepublish-check.sh`,
+  `reports/`, `CHANGELOG.md` e l'audit SEO. Nel pannello ora: build command
+  `bash scripts/export_for_cloudflare.sh`, output `export`, `NODE_VERSION=22`.
+  Verificato in produzione: 13 percorsi interni a 404, 22 pagine a 200, 24 file
+  su 24 identici all'export costruito in locale.
+- **`export_for_cloudflare.sh` avrebbe rotto il sito se fosse mai stato usato**:
+  escludeva `_headers` e `_redirects` (via CSP, HSTS e cache) e copiava
+  `node_modules` (201 MB). Riscritto a lista di inclusione su `git ls-files`,
+  copia pura senza rigenerare niente in build, `tar` al posto di `rsync`.
+- **`_headers`**: il commento sopra la CSP diceva che spegnendo Bot Fight Mode
+  spariva lo script anti-bot di Cloudflare. Non e' vero: sul piano gratuito
+  JavaScript Detections resta iniettato e non ha interruttore. Si lascia, la
+  CSP lo blocca.
+
+### Changed
+- **JS e CSS minificati** con esbuild 0.24.2 fissato in devDependencies, al
+  posto di `npx --yes esbuild` che scaricava l'ultima versione a ogni build.
+  Misurato: da 150 a 110 KB in transito dopo Brotli (-27%). Il piano qualita'
+  la dava per "gia' in produzione": non ci era mai arrivata.
+- **Le 656 domande disattivate non vengono piu' spedite.** Civica in transito
+  da 87 a 65 KB. Restano nel repo come archivio.
+- **L'audit SEO esce dal repo pubblico** (`lascuolaamica.it-audit/`, 25 file
+  con i dati di Search Console). Resta nella storia dei commit gia' pubblicati.
+
+### Added
+- `scripts/check_export.js`, ultimo passo di `npm run verify`: file
+  obbligatori, 110 URL del service worker, 738 riferimenti nelle pagine,
+  sitemap, sintassi dei 20 JS minificati, domande pubblicate uguali alle
+  attive, nessun file interno. Provato reintroducendo cinque difetti.
+- `scripts/check_files_materialized.js`, primo passo di `npm run verify`: si
+  ferma se un file tracciato legge meno byte di quelli dichiarati, cioe' e' un
+  segnaposto iCloud. E' il difetto per cui il 9 settembre `prepublish-check.sh`
+  girava vuoto e usciva 0.
+
 ## 4.13.17 - 2026-09-10
 
 **Nel Bosco delle Lettere ora c'e' qualcuno.** Punti 4, 5 e 6 del piano sui
