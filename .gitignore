@@ -46,3 +46,7 @@ templates/
 # Output del tool graphify: non è codice del sito e fa fallire il check dei pattern pericolosi
 graphify-out/
 docs/graphify-out/
+
+# Audit SEO: contiene i dati di traffico di Search Console (click, impression,
+# posizioni). Resta sul disco di chi lavora al sito, non nel repo pubblico.
+lascuolaamica.it-audit/
