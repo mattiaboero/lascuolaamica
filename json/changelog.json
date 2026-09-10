@@ -1,5 +1,12 @@
 [
  {
+  "date": "10 settembre 2026 · Release 4.13.17",
+  "items": [
+   "Nel Bosco delle Lettere ora c'è qualcuno. Il gufo ti guarda mentre cammini e saluta appena arrivi, invece di comparire solo quando sbagli: un personaggio che parla soltanto per correggerti non fa compagnia a nessuno. Dalla seconda parola completata arriva anche uno scoiattolo, che si siede sul bordo della radura e resta a guardare fino alla fine, quando saltella.",
+   "I passi lasciano il segno anche sull'asciutto: prima le pozze si increspavano al passaggio ma sulla terra il personaggio scivolava senza traccia. Chi preferisce lo schermo fermo può spegnere tutto dalle impostazioni di sistema: con «riduci animazioni» il bosco resta immobile, ma continua a fiorire."
+  ]
+ },
+ {
   "date": "9 settembre 2026 · Release 4.13.1 – 4.13.16",
   "items": [
    "Rilette una per una tutte le 1.094 domande di inglese, le uniche che la revisione dei mesi scorsi non aveva ancora toccato. Corrette domande che descrivevano una cosa e ne davano per buona un'altra, altre in cui nessuna delle quattro risposte era giusta, errori di inglese dentro le domande stesse (\"Who are in the garden?\", \"a scissors\") e casi in cui la risposta si trovava senza sapere l'inglese, cercando l'unica opzione al plurale. Aggiunti controlli automatici anche per l'inglese, che prima non ne aveva nessuno.",

@@ -1,5 +1,43 @@
 # Changelog Repo
 
+## 4.13.17 - 2026-09-10
+
+**Nel Bosco delle Lettere ora c'e' qualcuno.** Punti 4, 5 e 6 del piano sui
+"piccoli tocchi": un ospite, il gufo come personaggio, le micro-risposte.
+
+### Added
+- **Lo scoiattolo.** Dalla seconda parola compare sul bordo della radura e
+  resta a guardare; a fine partita saltella. Nessuna tabella di soglie, nessun
+  sistema di dialoghi, nessuna parola nuova nel banco: reagisce a
+  `state.solved`. Il primo posto scelto era sul sottobosco scuro — veniva
+  disegnato, 966 pixel cambiavano, ma marrone su marrone non lo vedeva nessuno.
+- **Il gufo guarda e saluta.** Le pupille seguono il giocatore di due pixel (56
+  pixel di differenza fra giocatore a sinistra e a destra) e batte le palpebre
+  due volte di fila ogni otto secondi. Saluta a inizio partita: prima l'unica
+  volta in cui apriva bocca era per dire che avevi sbagliato. Il saluto non
+  nomina nessuna parola del banco, sarebbe un anticipo su quella che uscira'.
+- **Polvere sotto i piedi.** Sull'acqua le pozze si increspavano gia', sulla
+  terra il personaggio scivolava senza lasciare traccia. Due granelli per passo,
+  spenti da `motionReduced()`.
+- `check_bosco.js`: controllo sugli ospiti — quando compare lo scoiattolo, che
+  non finisca sotto un cartello o dentro una pozza, e che il saluto del gufo non
+  nomini parole del banco. Verificato reintroducendo entrambi i difetti.
+
+### Non fatto, di proposito
+Il piano diceva "il tabellone pulsa quando ti avvicini con quello giusto".
+Sarebbe lo stesso difetto corretto in 4.13.16: la risposta rivelata senza
+leggere la parola. Il tabellone pulsa con qualunque cartello in mano.
+
+Meta' del punto 6 era gia' implementata — la piazzola vuota pulsa gia'
+(`drawPad`), il tabellone si illumina gia' (`drawBoard`). Proposte cose che il
+gioco faceva gia'.
+
+### Note di ambiente
+iCloud aveva sfrattato parte di `node_modules` (ESLint caricava file vuoti,
+risolto con `npm ci`) e **`prepublish-check.sh` stesso**, che leggeva vuoto e
+usciva 0 senza eseguire nulla: un "verify passed" che non valeva niente. Dopo
+la rimaterializzazione lo script stampa di nuovo i suoi 195 controlli.
+
 ## 4.13.16 - 2026-09-09
 
 Include 4.13.15, mai pubblicata: `js/bosco.js` e' in precache e il guard PWA
