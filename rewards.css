@@ -82,20 +82,12 @@
   cursor: pointer;
 }
 
+/* Geometria (min-height, display, padding, ecc.) e' in index.css, bloccante: qui solo l'aspetto */
 .reward-link-pill {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  border: 2px solid rgba(var(--info-blue-rgb) / .2);
+  border-color: rgba(var(--info-blue-rgb) / .2);
   border-radius: 50px;
-  padding: 6px 14px;
   background: #fff;
   color: var(--info-blue);
-  font-size: .85rem;
-  font-weight: 900;
-  line-height: normal;
   text-decoration: none;
   box-shadow: 0 3px 12px rgba(0, 0, 0, .12);
 }

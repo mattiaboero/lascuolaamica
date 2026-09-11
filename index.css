@@ -184,6 +184,20 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   margin-bottom:12px;
 }
 .faq-mini-link:hover{transform:translateY(-1px);}
+/* Geometria di .reward-link-pill (rewards.css, caricato lazy): qui bloccante per evitare CLS */
+.reward-link-pill{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+  border-width:2px;
+  border-style:solid;
+  padding:6px 14px;
+  font-size:.85rem;
+  font-weight:900;
+  line-height:normal;
+}
 
 .main-title{
   display:grid;
