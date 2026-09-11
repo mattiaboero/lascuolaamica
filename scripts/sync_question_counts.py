@@ -70,7 +70,7 @@ def sostituzioni(attive: dict[str, int]) -> list[tuple[Path, str, str]]:
     for materia, etichetta in (('inglese', 'Inglese'), ('civica', 'Educazione civica'),
                                ('scienze', 'Scienze')):
         lavori.append((ROOT / 'per-insegnanti.html',
-                       rf'(<strong>{etichetta}</strong> \()[\d.]+( domande\))',
+                       rf'(<strong><a href="/{materia}">{etichetta}</a></strong> \()[\d.]+( domande\))',
                        rf'\g<1>{_it(attive[materia])}\g<2>'))
 
     # Documentazione e schede per gli assistenti AI.
