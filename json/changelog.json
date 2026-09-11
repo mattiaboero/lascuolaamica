@@ -1,8 +1,8 @@
 [
  {
-  "date": "11 settembre 2026 · Release 4.13.19",
+  "date": "11 settembre 2026 · Release 4.13.19 – 4.13.20",
   "items": [
-   "La home page e la pagina \"Premi\" non saltano più mentre caricano. Prima, su schermi piccoli, il pulsante \"Premi\" sopra il titolo della home cresceva all'improvviso e spingeva giù tutto il resto appena la pagina finiva di caricare; sulla pagina \"Premi\" poteva succedere all'intera pagina. Ora tutto è al suo posto fin dal primo istante."
+   "La pagina \"Premi\" non si riorganizza più mentre carica. Sulla home, il pulsante \"Premi\" sopra il titolo adesso c'è già quando la pagina appare, e non spinge più giù il titolo e i giochi sui telefoni."
   ]
  },
  {

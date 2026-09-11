@@ -1,5 +1,28 @@
 # Changelog Repo
 
+## 4.13.20 - 2026-09-11
+
+**La diagnosi della 4.13.19 per la home era incompleta: mancava la pillola
+"Premi" iniettata da JavaScript.** Il fix precedente (geometria di
+`.reward-link-pill` spostata da `rewards.css` a `index.css`) era reale e
+resta valido, ma il CLS che PageSpeed continuava a misurare sulla home
+(0.151-0.158 mobile, invariato dopo 4.13.19) veniva da un'altra causa.
+
+### Fixed
+- **`injectRewardsLink()` in `js/rewards.js` (riga ~546) crea il link "Premi"
+  via JavaScript a `DOMContentLoaded`** e lo aggiunge a `.badge-row`
+  (`index.html:228`), dopo il link FAQ. Su mobile il link va a capo su una
+  seconda riga e `.badge-row` cresce da 56 a 122px dopo il primo paint,
+  spingendo giu' il titolo e le card. Verificato con Chrome reale (412x823,
+  ritardando una risorsa di 1s alla volta): ritardare `js/rewards.js` -> CLS
+  0.143 (l'h1 si sposta da y=98 a y=164, +66px); ritardare il font Fredoka ->
+  0.041; il font Nunito -> 0.040; `rewards.css` -> 0 (il fix della 4.13.19
+  tiene). La pillola e' ora statica in `index.html` dentro `.badge-row`, con
+  gli stessi attributi che creava il JS (`class="reward-link-pill"
+  data-rewards-link="1" href="/premi"`); `injectRewardsLink()` la trova gia'
+  presente (`document.querySelector('[data-rewards-link]')`) e non fa nulla
+  sulla home. `js/rewards.js` non e' stato toccato.
+
 ## 4.13.19 - 2026-09-11
 
 **La pillola "Premi" non spinge piu' la pagina in giu' mentre carica.**
