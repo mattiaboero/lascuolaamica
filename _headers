@@ -23,7 +23,7 @@
   Cross-Origin-Resource-Policy: same-origin
   X-DNS-Prefetch-Control: on
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), accelerometer=(), gyroscope=(), magnetometer=()
-  Content-Security-Policy: require-trusted-types-for 'script'; trusted-types sa-sw-url sa-sw-import; default-src 'self'; script-src 'self'; style-src 'self' 'sha256-BNmAHbO2/ek3x7c/V95X+65lWTk5Sab4/A58ijnWg0g=' 'sha256-f3Qa+ps9NidvaREkzVRGukR8L+JxdIqjQLNwI6tguVA='; style-src-elem 'self' 'sha256-BNmAHbO2/ek3x7c/V95X+65lWTk5Sab4/A58ijnWg0g=' 'sha256-f3Qa+ps9NidvaREkzVRGukR8L+JxdIqjQLNwI6tguVA='; style-src-attr 'none'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: require-trusted-types-for 'script'; trusted-types sa-sw-url sa-sw-import; default-src 'self'; script-src 'self'; style-src 'self' 'sha256-BNmAHbO2/ek3x7c/V95X+65lWTk5Sab4/A58ijnWg0g=' 'sha256-OAPk1tICK41ezq4Cxk7Q0DnJTV3mSu1Y5J+8dsdfHzw='; style-src-elem 'self' 'sha256-BNmAHbO2/ek3x7c/V95X+65lWTk5Sab4/A58ijnWg0g=' 'sha256-OAPk1tICK41ezq4Cxk7Q0DnJTV3mSu1Y5J+8dsdfHzw='; style-src-attr 'none'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests
 
 /json/*
   X-Robots-Tag: noindex, nofollow, noai, noimageai
