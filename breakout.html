@@ -75,7 +75,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-08-09",
-  "dateModified": "2026-09-06",
+  "dateModified": "2026-09-11",
   "publisher": {
     "@id": "https://lascuolaamica.it/#organization"
   }
@@ -148,7 +148,7 @@
     }
   ],
   "datePublished": "2026-08-09",
-  "dateModified": "2026-09-06"
+  "dateModified": "2026-09-11"
 }
 </script>
 </head>
@@ -215,7 +215,21 @@
         Premi <strong>spazio</strong> o tocca lo schermo per lanciare la pallina.<br>
         Durante la partita <strong>spazio</strong> mette in pausa e fa riprendere.
       </div>
-      <div class="class-grid" id="classGrid" aria-label="Selezione classe"></div>
+      <div class="class-grid" id="classGrid" aria-label="Selezione classe">
+        <button type="button" class="class-btn" aria-pressed="false">Classe 2ª</button>
+        <button type="button" class="class-btn" aria-pressed="false">Classe 3ª</button>
+        <button type="button" class="class-btn" aria-pressed="false">Classe 4ª</button>
+        <button type="button" class="class-btn" aria-pressed="false">Classe 5ª</button>
+      </div>
+      <section class="play-window-panel play-window-panel-start" data-play-window-panel="1" data-context="subject-start" aria-live="polite" aria-atomic="true">
+        <div class="play-window-kicker">Tempo di gioco</div>
+        <p class="play-window-status">Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo. Dopo i 30 minuti bisogna aspettare 60 minuti prima di poter tornare a giocare.</p>
+        <div class="play-window-actions">
+          <strong class="play-window-timer">30:00</strong>
+          <button type="button" class="play-window-btn">Attiva 30 minuti</button>
+        </div>
+        <p class="play-window-note">Solo sul dispositivo, nessun login, nessun cookie, funziona anche offline.</p>
+      </section>
       <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
       <p class="intro-note intro-note-small">Nessuna registrazione e nessun login: il record resta su questo dispositivo.</p>
     </main>
