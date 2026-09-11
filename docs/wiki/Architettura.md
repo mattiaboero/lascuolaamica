@@ -150,6 +150,8 @@ Riferimento storico: `CHANGELOG.md` release 4.11.0 e 4.12.0.
 
 **In comune con il resto del sito:** palette letta dai token CSS via `readPalette()` (quindi la modalità accessibile Okabe-Ito ridipinge il bosco senza toccare il JS), premi nella bacheca condivisa (`js/rewards.js`, sei premi dedicati), precache opzionale nel Service Worker, `storageGet`/`storageSet` con fallback in memoria quando `localStorage` non è disponibile.
 
+**Finestra di gioco dei 30 minuti.** Stesso cancello dei quiz e di Spacca-Muri, con gli stessi testi. Il bosco si apre in pausa sotto l'overlay «Entra nel bosco» (`state.inGioco` falso): il clic chiama `entra()` → `SA.playWindow.ensureActive()`, ed è anche il gesto utente che sblocca l'`AudioContext`. Finché non si è entrati, `setPaused(false)` passa dal cancello invece di riprendere, Esc non fa niente e scegliere classe o modalità ricompone la partita restando sotto l'overlay. Alla scadenza (evento `SA.playWindow.eventName` con `detail.active` falso) `onPlayWindowExpired()` chiude la partita, mostra `SA.ui.alert` «Tempo di gioco terminato» e torna al cancello con una partita nuova. Non si perde niente: `SA.rewards.recordBosco` registra ogni risposta e ogni parola mentre si gioca, non a fine partita. `scripts/check_bosco.js` verifica rifiuto, ingresso e scadenza con un `SA.playWindow` finto.
+
 ## Dati
 
 ```

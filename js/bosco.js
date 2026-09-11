@@ -1203,6 +1203,8 @@
     winTime: 0,
     paused: false,
     helpOpen: false,
+    // Falso finche' non si attraversa il cancello dei 30 minuti (entra()).
+    inGioco: false,
     player: { x: 410, y: 378, phase: 0, dir: 'up' },
     keys: new Set(),
     particles: [],
@@ -1493,7 +1495,9 @@
     });
     dom.overlayBtn.textContent = buttonLabel;
     dom.overlay.classList.add('open');
-    dom.overlayBtn.focus();
+    // Il cancello si apre gia' al caricamento: senza preventScroll la pagina
+    // salterebbe giu' fino al bosco prima che si sia letto il titolo.
+    dom.overlayBtn.focus({ preventScroll: true });
   }
 
   function closeOverlay() {
@@ -1508,6 +1512,7 @@
 
   function showPauseOverlay() {
     if (state.helpOpen) openOverlay('Un passo, una scoperta', HELP_LINES, 'Torniamo a esplorare');
+    else if (!state.inGioco) openOverlay('Il Bosco delle Lettere', ['Tre parole da scoprire, un passo alla volta. Qui non c’è fretta.'], 'Entra nel bosco');
     else openOverlay('Il bosco ti aspetta', ['Riparti quando vuoi. Qui non c’è fretta.'], 'Torniamo a esplorare');
   }
 
@@ -1538,8 +1543,52 @@
 
   /* ------------------------------------------------------------------ gioco */
 
+  /*
+    Stesso cancello dei quiz materia e di Spacca-Muri: senza finestra di gioco
+    attiva non si entra. Il bosco si apre in pausa, con il pulsante «Entra nel
+    bosco»: e' il gesto che serve alla conferma dei 30 minuti e, gia' che c'e',
+    quello che il browser vuole prima di lasciar suonare l'audio.
+  */
+  function ensurePlayWindow() {
+    const api = SA.playWindow;
+    if (!api || typeof api.ensureActive !== 'function') return Promise.resolve(true);
+    return api.ensureActive({
+      title: 'Attiva 30 minuti di gioco',
+      message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
+      confirmLabel: 'Attiva 30 minuti',
+      cancelLabel: 'Non ora'
+    });
+  }
+
+  async function entra() {
+    const allowed = await ensurePlayWindow();
+    // Due clic mentre la conferma e' aperta risolvono entrambi: entra il primo.
+    if (!allowed || state.inGioco) return;
+    state.inGioco = true;
+    setPaused(false);
+  }
+
+  // Le parole giocate sono gia' nella bacheca: premi() le registra una a
+  // una, quindi chiudere la partita a meta' non perde niente.
+  function onPlayWindowExpired() {
+    if (!state.inGioco) return;
+    state.inGioco = false;
+    restart();
+    announce('I 30 minuti di gioco sono terminati.');
+    if (SA.ui && typeof SA.ui.alert === 'function') {
+      SA.ui.alert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
+        title: 'Tempo di gioco terminato',
+        okLabel: 'Va bene'
+      });
+    }
+  }
+
   function setPaused(value) {
     if (state.mode === 'complete') return;
+    if (!value && !state.inGioco) {
+      entra();
+      return;
+    }
     state.paused = value;
     state.keys.clear();
     state.target = null;
@@ -1560,8 +1609,8 @@
 
   function toggleHelp() {
     state.helpOpen = !state.helpOpen;
-    if (state.helpOpen) setPaused(true);
-    else setPaused(false);
+    // Chiudere l'aiuto prima di entrare riporta al cancello, non lo apre.
+    setPaused(state.helpOpen || !state.inGioco);
   }
 
   function toggleMute() {
@@ -1791,8 +1840,11 @@
     state.target = null;
     state.arrivedAt = -1;
     state.wrong = -1;
-    state.paused = false;
+    // Fuori dal cancello (apertura della pagina, 30 minuti scaduti) la partita
+    // nuova resta ferma sotto «Entra nel bosco».
+    state.paused = !state.inGioco;
     state.helpOpen = false;
+    state.keys.clear();
     state.particles = [];
     state.rings = [];
     state.player = { x: 410, y: 378, phase: 0, dir: 'up' };
@@ -1800,7 +1852,8 @@
       p.water.front.fill(0);
       p.water.back.fill(0);
     });
-    closeOverlay();
+    if (state.inGioco) closeOverlay();
+    else showPauseOverlay();
     owlSaluta();
     aggiornaRipasso();
     setMessage('Esplora la radura e scegli il gruppo mancante.');
@@ -2293,7 +2346,7 @@
 
       if (key === 'Escape') {
         event.preventDefault();
-        if (state.mode === 'complete') return;
+        if (state.mode === 'complete' || !state.inGioco) return;
         state.helpOpen = false;
         setPaused(!state.paused);
         return;
@@ -2320,6 +2373,14 @@
 
     document.addEventListener('visibilitychange', function () {
       if (document.hidden && state.mode !== 'complete' && !state.paused) setPaused(true);
+    });
+
+    // shared.js arriva dopo questo file: se SA.playWindow non c'e' ancora, il
+    // nome dell'evento e' quello che shared.js usera'.
+    const playWindowEvent = (SA.playWindow && SA.playWindow.eventName) || 'sa:play-window-change';
+    document.addEventListener(playWindowEvent, function (event) {
+      if (event && event.detail && event.detail.active) return;
+      onPlayWindowExpired();
     });
 
     new MutationObserver(readPalette).observe(document.documentElement, {
@@ -2378,8 +2439,6 @@
     dom.wordAria = document.getElementById('boscoJourneyLabel');
     dom.steps = Array.prototype.slice.call(document.querySelectorAll('.bosco-step'));
 
-    state.session = buildSession();
-
     state.puddles = PUDDLES.map(function (p) {
       return { x: p.x, y: p.y, rx: p.rx, ry: p.ry, water: new Water(PUDDLE_W, PUDDLE_H) };
     });
@@ -2412,9 +2471,7 @@
       dom.mute.setAttribute('aria-pressed', 'true');
     }
 
-    owlSaluta();
-    setMessage('Esplora la radura e scegli il gruppo mancante.');
-    render();
+    restart();
     raf = requestAnimationFrame(frame);
   }
 
@@ -2455,6 +2512,8 @@
     choose: choose,
     tap: tap,
     restart: restart,
+    entra: entra,
+    scadenza: onPlayWindowExpired,
     stop: function () {
       cancelAnimationFrame(raf);
     }

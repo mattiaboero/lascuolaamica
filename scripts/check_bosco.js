@@ -471,6 +471,42 @@ function checkCacciaAlSuono(game) {
 
 // Ogni lettera disegnata sul tabellone e sulle tessere passa dal font 5x7
 // interno: una lettera senza glifo verrebbe disegnata come "?" senza errori.
+/*
+  Il cancello dei 30 minuti, come nei quiz e in Spacca-Muri: senza finestra
+  attiva il bosco resta fermo sotto «Entra nel bosco», e alla scadenza la
+  partita si chiude e torna li'. Qui SA.playWindow e' finto: conta solo cosa
+  risponde ensureActive().
+*/
+async function checkCancelloTempo(game) {
+  const s = game.state;
+  const sa = global.window.SA;
+  let risposta = false;
+  sa.playWindow = { ensureActive: function () { return Promise.resolve(risposta); } };
+
+  s.inGioco = false;
+  game.restart();
+  assert.equal(s.paused, true, 'fuori dal cancello la partita deve restare ferma');
+
+  await game.entra();
+  assert.equal(s.inGioco, false, 'rifiutati i 30 minuti non si entra');
+  assert.equal(s.paused, true);
+
+  risposta = true;
+  await game.entra();
+  assert.equal(s.inGioco, true, 'attivati i 30 minuti si entra');
+  assert.equal(s.paused, false, 'entrati si gioca, non si resta in pausa');
+
+  s.solved = 2;
+  s.mode = 'solved';
+  game.scadenza();
+  assert.equal(s.inGioco, false, 'alla scadenza si esce dal bosco');
+  assert.equal(s.paused, true, 'e si torna fermi sotto «Entra nel bosco»');
+  assert.equal(s.solved, 0, 'con una partita nuova, non quella di prima');
+  assert.equal(s.mode, 'playing');
+
+  delete sa.playWindow;
+}
+
 function checkGlyphs(game) {
   const source = fs.readFileSync(SOURCE, 'utf8');
   const block = source.slice(source.indexOf('const LETTERS = {'), source.indexOf('const PUDDLE_W'));
@@ -536,7 +572,7 @@ function checkWater(game) {
   assert.equal(Array.from(dry.front).some(function (v) { return v !== 0; }), false);
 }
 
-function main() {
+async function main() {
   const game = loadGame();
   const checks = [
     ['banco parole', checkRounds],
@@ -555,20 +591,21 @@ function main() {
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],
     ['centro asciutto', checkDryCenter],
-    ['simulazione dell acqua', checkWater]
+    ['simulazione dell acqua', checkWater],
+    ['cancello dei 30 minuti', checkCancelloTempo]
   ];
 
   let failed = false;
-  checks.forEach(function (entry) {
+  for (const entry of checks) {
     try {
-      entry[1](game);
+      await entry[1](game);
       console.error(`[OK] bosco: ${entry[0]}`);
     } catch (error) {
       failed = true;
       console.error(`[ERROR] bosco: ${entry[0]} — ${error.message}`);
       if (process.env.BOSCO_TRACE) console.error(error.stack);
     }
-  });
+  }
 
   if (failed) process.exit(1);
   console.error('[OK] js/bosco.js: tutti i controlli superati');
