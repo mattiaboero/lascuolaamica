@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.13.19 - 2026-09-11
+
+**La pillola "Premi" non spinge piu' la pagina in giu' mentre carica.**
+L'audit SEO dell'11 settembre ha misurato CLS in laboratorio: home mobile
+0.151, /premi fino a 0.643 mobile / 0.354 desktop.
+
+### Fixed
+- **`.reward-link-pill` arrivava dopo il primo paint.** La sua geometria
+  (min-height 44px, inline-flex, padding) viveva in `rewards.css`, caricato
+  da `js/lazy-css.js` dopo il render: sulla home la pillola cresceva da 22 a
+  44px e spingeva tutto giu' di 34px; su `/premi` era l'intero layout della
+  pagina a comparire in ritardo. Difetto latente dal lazy-load del 5 luglio
+  (commit 8282bc8), non dalla minificazione del 10 settembre. Geometria
+  spostata in `index.css` (gia' bloccante), `rewards.css` tiene solo
+  l'aspetto; in `premi.html` il foglio torna un `<link rel="stylesheet">`
+  normale invece di preload + lazy-css.js. Verificato con Chrome reale: CLS
+  0 su home mobile, 0.004 su home desktop, 0 su `/premi`.
+
 ## 4.13.18 - 2026-09-10
 
 **Il sito pubblica solo i suoi file, minificati e verificati.** Il bump serve
