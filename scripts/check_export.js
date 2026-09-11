@@ -77,7 +77,9 @@ for (const m of sitemap.matchAll(/<loc>https:\/\/lascuolaamica\.it([^<]*)<\/loc>
 const llms = fs.readFileSync(path.join(DST, 'llms.txt'), 'utf8');
 for (const m of sitemap.matchAll(/<loc>https:\/\/lascuolaamica\.it([^<]*)<\/loc>/g)) {
   const url = 'https://lascuolaamica.it' + (m[1] || '/').replace(/\/$/, '');
-  if (!llms.includes(url)) errori.push(`llms.txt: manca ${url}, presente in sitemap.xml`);
+  // match il link intero tra parentesi markdown, non solo come prefisso
+  // (la root e' prefisso di ogni altra URL: un .includes() semplice passa sempre)
+  if (!llms.includes(`(${url})`) && !llms.includes(`(${url}/)`)) errori.push(`llms.txt: manca ${url}, presente in sitemap.xml`);
 }
 
 // ------------------------------------------------------------ 5. riferimenti nelle pagine
