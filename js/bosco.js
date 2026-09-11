@@ -77,12 +77,12 @@
   const PAROLE = [
     // Riscaldamento: le tre parole storiche, con il loro disegno sul tabellone.
     { word: 'SOLE', hole: [3, 1], errate: ['A', 'O'], skill: 'vocali', picture: 'sun', cls: 2, diff: 1, clue: 'Scalda il bosco e illumina il cielo.' },
-    { word: 'MELA', hole: [1, 1], errate: ['I', 'O'], skill: 'vocali', picture: 'apple', cls: 2, diff: 1, clue: 'E’ un frutto, croccante e dolce.' },
+    { word: 'MELA', hole: [1, 1], errate: ['I', 'O'], skill: 'vocali', picture: 'apple', cls: 2, diff: 1, clue: 'È un frutto, croccante e dolce.' },
     { word: 'LUNA', hole: [1, 1], errate: ['A', 'I'], skill: 'vocali', picture: 'moon', cls: 2, diff: 1, clue: 'Brilla nel cielo quando arriva la notte.' },
 
     { word: 'RAGNO', hole: [2, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 1, clue: 'Ha otto zampe e tesse la tela.' },
     { word: 'GNOMO', hole: [0, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 2, clue: 'Piccolo folletto del bosco col cappello a punta.' },
-    { word: 'MONTAGNA', hole: [5, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 2, clue: 'E’ altissima e in cima ha la neve.' },
+    { word: 'MONTAGNA', hole: [5, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 2, clue: 'È altissima e in cima ha la neve.' },
     { word: 'CIGNO', hole: [2, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 3, diff: 2, clue: 'Uccello bianco dal collo lungo, vive sul lago.' },
     { word: 'LEGNO', hole: [2, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 1, clue: 'Viene dagli alberi e serve per il fuoco.' },
     { word: 'AGNELLO', hole: [1, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 2, clue: 'Il piccolo della pecora.' },
@@ -96,12 +96,12 @@
     { word: 'PIGNA', hole: [2, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 1, clue: 'Cade dal pino e ha le squame.' },
     { word: 'FOGLIA', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 1, clue: 'Cade dagli alberi in autunno.' },
     { word: 'AGLIO', hole: [1, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 2, clue: 'Ha un odore forte e si usa in cucina.' },
-    { word: 'FAMIGLIA', hole: [4, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 2, clue: 'Mamma, papa’ e figli, tutti insieme.' },
+    { word: 'FAMIGLIA', hole: [4, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 2, clue: 'Mamma, papà e figli, tutti insieme.' },
     { word: 'CONIGLIO', hole: [4, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 3, diff: 3, clue: 'Ha le orecchie lunghe e salta.' },
     { word: 'MAGLIA', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 1, clue: 'Si mette addosso quando fa freddo.' },
     { word: 'SCOGLIO', hole: [3, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 3, diff: 3, clue: 'Roccia che spunta in mezzo al mare.' },
-    { word: 'LUGLIO', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 3, diff: 2, clue: 'Il mese piu’ caldo dell’estate.' },
-    { word: 'FIGLIO', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 2, clue: 'Lo e’ un bambino per i suoi genitori.' },
+    { word: 'LUGLIO', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 3, diff: 2, clue: 'Il mese più caldo dell’estate.' },
+    { word: 'FIGLIO', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 2, clue: 'Lo è un bambino per i suoi genitori.' },
     { word: 'GRIGLIA', hole: [3, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 3, diff: 3, clue: 'Ci si cuoce sopra la carne sul fuoco.' },
     { word: 'MOGLIE', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 3, diff: 2, clue: 'La sposa di un uomo.' },
     { word: 'PAGLIA', hole: [2, 3], errate: ['LI', 'GHI'], skill: 'gli', cls: 2, diff: 2, clue: 'Steli secchi dove dormono gli animali.' },
@@ -113,7 +113,7 @@
     { word: 'SCENA', hole: [0, 3], errate: ['SCIE', 'SE'], skill: 'sc', cls: 3, diff: 3, clue: 'La parte di una storia che si recita a teatro.' },
     { word: 'LISCIO', hole: [2, 3], errate: ['SCE', 'SI'], skill: 'sc', cls: 3, diff: 3, clue: 'Il contrario di ruvido.' },
     { word: 'SCIARPA', hole: [0, 3], errate: ['SCE', 'SI'], skill: 'sc', cls: 2, diff: 1, clue: 'Si mette al collo quando fa freddo.' },
-    { word: 'SCIVOLO', hole: [0, 3], errate: ['SCE', 'SI'], skill: 'sc', cls: 2, diff: 1, clue: 'Al parco ci si lascia andare giu’.' },
+    { word: 'SCIVOLO', hole: [0, 3], errate: ['SCE', 'SI'], skill: 'sc', cls: 2, diff: 1, clue: 'Al parco ci si lascia andare giù.' },
     { word: 'CUSCINO', hole: [2, 3], errate: ['SCE', 'SI'], skill: 'sc', cls: 2, diff: 1, clue: 'Sta sotto la testa quando dormi.' },
     { word: 'PISCINA', hole: [2, 3], errate: ['SCE', 'SI'], skill: 'sc', cls: 2, diff: 1, clue: 'Vasca grande dove si nuota.' },
     { word: 'RUSCELLO', hole: [2, 3], errate: ['SCIE', 'SE'], skill: 'sc', cls: 3, diff: 2, clue: 'Piccolo corso d’acqua nel bosco.' },
@@ -157,25 +157,25 @@
     { word: 'SQUALO', hole: [1, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 2, diff: 2, clue: 'Pesce grande con i denti aguzzi.' },
     { word: 'QUADRATO', hole: [0, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 2, diff: 2, clue: 'Figura con quattro lati uguali.' },
     { word: 'QUINDICI', hole: [0, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 3, diff: 3, clue: 'Il numero dopo il quattordici.' },
-    { word: 'LIQUIDO', hole: [2, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 3, diff: 3, clue: 'L’acqua lo e’, la pietra no.' },
+    { word: 'LIQUIDO', hole: [2, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 3, diff: 3, clue: 'L’acqua lo è, la pietra no.' },
     { word: 'AQUILONE', hole: [1, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 2, diff: 1, clue: 'Vola in cielo tenuto da un filo.' },
     { word: 'QUANDO', hole: [0, 2], errate: ['CU', 'Q'], skill: 'qu', cls: 2, diff: 2, clue: 'Si chiede per sapere il momento.' },
     { word: 'ACQUA', hole: [1, 3], errate: ['QU', 'CU'], skill: 'cqu', cls: 2, diff: 2, clue: 'Si beve e riempie il mare.' },
     { word: 'ACQUARIO', hole: [1, 3], errate: ['QU', 'CU'], skill: 'cqu', cls: 3, diff: 3, clue: 'La vasca di vetro dove nuotano i pesci.' },
     { word: 'ACQUISTO', hole: [1, 3], errate: ['QU', 'CU'], skill: 'cqu', cls: 3, diff: 3, clue: 'Quello che fai quando compri qualcosa.' },
-    { word: 'PALLA', hole: [2, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 2, diff: 1, clue: 'E’ rotonda, rimbalza e si calcia.' },
+    { word: 'PALLA', hole: [2, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 2, diff: 1, clue: 'È rotonda, rimbalza e si calcia.' },
     { word: 'GATTO', hole: [2, 2], errate: ['T', 'DD'], skill: 'doppie', cls: 2, diff: 1, clue: 'Fa le fusa e miagola.' },
     { word: 'STELLA', hole: [3, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 2, diff: 1, clue: 'Brilla in cielo di notte.' },
-    { word: 'NONNO', hole: [2, 2], errate: ['N', 'MM'], skill: 'doppie', cls: 2, diff: 2, clue: 'E’ il papa’ del tuo papa’.' },
+    { word: 'NONNO', hole: [2, 2], errate: ['N', 'MM'], skill: 'doppie', cls: 2, diff: 2, clue: 'È il papà del tuo papà.' },
     { word: 'PENNA', hole: [2, 2], errate: ['N', 'MM'], skill: 'doppie', cls: 2, diff: 2, clue: 'Serve per scrivere e ha l’inchiostro.' },
     { word: 'FARFALLA', hole: [5, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 2, diff: 2, clue: 'Ha le ali colorate e nasce dal bruco.' },
-    { word: 'CAVALLO', hole: [4, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 2, diff: 3, clue: 'Corre veloce e si puo’ cavalcare.' },
+    { word: 'CAVALLO', hole: [4, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 2, diff: 3, clue: 'Corre veloce e si può cavalcare.' },
     { word: 'MARTELLO', hole: [5, 2], errate: ['L', 'RR'], skill: 'doppie', cls: 3, diff: 2, clue: 'Serve per piantare i chiodi.' },
     { word: 'CASSA', hole: [2, 2], errate: ['S', 'ZZ'], skill: 'doppie', cls: 2, diff: 2, clue: 'Scatola grande di legno.' },
     { word: 'PIZZA', hole: [2, 2], errate: ['Z', 'SS'], skill: 'doppie', cls: 2, diff: 1, clue: 'Tonda, con pomodoro e mozzarella.' },
     { word: 'TORRE', hole: [2, 2], errate: ['R', 'LL'], skill: 'doppie', cls: 2, diff: 2, clue: 'Alta e stretta, come quella di Pisa.' },
     { word: 'CARRO', hole: [2, 2], errate: ['R', 'LL'], skill: 'doppie', cls: 3, diff: 3, clue: 'Lo tirano i buoi.' },
-    { word: 'NOTTE', hole: [2, 2], errate: ['T', 'DD'], skill: 'doppie', cls: 2, diff: 1, clue: 'Quando e’ buio e si dorme.' },
+    { word: 'NOTTE', hole: [2, 2], errate: ['T', 'DD'], skill: 'doppie', cls: 2, diff: 1, clue: 'Quando è buio e si dorme.' },
     { word: 'LETTO', hole: [2, 2], errate: ['T', 'DD'], skill: 'doppie', cls: 2, diff: 1, clue: 'Ci si dorme sopra.' },
     { word: 'SACCO', hole: [2, 2], errate: ['C', 'GG'], skill: 'doppie', cls: 2, diff: 2, clue: 'Grande borsa di tela.' },
     { word: 'BOCCA', hole: [2, 2], errate: ['C', 'GG'], skill: 'doppie', cls: 2, diff: 1, clue: 'Serve per mangiare e per parlare.' },
@@ -202,9 +202,9 @@
     { word: 'PAPÀ', hole: [3, 1], errate: ['A', 'Á'], skill: 'accento', cls: 2, diff: 1, clue: 'Un altro modo per dire babbo.' },
     { word: 'PERÒ', hole: [3, 1], errate: ['O', 'Ó'], skill: 'accento', cls: 3, diff: 3, clue: 'Vuol dire «ma».' },
     { word: 'LUNEDÌ', hole: [5, 1], errate: ['I', 'Í'], skill: 'accento', cls: 2, diff: 2, clue: 'Il primo giorno della settimana.' },
-    { word: 'MARTEDÌ', hole: [6, 1], errate: ['I', 'Í'], skill: 'accento', cls: 2, diff: 2, clue: 'Il giorno dopo il lunedi’.' },
+    { word: 'MARTEDÌ', hole: [6, 1], errate: ['I', 'Í'], skill: 'accento', cls: 2, diff: 2, clue: 'Il giorno dopo il lunedì.' },
     { word: 'VENERDÌ', hole: [6, 1], errate: ['I', 'Í'], skill: 'accento', cls: 3, diff: 2, clue: 'L’ultimo giorno di scuola della settimana.' },
-    { word: 'GIOVEDÌ', hole: [6, 1], errate: ['I', 'Í'], skill: 'accento', cls: 3, diff: 2, clue: 'Il giorno fra il mercoledi’ e il venerdi’.' },
+    { word: 'GIOVEDÌ', hole: [6, 1], errate: ['I', 'Í'], skill: 'accento', cls: 3, diff: 2, clue: 'Il giorno fra il mercoledì e il venerdì.' },
     { word: 'METÀ', hole: [3, 1], errate: ['A', 'Á'], skill: 'accento', cls: 3, diff: 3, clue: 'Una delle due parti uguali.' }
   ];
 
@@ -241,7 +241,7 @@
     qu: 'Il gruppo QU si scrive con la Q seguita dalla U, mai con CU.',
     cqu: 'Poche parole hanno CQU, e quasi tutte sono parenti di acqua.',
     doppie: 'Qui la consonante si sente lunga: va scritta doppia.',
-    accento: 'Quando la voce batte sull’ultima vocale, l’accento va scritto: quasi sempre grave, come in citta’ o cosi’; acuto solo in poche parole come perche’.'
+    accento: 'Quando la voce batte sull’ultima vocale, l’accento va scritto: quasi sempre grave, come in città o così; acuto solo in poche parole come perché.'
   };
 
   // Famiglie di confusione, una per abilita': servono a scripts/check_bosco.js
@@ -290,9 +290,9 @@
   function messaggioErrore(round, scelto) {
     const vicina = parolaCon(round, scelto);
     if (vicina && PAROLE_VICINE.has(vicina)) {
-      return vicina + ' e’ una parola vera, ma non e’ questa. Senti cosa dice il gufo.';
+      return vicina + ' è una parola vera, ma non è questa. Senti cosa dice il gufo.';
     }
-    return 'Non e’ questo. Senti cosa dice il gufo.';
+    return 'Non è questo. Senti cosa dice il gufo.';
   }
 
   const TILE_POSITIONS = [
@@ -1323,7 +1323,7 @@
       ? vicina.charAt(0) + vicina.slice(1).toLowerCase() + ' esiste davvero, ma l’indizio dice un’altra cosa. '
       : '';
     const testo = round.tipo === 'suono'
-      ? 'In ' + parola + ' il gruppo ' + (ETICHETTE[round.skill] || round.target) + ' non c’e’. ' + regola
+      ? 'In ' + parola + ' il gruppo ' + (ETICHETTE[round.skill] || round.target) + ' non c’è. ' + regola
       : premessa + regola + ' Ascolta: ' + parola + '.';
     dom.owlText.textContent = testo;
     dom.owl.hidden = false;
@@ -1508,7 +1508,7 @@
 
   function showPauseOverlay() {
     if (state.helpOpen) openOverlay('Un passo, una scoperta', HELP_LINES, 'Torniamo a esplorare');
-    else openOverlay('Il bosco ti aspetta', ['Riparti quando vuoi. Qui non c’e’ fretta.'], 'Torniamo a esplorare');
+    else openOverlay('Il bosco ti aspetta', ['Riparti quando vuoi. Qui non c’è fretta.'], 'Torniamo a esplorare');
   }
 
   // Elenco all'italiana: "SOLE, MELA e LUNA".

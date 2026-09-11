@@ -306,9 +306,9 @@ function checkCicloRaccoltaConsegna(game) {
   // CASSA/CASA: il gufo deve riconoscere la parola vera prima di correggere.
   const casa = game.messaggioErrore(round, round.choices[sbagliato] === 'S' ? 'S' : round.choices[sbagliato]);
   assert.ok(typeof casa === 'string' && casa.length > 0);
-  assert.ok(/^CASA e/.test(game.messaggioErrore(round, 'S')),
+  assert.ok(/^CASA è una parola vera/.test(game.messaggioErrore(round, 'S')),
     'CASA deve essere riconosciuta come parola vera, non liquidata come errore');
-  assert.ok(/^Non e/.test(game.messaggioErrore(round, 'ZZ')),
+  assert.ok(/^Non è questo/.test(game.messaggioErrore(round, 'ZZ')),
     'una non-parola resta un errore normale');
 }
 
