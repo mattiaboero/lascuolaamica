@@ -71,6 +71,15 @@ for (const m of sitemap.matchAll(/<loc>https:\/\/lascuolaamica\.it([^<]*)<\/loc>
   if (!risolve(m[1] || '/')) errori.push(`sitemap: ${m[1] || '/'} non corrisponde a nessuna pagina`);
 }
 
+// ------------------------------------------------------------ 4b. llms.txt
+// Ogni URL della sitemap deve comparire anche in llms.txt (G1 dell'audit SEO
+// dell'11/09/2026: 8 pagine su 22 mancavano e i crawler AI le ignoravano).
+const llms = fs.readFileSync(path.join(DST, 'llms.txt'), 'utf8');
+for (const m of sitemap.matchAll(/<loc>https:\/\/lascuolaamica\.it([^<]*)<\/loc>/g)) {
+  const url = 'https://lascuolaamica.it' + (m[1] || '/').replace(/\/$/, '');
+  if (!llms.includes(url)) errori.push(`llms.txt: manca ${url}, presente in sitemap.xml`);
+}
+
 // ------------------------------------------------------------ 5. riferimenti nelle pagine
 let riferimenti = 0;
 fs.readdirSync(DST).filter((f) => f.endsWith('.html')).forEach((pagina) => {

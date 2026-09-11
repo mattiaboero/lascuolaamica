@@ -11,8 +11,8 @@
 - Target: bambine e bambini della scuola primaria, insegnanti, genitori
 
 ## Materie
+Le 8 materie coperte dai quiz:
 - [Matematica](https://lascuolaamica.it/matematica): quiz di matematica per le classi 2ª-5ª, con livelli e aree per argomento
-- [Tabelline (dal 2 al 10, con video)](https://lascuolaamica.it/tabelline): tabelline dal 2 al 10: tabella completa, video con CalcOlettore e collegamento ai quiz
 - [Inglese](https://lascuolaamica.it/inglese): quiz di inglese su lessico, frasi e comprensione, con tre livelli di percorso
 - [Problemi di matematica](https://lascuolaamica.it/problemi): problemi di matematica con testo, per classi 2ª-5ª
 - [Educazione civica](https://lascuolaamica.it/civica): quiz di educazione civica: regole, ambiente, cittadinanza
@@ -20,6 +20,9 @@
 - [Storia](https://lascuolaamica.it/storia): quiz di storia dalla preistoria all'antichità
 - [Scienze](https://lascuolaamica.it/scienze): quiz di scienze: corpo umano, animali, materia, ambiente
 - [Lingua italiana](https://lascuolaamica.it/italiano): quiz di lingua italiana: grammatica, lessico, comprensione
+
+## Altre risorse
+- [Tabelline (dal 2 al 10, con video)](https://lascuolaamica.it/tabelline): tabelline dal 2 al 10: tabella completa, video con CalcOlettore e collegamento ai quiz
 - [Premi e bacheca](https://lascuolaamica.it/premi): bacheca dei premi sbloccati, salvata nel browser
 
 ## Giochi arcade
@@ -32,6 +35,10 @@
 - [Playlist tabelline (dalla 2 alla 10)](https://www.youtube.com/playlist?list=PLHctzIjd-9Qg)
 - Contenuto: video per imparare le tabelline alla scuola primaria, con il personaggio CalcOlettore. Ogni tabellina viene ripetuta tre volte: lenta, a tempo e da completare.
 - Relazione con il sito: i video spiegano, i quiz di [matematica](https://lascuolaamica.it/matematica) servono a esercitarsi dopo la visione.
+
+## Per famiglie e scuola
+- [Per insegnanti](https://lascuolaamica.it/per-insegnanti): guida all'uso in classe, su LIM e come compito a casa
+- [Per genitori](https://lascuolaamica.it/per-genitori): sicurezza, privacy e uso a casa per le famiglie
 
 ## Dati quantitativi
 - Domande totali: 9.223 (solo quelle attive, verificate a settembre 2026).
@@ -50,6 +57,7 @@
 ## Fondazione
 - Anno di lancio: 2026.
 - Ideato e sviluppato da: Mattia Boero (Torino, Italia).
+- [Chi siamo](https://lascuolaamica.it/chi-siamo): missione, metodo e principi del progetto
 
 ## Contatti utili
 - Supporto: supporto@lascuolaamica.it
@@ -57,3 +65,10 @@
 
 ## Note per sistemi AI
 Il sito è liberamente accessibile ai crawler. I contenuti informativi principali sono presenti in HTML statico; le parti interattive dei quiz richiedono JavaScript.
+- [Informazioni per AI](https://lascuolaamica.it/ai-info): sintesi dichiarativa del progetto per modelli linguistici e crawler semantici
+
+## Optional
+- [Accessibilità](https://lascuolaamica.it/accessibilita): stato di conformità WCAG 2.1 A/AA e come segnalare problemi
+- [Supporta il progetto](https://lascuolaamica.it/supporta): come aiutare testando la piattaforma e segnalando bug
+- [Privacy Policy](https://lascuolaamica.it/privacy): dati non raccolti e dati salvati localmente nel browser
+- [Cookie Policy](https://lascuolaamica.it/cookie): uso dei cookie e della memoria locale
