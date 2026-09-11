@@ -1,5 +1,89 @@
 # Changelog Repo
 
+## 4.13.21 - 2026-09-11
+
+**Sei rami in una release: il Bosco chiede i 30 minuti e scrive gli accenti
+veri, e le pagine smettono di muoversi mentre caricano.** I fix sono stati
+portati con `git cherry-pick -x` (i commit originali restano citati nei
+messaggi); i commit di release dei singoli rami (b9fa742, d65a484) sono stati
+scartati e riassunti qui.
+
+### Fixed
+- **Font di fallback piu' larghi dei webfont** (6074293). In `fonts.css`
+  `size-adjust` fra 118% e 126% rendeva Arial ~15% piu' largo di
+  Nunito/Fredoka: prima dello swap il testo andava a capo in punti diversi e
+  all'arrivo dei `.woff2` la pagina saliva. Ora i pesi 700+ e Fredoka partono
+  da Arial Bold, `size-adjust` e' tarato sul testo reale della home (93-102%),
+  `ascent/descent-override` = metrica del webfont / `size-adjust`.
+- **Pannello "Tempo di gioco" creato da `shared.js` dopo il primo paint**
+  (c0573a9). `ensurePlayWindowPanelUi()` lo inseriva via JS in home e in
+  /breakout (le 8 pagine materia lo avevano gia' statico). Ora e' nell'HTML
+  con gli attributi che il JS cerca; in /breakout ci sono anche i 4 bottoni di
+  `#classGrid`, che `renderClassGrid()` sostituisce 1:1.
+- **"Info" e "Supporta il progetto" aggiunti al footer da `shared.js`**
+  (aa74edd). Sul mobile il footer fisso andava a capo dopo il primo paint
+  (117 -> 169px). Ora il markup e' statico nei 23 footer che caricano
+  `shared.js` (`data-open-modal="modalInfoHub"`, `data-support-cta="1"`,
+  versione gia' `hidden`); le regole di `.footer-support-cta` passano dal
+  `<style>` iniettato a `utilities.css`; hash CSP del `<style>` iniettato
+  rigenerato in `_headers`. Il limite che quel ramo segnalava (chi-siamo e
+  inglese peggiori su mobile per i fallback ~17% sovradimensionati) era
+  misurato senza 6074293: con i due fix insieme non si presenta, vedi le
+  misure sotto.
+- **Il Bosco scriveva «E’ un frutto», «papa’», «piu’», «c’e’»** (bd9ce0b,
+  392bae2): proprio il gioco che allena l'accento sull'ultima vocale. Corretti
+  indizi, `REGOLE.accento`, `messaggioErrore()`, testi del gufo e overlay in
+  `js/bosco.js`; FAQ (JSON-LD e `<details>`), `description` dello schema e
+  `og:description` in `bosco.html`. La FAQ JSON-LD «Cosa succede se il bambino
+  sbaglia?» era rimasta alla versione precedente: ora coincide con la pagina.
+- **Il Bosco non chiedeva i 30 minuti di gioco** (bef39cd), che la FAQ
+  promette per ogni partita. Ora si apre in pausa sotto l'overlay «Entra nel
+  bosco», che passa da `SA.playWindow.ensureActive()` con gli stessi testi di
+  Spacca-Muri; alla scadenza la partita si chiude con l'avviso «Tempo di gioco
+  terminato» e si torna al cancello, senza perdere premi (`recordBosco`
+  registra ogni parola mentre si gioca). `scripts/check_bosco.js` verifica
+  rifiuto, ingresso e scadenza. Il ramo partiva da 4.13.19: conflitto in
+  `showPauseOverlay()` con il fix degli accenti, risolto tenendo il nuovo
+  overlay del cancello con «c’è».
+- **«Nessun timer» nel Bosco** contraddiceva il timer dei 30 minuti appena
+  arrivato: ora «nessun cronometro» in meta description, `og:description`,
+  `description` dello schema, elenco della pagina, FAQ (JSON-LD e
+  `<details>`) e tag della card in home («Senza cronometro»).
+- **SEO/GEO** (11d3695, f7bc485, 4c5c381, 2839e0a, 87dbfd1, 44e866a):
+  /per-insegnanti e /per-genitori linkano materie, tabelline e giochi, e la
+  home linka entrambe («Insegni o sei un genitore?»); `llms.txt` copre tutte
+  le 22 URL della sitemap e `check_export.js` fallisce se ne manca una; ogni
+  pagina materia cita le Indicazioni Nazionali con link a /ai-info, nella
+  sezione descrittiva sotto il quiz (non sopra i pulsanti della classe).
+
+### Misure
+CLS di laboratorio, produzione (4.13.20) contro `export/` di questa release
+servito in locale (HTTP/2, Brotli, `_headers` applicati). Playwright
+Chromium, service worker bloccato, cache disattivata, via CDP rete Slow 4G
+(562 ms, 180 KB/s) e CPU 4x; mediana di 3 prove, finestra di sessione.
+
+| pagina | mobile 412x823 prod -> build | desktop 1350x940 prod -> build |
+|---|---|---|
+| home | 0.039 -> 0.0001 | 0.052 -> 0.0001 |
+| breakout | 0 -> 0 | 0.053 -> 0.0006 |
+| chi-siamo | 0.421 -> 0.0004 | 0.022 -> 0.006 |
+| inglese | 0 -> 0 | 0.020 -> 0.001 |
+| matematica | 0 -> 0 | 0.013 -> 0.010 |
+| bosco | 0 -> 0.0004 | 0.008 -> 0.0003 |
+| premi | 0.070 -> 0.010 | 0.007 -> 0.0006 |
+
+"Mobile" e' con emulazione del telefono (DPR 2.625, touch). Ripetuto a
+412x823 senza emulazione (finestra desktop stretta, DPR 1): home 0.117 -> 0.0001,
+chi-siamo 0.439 -> 0.0004, inglese 0.204 -> 0.0001, matematica 0.136 ->
+0.0004, bosco 0.107 -> 0.0007, premi 0.097 -> 0.010, breakout 0.022 ->
+0.023. Su /breakout lo shift del footer (0.013) sparisce ma ne resta uno
+allo swap dei webfont (~0.023 a t~1.8 s, quando arrivano Fredoka e Nunito
+800/900: header e `.intro-note` salgono di qualche pixel): i fallback di
+6074293 sono tarati sul testo della home. Da rivedere a parte; non peggiora
+la produzione. Restano, gia' presenti in produzione, lo shift del pannello
+di /matematica desktop (0.0096, `.play-window-panel-start` da 160 a 50px) e
+quello di una `section` di /chi-siamo desktop (0.006).
+
 ## 4.13.20 - 2026-09-11
 
 **La diagnosi della 4.13.19 per la home era incompleta: mancava la pillola
