@@ -1,8 +1,9 @@
 [
  {
-  "date": "11 settembre 2026 · Release 4.13.19 – 4.13.20",
+  "date": "11 settembre 2026 · Release 4.13.19 – 4.13.21",
   "items": [
-   "La pagina \"Premi\" non si riorganizza più mentre carica. Sulla home, il pulsante \"Premi\" sopra il titolo adesso c'è già quando la pagina appare, e non spinge più giù il titolo e i giochi sui telefoni."
+   "La pagina \"Premi\" non si riorganizza più mentre carica. Sulla home, il pulsante \"Premi\" sopra il titolo adesso c'è già quando la pagina appare, e non spinge più giù il titolo e i giochi sui telefoni.",
+   "Il Bosco delle Lettere ora scrive gli accenti come si deve. Nei suggerimenti e nelle frasi del gufo comparivano \"piu'\", \"papa'\" o \"E' un frutto\" con l'apostrofo al posto dell'accento, proprio nel gioco che insegna a scrivere PAPÀ e PERCHÉ. Adesso si legge più, papà, È."
   ]
  },
  {

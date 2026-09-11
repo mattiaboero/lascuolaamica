@@ -1,5 +1,25 @@
 # Changelog Repo
 
+## 4.13.21 - 2026-09-11
+
+**Il Bosco delle Lettere scrive gli accenti veri.** Proprio il gioco che
+allena l'accento sull'ultima vocale mostrava e leggeva ai bambini «E’ un
+frutto», «papa’», «piu’», «c’e’», mentre nel banco scrive PAPÀ e PERCHÉ.
+
+### Fixed
+- **`js/bosco.js`: vocale + apostrofo tipografico al posto dell'accento** in
+  31 stringhe visibili o parlate: indizi di `PAROLE[].clue`, `REGOLE.accento`
+  (ora «città o così… perché»), `messaggioErrore()`, testi del gufo in
+  `owlTeach()` e overlay di pausa. Le elisioni vere (l’acqua, un’altra, la c’
+  di c’è) restano. I commenti del codice non sono stati toccati.
+- **`bosco.html`: stesse forme con apostrofo ASCII** (perche', e', cosi',
+  penalita', puo', Si') nelle FAQ, sia JSON-LD sia `<details>`, nella
+  `description` dello schema e in `og:description`.
+- **FAQPage JSON-LD disallineato dai `<details>`**: la risposta «Cosa succede
+  se il bambino sbaglia?» era rimasta alla versione precedente al cartello
+  che torna sulla piazzola e al gufo che riconosce CASA al posto di CASSA.
+  Ora le 6 coppie domanda/risposta coincidono parola per parola.
+
 ## 4.13.20 - 2026-09-11
 
 **La diagnosi della 4.13.19 per la home era incompleta: mancava la pillola
