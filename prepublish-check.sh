@@ -135,6 +135,38 @@ check_security_patterns() {
   fi
 }
 
+check_no_secret_leak() {
+  # Guarda solo i file tracciati da git: sono quelli che finiscono su GitHub,
+  # dove il repo e' pubblico. I file locali ignorati non riguardano nessuno.
+  #
+  # Due famiglie di pattern, entrambe nate da cose viste davvero nel repo:
+  # - path della macchina di chi lavora (/Users/<nome>, /home/<nome>, C:\Users\):
+  #   un report SEO ne aveva uno, e rivela username e struttura del disco;
+  # - forme note di chiavi e token. Non tutte le chiavi hanno una forma
+  #   riconoscibile, quindi questo controllo alza il costo di una svista, non
+  #   e' una garanzia: una chiave senza prefisso passa lo stesso.
+  #
+  # /Users/ seguito da un carattere non alfanumerico non conta: serve a lasciar
+  # passare i commenti che nominano il pattern (vedi scripts/sync_github_wiki.sh).
+  if ! command -v git >/dev/null 2>&1; then
+    echo "[WARN] git non disponibile, controllo anti-leak saltato"
+    return
+  fi
+
+  local percorsi chiavi findings
+  percorsi='(/Users/|/home/)[A-Za-z0-9_-][A-Za-z0-9._-]+|C:\\Users\\[A-Za-z0-9._-]+'
+  chiavi='AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-ant-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{35}|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}'
+
+  findings=$(git ls-files -z | xargs -0 grep -InE "$percorsi|$chiavi" || true)
+  if [[ -n "$findings" ]]; then
+    echo "[ERROR] file tracciati: path locali o chiavi in chiaro"
+    echo "$findings"
+    status=1
+  else
+    echo "[OK] file tracciati: nessun path locale, nessuna chiave in chiaro"
+  fi
+}
+
 check_csp_hashes() {
   if python3 scripts/sync_csp_hashes.py --check; then
     echo "[OK] _headers: inline script+style CSP hashes are aligned"
@@ -202,6 +234,7 @@ check_csp_hashes
 check_rewards_page_metadata
 check_css_hygiene
 check_security_patterns
+check_no_secret_leak
 for file in "${HTML_FILES[@]}"; do
   check_target_blank_rel "$file"
 done
