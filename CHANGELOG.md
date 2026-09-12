@@ -1,5 +1,46 @@
 # Changelog Repo
 
+## Non rilasciato - 2026-09-12
+
+### Security
+- **La cartella `lascuolaamica.it-audit/` era pubblica su GitHub**, in due ref
+  che nessuno guardava piu': il branch `fix/ripasso-crash-e-ci` e il tag
+  `v4.13.17`. Era stata tolta da `main` con fc27148 e aggiunta a `.gitignore`,
+  ma quei due ref la portavano ancora nel loro albero — 25 file, fra cui i tre
+  `.xlsx` di Search Console (query, click, impression, posizioni) e un path
+  assoluto del disco di chi lavora al sito in `findings/visual.md`. Branch e
+  tag cancellati da remoto e in locale; il branch era gia' mergiato in `main`,
+  nessun commit perso. I blob restano raggiungibili per SHA diretto finche'
+  GitHub non fa garbage collection: i dati di traffico vanno considerati usciti.
+  Nessuna credenziale era coinvolta (la chiave del service account sta fuori dal
+  repo, in `~/.config/`).
+
+### Added
+- **`check_no_secret_leak` in `prepublish-check.sh`**, cioe' il controllo che
+  sarebbe servito a fermare la cosa qui sopra prima del push. Gira su
+  `git ls-files` — non sul disco: cio' che non e' tracciato non finisce su
+  GitHub e non riguarda nessuno — e cerca due famiglie di pattern: i path della
+  macchina locale (`/Users/<nome>`, `/home/<nome>`, `C:\Users\<nome>`), che
+  rivelano username e struttura del disco, e le forme note di chiavi e token
+  (`AKIA`, `ghp_`/`gho_`/`ghu_`/`ghs_`/`ghr_`, `github_pat_`, `sk-ant-`,
+  `AIza`, `xox[baprs]-`, blocchi PRIVATE KEY, JWT). Dopo `/Users/` serve un
+  carattere alfanumerico, cosi' i commenti che nominano il pattern passano
+  (`scripts/sync_github_wiki.sh` e' il caso reale). Il limite e' scritto nella
+  funzione: una chiave senza prefisso riconoscibile passa lo stesso — alza il
+  costo di una svista, non e' una garanzia.
+
+### Notes
+- Nessun bump: non cambia nessun file servito al browser.
+- Il resto del controllo sul repo non ha trovato altro. In tutti i 521 commit
+  di ogni ref: nessuna chiave, nessun `.env`, nessun `.pem`, nessun
+  service-account json, mai. Nei file tracciati di oggi: nessun path locale,
+  una sola email (`supporto@lascuolaamica.it`, pubblica per scelta). Restano
+  nella storia pubblica di `main` l'hash SHA-256 del token del vecchio editor
+  `admin/` (strumento rimosso con b2c736d, `/admin/*` risponde 404 in
+  produzione: quel token va considerato bruciato) e quattro file del vault
+  Obsidian committati per sbaglio nella 4.10.0, letti uno per uno, dentro non
+  c'e' niente.
+
 ## 4.13.21 - 2026-09-11
 
 **Sei rami in una release: il Bosco chiede i 30 minuti e scrive gli accenti
