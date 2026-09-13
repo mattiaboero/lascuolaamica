@@ -16,7 +16,7 @@
   repo, in `~/.config/`).
 
 ### Added
-- **Pagina "link in bio" su `/link`** (`link/index.html`), unico link cliccabile
+- **Pagina "link in bio" su `/link`** (`link.html`, con `link.css`), unico link cliccabile
   dalla bio Instagram: cinque voci a piena larghezza verso esercizi, playlist
   tabelline, playlist canzoni, canale YouTube e mail. Non porta un sistema
   visivo suo: carica `tokens.css` e `fonts.css` come le altre pagine, usa le
@@ -26,8 +26,12 @@
   >= 5.13:1, calcolati e annotati in fondo al file. Nessun asset nuovo:
   mascotte `cervellino-waving-03` e `og-home-1200x630.jpg` erano gia' in repo.
   Fuori dalla lista di precache del service worker: e' una pagina d'ingresso
-  dai social, non serve offline. APP_VERSION 4.13.21 -> 4.13.22 per rinnovare
-  la cache.
+  dai social, non serve offline. Sta nella root come tutte le altre pagine:
+  `export_for_cloudflare.sh` pubblica solo `^[^/]+\.html$`, quindi da
+  `link/index.html` la pagina non finiva nell'export e in produzione dava 404
+  (trovato dopo il merge di #18, con la 4.13.22 gia' online). La route `/link`
+  arriva dalle clean URL di Cloudflare, come `/storia` da `storia.html`.
+  APP_VERSION 4.13.21 -> 4.13.23 per rinnovare la cache.
 - **`check_no_secret_leak` in `prepublish-check.sh`**, cioe' il controllo che
   sarebbe servito a fermare la cosa qui sopra prima del push. Gira su
   `git ls-files` — non sul disco: cio' che non e' tracciato non finisce su

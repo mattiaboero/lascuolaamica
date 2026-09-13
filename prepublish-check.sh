@@ -13,7 +13,7 @@ while IFS= read -r -d '' f; do HTML_FILES+=("$(basename "$f")"); done \
   < <(find . -maxdepth 1 -name '*.html' -print0 | sort -z)
 
 # Pagine statiche che non dipendono da JS: un <noscript> qui sarebbe decorativo.
-NOSCRIPT_EXEMPT=("404.html")
+NOSCRIPT_EXEMPT=("404.html" "link.html")
 
 check_html_integrity() {
   local file="$1"
@@ -41,8 +41,10 @@ check_html_integrity() {
   fi
 
   local opens closes
-  opens=$(grep -o '<script[^>]*>' "$file" | wc -l | tr -d ' ')
-  closes=$(grep -o '</script>' "$file" | wc -l | tr -d ' ')
+  # || true: una pagina senza <script> (link.html) fa uscire grep con 1, che
+  # sotto `set -e` interrompeva il controllo a meta' senza stampare nulla.
+  opens=$({ grep -o '<script[^>]*>' "$file" || true; } | wc -l | tr -d ' ')
+  closes=$({ grep -o '</script>' "$file" || true; } | wc -l | tr -d ' ')
   if [[ "$opens" != "$closes" ]]; then
     echo "[ERROR] $file: script tag mismatch (open=$opens close=$closes)"
     status=1
