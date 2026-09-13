@@ -9,7 +9,6 @@ body {
   color: var(--ws-slate-black, #2c2a28);
   font-size: 17px;
   line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
 }
 
 .card {
