@@ -31,7 +31,9 @@
   `link/index.html` la pagina non finiva nell'export e in produzione dava 404
   (trovato dopo il merge di #18, con la 4.13.22 gia' online). La route `/link`
   arriva dalle clean URL di Cloudflare, come `/storia` da `storia.html`.
-  APP_VERSION 4.13.21 -> 4.13.23 per rinnovare la cache.
+  APP_VERSION 4.13.21 -> 4.13.24 per rinnovare la cache. La route e' in
+  `PAGES` di `generate_sitemap.py` (monthly, 0.4: pagina d'ingresso, non
+  contenuto didattico), quindi in sitemap.xml — 23 URL.
 - **`check_no_secret_leak` in `prepublish-check.sh`**, cioe' il controllo che
   sarebbe servito a fermare la cosa qui sopra prima del push. Gira su
   `git ls-files` — non sul disco: cio' che non e' tracciato non finisce su

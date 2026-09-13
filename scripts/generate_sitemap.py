@@ -34,6 +34,7 @@ PAGES = [
     ("/supporta", "supporta.html", "monthly", "0.6"),
     ("/privacy", "privacy.html", "monthly", "0.5"),
     ("/cookie", "cookie.html", "monthly", "0.5"),
+    ("/link", "link.html", "monthly", "0.4"),
 ]
 
 
