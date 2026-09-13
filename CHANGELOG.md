@@ -16,6 +16,18 @@
   repo, in `~/.config/`).
 
 ### Added
+- **Pagina "link in bio" su `/link`** (`link/index.html`), unico link cliccabile
+  dalla bio Instagram: cinque voci a piena larghezza verso esercizi, playlist
+  tabelline, playlist canzoni, canale YouTube e mail. Non porta un sistema
+  visivo suo: carica `tokens.css` e `fonts.css` come le altre pagine, usa le
+  hue materia Wada Sanzo per i bottoni (quelle di `index.css` sono calibrate
+  per i gradienti delle card e con testo bianco stanno sotto 4.5:1), il
+  gradiente cielo della home e lo stesso indicatore di focus. Contrasti tutti
+  >= 5.13:1, calcolati e annotati in fondo al file. Nessun asset nuovo:
+  mascotte `cervellino-waving-03` e `og-home-1200x630.jpg` erano gia' in repo.
+  Fuori dalla lista di precache del service worker: e' una pagina d'ingresso
+  dai social, non serve offline. APP_VERSION 4.13.21 -> 4.13.22 per rinnovare
+  la cache.
 - **`check_no_secret_leak` in `prepublish-check.sh`**, cioe' il controllo che
   sarebbe servito a fermare la cosa qui sopra prima del push. Gira su
   `git ls-files` — non sul disco: cio' che non e' tracciato non finisce su
