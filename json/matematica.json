@@ -70099,7 +70099,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: +3 + +4.",
+   "question": "Esegui questa addizione tra numeri relativi: (+3) + (+4).",
    "options": [
     "+7",
     "-7",
@@ -70108,7 +70108,7 @@
    ],
    "answerIndex": 0,
    "answer": "+7",
-   "explanation": "Sommando due numeri relativi con lo stesso segno positivo, sommi i valori e tieni il segno: 3 + 4 = 7, quindi +3 + +4 = +7.",
+   "explanation": "Sommando due numeri relativi con lo stesso segno positivo, sommi i valori e tieni il segno: 3 + 4 = 7, quindi (+3) + (+4) = +7.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70131,7 +70131,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: -2 + -5.",
+   "question": "Esegui questa addizione tra numeri relativi: (-2) + (-5).",
    "options": [
     "+7",
     "-7",
@@ -70140,7 +70140,7 @@
    ],
    "answerIndex": 1,
    "answer": "-7",
-   "explanation": "Sommando due numeri relativi con lo stesso segno negativo, sommi i valori e tieni il segno: 2 + 5 = 7, quindi -2 + -5 = -7.",
+   "explanation": "Sommando due numeri relativi con lo stesso segno negativo, sommi i valori e tieni il segno: 2 + 5 = 7, quindi (-2) + (-5) = -7.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70163,7 +70163,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Esegui questa addizione tra numeri relativi: +6 + -2.",
+   "question": "Esegui questa addizione tra numeri relativi: (+6) + (-2).",
    "options": [
     "-4",
     "+8",
@@ -70172,7 +70172,7 @@
    ],
    "answerIndex": 2,
    "answer": "+4",
-   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 6 - 2 = 4, e 6 è positivo, quindi +6 + -2 = +4.",
+   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 6 - 2 = 4, e 6 è positivo, quindi (+6) + (-2) = +4.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70195,7 +70195,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Esegui questa addizione tra numeri relativi: -7 + +3.",
+   "question": "Esegui questa addizione tra numeri relativi: (-7) + (+3).",
    "options": [
     "+4",
     "-10",
@@ -70204,7 +70204,7 @@
    ],
    "answerIndex": 3,
    "answer": "-4",
-   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 7 - 3 = 4, e 7 è negativo, quindi -7 + +3 = -4.",
+   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 7 - 3 = 4, e 7 è negativo, quindi (-7) + (+3) = -4.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70227,7 +70227,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: +5 + -5.",
+   "question": "Esegui questa addizione tra numeri relativi: (+5) + (-5).",
    "options": [
     "0",
     "+10",
@@ -70236,7 +70236,7 @@
    ],
    "answerIndex": 0,
    "answer": "0",
-   "explanation": "Un numero relativo sommato al suo opposto dà sempre zero: 5 - 5 = 0, quindi +5 + -5 = 0.",
+   "explanation": "Un numero relativo sommato al suo opposto dà sempre zero: 5 - 5 = 0, quindi (+5) + (-5) = 0.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70268,7 +70268,7 @@
    ],
    "answerIndex": 1,
    "answer": "+2°C",
-   "explanation": "Salire di 6 gradi vuol dire sommare +6: -4 + 6 = 2, quindi la temperatura di oggi è +2°C.",
+   "explanation": "Salire di 6 gradi vuol dire sommare +6: (-4) + (+6) = +2, quindi la temperatura di oggi è +2°C.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70300,7 +70300,7 @@
    ],
    "answerIndex": 2,
    "answer": "-13",
-   "explanation": "Scendere di altri 5 metri vuol dire sommare -5: -8 + -5 = -13, quindi il sub è a -13 metri.",
+   "explanation": "Scendere di altri 5 metri vuol dire sommare -5: (-8) + (-5) = -13, quindi il sub è a -13 metri.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70322,17 +70322,17 @@
    "class": 5,
    "area": "aritmetica",
    "subarea": "numeri_relativi",
-   "difficulty": 3,
-   "question": "Alle 8 del mattino la temperatura era -6°C, alle 14 era salita di 9 gradi. Con un'addizione tra numeri relativi, qual è la differenza tra le due temperature?",
+   "difficulty": 2,
+   "question": "Alle 8 del mattino c'erano -6°C; alle 14 la temperatura era salita di 9 gradi. Con un'addizione tra numeri relativi, quanti gradi c'erano alle 14?",
    "options": [
-    "-9",
-    "+3",
-    "-3",
-    "+9"
+    "-15°C",
+    "+15°C",
+    "-3°C",
+    "+3°C"
    ],
    "answerIndex": 3,
-   "answer": "+9",
-   "explanation": "La differenza tra le due temperature è proprio la variazione avvenuta, cioè un aumento di 9 gradi: si scrive +9.",
+   "answer": "+3°C",
+   "explanation": "Salire di 9 gradi vuol dire sommare +9: (-6) + (+9) = +3, quindi alle 14 c'erano +3°C.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70364,7 +70364,7 @@
    ],
    "answerIndex": 0,
    "answer": "+3",
-   "explanation": "Salire di 5 piani vuol dire sommare +5: -2 + 5 = 3, quindi l'ascensore arriva al piano +3.",
+   "explanation": "Salire di 5 piani vuol dire sommare +5: (-2) + (+5) = +3, quindi l'ascensore arriva al piano +3.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70387,7 +70387,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Esegui questa addizione tra numeri relativi: -10 + +4.",
+   "question": "Esegui questa addizione tra numeri relativi: (-10) + (+4).",
    "options": [
     "+6",
     "-6",
@@ -70396,7 +70396,7 @@
    ],
    "answerIndex": 1,
    "answer": "-6",
-   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 10 - 4 = 6, e 10 è negativo, quindi -10 + +4 = -6.",
+   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 10 - 4 = 6, e 10 è negativo, quindi (-10) + (+4) = -6.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70428,7 +70428,7 @@
    ],
    "answerIndex": 2,
    "answer": "-7°C",
-   "explanation": "Parti da -3, sommi +2 e ottieni -1; poi sommi -6 e ottieni -7: la temperatura finale è -7°C.",
+   "explanation": "Parti da -3 e sommi +2: (-3) + (+2) = -1. Poi sommi -6: (-1) + (-6) = -7. La temperatura finale è -7°C.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70451,7 +70451,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: +2 + +9.",
+   "question": "Esegui questa addizione tra numeri relativi: (+2) + (+9).",
    "options": [
     "-11",
     "+7",
@@ -70460,7 +70460,7 @@
    ],
    "answerIndex": 3,
    "answer": "+11",
-   "explanation": "Sommando due numeri relativi con lo stesso segno positivo, sommi i valori e tieni il segno: 2 + 9 = 11, quindi +2 + +9 = +11.",
+   "explanation": "Sommando due numeri relativi con lo stesso segno positivo, sommi i valori e tieni il segno: 2 + 9 = 11, quindi (+2) + (+9) = +11.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70584,11 +70584,11 @@
     "Il segmento che unisce il centro con un punto della circonferenza",
     "La lunghezza del contorno del cerchio",
     "Il centro del cerchio",
-    "Un segmento che unisce due punti della circonferenza, senza passare per il centro"
+    "Un segmento che unisce due punti qualsiasi della circonferenza"
    ],
    "answerIndex": 3,
-   "answer": "Un segmento che unisce due punti della circonferenza, senza passare per il centro",
-   "explanation": "La corda è un segmento che unisce due punti qualsiasi della circonferenza, e non deve passare per il centro.",
+   "answer": "Un segmento che unisce due punti qualsiasi della circonferenza",
+   "explanation": "La corda è un segmento che unisce due punti qualsiasi della circonferenza; se passa per il centro, quella corda è il diametro.",
    "active": true,
    "tag": "matematica;cerchio;classe_5;primaria",
    "tags": [
@@ -70616,7 +70616,7 @@
     "Perché passando per il centro unisce i due punti più lontani della circonferenza",
     "Perché è sempre uguale al raggio",
     "Perché tocca la circonferenza in un solo punto",
-    "Perché non passa per il centro"
+    "Perché è una linea curva"
    ],
    "answerIndex": 0,
    "answer": "Perché passando per il centro unisce i due punti più lontani della circonferenza",
@@ -70840,10 +70840,10 @@
     "Sì, l'area si trova sempre così",
     "No, bisogna moltiplicare il diametro per se stesso e poi per 3,14",
     "Sì, ma solo se il diametro è un numero pari",
-    "No, quella è la circonferenza: l'area si trova moltiplicando il raggio per se stesso e poi per 3,14"
+    "No, così trova la circonferenza: per l'area serve raggio × raggio × 3,14"
    ],
    "answerIndex": 3,
-   "answer": "No, quella è la circonferenza: l'area si trova moltiplicando il raggio per se stesso e poi per 3,14",
+   "answer": "No, così trova la circonferenza: per l'area serve raggio × raggio × 3,14",
    "explanation": "Luca non ha ragione: moltiplicare il diametro per 3,14 dà la circonferenza, non l'area. L'area si calcola con raggio × raggio × 3,14.",
    "active": true,
    "tag": "matematica;cerchio;classe_5;primaria",
@@ -70872,7 +70872,7 @@
     "parallelogramma",
     "trapezio",
     "quadrilatero irregolare",
-    "poligono"
+    "trapezio rettangolo"
    ],
    "answerIndex": 0,
    "answer": "parallelogramma",
@@ -71091,7 +71091,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il quadrato ha quattro lati uguali, come il rombo, e quattro angoli retti. Di quali due figure ha tutte le proprietà insieme?",
+   "question": "Il quadrato ha quattro lati uguali e quattro angoli retti. Di quali due quadrilateri ha tutte le proprietà insieme?",
    "options": [
     "trapezio e rombo",
     "trapezio e rettangolo",
@@ -71123,7 +71123,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 3,
-   "question": "Il rettangolo è un parallelogramma e le sue due diagonali hanno sempre la stessa proprietà speciale. Quale?",
+   "question": "Il rettangolo è un parallelogramma speciale. Quale proprietà hanno sempre le sue due diagonali?",
    "options": [
     "sono uguali tra loro",
     "sono sempre perpendicolari",
@@ -71251,7 +71251,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Che cosa caratterizza un triangolo equilatero?",
+   "question": "Da che cosa riconosci un triangolo equilatero?",
    "options": [
     "Ha due lati uguali e uno diverso",
     "Ha tre lati della stessa lunghezza",
@@ -71283,16 +71283,16 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Che cosa caratterizza un triangolo isoscele?",
+   "question": "Quale di queste proprietà ha sempre un triangolo isoscele?",
    "options": [
-    "Ha tre lati della stessa lunghezza",
     "Ha tre lati tutti diversi tra loro",
-    "Ha due lati uguali e uno diverso",
-    "Ha un angolo maggiore di 90°"
+    "Ha un angolo maggiore di 90°",
+    "Ha due lati uguali",
+    "Ha tutti gli angoli uguali"
    ],
    "answerIndex": 2,
-   "answer": "Ha due lati uguali e uno diverso",
-   "explanation": "Il triangolo isoscele ha due lati uguali e uno diverso, per questo si chiama così.",
+   "answer": "Ha due lati uguali",
+   "explanation": "Il triangolo isoscele ha due lati della stessa lunghezza: da qui viene il suo nome, che significa «gambe uguali».",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
    "tags": [
@@ -71315,15 +71315,15 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Che cosa caratterizza un triangolo scaleno?",
+   "question": "Un triangolo scaleno ha i lati...",
    "options": [
-    "Ha due lati uguali e uno diverso",
-    "Ha tre lati tutti diversi tra loro",
-    "Ha tre lati della stessa lunghezza",
-    "Ha tutti gli angoli acuti"
+    "due uguali e uno diverso",
+    "tutti diversi tra loro",
+    "tutti della stessa lunghezza",
+    "sempre lunghi più di 10 cm"
    ],
    "answerIndex": 1,
-   "answer": "Ha tre lati tutti diversi tra loro",
+   "answer": "tutti diversi tra loro",
    "explanation": "Il triangolo scaleno ha tre lati tutti diversi tra loro, per questo si chiama così.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
@@ -71347,15 +71347,15 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Che cosa caratterizza un triangolo rettangolo?",
+   "question": "Che cosa ha sempre un triangolo rettangolo?",
    "options": [
-    "Ha tutti gli angoli acuti",
-    "Ha un angolo maggiore di 90°",
-    "Ha tre lati uguali",
-    "Ha un angolo di 90°"
+    "Tre angoli acuti",
+    "Un angolo maggiore di 90°",
+    "Tre angoli di 60°",
+    "Un angolo di 90°"
    ],
    "answerIndex": 3,
-   "answer": "Ha un angolo di 90°",
+   "answer": "Un angolo di 90°",
    "explanation": "Il triangolo con un angolo di 90° si chiama triangolo rettangolo.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
@@ -71443,7 +71443,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Anche in un triangolo scaleno, come in tutti i triangoli, quanto misura la somma degli angoli interni?",
+   "question": "Quanto misura la somma degli angoli interni di un triangolo scaleno?",
    "options": [
     "90°",
     "360°",
@@ -71671,7 +71671,7 @@
    "options": [
     "Sì, se i lati sono molto lunghi",
     "Sì, tutti i triangoli equilateri sono anche rettangoli",
-    "No, perché un triangolo equilatero non ha angoli",
+    "No, perché un triangolo rettangolo ha sempre due lati uguali",
     "No, perché un triangolo equilatero ha sempre angoli di 60° e nessuno è retto"
    ],
    "answerIndex": 3,
@@ -71701,13 +71701,13 @@
    "difficulty": 3,
    "question": "Un triangolo scaleno può essere anche rettangolo? Perché?",
    "options": [
-    "Sì, per esempio un triangolo con lati 3 cm, 4 cm e 5 cm, tutti diversi, che ha anche un angolo di 90°",
+    "Sì, può avere tre lati diversi e anche un angolo di 90°",
     "No, il triangolo rettangolo ha sempre due lati uguali",
     "No, il triangolo scaleno non può avere angoli di 90°",
     "Sì, ma solo se è anche equilatero"
    ],
    "answerIndex": 0,
-   "answer": "Sì, per esempio un triangolo con lati 3 cm, 4 cm e 5 cm, tutti diversi, che ha anche un angolo di 90°",
+   "answer": "Sì, può avere tre lati diversi e anche un angolo di 90°",
    "explanation": "Un triangolo scaleno ha tre lati diversi tra loro, ma questo non impedisce di avere anche un angolo di 90°: per esempio un triangolo con lati 3 cm, 4 cm e 5 cm è scaleno e allo stesso tempo rettangolo.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
@@ -71768,7 +71768,7 @@
     "-6",
     "-2",
     "sono uguali",
-    "-6 è il doppio"
+    "non si possono confrontare"
    ],
    "answerIndex": 1,
    "answer": "-2",
@@ -71923,12 +71923,12 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Confronta due quote scritte come numeri relativi, -1 e -3: quale piano è più in basso?",
+   "question": "Confronta due piani sotto terra scritti come numeri relativi, -1 e -3: quale piano è più in basso?",
    "options": [
     "-1",
     "sono allo stesso livello",
     "-3",
-    "-1 è più in basso"
+    "non si può dire"
    ],
    "answerIndex": 2,
    "answer": "-3",
@@ -72156,7 +72156,7 @@
    ],
    "answerIndex": 1,
    "answer": "esponente",
-   "explanation": "Nella scrittura 2⁴ il 4 indica quante volte moltiplicare la base per se stessa: si chiama esponente.",
+   "explanation": "Nella scrittura 2⁴ il 4 indica quante volte la base 2 compare come fattore: si chiama esponente.",
    "active": true,
    "tag": "matematica;potenze;classe_5;primaria",
    "tags": [
@@ -72220,7 +72220,7 @@
    ],
    "answerIndex": 3,
    "answer": "8",
-   "explanation": "Al cubo significa elevato a 3: moltiplichi 2 per se stesso tre volte, 2 × 2 × 2 = 8.",
+   "explanation": "Al cubo significa elevato a 3: prendi 2 come fattore tre volte, 2 × 2 × 2 = 8.",
    "active": true,
    "tag": "matematica;potenze;classe_5;primaria",
    "tags": [
@@ -72316,7 +72316,7 @@
    ],
    "answerIndex": 2,
    "answer": "27",
-   "explanation": "Moltiplichi 3 per se stesso tre volte: 3 × 3 × 3 = 27.",
+   "explanation": "Prendi 3 come fattore tre volte: 3 × 3 × 3 = 27.",
    "active": true,
    "tag": "matematica;potenze;classe_5;primaria",
    "tags": [
@@ -72476,7 +72476,7 @@
    ],
    "answerIndex": 3,
    "answer": "no, 4² = 4 × 4 = 16",
-   "explanation": "L'esponente 2 significa moltiplicare la base per se stessa due volte, non moltiplicarla per l'esponente: 4² = 4 × 4 = 16.",
+   "explanation": "L'esponente 2 dice di usare la base 4 come fattore due volte, non di moltiplicarla per 2: 4² = 4 × 4 = 16.",
    "active": true,
    "tag": "matematica;potenze;classe_5;primaria",
    "tags": [
@@ -72499,7 +72499,7 @@
    "area": "aritmetica",
    "subarea": "potenze",
    "difficulty": 3,
-   "question": "Un contenitore quadrato ha ogni lato di 7 caselle. Quante caselle in tutto occupa, scritto come potenza?",
+   "question": "Una scacchiera quadrata ha 7 caselle per lato. Quante caselle ha in tutto, scritto come potenza?",
    "options": [
     "7² = 49",
     "7 × 2 = 14",
@@ -72508,7 +72508,7 @@
    ],
    "answerIndex": 0,
    "answer": "7² = 49",
-   "explanation": "Un quadrato con il lato di 7 caselle ha 7 file da 7 caselle: si calcola con 7², cioè 7 × 7 = 49.",
+   "explanation": "Una scacchiera quadrata con 7 caselle per lato ha 7 file da 7 caselle: si calcola con 7², cioè 7 × 7 = 49.",
    "active": true,
    "tag": "matematica;potenze;classe_5;primaria",
    "tags": [
@@ -72535,7 +72535,7 @@
    "options": [
     "3² = 9",
     "3³ = 27",
-    "3 × 3 = 9",
+    "3 × 6 = 18",
     "2³ = 8"
    ],
    "answerIndex": 1,
@@ -72599,8 +72599,8 @@
    "options": [
     "300",
     "30",
-    "3000",
-    "30000"
+    "3.000",
+    "30.000"
    ],
    "answerIndex": 0,
    "answer": "300",
@@ -72631,8 +72631,8 @@
    "options": [
     "20",
     "200",
-    "2000",
-    "20000"
+    "2.000",
+    "20.000"
    ],
    "answerIndex": 1,
    "answer": "200",
@@ -72662,9 +72662,9 @@
    "question": "Quanti mm² sono 4 cm²?",
    "options": [
     "40",
-    "4000",
+    "4.000",
     "400",
-    "40000"
+    "40.000"
    ],
    "answerIndex": 2,
    "answer": "400",
@@ -72695,7 +72695,7 @@
    "options": [
     "50",
     "0,5",
-    "5000",
+    "5.000",
     "5"
    ],
    "answerIndex": 3,
@@ -72728,7 +72728,7 @@
     "3",
     "30",
     "0,3",
-    "3000"
+    "3.000"
    ],
    "answerIndex": 0,
    "answer": "3",
@@ -72759,8 +72759,8 @@
    "options": [
     "20",
     "200",
-    "2000",
-    "20000"
+    "2.000",
+    "20.000"
    ],
    "answerIndex": 1,
    "answer": "200",
@@ -72790,9 +72790,9 @@
    "question": "Quanti dam² sono 3 hm²?",
    "options": [
     "30",
-    "3000",
+    "3.000",
     "300",
-    "30000"
+    "30.000"
    ],
    "answerIndex": 2,
    "answer": "300",
@@ -72822,8 +72822,8 @@
    "question": "Quanti hm² sono 2 km²?",
    "options": [
     "20",
-    "2000",
-    "20000",
+    "2.000",
+    "20.000",
     "200"
    ],
    "answerIndex": 3,
@@ -72856,7 +72856,7 @@
     "6",
     "60",
     "0,6",
-    "6000"
+    "6.000"
    ],
    "answerIndex": 0,
    "answer": "6",
@@ -72888,7 +72888,7 @@
     "50",
     "5",
     "0,5",
-    "5000"
+    "5.000"
    ],
    "answerIndex": 1,
    "answer": "5",
@@ -72920,7 +72920,7 @@
     "5",
     "500",
     "50",
-    "5000"
+    "5.000"
    ],
    "answerIndex": 2,
    "answer": "50",
@@ -72950,8 +72950,8 @@
    "question": "Quanti dm² sono 1,5 m²?",
    "options": [
     "15",
-    "1500",
-    "15000",
+    "1.500",
+    "15.000",
     "150"
    ],
    "answerIndex": 3,
@@ -72984,7 +72984,7 @@
     "2,5",
     "25",
     "0,25",
-    "2500"
+    "2.500"
    ],
    "answerIndex": 0,
    "answer": "2,5",
@@ -73011,16 +73011,16 @@
    "area": "geometria",
    "subarea": "misure_superficie",
    "difficulty": 3,
-   "question": "Quanti m² sono in 1 ettaro (1 hm²)?",
+   "question": "Quanti m² ci sono in un ettaro (1 hm²)?",
    "options": [
     "10",
-    "10000",
+    "10.000",
     "100",
-    "1000000"
+    "1.000.000"
    ],
    "answerIndex": 1,
-   "answer": "10000",
-   "explanation": "1 ettaro corrisponde a 1 hm², e fra hm² e m² ci sono due passi da 100: 100 × 100 = 10000. Quindi 1 hm² = 10000 m².",
+   "answer": "10.000",
+   "explanation": "Un ettaro corrisponde a 1 hm², e fra hm² e m² ci sono due passi da 100: 100 × 100 = 10.000. Quindi 1 hm² = 10.000 m².",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -73043,16 +73043,16 @@
    "area": "geometria",
    "subarea": "misure_superficie",
    "difficulty": 3,
-   "question": "Quanti m² sono in 1 ara (1 dam²)?",
+   "question": "Quanti m² ci sono in un'ara (1 dam²)?",
    "options": [
     "10",
-    "1000",
+    "1.000",
     "100",
-    "10000"
+    "10.000"
    ],
    "answerIndex": 2,
    "answer": "100",
-   "explanation": "1 ara corrisponde a 1 dam²: 1 dam² = 1 × 100 = 100 m².",
+   "explanation": "Un'ara corrisponde a 1 dam²: 1 dam² = 1 × 100 = 100 m².",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -73075,12 +73075,12 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 1,
-   "question": "Nel numero 3.450.000, che appartiene alla classe dei milioni, la cifra 3 rappresenta...",
+   "question": "Nel numero 3.450.000, quanto vale la cifra 3?",
    "options": [
     "3 milioni",
-    "3 centomila",
+    "3 centinaia di migliaia",
     "3 miliardi",
-    "3 mila"
+    "3 migliaia"
    ],
    "answerIndex": 0,
    "answer": "3 milioni",
@@ -73203,7 +73203,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "Il numero 7.020.000, nella classe dei milioni, si legge...",
+   "question": "Come si legge il numero 7.020.000?",
    "options": [
     "sette milioni ventimila",
     "sette milioni duecentomila",
@@ -73212,7 +73212,7 @@
    ],
    "answerIndex": 0,
    "answer": "sette milioni ventimila",
-   "explanation": "Le cifre 7.020.000 si dividono in 7 milioni e 020 migliaia, cioè 7 milioni e 20mila: si legge sette milioni ventimila.",
+   "explanation": "7.020.000 si divide in 7 milioni e 020 migliaia, cioè 7 milioni e 20 mila: si legge sette milioni ventimila.",
    "active": true,
    "tag": "matematica;numeri;classe_5;primaria",
    "tags": [
@@ -73363,7 +73363,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "Ordina dal più piccolo al più grande: 890.000 - 9.000.000 - 89.000 - 900.000.",
+   "question": "Ordina dal più piccolo al più grande: 890.000, 9.000.000, 89.000, 900.000.",
    "options": [
     "9.000.000, 900.000, 890.000, 89.000",
     "89.000, 890.000, 900.000, 9.000.000",
@@ -73427,7 +73427,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "Quale scrittura in lettere corrisponde al numero 12.000.000, nella classe dei milioni?",
+   "question": "Come si scrive in lettere il numero 12.000.000?",
    "options": [
     "dodici miliardi",
     "centoventi milioni",
@@ -73557,14 +73557,14 @@
    "difficulty": 1,
    "question": "I numeri relativi sono i numeri...",
    "options": [
-    "preceduti da un segno + o -",
+    "i numeri positivi, i numeri negativi e lo zero",
     "solo i numeri pari",
     "solo le frazioni",
     "solo i numeri fino a 10"
    ],
    "answerIndex": 0,
-   "answer": "preceduti da un segno + o -",
-   "explanation": "I numeri relativi hanno sempre un segno davanti, + (positivo) o - (negativo), che indica se sono maggiori o minori di zero.",
+   "answer": "i numeri positivi, i numeri negativi e lo zero",
+   "explanation": "I numeri relativi comprendono i positivi, con il segno +, i negativi, con il segno -, e lo zero, che non è né positivo né negativo.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -73591,7 +73591,7 @@
    "options": [
     "+3",
     "-3",
-    "3",
+    "-4",
     "-30"
    ],
    "answerIndex": 1,
@@ -73654,7 +73654,7 @@
    "question": "Un ascensore scende di 2 piani sotto il piano terra. A quale piano si trova, scritto come numero relativo?",
    "options": [
     "+2",
-    "2",
+    "-1",
     "-20",
     "-2"
    ],
@@ -73687,7 +73687,7 @@
    "options": [
     "-15",
     "+15",
-    "15",
+    "+150",
     "-150"
    ],
    "answerIndex": 0,
@@ -73815,7 +73815,7 @@
    "options": [
     "+12",
     "-12",
-    "12,0",
+    "+21",
     "-120"
    ],
    "answerIndex": 0,
@@ -73912,11 +73912,11 @@
     "i numeri relativi negativi non hanno un opposto",
     "lo zero ha due opposti diversi",
     "l'opposto di un numero positivo è sempre 0",
-    "ogni numero relativo, tranne lo zero, ha un opposto con il segno cambiato"
+    "l'opposto di un numero negativo è sempre positivo"
    ],
    "answerIndex": 3,
-   "answer": "ogni numero relativo, tranne lo zero, ha un opposto con il segno cambiato",
-   "explanation": "Tutti i numeri relativi diversi da zero hanno un opposto: basta cambiare il segno mantenendo lo stesso valore, per esempio l'opposto di -4 è +4.",
+   "answer": "l'opposto di un numero negativo è sempre positivo",
+   "explanation": "Per trovare l'opposto cambi il segno e tieni lo stesso valore: l'opposto di -4 è +4, quindi l'opposto di un numero negativo è sempre positivo.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -73939,15 +73939,15 @@
    "area": "logica_e_dati",
    "subarea": "logica_proposizioni",
    "difficulty": 1,
-   "question": "Una proposizione logica è una frase che...",
+   "question": "Una proposizione logica è una frase...",
    "options": [
-    "puoi dire se è vera o falsa",
-    "è sempre una domanda",
-    "non ha nessun significato",
-    "è sempre falsa"
+    "di cui puoi dire con certezza se è vera o falsa",
+    "che contiene sempre una domanda",
+    "che non ha nessun significato",
+    "che è sempre falsa"
    ],
    "answerIndex": 0,
-   "answer": "puoi dire se è vera o falsa",
+   "answer": "di cui puoi dire con certezza se è vera o falsa",
    "explanation": "Una proposizione logica è un'affermazione di cui si può stabilire con certezza se è vera o falsa, per esempio \"Roma è la capitale d'Italia\".",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
@@ -74101,14 +74101,14 @@
    "difficulty": 2,
    "question": "Il connettivo logico \"o\" unisce due proposizioni e la frase risultante è vera quando...",
    "options": [
-    "sono vere entrambe insieme",
+    "solo se sono vere entrambe",
     "almeno una delle due è vera",
     "sono false entrambe",
-    "nessuna delle due è vera"
+    "solo se la prima è vera"
    ],
    "answerIndex": 1,
    "answer": "almeno una delle due è vera",
-   "explanation": "Con il connettivo \"o\" la frase composta è vera se è vera almeno una delle due proposizioni collegate, anche una sola.",
+   "explanation": "Con il connettivo \"o\" la frase composta è vera se è vera almeno una delle due proposizioni collegate: una sola oppure tutte e due.",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
    "tags": [
@@ -74133,14 +74133,14 @@
    "difficulty": 2,
    "question": "Con il connettivo logico \"o\", la frase \"Marco gioca a calcio o a basket\" è vera quando...",
    "options": [
-    "Marco gioca a entrambi gli sport insieme",
-    "Marco non gioca a nessuno sport",
+    "solo se Marco gioca a entrambi gli sport",
+    "Marco non gioca a nessuno dei due sport",
     "Marco gioca almeno a uno dei due sport",
-    "Marco gioca solo a calcio"
+    "solo se Marco gioca a calcio"
    ],
    "answerIndex": 2,
    "answer": "Marco gioca almeno a uno dei due sport",
-   "explanation": "Con \"o\" basta che sia vera una delle due proposizioni: se Marco gioca anche a uno solo dei due sport, la frase è vera.",
+   "explanation": "Con il connettivo logico \"o\" basta che sia vera almeno una delle due parti: la frase è vera se Marco gioca a calcio, a basket o a tutti e due.",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
    "tags": [
@@ -74291,10 +74291,10 @@
    "area": "logica_e_dati",
    "subarea": "logica_proposizioni",
    "difficulty": 3,
-   "question": "Sara dice: \"5 > 3 e 2 > 8\" è una proposizione logica vera, perché almeno una delle due parti è vera. Ha ragione?",
+   "question": "Sara dice che la proposizione logica \"5 > 3 e 2 > 8\" è vera, perché almeno una delle due parti è vera. Ha ragione?",
    "options": [
     "sì, ha ragione",
-    "no, con \"e\" basta che una parte sia falsa perché sia falsa la prima parte",
+    "no, perché 5 > 3 è falsa",
     "sì, perché 5 > 3 è vera",
     "no, con \"e\" servono vere entrambe le parti, e 2 > 8 è falsa"
    ],
