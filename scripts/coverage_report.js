@@ -134,7 +134,12 @@ function generateCoverageReport() {
 
     topics.forEach(topic => {
       const regex = new RegExp(topic.match, 'i');
-      const count = questions.filter(q => q.class === topic.class && regex.test(q.question)).length;
+      // Testa anche la risposta, non solo la domanda: molte domande "quale
+      // proprieta' ha usato?" o "che tipo di angolo e'?" nominano l'argomento
+      // solo nella risposta, per non svelarla nel testo (F4, c3). Verificato
+      // sull'intero dataset prima di adottarlo: nessun match spurio fra
+      // argomenti diversi, solo domande davvero pertinenti in piu'.
+      const count = questions.filter(q => q.class === topic.class && regex.test(`${q.question} ${q.answer || ''}`)).length;
       const status = count === 0 ? 'manca' : count < 10 ? 'debole' : 'coperto';
       report.push(`${topic.id.padEnd(40)} | c${topic.class}     | ${String(count).padEnd(7)} | ${status}\n`);
     });

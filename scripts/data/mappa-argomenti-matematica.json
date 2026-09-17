@@ -189,7 +189,7 @@
   "area": "aritmetica",
   "subarea": "proprieta",
   "newSubarea": true,
-  "match": "associativ.*addizion|addizion.*associativ"
+  "match": "associativ.*addizion|addizion.*associativ|associativ.*\\+|\\+.*associativ"
  },
  {
   "id": "c3-proprieta-dissociativa-addizione",
@@ -198,7 +198,7 @@
   "area": "aritmetica",
   "subarea": "proprieta",
   "newSubarea": true,
-  "match": "dissociativ.*addizion|addizion.*dissociativ"
+  "match": "dissociativ.*addizion|addizion.*dissociativ|dissociativ.*\\+|\\+.*dissociativ"
  },
  {
   "id": "c3-proprieta-invariantiva-sottrazione",
@@ -207,7 +207,7 @@
   "area": "aritmetica",
   "subarea": "proprieta",
   "newSubarea": true,
-  "match": "invariantiv.*sottrazion|sottrazion.*invariantiv"
+  "match": "invariantiv.*sottrazion|sottrazion.*invariantiv|invariantiv.*-|-.*invariantiv"
  },
  {
   "id": "c3-proprieta-associativa-moltiplicazione",
@@ -216,7 +216,7 @@
   "area": "aritmetica",
   "subarea": "proprieta",
   "newSubarea": true,
-  "match": "associativ.*moltiplicazion|moltiplicazion.*associativ"
+  "match": "associativ.*moltiplicazion|moltiplicazion.*associativ|associativ.*×|×.*associativ"
  },
  {
   "id": "c3-proprieta-dissociativa-moltiplicazione",
@@ -225,7 +225,7 @@
   "area": "aritmetica",
   "subarea": "proprieta",
   "newSubarea": true,
-  "match": "dissociativ.*moltiplicazion|moltiplicazion.*dissociativ"
+  "match": "dissociativ.*moltiplicazion|moltiplicazion.*dissociativ|dissociativ.*×|×.*dissociativ"
  },
  {
   "id": "c3-proprieta-invariantiva-divisione",
@@ -234,7 +234,7 @@
   "area": "aritmetica",
   "subarea": "proprieta",
   "newSubarea": true,
-  "match": "invariantiv.*divisione|divisione.*invariantiv"
+  "match": "invariantiv.*divisione|divisione.*invariantiv|invariantiv.*÷|÷.*invariantiv"
  },
  {
   "id": "c3-proprieta-distributiva",
