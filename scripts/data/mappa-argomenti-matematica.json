@@ -322,7 +322,7 @@
   "area": "aritmetica",
   "subarea": "numeri",
   "newSubarea": true,
-  "match": "migliai|\\bmille\\b|\\d\\.\\d{3}\\b.*(cifr|posto|legge|scrive)"
+  "match": "migliai|\\bmille\\b|\\d\\.\\d{3}\\b.*(cifr|posto|legge|scrive)|mila[a-z]|\\d{1,3}\\.\\d{3}.*(maggiore|minore|più grande|più piccol|ordine|___|precede|segue)|(maggiore|minore|più grande|più piccol|ordina)\\b.*\\d{1,3}\\.\\d{3}"
  },
  {
   "id": "c4-multipli",
@@ -375,7 +375,7 @@
   "title": "Frazioni (concetto e lettura)",
   "area": "aritmetica",
   "subarea": "frazioni",
-  "match": "^(?!.*(equivalent|minimi termini|maggiore|minore|virgola|decimal))(?!.*\\d+/\\d+\\s*di\\s*\\d).*(numeratore|denominatore|unit[aà] frazionaria|si legge|si scrive|in lettere|che frazione (è|rappresenta|hai)|parti uguali.*che frazione)"
+  "match": "^(?!.*(equivalent|minimi termini|maggiore|minore|virgola|decimal))(?!.*\\d+/\\d+\\s*di\\s*\\d).*(numeratore|denominatore|unit[aà] frazionaria|si legge|si scrive|in lettere|che frazione (è|rappresenta|hai)|parti uguali.*che frazione|sopra la linea|sotto la linea)"
  },
  {
   "id": "c4-frazioni-unitarie",
@@ -399,7 +399,7 @@
   "title": "Classificazione delle frazioni",
   "area": "aritmetica",
   "subarea": "frazioni",
-  "match": "frazion.*(proprie|improprie|apparenti)|classificazione.*frazion"
+  "match": "frazion.*(propri[ae]|impropri[ae]|apparent[ei])|classificazione.*frazion|\\bpropri[ae]\\b|\\bimpropri[ae]\\b|\\bapparent[ei]\\b"
  },
  {
   "id": "c4-numeri-misti",
@@ -447,7 +447,7 @@
   "title": "Addizione con decimali",
   "area": "aritmetica",
   "subarea": "decimali",
-  "match": "\\d,\\d+ ?\\+ ?\\d|\\d ?\\+ ?\\d+,\\d"
+  "match": "\\d,\\d+ ?\\+ ?\\d|\\d ?\\+ ?\\d+,\\d|(?=.*\\d,\\d)(?=.*\\b(insieme|in tutto|in totale|somma|sommare)\\b)"
  },
  {
   "id": "c4-sottrazione-decimali",
@@ -455,7 +455,7 @@
   "title": "Sottrazione con decimali",
   "area": "aritmetica",
   "subarea": "decimali",
-  "match": "\\d,\\d+ ?[-−] ?\\d|\\d ?[-−] ?\\d+,\\d"
+  "match": "\\d,\\d+ ?[-−] ?\\d|\\d ?[-−] ?\\d+,\\d|(?=.*\\d,\\d)(?=.*\\b(resta|restano|resto)\\b)"
  },
  {
   "id": "c4-moltiplicazione-virgola",
@@ -463,7 +463,7 @@
   "title": "Moltiplicazione con la virgola",
   "area": "aritmetica",
   "subarea": "decimali",
-  "match": "\\d,\\d+ ?[×x] ?\\d|\\d ?[×x] ?\\d+,\\d"
+  "match": "\\d,\\d+ ?[×x] ?\\d|\\d ?[×x] ?\\d+,\\d|\\bquanto costano\\b|\\bcon \\d+ \\w+ uguali\\b"
  },
  {
   "id": "c4-divisione-virgola",
@@ -471,7 +471,7 @@
   "title": "Divisione con la virgola",
   "area": "aritmetica",
   "subarea": "decimali",
-  "match": "\\d,\\d+ ?[:÷] ?\\d|\\d ?[:÷] ?\\d+,\\d"
+  "match": "\\d,\\d+ ?[:÷] ?\\d|\\d ?[:÷] ?\\d+,\\d|\\d+ ?÷ ?(10|100|1\\.?000)\\b|(?=.*\\d,\\d)(?=.*\\b(divisa in|dividono|paga ciascuno|pesa ogni)\\b)"
  },
  {
   "id": "c4-unita-di-misura",
@@ -512,7 +512,7 @@
   "area": "aritmetica",
   "subarea": "equivalenze",
   "newSubarea": true,
-  "match": "equivalenz|quant[ie] (mm|cm|dm|m|km|g|hg|kg|ml|cl|dl|l|millimetri|centimetri|metri|grammi|chilogrammi|millilitri|litri) (sono|ci sono|equival|corrispond)"
+  "match": "equivalenz|quant[ie] (mm|cm|dm|m|km|g|hg|kg|ml|cl|dl|l|dal|hl|dag|millimetri|centimetri|metri|grammi|chilogrammi|millilitri|litri|decalitri|ettolitri|decagrammi|ettogrammi) (sono|ci sono|equival|corrispond)"
  },
  {
   "id": "c4-misure-angoli-gradi",

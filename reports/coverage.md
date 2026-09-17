@@ -1,22 +1,26 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 15:02:10
+Data generazione: 17/09/2026, 15:32:51
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
 ## MATEMATICA
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
+| angoli                 | 0     | 0     | 10 ⚠️  | 0     | 10   
 | calcolo_mentale        | 65    | 41    | 28    | 52    | 186  
 | dati_probabilita       | 3  ⚠️  | 16    | 95    | 94    | 208  
-| decimali               | 0     | 0     | 15    | 15    | 30   
+| decimali               | 0     | 0     | 70    | 15    | 85   
+| equivalenze            | 0     | 0     | 20    | 0     | 20   
 | figure                 | 23    | 16    | 6  ⚠️  | 7  ⚠️  | 52   
-| frazioni               | 0     | 15    | 41    | 30    | 86   
-| misure                 | 0     | 9  ⚠️  | 25    | 29    | 63   
+| frazioni               | 0     | 15    | 115    | 30    | 160  
+| misure                 | 0     | 9  ⚠️  | 39    | 29    | 77   
+| multipli_divisori      | 0     | 0     | 44    | 0     | 44   
+| numeri                 | 0     | 0     | 15    | 0     | 15   
 | operazioni             | 224    | 212    | 187    | 175    | 798  
 | perimetro_area         | 58    | 68    | 96    | 92    | 314  
 | ragionamento           | 22    | 15    | 15    | 15    | 67   
 | sequenze               | 49    | 66    | 18    | 17    | 150  
-| TOTAL                   |        |        |        |        | 1954  
+| TOTAL                   |        |        |        |        | 2186  
 
 ## PROBLEMI
 Subarea                   | c2     | c3     | c4     | c5     | Total
@@ -440,6 +444,7 @@ storia          | cambiamenti_e_cause       | c2    | 9
 storia          | confronti_e_sintesi       | c3    | 9
 storia          | storia_personale          | c2    | 9
 scienze         | osservazione_e_dati       | c3    | 9
+matematica      | angoli                    | c4    | 10
 problemi        | due_operazioni            | c3    | 10
 civica          | diritti_e_doveri          | c3    | 10
 civica          | gentilezza_in_strada      | c4    | 10
@@ -542,7 +547,7 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 262
+Totale celle sotto soglia: 263
 ## Copertura per argomento (matematica)
 
 Argomento                                | Classe | Domande | Stato
@@ -583,31 +588,31 @@ c3-angoli-notevoli                       | c3     | 3       | debole
 c3-posizione-rette-piano                 | c3     | 0       | manca
 c3-poligoni                              | c3     | 0       | manca
 c3-diagramma-di-flusso                   | c3     | 0       | manca
-c4-numero-mille-migliaia                 | c4     | 0       | manca
-c4-multipli                              | c4     | 0       | manca
-c4-divisori                              | c4     | 0       | manca
-c4-numeri-primi-composti                 | c4     | 0       | manca
-c4-crivello-eratostene                   | c4     | 0       | manca
-c4-scomposizione-albero                  | c4     | 0       | manca
-c4-frazioni-concetto                     | c4     | 0       | manca
-c4-frazioni-unitarie                     | c4     | 0       | manca
+c4-numero-mille-migliaia                 | c4     | 15      | coperto
+c4-multipli                              | c4     | 15      | coperto
+c4-divisori                              | c4     | 13      | coperto
+c4-numeri-primi-composti                 | c4     | 15      | coperto
+c4-crivello-eratostene                   | c4     | 2       | debole
+c4-scomposizione-albero                  | c4     | 8       | debole
+c4-frazioni-concetto                     | c4     | 18      | coperto
+c4-frazioni-unitarie                     | c4     | 10      | coperto
 c4-frazione-di-un-numero                 | c4     | 21      | coperto
-c4-classificazione-frazioni              | c4     | 0       | manca
-c4-numeri-misti                          | c4     | 0       | manca
-c4-frazioni-complementari                | c4     | 0       | manca
+c4-classificazione-frazioni              | c4     | 18      | coperto
+c4-numeri-misti                          | c4     | 12      | coperto
+c4-frazioni-complementari                | c4     | 10      | coperto
 c4-frazioni-equivalenti                  | c4     | 19      | coperto
-c4-confronto-frazioni                    | c4     | 0       | manca
-c4-decimi-centesimi-millesimi            | c4     | 4       | debole
-c4-addizione-decimali                    | c4     | 2       | debole
-c4-sottrazione-decimali                  | c4     | 1       | debole
-c4-moltiplicazione-virgola               | c4     | 0       | manca
-c4-divisione-virgola                     | c4     | 0       | manca
-c4-unita-di-misura                       | c4     | 0       | manca
-c4-misure-lunghezza                      | c4     | 50      | coperto
-c4-misure-massa-peso                     | c4     | 53      | coperto
-c4-misure-capacita                       | c4     | 9       | debole
-c4-equivalenze                           | c4     | 2       | debole
-c4-misure-angoli-gradi                   | c4     | 0       | manca
+c4-confronto-frazioni                    | c4     | 15      | coperto
+c4-decimi-centesimi-millesimi            | c4     | 19      | coperto
+c4-addizione-decimali                    | c4     | 16      | coperto
+c4-sottrazione-decimali                  | c4     | 17      | coperto
+c4-moltiplicazione-virgola               | c4     | 12      | coperto
+c4-divisione-virgola                     | c4     | 12      | coperto
+c4-unita-di-misura                       | c4     | 7       | debole
+c4-misure-lunghezza                      | c4     | 61      | coperto
+c4-misure-massa-peso                     | c4     | 59      | coperto
+c4-misure-capacita                       | c4     | 26      | coperto
+c4-equivalenze                           | c4     | 22      | coperto
+c4-misure-angoli-gradi                   | c4     | 10      | coperto
 c4-goniometro                            | c4     | 0       | manca
 c4-perimetro-poligono                    | c4     | 45      | coperto
 c5-milioni-miliardi                      | c5     | 0       | manca
