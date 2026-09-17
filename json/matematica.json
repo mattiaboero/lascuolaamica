@@ -62931,7 +62931,7 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 3,
-   "question": "In una gara di atletica Elena salta 1,45 m e poi migliora di altri 0,38 m. Quanto salta in totale?",
+   "question": "Nel salto in lungo Elena salta 1,45 m. Al secondo salto aggiunge altri 0,38 m. Quanto è lungo in tutto il secondo salto?",
    "options": [
     "1,73 m",
     "1,8 m",
@@ -63091,7 +63091,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 1,
-   "question": "Che cosa contraddistingue una frazione propria?",
+   "question": "Come si riconosce una frazione propria?",
    "options": [
     "Il numeratore è maggiore del denominatore",
     "Il numeratore è multiplo del denominatore",
@@ -63251,16 +63251,16 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "Luca dice che 10/5 è impropria e basta, non apparente. Ha ragione?",
+   "question": "Luca dice che 10/5 non può essere apparente, perché il numeratore è maggiore del denominatore. Ha ragione?",
    "options": [
-    "No, perché 10 è multiplo di 5 ed è anche apparente",
-    "Sì, perché il numeratore è maggiore del denominatore",
+    "No, perché 10 è multiplo di 5: 10/5 è apparente e vale 2",
+    "Sì, perché una frazione apparente ha numeratore e denominatore uguali",
     "Sì, perché 10 e 5 non si dividono esattamente",
     "No, perché 10/5 è una frazione propria"
    ],
    "answerIndex": 0,
-   "answer": "No, perché 10 è multiplo di 5 ed è anche apparente",
-   "explanation": "10/5 ha il numeratore maggiore del denominatore, quindi è impropria, ma è anche apparente perché 10 ÷ 5 = 2, un numero intero: a Luca manca questa seconda parte.",
+   "answer": "No, perché 10 è multiplo di 5: 10/5 è apparente e vale 2",
+   "explanation": "10 ÷ 5 = 2: il numeratore è multiplo del denominatore, quindi 10/5 è apparente e corrisponde al numero intero 2. Un numeratore più grande non lo impedisce, anzi: 6/3, 8/4 e 10/5 sono tutte apparenti.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -63699,7 +63699,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "Sara ha percorso la frazione 5/6 del tragitto verso scuola, Giulia la frazione 5/9. Confrontando le due frazioni, chi ha percorso di più?",
+   "question": "Sara ha percorso 5/6 di un sentiero, Giulia 5/9 dello stesso sentiero. Confrontando le due frazioni, chi ha percorso di più?",
    "options": [
     "Giulia",
     "Hanno percorso la stessa parte",
@@ -63730,7 +63730,7 @@
    "class": 4,
    "area": "aritmetica",
    "subarea": "frazioni",
-   "difficulty": 3,
+   "difficulty": 2,
    "question": "Confronta le frazioni 3/4 e 9/4. Quale delle due è maggiore?",
    "options": [
     "3/4",
@@ -63795,16 +63795,16 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "La classe A assegna la frazione 5/8 delle caramelle a un gruppo, la classe B assegna la frazione 5/6 a un gruppo simile. Confrontando le due frazioni, quale gruppo riceve di più?",
+   "question": "Due scatole uguali contengono le stesse caramelle. La classe A riceve 5/8 della prima scatola, la classe B 5/6 della seconda. Confrontando le due frazioni, quale classe riceve più caramelle?",
    "options": [
-    "Il gruppo della classe A",
-    "Il gruppo della classe B",
-    "Ricevono la stessa frazione",
+    "La classe A",
+    "La classe B",
+    "Ricevono lo stesso numero di caramelle",
     "Non si può sapere"
    ],
    "answerIndex": 1,
-   "answer": "Il gruppo della classe B",
-   "explanation": "Le due frazioni hanno lo stesso numeratore (5): il denominatore della classe B (6) è minore di quello della classe A (8), quindi 5/6 è maggiore di 5/8.",
+   "answer": "La classe B",
+   "explanation": "Le due frazioni hanno lo stesso numeratore (5) e le scatole sono uguali: il denominatore della classe B (6) è minore di quello della classe A (8), quindi ogni parte è più grande e 5/6 è maggiore di 5/8.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -64508,7 +64508,7 @@
    ],
    "answerIndex": 0,
    "answer": "3,6",
-   "explanation": "Dividi come se non ci fosse la virgola, tenendola allineata: 7 ÷ 2 = 3 (con resto di 1), che diventa 10 decimi più 2 decimi = 12 decimi, 12 ÷ 2 = 6 decimi. Quindi 7,2 ÷ 2 = 3,6.",
+   "explanation": "Dividi prima gli interi: 7 ÷ 2 = 3 (con resto di 1). Il resto diventa 10 decimi, che con i 2 decimi fanno 12 decimi, e 12 ÷ 2 = 6 decimi. Quindi 7,2 ÷ 2 = 3,6.",
    "active": true,
    "tag": "matematica;decimali;classe_4;primaria",
    "tags": [
@@ -64566,7 +64566,7 @@
    "question": "Paolo divide 15 ÷ 100 e ottiene 1,5. Dove si trova il suo errore?",
    "options": [
     "Ha spostato la virgola di un posto invece di due",
-    "Ha diviso per 10 invece che per 100",
+    "Ha spostato la virgola verso destra invece che verso sinistra",
     "Il risultato è giusto",
     "Doveva moltiplicare invece di dividere"
    ],
@@ -64915,7 +64915,7 @@
    "area": "aritmetica",
    "subarea": "multipli_divisori",
    "difficulty": 3,
-   "question": "Qual è il massimo comune divisore tra 16 e 24?",
+   "question": "Qual è il più grande divisore comune di 16 e 24?",
    "options": [
     "8",
     "4",
@@ -64950,12 +64950,12 @@
    "question": "Perché il numero 1 è un divisore di ogni numero?",
    "options": [
     "Perché 1 è un numero primo",
-    "Perché ogni numero diviso 1 dà come risultato se stesso",
-    "Perché 1 moltiplicato per 0 dà 1",
-    "Perché 1 è pari"
+    "Perché ogni numero diviso per 1 dà come risultato se stesso",
+    "Perché 1 è il numero più piccolo",
+    "Perché 1 è dispari"
    ],
    "answerIndex": 1,
-   "answer": "Perché ogni numero diviso 1 dà come risultato se stesso",
+   "answer": "Perché ogni numero diviso per 1 dà come risultato se stesso",
    "explanation": "Qualsiasi numero diviso per 1 resta uguale a se stesso (per esempio 15 ÷ 1 = 15), quindi la divisione è sempre esatta: 1 è divisore di ogni numero.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
@@ -65148,7 +65148,7 @@
    ],
    "answerIndex": 3,
    "answer": "2,5 m",
-   "explanation": "Il centimetro vale 0,01 metri, quindi dividi per 100: 250 ÷ 100 = 2,5. Quindi 250 cm = 2,5 m.",
+   "explanation": "100 centimetri fanno 1 metro, quindi dividi per 100: 250 ÷ 100 = 2,5. Quindi 250 cm = 2,5 m.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65180,7 +65180,7 @@
    ],
    "answerIndex": 3,
    "answer": "3,5 km",
-   "explanation": "Il metro vale 0,001 chilometri, quindi dividi per 1.000: 3.500 ÷ 1.000 = 3,5. Quindi 3.500 m = 3,5 km.",
+   "explanation": "1.000 metri fanno 1 chilometro, quindi dividi per 1.000: 3.500 ÷ 1.000 = 3,5. Quindi 3.500 m = 3,5 km.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65340,7 +65340,7 @@
    ],
    "answerIndex": 0,
    "answer": "4 kg",
-   "explanation": "Il grammo vale 0,001 chilogrammi, quindi dividi per 1.000: 4.000 ÷ 1.000 = 4. Quindi 4.000 g = 4 kg.",
+   "explanation": "1.000 grammi fanno 1 chilogrammo, quindi dividi per 1.000: 4.000 ÷ 1.000 = 4. Quindi 4.000 g = 4 kg.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65372,7 +65372,7 @@
    ],
    "answerIndex": 3,
    "answer": "1,5 kg",
-   "explanation": "Il grammo vale 0,001 chilogrammi, quindi dividi per 1.000: 1.500 ÷ 1.000 = 1,5. Quindi 1.500 g = 1,5 kg.",
+   "explanation": "1.000 grammi fanno 1 chilogrammo, quindi dividi per 1.000: 1.500 ÷ 1.000 = 1,5. Quindi 1.500 g = 1,5 kg.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65564,7 +65564,7 @@
    ],
    "answerIndex": 3,
    "answer": "3 l",
-   "explanation": "Il millilitro vale 0,001 litri, quindi dividi per 1.000: 3.000 ÷ 1.000 = 3. Quindi 3.000 ml = 3 l.",
+   "explanation": "1.000 millilitri fanno 1 litro, quindi dividi per 1.000: 3.000 ÷ 1.000 = 3. Quindi 3.000 ml = 3 l.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65596,7 +65596,7 @@
    ],
    "answerIndex": 2,
    "answer": "7,5 l",
-   "explanation": "Il centilitro vale 0,01 litri, quindi dividi per 100: 750 ÷ 100 = 7,5. Quindi 750 cl = 7,5 l.",
+   "explanation": "100 centilitri fanno 1 litro, quindi dividi per 100: 750 ÷ 100 = 7,5. Quindi 750 cl = 7,5 l.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65651,16 +65651,16 @@
    "area": "aritmetica",
    "subarea": "equivalenze",
    "difficulty": 3,
-   "question": "Una bottiglia contiene 1 litro e 250 ml di succo. In tutto, quanti millilitri corrispondono al succo?",
+   "question": "Una caraffa contiene 2 litri e 75 ml di succo. In tutto, quanti millilitri corrispondono al succo?",
    "options": [
-    "1.250 ml",
-    "1.025 ml",
-    "1.250 l",
-    "125 ml"
+    "2.075 ml",
+    "2.750 ml",
+    "2.075 l",
+    "275 ml"
    ],
    "answerIndex": 0,
-   "answer": "1.250 ml",
-   "explanation": "Trasformi il litro in millilitri: 1 l = 1.000 ml. Poi sommi i 250 ml già in millilitri: 1.000 + 250 = 1.250 ml.",
+   "answer": "2.075 ml",
+   "explanation": "Trasformi i litri in millilitri: 2 l = 2.000 ml. Poi sommi i 75 ml: 2.000 + 75 = 2.075 ml. Attenzione allo zero delle centinaia: 75 ml non sono 750 ml.",
    "active": true,
    "tag": "matematica;equivalenze;classe_4;primaria",
    "tags": [
@@ -65906,7 +65906,7 @@
    "class": 4,
    "area": "aritmetica",
    "subarea": "frazioni",
-   "difficulty": 3,
+   "difficulty": 2,
    "question": "Quale frazione complementare devi sommare a 5/9 per ottenere l'intero?",
    "options": [
     "5/9",
@@ -66396,7 +66396,7 @@
    ],
    "answerIndex": 0,
    "answer": "sette dodicesimi",
-   "explanation": "La frazione sette dodicesimi ha numeratore 7 e denominatore 12, quindi in lettere si scrive proprio così.",
+   "explanation": "Il numeratore 7 si legge sette e il denominatore 12 diventa dodicesimi: 7/12 si scrive sette dodicesimi.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -66418,7 +66418,7 @@
    "class": 4,
    "area": "aritmetica",
    "subarea": "frazioni",
-   "difficulty": 3,
+   "difficulty": 2,
    "question": "Che frazione rappresenta un intero diviso in 9 parti uguali, di cui ne prendi 4?",
    "options": [
     "9/4",
@@ -66611,7 +66611,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 2,
-   "question": "Qual è la frazione unitaria con il denominatore più grande, quindi con la parte più piccola, tra 1/9 e 1/4?",
+   "question": "Due torte uguali: una è divisa in 9 fette uguali, l'altra in 4. Quale frazione unitaria indica la fetta più piccola?",
    "options": [
     "1/9",
     "1/4",
@@ -66620,7 +66620,7 @@
    ],
    "answerIndex": 0,
    "answer": "1/9",
-   "explanation": "Più è grande il denominatore, più piccola è la parte: 9 è maggiore di 4, quindi 1/9 è più piccola di 1/4.",
+   "explanation": "Più è grande il denominatore, più piccola è la parte: 9 è maggiore di 4, quindi la fetta da 1/9 è più piccola di quella da 1/4.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -66812,7 +66812,7 @@
    ],
    "answerIndex": 0,
    "answer": "90°",
-   "explanation": "L'angolo retto è quello che si forma, per esempio, tra i due lati di un foglio squadrato: misura sempre 90°.",
+   "explanation": "L'angolo retto è quello che trovi, per esempio, nell'angolo di un foglio o di un quaderno: misura sempre 90°.",
    "active": true,
    "tag": "matematica;angoli;classe_4;primaria",
    "tags": [
@@ -67000,7 +67000,7 @@
     "90°, cioè un angolo retto",
     "180°, cioè un angolo piatto",
     "360°, cioè un angolo giro",
-    "270°"
+    "270°, cioè tre angoli retti"
    ],
    "answerIndex": 1,
    "answer": "180°, cioè un angolo piatto",
@@ -67091,7 +67091,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Un angolo piatto viene diviso in due angoli: uno di 70° e l'altro. Quanti gradi misura il secondo angolo, e che tipo di angolo è?",
+   "question": "Un angolo piatto è diviso in due angoli. Uno misura 70°: quanti gradi misura l'altro, e che tipo di angolo è?",
    "options": [
     "70°, un angolo acuto",
     "90°, un angolo retto",
@@ -67187,7 +67187,7 @@
    "area": "aritmetica",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Quale multiplo del litro useresti per misurare la capacità di una cisterna molto grande?",
+   "question": "Che cosa useresti per misurare la capacità di una cisterna molto grande?",
    "options": [
     "L'ettolitro",
     "Il decilitro",
@@ -67219,7 +67219,7 @@
    "area": "aritmetica",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Quale sottomultiplo del litro useresti per misurare uno sciroppo dato con un cucchiaino?",
+   "question": "Per misurare lo sciroppo in un cucchiaino, quale misura di capacità è più adatta?",
    "options": [
     "Il millilitro",
     "L'ettolitro",
@@ -67667,7 +67667,7 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 3,
-   "question": "Un francobollo costa 1,15 euro. Quanto costa un album con 8 francobolli uguali?",
+   "question": "Un francobollo costa 1,15 euro. Quanto costano 8 francobolli uguali?",
    "options": [
     "8,15 euro",
     "9,15 euro",
@@ -67795,7 +67795,7 @@
    "area": "aritmetica",
    "subarea": "multipli_divisori",
    "difficulty": 2,
-   "question": "Quale numero completa: 6 × ___ = 42, mostrando che 42 è un multiplo di 6?",
+   "question": "Quale numero completa 6 × ___ = 42, così che 42 risulti multiplo di 6?",
    "options": [
     "8",
     "9",
@@ -68147,16 +68147,16 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 1,
-   "question": "Nel numero misto 3 e 2/5, qual è la parte frazionaria?",
+   "question": "Nel numero misto 5 e 3/4, qual è la parte frazionaria?",
    "options": [
-    "3/5",
-    "5/2",
-    "2/5",
-    "3/2"
+    "5/4",
+    "4/3",
+    "3/4",
+    "5/3"
    ],
    "answerIndex": 2,
-   "answer": "2/5",
-   "explanation": "Nel numero misto 3 e 2/5 la parte frazionaria è proprio 2/5, che si aggiunge all'intero 3.",
+   "answer": "3/4",
+   "explanation": "Nel numero misto 5 e 3/4 la parte intera è 5 e la parte frazionaria è 3/4, che si aggiunge all'intero.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -68339,16 +68339,16 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "Marta ha mangiato 2 pizze intere e 3/4 di un'altra pizza. Quale numero misto rappresenta quanto ha mangiato?",
+   "question": "Marta ha mangiato 2 pizze intere e 3/4 di un'altra pizza, cioè il numero misto 2 e 3/4. Quanti quarti di pizza ha mangiato in tutto?",
    "options": [
-    "2 e 3/4",
-    "3 e 3/4",
-    "2 e 1/4",
-    "3 e 1/4"
+    "11/4",
+    "5/4",
+    "6/4",
+    "9/4"
    ],
    "answerIndex": 0,
-   "answer": "2 e 3/4",
-   "explanation": "Marta ha mangiato 2 pizze intere più 3/4 di un'altra pizza, quindi in totale ha mangiato il numero misto 2 e 3/4.",
+   "answer": "11/4",
+   "explanation": "Ogni pizza intera è fatta di 4 quarti: 2 × 4 = 8 quarti. Aggiungi i 3 quarti dell'altra pizza: 8 + 3 = 11, quindi 2 e 3/4 = 11/4.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -68435,7 +68435,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "Un nastro è lungo 4 metri interi e 1/2 metro. Quale numero misto indica la lunghezza del nastro?",
+   "question": "Un nastro è lungo 9/2 di metro. Quale numero misto indica la lunghezza del nastro?",
    "options": [
     "3 e 1/2",
     "4 e 1/4",
@@ -68444,7 +68444,7 @@
    ],
    "answerIndex": 3,
    "answer": "4 e 1/2",
-   "explanation": "Il nastro misura 4 metri interi più 1/2 metro, quindi la lunghezza è il numero misto 4 e 1/2.",
+   "explanation": "Dividi 9 per 2: entra 4 volte con il resto di 1, quindi 9/2 di metro sono 4 metri interi e 1/2 metro, cioè il numero misto 4 e 1/2.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -68604,7 +68604,7 @@
    ],
    "answerIndex": 0,
    "answer": "2",
-   "explanation": "2 è pari e ha solo due divisori, 1 e 2: è l'unico numero primo pari. Tutti gli altri numeri pari sono divisibili anche per 2 e per un altro numero, quindi sono composti.",
+   "explanation": "2 è pari e ha solo due divisori, 1 e 2: è l'unico numero primo pari. Ogni altro numero pari si divide anche per 2, oltre che per 1 e per se stesso, quindi è composto.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
    "tags": [
@@ -68693,14 +68693,14 @@
    "difficulty": 3,
    "question": "Con il metodo del crivello, per trovare i numeri primi tra 2 e 30, si cancellano i multipli di 2, 3, 5 e 7. Quali numeri restano non cancellati?",
    "options": [
-    "Solo i numeri pari",
-    "Tutti i numeri dispari",
-    "I multipli di 7",
-    "I numeri primi: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29"
+    "2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29",
+    "3, 5, 7, 11, 13, 17, 19, 23, 25, 29",
+    "11, 13, 17, 19, 23, 29",
+    "2, 3, 5, 7, 11, 13, 17, 19, 23, 29"
    ],
    "answerIndex": 3,
-   "answer": "I numeri primi: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29",
-   "explanation": "Cancellando i multipli di 2, 3, 5 e 7 restano soltanto i numeri che non hanno altri divisori oltre a 1 e se stessi, cioè i numeri primi fino a 30.",
+   "answer": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29",
+   "explanation": "Si cancellano i multipli di 2, 3, 5 e 7, ma non questi quattro numeri, che sono primi. Anche 9 = 3 × 3 e 25 = 5 × 5 vanno cancellati: restano 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, i numeri primi fino a 30.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
    "tags": [
@@ -69267,7 +69267,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 3,
-   "question": "Metti in ordine questi numeri: 5.670, 5.607, 5.706. Qual è il più piccolo?",
+   "question": "Tra 5.670, 5.607 e 5.706, qual è il numero più piccolo?",
    "options": [
     "5.670",
     "5.607",
@@ -69715,16 +69715,16 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 2,
-   "question": "Quanto fa 8,4 - 3,7?",
+   "question": "Quanto fa 8,3 - 3,7?",
    "options": [
-    "5,3",
-    "4,3",
-    "5,7",
-    "4,7"
+    "5,4",
+    "4,4",
+    "5,6",
+    "4,6"
    ],
    "answerIndex": 3,
-   "answer": "4,7",
-   "explanation": "Non puoi togliere 7 decimi da 4 decimi: prendi 1 intero e lo cambi in 10 decimi, così hai 7 interi e 14 decimi. 14 - 7 = 7 decimi e 7 - 3 = 4 interi. Quindi 8,4 - 3,7 = 4,7.",
+   "answer": "4,6",
+   "explanation": "Non puoi togliere 7 decimi da 3 decimi: prendi 1 intero e lo cambi in 10 decimi, così hai 7 interi e 13 decimi. 13 - 7 = 6 decimi e 7 - 3 = 4 interi. Quindi 8,3 - 3,7 = 4,6.",
    "active": true,
    "tag": "matematica;decimali;classe_4;primaria",
    "tags": [

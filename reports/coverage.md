@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 15:32:51
+Data generazione: 17/09/2026, 15:38:01
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -589,12 +589,12 @@ c3-posizione-rette-piano                 | c3     | 0       | manca
 c3-poligoni                              | c3     | 0       | manca
 c3-diagramma-di-flusso                   | c3     | 0       | manca
 c4-numero-mille-migliaia                 | c4     | 15      | coperto
-c4-multipli                              | c4     | 15      | coperto
+c4-multipli                              | c4     | 14      | coperto
 c4-divisori                              | c4     | 13      | coperto
 c4-numeri-primi-composti                 | c4     | 15      | coperto
 c4-crivello-eratostene                   | c4     | 2       | debole
 c4-scomposizione-albero                  | c4     | 8       | debole
-c4-frazioni-concetto                     | c4     | 18      | coperto
+c4-frazioni-concetto                     | c4     | 17      | coperto
 c4-frazioni-unitarie                     | c4     | 10      | coperto
 c4-frazione-di-un-numero                 | c4     | 21      | coperto
 c4-classificazione-frazioni              | c4     | 18      | coperto
