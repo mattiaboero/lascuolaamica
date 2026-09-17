@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 15:38:01
+Data generazione: 17/09/2026, 15:50:42
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -8,19 +8,24 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
 | angoli                 | 0     | 0     | 10 ⚠️  | 0     | 10   
 | calcolo_mentale        | 65    | 41    | 28    | 52    | 186  
+| cerchio                | 0     | 0     | 0     | 12 ⚠️  | 12   
 | dati_probabilita       | 3  ⚠️  | 16    | 95    | 94    | 208  
 | decimali               | 0     | 0     | 70    | 15    | 85   
 | equivalenze            | 0     | 0     | 20    | 0     | 20   
-| figure                 | 23    | 16    | 6  ⚠️  | 7  ⚠️  | 52   
+| figure                 | 23    | 16    | 6  ⚠️  | 34    | 79   
 | frazioni               | 0     | 15    | 115    | 30    | 160  
+| logica_proposizioni    | 0     | 0     | 0     | 12 ⚠️  | 12   
 | misure                 | 0     | 9  ⚠️  | 39    | 29    | 77   
+| misure_superficie      | 0     | 0     | 0     | 15    | 15   
 | multipli_divisori      | 0     | 0     | 44    | 0     | 44   
-| numeri                 | 0     | 0     | 15    | 0     | 15   
+| numeri                 | 0     | 0     | 15    | 15    | 30   
+| numeri_relativi        | 0     | 0     | 0     | 36    | 36   
 | operazioni             | 224    | 212    | 187    | 175    | 798  
 | perimetro_area         | 58    | 68    | 96    | 92    | 314  
+| potenze                | 0     | 0     | 0     | 15    | 15   
 | ragionamento           | 22    | 15    | 15    | 15    | 67   
 | sequenze               | 49    | 66    | 18    | 17    | 150  
-| TOTAL                   |        |        |        |        | 2186  
+| TOTAL                   |        |        |        |        | 2318  
 
 ## PROBLEMI
 Subarea                   | c2     | c3     | c4     | c5     | Total
@@ -416,7 +421,6 @@ storia          | sintesi_e_confronti       | c5    | 6
 storia          | stagioni                  | c2    | 6
 scienze         | osservazione_e_applicazione | c4    | 6
 scienze         | tutela_ambientale         | c3    | 6
-matematica      | figure                    | c5    | 7
 geografia       | italia_forma_mari         | c3    | 7
 geografia       | mappe_e_piante            | c2    | 7
 geografia       | paesaggi_base             | c2    | 7
@@ -514,6 +518,8 @@ scienze         | energia                   | c4    | 11
 scienze         | luce_e_suono              | c4    | 11
 scienze         | salute_e_igiene           | c4    | 11
 scienze         | terra_e_movimenti         | c4    | 11
+matematica      | cerchio                   | c5    | 12
+matematica      | logica_proposizioni       | c5    | 12
 problemi        | addizione                 | c4    | 12
 problemi        | euro_denaro               | c2    | 12
 inglese         | classroom_language        | c2    | 12
@@ -547,7 +553,7 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 263
+Totale celle sotto soglia: 264
 ## Copertura per argomento (matematica)
 
 Argomento                                | Classe | Domande | Stato
@@ -597,7 +603,7 @@ c4-scomposizione-albero                  | c4     | 8       | debole
 c4-frazioni-concetto                     | c4     | 17      | coperto
 c4-frazioni-unitarie                     | c4     | 10      | coperto
 c4-frazione-di-un-numero                 | c4     | 21      | coperto
-c4-classificazione-frazioni              | c4     | 18      | coperto
+c4-classificazione-frazioni              | c4     | 17      | coperto
 c4-numeri-misti                          | c4     | 12      | coperto
 c4-frazioni-complementari                | c4     | 10      | coperto
 c4-frazioni-equivalenti                  | c4     | 19      | coperto
@@ -615,18 +621,18 @@ c4-equivalenze                           | c4     | 22      | coperto
 c4-misure-angoli-gradi                   | c4     | 10      | coperto
 c4-goniometro                            | c4     | 0       | manca
 c4-perimetro-poligono                    | c4     | 45      | coperto
-c5-milioni-miliardi                      | c5     | 0       | manca
-c5-numeri-relativi                       | c5     | 0       | manca
-c5-confronto-numeri-relativi             | c5     | 0       | manca
-c5-addizione-numeri-relativi             | c5     | 0       | manca
-c5-elevamento-a-potenza                  | c5     | 0       | manca
-c5-proposizioni-connettivi-logici        | c5     | 0       | manca
-c5-classificazione-triangoli             | c5     | 0       | manca
-c5-basi-altezze-triangolo                | c5     | 12      | coperto
-c5-classificazione-quadrilateri          | c5     | 26      | coperto
-c5-misure-di-superficie                  | c5     | 20      | coperto
-c5-equivalenze-superficie                | c5     | 0       | manca
-c5-area-poligoni                         | c5     | 76      | coperto
-c5-circonferenza-cerchio                 | c5     | 1       | debole
-c5-solidi-classificazione                | c5     | 32      | coperto
+c5-milioni-miliardi                      | c5     | 14      | coperto
+c5-numeri-relativi                       | c5     | 36      | coperto
+c5-confronto-numeri-relativi             | c5     | 12      | coperto
+c5-addizione-numeri-relativi             | c5     | 12      | coperto
+c5-elevamento-a-potenza                  | c5     | 15      | coperto
+c5-proposizioni-connettivi-logici        | c5     | 12      | coperto
+c5-classificazione-triangoli             | c5     | 16      | coperto
+c5-basi-altezze-triangolo                | c5     | 13      | coperto
+c5-classificazione-quadrilateri          | c5     | 38      | coperto
+c5-misure-di-superficie                  | c5     | 36      | coperto
+c5-equivalenze-superficie                | c5     | 15      | coperto
+c5-area-poligoni                         | c5     | 80      | coperto
+c5-circonferenza-cerchio                 | c5     | 13      | coperto
+c5-solidi-classificazione                | c5     | 34      | coperto
 
