@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 17:13:26
+Data generazione: 17/09/2026, 18:48:00
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -579,7 +579,7 @@ Argomento                                | Classe | Domande | Stato
 ----------------------------------------------------------------------
 c2-proprieta-commutativa-addizione       | c2     | 8       | debole
 c2-numeri-31-99                          | c2     | 8       | debole
-c2-addizione-tre-addendi                 | c2     | 10      | coperto
+c2-addizione-tre-addendi                 | c2     | 12      | coperto
 c2-linee                                 | c2     | 11      | coperto
 c2-raggruppamento-secondo-ordine         | c2     | 8       | debole
 c2-cento-centinaia                       | c2     | 12      | coperto
@@ -592,24 +592,24 @@ c2-proprieta-commutativa-moltiplicazione | c2     | 9       | debole
 c2-tavola-pitagorica                     | c2     | 8       | debole
 c2-divisione                             | c2     | 24      | coperto
 c2-divisioni-colonna                     | c2     | 8       | debole
-c2-divisioni-due-cifre                   | c2     | 6       | debole
+c2-divisioni-due-cifre                   | c2     | 13      | coperto
 c2-indagine-statistica                   | c2     | 12      | coperto
 c2-orologio-lancette                     | c2     | 10      | coperto
 c2-punto-retta-piano                     | c2     | 8       | debole
 c2-rette-semirette-segmenti              | c2     | 21      | coperto
 c2-confronto-segmenti                    | c2     | 8       | debole
-c3-proprieta-associativa-addizione       | c3     | 7       | debole
-c3-proprieta-dissociativa-addizione      | c3     | 5       | debole
-c3-proprieta-invariantiva-sottrazione    | c3     | 4       | debole
-c3-proprieta-associativa-moltiplicazione | c3     | 5       | debole
-c3-proprieta-dissociativa-moltiplicazione | c3     | 4       | debole
-c3-proprieta-invariantiva-divisione      | c3     | 4       | debole
-c3-proprieta-distributiva                | c3     | 7       | debole
+c3-proprieta-associativa-addizione       | c3     | 9       | debole
+c3-proprieta-dissociativa-addizione      | c3     | 7       | debole
+c3-proprieta-invariantiva-sottrazione    | c3     | 6       | debole
+c3-proprieta-associativa-moltiplicazione | c3     | 7       | debole
+c3-proprieta-dissociativa-moltiplicazione | c3     | 6       | debole
+c3-proprieta-invariantiva-divisione      | c3     | 7       | debole
+c3-proprieta-distributiva                | c3     | 8       | debole
 c3-prova-del-nove                        | c3     | 8       | debole
 c3-angoli-direzione-rotazione            | c3     | 9       | debole
 c3-confronto-angoli                      | c3     | 7       | debole
 c3-angolo-concavo-convesso               | c3     | 8       | debole
-c3-angoli-notevoli                       | c3     | 29      | coperto
+c3-angoli-notevoli                       | c3     | 30      | coperto
 c3-posizione-rette-piano                 | c3     | 9       | debole
 c3-poligoni                              | c3     | 12      | coperto
 c3-diagramma-di-flusso                   | c3     | 9       | debole
@@ -643,7 +643,7 @@ c4-perimetro-poligono                    | c4     | 45      | coperto
 c5-milioni-miliardi                      | c5     | 15      | coperto
 c5-numeri-relativi                       | c5     | 36      | coperto
 c5-confronto-numeri-relativi             | c5     | 12      | coperto
-c5-addizione-numeri-relativi             | c5     | 12      | coperto
+c5-addizione-numeri-relativi             | c5     | 13      | coperto
 c5-elevamento-a-potenza                  | c5     | 15      | coperto
 c5-proposizioni-connettivi-logici        | c5     | 12      | coperto
 c5-classificazione-triangoli             | c5     | 17      | coperto

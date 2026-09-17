@@ -23,7 +23,7 @@
   "title": "Addizione con tre o più addendi",
   "area": "aritmetica",
   "subarea": "operazioni",
-  "match": "\\d+ ?\\+ ?\\d+ ?\\+ ?\\d+"
+  "match": "\\d+ ?\\+ ?\\d+ ?\\+ ?\\d+|(?:\\d+\\D+?){2}\\d+\\D{0,80}?in tutto"
  },
  {
   "id": "c2-linee",
@@ -136,7 +136,7 @@
   "title": "Divisioni a due cifre",
   "area": "aritmetica",
   "subarea": "operazioni",
-  "match": "divisione.*due cifre|due cifre.*divisione"
+  "match": "divisione.*due cifre|due cifre.*divisione|\\b\\d{2} ?÷ ?\\d\\b"
  },
  {
   "id": "c2-indagine-statistica",
@@ -556,7 +556,7 @@
   "area": "aritmetica",
   "subarea": "numeri_relativi",
   "newSubarea": true,
-  "match": "numer[oi].{0,25}relativ|relativ.{0,25}numer[oi]|numeri interi relativi"
+  "match": "numer[oi].{0,25}relativ|relativ.{0,25}numer[oi]|numeri interi relativi|\\([+-]\\s*\\d+\\)\\s*\\+\\s*\\([+-]\\s*\\d+\\)|(?=.*[+-]\\s*\\d)(?=.*(temperatura|sotto zero|quota|profondit|piano|opposto|maggiore|minore|più grande|più piccolo|più vicino|più a destra|più in basso|più freddo))"
  },
  {
   "id": "c5-confronto-numeri-relativi",
@@ -565,7 +565,7 @@
   "area": "aritmetica",
   "subarea": "numeri_relativi",
   "newSubarea": true,
-  "match": "(?=.*confront)(?=.*numer)(?=.*relativ)"
+  "match": "(?=.*confront)(?=.*numer)(?=.*relativ)|(?=.*[+-]\\d)(?=.*(maggiore|minore|più grande|più piccolo|più vicino|più a destra|più in basso|più freddo|ordine))"
  },
  {
   "id": "c5-addizione-numeri-relativi",
@@ -574,7 +574,7 @@
   "area": "aritmetica",
   "subarea": "numeri_relativi",
   "newSubarea": true,
-  "match": "(?=.*addizion)(?=.*numer)(?=.*relativ)"
+  "match": "(?=.*addizion)(?=.*numer)(?=.*relativ)|\\([+-]\\s*\\d+\\)\\s*\\+\\s*\\([+-]\\s*\\d+\\)|(?=.*[+-]\\d)(?=.*(temperatura|sotto zero|quota|profondit|piano))(?=.*(sal|scend|aumenta|diminu))"
  },
  {
   "id": "c5-elevamento-a-potenza",

@@ -57779,7 +57779,7 @@
    "area": "problemi",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Una piscina è lunga 25 m. Marco nuota 4 vasche intere. Quanti metri percorre?",
+   "question": "Una piscina è lunga 25 m. Luca nuota 4 vasche intere. Quanti metri percorre?",
    "options": [
     "50 m",
     "75 m",
@@ -61427,16 +61427,16 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 3,
-   "question": "In una gara Marco arriva prima di Sara e Sara prima di Ivo. Chi è ultimo?",
+   "question": "In una gara Giacomo arriva prima di Sara e Sara prima di Ivo. Chi è ultimo?",
    "options": [
-    "Marco",
+    "Giacomo",
     "Sara",
     "Ivo",
     "pareggio"
    ],
    "answerIndex": 2,
    "answer": "Ivo",
-   "explanation": "L'ordine è Marco, Sara, Ivo: l'ultimo è Ivo.",
+   "explanation": "L'ordine è Giacomo, Sara, Ivo: l'ultimo è Ivo.",
    "active": true,
    "tag": "logica_e_dati",
    "tags": [
@@ -63571,16 +63571,16 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 2,
-   "question": "Confronta le frazioni 1/6 e 1/3. Quale delle due è minore?",
+   "question": "Confronta le frazioni 1/7 e 1/9. Quale delle due è minore?",
    "options": [
-    "1/3",
+    "1/7",
     "Sono uguali",
-    "1/6",
+    "1/9",
     "Non si può sapere"
    ],
    "answerIndex": 2,
-   "answer": "1/6",
-   "explanation": "Con lo stesso numeratore (1) confronti i denominatori: 6 è maggiore di 3, quindi 1/6 è minore di 1/3.",
+   "answer": "1/9",
+   "explanation": "Con lo stesso numeratore (1) confronti i denominatori: 9 è maggiore di 7, quindi 1/9 è minore di 1/7.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -64627,16 +64627,16 @@
    "area": "aritmetica",
    "subarea": "decimali",
    "difficulty": 3,
-   "question": "Cinque amici dividono in parti uguali una pizza che costa 8,5 euro. Quanto paga ciascuno?",
+   "question": "Cinque amici dividono in parti uguali una pizza che costa 8,50 euro. Quanto paga ciascuno?",
    "options": [
-    "1,5 euro",
+    "1,50 euro",
     "17 euro",
-    "1,7 euro",
+    "1,70 euro",
     "1,07 euro"
    ],
    "answerIndex": 2,
-   "answer": "1,7 euro",
-   "explanation": "Dividi gli interi: 8 ÷ 5 = 1 (con resto di 3), che diventa 30 decimi più 5 decimi = 35 decimi. 35 ÷ 5 = 7 decimi. Quindi 8,5 ÷ 5 = 1,7 euro.",
+   "answer": "1,70 euro",
+   "explanation": "Dividi gli interi: 8 ÷ 5 = 1 (con resto di 3), che diventa 30 decimi più 5 decimi = 35 decimi. 35 ÷ 5 = 7 decimi. Quindi 8,50 ÷ 5 = 1,70 euro.",
    "active": true,
    "tag": "matematica;decimali;classe_4;primaria",
    "tags": [
@@ -64882,17 +64882,17 @@
    "class": 4,
    "area": "aritmetica",
    "subarea": "multipli_divisori",
-   "difficulty": 3,
-   "question": "Quali sono i divisori comuni di 12 e 18?",
+   "difficulty": 2,
+   "question": "Tra questi numeri, qual è divisore sia di 12 sia di 18?",
    "options": [
-    "1, 2, 3",
-    "1, 6, 9",
-    "2, 3, 6, 9",
-    "1, 2, 3, 6"
+    "6",
+    "4",
+    "9",
+    "8"
    ],
-   "answerIndex": 3,
-   "answer": "1, 2, 3, 6",
-   "explanation": "I divisori di 12 sono 1, 2, 3, 4, 6, 12; i divisori di 18 sono 1, 2, 3, 6, 9, 18. I numeri comuni a entrambe le liste sono 1, 2, 3, 6.",
+   "answerIndex": 0,
+   "answer": "6",
+   "explanation": "6 divide sia 12 (12 ÷ 6 = 2) sia 18 (18 ÷ 6 = 3); 4 divide 12 ma non 18, 9 divide 18 ma non 12, e 8 non divide né 12 né 18.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
    "tags": [
@@ -65779,7 +65779,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 2,
-   "question": "Qual è la frazione complementare di 3/8 rispetto all'intero?",
+   "question": "Una pizza è divisa in 8 fette uguali e ne hai già mangiate 3, cioè 3/8. Qual è la frazione complementare, cioè la parte che ti resta ancora da mangiare?",
    "options": [
     "3/8",
     "4/8",
@@ -65788,7 +65788,7 @@
    ],
    "answerIndex": 3,
    "answer": "5/8",
-   "explanation": "Sottrai da 1: 8/8 - 3/8 = 5/8, quindi la frazione complementare di 3/8 è 5/8.",
+   "explanation": "Le fette totali sono 8/8: hai mangiato 3/8, quindi la frazione complementare, cioè la parte che resta, è 8/8 - 3/8 = 5/8 della pizza.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -65907,7 +65907,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 2,
-   "question": "Quale frazione complementare devi sommare a 5/9 per ottenere l'intero?",
+   "question": "Un album ha le pagine piene per 5/9. Qual è la frazione complementare, cioè quella che manca ancora per riempirlo del tutto?",
    "options": [
     "5/9",
     "3/9",
@@ -65916,7 +65916,7 @@
    ],
    "answerIndex": 3,
    "answer": "4/9",
-   "explanation": "Sottrai da 1: 9/9 - 5/9 = 4/9, quindi la frazione complementare di 5/9 è 4/9.",
+   "explanation": "Le pagine intere sono 9/9: se ne sono piene 5/9, la frazione complementare che manca è 9/9 - 5/9 = 4/9 dell'album.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -66323,7 +66323,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 3,
-   "question": "Marco ha diviso una torta in 4 parti uguali. Qual è l'unità frazionaria di questa divisione?",
+   "question": "Filippo ha diviso una torta in 4 parti uguali. Qual è l'unità frazionaria di questa divisione?",
    "options": [
     "4/1",
     "1/3",
@@ -66332,7 +66332,7 @@
    ],
    "answerIndex": 2,
    "answer": "1/4",
-   "explanation": "Marco ha diviso la torta in 4 parti uguali: l'unità frazionaria, cioè una sola parte, è 1/4.",
+   "explanation": "Filippo ha diviso la torta in 4 parti uguali: l'unità frazionaria, cioè una sola parte, è 1/4.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -66547,7 +66547,7 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 1,
-   "question": "Tra le frazioni unitarie 1/3 e 1/6, quale rappresenta la parte più grande?",
+   "question": "In una gara, vinci il premio se scegli la fetta più grande tra due frazioni unitarie della stessa torta: 1/3 oppure 1/6. Quale conviene scegliere?",
    "options": [
     "1/6",
     "Sono uguali",
@@ -66556,7 +66556,7 @@
    ],
    "answerIndex": 2,
    "answer": "1/3",
-   "explanation": "Più è piccolo il denominatore di una frazione unitaria, più grande è la parte: dividendo in 3 parti invece che in 6, ogni parte è più grande, quindi 1/3 è maggiore di 1/6.",
+   "explanation": "Più è piccolo il denominatore di una frazione unitaria, più grande è la parte: dividendo la torta in 3 parti invece che in 6, ogni fetta è più grande. Conviene scegliere 1/3.",
    "active": true,
    "tag": "matematica;frazioni;classe_4;primaria",
    "tags": [
@@ -67315,16 +67315,16 @@
    "area": "aritmetica",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Un serbatoio pieno contiene 1 ettolitro d'acqua. Una tanica ne contiene 15 litri. Quante taniche come questa servono per riempire di nuovo il serbatoio vuoto?",
+   "question": "Un serbatoio pieno contiene 1 ettolitro d'acqua. Una tanica ne contiene 15 litri. Quante taniche piene servono come minimo per riempire di nuovo il serbatoio vuoto?",
    "options": [
-    "Esattamente 15 taniche",
-    "Più di 100 taniche",
-    "Meno di 10 taniche",
-    "Esattamente 1 tanica"
+    "6",
+    "7",
+    "15",
+    "100"
    ],
-   "answerIndex": 2,
-   "answer": "Meno di 10 taniche",
-   "explanation": "1 ettolitro corrisponde a 100 litri. Con taniche da 15 litri ciascuna ne servono un po' meno di 7, quindi comunque meno di 10 taniche.",
+   "answerIndex": 1,
+   "answer": "7",
+   "explanation": "1 ettolitro corrisponde a 100 litri. Con 6 taniche da 15 litri hai 6 × 15 = 90 litri, che non bastano; con 7 taniche hai 7 × 15 = 105 litri, che bastano. Servono quindi 7 taniche.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
    "tags": [
@@ -67671,12 +67671,12 @@
    "options": [
     "8,15 euro",
     "9,15 euro",
-    "9,2 euro",
-    "9,8 euro"
+    "9,20 euro",
+    "9,80 euro"
    ],
    "answerIndex": 2,
-   "answer": "9,2 euro",
-   "explanation": "Moltiplichi come se non ci fosse la virgola: 115 × 8 = 920. Il numero di partenza aveva due cifre decimali, quindi rimetti la virgola: 9,20 euro, cioè 9,2 euro.",
+   "answer": "9,20 euro",
+   "explanation": "Moltiplichi come se non ci fosse la virgola: 115 × 8 = 920. Il numero di partenza aveva due cifre decimali, quindi rimetti la virgola: 9,20 euro.",
    "active": true,
    "tag": "matematica;decimali;classe_4;primaria",
    "tags": [
@@ -67891,7 +67891,7 @@
    "area": "aritmetica",
    "subarea": "multipli_divisori",
    "difficulty": 1,
-   "question": "Marco mette le biglie in gruppi da 6, quindi ogni totale è un multiplo di 6. Quale di questi totali può ottenere?",
+   "question": "Tommaso mette le biglie in gruppi da 6, quindi ogni totale è un multiplo di 6. Quale di questi totali può ottenere?",
    "options": [
     "32",
     "34",
@@ -67922,17 +67922,17 @@
    "class": 4,
    "area": "aritmetica",
    "subarea": "multipli_divisori",
-   "difficulty": 3,
-   "question": "Qual è il più piccolo multiplo comune di 4 e 6, diverso da 0?",
+   "difficulty": 2,
+   "question": "Tra questi numeri, qual è multiplo sia di 4 sia di 6?",
    "options": [
-    "24",
     "10",
     "18",
-    "12"
+    "24",
+    "16"
    ],
-   "answerIndex": 3,
-   "answer": "12",
-   "explanation": "I multipli di 4 sono 4, 8, 12, 16, 20, 24... e i multipli di 6 sono 6, 12, 18, 24... Tra le opzioni, 24 è multiplo di entrambi ma non è il più piccolo, mentre 10 e 18 non sono multipli di 4: il più piccolo numero comune è 12.",
+   "answerIndex": 2,
+   "answer": "24",
+   "explanation": "24 è multiplo di 4 (4 × 6 = 24) ed è anche multiplo di 6 (6 × 4 = 24); 18 è multiplo di 6 ma non di 4, 16 è multiplo di 4 ma non di 6, e 10 non è multiplo né di 4 né di 6.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
    "tags": [
@@ -68306,7 +68306,7 @@
    "class": 4,
    "area": "aritmetica",
    "subarea": "frazioni",
-   "difficulty": 2,
+   "difficulty": 1,
    "question": "Un numero misto è formato dalla parte intera 4 e dalla frazione 1/6. Quale numero misto rappresenta?",
    "options": [
     "6 e 1/4",
@@ -69939,7 +69939,7 @@
    "area": "aritmetica",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Qual è l'unità di misura campione per la lunghezza?",
+   "question": "Devi misurare la lunghezza del tuo banco di scuola. Quale unità di misura usi?",
    "options": [
     "Il litro",
     "Il metro",
@@ -69948,7 +69948,7 @@
    ],
    "answerIndex": 1,
    "answer": "Il metro",
-   "explanation": "Il metro è l'unità di misura campione per le lunghezze: con il metro confronti e misuri quanto è lunga una cosa.",
+   "explanation": "Per misurare una lunghezza, come quella del banco, si usa il metro, l'unità di misura campione per le lunghezze.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
    "tags": [
@@ -69980,7 +69980,7 @@
    ],
    "answerIndex": 2,
    "answer": "Il chilogrammo",
-   "explanation": "Il chilogrammo è l'unità di misura campione per la massa: con il chilogrammo confronti quanto pesa un oggetto.",
+   "explanation": "Il chilogrammo è l'unità di misura campione per la massa: con il chilogrammo confronti la massa di un oggetto.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
    "tags": [
@@ -70003,7 +70003,7 @@
    "area": "aritmetica",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Qual è l'unità di misura campione per la capacità?",
+   "question": "Devi misurare quanta acqua entra in una bottiglia. Quale unità di misura usi?",
    "options": [
     "Il litro",
     "Il metro",
@@ -70012,7 +70012,7 @@
    ],
    "answerIndex": 0,
    "answer": "Il litro",
-   "explanation": "Il litro è l'unità di misura campione per la capacità: con il litro misuri quanto liquido contiene un recipiente.",
+   "explanation": "Per misurare una capacità, come quella di una bottiglia, si usa il litro, l'unità di misura campione per la capacità.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
    "tags": [
@@ -70067,16 +70067,16 @@
    "area": "aritmetica",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Marco misura un tavolo con i suoi passi e Sofia lo misura con il metro, un'unità di misura campione. Perché i loro risultati possono essere diversi?",
+   "question": "Davide misura un tavolo con i suoi passi e Sofia lo misura con il metro, un'unità di misura campione. Perché i loro risultati possono essere diversi?",
    "options": [
-    "Perché Marco ha sbagliato a contare i passi",
+    "Perché Davide ha sbagliato a contare i passi",
     "Perché il passo non è un'unità di misura campione uguale per tutti, mentre il metro sì",
     "Perché il tavolo cambia lunghezza",
     "Perché Sofia ha usato il chilogrammo"
    ],
    "answerIndex": 1,
    "answer": "Perché il passo non è un'unità di misura campione uguale per tutti, mentre il metro sì",
-   "explanation": "Il passo di Marco può essere diverso da quello di un'altra persona, quindi non è un'unità campione affidabile. Il metro invece è sempre lungo uguale per tutti.",
+   "explanation": "Il passo di Davide può essere diverso da quello di un'altra persona, quindi non è un'unità campione affidabile. Il metro invece è sempre lungo uguale per tutti.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
    "tags": [
@@ -70099,7 +70099,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: (+3) + (+4).",
+   "question": "Quanto vale (+3) + (+4)?",
    "options": [
     "+7",
     "-7",
@@ -70131,7 +70131,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: (-2) + (-5).",
+   "question": "Quanto vale (-2) + (-5)?",
    "options": [
     "+7",
     "-7",
@@ -70163,7 +70163,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Esegui questa addizione tra numeri relativi: (+6) + (-2).",
+   "question": "Quanto vale (+6) + (-2)?",
    "options": [
     "-4",
     "+8",
@@ -70172,7 +70172,7 @@
    ],
    "answerIndex": 2,
    "answer": "+4",
-   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 6 - 2 = 4, e 6 è positivo, quindi (+6) + (-2) = +4.",
+   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del numero più lontano dallo zero: 6 - 2 = 4, e 6 è positivo, quindi (+6) + (-2) = +4.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70195,7 +70195,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Esegui questa addizione tra numeri relativi: (-7) + (+3).",
+   "question": "Quanto vale (-7) + (+3)?",
    "options": [
     "+4",
     "-10",
@@ -70204,7 +70204,7 @@
    ],
    "answerIndex": 3,
    "answer": "-4",
-   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 7 - 3 = 4, e 7 è negativo, quindi (-7) + (+3) = -4.",
+   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del numero più lontano dallo zero: 7 - 3 = 4, e 7 è negativo, quindi (-7) + (+3) = -4.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70227,7 +70227,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: (+5) + (-5).",
+   "question": "Quanto vale (+5) + (-5)?",
    "options": [
     "0",
     "+10",
@@ -70259,7 +70259,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Con un'addizione tra numeri relativi trovi la nuova temperatura: ieri era -4°C, oggi è salita di 6 gradi. Qual è la temperatura di oggi?",
+   "question": "Ieri la temperatura era di -4°C; oggi è salita di 6 gradi. Qual è la temperatura di oggi?",
    "options": [
     "-2°C",
     "+2°C",
@@ -70291,7 +70291,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Con un'addizione tra numeri relativi trovi la nuova profondità: un sub è a -8 metri e scende di altri 5 metri. A quale profondità si trova ora?",
+   "question": "Un sub è a -8 metri e scende di altri 5 metri. A quale profondità si trova ora?",
    "options": [
     "-3",
     "+13",
@@ -70323,7 +70323,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Alle 8 del mattino c'erano -6°C; alle 14 la temperatura era salita di 9 gradi. Con un'addizione tra numeri relativi, quanti gradi c'erano alle 14?",
+   "question": "Alle 8 del mattino c'erano -6°C; alle 14 la temperatura era salita di 9 gradi. Quanti gradi c'erano alle 14?",
    "options": [
     "-15°C",
     "+15°C",
@@ -70355,7 +70355,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 3,
-   "question": "Con un'addizione tra numeri relativi trovi il nuovo piano: un ascensore parte dal piano -2 e sale di 5 piani. A quale piano arriva?",
+   "question": "Un ascensore parte dal piano -2 e sale di 5 piani. A quale piano arriva?",
    "options": [
     "+3",
     "-3",
@@ -70387,7 +70387,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Esegui questa addizione tra numeri relativi: (-10) + (+4).",
+   "question": "Quanto vale (-10) + (+4)?",
    "options": [
     "+6",
     "-6",
@@ -70396,7 +70396,7 @@
    ],
    "answerIndex": 1,
    "answer": "-6",
-   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del più grande: 10 - 4 = 6, e 10 è negativo, quindi (-10) + (+4) = -6.",
+   "explanation": "Sommando due numeri relativi di segno diverso, fai la differenza tra i valori e tieni il segno del numero più lontano dallo zero: 10 - 4 = 6, e 10 è negativo, quindi (-10) + (+4) = -6.",
    "active": true,
    "tag": "matematica;numeri_relativi;classe_5;primaria",
    "tags": [
@@ -70419,7 +70419,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 3,
-   "question": "Con due addizioni tra numeri relativi trovi la temperatura finale: lunedì era -3°C, poi è salita di 2 gradi, poi è scesa di 6 gradi. Qual è la temperatura dopo questi due cambiamenti?",
+   "question": "Lunedì la temperatura era di -3°C; poi è salita di 2 gradi, poi è scesa di 6 gradi. Qual è la temperatura dopo questi due cambiamenti?",
    "options": [
     "+7°C",
     "-1°C",
@@ -70451,7 +70451,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Esegui questa addizione tra numeri relativi: (+2) + (+9).",
+   "question": "Quanto vale (+2) + (+9)?",
    "options": [
     "-11",
     "+7",
@@ -70931,7 +70931,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Il rombo ha quattro lati della stessa lunghezza ed è un parallelogramma. Quante coppie di lati paralleli ha?",
+   "question": "Il rombo ha quattro lati della stessa lunghezza. Quante coppie di lati paralleli ha?",
    "options": [
     "una",
     "tre",
@@ -70963,7 +70963,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Il rettangolo è un parallelogramma con quattro angoli retti. Che cosa si può dire dei suoi lati opposti?",
+   "question": "Un rettangolo, che è un tipo particolare di quadrilatero, ha quattro angoli retti. Che cosa si può dire dei suoi lati opposti?",
    "options": [
     "non sono mai paralleli",
     "sono tutti e quattro uguali tra loro",
@@ -70972,7 +70972,7 @@
    ],
    "answerIndex": 3,
    "answer": "sono paralleli e uguali a due a due",
-   "explanation": "Nel rettangolo i lati opposti sono paralleli e della stessa lunghezza, a due a due.",
+   "explanation": "Il rettangolo è un parallelogramma: i suoi lati opposti sono paralleli e della stessa lunghezza, a due a due.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
    "tags": [
@@ -70995,7 +70995,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il trapezio isoscele ha i due lati obliqui, cioè quelli non paralleli, della stessa lunghezza. Quante coppie di lati paralleli ha?",
+   "question": "Il trapezio isoscele ha i due lati obliqui, cioè quelli non paralleli, della stessa lunghezza. Quante coppie di lati paralleli ha un trapezio?",
    "options": [
     "una",
     "due",
@@ -71004,7 +71004,7 @@
    ],
    "answerIndex": 0,
    "answer": "una",
-   "explanation": "Il trapezio isoscele è un trapezio, quindi ha una sola coppia di lati paralleli; i lati obliqui sono uguali ma non paralleli.",
+   "explanation": "Il trapezio ha sempre una sola coppia di lati paralleli; nel trapezio isoscele, in più, i lati obliqui sono uguali ma non paralleli.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
    "tags": [
@@ -71027,7 +71027,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 2,
-   "question": "Il trapezio rettangolo ha due angoli di 90°. Quante coppie di lati paralleli ha?",
+   "question": "Il trapezio rettangolo ha due angoli di 90°. Quante coppie di lati paralleli ha un trapezio?",
    "options": [
     "due",
     "una",
@@ -71036,7 +71036,7 @@
    ],
    "answerIndex": 1,
    "answer": "una",
-   "explanation": "Il trapezio rettangolo è un trapezio, quindi ha una sola coppia di lati paralleli, con due angoli di 90°.",
+   "explanation": "Il trapezio ha sempre una sola coppia di lati paralleli; nel trapezio rettangolo, in più, due angoli misurano 90°.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
    "tags": [
@@ -71603,16 +71603,16 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 3,
-   "question": "Marco dice che un triangolo equilatero può essere anche ottusangolo. Ha ragione?",
+   "question": "Sara dice che un triangolo equilatero può essere anche rettangolo. Ha ragione?",
    "options": [
-    "No, perché un triangolo equilatero ha sempre tre angoli di 60° ed è sempre acutangolo",
+    "No, perché un triangolo equilatero ha sempre tre angoli di 60° e nessuno è retto",
     "Sì, se il triangolo è molto grande",
-    "Sì, ma solo se ha anche un angolo retto",
+    "Sì, ma solo se ha anche un angolo ottuso",
     "No, perché un triangolo equilatero non ha angoli uguali"
    ],
    "answerIndex": 0,
-   "answer": "No, perché un triangolo equilatero ha sempre tre angoli di 60° ed è sempre acutangolo",
-   "explanation": "Marco non ha ragione: in un triangolo equilatero ogni angolo misura 60° (180° ÷ 3 = 60°), quindi è sempre acutangolo e non può essere ottusangolo.",
+   "answer": "No, perché un triangolo equilatero ha sempre tre angoli di 60° e nessuno è retto",
+   "explanation": "Sara non ha ragione: in un triangolo equilatero ogni angolo misura 60° (180° ÷ 3 = 60°), quindi nessun angolo è di 90° e il triangolo non può essere rettangolo.",
    "active": true,
    "tag": "matematica;figure;classe_5;primaria",
    "tags": [
@@ -71731,7 +71731,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Nel confronto tra numeri relativi, qual è maggiore tra +5 e -8?",
+   "question": "Qual è maggiore tra +5 e -8?",
    "options": [
     "+5",
     "-8",
@@ -71763,7 +71763,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 1,
-   "question": "Nel confronto tra numeri relativi, quale numero è maggiore tra -2 e -6?",
+   "question": "Quale numero è maggiore tra -2 e -6?",
    "options": [
     "-6",
     "-2",
@@ -71955,7 +71955,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 3,
-   "question": "Nel confronto tra numeri relativi, Giulia dice: \"-20 è maggiore di -5 perché 20 è maggiore di 5\". Ha ragione?",
+   "question": "Giulia dice: «-20 è maggiore di -5 perché 20 è maggiore di 5». Ha ragione?",
    "options": [
     "sì, ha ragione",
     "no, -20 e -5 sono uguali",
@@ -72274,7 +72274,7 @@
    "class": 5,
    "area": "aritmetica",
    "subarea": "potenze",
-   "difficulty": 2,
+   "difficulty": 1,
    "question": "Quanto vale 5²?",
    "options": [
     "10",
@@ -72604,7 +72604,7 @@
    ],
    "answerIndex": 0,
    "answer": "300",
-   "explanation": "3 m² = 3 × 100 = 300 dm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "3 m² = 3 × 100 = 300 dm²: tra un'unità di superficie e la successiva il passo è sempre di 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72636,7 +72636,7 @@
    ],
    "answerIndex": 1,
    "answer": "200",
-   "explanation": "2 dm² = 2 × 100 = 200 cm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "2 dm² = 2 × 100 = 200 cm²: passando da un'unità di superficie a quella vicina si moltiplica o divide sempre per 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72668,7 +72668,7 @@
    ],
    "answerIndex": 2,
    "answer": "400",
-   "explanation": "4 cm² = 4 × 100 = 400 mm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "4 cm² = 4 × 100 = 400 mm²: nelle misure di superficie, ogni gradino della scala vale 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72700,7 +72700,7 @@
    ],
    "answerIndex": 3,
    "answer": "5",
-   "explanation": "500 dm² ÷ 100 = 5 m²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "500 dm² ÷ 100 = 5 m²: tra due unità di superficie consecutive c'è sempre un fattore 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72732,7 +72732,7 @@
    ],
    "answerIndex": 0,
    "answer": "3",
-   "explanation": "300 cm² ÷ 100 = 3 dm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "300 cm² ÷ 100 = 3 dm²: la scala delle unità di superficie procede sempre a passi di 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72796,7 +72796,7 @@
    ],
    "answerIndex": 2,
    "answer": "300",
-   "explanation": "3 hm² = 3 × 100 = 300 dam²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "3 hm² = 3 × 100 = 300 dam²: tra un'unità di superficie e la successiva il passo è sempre di 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72828,7 +72828,7 @@
    ],
    "answerIndex": 3,
    "answer": "200",
-   "explanation": "2 km² = 2 × 100 = 200 hm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "2 km² = 2 × 100 = 200 hm²: passando da un'unità di superficie a quella vicina si moltiplica o divide sempre per 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72860,7 +72860,7 @@
    ],
    "answerIndex": 0,
    "answer": "6",
-   "explanation": "600 m² ÷ 100 = 6 dam²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "600 m² ÷ 100 = 6 dam²: nelle misure di superficie, ogni gradino della scala vale 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72892,7 +72892,7 @@
    ],
    "answerIndex": 1,
    "answer": "5",
-   "explanation": "500 dam² ÷ 100 = 5 hm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "500 dam² ÷ 100 = 5 hm²: tra due unità di superficie consecutive c'è sempre un fattore 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72924,7 +72924,7 @@
    ],
    "answerIndex": 2,
    "answer": "50",
-   "explanation": "0,5 dam² = 0,5 × 100 = 50 m²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "0,5 dam² = 0,5 × 100 = 50 m²: la scala delle unità di superficie procede sempre a passi di 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -72988,7 +72988,7 @@
    ],
    "answerIndex": 0,
    "answer": "2,5",
-   "explanation": "250 cm² ÷ 100 = 2,5 dm²: ogni passo fra unità di superficie consecutive vale 100.",
+   "explanation": "250 cm² ÷ 100 = 2,5 dm²: tra un'unità di superficie e la successiva il passo è sempre di 100.",
    "active": true,
    "tag": "matematica;misure_superficie;classe_5;primaria",
    "tags": [
@@ -73715,7 +73715,7 @@
    "area": "aritmetica",
    "subarea": "numeri_relativi",
    "difficulty": 2,
-   "question": "Qual è l'opposto del numero relativo -9?",
+   "question": "In un gioco, un giocatore guadagna dei punti scritti come numero relativo. Qual è l'opposto del numero relativo -9?",
    "options": [
     "-9",
     "+9",
@@ -74008,11 +74008,11 @@
     "vera",
     "né vera né falsa",
     "falsa",
-    "non è una proposizione"
+    "vera, perché 7 è un numero primo"
    ],
    "answerIndex": 2,
    "answer": "falsa",
-   "explanation": "7 non è divisibile per 2, quindi la proposizione \"7 è un numero pari\" è falsa.",
+   "explanation": "7 non è divisibile per 2, quindi la proposizione \"7 è un numero pari\" è falsa. Essere un numero primo non c'entra con essere pari o dispari.",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
    "tags": [
@@ -74200,11 +74200,11 @@
     "falsa",
     "vera",
     "né vera né falsa",
-    "non è una proposizione"
+    "vera, perché 5 è un numero primo"
    ],
    "answerIndex": 0,
    "answer": "falsa",
-   "explanation": "5 è un numero dispari, quindi negarlo con \"non\" produce un'affermazione sbagliata: la proposizione è falsa.",
+   "explanation": "5 è un numero dispari, quindi negarlo con \"non\" produce un'affermazione sbagliata: la proposizione è falsa. Essere un numero primo non c'entra con essere pari o dispari.",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
    "tags": [
@@ -74230,13 +74230,13 @@
    "question": "A differenza di una proposizione logica, un enunciato aperto è una frase che...",
    "options": [
     "è sempre vera",
-    "contiene una variabile e diventa vera o falsa solo quando la variabile ha un valore",
+    "contiene un pronome o uno spazio vuoto e diventa vera o falsa solo quando lo completi",
     "è sempre falsa",
     "non contiene numeri"
    ],
    "answerIndex": 1,
-   "answer": "contiene una variabile e diventa vera o falsa solo quando la variabile ha un valore",
-   "explanation": "In un enunciato aperto come \"x è maggiore di 3\" non puoi dire se è vero o falso finché non sai quanto vale x: diventa una proposizione solo dopo avere scelto un valore per la variabile.",
+   "answer": "contiene un pronome o uno spazio vuoto e diventa vera o falsa solo quando lo completi",
+   "explanation": "In un enunciato aperto come \"Lui è alto 1 metro\" non puoi dire se è vero o falso finché non sai a chi si riferisce \"lui\": diventa una proposizione solo dopo avere scelto a chi si riferisce.",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
    "tags": [
@@ -74263,12 +74263,12 @@
    "options": [
     "3 + 2 = 5",
     "Roma è una città",
-    "x + 2 = 5",
+    "___ + 2 = 5",
     "Il triangolo ha tre lati"
    ],
    "answerIndex": 2,
-   "answer": "x + 2 = 5",
-   "explanation": "\"x + 2 = 5\" contiene la variabile x: è vera o falsa solo dopo avere scelto il valore di x, quindi è un enunciato aperto.",
+   "answer": "___ + 2 = 5",
+   "explanation": "\"___ + 2 = 5\" ha uno spazio da riempire: è vera o falsa solo dopo avere scelto quale numero metterci, quindi è un enunciato aperto.",
    "active": true,
    "tag": "matematica;logica_proposizioni;classe_5;primaria",
    "tags": [
@@ -74451,7 +74451,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 2,
-   "question": "Un ventilatore da tavolo viene acceso e la sua base ruota descrivendo un angolo di rotazione pari a un giro intero più un quarto di giro. In quale direzione si ferma rispetto a quella di partenza?",
+   "question": "Una giostra viene messa in moto e compie un angolo di rotazione pari a un giro intero più un quarto di giro. In quale direzione si ferma rispetto a quella di partenza?",
    "options": [
     "A un quarto di giro dalla partenza",
     "Nella stessa direzione di partenza",
@@ -74460,7 +74460,7 @@
    ],
    "answerIndex": 0,
    "answer": "A un quarto di giro dalla partenza",
-   "explanation": "Il giro intero riporta il ventilatore nella direzione di partenza; il quarto di giro aggiunto lo sposta di un quarto di giro rispetto all'inizio.",
+   "explanation": "Il giro intero riporta la giostra nella direzione di partenza; il quarto di giro aggiunto la sposta di un quarto di giro rispetto all'inizio.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -74515,7 +74515,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 2,
-   "question": "Un cane cammina verso il parco, poi si gira e ripercorre la stessa strada all'indietro fino a casa. Rispetto alla direzione di partenza, che angolo di rotazione ha fatto quando si è girato?",
+   "question": "Un pattinatore fa una piroetta su se stesso e alla fine si ritrova a guardare esattamente nella direzione opposta a quella di partenza. Che angolo di rotazione ha fatto?",
    "options": [
     "Un giro intero",
     "Tre quarti di giro",
@@ -74524,7 +74524,7 @@
    ],
    "answerIndex": 2,
    "answer": "Mezzo giro",
-   "explanation": "Ripercorrere la stessa strada al contrario significa guardare nella direzione opposta: l'angolo di rotazione è di mezzo giro.",
+   "explanation": "Guardare nella direzione opposta significa avere ruotato di metà di un giro completo: la piroetta corrisponde a un angolo di mezzo giro.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -74578,7 +74578,7 @@
    "class": 3,
    "area": "geometria",
    "subarea": "angoli",
-   "difficulty": 3,
+   "difficulty": 2,
    "question": "Una porta chiusa viene aperta ruotandola di un quarto di giro, poi richiusa ruotandola di un quarto di giro nella direzione opposta. Qual è l'angolo di rotazione totale rispetto alla posizione di partenza?",
    "options": [
     "Nessuna rotazione, torna alla direzione di partenza",
@@ -74965,14 +74965,14 @@
    "difficulty": 1,
    "question": "Un angolo convesso è...",
    "options": [
-    "un angolo più piccolo di un angolo piatto",
-    "un angolo più grande di un angolo piatto",
+    "un angolo che non contiene al suo interno i prolungamenti dei suoi lati, quindi minore di un angolo piatto",
+    "un angolo che contiene al suo interno i prolungamenti dei suoi lati, quindi maggiore di un angolo piatto",
     "un angolo formato da due rette parallele",
     "un angolo che ha sempre due lati uguali"
    ],
    "answerIndex": 0,
-   "answer": "un angolo più piccolo di un angolo piatto",
-   "explanation": "Un angolo convesso è un angolo la cui ampiezza è minore di quella di un angolo piatto (due lati distesi in linea retta).",
+   "answer": "un angolo che non contiene al suo interno i prolungamenti dei suoi lati, quindi minore di un angolo piatto",
+   "explanation": "Un angolo convesso non contiene al suo interno i prolungamenti dei suoi lati ed è sempre minore di un angolo piatto (180°); l'angolo concavo, invece, li contiene ed è maggiore di un angolo piatto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -74998,13 +74998,13 @@
    "question": "Un angolo concavo è...",
    "options": [
     "un angolo senza vertice",
-    "un angolo più grande di un angolo piatto",
-    "un angolo più piccolo di un angolo piatto",
+    "un angolo che contiene al suo interno i prolungamenti dei suoi lati, quindi maggiore di un angolo piatto",
+    "un angolo che non contiene al suo interno i prolungamenti dei suoi lati, quindi minore di un angolo piatto",
     "un angolo uguale a un angolo retto"
    ],
    "answerIndex": 1,
-   "answer": "un angolo più grande di un angolo piatto",
-   "explanation": "Un angolo concavo ha un'ampiezza maggiore di quella di un angolo piatto: 'si apre' oltre la linea retta.",
+   "answer": "un angolo che contiene al suo interno i prolungamenti dei suoi lati, quindi maggiore di un angolo piatto",
+   "explanation": "Un angolo concavo contiene al suo interno i prolungamenti dei suoi lati ed è sempre maggiore di un angolo piatto (180°); l'angolo convesso, invece, non li contiene ed è minore di un angolo piatto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -75187,7 +75187,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Il coperchio di una scatola è aperto e forma, con la base, un angolo che contiene al suo interno i prolungamenti dei due lati. Che tipo di angolo forma il coperchio con la base?",
+   "question": "Lo schienale di una sedia sdraio viene reclinato quasi del tutto all'indietro: l'angolo che si forma con la seduta contiene al suo interno i prolungamenti dei due lati. Che tipo di angolo forma lo schienale con la seduta?",
    "options": [
     "Convesso",
     "Retto",
@@ -75346,7 +75346,7 @@
    "class": 3,
    "area": "geometria",
    "subarea": "angoli",
-   "difficulty": 3,
+   "difficulty": 2,
    "question": "Un bambino fa una rotazione di un quarto di giro; una bambina fa una rotazione di mezzo giro. Confrontando i due angoli di rotazione, quale affermazione è vera?",
    "options": [
     "L'angolo di rotazione della bambina è più ampio",
@@ -75954,7 +75954,7 @@
    "class": 3,
    "area": "geometria",
    "subarea": "figure",
-   "difficulty": 2,
+   "difficulty": 1,
    "question": "Un poligono ha 4 lati e 4 vertici. Come si chiama in generale questo tipo di poligono?",
    "options": [
     "Esagono",
@@ -76018,8 +76018,8 @@
    "class": 3,
    "area": "geometria",
    "subarea": "figure",
-   "difficulty": 2,
-   "question": "Un poligono ha 6 lati e 6 vertici. Come si chiama?",
+   "difficulty": 1,
+   "question": "Un poligono ha 6 vertici. Come si chiama?",
    "options": [
     "Pentagono",
     "Ottagono",
@@ -76028,7 +76028,7 @@
    ],
    "answerIndex": 3,
    "answer": "Esagono",
-   "explanation": "Il nome 'esagono' indica un poligono con 6 lati (e quindi anche 6 vertici).",
+   "explanation": "Il nome 'esagono' indica un poligono con 6 vertici (e quindi anche 6 lati).",
    "active": true,
    "tag": "matematica;figure;classe_3;primaria",
    "tags": [
@@ -76243,7 +76243,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 2,
-   "question": "Una riga orizzontale e il margine verticale di un quaderno si incontrano formando quattro angoli retti. Che posizione hanno tra loro queste due rette?",
+   "question": "Le lancette di un orologio segnano le 3 in punto. Che posizione hanno tra loro la lancetta delle ore e quella dei minuti?",
    "options": [
     "Sono rette incidenti ma non perpendicolari",
     "Sono rette sovrapposte",
@@ -76252,7 +76252,7 @@
    ],
    "answerIndex": 2,
    "answer": "Sono rette perpendicolari",
-   "explanation": "Due rette incidenti che formano quattro angoli retti si chiamano rette perpendicolari: è il caso delle righe e del margine di un quaderno.",
+   "explanation": "Alle 3 in punto, la lancetta delle ore e quella dei minuti formano un angolo di 90°: sono quindi rette perpendicolari.",
    "active": true,
    "tag": "matematica;rette;classe_3;primaria",
    "tags": [
@@ -76403,16 +76403,16 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 2,
-   "question": "Le sbarre orizzontali di una scaletta a pioli, tutte alla stessa distanza una dall'altra, non si incrociano mai tra loro. Che posizione hanno queste rette?",
+   "question": "Due strade di campagna si incontrano a Y, formando angoli diversi da quello retto. Che posizione hanno tra loro queste due rette?",
    "options": [
-    "Incidenti",
-    "Perpendicolari",
-    "Si toccano in un punto",
-    "Parallele"
+    "Sono rette parallele",
+    "Sono rette incidenti",
+    "Sono rette perpendicolari",
+    "Sono rette sovrapposte"
    ],
-   "answerIndex": 3,
-   "answer": "Parallele",
-   "explanation": "Rette che mantengono sempre la stessa distanza e non si incontrano mai sono parallele: è il caso dei pioli orizzontali di una scaletta.",
+   "answerIndex": 1,
+   "answer": "Sono rette incidenti",
+   "explanation": "Due rette che si incontrano in un punto formando angoli diversi da quello retto sono rette incidenti: è il caso di due strade che si incrociano a Y.",
    "active": true,
    "tag": "matematica;rette;classe_3;primaria",
    "tags": [
@@ -76563,16 +76563,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 1,
-   "question": "Per calcolare a mente 27 + 3 + 8, un modo comodo è (27 + 3) + 8. Quanto fa 27 + 3 + 8?",
+   "question": "Quale uguaglianza mostra la proprietà associativa applicata a 27 + 3 + 8?",
    "options": [
-    "35",
-    "37",
-    "38",
-    "39"
+    "27 + 3 + 8 = 30 + 8",
+    "27 + 3 + 8 = 3 + 27 + 8",
+    "27 + 3 + 8 = 20 + 7 + 3 + 8",
+    "27 + 3 + 8 = 27 × 11"
    ],
-   "answerIndex": 2,
-   "answer": "38",
-   "explanation": "Sommi prima 27 + 3 = 30, poi aggiungi 8: 30 + 8 = 38.",
+   "answerIndex": 0,
+   "answer": "27 + 3 + 8 = 30 + 8",
+   "explanation": "Nella proprietà associativa sostituisci due addendi con la loro somma: 27 + 3 = 30, quindi 27 + 3 + 8 diventa 30 + 8. Il risultato resta 38 in entrambi i casi. '3 + 27 + 8' cambia solo l'ordine (proprietà commutativa), '20 + 7 + 3 + 8' scompone il 27 in due parti (proprietà dissociativa), e '27 × 11' cambia l'operazione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -76659,16 +76659,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "In un cesto ci sono 18 mele, 12 pere e 20 banane. Per contare a mente il totale, calcoli (18 + 12) + 20. Quanti frutti ci sono in tutto?",
+   "question": "In un cesto ci sono 18 mele, 12 pere e 20 banane. Quale uguaglianza mostra la proprietà associativa applicata al calcolo 18 + 12 + 20?",
    "options": [
-    "48",
-    "50",
-    "52",
-    "30"
+    "18 + 12 + 20 = 30 + 20",
+    "18 + 12 + 20 = 20 + 12 + 18",
+    "18 + 12 + 20 = 10 + 8 + 12 + 20",
+    "18 + 12 + 20 = 18 × 32"
    ],
-   "answerIndex": 1,
-   "answer": "50",
-   "explanation": "Sommi prima le mele e le pere: 18 + 12 = 30, poi aggiungi le banane: 30 + 20 = 50 frutti in tutto.",
+   "answerIndex": 0,
+   "answer": "18 + 12 + 20 = 30 + 20",
+   "explanation": "Nella proprietà associativa sostituisci due addendi con la loro somma: 18 + 12 = 30, quindi 18 + 12 + 20 diventa 30 + 20. Il totale resta 50 frutti in entrambi i casi. '20 + 12 + 18' cambia solo l'ordine (proprietà commutativa), '10 + 8 + 12 + 20' scompone il 18 in due parti (proprietà dissociativa), e '18 × 32' cambia l'operazione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -76819,16 +76819,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per calcolare a mente 2 × 6 × 5, conviene fare 2 × (6 × 5). Quanto ottieni?",
+   "question": "Quale uguaglianza mostra la proprietà associativa applicata a 2 × 6 × 5?",
    "options": [
-    "55",
-    "65",
-    "60",
-    "30"
+    "2 × 6 × 5 = 2 × 30",
+    "2 × 6 × 5 = 5 × 6 × 2",
+    "2 × 6 × 5 = 2 × 3 × 2 × 5",
+    "2 × 6 × 5 = 2 + 30"
    ],
-   "answerIndex": 2,
-   "answer": "60",
-   "explanation": "Moltiplichi prima 6 × 5 = 30, poi per 2: 2 × 30 = 60.",
+   "answerIndex": 0,
+   "answer": "2 × 6 × 5 = 2 × 30",
+   "explanation": "Nella proprietà associativa sostituisci due fattori con il loro prodotto: 6 × 5 = 30, quindi 2 × 6 × 5 diventa 2 × 30. Il risultato resta 60 in entrambi i casi. '5 × 6 × 2' cambia solo l'ordine (proprietà commutativa), '2 × 3 × 2 × 5' scompone il 6 in due fattori (proprietà dissociativa), e '2 + 30' cambia l'operazione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -76947,16 +76947,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "In un teatro ci sono 3 file, ognuna con 4 settori da 5 poltrone. Per contare a mente, calcoli 3 × 4 × 5 = (3 × 4) × 5. Quante poltrone ci sono in tutto?",
+   "question": "In un teatro ci sono 3 file, ognuna con 4 settori da 5 poltrone. Quale uguaglianza mostra la proprietà associativa applicata al calcolo 3 × 4 × 5?",
    "options": [
-    "55",
-    "65",
-    "60",
-    "12"
+    "3 × 4 × 5 = 12 × 5",
+    "3 × 4 × 5 = 5 × 4 × 3",
+    "3 × 4 × 5 = 3 × 2 × 2 × 5",
+    "3 × 4 × 5 = 3 + 20"
    ],
-   "answerIndex": 2,
-   "answer": "60",
-   "explanation": "Moltiplichi prima 3 × 4 = 12, poi per 5: 12 × 5 = 60 poltrone in tutto.",
+   "answerIndex": 0,
+   "answer": "3 × 4 × 5 = 12 × 5",
+   "explanation": "Nella proprietà associativa sostituisci due fattori con il loro prodotto: 3 × 4 = 12, quindi 3 × 4 × 5 diventa 12 × 5. Il totale resta 60 poltrone in entrambi i casi. '5 × 4 × 3' cambia solo l'ordine (proprietà commutativa), '3 × 2 × 2 × 5' scompone il 4 in due fattori (proprietà dissociativa), e '3 + 20' cambia l'operazione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77075,16 +77075,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 1,
-   "question": "Per sommare a mente 27 + 15, puoi scomporre 15 in 10 + 5: 27 + 10 + 5. Quanto ottieni?",
+   "question": "Quale uguaglianza mostra la proprietà dissociativa applicata a 27 + 15?",
    "options": [
-    "41",
-    "42",
-    "43",
-    "32"
+    "27 + 15 = 27 + 10 + 5",
+    "27 + 15 = 27 + 10 - 5",
+    "27 + 15 = 27 × 10 + 5",
+    "27 + 15 = 15 + 27"
    ],
-   "answerIndex": 1,
-   "answer": "42",
-   "explanation": "Sommi prima 27 + 10 = 37, poi aggiungi 5: 37 + 5 = 42.",
+   "answerIndex": 0,
+   "answer": "27 + 15 = 27 + 10 + 5",
+   "explanation": "Nella proprietà dissociativa scomponi un addendo in due parti che, sommate, ridanno l'addendo di partenza: 10 + 5 = 15, quindi 27 + 15 diventa 27 + 10 + 5. Il risultato resta 42 in ogni caso. '27 + 10 - 5' cambia un segno, '27 × 10 + 5' cambia l'operazione, e '15 + 27' cambia solo l'ordine (proprietà commutativa).",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77235,16 +77235,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Per calcolare a mente 148 + 55, scomponi 55 in 50 + 5 e sommi in due passaggi: 148 + 50 poi + 5. Quanto ottieni alla fine?",
+   "question": "Per calcolare a mente 148 + 55, quale uguaglianza mostra la proprietà dissociativa applicata scomponendo 55?",
    "options": [
-    "198",
-    "208",
-    "213",
-    "203"
+    "148 + 55 = 148 + 50 + 5",
+    "148 + 55 = 148 + 50 - 5",
+    "148 + 55 = 148 × 50 + 5",
+    "148 + 55 = 55 + 148"
    ],
-   "answerIndex": 3,
-   "answer": "203",
-   "explanation": "Sommi prima 148 + 50 = 198, poi aggiungi l'ultima parte: 198 + 5 = 203.",
+   "answerIndex": 0,
+   "answer": "148 + 55 = 148 + 50 + 5",
+   "explanation": "Nella proprietà dissociativa scomponi un addendo in due parti che, sommate, ridanno l'addendo di partenza: 50 + 5 = 55, quindi 148 + 55 diventa 148 + 50 + 5. Il risultato resta 203 in ogni caso. '148 + 50 - 5' cambia un segno, '148 × 50 + 5' cambia l'operazione, e '55 + 148' cambia solo l'ordine (proprietà commutativa).",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77331,16 +77331,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per calcolare a mente 6 × 12, scomponi 12 in 4 × 3: prima 6 × 4, poi × 3. Quanto ottieni?",
+   "question": "Quale uguaglianza mostra la proprietà dissociativa applicata a 6 × 12?",
    "options": [
-    "70",
-    "74",
-    "72",
-    "24"
+    "6 × 12 = 6 × 4 × 3",
+    "6 × 12 = 6 + 4 × 3",
+    "6 × 12 = 6 × 4 - 3",
+    "6 × 12 = 12 × 6"
    ],
-   "answerIndex": 2,
-   "answer": "72",
-   "explanation": "Calcoli prima 6 × 4 = 24, poi moltiplichi per l'ultima parte: 24 × 3 = 72.",
+   "answerIndex": 0,
+   "answer": "6 × 12 = 6 × 4 × 3",
+   "explanation": "Nella proprietà dissociativa scomponi un fattore nel prodotto di due fattori più piccoli: 12 = 4 × 3, quindi 6 × 12 diventa 6 × 4 × 3. Il risultato resta 72 in entrambi i casi. '6 + 4 × 3' cambia un'operazione in addizione, '6 × 4 - 3' cambia un'altra operazione in sottrazione, e '12 × 6' cambia solo l'ordine (proprietà commutativa).",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77491,16 +77491,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Per calcolare a mente 15 × 12, scomponi 12 in 3 × 4: prima 15 × 3, poi × 4. Quanto ottieni?",
+   "question": "Quale uguaglianza mostra la proprietà dissociativa applicata a 15 × 12?",
    "options": [
-    "175",
-    "185",
-    "45",
-    "180"
+    "15 × 12 = 15 × 3 × 4",
+    "15 × 12 = 15 + 3 × 4",
+    "15 × 12 = 15 × 3 - 4",
+    "15 × 12 = 12 × 15"
    ],
-   "answerIndex": 3,
-   "answer": "180",
-   "explanation": "Calcoli prima 15 × 3 = 45, poi moltiplichi per l'ultima parte: 45 × 4 = 180.",
+   "answerIndex": 0,
+   "answer": "15 × 12 = 15 × 3 × 4",
+   "explanation": "Nella proprietà dissociativa scomponi un fattore nel prodotto di due fattori più piccoli: 12 = 3 × 4, quindi 15 × 12 diventa 15 × 3 × 4. Il risultato resta 180 in entrambi i casi. '15 + 3 × 4' cambia un'operazione in addizione, '15 × 3 - 4' cambia un'altra operazione in sottrazione, e '12 × 15' cambia solo l'ordine (proprietà commutativa).",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77715,16 +77715,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per calcolare a mente 9 × 15, scomponi 15 in 10 + 5 e usi la proprietà distributiva: 9 × 10 + 9 × 5. Quanto ottieni?",
+   "question": "Quale calcolo applica la proprietà distributiva a 9 × 15, scomponendo 15 in 10 + 5?",
    "options": [
-    "130",
-    "140",
-    "135",
-    "45"
+    "9 × 10 + 9 × 5",
+    "9 × 10 + 5",
+    "9 + 10 × 9 + 5",
+    "9 × 15 + 9 × 5"
    ],
-   "answerIndex": 2,
-   "answer": "135",
-   "explanation": "Calcoli 9 × 10 = 90 e 9 × 5 = 45, poi sommi 90 + 45 = 135.",
+   "answerIndex": 0,
+   "answer": "9 × 10 + 9 × 5",
+   "explanation": "Scomponi 15 in 10 + 5 e moltiplichi ciascuna parte per 9: 9 × 15 = 9 × 10 + 9 × 5. '9 × 10 + 5' dimentica di moltiplicare anche il 5 per 9, '9 + 10 × 9 + 5' mescola addizione e moltiplicazione senza senso, e '9 × 15 + 9 × 5' non scompone affatto il 15.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77747,16 +77747,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "In una scuola ci sono 12 classi con 24 alunni ciascuna. Per contare a mente il totale, scomponi 24 in 20 + 4: 12 × 20 + 12 × 4. Quanti alunni ci sono in tutto?",
+   "question": "In una scuola ci sono 12 classi con 24 alunni ciascuna. Quale calcolo applica la proprietà distributiva scomponendo 24 in 20 + 4?",
    "options": [
-    "280",
-    "290",
-    "48",
-    "288"
+    "12 × 20 + 12 × 4",
+    "12 × 20 + 4",
+    "12 + 20 × 12 + 4",
+    "12 × 24 + 12 × 4"
    ],
-   "answerIndex": 3,
-   "answer": "288",
-   "explanation": "Calcoli 12 × 20 = 240 e 12 × 4 = 48, poi sommi 240 + 48 = 288 alunni in tutto.",
+   "answerIndex": 0,
+   "answer": "12 × 20 + 12 × 4",
+   "explanation": "Scomponi 24 in 20 + 4 e moltiplichi ciascuna parte per 12: 12 × 24 = 12 × 20 + 12 × 4. '12 × 20 + 4' dimentica di moltiplicare anche il 4 per 12, '12 + 20 × 12 + 4' mescola addizione e moltiplicazione senza senso, e '12 × 24 + 12 × 4' non scompone affatto il 24.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77779,16 +77779,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Per calcolare a mente 6 × 98, scomponi 98 in 100 - 2 e usi la proprietà distributiva: 6 × 100 - 6 × 2. Quanto ottieni?",
+   "question": "Quale calcolo applica la proprietà distributiva a 6 × 98, scomponendo 98 in 100 - 2?",
    "options": [
-    "588",
-    "590",
-    "586",
-    "12"
+    "6 × 100 - 6 × 2",
+    "6 × 100 - 2",
+    "6 + 100 - 6 × 2",
+    "6 × 98 - 6 × 2"
    ],
    "answerIndex": 0,
-   "answer": "588",
-   "explanation": "Calcoli 6 × 100 = 600 e 6 × 2 = 12, poi sottrai 600 - 12 = 588.",
+   "answer": "6 × 100 - 6 × 2",
+   "explanation": "Scomponi 98 come 100 - 2 e moltiplichi ciascuna parte per 6: 6 × 98 = 6 × 100 - 6 × 2. '6 × 100 - 2' dimentica di moltiplicare anche il 2 per 6, '6 + 100 - 6 × 2' mescola le operazioni senza senso, e '6 × 98 - 6 × 2' non scompone affatto il 98.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77811,16 +77811,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Per calcolare a mente 7 × 103, scomponi 103 in 100 + 3 e usi la proprietà distributiva: 7 × 100 + 7 × 3. Quanto ottieni?",
+   "question": "Quale calcolo applica la proprietà distributiva a 7 × 103, scomponendo 103 in 100 + 3?",
    "options": [
-    "700",
-    "721",
-    "724",
-    "21"
+    "7 × 100 + 7 × 3",
+    "7 × 100 + 3",
+    "7 + 100 × 7 + 3",
+    "7 × 103 + 7 × 3"
    ],
-   "answerIndex": 1,
-   "answer": "721",
-   "explanation": "Calcoli 7 × 100 = 700 e 7 × 3 = 21, poi sommi 700 + 21 = 721.",
+   "answerIndex": 0,
+   "answer": "7 × 100 + 7 × 3",
+   "explanation": "Scomponi 103 in 100 + 3 e moltiplichi ciascuna parte per 7: 7 × 103 = 7 × 100 + 7 × 3. '7 × 100 + 3' dimentica di moltiplicare anche il 3 per 7, '7 + 100 × 7 + 3' mescola addizione e moltiplicazione senza senso, e '7 × 103 + 7 × 3' non scompone affatto il 103.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77907,16 +77907,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per calcolare a mente 250 ÷ 50, dividi entrambi i termini per 10: 25 ÷ 5. Quanto fa 250 ÷ 50?",
+   "question": "Quale uguaglianza mostra la proprietà invariantiva applicata a 250 ÷ 50, dividendo entrambi i termini per 10?",
    "options": [
-    "4",
-    "6",
-    "5",
-    "50"
+    "250 ÷ 50 = 25 ÷ 5",
+    "250 ÷ 50 = 25 ÷ 50",
+    "250 ÷ 50 = 250 ÷ 5",
+    "250 ÷ 50 = 25 × 5"
    ],
-   "answerIndex": 2,
-   "answer": "5",
-   "explanation": "Il quoziente non cambia dividendo entrambi i termini per 10: 25 ÷ 5 = 5, lo stesso risultato di 250 ÷ 50.",
+   "answerIndex": 0,
+   "answer": "250 ÷ 50 = 25 ÷ 5",
+   "explanation": "Nella proprietà invariantiva dividi sia il dividendo sia il divisore per lo stesso numero: 250 ÷ 10 = 25 e 50 ÷ 10 = 5, quindi 250 ÷ 50 = 25 ÷ 5. Il quoziente resta 5 in entrambi i casi.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78035,16 +78035,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Devi dividere 420 caramelle in sacchetti da 60. Per calcolare a mente, dividi entrambi i numeri per 10: 42 ÷ 6. Quanti sacchetti ottieni?",
+   "question": "Devi dividere 420 caramelle in sacchetti da 60. Quale uguaglianza mostra la proprietà invariantiva applicata dividendo entrambi i numeri per 10?",
    "options": [
-    "6",
-    "8",
-    "7",
-    "60"
+    "420 ÷ 60 = 42 ÷ 6",
+    "420 ÷ 60 = 42 ÷ 60",
+    "420 ÷ 60 = 420 ÷ 6",
+    "420 ÷ 60 = 42 × 6"
    ],
-   "answerIndex": 2,
-   "answer": "7",
-   "explanation": "Il quoziente non cambia dividendo entrambi i termini per 10: 42 ÷ 6 = 7 sacchetti, lo stesso risultato di 420 ÷ 60.",
+   "answerIndex": 0,
+   "answer": "420 ÷ 60 = 42 ÷ 6",
+   "explanation": "Nella proprietà invariantiva dividi sia il dividendo sia il divisore per lo stesso numero: 420 ÷ 10 = 42 e 60 ÷ 10 = 6, quindi 420 ÷ 60 = 42 ÷ 6. Il quoziente resta 7 sacchetti in entrambi i casi.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78067,16 +78067,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Per calcolare a mente 480 ÷ 40, dividi entrambi i termini per 10: 48 ÷ 4. Quanto ottieni?",
+   "question": "Quale uguaglianza mostra la proprietà invariantiva applicata a 480 ÷ 40, dividendo entrambi i termini per 10?",
    "options": [
-    "11",
-    "13",
-    "40",
-    "12"
+    "480 ÷ 40 = 48 ÷ 4",
+    "480 ÷ 40 = 48 ÷ 40",
+    "480 ÷ 40 = 480 ÷ 4",
+    "480 ÷ 40 = 48 × 4"
    ],
-   "answerIndex": 3,
-   "answer": "12",
-   "explanation": "Dividendo entrambi i termini per 10 il quoziente non cambia: 48 ÷ 4 = 12.",
+   "answerIndex": 0,
+   "answer": "480 ÷ 40 = 48 ÷ 4",
+   "explanation": "Nella proprietà invariantiva dividi sia il dividendo sia il divisore per lo stesso numero: 480 ÷ 10 = 48 e 40 ÷ 10 = 4, quindi 480 ÷ 40 = 48 ÷ 4. Il quoziente resta 12 in entrambi i casi.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78163,16 +78163,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per calcolare a mente 63 - 19, puoi aggiungere 1 a entrambi i termini: 64 - 20. Quanto fa 63 - 19?",
+   "question": "Quale uguaglianza mostra la proprietà invariantiva applicata a 63 - 19, aggiungendo 1 a entrambi i termini?",
    "options": [
-    "43",
-    "45",
-    "44",
-    "64"
+    "63 - 19 = 64 - 20",
+    "63 - 19 = 64 - 19",
+    "63 - 19 = 63 - 20",
+    "63 - 19 = 64 + 20"
    ],
-   "answerIndex": 2,
-   "answer": "44",
-   "explanation": "La differenza non cambia: 64 - 20 = 44, ed è lo stesso risultato di 63 - 19.",
+   "answerIndex": 0,
+   "answer": "63 - 19 = 64 - 20",
+   "explanation": "Nella proprietà invariantiva aggiungi lo stesso numero sia al minuendo sia al sottraendo: 63 + 1 = 64 e 19 + 1 = 20, quindi 63 - 19 = 64 - 20. La differenza resta 44 in entrambi i casi. '64 - 19' e '63 - 20' aggiungono il numero a un solo termine, quindi cambiano il risultato, e '64 + 20' cambia addirittura l'operazione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78323,16 +78323,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Per calcolare 340 - 199 a mente, aggiungi 1 a entrambi i termini: 341 - 200. Quanto ottieni?",
+   "question": "Quale uguaglianza mostra la proprietà invariantiva applicata a 340 - 199, aggiungendo 1 a entrambi i termini?",
    "options": [
-    "140",
-    "142",
-    "201",
-    "141"
+    "340 - 199 = 341 - 200",
+    "340 - 199 = 341 - 199",
+    "340 - 199 = 340 - 200",
+    "340 - 199 = 341 + 200"
    ],
-   "answerIndex": 3,
-   "answer": "141",
-   "explanation": "Aggiungendo 1 a entrambi i termini la differenza non cambia: 341 - 200 = 141.",
+   "answerIndex": 0,
+   "answer": "340 - 199 = 341 - 200",
+   "explanation": "Nella proprietà invariantiva aggiungi lo stesso numero sia al minuendo sia al sottraendo: 340 + 1 = 341 e 199 + 1 = 200, quindi 340 - 199 = 341 - 200. La differenza resta 141 in entrambi i casi. '341 - 199' e '340 - 200' aggiungono il numero a un solo termine, quindi cambiano il risultato, e '341 + 200' cambia addirittura l'operazione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78739,7 +78739,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "In classe ci sono 12 bambini alla lavagna, 9 al banco e 8 in fila. Quanti bambini ci sono in tutto? (12 + 9 + 8)",
+   "question": "In classe ci sono 12 bambini alla lavagna, 9 al banco e 8 in fila. Quanti bambini ci sono in tutto?",
    "options": [
     "29",
     "21",
@@ -78803,7 +78803,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Marta ha raccolto 17 conchiglie, Luigi 13 e Sara 6. Quante conchiglie hanno raccolto in tutto? (17 + 13 + 6)",
+   "question": "Marta ha raccolto 17 conchiglie, Luigi 13 e Sara 6. Quante conchiglie hanno raccolto in tutto?",
    "options": [
     "30",
     "42",
@@ -79062,7 +79062,7 @@
    "question": "Tra 318 e 381, quale numero è maggiore?",
    "options": [
     "318",
-    "Sono uguali",
+    "813",
     "381",
     "Non si può sapere"
    ],
@@ -79699,7 +79699,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Esegui la divisione 56 ÷ 7, che ha un dividendo a due cifre. Quanto fa?",
+   "question": "Esegui la divisione 56 ÷ 7. Quanto fa?",
    "options": [
     "8",
     "7",
@@ -79731,7 +79731,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Esegui la divisione 63 ÷ 9, che ha un dividendo a due cifre. Quanto fa?",
+   "question": "Esegui la divisione 63 ÷ 9. Quanto fa?",
    "options": [
     "6",
     "7",
@@ -79763,7 +79763,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Nella divisione 72 ÷ 8, il dividendo ha due cifre e il divisore una sola. Quanto fa?",
+   "question": "Nella divisione 72 ÷ 8, quanto fa?",
    "options": [
     "7",
     "8",
@@ -79795,7 +79795,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 2,
-   "question": "Nella divisione 39 ÷ 5, il dividendo ha due cifre e il divisore una sola. Quanto fa, con il resto?",
+   "question": "Nella divisione 39 ÷ 5, quanto fa, con il resto?",
    "options": [
     "6 (con resto di 4)",
     "8 (con resto di 1)",
@@ -80851,16 +80851,16 @@
    "area": "tabelline",
    "subarea": "colonna",
    "difficulty": 2,
-   "question": "Nella moltiplicazione in colonna 27 × 4, quanto fa il primo passo, cioè 7 × 4?",
+   "question": "Nella moltiplicazione in colonna 23 × 4, quanto fa il primo passo, cioè 3 × 4?",
    "options": [
-    "21",
-    "24",
-    "28",
-    "32"
+    "7",
+    "16",
+    "12",
+    "9"
    ],
    "answerIndex": 2,
-   "answer": "28",
-   "explanation": "Il primo passo della moltiplicazione in colonna è 7 × 4 = 28: scrivi 8 e riporti 2 alle decine.",
+   "answer": "12",
+   "explanation": "Il primo passo della moltiplicazione in colonna è 3 × 4 = 12: scrivi 2 e riporti 1 alle decine.",
    "active": true,
    "tag": "matematica;colonna;classe_2;primaria",
    "tags": [
@@ -80915,7 +80915,7 @@
    "area": "tabelline",
    "subarea": "colonna",
    "difficulty": 2,
-   "question": "Nella moltiplicazione in colonna 48 × 3, quanto riporti dopo avere calcolato 8 × 3?",
+   "question": "Nella moltiplicazione in colonna 28 × 3, quanto riporti dopo avere calcolato 8 × 3?",
    "options": [
     "2",
     "4",
@@ -81207,12 +81207,12 @@
    "options": [
     "63",
     "36",
-    "Sono uguali",
-    "Dipende da come li leggi"
+    "66",
+    "30"
    ],
    "answerIndex": 1,
    "answer": "36",
-   "explanation": "36 ha 3 decine, mentre 63 ne ha 6: 36 è più piccolo di 63.",
+   "explanation": "36 ha 3 decine, mentre 63 ne ha 6, quindi 36 è più piccolo di 63. Non è 66, che ha due decine in più, e non è nemmeno 30, che non è uno dei due numeri di partenza.",
    "active": true,
    "tag": "matematica;numeri;classe_2;primaria",
    "tags": [
@@ -81270,7 +81270,7 @@
    "question": "Tra 52 e 61, quale numero viene prima quando conti?",
    "options": [
     "61",
-    "Vengono insieme",
+    "58",
     "Non si può sapere",
     "52"
    ],
@@ -82357,14 +82357,14 @@
    "difficulty": 2,
    "question": "Qual è la differenza principale tra una retta e un piano?",
    "options": [
-    "La retta ha due dimensioni, il piano ne ha una",
+    "La retta va in tutte le direzioni, il piano va soltanto avanti e indietro",
     "La retta è chiusa, il piano è aperto",
     "Non c'è nessuna differenza tra i due",
-    "La retta ha una sola dimensione, il piano ne ha due"
+    "La retta va soltanto avanti e indietro, il piano si estende in tutte le direzioni come un foglio infinito"
    ],
    "answerIndex": 3,
-   "answer": "La retta ha una sola dimensione, il piano ne ha due",
-   "explanation": "La retta va soltanto in una direzione, avanti e indietro: ha una dimensione. Il piano si estende in tutte le direzioni come una superficie: ha due dimensioni.",
+   "answer": "La retta va soltanto avanti e indietro, il piano si estende in tutte le direzioni come un foglio infinito",
+   "explanation": "La retta va soltanto in una direzione, avanti e indietro. Il piano si estende invece in tutte le direzioni, come una superficie infinita: ecco la differenza principale tra i due.",
    "active": true,
    "tag": "matematica;rette;classe_2;primaria",
    "tags": [
