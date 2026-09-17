@@ -68,7 +68,7 @@
   "area": "tabelline",
   "subarea": "prodotto_cartesiano",
   "newSubarea": true,
-  "match": "prodotto cartesiano"
+  "match": "prodotto cartesiano|combinazion|modi divers\\w*|abbinar\\w*|abbinament\\w*"
  },
  {
   "id": "c2-schieramenti-reticoli",
@@ -112,7 +112,7 @@
   "area": "tabelline",
   "subarea": "tavola_pitagorica",
   "newSubarea": true,
-  "match": "tavola pitagorica"
+  "match": "tavola pitagorica|riga[^.?]{0,30}colonna|colonna[^.?]{0,30}riga|\\bincrocio\\b"
  },
  {
   "id": "c2-divisione",
@@ -162,7 +162,7 @@
   "area": "geometria",
   "subarea": "rette",
   "newSubarea": true,
-  "match": "punto,? ?retta e piano|retta e (il )?piano"
+  "match": "\\bpiano\\b|\\bgeometria\\b"
  },
  {
   "id": "c2-rette-semirette-segmenti",
@@ -180,7 +180,7 @@
   "area": "geometria",
   "subarea": "rette",
   "newSubarea": true,
-  "match": "confront.*segment|segment.*confront"
+  "match": "(?=.*segment\\w*)(?=.*(più lung\\w*|più cort\\w*|consecutiv\\w*|adiacent\\w*|congruent\\w*))"
  },
  {
   "id": "c3-proprieta-associativa-addizione",

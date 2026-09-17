@@ -41,7 +41,7 @@ Le 8 materie coperte dai quiz:
 - [Per genitori](https://lascuolaamica.it/per-genitori): sicurezza, privacy e uso a casa per le famiglie
 
 ## Dati quantitativi
-- Domande totali: 9.741 (solo quelle attive, verificate a settembre 2026).
+- Domande totali: 9.897 (solo quelle attive, verificate a settembre 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria.
 - Versione corrente: 4.13.24.
