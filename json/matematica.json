@@ -74357,7 +74357,7 @@
    "difficulty": 1,
    "question": "Un bambino è rivolto verso la lavagna e ruota fino a guardare verso la porta, che si trova esattamente di lato rispetto alla lavagna, senza continuare oltre. Che angolo di rotazione ha compiuto rispetto alla direzione di partenza?",
    "options": [
-    "Due quarti di giro",
+    "Tre quarti di giro",
     "Un quarto di giro",
     "Mezzo giro",
     "Un giro intero"
@@ -74387,7 +74387,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 1,
-   "question": "La lancetta piccola di un orologio parte dalle 12 e ruota fino a tornare esattamente sulle 12. Che angolo di direzione ha descritto?",
+   "question": "La lancetta piccola di un orologio parte dalle 12 e ruota fino a tornare esattamente sulle 12. Che angolo di rotazione ha descritto?",
    "options": [
     "Mezzo giro",
     "Nessuna rotazione",
@@ -74677,14 +74677,14 @@
    "difficulty": 1,
    "question": "Quale di queste situazioni descrive un angolo retto?",
    "options": [
-    "Una porta aperta più di uno squadro ma non del tutto spalancata",
+    "Una porta aperta più di un angolo retto, ma non del tutto spalancata",
     "Le lancette di un orologio che segna le 3 in punto",
     "Un ventaglio aperto pochissimo, quasi chiuso",
     "Un libro aperto completamente, con le due copertine distese in linea retta"
    ],
    "answerIndex": 1,
    "answer": "Le lancette di un orologio che segna le 3 in punto",
-   "explanation": "Alle 3 in punto la lancetta dei minuti è sul 12 e quella delle ore è sul 3: tra loro si forma un angolo retto, mentre le altre situazioni descrivono rispettivamente un angolo acuto, un angolo piatto e un angolo ottuso.",
+   "explanation": "Alle 3 in punto la lancetta dei minuti è sul 12 e quella delle ore è sul 3: tra loro si forma un angolo retto. Le altre situazioni descrivono, nell'ordine, un angolo ottuso, un angolo acuto e un angolo piatto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -74739,7 +74739,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 2,
-   "question": "Apri una porta molto di più di uno squadro, ma senza spalancarla completamente contro il muro. L'angolo tra la porta e lo stipite è un angolo...",
+   "question": "Apri una porta molto più di un angolo retto, ma senza spalancarla completamente contro il muro. L'angolo tra la porta e lo stipite è un angolo...",
    "options": [
     "acuto",
     "retto",
@@ -74812,7 +74812,7 @@
    ],
    "answerIndex": 1,
    "answer": "Una lancetta che ruota partendo dalle 12 e torna esattamente sulle 12",
-   "explanation": "Una rotazione completa, che riporta al punto di partenza, descrive un angolo giro: le altre situazioni descrivono rispettivamente un angolo piatto, un angolo retto e un angolo acuto.",
+   "explanation": "Una rotazione completa, che riporta al punto di partenza, descrive un angolo giro. Le altre situazioni descrivono, nell'ordine, un angolo acuto, un angolo piatto e un angolo retto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -74839,11 +74839,11 @@
    "options": [
     "No, è un angolo acuto",
     "No, è un angolo giro",
-    "No, è un angolo piatto, perché le due lancette formano un'unica linea retta",
+    "No, è un angolo piatto",
     "Sì, ha ragione"
    ],
    "answerIndex": 2,
-   "answer": "No, è un angolo piatto, perché le due lancette formano un'unica linea retta",
+   "answer": "No, è un angolo piatto",
    "explanation": "Alle 6 in punto la lancetta dei minuti e quella delle ore puntano in direzioni opposte, formando un'unica linea retta: è un angolo piatto, non ottuso.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
@@ -74867,7 +74867,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Le lame di un paio di forbici sono aperte a metà tra chiuse del tutto e completamente distese in linea retta, formando un angolo più ampio di un angolo retto ma che non arriva a distendersi. Che angolo notevole è?",
+   "question": "Le lame di un paio di forbici sono aperte più di un angolo retto, ma non tanto da formare una linea retta. Che angolo notevole formano?",
    "options": [
     "acuto",
     "retto",
@@ -74899,7 +74899,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Confronta l'apertura di due porte: la prima è aperta esattamente a metà tra chiusa e spalancata contro il muro (linea retta con lo stipite), la seconda è aperta un po' meno della prima. Che angolo notevole forma di sicuro la prima porta con lo stipite?",
+   "question": "Una porta è aperta esattamente a metà tra chiusa e spalancata, cioè tra aderente al muro e distesa in linea retta con il muro. Che angolo notevole forma con il muro?",
    "options": [
     "Un angolo retto",
     "Un angolo acuto",
@@ -74908,7 +74908,7 @@
    ],
    "answerIndex": 0,
    "answer": "Un angolo retto",
-   "explanation": "Un angolo piatto misura come una linea retta; la metà esatta di un angolo piatto è un angolo retto: ecco perché la prima porta, aperta esattamente a metà, forma un angolo retto con lo stipite.",
+   "explanation": "Spalancata in linea retta con il muro, la porta formerebbe un angolo piatto; la metà esatta di un angolo piatto è un angolo retto: ecco perché la porta aperta a metà forma un angolo retto con il muro.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -75096,7 +75096,7 @@
     "No, un angolo acuto è convesso perché è più piccolo di un angolo piatto",
     "Sì, perché è molto stretto",
     "Sì, ma solo se è disegnato in verticale",
-    "No, perché un angolo acuto non è mai un angolo"
+    "No, un angolo acuto può essere sia convesso sia concavo"
    ],
    "answerIndex": 0,
    "answer": "No, un angolo acuto è convesso perché è più piccolo di un angolo piatto",
@@ -75122,8 +75122,8 @@
    "class": 3,
    "area": "geometria",
    "subarea": "angoli",
-   "difficulty": 3,
-   "question": "Osservi la punta di una stella a cinque punte disegnata su un foglio: negli spazi tra due punte consecutive si forma un angolo molto ampio, che supera un angolo piatto. Come si può classificare questo angolo?",
+   "difficulty": 2,
+   "question": "In una stella a cinque punte disegnata su un foglio, nello spazio tra due punte vicine l'angolo interno della stella supera un angolo piatto. Come si può classificare questo angolo?",
    "options": [
     "Piatto",
     "Concavo",
@@ -75443,7 +75443,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Confronta due rotazioni: la prima porta un oggetto da guardare verso la lavagna a guardare verso la porta; la seconda lo porta da guardare verso la lavagna a guardare verso la finestra, che si trova dal lato opposto. Quale rotazione descrive l'angolo più ampio?",
+   "question": "Confronta due rotazioni. Nella prima un bambino passa da guardare la lavagna a guardare la porta, che è di lato. Nella seconda passa da guardare la lavagna a guardare la parete di fondo, opposta alla lavagna. Quale rotazione descrive l'angolo più ampio?",
    "options": [
     "La prima rotazione",
     "Le due rotazioni sono uguali",
@@ -75452,7 +75452,7 @@
    ],
    "answerIndex": 3,
    "answer": "La seconda rotazione",
-   "explanation": "Da lavagna a porta è un quarto di giro, da lavagna a finestra (lato opposto) è mezzo giro: mezzo giro è una rotazione più ampia, quindi il secondo angolo è maggiore.",
+   "explanation": "Da lavagna a porta è un quarto di giro, da lavagna a parete di fondo (lato opposto) è mezzo giro: mezzo giro è una rotazione più ampia, quindi il secondo angolo è maggiore.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -75475,7 +75475,7 @@
    "area": "logica_e_dati",
    "subarea": "diagramma_flusso",
    "difficulty": 1,
-   "question": "Un diagramma di flusso comincia sempre con un blocco che segna l'inizio. Come si chiama il blocco iniziale, il primo passo?",
+   "question": "Con quale blocco comincia sempre un diagramma di flusso?",
    "options": [
     "Inizio",
     "Fine",
@@ -75539,7 +75539,7 @@
    "area": "logica_e_dati",
    "subarea": "diagramma_flusso",
    "difficulty": 2,
-   "question": "Osserva questo diagramma di flusso, passo dopo passo: Inizio, poi \"parti da 5\", poi \"aggiungi 3\", poi \"scrivi il risultato\", poi Fine. Quale numero viene scritto alla fine?",
+   "question": "Leggi questo diagramma di flusso, passo dopo passo: Inizio, poi \"parti da 5\", poi \"aggiungi 3\", poi \"scrivi il risultato\", poi Fine. Quale numero viene scritto alla fine?",
    "options": [
     "3",
     "15",
@@ -75667,16 +75667,16 @@
    "area": "logica_e_dati",
    "subarea": "diagramma_flusso",
    "difficulty": 3,
-   "question": "Stesso diagramma di flusso di prima: Inizio, \"parti dal numero N\", domanda \"il numero è maggiore di 10?\", se sì \"sottrai 10\", se no \"aggiungi 10\", poi \"scrivi il risultato\", poi Fine. Se parti da N = 6, quale numero viene scritto?",
+   "question": "Un diagramma di flusso è descritto così: Inizio, \"parti dal numero 6\", domanda \"il numero è maggiore di 10?\", se sì \"sottrai 10\", se no \"aggiungi 10\", poi \"scrivi il risultato\", poi Fine. Quale numero viene scritto?",
    "options": [
     "6",
-    "-4",
+    "10",
     "16",
     "4"
    ],
    "answerIndex": 2,
    "answer": "16",
-   "explanation": "6 non è maggiore di 10, quindi si segue il ramo 'no' e si aggiunge 10: 6 + 10 = 16. Il diagramma scrive 16.",
+   "explanation": "6 non è maggiore di 10, quindi si segue il ramo 'no' e si aggiunge 10: 6 + 10 = 16. Il diagramma scrive 16: non 4, che è solo la differenza tra 10 e 6, né 6 o 10, che sono i numeri scritti nel diagramma.",
    "active": true,
    "tag": "matematica;diagramma_flusso;classe_3;primaria",
    "tags": [
@@ -76051,16 +76051,16 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 3,
-   "question": "Un poligono ha lo stesso numero di lati che ha un ottagono, e questo numero è anche il doppio dei vertici di un quadrilatero. Come si chiama questo poligono?",
+   "question": "Un poligono ha il doppio dei lati di un quadrilatero. Come si chiama questo poligono?",
    "options": [
     "Ottagono",
     "Esagono",
     "Pentagono",
-    "Eptagono"
+    "Quadrilatero"
    ],
    "answerIndex": 0,
    "answer": "Ottagono",
-   "explanation": "Un ottagono ha 8 lati; un quadrilatero ha 4 vertici, e il doppio di 4 è proprio 8. Il poligono cercato ha quindi 8 lati: è un ottagono.",
+   "explanation": "Un quadrilatero ha 4 lati e il doppio di 4 è 8: 4 × 2 = 8. Un poligono con 8 lati è un ottagono.",
    "active": true,
    "tag": "matematica;figure;classe_3;primaria",
    "tags": [
@@ -76243,7 +76243,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 2,
-   "question": "Le righe orizzontali e il margine verticale di un quaderno a righe si incontrano formando quattro angoli tutti uguali fra loro (angoli retti). Che posizione hanno tra loro queste due rette?",
+   "question": "Una riga orizzontale e il margine verticale di un quaderno si incontrano formando quattro angoli retti. Che posizione hanno tra loro queste due rette?",
    "options": [
     "Sono rette incidenti ma non perpendicolari",
     "Sono rette sovrapposte",
@@ -76632,7 +76632,7 @@
     "No, doveva scrivere 34 + 15",
     "Sì, ha ragione",
     "No, doveva scrivere 34 + 3",
-    "No, doveva scrivere 40 + 9"
+    "No, doveva scrivere 34 + 54"
    ],
    "answerIndex": 0,
    "answer": "No, doveva scrivere 34 + 15",
@@ -76885,13 +76885,13 @@
    "difficulty": 3,
    "question": "Sofia dice: «3 × 4 × 2 = 3 × 4 + 2, ho unito 4 e 2 con la proprietà associativa». Ha ragione?",
    "options": [
-    "No, doveva scrivere 3 × 8, perché 4 × 2 = 8",
+    "No, doveva scrivere 3 × 8",
     "Sì, ha ragione",
     "No, doveva scrivere 3 × 6",
     "No, doveva scrivere 7 × 2"
    ],
    "answerIndex": 0,
-   "answer": "No, doveva scrivere 3 × 8, perché 4 × 2 = 8",
+   "answer": "No, doveva scrivere 3 × 8",
    "explanation": "La proprietà associativa unisce due fattori con il loro prodotto, senza cambiare l'operazione: 4 × 2 = 8, quindi 3 × 4 × 2 = 3 × 8 = 24. Sofia ha sbagliato a trasformare il × in +.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
@@ -77139,16 +77139,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Paolo dice: «52 = 52 + 10 + 10 usando la proprietà dissociativa». Ha ragione?",
+   "question": "Paolo scrive: 52 + 30 = 52 + 10 + 10. Dice di avere usato la proprietà dissociativa. Ha ragione?",
    "options": [
-    "No, per scomporre 52 basta scrivere per esempio 52 = 40 + 12",
-    "Sì, ha ragione",
-    "No, doveva scrivere 52 = 52 × 2",
-    "No, doveva scrivere 52 = 26 - 26"
+    "No, perché 10 + 10 fa 20, non 30",
+    "Sì, perché ha scomposto 30",
+    "No, perché la dissociativa vale solo per la moltiplicazione",
+    "No, perché si può scomporre solo il primo addendo"
    ],
    "answerIndex": 0,
-   "answer": "No, per scomporre 52 basta scrivere per esempio 52 = 40 + 12",
-   "explanation": "La proprietà dissociativa scompone un numero in due parti che sommate ridanno lo stesso numero, per esempio 52 = 40 + 12 perché 40 + 12 = 52. Paolo ha aggiunto due volte 10 invece di scomporre 52.",
+   "answer": "No, perché 10 + 10 fa 20, non 30",
+   "explanation": "Nella proprietà dissociativa le parti devono ridare l'addendo di partenza, ma 10 + 10 = 20, non 30. Paolo poteva scrivere per esempio 52 + 10 + 20, perché 10 + 20 = 30.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77171,16 +77171,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "In classe siete 30 bambini. Per contare più in fretta chi ha portato il quaderno, scomponi 30 in 18 + 12: 18 nella prima fila e 12 nella seconda fila. Quanto fa 18 + 12?",
+   "question": "In una gara Anna segna 46 punti e poi altri 27. Per sommare a mente scomponi 27 in 20 + 7: 46 + 20 + 7. Quanti punti fa in tutto?",
    "options": [
-    "28",
-    "30",
-    "32",
-    "20"
+    "63",
+    "73",
+    "83",
+    "66"
    ],
    "answerIndex": 1,
-   "answer": "30",
-   "explanation": "Sommando le due file ritrovi il numero di partenza: 18 + 12 = 30, gli stessi bambini della classe.",
+   "answer": "73",
+   "explanation": "Sommi prima 46 + 20 = 66, poi aggiungi 7: 66 + 7 = 73 punti in tutto.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -77397,13 +77397,13 @@
    "difficulty": 3,
    "question": "Leo dice: «7 × 10 = 7 × 5 × 5, ho scomposto 10 in 5 e 5». Ha ragione?",
    "options": [
-    "No, doveva scomporre 10 come 2 × 5, perché 2 × 5 = 10",
+    "No, doveva scomporre 10 come 2 × 5",
     "Sì, ha ragione",
     "No, doveva scomporre 10 come 5 + 5",
     "No, doveva scomporre 7 invece di 10"
    ],
    "answerIndex": 0,
-   "answer": "No, doveva scomporre 10 come 2 × 5, perché 2 × 5 = 10",
+   "answer": "No, doveva scomporre 10 come 2 × 5",
    "explanation": "Per la dissociativa della moltiplicazione servono due fattori il cui prodotto sia il numero di partenza: 2 × 5 = 10, non 5 × 5 che fa 25. Leo ha confuso la scomposizione con un'addizione.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
@@ -77458,17 +77458,17 @@
    "class": 3,
    "area": "aritmetica",
    "subarea": "proprieta",
-   "difficulty": 3,
-   "question": "Devi disporre delle scatole in file da 3 × 3. Per contare a mente, scomponi 9 in 3 × 3 dentro il calcolo 8 × 9 = 8 × 3 × 3. Quanto fa 8 × 9?",
+   "difficulty": 2,
+   "question": "Per calcolare a mente 7 × 9, scomponi 9 in 3 × 3: 7 × 3 × 3. Quanto ottieni?",
    "options": [
-    "68",
-    "74",
-    "72",
-    "24"
+    "61",
+    "65",
+    "63",
+    "21"
    ],
    "answerIndex": 2,
-   "answer": "72",
-   "explanation": "Il risultato non cambia scomponendo un fattore: 8 × 9 = 72, lo stesso valore di 8 × 3 × 3.",
+   "answer": "63",
+   "explanation": "Calcoli prima 7 × 3 = 21, poi moltiplichi per l'ultima parte: 21 × 3 = 63.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78291,16 +78291,16 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "Hai 205 figurine e ne regali 98. Per calcolare a mente, togli 2 a entrambi i termini: 203 - 96. Quante figurine ti restano?",
+   "question": "Hai 205 figurine e ne regali 98. Per calcolare a mente, aggiungi 2 a entrambi i termini: 207 - 100. Quante figurine ti restano?",
    "options": [
     "105",
     "109",
     "107",
-    "203"
+    "207"
    ],
    "answerIndex": 2,
    "answer": "107",
-   "explanation": "La differenza non cambia togliendo 2 a entrambi i termini: 203 - 96 = 107, lo stesso risultato di 205 - 98.",
+   "explanation": "La differenza non cambia aggiungendo 2 a entrambi i termini: 207 - 100 = 107, lo stesso risultato di 205 - 98.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -78515,15 +78515,15 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "La prova del nove conferma che 45 × 3 = 135. Puoi essere sicuro al cento per cento che il calcolo sia giusto?",
+   "question": "La prova del nove di 45 × 3 = 135 torna. Puoi essere sicuro al cento per cento che il calcolo sia giusto?",
    "options": [
     "Sì, se la prova torna il calcolo è sicuramente giusto",
-    "No, la prova del nove può non accorgersi di alcuni errori, per esempio se scambi l'ordine di due cifre nel risultato",
+    "No, alcuni errori la prova del nove non li fa notare",
     "No, la prova del nove serve solo per le addizioni",
     "Sì, ma solo per i numeri pari"
    ],
    "answerIndex": 1,
-   "answer": "No, la prova del nove può non accorgersi di alcuni errori, per esempio se scambi l'ordine di due cifre nel risultato",
+   "answer": "No, alcuni errori la prova del nove non li fa notare",
    "explanation": "La prova di 45 è 4 + 5 = 9 → 0, e la prova di 135 è 1 + 3 + 5 = 9 → 0: tornano. Ma la prova non basta per essere sicuri al cento per cento, perché non riconosce per esempio uno scambio di cifre come 135 scritto 153.",
    "active": true,
    "tag": "matematica;operazioni;classe_3;primaria",
@@ -78549,7 +78549,7 @@
    "difficulty": 3,
    "question": "Fai la prova del nove di 126 × 3 = 378. La prova di 126 è 1 + 2 + 6 = 9 → 0, quella di 3 è 3. Moltiplichi 0 × 3 = 0. Qual è la prova del risultato 378?",
    "options": [
-    "9",
+    "8",
     "18",
     "0",
     "3"
@@ -78579,15 +78579,15 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Luca ha calcolato 52 × 4 = 208 ed è vero. La prova di 52 è 5 + 2 = 7, quella di 4 è 4: 7 × 4 = 28 → 2 + 8 = 10 → 1 + 0 = 1. La prova di 208 è 2 + 0 + 8 = 10 → 1. Le prove tornano (1 = 1): che cosa puoi concludere?",
+   "question": "Luca fa la prova del nove di 52 × 4 = 208. La prova di 52 è 5 + 2 = 7, quella di 4 è 4: 7 × 4 = 28 → 2 + 8 = 10 → 1 + 0 = 1. La prova di 208 è 2 + 0 + 8 = 10 → 1. Le prove tornano (1 = 1): che cosa puoi concludere?",
    "options": [
-    "Il calcolo è sicuramente giusto, senza alcun dubbio",
+    "Il calcolo è sicuramente giusto",
     "Il calcolo è sicuramente sbagliato",
     "La prova non serve a niente in questo caso",
-    "Il calcolo è probabilmente giusto, ma la prova del nove non lo garantisce con certezza"
+    "Il calcolo è probabilmente giusto, ma non è certo"
    ],
    "answerIndex": 3,
-   "answer": "Il calcolo è probabilmente giusto, ma la prova del nove non lo garantisce con certezza",
+   "answer": "Il calcolo è probabilmente giusto, ma non è certo",
    "explanation": "Le due prove sono uguali (1 = 1), quindi il calcolo è probabilmente giusto, ma la prova del nove non dà mai la certezza assoluta: alcuni errori non li fa notare.",
    "active": true,
    "tag": "matematica;operazioni;classe_3;primaria",

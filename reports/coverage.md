@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 16:18:13
+Data generazione: 17/09/2026, 16:22:47
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -593,7 +593,7 @@ c3-proprieta-invariantiva-divisione      | c3     | 4       | debole
 c3-proprieta-distributiva                | c3     | 7       | debole
 c3-prova-del-nove                        | c3     | 8       | debole
 c3-angoli-direzione-rotazione            | c3     | 9       | debole
-c3-confronto-angoli                      | c3     | 8       | debole
+c3-confronto-angoli                      | c3     | 7       | debole
 c3-angolo-concavo-convesso               | c3     | 8       | debole
 c3-angoli-notevoli                       | c3     | 29      | coperto
 c3-posizione-rette-piano                 | c3     | 9       | debole
