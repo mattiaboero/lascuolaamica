@@ -375,7 +375,7 @@
   "title": "Frazioni (concetto e lettura)",
   "area": "aritmetica",
   "subarea": "frazioni",
-  "match": "frazion"
+  "match": "^(?!.*(equivalent|minimi termini|maggiore|minore|virgola|decimal))(?!.*\\d+/\\d+\\s*di\\s*\\d).*(numeratore|denominatore|unit[aà] frazionaria|si legge|si scrive|in lettere|che frazione (è|rappresenta|hai)|parti uguali.*che frazione)"
  },
  {
   "id": "c4-frazioni-unitarie",
