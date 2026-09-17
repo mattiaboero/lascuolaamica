@@ -78835,16 +78835,16 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "In 9 + 21 + 11, quale coppia di addendi conviene sommare per prima per ottenere subito una decina intera?",
+   "question": "In 9 + 23 + 11, quale coppia di addendi conviene sommare per prima per ottenere subito una decina intera?",
    "options": [
-    "21 e 11",
-    "9 e 21",
+    "23 e 11",
+    "9 e 23",
     "Nessuna coppia dà una decina intera",
     "9 e 11"
    ],
    "answerIndex": 3,
    "answer": "9 e 11",
-   "explanation": "9 + 11 = 20: sommando prima questi due addendi ottieni subito una decina intera, poi aggiungi 21 e il totale è 41.",
+   "explanation": "9 + 11 = 20: sommando prima questi due addendi ottieni subito una decina intera, poi aggiungi 23 e il totale è 43.",
    "active": true,
    "tag": "matematica;operazioni;classe_2;primaria",
    "tags": [
@@ -79155,7 +79155,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 3,
-   "question": "Qual è il numero successivo a 199, quando le centinaia cambiano?",
+   "question": "Quale numero viene subito dopo 199, e apre un nuovo centinaio?",
    "options": [
     "198",
     "200",
@@ -79164,7 +79164,7 @@
    ],
    "answerIndex": 1,
    "answer": "200",
-   "explanation": "Dopo 199 viene 200: quando le unità e le decine arrivano a 9, un raggruppamento cambia 199 nella centinaia successiva, 200.",
+   "explanation": "199 + 1 = 200: le unità formano una nuova decina, e le decine formano un nuovo centinaio.",
    "active": true,
    "tag": "matematica;numeri;classe_2;primaria",
    "tags": [
@@ -79187,16 +79187,16 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 1,
-   "question": "I segmenti AB, lungo 5 quadretti, e BC, lungo 7 quadretti, hanno l'estremo B in comune. Come si chiama questa coppia di segmenti?",
+   "question": "I segmenti AB, lungo 5 quadretti, e BC, lungo 7 quadretti, hanno l'estremo B in comune e formano un angolo. Come si chiama questa coppia di segmenti?",
    "options": [
     "Segmenti consecutivi",
-    "Segmenti congruenti soltanto",
+    "Segmenti congruenti",
     "Segmenti adiacenti",
     "Segmenti paralleli"
    ],
    "answerIndex": 0,
    "answer": "Segmenti consecutivi",
-   "explanation": "Due segmenti che hanno un estremo in comune, come B, si dicono consecutivi.",
+   "explanation": "Due segmenti che hanno un estremo in comune, come B, si dicono consecutivi. Non sono adiacenti, perché formano un angolo e non stanno sulla stessa retta.",
    "active": true,
    "tag": "matematica;rette;classe_2;primaria",
    "tags": [
@@ -79315,16 +79315,16 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 2,
-   "question": "Il segmento LM è lungo 4 centimetri e il segmento NO è lungo 9 centimetri. Quale segmento è più corto?",
+   "question": "Il segmento LM è lungo 4 centimetri e il segmento RS è lungo 9 centimetri. Quale segmento è più corto?",
    "options": [
     "Il segmento LM",
-    "Il segmento NO",
+    "Il segmento RS",
     "Sono congruenti",
     "Non si possono confrontare"
    ],
    "answerIndex": 0,
    "answer": "Il segmento LM",
-   "explanation": "LM misura 4 centimetri e NO misura 9 centimetri: 4 è meno di 9, quindi LM è più corto.",
+   "explanation": "LM misura 4 centimetri e RS misura 9 centimetri: 4 è meno di 9, quindi LM è più corto.",
    "active": true,
    "tag": "matematica;rette;classe_2;primaria",
    "tags": [
@@ -79827,7 +79827,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "In una divisione con un dividendo a due cifre e un divisore a una cifra, il quoziente è 9 con resto 3, e il divisore è 6. Quale può essere il dividendo?",
+   "question": "In una divisione con un dividendo a due cifre e un divisore a una cifra, il quoziente è 9 con resto 3, e il divisore è 6. Qual è il dividendo?",
    "options": [
     "57",
     "51",
@@ -80275,7 +80275,7 @@
    "area": "geometria",
    "subarea": "linee",
    "difficulty": 1,
-   "question": "Tanti segmenti dritti uniti fra loro, con angoli: come si chiama questa linea?",
+   "question": "Più segmenti uniti fra loro, che formano angoli: come si chiama questa linea?",
    "options": [
     "linea retta",
     "linea curva",
@@ -80531,7 +80531,7 @@
    "area": "tabelline",
    "subarea": "prodotto_cartesiano",
    "difficulty": 1,
-   "question": "Hai 3 magliette e 2 pantaloncini. Quanti modi diversi hai per vestirti?",
+   "question": "Hai 3 magliette e 2 pantaloncini. Quanti abbinamenti diversi di maglietta e pantaloncini puoi fare?",
    "options": [
     "6",
     "5",
@@ -80627,7 +80627,7 @@
    "area": "tabelline",
    "subarea": "prodotto_cartesiano",
    "difficulty": 2,
-   "question": "Quale moltiplicazione rappresenta il prodotto cartesiano se hai 4 cappelli e 3 sciarpe?",
+   "question": "Hai 4 cappelli e 3 sciarpe. Quale operazione ti dice quanti abbinamenti cappello-sciarpa puoi fare?",
    "options": [
     "4 + 3",
     "4 - 3",
@@ -80883,16 +80883,16 @@
    "area": "tabelline",
    "subarea": "colonna",
    "difficulty": 2,
-   "question": "Esegui in colonna la moltiplicazione 36 × 4, che ha un riporto. Quanto fa?",
+   "question": "Esegui in colonna la moltiplicazione 24 × 4, che ha un riporto. Quanto fa?",
    "options": [
-    "124",
-    "140",
-    "132",
-    "144"
+    "86",
+    "816",
+    "916",
+    "96"
    ],
    "answerIndex": 3,
-   "answer": "144",
-   "explanation": "In colonna calcoli 6 × 4 = 24: scrivi 4 e riporti 2. Poi 3 × 4 = 12, più il riporto 2 fa 14. Il risultato è 144.",
+   "answer": "96",
+   "explanation": "In colonna calcoli 4 × 4 = 16: scrivi 6 e riporti 1. Poi 2 × 4 = 8, più il riporto 1 fa 9. Il risultato è 96.",
    "active": true,
    "tag": "matematica;colonna;classe_2;primaria",
    "tags": [
@@ -80947,16 +80947,16 @@
    "area": "tabelline",
    "subarea": "colonna",
    "difficulty": 3,
-   "question": "Esegui in colonna la moltiplicazione 57 × 6, con più riporti. Quanto fa?",
+   "question": "Esegui in colonna la moltiplicazione 19 × 5, con il riporto. Quanto fa?",
    "options": [
-    "312",
-    "342",
-    "332",
-    "352"
+    "55",
+    "95",
+    "545",
+    "945"
    ],
    "answerIndex": 1,
-   "answer": "342",
-   "explanation": "In colonna calcoli 7 × 6 = 42: scrivi 2 e riporti 4. Poi 5 × 6 = 30, più il riporto 4 fa 34. Il risultato è 342.",
+   "answer": "95",
+   "explanation": "In colonna calcoli 9 × 5 = 45: scrivi 5 e riporti 4. Poi 1 × 5 = 5, più il riporto 4 fa 9. Il risultato è 95.",
    "active": true,
    "tag": "matematica;colonna;classe_2;primaria",
    "tags": [
@@ -81011,16 +81011,16 @@
    "area": "tabelline",
    "subarea": "colonna",
    "difficulty": 3,
-   "question": "Nella moltiplicazione in colonna 65 × 7, quanto fa il secondo passo, cioè 6 × 7 più il riporto di 3 dal primo passo (5 × 7 = 35)?",
+   "question": "Nella moltiplicazione in colonna 13 × 7 calcoli 3 × 7 = 21, scrivi 1 e riporti 2. Quale cifra scrivi poi alle decine?",
    "options": [
-    "42",
-    "39",
-    "48",
-    "45"
+    "7",
+    "2",
+    "8",
+    "9"
    ],
    "answerIndex": 3,
-   "answer": "45",
-   "explanation": "5 × 7 = 35: scrivi 5 e riporti 3. Poi 6 × 7 = 42, e sommando il riporto 3 ottieni 45. Il risultato finale della moltiplicazione è 455.",
+   "answer": "9",
+   "explanation": "Poi calcoli 1 × 7 = 7, e sommando il riporto 2 ottieni 9: scrivi 9 alle decine. Il risultato finale è 91.",
    "active": true,
    "tag": "matematica;colonna;classe_2;primaria",
    "tags": [
@@ -81522,7 +81522,7 @@
    "class": 2,
    "area": "aritmetica",
    "subarea": "orologio",
-   "difficulty": 1,
+   "difficulty": 2,
    "question": "La lancetta corta è poco dopo il 5, e la lancetta lunga è sul 4. Che ore sono?",
    "options": [
     "Le 5 e mezza",
@@ -81587,16 +81587,16 @@
    "area": "aritmetica",
    "subarea": "orologio",
    "difficulty": 1,
-   "question": "Quando le due lancette dell'orologio sono ferme insieme sul 12 e il sole è alto a metà giornata, che ora indica l'orologio?",
+   "question": "Le due lancette sono tutte e due sul 12 ed è ora di pranzo. Che ore sono?",
    "options": [
-    "Le 6 in punto",
-    "Le 3 in punto",
-    "Le 9 in punto",
-    "Mezzogiorno, cioè le 12 in punto"
+    "Mezzanotte",
+    "Le 12 e mezza",
+    "Le 11 in punto",
+    "Mezzogiorno"
    ],
    "answerIndex": 3,
-   "answer": "Mezzogiorno, cioè le 12 in punto",
-   "explanation": "A metà giornata, quando entrambe le lancette sono sul 12, l'orologio segna mezzogiorno, cioè le 12 in punto.",
+   "answer": "Mezzogiorno",
+   "explanation": "Tutte e due le lancette sul 12 indicano le 12 in punto. È ora di pranzo, quindi è mezzogiorno e non mezzanotte.",
    "active": true,
    "tag": "matematica;orologio;classe_2;primaria",
    "tags": [
@@ -81752,7 +81752,7 @@
     "non cambia",
     "raddoppia",
     "diminuisce di 1",
-    "diventa il doppio"
+    "aumenta"
    ],
    "answerIndex": 0,
    "answer": "non cambia",
@@ -81784,7 +81784,7 @@
     "6 + 3",
     "9 + 6",
     "9 + 9",
-    "6 - 9"
+    "9 - 6"
    ],
    "answerIndex": 1,
    "answer": "9 + 6",
@@ -81875,7 +81875,7 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per la proprietà commutativa dell'addizione, 35 + 8 = 43. Quanto fa 8 + 35?",
+   "question": "Sai che 35 + 8 = 43. Per la proprietà commutativa dell'addizione, quanto fa 8 + 35?",
    "options": [
     "43",
     "33",
@@ -81941,7 +81941,7 @@
    "difficulty": 3,
    "question": "In una gara di addizione, Luca scrive 18 + 6 e Sara scrive 6 + 18. Perché ottengono lo stesso risultato?",
    "options": [
-    "Perché hanno scritto l'addizione al contrario",
+    "Perché è capitato per caso",
     "Perché 18 e 6 sono uguali tra loro",
     "Per la proprietà commutativa dell'addizione",
     "Perché hanno usato numeri pari"
@@ -82131,7 +82131,7 @@
    "area": "tabelline",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Per la proprietà commutativa della moltiplicazione, 9 × 6 = 54. Quanto fa 6 × 9?",
+   "question": "Sai che 9 × 6 = 54. Per la proprietà commutativa della moltiplicazione, quanto fa 6 × 9?",
    "options": [
     "54",
     "45",
@@ -82198,7 +82198,7 @@
    "question": "Luca scrive 9 × 5 e Marco scrive 5 × 9. Perché ottengono lo stesso risultato?",
    "options": [
     "Perché 9 e 5 sono numeri pari",
-    "Perché hanno scritto la moltiplicazione al contrario",
+    "Perché è capitato per caso",
     "Per la proprietà commutativa della moltiplicazione",
     "Perché hanno sommato invece di moltiplicare"
    ],
@@ -82227,7 +82227,7 @@
    "area": "tabelline",
    "subarea": "proprieta",
    "difficulty": 3,
-   "question": "In una moltiplicazione con la proprietà commutativa, 12 × 3 = 36. Quale altra moltiplicazione dà lo stesso risultato?",
+   "question": "Sai che 12 × 3 = 36. Per la proprietà commutativa della moltiplicazione, quale altra moltiplicazione dà 36?",
    "options": [
     "3 × 4",
     "12 × 12",
@@ -82294,13 +82294,13 @@
    "question": "Che cos'è una retta in geometria?",
    "options": [
     "Una posizione precisa, senza lunghezza",
-    "Una linea che continua senza fine in due direzioni",
+    "Una linea dritta senza inizio né fine",
     "Una superficie che si estende in ogni direzione",
-    "Una linea con un inizio e una fine"
+    "Una linea dritta con un inizio e una fine"
    ],
    "answerIndex": 1,
-   "answer": "Una linea che continua senza fine in due direzioni",
-   "explanation": "La retta è una linea dritta che non si ferma mai, né da una parte né dall'altra: continua senza fine in due direzioni.",
+   "answer": "Una linea dritta senza inizio né fine",
+   "explanation": "La retta è una linea dritta che non si ferma mai, né da una parte né dall'altra: non ha inizio e non ha fine.",
    "active": true,
    "tag": "matematica;rette;classe_2;primaria",
    "tags": [
@@ -82451,7 +82451,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 3,
-   "question": "Su una retta ci sono infiniti punti, e su un piano ci sono infinite rette. Quante rette puoi tracciare, come minimo, passando per due punti diversi?",
+   "question": "Su un piano segni due punti diversi. Quante rette puoi tracciare che passano per tutti e due?",
    "options": [
     "Nessuna",
     "Due",
@@ -82524,7 +82524,7 @@
    ],
    "answerIndex": 0,
    "answer": "1 decina",
-   "explanation": "Un raggruppamento di 10 unità diventa 1 decina: sull'abaco sposti una pallina dalla colonna delle unità a quella delle decine.",
+   "explanation": "Un raggruppamento di 10 unità diventa 1 decina: sull'abaco togli le 10 palline delle unità e metti 1 pallina nelle decine.",
    "active": true,
    "tag": "matematica;raggruppamento;classe_2;primaria",
    "tags": [
@@ -82771,15 +82771,15 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 1,
-   "question": "Una retta non ha inizio né fine. Una semiretta invece ha un punto di partenza chiamato origine e continua senza fine in una sola direzione. Quanti punti di partenza ha una semiretta?",
+   "question": "Quante origini ha una semiretta?",
    "options": [
-    "Uno solo, chiamato origine",
+    "Una sola",
     "Due",
-    "Nessuno",
-    "Infiniti"
+    "Nessuna",
+    "Infinite"
    ],
    "answerIndex": 0,
-   "answer": "Uno solo, chiamato origine",
+   "answer": "Una sola",
    "explanation": "La semiretta ha un solo punto di partenza, chiamato origine, e da lì continua senza fine in una direzione.",
    "active": true,
    "tag": "matematica;rette;classe_2;primaria",
@@ -82803,7 +82803,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 1,
-   "question": "Un segmento ha due punti che lo delimitano, chiamati estremi. Quanti estremi ha un segmento?",
+   "question": "Quanti estremi ha un segmento?",
    "options": [
     "Uno",
     "Due",
@@ -82904,7 +82904,7 @@
     "La retta",
     "La semiretta",
     "Il segmento",
-    "Il punto"
+    "Nessuna delle tre"
    ],
    "answerIndex": 0,
    "answer": "La retta",
@@ -83507,7 +83507,7 @@
    "area": "tabelline",
    "subarea": "tavola_pitagorica",
    "difficulty": 3,
-   "question": "In quale casella, incrociando una riga con la stessa colonna, trovi il numero 36 sulla diagonale dei quadrati?",
+   "question": "Sulla diagonale della tavola pitagorica, dove riga e colonna hanno lo stesso numero, in quale casella trovi 36?",
    "options": [
     "riga 4 colonna 9",
     "riga 6 colonna 6",
@@ -83571,16 +83571,16 @@
    "area": "tabelline",
    "subarea": "tavola_pitagorica",
    "difficulty": 3,
-   "question": "Quanti numeri diversi trovi contando, incrocio dopo incrocio di riga e colonna, la diagonale dei quadrati da 1 × 1 a 5 × 5?",
+   "question": "Sulla diagonale della tavola pitagorica, quale numero viene subito dopo 16?",
    "options": [
-    "10",
     "20",
-    "15",
-    "5"
+    "32",
+    "24",
+    "25"
    ],
    "answerIndex": 3,
-   "answer": "5",
-   "explanation": "La diagonale dei quadrati va da 1 × 1 a 5 × 5: sono 1, 4, 9, 16, 25, cioè 5 numeri diversi.",
+   "answer": "25",
+   "explanation": "Sulla diagonale trovi 4 × 4 = 16 e subito dopo 5 × 5 = 25. Non è 20, perché 4 × 5 = 20 non sta sulla diagonale, e nemmeno 24 o 32.",
    "active": true,
    "tag": "matematica;tavola_pitagorica;classe_2;primaria",
    "tags": [

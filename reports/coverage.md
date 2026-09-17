@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 17:08:51
+Data generazione: 17/09/2026, 17:13:26
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -583,10 +583,10 @@ c2-addizione-tre-addendi                 | c2     | 10      | coperto
 c2-linee                                 | c2     | 11      | coperto
 c2-raggruppamento-secondo-ordine         | c2     | 8       | debole
 c2-cento-centinaia                       | c2     | 12      | coperto
-c2-moltiplicazione                       | c2     | 105     | coperto
+c2-moltiplicazione                       | c2     | 104     | coperto
 c2-moltiplicazione-prodotto-cartesiano   | c2     | 8       | debole
 c2-schieramenti-reticoli                 | c2     | 8       | debole
-c2-tabelline                             | c2     | 82      | coperto
+c2-tabelline                             | c2     | 81      | coperto
 c2-moltiplicazioni-colonna               | c2     | 9       | debole
 c2-proprieta-commutativa-moltiplicazione | c2     | 9       | debole
 c2-tavola-pitagorica                     | c2     | 8       | debole
