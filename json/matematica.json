@@ -63059,10 +63059,10 @@
    "area": "aritmetica",
    "subarea": "frazioni",
    "difficulty": 1,
-   "question": "La frazione 8/4 è propria, impropria o apparente?",
+   "question": "Che tipo di frazione è 8/4?",
    "options": [
     "Propria",
-    "Impropria",
+    "Decimale",
     "Apparente",
     "Unitaria"
    ],
