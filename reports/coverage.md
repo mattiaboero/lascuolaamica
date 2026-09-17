@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 17/09/2026, 12:15:51
+Data generazione: 17/09/2026, 14:50:59
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -10,13 +10,13 @@ Subarea                   | c2     | c3     | c4     | c5     | Total
 | dati_probabilita       | 3  ⚠️  | 16    | 95    | 94    | 208  
 | decimali               | 0     | 0     | 15    | 15    | 30   
 | figure                 | 23    | 16    | 6  ⚠️  | 7  ⚠️  | 52   
-| frazioni               | 0     | 15    | 21    | 30    | 66   
+| frazioni               | 0     | 15    | 41    | 30    | 86   
 | misure                 | 0     | 9  ⚠️  | 25    | 29    | 63   
 | operazioni             | 224    | 212    | 187    | 175    | 798  
 | perimetro_area         | 58    | 68    | 96    | 92    | 314  
 | ragionamento           | 22    | 15    | 15    | 15    | 67   
 | sequenze               | 49    | 66    | 18    | 17    | 150  
-| TOTAL                   |        |        |        |        | 1934  
+| TOTAL                   |        |        |        |        | 1954  
 
 ## PROBLEMI
 Subarea                   | c2     | c3     | c4     | c5     | Total
@@ -589,13 +589,13 @@ c4-divisori                              | c4     | 0       | manca
 c4-numeri-primi-composti                 | c4     | 0       | manca
 c4-crivello-eratostene                   | c4     | 0       | manca
 c4-scomposizione-albero                  | c4     | 0       | manca
-c4-frazioni-concetto                     | c4     | 2       | debole
+c4-frazioni-concetto                     | c4     | 21      | coperto
 c4-frazioni-unitarie                     | c4     | 0       | manca
 c4-frazione-di-un-numero                 | c4     | 21      | coperto
 c4-classificazione-frazioni              | c4     | 0       | manca
 c4-numeri-misti                          | c4     | 0       | manca
 c4-frazioni-complementari                | c4     | 0       | manca
-c4-frazioni-equivalenti                  | c4     | 0       | manca
+c4-frazioni-equivalenti                  | c4     | 19      | coperto
 c4-confronto-frazioni                    | c4     | 0       | manca
 c4-decimi-centesimi-millesimi            | c4     | 4       | debole
 c4-addizione-decimali                    | c4     | 2       | debole
@@ -605,7 +605,7 @@ c4-divisione-virgola                     | c4     | 0       | manca
 c4-unita-di-misura                       | c4     | 0       | manca
 c4-misure-lunghezza                      | c4     | 50      | coperto
 c4-misure-massa-peso                     | c4     | 53      | coperto
-c4-misure-capacita                       | c4     | 8       | debole
+c4-misure-capacita                       | c4     | 9       | debole
 c4-equivalenze                           | c4     | 2       | debole
 c4-misure-angoli-gradi                   | c4     | 0       | manca
 c4-goniometro                            | c4     | 0       | manca
