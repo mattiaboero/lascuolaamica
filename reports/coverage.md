@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 01/07/2026, 16:48:23
+Data generazione: 17/09/2026, 12:15:51
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -543,3 +543,85 @@ scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
 Totale celle sotto soglia: 262
+## Copertura per argomento (matematica)
+
+Argomento                                | Classe | Domande | Stato
+----------------------------------------------------------------------
+c2-proprieta-commutativa-addizione       | c2     | 0       | manca
+c2-numeri-31-99                          | c2     | 1       | debole
+c2-addizione-tre-addendi                 | c2     | 2       | debole
+c2-linee                                 | c2     | 0       | manca
+c2-raggruppamento-secondo-ordine         | c2     | 0       | manca
+c2-cento-centinaia                       | c2     | 0       | manca
+c2-moltiplicazione                       | c2     | 86      | coperto
+c2-moltiplicazione-prodotto-cartesiano   | c2     | 0       | manca
+c2-schieramenti-reticoli                 | c2     | 0       | manca
+c2-tabelline                             | c2     | 77      | coperto
+c2-moltiplicazioni-colonna               | c2     | 0       | manca
+c2-proprieta-commutativa-moltiplicazione | c2     | 0       | manca
+c2-tavola-pitagorica                     | c2     | 0       | manca
+c2-divisione                             | c2     | 10      | coperto
+c2-divisioni-colonna                     | c2     | 0       | manca
+c2-divisioni-due-cifre                   | c2     | 0       | manca
+c2-indagine-statistica                   | c2     | 1       | debole
+c2-orologio-lancette                     | c2     | 0       | manca
+c2-punto-retta-piano                     | c2     | 0       | manca
+c2-rette-semirette-segmenti              | c2     | 0       | manca
+c2-confronto-segmenti                    | c2     | 0       | manca
+c3-proprieta-associativa-addizione       | c3     | 0       | manca
+c3-proprieta-dissociativa-addizione      | c3     | 0       | manca
+c3-proprieta-invariantiva-sottrazione    | c3     | 0       | manca
+c3-proprieta-associativa-moltiplicazione | c3     | 0       | manca
+c3-proprieta-dissociativa-moltiplicazione | c3     | 0       | manca
+c3-proprieta-invariantiva-divisione      | c3     | 0       | manca
+c3-proprieta-distributiva                | c3     | 0       | manca
+c3-prova-del-nove                        | c3     | 0       | manca
+c3-angoli-direzione-rotazione            | c3     | 0       | manca
+c3-confronto-angoli                      | c3     | 0       | manca
+c3-angolo-concavo-convesso               | c3     | 0       | manca
+c3-angoli-notevoli                       | c3     | 3       | debole
+c3-posizione-rette-piano                 | c3     | 0       | manca
+c3-poligoni                              | c3     | 0       | manca
+c3-diagramma-di-flusso                   | c3     | 0       | manca
+c4-numero-mille-migliaia                 | c4     | 0       | manca
+c4-multipli                              | c4     | 0       | manca
+c4-divisori                              | c4     | 0       | manca
+c4-numeri-primi-composti                 | c4     | 0       | manca
+c4-crivello-eratostene                   | c4     | 0       | manca
+c4-scomposizione-albero                  | c4     | 0       | manca
+c4-frazioni-concetto                     | c4     | 2       | debole
+c4-frazioni-unitarie                     | c4     | 0       | manca
+c4-frazione-di-un-numero                 | c4     | 21      | coperto
+c4-classificazione-frazioni              | c4     | 0       | manca
+c4-numeri-misti                          | c4     | 0       | manca
+c4-frazioni-complementari                | c4     | 0       | manca
+c4-frazioni-equivalenti                  | c4     | 0       | manca
+c4-confronto-frazioni                    | c4     | 0       | manca
+c4-decimi-centesimi-millesimi            | c4     | 4       | debole
+c4-addizione-decimali                    | c4     | 2       | debole
+c4-sottrazione-decimali                  | c4     | 1       | debole
+c4-moltiplicazione-virgola               | c4     | 0       | manca
+c4-divisione-virgola                     | c4     | 0       | manca
+c4-unita-di-misura                       | c4     | 0       | manca
+c4-misure-lunghezza                      | c4     | 50      | coperto
+c4-misure-massa-peso                     | c4     | 53      | coperto
+c4-misure-capacita                       | c4     | 8       | debole
+c4-equivalenze                           | c4     | 2       | debole
+c4-misure-angoli-gradi                   | c4     | 0       | manca
+c4-goniometro                            | c4     | 0       | manca
+c4-perimetro-poligono                    | c4     | 45      | coperto
+c5-milioni-miliardi                      | c5     | 0       | manca
+c5-numeri-relativi                       | c5     | 0       | manca
+c5-confronto-numeri-relativi             | c5     | 0       | manca
+c5-addizione-numeri-relativi             | c5     | 0       | manca
+c5-elevamento-a-potenza                  | c5     | 0       | manca
+c5-proposizioni-connettivi-logici        | c5     | 0       | manca
+c5-classificazione-triangoli             | c5     | 0       | manca
+c5-basi-altezze-triangolo                | c5     | 12      | coperto
+c5-classificazione-quadrilateri          | c5     | 26      | coperto
+c5-misure-di-superficie                  | c5     | 20      | coperto
+c5-equivalenze-superficie                | c5     | 0       | manca
+c5-area-poligoni                         | c5     | 76      | coperto
+c5-circonferenza-cerchio                 | c5     | 1       | debole
+c5-solidi-classificazione                | c5     | 32      | coperto
+
