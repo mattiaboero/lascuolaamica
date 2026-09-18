@@ -1,5 +1,11 @@
 [
  {
+  "date": "18 settembre 2026 · Release 4.15.1",
+  "items": [
+   "Sui telefoni la schermata delle domande non scorre più di lato: un cerchio decorativo usciva di qualche pixel dal bordo dello schermo e faceva spostare la pagina quando la si trascinava col dito."
+  ]
+ },
+ {
   "date": "18 settembre 2026 · Release 4.15.0",
   "items": [
    "Alcune domande di matematica ora hanno una figura, per gli argomenti che non si spiegano bene a sole parole: l'orologio con le lancette, il goniometro, il confronto tra angoli, uno schieramento da contare, i tipi di linea. Sono 20 domande pilota, e ogni figura ha un testo alternativo per chi usa uno screen reader. Le domande totali attive restano 9.917."

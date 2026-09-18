@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.15.1 - 2026-09-18
+
+**La schermata di gioco non scorre piu' di lato sui telefoni.**
+
+### Fixed
+- fix(quiz): il cerchio decorativo in alto a destra della card della domanda
+  sporgeva oltre il bordo dello schermo e rendeva la pagina di gioco larga 7px
+  piu' del viewport (da 360 a 768px), cosi' si poteva trascinare in
+  orizzontale. `overflow-x: clip` su `html` e `body` in
+  `subject-quiz-theme.css` taglia la decorazione al bordo dello schermo senza
+  cambiarne l'aspetto; `hidden` resta come fallback per i browser senza
+  `clip`.
+
 ## 4.15.0 - 2026-09-18
 
 **Le domande di matematica possono avere una figura**, per gli argomenti che
