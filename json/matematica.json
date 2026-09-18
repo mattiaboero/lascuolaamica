@@ -84001,7 +84001,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "angoli-abc",
-   "figureAlt": "Tre angoli, ognuno con un lato orizzontale verso destra. In A l'altro lato sale dritto verso l'alto, con il quadratino nel vertice. In B l'altro lato sale piegato all'indietro, verso sinistra. In C, che ha i lati più lunghi, l'altro lato sale poco inclinato verso destra."
+   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale vicino all'orizzontale verso destra."
   },
   {
    "id": "mat-3-angoli-9648",
@@ -84035,7 +84035,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "angoli-abc",
-   "figureAlt": "Tre angoli, ognuno con un lato orizzontale verso destra. In A l'altro lato sale dritto verso l'alto, con il quadratino nel vertice. In B l'altro lato sale piegato all'indietro, verso sinistra. In C, che ha i lati più lunghi, l'altro lato sale poco inclinato verso destra."
+   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale vicino all'orizzontale verso destra."
   },
   {
    "id": "mat-3-angoli-9649",
@@ -84069,7 +84069,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "angoli-abc",
-   "figureAlt": "Tre angoli, ognuno con un lato orizzontale verso destra. In A l'altro lato sale dritto verso l'alto, con il quadratino nel vertice. In B l'altro lato sale piegato all'indietro, verso sinistra. In C, che ha i lati più lunghi, l'altro lato sale poco inclinato verso destra."
+   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale vicino all'orizzontale verso destra."
   },
   {
    "id": "mat-2-schieramenti-9203",
@@ -84205,7 +84205,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "linee-abcd",
-   "figureAlt": "Quattro linee, ognuna con una lettera. A: un tratto dritto che poi continua girando in modo morbido. B: ondeggia in modo morbido, senza angoli. C: tratti dritti che cambiano direzione e formano angoli. D: un solo tratto dritto e inclinato."
+   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in diagonale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
   },
   {
    "id": "mat-2-linee-9207",
@@ -84239,7 +84239,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "linee-abcd",
-   "figureAlt": "Quattro linee, ognuna con una lettera. A: un tratto dritto che poi continua girando in modo morbido. B: ondeggia in modo morbido, senza angoli. C: tratti dritti che cambiano direzione e formano angoli. D: un solo tratto dritto e inclinato."
+   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in diagonale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
   },
   {
    "id": "mat-2-linee-9208",
@@ -84273,7 +84273,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "linee-abcd",
-   "figureAlt": "Quattro linee, ognuna con una lettera. A: un tratto dritto che poi continua girando in modo morbido. B: ondeggia in modo morbido, senza angoli. C: tratti dritti che cambiano direzione e formano angoli. D: un solo tratto dritto e inclinato."
+   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in diagonale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
   }
  ],
  "stats": {

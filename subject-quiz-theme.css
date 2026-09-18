@@ -1760,6 +1760,23 @@ body.subject-problemi .answer-btn {
     width: 72px;
     height: 104px;
   }
+
+  /* F6: la figura sfonda la colonna del testo (accanto alla mascotte, 72px + gap 10px)
+     e usa tutta la larghezza interna della card. Solo dimensioni, nessun colore. */
+  .q-figure {
+    max-width: none;
+    width: calc(100% + 82px);
+    margin-left: -82px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  /* F6: su desktop una figura a 320px spinge la prima risposta sotto la piega
+     (misurato a 1280x800); si limita solo la dimensione, niente colore. */
+  .q-figure {
+    max-width: 260px;
+  }
 }
 
 @media (max-width: 640px) {
