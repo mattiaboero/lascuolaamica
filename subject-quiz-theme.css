@@ -1026,6 +1026,16 @@ header {
   margin-bottom: 16px;
 }
 
+/* F6: figura facoltativa (docs/figure-nel-quiz.md). Il colore sta nell'SVG, qui solo misure:
+   width/height dell'img danno le proporzioni 4:3 prima del caricamento, niente CLS. */
+.q-figure {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto 16px;
+}
+
 .answers-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

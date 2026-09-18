@@ -292,6 +292,8 @@
       rows.forEach(function (row) {
         if (Number(row.class) !== grade) return;
         if (row.active === false) return;
+        // Le domande con figura (F6) hanno senso solo accanto all'immagine, che qui non c'e'.
+        if (row.figure) return;
         const options = Array.isArray(row.options) ? row.options.slice(0, 4) : [];
         if (options.length < 2) return;
         const answerIndex = Number.isInteger(row.answerIndex) ? row.answerIndex : options.indexOf(row.answer);

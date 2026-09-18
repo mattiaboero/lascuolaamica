@@ -65,6 +65,9 @@ def build_tags(subject, area, cls):
     base = [subject, area, f'classe_{cls}', 'primaria']
     return {'tag': ';'.join(base), 'tags': base}
 
+FIGURE_ID_RE = re.compile(r'^[a-z0-9-]{1,60}$')
+
+
 def question_signature(text):
     """Testo della domanda normalizzato, per riconoscere un re-ingest."""
     return re.sub(r'\s+', ' ', str(text or '')).strip().lower()
@@ -134,6 +137,15 @@ def ingest_new(subject, dry_run=False):
                     errors += 1
                     continue
 
+                # F6 (docs/figure-nel-quiz.md): figura facoltativa, id + testo alternativo.
+                # Stessa regex dell'audit; l'esistenza del file la verifica l'audit.
+                figure = str(q.get('figure') or '').strip()
+                figure_alt = str(q.get('figureAlt') or '').strip()
+                if (figure or figure_alt) and not (FIGURE_ID_RE.match(figure) and figure_alt):
+                    print(f'    SKIP line {lineno}: figure deve essere un id [a-z0-9-] e figureAlt non vuoto')
+                    errors += 1
+                    continue
+
                 signature = question_signature(q['question'])
                 if signature in existing_texts:
                     duplicates += 1
@@ -181,6 +193,10 @@ def ingest_new(subject, dry_run=False):
                 # Inglese-specific
                 if q.get('answerLang'):
                     row['answerLang'] = str(q['answerLang'])
+
+                if figure:
+                    row['figure'] = figure
+                    row['figureAlt'] = figure_alt
 
                 if not dry_run:
                     questions.append(row)
