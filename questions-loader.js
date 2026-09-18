@@ -175,7 +175,10 @@
       answerLang: row && row.answerLang ? String(row.answerLang).trim().toLowerCase() : null,
       language: row && row.language ? String(row.language).trim().toLowerCase() : null,
       difficulty: Number(row.difficulty) || null,
-      explanation: String(row.explanation || '').trim()
+      explanation: String(row.explanation || '').trim(),
+      // F6: id di assets/figure/<id>.svg; il core lo rivalida prima di usarlo.
+      figure: row && row.figure ? String(row.figure).trim() : null,
+      figureAlt: row && row.figureAlt ? String(row.figureAlt).trim() : ''
     };
   }
 

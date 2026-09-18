@@ -1973,6 +1973,7 @@
       ? `Domanda ${curQ + 1} di ${sessionLen()} · ${levelMeta.label} · ${areaLabel} · ${classLabel}`
       : `Domanda ${curQ + 1} di ${sessionLen()} · ${areaLabel} · ${classLabel}`;
     renderPrompt($('qText'), q);
+    renderFigure(q);
 
     const answers = $('answers');
     answers.textContent = '';
@@ -2402,6 +2403,29 @@
     el.className = `q-explanation show ${isOk ? 'ok' : 'ko'}`;
   }
 
+  // ---- F6: figura facoltativa della domanda (docs/figure-nel-quiz.md) ----
+  // Dal dataset (e dal ripasso in localStorage) arriva solo un id: si valida qui
+  // e diventa un URL sotto assets/figure/. Nessun markup entra nel DOM.
+  const FIGURE_ID_RE = /^[a-z0-9-]{1,60}$/;
+
+  function renderFigure(question) {
+    // Elemento nuovo a ogni domanda: cambiando solo src il browser terrebbe
+    // la figura precedente finche' la nuova non e' pronta.
+    $('qFigure')?.remove();
+    const id = question && question.figure;
+    const answersEl = $('answers');
+    if (!answersEl || typeof id !== 'string' || !FIGURE_ID_RE.test(id)) return;
+    const img = document.createElement('img');
+    img.id = 'qFigure';
+    img.className = 'q-figure';
+    img.width = 320;
+    img.height = 240;
+    img.decoding = 'async';
+    img.alt = String(question.figureAlt || '').trim() || 'Figura della domanda';
+    img.src = `assets/figure/${id}.svg`;
+    answersEl.insertAdjacentElement('beforebegin', img);
+  }
+
   // ---- A3: Wrong-answer queue (Ripassa errori) ----
 
   function loadWrongQ() {
@@ -2434,7 +2458,9 @@
       expl: q.explanation || '',
       area: q.sourceArea || q.area || '',
       sub: q.subarea || '',
-      cls: q.grade || selectedClass
+      cls: q.grade || selectedClass,
+      // F6: solo se c'e' una figura; i record vecchi non hanno questi campi.
+      ...(q.figure ? { fig: q.figure, figAlt: q.figureAlt || '' } : {})
     });
     saveWrongQ(arr.slice(-30));
   }
@@ -2492,7 +2518,9 @@
       answerLang: null,
       language: 'it',
       difficulty: 2,
-      explanation: w.expl || ''
+      explanation: w.expl || '',
+      figure: w.fig || null,
+      figureAlt: w.figAlt || ''
     }))).slice(0, TOTAL_Q);
 
     if (!questions.length) { notifyLoadError(); return; }

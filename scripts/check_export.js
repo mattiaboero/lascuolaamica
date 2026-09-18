@@ -130,6 +130,13 @@ fs.readdirSync(path.join(DST, 'json')).filter((f) => f.endsWith('.json')).forEac
     errori.push(`json/${f}: pubblicate ${pubblicato.questions.length} domande, nel repo le attive sono ${attiveNelRepo}`);
   }
   domande += pubblicato.questions.length;
+  // F6: l'export copia solo i file tracciati da git; un SVG mai aggiunto
+  // lascerebbe la domanda senza figura in produzione.
+  pubblicato.questions.forEach((q) => {
+    if (q.figure && !esiste(`assets/figure/${q.figure}.svg`)) {
+      errori.push(`json/${f}: ${q.id} usa la figura ${q.figure}, ma assets/figure/${q.figure}.svg non e' nell'export`);
+    }
+  });
 });
 
 if (errori.length) {

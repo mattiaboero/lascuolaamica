@@ -35,6 +35,49 @@ const SCIENZE_BAD_PATTERNS = [
 
 const issues = [];
 
+// F6 — figure nelle domande (docs/figure-nel-quiz.md). Il dataset porta solo un
+// id; qui si controlla che il file esista e che l'SVG resti un disegno statico
+// nel formato unico 320x240. Niente <style> o style="": Cloudflare manda la CSP
+// anche sulla risposta .svg e li bloccherebbe (in locale non si vedrebbe).
+const FIGURE_DIR = path.join(ROOT, 'assets', 'figure');
+const FIGURE_ID_RE = /^[a-z0-9-]{1,60}$/;
+const FIGURE_MAX_BYTES = 6144;
+const FIGURE_ROOT_RE = /^<svg\b[^>]*\bviewBox="0 0 320 240"[^>]*>/;
+const FIGURE_SIZE_RE = /^<svg\b(?=[^>]*\bwidth="320")(?=[^>]*\bheight="240")[^>]*>/;
+const FIGURE_FORBIDDEN_RE = /<style|\sstyle\s*=|<script|<foreignObject|<image\b|href\s*=|\son[a-z]+\s*=|url\(/i;
+const figureFileIssues = new Map();
+
+function figureFileProblem(id) {
+  if (figureFileIssues.has(id)) return figureFileIssues.get(id);
+  const file = path.join(FIGURE_DIR, `${id}.svg`);
+  let problem = '';
+  if (!fs.existsSync(file)) {
+    problem = `manca assets/figure/${id}.svg`;
+  } else {
+    const svg = fs.readFileSync(file, 'utf8').trim();
+    if (Buffer.byteLength(svg) > FIGURE_MAX_BYTES) problem = `${id}.svg supera ${FIGURE_MAX_BYTES} byte`;
+    else if (!FIGURE_ROOT_RE.test(svg) || !FIGURE_SIZE_RE.test(svg)) problem = `${id}.svg: la radice deve essere <svg viewBox="0 0 320 240" width="320" height="240">`;
+    else if (FIGURE_FORBIDDEN_RE.test(svg)) problem = `${id}.svg contiene style/script/link/immagini esterne: solo attributi di presentazione`;
+  }
+  figureFileIssues.set(id, problem);
+  return problem;
+}
+
+function checkFigure(file, q) {
+  if (q.figure === undefined && q.figureAlt === undefined) return;
+  if (typeof q.figure !== 'string' || !FIGURE_ID_RE.test(q.figure)) {
+    add(file, q, 'bad_figure_id', String(q.figure));
+    return;
+  }
+  const problem = figureFileProblem(q.figure);
+  if (problem) add(file, q, 'bad_figure_file', problem);
+  const alt = typeof q.figureAlt === 'string' ? q.figureAlt.trim() : '';
+  if (alt.length < 20 || alt.length > 300 || !alt.endsWith('.')) {
+    add(file, q, 'bad_figureAlt', 'obbligatorio con figure: 20-300 caratteri, chiuso dal punto');
+  }
+  if (q.bonus === true) add(file, q, 'figure_on_bonus', 'le domande bonus non mostrano figure');
+}
+
 function add(file, q, type, detail) {
   issues.push({ file, id: q && q.id, type, detail, question: q && q.question });
 }
@@ -86,6 +129,7 @@ for (const file of files) {
     if (typeof q.subarea !== 'string' || !q.subarea.trim()) add(file, q, 'empty_subarea');
     if (![1, 2, 3].includes(q.difficulty)) add(file, q, 'bad_difficulty', String(q.difficulty));
     if (typeof q.explanation !== 'string' || !q.explanation.trim()) add(file, q, 'empty_explanation');
+    checkFigure(file, q);
 
     const textKey = normText(q.question);
     if (textKey) {

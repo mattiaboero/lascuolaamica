@@ -1026,6 +1026,16 @@ header {
   margin-bottom: 16px;
 }
 
+/* F6: figura facoltativa (docs/figure-nel-quiz.md). Il colore sta nell'SVG, qui solo misure:
+   width/height dell'img danno le proporzioni 4:3 prima del caricamento, niente CLS. */
+.q-figure {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto 16px;
+}
+
 .answers-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1749,6 +1759,34 @@ body.subject-problemi .answer-btn {
   .q-card-main .mascot-q {
     width: 72px;
     height: 104px;
+  }
+
+  /* F6: la figura sfonda la colonna del testo (accanto alla mascotte, 72px + gap 10px)
+     e usa tutta la larghezza interna della card. Solo dimensioni, nessun colore. */
+  .q-figure {
+    max-width: none;
+    width: calc(100% + 82px);
+    margin-left: -82px;
+    margin-right: 0;
+  }
+}
+
+/* F6: tra 381 e 599px la mascotte e' larga 88px con gap 14px (vedi .mascot-q e
+   .q-card-main): stessa idea della regola sotto i 380px, qui con 102px. */
+@media (min-width: 381px) and (max-width: 599px) {
+  .q-figure {
+    max-width: none;
+    width: calc(100% + 102px);
+    margin-left: -102px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  /* F6: su desktop una figura a 320px spinge la prima risposta sotto la piega
+     (misurato a 1280x800); si limita solo la dimensione, niente colore. */
+  .q-figure {
+    max-width: 260px;
   }
 }
 
