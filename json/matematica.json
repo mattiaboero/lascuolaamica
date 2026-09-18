@@ -83809,14 +83809,14 @@
    "difficulty": 1,
    "question": "Quanti gradi misura l'angolo segnato sul goniometro?",
    "options": [
-    "120°",
+    "130°",
     "90°",
-    "60°",
-    "30°"
+    "50°",
+    "60°"
    ],
    "answerIndex": 2,
-   "answer": "60°",
-   "explanation": "Il lato fermo è appoggiato a destra, sullo 0 della scala interna: leggi quella. L'altro lato arriva al 60, quindi l'angolo misura 60°, meno di un angolo retto.",
+   "answer": "50°",
+   "explanation": "Il lato fermo è appoggiato a destra, sullo 0 della scala interna: leggi quella. L'altro lato passa una tacca prima del 60, quindi l'angolo misura 50°, meno di un angolo retto. 130° è la lettura sulla scala esterna, 60° è il numero vicino ma una tacca più in là.",
    "active": true,
    "tag": "matematica;angoli;classe_4;primaria",
    "tags": [
@@ -83830,8 +83830,8 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-60-b",
-   "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso destra; l'altro lato passa dove la scala esterna segna 120 e la scala interna segna 60."
+   "figure": "goniometro-50",
+   "figureAlt": "Goniometro con due scale: l'esterna parte da 0 a sinistra, l'interna da 0 a destra. Il vertice è al centro, un lato è sulla base verso destra; l'altro passa una tacca prima del 60 della scala interna, una tacca dopo il 120 di quella esterna."
   },
   {
    "id": "mat-4-angoli-9765",
@@ -83843,14 +83843,14 @@
    "difficulty": 2,
    "question": "Leggi il goniometro: quanti gradi misura l'angolo?",
    "options": [
-    "150°",
-    "30°",
-    "130°",
-    "180°"
+    "100°",
+    "80°",
+    "110°",
+    "90°"
    ],
    "answerIndex": 0,
-   "answer": "150°",
-   "explanation": "Il lato fermo parte dallo 0 della scala interna, a destra. Seguendo quella scala l'altro lato arriva al 150: l'angolo misura 150°. Il 30 è sulla scala esterna, che qui non va usata.",
+   "answer": "100°",
+   "explanation": "Il lato fermo parte dallo 0 della scala interna, a destra. Seguendo quella scala l'altro lato passa una tacca dopo il 90: l'angolo misura 100°. L'80 è sulla scala esterna, che qui non va usata; 110° e 90° sono una tacca più in là o più in qua.",
    "active": true,
    "tag": "matematica;angoli;classe_4;primaria",
    "tags": [
@@ -83864,8 +83864,8 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-150-b",
-   "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso destra; l'altro lato passa dove la scala esterna segna 30 e la scala interna segna 150."
+   "figure": "goniometro-100",
+   "figureAlt": "Goniometro con due scale: l'esterna parte da 0 a sinistra, l'interna da 0 a destra. Il vertice è al centro, un lato è sulla base verso destra; l'altro passa una tacca dopo il 90 della scala interna, una tacca prima del 90 di quella esterna."
   },
   {
    "id": "mat-4-angoli-9766",
@@ -83877,14 +83877,14 @@
    "difficulty": 2,
    "question": "Che tipo di angolo è quello misurato sul goniometro?",
    "options": [
-    "Acuto, perché misura 30°",
-    "Ottuso, perché misura 150°",
+    "Acuto, perché misura 80°",
+    "Ottuso, perché misura 100°",
     "Retto, perché misura 90°",
     "Piatto, perché misura 180°"
    ],
    "answerIndex": 1,
-   "answer": "Ottuso, perché misura 150°",
-   "explanation": "Sulla scala che parte da 0 dal lato fermo l'angolo misura 150°. È più di 90° e meno di 180°, quindi è un angolo ottuso.",
+   "answer": "Ottuso, perché misura 100°",
+   "explanation": "Sulla scala che parte da 0 dal lato fermo l'angolo misura 100°. È più di 90° e meno di 180°, quindi è un angolo ottuso.",
    "active": true,
    "tag": "matematica;angoli;classe_4;primaria",
    "tags": [
@@ -83898,8 +83898,8 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-150-b",
-   "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso destra; l'altro lato passa dove la scala esterna segna 30 e la scala interna segna 150."
+   "figure": "goniometro-100",
+   "figureAlt": "Goniometro con due scale: l'esterna parte da 0 a sinistra, l'interna da 0 a destra. Il vertice è al centro, un lato è sulla base verso destra; l'altro passa una tacca dopo il 90 della scala interna, una tacca prima del 90 di quella esterna."
   },
   {
    "id": "mat-4-angoli-9767",
