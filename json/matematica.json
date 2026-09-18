@@ -84001,7 +84001,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "angoli-abc",
-   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale vicino all'orizzontale verso destra."
+   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale in diagonale verso destra, senza arrivare alla verticale."
   },
   {
    "id": "mat-3-angoli-9648",
@@ -84035,7 +84035,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "angoli-abc",
-   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale vicino all'orizzontale verso destra."
+   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale in diagonale verso destra, senza arrivare alla verticale."
   },
   {
    "id": "mat-3-angoli-9649",
@@ -84069,7 +84069,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "angoli-abc",
-   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale vicino all'orizzontale verso destra."
+   "figureAlt": "Tre angoli con un lato orizzontale verso destra. In A un quadratino segna il vertice e l'altro lato sale verticale. In B l'altro lato sale e punta indietro verso sinistra. In C, lati più lunghi, l'altro lato sale in diagonale verso destra, senza arrivare alla verticale."
   },
   {
    "id": "mat-2-schieramenti-9203",
@@ -84137,7 +84137,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "schieramento-4x6",
-   "figureAlt": "Uno schieramento di pallini blu: 4 righe orizzontali, e in ogni riga 6 pallini, uno sotto l'altro in 6 colonne."
+   "figureAlt": "Uno schieramento di pallini blu: 4 righe orizzontali, e in ogni riga 6 pallini, uno accanto all'altro."
   },
   {
    "id": "mat-2-schieramenti-9205",
@@ -84156,7 +84156,7 @@
    ],
    "answerIndex": 2,
    "answer": "4 × 6 = 24",
-   "explanation": "Lo schieramento ha 4 righe da 6 pallini: è una moltiplicazione, 4 × 6 = 24. Con 4 + 6 conti solo i pallini di una riga e di una colonna.",
+   "explanation": "Lo schieramento ha 4 righe da 6 pallini: è una moltiplicazione, 4 × 6 = 24. Con 4 + 6 sommi solo il numero delle righe e quello delle colonne, non tutti i pallini.",
    "active": true,
    "tag": "matematica;schieramenti;classe_2;primaria",
    "tags": [
@@ -84171,7 +84171,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "schieramento-4x6",
-   "figureAlt": "Uno schieramento di pallini blu: 4 righe orizzontali, e in ogni riga 6 pallini, uno sotto l'altro in 6 colonne."
+   "figureAlt": "Uno schieramento di pallini blu: 4 righe orizzontali, e in ogni riga 6 pallini, uno accanto all'altro."
   },
   {
    "id": "mat-2-linee-9206",
@@ -84205,7 +84205,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "linee-abcd",
-   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in diagonale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
+   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in orizzontale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
   },
   {
    "id": "mat-2-linee-9207",
@@ -84239,7 +84239,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "linee-abcd",
-   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in diagonale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
+   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in orizzontale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
   },
   {
    "id": "mat-2-linee-9208",
@@ -84273,7 +84273,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "linee-abcd",
-   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in diagonale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
+   "figureAlt": "Quattro linee con una lettera accanto. A comincia dritta in orizzontale, poi il percorso gira senza altri tratti dritti. B cambia direzione in modo continuo, senza tratti dritti. C è fatta di tratti dritti uniti, che cambiano direzione in punti precisi. D è un solo tratto dritto inclinato."
   }
  ],
  "stats": {
