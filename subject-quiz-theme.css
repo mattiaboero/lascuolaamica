@@ -78,11 +78,22 @@ body.subject-inglese {
   --card-bg: #fff9f1;
 }
 
+/* Il cerchio decorativo di .q-card-main::before sporge 26px a destra della card:
+   con il solo overflow-x: hidden sul body (propagato al viewport) la pagina di
+   gioco restava larga 7px piu' del viewport e scorreva in orizzontale sui
+   telefoni. clip su html impedisce la propagazione e clip sul body taglia al
+   bordo del viewport senza creare un contenitore di scroll; hidden resta come
+   fallback per i browser senza clip. */
+html {
+  overflow-x: clip;
+}
+
 body {
   font-family: 'Nunito', 'Nunito Fallback', sans-serif;
   background: linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-3) 100%);
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   color: var(--text-main);
 }
