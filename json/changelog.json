@@ -1,5 +1,11 @@
 [
  {
+  "date": "18 settembre 2026 · Release 4.15.2",
+  "items": [
+   "Sui telefoni, quando la barra dei link in fondo alla pagina andava su piu' righe, l'ultima risposta del quiz poteva restare parzialmente coperta anche scorrendo fino in fondo. Ora c'e' sempre spazio a sufficienza."
+  ]
+ },
+ {
   "date": "18 settembre 2026 · Release 4.15.1",
   "items": [
    "Sui telefoni la schermata delle domande non scorre più di lato: un cerchio decorativo usciva di qualche pixel dal bordo dello schermo e faceva spostare la pagina quando la si trascinava col dito."

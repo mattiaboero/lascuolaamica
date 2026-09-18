@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.15.2 - 2026-09-18
+
+**Le risposte non finiscono piu' sotto la barra dei link in fondo, sui telefoni.**
+
+### Fixed
+- fix(quiz): sotto i 600px il footer fisso (`.site-footer`) puo' andare su 3
+  righe, fino a 169px di altezza, perche' i link non ci stanno su una riga
+  sola. Lo spazio riservato in fondo alla pagina (`.wrapper`, 122px, pensato
+  per 1 riga) non bastava piu' e l'ultima risposta del quiz restava
+  parzialmente sotto la barra anche scorrendo fino in fondo. Il
+  padding-bottom di `.wrapper` sotto i 600px ora riserva 190px piu'
+  `env(safe-area-inset-bottom)`, coprendo il caso peggiore osservato.
+
 ## 4.15.1 - 2026-09-18
 
 **La schermata di gioco non scorre piu' di lato sui telefoni.**
