@@ -1739,6 +1739,15 @@ body.subject-problemi .answer-btn {
 }
 
 @media (max-width: 600px) {
+  /* Sotto i 600px il .site-footer fisso puo' andare su 3 righe (fino a 169px,
+     misurato 320-430px) perche' i link non ci stanno su una riga sola: il
+     padding-bottom fisso di .wrapper (122px, pensato per 1 riga) non basta piu'
+     e l'ultima risposta finisce sotto la barra. Riserviamo lo spazio peggiore
+     osservato piu' un margine, safe-area inclusa per i notch. */
+  .wrapper {
+    padding-bottom: calc(190px + env(safe-area-inset-bottom, 0px));
+  }
+
   .answers-grid,
   .bonus-grid,
   .score-final,
