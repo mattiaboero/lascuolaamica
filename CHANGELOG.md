@@ -1,5 +1,30 @@
 # Changelog Repo
 
+## 4.15.0 - 2026-09-18
+
+**Le domande di matematica possono avere una figura**, per gli argomenti che
+non si spiegano bene a sole parole: l'orologio con le lancette, il
+goniometro, il confronto tra angoli, uno schieramento da contare, i tipi di
+linea. 20 domande pilota usano la nuova figura.
+
+### Added
+- feat(quiz): figura facoltativa nelle domande — due campi facoltativi nel
+  dataset (`figure`, l'id di un SVG in `assets/figure/`; `figureAlt`, il
+  testo alternativo), un `<img>` con dimensioni fisse fra il testo della
+  domanda e le risposte, nessuna riga di HTML in piu' per materia.
+- feat(matematica): **20 domande pilota con figura** — orologio (classe 2,
+  6 domande), goniometro (classe 4, 5), confronto tra angoli (classe 3, 3),
+  schieramenti (classe 2, 3), tipi di linee (classe 2, 3).
+
+### Notes
+- Ogni figura ha un testo alternativo che descrive ciò che si vede, non la
+  risposta: chi usa uno screen reader ha la stessa informazione di chi vede
+  l'immagine.
+- Il ripasso mostra la figura anche per le domande sbagliate salvate; il
+  breakout, che pesca domande da tutte le materie come solo testo, salta
+  quelle con figura.
+- Domande totali attive: 9.917.
+
 ## 4.14.0 - 2026-09-18
 
 **674 domande nuove di matematica, per chiudere gli argomenti del programma
