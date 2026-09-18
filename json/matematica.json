@@ -83626,7 +83626,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "orologio-8-00",
+   "figure": "orologio-8-00-b",
    "figureAlt": "Un orologio con le lancette. La lancetta corta indica l'8, la lancetta lunga indica il 12."
   },
   {
@@ -83660,7 +83660,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "orologio-8-00",
+   "figure": "orologio-8-00-b",
    "figureAlt": "Un orologio con le lancette. La lancetta corta indica l'8, la lancetta lunga indica il 12."
   },
   {
@@ -83694,7 +83694,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "orologio-4-30",
+   "figure": "orologio-4-30-b",
    "figureAlt": "Un orologio con le lancette. La lancetta corta è a metà strada fra il 4 e il 5, la lancetta lunga indica il 6."
   },
   {
@@ -83728,7 +83728,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "orologio-4-30",
+   "figure": "orologio-4-30-b",
    "figureAlt": "Un orologio con le lancette. La lancetta corta è a metà strada fra il 4 e il 5, la lancetta lunga indica il 6."
   },
   {
@@ -83762,7 +83762,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "orologio-2-15",
+   "figure": "orologio-2-15-b",
    "figureAlt": "Un orologio con le lancette. La lancetta corta è poco dopo il 2, la lancetta lunga indica il 3."
   },
   {
@@ -83796,7 +83796,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "orologio-10-45",
+   "figure": "orologio-10-45-b",
    "figureAlt": "Un orologio con le lancette. La lancetta corta è fra il 10 e l'11, molto vicina all'11; la lancetta lunga indica il 9."
   },
   {
@@ -83830,7 +83830,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-60",
+   "figure": "goniometro-60-b",
    "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso destra; l'altro lato passa dove la scala esterna segna 120 e la scala interna segna 60."
   },
   {
@@ -83864,7 +83864,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-150",
+   "figure": "goniometro-150-b",
    "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso destra; l'altro lato passa dove la scala esterna segna 30 e la scala interna segna 150."
   },
   {
@@ -83898,7 +83898,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-150",
+   "figure": "goniometro-150-b",
    "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso destra; l'altro lato passa dove la scala esterna segna 30 e la scala interna segna 150."
   },
   {
@@ -83909,7 +83909,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Il lato fermo dell'angolo è appoggiato a sinistra. Quanti gradi misura l'angolo sul goniometro?",
+   "question": "Quanti gradi misura l'angolo sul goniometro?",
    "options": [
     "140°",
     "50°",
@@ -83946,7 +83946,7 @@
    "question": "Per misurare questo angolo, quale scala del goniometro devi leggere?",
    "options": [
     "La scala interna, che parte da 0 a destra",
-    "La scala con il numero più grande",
+    "La scala interna, quella con i numeri blu",
     "La scala esterna, che parte da 0 a sinistra",
     "Una qualsiasi, perché danno lo stesso numero"
    ],
@@ -84054,7 +84054,7 @@
    ],
    "answerIndex": 0,
    "answer": "C, A, B",
-   "explanation": "Conta quanto sono aperti i lati, non quanto sono lunghi. C è meno aperto dell'angolo retto A, e B è più aperto di A: l'ordine è C, A, B.",
+   "explanation": "Quello che conta è quanto sono aperti i lati, non quanto sono lunghi. C è meno aperto dell'angolo retto A, e B è più aperto di A: l'ordine è C, A, B.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
