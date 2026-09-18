@@ -1,0 +1,665 @@
+[
+ {
+  "id": "c2-proprieta-commutativa-addizione",
+  "class": 2,
+  "title": "Proprietà commutativa dell'addizione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "commutativ.*addizion|addizion.*commutativ"
+ },
+ {
+  "id": "c2-numeri-31-99",
+  "class": 2,
+  "title": "Numeri da 31 a 99 (lettura e confronto)",
+  "area": "aritmetica",
+  "subarea": "numeri",
+  "newSubarea": true,
+  "match": "\\b[3-9]\\d\\b.*(maggiore|minore|più grande|più piccol|precede|segue|viene (prima|dopo))|(maggiore|minore|più grande|più piccol|precede|segue|viene (prima|dopo)).*\\b[3-9]\\d\\b|confronta i numeri|ordina i numeri"
+ },
+ {
+  "id": "c2-addizione-tre-addendi",
+  "class": 2,
+  "title": "Addizione con tre o più addendi",
+  "area": "aritmetica",
+  "subarea": "operazioni",
+  "match": "\\d+ ?\\+ ?\\d+ ?\\+ ?\\d+|(?:\\d+\\D+?){2}\\d+\\D{0,80}?in tutto"
+ },
+ {
+  "id": "c2-linee",
+  "class": 2,
+  "title": "Linee e tipi di linea",
+  "area": "geometria",
+  "subarea": "linee",
+  "newSubarea": true,
+  "match": "\\bline[ae]\\b"
+ },
+ {
+  "id": "c2-raggruppamento-secondo-ordine",
+  "class": 2,
+  "title": "Raggruppamento al secondo ordine (cambi unità/decine)",
+  "area": "aritmetica",
+  "subarea": "raggruppamento",
+  "newSubarea": true,
+  "match": "raggruppamento|cambio di (decin|unit)|secondo ordine"
+ },
+ {
+  "id": "c2-cento-centinaia",
+  "class": 2,
+  "title": "Cento, centinaia e numeri a tre cifre",
+  "area": "aritmetica",
+  "subarea": "numeri",
+  "newSubarea": true,
+  "match": "centinai|\\bcento\\b|\\b[1-9]\\d\\d\\b.*(cifr|posto)"
+ },
+ {
+  "id": "c2-moltiplicazione",
+  "class": 2,
+  "title": "Moltiplicazione",
+  "area": "tabelline",
+  "subarea": "moltiplicazione",
+  "newSubarea": true,
+  "match": "moltiplic|×|\\bvolte\\b|doppio|triplo"
+ },
+ {
+  "id": "c2-moltiplicazione-prodotto-cartesiano",
+  "class": 2,
+  "title": "Moltiplicazione come prodotto cartesiano",
+  "area": "tabelline",
+  "subarea": "prodotto_cartesiano",
+  "newSubarea": true,
+  "match": "prodotto cartesiano|combinazion|modi divers\\w*|abbinar\\w*|abbinament\\w*"
+ },
+ {
+  "id": "c2-schieramenti-reticoli",
+  "class": 2,
+  "title": "Schieramenti e reticoli",
+  "area": "tabelline",
+  "subarea": "schieramenti",
+  "newSubarea": true,
+  "match": "schierament|reticol"
+ },
+ {
+  "id": "c2-tabelline",
+  "class": 2,
+  "title": "Tabelline",
+  "area": "tabelline",
+  "subarea": "calcolo_mentale",
+  "match": "tabellin|\\b\\d0? ?× ?\\d{1,2}\\b\\s*\\?|quanto fa \\d{1,2} ?[×x] ?\\d{1,2}\\b"
+ },
+ {
+  "id": "c2-moltiplicazioni-colonna",
+  "class": 2,
+  "title": "Moltiplicazioni in colonna",
+  "area": "tabelline",
+  "subarea": "colonna",
+  "newSubarea": true,
+  "match": "moltiplicazion.*colonna|colonna.*moltiplicazion"
+ },
+ {
+  "id": "c2-proprieta-commutativa-moltiplicazione",
+  "class": 2,
+  "title": "Proprietà commutativa della moltiplicazione",
+  "area": "tabelline",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "commutativ.*moltiplicazion|moltiplicazion.*commutativ"
+ },
+ {
+  "id": "c2-tavola-pitagorica",
+  "class": 2,
+  "title": "Tavola pitagorica",
+  "area": "tabelline",
+  "subarea": "tavola_pitagorica",
+  "newSubarea": true,
+  "match": "tavola pitagorica|riga[^.?]{0,30}colonna|colonna[^.?]{0,30}riga|\\bincrocio\\b"
+ },
+ {
+  "id": "c2-divisione",
+  "class": 2,
+  "title": "Divisione",
+  "area": "aritmetica",
+  "subarea": "operazioni",
+  "match": "divis|divid|÷|\\bmetà\\b|in parti uguali|\\d ?: ?\\d"
+ },
+ {
+  "id": "c2-divisioni-colonna",
+  "class": 2,
+  "title": "Divisioni in colonna",
+  "area": "aritmetica",
+  "subarea": "operazioni",
+  "match": "divisione.*colonna|colonna.*divisione"
+ },
+ {
+  "id": "c2-divisioni-due-cifre",
+  "class": 2,
+  "title": "Divisioni a due cifre",
+  "area": "aritmetica",
+  "subarea": "operazioni",
+  "match": "divisione.*due cifre|due cifre.*divisione|\\b\\d{2} ?÷ ?\\d\\b"
+ },
+ {
+  "id": "c2-indagine-statistica",
+  "class": 2,
+  "title": "Indagine statistica",
+  "area": "logica_e_dati",
+  "subarea": "dati_probabilita",
+  "match": "indagin|grafico|istogramm|ideogramm|pittogramm|tabella|sondaggio|moda\\b"
+ },
+ {
+  "id": "c2-orologio-lancette",
+  "class": 2,
+  "title": "Leggere l'orologio con le lancette",
+  "area": "aritmetica",
+  "subarea": "orologio",
+  "newSubarea": true,
+  "match": "orologio|lancett|che ore|\\bore \\d|mezzogiorno"
+ },
+ {
+  "id": "c2-punto-retta-piano",
+  "class": 2,
+  "title": "Punto, retta e piano",
+  "area": "geometria",
+  "subarea": "rette",
+  "newSubarea": true,
+  "match": "\\bpiano\\b|\\bgeometria\\b"
+ },
+ {
+  "id": "c2-rette-semirette-segmenti",
+  "class": 2,
+  "title": "Rette, semirette e segmenti",
+  "area": "geometria",
+  "subarea": "rette",
+  "newSubarea": true,
+  "match": "semirett|segment"
+ },
+ {
+  "id": "c2-confronto-segmenti",
+  "class": 2,
+  "title": "Tipi di segmenti e confronto tra segmenti",
+  "area": "geometria",
+  "subarea": "rette",
+  "newSubarea": true,
+  "match": "(?=.*segment\\w*)(?=.*(più lung\\w*|più cort\\w*|consecutiv\\w*|adiacent\\w*|congruent\\w*))"
+ },
+ {
+  "id": "c3-proprieta-associativa-addizione",
+  "class": 3,
+  "title": "Proprietà associativa dell'addizione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "associativ.*addizion|addizion.*associativ|associativ.*\\+|\\+.*associativ"
+ },
+ {
+  "id": "c3-proprieta-dissociativa-addizione",
+  "class": 3,
+  "title": "Proprietà dissociativa dell'addizione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "dissociativ.*addizion|addizion.*dissociativ|dissociativ.*\\+|\\+.*dissociativ"
+ },
+ {
+  "id": "c3-proprieta-invariantiva-sottrazione",
+  "class": 3,
+  "title": "Proprietà invariantiva della sottrazione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "invariantiv.*sottrazion|sottrazion.*invariantiv|invariantiv.*-|-.*invariantiv"
+ },
+ {
+  "id": "c3-proprieta-associativa-moltiplicazione",
+  "class": 3,
+  "title": "Proprietà associativa della moltiplicazione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "associativ.*moltiplicazion|moltiplicazion.*associativ|associativ.*×|×.*associativ"
+ },
+ {
+  "id": "c3-proprieta-dissociativa-moltiplicazione",
+  "class": 3,
+  "title": "Proprietà dissociativa della moltiplicazione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "dissociativ.*moltiplicazion|moltiplicazion.*dissociativ|dissociativ.*×|×.*dissociativ"
+ },
+ {
+  "id": "c3-proprieta-invariantiva-divisione",
+  "class": 3,
+  "title": "Proprietà invariantiva della divisione",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "invariantiv.*divisione|divisione.*invariantiv|invariantiv.*÷|÷.*invariantiv"
+ },
+ {
+  "id": "c3-proprieta-distributiva",
+  "class": 3,
+  "title": "Proprietà distributiva",
+  "area": "aritmetica",
+  "subarea": "proprieta",
+  "newSubarea": true,
+  "match": "distributiv"
+ },
+ {
+  "id": "c3-prova-del-nove",
+  "class": 3,
+  "title": "Prova del nove",
+  "area": "aritmetica",
+  "subarea": "operazioni",
+  "match": "prova del nove"
+ },
+ {
+  "id": "c3-angoli-direzione-rotazione",
+  "class": 3,
+  "title": "Angoli come cambio di direzione e rotazione",
+  "area": "geometria",
+  "subarea": "angoli",
+  "newSubarea": true,
+  "match": "\\bangol.*(direzion|rotazion)|rotazion.*\\bangol"
+ },
+ {
+  "id": "c3-confronto-angoli",
+  "class": 3,
+  "title": "Confronto tra angoli",
+  "area": "geometria",
+  "subarea": "angoli",
+  "newSubarea": true,
+  "match": "confront.*\\bangol|\\bangol.*confront"
+ },
+ {
+  "id": "c3-angolo-concavo-convesso",
+  "class": 3,
+  "title": "Angolo concavo e convesso",
+  "area": "geometria",
+  "subarea": "angoli",
+  "newSubarea": true,
+  "match": "concav|convess"
+ },
+ {
+  "id": "c3-angoli-notevoli",
+  "class": 3,
+  "title": "Angoli notevoli",
+  "area": "geometria",
+  "subarea": "angoli",
+  "newSubarea": true,
+  "match": "\\bangol[oi]\\b.*(retto|acuto|ottuso|piatto|giro)|(retto|acuto|ottuso|piatto|giro).*\\bangol"
+ },
+ {
+  "id": "c3-posizione-rette-piano",
+  "class": 3,
+  "title": "Posizione tra due rette nel piano",
+  "area": "geometria",
+  "subarea": "rette",
+  "newSubarea": true,
+  "match": "rette (parallele|incidenti|perpendicolari)|posizione.*rette"
+ },
+ {
+  "id": "c3-poligoni",
+  "class": 3,
+  "title": "Poligoni",
+  "area": "geometria",
+  "subarea": "figure",
+  "match": "poligon|quant[ie] lati|pentagon|esagon|ottagon"
+ },
+ {
+  "id": "c3-diagramma-di-flusso",
+  "class": 3,
+  "title": "Diagramma di flusso",
+  "area": "logica_e_dati",
+  "subarea": "diagramma_flusso",
+  "newSubarea": true,
+  "match": "diagramma di flusso"
+ },
+ {
+  "id": "c4-numero-mille-migliaia",
+  "class": 4,
+  "title": "Il numero mille e le migliaia",
+  "area": "aritmetica",
+  "subarea": "numeri",
+  "newSubarea": true,
+  "match": "migliai|\\bmille\\b|\\d\\.\\d{3}\\b.*(cifr|posto|legge|scrive)|mila[a-z]|\\d{1,3}\\.\\d{3}.*(maggiore|minore|più grande|più piccol|ordine|___|precede|segue)|(maggiore|minore|più grande|più piccol|ordina)\\b.*\\d{1,3}\\.\\d{3}"
+ },
+ {
+  "id": "c4-multipli",
+  "class": 4,
+  "title": "Multipli",
+  "area": "aritmetica",
+  "subarea": "multipli_divisori",
+  "newSubarea": true,
+  "match": "\\bmultipl"
+ },
+ {
+  "id": "c4-divisori",
+  "class": 4,
+  "title": "Divisori",
+  "area": "aritmetica",
+  "subarea": "multipli_divisori",
+  "newSubarea": true,
+  "match": "\\bdivisor(e|i)\\b"
+ },
+ {
+  "id": "c4-numeri-primi-composti",
+  "class": 4,
+  "title": "Numeri primi e composti",
+  "area": "aritmetica",
+  "subarea": "multipli_divisori",
+  "newSubarea": true,
+  "match": "numer.*\\bprim[oi]\\b|numero composto|numeri composti"
+ },
+ {
+  "id": "c4-crivello-eratostene",
+  "class": 4,
+  "title": "Crivello di Eratostene",
+  "area": "aritmetica",
+  "subarea": "multipli_divisori",
+  "newSubarea": true,
+  "match": "crivello|eratostene"
+ },
+ {
+  "id": "c4-scomposizione-albero",
+  "class": 4,
+  "title": "Scomposizione con diagrammi ad albero",
+  "area": "aritmetica",
+  "subarea": "multipli_divisori",
+  "newSubarea": true,
+  "match": "diagramma ad albero|albero.*scomposizion|scomposizion.*albero"
+ },
+ {
+  "id": "c4-frazioni-concetto",
+  "class": 4,
+  "title": "Frazioni (concetto e lettura)",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "^(?!.*(equivalent|minimi termini|maggiore|minore|virgola|decimal))(?!.*\\d+/\\d+\\s*di\\s*\\d).*(numeratore|denominatore|unit[aà] frazionaria|si legge|si scrive|in lettere|che frazione (è|rappresenta|hai)|parti uguali.*che frazione|sopra la linea|sotto la linea)"
+ },
+ {
+  "id": "c4-frazioni-unitarie",
+  "class": 4,
+  "title": "Frazioni unitarie",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "frazion.*unitari|unitari.*frazion"
+ },
+ {
+  "id": "c4-frazione-di-un-numero",
+  "class": 4,
+  "title": "Frazione di un numero",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "\\d+/\\d+ di \\d|frazione di\\b"
+ },
+ {
+  "id": "c4-classificazione-frazioni",
+  "class": 4,
+  "title": "Classificazione delle frazioni",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "frazion.*(propri[ae]|impropri[ae]|apparent[ei])|classificazione.*frazion|\\bpropri[ae]\\b|\\bimpropri[ae]\\b|\\bapparent[ei]\\b"
+ },
+ {
+  "id": "c4-numeri-misti",
+  "class": 4,
+  "title": "Numeri misti",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "numero misto|numeri misti"
+ },
+ {
+  "id": "c4-frazioni-complementari",
+  "class": 4,
+  "title": "Frazioni complementari",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "frazion.*complementar"
+ },
+ {
+  "id": "c4-frazioni-equivalenti",
+  "class": 4,
+  "title": "Frazioni equivalenti",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "frazion.*equivalent|equivalent.*frazion"
+ },
+ {
+  "id": "c4-confronto-frazioni",
+  "class": 4,
+  "title": "Confronto tra frazioni",
+  "area": "aritmetica",
+  "subarea": "frazioni",
+  "match": "confront.*frazion|frazion.*confront"
+ },
+ {
+  "id": "c4-decimi-centesimi-millesimi",
+  "class": 4,
+  "title": "Decimi, centesimi e millesimi",
+  "area": "aritmetica",
+  "subarea": "decimali",
+  "match": "\\bdecim[oi]\\b|centesim|millesim"
+ },
+ {
+  "id": "c4-addizione-decimali",
+  "class": 4,
+  "title": "Addizione con decimali",
+  "area": "aritmetica",
+  "subarea": "decimali",
+  "match": "\\d,\\d+ ?\\+ ?\\d|\\d ?\\+ ?\\d+,\\d|(?=.*\\d,\\d)(?=.*\\b(insieme|in tutto|in totale|somma|sommare)\\b)"
+ },
+ {
+  "id": "c4-sottrazione-decimali",
+  "class": 4,
+  "title": "Sottrazione con decimali",
+  "area": "aritmetica",
+  "subarea": "decimali",
+  "match": "\\d,\\d+ ?[-−] ?\\d|\\d ?[-−] ?\\d+,\\d|(?=.*\\d,\\d)(?=.*\\b(resta|restano|resto)\\b)"
+ },
+ {
+  "id": "c4-moltiplicazione-virgola",
+  "class": 4,
+  "title": "Moltiplicazione con la virgola",
+  "area": "aritmetica",
+  "subarea": "decimali",
+  "match": "\\d,\\d+ ?[×x] ?\\d|\\d ?[×x] ?\\d+,\\d|\\bquanto costano\\b|\\bcon \\d+ \\w+ uguali\\b"
+ },
+ {
+  "id": "c4-divisione-virgola",
+  "class": 4,
+  "title": "Divisione con la virgola",
+  "area": "aritmetica",
+  "subarea": "decimali",
+  "match": "\\d,\\d+ ?[:÷] ?\\d|\\d ?[:÷] ?\\d+,\\d|\\d+ ?÷ ?(10|100|1\\.?000)\\b|(?=.*\\d,\\d)(?=.*\\b(divisa in|dividono|paga ciascuno|pesa ogni)\\b)"
+ },
+ {
+  "id": "c4-unita-di-misura",
+  "class": 4,
+  "title": "Unità di misura (cosa significa misurare)",
+  "area": "aritmetica",
+  "subarea": "misure",
+  "match": "unità di misura|cosa significa misurare"
+ },
+ {
+  "id": "c4-misure-lunghezza",
+  "class": 4,
+  "title": "Misure di lunghezza",
+  "area": "aritmetica",
+  "subarea": "misure",
+  "match": "^(?!.*(area|perimetr|²|³)).*(\\b\\d+(,\\d+)? ?(km|hm|dam|m|dm|cm|mm)\\b|lunghezza|\\bmetri\\b)"
+ },
+ {
+  "id": "c4-misure-massa-peso",
+  "class": 4,
+  "title": "Misure di massa e peso",
+  "area": "aritmetica",
+  "subarea": "misure",
+  "match": "\\bpeso\\b|\\bmassa\\b|\\bkg\\b|grammo"
+ },
+ {
+  "id": "c4-misure-capacita",
+  "class": 4,
+  "title": "Misure di capacità",
+  "area": "aritmetica",
+  "subarea": "misure",
+  "match": "\\b\\d+(,\\d+)? ?(hl|dal|l|dl|cl|ml)\\b|litr|capacit"
+ },
+ {
+  "id": "c4-equivalenze",
+  "class": 4,
+  "title": "Equivalenze",
+  "area": "aritmetica",
+  "subarea": "equivalenze",
+  "newSubarea": true,
+  "match": "equivalenz|quant[ie] (mm|cm|dm|m|km|g|hg|kg|ml|cl|dl|l|dal|hl|dag|millimetri|centimetri|metri|grammi|chilogrammi|millilitri|litri|decalitri|ettolitri|decagrammi|ettogrammi) (sono|ci sono|equival|corrispond)"
+ },
+ {
+  "id": "c4-misure-angoli-gradi",
+  "class": 4,
+  "title": "Misure degli angoli: i gradi",
+  "area": "geometria",
+  "subarea": "angoli",
+  "newSubarea": true,
+  "match": "misura.*\\bangol|\\bangol.*\\bgrad[oi]\\b"
+ },
+ {
+  "id": "c4-goniometro",
+  "class": 4,
+  "title": "Goniometro",
+  "area": "geometria",
+  "subarea": "angoli",
+  "newSubarea": true,
+  "match": "goniometro"
+ },
+ {
+  "id": "c4-perimetro-poligono",
+  "class": 4,
+  "title": "Perimetro di un poligono",
+  "area": "geometria",
+  "subarea": "perimetro_area",
+  "match": "perimetr"
+ },
+ {
+  "id": "c5-milioni-miliardi",
+  "class": 5,
+  "title": "Milioni e miliardi",
+  "area": "aritmetica",
+  "subarea": "numeri",
+  "newSubarea": true,
+  "match": "milion|miliard|\\d{1,3}(?:\\.\\d{3}){2,}"
+ },
+ {
+  "id": "c5-numeri-relativi",
+  "class": 5,
+  "title": "Numeri interi (relativi)",
+  "area": "aritmetica",
+  "subarea": "numeri_relativi",
+  "newSubarea": true,
+  "match": "numer[oi].{0,25}relativ|relativ.{0,25}numer[oi]|numeri interi relativi|\\([+-]\\s*\\d+\\)\\s*\\+\\s*\\([+-]\\s*\\d+\\)|(?=.*[+-]\\s*\\d)(?=.*(temperatura|sotto zero|quota|profondit|piano|opposto|maggiore|minore|più grande|più piccolo|più vicino|più a destra|più in basso|più freddo))"
+ },
+ {
+  "id": "c5-confronto-numeri-relativi",
+  "class": 5,
+  "title": "Confronto tra numeri relativi",
+  "area": "aritmetica",
+  "subarea": "numeri_relativi",
+  "newSubarea": true,
+  "match": "(?=.*confront)(?=.*numer)(?=.*relativ)|(?=.*[+-]\\d)(?=.*(maggiore|minore|più grande|più piccolo|più vicino|più a destra|più in basso|più freddo|ordine))"
+ },
+ {
+  "id": "c5-addizione-numeri-relativi",
+  "class": 5,
+  "title": "Addizione tra numeri relativi",
+  "area": "aritmetica",
+  "subarea": "numeri_relativi",
+  "newSubarea": true,
+  "match": "(?=.*addizion)(?=.*numer)(?=.*relativ)|\\([+-]\\s*\\d+\\)\\s*\\+\\s*\\([+-]\\s*\\d+\\)|(?=.*[+-]\\d)(?=.*(temperatura|sotto zero|quota|profondit|piano))(?=.*(sal|scend|aumenta|diminu))"
+ },
+ {
+  "id": "c5-elevamento-a-potenza",
+  "class": 5,
+  "title": "Elevamento a potenza",
+  "area": "aritmetica",
+  "subarea": "potenze",
+  "newSubarea": true,
+  "match": "potenz|esponent|al quadrato|al cubo|\\b\\d+[²³⁴⁵]|\\d\\^\\d"
+ },
+ {
+  "id": "c5-proposizioni-connettivi-logici",
+  "class": 5,
+  "title": "Proposizioni e connettivi logici",
+  "area": "logica_e_dati",
+  "subarea": "logica_proposizioni",
+  "newSubarea": true,
+  "match": "proposizion.*logic|connettiv.*logic"
+ },
+ {
+  "id": "c5-classificazione-triangoli",
+  "class": 5,
+  "title": "Classificazione dei triangoli",
+  "area": "geometria",
+  "subarea": "figure",
+  "match": "equilater|isoscel|scalen|triangolo (rettangolo|acutangolo|ottusangolo)"
+ },
+ {
+  "id": "c5-basi-altezze-triangolo",
+  "class": 5,
+  "title": "Basi e altezze di un triangolo",
+  "area": "geometria",
+  "subarea": "figure",
+  "match": "(?=.*triangol)(?=.*(base|altezza))"
+ },
+ {
+  "id": "c5-classificazione-quadrilateri",
+  "class": 5,
+  "title": "Classificazione dei quadrilateri",
+  "area": "geometria",
+  "subarea": "figure",
+  "match": "quadrilater|trapezi|\\brombo|parallelogramm"
+ },
+ {
+  "id": "c5-misure-di-superficie",
+  "class": 5,
+  "title": "Misure di superficie",
+  "area": "geometria",
+  "subarea": "misure_superficie",
+  "newSubarea": true,
+  "match": "(km|hm|dam|m|dm|cm|mm)²|superfic|ettar"
+ },
+ {
+  "id": "c5-equivalenze-superficie",
+  "class": 5,
+  "title": "Equivalenze con misure di superficie",
+  "area": "geometria",
+  "subarea": "misure_superficie",
+  "newSubarea": true,
+  "match": "(km|hm|dam|m|dm|cm|mm)² *(sono|equival|corrispond|=|in) *(quant|\\d)|quanti (km|hm|dam|m|dm|cm|mm)² (sono|ci sono|equival|corrispond)"
+ },
+ {
+  "id": "c5-area-poligoni",
+  "class": 5,
+  "title": "Area dei poligoni",
+  "area": "geometria",
+  "subarea": "perimetro_area",
+  "match": "\\barea\\b|superficie di|m² di"
+ },
+ {
+  "id": "c5-circonferenza-cerchio",
+  "class": 5,
+  "title": "Circonferenza e cerchio",
+  "area": "geometria",
+  "subarea": "cerchio",
+  "newSubarea": true,
+  "match": "circonferenza|\\bcerchio\\b"
+ },
+ {
+  "id": "c5-solidi-classificazione",
+  "class": 5,
+  "title": "Solidi e classificazione",
+  "area": "geometria",
+  "subarea": "solidi",
+  "newSubarea": true,
+  "match": "\\bsolid|\\bcubo|prism|piramid|cilindr|\\bcono\\b|\\bsfera|parallelepiped|volume"
+ }
+]

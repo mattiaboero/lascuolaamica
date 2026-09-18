@@ -119,7 +119,10 @@ async function main() {
         throw new Error(`Question not found in config map: ${questionText}`);
       }
 
-      const answerPlan = await clickPlannedAnswer(page, '#answers', meta, options.mode, domOptions);
+      // Con --ripassa serve almeno un errore: il mix pseudo-casuale di "mixed"
+      // puo' dare 10 risposte giuste (~3% delle partite) e il bottone non compare.
+      const questionMode = options.ripassa && index === 0 ? 'worst' : options.mode;
+      const answerPlan = await clickPlannedAnswer(page, '#answers', meta, questionMode, domOptions);
       questions.push({
         question: questionText,
         promptHtml: promptMeta.html,

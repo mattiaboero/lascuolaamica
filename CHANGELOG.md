@@ -1,5 +1,51 @@
 # Changelog Repo
 
+## 4.14.0 - 2026-09-18
+
+**674 domande nuove di matematica, per chiudere gli argomenti del programma
+che il banco non copriva ancora in nessuna classe fra la seconda e la
+quinta.** Pipeline in cinque fasi (F0 mappa argomenti e copertura per
+argomento, F1 pilota, F2-F5 le quattro classi), ognuna seguita da una
+revisione indipendente sul suo stesso lotto, piu' una passata finale sui casi
+dubbi lasciati aperti dalle quattro revisioni.
+
+### Added
+- feat(matematica): **252 domande di quarta** — F1 pilota (20, frazioni
+  equivalenti, c4-frazioni-concetto) e F2 (232 su 20 argomenti): frazioni,
+  multipli/divisori/numeri primi, migliaia, numeri decimali, equivalenze,
+  angoli in gradi.
+- feat(matematica): **132 domande di quinta** (F3, su 10 argomenti): milioni
+  e miliardi, numeri relativi, potenze, connettivi logici, triangoli,
+  quadrilateri, superfici, cerchio.
+- feat(matematica): **134 domande di terza** (F4, su 15 argomenti): proprieta'
+  delle operazioni, prova del nove, angoli, rette, poligoni, diagramma di
+  flusso.
+- feat(matematica): **156 domande di seconda** (F5, su 18 argomenti):
+  proprieta' commutativa, centinaia, cambi, prodotto cartesiano,
+  schieramenti, addizione in colonna, tavola pitagorica, linee, indagine
+  statistica, orologio, punto/retta/segmenti.
+- **`scripts/data/mappa-argomenti-matematica.json`** (F0): un argomento per
+  riga con classe, area/sottoarea e la regex usata da
+  `scripts/coverage_report.js` per contare quante domande attive lo coprono
+  gia' — la mappa che ha guidato dove generare.
+- **`docs/prompt-generazione-matematica.md`**: il prompt e i vincoli usati per
+  generare le domande di ogni fase (formato, distrattori plausibili, numeri
+  in scala, una spiegazione che dice il perche').
+
+### Fixed
+- fix(matematica): **246 correzioni** trovate dalle revisioni indipendenti,
+  una per classe piu' una finale sui casi dubbi: F2 quarta 35, F3 quinta 62,
+  F4 terza 26, F5 seconda 28, casi dubbi trasversali F2-F5 95. Oltre a queste,
+  un fix di merito su 8/4 (nessuna opzione "Impropria": la risposta non deve
+  dipendere da una convenzione) e una correzione alla regex
+  `c4-frazioni-concetto`, che contava ogni frazione della domanda invece
+  dell'argomento.
+
+### Notes
+- Domande totali attive: 9.897 (era 9.223 prima di questa pipeline).
+- Generazione -> controlli automatici -> ingest -> revisione indipendente per
+  ogni classe, come nelle campagne di revisione precedenti.
+
 ## Non rilasciato - 2026-09-12
 
 ### Security

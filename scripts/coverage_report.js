@@ -7,6 +7,9 @@ const SUBJECTS = ['matematica', 'problemi', 'italiano', 'inglese', 'civica', 'ge
 const JSON_DIR = path.join(__dirname, '..', 'json');
 const THRESHOLD = 15; // Minimum per subarea-class combination
 
+const TOPIC_MAP_FILE = path.join(__dirname, 'data', 'mappa-argomenti-matematica.json');
+const TOPIC_SUBJECTS = ['matematica', 'problemi']; // subjects scanned for topic coverage
+
 function getQuestionsFromData(data) {
   for (const v of Object.values(data)) {
     if (Array.isArray(v)) {
@@ -111,6 +114,37 @@ function generateCoverageReport() {
     report.push(`\nTotale celle sotto soglia: ${underThreshold.length}\n`);
   } else {
     report.push('## ✅ Nessuna cella sotto soglia\n');
+  }
+
+  // Copertura per argomento (matematica)
+  if (fs.existsSync(TOPIC_MAP_FILE)) {
+    const topics = JSON.parse(fs.readFileSync(TOPIC_MAP_FILE, 'utf-8'));
+
+    const questions = [];
+    TOPIC_SUBJECTS.forEach(subject => {
+      const jsonFile = path.join(JSON_DIR, `${subject}.json`);
+      if (!fs.existsSync(jsonFile)) return;
+      const data = JSON.parse(fs.readFileSync(jsonFile, 'utf-8'));
+      questions.push(...getQuestionsFromData(data).filter(q => q.active !== false));
+    });
+
+    report.push('## Copertura per argomento (matematica)\n\n');
+    report.push(`${'Argomento'.padEnd(40)} | Classe | Domande | Stato\n`);
+    report.push('-'.repeat(70) + '\n');
+
+    topics.forEach(topic => {
+      const regex = new RegExp(topic.match, 'i');
+      // Testa anche la risposta, non solo la domanda: molte domande "quale
+      // proprieta' ha usato?" o "che tipo di angolo e'?" nominano l'argomento
+      // solo nella risposta, per non svelarla nel testo (F4, c3). Verificato
+      // sull'intero dataset prima di adottarlo: nessun match spurio fra
+      // argomenti diversi, solo domande davvero pertinenti in piu'.
+      const count = questions.filter(q => q.class === topic.class && regex.test(`${q.question} ${q.answer || ''}`)).length;
+      const status = count === 0 ? 'manca' : count < 10 ? 'debole' : 'coperto';
+      report.push(`${topic.id.padEnd(40)} | c${topic.class}     | ${String(count).padEnd(7)} | ${status}\n`);
+    });
+
+    report.push('\n');
   }
 
   const reportPath = path.join(__dirname, '..', 'reports', 'coverage.md');

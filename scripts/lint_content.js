@@ -79,7 +79,7 @@ const NOMI_PROPRI_F = 'Giulia|Monica|Sara|Anna|Chiara|Elena|Marta|Sofia|Alice|Be
 // fallisce se compare un nome che non sta in nessuna delle due, cosi' la lista
 // non puo' restare indietro in silenzio (era gia' successo due volte).
 const NOMI_PERSONA_F = 'Ada|Aisha|Alice|Amina|Amy|Anna|Arianna|Asel|Bea|Beatrice|Chiara|Claudia|Elena|Elisa|Emma|Fatima|Francesca|Giada|Giorgia|Giulia|Grace|Irene|Julia|Laura|Lea|Lena|Lisa|Lucy|Maria|Marina|Marta|Martina|Mei|Mia|Monica|Nadia|Nina|Olivia|Paola|Priya|Rima|Roberta|Sara|Sarah|Serena|Sofia|Valentina|Yasmin';
-const NOMI_PERSONA_M = 'Ahmed|Alessandro|Amir|Andrea|Carlo|Dan|Daniele|Davide|Emilio|Fabio|Filippo|Francesco|Gianni|Giacomo|Giorgio|Giovanni|Giulio|Ivo|Jack|Jake|Leo|Lorenzo|Luca|Marco|Marino|Mario|Matteo|Mattia|Mike|Nicola|Omar|Paolo|Paul|Pedro|Peter|Pietro|Riccardo|Roberto|Sam|Simone|Soren|Stefano|Tom|Tommaso|Yusuf';
+const NOMI_PERSONA_M = 'Ahmed|Alessandro|Amir|Andrea|Carlo|Dan|Daniele|Davide|Emilio|Fabio|Filippo|Francesco|Gianni|Giacomo|Giorgio|Giovanni|Giulio|Ivo|Jack|Jake|Leo|Lorenzo|Luca|Luigi|Marco|Marino|Mario|Matteo|Mattia|Mike|Nicola|Omar|Paolo|Paul|Pedro|Peter|Pietro|Riccardo|Roberto|Sam|Simone|Soren|Stefano|Tom|Tommaso|Yusuf';
 const VERBI_DATIVO = 'rimane|resta|restano|rimangono|serve|servono|applicano|danno|chiedono';
 // Nomi femminili plurali usati nei problemi col prezzo unitario: "4 magliette a
 // 18 euro l'uno" e' l'accordo rotto dal template, che era scritto per "libri".
