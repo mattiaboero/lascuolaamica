@@ -1771,6 +1771,17 @@ body.subject-problemi .answer-btn {
   }
 }
 
+/* F6: tra 381 e 599px la mascotte e' larga 88px con gap 14px (vedi .mascot-q e
+   .q-card-main): stessa idea della regola sotto i 380px, qui con 102px. */
+@media (min-width: 381px) and (max-width: 599px) {
+  .q-figure {
+    max-width: none;
+    width: calc(100% + 102px);
+    margin-left: -102px;
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 900px) {
   /* F6: su desktop una figura a 320px spinge la prima risposta sotto la piega
      (misurato a 1280x800); si limita solo la dimensione, niente colore. */
