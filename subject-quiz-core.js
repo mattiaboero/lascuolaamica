@@ -1332,6 +1332,9 @@
         case 'toggle-mute':
           toggleMute();
           break;
+        case 'toggle-speak':
+          toggleSpeak(target);
+          break;
         case 'start-game':
           if (HAS_LEVELS) showLevelsScreen();
           else startGame();
@@ -1392,6 +1395,7 @@
     selectedClass = key;
     saveClassPref(key);
     document.documentElement.dataset.classe = key;
+    syncSpeakBtns();
 
     document.querySelectorAll('.class-btn').forEach((b) => {
       b.classList.remove('selected');
@@ -2005,6 +2009,7 @@
     answers.appendChild(frag);
 
     updateDots();
+    speakScreen($('screenGame'));
   }
 
   function markAnswerState(btn, isCorrect) {
@@ -2020,6 +2025,7 @@
     if (answered) return;
     answered = true;
 
+    stopSpeaking();
     const q = questions[curQ];
     const isOk = answersMatch(chosen, correctAnswer);
     const buttons = Array.from(document.querySelectorAll('#answers .answer-btn'));
@@ -2098,11 +2104,13 @@
     area.appendChild(frag);
 
     showScreen('screenBonusQuestion');
+    speakScreen($('screenBonusQuestion'));
   }
 
   function checkBonusAnswer(chosen, correctAnswer, btn) {
     const buttons = Array.from(document.querySelectorAll('#bonusAnswers .answer-btn'));
     if (!buttons.length || buttons[0].disabled) return;
+    stopSpeaking();
     buttons.forEach((b) => {
       b.disabled = true;
     });
@@ -2362,6 +2370,7 @@
       clearTimeout(nextStepTimer);
       nextStepTimer = null;
     }
+    stopSpeaking();
     document.querySelectorAll('.screen').forEach((s) => s.classList.remove('active'));
     const target = $(id);
     if (!target) return;
@@ -2815,6 +2824,128 @@
     btn.setAttribute('aria-label', muted ? 'Riattiva audio' : 'Disattiva audio');
   }
 
+  // ---- Ascolta: lettura ad alta voce (docs/classe-prima.md) ----
+  // Solo voci locali (localService): quelle remote mandano il testo a un
+  // server, e questo e' un sito per bambini. Senza voce italiana locale il
+  // bottone resta nascosto. Si parla solo dopo un tocco esplicito sul bottone.
+  const speech = typeof window.SpeechSynthesisUtterance === 'function' && window.speechSynthesis ? window.speechSynthesis : null;
+  let speakVoices = {};
+  let speakOn = false;
+
+  const SPOKEN_OPS = { '+': 'più', '-': 'meno', '−': 'meno', '–': 'meno', '×': 'per', '÷': 'diviso', '>': 'maggiore di', '<': 'minore di', '=': 'uguale a', ':': 'diviso', x: 'per' };
+
+  // Solo il testo pronunciato: "3 + ___ = 5" -> "3 più quanto uguale a 5".
+  // I due punti e la x valgono "diviso" e "per" solo se spaziati ("10 : 2",
+  // "3 x 3"), non "di 5: 10".
+  function toSpokenText(text) {
+    return String(text || '')
+      .replace(/_{2,}|□/g, '?')
+      .replace(/([\d?])\s*([+\-−–×÷<>=])\s*(?=[\d?])/g, (m, left, op) => `${left} ${SPOKEN_OPS[op]} `)
+      .replace(/(\d)\s+([:x])\s+(?=\d)/g, (m, left, op) => `${left} ${SPOKEN_OPS[op]} `)
+      .replace(/(^|\s)\?(?=\s|$)/g, '$1quanto');
+  }
+
+  function speakKey() {
+    return `${CURSOR_KEY}_speak_c${selectedClass}_v1`;
+  }
+
+  function pickLocalVoice(voices, prefix) {
+    const re = new RegExp(`^${prefix}([-_]|$)`, 'i');
+    const local = voices.filter((v) => v && v.localService === true && re.test(v.lang || ''));
+    return local.find((v) => v.default) || local[0] || null;
+  }
+
+  function syncSpeakBtns() {
+    speakOn = !!speakVoices.it && storageGet(speakKey()) === '1';
+    document.querySelectorAll('.speak-btn').forEach((btn) => {
+      btn.hidden = !speakVoices.it;
+      btn.setAttribute('aria-pressed', String(speakOn));
+    });
+  }
+
+  function refreshSpeakVoices() {
+    let voices = [];
+    try {
+      voices = speech ? speech.getVoices() : [];
+    } catch (e) {
+      debugWarn('getVoices', e);
+    }
+    speakVoices = { it: pickLocalVoice(voices, 'it'), en: pickLocalVoice(voices, 'en') };
+    if (!speakVoices.it) stopSpeaking();
+    syncSpeakBtns();
+  }
+
+  function stopSpeaking() {
+    try {
+      if (speech) speech.cancel();
+    } catch (e) {
+      debugWarn('speech.cancel', e);
+    }
+  }
+
+  // Domanda e poi le risposte, nell'ordine dei bottoni. Le parti marcate
+  // lang="en" (inglese) usano una voce inglese locale, altrimenti si saltano.
+  function speakScreen(screen) {
+    if (!speakOn || !speech || !speakVoices.it || !screen || !screen.classList.contains('active')) return;
+    const bonus = screen.id === 'screenBonusQuestion';
+    const textEl = $(bonus ? 'bonusText' : 'qText');
+    const answersEl = $(bonus ? 'bonusAnswers' : 'answers');
+    if (!textEl || !answersEl) return;
+    const parts = [];
+    textEl.childNodes.forEach((node) => parts.push([node.textContent, node.lang || textEl.lang]));
+    answersEl.querySelectorAll('.answer-btn').forEach((btn) => parts.push([btn.textContent, btn.lang]));
+    stopSpeaking();
+    parts.forEach(([text, lang]) => {
+      const spoken = toSpokenText(text).trim();
+      const voice = speakVoices[lang === 'en' ? 'en' : 'it'];
+      if (!spoken || !voice) return;
+      try {
+        const utterance = new window.SpeechSynthesisUtterance(spoken);
+        utterance.voice = voice;
+        utterance.lang = voice.lang;
+        utterance.rate = 0.9;
+        speech.speak(utterance);
+      } catch (e) {
+        debugWarn('speech.speak', e);
+      }
+    });
+  }
+
+  function toggleSpeak(btn) {
+    speakOn = !speakOn;
+    storageSet(speakKey(), speakOn ? '1' : '0');
+    syncSpeakBtns();
+    if (speakOn) speakScreen(btn && btn.closest('.screen'));
+    else stopSpeaking();
+  }
+
+  function ensureSpeakBtns() {
+    if (!speech) return;
+    ['qText', 'bonusText'].forEach((id) => {
+      const textEl = $(id);
+      if (!textEl) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'icon-btn speak-btn';
+      btn.dataset.action = 'toggle-speak';
+      btn.textContent = '🗣️ Ascolta';
+      // Il nome accessibile contiene il testo visibile (WCAG 2.5.3).
+      btn.setAttribute('aria-label', 'Ascolta: leggi ad alta voce la domanda');
+      btn.hidden = true;
+      textEl.insertAdjacentElement('beforebegin', btn);
+    });
+    refreshSpeakVoices();
+    try {
+      speech.addEventListener('voiceschanged', refreshSpeakVoices);
+    } catch (e) {
+      debugWarn('voiceschanged', e);
+    }
+    window.addEventListener('pagehide', stopSpeaking);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopSpeaking();
+    });
+  }
+
   let _initDone = false;
   function initSubjectPage() {
     if (_initDone) return;
@@ -2829,6 +2960,7 @@
     buildAreaGrid();
     buildSubareaGrid();
     ensureRipassaBtn();
+    ensureSpeakBtns();
     if (HAS_LEVELS) buildLevelsGrid();
     bindActions();
     spawnShapes();
