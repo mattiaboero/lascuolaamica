@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.17.1 - 2026-09-19
+
+**Goniometri con i numeri lontani dal lato.** In tre figure pubblicate
+(goniometro-50, goniometro-100, goniometro-40-sinistra) il lato mobile
+toccava un'etichetta numerica. Creati i file goniometro-50-b.svg,
+goniometro-100-b.svg e goniometro-40-sinistra-b.svg (i vecchi restano
+pubblicati e nel repo) con solo i numeri in questione spostati lungo
+l'arco; le 5 domande che li usano ora puntano ai nuovi file.
+
+### Fixed
+- fix(matematica): goniometri 50°, 100° e 40° con i numeri lontani dal
+  lato, clearance minima 3 unità come da `docs/figure-nel-quiz.md`.
+
 ## 4.17.0 - 2026-09-19
 
 **40 domande nuove di matematica con la figura.** Orologi, goniometri,

@@ -1,5 +1,11 @@
 [
  {
+  "date": "19 settembre 2026 · Release 4.17.1",
+  "items": [
+   "In tre goniometri il numero vicino a un lato dell'angolo era troppo attaccato: ora i numeri sono più leggibili, spostati un po' lungo l'arco."
+  ]
+ },
+ {
   "date": "19 settembre 2026 · Release 4.17.0",
   "items": [
    "Ci sono 40 domande nuove di matematica con un disegno da guardare. In seconda: l'orologio con le lancette (ore intere, mezze e quarti) e gli schieramenti di pallini. In terza: i poligoni, anche irregolari, le figure che non sono poligoni, le rette parallele, perpendicolari e incidenti, gli angoli concavi e convessi e il confronto fra angoli. In quarta: 10 domande per imparare a leggere il goniometro, dalla parte giusta. Le domande totali attive passano da 10.032 a 10.072."
