@@ -1,5 +1,30 @@
 # Changelog Repo
 
+## 4.17.0 - 2026-09-19
+
+**40 domande nuove di matematica con la figura.** Orologi, goniometri,
+schieramenti, poligoni, rette e angoli si guardano disegnati invece di
+leggerli descritti a parole. Domande totali attive: 10.032 -> 10.072.
+
+### Added
+- feat(matematica): F9, 40 domande con figura e 26 disegni nuovi in
+  `assets/figure/`.
+  - Classe 2: 9 domande sull'orologio (ore intere, mezze, quarti, "meno un
+    quarto", lancette scambiate, quanto tempo passa) e 5 sugli schieramenti
+    (righe e colonne, addizione ripetuta, lettura commutativa 4 x 3 / 3 x 4).
+  - Classe 3: 7 sui poligoni (contare lati e vertici anche in poligoni
+    irregolari o con un vertice rientrante, poligono o no: aperta, con un
+    lato curvo, con i lati che si incrociano), 4 sulla posizione delle rette
+    (parallele, perpendicolari, incidenti anche se non si toccano nel
+    disegno), 5 sugli angoli (concavo e convesso con l'arco, confronto fra
+    angoli con i lati di lunghezza diversa).
+  - Classe 4: 10 sul goniometro (lato fermo a destra e a sinistra, scala
+    interna ed esterna, letture fra un numero e l'altro, tipo di angolo,
+    gradi che mancano all'angolo retto o piatto). L'argomento passa da 5 a
+    15 domande.
+- docs: `docs/figure-nel-quiz.md`, cosa si e' imparato in F9 (angoli del
+  goniometro che non toccano i numeri, lettura dell'orologio, alt verificati).
+
 ## 4.16.0 - 2026-09-19
 
 **115 domande nuove di matematica per gli argomenti meno coperti di seconda,
