@@ -29,7 +29,7 @@
   "title": "Semplici problemi con addizione e sottrazione",
   "area": "problemi",
   "subarea": "operazioni",
-  "match": "\\b(ne|gli|le) (regala|dà|mangia|perde|trova|compra)\\b|restano|rimangono"
+  "match": "\\b(ne|gli|le) (regala|dà|mangia|perde|trova|compra)\\b|restano|rimangono|in più|di più|in meno|di meno|manca|in tutto|prima\\b.*\\bpoi\\b|divid|gruppi uguali"
  },
  {
   "id": "c1-posizioni",
