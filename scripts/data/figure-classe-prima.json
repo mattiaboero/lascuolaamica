@@ -6,6 +6,49 @@
   },
   "alt": "Una bilancia a due piatti. Sul piatto A c'è un cubo, sul piatto B una palla. Il piatto A è più in basso dell'altro."
  },
+ "c1-bilancia-b": {
+  "modello": "bilancia",
+  "fatti": {
+   "piu_pesante": "B"
+  },
+  "alt": "Una bilancia a due piatti. Sul piatto A c'è un cubo, sul piatto B una palla. Il piatto B è più in basso dell'altro."
+ },
+ "c1-confronto-1-5": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 1,
+   "B": 5,
+   "maggiore": "B"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: 1 pallino in colonna. Riquadro B: 5 pallini in colonna."
+ },
+ "c1-confronto-10-4": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 10,
+   "B": 4,
+   "maggiore": "A"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: due colonne di 5 pallini. Riquadro B: 4 pallini in colonna."
+ },
+ "c1-confronto-2-9": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 2,
+   "B": 9,
+   "maggiore": "B"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: 2 pallini in colonna. Riquadro B: una colonna di 5 pallini e accanto 4 pallini."
+ },
+ "c1-confronto-3-7": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 3,
+   "B": 7,
+   "maggiore": "B"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: 3 pallini in colonna. Riquadro B: una colonna di 5 pallini e accanto 2 pallini."
+ },
  "c1-confronto-5-8": {
   "modello": "confronto",
   "fatti": {
@@ -14,6 +57,15 @@
    "maggiore": "B"
   },
   "alt": "Due riquadri con dei pallini. Riquadro A: 5 pallini in colonna. Riquadro B: una colonna di 5 pallini e accanto 3 pallini."
+ },
+ "c1-confronto-6-10": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 6,
+   "B": 10,
+   "maggiore": "B"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 1 pallino. Riquadro B: due colonne di 5 pallini."
  },
  "c1-confronto-7-7": {
   "modello": "confronto",
@@ -24,6 +76,24 @@
   },
   "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 2 pallini. Riquadro B: una colonna di 5 pallini e accanto 2 pallini."
  },
+ "c1-confronto-8-3": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 8,
+   "B": 3,
+   "maggiore": "A"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 3 pallini. Riquadro B: 3 pallini in colonna."
+ },
+ "c1-confronto-9-2": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 9,
+   "B": 2,
+   "maggiore": "A"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 4 pallini. Riquadro B: 2 pallini in colonna."
+ },
  "c1-confronto-9-6": {
   "modello": "confronto",
   "fatti": {
@@ -33,12 +103,97 @@
   },
   "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 4 pallini. Riquadro B: una colonna di 5 pallini e accanto 1 pallino."
  },
+ "c1-conta-cubi-10-4": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 14,
+   "arancioni": 10,
+   "blu": 4
+  },
+  "alt": "Sopra, cubi arancioni pieni in due file: 5 e 5. Sotto, cubi blu vuoti in una fila: 4."
+ },
+ "c1-conta-cubi-13": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 13
+  },
+  "alt": "Tre file di cubi, una sotto l'altra: 5, 5 e 3."
+ },
+ "c1-conta-cubi-18": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 18
+  },
+  "alt": "Quattro file di cubi, una sotto l'altra: 5, 5, 5 e 3."
+ },
+ "c1-conta-cubi-20": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 20
+  },
+  "alt": "Quattro file di cubi, una sotto l'altra: 5, 5, 5 e 5."
+ },
+ "c1-conta-cubi-6": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 6
+  },
+  "alt": "Due file di cubi, una sotto l'altra: 5 e 1."
+ },
+ "c1-conta-cubi-6-3": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 9,
+   "arancioni": 6,
+   "blu": 3
+  },
+  "alt": "Sopra, cubi arancioni pieni in due file: 5 e 1. Sotto, cubi blu vuoti in una fila: 3."
+ },
+ "c1-conta-cubi-8-7": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 15,
+   "arancioni": 8,
+   "blu": 7
+  },
+  "alt": "Sopra, cubi arancioni pieni in due file: 5 e 3. Sotto, cubi blu vuoti in due file: 5 e 2."
+ },
  "c1-conta-cubi-9": {
   "modello": "conta",
   "fatti": {
    "totale": 9
   },
   "alt": "Due file di cubi, una sotto l'altra: 5 e 4."
+ },
+ "c1-conta-mele-10-8": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 18,
+   "arancioni": 10,
+   "blu": 8
+  },
+  "alt": "Sopra, mele arancioni piene in due file: 5 e 5. Sotto, mele blu vuote in due file: 5 e 3."
+ },
+ "c1-conta-mele-11": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 11
+  },
+  "alt": "Tre file di mele, una sotto l'altra: 5, 5 e 1."
+ },
+ "c1-conta-mele-17": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 17
+  },
+  "alt": "Quattro file di mele, una sotto l'altra: 5, 5, 5 e 2."
+ },
+ "c1-conta-mele-18": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 18
+  },
+  "alt": "Quattro file di mele, una sotto l'altra: 5, 5, 5 e 3."
  },
  "c1-conta-mele-20": {
   "modello": "conta",
@@ -47,12 +202,83 @@
   },
   "alt": "Quattro file di mele, una sotto l'altra: 5, 5, 5 e 5."
  },
+ "c1-conta-mele-4-3": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 7,
+   "arancioni": 4,
+   "blu": 3
+  },
+  "alt": "Sopra, mele arancioni piene in una fila: 4. Sotto, mele blu vuote in una fila: 3."
+ },
  "c1-conta-mele-7": {
   "modello": "conta",
   "fatti": {
    "totale": 7
   },
   "alt": "Due file di mele, una sotto l'altra: 5 e 2."
+ },
+ "c1-conta-mele-8": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 8
+  },
+  "alt": "Due file di mele, una sotto l'altra: 5 e 3."
+ },
+ "c1-conta-mele-8-5": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 13,
+   "arancioni": 8,
+   "blu": 5
+  },
+  "alt": "Sopra, mele arancioni piene in due file: 5 e 3. Sotto, mele blu vuote in una fila: 5."
+ },
+ "c1-conta-mele-9-6": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 15,
+   "arancioni": 9,
+   "blu": 6
+  },
+  "alt": "Sopra, mele arancioni piene in due file: 5 e 4. Sotto, mele blu vuote in due file: 5 e 1."
+ },
+ "c1-conta-palline-13": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 13
+  },
+  "alt": "Tre file di palline, una sotto l'altra: 5, 5 e 3."
+ },
+ "c1-conta-palline-14": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 14
+  },
+  "alt": "Tre file di palline, una sotto l'altra: 5, 5 e 4."
+ },
+ "c1-conta-palline-19": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 19
+  },
+  "alt": "Quattro file di palline, una sotto l'altra: 5, 5, 5 e 4."
+ },
+ "c1-conta-palline-2": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 2
+  },
+  "alt": "Una sola fila con 2 palline."
+ },
+ "c1-conta-palline-2-5": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 7,
+   "arancioni": 2,
+   "blu": 5
+  },
+  "alt": "Sopra, palline arancioni piene in una fila: 2. Sotto, palline blu vuote in una fila: 5."
  },
  "c1-conta-palline-3-4": {
   "modello": "conta",
@@ -63,12 +289,137 @@
   },
   "alt": "Sopra, palline arancioni piene in una fila: 3. Sotto, palline blu vuote in una fila: 4."
  },
+ "c1-conta-palline-6": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 6
+  },
+  "alt": "Due file di palline, una sotto l'altra: 5 e 1."
+ },
+ "c1-conta-palline-6-9": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 15,
+   "arancioni": 6,
+   "blu": 9
+  },
+  "alt": "Sopra, palline arancioni piene in due file: 5 e 1. Sotto, palline blu vuote in due file: 5 e 4."
+ },
+ "c1-conta-palline-9": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 9
+  },
+  "alt": "Due file di palline, una sotto l'altra: 5 e 4."
+ },
+ "c1-conta-palline-9-8": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 17,
+   "arancioni": 9,
+   "blu": 8
+  },
+  "alt": "Sopra, palline arancioni piene in due file: 5 e 4. Sotto, palline blu vuote in due file: 5 e 3."
+ },
+ "c1-conta-stelle-10-9": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 19,
+   "arancioni": 10,
+   "blu": 9
+  },
+  "alt": "Sopra, stelle arancioni piene in due file: 5 e 5. Sotto, stelle blu vuote in due file: 5 e 4."
+ },
  "c1-conta-stelle-12": {
   "modello": "conta",
   "fatti": {
    "totale": 12
   },
   "alt": "Tre file di stelle, una sotto l'altra: 5, 5 e 2."
+ },
+ "c1-conta-stelle-16": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 16
+  },
+  "alt": "Quattro file di stelle, una sotto l'altra: 5, 5, 5 e 1."
+ },
+ "c1-conta-stelle-3": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 3
+  },
+  "alt": "Una sola fila con 3 stelle."
+ },
+ "c1-conta-stelle-3-9": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 12,
+   "arancioni": 3,
+   "blu": 9
+  },
+  "alt": "Sopra, stelle arancioni piene in una fila: 3. Sotto, stelle blu vuote in due file: 5 e 4."
+ },
+ "c1-conta-stelle-5-4": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 9,
+   "arancioni": 5,
+   "blu": 4
+  },
+  "alt": "Sopra, stelle arancioni piene in una fila: 5. Sotto, stelle blu vuote in una fila: 4."
+ },
+ "c1-conta-stelle-7-6": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 13,
+   "arancioni": 7,
+   "blu": 6
+  },
+  "alt": "Sopra, stelle arancioni piene in due file: 5 e 2. Sotto, stelle blu vuote in due file: 5 e 1."
+ },
+ "c1-conta-stelle-9": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 9
+  },
+  "alt": "Due file di stelle, una sotto l'altra: 5 e 4."
+ },
+ "c1-decine-1-0": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 0,
+   "numero": 10
+  },
+  "alt": "1 bastoncino da 10 quadretti e nessun cubetto sciolto."
+ },
+ "c1-decine-1-1": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 1,
+   "numero": 11
+  },
+  "alt": "1 bastoncino da 10 quadretti e 1 cubetto sciolto."
+ },
+ "c1-decine-1-2": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 2,
+   "numero": 12
+  },
+  "alt": "1 bastoncino da 10 quadretti e 2 cubetti sciolti."
+ },
+ "c1-decine-1-3": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 3,
+   "numero": 13
+  },
+  "alt": "1 bastoncino da 10 quadretti e 3 cubetti sciolti."
  },
  "c1-decine-1-4": {
   "modello": "decine",
@@ -79,6 +430,24 @@
   },
   "alt": "1 bastoncino da 10 quadretti e 4 cubetti sciolti."
  },
+ "c1-decine-1-5": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 5,
+   "numero": 15
+  },
+  "alt": "1 bastoncino da 10 quadretti e 5 cubetti sciolti."
+ },
+ "c1-decine-1-6": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 6,
+   "numero": 16
+  },
+  "alt": "1 bastoncino da 10 quadretti e 6 cubetti sciolti."
+ },
  "c1-decine-1-7": {
   "modello": "decine",
   "fatti": {
@@ -87,6 +456,24 @@
    "numero": 17
   },
   "alt": "1 bastoncino da 10 quadretti e 7 cubetti sciolti."
+ },
+ "c1-decine-1-8": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 8,
+   "numero": 18
+  },
+  "alt": "1 bastoncino da 10 quadretti e 8 cubetti sciolti."
+ },
+ "c1-decine-1-9": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 9,
+   "numero": 19
+  },
+  "alt": "1 bastoncino da 10 quadretti e 9 cubetti sciolti."
  },
  "c1-decine-2-0": {
   "modello": "decine",
@@ -97,6 +484,46 @@
   },
   "alt": "2 bastoncini da 10 quadretti e nessun cubetto sciolto."
  },
+ "c1-forme-ccqt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "cerchio",
+   "B": "cerchio",
+   "C": "quadrato",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura rotonda, senza lati; B una figura rotonda, senza lati; C una figura con 4 lati tutti uguali; D una figura con 3 lati."
+ },
+ "c1-forme-ccrc": {
+  "modello": "forme",
+  "fatti": {
+   "A": "cerchio",
+   "B": "cerchio",
+   "C": "rettangolo",
+   "D": "cerchio"
+  },
+  "alt": "Quattro figure con le lettere: A una figura rotonda, senza lati; B una figura rotonda, senza lati; C una figura con 4 lati, due lunghi e due corti; D una figura rotonda, senza lati."
+ },
+ "c1-forme-cqcc": {
+  "modello": "forme",
+  "fatti": {
+   "A": "cerchio",
+   "B": "quadrato",
+   "C": "cerchio",
+   "D": "cerchio"
+  },
+  "alt": "Quattro figure con le lettere: A una figura rotonda, senza lati; B una figura con 4 lati tutti uguali; C una figura rotonda, senza lati; D una figura rotonda, senza lati."
+ },
+ "c1-forme-cqqq": {
+  "modello": "forme",
+  "fatti": {
+   "A": "cerchio",
+   "B": "quadrato",
+   "C": "quadrato",
+   "D": "quadrato"
+  },
+  "alt": "Quattro figure con le lettere: A una figura rotonda, senza lati; B una figura con 4 lati tutti uguali; C una figura con 4 lati tutti uguali; D una figura con 4 lati tutti uguali."
+ },
  "c1-forme-cqrt": {
   "modello": "forme",
   "fatti": {
@@ -106,6 +533,66 @@
    "D": "triangolo"
   },
   "alt": "Quattro figure con le lettere: A una figura rotonda, senza lati; B una figura con 4 lati tutti uguali; C una figura con 4 lati, due lunghi e due corti; D una figura con 3 lati."
+ },
+ "c1-forme-qcrt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "quadrato",
+   "B": "cerchio",
+   "C": "rettangolo",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati tutti uguali; B una figura rotonda, senza lati; C una figura con 4 lati, due lunghi e due corti; D una figura con 3 lati."
+ },
+ "c1-forme-qqqc": {
+  "modello": "forme",
+  "fatti": {
+   "A": "quadrato",
+   "B": "quadrato",
+   "C": "quadrato",
+   "D": "cerchio"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati tutti uguali; B una figura con 4 lati tutti uguali; C una figura con 4 lati tutti uguali; D una figura rotonda, senza lati."
+ },
+ "c1-forme-qqtc": {
+  "modello": "forme",
+  "fatti": {
+   "A": "quadrato",
+   "B": "quadrato",
+   "C": "triangolo",
+   "D": "cerchio"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati tutti uguali; B una figura con 4 lati tutti uguali; C una figura con 3 lati; D una figura rotonda, senza lati."
+ },
+ "c1-forme-qtcr": {
+  "modello": "forme",
+  "fatti": {
+   "A": "quadrato",
+   "B": "triangolo",
+   "C": "cerchio",
+   "D": "rettangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati tutti uguali; B una figura con 3 lati; C una figura rotonda, senza lati; D una figura con 4 lati, due lunghi e due corti."
+ },
+ "c1-forme-qttt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "quadrato",
+   "B": "triangolo",
+   "C": "triangolo",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati tutti uguali; B una figura con 3 lati; C una figura con 3 lati; D una figura con 3 lati."
+ },
+ "c1-forme-rcqt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "rettangolo",
+   "B": "cerchio",
+   "C": "quadrato",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati, due lunghi e due corti; B una figura rotonda, senza lati; C una figura con 4 lati tutti uguali; D una figura con 3 lati."
  },
  "c1-forme-rtqt": {
   "modello": "forme",
@@ -127,6 +614,68 @@
   },
   "alt": "Quattro figure con le lettere: A una figura con 3 lati; B una figura rotonda, senza lati; C una figura con 4 lati tutti uguali; D una figura con 4 lati, due lunghi e due corti."
  },
+ "c1-forme-trcq": {
+  "modello": "forme",
+  "fatti": {
+   "A": "triangolo",
+   "B": "rettangolo",
+   "C": "cerchio",
+   "D": "quadrato"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 3 lati; B una figura con 4 lati, due lunghi e due corti; C una figura rotonda, senza lati; D una figura con 4 lati tutti uguali."
+ },
+ "c1-forme-trrc": {
+  "modello": "forme",
+  "fatti": {
+   "A": "triangolo",
+   "B": "rettangolo",
+   "C": "rettangolo",
+   "D": "cerchio"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 3 lati; B una figura con 4 lati, due lunghi e due corti; C una figura con 4 lati, due lunghi e due corti; D una figura rotonda, senza lati."
+ },
+ "c1-forme-trtt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "triangolo",
+   "B": "rettangolo",
+   "C": "triangolo",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 3 lati; B una figura con 4 lati, due lunghi e due corti; C una figura con 3 lati; D una figura con 3 lati."
+ },
+ "c1-forme-tttc": {
+  "modello": "forme",
+  "fatti": {
+   "A": "triangolo",
+   "B": "triangolo",
+   "C": "triangolo",
+   "D": "cerchio"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 3 lati; B una figura con 3 lati; C una figura con 3 lati; D una figura rotonda, senza lati."
+ },
+ "c1-ideogramma-2-5-8": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 2,
+   "B": 5,
+   "C": 8,
+   "piu": "C",
+   "meno": "A"
+  },
+  "alt": "Tre righe di disegni: riga A 2 cerchi; riga B 5 quadrati; riga C 8 triangoli."
+ },
+ "c1-ideogramma-3-5-8": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 3,
+   "B": 5,
+   "C": 8,
+   "piu": "C",
+   "meno": "A"
+  },
+  "alt": "Tre righe di disegni: riga A 3 cerchi; riga B 5 quadrati; riga C 8 triangoli."
+ },
  "c1-ideogramma-4-6-3": {
   "modello": "ideogramma",
   "fatti": {
@@ -138,6 +687,17 @@
   },
   "alt": "Tre righe di disegni: riga A 4 cerchi; riga B 6 quadrati; riga C 3 triangoli."
  },
+ "c1-ideogramma-7-2-5": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 7,
+   "B": 2,
+   "C": 5,
+   "piu": "A",
+   "meno": "B"
+  },
+  "alt": "Tre righe di disegni: riga A 7 cerchi; riga B 2 quadrati; riga C 5 triangoli."
+ },
  "c1-linee-acca": {
   "modello": "linee",
   "fatti": {
@@ -148,6 +708,16 @@
   },
   "alt": "Quattro linee con le lettere: A ha due estremità libere; B gira e torna al punto di partenza; C gira e torna al punto di partenza; D ha due estremità libere."
  },
+ "c1-linee-caaa": {
+  "modello": "linee",
+  "fatti": {
+   "A": "chiusa",
+   "B": "aperta",
+   "C": "aperta",
+   "D": "aperta"
+  },
+  "alt": "Quattro linee con le lettere: A gira e torna al punto di partenza; B ha due estremità libere; C ha due estremità libere; D ha due estremità libere."
+ },
  "c1-linee-caac": {
   "modello": "linee",
   "fatti": {
@@ -157,6 +727,64 @@
    "D": "chiusa"
   },
   "alt": "Quattro linee con le lettere: A gira e torna al punto di partenza; B ha due estremità libere; C ha due estremità libere; D gira e torna al punto di partenza."
+ },
+ "c1-linee-ccca": {
+  "modello": "linee",
+  "fatti": {
+   "A": "chiusa",
+   "B": "chiusa",
+   "C": "chiusa",
+   "D": "aperta"
+  },
+  "alt": "Quattro linee con le lettere: A gira e torna al punto di partenza; B gira e torna al punto di partenza; C gira e torna al punto di partenza; D ha due estremità libere."
+ },
+ "c1-percorso-3x3-d2a1": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    2
+   ],
+   "arrivo": [
+    2,
+    1
+   ],
+   "passi_minimi": 3,
+   "frecce": []
+  },
+  "alt": "Una griglia di 3 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 2 caselle più a destra e 1 casella più in alto."
+ },
+ "c1-percorso-3x4-a3": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    3
+   ],
+   "arrivo": [
+    0,
+    0
+   ],
+   "passi_minimi": 3,
+   "frecce": []
+  },
+  "alt": "Una griglia di 3 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 3 caselle più in alto."
+ },
+ "c1-percorso-4x2-d3": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    1
+   ],
+   "arrivo": [
+    3,
+    1
+   ],
+   "passi_minimi": 3,
+   "frecce": []
+  },
+  "alt": "Una griglia di 4 colonne e 2 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 3 caselle più a destra."
  },
  "c1-percorso-4x3-a2d3": {
   "modello": "percorso",
@@ -196,6 +824,28 @@
   },
   "alt": "Una griglia di 5 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 3 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: destra, destra, destra, alto, alto."
  },
+ "c1-percorso-6x3-d4a1-frecce": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    2
+   ],
+   "arrivo": [
+    4,
+    1
+   ],
+   "passi_minimi": 5,
+   "frecce": [
+    "destra",
+    "destra",
+    "destra",
+    "destra",
+    "alto"
+   ]
+  },
+  "alt": "Una griglia di 6 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 4 caselle più a destra e 1 casella più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: destra, destra, destra, destra, alto."
+ },
  "c1-posizione-scatola-dentro": {
   "modello": "posizione",
   "fatti": {
@@ -209,6 +859,27 @@
    "posizione": "destra"
   },
   "alt": "Disegno con una scatola aperta in alto e una palla blu. La palla è per terra, accanto alla scatola, dal lato della mano destra."
+ },
+ "c1-posizione-scatola-sinistra": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "sinistra"
+  },
+  "alt": "Disegno con una scatola aperta in alto e una palla blu. La palla è per terra, accanto alla scatola, dal lato della mano sinistra."
+ },
+ "c1-posizione-tavolo-destra": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "destra"
+  },
+  "alt": "Disegno con un tavolo e una palla blu. La palla è per terra, accanto al tavolo, dal lato della mano destra."
+ },
+ "c1-posizione-tavolo-sinistra": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "sinistra"
+  },
+  "alt": "Disegno con un tavolo e una palla blu. La palla è per terra, accanto al tavolo, dal lato della mano sinistra."
  },
  "c1-posizione-tavolo-sopra": {
   "modello": "posizione",
@@ -234,6 +905,16 @@
   },
   "alt": "Una linea chiusa colorata dentro e quattro punti: A nella parte colorata, lontano dalla linea; B nella parte bianca, lontano dalla linea; C proprio sopra la linea; D nella parte bianca, lontano dalla linea."
  },
+ "c1-regione-iiff": {
+  "modello": "regione",
+  "fatti": {
+   "A": "dentro",
+   "B": "dentro",
+   "C": "fuori",
+   "D": "fuori"
+  },
+  "alt": "Una linea chiusa colorata dentro e quattro punti: A nella parte colorata, lontano dalla linea; B nella parte colorata, lontano dalla linea; C nella parte bianca, lontano dalla linea; D nella parte bianca, lontano dalla linea."
+ },
  "c1-regione-sfii": {
   "modello": "regione",
   "fatti": {
@@ -244,12 +925,39 @@
   },
   "alt": "Una linea chiusa colorata dentro e quattro punti: A proprio sopra la linea; B nella parte bianca, lontano dalla linea; C nella parte colorata, lontano dalla linea; D nella parte colorata, lontano dalla linea."
  },
+ "c1-retta-0-10-manca-3": {
+  "modello": "retta",
+  "fatti": {
+   "manca": 3
+  },
+  "alt": "Una linea dei numeri da 0 a 10. Fra il 2 e il 4, al posto del numero, c'è un riquadro con il punto di domanda."
+ },
  "c1-retta-0-10-manca-6": {
   "modello": "retta",
   "fatti": {
    "manca": 6
   },
   "alt": "Una linea dei numeri da 0 a 10. Fra il 5 e il 7, al posto del numero, c'è un riquadro con il punto di domanda."
+ },
+ "c1-retta-0-10-salto-1-9": {
+  "modello": "retta",
+  "fatti": {
+   "da": 1,
+   "a": 9,
+   "salti": 8,
+   "verso": "avanti"
+  },
+  "alt": "Una linea dei numeri da 0 a 10. Sul 1 c'è un pallino blu. Da lì partono 8 salti di un numero in avanti, verso destra."
+ },
+ "c1-retta-0-10-salto-2-6": {
+  "modello": "retta",
+  "fatti": {
+   "da": 2,
+   "a": 6,
+   "salti": 4,
+   "verso": "avanti"
+  },
+  "alt": "Una linea dei numeri da 0 a 10. Sul 2 c'è un pallino blu. Da lì partono 4 salti di un numero in avanti, verso destra."
  },
  "c1-retta-0-10-salto-3-7": {
   "modello": "retta",
@@ -261,6 +969,43 @@
   },
   "alt": "Una linea dei numeri da 0 a 10. Sul 3 c'è un pallino blu. Da lì partono 4 salti di un numero in avanti, verso destra."
  },
+ "c1-retta-0-10-salto-8-3": {
+  "modello": "retta",
+  "fatti": {
+   "da": 8,
+   "a": 3,
+   "salti": 5,
+   "verso": "indietro"
+  },
+  "alt": "Una linea dei numeri da 0 a 10. Sul 8 c'è un pallino blu. Da lì partono 5 salti di un numero all'indietro, verso sinistra."
+ },
+ "c1-retta-10-20-manca-14": {
+  "modello": "retta",
+  "fatti": {
+   "manca": 14
+  },
+  "alt": "Una linea dei numeri da 10 a 20. Fra il 13 e il 15, al posto del numero, c'è un riquadro con il punto di domanda."
+ },
+ "c1-retta-10-20-salto-12-17": {
+  "modello": "retta",
+  "fatti": {
+   "da": 12,
+   "a": 17,
+   "salti": 5,
+   "verso": "avanti"
+  },
+  "alt": "Una linea dei numeri da 10 a 20. Sul 12 c'è un pallino blu. Da lì partono 5 salti di un numero in avanti, verso destra."
+ },
+ "c1-retta-10-20-salto-14-11": {
+  "modello": "retta",
+  "fatti": {
+   "da": 14,
+   "a": 11,
+   "salti": 3,
+   "verso": "indietro"
+  },
+  "alt": "Una linea dei numeri da 10 a 20. Sul 14 c'è un pallino blu. Da lì partono 3 salti di un numero all'indietro, verso sinistra."
+ },
  "c1-retta-10-20-salto-15-12": {
   "modello": "retta",
   "fatti": {
@@ -270,6 +1015,51 @@
    "verso": "indietro"
   },
   "alt": "Una linea dei numeri da 10 a 20. Sul 15 c'è un pallino blu. Da lì partono 3 salti di un numero all'indietro, verso sinistra."
+ },
+ "c1-retta-10-20-salto-19-13": {
+  "modello": "retta",
+  "fatti": {
+   "da": 19,
+   "a": 13,
+   "salti": 6,
+   "verso": "indietro"
+  },
+  "alt": "Una linea dei numeri da 10 a 20. Sul 19 c'è un pallino blu. Da lì partono 6 salti di un numero all'indietro, verso sinistra."
+ },
+ "c1-retta-5-15-manca-9": {
+  "modello": "retta",
+  "fatti": {
+   "manca": 9
+  },
+  "alt": "Una linea dei numeri da 5 a 15. Fra il 8 e il 10, al posto del numero, c'è un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-ccq-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "cerchio",
+    "cerchio",
+    "quadrato",
+    "cerchio",
+    "cerchio",
+    "quadrato"
+   ],
+   "prossimo": "cerchio"
+  },
+  "alt": "Una fila di figure: cerchio, cerchio, quadrato, cerchio, cerchio, quadrato. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-cq-4": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "cerchio",
+    "quadrato",
+    "cerchio",
+    "quadrato"
+   ],
+   "prossimo": "cerchio"
+  },
+  "alt": "Una fila di figure: cerchio, quadrato, cerchio, quadrato. Alla fine un riquadro con il punto di domanda."
  },
  "c1-ritmo-cq-7": {
   "modello": "ritmo",
@@ -287,6 +1077,145 @@
   },
   "alt": "Una fila di figure: cerchio, quadrato, cerchio, quadrato, cerchio, quadrato, cerchio. Alla fine un riquadro con il punto di domanda."
  },
+ "c1-ritmo-cqq-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "cerchio",
+    "quadrato",
+    "quadrato",
+    "cerchio",
+    "quadrato",
+    "quadrato",
+    "cerchio"
+   ],
+   "prossimo": "quadrato"
+  },
+  "alt": "Una fila di figure: cerchio, quadrato, quadrato, cerchio, quadrato, quadrato, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-cqt-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "cerchio",
+    "quadrato",
+    "triangolo",
+    "cerchio",
+    "quadrato",
+    "triangolo"
+   ],
+   "prossimo": "cerchio"
+  },
+  "alt": "Una fila di figure: cerchio, quadrato, triangolo, cerchio, quadrato, triangolo. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-ctq-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "cerchio",
+    "triangolo",
+    "quadrato",
+    "cerchio",
+    "triangolo",
+    "quadrato",
+    "cerchio"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: cerchio, triangolo, quadrato, cerchio, triangolo, quadrato, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-qc-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "quadrato",
+    "cerchio",
+    "quadrato",
+    "cerchio",
+    "quadrato",
+    "cerchio",
+    "quadrato"
+   ],
+   "prossimo": "cerchio"
+  },
+  "alt": "Una fila di figure: quadrato, cerchio, quadrato, cerchio, quadrato, cerchio, quadrato. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-qqt-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "quadrato",
+    "quadrato",
+    "triangolo",
+    "quadrato",
+    "quadrato",
+    "triangolo",
+    "quadrato"
+   ],
+   "prossimo": "quadrato"
+  },
+  "alt": "Una fila di figure: quadrato, quadrato, triangolo, quadrato, quadrato, triangolo, quadrato. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-qt-5": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "quadrato",
+    "triangolo",
+    "quadrato",
+    "triangolo",
+    "quadrato"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: quadrato, triangolo, quadrato, triangolo, quadrato. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-qtc-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "quadrato",
+    "triangolo",
+    "cerchio",
+    "quadrato",
+    "triangolo",
+    "cerchio",
+    "quadrato"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: quadrato, triangolo, cerchio, quadrato, triangolo, cerchio, quadrato. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-qtt-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "quadrato",
+    "triangolo",
+    "triangolo",
+    "quadrato",
+    "triangolo",
+    "triangolo"
+   ],
+   "prossimo": "quadrato"
+  },
+  "alt": "Una fila di figure: quadrato, triangolo, triangolo, quadrato, triangolo, triangolo. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-tc-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "triangolo",
+    "cerchio",
+    "triangolo",
+    "cerchio",
+    "triangolo",
+    "cerchio"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: triangolo, cerchio, triangolo, cerchio, triangolo, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
  "c1-ritmo-tcc-6": {
   "modello": "ritmo",
   "fatti": {
@@ -302,6 +1231,120 @@
   },
   "alt": "Una fila di figure: triangolo, cerchio, cerchio, triangolo, cerchio, cerchio. Alla fine un riquadro con il punto di domanda."
  },
+ "c1-ritmo-tcc-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "triangolo",
+    "cerchio",
+    "cerchio",
+    "triangolo",
+    "cerchio",
+    "cerchio",
+    "triangolo"
+   ],
+   "prossimo": "cerchio"
+  },
+  "alt": "Una fila di figure: triangolo, cerchio, cerchio, triangolo, cerchio, cerchio, triangolo. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-tcq-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "triangolo",
+    "cerchio",
+    "quadrato",
+    "triangolo",
+    "cerchio",
+    "quadrato"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: triangolo, cerchio, quadrato, triangolo, cerchio, quadrato. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-tqc-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "triangolo",
+    "quadrato",
+    "cerchio",
+    "triangolo",
+    "quadrato",
+    "cerchio"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: triangolo, quadrato, cerchio, triangolo, quadrato, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-ttc-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "triangolo",
+    "triangolo",
+    "cerchio",
+    "triangolo",
+    "triangolo",
+    "cerchio"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: triangolo, triangolo, cerchio, triangolo, triangolo, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-strisce-1-5-9": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 1,
+   "B": 5,
+   "C": 9,
+   "piu_lunga": "C",
+   "piu_corta": "A"
+  },
+  "alt": "Tre strisce che partono dalla stessa linea: A lunga 1 quadretto; B lunga 5 quadretti; C lunga 9 quadretti."
+ },
+ "c1-strisce-3-6": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 3,
+   "B": 6,
+   "piu_lunga": "B",
+   "piu_corta": "A"
+  },
+  "alt": "Due strisce che partono dalla stessa linea: A lunga 3 quadretti; B lunga 6 quadretti."
+ },
+ "c1-strisce-4-9-2": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 4,
+   "B": 9,
+   "C": 2,
+   "piu_lunga": "B",
+   "piu_corta": "C"
+  },
+  "alt": "Tre strisce che partono dalla stessa linea: A lunga 4 quadretti; B lunga 9 quadretti; C lunga 2 quadretti."
+ },
+ "c1-strisce-5-10": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 5,
+   "B": 10,
+   "piu_lunga": "B",
+   "piu_corta": "A"
+  },
+  "alt": "Due strisce che partono dalla stessa linea: A lunga 5 quadretti; B lunga 10 quadretti."
+ },
+ "c1-strisce-6-2-9": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 6,
+   "B": 2,
+   "C": 9,
+   "piu_lunga": "C",
+   "piu_corta": "B"
+  },
+  "alt": "Tre strisce che partono dalla stessa linea: A lunga 6 quadretti; B lunga 2 quadretti; C lunga 9 quadretti."
+ },
  "c1-strisce-7-4-9": {
   "modello": "strisce",
   "fatti": {
@@ -312,5 +1355,15 @@
    "piu_corta": "B"
   },
   "alt": "Tre strisce che partono dalla stessa linea: A lunga 7 quadretti; B lunga 4 quadretti; C lunga 9 quadretti."
+ },
+ "c1-strisce-8-3": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 8,
+   "B": 3,
+   "piu_lunga": "A",
+   "piu_corta": "B"
+  },
+  "alt": "Due strisce che partono dalla stessa linea: A lunga 8 quadretti; B lunga 3 quadretti."
  }
 }

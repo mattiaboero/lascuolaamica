@@ -20,7 +20,7 @@ Documentazione tecnica del progetto [lascuolaamica.it](https://lascuolaamica.it)
 
 La Scuola Amica è una piattaforma educativa gratuita per la scuola primaria italiana. Quiz a risposta multipla su 8 materie (matematica, italiano, inglese, problemi, civica, geografia, storia, scienze), per le classi dalla 2ª alla 5ª. Include anche due giochi: "Cervellino Spacca-Muri" (`/breakout`), un arcade che riusa lo stesso pool di domande per i suoi bonus, e "Il Bosco delle Lettere" (`/bosco`), un gioco di ortografia per la 2ª e la 3ª con un banco di parole tutto suo.
 
-**10.096 domande** validate, coerenti con le Indicazioni Nazionali.
+**10.352 domande** validate, coerenti con le Indicazioni Nazionali.
 
 Principi tecnici fondamentali:
 

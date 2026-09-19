@@ -140,7 +140,10 @@ function generateCoverageReport() {
       // solo nella risposta, per non svelarla nel testo (F4, c3). Verificato
       // sull'intero dataset prima di adottarlo: nessun match spurio fra
       // argomenti diversi, solo domande davvero pertinenti in piu'.
-      const count = questions.filter(q => q.class === topic.class && regex.test(`${q.question} ${q.answer || ''}`)).length;
+      // In 1ª le parole si ripetono fra argomenti («in tutto», «forma», «palla»):
+      // conta anche area e sottoarea, che per la 1ª sono diverse in ogni argomento.
+      const sameArea = q => topic.class !== 1 || (q.area === topic.area && q.subarea === topic.subarea);
+      const count = questions.filter(q => q.class === topic.class && sameArea(q) && regex.test(`${q.question} ${q.answer || ''}`)).length;
       const status = count === 0 ? 'manca' : count < 10 ? 'debole' : 'coperto';
       report.push(`${topic.id.padEnd(40)} | c${topic.class}     | ${String(count).padEnd(7)} | ${status}\n`);
     });

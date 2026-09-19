@@ -5,7 +5,7 @@
   "title": "Numeri entro il 20: contare, confrontare, ordinare",
   "area": "aritmetica",
   "subarea": "numeri",
-  "match": "^(?!.*(in tutto|due riquadri))(?:.*(quant[ei] (mele|stelle|cubi|pallin[ei])\\b|pallini ci sono|\\bmanca\\b|in più|precede|\\bsegue\\b|viene (prima|dopo)|maggiore|minore|più grande|più piccol))"
+  "match": "^(?!.*(in tutto|due riquadri))(?:.*(quant[ei] (mele|stelle|cubi|pallin[ei])\\b|pallini ci sono|\\bmanca\\b|in più|precede|\\bsegue\\b|viene (prima|dopo)|maggiore|minore|più grande|più piccol|si scrive|in cifre|in lettere))"
  },
  {
   "id": "c1-decine-unita",
@@ -63,7 +63,7 @@
   "title": "Linee aperte e chiuse, dentro e fuori",
   "area": "geometria",
   "subarea": "linee",
-  "match": "\\blinee\\b|\\bpunto\\b|apert[ae]\\b|chius[ae]\\b|confine|regione"
+  "match": "\\blinee\\b|\\bpunt[oi]\\b|apert[ae]\\b|chius[ae]\\b|confine|regione"
  },
  {
   "id": "c1-confronto-misure",

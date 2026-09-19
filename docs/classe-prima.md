@@ -108,6 +108,9 @@ Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente styl
 
 - Domanda di 3-8 parole, una frase sola, numeri in cifre.
 - Opzioni di 1-2 parole, un numero o una lettera A-D. Nello shard le lettere stanno in ordine A, B, C, D; il gioco poi mescola i bottoni come per ogni domanda.
+- Eccezione: quando si chiede quale conto racconta il disegno, le opzioni sono espressioni brevi («4 + 3», «8 - 5»), come nel pilota.
+- I numeri della domanda e della risposta restano entro il 20. Un distrattore può superarlo quando nasce da un errore tipico (17 letto 71, 18 - 9 fatto 27, il numero dopo il 19 detto 21).
+- La domanda non nomina già la risposta: «Dove sta la palla rispetto alla scatola?», non «Dove sta la palla nella scatola?»; «Nel gruppo degli animali, chi è l'intruso?», non «Quale animale è l'intruso?» se l'intruso è una sedia.
 - Spiegazione di 1-2 frasi brevi, con il numero della risposta e il conto giusto («5 + 2 = 7»).
 - Stem tutti diversi, anche fra domande sulla stessa figura: l'ingest salta un testo già presente. Si cambia oggetto o contesto («Quante mele ha raccolto il nonno?», «Quante stelle ha disegnato Sara?»).
 
@@ -120,3 +123,38 @@ Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente styl
 - `lint_content.js` legge la «A» finale di «nel riquadro A?» come la preposizione: la domanda è diventata «Nel riquadro A, quanti pallini ci sono?». `check_grammar_rules.js` prendeva «cassetta» per un refuso di «casetta»: ora è «cesta».
 - Quattro bonus con `grade: 1` in `matematica-page.js` (due facili, un medio, un difficile): nella copia la 1ª vede tutti e tre i livelli di bonus.
 - I conteggi pubblici (`sync_question_counts.py`) includono già le 24 domande, anche se la classe è nascosta.
+
+## P4: domande
+
+256 domande nuove, scritte da quattro generatori (uno per gruppo di argomenti), riviste e corrette prima dell'ingest. Shard in `reports/generated/ingested/matematica-c1-<argomento>-c1p4.jsonl`, ingest unico con `--subject matematica`.
+
+| argomento | domande | con figura | in tutto (con il pilota) |
+|---|---|---|---|
+| c1-numeri-entro-20 | 43 | 23 | 50 |
+| c1-decine-unita | 17 | 10 | 20 |
+| c1-addizione-sottrazione | 54 | 32 | 60 |
+| c1-problemi | 25 | 6 | 25 |
+| c1-posizioni | 20 | 18 | 20 |
+| c1-percorsi | 10 | 10 | 10 |
+| c1-figure-piane | 16 | 16 | 20 |
+| c1-linee-regioni | 11 | 11 | 15 |
+| c1-confronto-misure | 15 | 12 | 15 |
+| c1-ritmi | 20 | 15 | 20 |
+| c1-classificazione | 15 | 6 | 15 |
+| c1-ideogramma | 10 | 10 | 10 |
+
+104 figure nuove dal generatore (136 in tutto, 193 domande che le usano), tutte passate dal verificatore. Ogni risposta con figura è stata confrontata con i fatti del manifest.
+
+Correzioni fatte in revisione:
+
+- «ne trova altri 4» con nomi femminili (mele, palline, stelle, matite...): «altre».
+- Distrattori che erano anche giusti: «un astuccio» più lungo di una matita, «un armadio» e «un divano» più leggeri di un elefante, «una foglia» più pesante di una piuma.
+- Domande che dicevano già la risposta o la negavano: «Quale animale è l'intruso?» con risposta «libro», «Dove sta la palla nella scatola?».
+- Decine e unità oltre il 20 (23, 25, 26, 29): ora 13, 16, 20, 14, 11.
+- «Quanti punti di questa regione sono fuori?» era piegata sulla regex: ora «Quanti punti sono fuori dalla linea?», e la regex di `c1-linee-regioni` accetta `punt[oi]`. La regex di `c1-numeri-entro-20` riconosce anche «si scrive», «in cifre», «in lettere». «Quale cifra si scrive per il numero venti?» (20 ha due cifre) è diventata «Come si scrive venti in cifre?».
+- Lint: «Che forma ha la figura A?» e «Com'è la linea A?» finivano con la «A» letta come preposizione (ora «La figura A che forma ha?»); «gira e torna» nelle spiegazioni sembrava un pronominale senza «si». «contato» è in `PAROLE_LEGITTIME` di `check_grammar_rules.js`: in 1ª si conta spesso.
+- «Parti dal 8», «dal 1», «al 11»: «dall'8», «dall'1», «all'11».
+
+In 1ª le stesse parole servono ad argomenti diversi («in tutto» nelle addizioni e nelle forme, «palla» nelle posizioni e nei gruppi). Per non contare due volte una domanda, `coverage_report.js` per gli argomenti di 1ª chiede anche area e sottoarea uguali a quelle dell'argomento (in 1ª sono diverse per ogni argomento). Così ogni domanda di 1ª conta in un argomento solo.
+
+Percorsi e ideogramma restano a 10: i modelli T7 e T11 hanno pochi parametri, e altre domande sulla stessa figura sarebbero ripetizioni.
