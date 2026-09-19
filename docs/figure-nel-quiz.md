@@ -66,3 +66,11 @@ Senza `figure` la domanda è identica a prima. Le domande bonus (`bonus: true`) 
 3. Il testo della domanda deve avere senso insieme alla figura ("Che ore segna l'orologio della cucina?") e non deve nominare "la figura sopra" (lint). Stem unici anche fra domande con figure diverse: l'ingest salta un testo già presente, e la firma anti-ripetizione della partita è testo + risposta.
 4. Il resto della sequenza è quella di `docs/prompt-generazione-matematica.md` (ingest una volta, `sync_question_counts.py`, controlli).
 5. Guarda la domanda nel browser a 375px e a 1280px prima del commit.
+
+## Cose imparate in F9 (26 figure, 40 domande)
+
+- **Goniometro: il lato mobile passa vicino ai numeri quasi sempre.** Le cifre sono sui due anelli (esterno r≈104, interno r≈76) a 0, 30, 60, ... gradi, e anche un lato a 10° da un numero può toccarlo. Misurata la distanza fra il bordo del lato (mezzo tratto 2,5) e il riquadro delle cifre (larghezza 0,556 × corpo per cifra, altezza 0,716 × corpo): le etichette non sono simmetriche, quindi gli angoli liberi (≥ 1 unità) cambiano col lato fermo. Con le etichette dei file pubblicati: lato fermo a destra 20, 40, 50, 70, 80, 100; a sinistra 80, 100, 110, 130, 140, 160. Tutti gli altri toccano un numero.
+- **Nei goniometri nuovi i lati si disegnano prima dei numeri** (come in `goniometro-40-sinistra`): l'alone chiaro dei numeri resta sopra al lato e ogni cifra si legge intera.
+- **Orologio: l'ora si ricava con l'arrotondamento, non con la divisione intera.** Una coordinata a un decimale sposta la lancetta corta di qualche centesimo di grado: `(angolo - minuti × 0,5) // 30` dava le 10 per le 11 in punto. Usare `round(... / 30)`.
+- **Il testo alternativo delle figure misurabili si può ricostruire dalla lettura** (orologio, goniometro, schieramento) e confrontare parola per parola con lo shard; per poligoni, rette e angoli con l'arco resta un controllo a mano sulle coordinate.
+- **Le lettere A-D come risposta finiscono con una preposizione per il lint** ("... della coppia A?" è letto come "a" sospesa): mettere la lettera prima ("Nella coppia A, che posizione hanno ...?").
