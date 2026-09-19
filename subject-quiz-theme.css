@@ -1141,6 +1141,22 @@ html[data-classe="1"][data-screen="screenGame"] .progress-dots {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 8px; /* 16px di default: sotto i 600px serve lo spazio, non le proporzioni */
+  }
+}
+
+/* A 360x740 (misurato, docs/classe-prima.md) il fondo della figura tocca il
+   footer fisso per poche domande: stringe ulteriormente pallini e margini
+   sopra la card, misure soltanto, nessun colore. */
+@media (max-width: 379px) {
+  html[data-classe="1"][data-screen="screenGame"] .progress-dots,
+  html[data-classe="1"][data-screen="screenBonusQuestion"] .progress-dots {
+    margin-bottom: 4px;
+  }
+
+  html[data-classe="1"][data-screen="screenGame"] .wrapper,
+  html[data-classe="1"][data-screen="screenBonusQuestion"] .wrapper {
+    padding-top: 4px;
   }
 }
 

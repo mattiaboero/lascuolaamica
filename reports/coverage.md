@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 12:54:53
+Data generazione: 19/09/2026, 18:26:19
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
