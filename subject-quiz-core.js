@@ -235,12 +235,14 @@
   const MAX_LEVEL_DISTANCE = Math.max(0, Number.isFinite(Number(cfg.maxLevelDistance)) ? Number(cfg.maxLevelDistance) : 2);
 
   const CLASS_DEFAULTS = {
+    1: { label: 'Classe 1ª', icon: '1️⃣', subtitle: 'Primi numeri' },
     2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Consolidiamo le basi' },
     3: { label: 'Classe 3ª', icon: '3️⃣', subtitle: 'Basi + primi passaggi' },
     4: { label: 'Classe 4ª', icon: '4️⃣', subtitle: 'Competenze intermedie' },
     5: { label: 'Classe 5ª', icon: '5️⃣', subtitle: 'Verso la secondaria' }
   };
   const CLASS_PROFILES = cfg.classProfiles || {
+    1: { 1: 1 },
     2: { 2: 1 },
     3: { 2: 0.35, 3: 0.65 },
     4: { 2: 0.15, 3: 0.35, 4: 0.5 },
@@ -652,7 +654,10 @@
 
   function buildClassMap() {
     const out = {};
-    [2, 3, 4, 5].forEach((c) => {
+    // cfg.classes: classi mostrate dalla pagina. Senza, restano 2ª-5ª: la 1ª
+    // compare solo nelle materie che la elencano.
+    const classes = Array.isArray(cfg.classes) && cfg.classes.length ? cfg.classes : [2, 3, 4, 5];
+    classes.filter((c) => CLASS_DEFAULTS[c]).forEach((c) => {
       const cfgClass = cfg.classMeta && cfg.classMeta[String(c)] ? cfg.classMeta[String(c)] : {};
       const base = CLASS_DEFAULTS[c];
       out[String(c)] = {
@@ -702,7 +707,7 @@
     const n = Number(value);
     if (!Number.isFinite(n)) return null;
     const g = Math.round(n);
-    if (g < 2 || g > 5) return null;
+    if (g < 1 || g > 5) return null;
     return g;
   }
 
@@ -773,7 +778,8 @@
   function getAvailableLevelsForClass(classKey) {
     const classNum = classToNum(classKey);
     return LEVELS.map((level) => {
-      const pool = AREA_KEYS.flatMap((area) => getLevelScopedPool(area, level.key));
+      const pool = AREA_KEYS.flatMap((area) => getLevelScopedPool(area, level.key))
+        .filter((question) => fitsClassOneRule(question, classNum));
       if (!pool.length) {
         return { ...level, available: false, minDistance: 99, poolSize: 0 };
       }
@@ -808,9 +814,17 @@
     return Math.abs(grade - classNum);
   }
 
+  // La 1ª non si mescola con le altre classi, nemmeno a distanza 1: le sue
+  // domande escono solo nelle partite di 1ª e la 1ª usa solo le sue. Chi e' in
+  // 1ª legge ancora lo stampato maiuscolo; chi e' in 2ª non deve ritrovarsi
+  // domande pensate per chi comincia.
+  function fitsClassOneRule(q, classNum) {
+    return (normalizeGrade(q && q._grade) === 1) === (classNum === 1);
+  }
+
   function getClassAwarePool(area, classKey, allowLoose, levelKey = null) {
-    const pool = getLevelScopedPool(area, levelKey);
     const classNum = classToNum(classKey);
+    const pool = getLevelScopedPool(area, levelKey).filter((q) => fitsClassOneRule(q, classNum));
     if (!pool.length) return { pool: [], mode: 'none', minDistance: 99 };
 
     const strict = pool.filter((q) => questionClassDistance(q, classNum) <= MAX_GRADE_DISTANCE);
@@ -1377,6 +1391,7 @@
     const key = normalizeClassKey(cls);
     selectedClass = key;
     saveClassPref(key);
+    document.documentElement.dataset.classe = key;
 
     document.querySelectorAll('.class-btn').forEach((b) => {
       b.classList.remove('selected');
@@ -2556,7 +2571,7 @@
     const pool = BANKS[area] || [];
     const subs = new Set();
     pool.forEach((q) => {
-      if (!q.subarea) return;
+      if (!q.subarea || !fitsClassOneRule(q, classNum)) return;
       if (Math.abs((q._grade || classNum) - classNum) <= MAX_GRADE_DISTANCE + 1) {
         subs.add(q.subarea);
       }
@@ -2808,6 +2823,8 @@
       const storedLevel = normalizeLevelKey(loadCursor().__level);
       selectedLevel = getLevelMeta(storedLevel) ? storedLevel : getFirstAvailableLevelKey(selectedClass);
     }
+    // Aggancio per il CSS e le funzioni legate alla classe (per la 1ª: maiuscolo).
+    document.documentElement.dataset.classe = selectedClass;
     ensureClassSelector();
     buildAreaGrid();
     buildSubareaGrid();
