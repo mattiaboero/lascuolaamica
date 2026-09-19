@@ -1117,28 +1117,31 @@ html[data-classe="1"][data-screen="screenGame"] .progress-dots {
   margin-bottom: 8px;
 }
 
-/* La mascotte, piccola, sta accanto ad Ascolta; testo e figura prendono tutta
-   la larghezza della card (niente colonna stretta accanto alla mascotte). */
-html[data-classe="1"] .q-card-main {
-  display: block;
-  padding-top: 10px;
-}
+/* Sul telefono la mascotte, piccola, sta accanto ad Ascolta; testo e figura
+   prendono tutta la larghezza della card (niente colonna stretta accanto alla
+   mascotte). Dai 600px c'e' spazio: resta l'impaginazione normale. */
+@media (max-width: 599px) {
+  html[data-classe="1"] .q-card-main {
+    display: block;
+    padding-top: 10px;
+  }
 
-html[data-classe="1"] .q-card-main .mascot-q {
-  float: left;
-  width: 40px;
-  height: 58px;
-  margin-right: 12px;
-}
+  html[data-classe="1"] .q-card-main .mascot-q {
+    float: left;
+    width: 40px;
+    height: 58px;
+    margin-right: 12px;
+  }
 
-html[data-classe="1"] .q-card-main .q-text {
-  clear: left;
-}
+  html[data-classe="1"] .q-card-main .q-text {
+    clear: left;
+  }
 
-html[data-classe="1"] .q-card-main .q-figure {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  html[data-classe="1"] .q-card-main .q-figure {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 html[data-classe="1"] #qMeta {
