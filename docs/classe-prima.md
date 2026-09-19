@@ -122,7 +122,7 @@ Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente styl
 - Con le figure il testo può essere cortissimo e resta univoco: le 24 domande non collidono né fra loro né col dataset.
 - `lint_content.js` legge la «A» finale di «nel riquadro A?» come la preposizione: la domanda è diventata «Nel riquadro A, quanti pallini ci sono?». `check_grammar_rules.js` prendeva «cassetta» per un refuso di «casetta»: ora è «cesta».
 - Quattro bonus con `grade: 1` in `matematica-page.js` (due facili, un medio, un difficile): nella copia la 1ª vede tutti e tre i livelli di bonus.
-- I conteggi pubblici (`sync_question_counts.py`) includono già le 24 domande, anche se la classe è nascosta.
+- I conteggi pubblici non contano la 1ª finché è nascosta: vedi «Conteggi pubblici» più sotto.
 
 ## P4: domande
 
@@ -135,13 +135,13 @@ Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente styl
 | c1-addizione-sottrazione | 54 | 32 | 60 |
 | c1-problemi | 25 | 6 | 25 |
 | c1-posizioni | 20 | 18 | 20 |
-| c1-percorsi | 10 | 10 | 10 |
+| c1-percorsi | 10 (+5) | 10 (+5) | 15 |
 | c1-figure-piane | 16 | 16 | 20 |
 | c1-linee-regioni | 11 | 11 | 15 |
 | c1-confronto-misure | 15 | 12 | 15 |
 | c1-ritmi | 20 | 15 | 20 |
 | c1-classificazione | 15 | 6 | 15 |
-| c1-ideogramma | 10 | 10 | 10 |
+| c1-ideogramma | 10 (+5) | 10 (+5) | 15 |
 
 104 figure nuove dal generatore (136 in tutto, 193 domande che le usano), tutte passate dal verificatore. Ogni risposta con figura è stata confrontata con i fatti del manifest.
 
@@ -157,7 +157,7 @@ Correzioni fatte in revisione:
 
 In 1ª le stesse parole servono ad argomenti diversi («in tutto» nelle addizioni e nelle forme, «palla» nelle posizioni e nei gruppi). Per non contare due volte una domanda, `coverage_report.js` per gli argomenti di 1ª chiede anche area e sottoarea uguali a quelle dell'argomento (in 1ª sono diverse per ogni argomento). Così ogni domanda di 1ª conta in un argomento solo.
 
-Percorsi e ideogramma restano a 10: i modelli T7 e T11 hanno pochi parametri, e altre domande sulla stessa figura sarebbero ripetizioni.
+Percorsi e ideogramma erano rimasti a 10. Nella revisione della 4.18.0 hanno 5 domande in più ciascuno, su 7 figure nuove (percorsi con frecce che girano o scendono, un percorso senza frecce, tre ideogrammi): shard `matematica-c1-percorsi-c1rev.jsonl` e `matematica-c1-ideogramma-c1rev.jsonl`.
 
 ### Impaginazione compatta in gioco
 
@@ -165,7 +165,43 @@ A 375×812, in 1ª, intestazione, bottoni e testo in maiuscolo spingevano la fig
 
 - spariscono briciole e sottotitolo, il titolo scende a 1,4rem, gli spazi fra le righe in alto si stringono;
 - la riga «Domanda 1 di 10 · area · classe» resta solo per lo screen reader: il progresso lo mostrano i pallini;
-- la mascotte, piccola (40×58), sta accanto ad Ascolta; testo, figura e risposte prendono tutta la larghezza della card, e con una colonna più larga il testo va su meno righe;
+- sotto i 600 px di larghezza la mascotte, piccola (40×58), sta accanto ad Ascolta; testo, figura e risposte prendono tutta la larghezza della card, e con una colonna più larga il testo va su meno righe;
 - `line-height` 1,25 per il testo in maiuscolo, che non ha discendenti.
 
 Solo misure, nessun colore. Misure prima → dopo, stessa domanda, 375×812: card da 374 a 220, testo da 3 a 2 righe, fondo della figura da 857 a 582. Con tutte le 193 domande di 1ª con figura, il fondo della figura sta sopra il footer fisso a 375×812 (peggiore 636 contro 643) e a 390×844 (647 contro 675); a 360×740 no, per 82 domande su 193. A fondo pagina l'ultima risposta resta sopra il footer; niente scroll orizzontale. La 3ª non cambia (stesse misure prima e dopo a 375×812 e 1280×800).
+
+Dai 600 px in su la card resta come nelle altre classi (mascotte 96×138 a sinistra, testo e figura accanto): a 1280×800 la mascotte da 40 px sembrava persa in una card larga 940, e l'ultima risposta resta comunque sopra il footer.
+
+## Revisione (4.18.0)
+
+Rilettura delle 280 domande da maestra di 1ª e da matematico, con le figure guardate a 320 px. Corrette 32 domande, stessi id e stesse figure:
+
+- Bilancia: fra le opzioni c'erano «il piatto A» e «il piatto B», e il piatto col cubo «pesa di più» quanto il cubo. Ora le opzioni sono il cubo, la palla, «pesano uguale», «non si sa». Due delle sei domande ripetevano la stessa domanda sulla stessa figura: ora chiedono quale piatto scende e quale sta più in alto.
+- «Com'è la linea D?» con una linea chiusa fatta di segmenti aveva fra le opzioni «Spezzata», giusta anche lei (spezzata chiusa): ora «Curva» e «Tonda».
+- «Fra questi animali, cosa NON c'entra?» con la sedia e «Fra questi frutti» col tavolo dicevano che erano tutti animali o frutti: «Chi di questi NON è un animale?», «Cosa NON va nel cesto della frutta?».
+- Domande oltre le 8 parole accorciate (bilancia, ideogramma), italiano più naturale («Quale lettera ha il cerchio?», «Quanti salti vedi sulla linea?», «Dove sta la palla rispetto al tavolo?», non «vicino al tavolo» con la palla sopra), «ordine crescente» e «in ordine» tolti.
+- Varietà: fra le otto domande «qual è il maggiore/minore fra quattro numeri» due chiedono ora il numero che sta in mezzo («fra il 10 e il 12»); due delle tre domande su ciascuna figura sopra/sotto chiedono la posizione rovesciata («Dove sta il tavolo rispetto alla palla?»).
+- «5 e quale numero fanno 10?» era difficoltà 3: è la più facile delle coppie del 10, ora 1.
+
+Le regex di quattro argomenti di 1ª (`c1-numeri-entro-20`, `c1-confronto-misure`, `c1-ritmi`, `c1-classificazione`) riconoscono anche le domande riscritte: ogni domanda di 1ª resta in un argomento solo.
+
+Restano, senza modifiche:
+
+- i problemi (`c1-problemi`) hanno due frasi e 9-13 parole: a 6 anni si leggono con Ascolta o con l'adulto, e sono tutti sullo stesso schema («ha 8 biscotti e ne trova altri 5»);
+- «Quale figura è il rettangolo?» con un quadrato fra le figure: per il matematico anche il quadrato è un rettangolo, in 1ª no (si guarda «due lati lunghi e due corti», come dice la spiegazione);
+- sopra/sotto/destra/sinistra/dentro hanno 6 figure per 20 domande: in una partita da 10 si possono vedere due domande simili sulla stessa figura (mai la stessa);
+- «Il gatto è sotto il tavolo. Dove sta il tavolo?» ha due frasi.
+
+## Conteggi pubblici
+
+`sync_question_counts.py` conta solo le classi che la pagina della materia mostra: legge `classes: [...]` in `js/<materia>-page.js`, e senza quella riga conta 2-5 come `subject-quiz-core.js`. Finché la 1ª è nascosta README, llms.txt, home, FAQ, JSON-LD delle pagine e `json/index.json` (`totalQuestions`, `activeRows`) non contano le 290 domande di 1ª. Le domande restano in `json/matematica.json` e in `export/json`: servono il giorno in cui la 1ª si accende. Non escono in 2ª-5ª: pool, livelli, sottoambiti e bonus passano da `fitsClassOneRule`, il ripasso usa solo le domande sbagliate in partita, Spacca-Muri prende solo la classe scelta (2ª-5ª) e scarta le domande con figura, il Bosco ha le sue parole.
+
+## Accendere la 1ª
+
+Una riga in `js/matematica-page.js`, dentro `__sa.subjectConfig`:
+
+```js
+  classes: [1, 2, 3, 4, 5],
+```
+
+Poi `python3 scripts/sync_question_counts.py` (i conteggi salgono da soli di 290), `npm run freshness`, i controlli di sempre e una partita di 1ª a 375×812 e a 1280×800. Da guardare prima: la schermata di scelta classe con cinque bottoni, i bonus di 1ª (quattro, in `bonusQuestions` con `grade: 1`), Ascolta su un iPhone e su un Android veri, le figure a 360×740 (misurate in P4: 82 domande su 193 finiscono sotto il footer fisso e vanno scrollate).

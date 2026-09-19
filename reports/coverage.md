@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 12:22:22
+Data generazione: 19/09/2026, 12:54:53
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -10,7 +10,7 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 | calcolo_mentale        | 0     | 65    | 41    | 28    | 52    | 186  
 | cerchio                | 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
 | colonna                | 0     | 11 ⚠️  | 0     | 0     | 0     | 11   
-| dati_probabilita       | 10 ⚠️  | 13 ⚠️  | 16    | 95    | 94    | 228  
+| dati_probabilita       | 15    | 13 ⚠️  | 16    | 95    | 94    | 233  
 | decimali               | 0     | 0     | 0     | 70    | 15    | 85   
 | diagramma_flusso       | 0     | 0     | 13 ⚠️  | 0     | 0     | 13   
 | equivalenze            | 0     | 0     | 0     | 20    | 0     | 20   
@@ -25,7 +25,7 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 | numeri_relativi        | 0     | 0     | 0     | 0     | 36    | 36   
 | operazioni             | 85    | 250    | 224    | 187    | 175    | 921  
 | orologio               | 0     | 27    | 0     | 0     | 0     | 27   
-| percorsi               | 10 ⚠️  | 0     | 0     | 0     | 0     | 10   
+| percorsi               | 15    | 0     | 0     | 0     | 0     | 15   
 | perimetro_area         | 0     | 58    | 68    | 96    | 92    | 314  
 | posizioni              | 20    | 0     | 0     | 0     | 0     | 20   
 | potenze                | 0     | 0     | 0     | 0     | 15    | 15   
@@ -37,7 +37,7 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 | schieramenti           | 0     | 17    | 0     | 0     | 0     | 17   
 | sequenze               | 20    | 49    | 66    | 18    | 17    | 170  
 | tavola_pitagorica      | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
-| TOTAL                   |        |        |        |        |        | 3063  
+| TOTAL                   |        |        |        |        |        | 3073  
 
 ## PROBLEMI
 Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
@@ -459,8 +459,6 @@ storia          | cambiamenti_e_cause       | c2    | 9
 storia          | confronti_e_sintesi       | c3    | 9
 storia          | storia_personale          | c2    | 9
 scienze         | osservazione_e_dati       | c3    | 9
-matematica      | dati_probabilita          | c1    | 10
-matematica      | percorsi                  | c1    | 10
 problemi        | due_operazioni            | c3    | 10
 civica          | diritti_e_doveri          | c3    | 10
 civica          | gentilezza_in_strada      | c4    | 10
@@ -572,7 +570,7 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 271
+Totale celle sotto soglia: 269
 ## Copertura per argomento (matematica)
 
 Argomento                                | Classe | Domande | Stato
@@ -582,13 +580,13 @@ c1-decine-unita                          | c1     | 20      | coperto
 c1-addizione-sottrazione                 | c1     | 60      | coperto
 c1-problemi                              | c1     | 25      | coperto
 c1-posizioni                             | c1     | 20      | coperto
-c1-percorsi                              | c1     | 10      | coperto
+c1-percorsi                              | c1     | 15      | coperto
 c1-figure-piane                          | c1     | 20      | coperto
 c1-linee-regioni                         | c1     | 15      | coperto
 c1-confronto-misure                      | c1     | 15      | coperto
 c1-ritmi                                 | c1     | 20      | coperto
 c1-classificazione                       | c1     | 15      | coperto
-c1-ideogramma                            | c1     | 10      | coperto
+c1-ideogramma                            | c1     | 15      | coperto
 c2-proprieta-commutativa-addizione       | c2     | 12      | coperto
 c2-numeri-31-99                          | c2     | 12      | coperto
 c2-addizione-tre-addendi                 | c2     | 13      | coperto

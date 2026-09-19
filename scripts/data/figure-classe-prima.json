@@ -687,6 +687,28 @@
   },
   "alt": "Tre righe di disegni: riga A 4 cerchi; riga B 6 quadrati; riga C 3 triangoli."
  },
+ "c1-ideogramma-5-8-4": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 5,
+   "B": 8,
+   "C": 4,
+   "piu": "B",
+   "meno": "C"
+  },
+  "alt": "Tre righe di disegni: riga A 5 cerchi; riga B 8 quadrati; riga C 4 triangoli."
+ },
+ "c1-ideogramma-6-3-5": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 6,
+   "B": 3,
+   "C": 5,
+   "piu": "A",
+   "meno": "B"
+  },
+  "alt": "Tre righe di disegni: riga A 6 cerchi; riga B 3 quadrati; riga C 5 triangoli."
+ },
  "c1-ideogramma-7-2-5": {
   "modello": "ideogramma",
   "fatti": {
@@ -697,6 +719,17 @@
    "meno": "B"
   },
   "alt": "Tre righe di disegni: riga A 7 cerchi; riga B 2 quadrati; riga C 5 triangoli."
+ },
+ "c1-ideogramma-8-2-6": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 8,
+   "B": 2,
+   "C": 6,
+   "piu": "A",
+   "meno": "B"
+  },
+  "alt": "Tre righe di disegni: riga A 8 cerchi; riga B 2 quadrati; riga C 6 triangoli."
  },
  "c1-linee-acca": {
   "modello": "linee",
@@ -801,6 +834,90 @@
    "frecce": []
   },
   "alt": "Una griglia di 4 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 3 caselle più a destra e 2 caselle più in alto."
+ },
+ "c1-percorso-4x4-a2d2a1-frecce": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    3
+   ],
+   "arrivo": [
+    2,
+    0
+   ],
+   "passi_minimi": 5,
+   "frecce": [
+    "alto",
+    "alto",
+    "destra",
+    "destra",
+    "alto"
+   ]
+  },
+  "alt": "Una griglia di 4 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 2 caselle più a destra e 3 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: alto, alto, destra, destra, alto."
+ },
+ "c1-percorso-5x3-d2a2d2-frecce": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    2
+   ],
+   "arrivo": [
+    4,
+    0
+   ],
+   "passi_minimi": 6,
+   "frecce": [
+    "destra",
+    "destra",
+    "alto",
+    "alto",
+    "destra",
+    "destra"
+   ]
+  },
+  "alt": "Una griglia di 5 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 4 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: destra, destra, alto, alto, destra, destra."
+ },
+ "c1-percorso-5x3-d4a2": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    2
+   ],
+   "arrivo": [
+    4,
+    0
+   ],
+   "passi_minimi": 6,
+   "frecce": []
+  },
+  "alt": "Una griglia di 5 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 4 caselle più a destra e 2 caselle più in alto."
+ },
+ "c1-percorso-5x4-a3d2b1-frecce": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    3
+   ],
+   "arrivo": [
+    2,
+    1
+   ],
+   "passi_minimi": 4,
+   "frecce": [
+    "alto",
+    "alto",
+    "alto",
+    "destra",
+    "destra",
+    "basso"
+   ]
+  },
+  "alt": "Una griglia di 5 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 2 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: alto, alto, alto, destra, destra, basso."
  },
  "c1-percorso-5x4-d3a2-frecce": {
   "modello": "percorso",

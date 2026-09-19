@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "matematica",
- "totalQuestions": 3063,
+ "totalQuestions": 3073,
  "questions": [
   {
    "id": "mat-2-tabelline-001",
@@ -90989,7 +90989,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Quanti salti conta la linea?",
+   "question": "Quanti salti vedi sulla linea?",
    "options": [
     "1",
     "8",
@@ -91578,7 +91578,7 @@
    "class": 1,
    "area": "aritmetica",
    "subarea": "operazioni",
-   "difficulty": 3,
+   "difficulty": 1,
    "question": "5 e quale numero fanno 10 in tutto?",
    "options": [
     "4",
@@ -92327,7 +92327,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 1,
-   "question": "Fra questi frutti, qual è l'intruso?",
+   "question": "Cosa NON va nel cesto della frutta?",
    "options": [
     "tavolo",
     "pera",
@@ -92391,7 +92391,7 @@
    "area": "logica_e_dati",
    "subarea": "ragionamento",
    "difficulty": 3,
-   "question": "Fra questi animali, cosa NON c'entra?",
+   "question": "Chi di questi NON è un animale?",
    "options": [
     "pesce",
     "sedia",
@@ -92587,7 +92587,7 @@
    "area": "geometria",
    "subarea": "misure",
    "difficulty": 3,
-   "question": "Quale striscia è la più lunga fra le tre?",
+   "question": "Fra le tre strisce, qual è la più lunga?",
    "options": [
     "A",
     "C",
@@ -92723,14 +92723,14 @@
    "area": "geometria",
    "subarea": "misure",
    "difficulty": 1,
-   "question": "Guarda la bilancia: cosa pesa di più, il cubo o la palla?",
+   "question": "Cosa pesa di più, il cubo o la palla?",
    "options": [
-    "la palla",
     "il cubo",
-    "il piatto A",
-    "il piatto B"
+    "la palla",
+    "pesano uguale",
+    "non si sa"
    ],
-   "answerIndex": 1,
+   "answerIndex": 0,
    "answer": "il cubo",
    "explanation": "Il piatto A, con il cubo, è più in basso: il cubo pesa di più.",
    "active": true,
@@ -92757,14 +92757,14 @@
    "area": "geometria",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "Osserva la bilancia: cosa pesa di più, il cubo o la palla?",
+   "question": "Pesa di più il cubo o la palla?",
    "options": [
     "il cubo",
-    "il piatto A",
     "la palla",
-    "il piatto B"
+    "pesano uguale",
+    "non si sa"
    ],
-   "answerIndex": 2,
+   "answerIndex": 1,
    "answer": "la palla",
    "explanation": "Il piatto B, con la palla, è più in basso: la palla pesa di più.",
    "active": true,
@@ -92790,17 +92790,17 @@
    "class": 1,
    "area": "geometria",
    "subarea": "misure",
-   "difficulty": 3,
-   "question": "Nella bilancia, quale oggetto è più pesante?",
+   "difficulty": 1,
+   "question": "Quale piatto della bilancia scende?",
    "options": [
-    "la palla",
-    "il piatto A",
-    "il piatto B",
-    "il cubo"
+    "A",
+    "B",
+    "nessuno",
+    "tutti e due"
    ],
-   "answerIndex": 3,
-   "answer": "il cubo",
-   "explanation": "Il piatto con il cubo scende: il cubo è più pesante della palla.",
+   "answerIndex": 0,
+   "answer": "A",
+   "explanation": "Scende il piatto A, quello con il cubo: il cubo pesa di più.",
    "active": true,
    "tag": "matematica;misure;classe_1;primaria",
    "tags": [
@@ -92829,8 +92829,8 @@
    "options": [
     "il cubo",
     "la palla",
-    "il piatto A",
-    "il piatto B"
+    "pesano uguale",
+    "non si sa"
    ],
    "answerIndex": 0,
    "answer": "il cubo",
@@ -92859,12 +92859,12 @@
    "area": "geometria",
    "subarea": "misure",
    "difficulty": 2,
-   "question": "La bilancia in figura: chi pesa di meno?",
+   "question": "Chi pesa di meno sulla bilancia?",
    "options": [
-    "il piatto A",
-    "la palla",
     "il cubo",
-    "il piatto B"
+    "la palla",
+    "pesano uguale",
+    "non si sa"
    ],
    "answerIndex": 1,
    "answer": "la palla",
@@ -92892,17 +92892,17 @@
    "class": 1,
    "area": "geometria",
    "subarea": "misure",
-   "difficulty": 3,
-   "question": "La bilancia in figura: chi pesa di più?",
+   "difficulty": 2,
+   "question": "Quale piatto della bilancia sta più in alto?",
    "options": [
-    "il piatto B",
-    "il cubo",
-    "la palla",
-    "il piatto A"
+    "A",
+    "B",
+    "nessuno",
+    "tutti e due"
    ],
-   "answerIndex": 2,
-   "answer": "la palla",
-   "explanation": "Il piatto B con la palla scende: la palla pesa di più del cubo.",
+   "answerIndex": 0,
+   "answer": "A",
+   "explanation": "Il piatto A, con il cubo, sta più in alto: il cubo pesa meno della palla.",
    "active": true,
    "tag": "matematica;misure;classe_1;primaria",
    "tags": [
@@ -93491,7 +93491,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Quale lettera è il cerchio?",
+   "question": "Quale lettera ha il cerchio?",
    "options": [
     "A",
     "B",
@@ -93559,7 +93559,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Quale lettera è il rettangolo?",
+   "question": "Quale lettera ha il rettangolo?",
    "options": [
     "A",
     "B",
@@ -93695,7 +93695,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Quale lettera è il quadrato?",
+   "question": "Quale lettera ha il quadrato?",
    "options": [
     "A",
     "B",
@@ -93933,7 +93933,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Quale lettera è la figura rotonda?",
+   "question": "Quale lettera ha la figura rotonda?",
    "options": [
     "A",
     "B",
@@ -94069,7 +94069,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 2,
-   "question": "Guardando le tre righe, quante figure ci sono in tutto?",
+   "question": "Nelle tre righe, quante figure ci sono in tutto?",
    "options": [
     "13",
     "9",
@@ -94137,7 +94137,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 2,
-   "question": "Quante figure in più ha la riga A rispetto alla riga B?",
+   "question": "Quante figure ha la riga A più della B?",
    "options": [
     "4",
     "5",
@@ -94307,7 +94307,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "Rispetto alla riga A, quante figure in più ha la riga C?",
+   "question": "Rispetto alla riga A, quante figure in più ha C?",
    "options": [
     "10",
     "4",
@@ -94341,7 +94341,7 @@
    "area": "logica_e_dati",
    "subarea": "dati_probabilita",
    "difficulty": 3,
-   "question": "In totale, quante figure ci sono nelle tre righe?",
+   "question": "Quante figure ci sono nelle tre righe?",
    "options": [
     "13",
     "10",
@@ -94480,8 +94480,8 @@
    "question": "La linea D com'è?",
    "options": [
     "Aperta",
-    "Spezzata",
-    "Dritta",
+    "Curva",
+    "Tonda",
     "Chiusa"
    ],
    "answerIndex": 3,
@@ -95327,7 +95327,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "Qual è il numero più grande di pallini?",
+   "question": "Quanti pallini ha il riquadro più pieno?",
    "options": [
     "6",
     "10",
@@ -95336,7 +95336,7 @@
    ],
    "answerIndex": 1,
    "answer": "10",
-   "explanation": "Il riquadro A ha 6 pallini, il riquadro B ne ha 10: 10 è più grande di 6. Non ci sono 9 né 11 pallini in nessun riquadro.",
+   "explanation": "Il riquadro B ha 10 pallini, più dei 6 del riquadro A.",
    "active": true,
    "tag": "matematica;numeri;classe_1;primaria",
    "tags": [
@@ -95361,7 +95361,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 1,
-   "question": "Qual è il numero più piccolo di pallini?",
+   "question": "Quanti pallini ha il riquadro più vuoto?",
    "options": [
     "5",
     "2",
@@ -95370,7 +95370,7 @@
    ],
    "answerIndex": 2,
    "answer": "1",
-   "explanation": "Il riquadro A ha 1 pallino, il riquadro B ne ha 5: 1 è più piccolo di 5. Non ci sono 2 né 0 pallini in nessun riquadro.",
+   "explanation": "Il riquadro A ha 1 pallino solo, meno dei 5 del riquadro B.",
    "active": true,
    "tag": "matematica;numeri;classe_1;primaria",
    "tags": [
@@ -95621,7 +95621,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 1,
-   "question": "Quale numero viene prima in ordine crescente?",
+   "question": "Contando, quale numero dici per primo?",
    "options": [
     "12",
     "9",
@@ -95630,7 +95630,7 @@
    ],
    "answerIndex": 2,
    "answer": "5",
-   "explanation": "5 è il più piccolo tra 5, 9, 12 e 17: viene prima in ordine crescente.",
+   "explanation": "Contando 1, 2, 3... arrivi prima al 5, poi al 9, al 12 e al 17.",
    "active": true,
    "tag": "matematica;numeri;classe_1;primaria",
    "tags": [
@@ -95685,16 +95685,16 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "In ordine, qual è il numero più piccolo?",
+   "question": "Quale numero sta fra il 10 e il 12?",
    "options": [
-    "8",
-    "15",
+    "9",
     "11",
-    "2"
+    "13",
+    "12"
    ],
-   "answerIndex": 3,
-   "answer": "2",
-   "explanation": "2 è il più piccolo tra 2, 8, 11 e 15.",
+   "answerIndex": 1,
+   "answer": "11",
+   "explanation": "Fra il 10 e il 12 c'è l'11: 10, 11, 12.",
    "active": true,
    "tag": "matematica;numeri;classe_1;primaria",
    "tags": [
@@ -95717,16 +95717,16 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "In ordine, qual è il numero più grande?",
+   "question": "Quale numero sta fra il 15 e il 17?",
    "options": [
+    "14",
+    "18",
     "16",
-    "4",
-    "9",
-    "13"
+    "15"
    ],
-   "answerIndex": 0,
+   "answerIndex": 2,
    "answer": "16",
-   "explanation": "16 è il più grande tra 4, 9, 13 e 16.",
+   "explanation": "Fra il 15 e il 17 c'è il 16: 15, 16, 17.",
    "active": true,
    "tag": "matematica;numeri;classe_1;primaria",
    "tags": [
@@ -96307,7 +96307,7 @@
    "area": "geometria",
    "subarea": "percorsi",
    "difficulty": 1,
-   "question": "Quanti passi porta il pallino alla stella?",
+   "question": "In quanti passi il pallino arriva alla stella?",
    "options": [
     "2",
     "3",
@@ -96511,7 +96511,7 @@
    "area": "geometria",
    "subarea": "posizioni",
    "difficulty": 1,
-   "question": "Dove sta la palla vicino al tavolo?",
+   "question": "Dove sta la palla rispetto al tavolo?",
    "options": [
     "Sotto",
     "Sopra",
@@ -96578,17 +96578,17 @@
    "class": 1,
    "area": "geometria",
    "subarea": "posizioni",
-   "difficulty": 1,
-   "question": "Guarda il tavolo, dove sta la palla?",
+   "difficulty": 3,
+   "question": "Rispetto alla palla, dove sta il tavolo?",
    "options": [
     "Sopra",
     "Sotto",
-    "Sinistra",
+    "Dentro",
     "Destra"
    ],
-   "answerIndex": 0,
-   "answer": "Sopra",
-   "explanation": "La palla è appoggiata sul tavolo: sta sopra.",
+   "answerIndex": 1,
+   "answer": "Sotto",
+   "explanation": "La palla è appoggiata sul tavolo: il tavolo sta sotto la palla.",
    "active": true,
    "tag": "matematica;posizioni;classe_1;primaria",
    "tags": [
@@ -96680,17 +96680,17 @@
    "class": 1,
    "area": "geometria",
    "subarea": "posizioni",
-   "difficulty": 2,
-   "question": "La palla del nonno adesso dove sta?",
+   "difficulty": 3,
+   "question": "Dove sta il tavolo rispetto alla palla?",
    "options": [
     "Destra",
     "Sopra",
     "Sinistra",
     "Sotto"
    ],
-   "answerIndex": 3,
-   "answer": "Sotto",
-   "explanation": "La palla è fra le gambe del tavolo, per terra: è sotto.",
+   "answerIndex": 1,
+   "answer": "Sopra",
+   "explanation": "La palla è per terra, sotto il tavolo: il tavolo sta sopra la palla.",
    "active": true,
    "tag": "matematica;posizioni;classe_1;primaria",
    "tags": [
@@ -98135,7 +98135,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Quale figura chiude questa fila di figure?",
+   "question": "Cosa va al posto del punto di domanda?",
    "options": [
     "cerchio",
     "quadrato",
@@ -98203,7 +98203,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 2,
-   "question": "Qual è la forma che continua la fila di figure?",
+   "question": "Che forma va dopo il cerchio?",
    "options": [
     "cerchio",
     "quadrato",
@@ -98475,7 +98475,7 @@
    "area": "logica_e_dati",
    "subarea": "sequenze",
    "difficulty": 3,
-   "question": "Qual è la forma giusta per continuare il ritmo?",
+   "question": "Con quale forma continua il ritmo?",
    "options": [
     "cerchio",
     "quadrato",
@@ -98660,11 +98660,351 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": ""
+  },
+  {
+   "id": "mat-1-dati_probabilita-281",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "logica_e_dati",
+   "subarea": "dati_probabilita",
+   "difficulty": 1,
+   "question": "Nella riga A, quanti cerchi ci sono?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "3"
+   ],
+   "answerIndex": 1,
+   "answer": "6",
+   "explanation": "Conta i cerchi della riga A: sono 6.",
+   "active": true,
+   "tag": "matematica;dati_probabilita;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "dati_probabilita",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-ideogramma-6-3-5",
+   "figureAlt": "Tre righe di disegni: riga A 6 cerchi; riga B 3 quadrati; riga C 5 triangoli."
+  },
+  {
+   "id": "mat-1-dati_probabilita-282",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "logica_e_dati",
+   "subarea": "dati_probabilita",
+   "difficulty": 3,
+   "question": "Quante figure hanno insieme le righe B e C?",
+   "options": [
+    "9",
+    "7",
+    "8",
+    "11"
+   ],
+   "answerIndex": 2,
+   "answer": "8",
+   "explanation": "La riga B ha 3 quadrati e la riga C 5 triangoli: 3 + 5 = 8.",
+   "active": true,
+   "tag": "matematica;dati_probabilita;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "dati_probabilita",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-ideogramma-6-3-5",
+   "figureAlt": "Tre righe di disegni: riga A 6 cerchi; riga B 3 quadrati; riga C 5 triangoli."
+  },
+  {
+   "id": "mat-1-dati_probabilita-283",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "logica_e_dati",
+   "subarea": "dati_probabilita",
+   "difficulty": 1,
+   "question": "Quale riga ha 4 figure?",
+   "options": [
+    "A",
+    "B",
+    "Nessuna",
+    "C"
+   ],
+   "answerIndex": 3,
+   "answer": "C",
+   "explanation": "La riga C ha 4 triangoli. La riga A ne ha 5 e la riga B 8.",
+   "active": true,
+   "tag": "matematica;dati_probabilita;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "dati_probabilita",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-ideogramma-5-8-4",
+   "figureAlt": "Tre righe di disegni: riga A 5 cerchi; riga B 8 quadrati; riga C 4 triangoli."
+  },
+  {
+   "id": "mat-1-dati_probabilita-284",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "logica_e_dati",
+   "subarea": "dati_probabilita",
+   "difficulty": 2,
+   "question": "Quante figure ha la riga B più della C?",
+   "options": [
+    "3",
+    "12",
+    "4",
+    "5"
+   ],
+   "answerIndex": 2,
+   "answer": "4",
+   "explanation": "La riga B ha 8 figure e la riga C ne ha 4: 8 - 4 = 4 in più.",
+   "active": true,
+   "tag": "matematica;dati_probabilita;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "dati_probabilita",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-ideogramma-5-8-4",
+   "figureAlt": "Tre righe di disegni: riga A 5 cerchi; riga B 8 quadrati; riga C 4 triangoli."
+  },
+  {
+   "id": "mat-1-dati_probabilita-285",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "logica_e_dati",
+   "subarea": "dati_probabilita",
+   "difficulty": 3,
+   "question": "Rispetto alla riga A, quante figure in meno ha C?",
+   "options": [
+    "2",
+    "6",
+    "8",
+    "14"
+   ],
+   "answerIndex": 0,
+   "answer": "2",
+   "explanation": "La riga A ha 8 figure e la riga C ne ha 6: 8 - 6 = 2 in meno.",
+   "active": true,
+   "tag": "matematica;dati_probabilita;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "dati_probabilita",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-ideogramma-8-2-6",
+   "figureAlt": "Tre righe di disegni: riga A 8 cerchi; riga B 2 quadrati; riga C 6 triangoli."
+  },
+  {
+   "id": "mat-1-percorsi-286",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "geometria",
+   "subarea": "percorsi",
+   "difficulty": 2,
+   "question": "Quante frecce vanno verso destra?",
+   "options": [
+    "2",
+    "6",
+    "4",
+    "3"
+   ],
+   "answerIndex": 2,
+   "answer": "4",
+   "explanation": "Due frecce a destra all'inizio e due alla fine: 2 + 2 = 4.",
+   "active": true,
+   "tag": "matematica;percorsi;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "percorsi",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-percorso-5x3-d2a2d2-frecce",
+   "figureAlt": "Una griglia di 5 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 4 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: destra, destra, alto, alto, destra, destra."
+  },
+  {
+   "id": "mat-1-percorsi-287",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "geometria",
+   "subarea": "percorsi",
+   "difficulty": 2,
+   "question": "Quante frecce portano il pallino alla stella?",
+   "options": [
+    "4",
+    "5",
+    "3",
+    "6"
+   ],
+   "answerIndex": 1,
+   "answer": "5",
+   "explanation": "2 frecce in alto, 2 a destra e 1 in alto: 2 + 2 + 1 = 5.",
+   "active": true,
+   "tag": "matematica;percorsi;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "percorsi",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-percorso-4x4-a2d2a1-frecce",
+   "figureAlt": "Una griglia di 4 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 2 caselle più a destra e 3 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: alto, alto, destra, destra, alto."
+  },
+  {
+   "id": "mat-1-percorsi-288",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "geometria",
+   "subarea": "percorsi",
+   "difficulty": 3,
+   "question": "Dove va l'ultima freccia?",
+   "options": [
+    "Alto",
+    "Destra",
+    "Sinistra",
+    "Basso"
+   ],
+   "answerIndex": 3,
+   "answer": "Basso",
+   "explanation": "L'ultima freccia scende di una casella, verso il basso, fino alla stella.",
+   "active": true,
+   "tag": "matematica;percorsi;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "percorsi",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-percorso-5x4-a3d2b1-frecce",
+   "figureAlt": "Una griglia di 5 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 2 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: alto, alto, alto, destra, destra, basso."
+  },
+  {
+   "id": "mat-1-percorsi-289",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "geometria",
+   "subarea": "percorsi",
+   "difficulty": 2,
+   "question": "Quante frecce puntano verso l'alto?",
+   "options": [
+    "1",
+    "3",
+    "2",
+    "4"
+   ],
+   "answerIndex": 1,
+   "answer": "3",
+   "explanation": "Le prime 3 frecce puntano verso l'alto, poi 2 a destra e 1 in basso.",
+   "active": true,
+   "tag": "matematica;percorsi;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "percorsi",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-percorso-5x4-a3d2b1-frecce",
+   "figureAlt": "Una griglia di 5 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 2 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: alto, alto, alto, destra, destra, basso."
+  },
+  {
+   "id": "mat-1-percorsi-290",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "geometria",
+   "subarea": "percorsi",
+   "difficulty": 3,
+   "question": "Con quanti passi al minimo arrivi alla stella?",
+   "options": [
+    "5",
+    "7",
+    "4",
+    "6"
+   ],
+   "answerIndex": 3,
+   "answer": "6",
+   "explanation": "Servono 4 passi a destra e 2 in alto: 4 + 2 = 6.",
+   "active": true,
+   "tag": "matematica;percorsi;classe_1;primaria",
+   "tags": [
+    "matematica",
+    "percorsi",
+    "classe_1",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_primaria_classe_1",
+   "teacherNote": "",
+   "bonus": false,
+   "bonusRaw": "",
+   "figure": "c1-percorso-5x3-d4a2",
+   "figureAlt": "Una griglia di 5 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 4 caselle più a destra e 2 caselle più in alto."
   }
  ],
  "stats": {
   "file": "template_matematica_da_json.csv",
-  "rows": 3063,
+  "rows": 3073,
   "areas": {
    "tabelline": 186,
    "aritmetica": 539,
