@@ -1,5 +1,30 @@
 # Changelog Repo
 
+## 4.16.0 - 2026-09-19
+
+**115 domande nuove di matematica per gli argomenti meno coperti di seconda,
+terza e quarta.** Tutti gli argomenti che erano sotto le 10 domande ora ne
+hanno almeno 10. Domande totali attive: 9.917 -> 10.032.
+
+### Added
+- feat(matematica): F8, 115 domande per gli argomenti deboli.
+  - Classe 2: numeri da 31 a 99, raggruppamento del secondo ordine,
+    proprieta' commutativa (addizione e moltiplicazione), tavola pitagorica,
+    moltiplicazioni e divisioni in colonna, prodotto cartesiano, schieramenti,
+    punto/retta/piano, confronto tra segmenti.
+  - Classe 3: proprieta' associativa, dissociativa, invariantiva e
+    distributiva, prova del nove, angoli (rotazione, confronto, concavo e
+    convesso), posizione delle rette nel piano, diagrammi di flusso.
+  - Classe 4: crivello di Eratostene (da 2 a 12 domande), scomposizione con
+    il diagramma ad albero, frazioni complementari e unitarie, unita' di
+    misura.
+
+### Fixed
+- fix(matematica): revisione indipendente delle 115 domande, 26 corrette
+  (numeri oltre il 100 in seconda, risposte suggerite dal testo, distrattori
+  riconoscibili dalla lunghezza, stem che citavano numeri assenti dalle
+  opzioni, prova del nove con il risultato gia' scritto nella domanda).
+
 ## 4.15.2 - 2026-09-18
 
 **Le risposte non finiscono piu' sotto la barra dei link in fondo, sui telefoni.**
