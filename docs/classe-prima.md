@@ -158,3 +158,14 @@ Correzioni fatte in revisione:
 In 1ª le stesse parole servono ad argomenti diversi («in tutto» nelle addizioni e nelle forme, «palla» nelle posizioni e nei gruppi). Per non contare due volte una domanda, `coverage_report.js` per gli argomenti di 1ª chiede anche area e sottoarea uguali a quelle dell'argomento (in 1ª sono diverse per ogni argomento). Così ogni domanda di 1ª conta in un argomento solo.
 
 Percorsi e ideogramma restano a 10: i modelli T7 e T11 hanno pochi parametri, e altre domande sulla stessa figura sarebbero ripetizioni.
+
+### Impaginazione compatta in gioco
+
+A 375×812, in 1ª, intestazione, bottoni e testo in maiuscolo spingevano la figura sotto la prima schermata: finiva a 857 px, e il footer fisso copre da 643 in giù. Ora `showScreen` scrive `<html data-screen="<id>">`, e solo con `html[data-classe="1"]` sulle schermate `screenGame` e `screenBonusQuestion` (`subject-quiz-theme.css`):
+
+- spariscono briciole e sottotitolo, il titolo scende a 1,4rem, gli spazi fra le righe in alto si stringono;
+- la riga «Domanda 1 di 10 · area · classe» resta solo per lo screen reader: il progresso lo mostrano i pallini;
+- la mascotte, piccola (40×58), sta accanto ad Ascolta; testo, figura e risposte prendono tutta la larghezza della card, e con una colonna più larga il testo va su meno righe;
+- `line-height` 1,25 per il testo in maiuscolo, che non ha discendenti.
+
+Solo misure, nessun colore. Misure prima → dopo, stessa domanda, 375×812: card da 374 a 220, testo da 3 a 2 righe, fondo della figura da 857 a 582. Con tutte le 193 domande di 1ª con figura, il fondo della figura sta sopra il footer fisso a 375×812 (peggiore 636 contro 643) e a 390×844 (647 contro 675); a 360×740 no, per 82 domande su 193. A fondo pagina l'ultima risposta resta sopra il footer; niente scroll orizzontale. La 3ª non cambia (stesse misure prima e dopo a 375×812 e 1280×800).

@@ -2398,6 +2398,8 @@
     const target = $(id);
     if (!target) return;
     target.classList.add('active');
+    // Aggancio per il CSS (impaginazione compatta della 1ª in gioco).
+    document.documentElement.dataset.screen = id;
     const heading = target.querySelector('h1,h2');
     if (heading) {
       heading.setAttribute('tabindex', '-1');
