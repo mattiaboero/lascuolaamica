@@ -9,6 +9,11 @@ I conteggi vivono sparsi — footer (via json/index.json), JSON-LD delle pagine
 materia, home, FAQ, per-insegnanti, llms.txt, README, wiki — e sono gia' andati
 fuori sincrono tre volte (4.12.6, 4.12.64, e adesso). Questo script e' l'unica
 fonte: `--check` lo verifica in prepublish, senza argomenti riscrive.
+
+Si contano solo le classi che la pagina della materia mostra (`classes` in
+`js/<materia>-page.js`, altrimenti 2-5 come `subject-quiz-core.js`). Le domande
+di 1ª restano fuori finche' la 1ª e' nascosta, ed entrano da sole quando la
+pagina la accende (docs/classe-prima.md).
 """
 
 from __future__ import annotations
@@ -21,6 +26,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 JSON_DIR = ROOT / 'json'
 ESCLUSI = {'index.json', 'changelog.json'}
+CLASSI_PREDEFINITE = {2, 3, 4, 5}  # come subject-quiz-core.js senza cfg.classes
+
+
+def classi_visibili(materia: str) -> set[int]:
+    pagina = ROOT / 'js' / f'{materia}-page.js'
+    trovate = re.search(r'\bclasses:\s*\[([\d,\s]+)\]', pagina.read_text(encoding='utf-8')) if pagina.exists() else None
+    return {int(c) for c in re.findall(r'\d+', trovate[1])} if trovate else CLASSI_PREDEFINITE
 
 
 def _righe(payload):
@@ -38,9 +50,11 @@ def conta_attive() -> dict[str, int]:
         if path.name in ESCLUSI:
             continue
         righe = _righe(json.loads(path.read_text(encoding='utf-8')))
+        classi = classi_visibili(path.stem)
         attive[path.stem] = sum(
             1 for q in righe
             if isinstance(q, dict) and 'id' in q and q.get('active') is not False
+            and q.get('class', 2) in classi
         )
     return attive
 
