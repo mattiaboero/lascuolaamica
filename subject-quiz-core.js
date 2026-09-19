@@ -114,6 +114,8 @@
       q: question,
       a: answer,
       d: distractors,
+      // Serve a getBonusPool: anche il bonus rispetta la regola della 1ª.
+      grade: normalizeGrade(row && row.class),
       answerLang: row && row.answerLang ? String(row.answerLang).trim().toLowerCase() : null
     };
   }
@@ -1685,9 +1687,10 @@
     if (!available.length) {
       available = pool.filter((q) => !sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q)));
     }
-    if (!available.length) {
-      available = pool.slice();
-    }
+    // Pool esaurito: meglio una partita piu' corta (sessionLen) che la stessa
+    // domanda due volte. I fallback di buildSessionQuestions pescano solo
+    // domande non ancora usate.
+    if (!available.length) return null;
 
     const areaWeakness = getAreaWeakness(stats, area);
     const chosen = pickWithSoftmax(
@@ -2072,15 +2075,35 @@
     }, 2200);
   }
 
+  function getBonusPool(type) {
+    const pool = cfg.bonusQuestions && cfg.bonusQuestions[type];
+    const classNum = classToNum(selectedClass);
+    // `grade` come nelle righe del loader; nei bonus scritti nella config della
+    // pagina (es. matematica-page.js) va messo a mano: senza, non sono di 1ª.
+    return Array.isArray(pool) ? pool.filter((q) => fitsClassOneRule({ _grade: q && q.grade }, classNum)) : [];
+  }
+
   function openBonusPick() {
     baseScore = points;
     $('baseScoreLabel').textContent = baseScore;
+    // Si offrono solo i livelli di bonus che hanno domande per questa classe;
+    // se non ce n'e' nessuno (es. 1ª senza bonus) si chiude la partita.
+    let anyBonus = false;
+    document.querySelectorAll('#screenBonusPick .bonus-btn').forEach((btn) => {
+      const has = getBonusPool(btn.dataset.bonus).length > 0;
+      btn.hidden = !has;
+      anyBonus = anyBonus || has;
+    });
+    if (!anyBonus) {
+      finishGame('skip');
+      return;
+    }
     showScreen('screenBonusPick');
   }
 
   function openBonusQuestion(type) {
-    const pool = cfg.bonusQuestions && cfg.bonusQuestions[type];
-    if (!pool || !pool.length) return;
+    const pool = getBonusPool(type);
+    if (!pool.length) return;
 
     bonusType = type;
     bonusFactor = BONUS_FACTORS[type] || 1;
