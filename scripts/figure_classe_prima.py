@@ -130,19 +130,15 @@ def file_da_5(k):
     return [5] * (k // 5) + ([k % 5] if k % 5 else [])
 
 
-def descrivi_file(rows, sing, plur, agg=('', '')):
-    """[5, 5, 2] -> 'due file di 5 stelle e sotto una fila di 2 stelle'."""
-    parti = []
-    i = 0
-    while i < len(rows):
-        j = i
-        while j < len(rows) and rows[j] == rows[i]:
-            j += 1
-        k, m = j - i, rows[i]
-        nome = f'{sing}{agg[0]}' if m == 1 else f'{plur}{agg[1]}'
-        parti.append(f'{"una fila" if k == 1 else NUMERI[k] + " file"} di {m} {nome}')
-        i = j
-    return ' e sotto '.join(parti)
+def elenco(xs):
+    """[5, 5, 2] -> '5, 5 e 2'."""
+    xs = [str(x) for x in xs]
+    return xs[0] if len(xs) == 1 else ', '.join(xs[:-1]) + ' e ' + xs[-1]
+
+
+def descrivi_gruppo(rows):
+    """Le file di un gruppo, mai il totale: [5, 3] -> 'in due file: 5 e 3'."""
+    return f'in {"una fila" if len(rows) == 1 else NUMERI[len(rows)] + " file"}: {elenco(rows)}'
 
 
 def t_conta(kind, a, b=None):
@@ -175,13 +171,25 @@ def t_conta(kind, a, b=None):
         paint = ring(color) if hollow else fill(color)
         for i in range(cnt):
             body += oggetto(kind, 68 + 46 * i, y, paint)
+    # figureAlt: le file come si vedono (al massimo 5 per fila), mai il totale
+    # di un gruppo che occupa piu' di una fila: e' quello che si chiede di contare.
+    m = kind == 'cubi'
     if b is None:
-        alt = descrivi_file(groups[0][0], sing, plur)
+        rs = groups[0][0]
+        if a == 1:
+            alt = f'{"un" if m else "una"} {sing} {"solo" if m else "sola"} nel disegno'
+        elif len(rs) == 1:
+            alt = f'una sola fila con {a} {plur}'
+        else:
+            alt = f'{NUMERI[len(rs)]} file di {plur}, una sotto l\'altra: {elenco(rs)}'
     else:
-        o = 'o' if kind == 'cubi' else 'a'
-        oo = 'i' if kind == 'cubi' else 'e'
-        alt = (descrivi_file(groups[0][0], sing, plur, (f' arancione pien{o}', f' arancioni pien{oo}'))
-               + ' e sotto ' + descrivi_file(groups[1][0], sing, plur, (f' blu vuot{o}', f' blu vuot{oo}')))
+        o, oo = ('o', 'i') if m else ('a', 'e')
+        def gruppo(rs, k, colore_s, colore_p, stato):
+            if k == 1:
+                return f'{"un" if m else "una"} {sing} {colore_s} {stato}{o}'
+            return f'{plur} {colore_p} {stato}{oo} {descrivi_gruppo(rs)}'
+        alt = (f'sopra, {gruppo(groups[0][0], a, "arancione", "arancioni", "pien")}. '
+               f'Sotto, {gruppo(groups[1][0], b, "blu", "blu", "vuot")}')
     return body, facts, alt[0].upper() + alt[1:] + '.'
 
 

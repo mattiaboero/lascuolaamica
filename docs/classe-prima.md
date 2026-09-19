@@ -79,7 +79,7 @@ Scelte di disegno:
 - La linea dei numeri mostra al massimo 11 tacche. Per i numeri fino a 20 si usa una finestra (`c1-retta-10-20-...`): con 21 tacche su 320 unità le etichette di due cifre si toccano.
 - Colori Okabe-Ito come le altre figure. Quando il colore distingue due gruppi (T1 a due gruppi) cambia anche il riempimento (pieni e vuoti) e i gruppi stanno su file diverse. Nelle altre figure il colore non porta mai l'informazione: contano forma, lettera, posizione.
 - Il testo nel disegno è solo lettere A-D e numeri, da 18 a 24 unità; il vermiglio non si usa mai per il testo.
-- Il `figureAlt` descrive la disposizione, non il risultato: per contare «Una fila di 5 mele e sotto una fila di 2 mele.», non «7 mele»; per le figure piane le proprietà («una figura con 3 lati»), non il nome.
+- Il `figureAlt` descrive la disposizione, non il risultato. Per contare dà le file come si vedono (al massimo 5 per fila) e mai il totale di un gruppo che occupa più di una fila, che è proprio quello che si chiede: «Due file di mele, una sotto l'altra: 5 e 2.», non «7 mele»; con una fila sola «Una sola fila con 3 mele.». Nei due gruppi, un gruppo per colore: «Sopra, mele arancioni piene in due file: 5 e 3. Sotto, mele blu vuote in una fila: 5.». Per le figure piane le proprietà («una figura con 3 lati»), non il nome. Ogni `figureAlt` ha almeno 20 caratteri (lo controllano generatore e verificatore).
 
 ### Verificatore
 

@@ -38,21 +38,21 @@
   "fatti": {
    "totale": 9
   },
-  "alt": "Una fila di 5 cubi e sotto una fila di 4 cubi."
+  "alt": "Due file di cubi, una sotto l'altra: 5 e 4."
  },
  "c1-conta-mele-20": {
   "modello": "conta",
   "fatti": {
    "totale": 20
   },
-  "alt": "Quattro file di 5 mele."
+  "alt": "Quattro file di mele, una sotto l'altra: 5, 5, 5 e 5."
  },
  "c1-conta-mele-7": {
   "modello": "conta",
   "fatti": {
    "totale": 7
   },
-  "alt": "Una fila di 5 mele e sotto una fila di 2 mele."
+  "alt": "Due file di mele, una sotto l'altra: 5 e 2."
  },
  "c1-conta-palline-3-4": {
   "modello": "conta",
@@ -61,14 +61,14 @@
    "arancioni": 3,
    "blu": 4
   },
-  "alt": "Una fila di 3 palline arancioni piene e sotto una fila di 4 palline blu vuote."
+  "alt": "Sopra, palline arancioni piene in una fila: 3. Sotto, palline blu vuote in una fila: 4."
  },
  "c1-conta-stelle-12": {
   "modello": "conta",
   "fatti": {
    "totale": 12
   },
-  "alt": "Due file di 5 stelle e sotto una fila di 2 stelle."
+  "alt": "Tre file di stelle, una sotto l'altra: 5, 5 e 2."
  },
  "c1-decine-1-4": {
   "modello": "decine",

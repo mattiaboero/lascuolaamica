@@ -89347,7 +89347,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "c1-conta-mele-7",
-   "figureAlt": "Una fila di 5 mele e sotto una fila di 2 mele."
+   "figureAlt": "Due file di mele, una sotto l'altra: 5 e 2."
   },
   {
    "id": "mat-1-numeri-002",
@@ -89381,7 +89381,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "c1-conta-stelle-12",
-   "figureAlt": "Due file di 5 stelle e sotto una fila di 2 stelle."
+   "figureAlt": "Tre file di stelle, una sotto l'altra: 5, 5 e 2."
   },
   {
    "id": "mat-1-numeri-003",
@@ -89415,7 +89415,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "c1-conta-cubi-9",
-   "figureAlt": "Una fila di 5 cubi e sotto una fila di 4 cubi."
+   "figureAlt": "Due file di cubi, una sotto l'altra: 5 e 4."
   },
   {
    "id": "mat-1-numeri-004",
@@ -89449,7 +89449,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "c1-conta-mele-20",
-   "figureAlt": "Quattro file di 5 mele."
+   "figureAlt": "Quattro file di mele, una sotto l'altra: 5, 5, 5 e 5."
   },
   {
    "id": "mat-1-operazioni-005",
@@ -89483,7 +89483,7 @@
    "bonus": false,
    "bonusRaw": "",
    "figure": "c1-conta-palline-3-4",
-   "figureAlt": "Una fila di 3 palline arancioni piene e sotto una fila di 4 palline blu vuote."
+   "figureAlt": "Sopra, palline arancioni piene in una fila: 3. Sotto, palline blu vuote in una fila: 4."
   },
   {
    "id": "mat-1-numeri-006",
