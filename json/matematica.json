@@ -84699,16 +84699,16 @@
    "area": "tabelline",
    "subarea": "colonna",
    "difficulty": 2,
-   "question": "Esegui in colonna la moltiplicazione 27 × 4, che ha un riporto. Quanto fa?",
+   "question": "Esegui in colonna la moltiplicazione 19 × 5, che ha un riporto. Quanto fa?",
    "options": [
-    "104",
-    "98",
-    "108",
-    "118"
+    "55",
+    "545",
+    "95",
+    "105"
    ],
    "answerIndex": 2,
-   "answer": "108",
-   "explanation": "Calcoli 7 × 4 = 28: scrivi 8 e riporti 2. Poi 2 × 4 = 8, più il riporto 2 fa 10. Quindi 27 × 4 = 108.",
+   "answer": "95",
+   "explanation": "Calcoli 9 × 5 = 45: scrivi 5 e riporti 4. Poi 1 × 5 = 5, più il riporto 4 fa 9. Quindi 19 × 5 = 95.",
    "active": true,
    "tag": "matematica;colonna;classe_2;primaria",
    "tags": [
@@ -84827,7 +84827,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "Tra 58 e 85, quale numero è minore?",
+   "question": "Tra 58, 68, 80 e 85, quale numero è minore?",
    "options": [
     "85",
     "68",
@@ -84859,7 +84859,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 2,
-   "question": "Ordina i numeri 37, 73 e 55 dal più grande al più piccolo: quale scrivi per primo?",
+   "question": "Ordina i numeri 37, 73, 46 e 55 dal più grande al più piccolo: quale scrivi per primo?",
    "options": [
     "37",
     "55",
@@ -84955,9 +84955,9 @@
    "area": "aritmetica",
    "subarea": "proprieta",
    "difficulty": 2,
-   "question": "Un fruttivendolo pesa prima 17 mele poi altre 24 mele. Il suo collega pesa prima 24 mele poi altre 17. Grazie a quale proprietà i due totali sono uguali?",
+   "question": "Un fruttivendolo conta prima 17 mele e poi altre 24. Il suo collega conta prima 24 mele e poi altre 17. Grazie a quale proprietà i due totali sono uguali?",
    "options": [
-    "Al fatto che le mele pesano tutte uguale",
+    "Al fatto che le mele sono tutte uguali",
     "Alla proprietà commutativa della moltiplicazione",
     "Al fatto che 17 e 24 sono numeri consecutivi",
     "Alla proprietà commutativa dell'addizione"
@@ -85147,7 +85147,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 2,
-   "question": "Un foglio di quaderno rappresenta un pezzo di piano. Se il foglio potesse estendersi senza fine in ogni direzione, che cosa diventerebbe?",
+   "question": "Un foglio di quaderno ha quattro bordi. Se il foglio potesse estendersi senza fine in ogni direzione, che cosa diventerebbe?",
    "options": [
     "Una retta",
     "Un piano geometrico",
@@ -85211,7 +85211,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 1,
-   "question": "Quale di queste tre idee della geometria NON ha mai un bordo, perché si estende senza fine in tutte le direzioni, come un foglio infinito?",
+   "question": "Quale di questi enti della geometria si estende senza fine in tutte le direzioni, come un foglio che non finisce mai?",
    "options": [
     "Il punto",
     "La retta",
@@ -85243,7 +85243,7 @@
    "area": "aritmetica",
    "subarea": "raggruppamento",
    "difficulty": 1,
-   "question": "Hai 16 palline unità in una scatola. Con un raggruppamento, in che cosa le cambi?",
+   "question": "Hai 16 palline sciolte. Se fai un raggruppamento da 10, che cosa ottieni?",
    "options": [
     "6 decine e 1 unità",
     "1 decina e 6 unità",
@@ -85275,16 +85275,16 @@
    "area": "aritmetica",
    "subarea": "raggruppamento",
    "difficulty": 2,
-   "question": "Quante decine servono per formare, con un raggruppamento del secondo ordine, 3 centinaia?",
+   "question": "Hai 7 decine. Quante decine ti mancano per fare un raggruppamento del secondo ordine e ottenere 1 centinaio?",
    "options": [
-    "13",
+    "10",
+    "4",
     "3",
-    "30",
-    "300"
+    "30"
    ],
    "answerIndex": 2,
-   "answer": "30",
-   "explanation": "Ogni centinaio è formato da 10 decine, quindi per 3 centinaia servono 10 × 3 = 30 decine.",
+   "answer": "3",
+   "explanation": "1 centinaio è formato da 10 decine. Ne hai 7, quindi ti mancano 10 - 7 = 3 decine.",
    "active": true,
    "tag": "matematica;raggruppamento;classe_2;primaria",
    "tags": [
@@ -85339,16 +85339,16 @@
    "area": "aritmetica",
    "subarea": "raggruppamento",
    "difficulty": 3,
-   "question": "Sull'abaco hai 6 decine e ne aggiungi altre 6. Dopo il raggruppamento del secondo ordine, che cosa ottieni?",
+   "question": "Sull'abaco hai 9 decine e 10 unità. Dopo il raggruppamento del primo e del secondo ordine, che cosa ottieni?",
    "options": [
-    "1 centinaio e 2 decine",
-    "2 centinaia",
-    "1 centinaio e 6 decine",
-    "12 decine e basta"
+    "1 centinaio",
+    "1 centinaio e 1 decina",
+    "9 decine e 1 unità",
+    "19 decine"
    ],
    "answerIndex": 0,
-   "answer": "1 centinaio e 2 decine",
-   "explanation": "6 decine più altre 6 decine fanno 12 decine. Con il raggruppamento del secondo ordine, 10 decine diventano 1 centinaio: restano 2 decine. Quindi ottieni 1 centinaio e 2 decine.",
+   "answer": "1 centinaio",
+   "explanation": "Le 10 unità diventano 1 decina: in tutto hai 9 + 1 = 10 decine. Con il raggruppamento del secondo ordine, 10 decine diventano 1 centinaio. Quindi ottieni 1 centinaio.",
    "active": true,
    "tag": "matematica;raggruppamento;classe_2;primaria",
    "tags": [
@@ -85595,7 +85595,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Le lancette di un orologio compiono il loro angolo di rotazione sempre nella stessa direzione, quella che chiamiamo 'senso orario'. Se un ballerino compie lo stesso angolo di rotazione ma nel senso opposto a quello delle lancette, in che direzione sta ruotando?",
+   "question": "Le lancette di un orologio girano in senso orario. Un ballerino gira nel verso opposto a quello delle lancette. In che senso sta ruotando?",
    "options": [
     "Nel senso antiorario",
     "Nel senso orario",
@@ -85661,13 +85661,13 @@
    "difficulty": 2,
    "question": "Simone dice: 'Un angolo ottuso, più ampio di un angolo retto ma meno ampio di un angolo piatto, è sempre un angolo concavo perché è molto aperto.' Ha ragione?",
    "options": [
-    "No, un angolo ottuso è convesso perché è comunque minore di un angolo piatto",
+    "No, è convesso perché è minore di un angolo piatto",
     "Sì, perché è più ampio di un angolo retto",
     "Sì, perché è molto aperto",
     "No, un angolo ottuso non esiste"
    ],
    "answerIndex": 0,
-   "answer": "No, un angolo ottuso è convesso perché è comunque minore di un angolo piatto",
+   "answer": "No, è convesso perché è minore di un angolo piatto",
    "explanation": "Un angolo è concavo solo se supera un angolo piatto. L'angolo ottuso è più ampio del retto ma resta minore del piatto, quindi è ancora convesso, come l'angolo acuto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
@@ -85725,14 +85725,14 @@
    "difficulty": 3,
    "question": "Quale affermazione sull'angolo concavo e sull'angolo convesso è vera?",
    "options": [
-    "Un angolo concavo è sempre minore di un angolo retto",
-    "Un angolo convesso è sempre maggiore di un angolo piatto",
-    "Un angolo concavo è sempre maggiore di un angolo piatto, un angolo convesso è sempre minore",
-    "Concavo e convesso indicano sempre la stessa ampiezza"
+    "Un angolo concavo è minore di un angolo retto",
+    "Un angolo convesso è maggiore di un angolo piatto",
+    "Un angolo concavo è maggiore di un angolo piatto",
+    "Un angolo convesso è sempre un angolo retto"
    ],
    "answerIndex": 2,
-   "answer": "Un angolo concavo è sempre maggiore di un angolo piatto, un angolo convesso è sempre minore",
-   "explanation": "L'angolo piatto è il confine: sotto quel valore l'angolo è convesso, sopra è concavo. Per questo un angolo concavo è sempre maggiore di un angolo piatto e un angolo convesso è sempre minore.",
+   "answer": "Un angolo concavo è maggiore di un angolo piatto",
+   "explanation": "L'angolo piatto è il confine: sotto quel valore l'angolo è convesso, sopra è concavo. Per questo un angolo concavo è sempre maggiore di un angolo piatto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -85755,7 +85755,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 1,
-   "question": "Confronti l'apertura delle due ali di un ventaglio chiuso quasi del tutto con quelle di un ventaglio aperto a metà. Quale dei due ventagli forma l'angolo più ampio?",
+   "question": "Confronti l'apertura di un ventaglio chiuso quasi del tutto con quella di un ventaglio aperto a metà. Quale dei due ventagli forma l'angolo più ampio?",
    "options": [
     "Il ventaglio chiuso quasi del tutto",
     "Il ventaglio aperto a metà",
@@ -85787,7 +85787,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 2,
-   "question": "Confronti l'angolo formato dalle lancette di un orologio alle 4 in punto con un angolo retto, sovrapponendo i vertici. L'apertura tra le lancette è maggiore dell'apertura dell'angolo retto. Che cosa puoi dire di questo angolo rispetto all'angolo retto?",
+   "question": "Alle 4 in punto le lancette di un orologio formano un angolo. Se lo confronti con un angolo retto sovrapponendo i vertici, che cosa scopri?",
    "options": [
     "È uguale all'angolo retto",
     "È meno ampio dell'angolo retto",
@@ -85796,7 +85796,7 @@
    ],
    "answerIndex": 2,
    "answer": "È più ampio dell'angolo retto",
-   "explanation": "Se, sovrapponendo i vertici, l'apertura di un angolo supera quella dell'angolo retto, quell'angolo è più ampio dell'angolo retto: è il caso delle lancette alle 4 in punto.",
+   "explanation": "Alle 4 in punto la lancetta lunga è sul 12 e quella corta sul 4: fra le due ci sono 4 spazi, uno in più dei 3 spazi di un angolo retto, che va dal 12 al 3. Quindi l'angolo è più ampio dell'angolo retto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -85947,7 +85947,7 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 2,
-   "question": "Le lettere maiuscole X e T sono disegnate con due segmenti. Nella lettera T, i due segmenti si incontrano formando quattro angoli retti uguali. Che posizione hanno tra loro le rette che contengono i due segmenti della T?",
+   "question": "Nella lettera T maiuscola, il segmento verticale incontra quello orizzontale formando due angoli retti. Che posizione hanno tra loro le rette che contengono i due segmenti?",
    "options": [
     "Sono rette perpendicolari",
     "Sono rette parallele",
@@ -85956,7 +85956,7 @@
    ],
    "answerIndex": 0,
    "answer": "Sono rette perpendicolari",
-   "explanation": "Quando due rette si incontrano in un punto formando quattro angoli retti uguali, sono rette perpendicolari: è il caso dei due segmenti della lettera T.",
+   "explanation": "Le rette che contengono i due segmenti della T si incontrano in un punto formando angoli retti: sono rette perpendicolari.",
    "active": true,
    "tag": "matematica;rette;classe_3;primaria",
    "tags": [
@@ -87076,7 +87076,7 @@
    ],
    "answerIndex": 1,
    "answer": "No, perché 37 + 3 fa 40, non 39",
-   "explanation": "Per usare la proprietà invariantiva serve aggiungere lo stesso numero a entrambi i termini: 37 + 3 fa 40, non 39. La proprietà di Federica non è applicata correttamente.",
+   "explanation": "Per usare la proprietà invariantiva serve aggiungere lo stesso numero a entrambi i termini: 81 + 3 = 84, ma 37 + 3 fa 40, non 39. Federica non ha applicato bene la proprietà invariantiva.",
    "active": true,
    "tag": "matematica;proprieta;classe_3;primaria",
    "tags": [
@@ -87099,7 +87099,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 1,
-   "question": "Fai la prova del nove di 52 + 19 = 71. La prova di 52 è 5 + 2 = 7, quella di 19 è 1 + 9 = 10 → 1 + 0 = 1. Sommi 7 + 1 = 8. Qual è la prova del risultato 71?",
+   "question": "Fai la prova del nove di 52 + 19 = 71. Qual è la prova del risultato 71?",
    "options": [
     "7",
     "1",
@@ -87108,7 +87108,7 @@
    ],
    "answerIndex": 3,
    "answer": "8",
-   "explanation": "La prova del risultato si ottiene sommando le sue cifre: 7 + 1 = 8, proprio come la somma delle prove degli addendi.",
+   "explanation": "Sommi le cifre di 71: 7 + 1 = 8. Dagli addendi ottieni lo stesso numero: la prova di 52 è 5 + 2 = 7, quella di 19 è 1 + 9 = 10 → 1, e 7 + 1 = 8.",
    "active": true,
    "tag": "matematica;operazioni;classe_3;primaria",
    "tags": [
@@ -87135,11 +87135,11 @@
    "options": [
     "Sommi le due prove e riduci il risultato a una cifra",
     "Sottrai le due prove",
-    "Moltiplichi le due prove e riduci il risultato a una cifra (il 9 conta come 0)",
+    "Moltiplichi le due prove e riduci il risultato a una cifra",
     "Dividi una prova per l'altra"
    ],
    "answerIndex": 2,
-   "answer": "Moltiplichi le due prove e riduci il risultato a una cifra (il 9 conta come 0)",
+   "answer": "Moltiplichi le due prove e riduci il risultato a una cifra",
    "explanation": "Nella moltiplicazione, dopo avere calcolato la prova di ciascun fattore le moltiplichi tra loro e, se serve, riduci ancora il risultato a una sola cifra, ricordando che il 9 conta come 0.",
    "active": true,
    "tag": "matematica;operazioni;classe_3;primaria",
@@ -87195,7 +87195,7 @@
    "area": "aritmetica",
    "subarea": "operazioni",
    "difficulty": 3,
-   "question": "Fai la prova del nove di 126 + 245 = 371. La prova di 126 è 1 + 2 + 6 = 9 → 0, quella di 245 è 2 + 4 + 5 = 11 → 1 + 1 = 2. Sommi 0 + 2 = 2. Qual è la prova del risultato 371, cioè la somma delle sue cifre ridotta a una cifra?",
+   "question": "Fai la prova del nove di 126 + 245 = 371. Qual è la prova del risultato 371?",
    "options": [
     "0",
     "2",
@@ -87204,7 +87204,7 @@
    ],
    "answerIndex": 1,
    "answer": "2",
-   "explanation": "Sommi le cifre di 371: 3 + 7 + 1 = 11, e riduci ancora: 1 + 1 = 2. La prova del risultato è 2, uguale alla somma delle prove degli addendi: il calcolo torna.",
+   "explanation": "Sommi le cifre di 371: 3 + 7 + 1 = 11, e riduci ancora: 1 + 1 = 2. Dagli addendi ottieni lo stesso: la prova di 126 è 0 (1 + 2 + 6 = 9, e il 9 conta come 0), quella di 245 è 2, e 0 + 2 = 2. La prova torna.",
    "active": true,
    "tag": "matematica;operazioni;classe_3;primaria",
    "tags": [
@@ -87259,7 +87259,7 @@
    "area": "aritmetica",
    "subarea": "multipli_divisori",
    "difficulty": 1,
-   "question": "Con il crivello di Eratostene, perché il numero 1 non è considerato un numero primo?",
+   "question": "Nel crivello di Eratostene il numero 1 si cancella subito. Perché non è un numero primo?",
    "options": [
     "Perché è troppo piccolo",
     "Perché ha un solo divisore, se stesso",
@@ -87300,7 +87300,7 @@
    ],
    "answerIndex": 2,
    "answer": "3",
-   "explanation": "Dopo il 2, il primo numero non cancellato che trovi è il 3: lo cerchi perché non è multiplo di nessun numero più piccolo tranne se stesso e 1.",
+   "explanation": "Dopo il 2, il primo numero non cancellato che trovi è il 3: lo cerchi perché non è multiplo di nessun numero più piccolo di lui, a parte 1.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
    "tags": [
@@ -87389,14 +87389,14 @@
    "difficulty": 3,
    "question": "Nel crivello di Eratostene tra 2 e 50, dopo avere cancellato i multipli di 2, 3, 5 e 7, puoi fermarti: i numeri rimasti sono già tutti primi. Perché puoi fermarti proprio dopo il 7?",
    "options": [
-    "Perché 7 è un numero fortunato",
+    "Perché 7 è il numero primo più grande fino a 50",
     "Perché 7 × 7 = 49 non supera 50, mentre 11 × 11 supera 50",
-    "Perché dopo il 7 non ci sono più numeri",
-    "Perché 7 è l'unico numero dispari"
+    "Perché 50 è un multiplo di 7",
+    "Perché dopo il 7 non ci sono più numeri primi"
    ],
    "answerIndex": 1,
    "answer": "Perché 7 × 7 = 49 non supera 50, mentre 11 × 11 supera 50",
-   "explanation": "Un numero composto minore o uguale a 50 ha sempre un fattore minore o uguale alla sua radice quadrata. Poiché 7 × 7 = 49 è ancora dentro il limite 50, ma 11 × 11 = 121 lo supera, dopo avere cancellato i multipli di 7 tutti i numeri composti fino a 50 sono già stati eliminati.",
+   "explanation": "Un numero composto fino a 50 ha sempre un divisore primo piccolo: se tutti i suoi divisori primi fossero 11 o più, il numero sarebbe almeno 11 × 11 = 121. Poiché 7 × 7 = 49 sta ancora entro 50, dopo avere cancellato i multipli di 7 tutti i numeri composti fino a 50 sono già stati eliminati.",
    "active": true,
    "tag": "matematica;multipli_divisori;classe_4;primaria",
    "tags": [
@@ -87812,7 +87812,7 @@
    ],
    "answerIndex": 0,
    "answer": "Il chilogrammo",
-   "explanation": "Il peso, cioè la massa, si misura con il chilogrammo come unità campione, per esempio il peso di un cane.",
+   "explanation": "Il peso, cioè la massa, si misura in chilogrammi: un cane può pesare, per esempio, 10 chilogrammi.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
    "tags": [
@@ -87870,12 +87870,12 @@
    "question": "Che cosa significa misurare la capacità di una bottiglia?",
    "options": [
     "Pesare la bottiglia vuota",
-    "Guardare quanto è alta la bottiglia",
-    "Contare quante volte un'unità di misura, come il litro, è contenuta nella bottiglia",
+    "Misurare quanto è alta la bottiglia",
+    "Trovare quanti litri può contenere",
     "Contare i millimetri del tappo"
    ],
    "answerIndex": 2,
-   "answer": "Contare quante volte un'unità di misura, come il litro, è contenuta nella bottiglia",
+   "answer": "Trovare quanti litri può contenere",
    "explanation": "Misurare una capacità significa confrontarla con un'unità di misura campione, come il litro, e contare quante volte è contenuta nel contenitore.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
@@ -87902,12 +87902,12 @@
    "question": "Paolo misura la lunghezza dell'aula con i suoi piedi, uno dietro l'altro, e Chiara la misura con il metro. Perché il risultato di Chiara è più affidabile?",
    "options": [
     "Perché Chiara ha misurato più in fretta",
-    "Perché i piedi non si possono usare in un'aula",
+    "Perché i piedi non si usano in un'aula",
     "Perché il metro pesa di più",
-    "Perché il metro è un'unità di misura campione uguale per tutti, mentre il piede di Paolo no"
+    "Perché il metro è uguale per tutti, il piede no"
    ],
    "answerIndex": 3,
-   "answer": "Perché il metro è un'unità di misura campione uguale per tutti, mentre il piede di Paolo no",
+   "answer": "Perché il metro è uguale per tutti, il piede no",
    "explanation": "Un'unità di misura campione, come il metro, ha sempre la stessa lunghezza per chiunque la usi. Il piede di una persona invece cambia da persona a persona, quindi le misure di Paolo non sono confrontabili con quelle di altri.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",
@@ -87933,13 +87933,13 @@
    "difficulty": 1,
    "question": "Perché non puoi usare il chilogrammo per misurare la lunghezza di un tavolo?",
    "options": [
-    "Perché il chilogrammo è un'unità di misura del peso, non della lunghezza",
+    "Perché il chilogrammo misura il peso",
     "Perché il tavolo è troppo pesante",
-    "Perché il chilogrammo si usa solo per i liquidi",
+    "Perché il chilogrammo si usa per i liquidi",
     "Perché il tavolo non ha una lunghezza precisa"
    ],
    "answerIndex": 0,
-   "answer": "Perché il chilogrammo è un'unità di misura del peso, non della lunghezza",
+   "answer": "Perché il chilogrammo misura il peso",
    "explanation": "Ogni grandezza ha le sue unità di misura: il chilogrammo misura il peso, cioè la massa, mentre la lunghezza si misura con il metro e i suoi multipli o sottomultipli.",
    "active": true,
    "tag": "matematica;misure;classe_4;primaria",

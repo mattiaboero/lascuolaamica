@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 10:49:33
+Data generazione: 19/09/2026, 10:53:39
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -604,7 +604,7 @@ c3-proprieta-dissociativa-moltiplicazione | c3     | 13      | coperto
 c3-proprieta-invariantiva-divisione      | c3     | 12      | coperto
 c3-proprieta-distributiva                | c3     | 12      | coperto
 c3-prova-del-nove                        | c3     | 12      | coperto
-c3-angoli-direzione-rotazione            | c3     | 12      | coperto
+c3-angoli-direzione-rotazione            | c3     | 11      | coperto
 c3-confronto-angoli                      | c3     | 12      | coperto
 c3-angolo-concavo-convesso               | c3     | 12      | coperto
 c3-angoli-notevoli                       | c3     | 38      | coperto
@@ -630,7 +630,7 @@ c4-addizione-decimali                    | c4     | 17      | coperto
 c4-sottrazione-decimali                  | c4     | 17      | coperto
 c4-moltiplicazione-virgola               | c4     | 12      | coperto
 c4-divisione-virgola                     | c4     | 12      | coperto
-c4-unita-di-misura                       | c4     | 12      | coperto
+c4-unita-di-misura                       | c4     | 10      | coperto
 c4-misure-lunghezza                      | c4     | 65      | coperto
 c4-misure-massa-peso                     | c4     | 63      | coperto
 c4-misure-capacita                       | c4     | 27      | coperto
