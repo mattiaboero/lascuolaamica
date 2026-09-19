@@ -114,6 +114,8 @@
       q: question,
       a: answer,
       d: distractors,
+      // Serve a getBonusPool: anche il bonus rispetta la regola della 1ª.
+      grade: normalizeGrade(row && row.class),
       answerLang: row && row.answerLang ? String(row.answerLang).trim().toLowerCase() : null
     };
   }
@@ -235,12 +237,14 @@
   const MAX_LEVEL_DISTANCE = Math.max(0, Number.isFinite(Number(cfg.maxLevelDistance)) ? Number(cfg.maxLevelDistance) : 2);
 
   const CLASS_DEFAULTS = {
+    1: { label: 'Classe 1ª', icon: '1️⃣', subtitle: 'Primi numeri' },
     2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Consolidiamo le basi' },
     3: { label: 'Classe 3ª', icon: '3️⃣', subtitle: 'Basi + primi passaggi' },
     4: { label: 'Classe 4ª', icon: '4️⃣', subtitle: 'Competenze intermedie' },
     5: { label: 'Classe 5ª', icon: '5️⃣', subtitle: 'Verso la secondaria' }
   };
   const CLASS_PROFILES = cfg.classProfiles || {
+    1: { 1: 1 },
     2: { 2: 1 },
     3: { 2: 0.35, 3: 0.65 },
     4: { 2: 0.15, 3: 0.35, 4: 0.5 },
@@ -652,7 +656,10 @@
 
   function buildClassMap() {
     const out = {};
-    [2, 3, 4, 5].forEach((c) => {
+    // cfg.classes: classi mostrate dalla pagina. Senza, restano 2ª-5ª: la 1ª
+    // compare solo nelle materie che la elencano.
+    const classes = Array.isArray(cfg.classes) && cfg.classes.length ? cfg.classes : [2, 3, 4, 5];
+    classes.filter((c) => CLASS_DEFAULTS[c]).forEach((c) => {
       const cfgClass = cfg.classMeta && cfg.classMeta[String(c)] ? cfg.classMeta[String(c)] : {};
       const base = CLASS_DEFAULTS[c];
       out[String(c)] = {
@@ -702,7 +709,7 @@
     const n = Number(value);
     if (!Number.isFinite(n)) return null;
     const g = Math.round(n);
-    if (g < 2 || g > 5) return null;
+    if (g < 1 || g > 5) return null;
     return g;
   }
 
@@ -773,7 +780,8 @@
   function getAvailableLevelsForClass(classKey) {
     const classNum = classToNum(classKey);
     return LEVELS.map((level) => {
-      const pool = AREA_KEYS.flatMap((area) => getLevelScopedPool(area, level.key));
+      const pool = AREA_KEYS.flatMap((area) => getLevelScopedPool(area, level.key))
+        .filter((question) => fitsClassOneRule(question, classNum));
       if (!pool.length) {
         return { ...level, available: false, minDistance: 99, poolSize: 0 };
       }
@@ -808,9 +816,17 @@
     return Math.abs(grade - classNum);
   }
 
+  // La 1ª non si mescola con le altre classi, nemmeno a distanza 1: le sue
+  // domande escono solo nelle partite di 1ª e la 1ª usa solo le sue. Chi e' in
+  // 1ª legge ancora lo stampato maiuscolo; chi e' in 2ª non deve ritrovarsi
+  // domande pensate per chi comincia.
+  function fitsClassOneRule(q, classNum) {
+    return (normalizeGrade(q && q._grade) === 1) === (classNum === 1);
+  }
+
   function getClassAwarePool(area, classKey, allowLoose, levelKey = null) {
-    const pool = getLevelScopedPool(area, levelKey);
     const classNum = classToNum(classKey);
+    const pool = getLevelScopedPool(area, levelKey).filter((q) => fitsClassOneRule(q, classNum));
     if (!pool.length) return { pool: [], mode: 'none', minDistance: 99 };
 
     const strict = pool.filter((q) => questionClassDistance(q, classNum) <= MAX_GRADE_DISTANCE);
@@ -1318,6 +1334,9 @@
         case 'toggle-mute':
           toggleMute();
           break;
+        case 'toggle-speak':
+          toggleSpeak(target);
+          break;
         case 'start-game':
           if (HAS_LEVELS) showLevelsScreen();
           else startGame();
@@ -1377,6 +1396,8 @@
     const key = normalizeClassKey(cls);
     selectedClass = key;
     saveClassPref(key);
+    document.documentElement.dataset.classe = key;
+    syncSpeakBtns();
 
     document.querySelectorAll('.class-btn').forEach((b) => {
       b.classList.remove('selected');
@@ -1666,9 +1687,10 @@
     if (!available.length) {
       available = pool.filter((q) => !sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q)));
     }
-    if (!available.length) {
-      available = pool.slice();
-    }
+    // Pool esaurito: meglio una partita piu' corta (sessionLen) che la stessa
+    // domanda due volte. I fallback di buildSessionQuestions pescano solo
+    // domande non ancora usate.
+    if (!available.length) return null;
 
     const areaWeakness = getAreaWeakness(stats, area);
     const chosen = pickWithSoftmax(
@@ -1990,6 +2012,7 @@
     answers.appendChild(frag);
 
     updateDots();
+    speakScreen($('screenGame'));
   }
 
   function markAnswerState(btn, isCorrect) {
@@ -2005,6 +2028,7 @@
     if (answered) return;
     answered = true;
 
+    stopSpeaking();
     const q = questions[curQ];
     const isOk = answersMatch(chosen, correctAnswer);
     const buttons = Array.from(document.querySelectorAll('#answers .answer-btn'));
@@ -2051,15 +2075,35 @@
     }, 2200);
   }
 
+  function getBonusPool(type) {
+    const pool = cfg.bonusQuestions && cfg.bonusQuestions[type];
+    const classNum = classToNum(selectedClass);
+    // `grade` come nelle righe del loader; nei bonus scritti nella config della
+    // pagina (es. matematica-page.js) va messo a mano: senza, non sono di 1ª.
+    return Array.isArray(pool) ? pool.filter((q) => fitsClassOneRule({ _grade: q && q.grade }, classNum)) : [];
+  }
+
   function openBonusPick() {
     baseScore = points;
     $('baseScoreLabel').textContent = baseScore;
+    // Si offrono solo i livelli di bonus che hanno domande per questa classe;
+    // se non ce n'e' nessuno (es. 1ª senza bonus) si chiude la partita.
+    let anyBonus = false;
+    document.querySelectorAll('#screenBonusPick .bonus-btn').forEach((btn) => {
+      const has = getBonusPool(btn.dataset.bonus).length > 0;
+      btn.hidden = !has;
+      anyBonus = anyBonus || has;
+    });
+    if (!anyBonus) {
+      finishGame('skip');
+      return;
+    }
     showScreen('screenBonusPick');
   }
 
   function openBonusQuestion(type) {
-    const pool = cfg.bonusQuestions && cfg.bonusQuestions[type];
-    if (!pool || !pool.length) return;
+    const pool = getBonusPool(type);
+    if (!pool.length) return;
 
     bonusType = type;
     bonusFactor = BONUS_FACTORS[type] || 1;
@@ -2083,11 +2127,13 @@
     area.appendChild(frag);
 
     showScreen('screenBonusQuestion');
+    speakScreen($('screenBonusQuestion'));
   }
 
   function checkBonusAnswer(chosen, correctAnswer, btn) {
     const buttons = Array.from(document.querySelectorAll('#bonusAnswers .answer-btn'));
     if (!buttons.length || buttons[0].disabled) return;
+    stopSpeaking();
     buttons.forEach((b) => {
       b.disabled = true;
     });
@@ -2347,10 +2393,13 @@
       clearTimeout(nextStepTimer);
       nextStepTimer = null;
     }
+    stopSpeaking();
     document.querySelectorAll('.screen').forEach((s) => s.classList.remove('active'));
     const target = $(id);
     if (!target) return;
     target.classList.add('active');
+    // Aggancio per il CSS (impaginazione compatta della 1ª in gioco).
+    document.documentElement.dataset.screen = id;
     const heading = target.querySelector('h1,h2');
     if (heading) {
       heading.setAttribute('tabindex', '-1');
@@ -2556,7 +2605,7 @@
     const pool = BANKS[area] || [];
     const subs = new Set();
     pool.forEach((q) => {
-      if (!q.subarea) return;
+      if (!q.subarea || !fitsClassOneRule(q, classNum)) return;
       if (Math.abs((q._grade || classNum) - classNum) <= MAX_GRADE_DISTANCE + 1) {
         subs.add(q.subarea);
       }
@@ -2800,6 +2849,128 @@
     btn.setAttribute('aria-label', muted ? 'Riattiva audio' : 'Disattiva audio');
   }
 
+  // ---- Ascolta: lettura ad alta voce (docs/classe-prima.md) ----
+  // Solo voci locali (localService): quelle remote mandano il testo a un
+  // server, e questo e' un sito per bambini. Senza voce italiana locale il
+  // bottone resta nascosto. Si parla solo dopo un tocco esplicito sul bottone.
+  const speech = typeof window.SpeechSynthesisUtterance === 'function' && window.speechSynthesis ? window.speechSynthesis : null;
+  let speakVoices = {};
+  let speakOn = false;
+
+  const SPOKEN_OPS = { '+': 'più', '-': 'meno', '−': 'meno', '–': 'meno', '×': 'per', '÷': 'diviso', '>': 'maggiore di', '<': 'minore di', '=': 'uguale a', ':': 'diviso', x: 'per' };
+
+  // Solo il testo pronunciato: "3 + ___ = 5" -> "3 più quanto uguale a 5".
+  // I due punti e la x valgono "diviso" e "per" solo se spaziati ("10 : 2",
+  // "3 x 3"), non "di 5: 10".
+  function toSpokenText(text) {
+    return String(text || '')
+      .replace(/_{2,}|□/g, '?')
+      .replace(/([\d?])\s*([+\-−–×÷<>=])\s*(?=[\d?])/g, (m, left, op) => `${left} ${SPOKEN_OPS[op]} `)
+      .replace(/(\d)\s+([:x])\s+(?=\d)/g, (m, left, op) => `${left} ${SPOKEN_OPS[op]} `)
+      .replace(/(^|\s)\?(?=\s|$)/g, '$1quanto');
+  }
+
+  function speakKey() {
+    return `${CURSOR_KEY}_speak_c${selectedClass}_v1`;
+  }
+
+  function pickLocalVoice(voices, prefix) {
+    const re = new RegExp(`^${prefix}([-_]|$)`, 'i');
+    const local = voices.filter((v) => v && v.localService === true && re.test(v.lang || ''));
+    return local.find((v) => v.default) || local[0] || null;
+  }
+
+  function syncSpeakBtns() {
+    speakOn = !!speakVoices.it && storageGet(speakKey()) === '1';
+    document.querySelectorAll('.speak-btn').forEach((btn) => {
+      btn.hidden = !speakVoices.it;
+      btn.setAttribute('aria-pressed', String(speakOn));
+    });
+  }
+
+  function refreshSpeakVoices() {
+    let voices = [];
+    try {
+      voices = speech ? speech.getVoices() : [];
+    } catch (e) {
+      debugWarn('getVoices', e);
+    }
+    speakVoices = { it: pickLocalVoice(voices, 'it'), en: pickLocalVoice(voices, 'en') };
+    if (!speakVoices.it) stopSpeaking();
+    syncSpeakBtns();
+  }
+
+  function stopSpeaking() {
+    try {
+      if (speech) speech.cancel();
+    } catch (e) {
+      debugWarn('speech.cancel', e);
+    }
+  }
+
+  // Domanda e poi le risposte, nell'ordine dei bottoni. Le parti marcate
+  // lang="en" (inglese) usano una voce inglese locale, altrimenti si saltano.
+  function speakScreen(screen) {
+    if (!speakOn || !speech || !speakVoices.it || !screen || !screen.classList.contains('active')) return;
+    const bonus = screen.id === 'screenBonusQuestion';
+    const textEl = $(bonus ? 'bonusText' : 'qText');
+    const answersEl = $(bonus ? 'bonusAnswers' : 'answers');
+    if (!textEl || !answersEl) return;
+    const parts = [];
+    textEl.childNodes.forEach((node) => parts.push([node.textContent, node.lang || textEl.lang]));
+    answersEl.querySelectorAll('.answer-btn').forEach((btn) => parts.push([btn.textContent, btn.lang]));
+    stopSpeaking();
+    parts.forEach(([text, lang]) => {
+      const spoken = toSpokenText(text).trim();
+      const voice = speakVoices[lang === 'en' ? 'en' : 'it'];
+      if (!spoken || !voice) return;
+      try {
+        const utterance = new window.SpeechSynthesisUtterance(spoken);
+        utterance.voice = voice;
+        utterance.lang = voice.lang;
+        utterance.rate = 0.9;
+        speech.speak(utterance);
+      } catch (e) {
+        debugWarn('speech.speak', e);
+      }
+    });
+  }
+
+  function toggleSpeak(btn) {
+    speakOn = !speakOn;
+    storageSet(speakKey(), speakOn ? '1' : '0');
+    syncSpeakBtns();
+    if (speakOn) speakScreen(btn && btn.closest('.screen'));
+    else stopSpeaking();
+  }
+
+  function ensureSpeakBtns() {
+    if (!speech) return;
+    ['qText', 'bonusText'].forEach((id) => {
+      const textEl = $(id);
+      if (!textEl) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'icon-btn speak-btn';
+      btn.dataset.action = 'toggle-speak';
+      btn.textContent = '🗣️ Ascolta';
+      // Il nome accessibile contiene il testo visibile (WCAG 2.5.3).
+      btn.setAttribute('aria-label', 'Ascolta: leggi ad alta voce la domanda');
+      btn.hidden = true;
+      textEl.insertAdjacentElement('beforebegin', btn);
+    });
+    refreshSpeakVoices();
+    try {
+      speech.addEventListener('voiceschanged', refreshSpeakVoices);
+    } catch (e) {
+      debugWarn('voiceschanged', e);
+    }
+    window.addEventListener('pagehide', stopSpeaking);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopSpeaking();
+    });
+  }
+
   let _initDone = false;
   function initSubjectPage() {
     if (_initDone) return;
@@ -2808,10 +2979,13 @@
       const storedLevel = normalizeLevelKey(loadCursor().__level);
       selectedLevel = getLevelMeta(storedLevel) ? storedLevel : getFirstAvailableLevelKey(selectedClass);
     }
+    // Aggancio per il CSS e le funzioni legate alla classe (per la 1ª: maiuscolo).
+    document.documentElement.dataset.classe = selectedClass;
     ensureClassSelector();
     buildAreaGrid();
     buildSubareaGrid();
     ensureRipassaBtn();
+    ensureSpeakBtns();
     if (HAS_LEVELS) buildLevelsGrid();
     bindActions();
     spawnShapes();

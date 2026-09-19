@@ -128,6 +128,10 @@ for (const file of files) {
     // D2 schema guardrails: content fields must be populated and well-formed.
     if (typeof q.subarea !== 'string' || !q.subarea.trim()) add(file, q, 'empty_subarea');
     if (![1, 2, 3].includes(q.difficulty)) add(file, q, 'bad_difficulty', String(q.difficulty));
+    // Classe: intero 2-5; la 1ª esiste solo in matematica (il motore la tiene
+    // separata dalle altre classi, vedi fitsClassOneRule in subject-quiz-core.js).
+    const minClass = file === 'matematica.json' ? 1 : 2;
+    if (!Number.isInteger(q.class) || q.class < minClass || q.class > 5) add(file, q, 'bad_class', String(q.class));
     if (typeof q.explanation !== 'string' || !q.explanation.trim()) add(file, q, 'empty_explanation');
     checkFigure(file, q);
 

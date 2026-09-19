@@ -1,5 +1,13 @@
 [
  {
+  "date": "19 settembre 2026 · Release 4.18.0",
+  "items": [
+   "Preparata la matematica di classe prima: 290 domande, quasi tutte con un disegno da guardare e contare, il pulsante «Ascolta» che legge domanda e risposte con le voci del dispositivo, e il testo in stampato maiuscolo. Non è ancora visibile: verrà attivata dopo una prova.",
+   "Il pulsante «Ascolta» legge ad alta voce la domanda e le risposte in tutte le materie, se sul dispositivo c'è una voce italiana. Il testo non viene mandato a nessun server.",
+   "Nella stessa partita non esce più due volte la stessa domanda."
+  ]
+ },
+ {
   "date": "19 settembre 2026 · Release 4.17.1",
   "items": [
    "In tre goniometri il numero vicino a un lato dell'angolo era troppo attaccato: ora i numeri sono più leggibili, spostati un po' lungo l'arco."

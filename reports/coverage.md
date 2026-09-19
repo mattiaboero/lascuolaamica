@@ -1,298 +1,300 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 11:41:39
+Data generazione: 19/09/2026, 12:54:53
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
 ## MATEMATICA
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| angoli                 | 0     | 53    | 25    | 0     | 78   
-| calcolo_mentale        | 65    | 41    | 28    | 52    | 186  
-| cerchio                | 0     | 0     | 0     | 12 ⚠️  | 12   
-| colonna                | 11 ⚠️  | 0     | 0     | 0     | 11   
-| dati_probabilita       | 13 ⚠️  | 16    | 95    | 94    | 218  
-| decimali               | 0     | 0     | 70    | 15    | 85   
-| diagramma_flusso       | 0     | 13 ⚠️  | 0     | 0     | 13   
-| equivalenze            | 0     | 0     | 20    | 0     | 20   
-| figure                 | 23    | 35    | 6  ⚠️  | 34    | 98   
-| frazioni               | 0     | 15    | 119    | 30    | 164  
-| linee                  | 13 ⚠️  | 0     | 0     | 0     | 13   
-| logica_proposizioni    | 0     | 0     | 0     | 12 ⚠️  | 12   
-| misure                 | 0     | 9  ⚠️  | 44    | 29    | 82   
-| misure_superficie      | 0     | 0     | 0     | 15    | 15   
-| multipli_divisori      | 0     | 0     | 58    | 0     | 58   
-| numeri                 | 24    | 0     | 15    | 15    | 54   
-| numeri_relativi        | 0     | 0     | 0     | 36    | 36   
-| operazioni             | 250    | 224    | 187    | 175    | 836  
-| orologio               | 27    | 0     | 0     | 0     | 27   
-| perimetro_area         | 58    | 68    | 96    | 92    | 314  
-| potenze                | 0     | 0     | 0     | 15    | 15   
-| prodotto_cartesiano    | 12 ⚠️  | 0     | 0     | 0     | 12   
-| proprieta              | 23    | 92    | 0     | 0     | 115  
-| raggruppamento         | 12 ⚠️  | 0     | 0     | 0     | 12   
-| ragionamento           | 22    | 15    | 15    | 15    | 67   
-| rette                  | 34    | 17    | 0     | 0     | 51   
-| schieramenti           | 17    | 0     | 0     | 0     | 17   
-| sequenze               | 49    | 66    | 18    | 17    | 150  
-| tavola_pitagorica      | 12 ⚠️  | 0     | 0     | 0     | 12   
-| TOTAL                   |        |        |        |        | 2783  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| angoli                 | 0     | 0     | 53    | 25    | 0     | 78   
+| calcolo_mentale        | 0     | 65    | 41    | 28    | 52    | 186  
+| cerchio                | 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
+| colonna                | 0     | 11 ⚠️  | 0     | 0     | 0     | 11   
+| dati_probabilita       | 15    | 13 ⚠️  | 16    | 95    | 94    | 233  
+| decimali               | 0     | 0     | 0     | 70    | 15    | 85   
+| diagramma_flusso       | 0     | 0     | 13 ⚠️  | 0     | 0     | 13   
+| equivalenze            | 0     | 0     | 0     | 20    | 0     | 20   
+| figure                 | 20    | 23    | 35    | 6  ⚠️  | 34    | 118  
+| frazioni               | 0     | 0     | 15    | 119    | 30    | 164  
+| linee                  | 15    | 13 ⚠️  | 0     | 0     | 0     | 28   
+| logica_proposizioni    | 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
+| misure                 | 15    | 0     | 9  ⚠️  | 44    | 29    | 97   
+| misure_superficie      | 0     | 0     | 0     | 0     | 15    | 15   
+| multipli_divisori      | 0     | 0     | 0     | 58    | 0     | 58   
+| numeri                 | 50    | 24    | 0     | 15    | 15    | 104  
+| numeri_relativi        | 0     | 0     | 0     | 0     | 36    | 36   
+| operazioni             | 85    | 250    | 224    | 187    | 175    | 921  
+| orologio               | 0     | 27    | 0     | 0     | 0     | 27   
+| percorsi               | 15    | 0     | 0     | 0     | 0     | 15   
+| perimetro_area         | 0     | 58    | 68    | 96    | 92    | 314  
+| posizioni              | 20    | 0     | 0     | 0     | 0     | 20   
+| potenze                | 0     | 0     | 0     | 0     | 15    | 15   
+| prodotto_cartesiano    | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| proprieta              | 0     | 23    | 92    | 0     | 0     | 115  
+| raggruppamento         | 20    | 12 ⚠️  | 0     | 0     | 0     | 32   
+| ragionamento           | 15    | 22    | 15    | 15    | 15    | 82   
+| rette                  | 0     | 34    | 17    | 0     | 0     | 51   
+| schieramenti           | 0     | 17    | 0     | 0     | 0     | 17   
+| sequenze               | 20    | 49    | 66    | 18    | 17    | 170  
+| tavola_pitagorica      | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| TOTAL                   |        |        |        |        |        | 3073  
 
 ## PROBLEMI
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| addizione              | 21    | 5  ⚠️  | 12 ⚠️  | 11 ⚠️  | 49   
-| divisione              | 0     | 4  ⚠️  | 17    | 16    | 37   
-| due_operazioni         | 0     | 10 ⚠️  | 38    | 41    | 89   
-| euro_denaro            | 12 ⚠️  | 68    | 142    | 127    | 349  
-| frazioni               | 2  ⚠️  | 2  ⚠️  | 25    | 23    | 52   
-| misure                 | 231    | 184    | 139    | 105    | 659  
-| moltiplicazione        | 3  ⚠️  | 3  ⚠️  | 18    | 39    | 63   
-| tempo                  | 11 ⚠️  | 1  ⚠️  | 11 ⚠️  | 40    | 63   
-| TOTAL                   |        |        |        |        | 1361  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| addizione              | 0     | 21    | 5  ⚠️  | 12 ⚠️  | 11 ⚠️  | 49   
+| divisione              | 0     | 0     | 4  ⚠️  | 17    | 16    | 37   
+| due_operazioni         | 0     | 0     | 10 ⚠️  | 38    | 41    | 89   
+| euro_denaro            | 0     | 12 ⚠️  | 68    | 142    | 127    | 349  
+| frazioni               | 0     | 2  ⚠️  | 2  ⚠️  | 25    | 23    | 52   
+| misure                 | 0     | 231    | 184    | 139    | 105    | 659  
+| moltiplicazione        | 0     | 3  ⚠️  | 3  ⚠️  | 18    | 39    | 63   
+| tempo                  | 0     | 11 ⚠️  | 1  ⚠️  | 11 ⚠️  | 40    | 63   
+| TOTAL                   |        |        |        |        |        | 1361  
 
 ## ITALIANO
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| alfabeto               | 29    | 24    | 0     | 0     | 53   
-| grammatica             | 30    | 41    | 37    | 39    | 147  
-| lessico                | 33    | 35    | 33    | 34    | 135  
-| lettura                | 28    | 28    | 33    | 32    | 121  
-| lingua                 | 20    | 22    | 23    | 29    | 94   
-| morfologia             | 35    | 38    | 39    | 33    | 145  
-| ortografia             | 51    | 29    | 23    | 16    | 119  
-| riflessione_sulla_lingua| 0     | 0     | 15    | 16    | 31   
-| scrittura              | 23    | 24    | 24    | 23    | 94   
-| sintassi               | 25    | 33    | 46    | 50    | 154  
-| TOTAL                   |        |        |        |        | 1093  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| alfabeto               | 0     | 29    | 24    | 0     | 0     | 53   
+| grammatica             | 0     | 30    | 41    | 37    | 39    | 147  
+| lessico                | 0     | 33    | 35    | 33    | 34    | 135  
+| lettura                | 0     | 28    | 28    | 33    | 32    | 121  
+| lingua                 | 0     | 20    | 22    | 23    | 29    | 94   
+| morfologia             | 0     | 35    | 38    | 39    | 33    | 145  
+| ortografia             | 0     | 51    | 29    | 23    | 16    | 119  
+| riflessione_sulla_lingua| 0     | 0     | 0     | 15    | 16    | 31   
+| scrittura              | 0     | 23    | 24    | 24    | 23    | 94   
+| sintassi               | 0     | 25    | 33    | 46    | 50    | 154  
+| TOTAL                   |        |        |        |        |        | 1093  
 
 ## INGLESE
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| bonus_easy             | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 0     | 3    
-| bonus_hard             | 0     | 0     | 1  ⚠️  | 2  ⚠️  | 3    
-| bonus_medium           | 0     | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 3    
-| classroom_language     | 12 ⚠️  | 0     | 0     | 0     | 12   
-| comprensione_in_contesto| 25    | 39    | 42    | 107    | 213  
-| days_months_seasons    | 0     | 11 ⚠️  | 0     | 0     | 11   
-| frasi_semplici         | 38    | 141    | 25    | 19    | 223  
-| future_going_to        | 0     | 0     | 0     | 21    | 21   
-| futuro_will            | 0     | 0     | 0     | 1  ⚠️  | 1    
-| lessico_base           | 167    | 42    | 24    | 20    | 253  
-| preposizioni           | 0     | 0     | 22    | 0     | 22   
-| present_continuous     | 0     | 0     | 28    | 0     | 28   
-| simple_past            | 0     | 0     | 0     | 42    | 42   
-| uso_guidato            | 30    | 38    | 130    | 61    | 259  
-| TOTAL                   |        |        |        |        | 1094  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| bonus_easy             | 0     | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 0     | 3    
+| bonus_hard             | 0     | 0     | 0     | 1  ⚠️  | 2  ⚠️  | 3    
+| bonus_medium           | 0     | 0     | 1  ⚠️  | 1  ⚠️  | 1  ⚠️  | 3    
+| classroom_language     | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| comprensione_in_contesto| 0     | 25    | 39    | 42    | 107    | 213  
+| days_months_seasons    | 0     | 0     | 11 ⚠️  | 0     | 0     | 11   
+| frasi_semplici         | 0     | 38    | 141    | 25    | 19    | 223  
+| future_going_to        | 0     | 0     | 0     | 0     | 21    | 21   
+| futuro_will            | 0     | 0     | 0     | 0     | 1  ⚠️  | 1    
+| lessico_base           | 0     | 167    | 42    | 24    | 20    | 253  
+| preposizioni           | 0     | 0     | 0     | 22    | 0     | 22   
+| present_continuous     | 0     | 0     | 0     | 28    | 0     | 28   
+| simple_past            | 0     | 0     | 0     | 0     | 42    | 42   
+| uso_guidato            | 0     | 30    | 38    | 130    | 61    | 259  
+| TOTAL                   |        |        |        |        |        | 1094  
 
 ## CIVICA
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| costituzione_e_istituzioni| 6  ⚠️  | 24    | 23    | 43    | 96   
-| diritti_e_doveri       | 12 ⚠️  | 10 ⚠️  | 17    | 19    | 58   
-| diritti_e_informazione | 0     | 17    | 16    | 23    | 56   
-| gentilezza_in_strada   | 15    | 16    | 10 ⚠️  | 15    | 56   
-| mezzi_e_mobilita       | 17    | 10 ⚠️  | 15    | 5  ⚠️  | 47   
-| natura_e_biodiversita  | 19    | 10 ⚠️  | 10 ⚠️  | 5  ⚠️  | 44   
-| partecipazione_e_solidarieta| 5  ⚠️  | 30    | 24    | 14 ⚠️  | 73   
-| pedoni_e_attraversamento| 29    | 11 ⚠️  | 21    | 16    | 77   
-| privacy_e_dati         | 20    | 16    | 28    | 25    | 89   
-| regole_e_convivenza    | 58    | 15    | 10 ⚠️  | 10 ⚠️  | 93   
-| relazioni_online       | 16    | 18    | 23    | 5  ⚠️  | 62   
-| rifiuti_e_riciclo      | 36    | 28    | 21    | 16    | 101  
-| risorse_ed_energia     | 15    | 27    | 20    | 20    | 82   
-| segnali_e_sicurezza    | 5  ⚠️  | 28    | 23    | 28    | 84   
-| sicurezza_online       | 26    | 15    | 5  ⚠️  | 10 ⚠️  | 56   
-| sostenibilita_e_mobilita| 0     | 5  ⚠️  | 15    | 27    | 47   
-| TOTAL                   |        |        |        |        | 1121  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| costituzione_e_istituzioni| 0     | 6  ⚠️  | 24    | 23    | 43    | 96   
+| diritti_e_doveri       | 0     | 12 ⚠️  | 10 ⚠️  | 17    | 19    | 58   
+| diritti_e_informazione | 0     | 0     | 17    | 16    | 23    | 56   
+| gentilezza_in_strada   | 0     | 15    | 16    | 10 ⚠️  | 15    | 56   
+| mezzi_e_mobilita       | 0     | 17    | 10 ⚠️  | 15    | 5  ⚠️  | 47   
+| natura_e_biodiversita  | 0     | 19    | 10 ⚠️  | 10 ⚠️  | 5  ⚠️  | 44   
+| partecipazione_e_solidarieta| 0     | 5  ⚠️  | 30    | 24    | 14 ⚠️  | 73   
+| pedoni_e_attraversamento| 0     | 29    | 11 ⚠️  | 21    | 16    | 77   
+| privacy_e_dati         | 0     | 20    | 16    | 28    | 25    | 89   
+| regole_e_convivenza    | 0     | 58    | 15    | 10 ⚠️  | 10 ⚠️  | 93   
+| relazioni_online       | 0     | 16    | 18    | 23    | 5  ⚠️  | 62   
+| rifiuti_e_riciclo      | 0     | 36    | 28    | 21    | 16    | 101  
+| risorse_ed_energia     | 0     | 15    | 27    | 20    | 20    | 82   
+| segnali_e_sicurezza    | 0     | 5  ⚠️  | 28    | 23    | 28    | 84   
+| sicurezza_online       | 0     | 26    | 15    | 5  ⚠️  | 10 ⚠️  | 56   
+| sostenibilita_e_mobilita| 0     | 0     | 5  ⚠️  | 15    | 27    | 47   
+| TOTAL                   |        |        |        |        |        | 1121  
 
 ## GEOGRAFIA
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| acque                  | 3  ⚠️  | 3  ⚠️  | 3  ⚠️  | 5  ⚠️  | 14   
-| ambienti_acquatici     | 10 ⚠️  | 6  ⚠️  | 0     | 0     | 16   
-| attivita_economiche_e_amministrazione| 0     | 0     | 52    | 0     | 52   
-| carte_legenda_scala_coordinate| 0     | 0     | 53    | 0     | 53   
-| carte_tematiche_e_dati | 0     | 0     | 0     | 53    | 53   
-| clima                  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 8    
-| clima_e_ambiente       | 0     | 5  ⚠️  | 0     | 0     | 5    
-| clima_italiano         | 0     | 0     | 5  ⚠️  | 0     | 5    
-| collina                | 0     | 6  ⚠️  | 0     | 0     | 6    
-| elementi_antropici     | 2  ⚠️  | 0     | 0     | 0     | 2    
-| elementi_naturali      | 4  ⚠️  | 0     | 0     | 0     | 4    
-| europa_base            | 0     | 2  ⚠️  | 2  ⚠️  | 3  ⚠️  | 7    
-| fiume_lago_mare        | 0     | 56    | 0     | 0     | 56   
-| fiumi_laghi_mari_vulcani_climi| 0     | 0     | 56    | 0     | 56   
-| funzione_degli_spazi   | 18    | 0     | 0     | 0     | 18   
-| geografia_fisica_europea| 0     | 0     | 0     | 8  ⚠️  | 8    
-| idrografia_italiana    | 0     | 0     | 9  ⚠️  | 0     | 9    
-| indicatori_topologici  | 65    | 0     | 0     | 0     | 65   
-| italia_forma_mari      | 0     | 7  ⚠️  | 0     | 0     | 7    
-| italia_in_europa       | 0     | 0     | 0     | 11 ⚠️  | 11   
-| italia_regioni         | 0     | 2  ⚠️  | 4  ⚠️  | 4  ⚠️  | 10   
-| legenda                | 4  ⚠️  | 2  ⚠️  | 3  ⚠️  | 1  ⚠️  | 10   
-| legenda_e_simboli      | 11 ⚠️  | 0     | 0     | 0     | 11   
-| lettura_di_mappe_e_carte| 0     | 33    | 0     | 0     | 33   
-| mappe_e_piante         | 7  ⚠️  | 0     | 0     | 0     | 7    
-| montagna               | 0     | 6  ⚠️  | 0     | 0     | 6    
-| montagna_collina_pianura| 0     | 56    | 0     | 0     | 56   
-| morfologia_idrografia_coste| 0     | 0     | 0     | 53    | 53   
-| morfologia_italiana    | 0     | 0     | 64    | 0     | 64   
-| orientamento_carte     | 0     | 6  ⚠️  | 0     | 0     | 6    
-| paesaggi_base          | 7  ⚠️  | 0     | 0     | 0     | 7    
-| paesaggio_antropico    | 3  ⚠️  | 4  ⚠️  | 4  ⚠️  | 5  ⚠️  | 16   
-| paesaggio_fisico       | 6  ⚠️  | 6  ⚠️  | 4  ⚠️  | 5  ⚠️  | 21   
-| percorsi               | 13 ⚠️  | 2  ⚠️  | 3  ⚠️  | 1  ⚠️  | 19   
-| pianta_e_prospettiva_verticale| 12 ⚠️  | 0     | 0     | 0     | 12   
-| pianta_legenda_percorsi| 22    | 0     | 0     | 0     | 22   
-| pianura                | 0     | 4  ⚠️  | 0     | 0     | 4    
-| popolazione_e_citta    | 0     | 0     | 0     | 7  ⚠️  | 7    
-| posizione_confini_ue   | 0     | 0     | 0     | 56    | 56   
-| punti_cardinali        | 13 ⚠️  | 4  ⚠️  | 2  ⚠️  | 2  ⚠️  | 21   
-| punti_cardinali_e_carte| 0     | 22    | 0     | 0     | 22   
-| regioni_economia_popolazione_patrimonio| 0     | 0     | 0     | 51    | 51   
-| regioni_italiane       | 0     | 0     | 12 ⚠️  | 0     | 12   
-| riduzione_in_scala_ingenua| 5  ⚠️  | 0     | 0     | 0     | 5    
-| riferimenti_e_punti_cardinali| 14 ⚠️  | 0     | 0     | 0     | 14   
-| scala                  | 0     | 3  ⚠️  | 3  ⚠️  | 2  ⚠️  | 8    
-| settori_economici      | 0     | 0     | 7  ⚠️  | 0     | 7    
-| sviluppo_sostenibile   | 0     | 0     | 0     | 8  ⚠️  | 8    
-| territorio_e_educazione_stradale| 0     | 51    | 0     | 0     | 51   
-| territorio_vicino_e_funzioni| 27    | 0     | 0     | 0     | 27   
-| trasformazioni_del_paesaggio| 22    | 0     | 0     | 0     | 22   
-| unione_europea         | 0     | 0     | 0     | 9  ⚠️  | 9    
-| TOTAL                   |        |        |        |        | 1132  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| acque                  | 0     | 3  ⚠️  | 3  ⚠️  | 3  ⚠️  | 5  ⚠️  | 14   
+| ambienti_acquatici     | 0     | 10 ⚠️  | 6  ⚠️  | 0     | 0     | 16   
+| attivita_economiche_e_amministrazione| 0     | 0     | 0     | 52    | 0     | 52   
+| carte_legenda_scala_coordinate| 0     | 0     | 0     | 53    | 0     | 53   
+| carte_tematiche_e_dati | 0     | 0     | 0     | 0     | 53    | 53   
+| clima                  | 0     | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 8    
+| clima_e_ambiente       | 0     | 0     | 5  ⚠️  | 0     | 0     | 5    
+| clima_italiano         | 0     | 0     | 0     | 5  ⚠️  | 0     | 5    
+| collina                | 0     | 0     | 6  ⚠️  | 0     | 0     | 6    
+| elementi_antropici     | 0     | 2  ⚠️  | 0     | 0     | 0     | 2    
+| elementi_naturali      | 0     | 4  ⚠️  | 0     | 0     | 0     | 4    
+| europa_base            | 0     | 0     | 2  ⚠️  | 2  ⚠️  | 3  ⚠️  | 7    
+| fiume_lago_mare        | 0     | 0     | 56    | 0     | 0     | 56   
+| fiumi_laghi_mari_vulcani_climi| 0     | 0     | 0     | 56    | 0     | 56   
+| funzione_degli_spazi   | 0     | 18    | 0     | 0     | 0     | 18   
+| geografia_fisica_europea| 0     | 0     | 0     | 0     | 8  ⚠️  | 8    
+| idrografia_italiana    | 0     | 0     | 0     | 9  ⚠️  | 0     | 9    
+| indicatori_topologici  | 0     | 65    | 0     | 0     | 0     | 65   
+| italia_forma_mari      | 0     | 0     | 7  ⚠️  | 0     | 0     | 7    
+| italia_in_europa       | 0     | 0     | 0     | 0     | 11 ⚠️  | 11   
+| italia_regioni         | 0     | 0     | 2  ⚠️  | 4  ⚠️  | 4  ⚠️  | 10   
+| legenda                | 0     | 4  ⚠️  | 2  ⚠️  | 3  ⚠️  | 1  ⚠️  | 10   
+| legenda_e_simboli      | 0     | 11 ⚠️  | 0     | 0     | 0     | 11   
+| lettura_di_mappe_e_carte| 0     | 0     | 33    | 0     | 0     | 33   
+| mappe_e_piante         | 0     | 7  ⚠️  | 0     | 0     | 0     | 7    
+| montagna               | 0     | 0     | 6  ⚠️  | 0     | 0     | 6    
+| montagna_collina_pianura| 0     | 0     | 56    | 0     | 0     | 56   
+| morfologia_idrografia_coste| 0     | 0     | 0     | 0     | 53    | 53   
+| morfologia_italiana    | 0     | 0     | 0     | 64    | 0     | 64   
+| orientamento_carte     | 0     | 0     | 6  ⚠️  | 0     | 0     | 6    
+| paesaggi_base          | 0     | 7  ⚠️  | 0     | 0     | 0     | 7    
+| paesaggio_antropico    | 0     | 3  ⚠️  | 4  ⚠️  | 4  ⚠️  | 5  ⚠️  | 16   
+| paesaggio_fisico       | 0     | 6  ⚠️  | 6  ⚠️  | 4  ⚠️  | 5  ⚠️  | 21   
+| percorsi               | 0     | 13 ⚠️  | 2  ⚠️  | 3  ⚠️  | 1  ⚠️  | 19   
+| pianta_e_prospettiva_verticale| 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| pianta_legenda_percorsi| 0     | 22    | 0     | 0     | 0     | 22   
+| pianura                | 0     | 0     | 4  ⚠️  | 0     | 0     | 4    
+| popolazione_e_citta    | 0     | 0     | 0     | 0     | 7  ⚠️  | 7    
+| posizione_confini_ue   | 0     | 0     | 0     | 0     | 56    | 56   
+| punti_cardinali        | 0     | 13 ⚠️  | 4  ⚠️  | 2  ⚠️  | 2  ⚠️  | 21   
+| punti_cardinali_e_carte| 0     | 0     | 22    | 0     | 0     | 22   
+| regioni_economia_popolazione_patrimonio| 0     | 0     | 0     | 0     | 51    | 51   
+| regioni_italiane       | 0     | 0     | 0     | 12 ⚠️  | 0     | 12   
+| riduzione_in_scala_ingenua| 0     | 5  ⚠️  | 0     | 0     | 0     | 5    
+| riferimenti_e_punti_cardinali| 0     | 14 ⚠️  | 0     | 0     | 0     | 14   
+| scala                  | 0     | 0     | 3  ⚠️  | 3  ⚠️  | 2  ⚠️  | 8    
+| settori_economici      | 0     | 0     | 0     | 7  ⚠️  | 0     | 7    
+| sviluppo_sostenibile   | 0     | 0     | 0     | 0     | 8  ⚠️  | 8    
+| territorio_e_educazione_stradale| 0     | 0     | 51    | 0     | 0     | 51   
+| territorio_vicino_e_funzioni| 0     | 27    | 0     | 0     | 0     | 27   
+| trasformazioni_del_paesaggio| 0     | 22    | 0     | 0     | 0     | 22   
+| unione_europea         | 0     | 0     | 0     | 0     | 9  ⚠️  | 9    
+| TOTAL                   |        |        |        |        |        | 1132  
 
 ## STORIA
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| agricoltura_e_sedentarieta| 0     | 10 ⚠️  | 0     | 0     | 10   
-| alto_medioevo          | 0     | 0     | 0     | 8  ⚠️  | 8    
-| approfondimenti        | 0     | 0     | 0     | 5  ⚠️  | 5    
-| babilonesi_assiri      | 0     | 0     | 12 ⚠️  | 0     | 12   
-| big_bang_ere_geologiche| 0     | 10 ⚠️  | 0     | 0     | 10   
-| caccia_raccolta        | 0     | 10 ⚠️  | 0     | 0     | 10   
-| cambiamenti_e_cause    | 9  ⚠️  | 0     | 0     | 0     | 9    
-| cambiamenti_nel_tempo  | 10 ⚠️  | 0     | 0     | 0     | 10   
-| causa_effetto          | 4  ⚠️  | 0     | 0     | 0     | 4    
-| cicli_temporali        | 6  ⚠️  | 0     | 0     | 0     | 6    
-| civilta                | 0     | 13 ⚠️  | 23    | 27    | 63   
-| civilta_fluviali       | 0     | 14 ⚠️  | 0     | 0     | 14   
-| civilta_fluviali_confronti| 0     | 0     | 10 ⚠️  | 0     | 10   
-| concetti_temporali     | 0     | 18    | 0     | 0     | 18   
-| confronti              | 0     | 10 ⚠️  | 10 ⚠️  | 0     | 20   
-| confronti_e_lessico    | 0     | 0     | 0     | 5  ⚠️  | 5    
-| confronti_e_sintesi    | 0     | 9  ⚠️  | 0     | 8  ⚠️  | 17   
-| confronto_fonti        | 10 ⚠️  | 10 ⚠️  | 0     | 0     | 20   
-| contemporaneita        | 4  ⚠️  | 0     | 0     | 0     | 4    
-| cretesi_micenei_fenici | 0     | 0     | 15    | 0     | 15   
-| crisi_della_repubblica | 0     | 0     | 0     | 10 ⚠️  | 10   
-| crisi_e_caduta         | 0     | 0     | 0     | 17    | 17   
-| cronologia             | 18    | 3  ⚠️  | 2  ⚠️  | 0     | 23   
-| eta_dei_metalli        | 0     | 10 ⚠️  | 0     | 0     | 10   
-| etruschi               | 0     | 0     | 0     | 12 ⚠️  | 12   
-| fonti                  | 10 ⚠️  | 6  ⚠️  | 4  ⚠️  | 1  ⚠️  | 21   
-| fonti_e_cronologia     | 0     | 0     | 11 ⚠️  | 0     | 11   
-| fonti_e_mappe          | 0     | 0     | 10 ⚠️  | 0     | 10   
-| fossili_e_dinosauri    | 0     | 10 ⚠️  | 0     | 0     | 10   
-| fuoco_e_strumenti      | 0     | 10 ⚠️  | 0     | 0     | 10   
-| giorni_settimana       | 18    | 0     | 0     | 0     | 18   
-| guerre_persiane_ellenismo| 0     | 0     | 0     | 13 ⚠️  | 13   
-| impero_e_vita_quotidiana| 0     | 0     | 0     | 19    | 19   
-| indo_cina_ebrei        | 0     | 0     | 10 ⚠️  | 0     | 10   
-| istituzioni_e_conquiste| 0     | 0     | 0     | 18    | 18   
-| istituzioni_monarchiche| 0     | 0     | 0     | 12 ⚠️  | 12   
-| lessico_e_contemporaneita| 8  ⚠️  | 0     | 0     | 0     | 8    
-| lettura_linea_tempo    | 18    | 0     | 0     | 0     | 18   
-| linea_del_tempo        | 0     | 0     | 0     | 8  ⚠️  | 8    
-| linea_tempo_e_periodi  | 0     | 8  ⚠️  | 0     | 0     | 8    
-| linea_tempo_personale  | 10 ⚠️  | 0     | 0     | 0     | 10   
-| mesi_anno              | 22    | 0     | 0     | 0     | 22   
-| metodo                 | 3  ⚠️  | 2  ⚠️  | 1  ⚠️  | 0     | 6    
-| metodo_e_ricerca       | 0     | 20    | 0     | 0     | 20   
-| nascita_del_cristianesimo| 0     | 0     | 0     | 10 ⚠️  | 10   
-| nilo_e_societa         | 0     | 0     | 10 ⚠️  | 0     | 10   
-| oggetti_vecchi_nuovi   | 10 ⚠️  | 0     | 0     | 0     | 10   
-| ordine_cronologico     | 28    | 0     | 0     | 0     | 28   
-| ordine_di_eventi       | 24    | 0     | 0     | 0     | 24   
-| origine_e_miti         | 0     | 10 ⚠️  | 0     | 0     | 10   
-| origini_e_mito         | 0     | 0     | 0     | 14 ⚠️  | 14   
-| parti_giornata         | 4  ⚠️  | 0     | 0     | 0     | 4    
-| passaggio_alla_repubblica| 0     | 0     | 0     | 7  ⚠️  | 7    
-| passato_presente       | 3  ⚠️  | 1  ⚠️  | 0     | 0     | 4    
-| periodizzazione        | 0     | 4  ⚠️  | 0     | 2  ⚠️  | 6    
-| polis_e_cultura        | 0     | 0     | 0     | 13 ⚠️  | 13   
-| preistoria             | 0     | 16    | 0     | 0     | 16   
-| prima_dopo             | 4  ⚠️  | 0     | 0     | 0     | 4    
-| quadro_di_civilta      | 0     | 0     | 68    | 0     | 68   
-| religione_e_cultura    | 0     | 0     | 10 ⚠️  | 0     | 10   
-| religione_e_societa    | 0     | 0     | 10 ⚠️  | 0     | 10   
-| ricerca_personale      | 10 ⚠️  | 0     | 0     | 0     | 10   
-| ruoli_e_fonti          | 0     | 13 ⚠️  | 0     | 0     | 13   
-| sequenze               | 0     | 17    | 0     | 0     | 17   
-| sintesi                | 0     | 0     | 8  ⚠️  | 0     | 8    
-| sintesi_e_confronti    | 0     | 0     | 16    | 6  ⚠️  | 22   
-| societa_e_amministrazione| 0     | 0     | 0     | 10 ⚠️  | 10   
-| societa_e_cultura      | 0     | 0     | 0     | 12 ⚠️  | 12   
-| societa_e_espansione   | 0     | 0     | 0     | 10 ⚠️  | 10   
-| societa_e_polis        | 0     | 0     | 0     | 11 ⚠️  | 11   
-| stagioni               | 6  ⚠️  | 0     | 0     | 0     | 6    
-| storia_personale       | 9  ⚠️  | 0     | 0     | 0     | 9    
-| strumenti_del_tempo    | 11 ⚠️  | 0     | 0     | 0     | 11   
-| strumenti_dello_storico| 0     | 0     | 11 ⚠️  | 0     | 11   
-| sumeri                 | 0     | 0     | 13 ⚠️  | 0     | 13   
-| tempo_storico          | 0     | 11 ⚠️  | 0     | 0     | 11   
-| tipi_di_fonti          | 12 ⚠️  | 0     | 0     | 0     | 12   
-| uso_delle_fonti        | 11 ⚠️  | 0     | 0     | 0     | 11   
-| villaggi_e_lavori      | 0     | 10 ⚠️  | 0     | 0     | 10   
-| vita_e_commerci        | 0     | 0     | 10 ⚠️  | 0     | 10   
-| vita_e_eredita         | 0     | 0     | 0     | 11 ⚠️  | 11   
-| vita_e_lavoro          | 0     | 0     | 10 ⚠️  | 0     | 10   
-| vita_nel_tempo         | 0     | 10 ⚠️  | 0     | 0     | 10   
-| vita_nomade            | 0     | 10 ⚠️  | 0     | 0     | 10   
-| vita_quotidiana        | 0     | 10 ⚠️  | 10 ⚠️  | 0     | 20   
-| TOTAL                   |        |        |        |        | 1120  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| agricoltura_e_sedentarieta| 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| alto_medioevo          | 0     | 0     | 0     | 0     | 8  ⚠️  | 8    
+| approfondimenti        | 0     | 0     | 0     | 0     | 5  ⚠️  | 5    
+| babilonesi_assiri      | 0     | 0     | 0     | 12 ⚠️  | 0     | 12   
+| big_bang_ere_geologiche| 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| caccia_raccolta        | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| cambiamenti_e_cause    | 0     | 9  ⚠️  | 0     | 0     | 0     | 9    
+| cambiamenti_nel_tempo  | 0     | 10 ⚠️  | 0     | 0     | 0     | 10   
+| causa_effetto          | 0     | 4  ⚠️  | 0     | 0     | 0     | 4    
+| cicli_temporali        | 0     | 6  ⚠️  | 0     | 0     | 0     | 6    
+| civilta                | 0     | 0     | 13 ⚠️  | 23    | 27    | 63   
+| civilta_fluviali       | 0     | 0     | 14 ⚠️  | 0     | 0     | 14   
+| civilta_fluviali_confronti| 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| concetti_temporali     | 0     | 0     | 18    | 0     | 0     | 18   
+| confronti              | 0     | 0     | 10 ⚠️  | 10 ⚠️  | 0     | 20   
+| confronti_e_lessico    | 0     | 0     | 0     | 0     | 5  ⚠️  | 5    
+| confronti_e_sintesi    | 0     | 0     | 9  ⚠️  | 0     | 8  ⚠️  | 17   
+| confronto_fonti        | 0     | 10 ⚠️  | 10 ⚠️  | 0     | 0     | 20   
+| contemporaneita        | 0     | 4  ⚠️  | 0     | 0     | 0     | 4    
+| cretesi_micenei_fenici | 0     | 0     | 0     | 15    | 0     | 15   
+| crisi_della_repubblica | 0     | 0     | 0     | 0     | 10 ⚠️  | 10   
+| crisi_e_caduta         | 0     | 0     | 0     | 0     | 17    | 17   
+| cronologia             | 0     | 18    | 3  ⚠️  | 2  ⚠️  | 0     | 23   
+| eta_dei_metalli        | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| etruschi               | 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
+| fonti                  | 0     | 10 ⚠️  | 6  ⚠️  | 4  ⚠️  | 1  ⚠️  | 21   
+| fonti_e_cronologia     | 0     | 0     | 0     | 11 ⚠️  | 0     | 11   
+| fonti_e_mappe          | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| fossili_e_dinosauri    | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| fuoco_e_strumenti      | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| giorni_settimana       | 0     | 18    | 0     | 0     | 0     | 18   
+| guerre_persiane_ellenismo| 0     | 0     | 0     | 0     | 13 ⚠️  | 13   
+| impero_e_vita_quotidiana| 0     | 0     | 0     | 0     | 19    | 19   
+| indo_cina_ebrei        | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| istituzioni_e_conquiste| 0     | 0     | 0     | 0     | 18    | 18   
+| istituzioni_monarchiche| 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
+| lessico_e_contemporaneita| 0     | 8  ⚠️  | 0     | 0     | 0     | 8    
+| lettura_linea_tempo    | 0     | 18    | 0     | 0     | 0     | 18   
+| linea_del_tempo        | 0     | 0     | 0     | 0     | 8  ⚠️  | 8    
+| linea_tempo_e_periodi  | 0     | 0     | 8  ⚠️  | 0     | 0     | 8    
+| linea_tempo_personale  | 0     | 10 ⚠️  | 0     | 0     | 0     | 10   
+| mesi_anno              | 0     | 22    | 0     | 0     | 0     | 22   
+| metodo                 | 0     | 3  ⚠️  | 2  ⚠️  | 1  ⚠️  | 0     | 6    
+| metodo_e_ricerca       | 0     | 0     | 20    | 0     | 0     | 20   
+| nascita_del_cristianesimo| 0     | 0     | 0     | 0     | 10 ⚠️  | 10   
+| nilo_e_societa         | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| oggetti_vecchi_nuovi   | 0     | 10 ⚠️  | 0     | 0     | 0     | 10   
+| ordine_cronologico     | 0     | 28    | 0     | 0     | 0     | 28   
+| ordine_di_eventi       | 0     | 24    | 0     | 0     | 0     | 24   
+| origine_e_miti         | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| origini_e_mito         | 0     | 0     | 0     | 0     | 14 ⚠️  | 14   
+| parti_giornata         | 0     | 4  ⚠️  | 0     | 0     | 0     | 4    
+| passaggio_alla_repubblica| 0     | 0     | 0     | 0     | 7  ⚠️  | 7    
+| passato_presente       | 0     | 3  ⚠️  | 1  ⚠️  | 0     | 0     | 4    
+| periodizzazione        | 0     | 0     | 4  ⚠️  | 0     | 2  ⚠️  | 6    
+| polis_e_cultura        | 0     | 0     | 0     | 0     | 13 ⚠️  | 13   
+| preistoria             | 0     | 0     | 16    | 0     | 0     | 16   
+| prima_dopo             | 0     | 4  ⚠️  | 0     | 0     | 0     | 4    
+| quadro_di_civilta      | 0     | 0     | 0     | 68    | 0     | 68   
+| religione_e_cultura    | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| religione_e_societa    | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| ricerca_personale      | 0     | 10 ⚠️  | 0     | 0     | 0     | 10   
+| ruoli_e_fonti          | 0     | 0     | 13 ⚠️  | 0     | 0     | 13   
+| sequenze               | 0     | 0     | 17    | 0     | 0     | 17   
+| sintesi                | 0     | 0     | 0     | 8  ⚠️  | 0     | 8    
+| sintesi_e_confronti    | 0     | 0     | 0     | 16    | 6  ⚠️  | 22   
+| societa_e_amministrazione| 0     | 0     | 0     | 0     | 10 ⚠️  | 10   
+| societa_e_cultura      | 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
+| societa_e_espansione   | 0     | 0     | 0     | 0     | 10 ⚠️  | 10   
+| societa_e_polis        | 0     | 0     | 0     | 0     | 11 ⚠️  | 11   
+| stagioni               | 0     | 6  ⚠️  | 0     | 0     | 0     | 6    
+| storia_personale       | 0     | 9  ⚠️  | 0     | 0     | 0     | 9    
+| strumenti_del_tempo    | 0     | 11 ⚠️  | 0     | 0     | 0     | 11   
+| strumenti_dello_storico| 0     | 0     | 0     | 11 ⚠️  | 0     | 11   
+| sumeri                 | 0     | 0     | 0     | 13 ⚠️  | 0     | 13   
+| tempo_storico          | 0     | 0     | 11 ⚠️  | 0     | 0     | 11   
+| tipi_di_fonti          | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| uso_delle_fonti        | 0     | 11 ⚠️  | 0     | 0     | 0     | 11   
+| villaggi_e_lavori      | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| vita_e_commerci        | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| vita_e_eredita         | 0     | 0     | 0     | 0     | 11 ⚠️  | 11   
+| vita_e_lavoro          | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| vita_nel_tempo         | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| vita_nomade            | 0     | 0     | 10 ⚠️  | 0     | 0     | 10   
+| vita_quotidiana        | 0     | 0     | 10 ⚠️  | 10 ⚠️  | 0     | 20   
+| TOTAL                   |        |        |        |        |        | 1120  
 
 ## SCIENZE
-Subarea                   | c2     | c3     | c4     | c5     | Total
-|-----------------------|-------|-------|-------|-------|--------|
-| adattamenti_e_ambiente | 0     | 7  ⚠️  | 11 ⚠️  | 0     | 18   
-| alimentazione          | 4  ⚠️  | 0     | 0     | 0     | 4    
-| animali                | 0     | 16    | 0     | 0     | 16   
-| animali_e_habitat      | 15    | 0     | 0     | 0     | 15   
-| apparati_e_organi      | 8  ⚠️  | 0     | 16    | 44    | 68   
-| aria_acqua_suolo       | 8  ⚠️  | 10 ⚠️  | 13 ⚠️  | 0     | 31   
-| botanica_e_zoologia    | 0     | 0     | 17    | 0     | 17   
-| catene_alimentari      | 0     | 14 ⚠️  | 0     | 0     | 14   
-| ciclo_acqua            | 22    | 0     | 0     | 0     | 22   
-| ciclo_vitale_e_causa_effetto| 10 ⚠️  | 0     | 0     | 0     | 10   
-| ecosistemi             | 1  ⚠️  | 21    | 16    | 15    | 53   
-| ecosistemi_e_biodiversita| 2  ⚠️  | 2  ⚠️  | 18    | 15    | 37   
-| energia                | 1  ⚠️  | 2  ⚠️  | 11 ⚠️  | 30    | 44   
-| forze_e_movimento      | 0     | 0     | 15    | 14 ⚠️  | 29   
-| habitat_e_funzioni_vitali| 0     | 26    | 0     | 0     | 26   
-| ipotesi_esperimento_conclusioni| 1  ⚠️  | 4  ⚠️  | 1  ⚠️  | 1  ⚠️  | 7    
-| lessico_e_pratica_scientifica| 0     | 39    | 0     | 8  ⚠️  | 47   
-| luce_e_suono           | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 13 ⚠️  | 28   
-| metodo_e_classificazione| 2  ⚠️  | 7  ⚠️  | 12 ⚠️  | 3  ⚠️  | 24   
-| metodo_e_strumenti     | 0     | 0     | 10 ⚠️  | 0     | 10   
-| metodo_ed_esperimenti  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 8    
-| osservazione_e_applicazione| 1  ⚠️  | 0     | 6  ⚠️  | 0     | 7    
-| osservazione_e_dati    | 1  ⚠️  | 9  ⚠️  | 1  ⚠️  | 1  ⚠️  | 12   
-| passaggi_di_stato_e_ciclo| 1  ⚠️  | 15    | 15    | 1  ⚠️  | 32   
-| piante                 | 26    | 13 ⚠️  | 0     | 0     | 39   
-| salute_e_igiene        | 17    | 15    | 11 ⚠️  | 27    | 70   
-| sensi                  | 14 ⚠️  | 0     | 0     | 16    | 30   
-| sistema_solare         | 0     | 0     | 14 ⚠️  | 19    | 33   
-| sostenibilita_e_osservazione| 12 ⚠️  | 2  ⚠️  | 1  ⚠️  | 1  ⚠️  | 16   
-| sostenibilita_energetica| 1  ⚠️  | 0     | 0     | 15    | 16   
-| stagioni_e_tempo_atmosferico| 40    | 0     | 0     | 0     | 40   
-| stati_proprieta_materia| 34    | 10 ⚠️  | 15    | 10 ⚠️  | 69   
-| tecnologia_applicata   | 2  ⚠️  | 1  ⚠️  | 5  ⚠️  | 1  ⚠️  | 9    
-| terra_e_movimenti      | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 12 ⚠️  | 27   
-| trasformazioni_ed_esperimenti| 1  ⚠️  | 10 ⚠️  | 10 ⚠️  | 1  ⚠️  | 22   
-| tutela_ambientale      | 1  ⚠️  | 6  ⚠️  | 7  ⚠️  | 1  ⚠️  | 15   
-| viventi_e_non_viventi  | 43    | 15    | 1  ⚠️  | 0     | 59   
-| TOTAL                   |        |        |        |        | 1024  
+Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
+|-----------------------|-------|-------|-------|-------|-------|--------|
+| adattamenti_e_ambiente | 0     | 0     | 7  ⚠️  | 11 ⚠️  | 0     | 18   
+| alimentazione          | 0     | 4  ⚠️  | 0     | 0     | 0     | 4    
+| animali                | 0     | 0     | 16    | 0     | 0     | 16   
+| animali_e_habitat      | 0     | 15    | 0     | 0     | 0     | 15   
+| apparati_e_organi      | 0     | 8  ⚠️  | 0     | 16    | 44    | 68   
+| aria_acqua_suolo       | 0     | 8  ⚠️  | 10 ⚠️  | 13 ⚠️  | 0     | 31   
+| botanica_e_zoologia    | 0     | 0     | 0     | 17    | 0     | 17   
+| catene_alimentari      | 0     | 0     | 14 ⚠️  | 0     | 0     | 14   
+| ciclo_acqua            | 0     | 22    | 0     | 0     | 0     | 22   
+| ciclo_vitale_e_causa_effetto| 0     | 10 ⚠️  | 0     | 0     | 0     | 10   
+| ecosistemi             | 0     | 1  ⚠️  | 21    | 16    | 15    | 53   
+| ecosistemi_e_biodiversita| 0     | 2  ⚠️  | 2  ⚠️  | 18    | 15    | 37   
+| energia                | 0     | 1  ⚠️  | 2  ⚠️  | 11 ⚠️  | 30    | 44   
+| forze_e_movimento      | 0     | 0     | 0     | 15    | 14 ⚠️  | 29   
+| habitat_e_funzioni_vitali| 0     | 0     | 26    | 0     | 0     | 26   
+| ipotesi_esperimento_conclusioni| 0     | 1  ⚠️  | 4  ⚠️  | 1  ⚠️  | 1  ⚠️  | 7    
+| lessico_e_pratica_scientifica| 0     | 0     | 39    | 0     | 8  ⚠️  | 47   
+| luce_e_suono           | 0     | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 13 ⚠️  | 28   
+| metodo_e_classificazione| 0     | 2  ⚠️  | 7  ⚠️  | 12 ⚠️  | 3  ⚠️  | 24   
+| metodo_e_strumenti     | 0     | 0     | 0     | 10 ⚠️  | 0     | 10   
+| metodo_ed_esperimenti  | 0     | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 2  ⚠️  | 8    
+| osservazione_e_applicazione| 0     | 1  ⚠️  | 0     | 6  ⚠️  | 0     | 7    
+| osservazione_e_dati    | 0     | 1  ⚠️  | 9  ⚠️  | 1  ⚠️  | 1  ⚠️  | 12   
+| passaggi_di_stato_e_ciclo| 0     | 1  ⚠️  | 15    | 15    | 1  ⚠️  | 32   
+| piante                 | 0     | 26    | 13 ⚠️  | 0     | 0     | 39   
+| salute_e_igiene        | 0     | 17    | 15    | 11 ⚠️  | 27    | 70   
+| sensi                  | 0     | 14 ⚠️  | 0     | 0     | 16    | 30   
+| sistema_solare         | 0     | 0     | 0     | 14 ⚠️  | 19    | 33   
+| sostenibilita_e_osservazione| 0     | 12 ⚠️  | 2  ⚠️  | 1  ⚠️  | 1  ⚠️  | 16   
+| sostenibilita_energetica| 0     | 1  ⚠️  | 0     | 0     | 15    | 16   
+| stagioni_e_tempo_atmosferico| 0     | 40    | 0     | 0     | 0     | 40   
+| stati_proprieta_materia| 0     | 34    | 10 ⚠️  | 15    | 10 ⚠️  | 69   
+| tecnologia_applicata   | 0     | 2  ⚠️  | 1  ⚠️  | 5  ⚠️  | 1  ⚠️  | 9    
+| terra_e_movimenti      | 0     | 2  ⚠️  | 2  ⚠️  | 11 ⚠️  | 12 ⚠️  | 27   
+| trasformazioni_ed_esperimenti| 0     | 1  ⚠️  | 10 ⚠️  | 10 ⚠️  | 1  ⚠️  | 22   
+| tutela_ambientale      | 0     | 1  ⚠️  | 6  ⚠️  | 7  ⚠️  | 1  ⚠️  | 15   
+| viventi_e_non_viventi  | 0     | 43    | 15    | 1  ⚠️  | 0     | 59   
+| TOTAL                   |        |        |        |        |        | 1024  
 
 ## ⚠️  Celle sotto soglia (< 15 domande)
 
@@ -573,6 +575,18 @@ Totale celle sotto soglia: 269
 
 Argomento                                | Classe | Domande | Stato
 ----------------------------------------------------------------------
+c1-numeri-entro-20                       | c1     | 50      | coperto
+c1-decine-unita                          | c1     | 20      | coperto
+c1-addizione-sottrazione                 | c1     | 60      | coperto
+c1-problemi                              | c1     | 25      | coperto
+c1-posizioni                             | c1     | 20      | coperto
+c1-percorsi                              | c1     | 15      | coperto
+c1-figure-piane                          | c1     | 20      | coperto
+c1-linee-regioni                         | c1     | 15      | coperto
+c1-confronto-misure                      | c1     | 15      | coperto
+c1-ritmi                                 | c1     | 20      | coperto
+c1-classificazione                       | c1     | 15      | coperto
+c1-ideogramma                            | c1     | 15      | coperto
 c2-proprieta-commutativa-addizione       | c2     | 12      | coperto
 c2-numeri-31-99                          | c2     | 12      | coperto
 c2-addizione-tre-addendi                 | c2     | 13      | coperto

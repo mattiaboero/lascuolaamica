@@ -1,5 +1,104 @@
 [
  {
+  "id": "c1-numeri-entro-20",
+  "class": 1,
+  "title": "Numeri entro il 20: contare, confrontare, ordinare",
+  "area": "aritmetica",
+  "subarea": "numeri",
+  "match": "^(?!.*(in tutto|due riquadri))(?:.*(quant[ei] (mele|stelle|cubi|pallin[ei])\\b|pallini ci sono|\\bmanca\\b|in più|precede|\\bsegue\\b|viene (prima|dopo)|maggiore|minore|più grande|più piccol|si scrive|in cifre|in lettere|sta fra|per primo))"
+ },
+ {
+  "id": "c1-decine-unita",
+  "class": 1,
+  "title": "Decine e unità entro il 20",
+  "area": "aritmetica",
+  "subarea": "raggruppamento",
+  "match": "decin|unità|bastoncin|blocchi"
+ },
+ {
+  "id": "c1-addizione-sottrazione",
+  "class": 1,
+  "title": "Addizioni e sottrazioni entro il 20",
+  "area": "aritmetica",
+  "subarea": "operazioni",
+  "match": "in tutto|\\d ?\\+ ?\\d|\\d - \\d|\\bsalti\\b|due riquadri|operazione"
+ },
+ {
+  "id": "c1-problemi",
+  "class": 1,
+  "title": "Semplici problemi con addizione e sottrazione",
+  "area": "problemi",
+  "subarea": "operazioni",
+  "match": "\\b(ne|gli|le) (regala|dà|mangia|perde|trova|compra)\\b|restano|rimangono"
+ },
+ {
+  "id": "c1-posizioni",
+  "class": 1,
+  "title": "Posizioni nello spazio (sopra, sotto, dentro, fuori, destra, sinistra)",
+  "area": "geometria",
+  "subarea": "posizioni",
+  "newSubarea": true,
+  "match": "\\b(sopra|sotto|destra|sinistra|davanti|dietro)\\b|\\bpalla\\b|scatola|tavolo"
+ },
+ {
+  "id": "c1-percorsi",
+  "class": 1,
+  "title": "Percorsi su griglia",
+  "area": "geometria",
+  "subarea": "percorsi",
+  "newSubarea": true,
+  "match": "percors|\\bpassi\\b|frecc|casell|griglia"
+ },
+ {
+  "id": "c1-figure-piane",
+  "class": 1,
+  "title": "Figure piane: cerchio, quadrato, triangolo, rettangolo",
+  "area": "geometria",
+  "subarea": "figure",
+  "match": "triangol|quadrat|cerchi|rettangol|\\bform[ae]\\b|\\bfigur[ae]\\b"
+ },
+ {
+  "id": "c1-linee-regioni",
+  "class": 1,
+  "title": "Linee aperte e chiuse, dentro e fuori",
+  "area": "geometria",
+  "subarea": "linee",
+  "match": "\\blinee\\b|\\bpunt[oi]\\b|apert[ae]\\b|chius[ae]\\b|confine|regione"
+ },
+ {
+  "id": "c1-confronto-misure",
+  "class": 1,
+  "title": "Confronto di lunghezze e pesi",
+  "area": "geometria",
+  "subarea": "misure",
+  "newSubarea": true,
+  "match": "più lung|più cort|più alt|più bass|più pesant|più legger|bilancia|strisc|pesa di"
+ },
+ {
+  "id": "c1-ritmi",
+  "class": 1,
+  "title": "Ritmi e sequenze di figure",
+  "area": "logica_e_dati",
+  "subarea": "sequenze",
+  "match": "ritmo|sequenz|fila di figure|viene dopo il|continua|punto di domanda|va dopo"
+ },
+ {
+  "id": "c1-classificazione",
+  "class": 1,
+  "title": "Classificare e trovare l'intruso",
+  "area": "logica_e_dati",
+  "subarea": "ragionamento",
+  "match": "intrus|gruppo|classific|insieme|non c'entra|non va|non è un"
+ },
+ {
+  "id": "c1-ideogramma",
+  "class": 1,
+  "title": "Ideogrammi e semplici tabelle",
+  "area": "logica_e_dati",
+  "subarea": "dati_probabilita",
+  "match": "ideogramm|\\brig(a|he)\\b|preferit|grafico"
+ },
+ {
   "id": "c2-proprieta-commutativa-addizione",
   "class": 2,
   "title": "Proprietà commutativa dell'addizione",

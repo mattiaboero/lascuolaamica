@@ -1037,6 +1037,123 @@ header {
   margin-bottom: 16px;
 }
 
+/* Ascolta (lettura ad alta voce, docs/classe-prima.md): eredita colori e
+   variante Okabe da .icon-btn. Lo stato attivo e' un anello in currentColor,
+   quindi nessun colore nuovo. */
+.speak-btn {
+  margin: 0 0 10px;
+}
+
+.speak-btn[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 3px currentcolor, 0 5px 0 rgba(0, 0, 0, 0.14), 0 10px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe 1ª: si legge lo stampato maiuscolo. Solo tipografia, i dati restano
+   in minuscolo/maiuscolo misti. data-classe="1" esiste solo nelle materie che
+   elencano la 1ª in cfg.classes. */
+html[data-classe="1"] .q-text,
+html[data-classe="1"] .answer-btn {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+html[data-classe="1"] .q-text {
+  font-size: 1.35rem;
+  line-height: 1.25; /* il maiuscolo non ha discendenti */
+  margin-bottom: 12px;
+}
+
+html[data-classe="1"] .answer-btn {
+  font-size: 1.25rem;
+}
+
+html[data-classe="1"] .speak-btn {
+  font-size: 1.05rem;
+  min-height: 52px;
+  padding: 12px 22px;
+  margin-bottom: 8px;
+}
+
+/* Classe 1ª in gioco (docs/classe-prima.md, P4): domanda e figura nella prima
+   schermata di un telefono, sopra il footer fisso. Si toglie cio' che a 6 anni
+   non serve durante la partita (briciole, sottotitolo, riga «Domanda 1 di 10»,
+   che resta per lo screen reader; i pallini mostrano gia' il progresso) e si
+   stringono gli spazi. Solo misure, nessun colore. */
+html[data-classe="1"][data-screen="screenGame"] .wrapper,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .wrapper {
+  padding-top: 8px;
+}
+
+html[data-classe="1"][data-screen="screenGame"] .top-nav,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .top-nav {
+  margin-bottom: 4px;
+}
+
+html[data-classe="1"][data-screen="screenGame"] .breadcrumbs,
+html[data-classe="1"][data-screen="screenGame"] .subtitle,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .breadcrumbs,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .subtitle {
+  display: none;
+}
+
+html[data-classe="1"][data-screen="screenGame"] header,
+html[data-classe="1"][data-screen="screenBonusQuestion"] header {
+  margin-bottom: 6px;
+}
+
+html[data-classe="1"][data-screen="screenGame"] .title,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .title {
+  font-size: 1.4rem;
+}
+
+html[data-classe="1"][data-screen="screenGame"] .header-row,
+html[data-classe="1"][data-screen="screenGame"] .score-bar,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .header-row,
+html[data-classe="1"][data-screen="screenBonusQuestion"] .score-bar {
+  margin-bottom: 8px;
+}
+
+html[data-classe="1"][data-screen="screenGame"] .progress-dots {
+  margin-bottom: 8px;
+}
+
+/* Sul telefono la mascotte, piccola, sta accanto ad Ascolta; testo e figura
+   prendono tutta la larghezza della card (niente colonna stretta accanto alla
+   mascotte). Dai 600px c'e' spazio: resta l'impaginazione normale. */
+@media (max-width: 599px) {
+  html[data-classe="1"] .q-card-main {
+    display: block;
+    padding-top: 10px;
+  }
+
+  html[data-classe="1"] .q-card-main .mascot-q {
+    float: left;
+    width: 40px;
+    height: 58px;
+    margin-right: 12px;
+  }
+
+  html[data-classe="1"] .q-card-main .q-text {
+    clear: left;
+  }
+
+  html[data-classe="1"] .q-card-main .q-figure {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+html[data-classe="1"] #qMeta {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 /* F6: figura facoltativa (docs/figure-nel-quiz.md). Il colore sta nell'SVG, qui solo misure:
    width/height dell'img danno le proporzioni 4:3 prima del caricamento, niente CLS. */
 .q-figure {

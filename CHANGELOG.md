@@ -1,5 +1,31 @@
 # Changelog Repo
 
+## 4.18.0 - 2026-09-19
+
+**Matematica di 1ª pronta, ancora nascosta.** Il motore accetta la 1ª
+(`cfg.classes`), che però non compare finché `js/matematica-page.js` non
+la accende (docs/classe-prima.md, «Accendere la 1ª»). Pronte 290
+domande di 1ª, 203 con una figura fatta dal generatore
+`scripts/figure_classe_prima.py` e controllata dal verificatore
+`scripts/verifica_figure_classe_prima.py`, riviste una per una.
+
+### Added
+- feat(quiz): classe 1ª nel motore, separata dalle altre (le sue domande
+  escono solo in 1ª, anche nel bonus), invisibile senza configurazione.
+- feat(quiz): pulsante «Ascolta» in tutte le materie: legge domanda e
+  risposte con una voce italiana locale del dispositivo (Web Speech API,
+  solo `localService`), nascosto se la voce non c'è.
+- feat(quiz): in 1ª testo in maiuscolo e impaginazione compatta sotto i
+  600px (figura sopra il footer a 375x812).
+- feat(matematica): 290 domande di 1ª (12 argomenti), 143 figure c1.
+
+### Fixed
+- fix(quiz): nessuna domanda ripetuta nella stessa partita, anche nei
+  pool piccoli: la partita è più corta invece di ripescare.
+- fix(conteggi): `sync_question_counts.py` conta solo le classi mostrate
+  dalla pagina della materia; le domande di 1ª non entrano nei numeri
+  pubblici finché la 1ª è nascosta (10.072 domande).
+
 ## 4.17.1 - 2026-09-19
 
 **Goniometri con i numeri lontani dal lato.** In tre figure pubblicate

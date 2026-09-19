@@ -5,10 +5,10 @@
  "subjects": {
   "matematica": {
    "path": "matematica.json",
-   "rows": 2783,
+   "rows": 3073,
    "stats": {
     "file": "template_matematica_da_json.csv",
-    "rows": 2783,
+    "rows": 3073,
     "areas": {
      "tabelline": 186,
      "aritmetica": 539,

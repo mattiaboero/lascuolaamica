@@ -58,6 +58,7 @@ Senza `figure` la domanda è identica a prima. Le domande bonus (`bonus: true`) 
 - Tratti principali spessi almeno 3 unità, colori come sopra.
 - Il file comincia con `<svg` (niente prologo XML) e ha un `id` sugli elementi che portano la risposta (`lancetta-ore`, `lancetta-minuti`, `lato-1`, `lato-2`, `angolo-A`, `linea-B`, ...): servono a verificare la figura.
 - Le coordinate si calcolano, non si stimano. Nel pilota uno script usa e getta ha generato gli SVG, e un secondo script, senza usare i parametri del primo, ha riletto dai file le coordinate (angolo delle lancette, lati del goniometro, pallini, comandi dei tracciati) e ricavato la risposta di ogni domanda.
+- Eccezione: le figure della 1ª. Sono tante (circa 150 previste) e ripetono pochi modelli, quindi generatore e verificatore restano nel repo: `scripts/figure_classe_prima.py` e `scripts/verifica_figure_classe_prima.py` (vedi `docs/classe-prima.md`, P3). Le regole di questa pagina valgono lo stesso, e il verificatore le controlla.
 
 ## Aggiungere una domanda con figura
 
