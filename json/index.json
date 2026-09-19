@@ -1,14 +1,14 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 10072,
+ "totalQuestions": 10096,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
-   "rows": 2783,
+   "rows": 2807,
    "stats": {
     "file": "template_matematica_da_json.csv",
-    "rows": 2783,
+    "rows": 2807,
     "areas": {
      "tabelline": 186,
      "aritmetica": 539,
@@ -23,7 +23,7 @@
      "5": 526
     }
    },
-   "activeRows": 2783
+   "activeRows": 2807
   },
   "problemi": {
    "path": "problemi.json",

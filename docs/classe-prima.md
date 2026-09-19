@@ -107,6 +107,16 @@ Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente styl
 ### Scrivere le domande di 1ª
 
 - Domanda di 3-8 parole, una frase sola, numeri in cifre.
-- Opzioni di 1-2 parole, un numero o una lettera A-D. Con le lettere l'ordine resta A, B, C, D.
+- Opzioni di 1-2 parole, un numero o una lettera A-D. Nello shard le lettere stanno in ordine A, B, C, D; il gioco poi mescola i bottoni come per ogni domanda.
 - Spiegazione di 1-2 frasi brevi, con il numero della risposta e il conto giusto («5 + 2 = 7»).
 - Stem tutti diversi, anche fra domande sulla stessa figura: l'ingest salta un testo già presente. Si cambia oggetto o contesto («Quante mele ha raccolto il nonno?», «Quante stelle ha disegnato Sara?»).
+
+### Pilota
+
+24 domande (`mat-1-*-001`…`024`, shard in `reports/generated/ingested/matematica-c1-pilota-figure.jsonl`) su 21 figure di T1, T2, T3, T4, T5 e T8, più 11 figure di prova per gli altri modelli (T6, T7, T9, T10, T11: 32 file in tutto). Aree: aritmetica/numeri 7, operazioni 6, raggruppamento 3, geometria/figure 4, linee 4 (difficoltà 9/11/4). Gli argomenti `c1-*` di `scripts/data/mappa-argomenti-matematica.json` riconoscono ognuna delle 24 domande in un argomento solo; `coverage_report.js` le conta nella colonna c1.
+
+- In gioco (copia con `classes: [1, 2, 3, 4, 5]`, 375×812) la figura è larga 297 px: il testo della domanda sta a destra della mascotte, la figura no. Domanda, figura e quattro risposte non stanno in una schermata: per l'ultima risposta serve scorrere, e scorrendo resta sopra il footer fisso.
+- Con le figure il testo può essere cortissimo e resta univoco: le 24 domande non collidono né fra loro né col dataset.
+- `lint_content.js` legge la «A» finale di «nel riquadro A?» come la preposizione: la domanda è diventata «Nel riquadro A, quanti pallini ci sono?». `check_grammar_rules.js` prendeva «cassetta» per un refuso di «casetta»: ora è «cesta».
+- Quattro bonus con `grade: 1` in `matematica-page.js` (due facili, un medio, un difficile): nella copia la 1ª vede tutti e tre i livelli di bonus.
+- I conteggi pubblici (`sync_question_counts.py`) includono già le 24 domande, anche se la classe è nascosta.

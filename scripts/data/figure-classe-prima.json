@@ -1,0 +1,316 @@
+{
+ "c1-bilancia-a": {
+  "modello": "bilancia",
+  "fatti": {
+   "piu_pesante": "A"
+  },
+  "alt": "Una bilancia a due piatti. Sul piatto A c'è un cubo, sul piatto B una palla. Il piatto A è più in basso dell'altro."
+ },
+ "c1-confronto-5-8": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 5,
+   "B": 8,
+   "maggiore": "B"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: 5 pallini in colonna. Riquadro B: una colonna di 5 pallini e accanto 3 pallini."
+ },
+ "c1-confronto-7-7": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 7,
+   "B": 7,
+   "maggiore": "uguali"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 2 pallini. Riquadro B: una colonna di 5 pallini e accanto 2 pallini."
+ },
+ "c1-confronto-9-6": {
+  "modello": "confronto",
+  "fatti": {
+   "A": 9,
+   "B": 6,
+   "maggiore": "A"
+  },
+  "alt": "Due riquadri con dei pallini. Riquadro A: una colonna di 5 pallini e accanto 4 pallini. Riquadro B: una colonna di 5 pallini e accanto 1 pallino."
+ },
+ "c1-conta-cubi-9": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 9
+  },
+  "alt": "Una fila di 5 cubi e sotto una fila di 4 cubi."
+ },
+ "c1-conta-mele-20": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 20
+  },
+  "alt": "Quattro file di 5 mele."
+ },
+ "c1-conta-mele-7": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 7
+  },
+  "alt": "Una fila di 5 mele e sotto una fila di 2 mele."
+ },
+ "c1-conta-palline-3-4": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 7,
+   "arancioni": 3,
+   "blu": 4
+  },
+  "alt": "Una fila di 3 palline arancioni piene e sotto una fila di 4 palline blu vuote."
+ },
+ "c1-conta-stelle-12": {
+  "modello": "conta",
+  "fatti": {
+   "totale": 12
+  },
+  "alt": "Due file di 5 stelle e sotto una fila di 2 stelle."
+ },
+ "c1-decine-1-4": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 4,
+   "numero": 14
+  },
+  "alt": "1 bastoncino da 10 quadretti e 4 cubetti sciolti."
+ },
+ "c1-decine-1-7": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 1,
+   "unita": 7,
+   "numero": 17
+  },
+  "alt": "1 bastoncino da 10 quadretti e 7 cubetti sciolti."
+ },
+ "c1-decine-2-0": {
+  "modello": "decine",
+  "fatti": {
+   "decine": 2,
+   "unita": 0,
+   "numero": 20
+  },
+  "alt": "2 bastoncini da 10 quadretti e nessun cubetto sciolto."
+ },
+ "c1-forme-cqrt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "cerchio",
+   "B": "quadrato",
+   "C": "rettangolo",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura rotonda, senza lati; B una figura con 4 lati tutti uguali; C una figura con 4 lati, due lunghi e due corti; D una figura con 3 lati."
+ },
+ "c1-forme-rtqt": {
+  "modello": "forme",
+  "fatti": {
+   "A": "rettangolo",
+   "B": "triangolo",
+   "C": "quadrato",
+   "D": "triangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 4 lati, due lunghi e due corti; B una figura con 3 lati; C una figura con 4 lati tutti uguali; D una figura con 3 lati."
+ },
+ "c1-forme-tcqr": {
+  "modello": "forme",
+  "fatti": {
+   "A": "triangolo",
+   "B": "cerchio",
+   "C": "quadrato",
+   "D": "rettangolo"
+  },
+  "alt": "Quattro figure con le lettere: A una figura con 3 lati; B una figura rotonda, senza lati; C una figura con 4 lati tutti uguali; D una figura con 4 lati, due lunghi e due corti."
+ },
+ "c1-ideogramma-4-6-3": {
+  "modello": "ideogramma",
+  "fatti": {
+   "A": 4,
+   "B": 6,
+   "C": 3,
+   "piu": "B",
+   "meno": "C"
+  },
+  "alt": "Tre righe di disegni: riga A 4 cerchi; riga B 6 quadrati; riga C 3 triangoli."
+ },
+ "c1-linee-acca": {
+  "modello": "linee",
+  "fatti": {
+   "A": "aperta",
+   "B": "chiusa",
+   "C": "chiusa",
+   "D": "aperta"
+  },
+  "alt": "Quattro linee con le lettere: A ha due estremità libere; B gira e torna al punto di partenza; C gira e torna al punto di partenza; D ha due estremità libere."
+ },
+ "c1-linee-caac": {
+  "modello": "linee",
+  "fatti": {
+   "A": "chiusa",
+   "B": "aperta",
+   "C": "aperta",
+   "D": "chiusa"
+  },
+  "alt": "Quattro linee con le lettere: A gira e torna al punto di partenza; B ha due estremità libere; C ha due estremità libere; D gira e torna al punto di partenza."
+ },
+ "c1-percorso-4x3-a2d3": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    2
+   ],
+   "arrivo": [
+    3,
+    0
+   ],
+   "passi_minimi": 5,
+   "frecce": []
+  },
+  "alt": "Una griglia di 4 colonne e 3 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 3 caselle più a destra e 2 caselle più in alto."
+ },
+ "c1-percorso-5x4-d3a2-frecce": {
+  "modello": "percorso",
+  "fatti": {
+   "partenza": [
+    0,
+    3
+   ],
+   "arrivo": [
+    3,
+    1
+   ],
+   "passi_minimi": 5,
+   "frecce": [
+    "destra",
+    "destra",
+    "destra",
+    "alto",
+    "alto"
+   ]
+  },
+  "alt": "Una griglia di 5 colonne e 4 righe. Il pallino blu è nella casella in basso a sinistra, la stella è 3 caselle più a destra e 2 caselle più in alto. Dal pallino alla stella c'è una freccia per ogni casella, verso: destra, destra, destra, alto, alto."
+ },
+ "c1-posizione-scatola-dentro": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "dentro"
+  },
+  "alt": "Disegno con una scatola aperta in alto e una palla blu. La palla è sul fondo della scatola."
+ },
+ "c1-posizione-scatola-destra": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "destra"
+  },
+  "alt": "Disegno con una scatola aperta in alto e una palla blu. La palla è per terra, accanto alla scatola, dal lato della mano destra."
+ },
+ "c1-posizione-tavolo-sopra": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "sopra"
+  },
+  "alt": "Disegno con un tavolo e una palla blu. La palla è appoggiata sul piano del tavolo."
+ },
+ "c1-posizione-tavolo-sotto": {
+  "modello": "posizione",
+  "fatti": {
+   "posizione": "sotto"
+  },
+  "alt": "Disegno con un tavolo e una palla blu. La palla è per terra, fra le gambe del tavolo."
+ },
+ "c1-regione-ifsf": {
+  "modello": "regione",
+  "fatti": {
+   "A": "dentro",
+   "B": "fuori",
+   "C": "sulla linea",
+   "D": "fuori"
+  },
+  "alt": "Una linea chiusa colorata dentro e quattro punti: A nella parte colorata, lontano dalla linea; B nella parte bianca, lontano dalla linea; C proprio sopra la linea; D nella parte bianca, lontano dalla linea."
+ },
+ "c1-regione-sfii": {
+  "modello": "regione",
+  "fatti": {
+   "A": "sulla linea",
+   "B": "fuori",
+   "C": "dentro",
+   "D": "dentro"
+  },
+  "alt": "Una linea chiusa colorata dentro e quattro punti: A proprio sopra la linea; B nella parte bianca, lontano dalla linea; C nella parte colorata, lontano dalla linea; D nella parte colorata, lontano dalla linea."
+ },
+ "c1-retta-0-10-manca-6": {
+  "modello": "retta",
+  "fatti": {
+   "manca": 6
+  },
+  "alt": "Una linea dei numeri da 0 a 10. Fra il 5 e il 7, al posto del numero, c'è un riquadro con il punto di domanda."
+ },
+ "c1-retta-0-10-salto-3-7": {
+  "modello": "retta",
+  "fatti": {
+   "da": 3,
+   "a": 7,
+   "salti": 4,
+   "verso": "avanti"
+  },
+  "alt": "Una linea dei numeri da 0 a 10. Sul 3 c'è un pallino blu. Da lì partono 4 salti di un numero in avanti, verso destra."
+ },
+ "c1-retta-10-20-salto-15-12": {
+  "modello": "retta",
+  "fatti": {
+   "da": 15,
+   "a": 12,
+   "salti": 3,
+   "verso": "indietro"
+  },
+  "alt": "Una linea dei numeri da 10 a 20. Sul 15 c'è un pallino blu. Da lì partono 3 salti di un numero all'indietro, verso sinistra."
+ },
+ "c1-ritmo-cq-7": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "cerchio",
+    "quadrato",
+    "cerchio",
+    "quadrato",
+    "cerchio",
+    "quadrato",
+    "cerchio"
+   ],
+   "prossimo": "quadrato"
+  },
+  "alt": "Una fila di figure: cerchio, quadrato, cerchio, quadrato, cerchio, quadrato, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-ritmo-tcc-6": {
+  "modello": "ritmo",
+  "fatti": {
+   "sequenza": [
+    "triangolo",
+    "cerchio",
+    "cerchio",
+    "triangolo",
+    "cerchio",
+    "cerchio"
+   ],
+   "prossimo": "triangolo"
+  },
+  "alt": "Una fila di figure: triangolo, cerchio, cerchio, triangolo, cerchio, cerchio. Alla fine un riquadro con il punto di domanda."
+ },
+ "c1-strisce-7-4-9": {
+  "modello": "strisce",
+  "fatti": {
+   "A": 7,
+   "B": 4,
+   "C": 9,
+   "piu_lunga": "C",
+   "piu_corta": "B"
+  },
+  "alt": "Tre strisce che partono dalla stessa linea: A lunga 7 quadretti; B lunga 4 quadretti; C lunga 9 quadretti."
+ }
+}

@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 12:14:37
+Data generazione: 19/09/2026, 12:15:35
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -14,28 +14,28 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 | decimali               | 0     | 0     | 0     | 70    | 15    | 85   
 | diagramma_flusso       | 0     | 0     | 13 ⚠️  | 0     | 0     | 13   
 | equivalenze            | 0     | 0     | 0     | 20    | 0     | 20   
-| figure                 | 0     | 23    | 35    | 6  ⚠️  | 34    | 98   
+| figure                 | 4  ⚠️  | 23    | 35    | 6  ⚠️  | 34    | 102  
 | frazioni               | 0     | 0     | 15    | 119    | 30    | 164  
-| linee                  | 0     | 13 ⚠️  | 0     | 0     | 0     | 13   
+| linee                  | 4  ⚠️  | 13 ⚠️  | 0     | 0     | 0     | 17   
 | logica_proposizioni    | 0     | 0     | 0     | 0     | 12 ⚠️  | 12   
 | misure                 | 0     | 0     | 9  ⚠️  | 44    | 29    | 82   
 | misure_superficie      | 0     | 0     | 0     | 0     | 15    | 15   
 | multipli_divisori      | 0     | 0     | 0     | 58    | 0     | 58   
-| numeri                 | 0     | 24    | 0     | 15    | 15    | 54   
+| numeri                 | 7  ⚠️  | 24    | 0     | 15    | 15    | 61   
 | numeri_relativi        | 0     | 0     | 0     | 0     | 36    | 36   
-| operazioni             | 0     | 250    | 224    | 187    | 175    | 836  
+| operazioni             | 6  ⚠️  | 250    | 224    | 187    | 175    | 842  
 | orologio               | 0     | 27    | 0     | 0     | 0     | 27   
 | perimetro_area         | 0     | 58    | 68    | 96    | 92    | 314  
 | potenze                | 0     | 0     | 0     | 0     | 15    | 15   
 | prodotto_cartesiano    | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
 | proprieta              | 0     | 23    | 92    | 0     | 0     | 115  
-| raggruppamento         | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
+| raggruppamento         | 3  ⚠️  | 12 ⚠️  | 0     | 0     | 0     | 15   
 | ragionamento           | 0     | 22    | 15    | 15    | 15    | 67   
 | rette                  | 0     | 34    | 17    | 0     | 0     | 51   
 | schieramenti           | 0     | 17    | 0     | 0     | 0     | 17   
 | sequenze               | 0     | 49    | 66    | 18    | 17    | 150  
 | tavola_pitagorica      | 0     | 12 ⚠️  | 0     | 0     | 0     | 12   
-| TOTAL                   |        |        |        |        |        | 2783  
+| TOTAL                   |        |        |        |        |        | 2807  
 
 ## PROBLEMI
 Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
@@ -366,6 +366,7 @@ scienze         | sostenibilita_e_osservazione | c3    | 2
 scienze         | tecnologia_applicata      | c2    | 2
 scienze         | terra_e_movimenti         | c2    | 2
 scienze         | terra_e_movimenti         | c3    | 2
+matematica      | raggruppamento            | c1    | 3
 problemi        | moltiplicazione           | c2    | 3
 problemi        | moltiplicazione           | c3    | 3
 geografia       | acque                     | c2    | 3
@@ -381,6 +382,8 @@ storia          | cronologia                | c3    | 3
 storia          | metodo                    | c2    | 3
 storia          | passato_presente          | c2    | 3
 scienze         | metodo_e_classificazione  | c5    | 3
+matematica      | figure                    | c1    | 4
+matematica      | linee                     | c1    | 4
 problemi        | divisione                 | c3    | 4
 geografia       | elementi_naturali         | c2    | 4
 geografia       | italia_regioni            | c4    | 4
@@ -417,6 +420,7 @@ storia          | approfondimenti           | c5    | 5
 storia          | confronti_e_lessico       | c5    | 5
 scienze         | tecnologia_applicata      | c4    | 5
 matematica      | figure                    | c4    | 6
+matematica      | operazioni                | c1    | 6
 civica          | costituzione_e_istituzioni | c2    | 6
 geografia       | ambienti_acquatici        | c3    | 6
 geografia       | collina                   | c3    | 6
@@ -430,6 +434,7 @@ storia          | sintesi_e_confronti       | c5    | 6
 storia          | stagioni                  | c2    | 6
 scienze         | osservazione_e_applicazione | c4    | 6
 scienze         | tutela_ambientale         | c3    | 6
+matematica      | numeri                    | c1    | 7
 geografia       | italia_forma_mari         | c3    | 7
 geografia       | mappe_e_piante            | c2    | 7
 geografia       | paesaggi_base             | c2    | 7
@@ -568,11 +573,23 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 269
+Totale celle sotto soglia: 274
 ## Copertura per argomento (matematica)
 
 Argomento                                | Classe | Domande | Stato
 ----------------------------------------------------------------------
+c1-numeri-entro-20                       | c1     | 7       | debole
+c1-decine-unita                          | c1     | 3       | debole
+c1-addizione-sottrazione                 | c1     | 6       | debole
+c1-problemi                              | c1     | 0       | manca
+c1-posizioni                             | c1     | 0       | manca
+c1-percorsi                              | c1     | 0       | manca
+c1-figure-piane                          | c1     | 4       | debole
+c1-linee-regioni                         | c1     | 4       | debole
+c1-confronto-misure                      | c1     | 0       | manca
+c1-ritmi                                 | c1     | 0       | manca
+c1-classificazione                       | c1     | 0       | manca
+c1-ideogramma                            | c1     | 0       | manca
 c2-proprieta-commutativa-addizione       | c2     | 12      | coperto
 c2-numeri-31-99                          | c2     | 12      | coperto
 c2-addizione-tre-addendi                 | c2     | 13      | coperto
