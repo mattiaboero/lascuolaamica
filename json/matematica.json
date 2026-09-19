@@ -83830,7 +83830,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-50",
+   "figure": "goniometro-50-b",
    "figureAlt": "Goniometro con due scale: l'esterna parte da 0 a sinistra, l'interna da 0 a destra. Il vertice è al centro, un lato è sulla base verso destra; l'altro passa una tacca prima del 60 della scala interna, una tacca dopo il 120 di quella esterna."
   },
   {
@@ -83864,7 +83864,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-100",
+   "figure": "goniometro-100-b",
    "figureAlt": "Goniometro con due scale: l'esterna parte da 0 a sinistra, l'interna da 0 a destra. Il vertice è al centro, un lato è sulla base verso destra; l'altro passa una tacca dopo il 90 della scala interna, una tacca prima del 90 di quella esterna."
   },
   {
@@ -83898,7 +83898,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-100",
+   "figure": "goniometro-100-b",
    "figureAlt": "Goniometro con due scale: l'esterna parte da 0 a sinistra, l'interna da 0 a destra. Il vertice è al centro, un lato è sulla base verso destra; l'altro passa una tacca dopo il 90 della scala interna, una tacca prima del 90 di quella esterna."
   },
   {
@@ -83932,7 +83932,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-40-sinistra",
+   "figure": "goniometro-40-sinistra-b",
    "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso sinistra; l'altro lato passa una tacca dopo il 30 della scala esterna, dove la scala interna segna 140."
   },
   {
@@ -83966,7 +83966,7 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": "",
-   "figure": "goniometro-40-sinistra",
+   "figure": "goniometro-40-sinistra-b",
    "figureAlt": "Un goniometro con due scale di numeri: quella esterna parte da 0 a sinistra, quella interna parte da 0 a destra. Il vertice dell'angolo è al centro. Un lato è appoggiato sulla base verso sinistra; l'altro lato passa una tacca dopo il 30 della scala esterna, dove la scala interna segna 140."
   },
   {
