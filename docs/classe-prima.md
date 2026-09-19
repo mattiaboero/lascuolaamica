@@ -39,3 +39,74 @@ Limiti noti:
 
 - Anche il bonus segue la regola della 1ª. Le righe bonus del JSON portano `grade` da `class`. I bonus scritti nella config della pagina (`bonusQuestions` in `matematica-page.js`) sono di 1ª solo con `grade: 1`. La schermata del bonus mostra solo i livelli con domande per la classe. Se non ce n'è nessuno, la partita va dritta al risultato. **Prima di accendere la 1ª servono bonus con `grade: 1`**, altrimenti la 1ª non ha il bonus.
 - Niente domande ripetute nella stessa partita: quando il pool finisce, `pickQuestion` non ricomincia più da capo. I fallback prendono solo domande non ancora uscite, e se non bastano la partita è più corta (`sessionLen()` usa `questions.length`). Con un'area di 1ª sotto le 10 domande, il fallback largo completa la partita con altre domande di 1ª di altre aree, come già succede nelle altre classi.
+
+## P3: figure
+
+In 1ª più o meno 6 domande su 10 hanno bisogno di un disegno: a 6 anni si conta, si confronta e si riconosce guardando. Le figure seguono tutte le regole di `docs/figure-nel-quiz.md`, ma invece di disegnarle una per una le costruisce un generatore che resta nel repo.
+
+### Generatore
+
+`scripts/figure_classe_prima.py` legge solo l'id: l'id contiene tutti i parametri e lo stesso id dà sempre lo stesso file, byte per byte.
+
+```bash
+python3 scripts/figure_classe_prima.py c1-conta-mele-7 c1-retta-0-10-salto-3-7
+python3 scripts/figure_classe_prima.py --shard reports/generated/matematica-c1-<slug>.jsonl
+```
+
+Scrive `assets/figure/<id>.svg` e aggiorna `scripts/data/figure-classe-prima.json` (per ogni id: modello, fatti veri della figura, testo alternativo). Con `--shard` genera ogni figura `c1-*` citata nello shard e scrive nella riga il suo `figureAlt`. Un file già tracciato da git non viene mai riscritto: se il disegno di un id pubblicato dovesse cambiare, lo script si ferma e serve un id nuovo.
+
+| modello | id | disegno |
+|---|---|---|
+| T1 contare | `c1-conta-<mele\|palline\|stelle\|cubi>-<n>` | n oggetti (1-20) in file da 5, con uno spazio dopo il 10 |
+| T1 due gruppi | `c1-conta-<oggetto>-<a>-<b>` | a oggetti arancioni pieni, sotto b oggetti blu vuoti (addizione) |
+| T2 confronto | `c1-confronto-<a>-<b>` | riquadri A e B con 0-10 pallini, in colonne da 5 |
+| T3 linea dei numeri | `c1-retta-<x>-<y>-salto-<da>-<a>` | tacche da x a y (al massimo 11), pallino sul `da`, salti di 1 fino ad `a` |
+| T3 numero mancante | `c1-retta-<x>-<y>-manca-<m>` | come sopra, con "?" al posto di m |
+| T4 decine e unità | `c1-decine-<d>-<u>` | d bastoncini da 10 quadretti e u cubetti sciolti |
+| T5 figure piane | `c1-forme-<4 lettere c q r t>` | A-D: cerchio, quadrato, rettangolo, triangolo, in misure e versi diversi |
+| T6 posizioni | `c1-posizione-<tavolo\|scatola>-<rel>` | palla sopra, sotto, a destra, a sinistra del tavolo; dentro o accanto alla scatola |
+| T7 percorsi | `c1-percorso-<C>x<R>-<mosse>[-frecce]` | griglia, pallino in basso a sinistra, stella d'arrivo; `d3a2` = 3 a destra e 2 in alto (d s a b) |
+| T8 linee | `c1-linee-<4 lettere a c>` | linee A-D aperte o chiuse |
+| T8 regioni | `c1-regione-<4 lettere i f s>` | una linea chiusa e i punti A-D dentro, fuori o sulla linea |
+| T9 ritmi | `c1-ritmo-<motivo c q t>-<n>` | n figure (al massimo 7, almeno due giri del motivo) e un riquadro "?" |
+| T10 lunghezze | `c1-strisce-<l1>-<l2>[-<l3>]` | strisce A-C a quadretti, lunghezze diverse di almeno 2 |
+| T10 pesi | `c1-bilancia-<a\|b>` | bilancia a due piatti, scende il piatto più pesante |
+| T11 ideogramma | `c1-ideogramma-<a>-<b>-<c>` | righe A (cerchi), B (quadrati), C (triangoli), quantità diverse |
+
+Scelte di disegno:
+
+- Davanti e dietro non ci sono: in un disegno piatto non si distinguono senza ambiguità.
+- La linea dei numeri mostra al massimo 11 tacche. Per i numeri fino a 20 si usa una finestra (`c1-retta-10-20-...`): con 21 tacche su 320 unità le etichette di due cifre si toccano.
+- Colori Okabe-Ito come le altre figure. Quando il colore distingue due gruppi (T1 a due gruppi) cambia anche il riempimento (pieni e vuoti) e i gruppi stanno su file diverse. Nelle altre figure il colore non porta mai l'informazione: contano forma, lettera, posizione.
+- Il testo nel disegno è solo lettere A-D e numeri, da 18 a 24 unità; il vermiglio non si usa mai per il testo.
+- Il `figureAlt` descrive la disposizione, non il risultato: per contare «Una fila di 5 mele e sotto una fila di 2 mele.», non «7 mele»; per le figure piane le proprietà («una figura con 3 lati»), non il nome.
+
+### Verificatore
+
+`scripts/verifica_figure_classe_prima.py` è scritto a parte e non importa il generatore. Per ogni `assets/figure/c1-*.svg` ricava i fatti dalla sola geometria e li confronta con il manifest:
+
+- contare: forme per tipo (cerchio, stella a 10 vertici, quadrato) e per colore, al massimo 5 per fila; nei due gruppi, pieni contro vuoti e file separate;
+- confronto: pallini dentro ciascun riquadro, lettera sopra il suo riquadro;
+- linea dei numeri: legge le etichette e la distanza fra le tacche, poi i salti dagli estremi degli archi (ognuno lungo 1, uno di seguito all'altro), il pallino di partenza e la punta della freccia; per "?" il numero della tacca;
+- decine: bastoncini (rettangoli alti 10 volte la larghezza, con 9 righe dentro) e cubetti;
+- figure piane: cerchio, triangolo (nessun angolo sotto 25°), quadrato o rettangolo (lati in rapporto almeno 1,6, altrimenti è ambiguo);
+- posizioni: riquadri della palla e del tavolo o della scatola; percorsi: celle della griglia, frecce seguite dalla partenza fino alla stella;
+- linee: chiusa se il tracciato finisce con `Z`, aperta solo se le estremità distano almeno 40; regioni: punto nel poligono, sulla linea entro 1,5, altrimenti almeno 12 lontano, e la lettera tutta da una parte;
+- ritmi: il periodo più corto che si ripete almeno due volte e la figura che segue; strisce: quadretti contati dalle righe interne; bilancia: il lato più basso del giogo; ideogramma: forme per riga.
+
+Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente style/script/link/`url(`, cartoncino come primo elemento, solo i colori della palette, testo in Arial grassetto da almeno 16 e mai vermiglio, ogni elemento dentro il cartoncino, etichette che non si sovrappongono. Infine, per ogni domanda di `json/matematica.json` con una figura `c1-*`: classe 1 e `figureAlt` uguale a quello del manifest. Esce con 1 al primo problema. Provato con 19 alterazioni fatte a mano (un oggetto in meno, un salto lungo 2, una linea chiusa aperta, un punto spostato, un `style=`, un testo piccolo o vermiglio, ...): li trova tutti.
+
+### Aggiungere una domanda con figura
+
+1. Scegli l'id dal modello (tabella sopra) e scrivi la riga nello shard `reports/generated/matematica-c1-<slug>.jsonl` con `"figure": "<id>"` (il `figureAlt` lo mette il generatore).
+2. `python3 scripts/figure_classe_prima.py --shard reports/generated/matematica-c1-<slug>.jsonl`
+3. Guarda i file nuovi a circa 215 px di larghezza (quella della figura su un telefono di 375): se un bambino può leggerli male, cambia i parametri, non il file.
+4. Controlla ogni risposta sui fatti del manifest (il pilota lo ha fatto con uno script usa e getta).
+5. `git add assets/figure/c1-*.svg scripts/data/figure-classe-prima.json`, poi ingest e controlli come in `docs/prompt-generazione-matematica.md`, più `python3 scripts/verifica_figure_classe_prima.py`.
+
+### Scrivere le domande di 1ª
+
+- Domanda di 3-8 parole, una frase sola, numeri in cifre.
+- Opzioni di 1-2 parole, un numero o una lettera A-D. Con le lettere l'ordine resta A, B, C, D.
+- Spiegazione di 1-2 frasi brevi, con il numero della risposta e il conto giusto («5 + 2 = 7»).
+- Stem tutti diversi, anche fra domande sulla stessa figura: l'ingest salta un testo già presente. Si cambia oggetto o contesto («Quante mele ha raccolto il nonno?», «Quante stelle ha disegnato Sara?»).
