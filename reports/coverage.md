@@ -1,41 +1,41 @@
 # Rapporto copertura curricolare
-Data generazione: 18/09/2026, 12:34:12
+Data generazione: 19/09/2026, 10:49:33
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
 ## MATEMATICA
 Subarea                   | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|--------|
-| angoli                 | 0     | 39    | 15    | 0     | 54   
+| angoli                 | 0     | 48    | 15    | 0     | 63   
 | calcolo_mentale        | 65    | 41    | 28    | 52    | 186  
 | cerchio                | 0     | 0     | 0     | 12 ⚠️  | 12   
-| colonna                | 8  ⚠️  | 0     | 0     | 0     | 8    
+| colonna                | 11 ⚠️  | 0     | 0     | 0     | 11   
 | dati_probabilita       | 13 ⚠️  | 16    | 95    | 94    | 218  
 | decimali               | 0     | 0     | 70    | 15    | 85   
-| diagramma_flusso       | 0     | 10 ⚠️  | 0     | 0     | 10   
+| diagramma_flusso       | 0     | 13 ⚠️  | 0     | 0     | 13   
 | equivalenze            | 0     | 0     | 20    | 0     | 20   
 | figure                 | 23    | 28    | 6  ⚠️  | 34    | 91   
-| frazioni               | 0     | 15    | 115    | 30    | 160  
+| frazioni               | 0     | 15    | 119    | 30    | 164  
 | linee                  | 13 ⚠️  | 0     | 0     | 0     | 13   
 | logica_proposizioni    | 0     | 0     | 0     | 12 ⚠️  | 12   
-| misure                 | 0     | 9  ⚠️  | 39    | 29    | 77   
+| misure                 | 0     | 9  ⚠️  | 44    | 29    | 82   
 | misure_superficie      | 0     | 0     | 0     | 15    | 15   
-| multipli_divisori      | 0     | 0     | 44    | 0     | 44   
-| numeri                 | 20    | 0     | 15    | 15    | 50   
+| multipli_divisori      | 0     | 0     | 58    | 0     | 58   
+| numeri                 | 24    | 0     | 15    | 15    | 54   
 | numeri_relativi        | 0     | 0     | 0     | 36    | 36   
-| operazioni             | 246    | 220    | 187    | 175    | 828  
+| operazioni             | 250    | 224    | 187    | 175    | 836  
 | orologio               | 18    | 0     | 0     | 0     | 18   
 | perimetro_area         | 58    | 68    | 96    | 92    | 314  
 | potenze                | 0     | 0     | 0     | 15    | 15   
-| prodotto_cartesiano    | 8  ⚠️  | 0     | 0     | 0     | 8    
-| proprieta              | 16    | 58    | 0     | 0     | 74   
-| raggruppamento         | 8  ⚠️  | 0     | 0     | 0     | 8    
+| prodotto_cartesiano    | 12 ⚠️  | 0     | 0     | 0     | 12   
+| proprieta              | 23    | 92    | 0     | 0     | 115  
+| raggruppamento         | 12 ⚠️  | 0     | 0     | 0     | 12   
 | ragionamento           | 22    | 15    | 15    | 15    | 67   
-| rette                  | 26    | 10 ⚠️  | 0     | 0     | 36   
-| schieramenti           | 11 ⚠️  | 0     | 0     | 0     | 11   
+| rette                  | 34    | 13 ⚠️  | 0     | 0     | 47   
+| schieramenti           | 12 ⚠️  | 0     | 0     | 0     | 12   
 | sequenze               | 49    | 66    | 18    | 17    | 150  
-| tavola_pitagorica      | 8  ⚠️  | 0     | 0     | 0     | 8    
-| TOTAL                   |        |        |        |        | 2628  
+| tavola_pitagorica      | 12 ⚠️  | 0     | 0     | 0     | 12   
+| TOTAL                   |        |        |        |        | 2743  
 
 ## PROBLEMI
 Subarea                   | c2     | c3     | c4     | c5     | Total
@@ -439,10 +439,6 @@ storia          | passaggio_alla_repubblica | c5    | 7
 scienze         | adattamenti_e_ambiente    | c3    | 7
 scienze         | metodo_e_classificazione  | c3    | 7
 scienze         | tutela_ambientale         | c4    | 7
-matematica      | colonna                   | c2    | 8
-matematica      | prodotto_cartesiano       | c2    | 8
-matematica      | raggruppamento            | c2    | 8
-matematica      | tavola_pitagorica         | c2    | 8
 geografia       | geografia_fisica_europea  | c5    | 8
 geografia       | sviluppo_sostenibile      | c5    | 8
 storia          | alto_medioevo             | c5    | 8
@@ -461,8 +457,6 @@ storia          | cambiamenti_e_cause       | c2    | 9
 storia          | confronti_e_sintesi       | c3    | 9
 storia          | storia_personale          | c2    | 9
 scienze         | osservazione_e_dati       | c3    | 9
-matematica      | diagramma_flusso          | c3    | 10
-matematica      | rette                     | c3    | 10
 problemi        | due_operazioni            | c3    | 10
 civica          | diritti_e_doveri          | c3    | 10
 civica          | gentilezza_in_strada      | c4    | 10
@@ -513,7 +507,7 @@ scienze         | stati_proprieta_materia   | c3    | 10
 scienze         | stati_proprieta_materia   | c5    | 10
 scienze         | trasformazioni_ed_esperimenti | c3    | 10
 scienze         | trasformazioni_ed_esperimenti | c4    | 10
-matematica      | schieramenti              | c2    | 11
+matematica      | colonna                   | c2    | 11
 problemi        | addizione                 | c5    | 11
 problemi        | tempo                     | c2    | 11
 problemi        | tempo                     | c4    | 11
@@ -535,6 +529,10 @@ scienze         | salute_e_igiene           | c4    | 11
 scienze         | terra_e_movimenti         | c4    | 11
 matematica      | cerchio                   | c5    | 12
 matematica      | logica_proposizioni       | c5    | 12
+matematica      | prodotto_cartesiano       | c2    | 12
+matematica      | raggruppamento            | c2    | 12
+matematica      | schieramenti              | c2    | 12
+matematica      | tavola_pitagorica         | c2    | 12
 problemi        | addizione                 | c4    | 12
 problemi        | euro_denaro               | c2    | 12
 inglese         | classroom_language        | c2    | 12
@@ -550,7 +548,9 @@ scienze         | metodo_e_classificazione  | c4    | 12
 scienze         | sostenibilita_e_osservazione | c2    | 12
 scienze         | terra_e_movimenti         | c5    | 12
 matematica      | dati_probabilita          | c2    | 13
+matematica      | diagramma_flusso          | c3    | 13
 matematica      | linee                     | c2    | 13
+matematica      | rette                     | c3    | 13
 geografia       | percorsi                  | c2    | 13
 geografia       | punti_cardinali           | c2    | 13
 storia          | civilta                   | c3    | 13
@@ -575,54 +575,54 @@ Totale celle sotto soglia: 271
 
 Argomento                                | Classe | Domande | Stato
 ----------------------------------------------------------------------
-c2-proprieta-commutativa-addizione       | c2     | 8       | debole
-c2-numeri-31-99                          | c2     | 8       | debole
-c2-addizione-tre-addendi                 | c2     | 12      | coperto
+c2-proprieta-commutativa-addizione       | c2     | 12      | coperto
+c2-numeri-31-99                          | c2     | 12      | coperto
+c2-addizione-tre-addendi                 | c2     | 13      | coperto
 c2-linee                                 | c2     | 14      | coperto
-c2-raggruppamento-secondo-ordine         | c2     | 8       | debole
-c2-cento-centinaia                       | c2     | 12      | coperto
-c2-moltiplicazione                       | c2     | 105     | coperto
-c2-moltiplicazione-prodotto-cartesiano   | c2     | 8       | debole
-c2-schieramenti-reticoli                 | c2     | 11      | coperto
-c2-tabelline                             | c2     | 81      | coperto
-c2-moltiplicazioni-colonna               | c2     | 9       | debole
-c2-proprieta-commutativa-moltiplicazione | c2     | 9       | debole
-c2-tavola-pitagorica                     | c2     | 8       | debole
-c2-divisione                             | c2     | 24      | coperto
-c2-divisioni-colonna                     | c2     | 8       | debole
-c2-divisioni-due-cifre                   | c2     | 13      | coperto
+c2-raggruppamento-secondo-ordine         | c2     | 12      | coperto
+c2-cento-centinaia                       | c2     | 14      | coperto
+c2-moltiplicazione                       | c2     | 112     | coperto
+c2-moltiplicazione-prodotto-cartesiano   | c2     | 12      | coperto
+c2-schieramenti-reticoli                 | c2     | 12      | coperto
+c2-tabelline                             | c2     | 82      | coperto
+c2-moltiplicazioni-colonna               | c2     | 12      | coperto
+c2-proprieta-commutativa-moltiplicazione | c2     | 12      | coperto
+c2-tavola-pitagorica                     | c2     | 12      | coperto
+c2-divisione                             | c2     | 29      | coperto
+c2-divisioni-colonna                     | c2     | 12      | coperto
+c2-divisioni-due-cifre                   | c2     | 16      | coperto
 c2-indagine-statistica                   | c2     | 12      | coperto
 c2-orologio-lancette                     | c2     | 16      | coperto
-c2-punto-retta-piano                     | c2     | 8       | debole
-c2-rette-semirette-segmenti              | c2     | 21      | coperto
-c2-confronto-segmenti                    | c2     | 8       | debole
-c3-proprieta-associativa-addizione       | c3     | 9       | debole
-c3-proprieta-dissociativa-addizione      | c3     | 7       | debole
-c3-proprieta-invariantiva-sottrazione    | c3     | 6       | debole
-c3-proprieta-associativa-moltiplicazione | c3     | 7       | debole
-c3-proprieta-dissociativa-moltiplicazione | c3     | 6       | debole
-c3-proprieta-invariantiva-divisione      | c3     | 7       | debole
-c3-proprieta-distributiva                | c3     | 8       | debole
-c3-prova-del-nove                        | c3     | 8       | debole
-c3-angoli-direzione-rotazione            | c3     | 9       | debole
-c3-confronto-angoli                      | c3     | 10      | coperto
-c3-angolo-concavo-convesso               | c3     | 8       | debole
-c3-angoli-notevoli                       | c3     | 31      | coperto
-c3-posizione-rette-piano                 | c3     | 9       | debole
+c2-punto-retta-piano                     | c2     | 12      | coperto
+c2-rette-semirette-segmenti              | c2     | 25      | coperto
+c2-confronto-segmenti                    | c2     | 12      | coperto
+c3-proprieta-associativa-addizione       | c3     | 12      | coperto
+c3-proprieta-dissociativa-addizione      | c3     | 12      | coperto
+c3-proprieta-invariantiva-sottrazione    | c3     | 12      | coperto
+c3-proprieta-associativa-moltiplicazione | c3     | 12      | coperto
+c3-proprieta-dissociativa-moltiplicazione | c3     | 13      | coperto
+c3-proprieta-invariantiva-divisione      | c3     | 12      | coperto
+c3-proprieta-distributiva                | c3     | 12      | coperto
+c3-prova-del-nove                        | c3     | 12      | coperto
+c3-angoli-direzione-rotazione            | c3     | 12      | coperto
+c3-confronto-angoli                      | c3     | 12      | coperto
+c3-angolo-concavo-convesso               | c3     | 12      | coperto
+c3-angoli-notevoli                       | c3     | 38      | coperto
+c3-posizione-rette-piano                 | c3     | 12      | coperto
 c3-poligoni                              | c3     | 12      | coperto
-c3-diagramma-di-flusso                   | c3     | 9       | debole
+c3-diagramma-di-flusso                   | c3     | 12      | coperto
 c4-numero-mille-migliaia                 | c4     | 15      | coperto
-c4-multipli                              | c4     | 15      | coperto
-c4-divisori                              | c4     | 18      | coperto
-c4-numeri-primi-composti                 | c4     | 15      | coperto
-c4-crivello-eratostene                   | c4     | 2       | debole
-c4-scomposizione-albero                  | c4     | 8       | debole
+c4-multipli                              | c4     | 23      | coperto
+c4-divisori                              | c4     | 20      | coperto
+c4-numeri-primi-composti                 | c4     | 23      | coperto
+c4-crivello-eratostene                   | c4     | 12      | coperto
+c4-scomposizione-albero                  | c4     | 12      | coperto
 c4-frazioni-concetto                     | c4     | 17      | coperto
-c4-frazioni-unitarie                     | c4     | 10      | coperto
+c4-frazioni-unitarie                     | c4     | 12      | coperto
 c4-frazione-di-un-numero                 | c4     | 21      | coperto
 c4-classificazione-frazioni              | c4     | 19      | coperto
 c4-numeri-misti                          | c4     | 12      | coperto
-c4-frazioni-complementari                | c4     | 10      | coperto
+c4-frazioni-complementari                | c4     | 12      | coperto
 c4-frazioni-equivalenti                  | c4     | 19      | coperto
 c4-confronto-frazioni                    | c4     | 15      | coperto
 c4-decimi-centesimi-millesimi            | c4     | 21      | coperto
@@ -630,10 +630,10 @@ c4-addizione-decimali                    | c4     | 17      | coperto
 c4-sottrazione-decimali                  | c4     | 17      | coperto
 c4-moltiplicazione-virgola               | c4     | 12      | coperto
 c4-divisione-virgola                     | c4     | 12      | coperto
-c4-unita-di-misura                       | c4     | 7       | debole
-c4-misure-lunghezza                      | c4     | 62      | coperto
-c4-misure-massa-peso                     | c4     | 61      | coperto
-c4-misure-capacita                       | c4     | 26      | coperto
+c4-unita-di-misura                       | c4     | 12      | coperto
+c4-misure-lunghezza                      | c4     | 65      | coperto
+c4-misure-massa-peso                     | c4     | 63      | coperto
+c4-misure-capacita                       | c4     | 27      | coperto
 c4-equivalenze                           | c4     | 22      | coperto
 c4-misure-angoli-gradi                   | c4     | 14      | coperto
 c4-goniometro                            | c4     | 5       | debole
