@@ -1,5 +1,11 @@
 [
  {
+  "date": "19 settembre 2026 · Release 4.16.0",
+  "items": [
+   "Ci sono 115 domande nuove di matematica per gli argomenti che ne avevano ancora poche. In seconda: numeri fino a 99, cambi, proprietà commutativa, tavola pitagorica, moltiplicazioni e divisioni in colonna, abbinamenti, punto, retta e piano, confronto tra segmenti. In terza: le proprietà delle operazioni, la prova del nove, gli angoli, le rette nel piano, i diagrammi di flusso. In quarta: il crivello di Eratostene, la scomposizione con l'albero, le frazioni complementari e unitarie, le unità di misura. Le domande totali attive passano da 9.917 a 10.032."
+  ]
+ },
+ {
   "date": "18 settembre 2026 · Release 4.15.2",
   "items": [
    "Sui telefoni, quando la barra dei link in fondo alla pagina andava su piu' righe, l'ultima risposta del quiz poteva restare parzialmente coperta anche scorrendo fino in fondo. Ora c'e' sempre spazio a sufficienza."
