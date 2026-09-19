@@ -88235,7 +88235,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 1,
-   "question": "L'angolo è quasi disteso. Quanti gradi misura sul goniometro di Matteo?",
+   "question": "L'angolo è quasi piatto. Quanti gradi misura sul goniometro di Matteo?",
    "options": [
     "160°",
     "20°",
@@ -89085,16 +89085,16 @@
    "area": "geometria",
    "subarea": "rette",
    "difficulty": 3,
-   "question": "Le rette della coppia D non si toccano, ma si avvicinano verso destra. Che posizione hanno?",
+   "question": "Le rette della coppia D non si toccano nel disegno. Immagina di prolungarle verso destra. Che posizione hanno?",
    "options": [
     "Sono parallele, perché non si toccano",
     "Sono perpendicolari",
-    "Sono perpendicolari, perché si avvicinano",
+    "Non si può dire, perché nel disegno non si toccano",
     "Sono incidenti: prolungate si incontrano"
    ],
    "answerIndex": 3,
    "answer": "Sono incidenti: prolungate si incontrano",
-   "explanation": "Una retta non finisce dove finisce il tratto disegnato. Le due rette della coppia D si avvicinano: prolungandole verso destra si incontrano, quindi sono incidenti, non parallele.",
+   "explanation": "Una retta non finisce dove finisce il tratto disegnato. Le due rette della coppia D sono lontane a sinistra e più vicine a destra: prolungandole verso destra si incontrano, quindi sono incidenti, non parallele.",
    "active": true,
    "tag": "matematica;rette;classe_3;primaria",
    "tags": [
@@ -89162,7 +89162,7 @@
    ],
    "answerIndex": 1,
    "answer": "L'angolo B",
-   "explanation": "Un angolo concavo è più ampio di un angolo piatto. Nell'angolo B l'arco gira attorno al vertice dalla parte di sotto: l'apertura segnata supera mezzo giro, quindi B è concavo.",
+   "explanation": "Un angolo concavo contiene i prolungamenti dei suoi lati. Prolunga i lati oltre il vertice: in A e in C i prolungamenti restano fuori dall'arco, in B cadono dentro la parte segnata dall'arco, sotto il vertice. Quindi B è concavo.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -89196,7 +89196,7 @@
    ],
    "answerIndex": 2,
    "answer": "2",
-   "explanation": "Un angolo convesso è meno ampio di un angolo piatto. Gli angoli A e C lo sono, perché l'arco sta fra i due lati senza superare mezzo giro; B invece è concavo. Gli angoli convessi sono 2.",
+   "explanation": "Un angolo convesso non contiene i prolungamenti dei suoi lati. Prolungando i lati oltre il vertice, in A e in C i prolungamenti restano fuori dall'arco: sono convessi. In B cadono dentro l'arco, quindi B è concavo. Gli angoli convessi sono 2.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -89221,16 +89221,16 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 3,
-   "question": "Confronta l'angolo B con un angolo piatto: che cosa scopri?",
+   "question": "Immagina di prolungare i due lati dell'angolo B oltre il vertice. Che cosa scopri?",
    "options": [
-    "B è meno ampio di un angolo piatto",
-    "B è uguale a un angolo piatto",
-    "B è un angolo retto",
-    "B è più ampio di un angolo piatto"
+    "I prolungamenti restano fuori dall'angolo: B è convesso",
+    "I prolungamenti coincidono con i lati: B è piatto",
+    "I lati di un angolo non si possono prolungare",
+    "I prolungamenti cadono dentro l'angolo: B è concavo"
    ],
    "answerIndex": 3,
-   "answer": "B è più ampio di un angolo piatto",
-   "explanation": "Un angolo piatto è mezzo giro, e i suoi lati formano una linea dritta. L'arco di B gira attorno al vertice più di mezzo giro: B è più ampio di un angolo piatto, cioè concavo.",
+   "answer": "I prolungamenti cadono dentro l'angolo: B è concavo",
+   "explanation": "Il lato orizzontale di B, prolungato oltre il vertice, va verso sinistra; l'altro lato, prolungato, scende verso destra. Tutti e due cadono nella parte segnata dall'arco, sotto il vertice: B contiene i prolungamenti dei suoi lati, quindi è concavo, più ampio di un angolo piatto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [

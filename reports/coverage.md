@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 11:24:37
+Data generazione: 19/09/2026, 11:41:39
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -603,9 +603,9 @@ c3-proprieta-invariantiva-divisione      | c3     | 12      | coperto
 c3-proprieta-distributiva                | c3     | 12      | coperto
 c3-prova-del-nove                        | c3     | 12      | coperto
 c3-angoli-direzione-rotazione            | c3     | 11      | coperto
-c3-confronto-angoli                      | c3     | 14      | coperto
-c3-angolo-concavo-convesso               | c3     | 14      | coperto
-c3-angoli-notevoli                       | c3     | 39      | coperto
+c3-confronto-angoli                      | c3     | 13      | coperto
+c3-angolo-concavo-convesso               | c3     | 15      | coperto
+c3-angoli-notevoli                       | c3     | 38      | coperto
 c3-posizione-rette-piano                 | c3     | 15      | coperto
 c3-poligoni                              | c3     | 19      | coperto
 c3-diagramma-di-flusso                   | c3     | 12      | coperto
