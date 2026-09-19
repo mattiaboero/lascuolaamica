@@ -1,5 +1,27 @@
 # Changelog Repo
 
+## 4.18.1 - 2026-09-19
+
+**Rifiniture alla matematica di 1ª (ancora nascosta) e a domande recenti.**
+Nessuna modifica visibile in 2ª-5ª: la 1ª resta spenta finché
+`js/matematica-page.js` non la accende.
+
+### Fixed
+- fix(quiz): in 1ª, a 360×740 la figura di alcune domande finiva sotto il
+  footer fisso; ristretti margini e pallini di progresso sotto i 380px,
+  figura sempre sopra il footer per tutte le 203 domande con figura,
+  nessuna regressione a 375×812/390×844/1280×800 né sulle altre classi.
+- fix(matematica): metà dei 25 problemi di 1ª (`c1-problemi`) seguiva lo
+  stesso schema («ha N, ne trova M»); 12 riscritti con schemi diversi
+  (confronto, parte mancante, due gruppi, condivisione, ordine temporale).
+- fix(matematica): 3 domande di 1ª «Quale figura è il rettangolo?» erano
+  ambigue quando fra le figure c'era anche un quadrato (che è anch'esso
+  un rettangolo); riformulate come «due lati lunghi e due corti».
+- fix(matematica): 4 domande fra moltiplicazioni e divisioni in colonna
+  di 2ª, tutte clonate sullo stesso schema, riscritte in forme diverse
+  (cifra delle decine, individua l'errore, quale operazione dà il
+  risultato).
+
 ## 4.18.0 - 2026-09-19
 
 **Matematica di 1ª pronta, ancora nascosta.** Il motore accetta la 1ª
