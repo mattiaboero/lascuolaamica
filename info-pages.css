@@ -117,7 +117,7 @@ body.page-supporto-satispay {
   --page-muted: rgba(255, 255, 255, 0.97);
   --page-link: #ffffff;
   --page-link-strong: #3d1706;
-  --page-top-button-text: #ff3d00;
+  --page-top-button-text: #c43000; /* #ff3d00 su bianco e' 3,55:1, sotto AA */
   --page-button-border: rgba(255, 255, 255, 0.95);
   --page-button-bg: #ffffff;
   --page-button-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
@@ -342,6 +342,13 @@ body.info-page .qr-note {
   font-size: 0.92rem;
   font-weight: 800;
   color: var(--page-muted);
+}
+
+/* La nota del QR sta dentro la card chiara, non sul fondo della pagina:
+   su /supporto-satispay --page-muted e' bianco (pensato per il rosso) e la
+   frase spariva. Stesso colore del testo della card. */
+body.page-supporto-satispay .qr-note {
+  color: var(--page-text);
 }
 
 body.info-page .skip-link {

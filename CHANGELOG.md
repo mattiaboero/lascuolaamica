@@ -1,5 +1,39 @@
 # Changelog Repo
 
+## 4.19.2 - 2026-09-23
+
+**Chiusura di B2 (restyle Wada Sanzo): verifica del contrasto su tutte le
+pagine, nei due modi colore.** Le fasi 0-5 erano già in produzione; il giro di
+controllo ha trovato tre difetti veri, tutti corretti. Nessun cambio di
+palette, nessuna migrazione di colori: solo i punti dove testo e sfondo
+coincidevano.
+
+### Fixed
+- fix(a11y): su `/supporto-satispay` la nota sotto il QR era **bianca dentro
+  la card chiara** e spariva: `--page-muted` su quella pagina vale
+  `rgba(255,255,255,.97)` perché pensato per il fondo rosso, ma `.qr-note` sta
+  dentro `main.card` (`rgba(255,243,238,.97)`). Ora usa `--page-text`.
+- fix(a11y): sempre su `/supporto-satispay`, il pulsante «← Menu» usava il
+  rosso di marca `#ff3d00` su bianco: 3,55:1, sotto AA. Portato a `#c43000`
+  (5,57:1), stessa famiglia di colore.
+- fix(a11y): in modalità accessibile le briciole di `/accessibilita`,
+  `/supporta` e `/supporto-satispay` finivano sul fondo blu o rosso della
+  pagina con il blu `--accent-1` (1,2:1) o con il grigio scuro del testo
+  (2,9:1). Su queste tre pagine diventano bianche. La palette Okabe-Ito non
+  cambia: è una regola in più in `palette-okabe.css`, nessun token toccato.
+
+### Added
+- `npm run check:contrast` (`scripts/check_contrast.sh`): Lighthouse/axe su 25
+  pagine × 2 modi colore, esce 1 alla prima area sotto AA. Fuori dalla catena
+  di `npm run verify` perché richiede un server e qualche minuto.
+
+### Notes
+- Stato finale misurato: **25 pagine × 2 modi colore, zero aree sotto AA**.
+- Un controllo del contrasto scritto a mano dava 161-414 falsi positivi:
+  sbaglia i gradienti e non legge `color(srgb ...)`, che è la forma in cui
+  Chromium restituisce i colori dei gradienti. Per questo il controllo nuovo
+  usa Lighthouse invece di calcolare da sé.
+
 ## 4.19.1 - 2026-09-23
 
 **Voci aperte dell'audit SEO dell'11 settembre.** Solo testi, titoli e dati
