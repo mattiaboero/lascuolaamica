@@ -1,5 +1,39 @@
 # Changelog Repo
 
+## 4.19.0 - 2026-09-23
+
+**La matematica di 1ª si accende.** `js/matematica-page.js` ha
+`classes: [1, 2, 3, 4, 5]`: le 290 domande di 1ª preparate nella 4.18.0
+diventano visibili, la schermata di scelta classe mostra cinque bottoni e i
+conteggi pubblici salgono da 10.072 a 10.362 domande attive.
+
+### Added
+- feat(matematica): classe 1ª visibile in matematica (`classes` nella config
+  della pagina, docs/classe-prima.md). In 1ª il testo è in stampato maiuscolo,
+  203 domande su 290 hanno una figura e il pulsante «Ascolta» legge domanda e
+  risposte con una voce italiana locale.
+- content(matematica): testi della pagina e FAQ/JSON-LD aggiornati da
+  «dalla classe seconda alla quinta» a «dalla classe prima alla quinta»;
+  `llms.txt` dice che la matematica copre anche la 1ª.
+
+### Fixed
+- fix(quiz): **a 360×740 la figura di 84 domande di 1ª su 203 finiva sotto il
+  footer fisso.** La correzione della 4.18.1 era stata misurata su una copia
+  con il footer più corto: il footer vero è alto 169px (tre righe di link,
+  verificato anche in produzione), non i ~122px di una riga. Sotto i 760px di
+  altezza la figura di 1ª si limita a 160px (213×160, il 4:3 della misura di
+  lettura di `docs/figure-nel-quiz.md`) invece di restare a piena larghezza.
+  Misurato sulle 203 domande: margine minimo 10,5px a 360×740, 19,8px a
+  375×812, 32,5px a 390×844, 202,5px a 1280×800; niente scroll orizzontale.
+  Solo misure, nessun colore, regola scoperta solo da `html[data-classe="1"]`:
+  la 2ª-5ª e la modalità Okabe-Ito restano invariate.
+
+### Notes
+- Domande attive: 10.072 → 10.362 (le 290 di 1ª entrano nei conteggi
+  pubblici ora che la classe è visibile).
+- Da provare a mano, che l'automazione non copre: «Ascolta» su un iPhone e su
+  un Android veri, VoiceOver.
+
 ## 4.18.1 - 2026-09-19
 
 **Rifiniture alla matematica di 1ª (ancora nascosta) e a domande recenti.**

@@ -1,5 +1,6 @@
 const __sa = window.SA = window.SA || {};
 __sa.subjectConfig = {
+  classes: [1, 2, 3, 4, 5],
   totalQ: 10,
   pointsPerQ: 10,
   lbKey: 'matematica_programma_lb_v3',
