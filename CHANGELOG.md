@@ -1,5 +1,41 @@
 # Changelog Repo
 
+## 4.19.1 - 2026-09-23
+
+**Voci aperte dell'audit SEO dell'11 settembre.** Solo testi, titoli e dati
+strutturati: nessun cambio di layout, nessun colore.
+
+### Fixed
+- fix(seo): `/problemi`, 3 risposte del FAQPage JSON-LD contenevano frasi che
+  in pagina non c'erano («Un problema a più passaggi richiede di eseguire due
+  o più operazioni in sequenza», «I quiz allenano queste competenze», «adatti
+  al programma di quinta primaria»). Allineate al testo visibile: ora tutte e
+  9 le pagine con FAQPage hanno schema e pagina identici, verificato
+  confrontando ogni coppia domanda/risposta.
+- fix(seo): meta description di `/bosco` da 186 a 144 caratteri (era tagliata
+  in SERP).
+- fix(seo): H1 di `/inglese` da «English Adventure» a «English Adventure —
+  quiz di inglese»: la parola della query non c'era.
+- fix(seo): `/tabelline` dichiara l'intento di gioco — title «Tabelline dal 2
+  al 10 | Gioco e Video Gratis Online» e CTA «Gioca con le tabelline».
+- fix(seo): `Person` del fondatore su `/chi-siamo` completata con `url`,
+  `jobTitle` e `sameAs`, coerente con il nodo `founder` della home.
+- fix(seo): `/ai-info` cita la fonte del curricolo (Indicazioni Nazionali,
+  D.M. 254/2012) con link al documento del MIM, invece di nominarle soltanto.
+
+### Notes
+- Voce 16 dell'action plan (CLS da font-swap su `/breakout`) **chiusa senza
+  modifiche**: misurata l'altezza del footer con i webfont e con i fallback
+  metrici a 320, 360, 375, 390, 412, 414, 430, 480, 540 e 600px — differenza
+  0px a ogni larghezza. Il CLS 0,13 visto da PSI precede il retune dei
+  fallback dell'11/09 (`6074293`).
+- Voce 14 (target del footer da 44 a 48px) **non fatta**: 44px soddisfa già
+  WCAG 2.5.5, e ogni riga di footer più alta toglie spazio alla figura di 1ª,
+  che a 360×740 ha 10,5px di margine.
+- Voce 8 (footer fisso sopra le CTA a 1350×940: 4 pulsanti «Gioca» coperti)
+  **aperta**: richiede di decidere se il footer resta fisso, ed è una scelta
+  di design, non una pulizia.
+
 ## 4.19.0 - 2026-09-23
 
 **La matematica di 1ª si accende.** `js/matematica-page.js` ha
