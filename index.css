@@ -489,6 +489,9 @@ footer{
 .footer-link{min-width:44px;min-height:44px;padding:8px 4px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;font-size:.8rem;font-weight:800;color:#5f6b7a;cursor:pointer;transition:color .2s;text-decoration:none;border:none;background:none;}
 .footer-link:hover{color:var(--math-a);}
 .footer-version{cursor:default;color:inherit;opacity:.95;}
+/* Titolo del gruppo social: #5f6b7a sul verde delle colline dava 4,33:1, sotto
+   il 4,5:1 del testo normale; #4a5568 (lo stesso della 404) passa. */
+.footer-social-title{color:#4a5568;}
 /* Modal */
 .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.45);z-index:500;display:none;align-items:center;justify-content:center;padding:16px;}
 .modal-overlay.open{display:flex;}

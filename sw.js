@@ -20,6 +20,8 @@
   importScripts(url);
 })();
 
+// Release 4.21.0: riga cambiata solo perche' il browser veda sw.js nuovo e
+// rinnovi la cache delle pagine (footer con i link social).
 const CACHE_NAME = (self.SA && self.SA.cacheName) || 'lascuolaamica-v1';
 
 // Cache stabili: NON derivano da APP_VERSION, quindi activate non le tocca.
