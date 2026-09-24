@@ -1,5 +1,109 @@
 # Changelog Repo
 
+## 4.19.2 - 2026-09-23
+
+**Chiusura di B2 (restyle Wada Sanzo): verifica del contrasto su tutte le
+pagine, nei due modi colore.** Le fasi 0-5 erano già in produzione; il giro di
+controllo ha trovato tre difetti veri, tutti corretti. Nessun cambio di
+palette, nessuna migrazione di colori: solo i punti dove testo e sfondo
+coincidevano.
+
+### Fixed
+- fix(a11y): su `/supporto-satispay` la nota sotto il QR era **bianca dentro
+  la card chiara** e spariva: `--page-muted` su quella pagina vale
+  `rgba(255,255,255,.97)` perché pensato per il fondo rosso, ma `.qr-note` sta
+  dentro `main.card` (`rgba(255,243,238,.97)`). Ora usa `--page-text`.
+- fix(a11y): sempre su `/supporto-satispay`, il pulsante «← Menu» usava il
+  rosso di marca `#ff3d00` su bianco: 3,55:1, sotto AA. Portato a `#c43000`
+  (5,57:1), stessa famiglia di colore.
+- fix(a11y): in modalità accessibile le briciole di `/accessibilita`,
+  `/supporta` e `/supporto-satispay` finivano sul fondo blu o rosso della
+  pagina con il blu `--accent-1` (1,2:1) o con il grigio scuro del testo
+  (2,9:1). Su queste tre pagine diventano bianche. La palette Okabe-Ito non
+  cambia: è una regola in più in `palette-okabe.css`, nessun token toccato.
+
+### Added
+- `npm run check:contrast` (`scripts/check_contrast.sh`): Lighthouse/axe su 25
+  pagine × 2 modi colore, esce 1 alla prima area sotto AA. Fuori dalla catena
+  di `npm run verify` perché richiede un server e qualche minuto.
+
+### Notes
+- Stato finale misurato: **25 pagine × 2 modi colore, zero aree sotto AA**.
+- Un controllo del contrasto scritto a mano dava 161-414 falsi positivi:
+  sbaglia i gradienti e non legge `color(srgb ...)`, che è la forma in cui
+  Chromium restituisce i colori dei gradienti. Per questo il controllo nuovo
+  usa Lighthouse invece di calcolare da sé.
+
+## 4.19.1 - 2026-09-23
+
+**Voci aperte dell'audit SEO dell'11 settembre.** Solo testi, titoli e dati
+strutturati: nessun cambio di layout, nessun colore.
+
+### Fixed
+- fix(seo): `/problemi`, 3 risposte del FAQPage JSON-LD contenevano frasi che
+  in pagina non c'erano («Un problema a più passaggi richiede di eseguire due
+  o più operazioni in sequenza», «I quiz allenano queste competenze», «adatti
+  al programma di quinta primaria»). Allineate al testo visibile: ora tutte e
+  9 le pagine con FAQPage hanno schema e pagina identici, verificato
+  confrontando ogni coppia domanda/risposta.
+- fix(seo): meta description di `/bosco` da 186 a 144 caratteri (era tagliata
+  in SERP).
+- fix(seo): H1 di `/inglese` da «English Adventure» a «English Adventure —
+  quiz di inglese»: la parola della query non c'era.
+- fix(seo): `/tabelline` dichiara l'intento di gioco — title «Tabelline dal 2
+  al 10 | Gioco e Video Gratis Online» e CTA «Gioca con le tabelline».
+- fix(seo): `Person` del fondatore su `/chi-siamo` completata con `url`,
+  `jobTitle` e `sameAs`, coerente con il nodo `founder` della home.
+- fix(seo): `/ai-info` cita la fonte del curricolo (Indicazioni Nazionali,
+  D.M. 254/2012) con link al documento del MIM, invece di nominarle soltanto.
+
+### Notes
+- Voce 16 dell'action plan (CLS da font-swap su `/breakout`) **chiusa senza
+  modifiche**: misurata l'altezza del footer con i webfont e con i fallback
+  metrici a 320, 360, 375, 390, 412, 414, 430, 480, 540 e 600px — differenza
+  0px a ogni larghezza. Il CLS 0,13 visto da PSI precede il retune dei
+  fallback dell'11/09 (`6074293`).
+- Voce 14 (target del footer da 44 a 48px) **non fatta**: 44px soddisfa già
+  WCAG 2.5.5, e ogni riga di footer più alta toglie spazio alla figura di 1ª,
+  che a 360×740 ha 10,5px di margine.
+- Voce 8 (footer fisso sopra le CTA a 1350×940: 4 pulsanti «Gioca» coperti)
+  **aperta**: richiede di decidere se il footer resta fisso, ed è una scelta
+  di design, non una pulizia.
+
+## 4.19.0 - 2026-09-23
+
+**La matematica di 1ª si accende.** `js/matematica-page.js` ha
+`classes: [1, 2, 3, 4, 5]`: le 290 domande di 1ª preparate nella 4.18.0
+diventano visibili, la schermata di scelta classe mostra cinque bottoni e i
+conteggi pubblici salgono da 10.072 a 10.362 domande attive.
+
+### Added
+- feat(matematica): classe 1ª visibile in matematica (`classes` nella config
+  della pagina, docs/classe-prima.md). In 1ª il testo è in stampato maiuscolo,
+  203 domande su 290 hanno una figura e il pulsante «Ascolta» legge domanda e
+  risposte con una voce italiana locale.
+- content(matematica): testi della pagina e FAQ/JSON-LD aggiornati da
+  «dalla classe seconda alla quinta» a «dalla classe prima alla quinta»;
+  `llms.txt` dice che la matematica copre anche la 1ª.
+
+### Fixed
+- fix(quiz): **a 360×740 la figura di 84 domande di 1ª su 203 finiva sotto il
+  footer fisso.** La correzione della 4.18.1 era stata misurata su una copia
+  con il footer più corto: il footer vero è alto 169px (tre righe di link,
+  verificato anche in produzione), non i ~122px di una riga. Sotto i 760px di
+  altezza la figura di 1ª si limita a 160px (213×160, il 4:3 della misura di
+  lettura di `docs/figure-nel-quiz.md`) invece di restare a piena larghezza.
+  Misurato sulle 203 domande: margine minimo 10,5px a 360×740, 19,8px a
+  375×812, 32,5px a 390×844, 202,5px a 1280×800; niente scroll orizzontale.
+  Solo misure, nessun colore, regola scoperta solo da `html[data-classe="1"]`:
+  la 2ª-5ª e la modalità Okabe-Ito restano invariate.
+
+### Notes
+- Domande attive: 10.072 → 10.362 (le 290 di 1ª entrano nei conteggi
+  pubblici ora che la classe è visibile).
+- Da provare a mano, che l'automazione non copre: «Ascolta» su un iPhone e su
+  un Android veri, VoiceOver.
+
 ## 4.18.1 - 2026-09-19
 
 **Rifiniture alla matematica di 1ª (ancora nascosta) e a domande recenti.**

@@ -168,7 +168,7 @@ A 375×812, in 1ª, intestazione, bottoni e testo in maiuscolo spingevano la fig
 - sotto i 600 px di larghezza la mascotte, piccola (40×58), sta accanto ad Ascolta; testo, figura e risposte prendono tutta la larghezza della card, e con una colonna più larga il testo va su meno righe;
 - `line-height` 1,25 per il testo in maiuscolo, che non ha discendenti.
 
-Solo misure, nessun colore. Misure prima → dopo, stessa domanda, 375×812: card da 374 a 220, testo da 3 a 2 righe, fondo della figura da 857 a 582. Con tutte le 193 domande di 1ª con figura, il fondo della figura sta sopra il footer fisso a 375×812 (peggiore 636 contro 643) e a 390×844 (647 contro 675); a 360×740 no, per 82 domande su 193. A fondo pagina l'ultima risposta resta sopra il footer; niente scroll orizzontale. La 3ª non cambia (stesse misure prima e dopo a 375×812 e 1280×800).
+Solo misure, nessun colore. Misure prima → dopo, stessa domanda, 375×812: card da 374 a 220, testo da 3 a 2 righe, fondo della figura da 857 a 582. Con tutte le 203 domande di 1ª con figura, il fondo della figura sta sopra il footer fisso a 360×740 (margine minimo 10,5px), 375×812 (19,8px) e 390×844 (32,5px). A 360×740 il footer fisso è alto 169px — tre righe di link, misurato anche in produzione — e la figura a piena larghezza (211px) finiva sotto per 84 domande su 203: sotto i 760px di altezza la figura si limita a 160px (213×160, il 4:3 della misura di lettura). La misura del 4.18.1 (margine minimo 6,6px) era stata presa su una copia con il footer più corto e non reggeva in produzione. A fondo pagina l'ultima risposta resta sopra il footer; niente scroll orizzontale. La 3ª non cambia (stesse misure prima e dopo a 375×812 e 1280×800).
 
 Dai 600 px in su la card resta come nelle altre classi (mascotte 96×138 a sinistra, testo e figura accanto): a 1280×800 la mascotte da 40 px sembrava persa in una card larga 940, e l'ultima risposta resta comunque sopra il footer.
 
@@ -204,4 +204,4 @@ Una riga in `js/matematica-page.js`, dentro `__sa.subjectConfig`:
   classes: [1, 2, 3, 4, 5],
 ```
 
-Poi `python3 scripts/sync_question_counts.py` (i conteggi salgono da soli di 290), `npm run freshness`, i controlli di sempre e una partita di 1ª a 375×812 e a 1280×800. Da guardare prima: la schermata di scelta classe con cinque bottoni, i bonus di 1ª (quattro, in `bonusQuestions` con `grade: 1`), Ascolta su un iPhone e su un Android veri, le figure a 360×740 (misurate in P4: 82 domande su 193 finiscono sotto il footer fisso e vanno scrollate).
+Poi `python3 scripts/sync_question_counts.py` (i conteggi salgono da soli di 290), `npm run freshness`, i controlli di sempre e una partita di 1ª a 375×812 e a 1280×800. Da guardare prima: la schermata di scelta classe con cinque bottoni, i bonus di 1ª (quattro, in `bonusQuestions` con `grade: 1`), Ascolta su un iPhone e su un Android veri, le figure a 360×740 (dalla 4.19.0 tutte e 203 stanno sopra il footer fisso: la figura si rimpicciolisce a 213×160).

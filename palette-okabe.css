@@ -261,3 +261,19 @@ html[data-palette="okabe-ito"] .breadcrumbs [aria-current="page"] {
   color: var(--text-main);
   opacity: 1;
 }
+
+/* /accessibilita e /supporta hanno lo sfondo blu della palette e le briciole
+   ci finivano sopra con lo stesso blu di --accent-1 (link 1,2:1) o con il
+   grigio scuro del testo (2,9:1): illeggibili. Sulle altre pagine info lo
+   sfondo e' chiaro e le regole generali vanno bene. */
+html[data-palette="okabe-ito"] body.page-accessibilita .breadcrumbs,
+html[data-palette="okabe-ito"] body.page-supporta .breadcrumbs,
+html[data-palette="okabe-ito"] body.page-supporto-satispay .breadcrumbs,
+html[data-palette="okabe-ito"] body.page-accessibilita .breadcrumbs a,
+html[data-palette="okabe-ito"] body.page-supporta .breadcrumbs a,
+html[data-palette="okabe-ito"] body.page-supporto-satispay .breadcrumbs a,
+html[data-palette="okabe-ito"] body.page-accessibilita .breadcrumbs [aria-current="page"],
+html[data-palette="okabe-ito"] body.page-supporta .breadcrumbs [aria-current="page"],
+html[data-palette="okabe-ito"] body.page-supporto-satispay .breadcrumbs [aria-current="page"] {
+  color: #fff;
+}

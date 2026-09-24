@@ -1160,6 +1160,22 @@ html[data-classe="1"][data-screen="screenGame"] .progress-dots {
   }
 }
 
+/* Sugli schermi bassi (360x740) il footer fisso occupa 169px - tre righe di
+   link, misurate anche in produzione - e la figura a 211px finiva sotto per 84
+   delle 203 domande di 1a. Qui si rimpicciolisce invece di finire coperta:
+   160px di altezza, 4:3, cioe' 213px di larghezza, la misura di lettura di
+   docs/figure-nel-quiz.md. Solo misure, nessun colore. */
+@media (max-height: 760px) {
+  html[data-classe="1"][data-screen="screenGame"] .q-figure,
+  html[data-classe="1"][data-screen="screenBonusQuestion"] .q-figure {
+    width: auto;
+    max-width: 100%;
+    max-height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 html[data-classe="1"] #qMeta {
   position: absolute;
   width: 1px;
