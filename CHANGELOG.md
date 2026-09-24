@@ -1,5 +1,63 @@
 # Changelog Repo
 
+## 4.20.0 - 2026-09-24
+
+**Le voci aperte dell'audit SEO dell'11 settembre, chiuse.** Restavano 6, 7, 8,
+9, 13, 15, 17 e 19: sette sono chiuse qui, la 9 (contattare gli elenchi di
+risorse) resta all'utente perché sono email da mandare a mano.
+
+### Added
+- **`/guida-compiti` — «Aiutare i figli con i compiti», 1.270 parole** (voce 7,
+  la raccomandazione numero uno di agosto: per «aiutare i figli con i compiti»
+  Google mostra 9 guide su 9, e il sito non aveva quel formato). Tempi
+  indicativi classe per classe, le tre abitudini che contano, come aiutare
+  senza sostituirsi, gli errori tipici materia per materia, dove un quiz aiuta
+  e dove no, i segnali per cui conviene parlare con l'insegnante, 4 domande
+  frequenti. `Article` + `FAQPage` + `BreadcrumbList`, con lo schema costruito
+  dal testo visibile, quindi identico per definizione. Collegata da
+  `/per-genitori` (tre punti: link in alto, sezione dedicata, pulsante), da
+  `llms.txt`, dalla sitemap e dal precache del service worker.
+- `npm run indexnow` (`scripts/indexnow.js`, voce 19): segnala a IndexNow gli
+  URL della sitemap. La chiave sta nel file `<chiave>.txt` in radice, che
+  l'export pubblica. `--dry` stampa soltanto cosa invierebbe. Da lanciare dopo
+  un deploy, non è agganciato a nessuna catena automatica.
+
+### Fixed
+- fix(ui): **la barra fissa in fondo copriva 4 degli 11 pulsanti «Gioca» della
+  home a 1350×940** (voce 8, misurato). Da 900px in su il footer torna nel
+  flusso e lo spazio riservato sparisce, su tutte e quattro le famiglie di
+  pagine (home/premi, quiz e giochi, pagine info, 404). Sotto i 900px resta
+  fissa. Misurato dopo: 0 pulsanti coperti.
+- fix(ui): **su un telefono la scelta della classe stava sotto la piega** (voce
+  15): a 375×812 il primo bottone partiva oltre gli 812px, dopo sei righe di
+  istruzioni. Le tre righe sulle regole della partita (numero di domande,
+  punti, bonus) ora stanno in uno `span.intro-rules` nascosto sotto i 600px, su
+  tutte e 7 le pagine materia che le avevano. Misurato dopo: «Classe 1ª» a
+  578px, dentro la prima schermata.
+- fix(seo): `/tabelline` mancava dal blocco «Esplora altre materie» di tutte e
+  8 le pagine materia (voce 13): aggiunta ovunque.
+- chore(seo): `<changefreq>` e `<priority>` tolti dalla sitemap e dal suo
+  generatore (voce 19): Google dichiara di ignorarli.
+
+### Notes
+- **Voce 6 (crollo del CTR), misurata su Search Console** invece di riscrivere
+  le meta alla cieca: negli ultimi 28 giorni 470 impressioni e 3 clic (CTR
+  0,64%), nei 28 precedenti 96 impressioni e 3 clic (3,12%). Le impressioni
+  sono quintuplicate e si sono spostate nelle posizioni 4-10, che oggi valgono
+  il 75% del totale contro il 12%. Il CTR non è crollato: è cambiata la
+  composizione. Con 3 clic in 28 giorni non c'è niente da concludere sugli
+  snippet, quindi la riscrittura resta sospesa fino ad avere volume.
+- Il percorso delle credenziali Search Console in
+  `~/.config/claude-seo/google-api.json` puntava ancora a iCloud e il file non
+  esisteva più lì: aggiornato all'SSD.
+- **Voce 17** (purge della cache Cloudflare per `/package.json`,
+  `/CHANGELOG.md`, `/robots.txt`): non serve più, quelle copie sono scadute da
+  sole verso il 17/09.
+- **Voce 9** (email ai curatori degli elenchi di risorse per la primaria)
+  resta aperta: è un contatto umano, non una modifica al sito.
+- **Voce 14** (target del footer da 44 a 48px) resta non fatta per scelta: vedi
+  la 4.19.1.
+
 ## 4.19.2 - 2026-09-23
 
 **Chiusura di B2 (restyle Wada Sanzo): verifica del contrasto su tutte le

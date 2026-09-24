@@ -85,6 +85,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/chi-siamo',
   '/per-insegnanti',
   '/per-genitori',
+  '/guida-compiti',
   '/ai-info',
   '/supporta',
   '/supporto-satispay',

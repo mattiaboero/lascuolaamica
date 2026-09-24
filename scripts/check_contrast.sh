@@ -11,7 +11,7 @@ PORT="${1:-4173}"
 BASE="http://127.0.0.1:${PORT}"
 PAGES=(index matematica italiano problemi civica geografia storia scienze inglese
        tabelline premi faq bosco breakout link 404 chi-siamo ai-info privacy cookie
-       per-genitori per-insegnanti accessibilita supporta supporto-satispay)
+       per-genitori per-insegnanti accessibilita supporta supporto-satispay guida-compiti)
 fails=0
 for p in "${PAGES[@]}"; do
   for q in "" "?palette=okabe"; do
@@ -28,4 +28,4 @@ for p in "${PAGES[@]}"; do
   done
 done
 if [ "$fails" -gt 0 ]; then echo "contrasto: $fails pagine da sistemare"; exit 1; fi
-echo "[OK] contrasto: 25 pagine x 2 modi colore, nessuna area sotto AA"
+echo "[OK] contrasto: 26 pagine x 2 modi colore, nessuna area sotto AA"

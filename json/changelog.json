@@ -1,20 +1,13 @@
 [
  {
-  "date": "23 settembre 2026 · Release 4.19.2",
+  "date": "24 settembre 2026 · Release 4.20.0",
   "items": [
-   "Sulla pagina del sostegno con Satispay la frase sotto il QR era bianca su sfondo chiaro e non si leggeva; ora si legge. Sistemate anche le briciole di navigazione nella modalità accessibile su tre pagine."
-  ]
- },
- {
-  "date": "23 settembre 2026 · Release 4.19.1",
-  "items": [
-   "Rifiniture ai testi del sito: la pagina delle tabelline dice che si gioca, la descrizione del Bosco è più corta e chiara, e il titolo dei quiz di inglese dice «quiz di inglese»."
-  ]
- },
- {
-  "date": "23 settembre 2026 · Release 4.19.0",
-  "items": [
-   "La matematica di classe prima è ora disponibile: 290 domande pensate per chi comincia, quasi tutte con un disegno da guardare e contare, testo in stampato maiuscolo e il pulsante «Ascolta» che legge domanda e risposte."
+   "La matematica di classe prima è arrivata: 290 domande pensate per chi comincia, quasi tutte con un disegno da guardare e contare, testo in stampato maiuscolo e il pulsante «Ascolta» che legge domanda e risposte ad alta voce.",
+   "Sui telefoni più stretti il disegno della domanda non finisce più sotto la barra in fondo allo schermo.",
+   "Sulla pagina del sostegno con Satispay la frase sotto il QR era bianca su sfondo chiaro e non si leggeva: ora si legge. Sistemate anche le briciole di navigazione nella modalità ad alto contrasto.",
+   "Rifiniture ai testi: la pagina delle tabelline dice che si gioca, la descrizione del Bosco è più corta e chiara, il titolo dei quiz di inglese dice «quiz di inglese».",
+   "Nuova guida per i genitori: «Aiutare i figli con i compiti», con i tempi classe per classe, gli errori tipici materia per materia e i segnali per parlarne con l'insegnante.",
+   "Su computer la barra in fondo non copre più i pulsanti «Gioca», e sul telefono la scelta della classe si vede senza scorrere."
   ]
  },
  {
