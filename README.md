@@ -24,7 +24,7 @@ La Scuola Amica parte da un presupposto diverso: un bambino di 8 anni non dovreb
 
 | Materia | Classi supportate |
 |---|---|
-| Matematica | 2ª – 5ª |
+| Matematica | 1ª – 5ª |
 | Problemi di matematica | 2ª – 5ª |
 | Italiano | 2ª – 5ª |
 | Inglese | 2ª – 5ª |

@@ -314,3 +314,77 @@ html[data-palette="okabe-ito"] .footer-support-cta .support-tag {
   border-color: #ffbdbd;
   color: #8c1d1d;
 }
+
+/* Gruppo «Per genitori e insegnanti» del footer: Instagram e Facebook. I
+   social sono per maggiori di 13 anni: sotto i 900px, dove il footer e' una
+   barra fissa sotto gli esercizi, il gruppo resta solo nelle pagine per adulti
+   (info tranne /tabelline, e la FAQ); da 900px in su il footer sta in fondo
+   alla pagina e lo mostra ovunque. Colore, hover e focus arrivano da
+   .footer-link di ogni famiglia di pagine, le icone usano currentColor. */
+.footer-social {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-social-title {
+  margin: 0;
+  pointer-events: none; /* e' un titolo, non un link: niente hover */
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-social-link {
+  padding: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 899px) {
+  .footer-social {
+    display: none;
+  }
+
+  body.info-page:not(.page-tabelline) .footer-social,
+  body.page-faq .footer-social {
+    display: flex;
+  }
+
+  /* La riga in piu' nella barra fissa (44px + 8px di row-gap): stesso spazio
+     in fondo alla pagina, cosi' l'ultimo contenuto non finisce sotto. */
+  body.info-page:not(.page-tabelline)::after,
+  body.page-faq::after {
+    content: "";
+    display: block;
+    height: 52px;
+  }
+}
+
+/* /chi-siamo ha in piu' il contatore «N domande disponibili»: la barra va su 4
+   righe fino a ~400px (misurato), e l'ultima riga di testo finiva sotto di
+   31px gia' prima dei social. Una riga in piu' fino a 480px, con margine per
+   quando il contatore guadagna una cifra. */
+@media (max-width: 479px) {
+  body.info-page.page-chi-siamo::after {
+    height: 104px;
+  }
+}

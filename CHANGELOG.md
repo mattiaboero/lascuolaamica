@@ -1,5 +1,43 @@
 # Changelog Repo
 
+## 4.21.0 - 2026-09-24
+
+**I profili social nel footer, per gli adulti.**
+
+### Added
+- Gruppo «Per genitori e insegnanti» nel footer di tutte le 25 pagine con il
+  footer del sito (non `link.html`, che ha un suo footer): Instagram e
+  Facebook, SVG inline con i glifi ufficiali monocromatici (Simple Icons,
+  CC0), `currentColor`, `ul` con `aria-labelledby` verso il titolo, nome
+  accessibile nel testo nascosto «La scuola amica su … (si apre in una nuova
+  scheda)», `target="_blank"` con `rel="noopener noreferrer me"`, 44×44px con
+  12px fra i link. I social sono per maggiori di 13 anni: sotto i 900px, dove
+  il footer è la barra fissa sotto gli esercizi, il gruppo compare solo nelle
+  pagine per adulti (info tranne `/tabelline`, più la FAQ, che ora ha
+  `body.page-faq`); da 900px in su ovunque. Nelle pagine dove compare sotto i
+  900px la barra cresce di 52px e un `body::after` di 52px ne riserva lo spazio.
+- `sameAs` dell'`EducationalOrganization` della home: Instagram, Facebook e
+  YouTube @lascuolaamica (al posto di @ceciliaeilpapamattone, che resta nel
+  `Person` di `/chi-siamo`).
+
+### Changed
+- «Video su YouTube» nel footer punta a @lascuolaamica.
+- Testi generali rimasti a «2ª-5ª» dopo l'arrivo della classe 1ª (4.19.0,
+  solo matematica): home (titolo della sezione, voce Matematica, meta
+  description, og/twitter, descrizione del `WebSite`), FAQ «per quali classi»
+  (testo e `FAQPage`), `/chi-siamo`, `/ai-info`, `/per-genitori`,
+  `/per-insegnanti`, README. Le pagine delle singole materie restano 2ª-5ª,
+  che per loro è corretto.
+
+### Fixed
+- `/chi-siamo` sotto i 480px: con il contatore delle domande la barra fissa va
+  su 4 righe fino a ~400px e copriva di 31px l'ultima riga di testo (c'era già
+  prima dei social). Ora resta un margine di 21px, come nelle altre pagine.
+- Titolo del gruppo su home e premi in `#4a5568`: il `#5f6b7a` del footer sul
+  verde delle colline dà 4,33:1.
+- `sw.js`: una riga di commento, perché il browser veda il file nuovo e rinnovi
+  la cache delle pagine.
+
 ## 4.20.0 - 2026-09-24
 
 **Le voci aperte dell'audit SEO dell'11 settembre, chiuse.** Restavano 6, 7, 8,
