@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.19.2",
+  "version": "4.20.0",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -37,7 +37,8 @@
     "check:balance": "node scripts/check_answer_balance.js",
     "check:materialized": "node scripts/check_files_materialized.js",
     "export": "bash scripts/export_for_cloudflare.sh",
-    "check:contrast": "bash scripts/check_contrast.sh"
+    "check:contrast": "bash scripts/check_contrast.sh",
+    "indexnow": "node scripts/indexnow.js"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",

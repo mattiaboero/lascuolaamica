@@ -146,3 +146,15 @@ p {
   outline-offset: 2px;
   border-radius: 8px;
 }
+
+/* Voce 8 dell'audit SEO dell'11/09: a 1350x940 la barra fissa in fondo copre i
+   pulsanti «Gioca» delle card (4 su 11, misurato). Su desktop la barra non
+   serve - i link stanno in fondo alla pagina come ovunque - quindi da 900px in
+   su il footer torna nel flusso e lo spazio riservato sparisce. Sotto i 900px
+   resta fissa, dove la reperibilita' conta di piu'. */
+@media (min-width: 900px) {
+  .site-footer {
+    position: static;
+    margin-top: auto;
+  }
+}

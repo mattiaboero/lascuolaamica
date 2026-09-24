@@ -2459,3 +2459,30 @@ html:not([data-palette="okabe-ito"]) .btn-progress {
 html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
   color: #a04f20;
 }
+
+/* Voce 8 dell'audit SEO dell'11/09: a 1350x940 la barra fissa in fondo copre i
+   pulsanti «Gioca» delle card (4 su 11, misurato). Su desktop la barra non
+   serve - i link stanno in fondo alla pagina come ovunque - quindi da 900px in
+   su il footer torna nel flusso e lo spazio riservato sparisce. Sotto i 900px
+   resta fissa, dove la reperibilita' conta di piu'. */
+@media (min-width: 900px) {
+  .site-footer {
+    position: static;
+    margin-top: auto;
+  }
+
+  .wrapper {
+    padding-bottom: 24px;
+  }
+}
+
+/* Voce 15 dell'audit: su un telefono la scelta della classe finiva sotto la
+   piega (a 375x812 i bottoni partivano oltre gli 812px), dopo sei righe di
+   istruzioni. Le tre righe sulle regole della partita - numero di domande,
+   punti, bonus - restano su schermo largo e nella FAQ, ma sotto i 600px non
+   stanno davanti al gioco. */
+@media (max-width: 599px) {
+  .intro-rules {
+    display: none;
+  }
+}
