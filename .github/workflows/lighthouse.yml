@@ -10,6 +10,10 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # LHCI_GITHUB_TOKEN scrive gli status con questo token: serve statuses: write.
+    permissions:
+      contents: read
+      statuses: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,4 +23,6 @@ jobs:
       - name: Run Lighthouse CI
         run: npm run lighthouse
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Sulle PR il checkout e' il merge commit: lo status va sul commit della PR.
+          LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.event.pull_request.head.sha || github.sha }}
