@@ -13,7 +13,9 @@ while IFS= read -r -d '' f; do HTML_FILES+=("$(basename "$f")"); done \
   < <(find . -maxdepth 1 -name '*.html' -print0 | sort -z)
 
 # Pagine statiche che non dipendono da JS: un <noscript> qui sarebbe decorativo.
-NOSCRIPT_EXEMPT=("404.html" "link.html")
+NOSCRIPT_EXEMPT=("404.html" "link.html" "tabelline.html" "faq.html" "chi-siamo.html"
+  "per-genitori.html" "per-insegnanti.html" "guida-compiti.html" "ai-info.html"
+  "accessibilita.html" "privacy.html" "cookie.html" "supporta.html" "supporto-satispay.html")
 
 check_html_integrity() {
   local file="$1"

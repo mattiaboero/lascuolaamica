@@ -1,5 +1,13 @@
 [
  {
+  "date": "30 settembre 2026 · Release 4.21.1",
+  "items": [
+   "Nella pagina delle tabelline la tabella completa viene subito dopo l'introduzione, prima dei video, e il titolo della pagina dice «Tabelline da 2 a 10: tabella completa e quiz gratis».",
+   "Corretto «Tabellina del 8» in «Tabellina dell'8».",
+   "L'avviso «serve JavaScript» non compare più nelle pagine informative, che si leggono benissimo anche senza, e nei giochi non occupa più tutto lo schermo."
+  ]
+ },
+ {
   "date": "24 settembre 2026 · Release 4.21.0",
   "items": [
    "In fondo alla pagina, per genitori e insegnanti, ci sono i link a Instagram e Facebook de La scuola amica, e «Video su YouTube» porta al canale del progetto. Durante gli esercizi sul telefono non compaiono.",
