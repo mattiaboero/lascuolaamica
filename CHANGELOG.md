@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.21.1 - 2026-09-30
+
+**Ritocchi SEO alle tabelline e all'avviso «serve JavaScript».** Solo testi e
+ordine dei blocchi: nessun colore, nessun cambio ai quiz.
+
+### Changed
+- `/tabelline`: title, meta description, `og:title` e `twitter:title` diventano
+  «Tabelline da 2 a 10: tabella completa e quiz gratis» (description: «Tutte le
+  tabelline fino al 10 in una tabella, con i video e i quiz a moltiplicazioni
+  mescolate. Gratis, senza registrazione, per la scuola primaria.»).
+- `/tabelline`: la tabella completa passa prima dei video, subito dopo
+  l'introduzione.
+- Avviso `<noscript>` «serve JavaScript»: tolto dalle 12 pagine informative che
+  funzionano senza JavaScript (`/tabelline`, `/faq`, `/chi-siamo`,
+  `/per-genitori`, `/per-insegnanti`, `/guida-compiti`, `/ai-info`,
+  `/accessibilita`, `/privacy`, `/cookie`, `/supporta`, `/supporto-satispay`),
+  esentate in `prepublish-check.sh`. Nelle 12 pagine di gioco (home, 8 materie,
+  `/bosco`, `/breakout`, `/premi`) l'avviso passa dopo `</main>`. In
+  `noscript.css` via `min-height: 100vh`, così non occupa più tutto lo schermo.
+  Motivo: Google rischiava di usare la frase come snippet, perché era il primo
+  testo del body, e chi apriva una pagina informativa senza JavaScript vedeva a
+  tutto schermo un avviso falso.
+- `sitemap.xml` (`lastmod`) e `dateModified` dei JSON-LD aggiornati al
+  2026-09-30.
+
+### Fixed
+- `/tabelline`: «Tabellina del 8» corretto in «Tabellina dell'8» (titolo della
+  scheda video, alt della copertina, riga della tabella, `VideoObject`
+  JSON-LD).
+
 ## 4.21.0 - 2026-09-24
 
 **I profili social nel footer, per gli adulti.**
