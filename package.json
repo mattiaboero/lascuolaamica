@@ -28,6 +28,7 @@
     "test:e2e:ripassa": "bash scripts/run_e2e.sh ripassa",
     "test:e2e:interrupt": "bash scripts/run_e2e.sh interrupt",
     "test:e2e:dialogs": "bash scripts/run_e2e.sh dialogs",
+    "test:e2e:tabelline": "node scripts/tabelline_smoke.js",
     "test:e2e:install": "playwright install --with-deps chromium",
     "check:math": "node scripts/check_math_explanations.js",
     "check:plausibility": "node scripts/check_plausibility.js",
