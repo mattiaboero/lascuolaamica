@@ -90,5 +90,10 @@ export default [
       globals: commonGlobals
     },
     rules: sharedRules
+  },
+  {
+    // Script CLI Node: stdout è il loro canale di output.
+    files: ['scripts/**/*.js'],
+    rules: { 'no-console': 'off' }
   }
 ];
