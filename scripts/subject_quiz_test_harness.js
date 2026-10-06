@@ -146,6 +146,7 @@ async function main() {
     if (ripetute.length) {
       throw new Error(`Domande ripetute nella stessa partita: ${[...new Set(ripetute)].join(' | ')}`);
     }
+    assertClassOneRule(questions, options.classKey, 'Domande');
 
     await page.waitForSelector('#screenBonusPick.active');
     let bonus = { mode: options.bonus, attempted: false };
@@ -167,6 +168,7 @@ async function main() {
         mode: options.bonus,
         attempted: true,
         type: meta.type,
+        grade: meta.grade,
         question: bonusText,
         promptHtml: promptMeta.html,
         promptLang: promptMeta.lang,
@@ -175,6 +177,7 @@ async function main() {
         correct: answerPlan.correct,
         optionLangs: domOptionMeta.map((item) => item.lang || '')
       };
+      assertClassOneRule([bonus], options.classKey, 'Bonus');
     }
 
     await page.waitForSelector('#screenResult.active');
@@ -513,6 +516,7 @@ async function getConfigMaps(page) {
           correct: normalizeValue(row.a),
           distractors: (row.d || []).map((item) => normalizeValue(item)).filter(Boolean),
           type,
+          grade: row.grade ?? null,
           answerLang: row.answerLang || null
         };
         if (!bonus[key]) bonus[key] = [];
@@ -566,11 +570,12 @@ async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions
   // L'attesa fissa di 1100 ms era piu' corta dei 2200 ms del timer di
   // avanzamento del gioco: il giro dopo rileggeva la stessa domanda e la
   // registrava due volte. Si aspetta che la domanda cambi davvero, o che
-  // compaia la schermata bonus se era l'ultima.
+  // compaia la schermata bonus se era l'ultima. Dopo la risposta al bonus
+  // #qText non cambia piu': la partita finisce sulla schermata del risultato.
   const prima = normalize(await page.locator('#qText').textContent());
   await buttons.nth(targetIndex).click();
   await page.waitForFunction((testo) => {
-    if (document.querySelector('#screenBonusPick.active')) return true;
+    if (document.querySelector('#screenBonusPick.active, #screenResult.active')) return true;
     const el = document.getElementById('qText');
     return el && el.textContent.replace(/\s+/g, ' ').trim() !== testo;
   }, prima, { timeout: 10000 });
@@ -635,6 +640,18 @@ function resolveQuestionMeta(candidates, domOptions) {
 
 function normalize(value) {
   return String(value || '').replace(/\s+/g, ' ').trim();
+}
+
+// Regola della 1ª (fitsClassOneRule in subject-quiz-core.js): le domande di 1ª
+// escono solo nelle partite di 1ª, e la 1ª usa solo quelle. Vale anche per il
+// bonus. Si controlla in ogni partita, cosi' anche le altre classi verificano
+// di non ricevere domande di 1ª.
+function assertClassOneRule(items, classKey, what) {
+  const isClassOne = String(classKey) === '1';
+  const fuori = items.filter((item) => (Number(item.grade) === 1) !== isClassOne);
+  if (fuori.length) {
+    throw new Error(`${what} fuori dalla regola della 1ª (classe ${classKey}): ${fuori.map((item) => `[${item.grade}] ${item.question}`).join(' | ')}`);
+  }
 }
 
 main().catch((error) => {

@@ -46,6 +46,9 @@ jobs:
       - name: E2E tabelline (pagina info, con e senza JS)
         run: npm run test:e2e:tabelline
 
+      - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
+        run: npm run test:e2e:classe1
+
   full:
     # Daily schedule: perfect + mixed + worst
     if: github.event_name == 'schedule'
@@ -64,3 +67,6 @@ jobs:
           sleep 2
       - name: E2E full (perfect + mixed + worst, 8 subjects)
         run: npm run test:e2e:full
+
+      - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
+        run: npm run test:e2e:classe1
