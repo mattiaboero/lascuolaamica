@@ -81,7 +81,7 @@ Parametri essenziali della build automatica:
 |---|---|
 | Build command | `bash scripts/export_for_cloudflare.sh` |
 | Build output directory | `export` |
-| `NODE_VERSION` | `20` o superiore |
+| `NODE_VERSION` | `24` o superiore |
 
 > Controllare nel pannello che l'output directory sia davvero `export`. Fino al 10/09/2026 non lo era: Cloudflare pubblicava la radice del repo, e dal sito si raggiungevano `package.json`, `scripts/`, `reports/`, `CHANGELOG.md` e l'audit SEO. Un segno per riconoscerlo: se i JS in produzione hanno lo stesso numero di righe dei sorgenti, non sono passati dall'export.
 
