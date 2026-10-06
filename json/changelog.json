@@ -1,5 +1,14 @@
 [
  {
+  "date": "6 ottobre 2026 · Release 4.21.2",
+  "items": [
+   "La pagina dei link (lascuolaamica.it/link) si apre anche senza connessione, come le altre.",
+   "La pagina Accessibilità dice quali controlli sono automatici e quali fatti a mano, su quali pagine e in che data.",
+   "Alcuni pulsanti delle pagine per adulti («Apri le FAQ», «Scrivi al supporto», «Informazioni AI») ora hanno lo stesso nome per chi li legge e per chi usa lo screen reader o i comandi vocali.",
+   "Nella guida ai compiti le domande frequenti sono più distanziate e più facili da toccare."
+  ]
+ },
+ {
   "date": "30 settembre 2026 · Release 4.21.1",
   "items": [
    "Nella pagina delle tabelline la tabella completa viene subito dopo l'introduzione, prima dei video, e il titolo della pagina dice «Tabelline da 2 a 10: tabella completa e quiz gratis».",
