@@ -1,6 +1,8 @@
 # Classe 1ª in matematica
 
-La 1ª entra solo in matematica e si accende dalla configurazione della pagina. Finché `js/matematica-page.js` non ha `classes: [1, 2, 3, 4, 5]`, il sito resta com'è: 2ª-5ª.
+La 1ª c'è solo in matematica ed è in produzione dalla 4.19.0 (PR #30, 24 settembre 2026): `js/matematica-page.js` ha `classes: [1, 2, 3, 4, 5]`. Le altre materie restano 2ª-5ª.
+
+Le sezioni P1-P4 e «Revisione» raccontano il lavoro fatto mentre la 1ª era ancora nascosta: le prove «su una copia» sono di allora. Regole, limiti e misure valgono anche oggi.
 
 ## P1: motore
 
@@ -37,7 +39,7 @@ Limiti noti:
 
 ## Bonus e pool piccoli
 
-- Anche il bonus segue la regola della 1ª. Le righe bonus del JSON portano `grade` da `class`. I bonus scritti nella config della pagina (`bonusQuestions` in `matematica-page.js`) sono di 1ª solo con `grade: 1`. La schermata del bonus mostra solo i livelli con domande per la classe. Se non ce n'è nessuno, la partita va dritta al risultato. **Prima di accendere la 1ª servono bonus con `grade: 1`**, altrimenti la 1ª non ha il bonus.
+- Anche il bonus segue la regola della 1ª. Le righe bonus del JSON portano `grade` da `class`. I bonus scritti nella config della pagina (`bonusQuestions` in `matematica-page.js`) sono di 1ª solo con `grade: 1`. La schermata del bonus mostra solo i livelli con domande per la classe. Se non ce n'è nessuno, la partita va dritta al risultato. Oggi la 1ª ha quattro bonus con `grade: 1` in `matematica-page.js`; **un bonus nuovo per la 1ª va scritto con `grade: 1`**, altrimenti la 1ª non lo vede.
 - Niente domande ripetute nella stessa partita: quando il pool finisce, `pickQuestion` non ricomincia più da capo. I fallback prendono solo domande non ancora uscite, e se non bastano la partita è più corta (`sessionLen()` usa `questions.length`). Con un'area di 1ª sotto le 10 domande, il fallback largo completa la partita con altre domande di 1ª di altre aree, come già succede nelle altre classi.
 
 ## P3: figure
@@ -122,7 +124,7 @@ Controlla anche le regole comuni: peso fino a 6 KB, radice 320×240, niente styl
 - Con le figure il testo può essere cortissimo e resta univoco: le 24 domande non collidono né fra loro né col dataset.
 - `lint_content.js` legge la «A» finale di «nel riquadro A?» come la preposizione: la domanda è diventata «Nel riquadro A, quanti pallini ci sono?». `check_grammar_rules.js` prendeva «cassetta» per un refuso di «casetta»: ora è «cesta».
 - Quattro bonus con `grade: 1` in `matematica-page.js` (due facili, un medio, un difficile): nella copia la 1ª vede tutti e tre i livelli di bonus.
-- I conteggi pubblici non contano la 1ª finché è nascosta: vedi «Conteggi pubblici» più sotto.
+- Durante il pilota i conteggi pubblici non contavano la 1ª, allora nascosta. Dalla 4.19.0 la contano: vedi «Conteggi pubblici» più sotto.
 
 ## P4: domande
 
@@ -194,14 +196,18 @@ Restano, senza modifiche:
 
 ## Conteggi pubblici
 
-`sync_question_counts.py` conta solo le classi che la pagina della materia mostra: legge `classes: [...]` in `js/<materia>-page.js`, e senza quella riga conta 2-5 come `subject-quiz-core.js`. Finché la 1ª è nascosta README, llms.txt, home, FAQ, JSON-LD delle pagine e `json/index.json` (`totalQuestions`, `activeRows`) non contano le 290 domande di 1ª. Le domande restano in `json/matematica.json` e in `export/json`: servono il giorno in cui la 1ª si accende. Non escono in 2ª-5ª: pool, livelli, sottoambiti e bonus passano da `fitsClassOneRule`, il ripasso usa solo le domande sbagliate in partita, Spacca-Muri prende solo la classe scelta (2ª-5ª) e scarta le domande con figura, il Bosco ha le sue parole.
+`sync_question_counts.py` conta solo le classi che la pagina della materia mostra: legge `classes: [...]` in `js/<materia>-page.js`, e senza quella riga conta 2-5 come `subject-quiz-core.js`. Matematica dichiara 1-5, quindi dalla 4.19.0 README, llms.txt, home, FAQ, JSON-LD delle pagine e `json/index.json` (`totalQuestions`, `activeRows`) contano anche le 290 domande di 1ª: quel giorno il totale è salito da 10.072 a 10.362 domande attive. Prima, con la 1ª nascosta, restavano fuori dai conteggi pur stando già in `json/matematica.json` e in `export/json`. Le domande di 1ª non escono in 2ª-5ª: pool, livelli, sottoambiti e bonus passano da `fitsClassOneRule`, il ripasso usa solo le domande sbagliate in partita, Spacca-Muri prende solo la classe scelta (2ª-5ª) e scarta le domande con figura, il Bosco ha le sue parole.
 
-## Accendere la 1ª
+## Attivazione (4.19.0)
 
-Una riga in `js/matematica-page.js`, dentro `__sa.subjectConfig`:
+La 1ª è accesa dal 24 settembre 2026 (PR #30). È bastata una riga in `js/matematica-page.js`, dentro `__sa.subjectConfig`:
 
 ```js
   classes: [1, 2, 3, 4, 5],
 ```
 
-Poi `python3 scripts/sync_question_counts.py` (i conteggi salgono da soli di 290), `npm run freshness`, i controlli di sempre e una partita di 1ª a 375×812 e a 1280×800. Da guardare prima: la schermata di scelta classe con cinque bottoni, i bonus di 1ª (quattro, in `bonusQuestions` con `grade: 1`), Ascolta su un iPhone e su un Android veri, le figure a 360×740 (dalla 4.19.0 tutte e 203 stanno sopra il footer fisso: la figura si rimpicciolisce a 213×160).
+Poi `python3 scripts/sync_question_counts.py` (i conteggi sono saliti da soli di 290), `npm run freshness`, i controlli di sempre e una partita di 1ª a 375×812 e a 1280×800. Il meccanismo resta questo per chi dovesse rispegnerla: senza la riga `classes` il motore e i conteggi tornano a 2ª-5ª.
+
+Controllato con la PR #30: partita di 1ª a 360×740, 375×812, 390×844 e 1280×800, schermata di scelta classe con cinque bottoni, bonus di 1ª (quattro, in `bonusQuestions` con `grade: 1`), figure a 360×740 (dalla 4.19.0 tutte e 203 stanno sopra il footer fisso: la figura si rimpicciolisce a 213×160).
+
+La PR #30 lasciava da fare a mano una prova con un bambino di 1ª e «Ascolta» su un iPhone e su un Android veri, con VoiceOver: sono verifiche ancora aperte.
