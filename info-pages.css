@@ -292,7 +292,7 @@ body.info-page .card a:not(.action-btn):not(.back-btn):not(.link-btn):not(.faq-b
   font-weight: 900;
   text-decoration: underline;
   text-underline-offset: 2px;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 body.info-page .actions {

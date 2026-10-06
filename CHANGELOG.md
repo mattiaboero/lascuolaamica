@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.21.4 - 2026-10-06
+
+**CSS deprecato sostituito.** Nessun cambio visibile: 50 schermate su 50
+identiche al pixel prima e dopo, a 320 e 1280 px.
+
+### Changed
+- `clip: rect(0, 0, 0, 0)` diventa `clip-path: inset(50%)` nelle cinque regole
+  che nascondono a vista il testo per i lettori di schermo: `.sr-only` in
+  `404.css`, `index.css`, `utilities.css`, `subject-quiz-theme.css`, e
+  `html[data-classe="1"] #qMeta` in `subject-quiz-theme.css`.
+- `word-break: break-word` diventa `overflow-wrap: anywhere` sui link delle
+  pagine informative (`info-pages.css`). Per la specifica CSS sono equivalenti.
+- `.stylelintrc.json`: riaccese `property-no-deprecated` e
+  `declaration-property-value-keyword-no-deprecated`, spente dalla PR #52 in
+  attesa di queste sei righe.
+
 ## 4.21.3 - 2026-10-06
 
 **Pulizie.** Nessun cambio a quiz, colori o comportamento.
