@@ -28,4 +28,4 @@ for p in "${PAGES[@]}"; do
   done
 done
 if [ "$fails" -gt 0 ]; then echo "contrasto: $fails pagine da sistemare"; exit 1; fi
-echo "[OK] contrasto: 26 pagine x 2 modi colore, nessuna area sotto AA"
+echo "[OK] contrasto: ${#PAGES[@]} pagine x 2 modi colore, nessuna area sotto AA"

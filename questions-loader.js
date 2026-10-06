@@ -40,10 +40,6 @@
     return fallback;
   }
 
-  function clone(obj) {
-    return JSON.parse(JSON.stringify(obj));
-  }
-
   async function load(path) {
     const sourcePath = String(path || DEFAULT_INDEX_PATH).trim() || DEFAULT_INDEX_PATH;
     const existing = dataPromiseByPath.get(sourcePath);

@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.21.3 - 2026-10-06
+
+**Pulizie.** Nessun cambio a quiz, colori o comportamento.
+
+### Changed
+- Il numero di pagine del controllo contrasto stava scritto a mano in due
+  posti. `scripts/check_contrast.sh` ora lo ricava dall'elenco `PAGES`;
+  `/accessibilita` elenca le pagine senza ripetere il conteggio.
+
+### Removed
+- `questions-loader.js`: `clone()`, mai usata. Era l'unico warning rimasto di
+  `npm run lint`.
+
 ## 4.21.2 - 2026-10-06
 
 **`/link` disponibile offline e dichiarazione di accessibilità riallineata.**
