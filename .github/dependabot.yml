@@ -4,6 +4,12 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      # stylelint e la sua config hanno peer dependency incrociate:
+      # aggiornati in PR separate, npm ci fallisce con ERESOLVE.
+      stylelint:
+        patterns:
+          - "stylelint*"
   - package-ecosystem: github-actions
     directory: /
     schedule:
