@@ -47,7 +47,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-04-27",
-  "dateModified": "2026-09-30"
+  "dateModified": "2026-10-06"
 }
 </script>
 <script type="application/ld+json">
@@ -85,7 +85,7 @@
     <div class="top-links">
       <a class="back-btn" href="/" aria-label="Torna al menu principale">← Torna al menu</a>
       <a class="alt-btn" href="/faq" aria-label="Apri la pagina FAQ">FAQ</a>
-      <a class="alt-btn" href="/supporta" aria-label="Apri la pagina Supporta il progetto">Supporto</a>
+      <a class="alt-btn" href="/supporta" aria-label="Supporto: apri la pagina Supporta il progetto">Supporto</a>
     </div>
 
     <nav class="breadcrumbs" aria-label="Percorso di navigazione">
@@ -100,10 +100,16 @@
       <p class="text">La Scuola Amica adotta come riferimento WCAG 2.1 livelli A e AA per garantire un'esperienza utilizzabile da tutte e tutti, incluse bambine e bambini che usano tecnologie assistive.</p>
       <p class="text">Stato attuale: in base alle verifiche effettuate, il portale risulta allineato al perimetro WCAG 2.1 A/AA testato (vedi metodologia sotto).</p>
 
-      <h2 class="section-title">Metodologia di verifica</h2>
+      <h2 class="section-title">Metodologia di verifica: controlli automatici</h2>
       <ul class="ul">
-        <li>Audit automatico con regole WCAG 2.1 A/AA sulle pagine principali pubbliche.</li>
-        <li>Test manuale da tastiera: Tab, Shift+Tab, Enter, Esc.</li>
+        <li>Audit di accessibilità con Lighthouse (regole axe per WCAG 2.1 A/AA) su ogni pagina, così come si presenta all'apertura, con entrambe le palette: Standard e Accessibile.</li>
+        <li>Contrasto del testo misurato sulla pagina vera, con entrambe le palette.</li>
+        <li>Finestre di dialogo delle otto materie: ritorno del focus alla chiusura.</li>
+      </ul>
+
+      <h2 class="section-title">Metodologia di verifica: controlli manuali</h2>
+      <ul class="ul">
+        <li>Test da tastiera: Tab, Shift+Tab, Enter, Esc.</li>
         <li>Verifica modali: apertura, focus trap, chiusura e ritorno focus.</li>
         <li>Verifica zoom e reflow a 200% e 400%, inclusa viewport 320px.</li>
         <li>Verifica con screen reader (VoiceOver su Safari).</li>
@@ -113,17 +119,17 @@
 
       <h2 class="section-title">Perimetro coperto</h2>
       <ul class="ul">
-        <li>Home e pagine materia (matematica, inglese, problemi, civica, geografia, storia, scienze, italiano).</li>
-        <li>FAQ, Supporta il progetto e questa pagina Accessibilità.</li>
+        <li><strong>Controlli automatici, 26 pagine:</strong> home, le otto materie, Tabelline, Premi e i due giochi (Il Bosco delle Lettere e Cervellino Spacca-Muri); le pagine informative Chi siamo, Per genitori, Per insegnanti, Guida ai compiti, FAQ, Informazioni AI, Supporta il progetto, Supporto con Satispay, Privacy, Cookie, Accessibilità, la pagina dei link e la pagina di errore 404.</li>
+        <li><strong>Controlli manuali:</strong> home e pagine materia (matematica, inglese, problemi, civica, geografia, storia, scienze, italiano), FAQ, Supporta il progetto e questa pagina Accessibilità.</li>
       </ul>
 
       <h2 class="section-title">Segnalazioni</h2>
       <p class="text contact-mail">Se incontri barriere di accessibilità, scrivi a <a href="mailto:supporto@lascuolaamica.it">supporto@lascuolaamica.it</a> indicando pagina, dispositivo/browser e passaggi per riprodurre il problema.</p>
-      <p class="text">Ultimo aggiornamento verifica: 18 aprile 2026. Versione portale: <span data-app-version></span>.</p>
+      <p class="text">Ultima verifica automatica: 6 ottobre 2026. Ultima verifica manuale (tastiera, zoom, VoiceOver): 18 aprile 2026. Versione portale: <span data-app-version></span>.</p>
 
       <div class="actions" aria-label="Azioni rapide">
-        <a class="action-btn" href="/" aria-label="Apri il menu principale">Vai alle materie</a>
-        <a class="action-btn secondary" href="/faq" aria-label="Apri la pagina FAQ">Apri le FAQ</a>
+        <a class="action-btn" href="/">Vai alle materie</a>
+        <a class="action-btn secondary" href="/faq">Apri le FAQ</a>
       </div>
     </main>
   </div>

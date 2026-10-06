@@ -278,6 +278,13 @@ body.info-page .cta-list li {
   color: var(--page-text);
 }
 
+/* Domande apribili di /guida-compiti: senza spazio le righe sono alte 22px e
+   attaccate, sotto i 24px di bersaglio minimo. */
+body.info-page .seo-faq-item summary {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
 body.info-page .contact-mail a,
 body.info-page .text-link,
 body.info-page .card a:not(.action-btn):not(.back-btn):not(.link-btn):not(.faq-btn):not(.alt-btn) {

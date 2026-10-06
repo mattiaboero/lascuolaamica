@@ -1,5 +1,41 @@
 # Changelog Repo
 
+## 4.21.2 - 2026-10-06
+
+**`/link` disponibile offline e dichiarazione di accessibilità riallineata.**
+`/link` era in `sitemap.xml` ma fuori dal precache del service worker: senza
+rete, chi aveva installato la PWA da un'altra pagina ricadeva sulla home. La
+dichiarazione citava ancora una sola data (18 aprile 2026) e un perimetro di 12
+pagine.
+
+### Fixed
+- `sw.js`: `/link` e `/link.css` entrano in `OPTIONAL_PRECACHE_URLS`. Le altre
+  risorse della pagina (`tokens.css`, `fonts.css`, mascotte) c'erano già.
+- Nome accessibile diverso dal testo visibile (WCAG 2.5.3) su 14 link di
+  `/404`, `/accessibilita`, `/faq`, `/guida-compiti`, `/per-genitori`,
+  `/per-insegnanti` e `/supporta`: l'`aria-label` superfluo è tolto, quello
+  che aggiunge informazione ora comincia con il testo visibile.
+- `/guida-compiti`: i `summary` delle domande frequenti non avevano stile,
+  erano alti 22px e attaccati. In `info-pages.css` prendono 6px di padding
+  verticale (Lighthouse accessibilità da 96 a 100).
+
+### Changed
+- `/accessibilita`: metodologia e perimetro distinguono i controlli automatici
+  (26 pagine, due palette) da quelli manuali (home, otto materie, FAQ,
+  Supporta, Accessibilità). Due date: verifica automatica 6 ottobre 2026,
+  verifica manuale ancora 18 aprile 2026, perché tastiera, zoom e VoiceOver
+  non sono stati ripetuti.
+- Verifica del 6 ottobre 2026: `npm run check:contrast` verde su 26 pagine per
+  due palette, categoria accessibilità di Lighthouse su tutte e 52 le
+  combinazioni, `npm run test:e2e:dialogs` verde sulle otto materie.
+
+### Added
+- `scripts/check_sw_precache.js` controlla anche il verso opposto: ogni rotta
+  di `sitemap.xml` deve stare nel precache, insieme ai CSS e ai JS che la sua
+  pagina dichiara nell'HTML. Le rotte si leggono dalla sitemap, senza una
+  seconda lista da tenere allineata. Prima il check verificava solo che i path
+  già elencati esistessero su disco.
+
 ## 4.21.1 - 2026-09-30
 
 **Ritocchi SEO alle tabelline e all'avviso «serve JavaScript».** Solo testi e
