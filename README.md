@@ -216,7 +216,7 @@ bash scripts/export_backup_outside_repo.sh "/percorso/assoluto/export-backup"
 - Repository GitHub collegata a una piattaforma di hosting statico
 - Build command: `bash scripts/export_for_cloudflare.sh`
 - Build output directory: `export`
-- Variabile d'ambiente `NODE_VERSION`: `20` (o superiore, come in `engines`)
+- Variabile d'ambiente `NODE_VERSION`: `24` (o superiore, come in `engines`)
 
 Se l'output directory non è `export`, Cloudflare pubblica la radice del repo: è successo fino al 10/09/2026, con `scripts/`, `reports/` e `package.json` raggiungibili dal sito.
 - Regole di sicurezza e instradamento gestite nella configurazione di hosting del progetto
