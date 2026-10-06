@@ -1,5 +1,16 @@
 # Changelog Repo
 
+## 4.21.5 - 2026-10-06
+
+**Verifica manuale di accessibilità ripetuta.** Solo la data nella
+dichiarazione.
+
+### Changed
+- `/accessibilita`: «Ultima verifica manuale (tastiera, zoom, VoiceOver)» passa
+  dal 18 aprile 2026 al 6 ottobre 2026. La verifica è stata rifatta a mano da
+  Mattia dopo la 4.21.4, che aveva cambiato il CSS del testo per i lettori di
+  schermo (`clip` → `clip-path`).
+
 ## 4.21.4 - 2026-10-06
 
 **CSS deprecato sostituito.** Nessun cambio visibile: 50 schermate su 50
