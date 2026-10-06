@@ -1,8 +1,6 @@
 name: Lighthouse
 
 on:
-  pull_request:
-    branches: [main]
   schedule:
     - cron: '0 6 * * *'
 
@@ -24,5 +22,5 @@ jobs:
         run: npm run lighthouse
         env:
           LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Sulle PR il checkout e' il merge commit: lo status va sul commit della PR.
+          # Senza PR vale github.sha: lo status va sul commit di main misurato.
           LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.event.pull_request.head.sha || github.sha }}

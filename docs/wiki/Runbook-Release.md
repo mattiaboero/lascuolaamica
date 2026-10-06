@@ -59,6 +59,8 @@ Questi controlli servono a bloccare regressioni architetturali prima del merge.
 
 ## Merge e deploy
 
+`main` è protetto: una PR si fonde solo con i check `prepublish` e `smoke` (E2E) verdi e con il branch aggiornato con `main`. Lighthouse non è un gate: gira ogni giorno sulla produzione.
+
 1. Merge su `main`
 2. La piattaforma di hosting avvia il deploy automatico
 3. Attendi la fine del build (1–3 minuti tipicamente)
