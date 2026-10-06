@@ -210,4 +210,4 @@ Poi `python3 scripts/sync_question_counts.py` (i conteggi sono saliti da soli di
 
 Controllato con la PR #30: partita di 1ª a 360×740, 375×812, 390×844 e 1280×800, schermata di scelta classe con cinque bottoni, bonus di 1ª (quattro, in `bonusQuestions` con `grade: 1`), figure a 360×740 (dalla 4.19.0 tutte e 203 stanno sopra il footer fisso: la figura si rimpicciolisce a 213×160).
 
-La PR #30 lasciava da fare a mano una prova con un bambino di 1ª e «Ascolta» su un iPhone e su un Android veri, con VoiceOver: sono verifiche ancora aperte.
+La PR #30 lasciava due verifiche da fare a mano. La prova con un bambino è stata fatta, su tablet e su notebook. Resta aperta «Ascolta» su un iPhone e su un Android veri, con VoiceOver.
