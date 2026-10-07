@@ -74483,16 +74483,16 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 1,
-   "question": "Che cosa rappresenta un angolo, se pensi a una rotazione?",
+   "question": "Apri un libro chiuso: le due copertine formano un angolo. Che cosa succede all'angolo se apri il libro ancora di più?",
    "options": [
-    "La distanza tra due punti",
-    "Il cambiamento di direzione tra due segmenti che partono da uno stesso punto",
-    "La lunghezza di un segmento",
-    "Il numero di lati di una figura"
+    "Diventa più piccolo",
+    "Diventa più grande",
+    "Resta uguale",
+    "Sparisce"
    ],
    "answerIndex": 1,
-   "answer": "Il cambiamento di direzione tra due segmenti che partono da uno stesso punto",
-   "explanation": "Un angolo misura proprio quanto cambia la direzione: è la rotazione necessaria per passare da un segmento all'altro, partendo dallo stesso punto (vertice).",
+   "answer": "Diventa più grande",
+   "explanation": "L'angolo dice quanto sono aperte le due copertine: più apri il libro, più l'angolo diventa grande.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -75123,7 +75123,7 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 2,
-   "question": "In una stella a cinque punte disegnata su un foglio, nello spazio tra due punte vicine l'angolo interno della stella supera un angolo piatto. Come si può classificare questo angolo?",
+   "question": "Un angolo è più aperto di un angolo piatto. Come si chiama?",
    "options": [
     "Piatto",
     "Concavo",
@@ -75132,7 +75132,7 @@
    ],
    "answerIndex": 1,
    "answer": "Concavo",
-   "explanation": "Un angolo che supera l'ampiezza di un angolo piatto è per definizione un angolo concavo.",
+   "explanation": "Un angolo più aperto di un angolo piatto si chiama concavo. Se invece è meno aperto di un angolo piatto si chiama convesso.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
