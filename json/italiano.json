@@ -18213,7 +18213,7 @@
    "area": "italiano_classe3",
    "subarea": "lingua",
    "difficulty": 2,
-   "question": "Quale parola completa correttamente la frase: 'Non ho ___ soldi'?",
+   "question": "Quale parola completa bene la frase: 'Nel barattolo non c'è ___ biscotto'?",
    "options": [
     "qualche",
     "dei",
@@ -18222,7 +18222,7 @@
    ],
    "answerIndex": 2,
    "answer": "nessun",
-   "explanation": "Con la negazione 'non' si usa 'nessun' per indicare assenza totale: 'Non ho nessun soldo' (oppure 'Non ho soldi'). 'Qualche' e 'dei' indicano una quantità positiva e non si usano con la negazione.",
+   "explanation": "Per dire che non ce n'è neanche uno si usa 'nessun': 'Nel barattolo non c'è nessun biscotto'. Le altre parole non vanno d'accordo con 'non c'è' e con 'biscotto'.",
    "active": true,
    "tag": "italiano;lingua;classe_3;primaria",
    "tags": [

@@ -1,5 +1,12 @@
 [
  {
+  "date": "7 ottobre 2026 · Release 4.21.6",
+  "items": [
+   "Italiano, 3ª: corretta una domanda che dava per giusta una frase sbagliata («Non ho nessun soldi»). Ora la frase è «Nel barattolo non c'è nessun biscotto».",
+   "Matematica, 3ª: riscritte in parole più semplici due domande sugli angoli che erano troppo difficili da capire."
+  ]
+ },
+ {
   "date": "6 ottobre 2026 · Release 4.21.2 – 4.21.5",
   "items": [
    "La pagina dei link (lascuolaamica.it/link) si apre anche senza connessione, come le altre.",

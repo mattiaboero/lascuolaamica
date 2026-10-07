@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.21.6 - 2026-10-07
+
+**Tre domande di 3ª corrette.** Segnalate da Mattia giocando a Breakout: una
+sbagliata, due incomprensibili.
+
+### Fixed
+- `ita-3-lingua-9188`: «Non ho ___ soldi» dava per giusta «nessun», che con un
+  plurale è un errore. La frase diventa «Nel barattolo non c'è ___ biscotto».
+- `mat-3-angoli-9518`: «Che cosa rappresenta un angolo, se pensi a una
+  rotazione?» diventa una domanda su un libro che si apre.
+- `mat-3-angoli-9538`: la stella a cinque punte lascia il posto a «Un angolo è
+  più aperto di un angolo piatto. Come si chiama?».
+- Le tre spiegazioni sono riscritte in parole da bambino.
+
+I controlli automatici non avevano fermato nessuna delle tre: guardano refusi
+e calcoli, non se un bambino capisce la domanda.
+
 ## 4.21.5 - 2026-10-06
 
 **Verifica manuale di accessibilità ripetuta.** Solo la data nella
