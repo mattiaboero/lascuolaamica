@@ -1,18 +1,21 @@
-# Gli errori CSP visibili in console su ogni pagina ("Executing inline script
-# violates ... script-src 'self'") non riguardano codice di questo repo: sono lo
-# script anti-bot che Cloudflare inietta all'edge (JavaScript Detections), che carica
-# /cdn-cgi/challenge-platform/scripts/jsd/main.js per profilare il browser.
+# Questo file e' l'unica fonte degli header di risposta del sito. Non duplicarli
+# in regole di zona Cloudflare: una regola di zona vince su questo file senza
+# che dal repo si veda.
+#
+# Se in console ricompare su ogni pagina un errore CSP ("Executing inline script
+# violates ... script-src 'self'") per uno script che carica
+# /cdn-cgi/challenge-platform/scripts/jsd/main.js, non riguarda codice di questo
+# repo: e' lo script anti-bot che Cloudflare inietta all'edge (JavaScript
+# Detections).
 #
 # Non aggiungere un hash per farlo passare: lo script contiene il ray id della
 # richiesta (r:'a384b1...'), quindi il suo hash cambia a ogni caricamento e
 # nessun valore statico puo' corrispondere. E comunque il sito promette ai
 # genitori che non usa strumenti di analisi o tracciamento.
 #
-# Non si spegne. Verificato il 10/09/2026: con Bot Fight Mode disattivato da
-# tempo lo script viene iniettato lo stesso, e sul piano gratuito il pannello
-# non ha un interruttore per JavaScript Detections (Security -> Settings, filtri
-# "java" e "bot"). Si e' scelto di lasciarlo: la CSP lo blocca prima che parta,
-# quindi non profila nessuno. Il costo e' un errore in console e mezzo KB.
+# Va spento. E' spento dal 06/10/2026: sul piano gratuito il pannello non ha
+# l'interruttore, l'API si' (bot_management della zona, campo enable_js a false).
+# Spegnere Bot Fight Mode non basta.
 
 /*
   X-Content-Type-Options: nosniff
