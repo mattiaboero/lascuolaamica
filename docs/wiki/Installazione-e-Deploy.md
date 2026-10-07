@@ -89,6 +89,21 @@ Parametri essenziali della build automatica:
 
 ---
 
+## Sincronizzazione della wiki
+
+La wiki di GitHub è una copia di `docs/wiki/`. A ogni push su `main` che tocca quella cartella, il workflow `Sync Wiki` copia i file nel repository della wiki.
+
+| Parametro | Valore |
+|---|---|
+| Secret | `WIKI_SYNC_TOKEN` |
+| Tipo | personal access token classico |
+| Scope | `public_repo` |
+| Scadenza | 05/01/2027 |
+
+> Il token scade. Da quel giorno `Sync Wiki` fallisce finché il token non viene rigenerato e salvato di nuovo nel secret. Fino al 07/10/2026 aveva anche gli scope `repo` e `workflow`, che alla sincronizzazione non servono.
+
+---
+
 ## Aggiornamento Service Worker
 
 Dopo ogni release, la versione della cache offline va riallineata per forzare l’aggiornamento nei client già attivi. Questo controllo è incluso nel Runbook release.
