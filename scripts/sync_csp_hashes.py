@@ -23,8 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 HEADERS = ROOT / "_headers"
 
-SCRIPT_RE = re.compile(r"<script(?P<attrs>[^>]*)>(?P<body>.*?)</script>", re.S | re.I)
-STYLE_TAG_RE = re.compile(r"<style(?P<attrs>[^>]*)>(?P<body>.*?)</style>", re.S | re.I)
+SCRIPT_RE = re.compile(r"<script(?P<attrs>[^>]*)>(?P<body>.*?)</script[^>]*>", re.S | re.I)
+STYLE_TAG_RE = re.compile(r"<style(?P<attrs>[^>]*)>(?P<body>.*?)</style[^>]*>", re.S | re.I)
 # <style> iniettato via JS: createElement('style') ... .textContent = `...`;
 INJECTED_STYLE_RE = re.compile(
     r"createElement\(\s*['\"]style['\"]\s*\).*?\.textContent\s*=\s*`(?P<body>.*?)`",
