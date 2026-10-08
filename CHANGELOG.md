@@ -1,5 +1,25 @@
 # Changelog Repo
 
+## 4.21.8 - 2026-10-08
+
+**Revisione delle domande: storia completa.** Stesso procedimento della
+4.21.7: due revisori indipendenti per ogni domanda, chi riscrive non approva.
+
+### Changed
+- `json/storia.json`: 1.120 domande lette. 175 promosse senza modifiche, 833
+  riscritte e ripromosse, 112 spente: 73 doppioni dello stesso schema, 19 che
+  non verificavano nulla, 12 bocciate tre volte, 8 fuori programma. Il
+  dettaglio, con prima e dopo, è in `reports/revisione-storia.md`.
+- La sottoarea `alto_medioevo` di 5ª è spenta per intero: non è programma
+  della primaria.
+- `reports/revisione-qualita.json`: aggiunti i verdetti di storia.
+
+### Fixed
+- `scripts/revisione_domande.js`: la risposta alla cieca dichiara anche il
+  testo dell'opzione scelta, e `verdetti` rifiuta il lotto se indice e testo
+  non coincidono. In un lotto un risolutore aveva sbagliato a contare gli
+  indici in 13 risposte, bocciando riscritture buone.
+
 ## 4.21.7 - 2026-10-08
 
 **Revisione delle domande: geografia completa, attrezzi e taratura.** Ogni
