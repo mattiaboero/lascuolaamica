@@ -3062,7 +3062,7 @@
    ],
    "answerIndex": 3,
    "answer": "primavera",
-   "explanation": "La stagione corretta è 'primavera'.",
+   "explanation": "In primavera fa più caldo e c'è più luce. Così le piante si risvegliano e sui rami spuntano i germogli.",
    "active": true,
    "tag": "stagioni;cicli;classe2",
    "tags": [
@@ -5353,16 +5353,16 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Quale comportamento aiuta a stare bene?",
+   "question": "Quando è più importante lavarsi le mani con il sapone?",
    "options": [
-    "non bere acqua",
-    "non dormire mai",
-    "lavarsi spesso le mani",
-    "mangiare solo dolci"
+    "dopo aver guardato un cartone",
+    "dopo aver bevuto l'acqua",
+    "dopo essere andati in bagno",
+    "dopo aver messo il pigiama"
    ],
    "answerIndex": 2,
-   "answer": "lavarsi spesso le mani",
-   "explanation": "Sulle mani si raccolgono i germi di tutto ciò che tocchiamo, e da lì arrivano a bocca e occhi. Lavarle spesso interrompe quel passaggio.",
+   "answer": "dopo essere andati in bagno",
+   "explanation": "In bagno le mani toccano molti germi, anche se non si vedono. Con acqua e sapone i germi vanno via.",
    "active": true,
    "tag": "corpo;salute;classe2",
    "tags": [
@@ -6639,16 +6639,16 @@
    "area": "materia_materiali",
    "subarea": "stati_proprieta_materia",
    "difficulty": 1,
-   "question": "Quale stato della materia prende la forma del recipiente ma mantiene il proprio volume?",
+   "question": "Versi tutta l'acqua da una bottiglia a una ciotola. Che cosa cambia dell'acqua?",
    "options": [
-    "aeriforme",
-    "solido",
-    "arcobaleno",
-    "liquido"
+    "il colore",
+    "la quantità",
+    "il sapore",
+    "la forma"
    ],
    "answerIndex": 3,
-   "answer": "liquido",
-   "explanation": "Lo stato corretto è 'liquido'.",
+   "answer": "la forma",
+   "explanation": "L'acqua è un liquido: prende la forma del contenitore in cui la versi. La quantità di acqua, invece, resta la stessa.",
    "active": true,
    "tag": "stati_materia;classe3",
    "tags": [
@@ -7591,8 +7591,8 @@
    "question": "Gli uccelli hanno il corpo coperto di...",
    "options": [
     "squame",
-    "foglie",
-    "scaglie di ferro",
+    "pelo",
+    "pelle nuda",
     "piume"
    ],
    "answerIndex": 3,
@@ -9501,16 +9501,16 @@
    "area": "viventi_ambiente",
    "subarea": "botanica_e_zoologia",
    "difficulty": 2,
-   "question": "Le piante respirano e...",
+   "question": "Un melo fa i fiori, poi i frutti con dentro i semi. A che cosa servono i semi?",
    "options": [
-    "non cambiano mai",
-    "non hanno cellule",
-    "non crescono",
-    "si riproducono"
+    "ad assorbire l'acqua",
+    "a sostenere il fusto",
+    "a catturare la luce",
+    "a far nascere nuove piante"
    ],
    "answerIndex": 3,
-   "answer": "si riproducono",
-   "explanation": "Le piante fanno tutto quello che fanno i viventi: respirano, si nutrono, crescono e si riproducono con semi o spore. Non essendo mobili si nota di meno.",
+   "answer": "a far nascere nuove piante",
+   "explanation": "Da un seme che trova terra e acqua nasce una nuova pianta. È così che molte piante si riproducono, come fanno tutti i viventi.",
    "active": true,
    "tag": "botanica;classe4",
    "tags": [
@@ -13652,7 +13652,7 @@
    "answerIndex": 3,
    "answer": "la scienza studia forze, luce e suono con osservazioni ed esperimenti",
    "explanation": "Forze, luce e suono si studiano con osservazioni ed esperimenti.",
-   "active": true,
+   "active": false,
    "tag": "fisica;applicazione;classe5",
    "tags": [
     "fisica",
@@ -14107,16 +14107,16 @@
    "area": "scienza_tecnologia",
    "subarea": "tecnologia_applicata",
    "difficulty": 1,
-   "question": "Quale oggetto è uno strumento tecnologico?",
+   "question": "Quale di questi oggetti ha bisogno dell'elettricità per funzionare?",
    "options": [
     "computer",
-    "ramo",
-    "mela",
-    "conchiglia"
+    "martello",
+    "forbici",
+    "matita"
    ],
    "answerIndex": 0,
    "answer": "computer",
-   "explanation": "Il computer è costruito dall'uomo per svolgere funzioni utili.",
+   "explanation": "Il computer si accende solo con l'elettricità, che arriva dalla presa o dalla batteria. Martello, forbici e matita si usano con la forza delle mani.",
    "active": true,
    "tag": "tecnologia",
    "tags": [
@@ -15161,16 +15161,16 @@
    "area": "forze_luce_suono",
    "subarea": "luce_e_suono",
    "difficulty": 2,
-   "question": "Il suono si sente grazie a vibrazioni che arrivano alle...",
+   "question": "Pizzichi la corda di una chitarra: la corda trema veloce e fa un suono. Come si chiamano questi piccoli movimenti veloci?",
    "options": [
-    "ginocchia",
-    "spalle",
-    "orecchie",
-    "dita"
+    "rotazioni",
+    "riflessioni",
+    "vibrazioni",
+    "evaporazioni"
    ],
    "answerIndex": 2,
-   "answer": "orecchie",
-   "explanation": "Le orecchie percepiscono le vibrazioni del suono.",
+   "answer": "vibrazioni",
+   "explanation": "Quando la corda trema avanti e indietro molto in fretta, fa delle vibrazioni. Le vibrazioni passano nell'aria e arrivano alle orecchie: così sentiamo il suono.",
    "active": true,
    "tag": "udito",
    "tags": [
@@ -25749,16 +25749,16 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 2,
-   "question": "Quale tipo di alimentazione è più sana?",
+   "question": "Quale di questi pranzi è il più vario ed equilibrato?",
    "options": [
-    "Solo dolci e patatine",
-    "Solo carne",
-    "Saltare i pasti",
-    "Varia ed equilibrata"
+    "Pasta, pane e patate",
+    "Carne, uova e formaggio",
+    "Insalata, carote e mela",
+    "Pasta, pesce e insalata"
    ],
    "answerIndex": 3,
-   "answer": "Varia ed equilibrata",
-   "explanation": "Un'alimentazione varia ed equilibrata, con frutta, verdura, cereali e proteine, fornisce tutto ciò che serve al corpo.",
+   "answer": "Pasta, pesce e insalata",
+   "explanation": "Pasta, pesce e insalata danno al corpo cose diverse: energia, proteine e vitamine. Negli altri pranzi gli alimenti sono tutti dello stesso gruppo.",
    "active": true,
    "tag": "scienze;educazione_salute;classe_5;primaria",
    "tags": [
@@ -28337,16 +28337,16 @@
    "area": "materia_energia_fenomeni",
    "subarea": "energia",
    "difficulty": 3,
-   "question": "Una pallina ferma in cima a uno scivolo possiede energia...",
+   "question": "Il ventilatore funziona con l'energia elettrica. In che cosa la trasforma soprattutto?",
    "options": [
-    "sonora",
-    "potenziale",
-    "luminosa",
-    "magnetica"
+    "in luce",
+    "in movimento",
+    "in suono",
+    "in calore"
    ],
    "answerIndex": 1,
-   "answer": "potenziale",
-   "explanation": "In alto la pallina ha energia potenziale, che diventa energia di movimento scendendo.",
+   "answer": "in movimento",
+   "explanation": "Nel ventilatore l'energia elettrica fa girare le pale: diventa energia di movimento, che sposta l'aria.",
    "active": true,
    "tag": "scienze;energia;classe4",
    "tags": [
@@ -31003,16 +31003,16 @@
    "area": "corpo_umano_salute",
    "subarea": "salute_e_igiene",
    "difficulty": 1,
-   "question": "Stare puliti e curare l'igiene serve a...",
+   "question": "Perché ci laviamo i denti dopo aver mangiato?",
    "options": [
-    "ammalarsi",
-    "restare in salute",
-    "sporcare",
-    "crescere meno"
+    "per farli crescere più in fretta",
+    "per togliere i resti di cibo",
+    "per far cadere i denti da latte",
+    "per sentire meglio i sapori"
    ],
    "answerIndex": 1,
-   "answer": "restare in salute",
-   "explanation": "L'igiene personale tiene lontani germi e malattie.",
+   "answer": "per togliere i resti di cibo",
+   "explanation": "Sui denti restano pezzetti di cibo che fanno crescere i germi della carie. Lo spazzolino li porta via.",
    "active": true,
    "tag": "scienze;salute_e_igiene;classe3",
    "tags": [

@@ -836,7 +836,7 @@ function checkQuestion(subject, classNum, area, question, options, answer, expla
   // Nota: niente \b dopo "perche'" e "cos'", perche' in JavaScript una lettera
   // accentata non e' un carattere di parola e quel confine non fa mai match.
   if (subject !== 'inglese' && /[a-zà-ù]\?\s*$/i.test(question || '')) {
-    const interrogativa = /\b(?:chi|cosa|quale|quali|qual|quanto|quanta|quanti|quante|come|dove|quando)\b|perch[ée]|cos['’]|com['’]|qual['’]|\bqual\s+è|(?:^|[.!?,]\s*|['"»]\s+)che\s+[a-zà-ù]+|\b(?:in|di|a|con|per|da|su)\s+(?:che|quale|quali)\b/i.test(question);
+    const interrogativa = /\b(?:chi|cosa|quale|quali|qual|quanto|quanta|quanti|quante|come|dove|quando)\b|perch[ée]|cos['’]|com['’]|dov['’]|qual['’]|\bqual\s+è|(?:^|[.!?,]\s*|['"»]\s+)che\s+[a-zà-ù]+|\b(?:in|di|a|con|per|da|su)\s+(?:che|quale|quali)\b/i.test(question);
     // L'alternativa vale solo se non e' dentro il soggetto: "a piedi o in bici
     // invece che in auto fa?" finisce comunque con un verbo senza complemento.
     const verboFinale = /(?<![a-zà-ùA-ZÀ-Ù])(?:fa|fanno|serve|servono|aiuta|aiutano|rende|rendono|provoca|provocano|causa|causano|produce|producono|comporta|comportano)\s*\?\s*$/i.test(question || '');

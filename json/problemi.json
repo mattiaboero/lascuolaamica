@@ -4605,13 +4605,13 @@
    "question": "In una ciotola ci sono 52 nocciole. Daniele ne prende 6. Quante nocciole sono rimaste?",
    "options": [
     "46",
-    "31",
-    "50",
-    "23"
+    "58",
+    "54",
+    "44"
    ],
    "answerIndex": 0,
    "answer": "46",
-   "explanation": "52 - 6 = 46.",
+   "explanation": "Daniele toglie 6 nocciole dalle 52 della ciotola, quindi si fa una sottrazione: 52 - 6 = 46.",
    "active": true,
    "tag": "sottrazione,cibo",
    "tags": [
@@ -6500,16 +6500,16 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 2,
-   "question": "In cartoleria ogni squadra costa 3 euro. Monica ne compra 13. Quanto spende in tutto?",
+   "question": "In cartoleria ogni penna costa 3 euro. Monica ne compra 13. Quanto spende in tutto?",
    "options": [
-    "54",
-    "47",
-    "48",
-    "39"
+    "54 euro",
+    "47 euro",
+    "48 euro",
+    "39 euro"
    ],
    "answerIndex": 3,
-   "answer": "39",
-   "explanation": "Costo totale: 3 euro × 13 = 39 euro.",
+   "answer": "39 euro",
+   "explanation": "Monica paga 3 euro per ognuna delle 13 penne, quindi si moltiplica: 3 × 13 = 39 euro.",
    "active": true,
    "tag": "moltiplicazione,denaro",
    "tags": [
@@ -21179,7 +21179,7 @@
    "area": "problemi",
    "subarea": "euro_denaro",
    "difficulty": 3,
-   "question": "Giacomo guadagna 320 euro al mese. In 6 mesi guadagna 1920 euro in tutto. Se risparmia il 30% delle sue entrate totali, quanto risparmia?",
+   "question": "Giacomo guadagna 320 euro al mese e ne risparmia il 30%. Quanti euro risparmia in 6 mesi?",
    "options": [
     "568",
     "576",
@@ -21188,7 +21188,7 @@
    ],
    "answerIndex": 1,
    "answer": "576",
-   "explanation": "Entrate totali: 320 × 6 = 1920 euro. Risparmio: 1920 × 30/100 = 576 euro.",
+   "explanation": "In 6 mesi guadagna 320 × 6 = 1920 euro. Il 30% di 1920 è 1920 × 30 ÷ 100 = 576 euro.",
    "active": true,
    "tag": "percentuale,risparmio,moltiplicazione",
    "tags": [

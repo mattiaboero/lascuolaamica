@@ -2751,16 +2751,16 @@
    "area": "numeri",
    "subarea": "comprensione_in_contesto",
    "difficulty": 3,
-   "question": "A spider has eight legs. Which number is correct?",
+   "question": "Read: 'A spider has eight legs. Tom sees two spiders in the garden.' How many legs do the two spiders have?",
    "options": [
-    "six",
-    "four",
-    "eight",
-    "ten"
+    "ten",
+    "sixty",
+    "sixteen",
+    "eight"
    ],
    "answerIndex": 2,
-   "answer": "eight",
-   "explanation": "Il ragno ha otto zampe: in inglese 'eight'.",
+   "answer": "sixteen",
+   "explanation": "Ogni ragno ha otto zampe e i ragni sono due: 8 × 2 = 16, che in inglese si dice 'sixteen'. Attenzione a non confonderlo con 'sixty', che vuol dire sessanta.",
    "active": true,
    "tag": "inglese;classe_5;numeri;primaria",
    "tags": [
@@ -6216,16 +6216,16 @@
    "area": "casa",
    "subarea": "lessico_base",
    "difficulty": 1,
-   "question": "Where do you cook?",
+   "question": "What is the English word for 'cucina'?",
    "options": [
     "bedroom",
-    "garage",
+    "bathroom",
     "kitchen",
-    "hall"
+    "garden"
    ],
    "answerIndex": 2,
    "answer": "kitchen",
-   "explanation": "'Kitchen' è la cucina, la stanza dove si preparano i pasti.",
+   "explanation": "'Kitchen' è la cucina, la stanza dove si prepara da mangiare. 'Bedroom' è la camera da letto e 'bathroom' è il bagno.",
    "active": true,
    "tag": "inglese;classe_2;casa;primaria",
    "tags": [
@@ -9164,7 +9164,7 @@
    ],
    "answerIndex": 0,
    "answer": "in the bathroom",
-   "explanation": "The correct place is \"in the bathroom\".",
+   "explanation": "'Take a shower' vuol dire fare la doccia. La doccia è in bagno, che in inglese si dice 'bathroom'.",
    "active": true,
    "tag": "inglese;classe_4;casa;primaria;pilota_parametrico",
    "tags": [
@@ -11861,16 +11861,16 @@
    "area": "giorni",
    "subarea": "uso_guidato",
    "difficulty": 2,
-   "question": "Complete: 'I go to school on ___.'",
+   "question": "Complete: 'Sunday, ___, Tuesday, Wednesday.'",
    "options": [
     "Saturday",
-    "Sunday",
-    "holiday",
+    "Friday",
+    "Thursday",
     "Monday"
    ],
    "answerIndex": 3,
    "answer": "Monday",
-   "explanation": "Schools are open on weekdays like Monday.",
+   "explanation": "I giorni vanno in ordine: dopo 'Sunday' (domenica) viene 'Monday' (lunedì), poi 'Tuesday' (martedì).",
    "active": true,
    "tag": "giorni",
    "tags": [
@@ -15989,16 +15989,16 @@
    "area": "inglese",
    "subarea": "frasi_semplici",
    "difficulty": 2,
-   "question": "Complete: 'You ___ my best friend.'",
+   "question": "It is Tom's birthday today. What do you say?",
    "options": [
-    "am",
-    "is",
-    "are",
-    "has"
+    "Good night!",
+    "I'm sorry!",
+    "Happy birthday!",
+    "Goodbye!"
    ],
    "answerIndex": 2,
-   "answer": "are",
-   "explanation": "'You are my best friend' = Tu sei il mio migliore amico. Con 'you' si usa sempre 'are'.",
+   "answer": "Happy birthday!",
+   "explanation": "'Happy birthday!' vuol dire 'Buon compleanno!'. Si dice a chi compie gli anni.",
    "active": true,
    "tag": "inglese;frasi_semplici;classe_2;primaria",
    "tags": [
@@ -16625,7 +16625,7 @@
    ],
    "answerIndex": 2,
    "answer": "three",
-   "explanation": "Il testo dice 'I have three balls' = Ho tre palle. 'Three' = tre. Poi le elenca: una rossa, una blu, una gialla — sono tre in tutto.",
+   "explanation": "Il testo dice 'I have three balls': ho tre palle. 'Three' vuol dire tre.",
    "active": true,
    "tag": "inglese;comprensione_in_cont;classe_2;primaria",
    "tags": [
@@ -16748,16 +16748,16 @@
    "area": "inglese",
    "subarea": "comprensione_in_contesto",
    "difficulty": 2,
-   "question": "Choose the right word: 'I brush my ___ in the morning.'",
+   "question": "Choose the right word: 'I put a ___ on my head.'",
    "options": [
-    "shoes",
-    "bag",
-    "hair",
-    "desk"
+    "shoe",
+    "sock",
+    "hat",
+    "coat"
    ],
    "answerIndex": 2,
-   "answer": "hair",
-   "explanation": "'I brush my hair' = Mi spazzolo i capelli. I capelli si spazzolano. 'Hair' = capelli.",
+   "answer": "hat",
+   "explanation": "'Hat' è il cappello, che si mette in testa ('on my head'). 'Shoe' è la scarpa, 'sock' la calza e 'coat' il cappotto.",
    "active": true,
    "tag": "inglese;comprensione_in_cont;classe_2;primaria",
    "tags": [
@@ -19628,7 +19628,7 @@
    ],
    "answerIndex": 3,
    "answer": "I have got a big kitchen.",
-   "explanation": "Con 'I' la forma corretta è 'have got'. L'ordine è: soggetto + have got + aggettivo + sostantivo.",
+   "explanation": "Con 'I' si dice 'have got', con le due parole vicine e in quest'ordine. 'I have got a big kitchen' vuol dire 'Ho una cucina grande'.",
    "active": true,
    "tag": "inglese;frasi_semplici;classe_3;primaria",
    "tags": [
@@ -24701,16 +24701,16 @@
    "area": "inglese",
    "subarea": "present_continuous",
    "difficulty": 2,
-   "question": "What ___ he ___ (do) right now?",
+   "question": "Complete: 'What ___ he doing right now?'",
    "options": [
-    "does / do",
-    "are / doing",
-    "is / doing",
-    "does / doing"
+    "does",
+    "are",
+    "is",
+    "do"
    ],
    "answerIndex": 2,
-   "answer": "is / doing",
-   "explanation": "Per formare una domanda al present continuous con 'he': What + IS + he + DOING? Si usa 'is' perché il soggetto è he (terza persona singolare).",
+   "answer": "is",
+   "explanation": "Con 'he' si usa 'is'. 'What is he doing right now?' vuol dire 'Che cosa sta facendo adesso?'.",
    "active": true,
    "tag": "inglese;present_continuous;classe_4;primaria",
    "tags": [
@@ -29298,7 +29298,7 @@
    "answerIndex": 2,
    "answer": "since",
    "explanation": "'Since' si usa con un punto preciso nel tempo ('since Monday'). 'For' si usa con un periodo di tempo ('for three days'). Qui 'last Monday' è un punto preciso → since.",
-   "active": true,
+   "active": false,
    "tag": "inglese;vari;classe_5;primaria",
    "tags": [
     "inglese",

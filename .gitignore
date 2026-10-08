@@ -50,3 +50,6 @@ docs/graphify-out/
 # Audit SEO: contiene i dati di traffico di Search Console (click, impression,
 # posizioni). Resta sul disco di chi lavora al sito, non nel repo pubblico.
 lascuolaamica.it-audit/
+
+# Lotti di lavoro della revisione delle domande (transitori)
+reports/revisione-lotti/
