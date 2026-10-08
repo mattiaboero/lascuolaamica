@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 10362,
+ "totalQuestions": 10278,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
@@ -75,7 +75,7 @@
      "5": 119
     }
    },
-   "activeRows": 1091
+   "activeRows": 1090
   },
   "civica": {
    "path": "civica.json",
@@ -129,7 +129,7 @@
      "5": 225
     }
    },
-   "activeRows": 1132
+   "activeRows": 1051
   },
   "storia": {
    "path": "storia.json",
@@ -197,7 +197,7 @@
      "5": 250
     }
    },
-   "activeRows": 1011
+   "activeRows": 1010
   },
   "italiano": {
    "path": "italiano.json",
@@ -219,7 +219,7 @@
      "5": 100
     }
    },
-   "activeRows": 1093
+   "activeRows": 1092
   }
  }
 }

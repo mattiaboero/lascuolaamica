@@ -6533,16 +6533,16 @@
    "area": "italiano_classe3",
    "subarea": "scrittura",
    "difficulty": 2,
-   "question": "Quale frase descrive meglio un personaggio?",
+   "question": "Quale frase descrive com'è fatto il nonno?",
    "options": [
-    "C'era un uomo.",
-    "L'uomo era alto, con i capelli bianchi e gli occhi vivaci.",
-    "Un uomo camminava.",
-    "C'era quell'uomo lì."
+    "Il nonno legge il giornale in cucina.",
+    "Il nonno è alto, con i baffi bianchi.",
+    "Il nonno porta il cane al parco.",
+    "Il nonno prepara la torta di mele."
    ],
    "answerIndex": 1,
-   "answer": "L'uomo era alto, con i capelli bianchi e gli occhi vivaci.",
-   "explanation": "La seconda frase usa aggettivi e dettagli che rendono il personaggio vivido e specifico.",
+   "answer": "Il nonno è alto, con i baffi bianchi.",
+   "explanation": "Questa frase dice com'è il nonno: alto e con i baffi bianchi. Le altre frasi dicono che cosa fa.",
    "active": true,
    "tag": "italiano;classe_3;scrittura;primaria",
    "tags": [
@@ -10245,16 +10245,16 @@
    "area": "italiano_classe5",
    "subarea": "morfologia",
    "difficulty": 3,
-   "question": "Come si chiama la categoria delle parole come 'poiché', 'affinché', 'benché'?",
+   "question": "Nella frase 'Resto a casa perché piove', che cos'è la parola 'perché'?",
    "options": [
-    "preposizioni",
-    "avverbi",
-    "congiunzioni subordinanti",
-    "pronomi relativi"
+    "una preposizione",
+    "un avverbio",
+    "una congiunzione",
+    "un pronome"
    ],
    "answerIndex": 2,
-   "answer": "congiunzioni subordinanti",
-   "explanation": "Queste parole sono congiunzioni subordinanti: introducono proposizioni dipendenti dalla principale.",
+   "answer": "una congiunzione",
+   "explanation": "'Perché' qui è una congiunzione: unisce le due frasi 'Resto a casa' e 'piove'.",
    "active": true,
    "tag": "italiano;classe_5;morfologia;primaria",
    "tags": [
@@ -11727,7 +11727,7 @@
    "answerIndex": 1,
    "answer": "con una descrizione geografica del luogo",
    "explanation": "I Promessi Sposi iniziano con una descrizione geografica dettagliata del paesaggio lariano.",
-   "active": true,
+   "active": false,
    "tag": "italiano;classe_5;lettura;primaria",
    "tags": [
     "italiano",
@@ -14766,7 +14766,7 @@
    ],
    "answerIndex": 0,
    "answer": "topo",
-   "explanation": "'Topo' è maschile: si dice 'il topo'. 'Stella' (la stella), 'formica' (la formica) e 'rana' (la rana) sono nomi femminili. Il genere del nome si riconosce spesso dall'articolo.",
+   "explanation": "'Topo' è maschile: si dice 'il topo'. Le altre parole vogliono 'la': la stella, la formica, la rana.",
    "active": true,
    "tag": "italiano;morfologia;classe_2;primaria",
    "tags": [
@@ -24553,12 +24553,12 @@
    "options": [
     "Corri come il vento.",
     "I suoi occhi erano stelle nel buio.",
-    "È veloce simile a un leopardo.",
+    "È veloce come un leopardo.",
     "È alto come un grattacielo."
    ],
    "answerIndex": 1,
    "answer": "I suoi occhi erano stelle nel buio.",
-   "explanation": "La metafora afferma che una cosa è un'altra senza usare 'come' o 'simile a'. 'I suoi occhi erano stelle' = identifica gli occhi con le stelle (brillanti, luminosi). Le altre frasi usano 'come' o 'simile a', quindi sono similitudini, non metafore.",
+   "explanation": "Nella metafora si dice che una cosa è un'altra, senza 'come': gli occhi 'erano stelle' vuol dire che brillavano. Le altre frasi usano 'come' e sono similitudini.",
    "active": true,
    "tag": "italiano;lingua;classe_4;primaria",
    "tags": [
@@ -26606,7 +26606,7 @@
    ],
    "answerIndex": 2,
    "answer": "dorme",
-   "explanation": "Il predicato verbale è un verbo che da solo esprime l'azione o lo stato del soggetto. 'Dorme' è un verbo predicativo che dice che cosa fa il soggetto 'il gatto'. Non va confuso con il predicato nominale, che usa il verbo 'essere' come copula.",
+   "explanation": "'Dorme' è il predicato verbale perché è il verbo che dice che cosa fa il gatto.",
    "active": true,
    "tag": "italiano;sintassi;classe_5;primaria",
    "tags": [
@@ -32997,7 +32997,7 @@
    "area": "italiano_classe3",
    "subarea": "lessico",
    "difficulty": 2,
-   "question": "La parola 'riga' può indicare una linea o lo strumento per misurare. Come si chiamano queste parole con più significati?",
+   "question": "Dormo nel 'letto' e ho 'letto' un libro. Come si chiamano due parole uguali che vogliono dire cose diverse?",
    "options": [
     "Sinonimi",
     "Omonimi",
@@ -33006,7 +33006,7 @@
    ],
    "answerIndex": 1,
    "answer": "Omonimi",
-   "explanation": "Gli omonimi si scrivono uguali ma hanno significati diversi, come 'riga' (linea) e 'riga' (strumento).",
+   "explanation": "Gli omonimi sono parole che si scrivono uguali ma vogliono dire cose diverse: il 'letto' dove dormi e 'letto' del verbo leggere.",
    "active": true,
    "tag": "italiano;lessico;classe_3;primaria",
    "tags": [

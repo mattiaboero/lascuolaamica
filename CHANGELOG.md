@@ -1,5 +1,36 @@
 # Changelog Repo
 
+## 4.21.7 - 2026-10-08
+
+**Revisione delle domande: geografia completa, attrezzi e taratura.** Ogni
+domanda attiva di geografia è stata letta da due revisori indipendenti: uno
+risponde senza conoscere la soluzione, l'altro applica una rubrica di dieci
+criteri. Chi riscrive non approva.
+
+### Changed
+- `json/geografia.json`: 1.132 domande lette. 215 promosse senza modifiche,
+  836 riscritte e ripromosse, 81 spente (doppioni dello stesso schema, domande
+  che non verificano nulla, argomenti fuori programma per la classe). Il
+  dettaglio, con prima e dopo, è in `reports/revisione-geografia.md`.
+- Taratura su 120 domande (15 per materia): nelle sei materie non ancora
+  riviste, 43 domande riscritte e 3 spente. Dettaglio in `reports/taratura.md`.
+  Storia segue nella release successiva.
+
+### Added
+- `scripts/revisione_domande.js` con i comandi `check`, `leggibilita`, `lotto`,
+  `verdetti`, `riscritture`, `raccogli`, `rapporto`; `npm run check:revisione`
+  e `npm run check:leggibilita`, non ancora agganciati a `verify`.
+- `reports/revisione-qualita.json`: il registro dei verdetti, legato
+  all'impronta del testo di ogni domanda.
+- `docs/PIANO-REVISIONE-DOMANDE.md` e `docs/revisione-domande/`: il piano, le
+  istruzioni dei tre ruoli e il ciclo di lavoro.
+
+### Fixed
+- `scripts/lint_content.js`: «dov'» conta come parola interrogativa («Dov'è
+  ora la palla?» non è più un errore).
+- `geo-2-punti_cardinali_base-9064` dava per giusta una risposta sbagliata sul
+  tramonto: riscritta.
+
 ## 4.21.6 - 2026-10-07
 
 **Tre domande di 3ª corrette.** Segnalate da Mattia giocando a Breakout: una

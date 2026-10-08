@@ -3694,14 +3694,14 @@
    "difficulty": 3,
    "question": "Se fai un'assemblea di classe, qual è il comportamento corretto?",
    "options": [
-    "evitare il dialogo",
-    "giocare senza regole",
-    "scegliere il più rumoroso",
-    "confrontarsi su problemi e proposte"
+    "parlare tutti insieme per fare prima",
+    "lasciare decidere solo ai più bravi",
+    "interrompere chi non la pensa come te",
+    "ascoltare tutti e poi decidere insieme"
    ],
    "answerIndex": 3,
-   "answer": "confrontarsi su problemi e proposte",
-   "explanation": "L'assemblea di classe è il momento in cui si mettono in comune problemi e proposte e si decide insieme: funziona solo se ci si parla davvero.",
+   "answer": "ascoltare tutti e poi decidere insieme",
+   "explanation": "L'assemblea di classe serve a mettere in comune problemi e proposte: si decide bene solo dopo aver ascoltato tutti.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -4366,14 +4366,14 @@
    "difficulty": 3,
    "question": "Chi è un volontario?",
    "options": [
-    "chi pensa solo a sé",
-    "chi comanda tutti",
-    "chi rompe le regole",
-    "una persona che aiuta la comunità"
+    "una persona che aiuta solo i suoi amici",
+    "una persona che aiuta per avere un premio",
+    "una persona che aiuta perché è obbligata",
+    "una persona che aiuta senza essere pagata"
    ],
    "answerIndex": 3,
-   "answer": "una persona che aiuta la comunità",
-   "explanation": "Il volontario mette gratuitamente tempo e capacità al servizio della comunità: non lo fa per guadagno, ma perché quel bisogno riguarda anche lui.",
+   "answer": "una persona che aiuta senza essere pagata",
+   "explanation": "Il volontario sceglie da solo di aiutare gli altri e non riceve soldi in cambio: lo fa perché ci tiene.",
    "active": true,
    "tag": "educazione_civica;classe_4;costituzione_regole_comunita;primaria",
    "tags": [
@@ -5196,16 +5196,16 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Come sono legati i diritti e i doveri?",
+   "question": "Ogni bambino ha il diritto di andare a scuola. Quale dovere va insieme a questo diritto?",
    "options": [
-    "ai diritti corrispondono responsabilità verso la comunità",
-    "valgono solo i premi",
-    "contano solo i privilegi",
-    "i diritti eliminano ogni dovere"
+    "impegnarsi e rispettare compagni e insegnanti",
+    "prendere sempre i voti più alti",
+    "stare in silenzio per tutto il giorno",
+    "non sbagliare mai nessun esercizio"
    ],
    "answerIndex": 0,
-   "answer": "ai diritti corrispondono responsabilità verso la comunità",
-   "explanation": "Diritti e doveri sono due facce della stessa cosa: se hai diritto all'istruzione o a un ambiente pulito, hai anche la responsabilità di rispettare la scuola e l'ambiente degli altri.",
+   "answer": "impegnarsi e rispettare compagni e insegnanti",
+   "explanation": "Diritti e doveri vanno insieme: hai il diritto di imparare e il dovere di impegnarti e di rispettare gli altri, che hanno lo stesso diritto.",
    "active": true,
    "tag": "educazione_civica;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
@@ -26412,16 +26412,16 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "relazioni_online",
    "difficulty": 1,
-   "question": "Scrivere un messaggio gentile in chat significa...",
+   "question": "In chat un amico non ti risponde subito. Qual è la scelta gentile?",
    "options": [
-    "Scrivere tutto in maiuscolo",
-    "Usare parole educate",
-    "Mandare tanti punti esclamativi",
-    "Rispondere con parole offensive"
+    "Scrivergli dieci volte di fila",
+    "Aspettare con pazienza la risposta",
+    "Scrivergli che è un maleducato",
+    "Chiamarlo finché non risponde"
    ],
    "answerIndex": 1,
-   "answer": "Usare parole educate",
-   "explanation": "In chat è importante usare parole educate e rispettose.",
+   "answer": "Aspettare con pazienza la risposta",
+   "explanation": "Chi non risponde forse sta mangiando o facendo i compiti. Aspettare è un modo per rispettarlo, anche in chat.",
    "active": true,
    "tag": "netiquette",
    "tags": [
@@ -26860,7 +26860,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "gentilezza_in_strada",
    "difficulty": 1,
-   "question": "Quale parola aiuta la convivenza?",
+   "question": "Quale di queste parole è gentile?",
    "options": [
     "Grazie",
     "Muoviti",
@@ -26869,7 +26869,7 @@
    ],
    "answerIndex": 0,
    "answer": "Grazie",
-   "explanation": "Parole come 'grazie' rendono più gentili i rapporti con gli altri.",
+   "explanation": "'Grazie' fa sentire bene chi ci ha aiutato. 'Muoviti' e 'taci' sono ordini bruschi e 'noioso' è un'offesa.",
    "active": true,
    "tag": "gentilezza_convivenza",
    "tags": [
@@ -27884,7 +27884,7 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Perché non si deve attraversare sbucando tra auto parcheggiate?",
+   "question": "Perché non si deve attraversare passando in mezzo alle auto parcheggiate?",
    "options": [
     "Perché si rovinano le scarpe",
     "Perché si allunga la strada",
@@ -27893,7 +27893,7 @@
    ],
    "answerIndex": 3,
    "answer": "Perché si vede meno e ci vedono meno",
-   "explanation": "Tra auto parcheggiate la visuale è ridotta e il pericolo aumenta.",
+   "explanation": "Le auto ferme ti nascondono: tu non vedi chi arriva e chi guida non vede te.",
    "active": true,
    "tag": "semaforo_attraversamento",
    "tags": [
@@ -27921,11 +27921,11 @@
     "Chiedere aiuto a un adulto",
     "Correre subito a prenderlo",
     "Raggiungerlo passando dietro alle auto",
-    "Aspettare che si fermi il traffico da solo"
+    "Mandare un compagno più veloce"
    ],
    "answerIndex": 0,
    "answer": "Chiedere aiuto a un adulto",
-   "explanation": "Per recuperare un oggetto finito in strada è meglio chiedere aiuto a un adulto.",
+   "explanation": "Chi corre dietro al pallone guarda il pallone e non le auto. Un adulto controlla la strada e lo recupera senza pericolo.",
    "active": true,
    "tag": "semaforo_attraversamento",
    "tags": [
@@ -29134,14 +29134,14 @@
    "difficulty": 2,
    "question": "Perché il semaforo aiuta la sicurezza stradale?",
    "options": [
-    "Perché organizza i tempi di passaggio di veicoli e pedoni",
-    "Perché cambia colore per bellezza",
-    "Perché fa andare tutti più veloci",
-    "Perché sostituisce sempre il marciapiede"
+    "Perché fa passare auto e pedoni a turno",
+    "Perché fa andare le auto più veloci",
+    "Perché ferma solo chi corre troppo",
+    "Perché fa passare prima chi ha fretta"
    ],
    "answerIndex": 0,
-   "answer": "Perché organizza i tempi di passaggio di veicoli e pedoni",
-   "explanation": "Il semaforo regola i passaggi e riduce i rischi.",
+   "answer": "Perché fa passare auto e pedoni a turno",
+   "explanation": "Con il rosso si aspetta e con il verde si passa: così auto e pedoni non si trovano all'incrocio nello stesso momento.",
    "active": true,
    "tag": "semaforo_attraversamento",
    "tags": [
@@ -29740,16 +29740,16 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 3,
-   "question": "Perché diritti e doveri sono collegati?",
+   "question": "Tutti hanno il diritto di prendere i libri della biblioteca di classe. Perché c'è anche il dovere di riportarli?",
    "options": [
-    "Perché esistono solo nei libri",
-    "Perché il rispetto dei doveri aiuta a garantire i diritti di tutti",
-    "Perché i doveri cancellano i diritti",
-    "Perché valgono solo per gli adulti"
+    "Perché i libri si possono leggere una volta sola",
+    "Perché così anche gli altri possono leggerli",
+    "Perché la maestra li deve contare ogni sera",
+    "Perché a casa i libri si rovinano sempre"
    ],
    "answerIndex": 1,
-   "answer": "Perché il rispetto dei doveri aiuta a garantire i diritti di tutti",
-   "explanation": "Diritti e doveri si sostengono a vicenda nella vita comune.",
+   "answer": "Perché così anche gli altri possono leggerli",
+   "explanation": "Se riporti il libro, anche un altro bambino può usare il suo diritto di leggerlo. Per questo diritti e doveri vanno insieme: il dovere di uno protegge il diritto degli altri.",
    "active": true,
    "tag": "diritti_doveri",
    "tags": [
@@ -30318,14 +30318,14 @@
    "difficulty": 2,
    "question": "Che cosa conviene fare prima di pubblicare un commento scritto di fretta e con rabbia?",
    "options": [
-    "Inviare subito",
-    "Aggiungere molte faccine",
-    "Scriverlo in maiuscolo",
-    "Rileggerlo e valutare se è rispettoso"
+    "Aggiungere altre frasi per sfogarsi bene",
+    "Aggiungere una faccina che ride alla fine",
+    "Scriverlo in maiuscolo per farsi capire",
+    "Rileggerlo con calma e togliere le offese"
    ],
    "answerIndex": 3,
-   "answer": "Rileggerlo e valutare se è rispettoso",
-   "explanation": "Rileggere aiuta a evitare messaggi aggressivi o poco chiari.",
+   "answer": "Rileggerlo con calma e togliere le offese",
+   "explanation": "Quando si è arrabbiati si scrivono cose di cui poi ci si pente. Rileggere con calma aiuta a non offendere chi leggerà.",
    "active": true,
    "tag": "netiquette",
    "tags": [
@@ -31797,16 +31797,16 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "Chi è il Presidente della Repubblica italiana?",
+   "question": "In ogni città e in ogni paese c'è un sindaco. Come si chiama il palazzo dove lavora?",
    "options": [
-    "Il capo del Governo",
-    "Il capo della Polizia",
-    "La persona che rappresenta l'unità della nazione",
-    "Il direttore del Parlamento"
+    "La caserma",
+    "Il tribunale",
+    "Il municipio",
+    "La biblioteca"
    ],
    "answerIndex": 2,
-   "answer": "La persona che rappresenta l'unità della nazione",
-   "explanation": "Il Presidente della Repubblica è il capo dello Stato: rappresenta l'unità della nazione, garantisce che la Costituzione sia rispettata e nomina il Presidente del Consiglio.",
+   "answer": "Il municipio",
+   "explanation": "Il sindaco guida il Comune e lavora nel municipio. Lì ci sono gli uffici del Comune, aperti a tutti i cittadini.",
    "active": true,
    "tag": "civica;organi_dello_stato;classe_3;primaria",
    "tags": [

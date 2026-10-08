@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.21.6",
+  "version": "4.21.7",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -37,6 +37,8 @@
     "sync:counts": "python3 scripts/sync_question_counts.py",
     "check:counts": "python3 scripts/sync_question_counts.py --check",
     "check:balance": "node scripts/check_answer_balance.js",
+    "check:revisione": "node scripts/revisione_domande.js check",
+    "check:leggibilita": "node scripts/revisione_domande.js leggibilita",
     "check:materialized": "node scripts/check_files_materialized.js",
     "export": "bash scripts/export_for_cloudflare.sh",
     "check:contrast": "bash scripts/check_contrast.sh",

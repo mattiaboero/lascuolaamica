@@ -30220,7 +30220,7 @@
    "area": "geometria",
    "subarea": "figure",
    "difficulty": 1,
-   "question": "Come si chiama la figura con 4 angoli retti e tutti i lati uguali?",
+   "question": "Una figura ha 4 lati tutti lunghi uguali, come la faccia di un dado. Come si chiama?",
    "options": [
     "Rettangolo",
     "Quadrato",
@@ -30229,7 +30229,7 @@
    ],
    "answerIndex": 1,
    "answer": "Quadrato",
-   "explanation": "Il quadrato ha 4 angoli retti e tutti i 4 lati uguali: se i lati non fossero tutti uguali sarebbe un rettangolo.",
+   "explanation": "La faccia di un dado è un quadrato: ha 4 lati tutti lunghi uguali. Nel rettangolo, invece, due lati sono più lunghi degli altri due.",
    "active": true,
    "tag": "matematica;geometria;classe_2;primaria",
    "tags": [
@@ -75123,16 +75123,16 @@
    "area": "geometria",
    "subarea": "angoli",
    "difficulty": 2,
-   "question": "Un angolo è più aperto di un angolo piatto. Come si chiama?",
+   "question": "Un angolo è più aperto di un angolo retto, ma meno aperto di un angolo piatto. Come si chiama?",
    "options": [
-    "Piatto",
-    "Concavo",
-    "Convesso",
-    "Retto"
+    "Acuto",
+    "Ottuso",
+    "Retto",
+    "Piatto"
    ],
    "answerIndex": 1,
-   "answer": "Concavo",
-   "explanation": "Un angolo più aperto di un angolo piatto si chiama concavo. Se invece è meno aperto di un angolo piatto si chiama convesso.",
+   "answer": "Ottuso",
+   "explanation": "Un angolo più aperto di un angolo retto e meno aperto di un angolo piatto si chiama ottuso. L'angolo acuto, invece, è più stretto di un angolo retto.",
    "active": true,
    "tag": "matematica;angoli;classe_3;primaria",
    "tags": [
@@ -95429,7 +95429,7 @@
    "area": "aritmetica",
    "subarea": "numeri",
    "difficulty": 1,
-   "question": "Tra questi numeri, qual è il maggiore?",
+   "question": "Tra questi numeri, qual è il più grande?",
    "options": [
     "9",
     "6",
@@ -95438,7 +95438,7 @@
    ],
    "answerIndex": 2,
    "answer": "14",
-   "explanation": "14 è più grande di 9, di 6 e di 11: è il maggiore.",
+   "explanation": "14 è il numero più grande: quando conti viene dopo 6, 9 e 11.",
    "active": true,
    "tag": "matematica;numeri;classe_1;primaria",
    "tags": [
@@ -98975,7 +98975,7 @@
    "area": "geometria",
    "subarea": "percorsi",
    "difficulty": 3,
-   "question": "Con quanti passi al minimo arrivi alla stella?",
+   "question": "Ogni passo è una casella, a destra o in alto. Quanti passi fa il pallino per arrivare alla stella?",
    "options": [
     "5",
     "7",
