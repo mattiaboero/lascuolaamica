@@ -253,7 +253,7 @@ function cmdVerdetti(nome) {
   const perId = new Map(tutte(dati).map((q) => [q.id, q]));
   const reg = leggiRegistro();
   const daRiscrivere = [];
-  const conti = { promosse: 0, bocciate: 0, spente: 0, saltate: 0 };
+  const conti = { promosse: 0, bocciate: 0, spente: 0, saltate: 0, dubbie: 0 };
   for (const x of lotto) {
     const q = perId.get(x.id);
     if (!q || impronta(q) !== x.hash) { conti.saltate += 1; continue; }
@@ -273,6 +273,16 @@ function cmdVerdetti(nome) {
     motivi.push(...sforamenti(q));
 
     const prec = reg[q.id] || {};
+    // Se l'unico motivo e' la risposta alla cieca diversa dalla chiave, con la
+    // maestra d'accordo sulla chiave, puo' aver sbagliato il risolutore (in due
+    // lotti aveva disallineato le risposte). La domanda torna in rilettura una
+    // volta sola, da lettori nuovi, senza passare dallo scrittore.
+    const soloCieca = motivi.length > 0 && m.esito === 'ok' && motivi.every((t) => /^(alla cieca: scelta|nota alla cieca)/.test(t));
+    if (soloCieca && !prec.dubbi) {
+      reg[q.id] = { ...prec, hash: x.hash, esito: 'in revisione', dubbi: 1, giri: prec.giri || 0 };
+      conti.dubbie += 1;
+      continue;
+    }
     const voce = { hash: x.hash, bambino: { risposta: b.risposta }, maestra: { esito: m.esito }, giri: (prec.giri || 0) + 1 };
     if (prec.prima) voce.prima = prec.prima;
     if (prec.storia) voce.storia = prec.storia;
@@ -296,7 +306,7 @@ function cmdVerdetti(nome) {
   scrivi(REGISTRO, reg);
   if (conti.spente) salvaDomande(dati);
   scrivi(path.join(dir, 'da-riscrivere.json'), daRiscrivere);
-  console.log(`verdetti ${nome}: promosse ${conti.promosse}, da riscrivere ${conti.bocciate}, spente ${conti.spente}, saltate ${conti.saltate}`);
+  console.log(`verdetti ${nome}: promosse ${conti.promosse}, da riscrivere ${conti.bocciate}, spente ${conti.spente}, da rileggere ${conti.dubbie}, saltate ${conti.saltate}`);
 }
 
 function cmdRiscritture(nome) {
