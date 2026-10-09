@@ -122144,5 +122144,93 @@
    ]
   ],
   "esito": "riscritta"
+ },
+ "ita-2-grammatica-9051": {
+  "hash": "15d72682e4f9",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "riscrivi"
+  },
+  "giri": 1,
+  "storia": [
+   [
+    "maestra: riscrivi R3, R8. Risposta sbagliata: «il albero» non si dice, davanti a vocale ci vuole «l'» (l'albero), che fra le opzioni non c'è. Anche la spiegazione insegna l'errore. Cambiare nome (es. «gatto») o mettere «l'» fra le opzioni."
+   ],
+   [
+    "scrittore: fotocopia: con 'l'' diventa uguale a ita-2-grammatica-9081, ita-2-morfologia-9137 e ita-2-grammatica-9205; cambiando nome diventa uguale a ita-2-morfologia-005, 9131 e 9133 (articolo 'il')"
+   ]
+  ],
+  "esito": "spenta",
+  "prima": {
+   "question": "Quale articolo si usa con 'albero'?",
+   "options": [
+    "il",
+    "la",
+    "le",
+    "i"
+   ],
+   "answerIndex": 0,
+   "explanation": "'Albero' è maschile singolare, quindi si usa l'articolo 'il'."
+  }
+ },
+ "ita-2-grammatica-9053": {
+  "hash": "07ff7e08d898",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "riscrivi"
+  },
+  "giri": 1,
+  "storia": [
+   [
+    "maestra: riscrivi R3, R8. Risposta sbagliata: «la amica» non si dice, davanti a vocale ci vuole «l'» (l'amica), che fra le opzioni non c'è. Anche la spiegazione insegna l'errore. Cambiare nome (es. «maestra») o mettere «l'» fra le opzioni."
+   ],
+   [
+    "scrittore: fotocopia: con 'l'' diventa uguale a ita-2-grammatica-9081 e ita-2-ortografia-9228; cambiando nome diventa uguale a ita-2-grammatica-9093 (articolo 'la' con 'mamma')"
+   ]
+  ],
+  "esito": "spenta",
+  "prima": {
+   "question": "Quale articolo si usa con 'amica'?",
+   "options": [
+    "il",
+    "un",
+    "la",
+    "lo"
+   ],
+   "answerIndex": 2,
+   "explanation": "'Amica' è femminile singolare, quindi si usa l'articolo 'la'."
+  }
+ },
+ "ita-3-grammatica-9071": {
+  "hash": "5b30a9f2d83d",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Quale articolo determinativo si usa con 'studente'?",
+   "options": [
+    "il",
+    "lo",
+    "la",
+    "gli"
+   ],
+   "answerIndex": 0,
+   "explanation": "'Studente' è maschile singolare e inizia per consonante, quindi si usa 'il'."
+  },
+  "storia": [
+   [
+    "alla cieca: scelta «lo»",
+    "maestra: riscrivi R3, R8. Risposta sbagliata: si dice «lo studente» (s + consonante), non «il studente»; anche la spiegazione afferma la regola falsa."
+   ]
+  ],
+  "esito": "riscritta"
  }
 }

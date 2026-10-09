@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.21.12 - 2026-10-09
+
+**Italiano: tre domande sugli articoli con la risposta sbagliata.** Trovate
+dal primo ciclo della revisione di italiano, pubblicate subito senza aspettare
+la fine della materia.
+
+### Fixed
+- `ita-3-grammatica-9071`: la chiave era «il studente». Ora la risposta giusta
+  è «lo», con la regola della S seguita da consonante nella spiegazione.
+- `ita-2-grammatica-9051` («il albero») e `ita-2-grammatica-9053` («la
+  amica»): spente. Corrette con «l'» diventavano doppioni di domande già
+  attive in 2ª.
+- `reports/revisione-qualita.json`: verdetti delle tre domande.
+- Una scansione di tutte le domande di italiano sugli articoli non trova altri
+  casi dello stesso errore.
+
 ## 4.21.11 - 2026-10-09
 
 **Revisione delle domande: inglese completo.** Stesso procedimento delle
