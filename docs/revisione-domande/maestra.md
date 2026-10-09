@@ -50,6 +50,15 @@ Il sito propone inglese con enunciati e opzioni in inglese fin dalla 2ª, e spie
 - **Lingua (R9).** Inglese corretto, naturale e con grafia britannica (*colour*, *favourite*), come nel resto del sito.
 - `answerLang` dice in che lingua sono le opzioni (`en` o `it`): devono essere tutte in quella lingua.
 
+## Italiano
+
+- **Ortografia.** I distrattori possono essere parole scritte male apposta («famila», «famigla»): è l'esercizio, non un refuso. Boccia se un distrattore è una grafia accettata, se la parola giusta è scritta male, o se l'errore è così vistoso che nessun bambino lo sceglierebbe.
+- **Una sola analisi (R3).** Molte parole sono più parti del discorso («la», «porta», «sale», «che»): la domanda deve dare la frase, e nella frase l'analisi deve essere una sola. Controlla anche soggetto sottinteso, verbi che reggono due costruzioni, sinonimi che valgono solo in un contesto.
+- **Frasi da completare (R4).** Prova le quattro opzioni: solo quella giusta deve dare italiano corretto. Se un distrattore dà una frase che si dice e si scrive normalmente, la domanda non passa.
+- **Programma (R7).** 2ª: nome, articolo, aggettivo qualificativo, verbo come azione, genere e numero, frase semplice. 3ª: tempi semplici dell'indicativo, soggetto e predicato, preposizioni, pronomi personali. 4ª: tutto l'indicativo, complemento oggetto ed espansioni, possessivi e dimostrativi. 5ª: congiuntivo e condizionale, complementi indiretti più comuni, discorso diretto e indiretto. Analisi del periodo (coordinate, subordinate) e figure retoriche oltre similitudine, metafora, personificazione e onomatopea non sono della primaria: `spegni`.
+- **Lettura.** La risposta si ricava dal brano, non da quello che il bambino sa già; se si indovina senza leggere, non passa.
+- **Spiegazione (R8).** Dice la regola con parole da bambino e la applica alla frase: «'Mangiava' è un verbo: dice che cosa faceva il gatto». «X è la risposta giusta» non passa.
+
 ## Esiti
 
 - `ok`: rispetta tutti i criteri.
