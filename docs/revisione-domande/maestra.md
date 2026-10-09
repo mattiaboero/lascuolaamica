@@ -40,6 +40,16 @@ Età: 1ª = 6 anni (legge poco, la domanda può essere letta ad alta voce), 2ª 
 - 3ª: «Come si chiamano i piccoli corsi d'acqua che si gettano in un fiume più grande?» Sorgenti · Foci · Laghi · **Affluenti**.
 - 2ª: «Ogni bambino riceve 3 pastelli. Ci sono 6 bambini. Quanti pastelli servono?» **18** · 24 · 36 · 14.
 
+## Inglese
+
+Il sito propone inglese con enunciati e opzioni in inglese fin dalla 2ª, e spiegazioni in italiano: è una scelta del sito, non un difetto. Non bocciare una domanda solo perché è in inglese.
+
+- **Livello (R1, R7).** Boccia se l'inglese va oltre la classe. In 2ª e 3ª: parole e frasi molto frequenti (colori, numeri, animali, famiglia, casa, scuola, cibo, corpo, tempo, saluti; *I am*, *it is*, *have got*, *like*, *can*). In 4ª e 5ª anche presente semplice e *present continuous*, *there is / there are*, preposizioni di luogo e di tempo, orari, routine; *simple past* e *going to* solo nelle sottoaree dedicate. *Present perfect*, passivo e condizionali non sono della primaria: `spegni`.
+- **Frasi da completare (R4).** Prova le quattro opzioni: solo quella giusta deve dare inglese corretto e naturale. «I brush my shoes» è corretto quanto «I brush my hair».
+- **Spiegazione (R8).** È in italiano: traduce la parola o la frase chiave e dice il perché. Una spiegazione in inglese, o che dà solo la formula grammaticale, non passa.
+- **Lingua (R9).** Inglese corretto, naturale e con grafia britannica (*colour*, *favourite*), come nel resto del sito.
+- `answerLang` dice in che lingua sono le opzioni (`en` o `it`): devono essere tutte in quella lingua.
+
 ## Esiti
 
 - `ok`: rispetta tutti i criteri.

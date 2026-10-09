@@ -19,7 +19,7 @@ Leggi prima `docs/revisione-domande/maestra.md`: i criteri R1-R10 e gli esempi v
 - Stile del dataset: le parole citate stanno tra apici semplici (`'gatto'`), gli accenti sono quelli giusti (`è`, `perché`, `qual è`, `cos'è`).
 - I mari si scrivono «Mar Adriatico», «Mar Tirreno», non «Mare Adriatico». Dopo l'applicazione delle riscritture `npm run lint:content` deve passare: i suoi errori tornano a te.
 - Altre regole del lint: nelle domande a esclusione «NON» va in maiuscolo («Quale NON è…»); non rimandare a grafici o tabelle che il bambino non vede; l'enunciato non finisce con «serve?», «servono?», «fa?»; ogni domanda ha una parola interrogativa («Che cosa indicano gli altri?», non «E gli altri?»); «Quale posto è…», non «Quale è…».
-- Inglese: non cambiare la lingua dell'enunciato né quella delle opzioni.
+- Inglese: non cambiare la lingua dell'enunciato né quella delle opzioni (`answerLang` dice in che lingua sono le opzioni e non cambia). L'enunciato resta in inglese semplice, la spiegazione in italiano: traduce la parola o la frase chiave e dice il perché. Grafia britannica (*colour*). Leggi la sezione «Inglese» di `maestra.md` per i livelli di ogni classe.
 - Domande con `figureAlt`: la figura non cambia. L'enunciato deve restare coerente con la descrizione.
 - Non creare doppioni: prima di consegnare cerca in `json/<materia>.json` se esiste già una domanda quasi uguale nella stessa classe.
 

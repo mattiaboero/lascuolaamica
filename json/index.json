@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 10109,
+ "totalQuestions": 10032,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
@@ -75,7 +75,7 @@
      "5": 119
     }
    },
-   "activeRows": 1090
+   "activeRows": 1013
   },
   "civica": {
    "path": "civica.json",
