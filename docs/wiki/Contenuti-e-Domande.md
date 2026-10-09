@@ -74,9 +74,19 @@ Per inglese il dataset include anche metadata opzionali usati dal core:
 1. Genera le domande in JSONL in `reports/generated/<subject>-c*.jsonl`
 2. Ingest nel dataset materia: `python3 scripts/ingest_generated.py --subject <materia>` (o `--all`)
 3. Per domande parametriche: `python3 scripts/append_parametric_pilot.py --profile extended`
-4. Esegui i controlli: `./prepublish-check.sh` (include audit JSON, lint contenuti, freshness sitemap/JSON-LD)
-5. Verifica manuale su almeno 2 classi per materia toccata
-6. Merge su `main` → pubblicazione automatica
+4. Le domande nuove entrano con `active: false`. Si accendono solo dopo la revisione a tre ruoli (vedi sotto)
+5. Esegui i controlli: `npm run verify` (include audit JSON, lint contenuti, `check:revisione`, `check:leggibilita`, freshness sitemap/JSON-LD)
+6. Verifica manuale su almeno 2 classi per materia toccata
+7. Merge su `main` → pubblicazione automatica
+
+### Nessuna domanda attiva senza verdetto
+
+Dalla revisione dell'ottobre 2026 ogni domanda attiva deve avere in `reports/revisione-qualita.json` un verdetto (`ok` o `riscritta`) sull'impronta del testo corrente: classe, enunciato, opzioni, risposta giusta e spiegazione. `npm run check:revisione` lo controlla ed è dentro `npm run verify`, quindi dentro il check `prepublish` richiesto su `main`.
+
+- Chi ritocca anche una virgola di una domanda attiva ne cambia l'impronta: la domanda va riletta (`node scripts/revisione_domande.js lotto --ids <id>`) prima del merge.
+- Il verdetto nasce da tre ruoli separati: un risolutore alla cieca che non vede la soluzione, un revisore che applica la rubrica, uno scrittore che riscrive le bocciate. Chi riscrive non approva. Alla terza bocciatura la domanda viene spenta. Procedura in `docs/revisione-domande/CICLO.md`.
+- `check:revisione` blocca anche le **opzioni in serie**: se in una materia e classe più del 40% delle domande con quattro numeri consecutivi come opzioni ha la risposta giusta sul più grande (o sul più piccolo), si indovina senza fare il conto.
+- `npm run check:leggibilita` blocca enunciati, opzioni e spiegazioni oltre la lunghezza adatta alla classe.
 
 Dalla 4.12.45 `ingest_generated.py` è idempotente: salta le domande il cui testo è già presente nel dataset (confronto normalizzato: spazi compattati, minuscole) e, a fine ingest reale, sposta gli shard processati in `reports/generated/ingested/`. Il conteggio finale riporta anche quanti duplicati ha saltato. Prima ogni riga riceveva un id nuovo da `next_id()`, quindi rilanciare lo script sullo stesso shard duplicava le domande in silenzio.
 
