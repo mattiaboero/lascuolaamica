@@ -1,5 +1,26 @@
 # Changelog Repo
 
+## 4.21.11 - 2026-10-09
+
+**Revisione delle domande: inglese completo.** Stesso procedimento delle
+release precedenti: due revisori indipendenti per ogni domanda, chi riscrive
+non approva.
+
+### Changed
+- `json/inglese.json`: 1.091 domande lette. 243 promosse senza modifiche, 770
+  riscritte e ripromosse, 78 spente: 36 doppioni dello stesso schema, 17 fuori
+  programma (present perfect, relative, question tag), 16 bocciate tre volte,
+  9 che non verificavano nulla. Dettaglio in `reports/revisione-inglese.md`.
+- Enunciati e opzioni in inglese restano fin dalla 2ª: si boccia solo
+  l'inglese oltre il livello della classe. Le spiegazioni sono in italiano,
+  la grafia è britannica.
+- `eng-5-future_going_to-9214`: sottoarea corretta da `futuro_will` a
+  `future_going_to`.
+- `docs/revisione-domande/`: indicazioni per l'inglese nei tre ruoli.
+- `scripts/revisione_domande.js`: i lotti per il revisore portano anche
+  `answerLang`.
+- `reports/revisione-qualita.json`: aggiunti i verdetti di inglese.
+
 ## 4.21.10 - 2026-10-08
 
 **Revisione delle domande: scienze completa.** Stesso procedimento delle

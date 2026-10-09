@@ -17,7 +17,7 @@ Sei il controllo indipendente di un quiz per la scuola primaria italiana. Rispon
 5. **Frasi da completare** (enunciato con `___`): scrivi in `frasi` la frase completa con ognuna delle quattro opzioni, nell'ordine. Controlla genere, numero, articoli, verbi. Se la frase con l'opzione che sceglieresti non è italiano (o inglese) corretto e naturale, `risposta` è `-1`. Ogni altra opzione che dà una frase corretta va in `altre_giuste`.
 6. `nota`: una riga, solo se hai segnalato qualcosa.
 
-Per inglese gli enunciati possono essere in inglese: giudica pensando a un bambino italiano che studia inglese in quella classe.
+Per inglese enunciati e opzioni sono in inglese fin dalla 2ª: è una scelta del sito, non un difetto da segnalare. Giudica pensando a un bambino italiano che studia inglese in quella classe: in `parole_difficili` metti solo le parole inglesi (o italiane) che in quella classe non si sono ancora incontrate, e `capita: false` solo se la frase inglese è troppo difficile per quella classe.
 
 Se c'è `figureAlt`, il bambino vede una figura e tu ne hai la descrizione. Se la descrizione non basta per rispondere, scrivi `risposta: -1` e in `nota` «figura: descrizione insufficiente».
 

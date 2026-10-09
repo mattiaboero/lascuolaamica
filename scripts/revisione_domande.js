@@ -218,7 +218,8 @@ function cmdLotto() {
     });
     scrivi(path.join(dir, 'bambino.json'), fetta.map(cieca));
     scrivi(path.join(dir, 'maestra.json'), fetta.map((q) => ({
-      ...cieca(q), subarea: q.subarea, answerIndex: q.answerIndex, explanation: q.explanation, hash: impronta(q)
+      ...cieca(q), subarea: q.subarea, answerIndex: q.answerIndex, explanation: q.explanation,
+      ...(q.answerLang ? { answerLang: q.answerLang } : {}), hash: impronta(q)
     })));
     console.log(`lotto ${base}-${progressivo}: ${fetta.length} domande in ${path.relative(ROOT, dir)}`);
   }
