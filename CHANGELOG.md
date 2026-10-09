@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.21.10 - 2026-10-08
+
+**Revisione delle domande: scienze completa.** Stesso procedimento delle
+release precedenti.
+
+### Changed
+- `json/scienze.json`: 1.011 domande lette. 191 promosse senza modifiche, 773
+  riscritte e ripromosse, 47 spente: 34 doppioni dello stesso schema, 9
+  bocciate tre volte, 2 che non verificavano nulla, 2 fuori programma.
+  Dettaglio in `reports/revisione-scienze.md`.
+- Le sottoaree `ipotesi_esperimento_conclusioni` di 2ª e di 5ª restano senza
+  domande attive.
+- `reports/revisione-qualita.json`: aggiunti i verdetti di scienze.
+
 ## 4.21.9 - 2026-10-08
 
 **Revisione delle domande: educazione civica completa.** Stesso procedimento
