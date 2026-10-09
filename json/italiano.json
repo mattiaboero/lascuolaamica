@@ -4815,7 +4815,7 @@
    "answerIndex": 0,
    "answer": "il",
    "explanation": "'Albero' è maschile singolare, quindi si usa l'articolo 'il'.",
-   "active": true,
+   "active": false,
    "tag": "italiano;classe_2;grammatica;primaria",
    "tags": [
     "italiano",
@@ -4879,7 +4879,7 @@
    "answerIndex": 2,
    "answer": "la",
    "explanation": "'Amica' è femminile singolare, quindi si usa l'articolo 'la'.",
-   "active": true,
+   "active": false,
    "tag": "italiano;classe_2;grammatica;primaria",
    "tags": [
     "italiano",
@@ -5255,14 +5255,14 @@
    "difficulty": 2,
    "question": "Quale articolo determinativo si usa con 'studente'?",
    "options": [
-    "il",
     "lo",
-    "la",
+    "il",
+    "i",
     "gli"
    ],
    "answerIndex": 0,
-   "answer": "il",
-   "explanation": "'Studente' è maschile singolare e inizia per consonante, quindi si usa 'il'.",
+   "answer": "lo",
+   "explanation": "'Studente' comincia con S seguita da un'altra consonante: davanti a queste parole si usa 'lo', come in 'lo scoiattolo' e 'lo specchio'.",
    "active": true,
    "tag": "italiano;classe_3;grammatica;primaria",
    "tags": [
