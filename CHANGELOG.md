@@ -1,5 +1,28 @@
 # Changelog Repo
 
+## 4.21.9 - 2026-10-08
+
+**Revisione delle domande: educazione civica completa.** Stesso procedimento
+delle 4.21.7 e 4.21.8: due revisori indipendenti per ogni domanda, chi
+riscrive non approva.
+
+### Changed
+- `json/civica.json`: 481 domande lette. 61 promosse senza modifiche, 409
+  riscritte e ripromosse, 11 spente. Il difetto dominante era lo schema «un
+  comportamento buono contro tre palesemente sbagliati», che si risolve senza
+  sapere nulla: i distrattori ora sono mezze soluzioni e buone intenzioni
+  sbagliate. Dettaglio in `reports/revisione-civica.md`.
+- `reports/revisione-qualita.json`: aggiunti i verdetti di civica.
+
+### Fixed
+- `scripts/revisione_domande.js`: se l'unico motivo di bocciatura è la
+  risposta alla cieca diversa dalla chiave e il revisore conferma la chiave,
+  la domanda torna una volta in rilettura da lettori nuovi invece di andare
+  allo scrittore. In un lotto un risolutore aveva disallineato le risposte di
+  una decina di domande.
+- `scripts/check_grammar_rules.js`: parole legittime e cognomi che il
+  controllo scambiava per refusi o nomi di persona.
+
 ## 4.21.8 - 2026-10-08
 
 **Revisione delle domande: storia completa.** Stesso procedimento della

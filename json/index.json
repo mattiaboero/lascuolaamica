@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 10166,
+ "totalQuestions": 10155,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
@@ -96,7 +96,7 @@
      "5": 243
     }
    },
-   "activeRows": 481
+   "activeRows": 470
   },
   "geografia": {
    "path": "geografia.json",

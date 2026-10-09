@@ -266,7 +266,7 @@ function caricaRegole() {
 // cresceva (lotto 5 e lotto 7): la regola sembrava attiva e lasciava passare
 // "Irene ... gli applicano". Qui il corpus viene riletto a ogni build e ogni
 // nome che fa da soggetto va classificato, altrimenti il controllo fallisce.
-const NON_NOMI = new Set(['Grecia', 'Neolitico', 'Oggi', 
+const NON_NOMI = new Set(['Conti', 'Forse', 'Neri', 'Grecia', 'Neolitico', 'Oggi', 
   'Cosa', 'Chi', 'Come', 'Dove', 'Quando', 'Quanto', 'Quanta', 'Quanti', 'Quante',
   'Quale', 'Quali', 'Ognuno', 'Ognuna', 'Nessuno', 'Poi', 'Una', 'Uno', 'Studiare',
   'Roma', 'Italia', 'Terra', 'Padana', 'Indo', 'Mediterraneo', 'Solare', 'Paese',
@@ -306,7 +306,7 @@ function controllaNomiClassificati(sorgente) {
 // vicine di una parola frequente. Sono cresciute scrivendo le spiegazioni: un
 // testo con lessico piu' ricco incontra piu' spesso questo caso, e ogni voce
 // qui e' stata verificata a mano prima di entrare.
-const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini', 'impresse', 'presso', 'spesse', 'mesos', 'publica', 'contato', 'cassetta', 'copri', 'parto', 'sedete', 'piovve']);
+const PAROLE_LEGITTIME = new Set(['contrae', 'copia', 'rubano', 'spessa', 'camini', 'latitudini', 'impresse', 'presso', 'spesse', 'mesos', 'publica', 'contato', 'cassetta', 'copri', 'parto', 'sedete', 'piovve', 'camino', 'carpa', 'casuale', 'concerto', 'stese', 'steso', 'copro']);
 
 function controllaRefusi() {
   const dir = path.join(__dirname, '..', 'json');
