@@ -1,5 +1,47 @@
 # Changelog Repo
 
+## 4.21.15 - 2026-10-09
+
+**Revisione delle domande: matematica completa.** Stesso procedimento delle
+release precedenti: due revisori indipendenti per ogni domanda, chi riscrive
+non approva. Con questa release tutte le otto materie sono state rilette.
+
+### Changed
+- `json/matematica.json`: 3.073 domande lette. 790 promosse senza modifiche,
+  2.262 riscritte e ripromosse, 21 spente dopo tre bocciature. Dettaglio in
+  `reports/revisione-matematica.md`.
+- Attive per classe: 1ª 290, 2ª 657, 3ª 658, 4ª 792, 5ª 655.
+- Difetto dominante: in 1.292 domande con opzioni numeriche la risposta
+  giusta era il numero più grande e i distrattori erano risultato −1, −2, −3.
+  Chi sceglieva «il più grande» indovinava senza fare il conto. Ora i
+  distrattori sono i risultati degli errori tipici (riporto o prestito
+  dimenticato, tabellina accanto, operazione inversa, decina sbagliata), più
+  alti e più bassi del risultato. Nessuna domanda dalla 2ª alla 5ª ha più
+  quattro numeri consecutivi con la giusta sul più grande.
+- Dopo il primo giro 278 domande già promosse avevano ancora opzioni
+  consecutive: sono tornate allo scrittore e sono state rilette da capo.
+- `docs/revisione-domande/`: indicazioni per matematica nei tre ruoli
+  (figure, classe 1ª, calcolo puro, opzioni in serie).
+- `reports/revisione-qualita.json`: aggiunti i verdetti di matematica.
+
+### Fixed
+- Spiegazioni delle sottrazioni in colonna di 2ª e 3ª con il prestito scritto
+  sbagliato (per esempio «5 - 2 - 1 = 2» per un risultato 37).
+- Classe 1ª: articolo davanti a 1, 8 e 11 nelle descrizioni delle figure
+  («Fra l'8 e il 10», «Sull'11»), in `scripts/figure_classe_prima.py` e nei
+  dati generati.
+- Goniometri di 4ª: l'enunciato dice quanto vale una tacca.
+- `scripts/check_grammar_rules.js`: «speso» tra le parole legittime.
+
+### Known issues
+- Nelle domande con opzioni numeriche la risposta giusta è il numero più
+  piccolo o il più grande solo nel 15-25% dei casi: chi scarta gli estremi
+  parte avvantaggiato. Gli ultimi lotti riscritti sono già bilanciati; un
+  controllo automatico arriva con il blocco in `verify`.
+- 34 domande sulla media sono in 4ª: le istruzioni di revisione la mettono in
+  5ª. La revisione non sposta le domande di classe.
+- La sottoarea `figure` di 4ª ha 6 domande attive.
+
 ## 4.21.14 - 2026-10-09
 
 **Revisione delle domande: problemi completo.** Stesso procedimento delle
