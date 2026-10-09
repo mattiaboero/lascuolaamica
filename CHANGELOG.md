@@ -1,5 +1,32 @@
 # Changelog Repo
 
+## 4.21.13 - 2026-10-09
+
+**Revisione delle domande: italiano completo.** Stesso procedimento delle
+release precedenti: due revisori indipendenti per ogni domanda, chi riscrive
+non approva.
+
+### Changed
+- `json/italiano.json`: 1.093 domande lette. 178 promosse senza modifiche, 738
+  riscritte e ripromosse, 177 spente: circa 74 doppioni dello stesso schema,
+  69 fuori programma (analisi del periodo, figure retoriche oltre quelle della
+  primaria, lessico da adulti come «pervicace»), 11 bocciate tre volte, 11
+  che non verificavano nulla, 12 per altri motivi. Dettaglio in
+  `reports/revisione-italiano.md`.
+- Attive per classe: 2ª 243, 3ª 244, 4ª 229, 5ª 200. Nessuna sottoarea resta
+  vuota.
+- `docs/revisione-domande/`: indicazioni per l'italiano nei tre ruoli
+  (distrattori di ortografia scritti male apposta, una sola analisi
+  grammaticale possibile, programma per classe).
+- `reports/revisione-qualita.json`: aggiunti i verdetti di italiano.
+
+### Fixed
+- Chiavi sbagliate corrette, oltre alle tre della 4.21.12:
+  `ita-2-grammatica-9088` contava due nomi dove ce n'era uno,
+  `ita-3-alfabeto-9155` metteva «rana» prima di «ramo».
+- `scripts/check_grammar_rules.js`: «esatte» e «persi» tra le parole
+  legittime.
+
 ## 4.21.12 - 2026-10-09
 
 **Italiano: tre domande sugli articoli con la risposta sbagliata.** Trovate

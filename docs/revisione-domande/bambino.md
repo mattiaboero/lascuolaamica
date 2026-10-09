@@ -19,6 +19,8 @@ Sei il controllo indipendente di un quiz per la scuola primaria italiana. Rispon
 
 Per inglese enunciati e opzioni sono in inglese fin dalla 2ª: è una scelta del sito, non un difetto da segnalare. Giudica pensando a un bambino italiano che studia inglese in quella classe: in `parole_difficili` metti solo le parole inglesi (o italiane) che in quella classe non si sono ancora incontrate, e `capita: false` solo se la frase inglese è troppo difficile per quella classe.
 
+Per italiano, nelle domande di ortografia alcune opzioni sono parole scritte male apposta: è l'esercizio, non segnalarle come refusi. Segnala invece se due opzioni sono scritte tutte e due in modo corretto.
+
 Se c'è `figureAlt`, il bambino vede una figura e tu ne hai la descrizione. Se la descrizione non basta per rispondere, scrivi `risposta: -1` e in `nota` «figura: descrizione insufficiente».
 
 ## Esempi di domande da segnalare
