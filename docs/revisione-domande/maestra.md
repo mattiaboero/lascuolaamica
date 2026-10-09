@@ -59,6 +59,15 @@ Il sito propone inglese con enunciati e opzioni in inglese fin dalla 2ª, e spie
 - **Lettura.** La risposta si ricava dal brano, non da quello che il bambino sa già; se si indovina senza leggere, non passa.
 - **Spiegazione (R8).** Dice la regola con parole da bambino e la applica alla frase: «'Mangiava' è un verbo: dice che cosa faceva il gatto». «X è la risposta giusta» non passa.
 
+## Problemi
+
+- **Rifai il conto (R3).** Risolvi il problema da sola prima di guardare la chiave. Controlla che i dati bastino e non si contraddicano, che il risultato sia possibile nella realtà (niente mezzo bambino, prezzi o misure assurde) e che l'unità chiesta sia quella della risposta.
+- **Una domanda sola (R1).** Il testo dà i dati nell'ordine in cui servono e finisce con una sola domanda. Un dato in più che non serve va bene dalla 4ª, e uno solo.
+- **Numeri della classe (R7).** 2ª: entro 100, addizione e sottrazione, tabelline, euro interi. 3ª: entro 1.000, quattro operazioni con divisore a una cifra, anche due operazioni semplici di seguito, euro e centesimi, misure con equivalenze semplici. 4ª: grandi numeri, decimali, frazione di una quantità, equivalenze, due operazioni. 5ª: anche percentuali, media, più passaggi. Formule con le lettere, proporzioni ed equazioni non sono della primaria.
+- **Distrattori (R5).** Sono i risultati degli errori che i bambini fanno davvero: operazione sbagliata, passaggio dimenticato, riporto o prestito sbagliato, equivalenza sbagliata. Non numeri a caso né fuori scala. Le quattro opzioni hanno la stessa forma: tutte con l'unità o tutte senza (e allora l'unità è nella domanda).
+- **Spiegazione (R8).** Mostra i passaggi, uno per operazione, con i numeri del problema e l'unità nel risultato. Se le operazioni sono due o più può arrivare a tre frasi brevi. Ogni uguaglianza deve essere vera.
+- **Schema ripetuto.** Due problemi con la stessa struttura e numeri diversi non sono doppioni: sono esercizio. È un doppione solo se coincidono anche numeri e risultato, o se cambia soltanto il nome del personaggio.
+
 ## Esiti
 
 - `ok`: rispetta tutti i criteri.

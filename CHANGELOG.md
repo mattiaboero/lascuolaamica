@@ -1,5 +1,39 @@
 # Changelog Repo
 
+## 4.21.14 - 2026-10-09
+
+**Revisione delle domande: problemi completo.** Stesso procedimento delle
+release precedenti: due revisori indipendenti per ogni domanda, chi riscrive
+non approva.
+
+### Changed
+- `json/problemi.json`: 1.361 problemi letti. 218 promossi senza modifiche,
+  1.135 riscritti e ripromossi, 8 spenti dopo tre bocciature. Le chiavi erano
+  quasi tutte giuste: il difetto dominante erano i distrattori messi a caso e
+  le spiegazioni senza unità di misura e senza il perché dell'operazione. Ora
+  i distrattori sono i risultati degli errori tipici (operazione sbagliata,
+  passaggio dimenticato, riporto sbagliato). Dettaglio in
+  `reports/revisione-problemi.md`.
+- Attivi per classe: 2ª 279, 3ª 274, 4ª 399, 5ª 401.
+- Due problemi con la stessa struttura e numeri diversi non contano come
+  doppioni; i doppioni veri (stessi numeri, stesso risultato) hanno numeri
+  nuovi invece di essere spenti.
+- `docs/revisione-domande/`: indicazioni per i problemi nei tre ruoli.
+- `reports/revisione-qualita.json`: aggiunti i verdetti di problemi.
+
+### Fixed
+- Chiavi sbagliate corrette: `pro-5-problemi-195` (divisione non esatta, il
+  risultato non era tra le opzioni) e `pro-5-moltiplicazione-9201` (il
+  risultato era in quintali, la domanda chiedeva i chilogrammi).
+- Problemi «ha invitato N amici»: il testo ora dice tra quante persone si
+  divide.
+- `scripts/lint_content.js`, `scripts/check_grammar_rules.js`: nomi propri e
+  parole legittime che i controlli scambiavano per refusi.
+
+### Known issues
+- Le sottoaree di problemi (`misure`, `euro_denaro`, `due_operazioni`) spesso
+  non corrispondono al contenuto del problema. La revisione non le ha toccate.
+
 ## 4.21.13 - 2026-10-09
 
 **Revisione delle domande: italiano completo.** Stesso procedimento delle
