@@ -21,6 +21,8 @@ Per inglese enunciati e opzioni sono in inglese fin dalla 2ª: è una scelta del
 
 Per italiano, nelle domande di ortografia alcune opzioni sono parole scritte male apposta: è l'esercizio, non segnalarle come refusi. Segnala invece se due opzioni sono scritte tutte e due in modo corretto.
 
+Per problemi e matematica: fai davvero il conto, passo per passo, prima di guardare le opzioni. Se il tuo risultato non è tra le opzioni, `risposta` è `-1` e in `nota` scrivi il risultato che ti viene.
+
 Se c'è `figureAlt`, il bambino vede una figura e tu ne hai la descrizione. Se la descrizione non basta per rispondere, scrivi `risposta: -1` e in `nota` «figura: descrizione insufficiente».
 
 ## Esempi di domande da segnalare

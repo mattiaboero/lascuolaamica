@@ -1,14 +1,14 @@
 [
  {
-  "date": "9 ottobre 2026 · Release 4.21.11 – 4.21.13",
+  "date": "9 ottobre 2026 · Release 4.21.11 – 4.21.14",
   "items": [
-   "Inglese: tutte le domande, dalla 2ª alla 5ª, sono state rilette una per una. 770 riscritte, 78 tolte.",
-   "Inglese: le spiegazioni sono in italiano e dicono il perché della risposta, con la traduzione delle parole che servono.",
+   "Inglese: tutte le domande, dalla 2ª alla 5ª, sono state rilette una per una. 770 riscritte, 78 tolte. Le spiegazioni ora sono in italiano.",
    "Inglese: tolte le domande su strutture che non sono programma della primaria, come il present perfect.",
-   "Italiano: stesso lavoro su tutte le domande, dalla 2ª alla 5ª. 738 riscritte, 177 tolte.",
-   "Italiano: sistemate le domande che davano per giusta una risposta sbagliata, come «il albero» e «il studente».",
-   "Italiano: tolti gli argomenti che non sono programma della primaria, come l'analisi del periodo, e le parole troppo difficili.",
-   "La revisione prosegue con problemi e matematica."
+   "Italiano: stesso lavoro su tutte le domande. 738 riscritte, 177 tolte.",
+   "Italiano: sistemate le domande che davano per giusta una risposta sbagliata, come «il albero» e «il studente», e tolti gli argomenti fuori programma, come l'analisi del periodo.",
+   "Problemi: stesso lavoro su tutti i problemi. 1.135 riscritti, 8 tolti.",
+   "Problemi: le risposte sbagliate ora sono i risultati degli errori più comuni, non numeri a caso, e le spiegazioni dicono perché si fa quell'operazione.",
+   "La revisione prosegue con matematica."
   ]
  },
  {
