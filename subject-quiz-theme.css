@@ -1820,6 +1820,8 @@ body.subject-problemi .answer-btn {
   font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: 1.7rem;
   margin-bottom: 4px;
+  /* Spazio per .modal-close (48px a 12px dal bordo): senza, un titolo lungo ci finisce sotto. */
+  padding-right: 44px;
 }
 
 .modal-body {

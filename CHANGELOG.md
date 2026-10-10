@@ -1,5 +1,39 @@
 # Changelog Repo
 
+## 4.21.17 - 2026-10-10
+
+**Via i banchi di domande scritti nel codice.** Le config di pagina avevano
+ancora `banks`, le domande di ripiego precedenti al dataset: 434 in tutto,
+372 senza verdetto di revisione.
+
+### Removed
+- `js/<materia>-page.js` (tutte le otto materie): tolto `banks`. Il motore lo
+  usava quando `json/<materia>.json` non si caricava: `applySubjectConfig`
+  lanciava, `subject-quiz-core.js` registrava l'errore e la partita partiva
+  con i testi del codice, senza avviso. Il caso era raggiungibile: i
+  `json/<materia>.json` non sono in precache e stanno nella cache
+  versionata, quindi bastava aprire offline una materia mai aperta, o già
+  aperta ma prima dell'ultimo aggiornamento. Tra i testi: «ogni penn costa
+  10 euro», «32 squadre» in classe, la divisione delle ciliegine che non
+  dice tra quanti (corretta nel dataset con la 4.21.14).
+- Ora, senza dataset, «Inizia!» apre «Domande non disponibili. Non riesco a
+  caricare le domande. Controlla la connessione e riprova.» (`notifyLoadError`,
+  già presente). Con il dataset non cambia niente.
+
+### Fixed
+- `subject-quiz-theme.css`: `.modal-title` lascia spazio a `.modal-close`. A
+  390px «Domande non disponibili» finiva sotto la ✕.
+
+### Known issues
+- `bonusQuestions` nelle config di matematica, italiano, storia, geografia e
+  scienze: 64 domande scritte nel codice, senza verdetto, usate a ogni
+  partita (`hasConfiguredBonusQuestions` salta il dataset). Vanno portate in
+  `json/` come `bonus: true` e passate dal ciclo di revisione, in una PR a
+  parte.
+- Dopo un aggiornamento le materie già aperte non sono più disponibili
+  offline finché non si riaprono con la rete: la cache versionata riparte
+  senza i `json/<materia>.json`.
+
 ## 4.21.16 - 2026-10-10
 
 **Sottoaree: la griglia mostra solo quello che la partita può giocare.**
