@@ -46,6 +46,9 @@ jobs:
         env:
           E2E_SUBJECTS: matematica inglese
 
+      - name: E2E sottoaree (nessun bottone senza domande nel pool)
+        run: npm run test:e2e:subareas
+
       - name: E2E tabelline (pagina info, con e senza JS)
         run: npm run test:e2e:tabelline
 

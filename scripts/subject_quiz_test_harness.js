@@ -60,6 +60,20 @@ async function main() {
     }
 
     await waitForCfg(page);
+
+    if (options.subareas) {
+      const subareas = await checkSubareaGrid(page);
+      process.stdout.write(`${JSON.stringify({
+        page: options.page,
+        check: 'subareas',
+        subareas,
+        pageErrors: trackers.pageErrors,
+        consoleErrors: trackers.consoleErrors
+      }, null, 2)}\n`);
+      await context.close();
+      return;
+    }
+
     const maps = await getConfigMaps(page);
 
     if (options.classKey) {
@@ -308,6 +322,46 @@ async function checkClearLocalData(page) {
   return rimaste;
 }
 
+// Regressione: la griglia delle sottoaree guardava una classe piu' in la' del
+// pool della partita e offriva bottoni con il pool vuoto: «Inizia!» apriva
+// «Domande non disponibili». Ogni bottone deve avere, nel pool da cui pesca la
+// partita, almeno mezza partita di domande. Il conto e' rifatto qui dai banchi,
+// senza passare dal motore.
+async function checkSubareaGrid(page) {
+  if (!(await page.locator('#areaGrid').count())) return { griglia: false, bottoni: 0 };
+  const classes = await page.locator('[data-action="select-class"]').evaluateAll((els) => els.map((el) => el.dataset.class));
+  const scarsi = [];
+  let bottoni = 0;
+  for (const cls of classes) {
+    await page.locator(`[data-action="select-class"][data-class="${cls}"]`).click();
+    if (await page.locator('#areaMoreBtn').count()) await page.locator('#areaMoreBtn').click();
+    const areas = await page.locator('[data-action="select-area"]').evaluateAll((els) => els.map((el) => el.dataset.area));
+    for (const area of areas.filter((key) => key !== 'mixed')) {
+      await page.locator(`[data-action="select-area"][data-area="${area}"]`).click();
+      const shown = await page.locator('#subareaGrid [data-subarea]').evaluateAll((els) => els.map((el) => el.dataset.subarea).filter(Boolean));
+      const { sizes, minPool } = await page.evaluate(({ classNum, areaKey }) => {
+        const cfg = window.SA.subjectConfig;
+        const maxDistance = Number.isFinite(Number(cfg.maxGradeDistance)) ? Number(cfg.maxGradeDistance) : 1;
+        const out = {};
+        (cfg.banks[areaKey] || []).forEach((q) => {
+          const grade = Number(q.grade);
+          if ((grade === 1) !== (classNum === 1) || Math.abs(grade - classNum) > maxDistance || !q.subarea) return;
+          out[q.subarea] = (out[q.subarea] || 0) + 1;
+        });
+        return { sizes: out, minPool: Math.ceil((Number(cfg.totalQ) || 10) / 2) };
+      }, { classNum: Number(cls), areaKey: area });
+      bottoni += shown.length;
+      shown.forEach((sub) => {
+        if ((sizes[sub] || 0) < minPool) scarsi.push(`${cls}ª ${area}/${sub}: ${sizes[sub] || 0}`);
+      });
+    }
+  }
+  if (scarsi.length) {
+    throw new Error(`Sottoaree in griglia con troppe poche domande nel pool della partita: ${scarsi.join(' | ')}`);
+  }
+  return { griglia: true, bottoni };
+}
+
 // Regressione A2: l'avanzamento differito di checkAnswer resta pendente per
 // 2200 ms. Chi esce dal gioco in quella finestra (qui: apre la classifica; in
 // produzione anche la scadenza della play window) veniva riportato dentro la
@@ -382,6 +436,7 @@ function parseArgs(argv) {
     ripassa: false,
     interrupt: false,
     dialogs: false,
+    subareas: false,
     headless: true,
     help: false
   };
@@ -418,6 +473,9 @@ function parseArgs(argv) {
         break;
       case '--dialogs':
         options.dialogs = true;
+        break;
+      case '--subareas':
+        options.subareas = true;
         break;
       case '--headed':
         options.headless = false;
@@ -462,6 +520,7 @@ function printHelp() {
     '  --ripassa            dopo il risultato gioca la sessione "Ripassa i tuoi errori" (richiede mode mixed/worst)',
     '  --interrupt          risponde a una domanda, esce subito dal gioco e verifica che il timer di avanzamento sia annullato',
     '  --dialogs            verifica il focus di ritorno delle modali annidate e la coda dei dialoghi condivisi',
+    '  --subareas           verifica che ogni sottoarea in griglia abbia domande nel pool della partita',
     '  --base-url <url>     host locale del test server',
     '  --headed             avvia il browser non-headless',
     '  --help               mostra questo messaggio'

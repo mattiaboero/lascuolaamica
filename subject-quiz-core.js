@@ -251,6 +251,9 @@
     5: { 3: 0.15, 4: 0.35, 5: 0.5 }
   };
   const MAX_GRADE_DISTANCE = Math.max(0, Number.isFinite(Number(cfg.maxGradeDistance)) ? Number(cfg.maxGradeDistance) : 1);
+  // Sotto mezza partita la sottoarea non si offre: il resto verrebbe riempito
+  // con altro e l'etichetta «Ambito · sottoarea» direbbe una cosa non vera.
+  const MIN_SUBAREA_POOL = Math.ceil(TOTAL_Q / 2);
 
   function normalizeLevelKey(value) {
     const raw = String(value ?? '').trim();
@@ -1847,7 +1850,12 @@
           if (!sessionUsed.has(q._id) && !sessionUsed.has(sigKey(q))) loose.push(q);
         });
       });
-      const rankedLoose = rankWithScoredMap(loose, (q) => questionClassDistance(q, classNum) + Math.random() * 0.3);
+      // Prima l'ambito scelto: con una sottoarea piu' corta della partita le
+      // domande che mancano arrivavano da qualunque ambito della materia.
+      const rankedLoose = rankWithScoredMap(
+        loose,
+        (q) => questionClassDistance(q, classNum) + Math.random() * 0.3 + (q.area === selectedArea ? 0 : 10)
+      );
       for (let i = 0; i < rankedLoose.length && out.length < TOTAL_Q; i++) {
         const q = rankedLoose[i];
         sessionUsed.add(q._id);
@@ -2600,17 +2608,17 @@
 
   // ---- A4: Subarea selector ----
 
+  // La griglia conta sullo stesso pool da cui pesca buildSessionQuestions.
+  // Prima guardava BANKS fino a MAX_GRADE_DISTANCE + 1 classi di distanza, una
+  // in piu' della partita: comparivano bottoni con il pool vuoto (in 4ª le
+  // sottoaree delle tabelline che esistono solo in 2ª) e «Inizia!» rispondeva
+  // «Non riesco a caricare le domande. Controlla la connessione».
   function getAvailableSubareasForArea(area, cls) {
-    const classNum = classToNum(cls);
-    const pool = BANKS[area] || [];
-    const subs = new Set();
-    pool.forEach((q) => {
-      if (!q.subarea || !fitsClassOneRule(q, classNum)) return;
-      if (Math.abs((q._grade || classNum) - classNum) <= MAX_GRADE_DISTANCE + 1) {
-        subs.add(q.subarea);
-      }
+    const counts = new Map();
+    getClassAwarePool(area, cls, false, selectedLevel).pool.forEach((q) => {
+      if (q.subarea) counts.set(q.subarea, (counts.get(q.subarea) || 0) + 1);
     });
-    return Array.from(subs).sort();
+    return Array.from(counts.keys()).filter((sub) => counts.get(sub) >= MIN_SUBAREA_POOL).sort();
   }
 
   function buildSubareaGrid() {
