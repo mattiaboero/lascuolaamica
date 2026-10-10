@@ -68,6 +68,17 @@ Il sito propone inglese con enunciati e opzioni in inglese fin dalla 2ª, e spie
 - **Spiegazione (R8).** Mostra i passaggi, uno per operazione, con i numeri del problema e l'unità nel risultato. Se le operazioni sono due o più può arrivare a tre frasi brevi. Ogni uguaglianza deve essere vera.
 - **Schema ripetuto.** Due problemi con la stessa struttura e numeri diversi non sono doppioni: sono esercizio. È un doppione solo se coincidono anche numeri e risultato, o se cambia soltanto il nome del personaggio.
 
+## Matematica
+
+Valgono le indicazioni dei «Problemi» su conti, distrattori, spiegazione e schema ripetuto. In più:
+
+- **Figura.** Se c'è `figureAlt`, è la descrizione della figura che il bambino vede accanto alla domanda: giudica come se la vedessi. La risposta deve ricavarsi da quello che la descrizione dice. Se enunciato, opzioni o spiegazione non corrispondono alla figura, non passa.
+- **Classe 1ª.** Il bambino legge poco e spesso ascolta la domanda: frasi brevissime, numeri entro 20, parole di tutti i giorni, una cosa sola da fare.
+- **Programma (R7).** Se la sottoarea esiste per quella classe, l'argomento è una scelta del sito: non spegnere per questo. Boccia solo numeri o termini chiaramente oltre la classe dentro quell'argomento.
+- **Calcolo puro.** «Quanto fa 7 × 8?» va bene così: non serve una storia. I distrattori sono i risultati vicini che nascono da errori veri (tabellina accanto, riporto dimenticato, cifre scambiate).
+- **Opzioni in serie.** Quattro numeri consecutivi (risultato −1, +1, +2) non sono errori tipici: boccia con R5. Guarda anche il lotto intero: se la giusta è quasi sempre il numero più grande, o sempre nella stessa posizione di grandezza, chi sceglie a occhio indovina senza fare il conto.
+- **Termini.** Il nome giusto della cosa (addendo, minuendo, numeratore, perimetro) si usa solo se si studia in quella classe; la spiegazione lo ridice con parole semplici.
+
 ## Esiti
 
 - `ok`: rispetta tutti i criteri.

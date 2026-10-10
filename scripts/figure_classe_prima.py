@@ -54,6 +54,15 @@ FONT = 'Arial, Helvetica, sans-serif'
 NUMERI = ['zero', 'una', 'due', 'tre', 'quattro', 'cinque']
 
 
+def il(k):
+    """Articolo davanti a un numero letto ad alta voce: l'1, l'8, l'11; il 2, il 10."""
+    return f"l'{k}" if k in (1, 8, 11) else f'il {k}'
+
+
+def sul(k):
+    return f"Sull'{k}" if k in (1, 8, 11) else f'Sul {k}'
+
+
 def n(v):
     r = round(v, 1)
     return str(int(r)) if r == int(r) else str(r)
@@ -239,7 +248,7 @@ def t_retta(lo, hi, mode, p, q=None):
     if mode == 'manca':
         assert lo < p < hi
         facts = {'manca': p}
-        alt = (f'Una linea dei numeri da {lo} a {hi}. Fra il {p - 1} e il {p + 1}, '
+        alt = (f'Una linea dei numeri da {lo} a {hi}. Fra {il(p - 1)} e {il(p + 1)}, '
                'al posto del numero, c\'è un riquadro con il punto di domanda.')
         return body, facts, alt
     assert mode == 'salto' and lo <= p <= hi and lo <= q <= hi and p != q
@@ -251,7 +260,7 @@ def t_retta(lo, hi, mode, p, q=None):
     body.append(circle(X[p], 150, 8, fill(BLUE), ' id="partenza"'))
     k = abs(q - p)
     facts = {'da': p, 'a': q, 'salti': k, 'verso': 'avanti' if d > 0 else 'indietro'}
-    alt = (f'Una linea dei numeri da {lo} a {hi}. Sul {p} c\'è un pallino blu. Da lì partono '
+    alt = (f'Una linea dei numeri da {lo} a {hi}. {sul(p)} c\'è un pallino blu. Da lì partono '
            f'{plural(k, "salto", "salti")} di un numero {"in avanti, verso destra" if d > 0 else "all’indietro, verso sinistra"}.')
     return body, facts, alt.replace('’', "'")
 

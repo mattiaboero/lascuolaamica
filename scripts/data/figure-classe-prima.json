@@ -1064,7 +1064,7 @@
    "salti": 8,
    "verso": "avanti"
   },
-  "alt": "Una linea dei numeri da 0 a 10. Sul 1 c'è un pallino blu. Da lì partono 8 salti di un numero in avanti, verso destra."
+  "alt": "Una linea dei numeri da 0 a 10. Sull'1 c'è un pallino blu. Da lì partono 8 salti di un numero in avanti, verso destra."
  },
  "c1-retta-0-10-salto-2-6": {
   "modello": "retta",
@@ -1094,7 +1094,7 @@
    "salti": 5,
    "verso": "indietro"
   },
-  "alt": "Una linea dei numeri da 0 a 10. Sul 8 c'è un pallino blu. Da lì partono 5 salti di un numero all'indietro, verso sinistra."
+  "alt": "Una linea dei numeri da 0 a 10. Sull'8 c'è un pallino blu. Da lì partono 5 salti di un numero all'indietro, verso sinistra."
  },
  "c1-retta-10-20-manca-14": {
   "modello": "retta",
@@ -1148,7 +1148,7 @@
   "fatti": {
    "manca": 9
   },
-  "alt": "Una linea dei numeri da 5 a 15. Fra il 8 e il 10, al posto del numero, c'è un riquadro con il punto di domanda."
+  "alt": "Una linea dei numeri da 5 a 15. Fra l'8 e il 10, al posto del numero, c'è un riquadro con il punto di domanda."
  },
  "c1-ritmo-ccq-6": {
   "modello": "ritmo",
