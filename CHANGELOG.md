@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.21.18 - 2026-10-10
+
+**Le materie già aperte restano offline dopo un aggiornamento.** Chiude il
+secondo «Known issue» della 4.21.17.
+
+### Fixed
+- `sw.js`: nuova `refetchOpenedJson`. I `json/<materia>.json` non sono in
+  precache e stanno nella cache versionata, quindi a ogni `activate`
+  sparivano con la cache vecchia: una materia già aperta tornava disponibile
+  offline solo dopo averla riaperta con la rete, e dalla 4.21.17 in quel caso
+  «Inizia!» apre «Domande non disponibili». Ora il service worker nuovo
+  legge dalle cache vecchie quali `/json/*.json` c'erano e riscarica nella
+  cache nuova quelli, e solo quelli.
+- Il lavoro si fa all'`install`: la rete c'è (`sw.js` è appena arrivato) e
+  la versione vecchia continua a servire le pagine. L'`activate` ripete il
+  passaggio per le materie aperte tra install e attivazione («Più tardi»),
+  con un tetto di 5 secondi perché finché non finisce le pagine aspettano.
+- Si riscarica, non si copia: con `max-age=0, must-revalidate` su `/json/*`
+  il fetch rivalida sempre, un file non cambiato costa un 304. Se un file
+  non arriva non si tiene la copia vecchia: resta fuori dall'offline fino
+  alla prossima apertura con la rete, come prima.
+- Vale già per l'aggiornamento dalla 4.21.17: la logica sta nel service
+  worker che arriva, non in quello che se ne va.
+
+### Added
+- `scripts/check_sw_opened_json.js`, lanciato da `prepublish-check.sh`:
+  esegue `sw.js` con Cache Storage e rete finte e controlla che i file
+  arrivino dalla rete, che le materie mai aperte non si scarichino e che un
+  download fallito non lasci la copia vecchia.
+
 ## 4.21.17 - 2026-10-10
 
 **Via i banchi di domande scritti nel codice.** Le config di pagina avevano

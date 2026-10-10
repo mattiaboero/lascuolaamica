@@ -195,6 +195,7 @@ Tutto nella memoria locale del browser, tutto locale, niente server:
 
 - **Precache** degli asset statici principali all'install
 - **Precache lazy per i dataset materia** — `json/index.json` è precached all'install (serve alla home per il conteggio totale); i `json/<materia>.json` (~1MB ciascuno) NON sono precached: vengono salvati offline al primo fetch reale di quella materia, per non forzare il download di tutte le 8 materie a chi ne gioca una sola
+- **Materie già aperte al cambio di versione** — `refetchOpenedJson` legge dalle cache vecchie quali `json/*.json` c'erano e li riscarica nella cache nuova, all'install e di nuovo all'activate (tetto di 5 s). Riscarica, non copia; se un file non arriva resta fuori dall'offline fino alla prossima apertura con la rete. Controllo: `scripts/check_sw_opened_json.js`
 - **Fallback offline** sulle rotte pubbliche principali
 - Strategie differenziate per contenuti statici e dati quiz
 

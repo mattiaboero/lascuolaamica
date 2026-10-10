@@ -546,6 +546,12 @@ else
   status=1
 fi
 
+if node scripts/check_sw_opened_json.js; then
+  echo "[OK] sw.js: le materie gia' aperte vengono riscaricate al cambio di versione"
+else
+  status=1
+fi
+
 if node scripts/check_update_log.js; then
   echo "[OK] UPDATE_LOG (shared.js) allineato ad APP_VERSION"
 else

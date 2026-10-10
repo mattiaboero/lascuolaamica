@@ -70,7 +70,8 @@ const CORE_PRECACHE_URLS = [
 // Nota: i json/<materia>.json NON sono precachati qui (erano ~7.9MB totali
 // scaricati all'install per ogni utente, anche per le 7 materie mai aperte).
 // Restano cacheable via isSameOriginStaticAsset (estensione .json) quindi
-// vengono comunque salvati offline al primo fetch reale della materia.
+// vengono comunque salvati offline al primo fetch reale della materia, e
+// refetchOpenedJson li riporta nella cache nuova a ogni cambio di versione.
 const OPTIONAL_PRECACHE_URLS = [
   '/matematica',
   '/inglese',
@@ -204,6 +205,43 @@ function canCacheResponse(response) {
   return response.type === 'opaque';
 }
 
+// Materie gia' aperte. I json/<materia>.json non sono in precache e vivono
+// nella cache versionata: al cambio di versione sparivano con la cache vecchia
+// e la materia tornava disponibile offline solo dopo averla riaperta con la
+// rete. Qui si leggono le chiavi delle cache vecchie e si riscaricano nella
+// nuova gli stessi file, solo quelli (chi ha aperto una materia non scarica le
+// altre sette).
+//
+// Si riscarica, non si copia: la risposta vecchia nasconderebbe le domande
+// corrette. _headers da' a /json/* max-age=0, must-revalidate, quindi il fetch
+// rivalida sempre e un file non cambiato costa un 304. Se un file non arriva
+// (rete caduta, materia tolta) non si tiene la copia vecchia: resta fuori
+// dall'offline finche' la materia non viene riaperta con la rete, come prima.
+const OPENED_JSON_RE = /^\/json\/[^/]+\.json$/;
+
+async function refetchOpenedJson() {
+  const paths = new Set();
+  for (const key of await caches.keys()) {
+    if (KEEP_CACHE_NAMES.includes(key)) continue;
+    const oldCache = await caches.open(key);
+    for (const request of await oldCache.keys()) {
+      const { pathname } = new URL(request.url);
+      if (OPENED_JSON_RE.test(pathname)) paths.add(pathname);
+    }
+  }
+
+  const cache = await caches.open(CACHE_NAME);
+  await Promise.all(
+    Array.from(paths, async (pathname) => {
+      try {
+        if (!(await cache.match(pathname))) await cache.add(pathname);
+      } catch {
+        // Vedi sopra: niente copia vecchia.
+      }
+    })
+  );
+}
+
 // ============================================================
 // INSTALL — pre-cacha tutte le risorse essenziali
 // ============================================================
@@ -226,22 +264,36 @@ self.addEventListener('install', event => {
         }
       })
     );
+    // All'install la rete c'e' (sw.js e' appena arrivato) e la versione vecchia
+    // continua a servire le pagine: e' il momento di riportare le materie.
+    await refetchOpenedJson().catch(() => {});
   })());
 });
 
 // ============================================================
 // ACTIVATE — elimina le vecchie versioni della cache
 // ============================================================
+const ACTIVATE_REFETCH_LIMIT_MS = 5000;
+
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys
-          .filter(key => !KEEP_CACHE_NAMES.includes(key))
-          .map(key => caches.delete(key))
-      )
-    ).then(() => self.clients.claim())
-  );
+  event.waitUntil((async () => {
+    // Secondo passaggio per le materie aperte tra install e attivazione (chi ha
+    // risposto «Più tardi»): stanno solo nella cache vecchia. Di norma non fa
+    // richieste, perche' install ha gia' riportato tutto. Finche' activate non
+    // finisce le pagine restano in attesa, da qui il tetto di tempo.
+    await Promise.race([
+      refetchOpenedJson().catch(() => {}),
+      new Promise(resolve => setTimeout(resolve, ACTIVATE_REFETCH_LIMIT_MS))
+    ]);
+
+    const keys = await caches.keys();
+    await Promise.all(
+      keys
+        .filter(key => !KEEP_CACHE_NAMES.includes(key))
+        .map(key => caches.delete(key))
+    );
+    await self.clients.claim();
+  })());
 });
 
 // ============================================================
