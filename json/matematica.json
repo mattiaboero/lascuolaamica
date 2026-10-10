@@ -99547,7 +99547,7 @@
    "answerIndex": 1,
    "answer": "35",
    "explanation": "Togli prima 10: 52 - 10 = 42. Poi togli 7: 42 - 7 = 35.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_2;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99580,7 +99580,7 @@
    "answerIndex": 3,
    "answer": "176",
    "explanation": "Togli prima 100: 304 - 100 = 204. Poi togli 28: 204 - 28 = 176.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_3;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99606,14 +99606,14 @@
    "question": "Quanto fa 36 + 25?",
    "options": [
     "51",
-    "11",
+    "56",
     "61",
-    "511"
+    "71"
    ],
    "answerIndex": 2,
    "answer": "61",
    "explanation": "Aggiungi prima 20: 36 + 20 = 56. Poi aggiungi 5: 56 + 5 = 61.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_2;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99646,7 +99646,7 @@
    "answerIndex": 0,
    "answer": "60",
    "explanation": "Dividi 15 in 10 e 5: 10 × 4 = 40 e 5 × 4 = 20. Poi 40 + 20 = 60.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_3;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99679,7 +99679,7 @@
    "answerIndex": 3,
    "answer": "750",
    "explanation": "Togli prima 200: 1.000 - 200 = 800. Poi togli 50: 800 - 50 = 750.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_4;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99712,7 +99712,7 @@
    "answerIndex": 1,
    "answer": "35",
    "explanation": "Quando moltiplichi per 10 la virgola si sposta di un posto verso destra: 3,5 × 10 = 35.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_5;aritmetica;primaria",
    "tags": [
     "matematica",

@@ -35491,7 +35491,7 @@
    "answerIndex": 1,
    "answer": "Gli Egizi",
    "explanation": "Le piramidi furono costruite dagli Egizi: erano le grandi tombe dei faraoni.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_4;egizi;primaria",
    "tags": [
     "storia",
@@ -35514,17 +35514,17 @@
    "area": "civilta_greca",
    "subarea": "polis_e_cultura",
    "difficulty": 1,
-   "question": "In quale città greca nacquero le Olimpiadi?",
+   "question": "Ogni quanti anni si svolgevano le Olimpiadi nell'antica Grecia?",
    "options": [
-    "Olimpia",
-    "Atene",
-    "Sparta",
-    "Corinto"
+    "Ogni 4 anni",
+    "Ogni 2 anni",
+    "Ogni 5 anni",
+    "Ogni 10 anni"
    ],
    "answerIndex": 0,
-   "answer": "Olimpia",
-   "explanation": "Le Olimpiadi nacquero a Olimpia, in Grecia: da quella città prendono il nome.",
-   "active": false,
+   "answer": "Ogni 4 anni",
+   "explanation": "Nell'antica Grecia le Olimpiadi si tenevano ogni 4 anni, in onore di Zeus. Anche oggi le Olimpiadi si fanno ogni 4 anni.",
+   "active": true,
    "tag": "storia;bonus;classe_5;civilta_greca;primaria",
    "tags": [
     "storia",

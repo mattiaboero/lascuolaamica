@@ -32246,7 +32246,7 @@
    "answerIndex": 3,
    "answer": "È salita nell'aria",
    "explanation": "Con il calore del sole l'acqua dei panni evapora: diventa vapore e sale nell'aria, anche se non la vedi.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_2;materia_materiali_trasformazioni;primaria",
    "tags": [
     "scienze",
@@ -32279,7 +32279,7 @@
    "answerIndex": 1,
    "answer": "Per ripararsi dal freddo",
    "explanation": "Il grasso sotto la pelle trattiene il calore del corpo: così l'orso polare resta caldo anche tra i ghiacci.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_3;viventi_ambiente;primaria",
    "tags": [
     "scienze",
@@ -32312,7 +32312,7 @@
    "answerIndex": 2,
    "answer": "La lumaca",
    "explanation": "La lumaca nasce, mangia, cresce e muore: è un essere vivente. La nuvola, il fiume e la trottola si muovono, ma non sono vivi.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_2;viventi_non_viventi;primaria",
    "tags": [
     "scienze",
@@ -32345,7 +32345,7 @@
    "answerIndex": 3,
    "answer": "La formica",
    "explanation": "La formica ha sei zampe, come tutti gli insetti. Il ragno ne ha otto: non è un insetto.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_3;viventi_biologia;primaria",
    "tags": [
     "scienze",

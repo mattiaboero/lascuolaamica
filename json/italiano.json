@@ -35195,7 +35195,7 @@
    "answerIndex": 1,
    "answer": "Il nonno ha un orto.",
    "explanation": "'Ha' con l'h è il verbo avere: il nonno possiede un orto. 'A' senza h non è un verbo.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_2;italiano_classe2;primaria",
    "tags": [
     "italiano",
@@ -35228,7 +35228,7 @@
    "answerIndex": 3,
    "answer": "il cane",
    "explanation": "Il soggetto è chi fa l'azione: ad abbaiare è il cane, anche se nella frase viene dopo il verbo.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_3;italiano_classe3;primaria",
    "tags": [
     "italiano",
@@ -35261,7 +35261,7 @@
    "answerIndex": 2,
    "answer": "legge",
    "explanation": "Il predicato dice che cosa fa il soggetto. Che cosa fa Sara? Legge: 'legge' è il predicato.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_4;italiano_classe4;primaria",
    "tags": [
     "italiano",
@@ -35294,7 +35294,7 @@
    "answerIndex": 0,
    "answer": "avaro",
    "explanation": "Chi è generoso dà volentieri agli altri. Chi è avaro tiene tutto per sé: è il contrario.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_5;italiano_classe5;primaria",
    "tags": [
     "italiano",

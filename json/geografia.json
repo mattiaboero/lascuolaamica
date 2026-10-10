@@ -36665,17 +36665,17 @@
    "area": "orientamento",
    "subarea": "indicatori_topologici",
    "difficulty": 3,
-   "question": "Luca è di fronte a te e tiene una palla nella mano destra. Dove vedi la palla?",
+   "question": "Luca è di fronte a te e ti guarda. Alza una palla con la mano destra. Dove la vedi?",
    "options": [
-    "Alla tua sinistra",
-    "Alla tua destra",
-    "Dietro di te",
-    "Sopra di te"
+    "In alto, alla tua sinistra",
+    "In alto, alla tua destra",
+    "In basso, alla tua sinistra",
+    "In basso, alla tua destra"
    ],
    "answerIndex": 0,
-   "answer": "Alla tua sinistra",
-   "explanation": "Chi ti sta di fronte è girato al contrario rispetto a te: la sua mano destra è dalla parte della tua sinistra.",
-   "active": false,
+   "answer": "In alto, alla tua sinistra",
+   "explanation": "Luca alza la palla, quindi la vedi in alto. Chi ti guarda da davanti è girato al contrario rispetto a te: la sua mano destra è dalla parte della tua sinistra.",
+   "active": true,
    "tag": "geografia;bonus;classe_2;orientamento;primaria",
    "tags": [
     "geografia",
@@ -36708,7 +36708,7 @@
    "answerIndex": 2,
    "answer": "Ovest",
    "explanation": "Il Sole sorge a Est. Se guardi verso Est, alle tue spalle c'è il punto opposto: l'Ovest.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_3;orientamento_mappe;primaria",
    "tags": [
     "geografia",

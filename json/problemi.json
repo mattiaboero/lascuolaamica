@@ -42115,8 +42115,8 @@
    ],
    "answerIndex": 2,
    "answer": "33",
-   "explanation": "Leo ha le figurine di Amina più altre 9. In tutto 24 + 9 = 33 figurine.",
-   "active": false,
+   "explanation": "Leo ha tante figurine quante Amina, più altre 9. Quindi 24 + 9 = 33 figurine.",
+   "active": true,
    "tag": "bonus,classe_2,addizione",
    "tags": [
     "bonus",
@@ -42147,7 +42147,7 @@
    "answerIndex": 0,
    "answer": "4 euro",
    "explanation": "I quaderni costano 3 × 2 = 6 euro. Il resto è 10 - 6 = 4 euro.",
-   "active": false,
+   "active": true,
    "tag": "bonus,classe_3,due_operazioni",
    "tags": [
     "bonus",

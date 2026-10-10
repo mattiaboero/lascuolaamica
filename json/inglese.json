@@ -36129,7 +36129,7 @@
    "answerIndex": 2,
    "answer": "Il gatto è nero",
    "explanation": "'Cat' vuol dire gatto e 'black' vuol dire nero: la frase dice che il gatto è nero.",
-   "active": false,
+   "active": true,
    "tag": "inglese;bonus;classe_2;animali;primaria",
    "tags": [
     "inglese",
@@ -36163,7 +36163,7 @@
    "answerIndex": 0,
    "answer": "Ho due fratelli",
    "explanation": "'I have got' vuol dire 'ho', 'two' è due e 'brothers' sono i fratelli: ho due fratelli.",
-   "active": false,
+   "active": true,
    "tag": "inglese;bonus;classe_3;famiglia;primaria",
    "tags": [
     "inglese",

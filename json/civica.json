@@ -35902,8 +35902,8 @@
    ],
    "answerIndex": 1,
    "answer": "Mi fermo e chiedo a un adulto",
-   "explanation": "Nome e indirizzo sono dati personali. Prima di scriverli in un gioco ci si ferma e si chiede a un adulto di cui ti fidi.",
-   "active": false,
+   "explanation": "Nome e indirizzo sono dati personali. Prima di scriverli in un gioco, fermati e chiedi a un adulto di cui ti fidi.",
+   "active": true,
    "tag": "educazione_civica;bonus;classe_2;cittadinanza_digitale_online;primaria",
    "tags": [
     "educazione_civica",
@@ -35936,7 +35936,7 @@
    "answerIndex": 3,
    "answer": "Un divieto",
    "explanation": "I segnali rotondi con il bordo rosso sono segnali di divieto: dicono che cosa non si può fare. Quelli di pericolo sono a triangolo.",
-   "active": false,
+   "active": true,
    "tag": "educazione_civica;bonus;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
     "educazione_civica",

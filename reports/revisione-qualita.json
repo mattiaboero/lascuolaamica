@@ -255909,5 +255909,349 @@
   },
   "giri": 1,
   "esito": "ok"
+ },
+ "civ-bonus-hard-004": {
+  "hash": "59f179669d38",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Un gioco sul tablet ti chiede il tuo nome e il tuo indirizzo. Che cosa fai?",
+   "options": [
+    "Rispondo subito a tutto",
+    "Mi fermo e chiedo a un adulto",
+    "Scrivo solo l'indirizzo",
+    "Metto i dati di mio fratello"
+   ],
+   "answerIndex": 1,
+   "explanation": "Nome e indirizzo sono dati personali. Prima di scriverli in un gioco ci si ferma e si chiede a un adulto di cui ti fidi."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R9. Domanda e opzioni vanno bene; nella spiegazione la persona cambia a metà frase («ci si ferma e si chiede a un adulto di cui ti fidi»): tutta al tu oppure tutta impersonale."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "civ-bonus-hard-005": {
+  "hash": "a3115d3e2739",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-hard-005": {
+  "hash": "6ff4a9e67a80",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Luca è di fronte a te e tiene una palla nella mano destra. Dove vedi la palla?",
+   "options": [
+    "Alla tua sinistra",
+    "Alla tua destra",
+    "Dietro di te",
+    "Sopra di te"
+   ],
+   "answerIndex": 0,
+   "explanation": "Chi ti sta di fronte è girato al contrario rispetto a te: la sua mano destra è dalla parte della tua sinistra."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R5. «Dietro di te» e «Sopra di te» si scartano senza ragionare (la palla è in mano a Luca, che hai davanti): resta una scelta a due. Servono distrattori credibili; meglio dire anche che Luca ti guarda."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "geo-bonus-hard-006": {
+  "hash": "b50553081006",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "eng-bonus-hard-004": {
+  "hash": "b0a12e97e45c",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "eng-bonus-hard-005": {
+  "hash": "0d11a4338be3",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-hard-005": {
+  "hash": "a4f06bb17aa8",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-hard-006": {
+  "hash": "38ccc4ec8d49",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-easy-005": {
+  "hash": "e3e0e72ec6c6",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-easy-006": {
+  "hash": "f61c697fa197",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-006": {
+  "hash": "f5525c8c7cc6",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-007": {
+  "hash": "51d741e49966",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-006": {
+  "hash": "2cbb65b189d1",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Quanto fa 36 + 25?",
+   "options": [
+    "51",
+    "11",
+    "61",
+    "511"
+   ],
+   "answerIndex": 2,
+   "explanation": "Aggiungi prima 20: 36 + 20 = 56. Poi aggiungi 5: 56 + 5 = 61."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R5, R7. Il distrattore 511 è fuori scala e oltre il 100 della 2ª: è l'unico a tre cifre e si scarta a occhio. Sostituirlo con un errore entro 100 (per esempio 71 o 52)."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "mat-bonus-medium-007": {
+  "hash": "1fa3cf15af5e",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-007": {
+  "hash": "00896d27d29f",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-008": {
+  "hash": "778ac25ea041",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "pro-bonus-hard-004": {
+  "hash": "ba47949fd38c",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Amina ha 24 figurine. Leo ne ha 9 in più. Quante figurine ha Leo?",
+   "options": [
+    "15",
+    "23",
+    "33",
+    "43"
+   ],
+   "answerIndex": 2,
+   "explanation": "Leo ha le figurine di Amina più altre 9. In tutto 24 + 9 = 33 figurine."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R8. Domanda, conto e opzioni vanno bene; la spiegazione dice «Leo ha le figurine di Amina» (non è vero: ne ha tante quante lei, più 9) e «In tutto» fa pensare alla somma dei due bambini."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "pro-bonus-hard-005": {
+  "hash": "2b40e13f27d8",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-hard-005": {
+  "hash": "278fcf7cabfa",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-hard-006": {
+  "hash": "e832f8a7d50d",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-medium-005": {
+  "hash": "adba1c298f11",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-medium-006": {
+  "hash": "1d9e1b1dc18e",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-easy-005": {
+  "hash": "d35f5638efa0",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-easy-006": {
+  "hash": "844da9f54aaf",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "In quale città greca nacquero le Olimpiadi?",
+   "options": [
+    "Olimpia",
+    "Atene",
+    "Sparta",
+    "Corinto"
+   ],
+   "answerIndex": 0,
+   "explanation": "Le Olimpiadi nacquero a Olimpia, in Grecia: da quella città prendono il nome."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R3, R6. Olimpia era un santuario, non una città (polis) come Atene, Sparta e Corinto: «città greca» è impreciso, anche nella spiegazione. In più la risposta si indovina dal nome (Olimpiadi → Olimpia) senza sapere la storia."
+   ]
+  ],
+  "esito": "riscritta"
  }
 }
