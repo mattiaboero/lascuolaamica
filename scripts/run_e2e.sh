@@ -8,6 +8,7 @@
 #   il modo "ripassa" gioca una sessione mixed e poi "Ripassa i tuoi errori"
 #   il modo "interrupt" verifica che uscire dal gioco annulli l'avanzamento differito
 #   il modo "dialogs" verifica focus di ritorno delle modali e coda dei dialoghi
+#   il modo "subareas" verifica che ogni sottoarea in griglia abbia domande nel pool della partita
 #
 # Env:
 #   E2E_BASE_URL  host test server (default http://127.0.0.1:4173)
@@ -60,6 +61,11 @@ for mode in "${MODE_ARR[@]}"; do
     if [[ "$mode" == "dialogs" ]]; then
       run_mode="perfect"
       extra+=(--dialogs)
+    fi
+    # "subareas" non gioca: confronta la griglia delle sottoaree con i banchi
+    if [[ "$mode" == "subareas" ]]; then
+      run_mode="perfect"
+      extra+=(--subareas)
     fi
     echo "=== E2E: $subj mode=$mode${lvl:+ level=$lvl} ==="
     if ! node scripts/subject_quiz_test_harness.js \

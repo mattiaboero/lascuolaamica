@@ -116,7 +116,7 @@ Aggiunte in `subject-quiz-core.js`, condivise da tutte le 8 materie senza branch
 | A1 — Spiegazione risposta | Dopo ogni risposta appare `#qExplanation` con il campo `explanation` della domanda JSON, colorata in base a corretto/sbagliato | nessuna |
 | A2 — Difficoltà adattiva | A fine partita calcola una media mobile esponenziale (EMA) per classe e la usa per pesare la selezione delle domande successive | `${CURSOR_KEY}_adapt_v1`; opt-out con `cfg.adaptiveDifficulty: false` |
 | A3 — Ripassa i tuoi errori | Le domande sbagliate (max 30) restano disponibili per una sessione dedicata dalla schermata iniziale | `${CURSOR_KEY}_wrong_q_v1` |
-| A4 — Filtro sotto-ambito | Dopo la selezione dell'area, una griglia di sotto-ambiti derivata dinamicamente dal dataset (nessuna config per materia necessaria) | nessuna |
+| A4 — Filtro sotto-ambito | Dopo la selezione dell'area, una griglia di sotto-ambiti derivata dinamicamente dal dataset (nessuna config per materia necessaria). Conta sullo stesso pool della partita (`getClassAwarePool`, modo strict) e mostra solo i sotto-ambiti con almeno mezza partita di domande (`MIN_SUBAREA_POOL`) | nessuna |
 | B1 — Streak feedback | Risposte corrette consecutive: alle soglie configurate (default 3/5/8) messaggio dedicato + mascotte `celebrate` invece di `happy` | `cfg.streakMilestones` per personalizzare le soglie |
 | C1 — Overlay progressi | Pulsante "Progressi" nella schermata risultati apre statistiche per classe/area e le ultime partite | legge `loadStats()`/`loadLB()` esistenti |
 

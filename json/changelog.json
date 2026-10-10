@@ -1,7 +1,9 @@
 [
  {
-  "date": "10 ottobre 2026 · Release 4.21.16",
+  "date": "10 ottobre 2026 · Release 4.21.16 – 4.21.17",
   "items": [
+   "Matematica, italiano, storia, geografia, scienze e civica: sotto l'ambito scelto non compaiono più sotto-argomenti che per quella classe non hanno domande. Prima si potevano scegliere e «Inizia!» rispondeva che le domande non si caricavano.",
+   "Restano solo i sotto-argomenti con almeno 5 domande. Se uno ne ha meno di 10, la partita si completa con domande dello stesso ambito e non più di altri.",
    "Se le domande di una materia non si caricano, per esempio senza connessione, il quiz ora lo dice e chiede di riprovare.",
    "Prima, in quel caso, la partita cominciava lo stesso con poche vecchie domande di riserva, che non erano passate dalla revisione di ottobre. Le abbiamo tolte da tutte le otto materie.",
    "Negli avvisi con il titolo lungo, sul telefono, il titolo non finisce più sotto il pulsante di chiusura."

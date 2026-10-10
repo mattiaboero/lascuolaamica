@@ -1,6 +1,6 @@
 # Changelog Repo
 
-## 4.21.16 - 2026-10-10
+## 4.21.17 - 2026-10-10
 
 **Via i banchi di domande scritti nel codice.** Le config di pagina avevano
 ancora `banks`, le domande di ripiego precedenti al dataset: 434 in tutto,
@@ -33,6 +33,54 @@ ancora `banks`, le domande di ripiego precedenti al dataset: 434 in tutto,
 - Dopo un aggiornamento le materie già aperte non sono più disponibili
   offline finché non si riaprono con la rete: la cache versionata riparte
   senza i `json/<materia>.json`.
+
+## 4.21.16 - 2026-10-10
+
+**Sottoaree: la griglia mostra solo quello che la partita può giocare.**
+
+### Fixed
+- `subject-quiz-core.js`: `getAvailableSubareasForArea` contava le sottoaree
+  su `BANKS` fino a `MAX_GRADE_DISTANCE + 1` classi di distanza, una in più
+  del pool della partita (`getClassAwarePool`, modo strict). Comparivano
+  bottoni con il pool vuoto: in `matematica`, 4ª, Tabelline si vedevano
+  «colonna», «prodotto cartesiano», «proprieta», «schieramenti» e «tavola
+  pitagorica», che esistono solo in 2ª. Il bottone si selezionava e «Inizia!»
+  apriva «Domande non disponibili. Non riesco a caricare le domande.
+  Controlla la connessione e riprova.», senza ripiego. Ora la griglia conta
+  sullo stesso pool della partita.
+- Bottoni con pool vuoto tolti: matematica 21, italiano 2, storia 72,
+  geografia 47, scienze 13, civica 0. `inglese` e `problemi` non hanno
+  `#areaGrid` e non mostrano la griglia.
+- Partita su una sottoarea con meno di 10 domande: quelle che mancavano
+  arrivavano da qualunque ambito della materia (8 di «Fonti · confronto
+  fonti» più 2 di «Periodi»). Ora il ripiego prende prima dall'ambito scelto.
+
+### Changed
+- Una sottoarea entra in griglia solo con almeno mezza partita di domande nel
+  pool (`MIN_SUBAREA_POOL`, 5 con `totalQ` 10). Bottoni con 1-4 domande
+  tolti: matematica 8, storia 38, geografia 63, scienze 18, civica 5. Bottoni
+  rimasti: matematica 106, italiano 34, storia 205, geografia 116, scienze
+  111, civica 59. Storia e civica tengono la griglia in tutte le coppie
+  classe-ambito (13 e 16). Dove resta una sola sottoarea giocabile la griglia
+  non compare, come già succedeva: geografia in 3 coppie su 16 (2ª Italia e
+  Europa, 5ª Carte e mappe, 5ª Orientamento), scienze in 1 su 16 (5ª Viventi
+  e corpo), matematica in 1 su 22 (4ª Tabelline).
+- `json/problemi.json`: sottoaree riassegnate dal contenuto, 731 problemi su
+  1.353. Lo script che le aveva assegnate cercava parole chiave come
+  sottostringhe: la «l» dei litri stava in quasi ogni frase, 653 problemi
+  erano in misure e sottrazione non esisteva. Nuove: sottrazione (106) e
+  percentuali (93, solo 5ª). Nessun testo toccato, i verdetti di revisione
+  restano validi. Non si vede nel sito: la pagina Problemi non mostra le
+  sottoaree. `scripts/retag_problemi_areas.py` riscritto, `reports/coverage.md`
+  rigenerato.
+
+### Tests
+- `npm run test:e2e:subareas` (`--subareas` in
+  `scripts/subject_quiz_test_harness.js`): per ogni classe e ambito, ogni
+  bottone di sottoarea deve avere nel pool della partita almeno mezza partita
+  di domande. Il conto è rifatto dai banchi, senza passare dal motore. Sul
+  codice della 4.21.15 fallisce. Aggiunto allo smoke in
+  `.github/workflows/e2e.yml`.
 
 ## 4.21.15 - 2026-10-09
 
