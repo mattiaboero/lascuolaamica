@@ -180,7 +180,10 @@ def ingest_new(subject, dry_run=False):
                     'answerIndex': [str(o).strip() for o in opts].index(answer),
                     'answer': answer,
                     'explanation': str(q.get('explanation') or '').strip(),
-                    'active': True,
+                    # Spenta finche' non passa dalla revisione a tre ruoli
+                    # (docs/revisione-domande/CICLO.md): check:revisione blocca
+                    # ogni domanda attiva senza verdetto sul testo corrente.
+                    'active': False,
                     'tag': tags['tag'],
                     'tags': tags['tags'],
                     'language': str(q.get('language') or 'it'),

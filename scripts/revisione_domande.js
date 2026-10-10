@@ -37,6 +37,9 @@ const BRANO = /\b(Leggi|Read)\b[^:]{0,40}:/i;
 // Due tentativi di riscrittura falliti dopo la prima lettura: alla terza
 // bocciatura la domanda si spegne.
 const MAX_GIRI = 3;
+// Opzioni in serie: sotto SERIE_MIN domande per materia e classe non si giudica.
+const SERIE_MIN = 20;
+const SERIE_QUOTA = 0.4;
 
 const [comando, ...resto] = process.argv.slice(2);
 const opz = {};
@@ -144,7 +147,40 @@ function cmdCheck() {
     Object.keys(tot).forEach((k) => { tot[k] += c[k]; });
   }
   if (!opz.materia) console.log(`REVISIONE TOTALE: promosse ${tot.promosse}, spente ${tot.spente}, in sospeso ${tot.sospese}`);
-  if (tot.sospese > 0) fine(`${tot.sospese} domande attive senza un verdetto valido sul testo corrente.`);
+  const errori = [];
+  if (tot.sospese > 0) errori.push(`${tot.sospese} domande attive senza un verdetto valido sul testo corrente.`);
+  const serie = opzioniInSerie(tutte(caricaDomande()).filter((q) => q.active !== false && (!opz.materia || q.subject === opz.materia)));
+  if (serie.length) errori.push(`opzioni in serie, si indovina senza fare il conto:\n  ${serie.join('\n  ')}`);
+  if (errori.length) fine(errori.join('\n'));
+}
+
+// Il difetto trovato in matematica nell'ottobre 2026: quattro numeri
+// consecutivi come opzioni, con la giusta quasi sempre sul piu' grande. Una
+// domanda sola puo' essere legittima («Quanti lati ha un quadrato?»): conta la
+// quota per materia e classe.
+function opzioniInSerie(domande) {
+  const numero = (s) => {
+    const m = String(s).trim().match(/^(\d{1,3}(?:\.\d{3})+|\d+)(?:\s?[^\d\s,.][^\d]*)?$/);
+    return m ? Number(m[1].replace(/\./g, '')) : null;
+  };
+  const gruppi = {};
+  for (const q of domande) {
+    const n = q.options.map(numero);
+    if (n.some((x) => x === null)) continue;
+    const s = [...n].sort((a, b) => a - b);
+    if (s[1] - s[0] !== 1 || s[2] - s[1] !== 1 || s[3] - s[2] !== 1) continue;
+    const g = gruppi[`${q.subject} ${q.class}ª`] = gruppi[`${q.subject} ${q.class}ª`] || { tot: 0, max: 0, min: 0 };
+    g.tot += 1;
+    if (n[q.answerIndex] === s[3]) g.max += 1;
+    if (n[q.answerIndex] === s[0]) g.min += 1;
+  }
+  const fuori = [];
+  for (const [nome, g] of Object.entries(gruppi)) {
+    if (g.tot < SERIE_MIN) continue;
+    if (g.max / g.tot > SERIE_QUOTA) fuori.push(`${nome}: in ${g.max} domande su ${g.tot} con opzioni consecutive la giusta e' il numero piu' grande`);
+    if (g.min / g.tot > SERIE_QUOTA) fuori.push(`${nome}: in ${g.min} domande su ${g.tot} con opzioni consecutive la giusta e' il numero piu' piccolo`);
+  }
+  return fuori;
 }
 
 function cmdLeggibilita() {

@@ -137,7 +137,8 @@ def base_entry(
             "answerIndex": 0,
             "answer": str(answer),
             "explanation": explanation,
-            "active": True,
+            # Spenta finche' non passa dalla revisione a tre ruoli.
+            "active": False,
             "tag": tag_text,
             "tags": tags,
             "language": language,
