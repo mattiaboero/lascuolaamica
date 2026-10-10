@@ -2077,11 +2077,19 @@
     }, 2200);
   }
 
+  // Stessa regola delle domande normali (getClassAwarePool): prima le righe
+  // entro MAX_GRADE_DISTANCE dalla classe della partita; se non ce ne sono,
+  // solo le piu' vicine, cosi' nessun livello di bonus sparisce.
   function getBonusPool(type) {
     const pool = cfg.bonusQuestions && cfg.bonusQuestions[type];
+    if (!Array.isArray(pool)) return [];
     const classNum = classToNum(selectedClass);
     // `grade` viene da `class` della riga bonus (toBonusQuestion).
-    return Array.isArray(pool) ? pool.filter((q) => fitsClassOneRule({ _grade: q && q.grade }, classNum)) : [];
+    const distance = (q) => questionClassDistance({ _grade: q && q.grade }, classNum);
+    const fit = pool.filter((q) => fitsClassOneRule({ _grade: q && q.grade }, classNum));
+    const minDistance = fit.reduce((best, q) => Math.min(best, distance(q)), 99);
+    const limit = Math.max(MAX_GRADE_DISTANCE, minDistance);
+    return fit.filter((q) => distance(q) <= limit);
   }
 
   function openBonusPick() {

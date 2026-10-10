@@ -40,7 +40,7 @@ Ogni materia ha un file `json/<materia>.json` con questa struttura:
 
 L’indice dati tiene il conteggio aggiornato per materia e il timestamp di generazione.
 
-Le bonus questions non vivono più inline nei file pagina: stanno negli stessi JSON materia, con `bonus: true` e `bonusRaw` impostato su `easy`, `medium` o `hard`.
+Le bonus questions non vivono più inline nei file pagina: stanno negli stessi JSON materia, con `bonus: true` e `bonusRaw` impostato su `easy`, `medium` o `hard`. Conta anche `class`: a fine partita il motore pesca, nel livello scelto, le righe entro una classe di distanza da quella della partita e, se mancano, quelle più vicine. Un bonus nuovo va quindi scritto per la classe a cui è destinato.
 
 Per inglese il dataset include anche metadata opzionali usati dal core:
 

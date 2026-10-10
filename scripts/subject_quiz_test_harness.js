@@ -192,6 +192,7 @@ async function main() {
         optionLangs: domOptionMeta.map((item) => item.lang || '')
       };
       assertClassOneRule([bonus], options.classKey, 'Bonus');
+      assertBonusClass(bonus, maps, options.classKey);
     }
 
     await page.waitForSelector('#screenResult.active');
@@ -583,7 +584,8 @@ async function getConfigMaps(page) {
       });
     });
 
-    return { questions, bonus };
+    const maxGradeDistance = Number(cfg && cfg.maxGradeDistance);
+    return { questions, bonus, maxGradeDistance: Number.isFinite(maxGradeDistance) ? Math.max(0, maxGradeDistance) : 1 };
   });
 }
 
@@ -710,6 +712,22 @@ function assertClassOneRule(items, classKey, what) {
   const fuori = items.filter((item) => (Number(item.grade) === 1) !== isClassOne);
   if (fuori.length) {
     throw new Error(`${what} fuori dalla regola della 1ª (classe ${classKey}): ${fuori.map((item) => `[${item.grade}] ${item.question}`).join(' | ')}`);
+  }
+}
+
+// Classe del bonus (getBonusPool in subject-quiz-core.js): tra le righe del
+// livello scelto che passano la regola della 1ª, il bonus sta entro
+// maxGradeDistance dalla classe della partita; se a quella distanza non ce ne
+// sono, sta alla distanza minima disponibile.
+function assertBonusClass(bonus, maps, classKey) {
+  const classNum = Number(classKey);
+  const distance = (grade) => (Number(grade) ? Math.abs(Number(grade) - classNum) : 99);
+  const sameLevel = Object.values(maps.bonus).flat()
+    .filter((row) => row.type === bonus.type && (Number(row.grade) === 1) === (classNum === 1));
+  const minDistance = sameLevel.reduce((best, row) => Math.min(best, distance(row.grade)), 99);
+  const limit = Math.max(maps.maxGradeDistance, minDistance);
+  if (distance(bonus.grade) > limit) {
+    throw new Error(`Bonus ${bonus.type} di classe ${bonus.grade} in una partita di ${classKey}ª: distanza ammessa ${limit}, minima disponibile ${minDistance}: ${bonus.question}`);
   }
 }
 

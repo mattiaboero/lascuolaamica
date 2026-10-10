@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.21.20 - 2026-10-10
+
+**Il bonus di fine partita guarda la classe.**
+
+### Fixed
+- `subject-quiz-core.js`, `getBonusPool`: dalla 2ª alla 5ª il bonus pescava a
+  caso tra tutte le righe del livello scelto, senza guardare la classe della
+  partita. In storia una 2ª che sceglieva «Difficile» poteva ricevere
+  `sto-bonus-hard-004` (fine dell'Impero romano d'Occidente, `class: 5`).
+  Ora vale la regola delle domande normali (`getClassAwarePool`): righe
+  entro `MAX_GRADE_DISTANCE` dalla classe; se non ce ne sono, solo quelle
+  alla distanza minima. La regola della 1ª resta com'era. Nessun ramo per
+  materia.
+- Nessun livello di bonus sparisce: su 99 combinazioni materia × classe ×
+  livello, 84 hanno righe entro una classe di distanza e 15 usano il
+  ripiego.
+
+### Changed
+- `scripts/subject_quiz_test_harness.js`: nuova `assertBonusClass`, accanto
+  ad `assertClassOneRule`. In ogni partita con bonus controlla che la riga
+  uscita rispetti la regola, ricalcolandola dai bonus della pagina.
+- `docs/classe-prima.md`: regola del bonus aggiornata.
+
+### Known issues
+- Le 15 combinazioni col ripiego ricevono ancora un bonus lontano due o tre
+  classi, perché più vicino non ce n'è: «Difficile» in 2ª (tutte le materie
+  tranne storia) e in 3ª di civica, «Medio» in 2ª di matematica e scienze,
+  «Facile» in 4ª e 5ª di italiano e matematica e in 5ª di storia. Servono
+  bonus nuovi, in una PR di contenuti a parte.
+
 ## 4.21.19 - 2026-10-10
 
 **Le materie già aperte restano offline dopo un aggiornamento.** Chiude il
