@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
- "totalQuestions": 9891,
+ "totalQuestions": 9915,
  "subjects": {
   "matematica": {
    "path": "matematica.json",
@@ -23,7 +23,7 @@
      "5": 526
     }
    },
-   "activeRows": 3068
+   "activeRows": 3074
   },
   "problemi": {
    "path": "problemi.json",
@@ -41,7 +41,7 @@
      "5": 262
     }
    },
-   "activeRows": 1353
+   "activeRows": 1355
   },
   "inglese": {
    "path": "inglese.json",
@@ -75,7 +75,7 @@
      "5": 119
     }
    },
-   "activeRows": 1013
+   "activeRows": 1015
   },
   "civica": {
    "path": "civica.json",
@@ -96,7 +96,7 @@
      "5": 243
     }
    },
-   "activeRows": 470
+   "activeRows": 472
   },
   "geografia": {
    "path": "geografia.json",
@@ -129,7 +129,7 @@
      "5": 225
     }
    },
-   "activeRows": 1063
+   "activeRows": 1065
   },
   "storia": {
    "path": "storia.json",
@@ -166,7 +166,7 @@
      "5": 211
     }
    },
-   "activeRows": 1020
+   "activeRows": 1022
   },
   "scienze": {
    "path": "scienze.json",
@@ -197,7 +197,7 @@
      "5": 250
     }
    },
-   "activeRows": 976
+   "activeRows": 980
   },
   "italiano": {
    "path": "italiano.json",
@@ -219,7 +219,7 @@
      "5": 100
     }
    },
-   "activeRows": 928
+   "activeRows": 932
   }
  }
 }

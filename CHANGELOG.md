@@ -1,5 +1,30 @@
 # Changelog Repo
 
+## 4.21.21 - 2026-10-10
+
+**24 bonus nuovi: ogni classe ha un bonus della sua età in ogni livello.**
+Chiude il «Known issue» della 4.21.20.
+
+### Added
+- 24 righe `bonus: true` nelle otto materie: civica 2, geografia 2,
+  inglese 2, italiano 4, matematica 6, problemi 2, scienze 4, storia 2.
+  Coprono le 15 combinazioni materia × classe × livello in cui il bonus
+  ripiegava su righe lontane due o tre classi: «Difficile» in 2ª e 3ª
+  (civica, geografia, inglese, italiano, matematica, problemi, scienze),
+  «Medio» in 2ª e 3ª (matematica, scienze), «Facile» in 4ª e 5ª (italiano,
+  matematica, storia). Due righe per materia e livello, una per classe.
+- Ora tutte le 99 combinazioni hanno almeno una riga entro una classe di
+  distanza: il ripiego di `getBonusPool` non scatta più. Le combinazioni
+  con una sola riga disponibile scendono da 16 a 11.
+- Ciclo di revisione (`docs/revisione-domande/CICLO.md`): risolutore alla
+  cieca e revisore su tutte e 24. 19 promosse al primo giro, 5 bocciate,
+  riscritte da uno scrittore e promosse al secondo giro da lettori nuovi.
+  Nessuna spenta. Rapporto in `reports/revisione-bonus-classi.md`.
+
+### Changed
+- Domande attive: da 9.891 a 9.915.
+- `docs/classe-prima.md`: nota sul ripiego aggiornata.
+
 ## 4.21.20 - 2026-10-10
 
 **Il bonus di fine partita guarda la classe.**

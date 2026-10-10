@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
  "subject": "civica",
- "totalQuestions": 1121,
+ "totalQuestions": 1123,
  "questions": [
   {
    "id": "civ-2-cost-001",
@@ -35884,6 +35884,72 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": ""
+  },
+  {
+   "id": "civ-bonus-hard-004",
+   "subject": "civica",
+   "sourceSubject": "educazione civica",
+   "class": 2,
+   "area": "cittadinanza_digitale_online",
+   "subarea": "privacy_e_dati",
+   "difficulty": 3,
+   "question": "Un gioco sul tablet ti chiede il tuo nome e il tuo indirizzo. Che cosa fai?",
+   "options": [
+    "Rispondo subito a tutto",
+    "Mi fermo e chiedo a un adulto",
+    "Scrivo solo l'indirizzo",
+    "Metto i dati di mio fratello"
+   ],
+   "answerIndex": 1,
+   "answer": "Mi fermo e chiedo a un adulto",
+   "explanation": "Nome e indirizzo sono dati personali. Prima di scriverli in un gioco, fermati e chiedi a un adulto di cui ti fidi.",
+   "active": true,
+   "tag": "educazione_civica;bonus;classe_2;cittadinanza_digitale_online;primaria",
+   "tags": [
+    "educazione_civica",
+    "bonus",
+    "classe_2",
+    "cittadinanza_digitale_online",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "educazione_civica_bonus_digitale",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "civ-bonus-hard-005",
+   "subject": "civica",
+   "sourceSubject": "educazione civica",
+   "class": 3,
+   "area": "strada_gentilezza_sicurezza",
+   "subarea": "segnali_e_sicurezza",
+   "difficulty": 3,
+   "question": "Un segnale stradale è rotondo e ha il bordo rosso. Che cosa indica?",
+   "options": [
+    "Un pericolo",
+    "Un consiglio",
+    "Un'informazione",
+    "Un divieto"
+   ],
+   "answerIndex": 3,
+   "answer": "Un divieto",
+   "explanation": "I segnali rotondi con il bordo rosso sono segnali di divieto: dicono che cosa non si può fare. Quelli di pericolo sono a triangolo.",
+   "active": true,
+   "tag": "educazione_civica;bonus;classe_3;strada_gentilezza_sicurezza;primaria",
+   "tags": [
+    "educazione_civica",
+    "bonus",
+    "classe_3",
+    "strada_gentilezza_sicurezza",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "educazione_civica_bonus_strada",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
   }
  ],
  "stats": {
