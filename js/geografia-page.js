@@ -82,25 +82,5 @@ __sa.subjectConfig = {
       { q: 'Una carta politica mostra soprattutto...', a: 'confini e stati', d: ['solo rilievi montuosi', 'solo clima', 'solo fiumi sotterranei'] },
       { q: 'Le vie di comunicazione servono a...', a: 'collegare luoghi e persone', d: ['fermare i trasporti', 'isolare città', 'bloccare i commerci'] }
     ]
-  },
-  bonusQuestions: {
-    easy: [
-      { q: 'Bonus facile: quali sono i quattro punti cardinali principali?', a: 'Nord, Sud, Est, Ovest', d: ['Nord, Ovest, Alto, Basso', 'Nord, Sud, Destra, Sinistra', 'Est, Ovest, Caldo, Freddo'] },
-      { q: 'Bonus facile: la legenda si trova su...', a: 'mappa o carta geografica', d: ['calcolatrice', 'quaderno di musica', 'orologio'] },
-      { q: 'Bonus facile: una montagna è un elemento...', a: 'fisico', d: ['antropico', 'digitale', 'stradale'] },
-      { q: 'Bonus facile: Italia è in...', a: 'Europa', d: ['Africa', 'America', 'Asia'] }
-    ],
-    medium: [
-      { q: 'Bonus medio: in una carta, 1 cm rappresenta 1 km reali. Questa informazione è...', a: 'la scala', d: ['la legenda sonora', 'la latitudine media', 'la quota termica'] },
-      { q: 'Bonus medio: un territorio con fiumi e suolo fertile favorisce...', a: 'agricoltura', d: ['assenza totale di vita', 'solo traffico aereo', 'nessuna attività economica'] },
-      { q: 'Bonus medio: quale coppia contiene solo elementi antropici?', a: 'strada e ponte', d: ['fiume e ponte', 'bosco e collina', 'mare e lago'] },
-      { q: 'Bonus medio: se guardi il sole a mezzogiorno in Italia, in genere è verso...', a: 'sud', d: ['nord', 'ovest', 'est'] }
-    ],
-    hard: [
-      { q: 'Bonus difficile: per studiare le differenze di popolazione tra regioni quale carta scegli?', a: 'Carta tematica demografica', d: ['Carta fisica dei rilievi', "Pianta dell'aula", 'Carta nautica senza dati'] },
-      { q: 'Bonus difficile: un territorio costiero con porto e rete stradale favorisce soprattutto...', a: 'scambi commerciali', d: ['isolamento totale', 'scomparsa dei trasporti', 'assenza di attività umane'] },
-      { q: 'Bonus difficile: qual è la sequenza corretta da piccolo a grande?', a: 'quartiere, città, regione, stato, continente', d: ['città, quartiere, continente, regione, stato', 'regione, strada, quartiere, pianeta, città', 'stato, quartiere, continente, casa, regione'] },
-      { q: 'Bonus difficile: due carte della stessa zona con scale diverse mostrano che...', a: 'più grande scala = più dettagli', d: ['più grande scala = meno dettagli', 'la scala non cambia nulla', 'scala e legenda sono uguali sempre'] }
-    ]
   }
 };

@@ -1,9 +1,10 @@
 [
  {
-  "date": "10 ottobre 2026 · Release 4.21.16",
+  "date": "10 ottobre 2026 · Release 4.21.16 – 4.21.18",
   "items": [
    "Matematica, italiano, storia, geografia, scienze e civica: sotto l'ambito scelto non compaiono più sotto-argomenti che per quella classe non hanno domande. Prima si potevano scegliere e «Inizia!» rispondeva che le domande non si caricavano.",
-   "Restano solo i sotto-argomenti con almeno 5 domande. Se uno ne ha meno di 10, la partita si completa con domande dello stesso ambito e non più di altri."
+   "Restano solo i sotto-argomenti con almeno 5 domande. Se uno ne ha meno di 10, la partita si completa con domande dello stesso ambito e non più di altri.",
+   "Matematica, italiano, storia, geografia e scienze: le domande bonus di fine partita sono nuove. Sono state rilette una per una come tutte le altre e non hanno più «Bonus facile:» scritto davanti."
   ]
  },
  {

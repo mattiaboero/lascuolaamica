@@ -1,5 +1,44 @@
 # Changelog Repo
 
+## 4.21.18 - 2026-10-10
+
+**I bonus di fine partita arrivano dal dataset, con il verdetto di revisione.**
+
+### Changed
+- `json/matematica.json`, `json/italiano.json`, `json/storia.json`,
+  `json/geografia.json`, `json/scienze.json`: 64 righe nuove `bonus: true`
+  (`<mat|ita|sto|geo|sci>-bonus-<easy|medium|hard>-NNN`; matematica 16, le
+  altre 12). Sostituiscono le 64 domande di `bonusQuestions` scritte in
+  `js/<materia>-page.js`, che erano il round bonus di ogni partita in quelle
+  cinque materie e non avevano un verdetto in
+  `reports/revisione-qualita.json`. Quattro opzioni, spiegazione, classe,
+  `difficulty` 1/2/3 e `bonusRaw` coerenti con il livello. Niente prefisso
+  «Bonus facile:» nell'enunciato: il livello lo scrive già `#bonusMeta`.
+- Le domande sono state riscritte, non copiate. Molte originali non erano
+  domande («leggere un testo serve a...») o chiedevano concetti da adulti
+  («la periodizzazione serve soprattutto a...»). 57 tengono l'obiettivo
+  dell'originale, detto come domanda e con un caso concreto; 7 non
+  verificavano nulla e hanno un argomento nuovo della stessa materia:
+  `ita-bonus-easy-003`, `ita-bonus-hard-003`, `sto-bonus-medium-002`,
+  `sto-bonus-hard-003`, `sto-bonus-hard-004`, `geo-bonus-hard-002`,
+  `sci-bonus-medium-003`. In matematica cambia un solo calcolo: 84 ÷ 7 era
+  già una domanda attiva, ora è 96 ÷ 8.
+- Ciclo di revisione (`docs/revisione-domande/CICLO.md`): risolutore alla
+  cieca e revisore su tutte e 64. 58 promosse al primo giro, 6 bocciate,
+  riscritte e promosse al secondo giro da lettori nuovi. Nessuna spenta.
+- Matematica tiene quattro bonus di 1ª (`class: 1`: due facili, uno medio,
+  uno difficile), come prima con `grade: 1` nella config.
+- Italiano: `ita-2-ortografia-019`, già `bonus: true` e già promossa, ora
+  esce davvero tra i bonus facili (prima la config copriva il dataset).
+
+### Removed
+- `bonusQuestions` da `js/matematica-page.js`, `js/italiano-page.js`,
+  `js/storia-page.js`, `js/geografia-page.js`, `js/scienze-page.js`.
+- `subject-quiz-core.js`: `hasConfiguredBonusQuestions` e l'uscita anticipata
+  di `hydrateBonusQuestionsFromSource`. I bonus si leggono solo dal dataset:
+  una config non può più mettere davanti a un bambino domande che `verify`
+  non vede.
+
 ## 4.21.16 - 2026-10-10
 
 **Sottoaree: la griglia mostra solo quello che la partita può giocare.**
