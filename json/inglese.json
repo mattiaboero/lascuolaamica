@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
  "subject": "inglese",
- "totalQuestions": 1094,
+ "totalQuestions": 1096,
  "questions": [
   {
    "id": "eng-2-colori-001",
@@ -36110,6 +36110,74 @@
    "bonus": false,
    "bonusRaw": "",
    "answerLang": "en"
+  },
+  {
+   "id": "eng-bonus-hard-004",
+   "subject": "inglese",
+   "sourceSubject": "inglese",
+   "class": 2,
+   "area": "animali",
+   "subarea": "bonus_hard",
+   "difficulty": 3,
+   "question": "Che cosa vuol dire 'The cat is black' in italiano?",
+   "options": [
+    "Il cane è nero",
+    "Il gatto è bianco",
+    "Il gatto è nero",
+    "Il cane è bianco"
+   ],
+   "answerIndex": 2,
+   "answer": "Il gatto è nero",
+   "explanation": "'Cat' vuol dire gatto e 'black' vuol dire nero: la frase dice che il gatto è nero.",
+   "active": false,
+   "tag": "inglese;bonus;classe_2;animali;primaria",
+   "tags": [
+    "inglese",
+    "bonus",
+    "classe_2",
+    "animali",
+    "primaria"
+   ],
+   "language": "en",
+   "program": "inglese_bonus_animali",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard",
+   "answerLang": "it"
+  },
+  {
+   "id": "eng-bonus-hard-005",
+   "subject": "inglese",
+   "sourceSubject": "inglese",
+   "class": 3,
+   "area": "famiglia",
+   "subarea": "bonus_hard",
+   "difficulty": 3,
+   "question": "Che cosa vuol dire 'I have got two brothers' in italiano?",
+   "options": [
+    "Ho due fratelli",
+    "Ho due sorelle",
+    "Ho tre fratelli",
+    "Ho tre sorelle"
+   ],
+   "answerIndex": 0,
+   "answer": "Ho due fratelli",
+   "explanation": "'I have got' vuol dire 'ho', 'two' è due e 'brothers' sono i fratelli: ho due fratelli.",
+   "active": false,
+   "tag": "inglese;bonus;classe_3;famiglia;primaria",
+   "tags": [
+    "inglese",
+    "bonus",
+    "classe_3",
+    "famiglia",
+    "primaria"
+   ],
+   "language": "en",
+   "program": "inglese_bonus_famiglia",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard",
+   "answerLang": "it"
   }
  ],
  "stats": {

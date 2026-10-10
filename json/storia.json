@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "storia",
- "totalQuestions": 1132,
+ "totalQuestions": 1134,
  "questions": [
   {
    "id": "sto-2-tempo_strumenti-001",
@@ -35472,6 +35472,72 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "hard"
+  },
+  {
+   "id": "sto-bonus-easy-005",
+   "subject": "storia",
+   "sourceSubject": "storia",
+   "class": 4,
+   "area": "egizi",
+   "subarea": "quadro_di_civilta",
+   "difficulty": 1,
+   "question": "Quale popolo antico costruì le piramidi?",
+   "options": [
+    "I Sumeri",
+    "Gli Egizi",
+    "I Fenici",
+    "I Babilonesi"
+   ],
+   "answerIndex": 1,
+   "answer": "Gli Egizi",
+   "explanation": "Le piramidi furono costruite dagli Egizi: erano le grandi tombe dei faraoni.",
+   "active": false,
+   "tag": "storia;bonus;classe_4;egizi;primaria",
+   "tags": [
+    "storia",
+    "bonus",
+    "classe_4",
+    "egizi",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "storia_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
+  },
+  {
+   "id": "sto-bonus-easy-006",
+   "subject": "storia",
+   "sourceSubject": "storia",
+   "class": 5,
+   "area": "civilta_greca",
+   "subarea": "polis_e_cultura",
+   "difficulty": 1,
+   "question": "In quale città greca nacquero le Olimpiadi?",
+   "options": [
+    "Olimpia",
+    "Atene",
+    "Sparta",
+    "Corinto"
+   ],
+   "answerIndex": 0,
+   "answer": "Olimpia",
+   "explanation": "Le Olimpiadi nacquero a Olimpia, in Grecia: da quella città prendono il nome.",
+   "active": false,
+   "tag": "storia;bonus;classe_5;civilta_greca;primaria",
+   "tags": [
+    "storia",
+    "bonus",
+    "classe_5",
+    "civilta_greca",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "storia_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
   }
  ],
  "stats": {

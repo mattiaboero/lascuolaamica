@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "geografia",
- "totalQuestions": 1144,
+ "totalQuestions": 1146,
  "questions": [
   {
    "id": "geo-2-orientamento-001",
@@ -36649,6 +36649,72 @@
     "bonus",
     "classe_4",
     "strumenti_orientamento",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "geografia_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "geo-bonus-hard-005",
+   "subject": "geografia",
+   "sourceSubject": "geografia",
+   "class": 2,
+   "area": "orientamento",
+   "subarea": "indicatori_topologici",
+   "difficulty": 3,
+   "question": "Luca è di fronte a te e tiene una palla nella mano destra. Dove vedi la palla?",
+   "options": [
+    "Alla tua sinistra",
+    "Alla tua destra",
+    "Dietro di te",
+    "Sopra di te"
+   ],
+   "answerIndex": 0,
+   "answer": "Alla tua sinistra",
+   "explanation": "Chi ti sta di fronte è girato al contrario rispetto a te: la sua mano destra è dalla parte della tua sinistra.",
+   "active": false,
+   "tag": "geografia;bonus;classe_2;orientamento;primaria",
+   "tags": [
+    "geografia",
+    "bonus",
+    "classe_2",
+    "orientamento",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "geografia_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "geo-bonus-hard-006",
+   "subject": "geografia",
+   "sourceSubject": "geografia",
+   "class": 3,
+   "area": "orientamento_mappe",
+   "subarea": "punti_cardinali_e_carte",
+   "difficulty": 3,
+   "question": "Al mattino guardi verso il Sole che sorge. Quale punto cardinale hai alle spalle?",
+   "options": [
+    "Nord",
+    "Est",
+    "Ovest",
+    "Sud"
+   ],
+   "answerIndex": 2,
+   "answer": "Ovest",
+   "explanation": "Il Sole sorge a Est. Se guardi verso Est, alle tue spalle c'è il punto opposto: l'Ovest.",
+   "active": false,
+   "tag": "geografia;bonus;classe_3;orientamento_mappe;primaria",
+   "tags": [
+    "geografia",
+    "bonus",
+    "classe_3",
+    "orientamento_mappe",
     "primaria"
    ],
    "language": "it",

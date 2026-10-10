@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
  "subject": "problemi",
- "totalQuestions": 1361,
+ "totalQuestions": 1363,
  "questions": [
   {
    "id": "pro-2-problemi-001",
@@ -42097,6 +42097,68 @@
    "teacherNote": "",
    "bonus": false,
    "bonusRaw": ""
+  },
+  {
+   "id": "pro-bonus-hard-004",
+   "subject": "problemi",
+   "sourceSubject": "Matematica",
+   "class": 2,
+   "area": "problemi",
+   "subarea": "addizione",
+   "difficulty": 3,
+   "question": "Amina ha 24 figurine. Leo ne ha 9 in più. Quante figurine ha Leo?",
+   "options": [
+    "15",
+    "23",
+    "33",
+    "43"
+   ],
+   "answerIndex": 2,
+   "answer": "33",
+   "explanation": "Leo ha le figurine di Amina più altre 9. In tutto 24 + 9 = 33 figurine.",
+   "active": false,
+   "tag": "bonus,classe_2,addizione",
+   "tags": [
+    "bonus",
+    "classe_2",
+    "addizione"
+   ],
+   "language": "it",
+   "program": "Matematica Bonus Primaria",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "pro-bonus-hard-005",
+   "subject": "problemi",
+   "sourceSubject": "Matematica",
+   "class": 3,
+   "area": "problemi",
+   "subarea": "due_operazioni",
+   "difficulty": 3,
+   "question": "Omar compra 3 quaderni da 2 euro l'uno e paga con 10 euro. Quanto riceve di resto?",
+   "options": [
+    "4 euro",
+    "6 euro",
+    "8 euro",
+    "5 euro"
+   ],
+   "answerIndex": 0,
+   "answer": "4 euro",
+   "explanation": "I quaderni costano 3 × 2 = 6 euro. Il resto è 10 - 6 = 4 euro.",
+   "active": false,
+   "tag": "bonus,classe_3,due_operazioni",
+   "tags": [
+    "bonus",
+    "classe_3",
+    "due_operazioni"
+   ],
+   "language": "it",
+   "program": "Matematica Bonus Primaria",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
   }
  ],
  "stats": {

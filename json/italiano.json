@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "italiano",
- "totalQuestions": 1105,
+ "totalQuestions": 1109,
  "questions": [
   {
    "id": "ita-2-ortografia-001",
@@ -35176,6 +35176,138 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "hard"
+  },
+  {
+   "id": "ita-bonus-hard-005",
+   "subject": "italiano",
+   "sourceSubject": "italiano",
+   "class": 2,
+   "area": "italiano_classe2",
+   "subarea": "ortografia",
+   "difficulty": 3,
+   "question": "Quale frase è scritta in modo giusto?",
+   "options": [
+    "Il nonno a un orto.",
+    "Il nonno ha un orto.",
+    "Il nonno à un orto.",
+    "Il nonno ah un orto."
+   ],
+   "answerIndex": 1,
+   "answer": "Il nonno ha un orto.",
+   "explanation": "'Ha' con l'h è il verbo avere: il nonno possiede un orto. 'A' senza h non è un verbo.",
+   "active": false,
+   "tag": "italiano;bonus;classe_2;italiano_classe2;primaria",
+   "tags": [
+    "italiano",
+    "bonus",
+    "classe_2",
+    "italiano_classe2",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "italiano_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "ita-bonus-hard-006",
+   "subject": "italiano",
+   "sourceSubject": "italiano",
+   "class": 3,
+   "area": "italiano_classe3",
+   "subarea": "sintassi",
+   "difficulty": 3,
+   "question": "Leggi: 'In giardino abbaia il cane.' Qual è il soggetto?",
+   "options": [
+    "abbaia",
+    "in giardino",
+    "giardino",
+    "il cane"
+   ],
+   "answerIndex": 3,
+   "answer": "il cane",
+   "explanation": "Il soggetto è chi fa l'azione: ad abbaiare è il cane, anche se nella frase viene dopo il verbo.",
+   "active": false,
+   "tag": "italiano;bonus;classe_3;italiano_classe3;primaria",
+   "tags": [
+    "italiano",
+    "bonus",
+    "classe_3",
+    "italiano_classe3",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "italiano_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "ita-bonus-easy-005",
+   "subject": "italiano",
+   "sourceSubject": "italiano",
+   "class": 4,
+   "area": "italiano_classe4",
+   "subarea": "sintassi",
+   "difficulty": 1,
+   "question": "Leggi: 'Sara legge un libro in giardino.' Qual è il predicato?",
+   "options": [
+    "Sara",
+    "un libro",
+    "legge",
+    "in giardino"
+   ],
+   "answerIndex": 2,
+   "answer": "legge",
+   "explanation": "Il predicato dice che cosa fa il soggetto. Che cosa fa Sara? Legge: 'legge' è il predicato.",
+   "active": false,
+   "tag": "italiano;bonus;classe_4;italiano_classe4;primaria",
+   "tags": [
+    "italiano",
+    "bonus",
+    "classe_4",
+    "italiano_classe4",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "italiano_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
+  },
+  {
+   "id": "ita-bonus-easy-006",
+   "subject": "italiano",
+   "sourceSubject": "italiano",
+   "class": 5,
+   "area": "italiano_classe5",
+   "subarea": "lessico",
+   "difficulty": 1,
+   "question": "Qual è il contrario di 'generoso'?",
+   "options": [
+    "avaro",
+    "gentile",
+    "povero",
+    "timido"
+   ],
+   "answerIndex": 0,
+   "answer": "avaro",
+   "explanation": "Chi è generoso dà volentieri agli altri. Chi è avaro tiene tutto per sé: è il contrario.",
+   "active": false,
+   "tag": "italiano;bonus;classe_5;italiano_classe5;primaria",
+   "tags": [
+    "italiano",
+    "bonus",
+    "classe_5",
+    "italiano_classe5",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "italiano_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
   }
  ],
  "stats": {

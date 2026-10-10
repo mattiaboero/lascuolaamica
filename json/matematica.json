@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "matematica",
- "totalQuestions": 3089,
+ "totalQuestions": 3095,
  "questions": [
   {
    "id": "mat-2-tabelline-001",
@@ -99528,6 +99528,204 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "hard"
+  },
+  {
+   "id": "mat-bonus-hard-006",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 2,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 3,
+   "question": "Quanto fa 52 - 17?",
+   "options": [
+    "45",
+    "35",
+    "69",
+    "25"
+   ],
+   "answerIndex": 1,
+   "answer": "35",
+   "explanation": "Togli prima 10: 52 - 10 = 42. Poi togli 7: 42 - 7 = 35.",
+   "active": false,
+   "tag": "matematica;bonus;classe_2;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_2",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "mat-bonus-hard-007",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 3,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 3,
+   "question": "Quanto fa 304 - 128?",
+   "options": [
+    "224",
+    "186",
+    "432",
+    "176"
+   ],
+   "answerIndex": 3,
+   "answer": "176",
+   "explanation": "Togli prima 100: 304 - 100 = 204. Poi togli 28: 204 - 28 = 176.",
+   "active": false,
+   "tag": "matematica;bonus;classe_3;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_3",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "mat-bonus-medium-006",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 2,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 2,
+   "question": "Quanto fa 36 + 25?",
+   "options": [
+    "51",
+    "11",
+    "61",
+    "511"
+   ],
+   "answerIndex": 2,
+   "answer": "61",
+   "explanation": "Aggiungi prima 20: 36 + 20 = 56. Poi aggiungi 5: 56 + 5 = 61.",
+   "active": false,
+   "tag": "matematica;bonus;classe_2;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_2",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
+  },
+  {
+   "id": "mat-bonus-medium-007",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 3,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 2,
+   "question": "Quanto fa 15 × 4?",
+   "options": [
+    "60",
+    "19",
+    "45",
+    "40"
+   ],
+   "answerIndex": 0,
+   "answer": "60",
+   "explanation": "Dividi 15 in 10 e 5: 10 × 4 = 40 e 5 × 4 = 20. Poi 40 + 20 = 60.",
+   "active": false,
+   "tag": "matematica;bonus;classe_3;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_3",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
+  },
+  {
+   "id": "mat-bonus-easy-007",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 4,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 1,
+   "question": "Quanto fa 1.000 - 250?",
+   "options": [
+    "650",
+    "1.250",
+    "850",
+    "750"
+   ],
+   "answerIndex": 3,
+   "answer": "750",
+   "explanation": "Togli prima 200: 1.000 - 200 = 800. Poi togli 50: 800 - 50 = 750.",
+   "active": false,
+   "tag": "matematica;bonus;classe_4;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_4",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
+  },
+  {
+   "id": "mat-bonus-easy-008",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 5,
+   "area": "aritmetica",
+   "subarea": "decimali",
+   "difficulty": 1,
+   "question": "Quanto fa 3,5 × 10?",
+   "options": [
+    "3,50",
+    "35",
+    "350",
+    "30,5"
+   ],
+   "answerIndex": 1,
+   "answer": "35",
+   "explanation": "Quando moltiplichi per 10 la virgola si sposta di un posto verso destra: 3,5 × 10 = 35.",
+   "active": false,
+   "tag": "matematica;bonus;classe_5;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_5",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
   }
  ],
  "stats": {
