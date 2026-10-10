@@ -87,11 +87,6 @@
     return null;
   }
 
-  function hasConfiguredBonusQuestions() {
-    if (!cfg || !cfg.bonusQuestions || typeof cfg.bonusQuestions !== 'object') return false;
-    return Object.values(cfg.bonusQuestions).some((rows) => Array.isArray(rows) && rows.length > 0);
-  }
-
   function resolveBonusType(row) {
     const raw = String(row && row.bonusRaw ? row.bonusRaw : '').trim().toLowerCase();
     if (raw === 'easy' || raw === 'medium' || raw === 'hard') return raw;
@@ -122,7 +117,6 @@
 
   async function hydrateBonusQuestionsFromSource(loader, source) {
     if (!loader || typeof loader.getSubjectRows !== 'function' || !source || !source.subject) return;
-    if (hasConfiguredBonusQuestions()) return;
 
     const rows = await loader.getSubjectRows(source.subject, {
       path: source.path || 'json/index.json',
@@ -2086,8 +2080,7 @@
   function getBonusPool(type) {
     const pool = cfg.bonusQuestions && cfg.bonusQuestions[type];
     const classNum = classToNum(selectedClass);
-    // `grade` come nelle righe del loader; nei bonus scritti nella config della
-    // pagina (es. matematica-page.js) va messo a mano: senza, non sono di 1ª.
+    // `grade` viene da `class` della riga bonus (toBonusQuestion).
     return Array.isArray(pool) ? pool.filter((q) => fitsClassOneRule({ _grade: q && q.grade }, classNum)) : [];
   }
 

@@ -39,7 +39,7 @@ Limiti noti:
 
 ## Bonus e pool piccoli
 
-- Anche il bonus segue la regola della 1ª. Le righe bonus del JSON portano `grade` da `class`. I bonus scritti nella config della pagina (`bonusQuestions` in `matematica-page.js`) sono di 1ª solo con `grade: 1`. La schermata del bonus mostra solo i livelli con domande per la classe. Se non ce n'è nessuno, la partita va dritta al risultato. Oggi la 1ª ha quattro bonus con `grade: 1` in `matematica-page.js`; **un bonus nuovo per la 1ª va scritto con `grade: 1`**, altrimenti la 1ª non lo vede.
+- Anche il bonus segue la regola della 1ª. I bonus stanno solo nel dataset (`bonus: true` in `json/<materia>.json`) e portano `grade` da `class`: dalla 4.21.18 le config delle pagine non hanno più `bonusQuestions` e il motore non le legge. La schermata del bonus mostra solo i livelli con domande per la classe. Se non ce n'è nessuno, la partita va dritta al risultato. Oggi la 1ª ha quattro bonus in `json/matematica.json` (`mat-bonus-easy-005` e `-006`, `mat-bonus-medium-005`, `mat-bonus-hard-005`); **un bonus nuovo per la 1ª va scritto con `class: 1`**, altrimenti la 1ª non lo vede.
 - Niente domande ripetute nella stessa partita: quando il pool finisce, `pickQuestion` non ricomincia più da capo. I fallback prendono solo domande non ancora uscite, e se non bastano la partita è più corta (`sessionLen()` usa `questions.length`). Con un'area di 1ª sotto le 10 domande, il fallback largo completa la partita con altre domande di 1ª di altre aree, come già succede nelle altre classi.
 
 ## P3: figure

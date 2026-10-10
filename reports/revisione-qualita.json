@@ -255108,5 +255108,806 @@
    ]
   ],
   "esito": "riscritta"
+ },
+ "geo-bonus-easy-001": {
+  "hash": "f3cac961d5a0",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-easy-002": {
+  "hash": "6de9c4633910",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-easy-003": {
+  "hash": "366aba38e0b8",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-easy-004": {
+  "hash": "56f4ce081f74",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-medium-001": {
+  "hash": "048287d9c191",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-medium-002": {
+  "hash": "74d4e2c93a46",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-medium-003": {
+  "hash": "39aefb78a6f1",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-medium-004": {
+  "hash": "b6cbbc6d6204",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-hard-001": {
+  "hash": "9088147d412a",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-hard-002": {
+  "hash": "83ab6f5eecee",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-hard-003": {
+  "hash": "cea49a9b0909",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-hard-004": {
+  "hash": "b5e808a09989",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-easy-001": {
+  "hash": "1f16bed32b98",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-easy-002": {
+  "hash": "0ae502a508d4",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-easy-003": {
+  "hash": "324640257ad4",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-easy-004": {
+  "hash": "1757954b133b",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-medium-001": {
+  "hash": "48521e06b60e",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-medium-002": {
+  "hash": "dce45a06d67f",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Devi fare il riassunto di una storia. Che cosa scrivi?",
+   "options": [
+    "Tutte le parole della storia",
+    "Solo il titolo della storia",
+    "I fatti più importanti",
+    "Solo la fine della storia"
+   ],
+   "answerIndex": 2,
+   "explanation": "Il riassunto è più corto della storia: tiene i fatti più importanti e lascia fuori i particolari."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R6. La risposta giusta è l'unica che non finisce con «della storia» e che non comincia con «Solo» o «Tutte»: si riconosce dalla forma senza sapere che cos'è un riassunto."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "ita-bonus-medium-003": {
+  "hash": "548df169f741",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-medium-004": {
+  "hash": "3ba41d37af38",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-hard-001": {
+  "hash": "061025c3f6ba",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-hard-002": {
+  "hash": "d57f862da832",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-hard-003": {
+  "hash": "c0ced7891e20",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "ita-bonus-hard-004": {
+  "hash": "ca10ea0fd83b",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-001": {
+  "hash": "1798330d7e27",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-002": {
+  "hash": "65db63a8d10e",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-003": {
+  "hash": "e6317b4ba266",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-004": {
+  "hash": "6c47bcb52284",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-005": {
+  "hash": "554fe2ead025",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-easy-006": {
+  "hash": "80691ac3f963",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-001": {
+  "hash": "a340c31b1f39",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-002": {
+  "hash": "9f683bc953a9",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-003": {
+  "hash": "fff17516c897",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-004": {
+  "hash": "fd693d50caa2",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-005": {
+  "hash": "9f1005bd0c39",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-001": {
+  "hash": "325609a858d8",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-002": {
+  "hash": "54cdd333d834",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Quanto fa 2,5 + 1,75?",
+   "options": [
+    "4,25",
+    "3,80",
+    "3,25",
+    "2,00"
+   ],
+   "answerIndex": 0,
+   "explanation": "Scrivi 2,5 come 2,50, così i due numeri hanno le stesse cifre dopo la virgola. Poi 2,50 + 1,75 = 4,25."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R8. Spiegazione imprecisa: «hanno le stesse cifre dopo la virgola» non è vero (50 e 75), si intende «lo stesso numero di cifre»."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "mat-bonus-hard-003": {
+  "hash": "f9af30c78d4c",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-004": {
+  "hash": "3fc221b3ea29",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-005": {
+  "hash": "07bd884848fa",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-easy-001": {
+  "hash": "a7464da18dff",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-easy-002": {
+  "hash": "1eb579865acc",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-easy-003": {
+  "hash": "06c650931936",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Come si chiama il lavoro con cui le foglie producono il nutrimento della pianta?",
+   "options": [
+    "Fotosintesi",
+    "Respirazione",
+    "Impollinazione",
+    "Germinazione"
+   ],
+   "answerIndex": 0,
+   "explanation": "Con la fotosintesi le foglie usano luce, acqua e aria per produrre il nutrimento della pianta."
+  },
+  "storia": [
+   [
+    "parole difficili: Impollinazione",
+    "nota alla cieca: in 3ª impollinazione probabilmente non nota (distrattore); fotosintesi in 3ª incerta"
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "sci-bonus-easy-004": {
+  "hash": "06d9a96c7f54",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Quale di questi rifiuti si butta nel contenitore dell'umido?",
+   "options": [
+    "La lattina",
+    "La buccia di banana",
+    "Il barattolo di vetro",
+    "Il giornale"
+   ],
+   "answerIndex": 1,
+   "explanation": "La buccia di banana è uno scarto di cibo e va nell'umido. Lattina, vetro e carta hanno ognuno il proprio contenitore."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R8. Spiegazione non sempre vera: in molti comuni le lattine vanno con il vetro o con la plastica, non «ognuno il proprio contenitore»."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "sci-bonus-medium-001": {
+  "hash": "06a60e39aae2",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-medium-002": {
+  "hash": "be5e0459e09a",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-medium-003": {
+  "hash": "a6ead8a43736",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-medium-004": {
+  "hash": "59fa91af365c",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-hard-001": {
+  "hash": "be076f511ad2",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-hard-002": {
+  "hash": "4aeaec3cfef2",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-hard-003": {
+  "hash": "772a9b8c91ae",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-hard-004": {
+  "hash": "03fac7d5a080",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Vuoi scoprire se una pianta cresce meglio alla luce o al buio. Che cosa deve cambiare tra le due piante?",
+   "options": [
+    "La luce e l'acqua",
+    "Il tipo di pianta",
+    "Il vaso e la terra",
+    "Solo la luce"
+   ],
+   "answerIndex": 3,
+   "explanation": "Se cambia una cosa sola, la luce, sai che la differenza dipende da quella. Tutto il resto deve restare uguale."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R2, R6. «Le due piante» non sono mai state presentate: l'esperimento con due piante va detto prima; la giusta è l'unica con «Solo» ed è la più corta."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "sto-bonus-easy-001": {
+  "hash": "92cc6b561191",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-easy-002": {
+  "hash": "b5fcb2a12d08",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-easy-003": {
+  "hash": "673af32aed87",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-easy-004": {
+  "hash": "338a5d856fcd",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "prima": {
+   "question": "Quale di questi oggetti ti fa vedere com'eri da piccolo?",
+   "options": [
+    "Un quaderno ancora nuovo",
+    "Il calendario dell'anno prossimo",
+    "Le scarpe che porti oggi",
+    "Una tua foto da neonato"
+   ],
+   "answerIndex": 3,
+   "explanation": "La foto è stata scattata quando eri piccolo e mostra com'eri allora: è una fonte della tua storia."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R5. I tre distrattori sono oggetti di oggi o del futuro e si scartano senza ragionare; solo la giusta nomina il passato («da neonato»)."
+   ]
+  ],
+  "esito": "riscritta"
+ },
+ "sto-bonus-medium-001": {
+  "hash": "8845d80f37f6",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-medium-002": {
+  "hash": "01590e20e7fa",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-medium-003": {
+  "hash": "cd3e32f26049",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-medium-004": {
+  "hash": "ae66c6b03b7c",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-hard-001": {
+  "hash": "1cef4f01a577",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-hard-002": {
+  "hash": "740e78888df4",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-hard-003": {
+  "hash": "ce844ab7e631",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-hard-004": {
+  "hash": "2b2f56cc9dfc",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
  }
 }
