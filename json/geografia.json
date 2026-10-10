@@ -36279,7 +36279,7 @@
    "answerIndex": 2,
    "answer": "Nord, Sud, Est e Ovest",
    "explanation": "I punti cardinali sono Nord, Sud, Est e Ovest. Non cambiano mai, mentre destra e sinistra dipendono da come sei girato.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_3;orientamento_mappe;primaria",
    "tags": [
     "geografia",
@@ -36312,7 +36312,7 @@
    "answerIndex": 0,
    "answer": "A spiegare i simboli e i colori",
    "explanation": "La legenda è il riquadro che spiega che cosa vogliono dire i simboli e i colori della carta.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_3;orientamento_mappe;primaria",
    "tags": [
     "geografia",
@@ -36345,7 +36345,7 @@
    "answerIndex": 1,
    "answer": "La montagna",
    "explanation": "La montagna non l'ha fatta l'uomo: è un elemento naturale. Ponte, strada e casa sono stati costruiti dall'uomo.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_2;paesaggio;primaria",
    "tags": [
     "geografia",
@@ -36378,7 +36378,7 @@
    "answerIndex": 3,
    "answer": "Europa",
    "explanation": "L'Italia è una penisola dell'Europa, in mezzo al Mar Mediterraneo.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_5;italia_europa;primaria",
    "tags": [
     "geografia",
@@ -36411,7 +36411,7 @@
    "answerIndex": 1,
    "answer": "Scala",
    "explanation": "La scala dice quanto è stata rimpicciolita la realtà: qui ogni centimetro sulla carta vale un chilometro vero.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_4;strumenti_orientamento;primaria",
    "tags": [
     "geografia",
@@ -36444,7 +36444,7 @@
    "answerIndex": 2,
    "answer": "In pianura",
    "explanation": "In pianura il terreno è piatto e fertile e i fiumi portano l'acqua: per questo ci sono tanti campi coltivati.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_3;paesaggi_terra;primaria",
    "tags": [
     "geografia",
@@ -36477,7 +36477,7 @@
    "answerIndex": 3,
    "answer": "Strada e ponte",
    "explanation": "La strada e il ponte sono opere dell'uomo. Fiume, bosco, collina e lago sono elementi naturali.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_3;sistema_territoriale;primaria",
    "tags": [
     "geografia",
@@ -36510,7 +36510,7 @@
    "answerIndex": 0,
    "answer": "Sud",
    "explanation": "Il Sole sorge a Est, a mezzogiorno è alto verso Sud e tramonta a Ovest.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_4;strumenti_orientamento;primaria",
    "tags": [
     "geografia",
@@ -36543,7 +36543,7 @@
    "answerIndex": 0,
    "answer": "Una carta tematica",
    "explanation": "La carta tematica mostra un solo argomento, per esempio quanti abitanti ha ogni regione. La carta fisica mostra monti, pianure e fiumi.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_5;orientamento_carte;primaria",
    "tags": [
     "geografia",
@@ -36576,7 +36576,7 @@
    "answerIndex": 1,
    "answer": "Umbria",
    "explanation": "L'Umbria è al centro dell'Italia ed è circondata solo da altre regioni. Toscana, Puglia e Liguria hanno invece la costa.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_5;regioni_antropica;primaria",
    "tags": [
     "geografia",
@@ -36609,7 +36609,7 @@
    "answerIndex": 2,
    "answer": "Quartiere, città, regione, Stato",
    "explanation": "Il quartiere è una parte della città, la città si trova in una regione e la regione fa parte dello Stato.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_4;antropico_ambiente;primaria",
    "tags": [
     "geografia",
@@ -36642,7 +36642,7 @@
    "answerIndex": 3,
    "answer": "La pianta di una città",
    "explanation": "La pianta rappresenta uno spazio piccolo, quindi c'è posto per tanti particolari. Sul planisfero c'è tutta la Terra e i particolari spariscono.",
-   "active": false,
+   "active": true,
    "tag": "geografia;bonus;classe_4;strumenti_orientamento;primaria",
    "tags": [
     "geografia",

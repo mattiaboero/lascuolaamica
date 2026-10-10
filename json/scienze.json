@@ -31850,7 +31850,7 @@
    "answerIndex": 2,
    "answer": "Ghiaccio",
    "explanation": "Sotto zero gradi l'acqua gela e diventa ghiaccio: è acqua allo stato solido.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_3;materia_materiali;primaria",
    "tags": [
     "scienze",
@@ -31883,7 +31883,7 @@
    "answerIndex": 3,
    "answer": "Il cuore",
    "explanation": "Il cuore è un muscolo: battendo spinge il sangue nei vasi sanguigni, che lo portano a tutto il corpo.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_5;corpo_umano_salute;primaria",
    "tags": [
     "scienze",
@@ -31910,13 +31910,13 @@
    "options": [
     "Fotosintesi",
     "Respirazione",
-    "Impollinazione",
-    "Germinazione"
+    "Digestione",
+    "Fioritura"
    ],
    "answerIndex": 0,
    "answer": "Fotosintesi",
    "explanation": "Con la fotosintesi le foglie usano luce, acqua e aria per produrre il nutrimento della pianta.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_3;viventi_biologia;primaria",
    "tags": [
     "scienze",
@@ -31948,8 +31948,8 @@
    ],
    "answerIndex": 1,
    "answer": "La buccia di banana",
-   "explanation": "La buccia di banana è uno scarto di cibo e va nell'umido. Lattina, vetro e carta hanno ognuno il proprio contenitore.",
-   "active": false,
+   "explanation": "La buccia di banana è uno scarto di cibo: per questo va nell'umido. Lattina, vetro e carta non sono scarti di cibo.",
+   "active": true,
    "tag": "scienze;bonus;classe_2;terra_stagioni_ambiente;primaria",
    "tags": [
     "scienze",
@@ -31982,7 +31982,7 @@
    "answerIndex": 0,
    "answer": "Si spegne",
    "explanation": "La corrente passa solo se il percorso dei fili è chiuso. Staccando un filo il percorso si apre e la lampadina si spegne.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_5;materia_energia_fenomeni;primaria",
    "tags": [
     "scienze",
@@ -32015,7 +32015,7 @@
    "answerIndex": 1,
    "answer": "Precipitazione",
    "explanation": "Pioggia, neve e grandine sono precipitazioni: l'acqua delle nuvole torna sulla Terra.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;aria_acqua_suolo_materia;primaria",
    "tags": [
     "scienze",
@@ -32048,7 +32048,7 @@
    "answerIndex": 2,
    "answer": "Frutta e verdura",
    "explanation": "Frutta e verdura sono i cibi più ricchi di vitamine, che aiutano il corpo a stare bene e a difendersi dalle malattie.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;corpo_umano_salute;primaria",
    "tags": [
     "scienze",
@@ -32081,7 +32081,7 @@
    "answerIndex": 3,
    "answer": "Le piante",
    "explanation": "Le piante sono produttori perché fabbricano da sole il proprio nutrimento con la luce del Sole. Gli animali devono mangiare altri viventi.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;ecosistemi_ambiente;primaria",
    "tags": [
     "scienze",
@@ -32114,7 +32114,7 @@
    "answerIndex": 0,
    "answer": "Lo verso in un filtro",
    "explanation": "Il filtro lascia passare l'acqua e trattiene i granelli di sabbia, troppo grossi per i suoi fori.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;aria_acqua_suolo_materia;primaria",
    "tags": [
     "scienze",
@@ -32147,7 +32147,7 @@
    "answerIndex": 1,
    "answer": "L'asfalto non assorbe l'acqua",
    "explanation": "Il terreno del bosco assorbe la pioggia come una spugna. L'asfalto invece è impermeabile e l'acqua resta in superficie.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;aria_acqua_suolo_materia;primaria",
    "tags": [
     "scienze",
@@ -32180,7 +32180,7 @@
    "answerIndex": 2,
    "answer": "Foglia → bruco → uccellino",
    "explanation": "La catena parte dalla pianta: la foglia è mangiata dal bruco e il bruco è mangiato dall'uccellino.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;ecosistemi_ambiente;primaria",
    "tags": [
     "scienze",
@@ -32203,17 +32203,17 @@
    "area": "metodo_scientifico",
    "subarea": "ipotesi_esperimento_conclusioni",
    "difficulty": 3,
-   "question": "Vuoi scoprire se una pianta cresce meglio alla luce o al buio. Che cosa deve cambiare tra le due piante?",
+   "question": "Due piante uguali: una sta alla luce, l'altra al buio. Vuoi capire se la luce le fa crescere. Come le annaffi?",
    "options": [
-    "La luce e l'acqua",
-    "Il tipo di pianta",
-    "Il vaso e la terra",
-    "Solo la luce"
+    "Solo quella alla luce",
+    "Solo quella al buio",
+    "Tutte e due, ma una il doppio",
+    "Tutte e due allo stesso modo"
    ],
    "answerIndex": 3,
-   "answer": "Solo la luce",
-   "explanation": "Se cambia una cosa sola, la luce, sai che la differenza dipende da quella. Tutto il resto deve restare uguale.",
-   "active": false,
+   "answer": "Tutte e due allo stesso modo",
+   "explanation": "Se cambia solo la luce, sai che la differenza dipende da quella. L'acqua e tutto il resto devono essere uguali per le due piante.",
+   "active": true,
    "tag": "scienze;bonus;classe_4;metodo_scientifico;primaria",
    "tags": [
     "scienze",

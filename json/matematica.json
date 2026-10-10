@@ -99019,7 +99019,7 @@
    "answerIndex": 0,
    "answer": "9",
    "explanation": "Parti da 5 e conta avanti di 4: 6, 7, 8, 9. Quindi 4 + 5 = 9.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_2;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99052,7 +99052,7 @@
    "answerIndex": 1,
    "answer": "9",
    "explanation": "3 × 3 vuol dire 3 preso 3 volte: 3 + 3 + 3 = 9.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_2;tabelline;primaria",
    "tags": [
     "matematica",
@@ -99085,7 +99085,7 @@
    "answerIndex": 2,
    "answer": "30",
    "explanation": "Dopo 29 le unità ricominciano da 0 e le decine passano da 2 a 3: viene 30.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_2;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99118,7 +99118,7 @@
    "answerIndex": 3,
    "answer": "5",
    "explanation": "La metà si trova dividendo in due parti uguali: 5 + 5 = 10. Quindi la metà di 10 è 5.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_2;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99151,7 +99151,7 @@
    "answerIndex": 0,
    "answer": "5",
    "explanation": "Parti da 3 e conta avanti di 2: 4, 5. Quindi 3 + 2 = 5.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_1;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99184,7 +99184,7 @@
    "answerIndex": 1,
    "answer": "10",
    "explanation": "Contando si dice 8, 9, 10: subito dopo 9 viene 10.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_1;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99217,7 +99217,7 @@
    "answerIndex": 2,
    "answer": "20 cm",
    "explanation": "Il perimetro è la somma dei quattro lati: 7 + 3 + 7 + 3 = 20 cm.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_4;geometria;primaria",
    "tags": [
     "matematica",
@@ -99250,7 +99250,7 @@
    "answerIndex": 3,
    "answer": "1/2",
    "explanation": "2/4 vuol dire 2 parti su 4, cioè metà dell'intero. Anche 1/2 è la metà: le due frazioni sono equivalenti.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_4;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99283,7 +99283,7 @@
    "answerIndex": 0,
    "answer": "1.250",
    "explanation": "Moltiplicando per 10 ogni cifra si sposta di un posto a sinistra e nelle unità va 0: 125 × 10 = 1.250.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_4;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99316,7 +99316,7 @@
    "answerIndex": 1,
    "answer": "12",
    "explanation": "8 × 10 = 80 e avanzano 16. Poi 16 ÷ 8 = 2. In tutto 10 + 2 = 12.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_4;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99349,7 +99349,7 @@
    "answerIndex": 2,
    "answer": "13",
    "explanation": "Da 8 arrivi a 10 aggiungendo 2. Poi aggiungi gli altri 3: 10 + 3 = 13.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_1;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99382,7 +99382,7 @@
    "answerIndex": 3,
    "answer": "24",
    "explanation": "24 è nella tabellina del 3 (3 × 8 = 24) e in quella del 4 (4 × 6 = 24). Gli altri numeri sono in una sola delle due.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_4;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99414,8 +99414,8 @@
    ],
    "answerIndex": 0,
    "answer": "4,25",
-   "explanation": "Scrivi 2,5 come 2,50, così i due numeri hanno le stesse cifre dopo la virgola. Poi 2,50 + 1,75 = 4,25.",
-   "active": false,
+   "explanation": "Scrivi 2,5 come 2,50, così i due numeri hanno due cifre dopo la virgola. Poi 2,50 + 1,75 = 4,25.",
+   "active": true,
    "tag": "matematica;bonus;classe_5;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99448,7 +99448,7 @@
    "answerIndex": 1,
    "answer": "96 cm²",
    "explanation": "L'area del rettangolo si trova moltiplicando la base per l'altezza: 12 × 8 = 96 cm².",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_5;geometria;primaria",
    "tags": [
     "matematica",
@@ -99481,7 +99481,7 @@
    "answerIndex": 2,
    "answer": "25",
    "explanation": "Se 3 parti sono 15 alunni, una parte è 15 ÷ 3 = 5 alunni. La classe intera ha 5 parti: 5 × 5 = 25 alunni.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_5;problemi;primaria",
    "tags": [
     "matematica",
@@ -99514,7 +99514,7 @@
    "answerIndex": 3,
    "answer": "8",
    "explanation": "Da 15 togli 5 e arrivi a 10. Poi togli gli altri 2: 10 - 2 = 8.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_1;aritmetica;primaria",
    "tags": [
     "matematica",

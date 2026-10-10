@@ -34799,7 +34799,7 @@
    "answerIndex": 2,
    "answer": "corre",
    "explanation": "'Corre' è il verbo: dice che cosa fa il cane.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_2;italiano_classe2;primaria",
    "tags": [
     "italiano",
@@ -34832,7 +34832,7 @@
    "answerIndex": 0,
    "answer": "freddo",
    "explanation": "'Freddo' è il contrario di 'caldo': il gelato è freddo, la minestra è calda.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_2;italiano_classe2;primaria",
    "tags": [
     "italiano",
@@ -34865,7 +34865,7 @@
    "answerIndex": 1,
    "answer": "Il pallone",
    "explanation": "Il testo dice che Luca ha perso il pallone: 'lo cerca' vuol dire che cerca il pallone.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_2;italiano_classe2;primaria",
    "tags": [
     "italiano",
@@ -34898,7 +34898,7 @@
    "answerIndex": 3,
    "answer": "Il punto",
    "explanation": "Il punto chiude la frase. Dopo il punto si ricomincia con la lettera maiuscola.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_2;italiano_classe2;primaria",
    "tags": [
     "italiano",
@@ -34931,7 +34931,7 @@
    "answerIndex": 1,
    "answer": "I bambini giocano in giardino.",
    "explanation": "'I bambini' sono più di uno, quindi anche il verbo va al plurale: 'giocano'.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_3;italiano_classe3;primaria",
    "tags": [
     "italiano",
@@ -34956,15 +34956,15 @@
    "difficulty": 2,
    "question": "Devi fare il riassunto di una storia. Che cosa scrivi?",
    "options": [
-    "Tutte le parole della storia",
-    "Solo il titolo della storia",
+    "Tutti i particolari",
+    "I pensieri dei personaggi",
     "I fatti più importanti",
-    "Solo la fine della storia"
+    "Le descrizioni dei luoghi"
    ],
    "answerIndex": 2,
    "answer": "I fatti più importanti",
    "explanation": "Il riassunto è più corto della storia: tiene i fatti più importanti e lascia fuori i particolari.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_4;italiano_classe4;primaria",
    "tags": [
     "italiano",
@@ -34997,7 +34997,7 @@
    "answerIndex": 0,
    "answer": "Nel dizionario",
    "explanation": "Il dizionario spiega il significato delle parole, messe in ordine alfabetico.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_3;italiano_classe3;primaria",
    "tags": [
     "italiano",
@@ -35030,7 +35030,7 @@
    "answerIndex": 3,
    "answer": "veloce - rapido",
    "explanation": "'Veloce' e 'rapido' vogliono dire la stessa cosa: sono sinonimi. 'Caldo' e 'freddo' invece sono contrari.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_4;italiano_classe4;primaria",
    "tags": [
     "italiano",
@@ -35063,7 +35063,7 @@
    "answerIndex": 0,
    "answer": "argomentativo",
    "explanation": "Nel testo argomentativo chi scrive dice la sua idea e porta delle ragioni per convincere chi legge.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_5;italiano_classe5;primaria",
    "tags": [
     "italiano",
@@ -35096,7 +35096,7 @@
    "answerIndex": 1,
    "answer": "una storia",
    "explanation": "Il complemento oggetto risponde alla domanda 'che cosa?'. La maestra ha letto che cosa? 'Una storia'.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_4;italiano_classe4;primaria",
    "tags": [
     "italiano",
@@ -35129,7 +35129,7 @@
    "answerIndex": 2,
    "answer": "Sara dice che viene anche lei",
    "explanation": "Nel discorso indiretto le parole di Sara si riportano dopo 'che' e passano alla terza persona: 'vengo' diventa 'viene', 'io' diventa 'lei'.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_5;italiano_classe5;primaria",
    "tags": [
     "italiano",
@@ -35162,7 +35162,7 @@
    "answerIndex": 3,
    "answer": "Gentile sindaco,",
    "explanation": "A un adulto che non conosci bene si scrive in modo gentile e formale: 'Gentile sindaco' è il saluto adatto.",
-   "active": false,
+   "active": true,
    "tag": "italiano;bonus;classe_5;italiano_classe5;primaria",
    "tags": [
     "italiano",

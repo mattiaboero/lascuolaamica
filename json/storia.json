@@ -35095,7 +35095,7 @@
    "answerIndex": 1,
    "answer": "Ieri",
    "explanation": "Ieri è il giorno appena passato: è venuto prima di oggi. Domani deve ancora arrivare.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_2;successione_contemporaneita;primaria",
    "tags": [
     "storia",
@@ -35128,7 +35128,7 @@
    "answerIndex": 0,
    "answer": "Fonte orale",
    "explanation": "Il racconto si ascolta dalla voce di chi parla: per questo è una fonte orale.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_2;fonti_storiche;primaria",
    "tags": [
     "storia",
@@ -35161,7 +35161,7 @@
    "answerIndex": 2,
    "answer": "100 anni",
    "explanation": "Un secolo dura 100 anni. Dieci anni formano un decennio, mille anni un millennio.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_3;tempo_periodizzazione;primaria",
    "tags": [
     "storia",
@@ -35184,17 +35184,17 @@
    "area": "storia_personale_familiare",
    "subarea": "fonti",
    "difficulty": 1,
-   "question": "Quale di questi oggetti ti fa vedere com'eri da piccolo?",
+   "question": "Vuoi sapere che faccia avevi a un anno. Quale fonte guardi?",
    "options": [
-    "Un quaderno ancora nuovo",
-    "Il calendario dell'anno prossimo",
-    "Le scarpe che porti oggi",
-    "Una tua foto da neonato"
+    "Il tuo primo ciuccio",
+    "La tua vecchia culla",
+    "Le tue prime scarpine",
+    "Una tua foto di allora"
    ],
    "answerIndex": 3,
-   "answer": "Una tua foto da neonato",
-   "explanation": "La foto è stata scattata quando eri piccolo e mostra com'eri allora: è una fonte della tua storia.",
-   "active": false,
+   "answer": "Una tua foto di allora",
+   "explanation": "Solo la foto mostra il tuo viso di allora. Ciuccio, culla e scarpine sono ricordi di quando eri piccolo, ma non fanno vedere com'eri.",
+   "active": true,
    "tag": "storia;bonus;classe_2;storia_personale_familiare;primaria",
    "tags": [
     "storia",
@@ -35227,7 +35227,7 @@
    "answerIndex": 0,
    "answer": "Cerca altre fonti e le confronta",
    "explanation": "Lo storico non si fida di un racconto solo: cerca altre fonti e le confronta per capire com'è andata davvero.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_3;metodo_storico_fonti;primaria",
    "tags": [
     "storia",
@@ -35260,7 +35260,7 @@
    "answerIndex": 1,
    "answer": "La scrittura",
    "explanation": "Con la scrittura gli uomini hanno cominciato a lasciare documenti scritti: lì finisce la preistoria e comincia la storia.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_4;fonti_linea_antiche_civilta;primaria",
    "tags": [
     "storia",
@@ -35293,7 +35293,7 @@
    "answerIndex": 2,
    "answer": "Un vaso antico",
    "explanation": "Le fonti materiali sono oggetti usati nel passato, come un vaso. La lettera è una fonte scritta, il racconto è orale, la fotografia è visiva.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_3;metodo_storico_fonti;primaria",
    "tags": [
     "storia",
@@ -35326,7 +35326,7 @@
    "answerIndex": 3,
    "answer": "Il treno",
    "explanation": "I treni viaggiavano già più di cento anni fa. Cellulare, computer e tablet sono stati inventati molto dopo.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_3;metodo_storico_fonti;primaria",
    "tags": [
     "storia",
@@ -35359,7 +35359,7 @@
    "answerIndex": 0,
    "answer": "Paleolitico, Neolitico, età dei metalli",
    "explanation": "Prima viene il Paleolitico, l'età della pietra antica, poi il Neolitico, l'età della pietra nuova. Solo dopo gli uomini impararono a lavorare i metalli.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_3;preistoria_neolitico_metalli;primaria",
    "tags": [
     "storia",
@@ -35392,7 +35392,7 @@
    "answerIndex": 1,
    "answer": "La sua carta d'identità",
    "explanation": "Sulla carta d'identità la data di nascita è scritta in modo ufficiale. I ricordi e i racconti invece possono sbagliare.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_3;metodo_storico_fonti;primaria",
    "tags": [
     "storia",
@@ -35425,7 +35425,7 @@
    "answerIndex": 2,
    "answer": "I Sumeri",
    "explanation": "I Sumeri, in Mesopotamia, incidevano segni a forma di cuneo su tavolette di argilla: è la scrittura cuneiforme.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_4;mesopotamia;primaria",
    "tags": [
     "storia",
@@ -35458,7 +35458,7 @@
    "answerIndex": 3,
    "answer": "476 d.C.",
    "explanation": "Nel 476 d.C. fu deposto l'ultimo imperatore, Romolo Augustolo: così finì l'Impero romano d'Occidente.",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_5;roma_impero_cristianesimo_fine;primaria",
    "tags": [
     "storia",
