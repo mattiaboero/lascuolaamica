@@ -1,5 +1,5 @@
 # Rapporto copertura curricolare
-Data generazione: 19/09/2026, 18:26:19
+Data generazione: 10/10/2026, 06:11:44
 Soglia minima: 15 domande per (subarea × classe)
 ---
 
@@ -42,14 +42,16 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 ## PROBLEMI
 Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 |-----------------------|-------|-------|-------|-------|-------|--------|
-| addizione              | 0     | 21    | 5  ⚠️  | 12 ⚠️  | 11 ⚠️  | 49   
-| divisione              | 0     | 0     | 4  ⚠️  | 17    | 16    | 37   
-| due_operazioni         | 0     | 0     | 10 ⚠️  | 38    | 41    | 89   
-| euro_denaro            | 0     | 12 ⚠️  | 68    | 142    | 127    | 349  
-| frazioni               | 0     | 2  ⚠️  | 2  ⚠️  | 25    | 23    | 52   
-| misure                 | 0     | 231    | 184    | 139    | 105    | 659  
-| moltiplicazione        | 0     | 3  ⚠️  | 3  ⚠️  | 18    | 39    | 63   
-| tempo                  | 0     | 11 ⚠️  | 1  ⚠️  | 11 ⚠️  | 40    | 63   
+| addizione              | 0     | 99    | 28    | 12 ⚠️  | 6  ⚠️  | 145  
+| divisione              | 0     | 5  ⚠️  | 86    | 15    | 11 ⚠️  | 117  
+| due_operazioni         | 0     | 0     | 14 ⚠️  | 38    | 61    | 113  
+| euro_denaro            | 0     | 12 ⚠️  | 45    | 144    | 70    | 271  
+| frazioni               | 0     | 4  ⚠️  | 3  ⚠️  | 90    | 26    | 123  
+| misure                 | 0     | 14 ⚠️  | 19    | 68    | 107    | 208  
+| moltiplicazione        | 0     | 68    | 48    | 19    | 13 ⚠️  | 148  
+| percentuali            | 0     | 0     | 0     | 0     | 93    | 93   
+| sottrazione            | 0     | 73    | 30    | 2  ⚠️  | 1  ⚠️  | 106  
+| tempo                  | 0     | 5  ⚠️  | 4  ⚠️  | 14 ⚠️  | 14 ⚠️  | 37   
 | TOTAL                   |        |        |        |        |        | 1361  
 
 ## ITALIANO
@@ -77,8 +79,7 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 | comprensione_in_contesto| 0     | 25    | 39    | 42    | 107    | 213  
 | days_months_seasons    | 0     | 0     | 11 ⚠️  | 0     | 0     | 11   
 | frasi_semplici         | 0     | 38    | 141    | 25    | 19    | 223  
-| future_going_to        | 0     | 0     | 0     | 0     | 21    | 21   
-| futuro_will            | 0     | 0     | 0     | 0     | 1  ⚠️  | 1    
+| future_going_to        | 0     | 0     | 0     | 0     | 22    | 22   
 | lessico_base           | 0     | 167    | 42    | 24    | 20    | 253  
 | preposizioni           | 0     | 0     | 0     | 22    | 0     | 22   
 | present_continuous     | 0     | 0     | 0     | 28    | 0     | 28   
@@ -300,7 +301,7 @@ Subarea                   | c1     | c2     | c3     | c4     | c5     | Total
 
 Subject         | Subarea                   | Classe | Domande
 ----------------------------------------------------------------------
-problemi        | tempo                     | c3    | 1
+problemi        | sottrazione               | c5    | 1
 inglese         | bonus_easy                | c2    | 1
 inglese         | bonus_easy                | c3    | 1
 inglese         | bonus_easy                | c4    | 1
@@ -308,7 +309,6 @@ inglese         | bonus_hard                | c4    | 1
 inglese         | bonus_medium              | c3    | 1
 inglese         | bonus_medium              | c4    | 1
 inglese         | bonus_medium              | c5    | 1
-inglese         | futuro_will               | c5    | 1
 geografia       | legenda                   | c5    | 1
 geografia       | percorsi                  | c5    | 1
 storia          | fonti                     | c5    | 1
@@ -335,8 +335,7 @@ scienze         | trasformazioni_ed_esperimenti | c5    | 1
 scienze         | tutela_ambientale         | c2    | 1
 scienze         | tutela_ambientale         | c5    | 1
 scienze         | viventi_e_non_viventi     | c4    | 1
-problemi        | frazioni                  | c2    | 2
-problemi        | frazioni                  | c3    | 2
+problemi        | sottrazione               | c4    | 2
 inglese         | bonus_hard                | c5    | 2
 geografia       | clima                     | c2    | 2
 geografia       | clima                     | c3    | 2
@@ -368,8 +367,7 @@ scienze         | sostenibilita_e_osservazione | c3    | 2
 scienze         | tecnologia_applicata      | c2    | 2
 scienze         | terra_e_movimenti         | c2    | 2
 scienze         | terra_e_movimenti         | c3    | 2
-problemi        | moltiplicazione           | c2    | 3
-problemi        | moltiplicazione           | c3    | 3
+problemi        | frazioni                  | c3    | 3
 geografia       | acque                     | c2    | 3
 geografia       | acque                     | c3    | 3
 geografia       | acque                     | c4    | 3
@@ -383,7 +381,8 @@ storia          | cronologia                | c3    | 3
 storia          | metodo                    | c2    | 3
 storia          | passato_presente          | c2    | 3
 scienze         | metodo_e_classificazione  | c5    | 3
-problemi        | divisione                 | c3    | 4
+problemi        | frazioni                  | c2    | 4
+problemi        | tempo                     | c3    | 4
 geografia       | elementi_naturali         | c2    | 4
 geografia       | italia_regioni            | c4    | 4
 geografia       | italia_regioni            | c5    | 4
@@ -401,7 +400,8 @@ storia          | periodizzazione           | c3    | 4
 storia          | prima_dopo                | c2    | 4
 scienze         | alimentazione             | c2    | 4
 scienze         | ipotesi_esperimento_conclusioni | c3    | 4
-problemi        | addizione                 | c3    | 5
+problemi        | divisione                 | c2    | 5
+problemi        | tempo                     | c2    | 5
 civica          | mezzi_e_mobilita          | c5    | 5
 civica          | natura_e_biodiversita     | c5    | 5
 civica          | partecipazione_e_solidarieta | c2    | 5
@@ -419,6 +419,7 @@ storia          | approfondimenti           | c5    | 5
 storia          | confronti_e_lessico       | c5    | 5
 scienze         | tecnologia_applicata      | c4    | 5
 matematica      | figure                    | c4    | 6
+problemi        | addizione                 | c5    | 6
 civica          | costituzione_e_istituzioni | c2    | 6
 geografia       | ambienti_acquatici        | c3    | 6
 geografia       | collina                   | c3    | 6
@@ -459,7 +460,6 @@ storia          | cambiamenti_e_cause       | c2    | 9
 storia          | confronti_e_sintesi       | c3    | 9
 storia          | storia_personale          | c2    | 9
 scienze         | osservazione_e_dati       | c3    | 9
-problemi        | due_operazioni            | c3    | 10
 civica          | diritti_e_doveri          | c3    | 10
 civica          | gentilezza_in_strada      | c4    | 10
 civica          | mezzi_e_mobilita          | c3    | 10
@@ -510,9 +510,7 @@ scienze         | stati_proprieta_materia   | c5    | 10
 scienze         | trasformazioni_ed_esperimenti | c3    | 10
 scienze         | trasformazioni_ed_esperimenti | c4    | 10
 matematica      | colonna                   | c2    | 11
-problemi        | addizione                 | c5    | 11
-problemi        | tempo                     | c2    | 11
-problemi        | tempo                     | c4    | 11
+problemi        | divisione                 | c5    | 11
 inglese         | days_months_seasons       | c3    | 11
 civica          | pedoni_e_attraversamento  | c3    | 11
 geografia       | italia_in_europa          | c5    | 11
@@ -551,6 +549,7 @@ scienze         | terra_e_movimenti         | c5    | 12
 matematica      | dati_probabilita          | c2    | 13
 matematica      | diagramma_flusso          | c3    | 13
 matematica      | linee                     | c2    | 13
+problemi        | moltiplicazione           | c5    | 13
 geografia       | percorsi                  | c2    | 13
 geografia       | punti_cardinali           | c2    | 13
 storia          | civilta                   | c3    | 13
@@ -561,6 +560,10 @@ storia          | sumeri                    | c4    | 13
 scienze         | aria_acqua_suolo          | c4    | 13
 scienze         | luce_e_suono              | c5    | 13
 scienze         | piante                    | c3    | 13
+problemi        | due_operazioni            | c3    | 14
+problemi        | misure                    | c2    | 14
+problemi        | tempo                     | c4    | 14
+problemi        | tempo                     | c5    | 14
 civica          | partecipazione_e_solidarieta | c5    | 14
 geografia       | riferimenti_e_punti_cardinali | c2    | 14
 storia          | civilta_fluviali          | c3    | 14
@@ -570,98 +573,98 @@ scienze         | forze_e_movimento         | c5    | 14
 scienze         | sensi                     | c2    | 14
 scienze         | sistema_solare            | c4    | 14
 
-Totale celle sotto soglia: 269
+Totale celle sotto soglia: 271
 ## Copertura per argomento (matematica)
 
 Argomento                                | Classe | Domande | Stato
 ----------------------------------------------------------------------
-c1-numeri-entro-20                       | c1     | 50      | coperto
-c1-decine-unita                          | c1     | 20      | coperto
+c1-numeri-entro-20                       | c1     | 42      | coperto
+c1-decine-unita                          | c1     | 19      | coperto
 c1-addizione-sottrazione                 | c1     | 60      | coperto
-c1-problemi                              | c1     | 25      | coperto
+c1-problemi                              | c1     | 24      | coperto
 c1-posizioni                             | c1     | 20      | coperto
 c1-percorsi                              | c1     | 15      | coperto
 c1-figure-piane                          | c1     | 20      | coperto
 c1-linee-regioni                         | c1     | 15      | coperto
 c1-confronto-misure                      | c1     | 15      | coperto
-c1-ritmi                                 | c1     | 20      | coperto
-c1-classificazione                       | c1     | 15      | coperto
+c1-ritmi                                 | c1     | 13      | coperto
+c1-classificazione                       | c1     | 13      | coperto
 c1-ideogramma                            | c1     | 15      | coperto
-c2-proprieta-commutativa-addizione       | c2     | 12      | coperto
-c2-numeri-31-99                          | c2     | 12      | coperto
-c2-addizione-tre-addendi                 | c2     | 13      | coperto
-c2-linee                                 | c2     | 14      | coperto
-c2-raggruppamento-secondo-ordine         | c2     | 12      | coperto
-c2-cento-centinaia                       | c2     | 14      | coperto
-c2-moltiplicazione                       | c2     | 112     | coperto
-c2-moltiplicazione-prodotto-cartesiano   | c2     | 12      | coperto
-c2-schieramenti-reticoli                 | c2     | 17      | coperto
-c2-tabelline                             | c2     | 82      | coperto
-c2-moltiplicazioni-colonna               | c2     | 12      | coperto
-c2-proprieta-commutativa-moltiplicazione | c2     | 12      | coperto
-c2-tavola-pitagorica                     | c2     | 12      | coperto
-c2-divisione                             | c2     | 29      | coperto
-c2-divisioni-colonna                     | c2     | 12      | coperto
-c2-divisioni-due-cifre                   | c2     | 16      | coperto
-c2-indagine-statistica                   | c2     | 12      | coperto
+c2-proprieta-commutativa-addizione       | c2     | 8       | debole
+c2-numeri-31-99                          | c2     | 9       | debole
+c2-addizione-tre-addendi                 | c2     | 11      | coperto
+c2-linee                                 | c2     | 17      | coperto
+c2-raggruppamento-secondo-ordine         | c2     | 7       | debole
+c2-cento-centinaia                       | c2     | 11      | coperto
+c2-moltiplicazione                       | c2     | 108     | coperto
+c2-moltiplicazione-prodotto-cartesiano   | c2     | 8       | debole
+c2-schieramenti-reticoli                 | c2     | 9       | debole
+c2-tabelline                             | c2     | 80      | coperto
+c2-moltiplicazioni-colonna               | c2     | 10      | coperto
+c2-proprieta-commutativa-moltiplicazione | c2     | 7       | debole
+c2-tavola-pitagorica                     | c2     | 11      | coperto
+c2-divisione                             | c2     | 23      | coperto
+c2-divisioni-colonna                     | c2     | 0       | manca
+c2-divisioni-due-cifre                   | c2     | 13      | coperto
+c2-indagine-statistica                   | c2     | 3       | debole
 c2-orologio-lancette                     | c2     | 25      | coperto
-c2-punto-retta-piano                     | c2     | 12      | coperto
-c2-rette-semirette-segmenti              | c2     | 25      | coperto
-c2-confronto-segmenti                    | c2     | 12      | coperto
-c3-proprieta-associativa-addizione       | c3     | 12      | coperto
+c2-punto-retta-piano                     | c2     | 3       | debole
+c2-rette-semirette-segmenti              | c2     | 26      | coperto
+c2-confronto-segmenti                    | c2     | 6       | debole
+c3-proprieta-associativa-addizione       | c3     | 11      | coperto
 c3-proprieta-dissociativa-addizione      | c3     | 12      | coperto
-c3-proprieta-invariantiva-sottrazione    | c3     | 12      | coperto
+c3-proprieta-invariantiva-sottrazione    | c3     | 9       | debole
 c3-proprieta-associativa-moltiplicazione | c3     | 12      | coperto
-c3-proprieta-dissociativa-moltiplicazione | c3     | 13      | coperto
-c3-proprieta-invariantiva-divisione      | c3     | 12      | coperto
+c3-proprieta-dissociativa-moltiplicazione | c3     | 14      | coperto
+c3-proprieta-invariantiva-divisione      | c3     | 9       | debole
 c3-proprieta-distributiva                | c3     | 12      | coperto
-c3-prova-del-nove                        | c3     | 12      | coperto
-c3-angoli-direzione-rotazione            | c3     | 11      | coperto
-c3-confronto-angoli                      | c3     | 13      | coperto
-c3-angolo-concavo-convesso               | c3     | 15      | coperto
-c3-angoli-notevoli                       | c3     | 38      | coperto
-c3-posizione-rette-piano                 | c3     | 15      | coperto
+c3-prova-del-nove                        | c3     | 7       | debole
+c3-angoli-direzione-rotazione            | c3     | 1       | debole
+c3-confronto-angoli                      | c3     | 5       | debole
+c3-angolo-concavo-convesso               | c3     | 11      | coperto
+c3-angoli-notevoli                       | c3     | 33      | coperto
+c3-posizione-rette-piano                 | c3     | 11      | coperto
 c3-poligoni                              | c3     | 19      | coperto
-c3-diagramma-di-flusso                   | c3     | 12      | coperto
-c4-numero-mille-migliaia                 | c4     | 15      | coperto
-c4-multipli                              | c4     | 23      | coperto
+c3-diagramma-di-flusso                   | c3     | 13      | coperto
+c4-numero-mille-migliaia                 | c4     | 13      | coperto
+c4-multipli                              | c4     | 18      | coperto
 c4-divisori                              | c4     | 20      | coperto
-c4-numeri-primi-composti                 | c4     | 23      | coperto
-c4-crivello-eratostene                   | c4     | 12      | coperto
-c4-scomposizione-albero                  | c4     | 12      | coperto
+c4-numeri-primi-composti                 | c4     | 15      | coperto
+c4-crivello-eratostene                   | c4     | 8       | debole
+c4-scomposizione-albero                  | c4     | 0       | manca
 c4-frazioni-concetto                     | c4     | 17      | coperto
-c4-frazioni-unitarie                     | c4     | 12      | coperto
+c4-frazioni-unitarie                     | c4     | 11      | coperto
 c4-frazione-di-un-numero                 | c4     | 21      | coperto
-c4-classificazione-frazioni              | c4     | 19      | coperto
-c4-numeri-misti                          | c4     | 12      | coperto
-c4-frazioni-complementari                | c4     | 12      | coperto
-c4-frazioni-equivalenti                  | c4     | 19      | coperto
-c4-confronto-frazioni                    | c4     | 15      | coperto
-c4-decimi-centesimi-millesimi            | c4     | 21      | coperto
-c4-addizione-decimali                    | c4     | 17      | coperto
-c4-sottrazione-decimali                  | c4     | 17      | coperto
+c4-classificazione-frazioni              | c4     | 18      | coperto
+c4-numeri-misti                          | c4     | 9       | debole
+c4-frazioni-complementari                | c4     | 5       | debole
+c4-frazioni-equivalenti                  | c4     | 18      | coperto
+c4-confronto-frazioni                    | c4     | 13      | coperto
+c4-decimi-centesimi-millesimi            | c4     | 22      | coperto
+c4-addizione-decimali                    | c4     | 19      | coperto
+c4-sottrazione-decimali                  | c4     | 19      | coperto
 c4-moltiplicazione-virgola               | c4     | 12      | coperto
 c4-divisione-virgola                     | c4     | 12      | coperto
-c4-unita-di-misura                       | c4     | 10      | coperto
-c4-misure-lunghezza                      | c4     | 65      | coperto
-c4-misure-massa-peso                     | c4     | 63      | coperto
-c4-misure-capacita                       | c4     | 27      | coperto
-c4-equivalenze                           | c4     | 22      | coperto
-c4-misure-angoli-gradi                   | c4     | 19      | coperto
-c4-goniometro                            | c4     | 15      | coperto
+c4-unita-di-misura                       | c4     | 8       | debole
+c4-misure-lunghezza                      | c4     | 69      | coperto
+c4-misure-massa-peso                     | c4     | 71      | coperto
+c4-misure-capacita                       | c4     | 37      | coperto
+c4-equivalenze                           | c4     | 20      | coperto
+c4-misure-angoli-gradi                   | c4     | 18      | coperto
+c4-goniometro                            | c4     | 13      | coperto
 c4-perimetro-poligono                    | c4     | 45      | coperto
 c5-milioni-miliardi                      | c5     | 15      | coperto
-c5-numeri-relativi                       | c5     | 36      | coperto
-c5-confronto-numeri-relativi             | c5     | 12      | coperto
+c5-numeri-relativi                       | c5     | 31      | coperto
+c5-confronto-numeri-relativi             | c5     | 11      | coperto
 c5-addizione-numeri-relativi             | c5     | 13      | coperto
 c5-elevamento-a-potenza                  | c5     | 15      | coperto
-c5-proposizioni-connettivi-logici        | c5     | 12      | coperto
-c5-classificazione-triangoli             | c5     | 17      | coperto
+c5-proposizioni-connettivi-logici        | c5     | 11      | coperto
+c5-classificazione-triangoli             | c5     | 16      | coperto
 c5-basi-altezze-triangolo                | c5     | 13      | coperto
-c5-classificazione-quadrilateri          | c5     | 38      | coperto
-c5-misure-di-superficie                  | c5     | 41      | coperto
+c5-classificazione-quadrilateri          | c5     | 37      | coperto
+c5-misure-di-superficie                  | c5     | 91      | coperto
 c5-equivalenze-superficie                | c5     | 15      | coperto
-c5-area-poligoni                         | c5     | 80      | coperto
+c5-area-poligoni                         | c5     | 79      | coperto
 c5-circonferenza-cerchio                 | c5     | 13      | coperto
 c5-solidi-classificazione                | c5     | 35      | coperto
 
