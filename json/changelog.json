@@ -1,5 +1,13 @@
 [
  {
+  "date": "10 ottobre 2026 · Release 4.21.16",
+  "items": [
+   "Se le domande di una materia non si caricano, per esempio senza connessione, il quiz ora lo dice e chiede di riprovare.",
+   "Prima, in quel caso, la partita cominciava lo stesso con poche vecchie domande di riserva, che non erano passate dalla revisione di ottobre. Le abbiamo tolte da tutte le otto materie.",
+   "Negli avvisi con il titolo lungo, sul telefono, il titolo non finisce più sotto il pulsante di chiusura."
+  ]
+ },
+ {
   "date": "9 ottobre 2026 · Release 4.21.11 – 4.21.15",
   "items": [
    "Inglese: tutte le domande, dalla 2ª alla 5ª, sono state rilette una per una. 770 riscritte, 78 tolte. Le spiegazioni ora sono in italiano.",
