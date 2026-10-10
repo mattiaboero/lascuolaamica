@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "scienze",
- "totalQuestions": 1036,
+ "totalQuestions": 1040,
  "questions": [
   {
    "id": "sci-2-viventi-001",
@@ -32227,6 +32227,138 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "hard"
+  },
+  {
+   "id": "sci-bonus-hard-005",
+   "subject": "scienze",
+   "sourceSubject": "scienze",
+   "class": 2,
+   "area": "materia_materiali_trasformazioni",
+   "subarea": "ciclo_acqua",
+   "difficulty": 3,
+   "question": "Stendi i panni bagnati al sole e dopo un po' sono asciutti. Dov'è andata l'acqua?",
+   "options": [
+    "È entrata nei panni",
+    "È caduta tutta a terra",
+    "È diventata ghiaccio",
+    "È salita nell'aria"
+   ],
+   "answerIndex": 3,
+   "answer": "È salita nell'aria",
+   "explanation": "Con il calore del sole l'acqua dei panni evapora: diventa vapore e sale nell'aria, anche se non la vedi.",
+   "active": true,
+   "tag": "scienze;bonus;classe_2;materia_materiali_trasformazioni;primaria",
+   "tags": [
+    "scienze",
+    "bonus",
+    "classe_2",
+    "materia_materiali_trasformazioni",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "scienze_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "sci-bonus-hard-006",
+   "subject": "scienze",
+   "sourceSubject": "scienze",
+   "class": 3,
+   "area": "viventi_ambiente",
+   "subarea": "adattamenti_e_ambiente",
+   "difficulty": 3,
+   "question": "Perché l'orso polare ha uno spesso strato di grasso sotto la pelle?",
+   "options": [
+    "Per nuotare più veloce",
+    "Per ripararsi dal freddo",
+    "Per sembrare più grande",
+    "Per nascondersi sulla neve"
+   ],
+   "answerIndex": 1,
+   "answer": "Per ripararsi dal freddo",
+   "explanation": "Il grasso sotto la pelle trattiene il calore del corpo: così l'orso polare resta caldo anche tra i ghiacci.",
+   "active": true,
+   "tag": "scienze;bonus;classe_3;viventi_ambiente;primaria",
+   "tags": [
+    "scienze",
+    "bonus",
+    "classe_3",
+    "viventi_ambiente",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "scienze_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
+  },
+  {
+   "id": "sci-bonus-medium-005",
+   "subject": "scienze",
+   "sourceSubject": "scienze",
+   "class": 2,
+   "area": "viventi_non_viventi",
+   "subarea": "viventi_e_non_viventi",
+   "difficulty": 2,
+   "question": "Quale di queste cose che si muovono è un essere vivente?",
+   "options": [
+    "La nuvola",
+    "Il fiume",
+    "La lumaca",
+    "La trottola"
+   ],
+   "answerIndex": 2,
+   "answer": "La lumaca",
+   "explanation": "La lumaca nasce, mangia, cresce e muore: è un essere vivente. La nuvola, il fiume e la trottola si muovono, ma non sono vivi.",
+   "active": true,
+   "tag": "scienze;bonus;classe_2;viventi_non_viventi;primaria",
+   "tags": [
+    "scienze",
+    "bonus",
+    "classe_2",
+    "viventi_non_viventi",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "scienze_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
+  },
+  {
+   "id": "sci-bonus-medium-006",
+   "subject": "scienze",
+   "sourceSubject": "scienze",
+   "class": 3,
+   "area": "viventi_biologia",
+   "subarea": "animali",
+   "difficulty": 2,
+   "question": "Quale di questi animali è un insetto?",
+   "options": [
+    "Il ragno",
+    "Il lombrico",
+    "La lumaca",
+    "La formica"
+   ],
+   "answerIndex": 3,
+   "answer": "La formica",
+   "explanation": "La formica ha sei zampe, come tutti gli insetti. Il ragno ne ha otto: non è un insetto.",
+   "active": true,
+   "tag": "scienze;bonus;classe_3;viventi_biologia;primaria",
+   "tags": [
+    "scienze",
+    "bonus",
+    "classe_3",
+    "viventi_biologia",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "scienze_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
   }
  ],
  "stats": {
