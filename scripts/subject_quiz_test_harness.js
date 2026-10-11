@@ -543,7 +543,11 @@ async function waitForCfg(page) {
   await page.waitForFunction(() => {
     const cfg = window.SA && window.SA.subjectConfig;
     return !!(cfg && cfg.banks && Object.keys(cfg.banks).length);
-  }, { timeout: 15000 });
+    // Il secondo argomento di waitForFunction e' `arg`: le opzioni vanno al
+    // terzo posto. Qui c'era `{ timeout: 15000 }` al secondo, quindi valeva il
+    // default di 30 s. Resta 30 s, ma scritto: il dataset arriva di solito in
+    // 1-4 s, con la macchina carica si sono visti 10,8 s (matematica).
+  }, null, { timeout: 30000 });
 }
 
 async function getConfigMaps(page) {
