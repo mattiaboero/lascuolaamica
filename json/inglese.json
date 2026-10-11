@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
  "subject": "inglese",
- "totalQuestions": 1096,
+ "totalQuestions": 1098,
  "questions": [
   {
    "id": "eng-2-colori-001",
@@ -36178,6 +36178,74 @@
    "bonus": true,
    "bonusRaw": "hard",
    "answerLang": "it"
+  },
+  {
+   "id": "eng-bonus-medium-004",
+   "subject": "inglese",
+   "sourceSubject": "inglese",
+   "class": 2,
+   "area": "numeri",
+   "subarea": "bonus_medium",
+   "difficulty": 2,
+   "question": "Come si dice 'cinque' in inglese?",
+   "options": [
+    "four",
+    "five",
+    "six",
+    "nine"
+   ],
+   "answerIndex": 1,
+   "answer": "five",
+   "explanation": "'Five' vuol dire cinque. 'Four' è quattro, 'six' è sei e 'nine' è nove.",
+   "active": true,
+   "tag": "inglese;bonus;classe_2;numeri;primaria",
+   "tags": [
+    "inglese",
+    "bonus",
+    "classe_2",
+    "numeri",
+    "primaria"
+   ],
+   "language": "en",
+   "program": "inglese_bonus_numeri",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium",
+   "answerLang": "en"
+  },
+  {
+   "id": "eng-bonus-easy-004",
+   "subject": "inglese",
+   "sourceSubject": "inglese",
+   "class": 5,
+   "area": "famiglia",
+   "subarea": "bonus_easy",
+   "difficulty": 1,
+   "question": "Come si dice 'madre' in inglese?",
+   "options": [
+    "father",
+    "sister",
+    "mother",
+    "brother"
+   ],
+   "answerIndex": 2,
+   "answer": "mother",
+   "explanation": "'Mother' vuol dire madre. 'Father' è il padre, 'sister' la sorella e 'brother' il fratello.",
+   "active": true,
+   "tag": "inglese;bonus;classe_5;famiglia;primaria",
+   "tags": [
+    "inglese",
+    "bonus",
+    "classe_5",
+    "famiglia",
+    "primaria"
+   ],
+   "language": "en",
+   "program": "inglese_bonus_famiglia",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy",
+   "answerLang": "en"
   }
  ],
  "stats": {

@@ -1,5 +1,13 @@
 [
  {
+  "date": "11 ottobre 2026 · Release 4.21.22",
+  "items": [
+   "Bonus di fine partita: 11 domande nuove. Ora in ogni materia, classe e livello il bonus cambia da una partita all'altra: prima in 11 casi usciva sempre la stessa domanda.",
+   "Civica e problemi: le domande bonus non hanno più «Bonus facile:» scritto davanti. Sei sono state riscritte: avevano risposte che si scartavano a colpo d'occhio o spiegazioni che ripetevano solo il conto.",
+   "Geografia, 2ª: riscritta una domanda bonus in cui due risposte su quattro si potevano scartare senza ragionare."
+  ]
+ },
+ {
   "date": "10 ottobre 2026 · Release 4.21.16 – 4.21.21",
   "items": [
    "Matematica, italiano, storia, geografia, scienze e civica: sotto l'ambito scelto non compaiono più sotto-argomenti che per quella classe non hanno domande. Prima si potevano scegliere e «Inizia!» rispondeva che le domande non si caricavano.",

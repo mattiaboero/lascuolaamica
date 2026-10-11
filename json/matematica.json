@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "matematica",
- "totalQuestions": 3095,
+ "totalQuestions": 3097,
  "questions": [
   {
    "id": "mat-2-tabelline-001",
@@ -99726,6 +99726,72 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "easy"
+  },
+  {
+   "id": "mat-bonus-medium-008",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 2,
+   "question": "Quanto fa 12 - 4?",
+   "options": [
+    "16",
+    "8",
+    "6",
+    "9"
+   ],
+   "answerIndex": 1,
+   "answer": "8",
+   "explanation": "Togli prima 2: 12 - 2 = 10. Poi togli altri 2: 10 - 2 = 8.",
+   "active": true,
+   "tag": "matematica;bonus;classe_1;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_1",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
+  },
+  {
+   "id": "mat-bonus-hard-008",
+   "subject": "matematica",
+   "sourceSubject": "matematica",
+   "class": 1,
+   "area": "aritmetica",
+   "subarea": "operazioni",
+   "difficulty": 3,
+   "question": "Quanto fa 9 + 8?",
+   "options": [
+    "1",
+    "16",
+    "19",
+    "17"
+   ],
+   "answerIndex": 3,
+   "answer": "17",
+   "explanation": "Arriva prima a 10: 9 + 1 = 10. Poi aggiungi gli altri 7: 10 + 7 = 17.",
+   "active": true,
+   "tag": "matematica;bonus;classe_1;aritmetica;primaria",
+   "tags": [
+    "matematica",
+    "bonus",
+    "classe_1",
+    "aritmetica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "matematica_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "hard"
   }
  ],
  "stats": {

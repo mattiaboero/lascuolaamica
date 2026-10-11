@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "storia",
- "totalQuestions": 1134,
+ "totalQuestions": 1135,
  "questions": [
   {
    "id": "sto-2-tempo_strumenti-001",
@@ -35538,6 +35538,39 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "easy"
+  },
+  {
+   "id": "sto-bonus-medium-005",
+   "subject": "storia",
+   "sourceSubject": "storia",
+   "class": 5,
+   "area": "roma_repubblica",
+   "subarea": "sintesi_e_confronti",
+   "difficulty": 2,
+   "question": "Quale elenco mette in ordine di tempo i tre periodi della storia di Roma?",
+   "options": [
+    "Repubblica, monarchia, impero",
+    "Monarchia, impero, repubblica",
+    "Monarchia, repubblica, impero",
+    "Impero, monarchia, repubblica"
+   ],
+   "answerIndex": 2,
+   "answer": "Monarchia, repubblica, impero",
+   "explanation": "Roma fu prima governata dai re (monarchia), poi dai consoli (repubblica) e infine dagli imperatori (impero).",
+   "active": true,
+   "tag": "storia;bonus;classe_5;roma_repubblica;primaria",
+   "tags": [
+    "storia",
+    "bonus",
+    "classe_5",
+    "roma_repubblica",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "storia_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
   }
  ],
  "stats": {

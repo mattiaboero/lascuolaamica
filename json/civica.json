@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
  "subject": "civica",
- "totalQuestions": 1123,
+ "totalQuestions": 1125,
  "questions": [
   {
    "id": "civ-2-cost-001",
@@ -30732,7 +30732,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "costituzione_e_istituzioni",
    "difficulty": 1,
-   "question": "Bonus facile: quali sono i colori della bandiera italiana?",
+   "question": "Quali sono i colori della bandiera italiana?",
    "options": [
     "Verde, bianco e rosso",
     "Blu, bianco e rosso",
@@ -30765,16 +30765,16 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 1,
-   "question": "Bonus facile: il semaforo pedonale è rosso. Che cosa fai?",
+   "question": "Il semaforo pedonale è rosso. Che cosa fai?",
    "options": [
     "Corro",
     "Mi fermo e aspetto",
     "Passo se ho fretta",
-    "Guardo il telefono e passo"
+    "Passo se non vedo auto"
    ],
    "answerIndex": 1,
    "answer": "Mi fermo e aspetto",
-   "explanation": "Il rosso pedonale significa che in quel momento passano i veicoli. Fermarsi e aspettare il verde è l'unico comportamento che chi guida si aspetta da te.",
+   "explanation": "Con il rosso passano le auto, e una può arrivare anche quando la strada sembra vuota. Per questo ti fermi e aspetti il verde.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -30798,7 +30798,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 1,
-   "question": "Bonus facile: hai finito lo shampoo. Dove butti il flacone vuoto?",
+   "question": "Hai finito lo shampoo. Dove butti il flacone vuoto?",
    "options": [
     "Nel vetro",
     "Nell'indifferenziato",
@@ -30831,7 +30831,7 @@
    "area": "cittadinanza_digitale_online",
    "subarea": "privacy_e_dati",
    "difficulty": 2,
-   "question": "Bonus medio: in un gioco online uno sconosciuto ti chiede una tua foto. Che cosa fai?",
+   "question": "In un gioco online uno sconosciuto ti chiede una tua foto. Che cosa fai?",
    "options": [
     "Mando una foto dove mi si vede poco",
     "Prima gli chiedo come si chiama",
@@ -30864,7 +30864,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "risorse_ed_energia",
    "difficulty": 2,
-   "question": "Bonus medio: quale di queste scelte fa risparmiare acqua?",
+   "question": "Quale di queste scelte fa risparmiare acqua?",
    "options": [
     "Lavarsi le mani a lungo con l'acqua fredda",
     "Annaffiare le piante nelle ore più calde",
@@ -30897,7 +30897,7 @@
    "area": "costituzione_regole_comunita",
    "subarea": "diritti_e_doveri",
    "difficulty": 2,
-   "question": "Bonus medio: cosa significa diritto allo studio?",
+   "question": "Cosa significa diritto allo studio?",
    "options": [
     "Tutti i bambini possono andare a scuola",
     "Ogni bambino sceglie quali materie studiare",
@@ -30963,7 +30963,7 @@
    "area": "ambiente_rispetto_terra",
    "subarea": "rifiuti_e_riciclo",
    "difficulty": 3,
-   "question": "Bonus difficile: al parco finisci la merenda, ma il cestino è pieno. Che cosa fai con la carta?",
+   "question": "Al parco finisci la merenda, ma il cestino è pieno. Che cosa fai con la carta?",
    "options": [
     "La tengo nello zaino e la butto a casa",
     "La appoggio per terra accanto al cestino",
@@ -30996,16 +30996,16 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "Bonus difficile: all'uscita da scuola il gruppo attraversa sulle strisce con il semaforo pedonale rosso. Cosa scegli?",
+   "question": "All'uscita da scuola il gruppo attraversa sulle strisce con il semaforo pedonale rosso. Che cosa fai?",
    "options": [
-    "Seguo il gruppo senza guardare",
-    "Aspetto il verde e attraverso con attenzione",
-    "Attraverso correndo col telefono in mano",
-    "Passo in diagonale dove non ci sono strisce"
+    "Seguo il gruppo, ma guardo bene a destra e a sinistra",
+    "Aspetto il verde, anche se il gruppo si allontana",
+    "Attraverso solo se in quel momento non arrivano auto",
+    "Attraverso in fretta per non restare indietro"
    ],
    "answerIndex": 1,
-   "answer": "Aspetto il verde e attraverso con attenzione",
-   "explanation": "Attraversare col rosso perché lo fanno gli altri non lo rende sicuro: le auto hanno via libera e non si aspettano nessuno. Aspettare il verde vale anche quando il gruppo va avanti.",
+   "answer": "Aspetto il verde, anche se il gruppo si allontana",
+   "explanation": "Con il rosso pedonale le auto hanno il verde e non si aspettano nessuno sulle strisce: guardare bene non basta. Si aspetta il verde anche quando gli altri sono già passati.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -35950,6 +35950,72 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "hard"
+  },
+  {
+   "id": "civ-bonus-medium-004",
+   "subject": "civica",
+   "sourceSubject": "educazione civica",
+   "class": 2,
+   "area": "ambiente_rispetto_terra",
+   "subarea": "natura_e_biodiversita",
+   "difficulty": 2,
+   "question": "Al parco trovi un nido con delle uova. Che cosa fai?",
+   "options": [
+    "Lo guardo senza toccarlo",
+    "Prendo un uovo per guardarlo",
+    "Sposto il nido più in basso",
+    "Lo porto a casa mia"
+   ],
+   "answerIndex": 0,
+   "answer": "Lo guardo senza toccarlo",
+   "explanation": "Le uova hanno bisogno dei loro genitori. Se tocchi o sposti il nido, gli uccelli possono abbandonarlo: meglio guardare da lontano.",
+   "active": true,
+   "tag": "educazione_civica;bonus;classe_2;ambiente_rispetto_terra;primaria",
+   "tags": [
+    "educazione_civica",
+    "bonus",
+    "classe_2",
+    "ambiente_rispetto_terra",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "educazione_civica_bonus_ambiente",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
+  },
+  {
+   "id": "civ-bonus-easy-004",
+   "subject": "civica",
+   "sourceSubject": "educazione civica",
+   "class": 5,
+   "area": "costituzione_regole_comunita",
+   "subarea": "costituzione_e_istituzioni",
+   "difficulty": 1,
+   "question": "In che giorno si festeggia la Festa della Repubblica?",
+   "options": [
+    "Il 25 aprile",
+    "Il 1° maggio",
+    "Il 2 giugno",
+    "Il 4 novembre"
+   ],
+   "answerIndex": 2,
+   "answer": "Il 2 giugno",
+   "explanation": "Il 2 giugno 1946 gli italiani scelsero con il voto la Repubblica al posto della monarchia. Per questo il 2 giugno è la Festa della Repubblica.",
+   "active": true,
+   "tag": "educazione_civica;bonus;classe_5;costituzione_regole_comunita;primaria",
+   "tags": [
+    "educazione_civica",
+    "bonus",
+    "classe_5",
+    "costituzione_regole_comunita",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "educazione_civica_bonus_costituzione",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
   }
  ],
  "stats": {

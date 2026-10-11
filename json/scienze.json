@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-04-23T17:29:37Z",
  "subject": "scienze",
- "totalQuestions": 1040,
+ "totalQuestions": 1041,
  "questions": [
   {
    "id": "sci-2-viventi-001",
@@ -32359,6 +32359,39 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "medium"
+  },
+  {
+   "id": "sci-bonus-easy-005",
+   "subject": "scienze",
+   "sourceSubject": "scienze",
+   "class": 4,
+   "area": "astronomia_terra",
+   "subarea": "sistema_solare",
+   "difficulty": 1,
+   "question": "Intorno a che cosa gira la Terra?",
+   "options": [
+    "Al Sole",
+    "Alla Luna",
+    "A Marte",
+    "Alla Stella Polare"
+   ],
+   "answerIndex": 0,
+   "answer": "Al Sole",
+   "explanation": "La Terra è un pianeta e gira intorno al Sole: per fare un giro completo impiega un anno.",
+   "active": true,
+   "tag": "scienze;bonus;classe_4;astronomia_terra;primaria",
+   "tags": [
+    "scienze",
+    "bonus",
+    "classe_4",
+    "astronomia_terra",
+    "primaria"
+   ],
+   "language": "it",
+   "program": "scienze_bonus",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
   }
  ],
  "stats": {
