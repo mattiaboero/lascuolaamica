@@ -1,5 +1,41 @@
 # Changelog Repo
 
+## 4.21.22 - 2026-10-11
+
+**Rifiniture dei bonus: mai una sola domanda, via i prefissi, una
+domanda di geografia riscritta.** Chiude i tre punti lasciati aperti dalla
+4.21.21.
+
+### Added
+- 11 righe `bonus: true` nuove per le combinazioni materia × classe ×
+  livello che avevano una sola riga entro una classe di distanza, dove
+  usciva sempre la stessa domanda: civica 2ª «Medio» e 5ª «Facile»,
+  geografia 5ª «Facile», inglese 2ª «Medio» e 5ª «Facile», matematica 1ª
+  «Medio» e «Difficile», problemi 2ª «Medio» e 5ª «Facile», scienze 5ª
+  «Facile», storia 5ª «Medio». Ora tutte le 99 combinazioni hanno almeno
+  due righe.
+
+### Changed
+- Via il prefisso «Bonus facile:», «Bonus medio:», «Bonus difficile:» da 8
+  bonus di civica e 9 di problemi: il livello lo scrive già `#bonusMeta`.
+  Erano gli ultimi con il prefisso.
+- Sei di quei bonus, riletti senza prefisso, non hanno passato la
+  revisione e sono stati riscritti: `civ-bonus-easy-002`,
+  `civ-bonus-hard-003`, `pro-bonus-easy-001`, `pro-bonus-easy-002`,
+  `pro-bonus-medium-001`, `pro-bonus-medium-002`. Avevano quattro numeri
+  consecutivi come opzioni, spiegazioni che ripetevano solo il conto o
+  distrattori caricaturali. `pro-bonus-medium-002` passa da 9 × 7 a
+  24 × 6: una tabellina era poco per un «Medio» di 4ª.
+- `geo-bonus-hard-005` riscritta: due opzioni su quattro si scartavano
+  leggendo «alza». Ora chiede chi è il secondo di una fila di quattro
+  bambini, con quattro risposte tutte plausibili.
+- Ciclo di revisione (`docs/revisione-domande/CICLO.md`) su tutte e 29 le
+  righe nuove o ritoccate: 23 promosse al primo giro, 6 riscritte da uno
+  scrittore e promosse al secondo giro da lettori nuovi. Nessuna spenta.
+  Rapporto in `reports/revisione-bonus-rifiniture.md`.
+- Domande attive: da 9.915 a 9.926.
+- `docs/classe-prima.md`: i bonus di 1ª sono sei.
+
 ## 4.21.21 - 2026-10-10
 
 **24 bonus nuovi: ogni classe ha un bonus della sua età in ogni livello.**
