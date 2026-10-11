@@ -267,6 +267,7 @@ self.addEventListener('install', event => {
     // All'install la rete c'e' (sw.js e' appena arrivato) e la versione vecchia
     // continua a servire le pagine: e' il momento di riportare le materie.
     await refetchOpenedJson().catch(() => {});
+    await rememberOlderCaches().catch(() => {});
   })());
 });
 
@@ -275,16 +276,20 @@ self.addEventListener('install', event => {
 // ============================================================
 const ACTIVATE_REFETCH_LIMIT_MS = 5000;
 
+// Secondo passaggio per le materie aperte tra install e attivazione (chi ha
+// risposto «Più tardi»): stanno solo nella cache vecchia. Di norma non fa
+// richieste, perche' install ha gia' riportato tutto. Ha un tetto di tempo:
+// finche' activate non finisce le pagine restano in attesa.
+function carryOpenedJson() {
+  return Promise.race([
+    refetchOpenedJson().catch(() => {}),
+    new Promise(resolve => setTimeout(resolve, ACTIVATE_REFETCH_LIMIT_MS))
+  ]);
+}
+
 self.addEventListener('activate', event => {
   event.waitUntil((async () => {
-    // Secondo passaggio per le materie aperte tra install e attivazione (chi ha
-    // risposto «Più tardi»): stanno solo nella cache vecchia. Di norma non fa
-    // richieste, perche' install ha gia' riportato tutto. Finche' activate non
-    // finisce le pagine restano in attesa, da qui il tetto di tempo.
-    await Promise.race([
-      refetchOpenedJson().catch(() => {}),
-      new Promise(resolve => setTimeout(resolve, ACTIVATE_REFETCH_LIMIT_MS))
-    ]);
+    await carryOpenedJson();
 
     const keys = await caches.keys();
     await Promise.all(
@@ -292,9 +297,53 @@ self.addEventListener('activate', event => {
         .filter(key => !KEEP_CACHE_NAMES.includes(key))
         .map(key => caches.delete(key))
     );
+    // Pulizia fatta: la nota per dropOlderCachesOnce non serve piu'.
+    const cache = await caches.open(CACHE_NAME);
+    await cache.delete(OLDER_CACHES_KEY);
     await self.clients.claim();
   })());
 });
+
+// ============================================================
+// PULIZIA FUORI DA ACTIVATE
+// ============================================================
+// Su Safari (visto l'11/10/2026 su iOS 26.5) se l'app viene chiusa mentre un
+// aggiornamento e' in attesa, alla riapertura questo worker e' gia' attivo ma
+// la pulizia di activate non c'e' stata: la cache della versione prima resta
+// li'. Non basta cancellare «tutto cio' che non e' mio» alla prima richiesta:
+// un worker attivo cancellerebbe anche la cache di una versione piu' nuova
+// ancora in attesa. Per questo all'install si annota quali cache esistevano
+// gia', cioe' quelle sicuramente piu' vecchie, e fuori da activate si
+// cancellano solo quelle.
+const OLDER_CACHES_KEY = '/__sw/older-caches';
+
+async function rememberOlderCaches() {
+  const older = (await caches.keys()).filter(key => !KEEP_CACHE_NAMES.includes(key));
+  const cache = await caches.open(CACHE_NAME);
+  await cache.put(OLDER_CACHES_KEY, new Response(JSON.stringify(older)));
+}
+
+// Una volta per vita del worker. Dopo un activate andato a buon fine la nota
+// non c'e' e la funzione costa una lettura di cache.
+let olderCachesDropped = null;
+
+function dropOlderCachesOnce() {
+  if (!olderCachesDropped) {
+    olderCachesDropped = (async () => {
+      const cache = await caches.open(CACHE_NAME);
+      const note = await cache.match(OLDER_CACHES_KEY);
+      if (!note) return;
+      const older = await note.json();
+      const keys = (await caches.keys()).filter(key => older.includes(key));
+      if (keys.length) {
+        await carryOpenedJson();
+        await Promise.all(keys.map(key => caches.delete(key)));
+      }
+      await cache.delete(OLDER_CACHES_KEY);
+    })().catch(() => {});
+  }
+  return olderCachesDropped;
+}
 
 // ============================================================
 // FETCH — strategia per tipo di risorsa
@@ -313,6 +362,11 @@ self.addEventListener('fetch', event => {
   // Ignora richieste cross-origin non necessarie al funzionamento:
   // riduce il rischio di cache pollution e memorizzazioni indesiderate.
   if (!sameOrigin) return;
+
+  // Solo il worker attivo riceve richieste: e' il momento sicuro per togliere
+  // le cache piu' vecchie se activate non l'ha fatto. Non fa aspettare la
+  // risposta.
+  event.waitUntil(dropOlderCachesOnce());
 
   // File HTML locali: Network First con fallback alla cache
   // Così l'utente vede sempre la versione più aggiornata se online,
@@ -340,9 +394,21 @@ self.addEventListener('fetch', event => {
 // STRATEGIE
 // ============================================================
 
+// Cerca solo nelle cache di questa versione. `caches.match(request)` senza
+// nome guarda tutte le cache, dalla piu' vecchia: se ne e' rimasta una di una
+// versione precedente risponde lei, e il sito resta sui file vecchi (vedi
+// «Pulizia fuori da activate»).
+async function matchCurrent(request) {
+  for (const cacheName of KEEP_CACHE_NAMES) {
+    const cached = await caches.match(request, { cacheName });
+    if (cached) return cached;
+  }
+  return undefined;
+}
+
 // Cache First: serve dalla cache, se non c'è va in rete e salva
 async function cacheFirst(request, cacheName = CACHE_NAME) {
-  const cached = await caches.match(request);
+  const cached = await matchCurrent(request);
   if (cached) return cached;
 
   try {
@@ -372,7 +438,7 @@ async function networkFirstWithFallback(request) {
     return response;
   } catch {
     // Prova prima la URL esatta richiesta (es. /storia)
-    let cached = await caches.match(request);
+    let cached = await matchCurrent(request);
     // Se non trovata, prova la variante senza .html (es. /storia.html → /storia)
     if (!cached) {
       const reqUrl = new URL(request.url);
@@ -382,12 +448,12 @@ async function networkFirstWithFallback(request) {
       } else if (cleanPath.endsWith('.html')) {
         cleanPath = cleanPath.slice(0, -5);
       }
-      cached = await caches.match(new URL(cleanPath, self.location.origin).href);
+      cached = await matchCurrent(new URL(cleanPath, self.location.origin).href);
     }
     if (cached) return cached;
 
     // Fallback finale: pagina offline essenziale
-    return caches.match('/');
+    return matchCurrent('/');
   }
 }
 

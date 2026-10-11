@@ -1,10 +1,11 @@
 [
  {
-  "date": "11 ottobre 2026 · Release 4.21.22",
+  "date": "11 ottobre 2026 · Release 4.21.22 – 4.21.23",
   "items": [
    "Bonus di fine partita: 11 domande nuove. Ora in ogni materia, classe e livello il bonus cambia da una partita all'altra: prima in 11 casi usciva sempre la stessa domanda.",
    "Civica e problemi: le domande bonus non hanno più «Bonus facile:» scritto davanti. Sei sono state riscritte: avevano risposte che si scartavano a colpo d'occhio o spiegazioni che ripetevano solo il conto.",
-   "Geografia, 2ª: riscritta una domanda bonus in cui due risposte su quattro si potevano scartare senza ragionare."
+   "Geografia, 2ª: riscritta una domanda bonus in cui due risposte su quattro si potevano scartare senza ragionare.",
+   "iPhone e iPad: se chiudevi Safari senza toccare «Aggiorna ora», il sito poteva restare sulla versione vecchia anche dopo l'aggiornamento. Ora alla riapertura usa sempre quella nuova."
   ]
  },
  {
