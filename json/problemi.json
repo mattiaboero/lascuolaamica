@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "generatedAt": "2026-05-24T16:02:16Z",
  "subject": "problemi",
- "totalQuestions": 1363,
+ "totalQuestions": 1365,
  "questions": [
   {
    "id": "pro-2-problemi-001",
@@ -31843,7 +31843,7 @@
    "area": "problemi",
    "subarea": "addizione",
    "difficulty": 1,
-   "question": "Bonus facile: quanto fa 7 + 5?",
+   "question": "Quanto fa 7 + 5?",
    "options": [
     "12",
     "10",
@@ -31874,7 +31874,7 @@
    "area": "problemi",
    "subarea": "sottrazione",
    "difficulty": 1,
-   "question": "Bonus facile: quanto fa 18 - 9?",
+   "question": "Quanto fa 18 - 9?",
    "options": [
     "7",
     "9",
@@ -31905,7 +31905,7 @@
    "area": "problemi",
    "subarea": "addizione",
    "difficulty": 1,
-   "question": "Bonus facile: quanto fa 2,5 + 1,5?",
+   "question": "Quanto fa 2,5 + 1,5?",
    "options": [
     "3,10",
     "3",
@@ -31936,7 +31936,7 @@
    "area": "problemi",
    "subarea": "divisione",
    "difficulty": 2,
-   "question": "Bonus medio: quanto fa 36 ÷ 6?",
+   "question": "Quanto fa 36 ÷ 6?",
    "options": [
     "4",
     "5",
@@ -31967,7 +31967,7 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 2,
-   "question": "Bonus medio: quanto fa 9 × 7?",
+   "question": "Quanto fa 9 × 7?",
    "options": [
     "56",
     "72",
@@ -31998,7 +31998,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 2,
-   "question": "Bonus medio: quanto fa 15 × 6 - 28?",
+   "question": "Quanto fa 15 × 6 - 28?",
    "options": [
     "62",
     "72",
@@ -32029,7 +32029,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 3,
-   "question": "Bonus difficile: quanto fa (18 × 3) - 17?",
+   "question": "Quanto fa (18 × 3) - 17?",
    "options": [
     "47",
     "54",
@@ -32060,7 +32060,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 3,
-   "question": "Bonus difficile: quanto fa 144 ÷ 12 + 19?",
+   "question": "Quanto fa 144 ÷ 12 + 19?",
    "options": [
     "31",
     "21",
@@ -32091,7 +32091,7 @@
    "area": "problemi",
    "subarea": "due_operazioni",
    "difficulty": 3,
-   "question": "Bonus difficile: quanto fa (26 + 34) ÷ 2?",
+   "question": "Quanto fa (26 + 34) ÷ 2?",
    "options": [
     "60",
     "30",
@@ -42159,6 +42159,68 @@
    "teacherNote": "",
    "bonus": true,
    "bonusRaw": "hard"
+  },
+  {
+   "id": "pro-bonus-medium-004",
+   "subject": "problemi",
+   "sourceSubject": "Matematica",
+   "class": 2,
+   "area": "problemi",
+   "subarea": "moltiplicazione",
+   "difficulty": 2,
+   "question": "In ogni sacchetto ci sono 5 biglie. Quante biglie ci sono in 4 sacchetti?",
+   "options": [
+    "20",
+    "9",
+    "15",
+    "25"
+   ],
+   "answerIndex": 0,
+   "answer": "20",
+   "explanation": "Ci sono 4 sacchetti da 5 biglie. In tutto 5 × 4 = 20 biglie.",
+   "active": false,
+   "tag": "bonus,classe_2,moltiplicazione",
+   "tags": [
+    "bonus",
+    "classe_2",
+    "moltiplicazione"
+   ],
+   "language": "it",
+   "program": "Matematica Bonus Primaria",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "medium"
+  },
+  {
+   "id": "pro-bonus-easy-004",
+   "subject": "problemi",
+   "sourceSubject": "Matematica",
+   "class": 5,
+   "area": "problemi",
+   "subarea": "euro_denaro",
+   "difficulty": 1,
+   "question": "Un gelato costa 1,50 euro. Quanto costano 2 gelati?",
+   "options": [
+    "2,50 euro",
+    "3,50 euro",
+    "1,52 euro",
+    "3,00 euro"
+   ],
+   "answerIndex": 3,
+   "answer": "3,00 euro",
+   "explanation": "Due gelati costano il doppio di uno: 1,50 + 1,50 = 3,00 euro.",
+   "active": false,
+   "tag": "bonus,classe_5,euro_denaro",
+   "tags": [
+    "bonus",
+    "classe_5",
+    "euro_denaro"
+   ],
+   "language": "it",
+   "program": "Matematica Bonus Primaria",
+   "teacherNote": "",
+   "bonus": true,
+   "bonusRaw": "easy"
   }
  ],
  "stats": {
