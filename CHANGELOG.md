@@ -1,5 +1,43 @@
 # Changelog Repo
 
+## 4.21.23 - 2026-10-11
+
+**Safari: dopo un aggiornamento non restano più i file della versione
+vecchia.**
+
+### Fixed
+- `sw.js`: su Safari (visto su iOS 26.5, iPhone e iPad) se l'app veniva
+  chiusa con un aggiornamento in attesa (avviso ignorato o «Più tardi»), alla
+  riapertura il service worker nuovo era attivo ma la cache della versione
+  precedente restava. `cacheFirst` cercava con `caches.match(request)` in
+  tutte le cache, dalla più vecchia: JS, CSS e `json/*.json` restavano quelli
+  vecchi, sotto l'HTML nuovo, senza più avvisi. Chi non toccava mai «Aggiorna
+  ora» restava così a ogni release.
+- Nuova `matchCurrent`: `cacheFirst` e i ripieghi offline di
+  `networkFirstWithFallback` cercano solo nelle cache della versione
+  corrente (`KEEP_CACHE_NAMES`). Una cache vecchia rimasta non può più
+  rispondere.
+- Pulizia anche fuori da `activate`: all'install `rememberOlderCaches`
+  annota nella cache nuova quali cache esistevano già; alla prima richiesta
+  servita `dropOlderCachesOnce` riporta le materie aperte
+  (`refetchOpenedJson`, stesso tetto di 5 secondi) e cancella solo quelle.
+  Non cancella «tutto ciò che non è mio»: un worker attivo toglierebbe la
+  cache di una versione più nuova ancora in attesa.
+- Vale anche per chi è già in quello stato: il service worker di questa
+  versione, appena attivo, toglie le cache rimaste.
+
+### Changed
+- `scripts/check_sw_opened_json.js`: tre casi nuovi con Cache Storage finto.
+  Una cache vecchia rimasta non risponde al posto di quella corrente; la
+  prima richiesta la toglie anche senza `activate`, dopo aver riportato la
+  materia aperta nel frattempo; la cache di una versione più nuova in attesa
+  non viene toccata.
+- `docs/wiki/Architettura.md`: le due regole nella sezione Service Worker.
+
+### Known issues
+- Il difetto è stato visto e la correzione provata nei simulatori iOS, non
+  su un dispositivo fisico né su Safari per macOS.
+
 ## 4.21.22 - 2026-10-11
 
 **Rifiniture dei bonus: mai una sola domanda, via i prefissi, una

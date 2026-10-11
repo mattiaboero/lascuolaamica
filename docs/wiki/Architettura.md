@@ -196,6 +196,8 @@ Tutto nella memoria locale del browser, tutto locale, niente server:
 - **Precache** degli asset statici principali all'install
 - **Precache lazy per i dataset materia** — `json/index.json` è precached all'install (serve alla home per il conteggio totale); i `json/<materia>.json` (~1MB ciascuno) NON sono precached: vengono salvati offline al primo fetch reale di quella materia, per non forzare il download di tutte le 8 materie a chi ne gioca una sola
 - **Materie già aperte al cambio di versione** — `refetchOpenedJson` legge dalle cache vecchie quali `json/*.json` c'erano e li riscarica nella cache nuova, all'install e di nuovo all'activate (tetto di 5 s). Riscarica, non copia; se un file non arriva resta fuori dall'offline fino alla prossima apertura con la rete. Controllo: `scripts/check_sw_opened_json.js`
+- **Solo le cache della versione corrente** — `cacheFirst` e i ripieghi offline cercano con `matchCurrent`, cioè solo in `KEEP_CACHE_NAMES`. `caches.match(request)` senza nome guarda tutte le cache dalla più vecchia: se ne resta una di una versione precedente risponde lei. Non usarlo in `sw.js`
+- **Pulizia anche fuori da activate** — su Safari, se l'app viene chiusa con un aggiornamento in attesa, alla riapertura il worker nuovo è attivo ma la pulizia di `activate` non c'è stata. All'install `rememberOlderCaches` annota le cache che esistevano già; alla prima richiesta servita `dropOlderCachesOnce` riporta le materie aperte e cancella solo quelle. Non si cancella «tutto ciò che non è mio» fuori da `activate`: un worker attivo toglierebbe la cache di una versione più nuova ancora in attesa
 - **Fallback offline** sulle rotte pubbliche principali
 - Strategie differenziate per contenuti statici e dati quiz
 
