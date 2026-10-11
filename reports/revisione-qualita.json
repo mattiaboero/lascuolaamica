@@ -1851,15 +1851,31 @@
   "esito": "ok"
  },
  "pro-bonus-easy-002": {
-  "hash": "100a6f7997fd",
+  "hash": "09e7c72b9511",
   "bambino": {
    "risposta": 1
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 1,
-  "esito": "ok"
+  "giri": 3,
+  "prima": {
+   "question": "Quanto fa 18 - 9?",
+   "options": [
+    "7",
+    "9",
+    "8",
+    "10"
+   ],
+   "answerIndex": 1,
+   "explanation": "18 - 9 = 9."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R5, R8. Opzioni 7, 8, 9, 10: quattro numeri consecutivi, non errori veri (servono per esempio 27 da 18 + 9, 11 da prestito sbagliato). La spiegazione ripete solo «18 - 9 = 9» senza dire il perché (9 + 9 = 18, oppure 18 − 8 = 10 e poi − 1)."
+   ]
+  ],
+  "esito": "riscritta"
  },
  "pro-4-due_operazioni-9108": {
   "hash": "e491cbf96579",
@@ -1906,15 +1922,31 @@
   "esito": "ok"
  },
  "pro-bonus-medium-002": {
-  "hash": "2b14f2341eb7",
+  "hash": "c6bcedad1695",
   "bambino": {
    "risposta": 3
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 1,
-  "esito": "ok"
+  "giri": 3,
+  "prima": {
+   "question": "Quanto fa 9 × 7?",
+   "options": [
+    "56",
+    "72",
+    "54",
+    "63"
+   ],
+   "answerIndex": 3,
+   "explanation": "9 × 7 = 63."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R8. La spiegazione ripete solo «9 × 7 = 63»: non dice il perché (per esempio 10 × 7 = 70, meno 7 fa 63). Distrattori buoni (56, 72, 54). Da valutare il livello: una tabellina da sola è poco per una «media» di 4ª, quando la «facile» di 4ª ha i decimali."
+   ]
+  ],
+  "esito": "riscritta"
  },
  "pro-5-problemi-105": {
   "hash": "84b273d536bd",
@@ -66923,14 +66955,14 @@
   "esito": "ok"
  },
  "civ-bonus-easy-001": {
-  "hash": "5a027210ae24",
+  "hash": "a3e0ba13c1ac",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus facile: quali sono i colori della bandiera italiana?",
    "options": [
@@ -66950,25 +66982,41 @@
   "esito": "riscritta"
  },
  "civ-bonus-easy-002": {
-  "hash": "e2eb4295ebc8",
+  "hash": "bfc4e5cb631b",
   "bambino": {
    "risposta": 1
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 1,
-  "esito": "ok"
+  "giri": 3,
+  "prima": {
+   "question": "Il semaforo pedonale è rosso. Che cosa fai?",
+   "options": [
+    "Corro",
+    "Mi fermo e aspetto",
+    "Passo se ho fretta",
+    "Guardo il telefono e passo"
+   ],
+   "answerIndex": 1,
+   "explanation": "Il rosso pedonale significa che in quel momento passano i veicoli. Fermarsi e aspettare il verde è l'unico comportamento che chi guida si aspetta da te."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R8, R5. Spiegazione non da 3ª: «è l'unico comportamento che chi guida si aspetta da te» ha due relative incastrate, più «veicoli» e «comportamento»; dire in parole semplici che col rosso passano le auto. «Guardo il telefono e passo» si scarta senza sapere niente."
+   ]
+  ],
+  "esito": "riscritta"
  },
  "civ-bonus-easy-003": {
-  "hash": "cd1b3511d717",
+  "hash": "746ffb74500a",
   "bambino": {
    "risposta": 2
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus facile: dove butto una bottiglia di plastica?",
    "options": [
@@ -66989,14 +67037,14 @@
   "esito": "riscritta"
  },
  "civ-bonus-medium-001": {
-  "hash": "059d6be73023",
+  "hash": "038f38e5649e",
   "bambino": {
    "risposta": 2
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus medio: online qualcuno ti chiede una foto privata. Che cosa fai?",
    "options": [
@@ -67016,14 +67064,14 @@
   "esito": "riscritta"
  },
  "civ-bonus-medium-002": {
-  "hash": "89e676e06d06",
+  "hash": "dfa439177173",
   "bambino": {
    "risposta": 3
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus medio: quale scelta evita spreco d'acqua?",
    "options": [
@@ -67044,14 +67092,14 @@
   "esito": "riscritta"
  },
  "civ-bonus-medium-003": {
-  "hash": "c2ffc89d5fde",
+  "hash": "2162dbc837db",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus medio: cosa significa diritto allo studio?",
    "options": [
@@ -67106,14 +67154,14 @@
   "esito": "spenta"
  },
  "civ-bonus-hard-002": {
-  "hash": "668aadf3bd17",
+  "hash": "bef2fe9d28ab",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus difficile: al parco vedi rifiuti vicino a un cestino pieno. Che cosa è meglio fare?",
    "options": [
@@ -67134,15 +67182,31 @@
   "esito": "riscritta"
  },
  "civ-bonus-hard-003": {
-  "hash": "dfe4eb7ed713",
+  "hash": "e3418b09af1a",
   "bambino": {
    "risposta": 1
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 1,
-  "esito": "ok"
+  "giri": 3,
+  "prima": {
+   "question": "All'uscita da scuola il gruppo attraversa sulle strisce con il semaforo pedonale rosso. Cosa scegli?",
+   "options": [
+    "Seguo il gruppo senza guardare",
+    "Aspetto il verde e attraverso con attenzione",
+    "Attraverso correndo col telefono in mano",
+    "Passo in diagonale dove non ci sono strisce"
+   ],
+   "answerIndex": 1,
+   "explanation": "Attraversare col rosso perché lo fanno gli altri non lo rende sicuro: le auto hanno via libera e non si aspettano nessuno. Aspettare il verde vale anche quando il gruppo va avanti."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R5, R6. Distrattori caricaturali che si scartano da soli («senza guardare», «correndo col telefono in mano», «dove non ci sono strisce»): la giusta è l'unica sensata e l'unica con un tono prudente, per una difficile di 5ª non verifica niente. Servono scelte che un bambino farebbe davvero (per esempio seguire il gruppo guardando bene, passare se non arrivano auto). «Cosa scegli?» meglio «Che cosa fai?»."
+   ]
+  ],
+  "esito": "riscritta"
  },
  "civ-2-regole_della_classe-9041": {
   "hash": "861ed9e88d0c",
@@ -176842,25 +176906,41 @@
   "esito": "riscritta"
  },
  "pro-bonus-easy-001": {
-  "hash": "a1b9d0a82d6b",
+  "hash": "2d3b23e7a46c",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 1,
-  "esito": "ok"
+  "giri": 3,
+  "prima": {
+   "question": "Quanto fa 7 + 5?",
+   "options": [
+    "12",
+    "10",
+    "11",
+    "13"
+   ],
+   "answerIndex": 0,
+   "explanation": "7 + 5 = 12."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R5, R8. Opzioni 10, 11, 12, 13: quattro numeri consecutivi, non errori veri (servono per esempio 2 da 7 − 5, 75 dalle cifre accostate, un errore nel passaggio alla decina). La spiegazione ripete solo «7 + 5 = 12» senza dire come si fa (7 + 3 = 10, poi + 2)."
+   ]
+  ],
+  "esito": "riscritta"
  },
  "pro-bonus-easy-003": {
-  "hash": "cb7bc6ac8394",
+  "hash": "2728c84ddb63",
   "bambino": {
    "risposta": 2
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus facile: quanto fa 4 + 8?",
    "options": [
@@ -176880,25 +176960,41 @@
   "esito": "riscritta"
  },
  "pro-bonus-medium-001": {
-  "hash": "447fe167ff8c",
+  "hash": "3d55cb32a23d",
   "bambino": {
    "risposta": 2
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 1,
-  "esito": "ok"
+  "giri": 3,
+  "prima": {
+   "question": "Quanto fa 36 ÷ 6?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "answerIndex": 2,
+   "explanation": "36 ÷ 6 = 6."
+  },
+  "storia": [
+   [
+    "maestra: riscrivi R8. La spiegazione ripete solo il risultato «36 ÷ 6 = 6»: non dice il perché (6 × 6 = 36, quindi il 6 sta 6 volte nel 36). Conto e opzioni vanno bene."
+   ]
+  ],
+  "esito": "riscritta"
  },
  "pro-bonus-medium-003": {
-  "hash": "14ce11dd2910",
+  "hash": "862f172c555b",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus medio: quanto fa 45 - 17?",
    "options": [
@@ -176918,14 +177014,14 @@
   "esito": "riscritta"
  },
  "pro-bonus-hard-001": {
-  "hash": "115eab38a27c",
+  "hash": "6887540667ff",
   "bambino": {
    "risposta": 3
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus difficile: quanto fa (18 × 3) - 17?",
    "options": [
@@ -176945,14 +177041,14 @@
   "esito": "riscritta"
  },
  "pro-bonus-hard-002": {
-  "hash": "39b5a1dd4492",
+  "hash": "1f61f839a779",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus difficile: quanto fa 144 ÷ 12 + 19?",
    "options": [
@@ -176972,14 +177068,14 @@
   "esito": "riscritta"
  },
  "pro-bonus-hard-003": {
-  "hash": "33ccbb3d6e13",
+  "hash": "a733fb86ab3e",
   "bambino": {
    "risposta": 1
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Bonus difficile: quanto fa (25 + 35) ÷ 2?",
    "options": [
@@ -255949,14 +256045,14 @@
   "esito": "ok"
  },
  "geo-bonus-hard-005": {
-  "hash": "6ff4a9e67a80",
+  "hash": "9aabb5efa7ef",
   "bambino": {
    "risposta": 0
   },
   "maestra": {
    "esito": "ok"
   },
-  "giri": 2,
+  "giri": 3,
   "prima": {
    "question": "Luca è di fronte a te e tiene una palla nella mano destra. Dove vedi la palla?",
    "options": [
@@ -256253,5 +256349,126 @@
    ]
   ],
   "esito": "riscritta"
+ },
+ "civ-bonus-medium-004": {
+  "hash": "59a7bd7b067a",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "civ-bonus-easy-004": {
+  "hash": "fc484375afd2",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "geo-bonus-easy-005": {
+  "hash": "45b55d0b9d87",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 2,
+  "esito": "ok"
+ },
+ "eng-bonus-medium-004": {
+  "hash": "fbb7cde3f806",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "eng-bonus-easy-004": {
+  "hash": "9b674d0a7442",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-medium-008": {
+  "hash": "cfe28919722d",
+  "bambino": {
+   "risposta": 1
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "mat-bonus-hard-008": {
+  "hash": "60b3b4e537d5",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "pro-bonus-medium-004": {
+  "hash": "a34bcd25387b",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "pro-bonus-easy-004": {
+  "hash": "7c8f9bd2439c",
+  "bambino": {
+   "risposta": 3
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sci-bonus-easy-005": {
+  "hash": "d0771ca948ae",
+  "bambino": {
+   "risposta": 0
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
+ },
+ "sto-bonus-medium-005": {
+  "hash": "c5c47fdd0844",
+  "bambino": {
+   "risposta": 2
+  },
+  "maestra": {
+   "esito": "ok"
+  },
+  "giri": 1,
+  "esito": "ok"
  }
 }

@@ -99745,7 +99745,7 @@
    "answerIndex": 1,
    "answer": "8",
    "explanation": "Togli prima 2: 12 - 2 = 10. Poi togli altri 2: 10 - 2 = 8.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_1;aritmetica;primaria",
    "tags": [
     "matematica",
@@ -99778,7 +99778,7 @@
    "answerIndex": 3,
    "answer": "17",
    "explanation": "Arriva prima a 10: 9 + 1 = 10. Poi aggiungi gli altri 7: 10 + 7 = 17.",
-   "active": false,
+   "active": true,
    "tag": "matematica;bonus;classe_1;aritmetica;primaria",
    "tags": [
     "matematica",

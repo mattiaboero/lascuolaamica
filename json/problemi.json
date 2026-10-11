@@ -31846,13 +31846,13 @@
    "question": "Quanto fa 7 + 5?",
    "options": [
     "12",
-    "10",
+    "2",
     "11",
-    "13"
+    "75"
    ],
    "answerIndex": 0,
    "answer": "12",
-   "explanation": "7 + 5 = 12.",
+   "explanation": "Prima arrivi a 10: 7 + 3 = 10. Del 5 restano ancora 2, quindi 10 + 2 = 12.",
    "active": true,
    "tag": "bonus,classe_2,addizione",
    "tags": [
@@ -31876,14 +31876,14 @@
    "difficulty": 1,
    "question": "Quanto fa 18 - 9?",
    "options": [
-    "7",
+    "11",
     "9",
-    "8",
-    "10"
+    "27",
+    "19"
    ],
    "answerIndex": 1,
    "answer": "9",
-   "explanation": "18 - 9 = 9.",
+   "explanation": "Togli prima 8 e arrivi a 10: 18 - 8 = 10. Poi togli ancora 1: 10 - 1 = 9.",
    "active": true,
    "tag": "bonus,classe_3,sottrazione",
    "tags": [
@@ -31945,7 +31945,7 @@
    ],
    "answerIndex": 2,
    "answer": "6",
-   "explanation": "36 ÷ 6 = 6.",
+   "explanation": "Cerca nella tabellina del 6 il numero che dà 36: 6 × 6 = 36. Il 6 sta 6 volte nel 36, quindi 36 ÷ 6 = 6.",
    "active": true,
    "tag": "bonus,classe_3,divisione",
    "tags": [
@@ -31967,16 +31967,16 @@
    "area": "problemi",
    "subarea": "moltiplicazione",
    "difficulty": 2,
-   "question": "Quanto fa 9 × 7?",
+   "question": "Quanto fa 24 × 6?",
    "options": [
-    "56",
-    "72",
-    "54",
-    "63"
+    "124",
+    "138",
+    "120",
+    "144"
    ],
    "answerIndex": 3,
-   "answer": "63",
-   "explanation": "9 × 7 = 63.",
+   "answer": "144",
+   "explanation": "Dividi 24 in 20 e 4: 20 × 6 = 120 e 4 × 6 = 24. Poi metti insieme i due risultati: 120 + 24 = 144.",
    "active": true,
    "tag": "bonus,classe_4,moltiplicazione",
    "tags": [
@@ -42178,7 +42178,7 @@
    "answerIndex": 0,
    "answer": "20",
    "explanation": "Ci sono 4 sacchetti da 5 biglie. In tutto 5 × 4 = 20 biglie.",
-   "active": false,
+   "active": true,
    "tag": "bonus,classe_2,moltiplicazione",
    "tags": [
     "bonus",
@@ -42209,7 +42209,7 @@
    "answerIndex": 3,
    "answer": "3,00 euro",
    "explanation": "Due gelati costano il doppio di uno: 1,50 + 1,50 = 3,00 euro.",
-   "active": false,
+   "active": true,
    "tag": "bonus,classe_5,euro_denaro",
    "tags": [
     "bonus",

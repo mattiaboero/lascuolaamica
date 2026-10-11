@@ -35557,7 +35557,7 @@
    "answerIndex": 2,
    "answer": "Monarchia, repubblica, impero",
    "explanation": "Roma fu prima governata dai re (monarchia), poi dai consoli (repubblica) e infine dagli imperatori (impero).",
-   "active": false,
+   "active": true,
    "tag": "storia;bonus;classe_5;roma_repubblica;primaria",
    "tags": [
     "storia",

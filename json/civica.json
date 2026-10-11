@@ -30770,11 +30770,11 @@
     "Corro",
     "Mi fermo e aspetto",
     "Passo se ho fretta",
-    "Guardo il telefono e passo"
+    "Passo se non vedo auto"
    ],
    "answerIndex": 1,
    "answer": "Mi fermo e aspetto",
-   "explanation": "Il rosso pedonale significa che in quel momento passano i veicoli. Fermarsi e aspettare il verde è l'unico comportamento che chi guida si aspetta da te.",
+   "explanation": "Con il rosso passano le auto, e una può arrivare anche quando la strada sembra vuota. Per questo ti fermi e aspetti il verde.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_3;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -30996,16 +30996,16 @@
    "area": "strada_gentilezza_sicurezza",
    "subarea": "pedoni_e_attraversamento",
    "difficulty": 3,
-   "question": "All'uscita da scuola il gruppo attraversa sulle strisce con il semaforo pedonale rosso. Cosa scegli?",
+   "question": "All'uscita da scuola il gruppo attraversa sulle strisce con il semaforo pedonale rosso. Che cosa fai?",
    "options": [
-    "Seguo il gruppo senza guardare",
-    "Aspetto il verde e attraverso con attenzione",
-    "Attraverso correndo col telefono in mano",
-    "Passo in diagonale dove non ci sono strisce"
+    "Seguo il gruppo, ma guardo bene a destra e a sinistra",
+    "Aspetto il verde, anche se il gruppo si allontana",
+    "Attraverso solo se in quel momento non arrivano auto",
+    "Attraverso in fretta per non restare indietro"
    ],
    "answerIndex": 1,
-   "answer": "Aspetto il verde e attraverso con attenzione",
-   "explanation": "Attraversare col rosso perché lo fanno gli altri non lo rende sicuro: le auto hanno via libera e non si aspettano nessuno. Aspettare il verde vale anche quando il gruppo va avanti.",
+   "answer": "Aspetto il verde, anche se il gruppo si allontana",
+   "explanation": "Con il rosso pedonale le auto hanno il verde e non si aspettano nessuno sulle strisce: guardare bene non basta. Si aspetta il verde anche quando gli altri sono già passati.",
    "active": true,
    "tag": "educazione_civica;bonus;classe_5;strada_gentilezza_sicurezza;primaria",
    "tags": [
@@ -35969,7 +35969,7 @@
    "answerIndex": 0,
    "answer": "Lo guardo senza toccarlo",
    "explanation": "Le uova hanno bisogno dei loro genitori. Se tocchi o sposti il nido, gli uccelli possono abbandonarlo: meglio guardare da lontano.",
-   "active": false,
+   "active": true,
    "tag": "educazione_civica;bonus;classe_2;ambiente_rispetto_terra;primaria",
    "tags": [
     "educazione_civica",
@@ -36002,7 +36002,7 @@
    "answerIndex": 2,
    "answer": "Il 2 giugno",
    "explanation": "Il 2 giugno 1946 gli italiani scelsero con il voto la Repubblica al posto della monarchia. Per questo il 2 giugno è la Festa della Repubblica.",
-   "active": false,
+   "active": true,
    "tag": "educazione_civica;bonus;classe_5;costituzione_regole_comunita;primaria",
    "tags": [
     "educazione_civica",

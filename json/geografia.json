@@ -36731,17 +36731,17 @@
    "area": "regioni_antropica",
    "subarea": "regioni_italiane",
    "difficulty": 1,
-   "question": "Qual è la capitale d'Italia?",
+   "question": "Quale di queste regioni italiane è un'isola?",
    "options": [
-    "Milano",
-    "Napoli",
-    "Torino",
-    "Roma"
+    "La Toscana",
+    "La Calabria",
+    "La Puglia",
+    "La Sardegna"
    ],
    "answerIndex": 3,
-   "answer": "Roma",
-   "explanation": "La capitale d'Italia è Roma: lì hanno sede il Parlamento e il Governo.",
-   "active": false,
+   "answer": "La Sardegna",
+   "explanation": "La Sardegna è un'isola: è circondata dal mare da tutte le parti. Toscana, Calabria e Puglia fanno parte della penisola.",
+   "active": true,
    "tag": "geografia;bonus;classe_4;regioni_antropica;primaria",
    "tags": [
     "geografia",

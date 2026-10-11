@@ -32378,7 +32378,7 @@
    "answerIndex": 0,
    "answer": "Al Sole",
    "explanation": "La Terra è un pianeta e gira intorno al Sole: per fare un giro completo impiega un anno.",
-   "active": false,
+   "active": true,
    "tag": "scienze;bonus;classe_4;astronomia_terra;primaria",
    "tags": [
     "scienze",

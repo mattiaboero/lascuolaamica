@@ -36197,7 +36197,7 @@
    "answerIndex": 1,
    "answer": "five",
    "explanation": "'Five' vuol dire cinque. 'Four' è quattro, 'six' è sei e 'nine' è nove.",
-   "active": false,
+   "active": true,
    "tag": "inglese;bonus;classe_2;numeri;primaria",
    "tags": [
     "inglese",
@@ -36231,7 +36231,7 @@
    "answerIndex": 2,
    "answer": "mother",
    "explanation": "'Mother' vuol dire madre. 'Father' è il padre, 'sister' la sorella e 'brother' il fratello.",
-   "active": false,
+   "active": true,
    "tag": "inglese;bonus;classe_5;famiglia;primaria",
    "tags": [
     "inglese",
