@@ -1,13 +1,14 @@
 name: Lighthouse
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 6 * * *'
 
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     # LHCI_GITHUB_TOKEN scrive gli status con questo token: serve statuses: write.
     permissions:
       contents: read
