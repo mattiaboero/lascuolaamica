@@ -313,6 +313,70 @@ function checkCicloRaccoltaConsegna(game) {
 }
 
 /*
+  Sotto il tabellone la zona di consegna tocca la cima del cartello di mezzo.
+  Regressione: fermo li', l'omino raccoglieva e consegnava a ogni frame. Col
+  gruppo sbagliato: coriandoli e bip senza fine e un errore registrato per
+  frame; con quello giusto la parola si chiudeva senza che il bambino scegliesse.
+*/
+function checkConsegnaNonRaccoglie(game) {
+  const s = game.state;
+  game.readPalette();
+  const entry = game.parole.find(function (p) { return p.word === 'RAGNO'; });
+  for (const giustoInMezzo of [false, true]) {
+    const round = game.buildRound(entry);
+    const iGiusto = round.choices.indexOf(round.answer);
+    const scambio = giustoInMezzo ? iGiusto : (iGiusto === 1 ? 0 : 1);
+    const tmp = round.choices[1];
+    round.choices[1] = round.choices[scambio];
+    round.choices[scambio] = tmp;
+    assert.equal(round.choices[1] === round.answer, giustoInMezzo);
+
+    s.session = [round, game.buildRound(entry)];
+    s.roundIndex = 0;
+    s.solved = 0;
+    s.mode = 'playing';
+    s.paused = false;
+    s.carry = null;
+    s.carryFrom = -1;
+    s.arrivedAt = -1;
+    s.target = null;
+    s.keys.clear();
+    s.player = { x: 405, y: 215, phase: 0, dir: 'up' };
+    assert.ok(game.allaConsegna(s.player.x, s.player.y), 'il punto di prova deve stare nella zona di consegna');
+    const visti = (game.leggiAbilita().skills.gn || { visti: 0 }).visti;
+    for (let i = 0; i < 60; i++) game.update(1 / 60);
+    assert.equal(s.mode, 'playing', 'fermo davanti al tabellone non si raccoglie niente');
+    assert.equal(s.solved, 0, 'la parola non si chiude da sola');
+    assert.equal((game.leggiAbilita().skills.gn || { visti: 0 }).visti, visti, 'nessuna risposta registrata');
+  }
+  s.player = { x: 410, y: 378, phase: 0, dir: 'up' };
+}
+
+/*
+  Il riscaldamento a mazzo: mai uguale due partite di fila, e tutte le parole
+  escono prima che una si ripeta.
+*/
+function checkRiscaldamentoAMazzo(game) {
+  const quante = game.parole.filter(function (w) { return w.skill === 'vocali'; }).length;
+  assert.ok(quante >= 6, `solo ${quante} parole di riscaldamento: il bambino le impara a memoria`);
+  const giri = 20;
+  const conteggi = {};
+  let prima = null;
+  for (let i = 0; i < giri * quante; i++) {
+    const parola = game.buildSession({ classe: 2, modalita: 'parola', stats: { skills: {}, ripassa: null } })[0].word;
+    assert.notEqual(parola, prima, `${parola} apre due partite di fila`);
+    conteggi[parola] = (conteggi[parola] || 0) + 1;
+    prima = parola;
+  }
+  // A mazzo ogni parola esce una volta per giro; il mazzo gia' aperto dai
+  // controlli precedenti sposta al massimo di uno.
+  Object.keys(conteggi).forEach(function (parola) {
+    assert.ok(Math.abs(conteggi[parola] - giri) <= 1, `${parola} esce ${conteggi[parola]} volte su ${giri} giri`);
+  });
+  assert.equal(Object.keys(conteggi).length, quante, 'tutte le parole di riscaldamento devono uscire');
+}
+
+/*
   Il finale nominava tre parole fisse nel sorgente mentre la partita le estrae a
   caso: quasi ogni bambino chiudeva sentendosi elencare parole mai viste.
 */
@@ -587,6 +651,8 @@ async function main() {
     ['ospiti della radura', checkOspiti],
     ['parole vicine', checkParoleVicine],
     ['ciclo raccolta e consegna', checkCicloRaccoltaConsegna],
+    ['consegna senza raccolta', checkConsegnaNonRaccoglie],
+    ['riscaldamento a mazzo', checkRiscaldamentoAMazzo],
     ['memoria delle abilita', checkMemoria],
     ['glifi disponibili', checkGlyphs],
     ['confini della radura', checkBounds],
