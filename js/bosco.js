@@ -75,10 +75,16 @@
     reali gia' presenti in quelle domande.
   */
   const PAROLE = [
-    // Riscaldamento: le tre parole storiche, con il loro disegno sul tabellone.
+    // Riscaldamento, con il disegno sul tabellone. Erano tre e ogni partita apre
+    // con una di queste: dopo poche partite il bambino le conosceva a memoria.
+    // Le ultime quattro riusano personaggi gia' disegnati nella radura.
     { word: 'SOLE', hole: [3, 1], errate: ['A', 'O'], skill: 'vocali', picture: 'sun', cls: 2, diff: 1, clue: 'Scalda il bosco e illumina il cielo.' },
     { word: 'MELA', hole: [1, 1], errate: ['I', 'O'], skill: 'vocali', picture: 'apple', cls: 2, diff: 1, clue: 'È un frutto, croccante e dolce.' },
     { word: 'LUNA', hole: [1, 1], errate: ['A', 'I'], skill: 'vocali', picture: 'moon', cls: 2, diff: 1, clue: 'Brilla nel cielo quando arriva la notte.' },
+    { word: 'FUNGO', hole: [1, 1], errate: ['O', 'E'], skill: 'vocali', picture: 'mushroom', cls: 2, diff: 1, clue: 'Spunta nel bosco dopo la pioggia e ha il cappello.' },
+    { word: 'ALBERO', hole: [3, 1], errate: ['A', 'I'], skill: 'vocali', picture: 'tree', cls: 2, diff: 1, clue: 'Ha il tronco, i rami e tante foglie.' },
+    { word: 'LUMACA', hole: [3, 1], errate: ['E', 'O'], skill: 'vocali', picture: 'snail', cls: 2, diff: 1, clue: 'Va piano piano e si porta la casetta sulla schiena.' },
+    { word: 'FIORE', hole: [2, 1], errate: ['A', 'U'], skill: 'vocali', picture: 'flower', cls: 2, diff: 1, clue: 'Sboccia in primavera e piace tanto alle api.' },
 
     { word: 'RAGNO', hole: [2, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 1, clue: 'Ha otto zampe e tesse la tela.' },
     { word: 'GNOMO', hole: [0, 2], errate: ['NI', 'GNI'], skill: 'gn', cls: 2, diff: 2, clue: 'Piccolo folletto del bosco col cappello a punta.' },
@@ -710,6 +716,28 @@
     partita SUCCESSIVA, non subito dopo l'errore: ripetere una cosa appena
     sbagliata allena la memoria a breve, ripeterla dopo una pausa la fissa.
   */
+  /*
+    Il riscaldamento si pesca a mazzo: tutte le parole una volta, poi si
+    rimescola. Estratto a caso e senza memoria, tornava uguale due partite di
+    fila (MELA, MELA, SOLE, SOLE...). Fra un mazzo e l'altro l'ultima uscita non
+    va in cima, altrimenti ricomparirebbe subito.
+  */
+  let mazzoRiscaldamento = [];
+  let ultimoRiscaldamento = null;
+
+  function pescaRiscaldamento(warmups) {
+    mazzoRiscaldamento = mazzoRiscaldamento.filter(function (w) { return warmups.indexOf(w) !== -1; });
+    if (!mazzoRiscaldamento.length) {
+      mazzoRiscaldamento = shuffle(warmups.slice());
+      const cima = mazzoRiscaldamento.length - 1;
+      if (cima > 0 && mazzoRiscaldamento[cima] === ultimoRiscaldamento) {
+        mazzoRiscaldamento.unshift(mazzoRiscaldamento.pop());
+      }
+    }
+    ultimoRiscaldamento = mazzoRiscaldamento.pop();
+    return ultimoRiscaldamento;
+  }
+
   function buildSession(opts) {
     const o = opts || {};
     const classe = o.classe || classeScelta();
@@ -720,7 +748,7 @@
 
     const warmups = eleggibili.filter(function (w) { return w.skill === 'vocali'; });
     const rest = eleggibili.filter(function (w) { return w.skill !== 'vocali'; });
-    const session = [warmups[Math.floor(Math.random() * warmups.length)]];
+    const session = [pescaRiscaldamento(warmups)];
 
     let primo = null;
     if (dati.ripassa) {
@@ -915,7 +943,32 @@
   }
 
   function picture(c, kind, x, y) {
-    if (kind === 'sun') {
+    if (kind === 'mushroom') {
+      mushroom(c, x, y + 20, 3);
+    } else if (kind === 'tree') {
+      // Non l'albero della radura: rimpicciolito perde il tronco e sembra un
+      // cespuglio. Qui tronco e chioma devono leggersi subito.
+      rect(c, x - 4, y + 4, 9, 20, paint.trunk);
+      rect(c, x - 4, y + 4, 3, 20, paint.trunkLight);
+      oval(c, x, y - 6, 22, 18, paint.canopy[2]);
+      oval(c, x - 4, y - 10, 15, 12, paint.canopy[4]);
+      oval(c, x - 8, y - 14, 6, 5, paint.canopy[6]);
+    } else if (kind === 'snail') {
+      // Scala intera: i blocchi restano netti come nel resto del disegno.
+      c.save();
+      c.translate(Math.round(x), Math.round(y));
+      c.scale(2, 2);
+      snail(c, 1, 8);
+      c.restore();
+    } else if (kind === 'flower') {
+      rect(c, x - 2, y + 2, 4, 24, paint.canopy[3]);
+      oval(c, x + 8, y + 16, 7, 4, paint.canopy[4]);
+      [[0, -14], [13, -5], [8, 9], [-8, 9], [-13, -5]].forEach(function (d) {
+        oval(c, x + d[0], y - 3 + d[1], 8, 8, paint.accent);
+      });
+      oval(c, x, y - 3, 7, 7, paint.glow);
+      rect(c, x - 3, y - 6, 3, 3, paint.glowSoft);
+    } else if (kind === 'sun') {
       for (let i = 0; i < 8; i++) {
         const a = (i * Math.PI) / 4;
         rect(c, x + Math.cos(a) * 29 - 2, y + Math.sin(a) * 29 - 2, 5, 7, shade(raw.glow, -0.2));
@@ -935,7 +988,7 @@
       oval(c, x + 8, y, 16, 20, paint.accent);
       oval(c, x - 8, y - 7, 9, 10, shade(raw.accent, 0.25));
       rect(c, x - 13, y - 13, 5, 7, paint.tileLight);
-    } else {
+    } else if (kind === 'moon') {
       oval(c, x, y, 24, 24, shade(raw.tile, -0.15));
       oval(c, x, y - 2, 22, 23, paint.tileLight);
       oval(c, x + 11, y - 10, 19, 21, paint.trunkLight);
@@ -1862,6 +1915,11 @@
 
   /* --------------------------------------------------------------- update */
 
+  // Davanti al tabellone: qui il cartello in mano diventa una risposta.
+  function allaConsegna(x, y) {
+    return y < 220 && Math.abs(x - 400) < 123;
+  }
+
   function update(dt) {
     state.time += dt;
     state.acc += dt;
@@ -1911,7 +1969,16 @@
         state.arrivedAt = -1;
       }
 
-      if (state.mode === 'playing') {
+      /*
+        Sotto il tabellone la zona di consegna e la cima del cartello di mezzo
+        si toccano (y fra 208 e 220). Raccogliere li' voleva dire consegnare
+        nello stesso frame: col gruppo sbagliato il cartello tornava giu', si
+        rialzava al frame dopo, e cosi' a ogni frame, con coriandoli, bip, voce
+        del gufo e un errore registrato ogni volta. Succedeva soprattutto alla
+        parola nuova, quando l'omino e' ancora fermo dove ha consegnato. Al
+        tabellone si consegna e basta: per raccogliere si scende sul cartello.
+      */
+      if (state.mode === 'playing' && !allaConsegna(state.player.x, state.player.y)) {
         TILE_POSITIONS.forEach(function (p, i) {
           const targeted = !state.target || state.target.tile === undefined || state.target.tile === i;
           if (targeted && onTile(i, state.player.x, state.player.y)) collect(i);
@@ -1931,7 +1998,7 @@
         state.sostaPiazzola = 0;
       }
 
-      if (state.mode === 'carrying' && state.player.y < 220 && Math.abs(state.player.x - 400) < 123) {
+      if (state.mode === 'carrying' && allaConsegna(state.player.x, state.player.y)) {
         consegna();
       }
     }
@@ -2507,6 +2574,8 @@
     readPalette: readPalette,
     collect: collect,
     consegna: consegna,
+    update: update,
+    allaConsegna: allaConsegna,
     nearPuddle: nearPuddle,
     clampPosition: clampPosition,
     choose: choose,
