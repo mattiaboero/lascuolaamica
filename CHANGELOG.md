@@ -1,5 +1,15 @@
 # Changelog Repo
 
+## Non rilasciato - 2026-10-16
+
+### Fixed
+- I modelli 3D di ISS e Voyager (`assets/sistema-solare/*.bin`) arrivavano
+  non compressi: con `application/octet-stream` Cloudflare non comprime.
+  `_headers` li serve come `application/x-protobuf`, uno dei tipi che
+  Cloudflare comprime; il motore li legge con `fetch().arrayBuffer()` e non
+  guarda il tipo. Da 195 e 289 KB a circa 42 e 75 KB. Nessun asset cambia,
+  quindi niente bump di versione.
+
 ## 4.22.1 - 2026-10-16
 
 **Sistema Solare: il film delle Voyager ha la sua voce.**
