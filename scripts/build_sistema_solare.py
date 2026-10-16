@@ -503,9 +503,14 @@ def scrivi_pagina(uscita, faq, controlla):
 
     ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
         {'@type': 'Question', 'name': q['domanda'], 'acceptedAnswer': {'@type': 'Answer', 'text': q['risposta']}} for q in domande]}
+    pagina = PAGINA.read_text(encoding='utf-8')
+    # Le date le scrive npm run freshness (refresh_structured_data.py): si tengono.
+    vecchio = re.search(r'<!-- FAQ-JSONLD:INIZIO[^>]*-->\n<script type="application/ld\+json">\n(.*?)\n</script>', pagina, re.S)
+    if vecchio:
+        prima = json.loads(vecchio.group(1))
+        ld.update({k: prima[k] for k in ('datePublished', 'dateModified') if k in prima})
     testa_html = '<script type="application/ld+json">\n' + json.dumps(ld, ensure_ascii=False, indent=2) + '\n</script>\n'
 
-    pagina = PAGINA.read_text(encoding='utf-8')
     nuova = pagina
     for nome, contenuto in (('FAQ-JSONLD', testa_html), ('SCHEDE', corpo_html)):
         schema = re.compile(r'(<!-- ' + nome + r':INIZIO[^>]*-->\n)(.*?)(\s*<!-- ' + nome + r':FINE -->)', re.S)

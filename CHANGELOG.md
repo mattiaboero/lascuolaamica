@@ -1,5 +1,32 @@
 # Changelog Repo
 
+## 4.22.0 - 2026-10-16
+
+**Nuovo: il Sistema Solare in 3D.**
+
+### Added
+- `/sistema-solare`: modello 3D esplorabile (WebGL 1 vanilla) con Sole, 8
+  pianeti, 5 pianeti nani, 27 lune, asteroidi, comete, sciami meteorici, ISS,
+  buco nero nel confronto delle grandezze e sonde Voyager. Posizioni dagli
+  elementi orbitali JPL (1800-2050), lune da JPL Horizons, poli IAU; movimento
+  rallentato o tempo vero. Schede per bambini, missioni, passaporto, viaggio
+  guidato con voce, film di 2'30" sul viaggio delle Voyager.
+- Dati con fonte in `docs/sistema-solare/`, generati da
+  `scripts/build_sistema_solare.py`, che scrive anche schede, 12 FAQ e crediti
+  statici nella pagina. Controlli in `npm run check:sistema-solare`, aggiunto a
+  `verify` e a `prepublish-check.sh`.
+- Home: card nera «spazio» prima di Spacca-Muri, riga nel testo `seo-home`,
+  `hasPart` nel JSON-LD verso Sistema Solare, Spacca-Muri e Bosco. Link da
+  Scienze, Per insegnanti, Per genitori e ai-info; voce in `llms.txt`,
+  sitemap, `_redirects`, precache del Service Worker, immagine OG.
+
+### Changed
+- `sw.js`: `bin` fra le estensioni statiche e stabili, per avere offline i
+  modelli 3D già visti.
+- `noscript.css`: senza JavaScript la pagina del Sistema Solare esce dalla
+  vista immersiva e mostra titolo, testo e schede.
+- `scripts/check_contrast.sh`: aggiunta la pagina.
+
 ## 4.21.24 - 2026-10-14
 
 **Bosco delle Lettere: niente più coriandoli a raffica sotto il tabellone, e

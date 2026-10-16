@@ -1,9 +1,9 @@
 # Il Sistema Solare in 3D — guida alla revisione
 
-Stato al 16 ottobre 2026: **pagina in revisione, non pubblicata e non collegata al sito.**
-Nessun link dalla home o da altre pagine, niente sitemap, niente service worker,
-`noindex` nella pagina. Prima della pubblicazione: revisione di un fisico, poi
-prova con i bambini.
+Stato al 16 ottobre 2026: **pubblicata con la release 4.22.0**, dopo l'ok di
+Mattia. Indicizzabile, collegata dalla home, da Scienze e dalle pagine per
+insegnanti e genitori, in sitemap e nel service worker. Questa guida resta il
+riferimento per le prossime revisioni dei contenuti.
 
 ## Come aprirla
 

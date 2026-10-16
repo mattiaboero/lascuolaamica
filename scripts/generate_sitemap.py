@@ -29,6 +29,7 @@ PAGES = [
     ("/italiano", "italiano.html"),
     ("/breakout", "breakout.html"),
     ("/bosco", "bosco.html"),
+    ("/sistema-solare", "sistema-solare.html"),
     ("/chi-siamo", "chi-siamo.html"),
     ("/per-insegnanti", "per-insegnanti.html"),
     ("/per-genitori", "per-genitori.html"),
