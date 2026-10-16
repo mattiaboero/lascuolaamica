@@ -1,0 +1,45 @@
+{
+ "file": "iss.bin",
+ "vertici": 19926,
+ "byte_per_vertice": 10,
+ "tavolozza": [
+  [
+   0.642,
+   0.642,
+   0.642
+  ],
+  [
+   0.295,
+   0.223,
+   0.71
+  ],
+  [
+   0.79,
+   0.79,
+   0.79
+  ],
+  [
+   0.366,
+   0.366,
+   0.366
+  ],
+  [
+   0.942,
+   0.942,
+   0.942
+  ],
+  [
+   0.638,
+   0.575,
+   0.436
+  ]
+ ],
+ "estensione_assi": [
+  1.0,
+  0.6002,
+  0.6232
+ ],
+ "credito": "NASA/Ames Research Center, NASA 3D Resources (modello \"International Space Station (ISS) (A)\")",
+ "fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/International%20Space%20Station%20(ISS)%20(A)",
+ "licenza": "NASA 3D Resources: \"free and without copyright\"; citare NASA come fonte (linee guida NASA)."
+}

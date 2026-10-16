@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="dns-prefetch" href="https://lascuolaamica.it">
+<link rel="preconnect" href="https://lascuolaamica.it" crossorigin>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Sistema Solare 3D per bambini: esplora pianeti e lune</title>
+<meta name="description" content="Esplora il Sistema Solare in 3D: Sole, 8 pianeti, lune e comete nelle posizioni vere, con dati NASA spiegati ai bambini. Gratis, senza pubblicità.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://lascuolaamica.it/sistema-solare">
+<meta property="og:url" content="https://lascuolaamica.it/sistema-solare">
+<meta property="og:image" content="https://lascuolaamica.it/screenshots/og-sistema-solare-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Il Sole e gli otto pianeti con le loro orbite nel modello 3D del Sistema Solare de La Scuola Amica">
+<meta name="twitter:image" content="https://lascuolaamica.it/screenshots/og-sistema-solare-1200x630.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="La Scuola Amica">
+<meta property="og:title" content="Il Sistema Solare in 3D per bambini | La Scuola Amica">
+<meta property="og:description" content="Vola fra Sole, pianeti, lune e comete nelle loro posizioni vere, con i dati NASA spiegati per la scuola primaria.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Il Sistema Solare in 3D per bambini | La Scuola Amica">
+<meta name="twitter:description" content="Vola fra Sole, pianeti, lune e comete nelle loro posizioni vere, con i dati NASA spiegati per la scuola primaria.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2b3a6b">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Scuola Amica">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="subject-quiz-theme.css">
+<link rel="stylesheet" href="utilities.css">
+<link rel="stylesheet" href="sistema-solare.css">
+<link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-v32-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="rewards.css" as="style">
+<link rel="stylesheet" href="fonts.css">
+<script defer src="js/lazy-css.js"></script>
+<script defer src="js/dom-utils.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "EducationalApplication",
+    "LearningResource"
+  ],
+  "@id": "https://lascuolaamica.it/sistema-solare#app",
+  "name": "Il Sistema Solare in 3D",
+  "description": "Modello 3D esplorabile del Sistema Solare per la scuola primaria: Sole, pianeti, pianeti nani, lune, asteroidi, comete, sciami meteorici, ISS e il viaggio delle sonde Voyager, con le posizioni calcolate dagli elementi orbitali del JPL e i dati di NASA, JPL e IAU spiegati in italiano.",
+  "url": "https://lascuolaamica.it/sistema-solare",
+  "image": "https://lascuolaamica.it/screenshots/og-sistema-solare-1200x630.jpg",
+  "inLanguage": "it-IT",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web Browser",
+  "browserRequirements": "Richiede WebGL per la scena 3D; le schede sono leggibili anche senza",
+  "educationalUse": [
+    "self-study",
+    "demonstration"
+  ],
+  "learningResourceType": [
+    "Interactive resource",
+    "Simulation"
+  ],
+  "interactivityType": "active",
+  "teaches": [
+    "il Sole e i pianeti del Sistema Solare",
+    "pianeti nani, lune, asteroidi e comete",
+    "moto di rotazione e di rivoluzione",
+    "grandezze e distanze nel Sistema Solare",
+    "sciami meteorici"
+  ],
+  "keywords": "sistema solare, sistema solare 3d, pianeti, lune, pianeti nani, asteroidi, comete, sciami meteorici, Voyager, scienze, scuola primaria",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Sistema solare",
+      "sameAs": "https://www.wikidata.org/wiki/Q544"
+    },
+    {
+      "@type": "Thing",
+      "name": "Sole",
+      "sameAs": "https://www.wikidata.org/wiki/Q525"
+    },
+    {
+      "@type": "Thing",
+      "name": "Mercurio",
+      "sameAs": "https://www.wikidata.org/wiki/Q308"
+    },
+    {
+      "@type": "Thing",
+      "name": "Venere",
+      "sameAs": "https://www.wikidata.org/wiki/Q313"
+    },
+    {
+      "@type": "Thing",
+      "name": "Terra",
+      "sameAs": "https://www.wikidata.org/wiki/Q2"
+    },
+    {
+      "@type": "Thing",
+      "name": "Marte",
+      "sameAs": "https://www.wikidata.org/wiki/Q111"
+    },
+    {
+      "@type": "Thing",
+      "name": "Giove",
+      "sameAs": "https://www.wikidata.org/wiki/Q319"
+    },
+    {
+      "@type": "Thing",
+      "name": "Saturno",
+      "sameAs": "https://www.wikidata.org/wiki/Q193"
+    },
+    {
+      "@type": "Thing",
+      "name": "Urano",
+      "sameAs": "https://www.wikidata.org/wiki/Q324"
+    },
+    {
+      "@type": "Thing",
+      "name": "Nettuno",
+      "sameAs": "https://www.wikidata.org/wiki/Q332"
+    },
+    {
+      "@type": "Thing",
+      "name": "Luna",
+      "sameAs": "https://www.wikidata.org/wiki/Q405"
+    },
+    {
+      "@type": "Thing",
+      "name": "Plutone",
+      "sameAs": "https://www.wikidata.org/wiki/Q339"
+    },
+    {
+      "@type": "Thing",
+      "name": "Stazione Spaziale Internazionale",
+      "sameAs": "https://www.wikidata.org/wiki/Q25271"
+    },
+    {
+      "@type": "Thing",
+      "name": "Voyager 1",
+      "sameAs": "https://www.wikidata.org/wiki/Q48469"
+    },
+    {
+      "@type": "Thing",
+      "name": "Voyager 2",
+      "sameAs": "https://www.wikidata.org/wiki/Q48475"
+    }
+  ],
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "Planetary Fact Sheets",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NASA NSSDC"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Approximate Positions of the Planets",
+      "url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NASA JPL"
+      }
+    }
+  ],
+  "isAccessibleForFree": true,
+  "typicalAgeRange": "9-11",
+  "educationalLevel": "Scuola primaria",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "isPartOf": {
+    "@id": "https://lascuolaamica.it/#website"
+  },
+  "datePublished": "2026-10-16",
+  "dateModified": "2026-10-16",
+  "publisher": {
+    "@id": "https://lascuolaamica.it/#organization"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lascuolaamica.it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Il Sistema Solare in 3D",
+      "item": "https://lascuolaamica.it/sistema-solare"
+    }
+  ]
+}
+</script>
+<!-- FAQ-JSONLD:INIZIO (generato da scripts/build_sistema_solare.py da docs/sistema-solare/faq.json: non modificare qui) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanti pianeti ci sono nel Sistema Solare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Otto: Mercurio, Venere, Terra, Marte, Giove, Saturno, Urano e Nettuno. Plutone dal 2006 è un pianeta nano, per decisione dell'Unione Astronomica Internazionale. I pianeti nani riconosciuti sono cinque: Cerere, Plutone, Eris, Haumea e Makemake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual è il pianeta più grande del Sistema Solare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Giove: il suo volume è più di 1300 volte quello della Terra. È un gigante di gas e non ha una superficie solida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual è il pianeta più vicino al Sole?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mercurio. È poco più grande della Luna e fa un giro attorno al Sole in 88 giorni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual è il pianeta più caldo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Venere, con una temperatura media di 464 °C, anche se Mercurio è più vicino al Sole: le sue nubi spesse trattengono il calore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo impiega la luce del Sole ad arrivare sulla Terra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Poco più di 8 minuti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto dura un anno su Marte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Circa 687 giorni terrestri (686,98): quasi due dei nostri anni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto peserei su Marte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La bilancia segnerebbe circa il 38% di quanto segna sulla Terra: se sulla Terra segna 30 kg, su Marte segnerebbe circa 11 kg e sulla Luna circa 5 kg. Tu resti uguale: cambia quanto il pianeta ti tira verso il basso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quante lune hanno Giove e Saturno?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saturno ne ha 293 (conteggio di agosto 2026), Giove 115 (settembre 2026). Il numero cresce quando gli astronomi ne scoprono di nuove. Urano ne ha 29, Nettuno 16, Marte 2, la Terra 1; Mercurio e Venere nessuna."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dove si trova oggi Voyager 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il 15 ottobre 2026 era a circa 172 UA dal Sole, cioè circa 25,7 miliardi di km: i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra. Il 18 novembre 2026 sarà a un giorno luce dalla Terra. Dal 17 febbraio 1998 è l'oggetto costruito dalle persone più lontano dal Sole."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Che cos'è il «pallido puntino azzurro»?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "È la foto della Terra scattata da Voyager 1 il 14 febbraio 1990, da circa 6 miliardi di km: nella foto la Terra è un puntino azzurro grande circa un pixel. L'idea della foto era dello scienziato Carl Sagan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Il modello 3D è in scala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No: le distanze sono accorciate e i corpi ingranditi, altrimenti i pianeti sarebbero puntini invisibili. Il confronto delle grandezze mostra invece le proporzioni vere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ci sono buchi neri nel Sistema Solare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Il buco nero enorme al centro della nostra galassia, Sagittarius A*, è a circa 27 000 anni luce; il più vicino che conosciamo, Gaia BH1, a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero."
+      }
+    }
+  ],
+  "datePublished": "2026-10-16",
+  "dateModified": "2026-10-16"
+}
+</script><!-- FAQ-JSONLD:FINE -->
+</head>
+<body class="subject-spazio ss-immersivo">
+<a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
+<p id="ssStato" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+
+<div class="wrapper">
+  <div class="top-nav">
+    <a class="back-btn" href="/" aria-label="Torna al menu principale">← Menu</a>
+    <div></div>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Percorso di navigazione">
+    <a href="/">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Il Sistema Solare in 3D</span>
+  </nav>
+
+  <header>
+    <h1 class="title" id="mainTitle"><span aria-hidden="true">🪐</span> Il Sistema Solare in 3D per bambini <span aria-hidden="true">☀️</span></h1>
+    <p class="subtitle">La Scuola Amica · Vola fra pianeti, lune e comete</p>
+  </header>
+
+  <div class="header-row">
+    <a class="icon-btn" href="/scienze" aria-label="Vai ai quiz di scienze">📚 Quiz di scienze</a>
+  </div>
+
+  <main id="contenuto-principale" aria-labelledby="mainTitle" class="ss-app">
+    <div class="ss-scena" id="ssScena">
+      <canvas class="ss-canvas" id="ssCanvas" tabindex="0" role="img"
+              aria-label="Scena 3D del Sistema Solare. Usa le frecce per girarla, più e meno per avvicinarti. Per scegliere un corpo usa i pulsanti in basso."></canvas>
+      <div class="ss-etichette" id="ssEtichette" aria-hidden="true"></div>
+
+      <div class="ss-hud-alto">
+        <a class="ss-hud-btn ss-c-grigio" href="/" aria-label="Torna al menu principale del sito">🏠 <span class="ss-solo-largo">Menu</span></a>
+        <section class="ss-missione" id="ssMissione" aria-labelledby="ssMissioneTitolo">
+          <h2 class="ss-missione-titolo" id="ssMissioneTitolo"><span aria-hidden="true">🎯</span> La tua missione <span class="ss-missione-conto" id="ssMissioneConto"></span></h2>
+          <p class="ss-missione-testo" id="ssMissioneTesto"></p>
+          <p class="ss-missione-esito" id="ssMissioneEsito" role="status" aria-live="polite"></p>
+          <div class="ss-missione-azioni">
+            <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-giallo" data-ss="missione-prossima" hidden>Nuova missione ▶</button>
+            <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-grigio" data-ss="missione-salta">🔄 Cambiala</button>
+          </div>
+        </section>
+        <div class="ss-hud-destra">
+          <output class="ss-hud-data" id="ssData" aria-live="off"></output>
+          <button type="button" class="ss-hud-btn ss-c-grigio" data-ss="schermo-intero" aria-pressed="false" aria-label="Schermo intero" hidden>⛶</button>
+          <button type="button" class="ss-hud-btn ss-c-grigio ss-solo-immersivo" data-ss="esci" aria-label="Esci: torna alla pagina con le schede">✕ <span class="ss-solo-largo">Esci</span></button>
+          <button type="button" class="ss-hud-btn ss-c-grigio ss-solo-normale" data-ss="entra" aria-label="Torna alla vista a tutto schermo">⛶ <span class="ss-solo-largo">Tutto schermo</span></button>
+        </div>
+      </div>
+
+      <p class="ss-toast" id="ssToast" role="status" aria-live="polite" hidden></p>
+
+      <div class="ss-zoom" role="group" aria-label="Avvicinati o allontanati">
+        <button type="button" class="ss-hud-btn ss-c-grigio ss-zoom-btn" data-ss="vicino" aria-label="Avvicinati">＋</button>
+        <button type="button" class="ss-hud-btn ss-c-grigio ss-zoom-btn" data-ss="lontano" aria-label="Allontanati">－</button>
+      </div>
+
+      <p class="ss-avviso-scala" id="ssAvvisoScala">Distanze accorciate e corpi ingranditi: non è in scala</p>
+
+      <div class="ss-viaggio-barra" id="ssViaggioBarra" role="group" aria-label="Viaggio" hidden>
+        <span class="ss-viaggio-tappa" id="ssViaggioTappa"></span>
+        <span class="ss-viaggio-progresso" aria-hidden="true"><span id="ssViaggioProgresso"></span></span>
+        <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-grigio" data-ss="viaggio-pausa" aria-pressed="false">⏸ Aspetta</button>
+        <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-verde" data-ss="viaggio-avanti">⏭ Vai avanti</button>
+        <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-grigio" data-ss="viaggio-fine">✋ Basta</button>
+      </div>
+
+      <aside class="ss-film" id="ssFilm" aria-labelledby="ssFilmTitolo" hidden>
+        <p class="ss-film-data" id="ssFilmData"></p>
+        <p class="ss-film-sonda" id="ssFilmSonda"></p>
+        <h2 class="ss-film-titolo" id="ssFilmTitolo"></h2>
+        <p class="ss-film-testo" id="ssFilmTesto"></p>
+        <div class="ss-film-fine" id="ssFilmFine" hidden>
+          <button type="button" class="ss-hud-btn ss-c-verde" data-ss="film-ancora">🔁 Rivedi il film</button>
+          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="film-esci">👆 Torna a esplorare</button>
+        </div>
+        <figure class="ss-film-foto" id="ssFilmFoto" hidden>
+          <img id="ssFilmImg" src="/assets/sistema-solare/foto/voyager-disegno.webp" alt="Voyager in un disegno ufficiale della NASA" loading="lazy" decoding="async">
+          <figcaption id="ssFilmDidascalia"></figcaption>
+        </figure>
+      </aside>
+
+      <aside class="ss-cartellino" id="ssCartellino" aria-labelledby="ssCartNome" hidden>
+        <div class="ss-cart-testa">
+          <span class="ss-mini ss-mini-grande" id="ssCartMini" aria-hidden="true"></span>
+          <div>
+            <p class="ss-cart-tipo" id="ssCartTipo"></p>
+            <h2 class="ss-cart-nome" id="ssCartNome"></h2>
+          </div>
+        </div>
+        <ul class="ss-cart-dati" id="ssCartDati"></ul>
+        <div class="ss-cart-curiosita" id="ssCartCuriosita" hidden>
+          <p><strong><span aria-hidden="true">💡</span> Lo sapevi?</strong> <span id="ssCartTesto"></span></p>
+          <div class="ss-cart-curiosita-azioni">
+            <button type="button" class="ss-link-btn" data-ss="curiosita-avanti" aria-label="Mostra un'altra curiosità">Un'altra ›</button>
+            <button type="button" class="ss-link-btn" data-ss="curiosita-pausa" aria-label="Fermale: le curiosità smettono di cambiare da sole">Fermale</button>
+          </div>
+        </div>
+        <p class="ss-cart-scala">Distanze accorciate e corpi ingranditi: non è in scala.</p>
+        <div class="ss-cart-azioni">
+          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="scopri">📖 Scopri</button>
+          <button type="button" class="ss-hud-btn ss-c-viola" data-ss="ascolta-cartellino">🔈 Ascolta</button>
+        </div>
+      </aside>
+
+      <div class="ss-hud-basso">
+        <div class="ss-carosello">
+          <button type="button" class="ss-hud-btn ss-c-grigio ss-freccia" data-ss="prec" aria-label="Vai al pianeta prima"><svg class="ss-freccia-svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="ss-nav-riga ss-poster" role="group" aria-label="Il Sole e i pianeti, in ordine dal più vicino al più lontano" id="ssNavPianeti"></div>
+          <button type="button" class="ss-hud-btn ss-c-grigio ss-freccia" data-ss="succ" aria-label="Vai al pianeta dopo"><svg class="ss-freccia-svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <p class="ss-poster-nota">Grandi e piccoli, ma non in scala vera: per le grandezze vere c'è <strong>Confronta</strong> in Opzioni.</p>
+        <div class="ss-dock" role="group" aria-label="Comandi">
+          <button type="button" class="ss-hud-btn ss-c-verde ss-grande" data-ss="viaggio">🚀 <span>Parti per il viaggio</span></button>
+          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="sistema">🔭 <span>Vedi tutto</span></button>
+          <button type="button" class="ss-hud-btn ss-c-grigio" data-ss="pausa" aria-pressed="false">⏸ <span>Ferma</span></button>
+          <button type="button" class="ss-hud-btn ss-c-blu" data-pannello-apri="esplora">🗺️ <span>Altri posti</span></button>
+          <button type="button" class="ss-hud-btn ss-c-arancio" data-pannello-apri="passaporto">🛂 <span>Passaporto</span> <span class="ss-badge" id="ssBadgeTimbri" aria-hidden="true"></span></button>
+          <button type="button" class="ss-hud-btn ss-c-grigio" data-pannello-apri="strumenti" aria-label="Opzioni">⚙️ <span class="ss-solo-largo">Opzioni</span></button>
+        </div>
+      </div>
+
+      <section class="ss-benvenuto" id="ssBenvenuto" aria-labelledby="ssBenvenutoTitolo" hidden>
+        <h2 id="ssBenvenutoTitolo"><span aria-hidden="true">👋</span> Benvenuto nello spazio!</h2>
+        <ul>
+          <li><span aria-hidden="true">👆</span> <strong>Tocca un pianeta</strong> in basso: ci voli sopra.</li>
+          <li><span aria-hidden="true">✋</span> <strong>Trascina</strong> la scena per girarla, <strong>＋ e －</strong> per avvicinarti.</li>
+          <li><span aria-hidden="true">🎯</span> In alto c'è <strong>la tua missione</strong>: risolvila trovando il posto giusto.</li>
+        </ul>
+        <div class="ss-benvenuto-azioni">
+          <button type="button" class="ss-hud-btn ss-c-verde ss-grande" data-ss="benvenuto-viaggio">🚀 Parti per il viaggio</button>
+          <button type="button" class="ss-hud-btn ss-c-blu ss-grande" data-ss="benvenuto-chiudi">👆 Esploro da solo</button>
+        </div>
+      </section>
+
+      <div class="ss-nowebgl" id="ssNoWebgl" hidden>
+        <p>Questo browser non riesce a disegnare la scena 3D. Le schede con tutti i dati funzionano lo stesso: apri «Altri posti» e scegli dove andare.</p>
+      </div>
+    </div>
+
+    <aside class="ss-cassetto" id="ssCassetto" aria-label="Schede e strumenti">
+      <div class="ss-cassetto-testa">
+        <div class="ss-schede-tab" role="group" aria-label="Che cosa mostrare">
+          <button type="button" class="ss-btn ss-chip" data-pannello="scheda" aria-pressed="true">📖 Scopri</button>
+          <button type="button" class="ss-btn ss-chip" data-pannello="esplora" aria-pressed="false">🗺️ Altri posti</button>
+          <button type="button" class="ss-btn ss-chip" data-pannello="passaporto" aria-pressed="false">🛂 Passaporto</button>
+          <button type="button" class="ss-btn ss-chip" data-pannello="strumenti" aria-pressed="false">⚙️ Opzioni</button>
+        </div>
+        <button type="button" class="ss-btn ss-solo-immersivo ss-chiudi" data-ss="chiudi-cassetto" aria-label="Chiudi il pannello e torna alla scena">✕ Chiudi</button>
+      </div>
+
+      <section class="ss-pannello ss-scheda" id="ssScheda" data-pannello-corpo="scheda" aria-labelledby="ssNome" tabindex="-1">
+        <p class="ss-tipo" id="ssTipo"></p>
+        <h2 class="ss-nome" id="ssNome">Il Sistema Solare</h2>
+        <div class="ss-scheda-corpo" id="ssSchedaCorpo"></div>
+      </section>
+
+      <section class="ss-pannello" data-pannello-corpo="esplora" aria-labelledby="ssEsploraTitolo">
+        <h2 id="ssEsploraTitolo">🗺️ Altri posti da visitare</h2>
+        <p class="ss-nota">Pianeti nani, lune, asteroidi, comete e stelle cadenti. Il ✓ indica dove sei già stato.</p>
+        <nav class="ss-nav" aria-label="Scegli che cosa esplorare">
+          <div class="ss-nav-gruppi" id="ssNavGruppi"></div>
+        </nav>
+      </section>
+
+      <section class="ss-pannello" data-pannello-corpo="strumenti" aria-labelledby="ssStrumentiTitolo">
+        <h2 id="ssStrumentiTitolo">⚙️ Opzioni</h2>
+
+        <div class="ss-tempo" role="group" aria-labelledby="ssTempoTitolo">
+          <h3 id="ssTempoTitolo">⏱️ Il tempo</h3>
+          <div class="ss-barra" role="group" aria-label="Come si muovono i pianeti" id="ssModo">
+            <button type="button" class="ss-btn ss-chip" data-modo="estetico" aria-pressed="true">🎨 Rallentato, per guardare</button>
+            <button type="button" class="ss-btn ss-chip" data-modo="vero" aria-pressed="false">⏱️ Tempo vero</button>
+          </div>
+          <p class="ss-nota" id="ssModoNota">I pianeti partono dalla posizione vera di oggi, poi si muovono più piano o più in fretta del vero, per guardarli meglio: chi è più veloce resta più veloce.</p>
+          <div class="ss-barra" role="group" aria-label="Velocità del tempo vero" id="ssVelocita" hidden>
+            <button type="button" class="ss-btn ss-chip" data-vel="auto" aria-pressed="true">Automatica</button>
+            <button type="button" class="ss-btn ss-chip" data-vel="0.0416667" aria-pressed="false">1 ora al secondo</button>
+            <button type="button" class="ss-btn ss-chip" data-vel="1" aria-pressed="false">1 giorno al secondo</button>
+            <button type="button" class="ss-btn ss-chip" data-vel="30.436875" aria-pressed="false">1 mese al secondo</button>
+            <button type="button" class="ss-btn ss-chip" data-vel="365.25" aria-pressed="false">1 anno al secondo</button>
+          </div>
+          <p class="ss-nota" id="ssVelocitaNota"></p>
+          <div class="ss-barra">
+            <button type="button" class="ss-btn" data-ss="oggi">📅 Torna a oggi</button>
+            <label class="ss-vai-data">Vai a un giorno: <input type="date" id="ssDataInput" min="1800-01-01" max="2050-12-31"></label>
+          </div>
+          <p class="ss-nota">Le posizioni dei pianeti sono calcolate per date dal 1800 al 2050.</p>
+        </div>
+
+        <div class="ss-barra" role="group" aria-label="Gira la camera">
+          <button type="button" class="ss-btn ss-btn-tondo" data-ss="sx" aria-label="Gira a sinistra">↺</button>
+          <button type="button" class="ss-btn ss-btn-tondo" data-ss="dx" aria-label="Gira a destra">↻</button>
+          <button type="button" class="ss-btn ss-btn-tondo" data-ss="su" aria-label="Guarda da sopra">⤒</button>
+          <button type="button" class="ss-btn ss-btn-tondo" data-ss="giu" aria-label="Guarda da sotto">⤓</button>
+        </div>
+
+        <fieldset class="ss-filtri">
+          <legend>Cosa vedere</legend>
+          <label><input type="checkbox" data-filtro="orbite" checked> Orbite</label>
+          <label><input type="checkbox" data-filtro="nomi" checked> Nomi</label>
+          <label><input type="checkbox" data-filtro="lune" checked> Lune</label>
+          <label><input type="checkbox" data-filtro="nani" checked> Pianeti nani</label>
+          <label><input type="checkbox" data-filtro="asteroidi" checked> Asteroidi</label>
+          <label><input type="checkbox" data-filtro="comete" checked> Comete</label>
+          <label><input type="checkbox" data-filtro="fasce" checked> Fasce di asteroidi</label>
+        </fieldset>
+
+        <label class="ss-con-voce"><input type="checkbox" id="ssViaggioVoce"> Nel viaggio guidato, leggi ad alta voce</label>
+
+        <section class="ss-confronto" aria-labelledby="ssConfrontoTitolo">
+          <h3 id="ssConfrontoTitolo">⚖️ Confronta le grandezze vere</h3>
+          <p>Qui le grandezze sono in scala vera fra loro, una accanto all'altra.</p>
+          <div class="ss-barra" role="group" aria-label="Che cosa confrontare" id="ssConfronti"></div>
+        </section>
+
+        <section class="ss-aiuto" aria-labelledby="ssAiutoTitolo">
+          <h3 id="ssAiutoTitolo">❓ Come si usa</h3>
+          <button type="button" class="ss-btn" data-ss="benvenuto-apri">👋 Rivedi il benvenuto</button>
+          <ul>
+            <li><strong>Scegli un pianeta</strong> dai pulsanti in basso, oppure toccalo nella scena: la camera vola fin lì.</li>
+            <li><strong>Gira la scena</strong> trascinando con il dito o con il mouse, oppure con i tasti freccia. <strong>Avvicinati</strong> con due dita, con la rotellina o con i tasti + e −.</li>
+            <li><strong>Il movimento</strong>: i pianeti partono dalla posizione vera del giorno che vedi in basso, poi si muovono rallentati per guardarli meglio. Il tempo vero si sceglie qui in Opzioni.</li>
+            <li><strong>Attenzione</strong>: nella scena le distanze sono accorciate e i corpi ingranditi, altrimenti non si vedrebbe quasi niente. Per le grandezze vere usa <strong>Confronta le grandezze</strong>.</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="ss-pannello ss-passaporto" data-pannello-corpo="passaporto" aria-labelledby="ssPassaportoTitolo">
+        <h2 id="ssPassaportoTitolo">🛂 Il tuo passaporto spaziale</h2>
+        <p>Ogni posto che visiti riceve un timbro. Si salva solo in questo browser.</p>
+        <ul class="ss-passaporto-conti" id="ssPassaportoConti"></ul>
+        <div class="ss-timbri" id="ssTimbri"></div>
+        <button type="button" class="ss-btn ss-btn-piccolo" data-ss="passaporto-azzera">Ricomincia da capo</button>
+      </section>
+    </aside>
+  </main>
+  <noscript>
+    <link rel="stylesheet" href="noscript.css">
+    <div class="noscript-msg">
+      <p>
+        Per esplorare il Sistema Solare in 3D è necessario abilitare JavaScript nel browser.<br><br>
+        <a href="/faq">Vai alle FAQ</a>
+      </p>
+    </div>
+  </noscript>
+
+  <section class="seo-static" aria-label="Il Sistema Solare in 3D">
+    <h2>Il Sistema Solare in 3D: uno strumento per studiare</h2>
+    <p>Questa pagina è un <strong>modello 3D del Sistema Solare</strong> pensato per la scuola primaria. Si vola dal Sole ai pianeti, dalle lune di Giove alle comete, e per ogni corpo c'è una scheda con i dati veri: quanto è grande, quanto dura un giorno e quanto dura un anno, che temperatura fa, quante lune ha, quali sonde lo hanno visitato.</p>
+    <ul>
+      <li><strong>Posizioni vere.</strong> I pianeti si trovano dove sono davvero nel giorno indicato: le posizioni sono calcolate con gli elementi orbitali pubblicati dal Jet Propulsion Laboratory della NASA. Si può far scorrere il tempo o scegliere una data.</li>
+      <li><strong>Dati controllati.</strong> I numeri vengono dalle schede ufficiali di NASA e JPL e dall'Unione Astronomica Internazionale; ogni scheda elenca le sue fonti.</li>
+      <li><strong>Immagini vere.</strong> Le superfici sono mappe costruite con le fotografie delle sonde. Dove nessuna sonda è mai arrivata, il corpo resta grigio e la scheda lo dice: non si inventa una superficie che nessuno ha visto.</li>
+      <li><strong>Non in scala, e lo dice.</strong> Nella scena le distanze sono accorciate e i corpi ingranditi, altrimenti i pianeti sarebbero puntini invisibili. Il confronto delle grandezze mostra invece le proporzioni vere.</li>
+      <li><strong>Meteore e buchi neri.</strong> Le schede spiegano la differenza fra meteoroide, meteora e meteorite, mostrano da quale cometa nasce ogni sciame di stelle cadenti e chiariscono che nel Sistema Solare non ci sono buchi neri.</li>
+    </ul>
+    <p>È gratis, senza pubblicità, non chiede registrazione e non raccoglie dati. Dopo la prima visita si apre anche senza connessione: le superfici dei corpi e i modelli 3D restano salvati man mano che li guardi. Per allenarsi con le domande ci sono i <a href="/scienze">quiz di scienze sul Sistema Solare</a> e di <a href="/geografia">geografia</a>.</p>
+  </section>
+
+  <!-- SCHEDE:INIZIO (generato da scripts/build_sistema_solare.py dai dati in docs/sistema-solare/: non modificare qui) -->
+  <section class="seo-static ss-atlante" aria-labelledby="ssAtlanteTitolo">
+    <h2 id="ssAtlanteTitolo">Le schede del Sistema Solare</h2>
+    <p>Le stesse schede che si aprono nella scena 3D, con i dati e le fonti di ogni corpo. Dati aggiornati al 15 ottobre 2026.</p>
+    <article class="ss-atlante-corpo" id="sole" aria-labelledby="atl-sole">
+      <h3 id="atl-sole">Sole</h3>
+      <p>Il Sole è la nostra stella. È una palla enorme di gas caldissimo, soprattutto idrogeno ed elio. La sua luce e il suo calore rendono possibile la vita sulla Terra.</p>
+      <dl>
+        <dt>Diametro</dt><dd>1.391.400 km</dd>
+        <dt>Un giro su se stesso</dt><dd>25,4 giorni terrestri</dd>
+        <dt>Gravità</dt><dd>274 m/s²</dd>
+      </dl>
+      <ul>
+        <li>Il Sole contiene il 99,8% di tutta la massa del Sistema Solare.</li>
+        <li>La luce del Sole impiega poco più di 8 minuti per arrivare sulla Terra.</li>
+        <li>Servirebbero circa 1,3 milioni di Terre per riempire il volume del Sole.</li>
+        <li>Fra circa 5 miliardi di anni il Sole diventerà una gigante rossa e poi una nana bianca.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html</a></li>
+        <li><a href="https://science.nasa.gov/sun/facts/" rel="noopener noreferrer">science.nasa.gov/sun/facts/</a></li>
+        <li><a href="https://science.nasa.gov/mission/parker-solar-probe/" rel="noopener noreferrer">science.nasa.gov/mission/parker-solar-probe/</a></li>
+        <li><a href="https://science.nasa.gov/mission/soho/" rel="noopener noreferrer">science.nasa.gov/mission/soho/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="mercurio" aria-labelledby="atl-mercurio">
+      <h3 id="atl-mercurio">Mercurio</h3>
+      <p>Mercurio è il pianeta più piccolo e il più vicino al Sole. È poco più grande della Luna ed è pieno di crateri. Di giorno fa caldissimo, di notte fa freddissimo.</p>
+      <dl>
+        <dt>Diametro</dt><dd>4.879 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>0,39 UA, circa 58 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>175,9 giorni terrestri</dd>
+        <dt>Un giro attorno al Sole</dt><dd>87,97 giorni terrestri</dd>
+        <dt>Temperatura media</dt><dd>167 °C</dd>
+        <dt>Gravità</dt><dd>3,7 m/s²: una bilancia segnerebbe il 38% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>0 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Da Mercurio il Sole sembrerebbe più di tre volte più grande che dalla Terra.</li>
+        <li>È il pianeta più veloce: fa un giro attorno al Sole in 88 giorni.</li>
+        <li>Un giorno completo, da un'alba all'altra, dura 176 giorni terrestri: proprio due anni di Mercurio.</li>
+        <li>Molti crateri portano i nomi di artisti, musicisti e scrittori.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact.html</a></li>
+        <li><a href="https://science.nasa.gov/mercury/facts/" rel="noopener noreferrer">science.nasa.gov/mercury/facts/</a></li>
+        <li><a href="https://science.nasa.gov/mission/messenger/" rel="noopener noreferrer">science.nasa.gov/mission/messenger/</a></li>
+        <li><a href="https://science.nasa.gov/mission/mariner-10/" rel="noopener noreferrer">science.nasa.gov/mission/mariner-10/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="venere" aria-labelledby="atl-venere">
+      <h3 id="atl-venere">Venere</h3>
+      <p>Venere è il pianeta più caldo del Sistema Solare, anche se Mercurio è più vicino al Sole. Le sue nubi spesse trattengono il calore. È grande quasi come la Terra.</p>
+      <dl>
+        <dt>Diametro</dt><dd>12.104 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>0,72 UA, circa 108 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>116,8 giorni terrestri</dd>
+        <dt>Un giro attorno al Sole</dt><dd>224,7 giorni terrestri</dd>
+        <dt>Temperatura media</dt><dd>464 °C</dd>
+        <dt>Gravità</dt><dd>8,87 m/s²: una bilancia segnerebbe il 90% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>0 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Gira su se stessa al contrario: lì il Sole sorge a ovest e tramonta a est.</li>
+        <li>Per fare un giro completo su se stessa impiega 243 giorni terrestri: più di quanto impiega a girare attorno al Sole (225 giorni).</li>
+        <li>Dopo la Luna, è l'oggetto più luminoso del cielo notturno.</li>
+        <li>Dieci sonde sovietiche sono atterrate su Venere e hanno mandato dati: la più resistente, Venera 13, ha funzionato per circa due ore.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html</a></li>
+        <li><a href="https://science.nasa.gov/venus/facts/" rel="noopener noreferrer">science.nasa.gov/venus/facts/</a></li>
+        <li><a href="https://science.nasa.gov/mission/magellan/" rel="noopener noreferrer">science.nasa.gov/mission/magellan/</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-041A" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-041A</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="terra" aria-labelledby="atl-terra">
+      <h3 id="atl-terra">Terra</h3>
+      <p>La Terra è il nostro pianeta, il terzo dal Sole. È l'unico posto conosciuto dove c'è la vita. Gran parte della sua superficie è coperta d'acqua.</p>
+      <dl>
+        <dt>Diametro</dt><dd>12.742 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>1 UA, circa 150 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>24 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>365,26 giorni terrestri</dd>
+        <dt>Temperatura media</dt><dd>15 °C</dd>
+        <dt>Gravità</dt><dd>9,82 m/s²</dd>
+        <dt>Lune conosciute</dt><dd>1 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Gli oceani coprono circa il 71% della superficie.</li>
+        <li>Fa un giro attorno al Sole in 365,25 giorni: per questo ogni quattro anni c'è l'anno bisestile.</li>
+        <li>L'asse è inclinato di 23,4 gradi: è questo che crea le stagioni.</li>
+        <li>Si è formata circa 4,5 miliardi di anni fa.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html</a></li>
+        <li><a href="https://science.nasa.gov/earth/facts/" rel="noopener noreferrer">science.nasa.gov/earth/facts/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="marte" aria-labelledby="atl-marte">
+      <h3 id="atl-marte">Marte</h3>
+      <p>Marte è il pianeta rosso. Il colore viene dalla ruggine del ferro nelle rocce e nella polvere. È un deserto freddo, con vulcani, canyon e calotte di ghiaccio ai poli.</p>
+      <dl>
+        <dt>Diametro</dt><dd>6.779 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>1,52 UA, circa 228 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>24,7 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>686,98 giorni terrestri</dd>
+        <dt>Temperatura media</dt><dd>-65 °C</dd>
+        <dt>Gravità</dt><dd>3,73 m/s²: una bilancia segnerebbe il 38% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>2 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Ha il vulcano più grande del Sistema Solare, Olympus Mons: è alto circa 22 km, quasi tre volte il monte Everest.</li>
+        <li>Il canyon Valles Marineris è lungo circa 3870 km.</li>
+        <li>Un giorno su Marte si chiama sol e dura poco più di 24 ore e mezza.</li>
+        <li>È l'unico pianeta che conosciamo abitato solo da robot.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html</a></li>
+        <li><a href="https://science.nasa.gov/mars/facts/" rel="noopener noreferrer">science.nasa.gov/mars/facts/</a></li>
+        <li><a href="https://science.nasa.gov/mission/viking-1/" rel="noopener noreferrer">science.nasa.gov/mission/viking-1/</a></li>
+        <li><a href="https://science.nasa.gov/mission/mars-express/" rel="noopener noreferrer">science.nasa.gov/mission/mars-express/</a></li>
+        <li><a href="https://science.nasa.gov/mission/mars-2020-perseverance/" rel="noopener noreferrer">science.nasa.gov/mission/mars-2020-perseverance/</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-077A" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-077A</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="giove" aria-labelledby="atl-giove">
+      <h3 id="atl-giove">Giove</h3>
+      <p>Giove è il pianeta più grande del Sistema Solare. È un gigante fatto soprattutto di gas: non ha una superficie solida. Le sue strisce colorate sono nubi spinte da venti fortissimi.</p>
+      <dl>
+        <dt>Diametro</dt><dd>139.822 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>5,2 UA, circa 778 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>9,9 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>11,9 anni terrestri</dd>
+        <dt>Temperatura media</dt><dd>-108 °C</dd>
+        <dt>Gravità</dt><dd>25,92 m/s²: una bilancia segnerebbe il 264% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>115 (conteggio di settembre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Ha il giorno più corto di tutti i pianeti: circa 10 ore.</li>
+        <li>La Grande Macchia Rossa è una tempesta più grande della Terra: gli astronomi la seguono senza interruzioni dal 1831.</li>
+        <li>Il suo volume è più di 1300 volte quello della Terra.</li>
+        <li>Ha anelli sottili e scuri, scoperti nel 1979 dalla sonda Voyager 1.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupringfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/jupringfact.html</a></li>
+        <li><a href="https://science.nasa.gov/jupiter/facts/" rel="noopener noreferrer">science.nasa.gov/jupiter/facts/</a></li>
+        <li><a href="https://science.nasa.gov/jupiter/moons/" rel="noopener noreferrer">science.nasa.gov/jupiter/moons/</a></li>
+        <li><a href="https://www.iau.org/IAU/IAU/News/Ann2026/MPC-New-Moons-Saturn-Jupiter.aspx" rel="noopener noreferrer">www.iau.org/IAU/IAU/News/Ann2026/MPC-New-Moons-Saturn-Jupiter.aspx</a></li>
+        <li><a href="https://science.nasa.gov/mission/galileo/" rel="noopener noreferrer">science.nasa.gov/mission/galileo/</a></li>
+        <li><a href="https://science.nasa.gov/mission/juno/" rel="noopener noreferrer">science.nasa.gov/mission/juno/</a></li>
+        <li><a href="https://science.nasa.gov/mission/pioneer-10/" rel="noopener noreferrer">science.nasa.gov/mission/pioneer-10/</a></li>
+        <li><a href="https://science.nasa.gov/mission/voyager-1/" rel="noopener noreferrer">science.nasa.gov/mission/voyager-1/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="saturno" aria-labelledby="atl-saturno">
+      <h3 id="atl-saturno">Saturno</h3>
+      <p>Saturno è il secondo pianeta più grande ed è famoso per i suoi anelli. Gli anelli sono fatti di miliardi di pezzi di ghiaccio e roccia. Anche Saturno è un gigante di gas.</p>
+      <dl>
+        <dt>Diametro</dt><dd>116.464 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>9,54 UA, circa 1.427 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>10,7 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>29,4 anni terrestri</dd>
+        <dt>Temperatura media</dt><dd>-139 °C</dd>
+        <dt>Gravità</dt><dd>11,19 m/s²: una bilancia segnerebbe il 114% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>293 (conteggio di agosto 2026)</dd>
+      </dl>
+      <ul>
+        <li>La sua densità media è più bassa di quella dell'acqua.</li>
+        <li>Gli anelli principali sono larghissimi ma spessi in genere solo circa 10 metri.</li>
+        <li>Al polo nord c'è una corrente d'aria a forma di esagono, larga circa 30 000 km.</li>
+        <li>Ha più lune confermate di qualsiasi altro pianeta.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/satringfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/satringfact.html</a></li>
+        <li><a href="https://science.nasa.gov/saturn/facts/" rel="noopener noreferrer">science.nasa.gov/saturn/facts/</a></li>
+        <li><a href="https://science.nasa.gov/saturn/moons/" rel="noopener noreferrer">science.nasa.gov/saturn/moons/</a></li>
+        <li><a href="https://science.nasa.gov/image-article/apod/apod-2026-august-11-six-moons-of-saturn/" rel="noopener noreferrer">science.nasa.gov/image-article/apod/apod-2026-august-11-six-moons-of-saturn/</a></li>
+        <li><a href="https://science.nasa.gov/mission/cassini/" rel="noopener noreferrer">science.nasa.gov/mission/cassini/</a></li>
+        <li><a href="https://science.nasa.gov/saturn/moons/titan/" rel="noopener noreferrer">science.nasa.gov/saturn/moons/titan/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="urano" aria-labelledby="atl-urano">
+      <h3 id="atl-urano">Urano</h3>
+      <p>Urano è un gigante di ghiaccio, di colore azzurro. Ruota quasi coricato su un fianco, come una palla che rotola. È stato il primo pianeta scoperto con il telescopio.</p>
+      <dl>
+        <dt>Diametro</dt><dd>50.724 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>19,19 UA, circa 2.871 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>17,2 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>84 anni terrestri</dd>
+        <dt>Temperatura media</dt><dd>-197 °C</dd>
+        <dt>Gravità</dt><dd>9,01 m/s²: una bilancia segnerebbe il 92% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>29 (conteggio di agosto 2026)</dd>
+      </dl>
+      <ul>
+        <li>Il suo asse è inclinato di quasi 98 gradi.</li>
+        <li>Ogni polo ha circa 42 anni di luce continua e poi circa 42 anni di buio.</li>
+        <li>Le sue lune hanno nomi di personaggi di William Shakespeare e Alexander Pope.</li>
+        <li>Solo una sonda lo ha visitato: Voyager 2, nel 1986.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranringfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/uranringfact.html</a></li>
+        <li><a href="https://pds-rings.seti.org/uranus/uranus_tables.html" rel="noopener noreferrer">pds-rings.seti.org/uranus/uranus_tables.html</a></li>
+        <li><a href="https://science.nasa.gov/uranus/facts/" rel="noopener noreferrer">science.nasa.gov/uranus/facts/</a></li>
+        <li><a href="https://science.nasa.gov/uranus/moons/" rel="noopener noreferrer">science.nasa.gov/uranus/moons/</a></li>
+        <li><a href="https://science.nasa.gov/mission/voyager-2/" rel="noopener noreferrer">science.nasa.gov/mission/voyager-2/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="nettuno" aria-labelledby="atl-nettuno">
+      <h3 id="atl-nettuno">Nettuno</h3>
+      <p>Nettuno è il pianeta più lontano dal Sole. È un gigante di ghiaccio blu, freddo e buio. È il pianeta con i venti più forti.</p>
+      <dl>
+        <dt>Diametro</dt><dd>49.244 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>30,07 UA, circa 4.498 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>16,1 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>164,8 anni terrestri</dd>
+        <dt>Temperatura media</dt><dd>-201 °C</dd>
+        <dt>Gravità</dt><dd>11,27 m/s²: una bilancia segnerebbe il 115% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>16 (conteggio di settembre 2026)</dd>
+      </dl>
+      <ul>
+        <li>È il primo pianeta trovato grazie ai calcoli matematici, invece che con le normali osservazioni del cielo.</li>
+        <li>Fa un giro attorno al Sole in circa 165 anni.</li>
+        <li>I suoi venti superano i 2000 km all'ora.</li>
+        <li>Nel 1989 Voyager 2 vide una enorme tempesta scura, la Grande Macchia Scura, che poi è scomparsa.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/nepringfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/nepringfact.html</a></li>
+        <li><a href="https://pds-rings.seti.org/neptune/neptune_tables.html" rel="noopener noreferrer">pds-rings.seti.org/neptune/neptune_tables.html</a></li>
+        <li><a href="https://science.nasa.gov/neptune/facts/" rel="noopener noreferrer">science.nasa.gov/neptune/facts/</a></li>
+        <li><a href="https://science.nasa.gov/neptune/moons/" rel="noopener noreferrer">science.nasa.gov/neptune/moons/</a></li>
+        <li><a href="https://science.nasa.gov/mission/voyager-2/" rel="noopener noreferrer">science.nasa.gov/mission/voyager-2/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="luna" aria-labelledby="atl-luna">
+      <h3 id="atl-luna">Luna</h3>
+      <p>La Luna è l'unico satellite naturale della Terra. Mostra sempre la stessa faccia, perché ruota su se stessa nello stesso tempo in cui gira attorno alla Terra. È l'unico corpo celeste, oltre alla Terra, su cui hanno camminato delle persone.</p>
+      <dl>
+        <dt>Diametro</dt><dd>3.475 km</dd>
+        <dt>Distanza media da Terra</dt><dd>384.400 km</dd>
+        <dt>Un giro su se stesso</dt><dd>27,3 giorni terrestri</dd>
+        <dt>Un giro attorno a Terra</dt><dd>27,32 giorni terrestri</dd>
+        <dt>Temperatura</dt><dd>da -173 a 127 °C</dd>
+        <dt>Gravità</dt><dd>1,62 m/s²: una bilancia segnerebbe il 17% di quanto segna sulla Terra</dd>
+      </dl>
+      <ul>
+        <li>Si allontana dalla Terra di circa 3,8 cm all'anno.</li>
+        <li>La gravità sulla Luna è circa un sesto di quella terrestre.</li>
+        <li>Gli astronauti delle missioni Apollo hanno riportato sulla Terra 382 kg di rocce e polvere lunari.</li>
+        <li>Le macchie scure, chiamate mari, sono antiche colate di lava solidificata.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</a></li>
+        <li><a href="https://science.nasa.gov/moon/facts/" rel="noopener noreferrer">science.nasa.gov/moon/facts/</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059A" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059A</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="cerere" aria-labelledby="atl-cerere">
+      <h3 id="atl-cerere">Cerere</h3>
+      <p>Cerere è il corpo più grande della fascia degli asteroidi, tra Marte e Giove. È un pianeta nano. Potrebbe contenere molta acqua sotto forma di ghiaccio.</p>
+      <dl>
+        <dt>Diametro</dt><dd>939 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>2,77 UA, circa 414 milioni di km</dd>
+        <dt>Un giro su se stesso</dt><dd>9,1 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>4,6 anni terrestri</dd>
+        <dt>Gravità</dt><dd>0,28 m/s²: una bilancia segnerebbe il 3% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>0 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>È stato il primo oggetto della fascia degli asteroidi a essere scoperto, da Giuseppe Piazzi nel 1801.</li>
+        <li>Nel 2015 è diventato il primo pianeta nano visitato da una sonda, Dawn.</li>
+        <li>Contiene circa il 25% della massa di tutta la fascia degli asteroidi.</li>
+        <li>Una rotazione dura solo circa 9 ore.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1" rel="noopener noreferrer">ssd-api.jpl.nasa.gov/sbdb.api?sstr=1</a></li>
+        <li><a href="https://science.nasa.gov/dwarf-planets/ceres/facts/" rel="noopener noreferrer">science.nasa.gov/dwarf-planets/ceres/facts/</a></li>
+        <li><a href="https://science.nasa.gov/mission/dawn/" rel="noopener noreferrer">science.nasa.gov/mission/dawn/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="plutone" aria-labelledby="atl-plutone">
+      <h3 id="atl-plutone">Plutone</h3>
+      <p>Plutone è un pianeta nano nella fascia di Kuiper, oltre Nettuno. Per molti anni è stato considerato il nono pianeta. Ha montagne di ghiaccio d'acqua, grandi pianure e ghiacciai.</p>
+      <dl>
+        <dt>Diametro</dt><dd>2.376 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>39,48 UA, circa 5.906 milioni di km</dd>
+        <dt>Un giorno, da un'alba all'altra</dt><dd>6,4 giorni terrestri</dd>
+        <dt>Un giro attorno al Sole</dt><dd>247,9 anni terrestri</dd>
+        <dt>Temperatura</dt><dd>da -240 a -226 °C</dd>
+        <dt>Gravità</dt><dd>0,62 m/s²: una bilancia segnerebbe il 6% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>5 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Nel 2006 l'Unione Astronomica Internazionale lo ha classificato come pianeta nano.</li>
+        <li>Il nome Plutone fu proposto da una ragazzina inglese, Venetia Burney.</li>
+        <li>La sonda New Horizons lo ha sorvolato il 14 luglio 2015.</li>
+        <li>Per circa 20 anni su 248 è più vicino al Sole di Nettuno.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html</a></li>
+        <li><a href="https://science.nasa.gov/dwarf-planets/pluto/facts/" rel="noopener noreferrer">science.nasa.gov/dwarf-planets/pluto/facts/</a></li>
+        <li><a href="https://science.nasa.gov/mission/new-horizons/" rel="noopener noreferrer">science.nasa.gov/mission/new-horizons/</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="eris" aria-labelledby="atl-eris">
+      <h3 id="atl-eris">Eris</h3>
+      <p>Eris è un pianeta nano grande quasi come Plutone, ma molto più lontano dal Sole. La sua scoperta ha fatto discutere su che cosa sia un pianeta. Ha una luna chiamata Disnomia.</p>
+      <dl>
+        <dt>Diametro</dt><dd>2.326 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>67,93 UA, circa 10.163 milioni di km</dd>
+        <dt>Un giro su se stesso</dt><dd>15,8 giorni terrestri</dd>
+        <dt>Un giro attorno al Sole</dt><dd>559,9 anni terrestri</dd>
+        <dt>Temperatura</dt><dd>da -243 a -217 °C</dd>
+        <dt>Gravità</dt><dd>0,81 m/s²: una bilancia segnerebbe il 8% di quanto segna sulla Terra</dd>
+        <dt>Lune conosciute</dt><dd>1 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>La sua scoperta portò nel 2006 alla nuova definizione di pianeta e di pianeta nano.</li>
+        <li>Impiega circa 560 anni per fare un giro attorno al Sole.</li>
+        <li>Prima di avere un nome ufficiale era soprannominata Xena.</li>
+        <li>Ruota su se stessa nello stesso tempo in cui la sua luna Disnomia le gira attorno, circa 16 giorni.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/dwarf-planets/eris/" rel="noopener noreferrer">science.nasa.gov/dwarf-planets/eris/</a></li>
+        <li><a href="https://arxiv.org/abs/2009.13733" rel="noopener noreferrer">arxiv.org/abs/2009.13733</a></li>
+        <li><a href="https://arxiv.org/abs/2303.13445" rel="noopener noreferrer">arxiv.org/abs/2303.13445</a></li>
+        <li><a href="https://arxiv.org/abs/2211.07987" rel="noopener noreferrer">arxiv.org/abs/2211.07987</a></li>
+        <li><a href="https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199" rel="noopener noreferrer">ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="haumea" aria-labelledby="atl-haumea">
+      <h3 id="atl-haumea">Haumea</h3>
+      <p>Haumea è un pianeta nano della fascia di Kuiper. Gira su se stessa così in fretta che ha preso una forma allungata, come un pallone da rugby. Ha due lune e un anello.</p>
+      <dl>
+        <dt>Diametro</dt><dd>1.595 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>43,06 UA, circa 6.442 milioni di km</dd>
+        <dt>Un giro su se stesso</dt><dd>3,9 ore</dd>
+        <dt>Un giro attorno al Sole</dt><dd>282,6 anni terrestri</dd>
+        <dt>Lune conosciute</dt><dd>2 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Fa un giro su se stessa in meno di 4 ore: è uno dei grandi oggetti più veloci a ruotare.</li>
+        <li>È stato il primo oggetto della fascia di Kuiper in cui è stato scoperto un anello, nel 2017.</li>
+        <li>Le sue due lune si chiamano Hi'iaka e Namaka.</li>
+        <li>Prende il nome da una dea hawaiana.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/dwarf-planets/haumea/" rel="noopener noreferrer">science.nasa.gov/dwarf-planets/haumea/</a></li>
+        <li><a href="https://arxiv.org/abs/2006.03113" rel="noopener noreferrer">arxiv.org/abs/2006.03113</a></li>
+        <li><a href="https://arxiv.org/abs/0903.4213" rel="noopener noreferrer">arxiv.org/abs/0903.4213</a></li>
+        <li><a href="https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136108" rel="noopener noreferrer">ssd-api.jpl.nasa.gov/sbdb.api?sstr=136108</a></li>
+      </ul>
+    </article>
+    <article class="ss-atlante-corpo" id="makemake" aria-labelledby="atl-makemake">
+      <h3 id="atl-makemake">Makemake</h3>
+      <p>Makemake è un pianeta nano della fascia di Kuiper, più piccolo di Plutone: è largo circa 1430 km, Plutone circa 2380 km. È di colore rossiccio. Sulla sua superficie ci sono ghiacci di metano ed etano.</p>
+      <dl>
+        <dt>Diametro</dt><dd>1.430 km</dd>
+        <dt>Distanza media dal Sole</dt><dd>45,57 UA, circa 6.817 milioni di km</dd>
+        <dt>Un giro attorno al Sole</dt><dd>307,6 anni terrestri</dd>
+        <dt>Lune conosciute</dt><dd>1 (conteggio di ottobre 2026)</dd>
+      </dl>
+      <ul>
+        <li>Dalla Terra è il secondo oggetto più luminoso della fascia di Kuiper, dopo Plutone.</li>
+        <li>Gli scopritori lo soprannominarono Easterbunny, coniglietto di Pasqua.</li>
+        <li>Fa un giro attorno al Sole in circa 308 anni.</li>
+        <li>Nel 2016 è stata annunciata una sua piccola luna scura, vista dal telescopio Hubble e soprannominata MK 2.</li>
+      </ul>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/dwarf-planets/makemake/" rel="noopener noreferrer">science.nasa.gov/dwarf-planets/makemake/</a></li>
+        <li><a href="https://arxiv.org/abs/1604.07461" rel="noopener noreferrer">arxiv.org/abs/1604.07461</a></li>
+        <li><a href="https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136472" rel="noopener noreferrer">ssd-api.jpl.nasa.gov/sbdb.api?sstr=136472</a></li>
+      </ul>
+    </article>
+    <h3>Le lune</h3>
+    <ul class="ss-atlante-elenco">
+      <li id="phobos"><strong>Fobos</strong> (luna di Marte, diametro 22 km). Phobos è la luna più grande di Marte, ma è piccola e ha una forma irregolare, come una patata. Gira attorno a Marte tre volte al giorno. Si sta avvicinando lentamente al pianeta.</li>
+      <li id="deimos"><strong>Deimos</strong> (luna di Marte, diametro 12 km). Deimos è la luna più piccola di Marte. Ha una forma irregolare ed è coperta da uno strato spesso di polvere. Per questo sembra più liscia di Phobos.</li>
+      <li id="io"><strong>Io</strong> (luna di Giove, diametro 3.643 km). Io è il corpo con più vulcani attivi di tutto il Sistema Solare. Le maree di Giove e delle altre lune la scaldano dall'interno. Ha centinaia di vulcani.</li>
+      <li id="europa"><strong>Europa</strong> (luna di Giove, diametro 3.122 km). Europa è una luna di Giove coperta da una crosta di ghiaccio. Sotto il ghiaccio c'è probabilmente un oceano di acqua salata. È uno dei posti migliori dove cercare ambienti adatti alla vita.</li>
+      <li id="ganimede"><strong>Ganimede</strong> (luna di Giove, diametro 5.262 km). Ganimede è la luna più grande del Sistema Solare: è più grande anche del pianeta Mercurio. È fatta di roccia e ghiaccio. È l'unica luna con un proprio campo magnetico.</li>
+      <li id="callisto"><strong>Callisto</strong> (luna di Giove, diametro 4.821 km). Callisto è la seconda luna più grande di Giove. La sua superficie scura è piena di crateri antichi. Sotto potrebbe nascondere un oceano salato.</li>
+      <li id="amaltea"><strong>Amaltea</strong> (luna di Giove, diametro 167 km). Amaltea è una piccola luna di Giove dalla forma allungata e irregolare. Gira molto vicino al pianeta. Fa parte del gruppo delle lune interne di Giove.</li>
+      <li id="titano"><strong>Titano</strong> (luna di Saturno, diametro 5.150 km). Titano è la luna più grande di Saturno e l'unica luna con un'atmosfera densa. Sulla sua superficie ci sono fiumi, laghi e mari di metano ed etano liquidi. Lì piove metano invece di acqua.</li>
+      <li id="encelado"><strong>Encelado</strong> (luna di Saturno, diametro 504 km). Encelado è una piccola luna di Saturno, bianca e ghiacciata. Dal polo sud spruzza nello spazio getti di vapore e granelli di ghiaccio. Sotto il ghiaccio c'è un oceano di acqua salata.</li>
+      <li id="mimas"><strong>Mimas</strong> (luna di Saturno, diametro 396 km). Mimas è la più piccola e la più vicina a Saturno tra le sue lune principali. È fatta quasi solo di ghiaccio d'acqua. Un enorme cratere la fa somigliare alla Morte Nera di Guerre Stellari.</li>
+      <li id="teti"><strong>Teti</strong> (luna di Saturno, diametro 1.062 km). Teti è una luna di Saturno fatta quasi tutta di ghiaccio d'acqua. È molto luminosa perché riflette tanta luce. Ha un cratere enorme e un lunghissimo canyon.</li>
+      <li id="dione"><strong>Dione</strong> (luna di Saturno, diametro 1.123 km). Dione è una luna di Saturno fatta di ghiaccio e roccia. Sulla sua superficie ci sono crateri e lunghe scogliere di ghiaccio brillante. Gira attorno a Saturno a una distanza simile a quella tra la Terra e la Luna.</li>
+      <li id="rea"><strong>Rea</strong> (luna di Saturno, diametro 1.527 km). Rea è la seconda luna più grande di Saturno. È fredda, piena di crateri e fatta soprattutto di ghiaccio. Attorno ha un velo di gas sottilissimo.</li>
+      <li id="giapeto"><strong>Giapeto</strong> (luna di Saturno, diametro 1.469 km). Giapeto è una luna di Saturno con due facce di colore diverso. Una metà è scura come il carbone, l'altra è chiara. Lungo l'equatore ha una catena di montagne.</li>
+      <li id="iperione"><strong>Iperione</strong> (luna di Saturno, diametro 270 km). Iperione è una luna di Saturno dalla forma irregolare, simile a una spugna. È piena di crateri profondi. Non ruota in modo regolare, ma si rigira in modo imprevedibile.</li>
+      <li id="miranda"><strong>Miranda</strong> (luna di Urano, diametro 472 km). Miranda è la più piccola delle cinque lune principali di Urano. Sembra fatta di pezzi diversi messi insieme. Ha uno dei paesaggi più strani del Sistema Solare.</li>
+      <li id="ariel"><strong>Ariel</strong> (luna di Urano, diametro 1.158 km). Ariel è la luna più luminosa tra le cinque grandi lune di Urano. La sua superficie sembra la più giovane. È fatta circa metà di ghiaccio e metà di roccia.</li>
+      <li id="umbriel"><strong>Umbriel</strong> (luna di Urano, diametro 1.169 km). Umbriel è la più scura tra le grandi lune di Urano. La sua superficie è antica e piena di crateri. Non si sa ancora perché sia così scura.</li>
+      <li id="titania"><strong>Titania</strong> (luna di Urano, diametro 1.578 km). Titania è la luna più grande di Urano. Ha grandi valli prodotte da fratture della crosta. È di colore grigio.</li>
+      <li id="oberon"><strong>Oberon</strong> (luna di Urano, diametro 1.523 km). Oberon è la seconda luna più grande di Urano e la più lontana tra quelle principali. È piena di crateri. È fatta circa metà di ghiaccio e metà di roccia.</li>
+      <li id="tritone"><strong>Tritone</strong> (luna di Nettuno, diametro 2.705 km). Tritone è la luna più grande di Nettuno. Gira attorno al pianeta in senso contrario alla rotazione di Nettuno. Probabilmente era un oggetto della fascia di Kuiper catturato da Nettuno.</li>
+      <li id="proteo"><strong>Proteo</strong> (luna di Nettuno, diametro 416 km). Proteo è una delle lune più grandi di Nettuno. Ha una forma un po' squadrata ed è piena di crateri. È uno degli oggetti più scuri del Sistema Solare.</li>
+      <li id="nereide"><strong>Nereide</strong> (luna di Nettuno, diametro 340 km). Nereide è una delle lune più lontane di Nettuno. La sua orbita è molto allungata. Forse è un oggetto catturato da Nettuno.</li>
+      <li id="caronte"><strong>Caronte</strong> (luna di Plutone, diametro 1.212 km). Caronte è la luna più grande di Plutone: è grande circa la metà del pianeta nano. Plutone e Caronte si mostrano sempre la stessa faccia. Per questo a volte sono chiamati pianeta doppio.</li>
+      <li id="disnomia"><strong>Disnomia</strong> (luna di Eris, diametro 700 km). Disnomia è l'unica luna conosciuta del pianeta nano Eris. È scura e lontanissima dal Sole. Gira attorno a Eris in circa 16 giorni.</li>
+      <li id="dimorphos"><strong>Dimorphos</strong> (luna di Didymos, diametro 0 km). Dimorphos è la piccola luna dell'asteroide Didymos. Nel 2022 la sonda DART della NASA ci si è schiantata contro apposta. L'urto ha cambiato la sua orbita: è stata la prima prova di difesa planetaria.</li>
+    </ul>
+    <h3>Asteroidi, comete e oggetti oltre Nettuno</h3>
+    <ul class="ss-atlante-elenco">
+      <li id="vesta"><strong>Vesta</strong> (asteroide, diametro 523 km). Vesta è il secondo corpo più massiccio della fascia degli asteroidi, dopo Cerere. Come la Terra, ha una crosta, un mantello e un nucleo. Al polo sud ha un cratere gigantesco.</li>
+      <li id="pallade"><strong>Pallade</strong> (asteroide, diametro 513 km). Pallade è uno dei più grandi asteroidi della fascia principale. Fu il secondo asteroide scoperto. La sua orbita è molto inclinata rispetto a quella dei pianeti.</li>
+      <li id="igea"><strong>Igea</strong> (asteroide, diametro 407 km). Igea è uno dei quattro asteroidi più grandi della fascia principale. È molto scura e riflette poca luce. Fu scoperta in Italia, a Napoli.</li>
+      <li id="eros"><strong>Eros</strong> (asteroide, diametro 17 km). Eros è un asteroide che passa vicino all'orbita della Terra. Ha una forma allungata, come una nocciolina. È stato il primo asteroide su cui si è posata una sonda.</li>
+      <li id="bennu"><strong>Bennu</strong> (asteroide, diametro 0 km). Bennu è un piccolo asteroide che passa vicino alla Terra circa ogni sei anni. È un mucchio di sassi tenuti insieme dalla gravità. Una sonda della NASA ne ha portato un pezzetto sulla Terra.</li>
+      <li id="ryugu"><strong>Ryugu</strong> (asteroide, diametro 1 km). Ryugu è un piccolo asteroide molto scuro. La sonda giapponese Hayabusa2 lo ha visitato. Ha riportato sulla Terra alcuni grammi della sua polvere.</li>
+      <li id="itokawa"><strong>Itokawa</strong> (asteroide, diametro 0 km). Itokawa è un piccolo asteroide allungato, fatto di sassi tenuti insieme dalla gravità. È stato il primo asteroide da cui sono stati portati campioni sulla Terra. Ha la forma di una lontra marina.</li>
+      <li id="didymos"><strong>Didymos</strong> (asteroide, diametro 1 km). Didymos è un asteroide con una piccola luna, Dimorphos. I due girano uno attorno all'altro. Il nome in greco significa gemello.</li>
+      <li id="phaethon"><strong>Fetonte</strong> (asteroide, diametro 6 km). (3200) Fetonte è l'asteroide da cui nascono le stelle cadenti Geminidi, a dicembre. La sua orbita lo porta molto vicino al Sole. Forse è una cometa spenta, o una cometa di roccia.</li>
+      <li id="halley"><strong>Cometa di Halley (1P/Halley)</strong> (cometa, diametro 11 km). La cometa di Halley è la cometa più famosa. Torna vicino al Sole circa ogni 76 anni. È passata l'ultima volta nel 1986 e tornerà nel 2061.</li>
+      <li id="67p"><strong>Cometa 67P/Churyumov-Gerasimenko</strong> (cometa, diametro 3 km). 67P è una cometa formata da due parti unite. È stata la prima cometa attorno a cui ha girato una sonda e su cui si è posato un lander. La missione Rosetta era dell'Agenzia Spaziale Europea.</li>
+      <li id="swift-tuttle"><strong>Cometa 109P/Swift-Tuttle</strong> (cometa, diametro 26 km). Swift-Tuttle è una grande cometa che torna vicino al Sole ogni 133 anni circa. La polvere che lascia lungo l'orbita crea le stelle cadenti Perseidi. È passata l'ultima volta nel 1992.</li>
+      <li id="tempel-tuttle"><strong>Cometa 55P/Tempel-Tuttle</strong> (cometa, diametro 4 km). Tempel-Tuttle è una piccola cometa che torna vicino al Sole circa ogni 33 anni. La sua polvere crea le stelle cadenti Leonidi, a novembre. A volte le Leonidi diventano una vera tempesta di meteore.</li>
+      <li id="hale-bopp"><strong>Cometa Hale-Bopp (C/1995 O1)</strong> (cometa, diametro 60 km). Hale-Bopp è stata la grande cometa del 1997. Il suo nucleo è molto grande, circa 60 km. Si è vista a occhio nudo per 18 mesi.</li>
+      <li id="arrokoth"><strong>Arrokoth</strong> (oggetto della fascia di Kuiper, diametro 20 km). Arrokoth è un piccolo oggetto ghiacciato della fascia di Kuiper. È formato da due parti unite, come un pupazzo di neve schiacciato. È l'oggetto più lontano mai visitato da una sonda.</li>
+    </ul>
+    <h3>Stazione Spaziale Internazionale e sonde Voyager</h3>
+    <ul class="ss-atlante-elenco">
+      <li id="iss"><strong>Stazione Spaziale Internazionale</strong> (stazione spaziale). La Stazione Spaziale Internazionale è un grande laboratorio che gira attorno alla Terra a circa 400 chilometri di altezza. Ci vivono di solito sette astronauti, che fanno esperimenti per capire meglio lo spazio e la Terra. Da novembre del 2000 a bordo c'è sempre stato qualcuno.</li>
+      <li id="voyager-1"><strong>Voyager 1</strong> (sonda spaziale). Voyager 1 è una sonda partita nel 1977. Ha fotografato Giove, Saturno e la luna Titano, poi è uscita dalla bolla del Sole. Dal 1998 è l'oggetto costruito dalle persone più lontano dal Sole, e nel 2026 comunica ancora con la Terra.</li>
+      <li id="voyager-2"><strong>Voyager 2</strong> (sonda spaziale). Voyager 2 è partita nel 1977, 16 giorni prima della sua gemella. È l'unica sonda che è andata a trovare tutti e quattro i pianeti giganti: Giove, Saturno, Urano e Nettuno. Nel 2018 è uscita anche lei dalla bolla del Sole.</li>
+    </ul>
+    <h3>Le stelle cadenti</h3>
+    <ul class="ss-atlante-elenco">
+      <li id="quadrantidi"><strong>Quadrantidi</strong> (picco il 4 gennaio, da asteroide 2003 EH1). Le Quadrantidi sono uno degli sciami più ricchi dell'anno, ma il loro picco dura solo poche ore. Nascono dalla polvere di un asteroide, 2003 EH1.</li>
+      <li id="liridi"><strong>Liridi</strong> (picco il 22-23 aprile, dalla cometa C/1861 G1 (Thatcher)). Le Liridi sono uno degli sciami più antichi conosciuti: furono osservate in Cina già nel 687 a.C. Sono meteore veloci e luminose.</li>
+      <li id="eta-aquaridi"><strong>Eta Aquaridi</strong> (picco il 6 maggio, dalla cometa 1P/Halley). Le Eta Aquaridi nascono dalla polvere della cometa di Halley. Si vedono meglio prima dell'alba e dall'emisfero sud.</li>
+      <li id="perseidi"><strong>Perseidi</strong> (picco il 12-13 agosto, dalla cometa 109P/Swift-Tuttle). Le Perseidi sono le famose stelle cadenti d'agosto, chiamate anche lacrime di San Lorenzo. Nascono dalla polvere della cometa Swift-Tuttle e spesso lasciano lunghe scie luminose.</li>
+      <li id="orionidi"><strong>Orionidi</strong> (picco il 21-22 ottobre, dalla cometa 1P/Halley). Le Orionidi nascono, come le Eta Aquaridi, dalla polvere della cometa di Halley. Sono meteore molto veloci e luminose.</li>
+      <li id="leonidi"><strong>Leonidi</strong> (picco il 17-18 novembre, dalla cometa 55P/Tempel-Tuttle). Le Leonidi sono le meteore più veloci tra i grandi sciami. Di solito sono poche, ma circa ogni 33 anni possono diventare una vera tempesta di stelle cadenti.</li>
+      <li id="geminidi"><strong>Geminidi</strong> (picco il 13-14 dicembre, da asteroide (3200) Fetonte (Phaethon)). Le Geminidi sono uno degli sciami più ricchi e regolari dell'anno. Non nascono da una cometa ma da un asteroide, Fetonte.</li>
+    </ul>
+    <h3 id="fascia-asteroidi">La fascia degli asteroidi</h3>
+    <p>Tra Marte e Giove c'è una zona piena di asteroidi: è la fascia principale. Gli asteroidi sono rocce rimaste dalla nascita del Sistema Solare. Sono tantissimi, ma sono molto lontani uno dall'altro. Tutti insieme pesano meno della nostra Luna. Il più grande è il pianeta nano Cerere.</p>
+    <h3 id="fascia-kuiper">La fascia di Kuiper</h3>
+    <p>Oltre Nettuno c'è un grande anello a forma di ciambella pieno di corpi ghiacciati: è la fascia di Kuiper. Lì si trovano Plutone e quasi tutti i pianeti nani conosciuti. Sono resti della nascita del Sistema Solare. Una sola sonda è passata vicino ai suoi corpi e li ha fotografati: New Horizons.</p>
+    <h3 id="nube-oort">La nube di Oort</h3>
+    <p>Gli scienziati pensano che il Sistema Solare sia circondato da un enorme guscio di corpi ghiacciati: la nube di Oort. Da lì arriverebbero molte comete con orbite lunghissime. Attenzione: la nube di Oort è un'ipotesi. Nessuno l'ha mai osservata direttamente, perché è troppo lontana.</p>
+    <h3 id="meteora-meteoroide-meteorite">Meteoroide, meteora, meteorite</h3>
+    <p>Un meteoroide è un sassolino o un granello che viaggia nello spazio. Se entra nell'atmosfera a grande velocità, si scalda e produce una scia di luce: quella luce è la meteora, la stella cadente. Se un pezzo arriva fino a terra senza bruciare del tutto, si chiama meteorite. Quando vediamo tante meteore che sembrano partire dallo stesso punto del cielo, è uno sciame meteorico.</p>
+    <h3 id="buco-nero">Ci sono buchi neri nel Sistema Solare?</h3>
+    <p>No: nel Sistema Solare non ci sono buchi neri. Un buco nero è un oggetto con una gravità così forte che niente, nemmeno la luce, può sfuggirgli. Al centro della nostra galassia c'è un buco nero enorme, Sagittarius A*, a circa 27 000 anni luce da noi. Il buco nero più vicino che conosciamo, Gaia BH1, è a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero. Fra circa 5 miliardi di anni diventerà una gigante rossa e poi una nana bianca.</p>
+  </section>
+
+  <section class="seo-static seo-faq" aria-labelledby="ssFaqTitolo">
+    <h2 id="ssFaqTitolo">Domande frequenti sul Sistema Solare</h2>
+    <details class="seo-faq-item">
+      <summary>Quanti pianeti ci sono nel Sistema Solare?</summary>
+      <p>Otto: Mercurio, Venere, Terra, Marte, Giove, Saturno, Urano e Nettuno. Plutone dal 2006 è un pianeta nano, per decisione dell'Unione Astronomica Internazionale. I pianeti nani riconosciuti sono cinque: Cerere, Plutone, Eris, Haumea e Makemake.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/solar-system/planets/" rel="noopener noreferrer">science.nasa.gov/solar-system/planets/</a></li>
+        <li><a href="https://science.nasa.gov/dwarf-planets/pluto/facts/" rel="noopener noreferrer">science.nasa.gov/dwarf-planets/pluto/facts/</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Qual è il pianeta più grande del Sistema Solare?</summary>
+      <p>Giove: il suo volume è più di 1300 volte quello della Terra. È un gigante di gas e non ha una superficie solida.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/jupiter/facts/" rel="noopener noreferrer">science.nasa.gov/jupiter/facts/</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Qual è il pianeta più vicino al Sole?</summary>
+      <p>Mercurio. È poco più grande della Luna e fa un giro attorno al Sole in 88 giorni.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/mercury/facts/" rel="noopener noreferrer">science.nasa.gov/mercury/facts/</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Qual è il pianeta più caldo?</summary>
+      <p>Venere, con una temperatura media di 464 °C, anche se Mercurio è più vicino al Sole: le sue nubi spesse trattengono il calore.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html</a></li>
+        <li><a href="https://science.nasa.gov/venus/facts/" rel="noopener noreferrer">science.nasa.gov/venus/facts/</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Quanto tempo impiega la luce del Sole ad arrivare sulla Terra?</summary>
+      <p>Poco più di 8 minuti.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/sun/facts/" rel="noopener noreferrer">science.nasa.gov/sun/facts/</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Quanto dura un anno su Marte?</summary>
+      <p>Circa 687 giorni terrestri (686,98): quasi due dei nostri anni.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Quanto peserei su Marte?</summary>
+      <p>La bilancia segnerebbe circa il 38% di quanto segna sulla Terra: se sulla Terra segna 30 kg, su Marte segnerebbe circa 11 kg e sulla Luna circa 5 kg. Tu resti uguale: cambia quanto il pianeta ti tira verso il basso.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html</a></li>
+        <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" rel="noopener noreferrer">nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Quante lune hanno Giove e Saturno?</summary>
+      <p>Saturno ne ha 293 (conteggio di agosto 2026), Giove 115 (settembre 2026). Il numero cresce quando gli astronomi ne scoprono di nuove. Urano ne ha 29, Nettuno 16, Marte 2, la Terra 1; Mercurio e Venere nessuna.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/image-article/apod/apod-2026-august-11-six-moons-of-saturn/" rel="noopener noreferrer">science.nasa.gov/image-article/apod/apod-2026-august-11-six-moons-of-saturn/</a></li>
+        <li><a href="https://www.iau.org/IAU/IAU/News/Ann2026/MPC-New-Moons-Saturn-Jupiter.aspx" rel="noopener noreferrer">www.iau.org/IAU/IAU/News/Ann2026/MPC-New-Moons-Saturn-Jupiter.aspx</a></li>
+        <li><a href="https://science.nasa.gov/uranus/moons/" rel="noopener noreferrer">science.nasa.gov/uranus/moons/</a></li>
+        <li><a href="https://science.nasa.gov/neptune/moons/" rel="noopener noreferrer">science.nasa.gov/neptune/moons/</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Dove si trova oggi Voyager 1?</summary>
+      <p>Il 15 ottobre 2026 era a circa 172 UA dal Sole, cioè circa 25,7 miliardi di km: i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra. Il 18 novembre 2026 sarà a un giorno luce dalla Terra. Dal 17 febbraio 1998 è l'oggetto costruito dalle persone più lontano dal Sole.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://ssd.jpl.nasa.gov/api/horizons.api" rel="noopener noreferrer">ssd.jpl.nasa.gov/api/horizons.api</a></li>
+        <li><a href="https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/" rel="noopener noreferrer">science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Che cos'è il «pallido puntino azzurro»?</summary>
+      <p>È la foto della Terra scattata da Voyager 1 il 14 febbraio 1990, da circa 6 miliardi di km: nella foto la Terra è un puntino azzurro grande circa un pixel. L'idea della foto era dello scienziato Carl Sagan.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/" rel="noopener noreferrer">science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/</a></li>
+      </ul>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Il modello 3D è in scala?</summary>
+      <p>No: le distanze sono accorciate e i corpi ingranditi, altrimenti i pianeti sarebbero puntini invisibili. Il confronto delle grandezze mostra invece le proporzioni vere.</p>
+    </details>
+    <details class="seo-faq-item">
+      <summary>Ci sono buchi neri nel Sistema Solare?</summary>
+      <p>No. Il buco nero enorme al centro della nostra galassia, Sagittarius A*, è a circa 27 000 anni luce; il più vicino che conosciamo, Gaia BH1, a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero.</p>
+      <p class="ss-fonti-titolo">Fonti:</p>
+      <ul class="ss-fonti-statiche">
+        <li><a href="https://www.eso.org/public/news/eso2208-eht-mw/" rel="noopener noreferrer">www.eso.org/public/news/eso2208-eht-mw/</a></li>
+        <li><a href="https://noirlab.edu/public/news/noirlab2227/" rel="noopener noreferrer">noirlab.edu/public/news/noirlab2227/</a></li>
+        <li><a href="https://science.nasa.gov/universe/black-holes/types/" rel="noopener noreferrer">science.nasa.gov/universe/black-holes/types/</a></li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="seo-static ss-crediti" aria-labelledby="ssCreditiTitolo">
+    <h2 id="ssCreditiTitolo">Crediti delle immagini e dei modelli 3D</h2>
+    <p>Le superfici sono mappe costruite con le fotografie delle sonde; dove nessuna sonda è arrivata il corpo resta di un colore uniforme.</p>
+    <ul class="ss-atlante-elenco">
+      <li><strong>Mercurio</strong>: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington</li>
+      <li><strong>Venere</strong>: NASA/JPL (sonda Magellan)</li>
+      <li><strong>Terra</strong>: NASA Earth Observatory image by Reto Stockli and Robert Simmon (Blue Marble, dati MODIS)</li>
+      <li><strong>Marte</strong>: NASA/JPL/USGS (Viking Orbiter, Mars Digital Image Model 2.1 colorizzato da NASA Ames)</li>
+      <li><strong>Giove</strong>: NASA/JPL/Space Science Institute</li>
+      <li><strong>Saturno</strong>: NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST</li>
+      <li><strong>Urano</strong>: NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST</li>
+      <li><strong>Nettuno</strong>: NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST</li>
+      <li><strong>Cerere</strong>: NASA/JPL-Caltech/UCLA/MPS/DLR/IDA; mosaico DLR, pubblicato da USGS Astrogeology</li>
+      <li><strong>Plutone</strong>: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute</li>
+      <li><strong>Luna</strong>: NASA's Scientific Visualization Studio; Ernie Wright (USRA); dati LRO/LROC (ASU) e LOLA</li>
+      <li><strong>Stazione Spaziale Internazionale</strong>: NASA/Ames Research Center, NASA 3D Resources (modello "International Space Station (ISS) (A)")</li>
+      <li><strong>Fobos</strong>: NASA/JPL/Solar System Simulator</li>
+      <li><strong>Deimos</strong>: NASA/JPL/Solar System Simulator</li>
+      <li><strong>Io</strong>: NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1)</li>
+      <li><strong>Europa</strong>: NASA/JPL/USGS Astrogeology Science Center (Galileo SSI, Voyager 1 e 2)</li>
+      <li><strong>Ganimede</strong>: NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1/2)</li>
+      <li><strong>Callisto</strong>: NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1/2)</li>
+      <li><strong>Titano</strong>: NASA/JPL-Caltech/Univ. Arizona (Cassini ISS)</li>
+      <li><strong>Encelado</strong>: P. Schenk e W. B. McKinnon, NASA/JPL-Caltech/SSI/USGS Astrogeology (Cassini ISS, 2024)</li>
+      <li><strong>Mimas</strong>: NASA/JPL-Caltech/Space Science Institute (Cassini ISS + Voyager per i buchi)</li>
+      <li><strong>Teti</strong>: NASA/JPL-Caltech/Space Science Institute (mosaico DLR, Cassini ISS)</li>
+      <li><strong>Dione</strong>: NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)</li>
+      <li><strong>Rea</strong>: NASA/JPL-Caltech/Space Science Institute (Cassini ISS + 6 immagini Voyager)</li>
+      <li><strong>Giapeto</strong>: NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)</li>
+      <li><strong>Miranda</strong>: USGS/Tammy Becker &amp; JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources</li>
+      <li><strong>Ariel</strong>: USGS/Tammy Becker &amp; JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources</li>
+      <li><strong>Umbriel</strong>: USGS/Tammy Becker &amp; JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources</li>
+      <li><strong>Titania</strong>: USGS/Tammy Becker &amp; JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources</li>
+      <li><strong>Oberon</strong>: USGS/Tammy Becker &amp; JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources</li>
+      <li><strong>Tritone</strong>: NASA/JPL-Caltech/Lunar &amp; Planetary Institute (Paul Schenk)</li>
+      <li><strong>Caronte</strong>: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute</li>
+      <li><strong>Vesta</strong>: NASA/JPL-Caltech/UCLA/MPS/DLR/IDA (fotomappa Dawn FC, Roatsch et al.)</li>
+      <li><strong>Bennu</strong>: NASA/Goddard/University of Arizona (OSIRIS-REx), NASA SVS</li>
+      <li><strong>Ryugu</strong>: (c) ISAS/JAXA, dati Hayabusa2 ONC-T</li>
+      <li><strong>Voyager 1</strong>: NASA, NASA 3D Resources (modello "Voyager Probe (A)")</li>
+      <li><strong>Voyager 2</strong>: NASA, NASA 3D Resources (modello "Voyager Probe (A)")</li>
+      <li><strong>Voyager in un disegno ufficiale della NASA</strong>: <a href="https://images.nasa.gov/details/PIA04495" rel="noopener noreferrer">NASA/JPL-Caltech (PIA04495)</a></li>
+      <li><strong>Il «pallido puntino azzurro»: la Terra vista da Voyager 1 il 14 febbraio 1990 (versione rielaborata nel 2020)</strong>: <a href="https://images.nasa.gov/details/PIA23645" rel="noopener noreferrer">NASA/JPL-Caltech (PIA23645)</a></li>
+      <li><strong>Il «ritratto di famiglia» del Sistema Solare, 14 febbraio 1990</strong>: <a href="https://photojournal.jpl.nasa.gov/catalog/PIA00451" rel="noopener noreferrer">NASA/JPL-Caltech (PIA00451)</a></li>
+      <li><strong>La copertina del Disco d'oro che viaggia su ogni Voyager</strong>: <a href="https://science.nasa.gov/mission/voyager/golden-record-contents/" rel="noopener noreferrer">NASA/JPL-Caltech</a></li>
+    </ul>
+  </section>  <!-- SCHEDE:FINE -->
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <a class="footer-link" href="/privacy">Privacy Policy</a>
+  <a class="footer-link" href="/cookie">Cookie Policy</a>
+  <a class="footer-link" href="https://www.youtube.com/@lascuolaamica">Video su YouTube</a>
+  <span class="footer-link footer-version" data-app-version data-app-version-format="compact" hidden aria-hidden="true"></span>
+  <button type="button" class="footer-link" data-open-modal="modalInfoHub" aria-haspopup="dialog">Info</button>
+  <a class="footer-link footer-support-cta" href="/supporta" data-support-cta="1" aria-label="Apri la pagina Supporta il progetto" title="Supporta il progetto"><span class="support-heart" aria-hidden="true">❤</span><span class="support-tag">Supporta il progetto</span></a>
+  <div class="footer-social">
+    <h2 class="footer-link footer-social-title" id="footerSocialTitle">Per genitori e insegnanti</h2>
+    <ul class="footer-social-list" aria-labelledby="footerSocialTitle">
+      <li><a class="footer-link footer-social-link" href="https://www.instagram.com/lascuolaamica/" target="_blank" rel="noopener noreferrer me"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span class="sr-only">La scuola amica su Instagram (si apre in una nuova scheda)</span></a></li>
+      <li><a class="footer-link footer-social-link" href="https://www.facebook.com/lascuolaamica/" target="_blank" rel="noopener noreferrer me"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg><span class="sr-only">La scuola amica su Facebook (si apre in una nuova scheda)</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+<script defer src="js/sistema-solare-dati.js"></script>
+<script defer src="js/sistema-solare-motore.js"></script>
+<script defer src="js/sistema-solare.js"></script>
+<script defer src="app-version.js"></script>
+<script defer src="shared.js"></script>
+</body>
+</html>

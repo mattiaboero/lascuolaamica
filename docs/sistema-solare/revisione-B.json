@@ -1,0 +1,275 @@
+{
+ "revisore": "B",
+ "data": "2026-10-15",
+ "correzioni": [
+  {
+   "sezione": "corpi",
+   "id": "caronte",
+   "campo": "densita_gcm3",
+   "attuale": 1.853,
+   "nuovo": 1.705,
+   "motivo": "La densità 1,853 della tabella JPL non è coerente con GM e raggio della stessa tabella (GM 106,1 km³/s², R 606,0 km): M = GM/G = 1,590e21 kg, densità = 1,705 g/cm³. NSSDC dà 1700 kg/m³ (massa 1,586e21 kg). Massa 1,59e21 e raggio 606 restano giusti; con 1,705 lo scarto densità scende sotto lo 0,1%.",
+   "fonte": "https://ssd.jpl.nasa.gov/sats/phys_par/ ; https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "caronte",
+   "campo": "curiosita.0",
+   "attuale": "Da Plutone, Caronte non sorge e non tramonta: resta sempre nello stesso punto del cielo.",
+   "nuovo": "Da una metà di Plutone, Caronte resta sempre nello stesso punto del cielo; dall'altra metà non si vede mai.",
+   "motivo": "Per la rotazione sincrona reciproca Caronte è fisso nel cielo solo per l'emisfero di Plutone rivolto verso di lui; dall'emisfero opposto non è mai visibile. La frase attuale fa pensare che si veda da tutto Plutone.",
+   "fonte": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "dimorphos",
+   "campo": "periodo_orbitale_giorni",
+   "attuale": 0.4738,
+   "nuovo": 0.47365,
+   "motivo": "Coppia periodo/distanza resa coerente, entrambi DOPO l'impatto: periodo assestato 11 h 22 min 03 s = 11,3675 h = 0,47365 giorni (Naidu et al. 2024, PSJ 5, 74: 11,3674 ± 0,0004 h). Verifica Keplero con la massa del sistema 5,6e11 kg: scarto circa +2%, entro la soglia.",
+   "fonte": "https://www.jpl.nasa.gov/news/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/ ; https://iopscience.iop.org/article/10.3847/PSJ/ad26e7"
+  },
+  {
+   "sezione": "corpi",
+   "id": "dimorphos",
+   "campo": "distanza_media.valore",
+   "attuale": 1.206,
+   "nuovo": 1.152,
+   "motivo": "1,206 km era il semiasse PRIMA dell'impatto (Thomas et al. 2023). Dopo l'impatto la distanza media da Didymos è circa 1152 m, 37 m in meno di prima (Naidu et al. 2024, comunicato JPL marzo 2024).",
+   "fonte": "https://www.jpl.nasa.gov/news/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "dimorphos",
+   "campo": "note",
+   "attuale": "Dimensioni 177 × 174 × 116 m, diametro della sfera di ugual volume 151 ± 5 m, massa stimata 4,3e9 kg (Daly et al. 2023). Periodo orbitale dopo l'impatto 11,3712 h (= 0,47380 giorni), prima 11,921473 h; semiasse prima dell'impatto 1,206 ± 0,035 km (Thomas et al. 2023). Superficie 'parziale': solo l'emisfero visto da DART prima dell'urto.",
+   "nuovo": "Dimensioni 177 × 174 × 116 m, diametro della sfera di ugual volume 151 ± 5 m, massa stimata 4,3e9 kg (Daly et al. 2023). Orbita dopo l'impatto: periodo 11 h 22 min 03 s (= 0,47365 giorni) e distanza media da Didymos circa 1,152 km (Naidu et al. 2024; JPL, marzo 2024). Prima dell'impatto: periodo 11,921473 h e distanza circa 1,19-1,21 km (1,206 ± 0,035 km secondo Thomas et al. 2023, 1,189 km secondo Naidu et al. 2024). Dopo l'urto l'orbita è diventata leggermente eccentrica. Superficie 'parziale': solo l'emisfero visto da DART prima dell'urto.",
+   "motivo": "Allineata ai nuovi valori di periodo e distanza, entrambi dopo l'impatto.",
+   "fonte": "https://www.jpl.nasa.gov/news/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "67p",
+   "campo": "massa_kg",
+   "attuale": 9922000000000.0,
+   "nuovo": 9982000000000.0,
+   "motivo": "Pätzold et al. 2016 (Nature 530, 63) danno GM = 666,2 ± 0,2 m³/s² e massa (9982 ± 3)e9 kg. Il GM 662,2e-9 km³/s² riportato in SBDB e copiato qui è un refuso (666,2 → 662,2): con 662,2 la massa scende a 9,922e12 kg.",
+   "fonte": "https://www.nature.com/articles/nature16535 ; https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Inside_Rosetta_s_comet"
+  },
+  {
+   "sezione": "corpi",
+   "id": "67p",
+   "campo": "massa_rispetto_terra",
+   "attuale": 1.66e-12,
+   "nuovo": 1.67e-12,
+   "motivo": "Ricalcolata: 9,982e12 / 5,9722e24 = 1,671e-12.",
+   "fonte": "https://www.nature.com/articles/nature16535"
+  },
+  {
+   "sezione": "corpi",
+   "id": "67p",
+   "campo": "raggio_medio_km",
+   "attuale": 1.7,
+   "nuovo": 1.65,
+   "motivo": "3,4 km (Sierks 2015) è un diametro medio di forma, non quello della sfera di ugual volume. Con massa 9,982e12 kg e densità 533 kg/m³ (Pätzold 2016) il volume è circa 18,7 km³, quindi il raggio equivalente è 1,65 km. Con 1,7 km la densità calcolata esce 0,48 invece di 0,533 (scarto 10%).",
+   "fonte": "https://www.nature.com/articles/nature16535 ; https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=67P&phys-par=1"
+  },
+  {
+   "sezione": "corpi",
+   "id": "67p",
+   "campo": "note",
+   "attuale": "Raggio = metà del diametro medio 3,4 km (Sierks et al. 2015, via JPL SBDB). Massa da GM 662,2e-9 km³/s² (Pätzold et al. 2016). Rotazione prima del perielio 2015; dopo, 12,4043 h (JPL SBDB). Elementi orbitali JPL SBDB.",
+   "nuovo": "Raggio = raggio della sfera di ugual volume (circa 18,7 km³), ricavato da massa e densità di Pätzold et al. 2016; il diametro medio di forma è 3,4 km (Sierks et al. 2015). Massa (9982 ± 3)e9 kg, GM 666,2 m³/s² (Pätzold et al. 2016; JPL SBDB riporta 662,2e-9 km³/s², refuso). Rotazione prima del perielio 2015; dopo, 12,4043 h (JPL SBDB). Elementi orbitali JPL SBDB.",
+   "motivo": "Allineata ai nuovi valori di massa e raggio.",
+   "fonte": "https://www.nature.com/articles/nature16535"
+  },
+  {
+   "sezione": "corpi",
+   "id": "bennu",
+   "campo": "raggio_medio_km",
+   "attuale": 0.24222,
+   "nuovo": 0.2447,
+   "motivo": "0,48444 km è la media dei tre assi (0,5047, 0,4918, 0,4567), non il diametro della sfera di ugual volume. Con GM 4,8904 m³/s² e densità 1,194 g/cm³ di SBDB il raggio equivalente è 0,2447 km (volume circa 0,0614 km³, coerente con 0,0615 km³ di Lauretta et al. 2019). Con 0,24222 la densità calcolata esce 1,231 (scarto 3%).",
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1"
+  },
+  {
+   "sezione": "corpi",
+   "id": "bennu",
+   "campo": "gravita_superficie_ms2",
+   "attuale": 8.34e-05,
+   "nuovo": 8.17e-05,
+   "motivo": "Ricalcolata con il nuovo raggio: GM/R² = 4,8904 / 244,7² = 8,17e-5 m/s².",
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1"
+  },
+  {
+   "sezione": "corpi",
+   "id": "bennu",
+   "campo": "velocita_fuga_kms",
+   "attuale": 0.000201,
+   "nuovo": 0.0002,
+   "motivo": "Ricalcolata con il nuovo raggio: √(2GM/R) = 0,19993 m/s = 0,000200 km/s.",
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1"
+  },
+  {
+   "sezione": "corpi",
+   "id": "bennu",
+   "campo": "note",
+   "attuale": "Raggio = metà del diametro medio 0,48444 km (Daly et al. 2020, via JPL SBDB). Elementi orbitali JPL SBDB (epoca JD 2455562.5).",
+   "nuovo": "Raggio = raggio della sfera di ugual volume, ricavato da GM (Chesley et al. 2020) e densità (Daly et al. 2020) di JPL SBDB; il diametro medio 0,48444 km di SBDB è la media dei tre assi. Elementi orbitali JPL SBDB (epoca JD 2455562.5).",
+   "motivo": "Allineata al nuovo raggio.",
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1"
+  },
+  {
+   "sezione": "corpi",
+   "id": "mimas",
+   "campo": "curiosita.1",
+   "attuale": "Fa un giro attorno a Saturno in 22 ore e 36 minuti.",
+   "nuovo": "Fa un giro attorno a Saturno in circa 22 ore e 37 minuti.",
+   "motivo": "Il periodo del dataset, 0,9424218 giorni, vale 22,618 ore = 22 h 37 min. La NASA scrive 22 h 36 min (troncamento); la frase deve combaciare con il numero mostrato.",
+   "fonte": "https://ssd.jpl.nasa.gov/sats/elem/ ; https://science.nasa.gov/saturn/moons/mimas/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "titano",
+   "campo": "curiosita.0",
+   "attuale": "È l'unico posto, oltre alla Terra, dove ci sono liquidi in superficie.",
+   "nuovo": "È l'unico posto conosciuto, oltre alla Terra, con liquidi sulla superficie.",
+   "motivo": "La NASA scrive 'the only place besides Earth known to have liquids on its surface': manca 'conosciuto', che rende la frase verificabile e non assoluta.",
+   "fonte": "https://science.nasa.gov/saturn/moons/titan/facts/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "miranda",
+   "campo": "curiosita.0",
+   "attuale": "Ha tre grandi zone chiamate coronae, che non esistono su nessun altro corpo conosciuto.",
+   "nuovo": "Ha tre grandi zone chiamate coronae, fatte di creste e valli e con pochi crateri.",
+   "motivo": "'Non esistono su nessun altro corpo conosciuto' è falso preso alla lettera: l'IAU usa il termine corona anche per decine di strutture su Venere. La pagina NASA le dice 'unique', ma per un bambino la frase è fuorviante. La nuova frase usa la descrizione NASA.",
+   "fonte": "https://science.nasa.gov/uranus/moons/miranda/ ; https://planetarynames.wr.usgs.gov/DescriptorTerms"
+  },
+  {
+   "sezione": "corpi",
+   "id": "rea",
+   "campo": "curiosita.3",
+   "attuale": "Nel 2008 Cassini ha raccolto indizi di materiale in orbita attorno a lei.",
+   "nuovo": "Fu scoperta nel 1672 dall'astronomo italiano Giovanni Domenico Cassini.",
+   "motivo": "Gli indizi di anelli del 2008 sono stati smentiti: nel 2010 la ricerca con le immagini di Cassini (Tiscareno et al., GRL) non ha trovato materiale in orbita. Meglio una curiosità sicura; la scoperta è confermata da JPL.",
+   "fonte": "https://news.cornell.edu/node/272010 ; https://ssd.jpl.nasa.gov/sats/discovery.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "halley",
+   "campo": "curiosita.1",
+   "attuale": "Nel 1986 una flotta di sonde l'ha studiata; Giotto, dell'ESA, è passata a 605 km dal nucleo.",
+   "nuovo": "Nel 1986 una flotta di sonde l'ha studiata; Giotto, dell'ESA, è passata a 596 km dal nucleo.",
+   "motivo": "L'ESA, che ha gestito Giotto, dà 596 ± 2 km (14 marzo 1986). 605 km è il valore della pagina NASA.",
+   "fonte": "https://www.esa.int/Science_Exploration/Space_Science/Giotto_overview ; https://esdcdoi.esac.esa.int/doi/html/data/planetary/GIOTTO/GIO-C-OPE-3-RDR-HALLEY.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "swift-tuttle",
+   "campo": "curiosita.1",
+   "attuale": "Tornerà vicino al Sole nel 2125.",
+   "nuovo": "Tornerà vicino al Sole nel 2126.",
+   "motivo": "Il prossimo perielio è previsto per luglio 2126 (IAUC 5636, Marsden; 1992 + 133,3 anni del periodo SBDB). La NASA scrive 2125, ma il calcolo orbitale dà 2126.",
+   "fonte": "https://tamkin3.eps.harvard.edu/iauc/05600/05636.html ; https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=109P"
+  },
+  {
+   "sezione": "corpi",
+   "id": "iperione",
+   "campo": "distanza_media.valore",
+   "attuale": 1500930,
+   "nuovo": 1481500,
+   "motivo": "Con 1 500 930 km la terza legge di Keplero dà 21,71 giorni contro 21,28 del periodo (-2%). Il semiasse medio JPL (1 481 500 km, piano di Laplace) è coerente con il periodo (scarto < 0,1%). Iperione è molto perturbato da Titano, quindi il valore osculante oscilla.",
+   "fonte": "https://ssd.jpl.nasa.gov/sats/elem/"
+  }
+ ],
+ "verificati_senza_problemi": [
+  "luna",
+  "phobos",
+  "deimos",
+  "io",
+  "europa",
+  "ganimede",
+  "callisto",
+  "amaltea",
+  "encelado",
+  "teti",
+  "dione",
+  "giapeto",
+  "ariel",
+  "umbriel",
+  "titania",
+  "oberon",
+  "tritone",
+  "proteo",
+  "nereide",
+  "disnomia",
+  "vesta",
+  "pallade",
+  "eros",
+  "ryugu",
+  "itokawa",
+  "didymos",
+  "phaethon",
+  "tempel-tuttle",
+  "hale-bopp",
+  "arrokoth"
+ ],
+ "dubbi": [
+  {
+   "id": "phobos",
+   "campo": "nome",
+   "descrizione": "Nell'italiano corrente si trovano sia 'Phobos' sia 'Fobos' (Wikipedia italiana usa 'Fobos'; molti testi scolastici e divulgativi usano 'Phobos e Deimos'). Scelta editoriale: se si tiene 'Phobos', conviene citare 'Fobos' fra parentesi almeno nella scheda."
+  },
+  {
+   "id": "phaethon",
+   "campo": "nome",
+   "descrizione": "'Fetonte' è la forma italiana del mito, ma per l'asteroide in italiano è più comune '3200 Phaethon'. Valutare 'Fetonte (Phaethon)'."
+  },
+  {
+   "id": "igea",
+   "campo": "raggio_medio_km",
+   "descrizione": "203,56 km viene dal vecchio diametro IRAS (407 km). Le immagini VLT/SPHERE di Vernazza et al. 2020 (Nature Astronomy 4, 136) danno un corpo quasi sferico di circa 430 km di diametro (raggio circa 217 km), con massa misurata. Non ho potuto leggere il valore esatto con incertezza nel testo dell'articolo: da verificare prima di sostituirlo."
+  },
+  {
+   "id": "swift-tuttle",
+   "campo": "curiosita.2",
+   "descrizione": "La NASA scrive che Schiaparelli collegò la cometa alle Perseidi nel 1865; le lettere di Schiaparelli a Secchi sono del 1866 (pubblicate nel 1867). La cometa è stata scoperta nel 1862. Si può tenere 1865 citando la NASA o scrivere 'negli anni Sessanta dell'Ottocento'."
+  },
+  {
+   "id": "halley",
+   "campo": "curiosita.2",
+   "descrizione": "La NASA dà albedo 0,03 (3%), JPL SBDB 0,04 ± 0,01. Il 3% è citabile, ma 'circa il 4%' è il valore più usato in letteratura (Giotto)."
+  },
+  {
+   "id": "dimorphos",
+   "campo": "curiosita.3",
+   "descrizione": "'Larga circa 170 metri' corrisponde agli assi prima dell'urto (177 × 174 m); il diametro equivalente è 151 m e dopo l'impatto la forma è cambiata (Naidu et al. 2024). Va bene come ordine di grandezza; 'circa 150-170 metri' sarebbe più prudente."
+  },
+  {
+   "id": "dimorphos",
+   "campo": "eccentricita",
+   "descrizione": "Dopo l'impatto l'orbita è leggermente eccentrica (Naidu et al. 2024 danno un valore dell'ordine di 0,02). Non ho potuto leggere il numero esatto dall'articolo (accesso negato): resta null."
+  },
+  {
+   "id": "titano",
+   "campo": "curiosita.3",
+   "descrizione": "Dragonfly: la NASA indica un lancio 'non prima di luglio 2028' con arrivo a fine 2034. La frase è giusta oggi, ma va ricontrollata se la data slitta."
+  },
+  {
+   "id": "arrokoth",
+   "campo": "curiosita.2",
+   "descrizione": "Corretto nel contenuto (NASA: 'Powhatan/Algonquian for sky'). Per uno stile più rispettoso: 'nella lingua del popolo Powhatan' invece di 'dei nativi Powhatan'."
+  },
+  {
+   "id": "amaltea",
+   "campo": "densita_gcm3",
+   "descrizione": "JPL dà 1,01 ± 0,12; Anderson et al. 2005 (Galileo) davano 0,86 ± 0,10. La curiosità 'vicina a quella dell'acqua' regge con entrambi."
+  },
+  {
+   "id": "rea",
+   "campo": "curiosita.2",
+   "descrizione": "Rea, nel mito, è madre di diversi dèi olimpici (Zeus, Era, Poseidone...). 'La madre degli dèi dell'Olimpo' va bene per un bambino; più preciso 'la madre di Zeus e di altri dèi dell'Olimpo'."
+  }
+ ]
+}

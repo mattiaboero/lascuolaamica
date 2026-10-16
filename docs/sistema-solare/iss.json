@@ -1,0 +1,408 @@
+{
+ "meta": {
+  "aggiornato": "2026-10-16",
+  "note": "Ricerca per il modello 3D del Sistema Solare. Ogni valore ha la fonte consultata il 16/10/2026. Dove un numero e' un mio calcolo (non scritto in una fonte) e' marcato 'calcolo'. Dove le fonti NASA ed ESA danno valori diversi sono riportati entrambi. Non e' stato scaricato nessun file grande: dei modelli 3D sono stati scaricati solo A (39.708 byte) e B (476.992 byte) per contarne le facce; gli altri pesi vengono dall'API GitHub e da richieste HEAD."
+ },
+ "dati": {
+  "altitudine_km": {
+   "tipica": 415,
+   "intervallo": [
+    370,
+    460
+   ],
+   "valore_da_usare": "circa 400-420 km",
+   "dettagli": [
+    {
+     "valore": "257 miglia (415 km), altitudine a cui la ISS opera (giugno 2024)",
+     "fonte": "https://www.nasa.gov/wp-content/uploads/2024/06/iss-deorbit-analysis-summary.pdf"
+    },
+    {
+     "valore": "370-460 km (scheda tecnica ESA)",
+     "fonte": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station"
+    },
+    {
+     "valore": "circa 400 km (pagina ESA per ragazzi)",
+     "fonte": "https://www.esa.int/kids/en/learn/Life_in_Space/Space_Stations/The_International_Space_Station"
+    },
+    {
+     "valore": "circa 250 miglia, cioe' circa 402 km (home NASA ISS)",
+     "fonte": "https://www.nasa.gov/international-space-station/"
+    },
+    {
+     "valore": "circa 420 km al 15/10/2026 (calcolo dal TLE: semiasse 6798 km dal moto medio 15,4888 giri/giorno, meno raggio equatoriale 6378,137 km)",
+     "fonte": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE"
+    }
+   ],
+   "nota": "L'altitudine non e' fissa: scende piano piano per la resistenza dell'atmosfera e viene rialzata con spinte periodiche (reboost). Fonte NASA: https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm"
+  },
+  "inclinazione_gradi": {
+   "valore": 51.6,
+   "fonte": [
+    "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm",
+    "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station"
+   ],
+   "nota": "Il TLE del 15/10/2026 da' 51,6317 gradi. Va da ovest a est (NASA)."
+  },
+  "periodo_minuti": {
+   "intervallo": [
+    90,
+    93
+   ],
+   "tipico_calcolato_dal_TLE": 92.97,
+   "fonte": [
+    "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm",
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+   ],
+   "nota": "NASA: 'Each orbit takes 90-93 minutes, depending on the exact altitude'. 92,97 min e' calcolo da 86400/15,48879905 giri al giorno."
+  },
+  "velocita": {
+   "km_h": 28000,
+   "dettagli": [
+    {
+     "valore": "17.500 miglia/ora = 28.164 km/h (conversione mia)",
+     "fonte": "https://www.nasa.gov/international-space-station/"
+    },
+    {
+     "valore": "7,6-7,7 km/s, circa 27.500 km/h",
+     "fonte": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station"
+    },
+    {
+     "valore": "28.800 km/h (media, pagina ESA per ragazzi)",
+     "fonte": "https://www.esa.int/kids/en/learn/Life_in_Space/Space_Stations/The_International_Space_Station"
+    },
+    {
+     "valore": "cinque miglia al secondo (= circa 8 km/s, arrotondamento NASA)",
+     "fonte": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+    }
+   ],
+   "valore_da_usare": "circa 28.000 km/h (circa 7,7 km/s)"
+  },
+  "giri_al_giorno": {
+   "valore": 16,
+   "intervallo_esatto": [
+    15.5,
+    15.9
+   ],
+   "fonte": [
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+    "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm",
+    "https://www.esa.int/kids/en/learn/Life_in_Space/Space_Stations/The_International_Space_Station"
+   ],
+   "nota": "TLE 15/10/2026: 15,4888 giri/giorno."
+  },
+  "dimensioni_m": {
+   "lunghezza_massima": 109,
+   "larghezza": 73,
+   "dettagli": [
+    {
+     "valore": "109 m da un estremo all'altro (anche apertura dei pannelli solari: 356 ft)",
+     "fonte": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+    },
+    {
+     "valore": "73 m lunghezza dei pannelli solari (239 ft); traliccio principale 94 m; moduli pressurizzati lunghi 67 m",
+     "fonte": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+    },
+    {
+     "valore": "ESA: larghezza 108 m, lunghezza 74 m (circa 88 m con ATV o Progress), altezza 45 m",
+     "fonte": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station"
+    }
+   ],
+   "nota": "Le due agenzie misurano in modo un po' diverso. Per il modello: 109 m x 73 m (NASA)."
+  },
+  "massa_kg": {
+   "valore": 419725,
+   "fonte": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+   "nota": "925.335 libbre; pagina NASA aggiornata il 16/07/2024. ESA: circa 450.000 kg 'a stazione completata' (https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station)."
+  },
+  "volume": {
+   "abitabile_m3": 388,
+   "pressurizzato_m3": 1005,
+   "fonte": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+   "nota": "ESA indica 1200 m3 pressurizzati."
+  },
+  "persone_a_bordo": {
+   "valore": "7 di solito (di piu' durante i cambi dell'equipaggio)",
+   "fonte": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+   "nota": "Visitata finora da oltre 280 persone di 26 paesi (home NASA ISS) / almeno 290 persone di 26 paesi (NASA, 25 anni, novembre 2025). ESA kids: oltre 250 persone di oltre 20 paesi (pagina meno aggiornata)."
+  },
+  "abitata_continuativamente_dal": {
+   "valore": "2000-11-02",
+   "descrizione": "2 novembre 2000, arrivo dell'equipaggio della Expedition 1 (Shepherd, Gidzenko, Krikalev)",
+   "fonte": [
+    "https://www.nasa.gov/centers-and-facilities/johnson/the-international-space-station-marks-25-years-of-continuous-human-presence/",
+    "https://www.nasa.gov/international-space-station/"
+   ],
+   "nota": "Primo modulo (Zarya) lanciato il 20 novembre 1998 (ESA, https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station). Assemblaggio completato nel 2010 (ESA)."
+  },
+  "partner": {
+   "agenzie": [
+    {
+     "agenzia": "NASA",
+     "paese": "Stati Uniti"
+    },
+    {
+     "agenzia": "Roscosmos",
+     "paese": "Russia"
+    },
+    {
+     "agenzia": "ESA",
+     "paese": "Europa: 10 stati partecipanti = Belgio, Danimarca, Francia, Germania, Italia, Paesi Bassi, Norvegia, Spagna, Svezia, Svizzera"
+    },
+    {
+     "agenzia": "JAXA",
+     "paese": "Giappone"
+    },
+    {
+     "agenzia": "CSA",
+     "paese": "Canada"
+    }
+   ],
+   "numeri": "5 agenzie spaziali di 15 paesi (NASA)",
+   "fonte": [
+    "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station",
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+    "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/About_the_International_Space_Station"
+   ],
+   "nota": "L'Italia partecipa tramite l'ESA (elenco dei 10 stati ESA nella pagina 'About the ISS' consultata attraverso la ricerca; la scheda tecnica ESA indica 'Europe, ESA, representing 10 of the 18 Member States')."
+  },
+  "ritiro": {
+   "sintesi": "Fine della vita operativa prevista nel 2030; dopo, rientro controllato nell'atmosfera con il veicolo 'US Deorbit Vehicle' costruito da SpaceX, in una zona remota dell'oceano.",
+   "dettagli": [
+    {
+     "valore": "'At the end of the space station's useful life in 2030, NASA and its international partners will deorbit the station' (analisi NASA sul deorbit, giugno 2024)",
+     "fonte": "https://www.nasa.gov/wp-content/uploads/2024/06/iss-deorbit-analysis-summary.pdf"
+    },
+    {
+     "valore": "SpaceX costruira' il veicolo; contratto a prezzo unico fino a 843 milioni di dollari; annuncio del 26/06/2024; Stati Uniti, Giappone, Canada ed ESA si sono impegnati fino al 2030, la Russia 'through at least 2028'",
+     "fonte": "https://www.nasa.gov/news-release/nasa-selects-international-space-station-us-deorbit-vehicle/"
+    },
+    {
+     "valore": "Stati Uniti, Canada, Giappone ed ESA fino al 2030; la Russia 'currently is planning to extend' il suo segmento fino al 2030 (pagina FAQ NASA, data della pagina non indicata)",
+     "fonte": "https://www.nasa.gov/international-space-station-frequently-asked-questions/"
+    }
+   ],
+   "data_fonti": "2024-06-26 (comunicato NASA); l'analisi NASA e' dello stesso mese",
+   "avvertenza": "Non ho trovato in questa ricerca una fonte NASA piu' recente del giugno 2024. Una ricerca ha segnalato un documento del NASA Advisory Council che parlerebbe di gennaio 2031: non verificato, non usarlo. Scrivere 'previsto intorno al 2030'."
+  }
+ },
+ "descrizione_bambini": "La Stazione Spaziale Internazionale (ISS) e' un grande laboratorio che gira attorno alla Terra a circa 400 chilometri di altezza. Ci vivono di solito sette astronauti, che fanno esperimenti per capire meglio lo spazio e la Terra. Da novembre del 2000 a bordo c'e' sempre stato qualcuno.",
+ "curiosita": [
+  {
+   "testo": "La ISS gira cosi' veloce che fa il giro della Terra in circa un'ora e mezza: circa 16 giri al giorno.",
+   "fonte": [
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+    "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm"
+   ]
+  },
+  {
+   "testo": "Con 16 giri al giorno, gli astronauti vedono 16 albe e 16 tramonti ogni giorno.",
+   "fonte": [
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+   ],
+   "nota": "Deduzione mia dai 16 giri al giorno: in ogni giro la stazione passa una volta dalla notte al giorno e viceversa. Non e' scritta come frase nelle fonti."
+  },
+  {
+   "testo": "Passando sopra la Terra, la ISS sorvola piu' del 90% delle persone che vivono sul pianeta.",
+   "fonte": [
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+   ]
+  },
+  {
+   "testo": "L'acqua si ricicla: la stazione recupera cosi' tanta acqua che servono il 65% di rifornimenti d'acqua in meno dalla Terra.",
+   "fonte": [
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+   ]
+  },
+  {
+   "testo": "Per non perdere forza nei muscoli e nelle ossa, ogni astronauta fa ginnastica per almeno due ore al giorno.",
+   "fonte": [
+    "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+   ]
+  }
+ ],
+ "posizione_e_tle": {
+  "tle_di_riferimento": {
+   "fonte": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE",
+   "consultato": "2026-10-16",
+   "righe": [
+    "ISS (ZARYA)",
+    "1 25544U 98067A   26288.82192346  .00005580  00000+0  10980-3 0  9999",
+    "2 25544  51.6317  63.1136 0006755 265.8514  94.1703 15.48879905590452"
+   ],
+   "epoca": "giorno 288,82192346 del 2026 = 15/10/2026 alle 21:43 ora italiana (19:43 UTC) - calcolo dal formato TLE (https://celestrak.org/NORAD/documentation/tle-fmt.php)",
+   "elementi": {
+    "inclinazione_gradi": 51.6317,
+    "RAAN_gradi": 63.1136,
+    "eccentricita": 0.0006755,
+    "argomento_perigeo_gradi": 265.8514,
+    "anomalia_media_gradi": 94.1703,
+    "moto_medio_giri_giorno": 15.48879905,
+    "derivata_prima_moto_medio_ndot_su_2": 5.58e-05
+   }
+  },
+  "perche_la_posizione_non_si_sa_giorno_per_giorno": "Il sito non fa richieste esterne, quindi non puo' scaricare un TLE aggiornato. Un TLE descrive l'orbita in un istante (l'epoca). Poi l'orbita cambia: la resistenza dell'atmosfera frena la stazione e la fa scendere, e le spinte per rialzarla (reboost) e le manovre per evitare detriti cambiano periodo e altezza. NASA: 'The ISS orbital altitude drops gradually over time due to the Earth's gravitational pull and atmospheric drag. Periodic reboosts adjust the ISS orbit.' (https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm). Il periodo cambia, quindi dopo giorni la stazione e' piu' avanti o piu' indietro lungo l'orbita rispetto al calcolo.",
+  "quanto_degrada_un_TLE": {
+   "dalle_fonti": [
+    {
+     "valore": "'In general, TLE data is accurate to about a kilometer or so at epoch and it quickly degrades.' (citazione di Vallado, Crawford, Hujsak e Kelso, 'Revisiting Spacetrack Report #3', riportata dalla documentazione di Skyfield; non l'ho letta nel testo originale)",
+     "fonte": "https://rhodesmill.org/skyfield/earth-satellites.html"
+    },
+    {
+     "valore": "'The element set might only be useful for a couple of weeks to either side of its epoch.' (utile al massimo un paio di settimane)",
+     "fonte": "https://rhodesmill.org/skyfield/earth-satellites.html"
+    },
+    {
+     "valore": "Per i satelliti in orbita bassa i set di elementi vengono aggiornati 'several times a day' proprio per la resistenza dell'aria (CelesTrak, FAQ sulla precisione)",
+     "fonte": "https://celestrak.org/columns/v04n05/"
+    }
+   ],
+   "non_trovato": "Non ho trovato in una fonte primaria un numero di km di errore per giorno. Siti secondari parlano di 1-3 km all'epoca e 'decine di km dopo una settimana' (exoatlas.com, orbitalradar.com/glossary/tle): NON verificati, da non citare come dato.",
+   "calcolo_mio_errore_se_si_ignora_la_frenata": {
+    "metodo": "Con il termine di frenata dello stesso TLE (ndot/2 = 5,58e-5 giri/giorno^2), lo spostamento lungo l'orbita rispetto a un periodo costante e' (ndot/2) x t^2 giri, moltiplicato per 2 x pi x 6798 km.",
+    "risultati_km": {
+     "1_giorno": 2.4,
+     "3_giorni": 21,
+     "7_giorni": 117,
+     "14_giorni": 467
+    },
+    "significato": "Se il sito usasse un'orbita circolare a periodo fisso, la ISS sarebbe fuori posto di circa 2 km dopo un giorno, 20 km dopo 3, oltre 100 km dopo una settimana, quasi 500 km dopo 2 settimane. Non e' l'errore di un TLE (che modella la frenata) ma mostra quanto la posizione sfugga in fretta. Con le spinte di reboost e' peggio, non misurabile senza dati nuovi."
+   },
+   "regola_onesta": "Con un TLE incorporato nel sito, la posizione e' esatta entro pochi km solo nel giorno dell'epoca (15/10/2026) e diventa 'indicativa' dopo pochi giorni; oltre un paio di settimane non e' piu' attendibile. Su un modello in scala del Sistema Solare, dove 100 km sono pochi pixel, e' comunque accettabile se si scrive 'posizione indicativa'. Non si puo' dire 'dove si trova adesso'."
+  },
+  "calcolo_precessione_orbita": {
+   "valore_gradi_al_giorno": -4.95,
+   "periodo_giorni": 72.7,
+   "metodo": "formula standard della precessione nodale per J2 = 1,08263e-3: dOmega/dt = -1,5 J2 (R/p)^2 n cos(i), con R = 6378,137 km, a = 6798 km, n = 15,4888 giri/giorno, i = 51,63 gradi.",
+   "significato": "Il piano dell'orbita ruota attorno all'asse della Terra di circa 5 gradi al giorno (un giro completo in circa 73 giorni). Se il modello tiene fisso il piano orbitale, dopo qualche settimana la ISS passa su latitudini/longitudini diverse da quelle reali. E' un mio calcolo da formula nota, non una cifra trovata in una fonte; la formula non e' stata verificata su una fonte consultata."
+  }
+ },
+ "modelli_3d": {
+  "repo": {
+   "url": "https://github.com/nasa/NASA-3D-Resources",
+   "licenza_dichiarata": "README: 'These assets are free and without copyright.' rimanda alle linee guida d'uso NASA. Il repository non ha un file LICENSE.",
+   "linee_guida_uso": "I contenuti NASA 'generally are not subject to copyright in the United States'; 'NASA should be acknowledged as the source of the material'; non si deve far credere che NASA approvi il sito; logo e insegne NASA non sono di pubblico dominio. Uso educativo e web ammesso.",
+   "fonte_licenza": [
+    "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/README.md",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+   ],
+   "nota": "Le pagine dei singoli modelli su science.nasa.gov non riportano una licenza specifica e rimandano alle linee guida d'uso (le pagine A e B). Il dataset data.nasa.gov dice 'License not specified'.",
+   "commit_albero": "11ebb4ee043715aefbba6aeec8a61746fad67fa7 (HEAD del 16/10/2026); ultimo push al repo 03/06/2025"
+  },
+  "elenco": [
+   {
+    "nome": "International Space Station (ISS) (A)",
+    "formato": "glTF binario (.glb)",
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(A)/International%20Space%20Station%20(ISS)%20(A).glb",
+    "anteprima_png": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(A)/International%20Space%20Station%20(ISS)%20(A).png",
+    "pagina_nasa": "https://science.nasa.gov/3d-resources/international-space-station-iss-a/",
+    "peso_byte": 39708,
+    "peso_verificato_con": "HEAD content-length e API GitHub",
+    "facce_dichiarate": null,
+    "facce_contate": {
+     "triangoli": 6642,
+     "vertici": 7565,
+     "come": "mio conteggio leggendo gli accessor del file glTF (non dichiarato dalla NASA). Il dataset Ames dichiara 6.628 poligoni e 7.239 vertici per un 'Model of the ISS' (https://data.nasa.gov/dataset/nasa-3d-models-international-space-station): simile ma non provo che sia lo stesso file."
+    },
+    "materiali": "6 materiali a colore fisso (grigi, pannelli solari blu, un marrone), nessuna texture",
+    "compressione": "KHR_draco_mesh_compression (richiede decodificatore Draco) e KHR_materials_specular",
+    "unita": "non in metri: il nodo ha scala 0,678 e l'estensione e' circa 26 unita' contro 109 m reali. Va normalizzato.",
+    "credito": "NASA/Ames Research Center",
+    "licenza": "NASA 3D Resources: libero senza copyright, citare NASA (vedi 'repo')",
+    "data_file": "2025-04-07 (data del file sulla pagina NASA, non della configurazione)",
+    "configurazione": "Non dichiarata. Dall'anteprima: modello semplificato, 8 pannelli solari blu, 2 grandi radiatori, moduli a croce; il segmento russo non e' riconoscibile. Interpretazione mia, da non citare."
+   },
+   {
+    "nome": "International Space Station (ISS) (B)",
+    "formato": "glTF binario (.glb)",
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(B)/International%20Space%20Station%20(ISS)%20(B).glb",
+    "anteprima_png": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(B)/International%20Space%20Station%20(ISS)%20(B).png",
+    "pagina_nasa": "https://science.nasa.gov/3d-resources/international-space-station-iss-b/",
+    "peso_byte": 476992,
+    "peso_verificato_con": "HEAD content-length e API GitHub (la pagina NASA scrive 465,81 KB)",
+    "facce_dichiarate": null,
+    "facce_contate": {
+     "triangoli": 174440,
+     "vertici": 103071,
+     "come": "mio conteggio dagli accessor del file glTF (non dichiarato dalla NASA)"
+    },
+    "materiali": "19 materiali tutti grigio 0,4, nessuna texture: serve colorarli a mano (pannelli solari ecc.)",
+    "compressione": "KHR_draco_mesh_compression (richiede decodificatore Draco) e KHR_materials_specular",
+    "unita": "non in metri: estensione circa 45 unita' sul lato lungo contro 109 m reali. Va normalizzato.",
+    "credito": "NASA/Michael D. Carbajal",
+    "licenza": "NASA 3D Resources: libero senza copyright, citare NASA (vedi 'repo')",
+    "data_file": "2025-04-07 (data del file; pagina aggiornata il 17/06/2025), non della configurazione",
+    "configurazione": "Non dichiarata. Dall'anteprima: molto piu' dettagliato e piu' recente, con segmento russo, un braccio lungo in cima, radiatori e piu' pannelli. Interpretazione mia da una sola immagine, da non citare."
+   },
+   {
+    "nome": "International Space Station (ISS) (C) (High Res)",
+    "formato": "archivio .7z (formato interno non dichiarato nel repository)",
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(C)%20(High%20Res)/International%20Space%20Station%20(ISS)%20(C)%20(High%20Res).7z",
+    "peso_byte": 24793851,
+    "peso_verificato_con": "API GitHub (non scaricato)",
+    "scartato_perche": "24,8 MB, supera il limite di 10 MB; formato non glTF",
+    "nota_possibile": "Il dataset data.nasa.gov 'ISS (Hi-res)' parla di un modello ad altissima risoluzione in Lightwave del febbraio 2011, configurazione finale (https://data.nasa.gov/dataset/nasa-3d-models-iss-hi-res). Non verificato che sia lo stesso."
+   },
+   {
+    "nome": "International Space Station (ISS) (D) (IGOAL)",
+    "formato": "glb (95.875.648 byte, confermato con HEAD) + archivio .7z in 4 parti (41.943.040 x 3 + 18.658.261 byte)",
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(D)%20(IGOAL)/International%20Space%20Station%20(ISS).glb",
+    "peso_byte": 95875648,
+    "scartato_perche": "96 MB"
+   },
+   {
+    "nome": "International Space Station (ISS) (E) (Internal)",
+    "formato": "archivio .7z in 8 parti",
+    "peso_byte": "7 x 41.943.040 + 10.172.893 = 303.376.173 (somma mia dai pesi API)",
+    "scartato_perche": "303 MB, con interni"
+   }
+  ],
+  "consigliato": {
+   "migliore": "B",
+   "motivo": "E' il piu' completo e fedele tra quelli sotto 10 MB (174 mila triangoli, 477 KB compresso, nodi separati) ed e' l'unico con aspetto moderno. Pero' e' tutto grigio e pesante da disegnare per uno scena piccola.",
+   "alternativa_leggera": "A: 40 KB, 6.642 triangoli, gia' colorato (pannelli blu). Piu' adatto se la ISS e' piccola sullo schermo o se si decimano i poligoni. Se serve un solo modello per un sito per bambini che deve restare leggero: A.",
+   "url_consigliato": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20(ISS)%20(B)/International%20Space%20Station%20(ISS)%20(B).glb"
+  }
+ },
+ "avvertenze": [
+  "Entrambi i modelli usano la compressione Draco (KHR_draco_mesh_compression). Il motore del sito e' WebGL 1 senza librerie e non legge glTF/Draco: serve convertirli offline (per esempio con Blender: importare il .glb e riesportare in OBJ o in un formato semplice, oppure glTF senza Draco) e poi caricare un formato proprio. Non ho eseguito la conversione.",
+  "Peso dopo la conversione: non misurato. Stima mia solo indicativa, B probabilmente alcuni MB come mesh grezza; da misurare.",
+  "Nessuna delle due pagine NASA dichiara la configurazione della stazione rappresentata, ne' un numero di facce: i triangoli sono un mio conteggio.",
+  "I modelli non sono in metri e hanno assi/rotazioni proprie (A ha una rotazione di 90 gradi sul nodo): vanno scalati a 109 m e orientati.",
+  "Licenza: nessuna licenza formale sul repository, solo la dichiarazione 'free and without copyright' e le linee guida NASA. Serve il credito a NASA e non va suggerita l'approvazione NASA. Se si vuole una licenza scritta, chiedere a arc-special-proj@lists.nasa.gov (indirizzo del README).",
+  "Gli ordini di grandezza: la ISS e' lunga 109 m e orbita a circa 6,6% del raggio terrestre sopra la superficie: in scala col Sistema Solare e' invisibile, va ingrandita e va detto ai bambini.",
+  "Dati ritiro: ultima fonte NASA trovata e' di giugno 2024.",
+  "Dimensioni, velocita' e crew presentano differenze tra NASA ed ESA (riportate entrambe sopra)."
+ ],
+ "fonti": [
+  "https://api.github.com/repos/nasa/NASA-3D-Resources/git/trees/HEAD?recursive=1",
+  "https://celestrak.org/NORAD/documentation/gp-data-formats.php",
+  "https://celestrak.org/NORAD/documentation/tle-fmt.php",
+  "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE",
+  "https://celestrak.org/columns/v04n03/",
+  "https://celestrak.org/columns/v04n05/",
+  "https://celestrak.org/publications/AIAA/2006-6753/",
+  "https://data.nasa.gov/dataset/nasa-3d-models-international-space-station",
+  "https://data.nasa.gov/dataset/nasa-3d-models-iss-hi-res",
+  "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm",
+  "https://github.com/nasa/NASA-3D-Resources",
+  "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/README.md",
+  "https://rhodesmill.org/skyfield/earth-satellites.html",
+  "https://science.nasa.gov/3d-resources/international-space-station-iss-a/",
+  "https://science.nasa.gov/3d-resources/international-space-station-iss-b/",
+  "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/About_the_International_Space_Station",
+  "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station",
+  "https://www.esa.int/kids/en/learn/Life_in_Space/Space_Stations/The_International_Space_Station",
+  "https://www.nasa.gov/centers-and-facilities/johnson/the-international-space-station-marks-25-years-of-continuous-human-presence/",
+  "https://www.nasa.gov/international-space-station-frequently-asked-questions/",
+  "https://www.nasa.gov/international-space-station/",
+  "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+  "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "https://www.nasa.gov/news-release/nasa-selects-international-space-station-us-deorbit-vehicle/",
+  "https://www.nasa.gov/wp-content/uploads/2024/06/iss-deorbit-analysis-summary.pdf"
+ ],
+ "primo_modulo": {
+  "valore": "1998-11-20",
+  "descrizione": "Lancio del primo modulo (Zarya)",
+  "fonte": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station"
+ }
+}

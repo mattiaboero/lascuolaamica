@@ -1,0 +1,4221 @@
+{
+ "meta": {
+  "recuperato_il": "2026-10-15",
+  "descrizione": "Elementi orbitali e orientamento dei poli per il modello 3D del Sistema Solare. Tutti i numeri provengono dalle fonti elencate, tranne quelli marcati \"derivata/CALCOLATA da me\" (rotazioni di piano).",
+  "fonti": {
+   "pianeti": "E.M. Standish, \"Approximate Positions of the Planets\", Tabella 1 (valida 1800-2050), https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+   "corpi_minori": "JPL Small-Body Database API, https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=<ID>&full-prec=1 (full-prec=1 serve: senza, i valori sono arrotondati a ~3 cifre)",
+   "lune": "JPL, Planetary Satellite Mean Elements, https://ssd.jpl.nasa.gov/sats/elem/ (la tabella e' nella pagina HTML; l'endpoint sat_elem.api non esiste: risponde 404)",
+   "lune_supplemento": "JPL Horizons API, https://ssd.jpl.nasa.gov/api/horizons.api (EPHEM_TYPE=ELEMENTS, centro = corpo primario, REF_PLANE=ECLIPTIC)",
+   "poli": "NAIF pck00011.tpc (27 dic 2022), https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc, che riporta il report IAU WGCCRE 2015 (Archinal et al. 2018, Celest. Mech. Dyn. Astron. 130:22, DOI 10.1007/s10569-017-9805-5) e la sua correzione. Eccezioni: Terra e Luna sono dal report 2009 (il 2015 non le tratta).",
+   "dimorphos_periodo": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/"
+  },
+  "pianeti": {
+   "epoca": "J2000.0 = JD 2451545.0 TDB (le variabili sono L, long.peri., long.node. a T=0)",
+   "frame": "Eclittica media ed equinozio J2000 (eliocentrico). Terra = baricentro Terra-Luna.",
+   "formule": "T = (JD_TDB - 2451545.0)/36525. Per ogni elemento X = X0 + Xdot*T. omega = long_peri - long_node; M = L - long_peri (Tabella 1: nessun termine b,c,s,f, servono solo per la Tabella 2 di 3000 aC-3000 dC). Risolvere M = E - e* sin(E) con e* = e*180/pi (M ed E in gradi, normalizzare M a [-180,180]). x' = a(cosE - e), y' = a sqrt(1-e^2) sinE; r_ecl = Rz(-Omega) Rx(-I) Rz(-omega) r'. Per passare all'equatore: ruotare attorno a x di eps=23.43928 deg.",
+   "validita": "Solo 1800-2050 (tabella 1). Fuori da questo intervallo la pagina indica la Tabella 2a/2b."
+  },
+  "minori": {
+   "frame": "Eclittica ed equinozio J2000 (campo \"equinox\": J2000), elementi eliocentrici osculanti all'epoca indicata (ognuno ha la sua).",
+   "formule": "M(t) = ma + n*(JD - epoca). Per le comete usare tp: M = n*(JD - tp). Risolvere Kepler per E, poi come per i pianeti. Valido solo vicino all'epoca (le perturbazioni planetarie si accumulano).",
+   "periodo_giorni": "campo \"per\" della SBDB, periodo siderale in giorni."
+  },
+  "lune": {
+   "avvertenza_JPL": "Gli elementi medi della pagina JPL NON sono pensati per calcolare effemeridi (avviso testuale della pagina): descrivono forma e orientamento medi dell'orbita. Per posizioni accurate la fonte e' Horizons; per questo ogni luna ha anche il blocco horizons_osculanti_eclittica_j2000.",
+   "piani_di_riferimento": {
+    "ecliptic": "Piano dell'eclittica (J2000) centrato sul pianeta. Usato dalla pagina per: Luna, Nereide.",
+    "equatorial": "Piano equatoriale del pianeta. Usato per: Ariel, Umbriel, Titania, Oberon, Miranda (Urano) e Caronte (Plutone). ATTENZIONE Urano: il piano e' definito con il polo di spin (RA 77.31, Dec +15.18), opposto al \"polo nord IAU\" (RA 257.31, Dec -15.18).",
+    "laplace": "Piano di Laplace locale della luna (piano in cui precede il nodo, in media). Usato per le altre. La pagina ne da' il polo (R.A., Dec rispetto a ICRF) e l'inclinazione rispetto all'equatore del pianeta (Tilt), in polo_piano_laplace_icrf."
+   },
+   "definizione_nodo": "Dalla pagina: \"longitude of the ascending node measured from the node of the reference plane on the ICRF equator\". Quindi l'asse X di riferimento e' il nodo ascendente del piano di riferimento sull'equatore ICRF, a RA = RA_polo + 90 deg.",
+   "conversione_in_eclittica": "Dato il polo (alpha, delta) del piano di riferimento in ICRF e (i, Omega, omega, M): 1) matrice orbita->riferimento: Rz(Omega) Rx(i) Rz(omega) applicata al vettore perifocale; 2) riferimento->equatore ICRF: Rz(alpha + 90 deg) Rx(90 deg - delta); 3) equatore->eclittica J2000: Rx(-eps) con eps = 84381.448 arcsec = 23.4392911 deg. Dal vettore normale N e dal vettore del pericentro P in eclittica: i_ecl = acos(Nz); Omega_ecl = atan2(Nx, -Ny); omega_ecl = atan2((n x P).N, n.P) con n = (cosOmega_ecl, sinOmega_ecl, 0). M e a sono invariati. L'implementazione e' in ogni luna alla voce eclittica_j2000_derivata.",
+   "verifica_conversione": "Confrontata con Horizons (elementi osculanti ecliptic J2000 al JD 2451545.0): inclinazione e nodo concordano entro ~0.1-1 deg per Phobos, Deimos, Io, Europa, Ganimede, Callisto, Amaltea, Tritone, Proteo, Caronte e le 5 lune di Urano (con il polo di spin invertito). Per le lune di Saturno inclinazione e nodo concordano (~0.1-2.5 deg; Mimas e' il peggiore con 2.5 deg di inclinazione) ma NON la fase (vedi anomalia_saturno).",
+   "anomalia_saturno": "ANOMALIA RILEVATA: per le lune di Saturno (Mimas..Giapeto) la longitudine media in tabella (Omega+omega+M) differisce dalla posizione vera di Horizons al JD 2451545.0 di -46 deg (Mimas), -6 (Encelado), +61 (Teti), +151 (Dione), +157 (Rea, Titano). Non e' un semplice sfasamento d'epoca (provato). Per Giove, Marte, Nettuno, Plutone e Urano la fase invece torna entro ~5 deg. Per Saturno usare la fase del blocco Horizons e non M della tabella.",
+   "polo_urano": "vedi piani_di_riferimento.equatorial",
+   "epoche": "2000-01-01.5 = JD 2451545.0 TDB per quasi tutte le lune; Nereide 2020-01-01.0 = JD 2458849.5."
+  },
+  "poli": {
+   "fonte": "NAIF pck00011.tpc (27 dic 2022), https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc, che riporta il report IAU WGCCRE 2015 (Archinal et al. 2018, Celest. Mech. Dyn. Astron. 130:22, DOI 10.1007/s10569-017-9805-5) e la sua correzione. Eccezioni: Terra e Luna sono dal report 2009 (il 2015 non le tratta).",
+   "frame": "Equatoriale ICRF (~J2000). alpha0/delta0 = ascensione retta/declinazione del polo nord (IAU) al J2000; W = longitudine del meridiano primo.",
+   "formule": "T = giorni/36525 dal J2000.0 TDB (JD 2451545.0), d = giorni dal J2000.0. alpha = alpha0 + alpha1*T (+alpha2*T^2) + somma_k ra_sin[k]*sin(theta_k); delta = delta0 + delta1*T + somma_k dec_cos[k]*cos(theta_k); W = W0 + Wdot*d (+Wddot*d^2) + somma_k W_sin[k]*sin(theta_k). theta_k = angoli[sistema][k][0] + angoli[sistema][k][1]*T (+ angoli[2]*T^2 per BODY4, grado fase 2). Gli array dei termini periodici possono essere piu' corti della lista degli angoli (i mancanti sono 0).",
+   "unita": "alpha0, delta0, W0 in gradi; alpha1, delta1 in gradi per secolo giuliano; Wdot in gradi al giorno; Wddot in gradi/giorno^2.",
+   "convenzione_polo_nord_IAU": "Il \"polo nord\" IAU e' quello nell'emisfero nord del piano invariabile. Wdot<0 (rotazione retrograda) per Venere e Urano.",
+   "angoli": {
+    "BODY1_NUT_PREC_ANGLES": [
+     [
+      174.7910857,
+      149472.53587500003
+     ],
+     [
+      349.5821714,
+      298945.07175000006
+     ],
+     [
+      164.3732571,
+      448417.60762500006
+     ],
+     [
+      339.1643429,
+      597890.1435000001
+     ],
+     [
+      153.9554286,
+      747362.679375
+     ]
+    ],
+    "BODY3_NUT_PREC_ANGLES": [
+     [
+      125.045,
+      -1935.5364525
+     ],
+     [
+      250.089,
+      -3871.072905
+     ],
+     [
+      260.008,
+      475263.3328725
+     ],
+     [
+      176.625,
+      487269.629985
+     ],
+     [
+      357.529,
+      35999.0509575
+     ],
+     [
+      311.589,
+      964468.49931
+     ],
+     [
+      134.963,
+      477198.869325
+     ],
+     [
+      276.617,
+      12006.300765
+     ],
+     [
+      34.226,
+      63863.5132425
+     ],
+     [
+      15.134,
+      -5806.6093575
+     ],
+     [
+      119.743,
+      131.84064
+     ],
+     [
+      239.961,
+      6003.1503825
+     ],
+     [
+      25.053,
+      473327.79642
+     ]
+    ],
+    "BODY4_NUT_PREC_ANGLES": [
+     [
+      190.72646643,
+      15917.10818695,
+      0.0
+     ],
+     [
+      21.4689247,
+      31834.27934054,
+      0.0
+     ],
+     [
+      332.86082793,
+      19139.89694742,
+      0.0
+     ],
+     [
+      394.93256437,
+      38280.79631835,
+      0.0
+     ],
+     [
+      189.6327156,
+      41215158.1842005,
+      12.711923222
+     ],
+     [
+      121.46893664,
+      660.22803474,
+      0.0
+     ],
+     [
+      231.05028581,
+      660.9912354,
+      0.0
+     ],
+     [
+      251.37314025,
+      1320.50145245,
+      0.0
+     ],
+     [
+      217.98635955,
+      38279.9612555,
+      0.0
+     ],
+     [
+      196.19729402,
+      19139.83628608,
+      0.0
+     ],
+     [
+      198.991226,
+      19139.4819985,
+      0.0
+     ],
+     [
+      226.292679,
+      38280.8511281,
+      0.0
+     ],
+     [
+      249.663391,
+      57420.7251593,
+      0.0
+     ],
+     [
+      266.18351,
+      76560.636795,
+      0.0
+     ],
+     [
+      79.398797,
+      0.5042615,
+      0.0
+     ],
+     [
+      122.433576,
+      19139.9407476,
+      0.0
+     ],
+     [
+      43.058401,
+      38280.8753272,
+      0.0
+     ],
+     [
+      57.663379,
+      57420.7517205,
+      0.0
+     ],
+     [
+      79.476401,
+      76560.6495004,
+      0.0
+     ],
+     [
+      166.325722,
+      0.5042615,
+      0.0
+     ],
+     [
+      129.071773,
+      19140.0328244,
+      0.0
+     ],
+     [
+      36.352167,
+      38281.0473591,
+      0.0
+     ],
+     [
+      56.668646,
+      57420.929536,
+      0.0
+     ],
+     [
+      67.364003,
+      76560.2552215,
+      0.0
+     ],
+     [
+      104.79268,
+      95700.4387578,
+      0.0
+     ],
+     [
+      95.391654,
+      0.5042615,
+      0.0
+     ]
+    ],
+    "BODY5_NUT_PREC_ANGLES": [
+     [
+      73.32,
+      91472.9
+     ],
+     [
+      24.62,
+      45137.2
+     ],
+     [
+      283.9,
+      4850.7
+     ],
+     [
+      355.8,
+      1191.3
+     ],
+     [
+      119.9,
+      262.1
+     ],
+     [
+      229.8,
+      64.3
+     ],
+     [
+      352.25,
+      2382.6
+     ],
+     [
+      113.35,
+      6070.0
+     ],
+     [
+      146.64,
+      182945.8
+     ],
+     [
+      49.24,
+      90274.4
+     ],
+     [
+      99.360714,
+      4850.4046
+     ],
+     [
+      175.895369,
+      1191.9605
+     ],
+     [
+      300.323162,
+      262.5475
+     ],
+     [
+      114.012305,
+      6070.2476
+     ],
+     [
+      49.511251,
+      64.3
+     ]
+    ],
+    "BODY6_NUT_PREC_ANGLES": [
+     [
+      353.32,
+      75706.7
+     ],
+     [
+      28.72,
+      75706.7
+     ],
+     [
+      177.4,
+      -36505.5
+     ],
+     [
+      300.0,
+      -7225.9
+     ],
+     [
+      316.45,
+      506.2
+     ],
+     [
+      345.2,
+      -1016.3
+     ],
+     [
+      706.64,
+      151413.4
+     ],
+     [
+      57.44,
+      151413.4
+     ]
+    ],
+    "BODY7_NUT_PREC_ANGLES": [
+     [
+      115.75,
+      54991.87
+     ],
+     [
+      141.69,
+      41887.66
+     ],
+     [
+      135.03,
+      29927.35
+     ],
+     [
+      61.77,
+      25733.59
+     ],
+     [
+      249.32,
+      24471.46
+     ],
+     [
+      43.86,
+      22278.41
+     ],
+     [
+      77.66,
+      20289.42
+     ],
+     [
+      157.36,
+      16652.76
+     ],
+     [
+      101.81,
+      12872.63
+     ],
+     [
+      138.64,
+      8061.81
+     ],
+     [
+      102.23,
+      -2024.22
+     ],
+     [
+      316.41,
+      2863.96
+     ],
+     [
+      304.01,
+      -51.94
+     ],
+     [
+      308.71,
+      -93.17
+     ],
+     [
+      340.82,
+      -75.32
+     ],
+     [
+      259.14,
+      -504.81
+     ],
+     [
+      204.46,
+      -4048.44
+     ],
+     [
+      632.82,
+      5727.92
+     ]
+    ],
+    "BODY8_NUT_PREC_ANGLES": [
+     [
+      357.85,
+      52.316
+     ],
+     [
+      323.92,
+      62606.6
+     ],
+     [
+      220.51,
+      55064.2
+     ],
+     [
+      354.27,
+      46564.5
+     ],
+     [
+      75.31,
+      26109.4
+     ],
+     [
+      35.36,
+      14325.4
+     ],
+     [
+      142.61,
+      2824.6
+     ],
+     [
+      177.85,
+      52.316
+     ],
+     [
+      647.84,
+      125213.2
+     ],
+     [
+      355.7,
+      104.632
+     ],
+     [
+      533.55,
+      156.948
+     ],
+     [
+      711.4,
+      209.264
+     ],
+     [
+      889.25,
+      261.58
+     ],
+     [
+      1067.1,
+      313.896
+     ],
+     [
+      1244.95,
+      366.212
+     ],
+     [
+      1422.8,
+      418.528
+     ],
+     [
+      1600.65,
+      470.844
+     ]
+    ]
+   }
+  }
+ },
+ "pianeti": {
+  "mercurio": {
+   "nome_fonte": "Mercury",
+   "a": {
+    "valore": 0.38709927,
+    "tasso_per_secolo": 3.7e-07
+   },
+   "e": {
+    "valore": 0.20563593,
+    "tasso_per_secolo": 1.906e-05
+   },
+   "I": {
+    "valore": 7.00497902,
+    "tasso_per_secolo": -0.00594749
+   },
+   "L": {
+    "valore": 252.2503235,
+    "tasso_per_secolo": 149472.67411175
+   },
+   "long_peri": {
+    "valore": 77.45779628,
+    "tasso_per_secolo": 0.16047689
+   },
+   "long_node": {
+    "valore": 48.33076593,
+    "tasso_per_secolo": -0.12534081
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 15,
+    "latitudine_arcsec": 1,
+    "distanza_1000km": 1
+   }
+  },
+  "venere": {
+   "nome_fonte": "Venus",
+   "a": {
+    "valore": 0.72333566,
+    "tasso_per_secolo": 3.9e-06
+   },
+   "e": {
+    "valore": 0.00677672,
+    "tasso_per_secolo": -4.107e-05
+   },
+   "I": {
+    "valore": 3.39467605,
+    "tasso_per_secolo": -0.0007889
+   },
+   "L": {
+    "valore": 181.9790995,
+    "tasso_per_secolo": 58517.81538729
+   },
+   "long_peri": {
+    "valore": 131.60246718,
+    "tasso_per_secolo": 0.00268329
+   },
+   "long_node": {
+    "valore": 76.67984255,
+    "tasso_per_secolo": -0.27769418
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 20,
+    "latitudine_arcsec": 1,
+    "distanza_1000km": 4
+   }
+  },
+  "terra": {
+   "nome_fonte": "EM Bary",
+   "a": {
+    "valore": 1.00000261,
+    "tasso_per_secolo": 5.62e-06
+   },
+   "e": {
+    "valore": 0.01671123,
+    "tasso_per_secolo": -4.392e-05
+   },
+   "I": {
+    "valore": -1.531e-05,
+    "tasso_per_secolo": -0.01294668
+   },
+   "L": {
+    "valore": 100.46457166,
+    "tasso_per_secolo": 35999.37244981
+   },
+   "long_peri": {
+    "valore": 102.93768193,
+    "tasso_per_secolo": 0.32327364
+   },
+   "long_node": {
+    "valore": 0.0,
+    "tasso_per_secolo": 0.0
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 20,
+    "latitudine_arcsec": 8,
+    "distanza_1000km": 6
+   },
+   "nota": "Riga \"EM Bary\" = baricentro Terra-Luna, non il centro della Terra. Inclinazione ~0 per costruzione (eclittica J2000); long_node=0.0 e tasso 0.0 come nella tabella."
+  },
+  "marte": {
+   "nome_fonte": "Mars",
+   "a": {
+    "valore": 1.52371034,
+    "tasso_per_secolo": 1.847e-05
+   },
+   "e": {
+    "valore": 0.0933941,
+    "tasso_per_secolo": 7.882e-05
+   },
+   "I": {
+    "valore": 1.84969142,
+    "tasso_per_secolo": -0.00813131
+   },
+   "L": {
+    "valore": -4.55343205,
+    "tasso_per_secolo": 19140.30268499
+   },
+   "long_peri": {
+    "valore": -23.94362959,
+    "tasso_per_secolo": 0.44441088
+   },
+   "long_node": {
+    "valore": 49.55953891,
+    "tasso_per_secolo": -0.29257343
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 40,
+    "latitudine_arcsec": 2,
+    "distanza_1000km": 25
+   }
+  },
+  "giove": {
+   "nome_fonte": "Jupiter",
+   "a": {
+    "valore": 5.202887,
+    "tasso_per_secolo": -0.00011607
+   },
+   "e": {
+    "valore": 0.04838624,
+    "tasso_per_secolo": -0.00013253
+   },
+   "I": {
+    "valore": 1.30439695,
+    "tasso_per_secolo": -0.00183714
+   },
+   "L": {
+    "valore": 34.39644051,
+    "tasso_per_secolo": 3034.74612775
+   },
+   "long_peri": {
+    "valore": 14.72847983,
+    "tasso_per_secolo": 0.21252668
+   },
+   "long_node": {
+    "valore": 100.47390909,
+    "tasso_per_secolo": 0.20469106
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 400,
+    "latitudine_arcsec": 10,
+    "distanza_1000km": 600
+   }
+  },
+  "saturno": {
+   "nome_fonte": "Saturn",
+   "a": {
+    "valore": 9.53667594,
+    "tasso_per_secolo": -0.0012506
+   },
+   "e": {
+    "valore": 0.05386179,
+    "tasso_per_secolo": -0.00050991
+   },
+   "I": {
+    "valore": 2.48599187,
+    "tasso_per_secolo": 0.00193609
+   },
+   "L": {
+    "valore": 49.95424423,
+    "tasso_per_secolo": 1222.49362201
+   },
+   "long_peri": {
+    "valore": 92.59887831,
+    "tasso_per_secolo": -0.41897216
+   },
+   "long_node": {
+    "valore": 113.66242448,
+    "tasso_per_secolo": -0.28867794
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 600,
+    "latitudine_arcsec": 25,
+    "distanza_1000km": 1500
+   }
+  },
+  "urano": {
+   "nome_fonte": "Uranus",
+   "a": {
+    "valore": 19.18916464,
+    "tasso_per_secolo": -0.00196176
+   },
+   "e": {
+    "valore": 0.04725744,
+    "tasso_per_secolo": -4.397e-05
+   },
+   "I": {
+    "valore": 0.77263783,
+    "tasso_per_secolo": -0.00242939
+   },
+   "L": {
+    "valore": 313.23810451,
+    "tasso_per_secolo": 428.48202785
+   },
+   "long_peri": {
+    "valore": 170.9542763,
+    "tasso_per_secolo": 0.40805281
+   },
+   "long_node": {
+    "valore": 74.01692503,
+    "tasso_per_secolo": 0.04240589
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 50,
+    "latitudine_arcsec": 2,
+    "distanza_1000km": 1000
+   }
+  },
+  "nettuno": {
+   "nome_fonte": "Neptune",
+   "a": {
+    "valore": 30.06992276,
+    "tasso_per_secolo": 0.00026291
+   },
+   "e": {
+    "valore": 0.00859048,
+    "tasso_per_secolo": 5.105e-05
+   },
+   "I": {
+    "valore": 1.77004347,
+    "tasso_per_secolo": 0.00035372
+   },
+   "L": {
+    "valore": -55.12002969,
+    "tasso_per_secolo": 218.45945325
+   },
+   "long_peri": {
+    "valore": 44.96476227,
+    "tasso_per_secolo": -0.32241464
+   },
+   "long_node": {
+    "valore": 131.78422574,
+    "tasso_per_secolo": -0.00508664
+   },
+   "unita": {
+    "a": "au, au/secolo",
+    "e": "adimensionale (la pagina scrive \"rad\" nell'intestazione ma e e' un numero puro), 1/secolo",
+    "I": "gradi, gradi/secolo",
+    "L": "gradi, gradi/secolo (longitudine media)",
+    "long_peri": "gradi, gradi/secolo (longitudine del perielio)",
+    "long_node": "gradi, gradi/secolo (longitudine del nodo ascendente)"
+   },
+   "errori_nominali_1800_2050": {
+    "longitudine_arcsec": 10,
+    "latitudine_arcsec": 1,
+    "distanza_1000km": 200
+   }
+  }
+ },
+ "minori": {
+  "cerere": {
+   "nome": "1 Ceres (A801 AA)",
+   "designazione": "1",
+   "spkid": "20000001",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Main-belt Asteroid",
+   "orbit_id": "48",
+   "soluzione_del": "2021-04-13 11:04:44",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 2.765552595034094,
+   "e": 0.07969229514816586,
+   "q_au": 2.545159361382861,
+   "Q_au": 2.985945828685327,
+   "i_deg": 10.58802780183462,
+   "om_deg": 80.24862682043221,
+   "w_deg": 73.29421453021587,
+   "ma_deg": 274.4193463761342,
+   "tp_jd_tdb": 2461599.841466614,
+   "n_deg_giorno": 0.21430445064843,
+   "periodo_giorni": 1679.853119758983,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1&full-prec=1",
+   "arco_osservazioni": "1995-01-05 .. 2021-01-28"
+  },
+  "plutone": {
+   "nome": "134340 Pluto (1930 BM)",
+   "designazione": "134340",
+   "spkid": "20134340",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "TransNeptunian Object",
+   "orbit_id": "1",
+   "soluzione_del": null,
+   "epoca_jd_tdb": 2457588.5,
+   "equinozio": "J2000",
+   "a_au": 39.58862938517124,
+   "e": 0.2518378778576892,
+   "q_au": 29.61871297351516,
+   "Q_au": 49.55854579682732,
+   "i_deg": 17.14771140999114,
+   "om_deg": 110.2923840543057,
+   "w_deg": 113.7090015158565,
+   "ma_deg": 38.68366347318184,
+   "tp_jd_tdb": 2447812.094159956,
+   "n_deg_giorno": 0.003956838955553025,
+   "periodo_giorni": 90981.71647718345,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&full-prec=1",
+   "arco_osservazioni": "1930-03-29 .. 2016-07-19",
+   "satelliti_noti_sbdb": [
+    "Charon",
+    "Nix",
+    "Hydra",
+    "Kerberos",
+    "Styx"
+   ],
+   "nota": "Elementi eliocentrici del solo Plutone dalla soluzione SBDB (orbit_id 1); epoca JD 2457588.5."
+  },
+  "eris": {
+   "nome": "136199 Eris (2003 UB313)",
+   "designazione": "136199",
+   "spkid": "20136199",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "TransNeptunian Object",
+   "orbit_id": "103",
+   "soluzione_del": "2026-06-06 21:06:42",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 67.93394687853566,
+   "e": 0.4382385347971672,
+   "q_au": 38.16267353549761,
+   "Q_au": 97.70522022157373,
+   "i_deg": 43.9258279471791,
+   "om_deg": 36.00477044417249,
+   "w_deg": 150.7949235840312,
+   "ma_deg": 211.774434275007,
+   "tp_jd_tdb": 2545407.716847013,
+   "n_deg_giorno": 0.001760247770619088,
+   "periodo_giorni": 204516.6629430732,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&full-prec=1",
+   "arco_osservazioni": "1954-09-03 .. 2026-02-06",
+   "satelliti_noti_sbdb": [
+    "Dysnomia"
+   ]
+  },
+  "haumea": {
+   "nome": "136108 Haumea (2003 EL61)",
+   "designazione": "136108",
+   "spkid": "20136108",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "TransNeptunian Object",
+   "orbit_id": "132",
+   "soluzione_del": "2026-06-06 21:06:04",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 43.06029023650952,
+   "e": 0.1944430148898797,
+   "q_au": 34.68751758088936,
+   "Q_au": 51.43306289212968,
+   "i_deg": 28.20847393040364,
+   "om_deg": 121.7860561329425,
+   "w_deg": 240.6905472508661,
+   "ma_deg": 223.2104118812299,
+   "tp_jd_tdb": 2500416.599615283,
+   "n_deg_giorno": 0.003488097731816818,
+   "periodo_giorni": 103208.1173403618,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136108&full-prec=1",
+   "arco_osservazioni": "1955-03-22 .. 2026-04-14",
+   "satelliti_noti_sbdb": [
+    "Hi'iaka",
+    "Namaka"
+   ]
+  },
+  "makemake": {
+   "nome": "136472 Makemake (2005 FY9)",
+   "designazione": "136472",
+   "spkid": "20136472",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "TransNeptunian Object",
+   "orbit_id": "130",
+   "soluzione_del": "2026-06-06 21:09:02",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 45.57093317300052,
+   "e": 0.1588889953992523,
+   "q_au": 38.33021338173601,
+   "Q_au": 52.81165296426503,
+   "i_deg": 29.02785603743067,
+   "om_deg": 79.2948338209406,
+   "w_deg": 297.0922733397207,
+   "ma_deg": 169.9379962048232,
+   "tp_jd_tdb": 2408158.6940986165,
+   "n_deg_giorno": 0.003203850120050116,
+   "periodo_giorni": 112364.8068762869,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136472&full-prec=1",
+   "arco_osservazioni": "1955-01-29 .. 2026-04-05",
+   "satelliti_noti_sbdb": [
+    "S/2015 (136472) 1"
+   ]
+  },
+  "vesta": {
+   "nome": "4 Vesta (A807 FA)",
+   "designazione": "4",
+   "spkid": "20000004",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Main-belt Asteroid",
+   "orbit_id": "36",
+   "soluzione_del": "2021-04-13 11:15:57",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 2.361365965127599,
+   "e": 0.09020374382834395,
+   "q_au": 2.148361914524259,
+   "Q_au": 2.574370015730939,
+   "i_deg": 7.143925545058711,
+   "om_deg": 103.701293265032,
+   "w_deg": 151.4686478221564,
+   "ma_deg": 81.19015607686903,
+   "tp_jd_tdb": 2460901.587379843,
+   "n_deg_giorno": 0.2716183613599909,
+   "periodo_giorni": 1325.389042911101,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&full-prec=1",
+   "arco_osservazioni": "1950-09-23 .. 2021-03-17"
+  },
+  "pallade": {
+   "nome": "2 Pallas (A802 FA)",
+   "designazione": "2",
+   "spkid": "20000002",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Main-belt Asteroid",
+   "orbit_id": "74",
+   "soluzione_del": "2026-06-05 03:03:25",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 2.769559010737709,
+   "e": 0.2307000995648547,
+   "q_au": 2.130621471209779,
+   "Q_au": 3.408496550265638,
+   "i_deg": 34.93279321851542,
+   "om_deg": 172.8866193357694,
+   "w_deg": 310.9699161652136,
+   "ma_deg": 254.2496521742734,
+   "tp_jd_tdb": 2461695.0311643826,
+   "n_deg_giorno": 0.2138396029251949,
+   "periodo_giorni": 1683.504809564834,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2&full-prec=1",
+   "arco_osservazioni": "1804-08-27 .. 2025-12-14"
+  },
+  "igea": {
+   "nome": "10 Hygiea (A849 GA)",
+   "designazione": "10",
+   "spkid": "20000010",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Main-belt Asteroid",
+   "orbit_id": "129",
+   "soluzione_del": "2026-06-16 11:32:04",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 3.150974033963701,
+   "e": 0.1067092741240963,
+   "q_au": 2.814735882015559,
+   "Q_au": 3.487212185911843,
+   "i_deg": 3.829529946447122,
+   "om_deg": 283.1198927508594,
+   "w_deg": 312.4242387344704,
+   "ma_deg": 252.0344242359649,
+   "tp_jd_tdb": 2461813.2008286817,
+   "n_deg_giorno": 0.1762125505792448,
+   "periodo_giorni": 2042.987283349627,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=10&full-prec=1",
+   "arco_osservazioni": "1849-05-26 .. 2026-04-07"
+  },
+  "eros": {
+   "nome": "433 Eros (A898 PA)",
+   "designazione": "433",
+   "spkid": "20000433",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Amor",
+   "orbit_id": "659",
+   "soluzione_del": "2021-05-24 17:55:05",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 1.458243716760167,
+   "e": 0.2228779627700761,
+   "q_au": 1.133233327946397,
+   "Q_au": 1.783254105573937,
+   "i_deg": 10.82854410314273,
+   "om_deg": 304.2679713350896,
+   "w_deg": 178.9181319135911,
+   "ma_deg": 62.51145501986792,
+   "tp_jd_tdb": 2461088.8134940397,
+   "n_deg_giorno": 0.5597046347038453,
+   "periodo_giorni": 643.1963890927677,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=433&full-prec=1",
+   "arco_osservazioni": "1893-10-29 .. 2021-05-13"
+  },
+  "bennu": {
+   "nome": "101955 Bennu (1999 RQ36)",
+   "designazione": "101955",
+   "spkid": "20101955",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Apollo",
+   "orbit_id": "118",
+   "soluzione_del": "2021-01-07 11:18:06",
+   "epoca_jd_tdb": 2455562.5,
+   "equinozio": "J2000",
+   "a_au": 1.126391025894812,
+   "e": 0.2037450762416414,
+   "q_au": 0.8968944004459729,
+   "Q_au": 1.355887651343651,
+   "i_deg": 6.03494377024794,
+   "om_deg": 2.06086619569642,
+   "w_deg": 66.22306084084298,
+   "ma_deg": 101.703952002457,
+   "tp_jd_tdb": 2455439.1419408727,
+   "n_deg_giorno": 0.8244613503320309,
+   "periodo_giorni": 436.6487281120201,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&full-prec=1",
+   "arco_osservazioni": "1999-09-11 .. 2020-10-03"
+  },
+  "ryugu": {
+   "nome": "162173 Ryugu (1999 JU3)",
+   "designazione": "162173",
+   "spkid": "20162173",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Apollo",
+   "orbit_id": "270",
+   "soluzione_del": "2026-08-11 13:41:47",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 1.190918932702464,
+   "e": 0.1910730046480051,
+   "q_au": 0.9633664739388087,
+   "Q_au": 1.418471391466119,
+   "i_deg": 5.866442486408568,
+   "om_deg": 251.2897123995624,
+   "w_deg": 211.608993811871,
+   "ma_deg": 62.34067409463987,
+   "tp_jd_tdb": 2461118.2964223134,
+   "n_deg_giorno": 0.7583693538530714,
+   "periodo_giorni": 474.7027265420688,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=162173&full-prec=1",
+   "arco_osservazioni": "1986-04-14 .. 2025-07-23"
+  },
+  "itokawa": {
+   "nome": "25143 Itokawa (1998 SF36)",
+   "designazione": "25143",
+   "spkid": "20025143",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Apollo",
+   "orbit_id": "237",
+   "soluzione_del": "2025-05-22 17:09:17",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 1.324052284342771,
+   "e": 0.2801776414987972,
+   "q_au": 0.9530824380945183,
+   "Q_au": 1.695022130591023,
+   "i_deg": 1.620940810523569,
+   "om_deg": 69.07449749929083,
+   "w_deg": 162.8409022415483,
+   "ma_deg": 170.653905937934,
+   "tp_jd_tdb": 2460936.702994477,
+   "n_deg_giorno": 0.6469137342916093,
+   "periodo_giorni": 556.4884171058932,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=25143&full-prec=1",
+   "arco_osservazioni": "1998-09-19 .. 2024-12-19"
+  },
+  "didymos": {
+   "nome": "65803 Didymos (1996 GT)",
+   "designazione": "65803",
+   "spkid": "20065803",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Apollo",
+   "orbit_id": "240",
+   "soluzione_del": "2026-03-01 16:49:59",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 1.642709608529702,
+   "e": 0.3831233242624545,
+   "q_au": 1.013349242511927,
+   "Q_au": 2.272069974547477,
+   "i_deg": 3.413876519313629,
+   "om_deg": 72.9858236207145,
+   "w_deg": 319.5807001349104,
+   "ma_deg": 260.8612886320632,
+   "tp_jd_tdb": 2461412.2777801678,
+   "n_deg_giorno": 0.4681261239466357,
+   "periodo_giorni": 769.0235207660371,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=65803&full-prec=1",
+   "arco_osservazioni": "2022-09-27 .. 2025-03-11",
+   "satelliti_noti_sbdb": [
+    "Dimorphos"
+   ]
+  },
+  "phaethon": {
+   "nome": "3200 Phaethon (1983 TB)",
+   "designazione": "3200",
+   "spkid": "20003200",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "Apollo",
+   "orbit_id": "1017",
+   "soluzione_del": "2026-10-15 11:51:19",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 1.271464620766258,
+   "e": 0.8896722843984632,
+   "q_au": 0.1402777870773155,
+   "Q_au": 2.402651454455201,
+   "i_deg": 22.31052728903618,
+   "om_deg": 265.0988060336058,
+   "w_deg": 322.300168494526,
+   "ma_deg": 301.4858238591272,
+   "tp_jd_tdb": 2461285.6164380675,
+   "n_deg_giorno": 0.6874603480751936,
+   "periodo_giorni": 523.6665663815473,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3200&full-prec=1",
+   "arco_osservazioni": "1983-10-27 .. 2026-10-13"
+  },
+  "arrokoth": {
+   "nome": "486958 Arrokoth (2014 MU69)",
+   "designazione": "486958",
+   "spkid": "20486958",
+   "tipo": "asteroide/TNO",
+   "classe_orbitale": "TransNeptunian Object",
+   "orbit_id": "3",
+   "soluzione_del": "2024-02-21 21:21:36",
+   "epoca_jd_tdb": 2461200.5,
+   "equinozio": "J2000",
+   "a_au": 44.05257835991367,
+   "e": 0.03555717645015258,
+   "q_au": 42.48619305808604,
+   "Q_au": 45.61896366174129,
+   "i_deg": 2.450613924655929,
+   "om_deg": 159.0377267890618,
+   "w_deg": 188.8507463365642,
+   "ma_deg": 310.9839309924138,
+   "tp_jd_tdb": 2475741.4038730534,
+   "n_deg_giorno": 0.003370909362685521,
+   "periodo_giorni": 106796.1078945169,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=486958&full-prec=1",
+   "arco_osservazioni": "2014-06-26 .. 2018-08-04"
+  },
+  "halley": {
+   "nome": "1P/Halley",
+   "designazione": "1P",
+   "spkid": "1000036",
+   "tipo": "cometa",
+   "classe_orbitale": "Halley-type Comet*",
+   "orbit_id": "75",
+   "soluzione_del": "2025-11-21 15:57:34",
+   "epoca_jd_tdb": 2439875.5,
+   "equinozio": "J2000",
+   "a_au": 17.92863504856923,
+   "e": 0.9679359956953211,
+   "q_au": 0.5748638313743413,
+   "Q_au": 35.28240626576412,
+   "i_deg": 162.1905300439129,
+   "om_deg": 59.09894720612437,
+   "w_deg": 112.2414314637764,
+   "ma_deg": 274.3823371366792,
+   "tp_jd_tdb": 2446469.9736161465,
+   "n_deg_giorno": 0.01298324443268444,
+   "periodo_giorni": 27728.04608790421,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1P&full-prec=1",
+   "arco_osservazioni": "1835-08-21 .. 1994-01-11",
+   "nota": "Epoca 1968 (JD 2439875.5); ma e' l'anomalia media a quell'epoca, tp (perielio del 1986-02-09) e' il riferimento piu' affidabile per propagare."
+  },
+  "67p": {
+   "nome": "67P/Churyumov-Gerasimenko",
+   "designazione": "67P",
+   "spkid": "1000012",
+   "tipo": "cometa",
+   "classe_orbitale": "Jupiter-family Comet",
+   "orbit_id": "K284/1",
+   "soluzione_del": "2026-09-04 10:25:07",
+   "epoca_jd_tdb": 2457305.5,
+   "equinozio": "J2000",
+   "a_au": 3.462249490129549,
+   "e": 0.6409081308996354,
+   "q_au": 1.243265640702404,
+   "Q_au": 5.681233339556694,
+   "i_deg": 7.040294937543767,
+   "om_deg": 50.13557377155012,
+   "w_deg": 12.79824970228189,
+   "ma_deg": 8.859927425218402,
+   "tp_jd_tdb": 2457247.588657812,
+   "n_deg_giorno": 0.1529912291873851,
+   "periodo_giorni": 2353.076067903661,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=67P&full-prec=1",
+   "arco_osservazioni": "2008-06-01 .. 2025-06-21"
+  },
+  "swift-tuttle": {
+   "nome": "109P/Swift-Tuttle",
+   "designazione": "109P",
+   "spkid": "1000140",
+   "tipo": "cometa",
+   "classe_orbitale": "Halley-type Comet*",
+   "orbit_id": "32",
+   "soluzione_del": "2001-10-09 15:34:49",
+   "epoca_jd_tdb": 2450000.5,
+   "equinozio": "J2000",
+   "a_au": 26.0920694978266,
+   "e": 0.963225755046038,
+   "q_au": 0.959516155068868,
+   "Q_au": 51.22462284058444,
+   "i_deg": 113.453816997171,
+   "om_deg": 139.3811920815948,
+   "w_deg": 152.9821676305871,
+   "ma_deg": 7.631696167124212,
+   "tp_jd_tdb": 2448968.499784556,
+   "n_deg_giorno": 0.007395052881692476,
+   "periodo_giorni": 48681.19346262312,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=109P&full-prec=1",
+   "arco_osservazioni": "1737-07-08 .. 1995-03-29"
+  },
+  "tempel-tuttle": {
+   "nome": "55P/Tempel-Tuttle",
+   "designazione": "55P",
+   "spkid": "1000095",
+   "tipo": "cometa",
+   "classe_orbitale": "Halley-type Comet*",
+   "orbit_id": "J985/69",
+   "soluzione_del": "2002-01-03 16:05:39",
+   "epoca_jd_tdb": 2451040.5,
+   "equinozio": "J2000",
+   "a_au": 10.3383382297577,
+   "e": 0.905552720972412,
+   "q_au": 0.976427915467506,
+   "Q_au": 19.70024854404794,
+   "i_deg": 162.486575379434,
+   "om_deg": 235.270989149082,
+   "w_deg": 172.5002736828059,
+   "ma_deg": 4.97833968468816,
+   "tp_jd_tdb": 2450872.5977341123,
+   "n_deg_giorno": 0.02965022335088491,
+   "periodo_giorni": 12141.56115249823,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=55P&full-prec=1",
+   "arco_osservazioni": "1865-12-22 .. 1998-07-05"
+  },
+  "hale-bopp": {
+   "nome": "C/1995 O1 (Hale-Bopp)",
+   "designazione": "1995 O1",
+   "spkid": "1000132",
+   "tipo": "cometa",
+   "classe_orbitale": "Comet",
+   "orbit_id": "226",
+   "soluzione_del": "2022-08-01 01:56:46",
+   "epoca_jd_tdb": 2459837.5,
+   "equinozio": "J2000",
+   "a_au": 177.4333839117583,
+   "e": 0.9949810027633206,
+   "q_au": 0.890537663547794,
+   "Q_au": 353.9762301599687,
+   "i_deg": 89.28759424740302,
+   "om_deg": 282.7334213961641,
+   "w_deg": 130.4146670659176,
+   "ma_deg": 3.878386339423241,
+   "tp_jd_tdb": 2450537.134907144,
+   "n_deg_giorno": 0.0004170144183266921,
+   "periodo_giorni": 863279.5034870314,
+   "fonte": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C/1995%20O1&full-prec=1",
+   "arco_osservazioni": "1993-04-27 .. 2022-07-09",
+   "nota": "Cometa a periodo molto lungo: a=177 au e periodo ~2400 anni sono valori osculanti all'epoca (JD 2459837.5); tp = perielio 1997-04-01."
+  }
+ },
+ "lune": {
+  "luna": {
+   "pianeta": "Terra",
+   "nome_en": "Moon",
+   "codice_jpl": 301,
+   "effemeridi": "DE405/LE405",
+   "piano_riferimento": "ecliptic",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 384400.0,
+   "e": 0.0554,
+   "w_deg": 318.15,
+   "M_deg": 135.27,
+   "i_deg": 5.16,
+   "node_deg": 125.08,
+   "periodo_giorni": 27.322,
+   "P_apsidi_anni": 5.997,
+   "P_nodo_anni": 18.6,
+   "riferimento": "n/a",
+   "nota": "Elementi medi riferiti all'eclittica (non all'equatore ne' al piano di Laplace): inclinazione ~5.16 deg, nodo regredisce in 18.6 anni (P_nodo_anni).",
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@399",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 381874.5248499886,
+     "e": 0.06314721685094304,
+     "i_deg": 5.240273000309245,
+     "node_deg": 123.9580554371928,
+     "w_deg": 308.9226727206595,
+     "M_deg": 146.6732747774804,
+     "tp_jd_tdb": 2451533.992919727,
+     "n_deg_giorno": 13.325357055919255,
+     "periodo_giorni": 27.016161629986815
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 387488.3465754763,
+     "e": 0.04937771543302009,
+     "i_deg": 4.998967372381691,
+     "node_deg": 344.9009815664429,
+     "w_deg": 73.9379126800791,
+     "M_deg": 188.3016470628512,
+     "tp_jd_tdb": 2461013.6702558664,
+     "n_deg_giorno": 13.036827430072071,
+     "periodo_giorni": 27.61408033748973
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=301, EPHEM_TYPE=ELEMENTS, CENTER=500@399, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "phobos": {
+   "pianeta": "Marte",
+   "nome_en": "Phobos",
+   "codice_jpl": 401,
+   "effemeridi": "MAR099",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 9375.0,
+   "e": 0.015,
+   "w_deg": 216.3,
+   "M_deg": 189.7,
+   "i_deg": 1.1,
+   "node_deg": 169.2,
+   "periodo_giorni": 0.3187,
+   "P_apsidi_anni": 1.1,
+   "P_nodo_anni": 2.3,
+   "riferimento": "7",
+   "riferimento_testo": "M. Brozović, R. A. Jacobson, R. S. Park (2025) \"Revised Ephemerides of the Martian Satellites, Phobos and Deimos\". AJ 00:00.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 317.7,
+    "dec_deg": 52.9,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 26.046,
+    "node_deg": 84.912,
+    "w_deg": 342.861,
+    "M_deg": 189.7,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@499",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 9378.610328444505,
+     "e": 0.01469841851969655,
+     "i_deg": 26.05670195883539,
+     "node_deg": 84.81514244056581,
+     "w_deg": 342.7848642391356,
+     "M_deg": 189.8224342278868,
+     "tp_jd_tdb": 2451545.1508717295,
+     "n_deg_giorno": 1127.9619209090806,
+     "periodo_giorni": 0.31915971038265023
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 9378.87572729656,
+     "e": 0.01469070653774937,
+     "i_deg": 27.63170973244527,
+     "node_deg": 81.63460591753658,
+     "w_deg": 141.0251033954211,
+     "M_deg": 186.8788771766386,
+     "tp_jd_tdb": 2461000.653487869,
+     "n_deg_giorno": 1127.914043473147,
+     "periodo_giorni": 0.31917325800064017
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=401, EPHEM_TYPE=ELEMENTS, CENTER=500@499, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "deimos": {
+   "pianeta": "Marte",
+   "nome_en": "Deimos",
+   "codice_jpl": 402,
+   "effemeridi": "MAR099",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 23457.0,
+   "e": 0.0,
+   "w_deg": 0.0,
+   "M_deg": 205.0,
+   "i_deg": 1.8,
+   "node_deg": 54.3,
+   "periodo_giorni": 1.2625,
+   "P_apsidi_anni": 0.0,
+   "P_nodo_anni": 56.2,
+   "riferimento": "7",
+   "riferimento_testo": "M. Brozović, R. A. Jacobson, R. S. Park (2025) \"Revised Ephemerides of the Martian Satellites, Phobos and Deimos\". AJ 00:00.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 316.6,
+    "dec_deg": 53.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.9
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 27.588,
+    "node_deg": 83.577,
+    "w_deg": 11.979,
+    "M_deg": 205.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@499",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 23458.18251161354,
+     "e": 0.0003299624878237082,
+     "i_deg": 27.56936980386812,
+     "node_deg": 83.66926662588133,
+     "w_deg": 211.8947925261645,
+     "M_deg": 5.093950813525924,
+     "tp_jd_tdb": 2451544.982135366,
+     "n_deg_giorno": 285.1416324451851,
+     "periodo_giorni": 1.262530472708875
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 23458.83553426724,
+     "e": 0.000206891374858283,
+     "i_deg": 24.18601084629194,
+     "node_deg": 81.15263161432254,
+     "w_deg": 41.11770181235034,
+     "M_deg": 126.5255797896147,
+     "tp_jd_tdb": 2461000.056252582,
+     "n_deg_giorno": 285.1297263139505,
+     "periodo_giorni": 1.2625831920576793
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=402, EPHEM_TYPE=ELEMENTS, CENTER=500@499, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "io": {
+   "pianeta": "Giove",
+   "nome_en": "Io",
+   "codice_jpl": 501,
+   "effemeridi": "JUP365",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 421800.0,
+   "e": 0.004,
+   "w_deg": 49.1,
+   "M_deg": 330.9,
+   "i_deg": 0.0,
+   "node_deg": 0.0,
+   "periodo_giorni": 1.762732,
+   "P_apsidi_anni": 1.333,
+   "P_nodo_anni": 0.0,
+   "riferimento": "29",
+   "riferimento_testo": "R. A. Jacobson (2021) \"The Orbits of the Regular Jovian Satellites and the Orientation of the Pole of Jupiter\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 268.1,
+    "dec_deg": 64.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 2.206,
+    "node_deg": 338.23,
+    "w_deg": 69.14,
+    "M_deg": 330.9,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@599",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 422036.4314844596,
+     "e": 0.004715688921345897,
+     "i_deg": 2.212617763556377,
+     "node_deg": 336.8524452085695,
+     "w_deg": 66.16488500283468,
+     "M_deg": 335.153206478952,
+     "tp_jd_tdb": 2451545.122259735,
+     "n_deg_giorno": 203.22957108171727,
+     "periodo_giorni": 1.7713957574375163
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 422038.4189089871,
+     "e": 0.004797138776391134,
+     "i_deg": 2.203800637876276,
+     "node_deg": 338.4602129506113,
+     "w_deg": 278.84146874165,
+     "M_deg": 10.72734961203884,
+     "tp_jd_tdb": 2461000.447215234,
+     "n_deg_giorno": 203.2281355383851,
+     "periodo_giorni": 1.7714082700522744
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=501, EPHEM_TYPE=ELEMENTS, CENTER=500@599, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "europa": {
+   "pianeta": "Giove",
+   "nome_en": "Europa",
+   "codice_jpl": 502,
+   "effemeridi": "JUP365",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 671100.0,
+   "e": 0.009,
+   "w_deg": 45.0,
+   "M_deg": 345.4,
+   "i_deg": 0.5,
+   "node_deg": 184.0,
+   "periodo_giorni": 3.525463,
+   "P_apsidi_anni": 1.394,
+   "P_nodo_anni": 30.202,
+   "riferimento": "29",
+   "riferimento_testo": "R. A. Jacobson (2021) \"The Orbits of the Regular Jovian Satellites and the Orientation of the Pole of Jupiter\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 268.1,
+    "dec_deg": 64.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 1.761,
+    "node_deg": 331.586,
+    "w_deg": 255.68,
+    "M_deg": 345.4,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@599",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 671248.4976902213,
+     "e": 0.009812823575576082,
+     "i_deg": 1.790971209716447,
+     "node_deg": 332.6287323572119,
+     "w_deg": 254.6471423731226,
+     "M_deg": 345.411036769848,
+     "tp_jd_tdb": 2451545.1439933158,
+     "n_deg_giorno": 101.3169477820738,
+     "periodo_giorni": 3.5532061306696368
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 671251.3782098338,
+     "e": 0.009661915683560382,
+     "i_deg": 2.16001758129772,
+     "node_deg": 325.9142557934018,
+     "w_deg": 108.3977356388031,
+     "M_deg": 7.181955975255753,
+     "tp_jd_tdb": 2461000.429113516,
+     "n_deg_giorno": 101.31629561549755,
+     "periodo_giorni": 3.5532290024323934
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=502, EPHEM_TYPE=ELEMENTS, CENTER=500@599, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "ganimede": {
+   "pianeta": "Giove",
+   "nome_en": "Ganymede",
+   "codice_jpl": 503,
+   "effemeridi": "JUP365",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 1070400.0,
+   "e": 0.001,
+   "w_deg": 198.3,
+   "M_deg": 324.8,
+   "i_deg": 0.2,
+   "node_deg": 58.5,
+   "periodo_giorni": 7.155588,
+   "P_apsidi_anni": 68.301,
+   "P_nodo_anni": 137.812,
+   "riferimento": "29",
+   "riferimento_testo": "R. A. Jacobson (2021) \"The Orbits of the Regular Jovian Satellites and the Orientation of the Pole of Jupiter\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 268.2,
+    "dec_deg": 64.6,
+    "inclinazione_su_equatore_pianeta_deg": 0.1
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 2.146,
+    "node_deg": 343.635,
+    "w_deg": 271.529,
+    "M_deg": 324.8,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@599",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 1070497.481019323,
+     "e": 0.001457215292672099,
+     "i_deg": 2.214148041848081,
+     "node_deg": 343.1728455275238,
+     "w_deg": 319.8078127226449,
+     "M_deg": 277.0487684461206,
+     "tp_jd_tdb": 2451546.6488561435,
+     "n_deg_giorno": 50.308349757430214,
+     "periodo_giorni": 7.155869785747252
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 1070489.749921886,
+     "e": 0.00197953408683141,
+     "i_deg": 2.338464453611007,
+     "node_deg": 339.2579370085668,
+     "w_deg": 344.4939941112852,
+     "M_deg": 114.3665355323312,
+     "tp_jd_tdb": 2460998.2267134152,
+     "n_deg_giorno": 50.30889475020967,
+     "periodo_giorni": 7.1557922667044815
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=503, EPHEM_TYPE=ELEMENTS, CENTER=500@599, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "callisto": {
+   "pianeta": "Giove",
+   "nome_en": "Callisto",
+   "codice_jpl": 504,
+   "effemeridi": "JUP365",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 1882700.0,
+   "e": 0.007,
+   "w_deg": 43.8,
+   "M_deg": 87.4,
+   "i_deg": 0.3,
+   "node_deg": 309.1,
+   "periodo_giorni": 16.69044,
+   "P_apsidi_anni": 277.921,
+   "P_nodo_anni": 577.264,
+   "riferimento": "29",
+   "riferimento_testo": "R. A. Jacobson (2021) \"The Orbits of the Regular Jovian Satellites and the Orientation of the Pole of Jupiter\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 268.7,
+    "dec_deg": 64.8,
+    "inclinazione_su_equatore_pianeta_deg": 0.4
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 2.094,
+    "node_deg": 337.829,
+    "w_deg": 13.883,
+    "M_deg": 87.4,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@599",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 1882772.953875105,
+     "e": 0.007439434600948234,
+     "i_deg": 2.016916220859312,
+     "node_deg": 337.9426103461244,
+     "w_deg": 16.12689497888475,
+     "M_deg": 85.11888858079212,
+     "tp_jd_tdb": 2451541.053528535,
+     "n_deg_giorno": 21.568352726896308,
+     "periodo_giorni": 16.691121689190034
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 1882874.448768854,
+     "e": 0.007231223316547708,
+     "i_deg": 1.951407262788974,
+     "node_deg": 336.6986247487779,
+     "w_deg": 32.11598860215032,
+     "M_deg": 275.6345033792407,
+     "tp_jd_tdb": 2461004.4118573233,
+     "n_deg_giorno": 21.566608812290582,
+     "periodo_giorni": 16.692471363176935
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=504, EPHEM_TYPE=ELEMENTS, CENTER=500@599, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "amaltea": {
+   "pianeta": "Giove",
+   "nome_en": "Amalthea",
+   "codice_jpl": 505,
+   "effemeridi": "JUP365",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 181400.0,
+   "e": 0.003,
+   "w_deg": 180.1,
+   "M_deg": 310.6,
+   "i_deg": 0.4,
+   "node_deg": 282.9,
+   "periodo_giorni": 0.499918,
+   "P_apsidi_anni": 0.196,
+   "P_nodo_anni": 0.393,
+   "riferimento": "29",
+   "riferimento_testo": "R. A. Jacobson (2021) \"The Orbits of the Regular Jovian Satellites and the Orientation of the Pole of Jupiter\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 268.1,
+    "dec_deg": 64.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 2.446,
+    "node_deg": 330.34,
+    "w_deg": 130.924,
+    "M_deg": 310.6,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@599",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 181996.7340166629,
+     "e": 0.006131496682479541,
+     "i_deg": 2.442089133637652,
+     "node_deg": 330.4106584847095,
+     "w_deg": 105.1175845531084,
+     "M_deg": 336.2664083066824,
+     "tp_jd_tdb": 2451545.0330717564,
+     "n_deg_giorno": 717.6392886652766,
+     "periodo_giorni": 0.5016447757055735
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 181998.5071029364,
+     "e": 0.006758432116530828,
+     "i_deg": 2.573848263740131,
+     "node_deg": 340.4793544094751,
+     "w_deg": 120.7528588300263,
+     "M_deg": 354.8189063372018,
+     "tp_jd_tdb": 2461000.50721974,
+     "n_deg_giorno": 717.6288014918384,
+     "periodo_giorni": 0.5016521065648648
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=505, EPHEM_TYPE=ELEMENTS, CENTER=500@599, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "titano": {
+   "pianeta": "Saturno",
+   "nome_en": "Titan",
+   "codice_jpl": 606,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 1221900.0,
+   "e": 0.029,
+   "w_deg": 78.3,
+   "M_deg": 11.7,
+   "i_deg": 0.3,
+   "node_deg": 78.6,
+   "periodo_giorni": 15.945448,
+   "P_apsidi_anni": 346.68,
+   "P_nodo_anni": 687.37,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 36.4,
+    "dec_deg": 84.0,
+    "inclinazione_su_equatore_pianeta_deg": 0.6
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 27.652,
+    "node_deg": 169.834,
+    "w_deg": 112.499,
+    "M_deg": 11.7,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 1221934.800913171,
+     "e": 0.02860066256432539,
+     "i_deg": 27.71833887311165,
+     "node_deg": 169.2391602866279,
+     "w_deg": 164.4091285733822,
+     "M_deg": 163.4361974944248,
+     "tp_jd_tdb": 2451537.7600726755,
+     "n_deg_giorno": 22.574287029846413,
+     "periodo_giorni": 15.947347507543817
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 1221946.675266671,
+     "e": 0.02868616520387479,
+     "i_deg": 27.70935289385518,
+     "node_deg": 169.0768044261005,
+     "w_deg": 177.9521148815244,
+     "M_deg": 146.6495393487475,
+     "tp_jd_tdb": 2460994.0035965126,
+     "n_deg_giorno": 22.573957979792393,
+     "periodo_giorni": 15.947579964588508
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=606, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "encelado": {
+   "pianeta": "Saturno",
+   "nome_en": "Enceladus",
+   "codice_jpl": 602,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 238400.0,
+   "e": 0.005,
+   "w_deg": 119.5,
+   "M_deg": 57.0,
+   "i_deg": 0.0,
+   "node_deg": 0.0,
+   "periodo_giorni": 1.370218,
+   "P_apsidi_anni": 2.916,
+   "P_nodo_anni": 0.0,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 40.6,
+    "dec_deg": 83.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 28.081,
+    "node_deg": 169.479,
+    "w_deg": 79.588,
+    "M_deg": 57.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 238419.8688441309,
+     "e": 0.006351597350212341,
+     "i_deg": 28.05202310549093,
+     "node_deg": 169.5065956328603,
+     "w_deg": 135.4830251984964,
+     "M_deg": 6.953398474767734,
+     "tp_jd_tdb": 2451544.973449296,
+     "n_deg_giorno": 261.8913027043565,
+     "periodo_giorni": 1.3746160956188624
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 238417.2556881296,
+     "e": 0.005896188627695261,
+     "i_deg": 28.05418458694626,
+     "node_deg": 169.5171716320646,
+     "w_deg": 76.49315657937439,
+     "M_deg": 327.1405231912314,
+     "tp_jd_tdb": 2461000.625467842,
+     "n_deg_giorno": 261.8956083786833,
+     "periodo_giorni": 1.3745934963501354
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=602, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "mimas": {
+   "pianeta": "Saturno",
+   "nome_en": "Mimas",
+   "codice_jpl": 601,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 186000.0,
+   "e": 0.02,
+   "w_deg": 160.4,
+   "M_deg": 275.3,
+   "i_deg": 1.6,
+   "node_deg": 66.2,
+   "periodo_giorni": 0.942422,
+   "P_apsidi_anni": 0.493,
+   "P_nodo_anni": 0.986,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 40.6,
+    "dec_deg": 83.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 29.524,
+    "node_deg": 170.917,
+    "w_deg": 185.428,
+    "M_deg": 275.3,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 186036.8223903924,
+     "e": 0.02175634846415301,
+     "i_deg": 27.00265761372071,
+     "node_deg": 172.0569449519339,
+     "w_deg": 108.7253838060412,
+     "M_deg": 37.39805775106126,
+     "tp_jd_tdb": 2451544.9015733507,
+     "n_deg_giorno": 379.95865941711844,
+     "periodo_giorni": 0.9474714974314933
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 186027.7037968168,
+     "e": 0.0207615052558592,
+     "i_deg": 29.22970131969607,
+     "node_deg": 171.7008991766481,
+     "w_deg": 201.6576114106497,
+     "M_deg": 302.8917844561571,
+     "tp_jd_tdb": 2461000.650290079,
+     "n_deg_giorno": 379.98659663542423,
+     "periodo_giorni": 0.9474018378216632
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=601, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "teti": {
+   "pianeta": "Saturno",
+   "nome_en": "Tethys",
+   "codice_jpl": 603,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 295000.0,
+   "e": 0.001,
+   "w_deg": 335.3,
+   "M_deg": 0.0,
+   "i_deg": 1.1,
+   "node_deg": 273.0,
+   "periodo_giorni": 1.887802,
+   "P_apsidi_anni": 0.005,
+   "P_nodo_anni": 4.982,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 40.6,
+    "dec_deg": 83.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 27.434,
+    "node_deg": 167.57,
+    "w_deg": 210.078,
+    "M_deg": 0.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 294980.2530852608,
+     "e": 0.0009698778768676897,
+     "i_deg": 27.22072909012297,
+     "node_deg": 167.9977256763769,
+     "w_deg": 158.0570744864902,
+     "M_deg": 350.3828192477454,
+     "tp_jd_tdb": 2451545.050536162,
+     "n_deg_giorno": 190.30295054665584,
+     "periodo_giorni": 1.8917205380467303
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 294979.0493984635,
+     "e": 0.0009939275202084925,
+     "i_deg": 27.11947079276318,
+     "node_deg": 170.7521519596494,
+     "w_deg": 45.93842003438639,
+     "M_deg": 7.572863350733948,
+     "tp_jd_tdb": 2461000.4602065184,
+     "n_deg_giorno": 190.30411536861462,
+     "periodo_giorni": 1.8917089591188738
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=603, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "dione": {
+   "pianeta": "Saturno",
+   "nome_en": "Dione",
+   "codice_jpl": 604,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 377700.0,
+   "e": 0.002,
+   "w_deg": 116.0,
+   "M_deg": 212.0,
+   "i_deg": 0.0,
+   "node_deg": 0.0,
+   "periodo_giorni": 2.736916,
+   "P_apsidi_anni": 11.698,
+   "P_nodo_anni": 0.0,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 40.6,
+    "dec_deg": 83.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 28.081,
+    "node_deg": 169.479,
+    "w_deg": 76.088,
+    "M_deg": 212.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 377652.1784818554,
+     "e": 0.002928360145096942,
+     "i_deg": 28.04139510566285,
+     "node_deg": 169.470196786071,
+     "w_deg": 164.9353995421455,
+     "M_deg": 332.0565629313631,
+     "tp_jd_tdb": 2451545.212707447,
+     "n_deg_giorno": 131.37028102120914,
+     "periodo_giorni": 2.7403458164322547
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 377646.1093198441,
+     "e": 0.001581622410473606,
+     "i_deg": 28.02457206041411,
+     "node_deg": 169.5270272009849,
+     "w_deg": 248.8141954267087,
+     "M_deg": 176.6796255224644,
+     "tp_jd_tdb": 2460999.1551344404,
+     "n_deg_giorno": 131.37344791755476,
+     "periodo_giorni": 2.740279757488919
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=604, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "rea": {
+   "pianeta": "Saturno",
+   "nome_en": "Rhea",
+   "codice_jpl": 605,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 527200.0,
+   "e": 0.001,
+   "w_deg": 44.3,
+   "M_deg": 31.5,
+   "i_deg": 0.3,
+   "node_deg": 133.7,
+   "periodo_giorni": 4.517503,
+   "P_apsidi_anni": 33.939,
+   "P_nodo_anni": 35.775,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 40.6,
+    "dec_deg": 83.5,
+    "inclinazione_su_equatore_pianeta_deg": 0.0
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 28.063,
+    "node_deg": 170.115,
+    "w_deg": 137.527,
+    "M_deg": 31.5,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 527225.2527315543,
+     "e": 0.0008002149724314739,
+     "i_deg": 28.24141737577452,
+     "node_deg": 168.9842022220848,
+     "w_deg": 165.7818213737295,
+     "M_deg": 206.9021112955066,
+     "tp_jd_tdb": 2451546.9223299134,
+     "n_deg_giorno": 79.64183859971548,
+     "periodo_giorni": 4.520237180979472
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 527217.656258414,
+     "e": 0.0008853865065414564,
+     "i_deg": 28.23781807351617,
+     "node_deg": 170.0431866386274,
+     "w_deg": 156.3226738555978,
+     "M_deg": 244.6609708267272,
+     "tp_jd_tdb": 2461001.9481902784,
+     "n_deg_giorno": 79.64355989810107,
+     "periodo_giorni": 4.5201394872428775
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=605, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "giapeto": {
+   "pianeta": "Saturno",
+   "nome_en": "Iapetus",
+   "codice_jpl": 608,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 3561700.0,
+   "e": 0.028,
+   "w_deg": 254.5,
+   "M_deg": 74.8,
+   "i_deg": 7.6,
+   "node_deg": 86.5,
+   "periodo_giorni": 79.331002,
+   "P_apsidi_anni": 1662.9,
+   "P_nodo_anni": 3130.302,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 288.7,
+    "dec_deg": 78.9,
+    "inclinazione_su_equatore_pianeta_deg": 14.8
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 18.371,
+    "node_deg": 143.207,
+    "w_deg": 214.989,
+    "M_deg": 74.8,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 3562566.556811612,
+     "e": 0.02786249162022612,
+     "i_deg": 17.23820439459392,
+     "node_deg": 139.6917551276544,
+     "w_deg": 229.658395405145,
+     "M_deg": 208.0175928163262,
+     "tp_jd_tdb": 2451578.5198762952,
+     "n_deg_giorno": 4.534098092899998,
+     "periodo_giorni": 79.39837044190301
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 3558527.3061426,
+     "e": 0.02867875673750173,
+     "i_deg": 17.00009796594808,
+     "node_deg": 138.8958310466707,
+     "w_deg": 233.1615506842435,
+     "M_deg": 273.8942055542902,
+     "tp_jd_tdb": 2461019.4584331033,
+     "n_deg_giorno": 4.5418202009422215,
+     "periodo_giorni": 79.2633754910237
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=608, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "iperione": {
+   "pianeta": "Saturno",
+   "nome_en": "Hyperion",
+   "codice_jpl": 607,
+   "effemeridi": "SAT441",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 1481500.0,
+   "e": 0.105,
+   "w_deg": 214.0,
+   "M_deg": 122.9,
+   "i_deg": 0.6,
+   "node_deg": 87.1,
+   "periodo_giorni": 21.276658,
+   "P_apsidi_anni": 20.843,
+   "P_nodo_anni": 257.625,
+   "riferimento": "36",
+   "riferimento_testo": "R. A. Jacobson (2022) \"The Orbits of the Main Saturnian Satellites, the Saturnian System Gravity Field, and the Orientation of Saturn's Pole\". AJ 164:199-217.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 40.2,
+    "dec_deg": 83.6,
+    "inclinazione_su_equatore_pianeta_deg": 0.1
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 28.39,
+    "node_deg": 170.462,
+    "w_deg": 259.924,
+    "M_deg": 122.9,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento. ATTENZIONE: per le lune di Saturno la fase (M, w) della tabella non e' affidabile, vedi meta.lune.anomalia_saturno"
+   },
+   "nota": "Rotazione caotica e orbita perturbata da Titano (risonanza 4:3): gli elementi medi sono solo indicativi.",
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@699",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 1485060.66650382,
+     "e": 0.126730863824527,
+     "i_deg": 27.20902903280515,
+     "node_deg": 168.305013991762,
+     "w_deg": 188.6932689050722,
+     "M_deg": 70.60386395985986,
+     "tp_jd_tdb": 2451540.80907336,
+     "n_deg_giorno": 16.846838426496475,
+     "periodo_giorni": 21.368994637818634
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 1477550.989544085,
+     "e": 0.09487472208970367,
+     "i_deg": 27.05189693595413,
+     "node_deg": 169.4772443741485,
+     "w_deg": 85.50618610897116,
+     "M_deg": 312.5964519742621,
+     "tp_jd_tdb": 2461003.292478644,
+     "n_deg_giorno": 16.97543797953256,
+     "periodo_giorni": 21.207111146943912
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=607, EPHEM_TYPE=ELEMENTS, CENTER=500@699, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "miranda": {
+   "pianeta": "Urano",
+   "nome_en": "Miranda",
+   "codice_jpl": 705,
+   "effemeridi": "URA182",
+   "piano_riferimento": "equatorial",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 129846.0,
+   "e": 0.001,
+   "w_deg": 154.8,
+   "M_deg": 73.0,
+   "i_deg": 4.4,
+   "node_deg": 100.9,
+   "periodo_giorni": 1.413479,
+   "P_apsidi_anni": 8.939,
+   "P_nodo_anni": 17.787,
+   "riferimento": "45",
+   "riferimento_testo": "Robert A. Jacobson, Ryan S. Park (2025) \"The Orbits of Uranus, Its Satellites and Rings, the Gravity Field of the Uranian System, and the Orientation of the Poles of Uranus and Its Satellites\". AJ 169:65-82.",
+   "polo_equatore_usato_icrf": {
+    "ra_deg": 77.311,
+    "dec_deg": 15.175,
+    "nota": "dalle costanti IAU 2015 di pck00011.tpc con polo invertito (RA+180, Dec negata): il JPL per le lune di Urano usa il polo di spin, opposto al \"nord IAU\"; verificato contro Horizons (i=97.7 deg sull'eclittica)"
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 97.252,
+    "node_deg": 172.059,
+    "w_deg": 251.217,
+    "M_deg": 73.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@799",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 129871.7551017135,
+     "e": 0.001509798566639019,
+     "i_deg": 97.25415391960598,
+     "node_deg": 172.0875833032825,
+     "w_deg": 261.0221270814858,
+     "M_deg": 62.06189119864032,
+     "tp_jd_tdb": 2451544.756233991,
+     "n_deg_giorno": 254.59616563543543,
+     "periodo_giorni": 1.4140040133813159
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 129871.1415524489,
+     "e": 0.00129789285014845,
+     "i_deg": 99.35077063532378,
+     "node_deg": 163.4835444410276,
+     "w_deg": 62.47766669318101,
+     "M_deg": 87.5068416593755,
+     "tp_jd_tdb": 2461000.156294032,
+     "n_deg_giorno": 254.59796981771365,
+     "periodo_giorni": 1.4139939931875798
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=705, EPHEM_TYPE=ELEMENTS, CENTER=500@799, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "ariel": {
+   "pianeta": "Urano",
+   "nome_en": "Ariel",
+   "codice_jpl": 701,
+   "effemeridi": "URA182",
+   "piano_riferimento": "equatorial",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 190929.0,
+   "e": 0.001,
+   "w_deg": 9.6,
+   "M_deg": 193.5,
+   "i_deg": 0.0,
+   "node_deg": 0.0,
+   "periodo_giorni": 2.520379,
+   "P_apsidi_anni": 28.901,
+   "P_nodo_anni": 0.0,
+   "riferimento": "45",
+   "riferimento_testo": "Robert A. Jacobson, Ryan S. Park (2025) \"The Orbits of Uranus, Its Satellites and Rings, the Gravity Field of the Uranian System, and the Orientation of the Poles of Uranus and Its Satellites\". AJ 169:65-82.",
+   "polo_equatore_usato_icrf": {
+    "ra_deg": 77.311,
+    "dec_deg": 15.175,
+    "nota": "dalle costanti IAU 2015 di pck00011.tpc con polo invertito (RA+180, Dec negata): il JPL per le lune di Urano usa il polo di spin, opposto al \"nord IAU\"; verificato contro Horizons (i=97.7 deg sull'eclittica)"
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 97.722,
+    "node_deg": 167.647,
+    "w_deg": 4.541,
+    "M_deg": 193.5,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@799",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 190941.3469791885,
+     "e": 0.001520812328868678,
+     "i_deg": 97.719319228073,
+     "node_deg": 167.6455486422633,
+     "w_deg": 45.35674156751863,
+     "M_deg": 152.7943682479845,
+     "tp_jd_tdb": 2451543.9301314433,
+     "n_deg_giorno": 142.8160190892485,
+     "periodo_giorni": 2.520725632150755
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 190940.8294644537,
+     "e": 0.0004670226107403506,
+     "i_deg": 97.71484443461655,
+     "node_deg": 167.6642805259919,
+     "w_deg": 243.7592738260813,
+     "M_deg": 176.8386574705738,
+     "tp_jd_tdb": 2460999.2617779877,
+     "n_deg_giorno": 142.81659970978313,
+     "periodo_giorni": 2.520715384146899
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=701, EPHEM_TYPE=ELEMENTS, CENTER=500@799, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "umbriel": {
+   "pianeta": "Urano",
+   "nome_en": "Umbriel",
+   "codice_jpl": 702,
+   "effemeridi": "URA182",
+   "piano_riferimento": "equatorial",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 265986.0,
+   "e": 0.004,
+   "w_deg": 183.4,
+   "M_deg": 253.0,
+   "i_deg": 0.1,
+   "node_deg": 174.8,
+   "periodo_giorni": 4.144177,
+   "P_apsidi_anni": 64.126,
+   "P_nodo_anni": 129.745,
+   "riferimento": "45",
+   "riferimento_testo": "Robert A. Jacobson, Ryan S. Park (2025) \"The Orbits of Uranus, Its Satellites and Rings, the Gravity Field of the Uranian System, and the Orientation of the Poles of Uranus and Its Satellites\". AJ 169:65-82.",
+   "polo_equatore_usato_icrf": {
+    "ra_deg": 77.311,
+    "dec_deg": 15.175,
+    "nota": "dalle costanti IAU 2015 di pck00011.tpc con polo invertito (RA+180, Dec negata): il JPL per le lune di Urano usa il polo di spin, opposto al \"nord IAU\"; verificato contro Horizons (i=97.7 deg sull'eclittica)"
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 97.623,
+    "node_deg": 167.665,
+    "w_deg": 353.144,
+    "M_deg": 253.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@799",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 266012.188748696,
+     "e": 0.004170165145635332,
+     "i_deg": 97.66606723745439,
+     "node_deg": 167.6381821495947,
+     "w_deg": 334.9516684490692,
+     "M_deg": 271.2233789529364,
+     "tp_jd_tdb": 2451546.0221719192,
+     "n_deg_giorno": 86.8509683819681,
+     "periodo_giorni": 4.145031502892752
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 266018.5621929133,
+     "e": 0.004044922827817942,
+     "i_deg": 97.71104871111149,
+     "node_deg": 167.7239996737873,
+     "w_deg": 69.7257234900009,
+     "M_deg": 45.08184081840638,
+     "tp_jd_tdb": 2460999.980910094,
+     "n_deg_giorno": 86.84784715342239,
+     "periodo_giorni": 4.145180471359718
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=702, EPHEM_TYPE=ELEMENTS, CENTER=500@799, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "titania": {
+   "pianeta": "Urano",
+   "nome_en": "Titania",
+   "codice_jpl": 703,
+   "effemeridi": "URA182",
+   "piano_riferimento": "equatorial",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 436298.0,
+   "e": 0.002,
+   "w_deg": 184.0,
+   "M_deg": 68.1,
+   "i_deg": 0.1,
+   "node_deg": 29.5,
+   "periodo_giorni": 8.705869,
+   "P_apsidi_anni": 579.928,
+   "P_nodo_anni": 1644.649,
+   "riferimento": "45",
+   "riferimento_testo": "Robert A. Jacobson, Ryan S. Park (2025) \"The Orbits of Uranus, Its Satellites and Rings, the Gravity Field of the Uranian System, and the Orientation of the Poles of Uranus and Its Satellites\". AJ 169:65-82.",
+   "polo_equatore_usato_icrf": {
+    "ra_deg": 77.311,
+    "dec_deg": 15.175,
+    "nota": "dalle costanti IAU 2015 di pck00011.tpc con polo invertito (RA+180, Dec negata): il JPL per le lune di Urano usa il polo di spin, opposto al \"nord IAU\"; verificato contro Horizons (i=97.7 deg sull'eclittica)"
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 97.813,
+    "node_deg": 167.688,
+    "w_deg": 208.447,
+    "M_deg": 68.1,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@799",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 436292.6755951638,
+     "e": 0.002479000317146799,
+     "i_deg": 97.818368383812,
+     "node_deg": 167.6178145945835,
+     "w_deg": 202.1167721066045,
+     "M_deg": 74.41677554285916,
+     "tp_jd_tdb": 2451543.2002772265,
+     "n_deg_giorno": 41.34902143718141,
+     "periodo_giorni": 8.706372907685905
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 436267.6714407707,
+     "e": 0.0009799651090268862,
+     "i_deg": 97.76357236629138,
+     "node_deg": 167.6420384949078,
+     "w_deg": 288.3168090585941,
+     "M_deg": 26.47828505081167,
+     "tp_jd_tdb": 2460999.8596944273,
+     "n_deg_giorno": 41.35257629191064,
+     "periodo_giorni": 8.705624468442682
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=703, EPHEM_TYPE=ELEMENTS, CENTER=500@799, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "oberon": {
+   "pianeta": "Urano",
+   "nome_en": "Oberon",
+   "codice_jpl": 704,
+   "effemeridi": "URA182",
+   "piano_riferimento": "equatorial",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 583511.0,
+   "e": 0.002,
+   "w_deg": 132.2,
+   "M_deg": 143.6,
+   "i_deg": 0.1,
+   "node_deg": 76.8,
+   "periodo_giorni": 13.463237,
+   "P_apsidi_anni": 158.604,
+   "P_nodo_anni": 192.798,
+   "riferimento": "45",
+   "riferimento_testo": "Robert A. Jacobson, Ryan S. Park (2025) \"The Orbits of Uranus, Its Satellites and Rings, the Gravity Field of the Uranian System, and the Orientation of the Poles of Uranus and Its Satellites\". AJ 169:65-82.",
+   "polo_equatore_usato_icrf": {
+    "ra_deg": 77.311,
+    "dec_deg": 15.175,
+    "nota": "dalle costanti IAU 2015 di pck00011.tpc con polo invertito (RA+180, Dec negata): il JPL per le lune di Urano usa il polo di spin, opposto al \"nord IAU\"; verificato contro Horizons (i=97.7 deg sull'eclittica)"
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 97.753,
+    "node_deg": 167.743,
+    "w_deg": 203.954,
+    "M_deg": 143.6,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@799",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 583549.944051016,
+     "e": 0.0005523244847399845,
+     "i_deg": 97.87585296035932,
+     "node_deg": 167.7555265636234,
+     "w_deg": 254.006725206052,
+     "M_deg": 93.49629094330373,
+     "tp_jd_tdb": 2451541.502323551,
+     "n_deg_giorno": 26.730971921546445,
+     "periodo_giorni": 13.467523779403725
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 583501.6091105213,
+     "e": 0.002363661802958816,
+     "i_deg": 97.90551118617257,
+     "node_deg": 167.7099664766471,
+     "w_deg": 198.289131513952,
+     "M_deg": 264.390464219621,
+     "tp_jd_tdb": 2461004.0762881134,
+     "n_deg_giorno": 26.734293420596764,
+     "periodo_giorni": 13.465850558917221
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=704, EPHEM_TYPE=ELEMENTS, CENTER=500@799, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "tritone": {
+   "pianeta": "Nettuno",
+   "nome_en": "Triton",
+   "codice_jpl": 801,
+   "effemeridi": "NEP097",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 354800.0,
+   "e": 0.0,
+   "w_deg": 0.0,
+   "M_deg": 63.0,
+   "i_deg": 157.3,
+   "node_deg": 178.1,
+   "periodo_giorni": 5.876994,
+   "P_apsidi_anni": 0.0,
+   "P_nodo_anni": 340.379,
+   "riferimento": "24",
+   "riferimento_testo": "M. Brozović (2020) \"Update of the inner Neptunian satellite orbits — NEP097\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 299.8,
+    "dec_deg": 43.1,
+    "inclinazione_su_equatore_pianeta_deg": 0.4
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 130.238,
+    "node_deg": 216.552,
+    "w_deg": 16.121,
+    "M_deg": 63.0,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@899",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 354766.0619253411,
+     "e": 0.0001461079095879048,
+     "i_deg": 130.2614060073336,
+     "node_deg": 215.8591103702256,
+     "w_deg": 91.17138119399802,
+     "M_deg": 343.4606712122722,
+     "tp_jd_tdb": 2451545.2700081,
+     "n_deg_giorno": 61.254935565580645,
+     "periodo_giorni": 5.877077441614112
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 354766.390703627,
+     "e": 0.0001418530313144651,
+     "i_deg": 129.1513721197374,
+     "node_deg": 222.6325119280079,
+     "w_deg": 103.0500484522155,
+     "M_deg": 315.0254276033853,
+     "tp_jd_tdb": 2461001.23422059,
+     "n_deg_giorno": 61.25485041396292,
+     "periodo_giorni": 5.877085611459409
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=801, EPHEM_TYPE=ELEMENTS, CENTER=500@899, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "proteo": {
+   "pianeta": "Nettuno",
+   "nome_en": "Proteus",
+   "codice_jpl": 808,
+   "effemeridi": "NEP097",
+   "piano_riferimento": "laplace",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 117600.0,
+   "e": 0.0,
+   "w_deg": 0.0,
+   "M_deg": 276.8,
+   "i_deg": 0.0,
+   "node_deg": 0.0,
+   "periodo_giorni": 1.122315,
+   "P_apsidi_anni": 0.0,
+   "P_nodo_anni": 0.0,
+   "riferimento": "24",
+   "riferimento_testo": "M. Brozović (2020) \"Update of the inner Neptunian satellite orbits — NEP097\". personal communication to Horizons/NAIF.",
+   "polo_piano_laplace_icrf": {
+    "ra_deg": 299.8,
+    "dec_deg": 42.6,
+    "inclinazione_su_equatore_pianeta_deg": 0.9
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 28.943,
+    "node_deg": 49.107,
+    "w_deg": 335.89,
+    "M_deg": 276.8,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@899",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 117674.7976031349,
+     "e": 0.0004949303539595451,
+     "i_deg": 28.99163681179519,
+     "node_deg": 48.27950205867285,
+     "w_deg": 326.8036455837504,
+     "M_deg": 283.6240862259231,
+     "tp_jd_tdb": 2451545.2382169813,
+     "n_deg_giorno": 320.61490061032856,
+     "periodo_giorni": 1.1228423860360115
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 117674.2661597594,
+     "e": 0.0004573869693276855,
+     "i_deg": 29.06083672265647,
+     "node_deg": 48.71065156764953,
+     "w_deg": 334.8156660283433,
+     "M_deg": 274.6902879552053,
+     "tp_jd_tdb": 2461000.7660797546,
+     "n_deg_giorno": 320.6170725659689,
+     "periodo_giorni": 1.1228347795669171
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=808, EPHEM_TYPE=ELEMENTS, CENTER=500@899, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "nereide": {
+   "pianeta": "Nettuno",
+   "nome_en": "Nereid",
+   "codice_jpl": 802,
+   "effemeridi": "NEP105",
+   "piano_riferimento": "ecliptic",
+   "epoca": "2020-01-01.0",
+   "epoca_jd_tdb": 2458849.5,
+   "a_km": 5513900.0,
+   "e": 0.751,
+   "w_deg": 296.8,
+   "M_deg": 318.5,
+   "i_deg": 5.1,
+   "node_deg": 319.5,
+   "periodo_giorni": 360.133039,
+   "P_apsidi_anni": 7990.433,
+   "P_nodo_anni": 9426.334,
+   "riferimento": "44",
+   "riferimento_testo": "R. A. Jacobson (2024) \"Update of the orbit of the irregular Neptunian satellite Nereid with data through 2021 — NEP105\". personal communication to Horizons/NAIF.",
+   "nota": "Orbita molto eccentrica (e=0.75), elementi riferiti all'eclittica con epoca 2020-01-01.0 (non J2000). Il periodo e' ~360 giorni.",
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@899",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 5511154.829106982,
+     "e": 0.7506509374056886,
+     "i_deg": 5.060553241702044,
+     "node_deg": 319.5912156886533,
+     "w_deg": 297.0020523243177,
+     "M_deg": 215.6255522626936,
+     "tp_jd_tdb": 2451689.32628866,
+     "n_deg_giorno": 1.0003336819472537,
+     "periodo_giorni": 359.87991456932906
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 5507036.837810266,
+     "e": 0.7458503755412467,
+     "i_deg": 5.021626850984797,
+     "node_deg": 319.4986216587312,
+     "w_deg": 296.6648654116909,
+     "M_deg": 308.9802321363474,
+     "tp_jd_tdb": 2461051.4455951825,
+     "n_deg_giorno": 1.0014559194149373,
+     "periodo_giorni": 359.4766309937201
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=802, EPHEM_TYPE=ELEMENTS, CENTER=500@899, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "caronte": {
+   "pianeta": "Plutone",
+   "nome_en": "Charon",
+   "codice_jpl": 901,
+   "effemeridi": "PLU060",
+   "piano_riferimento": "equatorial",
+   "epoca": "2000-01-01.5",
+   "epoca_jd_tdb": 2451545.0,
+   "a_km": 19600.0,
+   "e": 0.0,
+   "w_deg": 0.0,
+   "M_deg": 304.1,
+   "i_deg": 0.0,
+   "node_deg": 0.0,
+   "periodo_giorni": 6.387222,
+   "P_apsidi_anni": null,
+   "P_nodo_anni": null,
+   "riferimento": "6",
+   "riferimento_testo": "M. Brozović, R. A. Jacobson (2024) \"Post-New Horizons orbits and masses for the satellites of Pluto\". AJ 167:256.",
+   "polo_equatore_usato_icrf": {
+    "ra_deg": 132.993,
+    "dec_deg": -6.163,
+    "nota": "dalle costanti IAU 2015 di pck00011.tpc"
+   },
+   "eclittica_j2000_derivata": {
+    "i_deg": 112.816,
+    "node_deg": 227.351,
+    "w_deg": 17.114,
+    "M_deg": 304.1,
+    "nota": "CALCOLATA da me con la rotazione descritta in meta.lune.conversione_in_eclittica; non e' un dato della fonte. Valida per piano/orientamento."
+   },
+   "horizons_osculanti_eclittica_j2000": {
+    "centro": "500@999",
+    "epoca_j2000": {
+     "epoca_jd_tdb": 2451545.0,
+     "a_km": 19595.76204124312,
+     "e": 0.0001610672790944719,
+     "i_deg": 112.8908097641467,
+     "node_deg": 227.3916867008565,
+     "w_deg": 172.5855027165132,
+     "M_deg": 148.6651344828103,
+     "tp_jd_tdb": 2451542.3623416354,
+     "n_deg_giorno": 56.36254355966765,
+     "periodo_giorni": 6.387220612548998
+    },
+    "epoca_2461000.5": {
+     "epoca_jd_tdb": 2461000.5,
+     "a_km": 19595.7669167067,
+     "e": 0.0001606180921628836,
+     "i_deg": 112.887810944501,
+     "node_deg": 227.3930028345143,
+     "w_deg": 172.2769664870434,
+     "M_deg": 284.8818065495274,
+     "tp_jd_tdb": 2461001.8327684794,
+     "n_deg_giorno": 56.362522525009076,
+     "periodo_giorni": 6.387222996278448
+    },
+    "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=901, EPHEM_TYPE=ELEMENTS, CENTER=500@999, REF_PLANE=ECLIPTIC)"
+   }
+  },
+  "disnomia": {
+   "pianeta": "Eris",
+   "nome_en": "Dysnomia",
+   "codice_jpl": 120136199,
+   "piano_riferimento": "ecliptic",
+   "fonte": "JPL Horizons, soluzione tnosat_v001_20136199_jpl (19 osservazioni 2005-2018), centro 500@920136199 (Eris), elementi osculanti, eclittica J2000",
+   "non_presente_in": "ssd.jpl.nasa.gov/sats/elem (la pagina non elenca i satelliti dei TNO tranne Plutone)",
+   "a_km": 37274.45544580947,
+   "e": 0.006094173094439576,
+   "i_deg": 61.60987261838479,
+   "node_deg": 139.0981115945523,
+   "w_deg": 155.8981590635696,
+   "M_deg": 114.5526103087081,
+   "periodo_giorni": 15.787159630757419,
+   "epoca_jd_tdb": 2451545.0,
+   "epoca_2461000.5": {
+    "epoca_jd_tdb": 2461000.5,
+    "a_km": 37274.45716443769,
+    "e": 0.00609788284833795,
+    "i_deg": 61.60967743727732,
+    "node_deg": 139.0978049611387,
+    "w_deg": 155.9117674892783,
+    "M_deg": 108.70780164072,
+    "tp_jd_tdb": 2460995.732812399,
+    "n_deg_giorno": 22.803340405872227,
+    "periodo_giorni": 15.787160722614757
+   },
+   "GM_primario_km3_s2": 1098.9,
+   "nota": "Orbita quasi circolare (e~0.006) inclinata ~62 deg sull'eclittica. a=37274 km e periodo 15.79 d sono coerenti con la soluzione Horizons; incertezza di posizione ~110 km (Horizons, 2025)."
+  },
+  "dimorphos": {
+   "pianeta": "Didymos (asteroide 65803)",
+   "nome_en": "Dimorphos",
+   "codice_jpl": 120065803,
+   "piano_riferimento": "ecliptic",
+   "fonte": "JPL Horizons, ricostruzione DART post-impatto (soluzione s547, marzo 2024, https://iopscience.iop.org/article/10.3847/PSJ/ad26e7/pdf), centro 500@920065803 (Didymos), osculanti, eclittica J2000",
+   "prima_impatto": {
+    "epoca_jd_tdb": 2459842.5,
+    "a_km": 1.209922010620725,
+    "e": 0.01711717899831503,
+    "i_deg": 170.7245506300443,
+    "node_deg": 39.81034174807042,
+    "w_deg": 163.6406732527526,
+    "M_deg": 359.9999992363327,
+    "tp_jd_tdb": 2459842.500000001,
+    "n_deg_giorno": 700.2453073392581,
+    "periodo_giorni": 0.5141055516214771
+   },
+   "dopo_impatto": {
+    "epoca_jd_tdb": 2459945.5,
+    "a_km": 1.170153850872601,
+    "e": 0.01194097607713814,
+    "i_deg": 170.7245506300443,
+    "node_deg": 39.81034174807038,
+    "w_deg": 315.6997120901434,
+    "M_deg": 119.9482753717972,
+    "tp_jd_tdb": 2459945.3370808316,
+    "n_deg_giorno": 736.2440938534845,
+    "periodo_giorni": 0.48896826881933725
+   },
+   "periodo_osservato_prima_impatto": "11 h 55 min (NASA, https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/)",
+   "periodo_osservato_dopo_impatto": "11 h 23 min +/- ~2 min (stessa pagina NASA, misura preliminare dell'ottobre 2022)",
+   "periodo_prima_giorni_osservato": 0.49652777777777773,
+   "periodo_dopo_giorni_osservato": 0.47430555555555554,
+   "impatto_DART": "2022-09-26 23:14:24.183 UTC = 2022-09-26 23:15:33.365 TDB (Horizons)",
+   "nota": "Gli elementi osculanti (periodo 12.34 h prima, 11.74 h dopo) differiscono dai periodi medi osservati perche' Didymos non e' sferico; per un modello visivo usare il periodo osservato con il semiasse osculante (a ~1.21 km prima, ~1.17 km dopo). Orbita praticamente retrograda sull'eclittica (i~170.7 deg)."
+  }
+ },
+ "poli": {
+  "sole": {
+   "alpha0": 286.13,
+   "alpha1": 0.0,
+   "delta0": 63.87,
+   "delta1": 0.0,
+   "W0": 84.176,
+   "Wdot": 14.1844,
+   "note": "Polo e rotazione di Carrington (sidereale)."
+  },
+  "mercurio": {
+   "alpha0": 281.0103,
+   "alpha1": -0.0328,
+   "delta0": 61.4155,
+   "delta1": -0.0049,
+   "W0": 329.5988,
+   "Wdot": 6.1385108,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.01067257,
+     -0.00112309,
+     -0.0001104,
+     -2.539e-05,
+     -5.71e-06
+    ],
+    "sistema_angoli": "BODY1_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.0106726 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "venere": {
+   "alpha0": 272.76,
+   "alpha1": 0.0,
+   "delta0": 67.16,
+   "delta1": 0.0,
+   "W0": 160.2,
+   "Wdot": -1.4813688,
+   "note": "Nessun termine periodico."
+  },
+  "terra": {
+   "alpha0": 0.0,
+   "alpha1": -0.641,
+   "delta0": 90.0,
+   "delta1": -0.557,
+   "W0": 190.147,
+   "Wdot": 360.9856235,
+   "note": "Valori IAU 2000 (report 2009): il report 2015 non da' piu' l'orientamento della Terra. NAIF avverte che W ha errore >=150 arcsec; per la Terra usare GMST/ERA. alpha0=0, delta0=90 sono i poli di precessione al J2000 (polo dell'equatore)."
+  },
+  "luna": {
+   "alpha0": 269.9949,
+   "alpha1": 0.0031,
+   "delta0": 66.5392,
+   "delta1": 0.013,
+   "W0": 38.3213,
+   "Wdot": 13.17635815,
+   "Wddot": -1.4e-12,
+   "termini_periodici": {
+    "ra_sin": [
+     -3.8787,
+     -0.1204,
+     0.07,
+     -0.0172,
+     0.0,
+     0.0072,
+     0.0,
+     0.0,
+     0.0,
+     -0.0052,
+     0.0,
+     0.0,
+     0.0043
+    ],
+    "dec_cos": [
+     1.5419,
+     0.0239,
+     -0.0278,
+     0.0068,
+     0.0,
+     -0.0029,
+     0.0009,
+     0.0,
+     0.0,
+     0.0008,
+     0.0,
+     0.0,
+     -0.0009
+    ],
+    "W_sin": [
+     3.561,
+     0.1208,
+     -0.0642,
+     0.0158,
+     0.0252,
+     -0.0066,
+     -0.0047,
+     -0.0046,
+     0.0028,
+     0.0052,
+     0.004,
+     0.0019,
+     -0.0044
+    ],
+    "sistema_angoli": "BODY3_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 3.8787 deg); ignorabili solo se < ~0.1 deg. Valori del report IAU 2009: il report 2015 non da' l'orientamento della Luna. I termini periodici sono grandi (fino a ~3.9 deg in alpha0, 1.5 in delta0, 3.6 in W) perche' rappresentano librazioni."
+  },
+  "marte": {
+   "alpha0": 317.269202,
+   "alpha1": -0.10927547,
+   "delta0": 54.432516,
+   "delta1": -0.05827105,
+   "W0": 176.049863,
+   "Wdot": 350.891982443297,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     6.8e-05,
+     0.000238,
+     5.2e-05,
+     9e-06,
+     0.419057
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     5.1e-05,
+     0.000141,
+     3.1e-05,
+     5e-06,
+     1.591274
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.000145,
+     0.000157,
+     4e-05,
+     1e-06,
+     1e-06,
+     0.584542
+    ],
+    "sistema_angoli": "BODY4_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 1.59127 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "phobos": {
+   "alpha0": 317.67071657,
+   "alpha1": -0.10844326,
+   "delta0": 52.88627266,
+   "delta1": -0.06134706,
+   "W0": 35.1877444,
+   "Wdot": 1128.84475928,
+   "Wddot": 9.536137031212154e-09,
+   "termini_periodici": {
+    "ra_sin": [
+     -1.78428399,
+     0.02212824,
+     -0.01028251,
+     -0.00475595
+    ],
+    "dec_cos": [
+     -1.07516537,
+     0.00668626,
+     -0.0064874,
+     0.00281576
+    ],
+    "W_sin": [
+     1.42421769,
+     -0.02273783,
+     0.00410711,
+     0.00631964,
+     -1.143
+    ],
+    "sistema_angoli": "BODY4_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 1.78428 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "deimos": {
+   "alpha0": 316.65705808,
+   "alpha1": -0.10518014,
+   "delta0": 53.50992033,
+   "delta1": -0.05979094,
+   "W0": 79.39932954,
+   "Wdot": 285.16188899,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     3.09217726,
+     0.22980637,
+     0.06418655,
+     0.02533537,
+     0.00778695
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.83936004,
+     0.1432532,
+     0.01911409,
+     -0.0148259,
+     0.0019243
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -2.73954829,
+     -0.39968606,
+     -0.06563259,
+     -0.0291294,
+     0.0169916
+    ],
+    "sistema_angoli": "BODY4_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 3.09218 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "giove": {
+   "alpha0": 268.056595,
+   "alpha1": -0.006499,
+   "delta0": 64.495303,
+   "delta1": 0.002413,
+   "W0": 284.95,
+   "Wdot": 870.536,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.000117,
+     0.000938,
+     0.001432,
+     3e-05,
+     0.00215
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     5e-05,
+     0.000404,
+     0.000617,
+     -1.3e-05,
+     0.000926
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY5_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.00215 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "io": {
+   "alpha0": 268.05,
+   "alpha1": -0.009,
+   "delta0": 64.5,
+   "delta1": 0.003,
+   "W0": 200.39,
+   "Wdot": 203.4889538,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.094,
+     0.024
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.04,
+     0.011
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     -0.085,
+     -0.022
+    ],
+    "sistema_angoli": "BODY5_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.094 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "europa": {
+   "alpha0": 268.08,
+   "alpha1": -0.009,
+   "delta0": 64.51,
+   "delta1": 0.003,
+   "W0": 36.022,
+   "Wdot": 101.3747235,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     1.086,
+     0.06,
+     0.015,
+     0.009
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.468,
+     0.026,
+     0.007,
+     0.002
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     -0.98,
+     -0.054,
+     -0.014,
+     -0.008
+    ],
+    "sistema_angoli": "BODY5_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 1.086 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "ganimede": {
+   "alpha0": 268.2,
+   "alpha1": -0.009,
+   "delta0": 64.57,
+   "delta1": 0.003,
+   "W0": 44.064,
+   "Wdot": 50.3176081,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     -0.037,
+     0.431,
+     0.091
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     -0.016,
+     0.186,
+     0.039
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.033,
+     -0.389,
+     -0.082
+    ],
+    "sistema_angoli": "BODY5_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.431 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "callisto": {
+   "alpha0": 268.72,
+   "alpha1": -0.009,
+   "delta0": 64.83,
+   "delta1": 0.003,
+   "W0": 259.51,
+   "Wdot": 21.5710715,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.068,
+     0.59,
+     0.0,
+     0.01
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.029,
+     0.254,
+     0.0,
+     -0.004
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.061,
+     -0.533,
+     0.0,
+     -0.009
+    ],
+    "sistema_angoli": "BODY5_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.59 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "amaltea": {
+   "alpha0": 268.05,
+   "alpha1": -0.009,
+   "delta0": 64.49,
+   "delta1": 0.003,
+   "W0": 231.67,
+   "Wdot": 722.631456,
+   "termini_periodici": {
+    "ra_sin": [
+     -0.84,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.0
+    ],
+    "dec_cos": [
+     -0.36,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.76,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.01,
+     0.0
+    ],
+    "sistema_angoli": "BODY5_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.84 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "saturno": {
+   "alpha0": 40.589,
+   "alpha1": -0.036,
+   "delta0": 83.537,
+   "delta1": -0.004,
+   "W0": 38.9,
+   "Wdot": 810.7939024,
+   "note": "Nessun termine periodico."
+  },
+  "mimas": {
+   "alpha0": 40.66,
+   "alpha1": -0.036,
+   "delta0": 83.52,
+   "delta1": -0.004,
+   "W0": 333.46,
+   "Wdot": 381.994555,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     13.56,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     -1.53,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     -13.48,
+     0.0,
+     -44.85,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY6_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 44.85 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "encelado": {
+   "alpha0": 40.66,
+   "alpha1": -0.036,
+   "delta0": 83.52,
+   "delta1": -0.004,
+   "W0": 6.32,
+   "Wdot": 262.7318996,
+   "note": "Nessun termine periodico."
+  },
+  "teti": {
+   "alpha0": 40.66,
+   "alpha1": -0.036,
+   "delta0": 83.52,
+   "delta1": -0.004,
+   "W0": 8.95,
+   "Wdot": 190.6979085,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     9.66,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     -1.09,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     -9.6,
+     2.23,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY6_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 9.66 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "dione": {
+   "alpha0": 40.66,
+   "alpha1": -0.036,
+   "delta0": 83.52,
+   "delta1": -0.004,
+   "W0": 357.6,
+   "Wdot": 131.5349316,
+   "note": "Nessun termine periodico."
+  },
+  "rea": {
+   "alpha0": 40.38,
+   "alpha1": -0.036,
+   "delta0": 83.55,
+   "delta1": -0.004,
+   "W0": 235.16,
+   "Wdot": 79.6900478,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     3.1,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.35,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -3.08,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY6_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 3.1 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "titano": {
+   "alpha0": 39.4827,
+   "alpha1": 0.0,
+   "delta0": 83.4279,
+   "delta1": 0.0,
+   "W0": 186.5855,
+   "Wdot": 22.5769768,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY6_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "iperione": {
+   "alpha0": null,
+   "delta0": null,
+   "W0": null,
+   "Wdot": null,
+   "note": "Nessun modello nel report IAU 2015 / pck00011.tpc (rotazione caotica o non determinata)."
+  },
+  "giapeto": {
+   "alpha0": 318.16,
+   "alpha1": -3.949,
+   "delta0": 75.03,
+   "delta1": -1.143,
+   "W0": 355.2,
+   "Wdot": 4.5379572,
+   "note": "Nessun termine periodico."
+  },
+  "urano": {
+   "alpha0": 257.311,
+   "alpha1": 0.0,
+   "delta0": -15.175,
+   "delta1": 0.0,
+   "W0": 203.81,
+   "Wdot": -501.1600928,
+   "note": "Nessun termine periodico."
+  },
+  "miranda": {
+   "alpha0": 257.43,
+   "alpha1": 0.0,
+   "delta0": -15.08,
+   "delta1": 0.0,
+   "W0": 30.7,
+   "Wdot": -254.6906892,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     4.41,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.04,
+     0.0
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     4.25,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.02,
+     0.0
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.15,
+     -1.27,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.09,
+     0.15
+    ],
+    "sistema_angoli": "BODY7_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 4.41 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "ariel": {
+   "alpha0": 257.43,
+   "alpha1": 0.0,
+   "delta0": -15.1,
+   "delta1": 0.0,
+   "W0": 156.22,
+   "Wdot": -142.8356681,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.29
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.28
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.05,
+     0.08
+    ],
+    "sistema_angoli": "BODY7_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.29 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "umbriel": {
+   "alpha0": 257.43,
+   "alpha1": 0.0,
+   "delta0": -15.1,
+   "delta1": 0.0,
+   "W0": 108.05,
+   "Wdot": -86.8688923,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.21
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.09,
+     0.0,
+     0.06
+    ],
+    "sistema_angoli": "BODY7_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.21 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "titania": {
+   "alpha0": 257.43,
+   "alpha1": 0.0,
+   "delta0": -15.1,
+   "delta1": 0.0,
+   "W0": 77.74,
+   "Wdot": -41.3514316,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.29
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.28
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.08
+    ],
+    "sistema_angoli": "BODY7_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.29 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "oberon": {
+   "alpha0": 257.43,
+   "alpha1": 0.0,
+   "delta0": -15.1,
+   "delta1": 0.0,
+   "W0": 6.77,
+   "Wdot": -26.7394932,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.16
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.16
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04
+    ],
+    "sistema_angoli": "BODY7_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.16 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "nettuno": {
+   "alpha0": 299.36,
+   "alpha1": 0.0,
+   "delta0": 43.46,
+   "delta1": 0.0,
+   "W0": 249.978,
+   "Wdot": 541.1397757,
+   "termini_periodici": {
+    "ra_sin": [
+     0.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     -0.51,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     -0.48,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY8_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.7 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "tritone": {
+   "alpha0": 299.36,
+   "alpha1": 0.0,
+   "delta0": 41.17,
+   "delta1": 0.0,
+   "W0": 296.53,
+   "Wdot": -61.2572637,
+   "termini_periodici": {
+    "ra_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -32.35,
+     0.0,
+     -6.28,
+     -2.08,
+     -0.74,
+     -0.28,
+     -0.11,
+     -0.07,
+     -0.02,
+     -0.01
+    ],
+    "dec_cos": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     22.55,
+     0.0,
+     2.1,
+     0.55,
+     0.16,
+     0.05,
+     0.02,
+     0.01,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     22.25,
+     0.0,
+     6.73,
+     2.05,
+     0.74,
+     0.28,
+     0.11,
+     0.05,
+     0.02,
+     0.01
+    ],
+    "sistema_angoli": "BODY8_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 32.35 deg); ignorabili solo se < ~0.1 deg. ATTENZIONE: i termini in N7 (-32.35 sin N7 in alpha0, +22.55 cos N7 in delta0) sono grandi; il polo di Tritone precede in ~688 anni, ignorarli sbaglia il polo fino a ~20 deg."
+  },
+  "proteo": {
+   "alpha0": 299.27,
+   "alpha1": 0.0,
+   "delta0": 42.91,
+   "delta1": 0.0,
+   "W0": 93.38,
+   "Wdot": 320.7654228,
+   "termini_periodici": {
+    "ra_sin": [
+     0.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.05,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "dec_cos": [
+     -0.51,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -0.04,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "W_sin": [
+     -0.48,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sistema_angoli": "BODY8_NUT_PREC_ANGLES"
+   },
+   "note": "Termini periodici presenti (ampiezza massima 0.7 deg); ignorabili solo se < ~0.1 deg."
+  },
+  "nereide": {
+   "alpha0": null,
+   "delta0": null,
+   "W0": null,
+   "Wdot": null,
+   "note": "Nessun modello nel report IAU 2015 / pck00011.tpc (rotazione caotica o non determinata)."
+  },
+  "plutone": {
+   "alpha0": 132.993,
+   "alpha1": 0.0,
+   "delta0": -6.163,
+   "delta1": 0.0,
+   "W0": 302.695,
+   "Wdot": 56.3625225,
+   "note": "Nessun termine periodico. Polo di Plutone e Caronte coincidono (sincronia)."
+  },
+  "caronte": {
+   "alpha0": 132.993,
+   "alpha1": 0.0,
+   "delta0": -6.163,
+   "delta1": 0.0,
+   "W0": 122.695,
+   "Wdot": 56.3625225,
+   "note": "Nessun termine periodico."
+  },
+  "cerere": {
+   "alpha0": 291.418,
+   "alpha1": 0.0,
+   "delta0": 66.764,
+   "delta1": 0.0,
+   "W0": 170.65,
+   "Wdot": 952.1532,
+   "note": "Corpo minore (non richiesto, presente in pck00011.tpc). Nessun termine periodico."
+  },
+  "vesta": {
+   "alpha0": 309.031,
+   "alpha1": 0.0,
+   "delta0": 42.235,
+   "delta1": 0.0,
+   "W0": 285.39,
+   "Wdot": 1617.3329428,
+   "note": "Corpo minore (non richiesto, presente in pck00011.tpc). Nessun termine periodico."
+  },
+  "pallade": {
+   "alpha0": 33.0,
+   "alpha1": 0.0,
+   "delta0": -3.0,
+   "delta1": 0.0,
+   "W0": 38.0,
+   "Wdot": 1105.8036,
+   "note": "Corpo minore (non richiesto, presente in pck00011.tpc). Nessun termine periodico."
+  },
+  "eros": {
+   "alpha0": 11.35,
+   "alpha1": 0.0,
+   "delta0": 17.22,
+   "delta1": 0.0,
+   "W0": 326.07,
+   "Wdot": 1639.38864745,
+   "note": "Corpo minore (non richiesto, presente in pck00011.tpc). Nessun termine periodico."
+  },
+  "itokawa": {
+   "alpha0": 90.53,
+   "alpha1": 0.0,
+   "delta0": -66.3,
+   "delta1": 0.0,
+   "W0": 0.0,
+   "Wdot": 712.143,
+   "note": "Corpo minore (non richiesto, presente in pck00011.tpc). Nessun termine periodico."
+  },
+  "67p": {
+   "alpha0": 69.54,
+   "alpha1": 0.0,
+   "delta0": 64.11,
+   "delta1": 0.0,
+   "W0": 114.69,
+   "Wdot": 696.543884683,
+   "note": "Corpo minore (non richiesto, presente in pck00011.tpc). Nessun termine periodico."
+  },
+  "dimorphos": {
+   "alpha0": 69.70029,
+   "delta0": -72.69527,
+   "W0": 73.38929405,
+   "Wdot": 724.7244051,
+   "Wddot": 1.0256e-06,
+   "periodo_rotazione_ore": 11.92177,
+   "note": "Da JPL Horizons (dati oggetto 120065803), polo di spin pre-impatto in ICRF J2000; PM = W0 + Wdot*d + Wddot*d^2. Dopo l'impatto il frame e' dinamico (asse X dal centro di Dimorphos a quello di Didymos, Z parallelo allo Z pre-impatto). Fonte: https://ssd.jpl.nasa.gov/api/horizons.api?COMMAND=%27Dimorphos%27 (non e' IAU)."
+  },
+  "disnomia": {
+   "alpha0": null,
+   "delta0": null,
+   "W0": null,
+   "Wdot": null,
+   "note": "Nessuna fonte ufficiale di orientamento; la rotazione sincrona implicherebbe asse normale al piano orbitale, ma e' un'ipotesi non verificata."
+  }
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "file": "voyager.bin",
+ "vertici": 29610,
+ "byte_per_vertice": 10,
+ "tavolozza": [
+  [
+   0.895,
+   0.895,
+   0.895
+  ],
+  [
+   0.769,
+   0.727,
+   0.701
+  ],
+  [
+   0.895,
+   0.7,
+   0.427
+  ],
+  [
+   0.941,
+   0.941,
+   0.941
+  ],
+  [
+   0.895,
+   0.762,
+   0.431
+  ],
+  [
+   1.0,
+   1.0,
+   1.0
+  ],
+  [
+   0.497,
+   0.498,
+   0.485
+  ],
+  [
+   0.651,
+   0.628,
+   0.632
+  ],
+  [
+   0.722,
+   0.714,
+   0.698
+  ],
+  [
+   0.936,
+   0.941,
+   0.932
+  ],
+  [
+   0.92,
+   0.925,
+   0.915
+  ]
+ ],
+ "estensione_assi": [
+  0.297,
+  1.0,
+  0.6215
+ ],
+ "credito": "NASA, NASA 3D Resources (modello \"Voyager Probe (A)\")",
+ "fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Voyager%20Probe%20(A)",
+ "licenza": "NASA 3D Resources: \"free and without copyright\"; citare NASA come fonte (linee guida NASA)."
+}

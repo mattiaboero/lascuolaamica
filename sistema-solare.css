@@ -1,0 +1,1745 @@
+/*
+  sistema-solare.css — Stili della pagina Il Sistema Solare in 3D.
+
+  La struttura di pagina (wrapper, top-nav, breadcrumbs, icon-btn, seo-static,
+  footer) arriva da subject-quiz-theme.css: qui c'e' solo cio' che la pagina
+  aggiunge.
+
+  REGOLA OKABE: palette-okabe.css non va mai modificato. Il blocco senza guardia
+  porta i valori della modalita' accessibile Okabe-Ito, quello con la guardia
+  html:not([data-palette="okabe-ito"]) i token Wada Sanzo.
+
+  La scena 3D ha sempre lo sfondo scuro dello spazio, in entrambe le palette: i
+  testi sopra la scena sono bianchi su un fondo semitrasparente scuro.
+*/
+
+/* ---- Modalita' accessibile (valori Okabe-Ito) ---- */
+body.subject-spazio {
+  --accent-1: #0072b2;
+  --accent-2: #005a8c;
+  --accent-3: #e69f00;
+  --bg-1: #e3ecf7;
+  --bg-2: #eef2f8;
+  --bg-3: #fff8da;
+  --card-bg: #fffdf7;
+  --text-main: #1f2d3d;
+  --ss-muted: #4a5563;
+  --ss-spazio: #05070f;
+  /* Un colore per funzione, sempre lo stesso: verde = parti, blu = scopri e
+     guarda, viola = ascolta, giallo = missione, arancione = passaporto.
+     Testo bianco con contrasto AA (giallo: testo scuro). */
+  --ss-verde: #00704f;
+  --ss-blu: #0072b2;
+  --ss-viola: #7d3a69;
+  --ss-arancio: #a34a00;
+  --ss-giallo: #e69f00;
+  --ss-giallo-testo: #1f2d3d;
+}
+
+/* ---- Modalita' standard (Wada Sanzo) ---- */
+html:not([data-palette="okabe-ito"]) body.subject-spazio {
+  --accent-1: #3f5191;
+  --accent-2: #34447c;
+  --accent-3: var(--ws-maize);
+  --bg-1: #e2e5f1;
+  --bg-2: var(--ws-olive-buff);
+  --bg-3: var(--ws-cartridge-buff);
+  --card-bg: var(--ws-ivory);
+  --text-main: var(--ws-slate-black);
+  --ss-muted: var(--ws-hays-russet);
+  --ss-verde: #237a45;
+  --ss-blu: #2d5fa8;
+  --ss-viola: #6b3fa0;
+  --ss-arancio: #b04d1a;
+  --ss-giallo: var(--ws-maize);
+  --ss-giallo-testo: var(--ws-slate-black);
+}
+
+/* ---- Navigazione ---- */
+.ss-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ss-nav-riga,
+.ss-barra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.ss-nav-gruppi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ss-gruppo {
+  background: var(--card-bg);
+  border: 3px solid var(--accent-1);
+  border-radius: 22px;
+  color: var(--text-main);
+}
+
+.ss-gruppo > summary {
+  cursor: pointer;
+  padding: 10px 18px;
+  min-height: 44px;
+  font-weight: 800;
+  list-style-position: inside;
+}
+
+.ss-gruppo[open] {
+  flex-basis: 100%;
+}
+
+.ss-gruppo-corpo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 14px 14px;
+}
+
+.ss-sottogruppo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.ss-sottotitolo {
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ss-muted);
+  min-width: 5.5em;
+}
+
+/* ---- Pulsanti ---- */
+.ss-btn {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 3px solid var(--accent-1);
+  background: var(--card-bg);
+  color: var(--text-main);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ss-btn:hover,
+.ss-btn[aria-pressed="true"] {
+  background: var(--accent-1);
+  color: #fff;
+}
+
+.ss-btn:focus-visible,
+.ss-gruppo > summary:focus-visible,
+.ss-canvas:focus-visible,
+.ss-filtri input:focus-visible,
+.ss-vai-data input:focus-visible,
+.ss-bilancia input:focus-visible {
+  outline: 4px solid var(--accent-3);
+  outline-offset: 3px;
+}
+
+.ss-btn-tondo {
+  min-width: 48px;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+}
+
+.ss-chip {
+  font-size: 0.85rem;
+}
+
+.ss-etichette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ss-etichetta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(5 7 15 / 0.62);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ss-et-luna,
+.ss-et-asteroide,
+.ss-et-cometa,
+.ss-et-oggetto-kuiper {
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ss-nowebgl {
+  padding: 40px 20px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---- Tempo e filtri ---- */
+.ss-tempo,
+.ss-filtri,
+.ss-confronto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 3px solid var(--accent-1);
+  border-radius: var(--radius-md, 18px);
+  color: var(--text-main);
+}
+
+.ss-vai-data {
+  font-weight: 700;
+}
+
+.ss-vai-data input,
+.ss-bilancia input {
+  min-height: 44px;
+  margin-left: 6px;
+  padding: 6px 10px;
+  border: 2px solid var(--accent-1);
+  border-radius: 12px;
+  font: inherit;
+  background: #fff;
+  color: var(--text-main);
+}
+
+.ss-bilancia input {
+  width: 5.5em;
+  margin: 0 6px;
+}
+
+.ss-filtri {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 16px;
+}
+
+.ss-filtri legend {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.ss-filtri label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ss-filtri input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--accent-1);
+}
+
+.ss-confronto h2 {
+  font-size: 1.1rem;
+}
+
+.ss-nota {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ss-muted);
+}
+
+/* ---- Scheda ---- */
+.ss-scheda {
+  padding: 18px 20px;
+  background: var(--card-bg);
+  border: 3px solid var(--accent-1);
+  border-radius: var(--radius-lg, 28px);
+  color: var(--text-main);
+}
+
+.ss-scheda:focus {
+  outline: none;
+}
+
+.ss-tipo {
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-1);
+}
+
+.ss-nome {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  line-height: 1.1;
+  margin: 2px 0 10px;
+}
+
+.ss-scheda-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ss-scheda-corpo h3 {
+  font-size: 1.05rem;
+  margin-top: 4px;
+}
+
+.ss-descrizione {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.ss-ascolta {
+  align-self: flex-start;
+}
+
+.ss-dati {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.ss-dato {
+  padding: 10px 12px;
+  background: var(--bg-3);
+  border-radius: 14px;
+}
+
+.ss-dato-largo {
+  grid-column: 1 / -1;
+}
+
+.ss-dato-largo ul {
+  padding-left: 1.1em;
+  font-weight: 600;
+  display: grid;
+  gap: 4px;
+}
+
+.ss-dato dt {
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ss-muted);
+}
+
+.ss-dato dd {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ss-dato-valore {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.ss-dato-nota {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ss-muted);
+}
+
+.ss-bilancia,
+.ss-pallone,
+.ss-oggi {
+  padding: 12px 14px;
+  border: 2px dashed var(--accent-1);
+  border-radius: 14px;
+}
+
+.ss-oggi:empty {
+  display: none;
+}
+
+.ss-bilancia label {
+  font-weight: 700;
+}
+
+.ss-bilancia-risultato {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.ss-curiosita,
+.ss-missioni {
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  line-height: 1.45;
+}
+
+.ss-fonti summary {
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.ss-fonti ul {
+  padding-left: 1.2em;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.ss-fonti a {
+  color: var(--accent-1);
+}
+
+.ss-missione-ok {
+  animation: ss-festa 1.1s ease-out;
+}
+
+@keyframes ss-festa {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.ss-con-voce {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ss-con-voce input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--accent-1);
+}
+
+/* ---- Passaporto ---- */
+.ss-passaporto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 3px solid var(--accent-1);
+  border-radius: var(--radius-md, 18px);
+  color: var(--text-main);
+}
+
+.ss-passaporto h2 {
+  font-size: 1.1rem;
+}
+
+.ss-passaporto-conti {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-weight: 700;
+}
+
+.ss-timbri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ss-timbro {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 4px 10px;
+  border: 2px dashed var(--ss-muted);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ss-muted);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ss-timbro-si {
+  border: 2px solid var(--accent-1);
+  background: var(--accent-1);
+  color: #fff;
+}
+
+.ss-timbro-si::before {
+  content: "✓ ";
+}
+
+.ss-timbro-nuovo {
+  animation: ss-festa 1.1s ease-out;
+}
+
+.ss-timbro:focus-visible,
+.ss-con-voce input:focus-visible {
+  outline: 4px solid var(--accent-3);
+  outline-offset: 3px;
+}
+
+/* Corpo gia' visitato nella barra di navigazione. */
+.ss-voce.ss-visitato:not([aria-pressed="true"])::after {
+  content: " ✓";
+  color: var(--accent-1);
+}
+
+/* =====================================================================
+   Layout. Due viste:
+   - body.ss-immersivo (di partenza): la scena occupa tutta la finestra, i
+     comandi stanno sopra la scena e schede e strumenti si aprono in un
+     cassetto laterale (in basso sui telefoni);
+   - senza la classe (dopo ✕): pagina normale, con la scena a sinistra e
+     tutti i pannelli in colonna a destra.
+   ===================================================================== */
+
+.ss-app {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 1000px) {
+  .ss-app {
+    grid-template-columns: minmax(0, 1.55fr) minmax(340px, 1fr);
+  }
+}
+
+.ss-scena {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 4px solid var(--accent-1);
+  border-radius: 20px;
+  background: var(--ss-spazio);
+  box-shadow: 0 14px 34px rgba(0 0 0 / 0.2);
+}
+
+.ss-canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  touch-action: none;
+  cursor: grab;
+}
+
+.ss-canvas:active {
+  cursor: grabbing;
+}
+
+/* ---- Vista a tutto schermo ---- */
+body.ss-immersivo {
+  overflow: hidden;
+}
+
+body.ss-immersivo .site-footer,
+body.ss-immersivo .wrapper > :not(.ss-app):not(header) {
+  display: none;
+}
+
+/* Il titolo resta per i lettori di schermo e per i motori di ricerca:
+   nascosto alla vista, non tolto. Senza JavaScript lo rimostra noscript.css. */
+body.ss-immersivo .wrapper > header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body.ss-immersivo .ss-app {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  max-width: none;
+  display: block;
+  background: var(--ss-spazio);
+}
+
+body.ss-immersivo .ss-scena {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.ss-immersivo .ss-canvas {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+body.ss-immersivo .ss-solo-normale,
+body:not(.ss-immersivo) .ss-solo-immersivo {
+  display: none;
+}
+
+/* ---- Pulsanti sopra la scena ---- */
+.ss-hud-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 6px 14px;
+  border: 2px solid rgba(255 255 255 / 0.65);
+  border-radius: 999px;
+  background: rgba(5 7 15 / 0.72);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ss-hud-btn:hover,
+.ss-hud-btn[aria-pressed="true"] {
+  background: #fff;
+  color: var(--ss-spazio);
+}
+
+.ss-hud-btn:focus-visible {
+  outline: 4px solid var(--accent-3);
+  outline-offset: 2px;
+}
+
+.ss-hud-primario {
+  background: var(--accent-1);
+  border-color: #fff;
+}
+
+.ss-hud-piccolo {
+  min-height: 40px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+  .ss-solo-largo {
+    display: none;
+  }
+}
+
+.ss-hud-alto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ss-hud-destra {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* ---- Missione (in alto, al centro) ---- */
+.ss-missione {
+  flex: 1;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 8px 14px;
+  border: 2px solid var(--accent-3);
+  border-radius: 16px;
+  background: rgba(5 7 15 / 0.8);
+  color: #fff;
+}
+
+.ss-missione-testo {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  line-height: 1.25;
+}
+
+.ss-missione-esito {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.ss-missione-esito:empty {
+  display: none;
+}
+
+.ss-missione-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 4px;
+}
+
+.ss-missione-conto {
+  font-size: 0.8rem;
+  font-weight: 800;
+  opacity: 0.85;
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  .ss-hud-alto {
+    flex-wrap: wrap;
+  }
+
+  .ss-missione {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
+
+.ss-avviso-scala {
+  position: absolute;
+  left: 10px;
+  bottom: calc(var(--ss-basso, 120px) + 8px);
+  padding: 3px 10px;
+  border-radius: 10px;
+  background: rgba(5 7 15 / 0.72);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* Con il cartellino aperto l'avviso scende sopra di lui, non sotto. */
+.ss-scena:has(.ss-cartellino:not([hidden])) .ss-avviso-scala {
+  left: auto;
+  right: 10px;
+}
+
+/* ---- Viaggio guidato ---- */
+.ss-viaggio-barra {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  max-width: calc(100% - 20px);
+}
+
+.ss-viaggio-barra[hidden] {
+  display: none;
+}
+
+/* Durante il viaggio la missione si fa da parte: la barra prende il suo posto. */
+body.ss-in-viaggio .ss-missione {
+  display: none;
+}
+
+/* Sul telefono la barra va da bordo a bordo: centrata con left: 50% avrebbe
+   solo meta' schermo a disposizione e i pulsanti finirebbero in colonna. */
+@media (max-width: 700px) {
+  .ss-viaggio-barra {
+    top: 62px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    max-width: none;
+  }
+
+  .ss-viaggio-tappa,
+  .ss-viaggio-progresso {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+/* Pagina normale: niente doppioni dei comandi che la pagina ha gia'. */
+body:not(.ss-immersivo) .ss-hud-alto > a,
+body:not(.ss-immersivo) [data-pannello-apri] {
+  display: none;
+}
+
+.ss-viaggio-tappa {
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(5 7 15 / 0.8);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* La barra si riempie durante la tappa: si vede che il viaggio va avanti da
+   solo. La durata la mette js/sistema-solare.js. */
+.ss-viaggio-progresso {
+  width: 90px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255 255 255 / 0.25);
+  overflow: hidden;
+}
+
+.ss-viaggio-progresso span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent-3);
+}
+
+.ss-viaggio-progresso span.ss-in-corso {
+  animation-name: ss-riempi;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ss-riempi {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ---- Cartellino del corpo ---- */
+.ss-cartellino {
+  position: absolute;
+  left: 10px;
+  bottom: calc(var(--ss-basso, 120px) + 36px);
+  max-width: min(360px, calc(100% - 20px));
+  max-height: calc(100% - var(--ss-basso, 120px) - 160px);
+  overflow-y: auto;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(5 7 15 / 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+body:not(.ss-immersivo) .ss-cartellino {
+  display: none;
+}
+
+.ss-cart-nome {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.ss-cart-dati {
+  list-style: none;
+  display: grid;
+  gap: 3px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.ss-cart-curiosita {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255 255 255 / 0.3);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.ss-cart-curiosita-azioni {
+  display: flex;
+  gap: 14px;
+}
+
+/* Comandi delle curiosita': testo sottolineato, piccolo, per non sembrare
+   i pulsanti dell'audio. */
+.ss-link-btn {
+  min-height: 32px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.ss-link-btn:hover,
+.ss-link-btn[aria-pressed="true"] {
+  color: var(--accent-3);
+}
+
+.ss-link-btn:focus-visible {
+  outline: 3px solid var(--accent-3);
+  outline-offset: 2px;
+}
+
+.ss-cart-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Sui telefoni il cartellino resta piccolo: nome, tre dati e i pulsanti. Le
+   curiosita' e l'avviso sulla scala stanno nella scheda e in una riga sola. */
+.ss-cart-scala {
+  display: none;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .ss-cartellino {
+    right: 10px;
+    max-width: none;
+    padding: 8px 12px;
+    gap: 4px;
+  }
+
+  .ss-cart-nome {
+    font-size: 1.15rem;
+  }
+
+  .ss-cart-dati {
+    font-size: 0.85rem;
+  }
+
+  .ss-cart-curiosita,
+  .ss-avviso-scala,
+  .ss-dock [data-ss="vicino"],
+  .ss-dock [data-ss="lontano"] {
+    display: none;
+  }
+
+  .ss-cart-scala {
+    display: block;
+  }
+
+  .ss-missione {
+    padding: 6px 10px;
+  }
+
+  .ss-missione-conto {
+    display: none;
+  }
+}
+
+/* ---- Barra in basso ---- */
+.ss-hud-basso {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 26px 10px 10px;
+  background: linear-gradient(to top, rgba(5 7 15 / 0.9), rgba(5 7 15 / 0));
+}
+
+.ss-hud-basso .ss-nav-riga {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+@media (min-width: 1100px) {
+  .ss-hud-basso .ss-nav-riga {
+    justify-content: center;
+  }
+}
+
+.ss-hud-basso .ss-voce {
+  flex: none;
+  border: 2px solid rgba(255 255 255 / 0.65);
+  background: rgba(5 7 15 / 0.72);
+  color: #fff;
+}
+
+.ss-hud-basso .ss-voce:hover,
+.ss-hud-basso .ss-voce[aria-pressed="true"] {
+  background: #fff;
+  color: var(--ss-spazio);
+}
+
+.ss-hud-basso .ss-voce.ss-visitato:not([aria-pressed="true"])::after {
+  color: var(--accent-3);
+}
+
+.ss-dock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ss-hud-data {
+  padding: 4px 10px;
+  border-radius: 10px;
+  background: rgba(5 7 15 / 0.72);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* ---- Cassetto: schede e strumenti ---- */
+.ss-cassetto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--card-bg);
+  border: 3px solid var(--accent-1);
+  border-radius: var(--radius-lg, 28px);
+  color: var(--text-main);
+}
+
+.ss-cassetto-testa {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ss-schede-tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+/* Pagina normale: tutti i pannelli in colonna, senza linguette. */
+body:not(.ss-immersivo) .ss-cassetto-testa {
+  display: none;
+}
+
+body.ss-immersivo .ss-cassetto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(460px, 100%);
+  border-width: 0 0 0 3px;
+  border-radius: 0;
+  overflow-y: auto;
+  box-shadow: -12px 0 30px rgba(0 0 0 / 0.35);
+}
+
+body.ss-immersivo .ss-cassetto:not(.ss-aperto),
+body.ss-immersivo .ss-pannello:not(.ss-attivo) {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  body.ss-immersivo .ss-cassetto {
+    top: auto;
+    left: 0;
+    width: 100%;
+    max-height: 78%;
+    border-width: 3px 0 0;
+    border-radius: 22px 22px 0 0;
+  }
+}
+
+.ss-pannello {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ss-pannello > h2:not(.ss-nome) {
+  font-size: 1.2rem;
+}
+
+.ss-cassetto .ss-scheda,
+.ss-cassetto .ss-tempo,
+.ss-cassetto .ss-filtri,
+.ss-cassetto .ss-confronto,
+.ss-cassetto .ss-passaporto {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.ss-cassetto .ss-tempo,
+.ss-cassetto .ss-confronto {
+  align-items: stretch;
+}
+
+.ss-cassetto .ss-barra,
+.ss-cassetto .ss-nav-gruppi {
+  justify-content: flex-start;
+}
+
+.ss-aiuto ul {
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+}
+
+/* ---- Tu su questo pianeta ---- */
+.ss-tu {
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--bg-3);
+}
+
+.ss-tu-campi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-weight: 700;
+}
+
+.ss-tu input {
+  width: 5em;
+  min-height: 44px;
+  margin: 0 6px;
+  padding: 6px 10px;
+  border: 2px solid var(--accent-1);
+  border-radius: 12px;
+  font: inherit;
+  background: #fff;
+  color: var(--text-main);
+}
+
+.ss-tu input:focus-visible {
+  outline: 4px solid var(--accent-3);
+  outline-offset: 3px;
+}
+
+.ss-tu-risultati {
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.ss-grandi summary {
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.ss-grandi table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.ss-grandi th,
+.ss-grandi td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--bg-2);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ss-grandi th {
+  font-weight: 700;
+  color: var(--ss-muted);
+  width: 45%;
+}
+
+
+/* =====================================================================
+   Aspetto per bambini (9-13 anni): pulsanti colorati con icona e parola,
+   un colore per funzione, pianeti riconoscibili a colpo d'occhio.
+   ===================================================================== */
+
+.ss-c-verde,
+.ss-c-blu,
+.ss-c-viola,
+.ss-c-arancio {
+  border-color: rgba(255 255 255 / 0.85);
+  color: #fff;
+}
+
+.ss-c-verde { background: var(--ss-verde); }
+.ss-c-blu { background: var(--ss-blu); }
+.ss-c-viola { background: var(--ss-viola); }
+.ss-c-arancio { background: var(--ss-arancio); }
+
+.ss-c-giallo {
+  background: var(--ss-giallo);
+  border-color: var(--ss-giallo);
+  color: var(--ss-giallo-testo);
+}
+
+.ss-c-grigio {
+  background: rgba(5 7 15 / 0.72);
+}
+
+.ss-c-verde:hover,
+.ss-c-blu:hover,
+.ss-c-viola:hover,
+.ss-c-arancio:hover,
+.ss-c-giallo:hover {
+  filter: brightness(1.12);
+  background-color: inherit;
+}
+
+.ss-c-verde:hover { background: var(--ss-verde); }
+.ss-c-blu:hover { background: var(--ss-blu); }
+.ss-c-viola:hover { background: var(--ss-viola); }
+.ss-c-arancio:hover { background: var(--ss-arancio); }
+.ss-c-giallo:hover { background: var(--ss-giallo); }
+
+/* Premuto (es. «Ascolta» mentre legge, «Ferma il viaggio»): anello giallo. */
+.ss-c-verde[aria-pressed="true"],
+.ss-c-blu[aria-pressed="true"],
+.ss-c-viola[aria-pressed="true"],
+.ss-c-arancio[aria-pressed="true"] {
+  color: #fff;
+  box-shadow: 0 0 0 3px var(--ss-giallo);
+}
+
+.ss-c-verde[aria-pressed="true"] { background: var(--ss-verde); }
+.ss-c-viola[aria-pressed="true"] { background: var(--ss-viola); }
+
+.ss-grande {
+  min-height: 52px;
+  padding: 8px 20px;
+  font-size: 1.05rem;
+}
+
+.ss-badge:empty {
+  display: none;
+}
+
+.ss-badge {
+  min-width: 24px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ss-arancio);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+/* ---- Missione ---- */
+.ss-missione-titolo {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ss-giallo);
+}
+
+.ss-missione-titolo .ss-missione-conto {
+  margin-left: auto;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+/* ---- Avviso (timbri, missioni) ---- */
+.ss-toast {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  max-width: calc(100% - 20px);
+  padding: 10px 18px;
+  border: 2px solid var(--ss-giallo);
+  border-radius: 999px;
+  background: var(--ss-arancio);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  box-shadow: 0 8px 24px rgba(0 0 0 / 0.45);
+  animation: ss-entra 0.35s ease-out;
+  pointer-events: none;
+}
+
+.ss-toast[hidden] {
+  display: none;
+}
+
+@keyframes ss-entra {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ---- Zoom sul lato destro, come nelle mappe ---- */
+.ss-zoom {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ss-zoom-btn {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
+.ss-scena:has(.ss-benvenuto:not([hidden])) .ss-zoom {
+  display: none;
+}
+
+/* ---- Poster dei pianeti in basso ---- */
+.ss-carosello {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  max-width: 100%;
+}
+
+/* Il poster e' largo quanto i pianeti: le frecce gli stanno subito accanto,
+   una prima del Sole e una dopo Nettuno. */
+.ss-poster {
+  flex: 0 1 auto;
+  min-width: 0;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.ss-freccia {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  align-self: center;
+  margin-bottom: 18px;
+}
+
+.ss-freccia-svg {
+  display: block;
+}
+
+.ss-pianetino {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 56px;
+  padding: 2px 4px 4px;
+  border: 0;
+  border-radius: 14px;
+  background: none;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Tutti i pianeti hanno il centro sulla stessa riga, come sui poster. */
+.ss-pianetino-posto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.ss-pianetino-nome {
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ss-pianetino:hover .ss-mini,
+.ss-pianetino[aria-pressed="true"] .ss-mini {
+  box-shadow: 0 0 0 3px var(--ss-giallo), inset -6px -4px 8px rgba(0 0 0 / 0.55);
+}
+
+.ss-pianetino[aria-pressed="true"] .ss-pianetino-nome {
+  background: #fff;
+  color: var(--ss-spazio);
+}
+
+.ss-pianetino.ss-visitato .ss-pianetino-nome::after {
+  content: " ✓";
+  color: var(--ss-giallo);
+}
+
+.ss-pianetino[aria-pressed="true"].ss-visitato .ss-pianetino-nome::after {
+  color: var(--ss-verde);
+}
+
+.ss-pianetino:focus-visible {
+  outline: 3px solid var(--ss-giallo);
+  outline-offset: 2px;
+}
+
+/* Il Sole: piu' grande di Giove e tagliato a sinistra dal bordo del suo
+   pulsante. Con 64 px di diametro e 44 visibili l'arco sta tutto nei 60 px
+   di altezza: niente tagli sopra e sotto. Niente alone, che verrebbe tagliato. */
+.ss-pianetino-sole .ss-pianetino-posto {
+  width: 44px;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+.ss-pianetino-sole .ss-mini {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  box-shadow: none;
+}
+
+/* L'anello giallo dei pianeti sul Sole tagliato non si vedrebbe e lascerebbe
+   un'ombra storta: lo scelto lo segna l'etichetta bianca. */
+.ss-pianetino-sole:hover .ss-mini,
+.ss-pianetino-sole[aria-pressed="true"] .ss-mini {
+  box-shadow: none;
+}
+
+.ss-poster-nota {
+  align-self: center;
+  margin-top: -4px;
+  font-size: 0.72rem;
+  color: rgba(255 255 255 / 0.8);
+  text-align: center;
+}
+
+/* ---- Miniature tonde ---- */
+.ss-mini {
+  display: inline-block;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #8c8c8c;
+  background-size: 200% 100%;
+  background-position: center;
+  box-shadow: inset -6px -4px 8px rgba(0 0 0 / 0.55);
+}
+
+.ss-mini-grande {
+  width: 48px;
+  height: 48px;
+}
+
+/* Gli stessi colori del Sole nella scena 3D (shader in
+   js/sistema-solare-motore.js): chiaro al centro, arancione sul bordo. */
+.ss-mini-sole {
+  background: radial-gradient(circle closest-side, #ffeda8 0%, #ffe9a1 45%, #ffd278 70%, #ffc15c 80%, #ffb847 89%, #ffa93f 95%, #ff8014 100%);
+  box-shadow: 0 0 14px rgba(255 160 60 / 0.6);
+}
+
+.ss-mini-grigio {
+  background-color: #8c8c8c;
+}
+
+.ss-mini-icona {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.ss-voce {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---- Cartellino ---- */
+.ss-cart-testa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ss-cart-tipo {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ss-giallo);
+}
+
+/* ---- Benvenuto ---- */
+.ss-benvenuto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: min(520px, calc(100% - 24px));
+  padding: 22px 24px;
+  border: 3px solid var(--ss-giallo);
+  border-radius: 24px;
+  background: rgba(5 7 15 / 0.94);
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(0 0 0 / 0.6);
+}
+
+.ss-benvenuto[hidden] {
+  display: none;
+}
+
+.ss-benvenuto h2 {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  margin-bottom: 12px;
+}
+
+.ss-benvenuto ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.ss-benvenuto-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---- Pannello ---- */
+.ss-chiudi {
+  flex: none;
+  background: var(--ss-spazio);
+  color: #fff;
+  border-color: var(--ss-spazio);
+}
+
+@media (max-width: 700px) {
+  .ss-freccia,
+  .ss-poster-nota {
+    display: none;
+  }
+
+  .ss-pianetino {
+    min-width: 50px;
+  }
+
+  .ss-pianetino-nome {
+    font-size: 0.72rem;
+  }
+
+  .ss-toast {
+    top: 10px;
+    font-size: 0.9rem;
+  }
+
+  .ss-hud-alto .ss-hud-data {
+    display: none;
+  }
+
+  .ss-zoom-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .ss-dock .ss-hud-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Telefoni e tablet piccoli: si avvicina con due dita, i pulsanti coprirebbero
+   il cartellino. */
+@media (max-width: 700px) and (pointer: coarse) {
+  .ss-zoom {
+    display: none;
+  }
+}
+
+/* ---- Film delle Voyager ---- */
+body.ss-in-film .ss-cartellino,
+body.ss-in-film .ss-missione,
+body.ss-in-film .ss-poster-nota {
+  display: none;
+}
+
+.ss-film {
+  position: absolute;
+  left: 10px;
+  bottom: calc(var(--ss-basso, 120px) + 36px);
+  z-index: 2;
+  width: min(420px, calc(100% - 20px));
+  max-height: calc(100% - var(--ss-basso, 120px) - 110px);
+  overflow-y: auto;
+  padding: 14px 16px;
+  border: 2px solid rgba(255 255 255 / 0.85);
+  border-radius: 18px;
+  background: rgba(5 7 15 / 0.86);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ss-film[hidden] {
+  display: none;
+}
+
+.ss-film-data {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: 1.25rem;
+  color: var(--ss-giallo);
+}
+
+.ss-film-sonda {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.ss-film-titolo {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+.ss-film-testo {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.ss-film-testo:empty {
+  display: none;
+}
+
+.ss-film-foto img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #000;
+}
+
+.ss-film-foto figcaption {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.ss-film-fine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ss-film-fine[hidden] {
+  display: none;
+}
+
+.ss-film-btn {
+  border-color: var(--ss-verde);
+}
+
+@media (max-width: 700px) {
+  .ss-film {
+    right: 10px;
+    width: auto;
+    font-size: 0.9rem;
+  }
+
+  .ss-film-foto img {
+    max-height: 120px;
+  }
+}
+
+/* ---- Schede statiche (generate da scripts/build_sistema_solare.py) ---- */
+.ss-atlante-corpo {
+  margin-top: 1.25rem;
+}
+
+.ss-atlante dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px 12px;
+  margin: 8px 0;
+}
+
+.ss-atlante dt {
+  font-weight: 800;
+}
+
+.ss-atlante dd {
+  margin: 0;
+}
+
+.ss-atlante-elenco li + li {
+  margin-top: 6px;
+}
+
+.ss-fonti-titolo,
+.ss-fonti-statiche {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+}
+
+.ss-fonti-statiche a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .ss-atlante dl {
+    grid-template-columns: 1fr;
+  }
+
+  .ss-atlante dd {
+    margin-bottom: 6px;
+  }
+}
