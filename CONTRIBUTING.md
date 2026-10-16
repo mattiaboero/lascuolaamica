@@ -58,7 +58,8 @@ La codebase quiz usa un motore unificato. Per aggiungere una nuova materia:
 3. crea `js/<subject>-page.js` con `window.SA.subjectConfig`
 4. crea la pagina HTML seguendo lo scaffold di `civica.html` o `inglese.html`
 5. aggiorna `sitemap.xml` e i metadati pagina
-6. esegui `./prepublish-check.sh`
+6. aggiungi la URL pubblica in `lighthouserc.json` per includerla nel monitoraggio quotidiano
+7. esegui `./prepublish-check.sh`
 
 Campi config obbligatori:
 - `subject`
