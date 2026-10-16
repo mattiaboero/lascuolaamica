@@ -1,0 +1,6 @@
+{
+ "lancio": {"file": "foto/voyager-disegno.webp", "titolo": "Voyager in un disegno ufficiale della NASA", "credito": "NASA/JPL-Caltech (PIA04495)", "fonte": "https://images.nasa.gov/details/PIA04495"},
+ "pale-blue-dot": {"file": "foto/pale-blue-dot-2020.webp", "titolo": "Il «pallido puntino azzurro»: la Terra vista da Voyager 1 il 14 febbraio 1990 (versione rielaborata nel 2020)", "credito": "NASA/JPL-Caltech (PIA23645)", "fonte": "https://images.nasa.gov/details/PIA23645"},
+ "ritratto": {"file": "foto/ritratto-famiglia.webp", "titolo": "Il «ritratto di famiglia» del Sistema Solare, 14 febbraio 1990", "credito": "NASA/JPL-Caltech (PIA00451)", "fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA00451"},
+ "futuro": {"file": "foto/disco-oro.webp", "titolo": "La copertina del Disco d'oro che viaggia su ogni Voyager", "credito": "NASA/JPL-Caltech", "fonte": "https://science.nasa.gov/mission/voyager/golden-record-contents/"}
+}

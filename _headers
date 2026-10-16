@@ -43,6 +43,13 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# I modelli 3D del Sistema Solare: con application/octet-stream Cloudflare non
+# li comprime (195 e 289 KB invece di circa 42 e 75). Il tipo serve solo a
+# entrare nella lista dei tipi compressi di Cloudflare: il motore li legge con
+# fetch().arrayBuffer() e non guarda il Content-Type.
+/assets/sistema-solare/*.bin
+  Content-Type: application/x-protobuf
+
 /icons/*
   Cache-Control: public, max-age=31536000, immutable
 

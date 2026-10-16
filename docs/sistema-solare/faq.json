@@ -1,0 +1,100 @@
+{
+ "nota": "Domande frequenti della pagina /sistema-solare. Testo visibile e FAQPage in JSON-LD si generano da qui (scripts/build_sistema_solare.py): restano identici. Ogni numero viene dalle schede della pagina, con la fonte indicata; i numeri che cambiano nel tempo hanno la data. Da far rileggere al fisico insieme alle schede.",
+ "domande": [
+  {
+   "domanda": "Quanti pianeti ci sono nel Sistema Solare?",
+   "risposta": "Otto: Mercurio, Venere, Terra, Marte, Giove, Saturno, Urano e Nettuno. Plutone dal 2006 è un pianeta nano, per decisione dell'Unione Astronomica Internazionale. I pianeti nani riconosciuti sono cinque: Cerere, Plutone, Eris, Haumea e Makemake.",
+   "fonti": [
+    "https://science.nasa.gov/solar-system/planets/",
+    "https://science.nasa.gov/dwarf-planets/pluto/facts/"
+   ],
+   "fonte_nota": "NASA, Planets: «Our solar system has eight planets…» e «There are five officially recognized dwarf planets…» (consultata il 16/10/2026)."
+  },
+  {
+   "domanda": "Qual è il pianeta più grande del Sistema Solare?",
+   "risposta": "Giove: il suo volume è più di 1300 volte quello della Terra. È un gigante di gas e non ha una superficie solida.",
+   "fonti": [
+    "https://science.nasa.gov/jupiter/facts/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"
+   ]
+  },
+  {
+   "domanda": "Qual è il pianeta più vicino al Sole?",
+   "risposta": "Mercurio. È poco più grande della Luna e fa un giro attorno al Sole in 88 giorni.",
+   "fonti": [
+    "https://science.nasa.gov/mercury/facts/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html"
+   ]
+  },
+  {
+   "domanda": "Qual è il pianeta più caldo?",
+   "risposta": "Venere, con una temperatura media di 464 °C, anche se Mercurio è più vicino al Sole: le sue nubi spesse trattengono il calore.",
+   "fonti": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+    "https://science.nasa.gov/venus/facts/"
+   ]
+  },
+  {
+   "domanda": "Quanto tempo impiega la luce del Sole ad arrivare sulla Terra?",
+   "risposta": "Poco più di 8 minuti.",
+   "fonti": [
+    "https://science.nasa.gov/sun/facts/"
+   ]
+  },
+  {
+   "domanda": "Quanto dura un anno su Marte?",
+   "risposta": "Circa 687 giorni terrestri (686,98): quasi due dei nostri anni.",
+   "fonti": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+   ]
+  },
+  {
+   "domanda": "Quanto peserei su Marte?",
+   "risposta": "La bilancia segnerebbe circa il 38% di quanto segna sulla Terra: se sulla Terra segna 30 kg, su Marte segnerebbe circa 11 kg e sulla Luna circa 5 kg. Tu resti uguale: cambia quanto il pianeta ti tira verso il basso.",
+   "fonti": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+   ],
+   "fonte_nota": "Gravità di superficie NSSDC (Marte 3,73 m/s², Luna 1,62 m/s²) divisa per 9,80665 m/s², come fa la bilancia della pagina."
+  },
+  {
+   "domanda": "Quante lune hanno Giove e Saturno?",
+   "risposta": "Saturno ne ha 293 (conteggio di agosto 2026), Giove 115 (settembre 2026). Il numero cresce quando gli astronomi ne scoprono di nuove. Urano ne ha 29, Nettuno 16, Marte 2, la Terra 1; Mercurio e Venere nessuna.",
+   "fonti": [
+    "https://science.nasa.gov/image-article/apod/apod-2026-august-11-six-moons-of-saturn/",
+    "https://www.iau.org/IAU/IAU/News/Ann2026/MPC-New-Moons-Saturn-Jupiter.aspx",
+    "https://science.nasa.gov/uranus/moons/",
+    "https://science.nasa.gov/neptune/moons/"
+   ]
+  },
+  {
+   "domanda": "Dove si trova oggi Voyager 1?",
+   "risposta": "Il 15 ottobre 2026 era a circa 172 UA dal Sole, cioè circa 25,7 miliardi di km: i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra. Il 18 novembre 2026 sarà a un giorno luce dalla Terra. Dal 17 febbraio 1998 è l'oggetto costruito dalle persone più lontano dal Sole.",
+   "fonti": [
+    "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
+   ]
+  },
+  {
+   "domanda": "Che cos'è il «pallido puntino azzurro»?",
+   "risposta": "È la foto della Terra scattata da Voyager 1 il 14 febbraio 1990, da circa 6 miliardi di km: nella foto la Terra è un puntino azzurro grande circa un pixel. L'idea della foto era dello scienziato Carl Sagan.",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/"
+   ]
+  },
+  {
+   "domanda": "Il modello 3D è in scala?",
+   "risposta": "No: le distanze sono accorciate e i corpi ingranditi, altrimenti i pianeti sarebbero puntini invisibili. Il confronto delle grandezze mostra invece le proporzioni vere.",
+   "fonti": []
+  },
+  {
+   "domanda": "Ci sono buchi neri nel Sistema Solare?",
+   "risposta": "No. Il buco nero enorme al centro della nostra galassia, Sagittarius A*, è a circa 27 000 anni luce; il più vicino che conosciamo, Gaia BH1, a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero.",
+   "fonti": [
+    "https://www.eso.org/public/news/eso2208-eht-mw/",
+    "https://noirlab.edu/public/news/noirlab2227/",
+    "https://science.nasa.gov/universe/black-holes/types/"
+   ]
+  }
+ ]
+}

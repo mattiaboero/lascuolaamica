@@ -1,0 +1,208 @@
+{
+ "revisore": "A",
+ "data": "2026-10-15",
+ "correzioni": [
+  {
+   "sezione": "corpi",
+   "id": "mercurio",
+   "campo": "curiosita.2",
+   "attuale": "Un giorno completo, da un'alba all'altra, dura 176 giorni terrestri: più di due anni di Mercurio.",
+   "nuovo": "Un giorno completo, da un'alba all'altra, dura 176 giorni terrestri: proprio due anni di Mercurio.",
+   "motivo": "Il giorno solare (4222,6 ore = 175,94 giorni) è uguale a due periodi orbitali (2 x 87,969 = 175,94 giorni): non 'più di due anni'. La NASA scrive 'just over two years', ma la differenza è solo di arrotondamento e un bambino capirebbe che dura sensibilmente di più.",
+   "fonte": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "mercurio",
+   "campo": "lune_fonte",
+   "attuale": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact.html",
+   "nuovo": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+   "motivo": "L'URL planetfact.html risponde 404 (verificato il 15/10/2026). La scheda NSSDC del pianeta riporta 'Number of natural satellites'. In alternativa la tabella è all'indice https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+   "fonte": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "venere",
+   "campo": "lune_fonte",
+   "attuale": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact.html",
+   "nuovo": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+   "motivo": "L'URL planetfact.html risponde 404 (verificato il 15/10/2026). La scheda NSSDC del pianeta riporta 'Number of natural satellites'. In alternativa la tabella è all'indice https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+   "fonte": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "marte",
+   "campo": "lune_fonte",
+   "attuale": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact.html",
+   "nuovo": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "motivo": "L'URL planetfact.html risponde 404 (verificato il 15/10/2026). La scheda NSSDC del pianeta riporta 'Number of natural satellites'. In alternativa la tabella è all'indice https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+   "fonte": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "venere",
+   "campo": "curiosita.1",
+   "attuale": "Un giorno di Venere (243 giorni terrestri) dura più del suo anno (225 giorni).",
+   "nuovo": "Per fare un giro completo su se stessa impiega 243 giorni terrestri: più di quanto impiega a girare attorno al Sole (225 giorni).",
+   "motivo": "243 giorni è la rotazione siderale, non il giorno solare. Nello stesso dataset giorno_solare_ore = 2802 ore (circa 117 giorni), che è più corto dell'anno: la frase 'un giorno di Venere dura 243 giorni' contraddice il valore mostrato nella scheda.",
+   "fonte": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "marte",
+   "campo": "curiosita.0",
+   "attuale": "Ha il vulcano più grande del Sistema Solare, Olympus Mons: secondo la NASA è alto più di 40 km dalla base alla cima.",
+   "nuovo": "Ha il vulcano più grande del Sistema Solare, Olympus Mons: è alto circa 22 km, quasi tre volte il monte Everest.",
+   "motivo": "'Più di 40 km' (pagina NASA Mars facts) non è coerente con le misure altimetriche: l'ESA (Mars Express) dà un'altezza media di 22 km; l'APOD NASA 21 km sopra la pianura circostante. 40 km è un'esagerazione da evitare con i bambini.",
+   "fonte": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Olympus_Mons_-_the_caldera_in_close-up"
+  },
+  {
+   "sezione": "corpi",
+   "id": "urano",
+   "campo": "curiosita.1",
+   "attuale": "Ogni polo resta al buio per circa 21 anni di fila.",
+   "nuovo": "Ogni polo ha circa 42 anni di luce continua e poi circa 42 anni di buio.",
+   "motivo": "La pagina NASA parla di un 'inverno buio di 21 anni' per metà pianeta quando il Sole è sopra l'altro polo, ma al polo il buio dura metà orbita (84/2 = 42 anni). Un'altra pagina NASA (Hubble) indica periodi senza luce 'fino a 42 anni'. 'Ogni polo resta al buio per circa 21 anni' è quindi sbagliato.",
+   "fonte": "https://science.nasa.gov/asset/hubble/uranus-nov-2014-and-nov-2022/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "plutone",
+   "campo": "temperatura_c.media",
+   "attuale": -232,
+   "nuovo": null,
+   "motivo": "-232 °C non è sulla pagina NASA citata (che dà un intervallo) ed è più alta del massimo -233 °C del dataset: media > massimo. Meglio null, o -225 se si vuole la media della tabella NSSDC (ma resta fuori dall'intervallo NSSDC).",
+   "fonte": "https://science.nasa.gov/dwarf-planets/pluto/facts/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "plutone",
+   "campo": "temperatura_c.min",
+   "attuale": -247,
+   "nuovo": -240,
+   "motivo": "NSSDC scrive 24-38 K '(-247 - -233 C)', ma 24 K = -249 °C e 38 K = -235 °C: la conversione della scheda è sbagliata di 2 gradi. Proposta: usare l'intervallo NASA, da -240 a -226 °C.",
+   "fonte": "https://science.nasa.gov/dwarf-planets/pluto/facts/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "plutone",
+   "campo": "temperatura_c.max",
+   "attuale": -233,
+   "nuovo": -226,
+   "motivo": "Vedi temperatura_c.min: intervallo NASA da -240 a -226 °C.",
+   "fonte": "https://science.nasa.gov/dwarf-planets/pluto/facts/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "plutone",
+   "campo": "temperatura_c.nota",
+   "attuale": "Media NASA; intervallo di superficie NSSDC (24-38 K).",
+   "nuovo": "Intervallo di superficie NASA (da -240 a -226 °C). La scheda NSSDC dà 24-38 K (circa da -249 a -235 °C) e la tabella NSSDC una media di -225 °C: le fonti non concordano, la media è lasciata vuota.",
+   "motivo": "Allineare la nota ai nuovi valori.",
+   "fonte": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html"
+  },
+  {
+   "sezione": "corpi",
+   "id": "plutone",
+   "campo": "descrizione",
+   "attuale": "Plutone è un pianeta nano nella fascia di Kuiper, oltre Nettuno. Per molti anni è stato considerato il nono pianeta. Ha montagne, pianure e ghiacciai di ghiaccio.",
+   "nuovo": "Plutone è un pianeta nano nella fascia di Kuiper, oltre Nettuno. Per molti anni è stato considerato il nono pianeta. Ha montagne di ghiaccio d'acqua, grandi pianure e ghiacciai.",
+   "motivo": "'Ghiacciai di ghiaccio' è una ripetizione. La NASA scrive che le montagne sono grandi blocchi di ghiaccio d'acqua e cita i ghiacciai (che sono di azoto ghiacciato).",
+   "fonte": "https://science.nasa.gov/dwarf-planets/pluto/facts/"
+  },
+  {
+   "sezione": "corpi",
+   "id": "eris",
+   "campo": "scoperta.nota",
+   "attuale": "Annunciata nel gennaio 2005, da immagini del 21 ottobre 2003 (NASA).",
+   "nuovo": "Riconosciuta il 5 gennaio 2005 in immagini del 21 ottobre 2003; annunciata il 29 luglio 2005.",
+   "motivo": "Nel gennaio 2005 Eris fu individuata nelle immagini, non annunciata: l'annuncio pubblico ('decimo pianeta') è del 29 luglio 2005. La pagina NASA dà la data di scoperta 5 gennaio 2005 (la sua cronologia riporta 8 gennaio 2005 come 'annuncio', ma è la data in cui il team si accorse dell'oggetto).",
+   "fonte": "https://www.npr.org/2005/07/29/4778110/tenth-planet-detected-in-solar-system"
+  },
+  {
+   "sezione": "corpi",
+   "id": "makemake",
+   "campo": "descrizione",
+   "attuale": "Makemake è un pianeta nano della fascia di Kuiper, un po' più piccolo di Plutone. È di colore rossiccio. Sulla sua superficie ci sono ghiacci di metano ed etano.",
+   "nuovo": "Makemake è un pianeta nano della fascia di Kuiper, più piccolo di Plutone: è largo circa 1430 km, Plutone circa 2380 km. È di colore rossiccio. Sulla sua superficie ci sono ghiacci di metano ed etano.",
+   "motivo": "'Un po' più piccolo di Plutone' sottostima la differenza: raggio 715 km contro 1188 km (diametro circa il 60%, volume circa un quinto).",
+   "fonte": "https://science.nasa.gov/dwarf-planets/makemake/"
+  },
+  {
+   "sezione": "schede",
+   "id": "fascia-kuiper",
+   "campo": "testo",
+   "attuale": "Oltre Nettuno c'è un grande anello a forma di ciambella pieno di corpi ghiacciati: è la fascia di Kuiper. Lì si trovano Plutone e quasi tutti i pianeti nani conosciuti. Sono resti della nascita del Sistema Solare. Una sola sonda l'ha visitata: New Horizons.",
+   "nuovo": "Oltre Nettuno c'è un grande anello a forma di ciambella pieno di corpi ghiacciati: è la fascia di Kuiper. Lì si trovano Plutone e quasi tutti i pianeti nani conosciuti. Sono resti della nascita del Sistema Solare. Una sola sonda è passata vicino ai suoi corpi e li ha fotografati: New Horizons.",
+   "motivo": "'Una sola sonda l'ha visitata' è falso alla lettera: Pioneer 10 e 11 e Voyager 1 e 2 hanno attraversato la regione (oltre 50 UA) senza avvicinare oggetti. New Horizons è l'unica ad aver visitato da vicino corpi della fascia (Plutone 2015, Arrokoth 2019).",
+   "fonte": "https://science.nasa.gov/solar-system/kuiper-belt/facts/"
+  }
+ ],
+ "verificati_senza_problemi": [
+  "sole",
+  "terra",
+  "giove",
+  "saturno",
+  "nettuno",
+  "cerere",
+  "haumea",
+  "quadrantidi",
+  "liridi",
+  "eta-aquaridi",
+  "perseidi",
+  "orionidi",
+  "leonidi",
+  "geminidi",
+  "fascia-asteroidi",
+  "nube-oort",
+  "meteora-meteoroide-meteorite",
+  "buco-nero"
+ ],
+ "dubbi": [
+  {
+   "id": "venere",
+   "campo": "curiosita.3",
+   "descrizione": "La NASA scrive che il programma Venera mandò dieci sonde sulla superficie (la più resistente due ore, Venera 13: 127 minuti). Contando le sole Venera che hanno trasmesso dal suolo sono otto (Venera 7-14); dieci si ottiene aggiungendo Vega 1 e 2, che non si chiamano Venera. La frase rispecchia la fonte NASA; per sicurezza: 'Dieci sonde sovietiche sono atterrate su Venere e hanno mandato dati: la più resistente, Venera 13, ha funzionato per circa due ore.'"
+  },
+  {
+   "id": "giove",
+   "campo": "curiosita.1",
+   "descrizione": "'Osservata da più di 300 anni' è la formula NASA, ma uno studio del 2024 (Sánchez-Lavega et al., Geophys. Res. Lett.) indica che la macchia vista da Cassini nel 1665 era probabilmente un'altra: l'attuale è seguita con continuità dal 1831. Alternativa prudente: 'osservata da quasi 200 anni'."
+  },
+  {
+   "id": "giove",
+   "campo": "curiosita.2",
+   "descrizione": "'Circa 1000 Terre' è la frase NASA (guscio vuoto). Il rapporto di volume NSSDC è 1321: se il modello mostra il volume, valutare 'più di 1300 Terre per volume'."
+  },
+  {
+   "id": "eris",
+   "campo": "curiosita.1",
+   "descrizione": "NASA dice 557 anni, ma periodo_orbitale_giorni = 204517 (circa 560 anni, JPL SBDB). Differenza piccola; per coerenza con il numero mostrato si può scrivere 'circa 560 anni'."
+  },
+  {
+   "id": "makemake",
+   "campo": "curiosita.2",
+   "descrizione": "NASA dice 305 anni, ma periodo_orbitale_giorni = 112365 (circa 308 anni, JPL SBDB). Stessa questione di Eris."
+  },
+  {
+   "id": "eris",
+   "campo": "rotazione_siderale_ore",
+   "descrizione": "378,9 ore (rotazione sincrona, Bernstein et al. 2023 / Szakáts et al. 2023) contro 25,9 ore della pagina NASA e di JPL SBDB/LCDB (che avverte di copertura incompleta). La scelta del dataset è ragionevole e motivata in nota, ma diverge dalla fonte NASA."
+  },
+  {
+   "id": "urano",
+   "campo": "anelli_km",
+   "descrizione": "Mancano i due anelli esterni deboli nu (R/2003 U 2, 67 300 km) e mu (R/2003 U 1, 97 700 km) presenti nella scheda NSSDC: la NASA parla di 13 anelli, il dataset ne ha 10. Se l'elenco vuole essere completo vanno aggiunti."
+  },
+  {
+   "id": "sole",
+   "campo": "curiosita.1",
+   "descrizione": "'Circa 8 minuti' è corretto (149,6 milioni di km / c = 8 min 19 s) ma non è sulla pagina NASA citata: aggiungere una fonte o scrivere 'poco più di 8 minuti'."
+  },
+  {
+   "id": "fascia-kuiper",
+   "campo": "testo",
+   "descrizione": "'Quasi tutti i pianeti nani conosciuti': la NASA mette Plutone, Eris, Haumea e Makemake nella fascia di Kuiper (4 su 5), ma descrive Eris anche come il più grande oggetto del disco diffuso. Va bene per bambini."
+  }
+ ]
+}

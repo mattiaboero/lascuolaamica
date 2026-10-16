@@ -1,5 +1,80 @@
 # Changelog Repo
 
+## Non rilasciato - 2026-10-16
+
+### Fixed
+- I modelli 3D di ISS e Voyager (`assets/sistema-solare/*.bin`) arrivavano
+  non compressi: con `application/octet-stream` Cloudflare non comprime.
+  `_headers` li serve come `application/x-protobuf`, uno dei tipi che
+  Cloudflare comprime; il motore li legge con `fetch().arrayBuffer()` e non
+  guarda il tipo. Da 195 e 289 KB a circa 42 e 75 KB. Nessun asset cambia,
+  quindi niente bump di versione.
+
+## 4.22.1 - 2026-10-16
+
+**Sistema Solare: il film delle Voyager ha la sua voce.**
+
+### Added
+- `assets/sistema-solare/audio/film-*.mp3`: i 9 capitoli del film letti con
+  ElevenLabs (testi in `docs/sistema-solare/audio-testi.md`), mp3 a 64 kbps
+  mono, 1,4 MB in tutto. `js/sistema-solare-dati.js` li elenca: il build li
+  prende solo se il testo del capitolo è quello registrato. Con «Nel viaggio
+  guidato, leggi ad alta voce» acceso, ogni capitolo aspetta la fine del suo
+  audio; il film dura circa 4 minuti invece di 2 e mezzo.
+
+## 4.22.0 - 2026-10-16
+
+**Nuovo: il Sistema Solare in 3D.**
+
+### Added
+- `/sistema-solare`: modello 3D esplorabile (WebGL 1 vanilla) con Sole, 8
+  pianeti, 5 pianeti nani, 27 lune, asteroidi, comete, sciami meteorici, ISS,
+  buco nero nel confronto delle grandezze e sonde Voyager. Posizioni dagli
+  elementi orbitali JPL (1800-2050), lune da JPL Horizons, poli IAU; movimento
+  rallentato o tempo vero. Schede per bambini, missioni, passaporto, viaggio
+  guidato con voce, film di 2'30" sul viaggio delle Voyager.
+- Dati con fonte in `docs/sistema-solare/`, generati da
+  `scripts/build_sistema_solare.py`, che scrive anche schede, 12 FAQ e crediti
+  statici nella pagina. Controlli in `npm run check:sistema-solare`, aggiunto a
+  `verify` e a `prepublish-check.sh`.
+- Home: card nera «spazio» prima di Spacca-Muri, riga nel testo `seo-home`,
+  `hasPart` nel JSON-LD verso Sistema Solare, Spacca-Muri e Bosco. Link da
+  Scienze, Per insegnanti, Per genitori e ai-info; voce in `llms.txt`,
+  sitemap, `_redirects`, precache del Service Worker, immagine OG.
+
+### Changed
+- `sw.js`: `bin` fra le estensioni statiche e stabili, per avere offline i
+  modelli 3D già visti.
+- `noscript.css`: senza JavaScript la pagina del Sistema Solare esce dalla
+  vista immersiva e mostra titolo, testo e schede.
+- `scripts/check_contrast.sh`: aggiunta la pagina.
+
+## 4.21.24 - 2026-10-14
+
+**Bosco delle Lettere: niente più coriandoli a raffica sotto il tabellone, e
+la prima parola cambia davvero da una partita all'altra.**
+
+### Fixed
+- `js/bosco.js`: la zona di consegna (y < 220 davanti al tabellone) e l'area
+  di raccolta del cartello di mezzo (y da 208 a 284) si sovrapponevano. Fermo
+  in quella fascia il personaggio raccoglieva e consegnava nello stesso frame:
+  col gruppo sbagliato il ciclo ripartiva a ogni frame, con 14 coriandoli,
+  due toni e la voce del gufo ogni volta (840 particelle in un secondo nella
+  riproduzione); col gruppo giusto la parola si chiudeva senza scelta. Capitava
+  soprattutto alla parola nuova, perché `next()` lascia il personaggio dove ha
+  consegnato. Nuova `allaConsegna()`: lì non si raccoglie.
+- Lo stesso ciclo registrava una risposta sbagliata per frame
+  (`registraRisposta`): 60 errori finti al secondo nei progressi, che
+  spostavano il gruppo da ripassare.
+
+### Changed
+- Riscaldamento: da 3 a 7 parole con disegno (FUNGO, ALBERO, LUMACA, FIORE
+  oltre a SOLE, MELA, LUNA), pescate a mazzo: nessuna si ripete prima che
+  siano uscite tutte, e mai due partite di fila con la stessa. Prima
+  l'estrazione era libera e capitava MELA, MELA, SOLE, SOLE.
+- `scripts/check_bosco.js`: due controlli nuovi, consegna senza raccolta e
+  riscaldamento a mazzo.
+
 ## 4.21.23 - 2026-10-11
 
 **Safari: dopo un aggiornamento non restano più i file della versione

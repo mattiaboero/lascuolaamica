@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.21.23",
+  "version": "4.22.1",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -21,7 +21,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:balance && npm run check:counts && npm run check:prepublish && npm run export",
+    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:balance && npm run check:counts && npm run check:prepublish && npm run export",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -35,6 +35,7 @@
     "check:math": "node scripts/check_math_explanations.js",
     "check:plausibility": "node scripts/check_plausibility.js",
     "check:bosco": "node scripts/check_bosco.js",
+    "check:sistema-solare": "python3 scripts/build_sistema_solare.py --check && node scripts/check_sistema_solare.js",
     "sync:counts": "python3 scripts/sync_question_counts.py",
     "check:counts": "python3 scripts/sync_question_counts.py --check",
     "check:balance": "node scripts/check_answer_balance.js",
@@ -49,7 +50,7 @@
     "@lhci/cli": "^0.15.1",
     "esbuild": "0.28.2",
     "eslint": "^10.12.0",
-    "playwright": "^1.63.0",
+    "playwright": "^1.64.0",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0"
   },

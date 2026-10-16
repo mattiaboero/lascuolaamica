@@ -1,0 +1,112 @@
+{
+ "sole": {
+  "file": "sole.mp3",
+  "testo": "Sole. Il Sole è la nostra stella. È una palla enorme di gas caldissimo, soprattutto idrogeno ed elio. La sua luce e il suo calore rendono possibile la vita sulla Terra. Il Sole contiene il 99,8% di tutta la massa del Sistema Solare. La luce del Sole impiega poco più di 8 minuti per arrivare sulla Terra. Servirebbero circa 1,3 milioni di Terre per riempire il volume del Sole. Fra circa 5 miliardi di anni il Sole diventerà una gigante rossa e poi una nana bianca.",
+  "sha1": "04db2e301fbd36ddee83bc12de46856601a09c60"
+ },
+ "mercurio": {
+  "file": "mercurio.mp3",
+  "testo": "Mercurio. Mercurio è il pianeta più piccolo e il più vicino al Sole. È poco più grande della Luna ed è pieno di crateri. Di giorno fa caldissimo, di notte fa freddissimo. Da Mercurio il Sole sembrerebbe più di tre volte più grande che dalla Terra. È il pianeta più veloce: fa un giro attorno al Sole in 88 giorni. Un giorno completo, da un'alba all'altra, dura 176 giorni terrestri: proprio due anni di Mercurio. Molti crateri portano i nomi di artisti, musicisti e scrittori.",
+  "sha1": "bda44389063b09a301ab2f5cfa167a651a4a7a38"
+ },
+ "venere": {
+  "file": "venere.mp3",
+  "testo": "Venere. Venere è il pianeta più caldo del Sistema Solare, anche se Mercurio è più vicino al Sole. Le sue nubi spesse trattengono il calore. È grande quasi come la Terra. Gira su se stessa al contrario: lì il Sole sorge a ovest e tramonta a est. Per fare un giro completo su se stessa impiega 243 giorni terrestri: più di quanto impiega a girare attorno al Sole (225 giorni). Dopo la Luna, è l'oggetto più luminoso del cielo notturno. Dieci sonde sovietiche sono atterrate su Venere e hanno mandato dati: la più resistente, Venera 13, ha funzionato per circa due ore.",
+  "sha1": "bc44f8c745f2cdb396a02d9def31c9851225900f"
+ },
+ "terra": {
+  "file": "terra.mp3",
+  "testo": "Terra. La Terra è il nostro pianeta, il terzo dal Sole. È l'unico posto conosciuto dove c'è la vita. Gran parte della sua superficie è coperta d'acqua. Gli oceani coprono circa il 71% della superficie. Fa un giro attorno al Sole in 365,25 giorni: per questo ogni quattro anni c'è l'anno bisestile. L'asse è inclinato di 23,4 gradi: è questo che crea le stagioni. Si è formata circa 4,5 miliardi di anni fa.",
+  "sha1": "b4faccba8e25a1b38e2e4dc0d64a12eeeec40ccf"
+ },
+ "luna": {
+  "file": "luna.mp3",
+  "testo": "Luna. La Luna è l'unico satellite naturale della Terra. Mostra sempre la stessa faccia, perché ruota su se stessa nello stesso tempo in cui gira attorno alla Terra. È l'unico corpo celeste, oltre alla Terra, su cui hanno camminato delle persone. Si allontana dalla Terra di circa 3,8 cm all'anno. La gravità sulla Luna è circa un sesto di quella terrestre. Gli astronauti delle missioni Apollo hanno riportato sulla Terra 382 kg di rocce e polvere lunari. Le macchie scure, chiamate mari, sono antiche colate di lava solidificata.",
+  "sha1": "95f30a6ea8b5da2ec2eb135419ffbab95780598d"
+ },
+ "iss": {
+  "file": "iss.mp3",
+  "testo": "Stazione Spaziale Internazionale. La Stazione Spaziale Internazionale è un grande laboratorio che gira attorno alla Terra a circa 400 chilometri di altezza. Ci vivono di solito sette astronauti, che fanno esperimenti per capire meglio lo spazio e la Terra. Da novembre del 2000 a bordo c'è sempre stato qualcuno. Gira così veloce che fa il giro della Terra in circa un'ora e mezza: circa 16 giri al giorno. Passando sopra la Terra, sorvola più del 90% delle persone che vivono sul pianeta. L'acqua a bordo si ricicla: così dalla Terra servono il 65% di rifornimenti d'acqua in meno. Per non perdere forza nei muscoli e nelle ossa, ogni astronauta fa ginnastica almeno due ore al giorno. La costruiscono e la usano insieme cinque agenzie spaziali: fra loro c'è l'ESA, di cui fa parte l'Italia.",
+  "sha1": "f302929243fb25313aab10a66cbbdb9415da3868"
+ },
+ "marte": {
+  "file": "marte.mp3",
+  "testo": "Marte. Marte è il pianeta rosso. Il colore viene dalla ruggine del ferro nelle rocce e nella polvere. È un deserto freddo, con vulcani, canyon e calotte di ghiaccio ai poli. Ha il vulcano più grande del Sistema Solare, Olympus Mons: è alto circa 22 km, quasi tre volte il monte Everest. Il canyon Valles Marineris è lungo circa 3870 km. Un giorno su Marte si chiama sol e dura poco più di 24 ore e mezza. È l'unico pianeta che conosciamo abitato solo da robot.",
+  "sha1": "bfae4bfd1fb77462705716381aa2be60dc8db3c1"
+ },
+ "fascia-asteroidi": {
+  "file": "fascia-asteroidi.mp3",
+  "testo": "La fascia degli asteroidi. Tra Marte e Giove c'è una zona piena di asteroidi: è la fascia principale. Gli asteroidi sono rocce rimaste dalla nascita del Sistema Solare. Sono tantissimi, ma sono molto lontani uno dall'altro. Tutti insieme pesano meno della nostra Luna. Il più grande è il pianeta nano Cerere.",
+  "sha1": "43750f117d18e96031e7841b1d3c9108c83b1439"
+ },
+ "giove": {
+  "file": "giove.mp3",
+  "testo": "Giove. Giove è il pianeta più grande del Sistema Solare. È un gigante fatto soprattutto di gas: non ha una superficie solida. Le sue strisce colorate sono nubi spinte da venti fortissimi. Ha il giorno più corto di tutti i pianeti: circa 10 ore. La Grande Macchia Rossa è una tempesta più grande della Terra: gli astronomi la seguono senza interruzioni dal 1831. Il suo volume è più di 1300 volte quello della Terra. Ha anelli sottili e scuri, scoperti nel 1979 dalla sonda Voyager 1.",
+  "sha1": "2c5b6e013c06e7e63642d960f5451aa5099134fa"
+ },
+ "saturno": {
+  "file": "saturno.mp3",
+  "testo": "Saturno. Saturno è il secondo pianeta più grande ed è famoso per i suoi anelli. Gli anelli sono fatti di miliardi di pezzi di ghiaccio e roccia. Anche Saturno è un gigante di gas. La sua densità media è più bassa di quella dell'acqua. Gli anelli principali sono larghissimi ma spessi in genere solo circa 10 metri. Al polo nord c'è una corrente d'aria a forma di esagono, larga circa 30 000 km. Ha più lune confermate di qualsiasi altro pianeta.",
+  "sha1": "d97859c35388bc35853bc4b141d2170d62249f63"
+ },
+ "urano": {
+  "file": "urano.mp3",
+  "testo": "Urano. Urano è un gigante di ghiaccio, di colore azzurro. Ruota quasi coricato su un fianco, come una palla che rotola. È stato il primo pianeta scoperto con il telescopio. Il suo asse è inclinato di quasi 98 gradi. Ogni polo ha circa 42 anni di luce continua e poi circa 42 anni di buio. Le sue lune hanno nomi di personaggi di William Shakespeare e Alexander Pope. Solo una sonda lo ha visitato: Voyager 2, nel 1986.",
+  "sha1": "f0cb0ad93642167ed361722b9546293d9f7c77eb"
+ },
+ "nettuno": {
+  "file": "nettuno.mp3",
+  "testo": "Nettuno. Nettuno è il pianeta più lontano dal Sole. È un gigante di ghiaccio blu, freddo e buio. È il pianeta con i venti più forti. È il primo pianeta trovato grazie ai calcoli matematici, invece che con le normali osservazioni del cielo. Fa un giro attorno al Sole in circa 165 anni. I suoi venti superano i 2000 km all'ora. Nel 1989 Voyager 2 vide una enorme tempesta scura, la Grande Macchia Scura, che poi è scomparsa.",
+  "sha1": "c9878440bd5502b54bd34edb3d714a4b9af3723d"
+ },
+ "fascia-kuiper": {
+  "file": "fascia-kuiper.mp3",
+  "testo": "La fascia di Kuiper. Oltre Nettuno c'è un grande anello a forma di ciambella pieno di corpi ghiacciati: è la fascia di Kuiper. Lì si trovano Plutone e quasi tutti i pianeti nani conosciuti. Sono resti della nascita del Sistema Solare. Una sola sonda è passata vicino ai suoi corpi e li ha fotografati: New Horizons.",
+  "sha1": "94985874ccca4236e437dc4601e875fe69061c1d"
+ },
+ "film-lancio": {
+  "file": "film-lancio.mp3",
+  "testo": "Si parte!. Il 20 agosto 1977 parte Voyager 2 da Cape Canaveral, in Florida. Il 5 settembre parte la sua gemella, Voyager 1, su una strada più veloce. A dicembre Voyager 1 è già davanti.",
+  "sha1": "94de2319f5956e2466d8ae49e94228609da8a3c1"
+ },
+ "film-giove": {
+  "file": "film-giove.mp3",
+  "testo": "Vulcani su Io. Voyager 1 passa vicino a Giove il 5 marzo 1979, Voyager 2 il 9 luglio. Sulla luna Io si vedono vulcani in eruzione: è la prima volta che li vediamo fuori dalla Terra. Giove ha anche un anello sottile e lune mai viste prima.",
+  "sha1": "1984b4be134cdb4d6f3f1bddea6ca86f3b066485"
+ },
+ "film-saturno": {
+  "file": "film-saturno.mp3",
+  "testo": "Saturno e Titano. Il 12 novembre 1980 Voyager 1 visita Saturno e passa vicino a Titano, una luna con un'atmosfera spessa fatta soprattutto di azoto. Poi lascia il piano in cui girano i pianeti e punta verso lo spazio fra le stelle. Voyager 2 arriva a Saturno nell'agosto 1981.",
+  "sha1": "a364271c9e640b6183e5273ec13bc783fa5bc816"
+ },
+ "film-urano": {
+  "file": "film-urano.mp3",
+  "testo": "Visita a Urano. Il 24 gennaio 1986 Voyager 2 è la prima sonda a visitare Urano. Scopre 10 lune nuove e 2 anelli nuovi. La luce del Sole lì è 400 volte più debole che sulla Terra.",
+  "sha1": "a76e97f9ce44fa7e520ce02afe9ac569694176c9"
+ },
+ "film-nettuno": {
+  "file": "film-nettuno.mp3",
+  "testo": "Nettuno e i geyser di Tritone. Il 25 agosto 1989 Voyager 2 passa a meno di 5.000 km sopra le nubi di Nettuno, dove soffiano i venti più forti mai misurati su un pianeta. Sulla luna Tritone, gelida, vede eruzioni simili a geyser. Fino al 2026 è l'unica sonda che ha visitato Urano e Nettuno.",
+  "sha1": "0a5aac1fe8e2d586f55eda280319b61970afbbce"
+ },
+ "film-pale-blue-dot": {
+  "file": "film-pale-blue-dot.mp3",
+  "testo": "Un puntino azzurro. Il 14 febbraio 1990, da circa 6 miliardi di km, Voyager 1 si gira e fotografa il Sole e sei pianeti: è il «ritratto di famiglia». Nella foto la Terra è un puntino azzurro grande circa un pixel. L'idea della foto era dello scienziato Carl Sagan.",
+  "sha1": "7a1fb3b15e95503c9d4414c928800cc94bc4f139"
+ },
+ "film-bolla-del-sole": {
+  "file": "film-bolla-del-sole.mp3",
+  "testo": "Fuori dalla bolla del Sole. Il Sole soffia intorno a sé una grande bolla di particelle, l'eliosfera. Voyager 1 incontra il suo confine interno, lo shock di terminazione, nel 2004 e il 25 agosto 2012 esce dalla bolla, a circa 122 UA dal Sole. Voyager 2 la segue il 5 novembre 2018. Nel 2026 sono le uniche sonde arrivate nello spazio interstellare.",
+  "sha1": "2801da9b1336dc83886ac056dff0204452ad4252"
+ },
+ "film-oggi": {
+  "file": "film-oggi.mp3",
+  "testo": "Ancora in viaggio. Il 15 ottobre 2026 Voyager 1 è a circa 172 UA dal Sole e i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra; Voyager 2 è a circa 144 UA. L'energia delle sonde cala ogni anno, così il gruppo della missione spegne gli strumenti uno alla volta: a quella data Voyager 1 ne ha 2 accesi, Voyager 2 ne ha 3.",
+  "sha1": "3f54bf3264f5063b6061ea65c162a1238f259754"
+ },
+ "film-futuro": {
+  "file": "film-futuro.mp3",
+  "testo": "E poi?. Il 18 novembre 2026 Voyager 1 si trova a un giorno luce dalla Terra: la luce impiega un giorno intero per arrivare fin lì. Nessuno sa quando le sonde smetteranno di parlarci: nel 2026 la NASA spera di tenere acceso almeno uno strumento fino agli anni 2030. Secondo le stime, fra circa 40.000 anni le due sonde passeranno vicino ad altre stelle, ma sempre a più di un anno luce di distanza. Con loro viaggiano i dischi d'oro con i saluti della Terra.",
+  "sha1": "4517edeac17c66d783f487a242a6a0f5f3ed77bd"
+ }
+}
