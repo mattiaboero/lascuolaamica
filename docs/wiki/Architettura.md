@@ -152,6 +152,17 @@ Riferimento storico: `CHANGELOG.md` release 4.11.0 e 4.12.0.
 
 **Finestra di gioco dei 30 minuti.** Stesso cancello dei quiz e di Spacca-Muri, con gli stessi testi. Il bosco si apre in pausa sotto l'overlay «Entra nel bosco» (`state.inGioco` falso): il clic chiama `entra()` → `SA.playWindow.ensureActive()`, ed è anche il gesto utente che sblocca l'`AudioContext`. Finché non si è entrati, `setPaused(false)` passa dal cancello invece di riprendere, Esc non fa niente e scegliere classe o modalità ricompone la partita restando sotto l'overlay. Alla scadenza (evento `SA.playWindow.eventName` con `detail.active` falso) `onPlayWindowExpired()` chiude la partita, mostra `SA.ui.alert` «Tempo di gioco terminato» e torna al cancello con una partita nuova. Non si perde niente: `SA.rewards.recordBosco` registra ogni risposta e ogni parola mentre si gioca, non a fine partita. `scripts/check_bosco.js` verifica rifiuto, ingresso e scadenza con un `SA.playWindow` finto.
 
+## Strumento interattivo: Il Sistema Solare in 3D
+
+`/sistema-solare` (`sistema-solare.html` + `sistema-solare.css` + `js/sistema-solare*.js`) è un modello 3D del Sistema Solare per la 4ª e la 5ª, **indipendente da `subject-quiz-core.js`** e senza punteggi né finestra dei 30 minuti: è uno strumento da esplorare, non un gioco a quiz.
+
+- **Motore WebGL 1 vanilla** (`js/sistema-solare-motore.js`, nessuna libreria): posizioni dagli elementi orbitali JPL (validi 1800-2050), lune da JPL Horizons, poli IAU, ISS da TLE, sonde Voyager da traiettorie JPL Horizons. Due modi di tempo: «movimento rallentato» (di partenza, velocità compresse per guardarle) e «tempo vero». Le scale di distanze e raggi sono compresse e la pagina lo dichiara.
+- **Interfaccia** (`js/sistema-solare.js`): vista immersiva a tutto schermo, schede per bambini, missioni, passaporto, viaggio guidato con voce, film delle Voyager. Se WebGL manca la pagina resta nella vista normale.
+- **Dati con fonte, generati.** `docs/sistema-solare/*.json` (ogni valore con URL e note, rivisti da revisori indipendenti) → `scripts/build_sistema_solare.py` → `js/sistema-solare-dati.js` e `assets/sistema-solare/voyager-traiettorie-v1.json`. Lo stesso script scrive in `sistema-solare.html`, fra i marcatori `SCHEDE` e `FAQ-JSONLD`, le schede di tutti i corpi, le FAQ (testo e `FAQPage` identici, da `faq.json`) e i crediti delle immagini: la pagina si legge anche senza JavaScript e dai crawler. Non si modificano a mano.
+- **Asset pesanti fuori dal precache.** Mappe (`assets/sistema-solare/*.webp` 2048×1024 e `basse/` 512×256), modelli (`*.bin`) e audio si scaricano quando servono; mappe e modelli finiscono nella cache stabile del Service Worker (`bin` è fra le estensioni stabili). `/assets/*` è immutabile: un file corretto cambia nome.
+- **Controlli:** `npm run check:sistema-solare` (build `--check` e `scripts/check_sistema_solare.js`: posizioni note, leggi di Keplero, coerenza fisica delle schede). È in `verify` e in `prepublish-check.sh`.
+- **Revisione e SEO:** `docs/sistema-solare/REVISIONE.md` (guida per fisico e bambini) e `docs/sistema-solare/AUDIT-SEO.md`.
+
 ## Dati
 
 ```

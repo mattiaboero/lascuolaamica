@@ -84,6 +84,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/tabelline',
   '/breakout',
   '/bosco',
+  '/sistema-solare',
   '/accessibilita',
   '/chi-siamo',
   '/per-insegnanti',
@@ -100,6 +101,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/inglese.css',
   '/breakout.css',
   '/bosco.css',
+  '/sistema-solare.css',
   '/faq.css',
   '/info-pages.css',
   '/link.css',
@@ -113,6 +115,9 @@ const OPTIONAL_PRECACHE_URLS = [
   '/js/italiano-page.js',
   '/js/breakout.js',
   '/js/bosco.js',
+  '/js/sistema-solare-dati.js',
+  '/js/sistema-solare-motore.js',
+  '/js/sistema-solare.js',
   '/js/faq-page.js',
   '/palette-okabe.css',
   '/robots.txt',
@@ -130,6 +135,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/screenshots/og-scienze-1200x630.jpg',
   '/screenshots/og-italiano-1200x630.jpg',
   '/screenshots/og-bosco-1200x630.jpg',
+  '/screenshots/og-sistema-solare-1200x630.jpg',
   '/screenshots/og-chi-siamo-1200x630.jpg',
   '/screenshots/og-faq-1200x630.jpg',
   '/screenshots/og-supporta-1200x630.jpg',
@@ -171,12 +177,14 @@ const OPTIONAL_PRECACHE_URLS = [
 
 const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
-const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|avif|ico|txt|xml|woff2?|ttf)$/i;
+// bin: i modelli 3D del Sistema Solare (assets/sistema-solare/*.bin), salvati
+// offline la prima volta che servono. Mappe e modelli non sono in precache.
+const STATIC_ASSET_RE = /\.(css|js|json|svg|png|jpe?g|webp|avif|ico|txt|xml|woff2?|ttf|bin)$/i;
 const REWARD_ASSET_RE = /^\/assets\/reward\/.+\.(png|webp)$/i;
 
 // Estensioni immutabili per nome. css/js/json/txt/xml restano fuori: cambiano
 // con le release e devono seguire il bump di CACHE_NAME.
-const STABLE_ASSET_RE = /\.(woff2?|ttf|svg|png|jpe?g|webp|avif|ico)$/i;
+const STABLE_ASSET_RE = /\.(woff2?|ttf|svg|png|jpe?g|webp|avif|ico|bin)$/i;
 
 function cacheNameForPath(pathname) {
   if (REWARD_ASSET_RE.test(pathname)) return REWARDS_CACHE_NAME;

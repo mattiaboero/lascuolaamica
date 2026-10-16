@@ -546,6 +546,14 @@ else
   status=1
 fi
 
+# Sistema Solare in 3D: dati generati e testo statico della pagina allineati alle
+# fonti in docs/sistema-solare/, piu' i controlli di fisica sulle posizioni.
+if python3 scripts/build_sistema_solare.py --check && node scripts/check_sistema_solare.js; then
+  echo "[OK] sistema-solare: dati, pagina e controlli di fisica"
+else
+  status=1
+fi
+
 if node scripts/check_sw_opened_json.js; then
   echo "[OK] sw.js: le materie gia' aperte vengono riscaricate al cambio di versione"
 else
@@ -705,6 +713,7 @@ else
     "https://lascuolaamica.it/faq"
     "https://lascuolaamica.it/premi"
     "https://lascuolaamica.it/accessibilita"
+    "https://lascuolaamica.it/sistema-solare"
   )
 
   for url in "${expected_urls[@]}"; do
