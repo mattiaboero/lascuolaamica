@@ -247,7 +247,7 @@ dell'11/09, mai fatto). Non va aggiunto all'`ItemList` delle 8 materie.
 
 | Da | Dove | Testo del link |
 |---|---|---|
-| Home | card dopo Tabelline, più una riga nel testo `seo-home` | «Sistema Solare 3D» / «Il Sistema Solare in 3D» |
+| Home | card **prima di Spacca-Muri**, nera «spazio» (preparata il 16/10/2026 sul branch), più una riga nel testo `seo-home` | «Sistema Solare 3D» / «Il Sistema Solare in 3D» |
 | Scienze | voce «Sistema solare» del testo (riga 302) e aside «Esplora» | «modello 3D del Sistema Solare» |
 | Per insegnanti | mappa curricolare, accanto ad «astronomia» | «il Sistema Solare in 3D, da proiettare sulla LIM» |
 | Per genitori | in coda alla sezione giochi | «il Sistema Solare in 3D per bambini» |
@@ -255,8 +255,8 @@ dell'11/09, mai fatto). Non va aggiunto all'`ItemList` delle 8 materie.
 | Sistema Solare | verso Scienze | «quiz di scienze sul Sistema Solare» |
 
 Il ponte naturale è Scienze: 61 domande attive su Sistema Solare e moti della Terra,
-quasi tutte di 4ª e 5ª (ambito «Ambienti e cicli»). La card in home va con la guardia
-`html:not([data-palette="okabe-ito"])` e il controllo del contrasto.
+quasi tutte di 4ª e 5ª (ambito «Ambienti e cicli»). La card in home è uguale nelle due palette (lo spazio resta scuro anche in
+Okabe-Ito, come nella pagina); contrasto verificato con Lighthouse in entrambe.
 
 `llms.txt`, sezione «Altre risorse» (obbligatorio: `check_export.js` fallisce se la
 pagina è in sitemap e non qui):
@@ -269,7 +269,7 @@ pagina è in sitemap e non qui):
 
 Da fare dopo fisico e bambini, su un albero che contenga **solo** il Sistema Solare.
 
-1. Togliere dall'albero i file della Scuderia prima di `freshness`: oggi `scuderia-prova.html` ha script e stile inline, e `sync_csp_hashes.py` ne scriverebbe gli hash in `_headers` dentro la PR (`audit:csp` già fallisce per questo).
+1. Prima di `freshness`, controllare che nell'albero non ci siano pagine HTML estranee con script o stili inline: `sync_csp_hashes.py` legge tutti gli `*.html` del disco e ne scriverebbe gli hash in `_headers` dentro la PR. (Il caso della Scuderia è risolto: i suoi file sono stati tolti il 16/10/2026.)
 2. Committare gli asset di `assets/sistema-solare/` solo quando sono definitivi: `/assets/*` è immutabile per un anno e la cache stabile del service worker non si svuota. Le correzioni dei dati passano da `js/sistema-solare-dati.js`, che invece si aggiorna con la versione.
 3. `sistema-solare.html`: `robots` come le altre pagine (`index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1`), `datePublished`, frase sull'offline coerente con A6.
 4. `scripts/generate_sitemap.py`: `("/sistema-solare", "sistema-solare.html"),` dopo `/bosco`.

@@ -365,6 +365,27 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   box-shadow:0 12px 40px rgba(85,116,47,.5),0 0 0 4px rgba(255,255,255,.3);
 }
 
+/* Sistema Solare card — nera come lo spazio della pagina, uguale in entrambe le
+   palette (la scena 3D e' scura anche in Okabe-Ito). Le stelle sono puntini
+   disegnati dal CSS, il cerchio in alto a destra e' un Sole arancione. */
+.card-spazio{
+  background-color:#020308;
+  background-image:
+    radial-gradient(circle at 18% 22%,rgba(255,255,255,.85) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 72% 14%,rgba(255,255,255,.7) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 86% 48%,rgba(255,255,255,.75) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 10% 62%,rgba(255,255,255,.6) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 40% 88%,rgba(255,255,255,.7) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 92% 80%,rgba(255,255,255,.55) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 55% 40%,rgba(255,255,255,.45) 0 1px,transparent 1.5px),
+    linear-gradient(145deg,#020308,#0a0f1f);
+  box-shadow:0 12px 40px rgba(0,0,0,.45),0 0 0 4px rgba(255,255,255,.3);
+}
+.card-spazio::before{
+  background:radial-gradient(circle,rgba(255,196,96,.55),rgba(255,128,20,.18) 55%,transparent 70%);
+}
+.card-spazio .tag{background:rgba(255,255,255,.1);}
+
 .card-icon{font-size:4rem;display:block;margin-bottom:12px;animation:iconBob 2.5s ease-in-out infinite;}
 .card-icon.math-icon{animation-delay:0s;}
 .card-icon.eng-icon{animation-delay:.4s;}
@@ -441,6 +462,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 .card-tabelline .card-btn{color:#96631a;}
 .card-breakout .card-btn{color:#993377;}
 .card-bosco .card-btn{color:#55742f;}
+.card-spazio .card-btn{color:#0a0f1f;}
 .card-btn:hover{transform:scale(1.05);}
 
 .seo-home{
