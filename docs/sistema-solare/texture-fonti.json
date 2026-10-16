@@ -1,0 +1,2314 @@
+[
+ {
+  "id": "sole",
+  "texture": [
+   {
+    "url": "https://svs.gsfc.nasa.gov/vis/a030000/a030300/a030362/euvi_aia304_2012_carrington.tif",
+    "pagina_fonte": "https://svs.gsfc.nasa.gov/30362/",
+    "licenza": "Pubblico dominio NASA (SVS: 'Please give credit for this item to NASA's Scientific Visualization Studio / NASA JPL')",
+    "credito": "NASA JPL / Scientific Visualization Studio; dati STEREO/EUVI e SDO/AIA",
+    "tipo": "falsi colori",
+    "copertura": "completa (360 gradi in longitudine di Carrington, vista combinata di STEREO A/B e SDO)",
+    "pixel": "4104x2304",
+    "byte": 13022905,
+    "note": "Fotogramma di un filmato: luce ultravioletta estrema a 304 angstrom (cromosfera), colorata in rosso/arancio. NON e' la superficie in luce visibile. 4104x2304 non e' 2:1: la proiezione e/o l'estensione in latitudine vanno verificate prima dell'uso. Anteprima JPG 1024x574: 243011 byte.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_sun.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (stilizzati)",
+    "copertura": "completa (ma texture artistica: il Sole non ha una superficie solida)",
+    "pixel": "8192x4096 (nominale dal nome file)",
+    "byte": 3696361,
+    "note": "Solar System Scope. ARTISTICA/STILIZZATA: granulazione arancione ricostruita, non una mappa da sonda. 2k: 822427 byte.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Nessuna mappa equirettangolare 'vera' in luce visibile: il Sole e' una sfera di gas con rotazione differenziale; l'unico dato globale PD e' la mappa EUV di Carrington. Per un Sole didattico e' ragionevole usare un colore uniforme giallo-bianco con granulazione procedurale."
+ },
+ {
+  "id": "mercurio",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia15/pia15063/PIA15063.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA15063",
+    "licenza": "Pubblico dominio / senza copyright: contenuti NASA/JPL 'generally not subject to copyright in the United States' (linee guida media NASA, nasa.gov/nasa-brand-center/images-and-media); NASA va citata come fonte; nessun logo NASA",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington",
+    "tipo": "grigi",
+    "copertura": "completa al 99,9% (MESSENGER; piccoli buchi riempiti con mappa a colori e con Mariner 10/flyby, soprattutto vicino al polo nord); illuminazione disomogenea tra le immagini",
+    "pixel": "6132x3066",
+    "byte": 3091704,
+    "note": "Mosaico MDIS base map morfologica, proiezione cilindrica semplice. Variazioni di luminosita' dovute alle diverse illuminazioni. Mercurio reale e' grigio-bruno scuro: si puo' tingere di grigio caldo. TIFF originale: 17950000 byte (PIA15063.tif nella stessa cartella).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia16/pia16298/PIA16298.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA16298",
+    "licenza": "Pubblico dominio / senza copyright: contenuti NASA/JPL 'generally not subject to copyright in the United States' (linee guida media NASA, nasa.gov/nasa-brand-center/images-and-media); NASA va citata come fonte; nessun logo NASA",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington",
+    "tipo": "grigi",
+    "copertura": "completa (>99,9%)",
+    "pixel": "3060x1530",
+    "byte": 1125514,
+    "note": "Mosaico globale MDIS 5 km/pixel, cilindrica semplice, centrato a 0 gradi E. Versione leggera della precedente. TIFF originale: 4690000 byte (PIA16298.tif nella stessa cartella).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia17/pia17386/PIA17386.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA17386",
+    "licenza": "Pubblico dominio / senza copyright: contenuti NASA/JPL 'generally not subject to copyright in the United States' (linee guida media NASA, nasa.gov/nasa-brand-center/images-and-media); NASA va citata come fonte; nessun logo NASA",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington",
+    "tipo": "falsi colori",
+    "copertura": "completa (cilindrica semplice, centrata a 180 gradi E: va ricentrata)",
+    "pixel": "4096x2048",
+    "byte": 1832827,
+    "note": "COLORI ANALITICI, non reali: 2a componente principale in R, 1a in G, rapporto 430/1000 nm in B. Evidenzia differenze di composizione; 3,74 km/pixel. TIFF originale: 25180000 byte (PIA17386.tif nella stessa cartella).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_mercury.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (ritoccati)",
+    "copertura": "completa ma con zone riempite con terreno fittizio",
+    "pixel": "8192x4096 (nominale)",
+    "byte": 15035740,
+    "note": "Solar System Scope. Da MESSENGER, colori tarati e piu' saturi. 2k: 872555 byte.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "venere",
+  "texture": [
+   {
+    "parte": "superficie",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Cylindrical_Map_of_Venus.jpg",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Cylindrical_Map_of_Venus.jpg (origine: http://solarviews.com/cap/venus/venmap.htm, NASA/JPL)",
+    "licenza": "Pubblico dominio (NASA/JPL, Commons 'Public domain')",
+    "credito": "NASA/JPL (sonda Magellan)",
+    "tipo": "radar",
+    "copertura": "completa; mosaico radar Magellan (98% della superficie) con buchi riempiti da altimetria Pioneer Venus o valore costante; i bordi sono a 240 gradi E (centro 60 gradi E: va ricentrata)",
+    "pixel": "5120x2560",
+    "byte": 2534779,
+    "note": "Radar con COLORI SIMULATI (tinte arancio basate sulle foto Venera 13/14): non e' un'immagine ottica. Le macchie scure sono aloni attorno ai crateri recenti.",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia00/pia00255/PIA00255.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA00255",
+    "licenza": "Pubblico dominio / senza copyright: contenuti NASA/JPL 'generally not subject to copyright in the United States' (linee guida media NASA, nasa.gov/nasa-brand-center/images-and-media); NASA va citata come fonte; nessun logo NASA",
+    "credito": "NASA/JPL",
+    "tipo": "radar",
+    "copertura": "meta' del pianeta (187,5 gradi di longitudine): servono entrambe le meta' e un ricucitura (sovrapposizione di 15 gradi)",
+    "pixel": "~6519x6258 (meta' occidentale, 240E-67,5E)",
+    "byte": 4354014,
+    "note": "PIA00255 + PIA00256 (meta' orientale: 4955400 byte jpg, 22,9 MB tif, 52,5E-240E). Stesso prodotto cromatico (radar Magellan + colori simulati Venera). Totale jpg ~9,3 MB. TIFF originale: 20820000 byte (PIA00255.tif nella stessa cartella).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Venus/Venus.jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Venus",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "radar",
+    "copertura": "completa",
+    "pixel": "1440x720 (stimato)",
+    "byte": 1166974,
+    "note": "Probabile stesso prodotto Magellan colorato, derivazione non dichiarata. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_venus_surface.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "radar",
+    "copertura": "completa ma con zone riempite fittizie",
+    "pixel": "8192x4096 (nominale)",
+    "byte": 12523129,
+    "note": "Solar System Scope. Da Magellan, colorata. 2k: 885075 byte.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/4k_venus_atmosphere.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (artistici)",
+    "copertura": "artistica, NON dati reali",
+    "pixel": "4096x2048 (nominale)",
+    "byte": 1546146,
+    "note": "Solar System Scope. ARTISTICA/INVENTATA: nuvole turbinose disegnate. Nella luce visibile Venere e' quasi uniforme giallo-crema (nessun dettaglio); i disegni nuvolosi veri si vedono solo in ultravioletto (Akatsuki, Pioneer Venus, Mariner 10). 2k: 229696 byte. ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "nuvole"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Nessuna mappa equirettangolare PD di nuvole venusiane trovata (le immagini UV sono parziali o su licenze diverse). Consiglio: sfera giallo-crema uniforme con gradiente morbido."
+ },
+ {
+  "id": "terra",
+  "texture": [
+   {
+    "parte": "giorno",
+    "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x5400x2700.jpg",
+    "pagina_fonte": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/ (Visible Earth ID 74218, Blue Marble Next Generation, dicembre 2004)",
+    "licenza": "NASA Earth Observatory / Visible Earth: immagini NASA senza copyright, uso libero con credito (linee guida media NASA)",
+    "credito": "NASA Earth Observatory image by Reto Stockli (Blue Marble Next Generation, dati Terra/MODIS)",
+    "tipo": "colori naturali",
+    "copertura": "completa, 500 m/pixel ridotti a 8 km/pixel",
+    "pixel": "5400x2700",
+    "byte": 1878742,
+    "note": "Mosaico MODIS mensile (dicembre 2004): oceano blu uniforme, niente rilievo. Mappa mensile quindi neve invernale boreale. Versione con rilievo e batimetria: world.topo.bathy.200412.3x5400x2700.jpg, 2566770 byte (ID 73909). Versione 21600x10800: 29868040 byte. Non ho letto la pagina Visible Earth dell'ID (reindirizza a una pagina generica): numero ID e licenza specifica da riverificare.",
+    "consigliata": true
+   },
+   {
+    "parte": "giorno",
+    "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57752/land_shallow_topo_2048.jpg",
+    "pagina_fonte": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/ (Blue Marble 2002, ID 57752)",
+    "licenza": "NASA Earth Observatory: uso libero con credito",
+    "credito": "NASA Earth Observatory image by Reto Stockli and Robert Simmon (Blue Marble, dati MODIS)",
+    "tipo": "colori naturali",
+    "copertura": "completa",
+    "pixel": "2048x1024 (dal nome file)",
+    "byte": 238676,
+    "note": "Blue Marble 2002 con rilievo ombreggiato e mare poco profondo. Piu' leggero. Versione 8192: tif 27797968 byte."
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Earth%20(A)/Earth%20(A).jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Earth%20(A)",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "colori naturali",
+    "copertura": "completa",
+    "pixel": "1440x720 (stimato)",
+    "byte": 1398329,
+    "note": "Mappa terrestre a bassa risoluzione. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "giorno"
+   },
+   {
+    "parte": "nuvole",
+    "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg",
+    "pagina_fonte": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/ (Blue Marble 2002, nuvole, ID 57747)",
+    "licenza": "NASA Earth Observatory: uso libero con credito",
+    "credito": "NASA Earth Observatory image by Reto Stockli and Robert Simmon (Blue Marble, dati MODIS)",
+    "tipo": "grigi",
+    "copertura": "completa (composito di due giorni in luce visibile + un giorno di infrarosso termico ai poli)",
+    "pixel": "2048x1024 (dal nome file)",
+    "byte": 829367,
+    "note": "Mappa di nuvole in scala di grigi: utilizzabile come alfa. Dati veri ma di un singolo istante del 2001. Versione 8192 tif: 35870468 byte.",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "luna",
+  "texture": [
+   {
+    "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+    "pagina_fonte": "https://svs.gsfc.nasa.gov/4720/ (CGI Moon Kit, versione 2025)",
+    "licenza": "Pubblico dominio NASA (SVS: 'Please give credit for this item to NASA's Scientific Visualization Studio')",
+    "credito": "NASA's Scientific Visualization Studio; Ernie Wright (USRA); dati LRO/LROC (ASU) e LOLA",
+    "tipo": "colori naturali",
+    "copertura": "completa; i dati LROC coprono 70N-70S, oltre queste latitudini (6% della superficie, >20% dei pixel) e' inserita la mappa monocroma di albedo LOLA a bassa risoluzione",
+    "pixel": "2048x1024",
+    "byte": 457942,
+    "note": "Colori bilanciati per assomigliare alla vista umana, 'ottimizzata per l'estetica, non per la scienza'. Centrata a 0 gradi di longitudine. Versione 2019 con poli: lroc_color_poles_4k.tif (4096x2048) 13095388 byte, 2k tif 3339438, 1k jpg 139068, 8k tif ~48,3 MB. Versioni 2025 grandi: 4k tif 61891324 byte. Rilievo: ldem_3_8bit.jpg (1024x512) 111552 byte.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Moon/Moon.jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Moon",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "grigi",
+    "copertura": "completa",
+    "pixel": "ignota (TIFF 10995708 byte)",
+    "byte": 2957499,
+    "note": "Mappa lunare in toni di grigio probabilmente da Clementine/LRO; derivazione da verificare. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_moon.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "grigi",
+    "copertura": "completa",
+    "pixel": "8192x4096 (nominale)",
+    "byte": 15030356,
+    "note": "Solar System Scope (Moon). 2k: 1053869 byte.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "marte",
+  "texture": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mars_Viking_MDIM21_ClrMosaic_1km.jpg/3840px-Mars_Viking_MDIM21_ClrMosaic_1km.jpg",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Mars_Viking_MDIM21_ClrMosaic_1km.jpg (origine USGS Astrogeology, Mars Viking MDIM2.1 Colorized Global Mosaic)",
+    "licenza": "Pubblico dominio (NASA/JPL/USGS, Commons 'Public domain')",
+    "credito": "NASA/JPL/USGS (Viking Orbiter, Mars Digital Image Model 2.1 colorizzato da NASA Ames)",
+    "tipo": "colori naturali (approssimati)",
+    "copertura": "completa a 1 km/pixel; il colore viene dai filtri rosso e viola di Viking (verde sintetizzato) e il bianco/nero MDIM 2.1 fa da base: colore indicativo; il rilievo ombreggiato dipende dall'illuminazione Viking",
+    "pixel": "3840x1920 (anteprima ridotta generata da Commons)",
+    "byte": 2440499,
+    "note": "Miniatura Commons generata al volo dal file originale 21339x10670 (36708552 byte); anche 1920px: 643763 byte. L'originale e' identico al file USGS 'mars_viking_mdim21_clrmosaic_1km.jpg' (36708552 byte). Il TIFF 232 m/pixel USGS pesa 12,7 GB: da scartare.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m",
+    "licenza": "Dati USGS Astrogeology (pubblico dominio USGS/NASA)",
+    "credito": "USGS Astrogeology Science Center / NASA Ames / Viking Orbiter",
+    "tipo": "colori naturali (approssimati)",
+    "copertura": "completa",
+    "pixel": "21339x10670",
+    "byte": 36708552,
+    "note": "Originale ufficiale a 1 km/pixel: 36,7 MB, troppo grande per il tetto di 20 MB ma ridimensionabile. Anteprima USGS 1024px: 113419 byte.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars/Mars.jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Mars",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "colori naturali",
+    "copertura": "completa",
+    "pixel": "1440x720 (stimato)",
+    "byte": 972896,
+    "note": "Mappa a bassa risoluzione. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_mars.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (ritoccati)",
+    "copertura": "completa",
+    "pixel": "8192x4096 (nominale)",
+    "byte": 8396951,
+    "note": "Solar System Scope (Mars). 2k: 750547 byte.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "giove",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia07/pia07782/PIA07782.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA07782",
+    "licenza": "Pubblico dominio / senza copyright: contenuti NASA/JPL 'generally not subject to copyright in the United States' (linee guida media NASA, nasa.gov/nasa-brand-center/images-and-media); NASA va citata come fonte; nessun logo NASA",
+    "credito": "NASA/JPL/Space Science Institute",
+    "tipo": "colori naturali (colori vicini a quelli visti dall'occhio, da due soli filtri 451 e 750 nm)",
+    "copertura": "completa (180 gradi di latitudine e 360 di longitudine, planetocentrica); i poli sono meno chiari perche' visti obliquamente e attraverso foschia",
+    "pixel": "3601x1801",
+    "byte": 441285,
+    "note": "Cassini ISS, 11-12 dicembre 2000, 36 immagini; dettagli fino a 120 km; mappa cilindrica semplice. Il TIFF pesa 19456427 byte. Include la Grande Macchia Rossa nella posizione del 2000. TIFF originale: 19456427 byte (PIA07782.tif nella stessa cartella).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://archive.stsci.edu/missions/hlsp/opal/cycle32/jupiter/hlsp_opal_hst_wfc3-uvis_jupiter-2025a_f395n-f502n-f631n_v1_globalmap.tif",
+    "pagina_fonte": "https://archive.stsci.edu/hlsp/opal/opal-jupiter-cycle-32",
+    "licenza": "Dati HST pubblici (archivio MAST/STScI, HLSP OPAL, DOI 10.17909/T9G593); obbligo di ringraziamento (testo ufficiale OPAL: 'This work used data acquired from the NASA/ESA HST Space Telescope, associated with OPAL program (PI: Simon, GO13937), and archived by the Space Telescope Science Institute ... All maps are available at http://dx.doi.org/10.17909/T9G593')",
+    "credito": "NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST",
+    "tipo": "falsi colori (filtri 395, 502 e 631 nm mappati su B,G,R: colori non fedeli)",
+    "copertura": "completa (10 px/grado), dicembre 2025",
+    "pixel": "3600x1800 (dalla scala 10 px/grado)",
+    "byte": 19444834,
+    "note": "TIFF RGB non compresso. Mappa piu' recente ma con colori meno naturali di Cassini.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Jupiter/Jupiter.jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Jupiter",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "colori naturali",
+    "copertura": "completa",
+    "pixel": "720x360 (stimato)",
+    "byte": 225878,
+    "note": "Mappa a bassa risoluzione. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_jupiter.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (ritoccati)",
+    "copertura": "completa",
+    "pixel": "8192x4096 (nominale)",
+    "byte": 3080980,
+    "note": "Solar System Scope. 2k: 498976 byte.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "saturno",
+  "texture": [
+   {
+    "url": "https://archive.stsci.edu/missions/hlsp/opal/cycle32/saturn/hlsp_opal_hst_wfc3-uvis_saturn-2025a_f395n-f502n-f631n_v1_globalmap.tif",
+    "pagina_fonte": "https://archive.stsci.edu/hlsp/opal/opal-saturn-cycle-32",
+    "licenza": "Dati HST pubblici (archivio MAST/STScI, HLSP OPAL, DOI 10.17909/T9G593); obbligo di ringraziamento (testo ufficiale OPAL: 'This work used data acquired from the NASA/ESA HST Space Telescope, associated with OPAL program (PI: Simon, GO13937), and archived by the Space Telescope Science Institute ... All maps are available at http://dx.doi.org/10.17909/T9G593')",
+    "credito": "NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST",
+    "tipo": "falsi colori (filtri 395, 502 e 631 nm su B,G,R, lieve contrasto)",
+    "copertura": "completa (5 px/grado, -90/+90 gradi); ARTEFATTI: lune e ombre di lune attraversano la mappa; la zona sotto gli anelli puo' mancare",
+    "pixel": "1800x900 (dalla scala 5 px/grado)",
+    "byte": 4885052,
+    "note": "Hubble, 29 agosto 2025. TIFF RGB non compresso. Colori non fedeli (tendono al blu/grigio). Non verificato se le zone nascoste dagli anelli sono interpolate.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Saturn/Saturn.jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Saturn",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "colori naturali",
+    "copertura": "completa",
+    "pixel": "720x360 (stimato)",
+    "byte": 275735,
+    "note": "Mappa a bassa risoluzione tipo JPL Solar System Simulator; Saturno e' quasi privo di dettagli longitudinali. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_saturn.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (stilizzati)",
+    "copertura": "completa (ma pochi dettagli: ricostruita a bande)",
+    "pixel": "8192x4096 (nominale)",
+    "byte": 1098204,
+    "note": "Solar System Scope. 2k: 199916 byte. Saturno in luce visibile mostra solo bande: va bene un gradiente a fasce di latitudine.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (profilo radiale semplificato)",
+    "copertura": "completa (anello intero)",
+    "pixel": "8192x4096 (nominale, striscia radiale)",
+    "byte": 64790,
+    "note": "Solar System Scope. PNG con canale alfa: striscia radiale con divisione di Cassini e anelli A/B/C. Derivazione dai dati Cassini dichiarata solo genericamente ('basata su dati NASA'): NON verificata e probabilmente semplificata. 2k: 12119 byte. Nessuna alternativa PD con trasparenza trovata. ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "anelli",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Non trovata una mappa Cassini PD completa e cilindrica di Saturno in colori naturali (esistono mosaici 'True Saturn' di SVS, ma non in proiezione cilindrica)."
+ },
+ {
+  "id": "urano",
+  "texture": [
+   {
+    "url": "https://archive.stsci.edu/missions/hlsp/opal/cycle33/uranus/hlsp_opal_hst_wfc3-uvis_uranus-2025a_f657n-f547m-f467m_v1_globalmap.tif",
+    "pagina_fonte": "https://archive.stsci.edu/hlsp/opal/opal-uranus-cycle-33",
+    "licenza": "Dati HST pubblici (archivio MAST/STScI, HLSP OPAL, DOI 10.17909/T9G593); obbligo di ringraziamento (testo ufficiale OPAL: 'This work used data acquired from the NASA/ESA HST Space Telescope, associated with OPAL program (PI: Simon, GO13937), and archived by the Space Telescope Science Institute ... All maps are available at http://dx.doi.org/10.17909/T9G593')",
+    "credito": "NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST",
+    "tipo": "colori naturali (R=F657N, G=F547M, B=F467M con lieve contrasto)",
+    "copertura": "completa (2 px/grado, sovracampionata; poli poco risolti)",
+    "pixel": "720x360 (dalla scala 2 px/grado)",
+    "byte": 787756,
+    "note": "Hubble, 23-24 ottobre 2025. Urano appare pallido ciano con pochissimi dettagli (da verificare sul file). Anche la rotazione 2025b (stesso peso). Il lato destro della mappa e' a 0 gradi E.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/2k_uranus.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (stilizzati)",
+    "copertura": "completa (praticamente tinta unita ciano)",
+    "pixel": "2048x1024 (nominale)",
+    "byte": 77751,
+    "note": "Solar System Scope. Quasi uniforme: corretto per Urano in luce visibile.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Nessuna mappa vera in longitudine: Urano appare quasi uniforme dalle sonde (Voyager 2, 1986, vide il polo sud). Dati veri: albedo geometrica 0.488 (NASA GSFC Uranus Fact Sheet); colore reale azzurro-verde molto pallido (cyan), fasce quasi invisibili in luce visibile. Alone piu' chiaro attorno al polo sud illuminato."
+ },
+ {
+  "id": "nettuno",
+  "texture": [
+   {
+    "url": "https://archive.stsci.edu/missions/hlsp/opal/cycle32/neptune/hlsp_opal_hst_wfc3-uvis_neptune-2025b_f467m-f547m-f657n_v1_globalmap.tif",
+    "pagina_fonte": "https://archive.stsci.edu/hlsp/opal/opal-neptune-cycle-32",
+    "licenza": "Dati HST pubblici (archivio MAST/STScI, HLSP OPAL, DOI 10.17909/T9G593); obbligo di ringraziamento (testo ufficiale OPAL: 'This work used data acquired from the NASA/ESA HST Space Telescope, associated with OPAL program (PI: Simon, GO13937), and archived by the Space Telescope Science Institute ... All maps are available at http://dx.doi.org/10.17909/T9G593')",
+    "credito": "NASA, ESA, A. Simon (NASA-GSFC) e il team OPAL (Hubble Space Telescope, programma OPAL); archivio STScI/MAST",
+    "tipo": "colori naturali (R=F657N, G=F547M, B=F467M con contrasto accentuato)",
+    "copertura": "completa (2 px/grado; poli poco risolti)",
+    "pixel": "720x360 (dalla scala 2 px/grado)",
+    "byte": 789926,
+    "note": "Hubble, 24-25 agosto 2025. Blu intenso con nuvole bianche; il contrasto e' accentuato rispetto all'aspetto reale (azzurro-blu meno saturo). Bordo sinistro = 360 W.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Neptune/Neptune.jpg",
+    "pagina_fonte": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Neptune",
+    "licenza": "Pubblico dominio NASA ('free and without copyright', README nasa/NASA-3D-Resources; linee guida https://www.nasa.gov/nasa-brand-center/images-and-media); il repository dichiara NASA Open Source Agreement 1.3 nel meta.json ma gli asset sono senza copyright",
+    "credito": "NASA 3D Resources (NASA/JPL-Caltech)",
+    "tipo": "colori naturali",
+    "copertura": "completa",
+    "pixel": "720x360 (stimato)",
+    "byte": 210528,
+    "note": "Probabile mappa da Voyager 2 a bande, senza dettagli veri in longitudine. Origine esatta non dichiarata nel repository (probabilmente JPL Solar System Simulator). Pixel STIMATI dal peso del TIFF non compresso (1440x720x3 = 3,11 MB; 720x360x3 = 0,78 MB), non misurati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://www.solarsystemscope.com/textures/download/2k_neptune.jpg",
+    "pagina_fonte": "https://www.solarsystemscope.com/textures/",
+    "licenza": "CC BY 4.0 (Attribution 4.0 International) - 'You may use, adapt, and share these textures for any purpose, even commercially' (solarsystemscope.com/textures)",
+    "credito": "Texture: Solar System Scope (solarsystemscope.com), CC BY 4.0; basata su dati NASA",
+    "tipo": "colori naturali (stilizzati)",
+    "copertura": "completa",
+    "pixel": "2048x1024 (nominale)",
+    "byte": 241580,
+    "note": "Solar System Scope. 8k non esiste.  ATTENZIONE: SSS dichiara che le zone non mappate sono 'riempite con terreno fittizio' e che i colori sono 'leggermente piu' saturati'; non sono mappe scientifiche pure. Il server risponde HTML a HEAD: peso letto dall'intestazione Content-Length di un GET interrotto.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Nessuna mappa vera in longitudine. Dati veri: albedo geometrica 0.442 (NASA GSFC Neptune Fact Sheet); colore reale azzurro-blu pallido (le immagini Voyager 2 'blu intenso' erano potenziate; studio Irwin et al. 2024 MNRAS: Nettuno solo un po' piu' blu di Urano, NON riverificato qui). Fasce di latitudine tenui, Grande Macchia Scura (dal flyby Voyager 2, scomparsa nel 1994) e nubi bianche."
+ },
+ {
+  "id": "cerere",
+  "texture": [
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCHCFC2_2/BROWSE/CE_HAMO_G_00N_180E_EQU_CLR.JPG",
+    "pagina_fonte": "https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCHCFC2_2/BROWSE/CE_HAMO_G_00N_180E_EQU_CLR.LBL",
+    "licenza": "Dati NASA/PDS (Dawn, SBN): uso libero con credito; non c'e' una riga di licenza esplicita sul file",
+    "credito": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA (PDS Small Bodies Node, DAWN-A-FC2-5-CERESMOSAIC-V1.0)",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica ('equirettangolare', EQU), filtro chiaro HAMO 140 m/px; CENTRATA A 180 E (longitudine 0 ai bordi): va traslata di 180 gradi; luce disomogenea, mosaico 'browse' (versione ridotta)",
+    "pixel": "ignota (browse JPG; l'originale e' ~21000x10500 a 140 m/px, 212 MB nel PDS)",
+    "byte": 204300,
+    "note": "'Browse image' ufficiale del mosaico globale: verificare a vista se contiene assi/scritte. Mosaico originale .IMG 212 MB, GeoTIFF 159 MB in EXTRAS. Esistono anche mosaici LAMO 35 m (browse CE_LAMO_G_00N_180E_EQU_CLR.JPG, 173 KB).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/6ad84c9a-1fad-4869-b4f6-b52c5c2ace36/resource/9f757a65-8d8a-4349-a72d-8062387574b3/download/ceres_dawn_fc_dlr_global_feb2016_1024.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/ceres_dawn_fc_global_mosaic_140m",
+    "licenza": "Pubblico dominio (prodotto USGS/NASA)",
+    "credito": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA; mosaico DLR, pubblicato da USGS Astrogeology",
+    "tipo": "grigi",
+    "copertura": "globale, cilindrica semplice, 140 m/px (originale), luce variabile",
+    "pixel": "1024x512 (campione ufficiale; supposto 2:1, non verificato)",
+    "byte": 178223,
+    "note": "Campione USGS di 1024 px (troppo piccolo come texture finale). Il GeoTIFF completo pesa 214 MB. Il percorso diretto del GeoTIFF su planetarymaps.usgs.gov non e' stato verificato (la mia ipotesi di nome file ha dato 302): il link e' sulla pagina fonte.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia20/pia20354/PIA20354.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA20354",
+    "licenza": "Pubblico dominio (opera NASA; Photojournal/pagina fonte: nessuna restrizione, credito richiesto)",
+    "credito": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA",
+    "tipo": "falsi colori",
+    "copertura": "globale ma in proiezione MERCATOR, non equirettangolare (distorce le alte latitudini; va riproiettata); le zone ad alta latitudine sono verdi/gialle 'where Dawn's color imaging coverage is incomplete'",
+    "pixel": "4000x2000",
+    "byte": 2454337,
+    "note": "'Colorized Map of Ceres': mosaico a filtro chiaro HAMO 140 m con colore AGGIUNTO da dati spettrali di altre osservazioni (non immagine a colori diretta). TIFF 22227174 byte.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Ceres_1_1000.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 9529028,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Cerere, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. Pagina: https://science.nasa.gov/resource/ceres-3d-model/ (stessa famiglia di file); pesante rispetto alla quasi sfericita' del corpo."
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/ceres/CERES_SPC181019_0128.ICQ.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 7418950,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "Dawn Science Team (SPC), NASA PDS",
+    "note": "OBJ derivato Dawn SPC q=128, 7,4 MB (USDZ 1.780.034 B). Facce non verificate (q=128 farebbe 196.608). Eccessivo per un corpo quasi sferico."
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica ~0.09 (da conoscenza generale, non riverificata); superficie scura grigia con macchie luminose (Occator, sali). Dawn non ha ripreso a colori diretti in luce visibile: ogni mappa a colori e' elaborata.",
+  "assi_ellissoide_km": [
+   482.2,
+   482.1,
+   445.9
+  ],
+  "note_forma": "Basta un ellissoide: semiassi = meta' di 964.4x964.2x891.8 km (Nature 537, 515, JPL SBDB). Quasi una sfera schiacciata."
+ },
+ {
+  "id": "plutone",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia11/pia11707/PIA11707.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA11707",
+    "licenza": "Pubblico dominio (opera NASA; Photojournal/pagina fonte: nessuna restrizione, credito richiesto); Commons marca la copia 'Public domain'",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+    "tipo": "colore migliorato",
+    "copertura": "completa in longitudine (mosaico globale a colori dai filtri blu/rosso/infrarosso di MVIC); risoluzione molto diseguale: emisfero 'cuore' ripreso da vicino, emisfero opposto solo a bassa risoluzione. Il polo sud era al buio durante il flyby: il comportamento della fascia sotto circa 30S nella mappa a colori NON e' stato verificato (nelle mappe in bianco e nero NH quella zona e' nera)",
+    "pixel": "5926x2963 (da mirror PDS pds-rings.seti.org; 2:1)",
+    "byte": 1423389,
+    "note": "'Pluto Color Map', 19/01/2017. Colori 'enhanced' (blu, rosso, infrarosso), non colori naturali. Proiezione non dichiarata ma 2:1, quasi certamente cilindrica semplice con Sputnik Planitia al centro (la didascalia dice 'Sputnik Planitia ... is at the center of this map'): servira' un controllo visivo prima dell'uso. Il TIFF pesa 30681324 byte. Copia alternativa su Commons (stesso soggetto e pixel, ricompressa): https://upload.wikimedia.org/wikipedia/commons/a/ad/Pluto_color_mapmosaic.jpg (3972946 byte, PD, fonte nasa.gov/image-feature/pluto-global-color-map).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia19/pia19858/PIA19858.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA19858",
+    "licenza": "Pubblico dominio (opera NASA; Photojournal/pagina fonte: nessuna restrizione, credito richiesto)",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+    "tipo": "grigi",
+    "copertura": "globale ma a risoluzione molto diversa: ~400 m/px sull'emisfero opposto a Caronte (centro mappa), ~40 km/px sull'emisfero rivolto a Caronte; mappa 2015 (aggiornamento successivo: PIA21861/62 e USGS 300 m); sotto circa 30S buio",
+    "pixel": "18630x9315 (da pds-rings.seti.org)",
+    "byte": 5220951,
+    "note": "'Global Map of Pluto' LORRI+MVIC, versione 2015 senza griglia (esiste anche una versione con griglia). TIFF 173613188 byte. Molto grande in pixel (173 Mpx): va ridimensionata prima dell'uso.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://planetarymaps.usgs.gov/mosaic/Pluto_NewHorizons_Global_Mosaic_300m_Jul2017_8bit.tif",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/pluto_new_horizons_lorri_mvic_global_mosaic_300m",
+    "licenza": "Pubblico dominio (USGS Astrogeology: 'Public Domain')",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute/Lunar and Planetary Institute; USGS Astrogeology Science Center",
+    "tipo": "grigi",
+    "copertura": "globale equirettangolare 300 m/px sull'emisfero visto da vicino, risoluzione minore sul lato opposto; sotto circa 30S buio (nero)",
+    "pixel": "stimata ~24887x12443 (300 m/px, raggio 1188.3 km; coerente col peso 8 bit)",
+    "byte": 309806463,
+    "note": "GeoTIFF 8 bit di 296 MB: TROPPO PESANTE. Campione ufficiale 1024 px di larghezza: https://astrogeology.usgs.gov/ckan/dataset/a5f1b7f4-9822-4697-a201-e23ef4bd3e16/resource/96be2aa1-f384-4a9f-9458-a8431a0e7956/download/pluto_newhorizons_global_mosaic_300m_jul2017_1024.jpg (82882 byte). Non verificato visivamente se il file 'mosaic' sia privo della sovrapposizione colorata della topografia (il testo della pagina la menziona; il DEM e' un prodotto separato).",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica 0.52 (NASA GSFC Pluto Fact Sheet). Colori reali (letteratura/NH): rosso-bruno scuro (tholins) lungo la fascia equatoriale (Cthulhu), 'cuore' chiaro biancastro-rosato (Sputnik Planitia), calotte polari piu' chiare. La mappa PIA11707 e' la migliore texture a colori; per texture a risoluzione adatta a WebGL basta una 4096x2048 derivata."
+ },
+ {
+  "id": "caronte",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia19/pia19866/PIA19866.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA19866",
+    "licenza": "Pubblico dominio (opera NASA; Photojournal/pagina fonte: nessuna restrizione, credito richiesto)",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+    "tipo": "grigi",
+    "copertura": "globale in proiezione cilindrica semplice, 0 longitudine al centro; risoluzione da ~400 m/px (parte centrale, lato rivolto a Plutone) a ~40 km/px (lati, emisfero opposto a Plutone); mappa luglio 2015, riempita solo con le prime immagini LORRI; il polo sud e' buio (nero)",
+    "pixel": "9520x4760 (da pds-rings.seti.org)",
+    "byte": 1150429,
+    "note": "'Global Map of Pluto's Moon Charon' (PIA19866). TIFF 45353498 byte. Copia Commons con titolo fuorviante 'Topographic Map': https://upload.wikimedia.org/wikipedia/commons/1/1b/Charon_Topographic_Map_NASA_PIA19866.jpg (stesso peso 1150429). La mappa e' in scala di grigi (non e' una mappa di quota).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Charon_map_iau1803c.jpg",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Charon_map_iau1803c.jpg",
+    "licenza": "Commons: Public domain (credito NASA/JHUAPL/SwRI); la serie IAU iau1803 e' distribuita dall'IAU con CC BY 4.0 (la copia .tif su Commons e' marcata CC BY 4.0)",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute (mappa IAU iau1803c, 2018)",
+    "tipo": "grigi",
+    "copertura": "globale, base mosaico 2017; sotto circa 30S buio. NON verificato se contenga sovrapposizioni colorate di topografia come in PIA21862 (il nome 'c' dovrebbe essere la versione senza nomi di feature: 'b' e' quella con annotazioni)",
+    "pixel": "6000x3000",
+    "byte": 2426080,
+    "note": "Pagina IAU (iau.org/public/images/detail/iau1803c) non raggiungibile (404): origine e licenza ricavate dai metadati Commons. Altre varianti: iau1803b annotata (6000x3000, 2623436) e iau1803a (4863x2078, 2295114, CC BY 4.0).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://planetarymaps.usgs.gov/mosaic/Charon_NewHorizons_Global_Mosaic_300m_Jul2017_8bit.tif",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/charon_new_horizons_lorri_mvic_global_mosaic_300m",
+    "licenza": "Pubblico dominio (USGS Astrogeology)",
+    "credito": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute/Lunar and Planetary Institute; USGS Astrogeology Science Center",
+    "tipo": "grigi",
+    "copertura": "globale equirettangolare 300 m/px (migliore versione, 2017); sotto circa 30S buio",
+    "pixel": "stimata ~12693x6347 (300 m/px, raggio 606 km; coerente col peso 8 bit)",
+    "byte": 80613890,
+    "note": "GeoTIFF 77 MB. Campione ufficiale 1024 px: https://astrogeology.usgs.gov/ckan/dataset/93827f6c-8feb-42b6-98e6-b0ce57c7d2c8/resource/1abf318c-3290-4aa0-932e-a34f32d7f6ad/download/charon_newhorizons_global_mosaic_300m_jul2017_1024.jpg (69352 byte).",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica 0.42 (NASA GSFC Pluto Fact Sheet). Colore: grigio con calotta polare nord rosso-bruna (Mordor Macula), unico dato di colore reale (PIA19968). Non esiste una mappa globale a colori di Caronte nei risultati trovati."
+ },
+ {
+  "id": "eris",
+  "texture": [],
+  "forma": [],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna immagine di superficie (solo un punto nei telescopi; Hubble ne risolve appena il disco). Albedo geometrica pV = 0.96 (Sicardy et al. 2011, occultazione stellare; riportata in rassegne). Colore: bianco-grigiastro, simile a Plutone senza il rosso (colore dal testo del committente, non riverificato)."
+ },
+ {
+  "id": "haumea",
+  "texture": [],
+  "forma": [],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna immagine di superficie. Albedo geometrica pV = 0.51 ± 0.02 (Ortiz et al. 2017, Nature, occultazione; valori termici precedenti 0.7-0.75). Superficie bianca di ghiaccio d'acqua con una macchia scura rossastra (Lacerda et al. 2008: colore dal testo del committente e letteratura, non riverificato qui). Forma a ellissoide allungato, rotazione ~3.9 ore; anello scoperto dall'occultazione 2017."
+ },
+ {
+  "id": "makemake",
+  "texture": [],
+  "forma": [],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna immagine di superficie. Albedo geometrica pV = 0.77 ± 0.03 (Ortiz et al. 2012, Nature, occultazione); studio fotometrico successivo 0.82 ± 0.02. Colore rossiccio-bruno (da letteratura/testo del committente, non riverificato qui); nessuna atmosfera globale densa."
+ },
+ {
+  "id": "phobos",
+  "texture": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Phobos_Viking_Mosaic_DLRcontrol_7200.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/ckan/dataset/85290c2c-7524-44ba-9251-61ea69fcd9dd/resource/88e0c686-572b-4857-8f9b-f4d9c17d4f20/download/phobos_viking_mosaic_40ppd_dlrcontrol.tif.html",
+    "licenza": "Pubblico dominio (Commons; USGS metadata: Stooke Small Bodies Maps, University of Western Ontario; PDS: pubblico dominio con credito)",
+    "credito": "Stooke, P., Stooke Small Bodies Maps V1.0, MULTI-SA-MULTI-6-STOOKEMAPS-V1.0, NASA Planetary Data System, 2011 (USGS Astrogeology 'Phobos Viking Mosaic 40ppd, DLR controlled')",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica, 0 lon al centro; immagini Viking con Mars Express HRSC, MGS, MRO; USGS: 'Low resolution, image gaps and some bad seams in the original DLR mosaic'; con effetti 'artistici' alle giunzioni di illuminazione opposta (solo aspetto)",
+    "pixel": "7200x3600",
+    "byte": 5367872,
+    "note": "Copia ridotta su Commons. Originale USGS GeoTIFF 103738243 byte (14400x7200, 40 px/grado): https://planetarymaps.usgs.gov/mosaic/Phobos_Viking_Mosaic_40ppd_DLRcontrol.tif ; versione JPEG dell'archivio PDS 14400x7200, 36650731 byte: https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/m1phobos/phobos_cyl_dlr_control.jpg (sua gemella, controllo Cornell: phobos_cyl_cor_control.jpg 36888998 byte).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars%20-%20Phobos/Mars%20-%20Phobos.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/mars-phobos",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "NASA/JPL/Solar System Simulator",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica (immagini Viking processate da USGS); qualita' bassa",
+    "pixel": "ignota (probabile 1440x720; TIFF 3138148 byte compatibile con 1440x720 RGB)",
+    "byte": 601584,
+    "note": "La pagina dice 'From Viking images processed at the USGS'. Soluzione leggera ma di risoluzione ridotta.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/phobos/phobos_ver64q.tab.obj",
+    "formato": "obj",
+    "facce": 49152,
+    "byte": 1619752,
+    "licenza": "Dati NASA PDS (archivio pubblico); citare il data set e gli autori del modello",
+    "credito": "Gaskell, R. W., Gaskell Phobos Shape Model V1.0, VO1-SA-VISA/VISB-5-PHOBOSSHAPE-V1.0, NASA Planetary Data System (Viking Orbiter)",
+    "note": "OBJ ufficiale ricavato dal TAB Gaskell q=64 (stesso modello, 49.152 facce: vedi sotto il TAB di 4.246.671 byte). Peso verificato con HEAD.",
+    "consigliata": true
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/phobos/phobos.gltf (+ phobos.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 721446,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Phobos usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 2838 B + .bin 718608 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/phobos_ver64q.tab",
+    "formato": "tab (vertici+piastre, Gaskell q=64)",
+    "facce": 49152,
+    "byte": 4246671,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "R. W. Gaskell (SPC), NASA PDS Small Bodies Node, Gaskell Phobos Shape Model",
+    "note": "Versione a bassa risoluzione del modello Gaskell (anche ver128q.tab 16.897.935 B = 196.608 piastre; ver256q/512q enormi). 49.152 piastre ricavate dal label phobos_ver64q.lbl (74.503 record: 1 conteggi + 25.350 vertici + 49.152 piastre). Pagina: https://sbn.psi.edu/pds/resource/phobosshape.html. Citazione: Gaskell, R.W. (2020), urn:nasa:pds:gaskell.phobos.shape-model::1.0, doi 10.26033/xzv5-bw95. Va convertito in OBJ in locale (formato TAB, righe v/f)."
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/phobos/phobos_ver512q.tab.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 118894862,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "R. W. Gaskell (SPC), NASA PDS SBN",
+    "note": "Solo OBJ ufficiale derivato dal sito SBN: 118,9 MB = risoluzione q=512 (~3 milioni di piastre, stima dalla taglia e dal nome, non verificata). TROPPO PESANTE, usare ver64q/ver128q.tab."
+   },
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/m1phobos.tab",
+    "formato": "tab (griglia lat/lon/raggio 2 gradi)",
+    "facce": null,
+    "byte": 527072,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. C. Thomas et al., NASA PDS (Small Body Optical Shape Models)",
+    "note": "Griglia di raggi ogni 2 gradi (16.471 righe da label m1phobos.lbl), da Thomas (1993) su immagini Viking. Mesh ricavabile in locale (~32k triangoli ma non verificato). Citazione: Thomas P.C. et al. (2021), urn:nasa:pds:ast-sat.thomas.shape-models::1.0, doi 10.26033/g5e0-kh52."
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Phobos: grigio scuro con colore reale appena rossiccio; albedo geometrica ~0.07 (da conoscenza generale).",
+  "assi_ellissoide_km": [
+   12.95,
+   11.3,
+   9.16
+  ],
+  "note_forma": "Semiassi = meta' delle dimensioni 25.90x22.60x18.32 km (Ernst et al. 2023, via infobox Wikipedia, fonte secondaria). Forme vere disponibili: preferire Eyes (730 KB) o Gaskell ver64q."
+ },
+ {
+  "id": "deimos",
+  "texture": [
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/m2deimos/deimos_cyl_viking_mro.jpg",
+    "pagina_fonte": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/aamapdesc.html#deimos",
+    "licenza": "Pubblico dominio con credito obbligatorio (PDS: 'These maps are in the public domain but should not be used without proper credit')",
+    "credito": "Stooke, P., Stooke Small Bodies Maps V1.0, MULTI-SA-MULTI-6-STOOKEMAPS-V1.0, NASA Planetary Data System, 2011 (mosaico Viking ingrandito con dettagli HiRISE MRO ESP_012065_9000/ESP_012068_9000)",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica (20 px/grado), 0 lon al centro; Viking con modifiche geometriche vicino a 60E equatore; alcune zone a bassa risoluzione",
+    "pixel": "7200x3600",
+    "byte": 4948381,
+    "note": "Le aree con dettaglio HiRISE sono limitate. Nessuna mappa a colori.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars%20-%20Deimos/Mars%20-%20Deimos.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/mars-deimos",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "NASA/JPL/Solar System Simulator",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica da immagini Viking (USGS)",
+    "pixel": "ignota (probabile 1440x720)",
+    "byte": 480429,
+    "note": "Alternativa leggera di qualita' inferiore.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/deimos/deimos.gltf (+ deimos.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 730678,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Deimos usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 2838 B + .bin 727840 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/m2deimos.tab",
+    "formato": "tab (griglia lat/lon/raggio 5 gradi)",
+    "facce": null,
+    "byte": 86432,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. C. Thomas et al., NASA PDS (Small Body Optical Shape Models); Thomas (1993)",
+    "note": "Griglia di raggi ogni 5 gradi (2.701 righe da label m2deimos.lbl, cioe' mesh di ~5k triangoli), solo dati Viking, incertezza ~400 m in parte della superficie. Citazione: Thomas P.C. et al. (2021), doi 10.26033/g5e0-kh52.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Deimos: grigio chiaro-bruno, albedo geometrica ~0.07 (da conoscenza generale).",
+  "assi_ellissoide_km": [
+   8.04,
+   5.89,
+   5.11
+  ],
+  "note_forma": "Semiassi = meta' di 16.08x11.78x10.22 km (Ernst et al. 2023, via Wikipedia, fonte secondaria). Esiste forma vera."
+ },
+ {
+  "id": "io",
+  "texture": [
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/f6924861-ce9c-490d-8a4b-7812a20f2de5/resource/a9fab679-8081-4144-9f58-45848836c8f5/download/full.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/io_galileo_ssi_voyager_color_merged_global_mosaic_1km",
+    "licenza": "Pubblico dominio (USGS Astrogeology; Access Constraints: public domain); Use Constraints: None",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1)",
+    "tipo": "colore migliorato",
+    "copertura": "completa (poli riempiti per interpolazione: il colore Galileo non copre ~5 gradi attorno ai poli; risoluzione 1-10 km/px, peggiore sull'emisfero rivolto a Giove, intorno a 50W)",
+    "pixel": "ignota (jpg 'full' di anteprima USGS, solo 202 KB: probabilmente ~2000 px di larghezza, NON verificata). Il GeoTIFF originale e' 11445x5723",
+    "byte": 201833,
+    "note": "Miglior candidata per Io. Mosaico monocromatico Voyager1+Galileo (1 km) con i rapporti di colore Galileo (viola/verde/NIR 756 nm) sovrapposti: e' la 'base map' USGS ufficiale. USGS avverte che i colori veri sono simili ma molto piu' tenui. Per una risoluzione maggiore serve il GeoTIFF: https://planetarymaps.usgs.gov/mosaic/Io_GalileoSSI-Voyager_Global_Mosaic_ClrMerge_1km.tif (196637696 B = 189 MB, 8 bit RGB) da ridurre in locale. Nessun terreno inventato (solo interpolazione ai poli).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Io_for_GeoHacks.jpg",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Io_for_GeoHacks.jpg",
+    "licenza": "Pubblico dominio (Wikimedia Commons: Public domain; opera USGS)",
+    "credito": "USGS Astrogeology Science Center / NASA/JPL (Galileo/Voyager)",
+    "tipo": "colore migliorato",
+    "copertura": "completa (come il mosaico USGS color-merge da cui deriva; longitudine 0-360)",
+    "pixel": "1225x613",
+    "byte": 573260,
+    "note": "Copia ridotta su Commons del file USGS 'Io_SSI_VGR_color_merge_SIMP0_med' (stesso prodotto della candidata 1). Unica jpg di dimensioni note e leggera; risoluzione bassa (1225 px). Rielaborazione solo di ridimensionamento, descrizione Commons 'Galileo/Voyager merged photomosaic'.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/3072a685-011c-40c3-9a7b-fdd121e80308/resource/825edaa2-f3fc-4d1d-85b0-33153260ea4d/download/full.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/io_voyager_galileo_ssi_false_color_global_mosaic_1km",
+    "licenza": "Pubblico dominio (USGS Astrogeology; Access Constraints: public domain); Use Constraints: None",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center",
+    "tipo": "falsi colori",
+    "copertura": "completa (stessi limiti ai poli del color-merge)",
+    "pixel": "ignota (jpg 'full' di anteprima USGS, 400 KB; GeoTIFF originale 11445x5723)",
+    "byte": 400320,
+    "note": "Versione a falsi colori (violetto-verde-infrarosso vicino) con contrasto esaltato per distinguere rosso/giallo: colori molto saturi e NON naturali. Meno adatta della candidata 1 per un modello 'realistico'. GeoTIFF: https://planetarymaps.usgs.gov/mosaic/Io_Galileo_SSI_Global_Mosaic_FalseColor_1km.tif (196637696 B).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/jupiter---io-(b)/Jupiter%20-%20Io%20%28B%29.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/jupiter-io-b/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "colore migliorato",
+    "copertura": "completa nominalmente (buchi non dichiarati dalla scheda; non verificabili senza scaricare)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 648170,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'mostly from the Caltech/JPL/USGS map with color taken from a recent Galileo global mosaic'. Mappa derivata/rielaborata da JPL, non il prodotto USGS finale; qualita' bassa. Eventuali buchi non dichiarati.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/jupiter---io-(a)/Jupiter%20-%20Io%20%28A%29.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/jupiter-io-a/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "colore migliorato",
+    "copertura": "parziale (buchi dichiarati vicino ai poli)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 702001,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'From the USGS, mosaicked from Voyager imagery. Data gaps near the poles.' Colori da Voyager 1979 (molto saturi/arancio, oggi superati dai dati Galileo). Buchi ai poli dichiarati.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "europa",
+  "texture": [
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/4080036f-afc5-422e-abe9-1c0c8e4f98ea/resource/3647e7b3-425e-4dcf-951b-cc4a22fb0129/download/europa_voyager_galileossi_global_mosaic_500m_1024.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/europa_voyager_galileo_ssi_global_mosaic_500m",
+    "licenza": "Dominio pubblico USGS (il campo 'Access Constraints' della scheda dice solo 'None'; Use Constraints: None)",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center (Galileo SSI, Voyager 1 e 2)",
+    "tipo": "grigi",
+    "copertura": "quasi completa: nessun dato a sud di -83 gradi (buco al polo sud); il polo nord e molte alte latitudini hanno solo dati a ~20 km/px (sfocati)",
+    "pixel": "1024x512 (dedotto dal nome file '_1024' e dalla copia Commons identica per formato; non verificato direttamente)",
+    "byte": 71532,
+    "note": "Anteprima USGS ufficiale 1024 px, 71 KB. Mosaico proiezione cilindrica semplice a 500 m/px (Voyager 1/2 + Galileo, 2013). Per piu' risoluzione servirebbe il GeoTIFF 19631x9816 (https://planetarymaps.usgs.gov/mosaic/Europa_Voyager_GalileoSSI_global_mosaic_500m.tif, 192777263 B = 184 MB, 8 bit grigi) da ridurre in locale. Esiste anche la versione 512 px (17261 B). Nessuna mappa globale ufficiale a colori in pubblico dominio.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Europa_Voyager_GalileoSSI_global_mosaic.jpg",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Europa_Voyager_GalileoSSI_global_mosaic.jpg",
+    "licenza": "Pubblico dominio (Wikimedia Commons: Public domain; opera USGS)",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center",
+    "tipo": "grigi",
+    "copertura": "come la candidata 1 (buco a sud di -83 gradi)",
+    "pixel": "1024x512",
+    "byte": 136367,
+    "note": "Copia Commons dello stesso mosaico USGS, dimensioni verificate dall'API Commons.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/jupiter---europa/Jupiter%20-%20Europa.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/jupiter-europa/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "colore migliorato (non documentato)",
+    "copertura": "completa nominalmente (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 610862,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'From the USGS, mosaicked with Voyager imagery'. Origine incerta (scheda vaga), probabilmente versione ridotta/colorata del mosaico USGS; il colore non e' documentato e potrebbe essere stato aggiunto. Buchi non dichiarati.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "SCARTATA: mappa a colori di Bjorn Jonsson (Planetary Society, 20000x10000, ~30 MB): copyright, hosting di copie vietato dall'autore e dichiara terreno fittizio al polo sud 'per motivi estetici' + righe riempite per clonazione. PIA03526 (Europa Hemispherical Globes) non e' cilindrica (layout a petali/emisferi)."
+ },
+ {
+  "id": "ganimede",
+  "texture": [
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/e1422336-3291-4b65-b903-c942d53de073/resource/eb32abd7-fee2-47d1-9f96-9d7d8824cc3a/download/ganymede_voyager_galileossi_global_clrmosaic_1024.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/ganymede_voyager_galileo_ssi_color_global_mosaic_1_4km",
+    "licenza": "Pubblico dominio (USGS Astrogeology; Access Constraints: public domain) (Public domain); Use Constraints: None",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1/2)",
+    "tipo": "falsi colori",
+    "copertura": "completa: i poli senza dati colore sono completati con il mosaico monocromatico (quindi grigi); colore a risoluzione molto bassa (~6 km/px) sovrapposto alla base mono a 1 km",
+    "pixel": "1024x512 (dedotto dal nome '_1024'; non verificato)",
+    "byte": 78790,
+    "note": "Mosaico colore USGS 1,4 km. Colori da filtri 991 nm / 559 nm / 413 nm (infrarosso-verde-violetto) quindi colori NON naturali ma 'migliorati'; Voyager 2 usato per riempire le longitudini 210-250. Versione 512 px: 21797 B. GeoTIFF originale 11520x5760: https://planetarymaps.usgs.gov/mosaic/Ganymede_Voyager_GalileoSSI_Global_ClrMosaic_1435m.tif (199204541 B = 190 MB).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/57cad6e2-ed52-4b99-9d44-afbb9def6450/resource/1d52d4a5-bc78-4ac1-a7d0-8d5254ebf1a8/download/ganymede_voyager_galileossi_global_mosaic_1024.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/ganymede_voyager_galileo_ssi_global_mosaic_1km",
+    "licenza": "Pubblico dominio (USGS Astrogeology; Access Constraints: public domain); Use Constraints: None",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1/2)",
+    "tipo": "grigi",
+    "copertura": "completa (gap fill da input a ~20 km/px; la scheda non elenca buchi)",
+    "pixel": "1024x512 (dedotto dal nome '_1024'; non verificato)",
+    "byte": 69978,
+    "note": "Base monocromatica 1 km/px, quella usata per la mappa geologica USGS. GeoTIFF 16539x8270: https://planetarymaps.usgs.gov/mosaic/Ganymede_Voyager_GalileoSSI_global_mosaic_1km.tif (136844537 B = 131 MB).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/jupiter---ganymede/Jupiter%20-%20Ganymede.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/jupiter-ganymede/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "colore migliorato (non documentato)",
+    "copertura": "completa nominalmente (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 710923,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'From the USGS, mosaicked with Voyager imagery'. Origine/colore non dettagliati; buchi non dichiarati.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "SCARTATA: PIA03781 'Global Map of Ganymede' (8817x4382, 4,5 MB) e' il layout a petali/emisferi del globo, non una cilindrica."
+ },
+ {
+  "id": "callisto",
+  "texture": [
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/a80abd68-7ed9-440e-829a-76376779164f/resource/ac628525-cb1c-4742-928b-5a0a60f372cd/download/callisto_voyager_galileossi_global_mosaic_1024.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/callisto_galileo_voyager_global_mosaic_1km",
+    "licenza": "Pubblico dominio (USGS Astrogeology; Access Constraints: public domain); Use Constraints: None",
+    "credito": "NASA/JPL/USGS Astrogeology Science Center (Galileo SSI + Voyager 1/2)",
+    "tipo": "grigi",
+    "copertura": "completa (risoluzione da 400 m a 60 km/px; le zone a 60 km/px sono 'gap fill' molto sfocato, non terreno inventato)",
+    "pixel": "1024x512 (dedotto dal nome '_1024'; non verificato)",
+    "byte": 70116,
+    "note": "Anteprima USGS. GeoTIFF 15138x7569: https://planetarymaps.usgs.gov/mosaic/Callisto_Voyager_GalileoSSI_global_mosaic_1km.tif (114640717 B = 109 MB, 8 bit grigi) da ridurre in locale. Versione 512 px: 18803 B. Non esiste una mappa globale a colori ufficiale (PIA03456 'Global Callisto in Color' e' una vista di globo, non una mappa; il colore e' comunque quasi nullo).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/jupiter---callisto/Jupiter%20-%20Callisto.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/jupiter-callisto/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile, colore non documentato)",
+    "copertura": "completa nominalmente (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 783405,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'From the USGS, mosaicked with Voyager imagery'. Origine incerta; buchi non dichiarati.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "amaltea",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/j5amalthea.tab",
+    "formato": "tab (griglia lat/lon/raggio 5 gradi)",
+    "facce": null,
+    "byte": 70226,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "Philip Stooke, University of Western Ontario, NASA PDS (Stooke Small Bodies Shape Models, doi 10.26033/yt84-5y91)",
+    "note": "Griglia 5 gradi (2.701 righe, label j5amalthea.lbl): forma da dati Voyager 1/2, senza Galileo. Versione corretta del bug 'bulge' di Stooke 1994. Mesh ~5k triangoli ricavabile in locale. Pagina: https://sbn.psi.edu/pds/resource/stkshape.html. Nessun OBJ/glTF pubblico trovato.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   126.0,
+   73.0,
+   63.0
+  ],
+  "note_forma": "Semiassi = meta' di 252x146x126 km (Denk et al. 2026, via infobox Wikipedia, fonte secondaria; il valore storico di Thomas 1998 era ~250x146x128). Il modello Stooke e' molto grezzo."
+ },
+ {
+  "id": "titano",
+  "texture": [
+   {
+    "url": "https://data.caltech.edu/api/records/8q9an-yt176/files/Titan_VIMS-ISS.jpg/content",
+    "pagina_fonte": "https://data.caltech.edu/records/8q9an-yt176 (CaltechDATA, DOI 10.22002/D1.1173)",
+    "licenza": "BSD-3-Clause (campo 'rights' del record CaltechDATA; richiede di mantenere l'avviso di copyright) + clearance JPL CL#19-0905",
+    "credito": "B. Seignovert, S. Le Mouelic, R. H. Brown, E. Karkoschka, V. Pasek, C. Sotin, E. P. Turtle. Copyright: Caltech-JPL/Univ. of Arizona/LPG-Univ. of Nantes-CNRS (VIMS + ISS, Cassini)",
+    "tipo": "falsi colori",
+    "copertura": "completa (mappa globale; il colore VIMS e' interpolato dove mancano dati, dettaglio dei punti non verificato)",
+    "pixel": "11520x5760 (dal file .hdr del record)",
+    "byte": 7856224,
+    "note": "Miglior mappa a colori. Composito VIMS (rapporti 1,59/1,27 um, 2,03/1,27 um, 1,27/1,08 um + albedo ISS 938 nm in luminosita'): sono falsi colori infrarossi con le dune equatoriali in marrone e i laghi in blu scuro. NON e' vista a occhio. Peso dedotto dai metadati API (il HEAD diretto sul file risponde 403 per redirect firmato). Il GeoTIFF e' 144203625 B. Leggere dal sito Caltech: se la licenza BSD risultasse inadatta, usare la candidata 2.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia22/pia22770/PIA22770.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA22770",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Univ. Arizona (Cassini ISS)",
+    "tipo": "grigi",
+    "copertura": "completa, senza giunzioni (9873 immagini ISS a 938 nm, 2,8 km/px; luminosita' di superficie nel vicino infrarosso, nessun rilievo ombreggiato)",
+    "pixel": "5760x2880",
+    "byte": 891048,
+    "note": "Ottima e leggera: cilindrica 2:1 pulita. E' la base dell'albedo del prodotto 1. Aspetto arancione del Titano visto da lontano non presente: la mappa e' in grigi/NIR. TIFF: 10946022 B.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia19/pia19658/PIA19658.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA19658",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute (Cassini ISS)",
+    "tipo": "grigi",
+    "copertura": "parziale: buco di ~3-5% della superficie (fascia a medie latitudini nord sull'emisfero rivolto a Saturno) riempito di grigio uniforme; 4 km/px",
+    "pixel": "4374x2430 (rapporto 1,8: probabilmente con cornice/margini, non 2:1 pulita; da controllare)",
+    "byte": 1004207,
+    "note": "Versione 2015, superata da PIA22770 (che e' senza buchi).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---titan/Saturn%20-%20Titan.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-titan/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "artistica (fittizia)",
+    "copertura": "non applicabile",
+    "pixel": "stimata: 720x360 (dal TIF di 802348 B = 720*360*3 + ~25 KB; NON verificata)",
+    "byte": 49233,
+    "note": "ARTISTICA/FITTIZIA: scheda NASA: 'Fictional. Titan concept with color from Voyager images.' NON usare come superficie reale. ",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "USGS 'Titan Cassini ISS Near Global Mosaic 450m': 35953x10987, 1,5 GB, copre solo da -65 a +45 gradi di latitudine (parziale, scartato per peso/copertura). PIA02147 (VIMS 1712x997, falsi colori 2005-06) e' a bassa risoluzione e vecchio."
+ },
+ {
+  "id": "encelado",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18435/PIA18435.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18435",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)",
+    "tipo": "colore migliorato",
+    "copertura": "globale a 100 m/px; la scheda non dichiara buchi (non verificato in dettaglio i poli)",
+    "pixel": "15960x7980 (cilindrica 2:1 pulita)",
+    "byte": 18915876,
+    "note": "Colori UV-verde-infrarosso (IR3) 'migliorati, piu' ampi della vista umana': le fratture 'tiger stripes' risultano azzurre, i depositi giallo/magenta. NON e' colore naturale. File grande (18,9 MB, 15960 px): va ridotto in locale. TIFF: 382146464 B (non usarlo).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://astrogeology.usgs.gov/ckan/dataset/64282c9f-ed8e-49cd-b7bb-e520d8a46908/resource/8ca2ddc0-0e54-4fda-9a27-7ccedee12fc9/download/enceladus_cassini_mosaic_global_100m_schenk2024_1024.jpg",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/enceladus-cassini-global-mosaic-100m-schenk",
+    "licenza": "USGS Astropedia (Access Constraints: None; Use Constraints: 'Please cite authors'): dati NASA/USGS, dominio pubblico ma citare gli autori",
+    "credito": "P. Schenk e W. B. McKinnon, NASA/JPL-Caltech/SSI/USGS Astrogeology (Cassini ISS, 2024)",
+    "tipo": "grigi",
+    "copertura": "globale, oltre 500 immagini ISS filtro Clear a 100 m/px; buchi non dichiarati",
+    "pixel": "1024x512 (dedotto dal nome '_1024'; non verificato). Originale 16098x8049",
+    "byte": 131277,
+    "note": "Anteprima USGS 1024 px del mosaico piu' recente. GeoTIFF a 32 bit float da 495 MB (518340175 B): https://asc-astropedia.s3.us-west-2.amazonaws.com/Enceladus/Cassini/Enceladus_Cassini_mosaic_global_100m_schenk2024.tif - pesante, sconsigliato. Alternativa piu' leggera: mosaico USGS HPF 100 m 15840x7920, TIF 125516817 B (https://planetarymaps.usgs.gov/mosaic/Enceladus/Cassini/Enceladus_Cassini_ISS_Global_Mosaic_100m_HPF.tif), anteprima 1024: 111376 B.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia24/pia24027/PIA24027.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA24027",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/University of Arizona/LPG/CNRS/University of Nantes/Space Science Institute",
+    "tipo": "falsi colori",
+    "copertura": "globale, equirettangolare centrata a 0 gradi, 200 m/px; mappa VIMS infrarossa (bassa risoluzione, ratio 3,1/1,65 um in rosso) sovrapposta alla mappa ISS Clear",
+    "pixel": "8192x4096",
+    "byte": 2551557,
+    "note": "Falsi colori infrarossi: il tinto rosso indica ghiaccio cristallino fresco. Utile come immagine speciale, non come aspetto realistico. TIFF: 89028972 B.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---enceladus/Saturn%20-%20Enceladus.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-enceladus/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile)",
+    "copertura": "parziale (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 472211,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'Mosaic from the Voyager imagery'. Solo dati Voyager (1981): risoluzione molto bassa, copertura incompleta (Voyager vide solo parte della superficie; non dichiarato quanto) - probabili zone interpolate/riempite.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Mappe 'Map of Enceladus' (PIA12564 7200x3600, PIA14937 7480x3930) hanno cornice/assi: rapporto non 2:1. Preferire le candidate sopra."
+ },
+ {
+  "id": "mimas",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18437/PIA18437.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18437",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)",
+    "tipo": "colore migliorato",
+    "copertura": "globale a 200 m/px; scheda non dichiara buchi (non verificato)",
+    "pixel": "6356x3178",
+    "byte": 1848860,
+    "note": "Colori UV/verde/IR migliorati (la banda equatoriale 'Pac-Man' appare bluastra). Cilindrica 2:1 pulita. TIFF: 60623752 B.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia14/pia14926/PIA14926.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA14926",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute (Cassini ISS + Voyager per i buchi)",
+    "tipo": "grigi",
+    "copertura": "globale; i buchi della copertura Cassini sono riempiti con immagini Voyager (a risoluzione inferiore)",
+    "pixel": "5760x2880 (216 m/px, 16 px/grado)",
+    "byte": 1416566,
+    "note": "Mappa DLR/Cassini giugno 2012. Cilindrica 2:1 pulita.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---mimas/Saturn%20-%20Mimas.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-mimas/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile)",
+    "copertura": "parziale (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 513028,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'Mosaic from the Voyager imagery'. Voyager: bassa risoluzione, copertura incompleta non dichiarata.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "teti",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18439/PIA18439.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18439",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)",
+    "tipo": "colore migliorato",
+    "copertura": "globale a 250 m/px; buchi non dichiarati",
+    "pixel": "13467x6734",
+    "byte": 10809057,
+    "note": "Colori UV/verde/IR migliorati; banda equatoriale 'Pac-Man' e differenza tra emisferi visibili. File grande (10,8 MB, 13467 px): da ridurre in locale. TIFF: 272114430 B.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia14/pia14931/PIA14931.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA14931",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute (mosaico DLR, Cassini ISS)",
+    "tipo": "grigi",
+    "copertura": "globale a 293 m/px, solo Cassini; buchi non dichiarati",
+    "pixel": "11520x5760 (cilindrica 2:1 pulita)",
+    "byte": 7104011,
+    "note": "Stesso prodotto del mosaico USGS 'Tethys Cassini Global Mosaic 293m' (GeoTIFF 66401923 B = 64 MB: https://planetarymaps.usgs.gov/mosaic/Tethys_Cassini_mosaic_global_293m.tif; Public domain, 'Please cite authors'). Credito USGS: Roatsch, Kersten, Hoffmeister, Waehlisch (DLR).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---tethys/Saturn%20-%20Tethys.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-tethys/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile)",
+    "copertura": "parziale (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 597139,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'Mosaic from the Voyager imagery'. Solo Voyager, bassa risoluzione e copertura incompleta non dichiarata.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "PIA08416 (12068x6408) ha cornice/assi: scartata."
+ },
+ {
+  "id": "dione",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18434/PIA18434.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18434",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)",
+    "tipo": "colore migliorato",
+    "copertura": "globale a 250 m/px; buchi non dichiarati",
+    "pixel": "14134x7067",
+    "byte": 10255303,
+    "note": "Colori UV/verde/IR migliorati; evidente la differenza fra emisfero chiaro (anteriore) e scuro (posteriore). File grande: ridurre in locale. TIFF: 299711694 B.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia12/pia12814/PIA12814.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA12814",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL/Space Science Institute (Cassini ISS, buchi riempiti con Voyager)",
+    "tipo": "grigi",
+    "copertura": "globale a 153 m/px; i buchi Cassini sono riempiti con immagini Voyager",
+    "pixel": "23040x11520",
+    "byte": 19087273,
+    "note": "Stesso mosaico del USGS 'Dione Cassini-Voyager Global Mosaic 154m' (GeoTIFF 254 MB: https://planetarymaps.usgs.gov/mosaic/Dione_Cassini_Voyager_mosaic_global_154m.tif, 265490551 B). JPG molto grande per un uso web: da ridurre.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---dione/Saturn%20-%20Dione.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-dione/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile)",
+    "copertura": "parziale (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 574654,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'Mosaic from the Voyager imagery'. Voyager: bassa risoluzione, copertura incompleta non dichiarata.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false
+ },
+ {
+  "id": "rea",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18438/PIA18438.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18438",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)",
+    "tipo": "colore migliorato",
+    "copertura": "globale a 400 m/px; buchi non dichiarati",
+    "pixel": "12015x6008",
+    "byte": 10389170,
+    "note": "Colori UV/verde/IR migliorati. File grande: ridurre in locale. TIFF: 216606648 B.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia14/pia14928/PIA14928.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA14928",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute (Cassini ISS + 6 immagini Voyager)",
+    "tipo": "grigi",
+    "copertura": "globale a 417 m/px; 6 immagini Voyager riempiono i buchi del polo nord",
+    "pixel": "11520x5760 (cilindrica 2:1 pulita)",
+    "byte": 5583646,
+    "note": "Marzo 2012, include il sorvolo del 10 marzo 2012.",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---rhea/Saturn%20-%20Rhea.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-rhea/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile)",
+    "copertura": "parziale (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 458149,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'Mosaic from the Voyager imagery'. Voyager: bassa risoluzione, copertura incompleta non dichiarata.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "USGS 'Rhea Image Mosaic' e' solo Voyager (jpg 273 KB): superata."
+ },
+ {
+  "id": "giapeto",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18436/PIA18436.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18436",
+    "licenza": "Pubblico dominio (NASA/JPL, nessun copyright; vedi NASA Images and Media Usage Guidelines)",
+    "credito": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute (mosaico P. Schenk, Cassini ISS)",
+    "tipo": "colore migliorato",
+    "copertura": "globale a 400 m/px; buchi non dichiarati",
+    "pixel": "11741x5871",
+    "byte": 4989080,
+    "note": "Colori UV/verde/IR migliorati; la Cassini Regio scura contro il terreno chiaro. Cilindrica 2:1 pulita. TIFF: 206841426 B.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://planetarymaps.usgs.gov/mosaic/Iapetus_Cassini_Voyager_mosaic_global_783m.tif",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/iapetus_cassini_voyager_global_mosaic_803m",
+    "licenza": "Pubblico dominio (USGS Astrogeology; Access Constraints: public domain); Use Constraints: Please cite authors",
+    "credito": "NASA/JPL/Space Science Institute, mosaico Roatsch et al. (DLR), USGS Astrogeology",
+    "tipo": "grigi",
+    "copertura": "globale a 803 m/px: Cassini con le immagini Voyager nei poli; alcune zone riprese con la luce riflessa da Saturno",
+    "pixel": "5760x2880",
+    "byte": 16612487,
+    "note": "E' un TIFF (da convertire in locale); leggero (16,6 MB). Jpg di anteprima USGS: full.jpg 113097 B (https://astrogeology.usgs.gov/ckan/dataset/6ac8ecfb-36e7-4113-8d16-c92ba857c3d7/resource/141c2d1e-aa01-4e2f-969a-e46a581db4b9/download/full.jpg, dimensioni ignote).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/saturn---iapetus/Saturn%20-%20Iapetus.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/saturn-iapetus/",
+    "licenza": "Pubblico dominio ('free and without copyright', README NASA-3D-Resources; NASA Images and Media Usage Guidelines)",
+    "credito": "NASA 3D Resources / NASA JPL Solar System Simulator; dati USGS, JPL, Caltech",
+    "tipo": "grigi (probabile)",
+    "copertura": "parziale (non verificata)",
+    "pixel": "stimata: 1440x720 (dedotta dal peso del TIF non compresso ~3,14 MB = 1440*720*3 + ~28 KB di intestazione; NON verificata)",
+    "byte": 384551,
+    "note": "Texture 'JPL Solar System Simulator' a bassa risoluzione; mirror GitHub nasa/NASA-3D-Resources (stesso file, peso identico). Scheda NASA: 'Mosaic from the Voyager imagery'. Voyager: bassa risoluzione, copertura incompleta non dichiarata.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "PIA07778 (7748x4250) ha cornice/assi: scartata."
+ },
+ {
+  "id": "iperione",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/h/Hyperion_1_1000.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 1289188,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Iperione, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. "
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/hyperion/hyperion.gltf (+ hyperion.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 361703,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Iperione usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 2823 B + .bin 358880 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj",
+    "formato": "obj",
+    "facce": 30000,
+    "byte": 1228388,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. Thomas, J. Joseph, T. Ansty, Saturn Small Moon Shape Models V1.0, NASA PDS (doi 10.26033/ewy3-jy61)",
+    "note": "OBJ derivato dal sito SBN, 30k piastre (dal nome del file e coerente con la taglia: ~15k vertici + 30k facce), 1,2 MB. Anche USDZ 311.919 B e TAB originale 2.195.250 B. Il 3D vero con sole 30k facce e' ideale.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   180.9,
+   129.0,
+   102.0
+  ],
+  "note_forma": "Semiassi = meta' di 361.8x258.0x204.0 km (Zubarev & Nadezhdina 2025, via Wikipedia, fonte secondaria). Hyperion e' la luna con forma a spugna: la forma vera conta."
+ },
+ {
+  "id": "miranda",
+  "texture": [
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Uranus%20-%20Miranda/Uranus%20-%20Miranda.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/uranus-miranda",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "USGS/Tammy Becker & JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources",
+    "tipo": "grigi",
+    "copertura": "parziale: solo l'emisfero sud (Voyager 2, gennaio 1986, polo sud rivolto al Sole); l'emisfero nord non fu mai illuminato/ripreso e resta vuoto/nero",
+    "pixel": "1440x720 (verificato: stesso peso in byte del file Commons Miranda map JPL USGS.jpg, 1440x720)",
+    "byte": 321268,
+    "note": "Mappa cilindrica 2:1 dal database JPL 'generated planetary maps', mosaico USGS (Tammy Becker) di immagini Voyager 2, scala di grigi. Pagina NASA: 'Mosaicked with Voyager imagery'. Il TIFF nello stesso repo pesa circa 3.1 MB (RGB non compresso). Copia identica su Commons: https://commons.wikimedia.org/wiki/File:Miranda_map_JPL_USGS.jpg. Il JPL avverte che le texture 'should not be used for scientific analysis' e che hanno 'blank spots'. Miranda: esiste anche 'Miranda map.jpg' (5040x2520, 497179 byte, Commons, 'NASA/Robin Gilbert', http://www.robingilbert.com/blog/2017-08-20-atlas-of-miranda/): compilazione di un privato da immagini Voyager, licenza PD dichiarata su Commons ma NON verificata: non usare senza controllo. Mosaici Voyager di Miranda ad alta risoluzione: PIA00043 (parziale, 560-740 m/px, non cilindrico), PIA01490 (polare, sinusoidale USGS).",
+    "parte": "superficie",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica visuale 0.32 (NASA GSFC Uranian Satellite Fact Sheet). Voyager 2 e' l'unica sonda: nessuna immagine dell'emisfero nord. Nessuna mappa a colori vera esiste (Voyager 2 la riprese solo a bassa risoluzione e colori quasi neutri)."
+ },
+ {
+  "id": "ariel",
+  "texture": [
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Uranus%20-%20Ariel/Uranus%20-%20Ariel.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/uranus-ariel",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "USGS/Tammy Becker & JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources",
+    "tipo": "grigi",
+    "copertura": "parziale: solo l'emisfero sud (Voyager 2, gennaio 1986, polo sud rivolto al Sole); l'emisfero nord non fu mai illuminato/ripreso e resta vuoto/nero",
+    "pixel": "1440x720 (verificato: stesso peso in byte del file Commons Ariel map JPL USGS.jpg, 1440x720)",
+    "byte": 254331,
+    "note": "Mappa cilindrica 2:1 dal database JPL 'generated planetary maps', mosaico USGS (Tammy Becker) di immagini Voyager 2, scala di grigi. Pagina NASA: 'Mosaicked with Voyager imagery'. Il TIFF nello stesso repo pesa circa 3.1 MB (RGB non compresso). Copia identica su Commons: https://commons.wikimedia.org/wiki/File:Ariel_map_JPL_USGS.jpg. Il JPL avverte che le texture 'should not be used for scientific analysis' e che hanno 'blank spots'. ",
+    "parte": "superficie",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica visuale 0.39 (NASA GSFC Uranian Satellite Fact Sheet). Voyager 2 e' l'unica sonda: nessuna immagine dell'emisfero nord. Nessuna mappa a colori vera esiste (Voyager 2 la riprese solo a bassa risoluzione e colori quasi neutri)."
+ },
+ {
+  "id": "umbriel",
+  "texture": [
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Uranus%20-%20Umbriel/Uranus%20-%20Umbriel.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/uranus-umbriel",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "USGS/Tammy Becker & JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources",
+    "tipo": "grigi",
+    "copertura": "parziale: solo l'emisfero sud (Voyager 2, gennaio 1986, polo sud rivolto al Sole); l'emisfero nord non fu mai illuminato/ripreso e resta vuoto/nero",
+    "pixel": "1440x720 (verificato: stesso peso in byte del file Commons Umbriel map JPL USGS.jpg, 1440x720)",
+    "byte": 216661,
+    "note": "Mappa cilindrica 2:1 dal database JPL 'generated planetary maps', mosaico USGS (Tammy Becker) di immagini Voyager 2, scala di grigi. Pagina NASA: 'Mosaicked with Voyager imagery'. Il TIFF nello stesso repo pesa circa 3.1 MB (RGB non compresso). Copia identica su Commons: https://commons.wikimedia.org/wiki/File:Umbriel_map_JPL_USGS.jpg. Il JPL avverte che le texture 'should not be used for scientific analysis' e che hanno 'blank spots'. ",
+    "parte": "superficie",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica visuale 0.21 (NASA GSFC Uranian Satellite Fact Sheet). Voyager 2 e' l'unica sonda: nessuna immagine dell'emisfero nord. Nessuna mappa a colori vera esiste (Voyager 2 la riprese solo a bassa risoluzione e colori quasi neutri)."
+ },
+ {
+  "id": "titania",
+  "texture": [
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Uranus%20-%20Titania/Uranus%20-%20Titania.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/uranus-titania",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "USGS/Tammy Becker & JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources",
+    "tipo": "grigi",
+    "copertura": "parziale: solo l'emisfero sud (Voyager 2, gennaio 1986, polo sud rivolto al Sole); l'emisfero nord non fu mai illuminato/ripreso e resta vuoto/nero",
+    "pixel": "1440x720 (verificato: stesso peso in byte del file Commons Titania map JPL USGS.jpg, 1440x720)",
+    "byte": 284122,
+    "note": "Mappa cilindrica 2:1 dal database JPL 'generated planetary maps', mosaico USGS (Tammy Becker) di immagini Voyager 2, scala di grigi. Pagina NASA: 'Mosaicked with Voyager imagery'. Il TIFF nello stesso repo pesa circa 3.1 MB (RGB non compresso). Copia identica su Commons: https://commons.wikimedia.org/wiki/File:Titania_map_JPL_USGS.jpg. Il JPL avverte che le texture 'should not be used for scientific analysis' e che hanno 'blank spots'. ",
+    "parte": "superficie",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica visuale 0.27 (NASA GSFC Uranian Satellite Fact Sheet). Voyager 2 e' l'unica sonda: nessuna immagine dell'emisfero nord. Nessuna mappa a colori vera esiste (Voyager 2 la riprese solo a bassa risoluzione e colori quasi neutri)."
+ },
+ {
+  "id": "oberon",
+  "texture": [
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Uranus%20-%20Oberon/Uranus%20-%20Oberon.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/uranus-oberon",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "USGS/Tammy Becker & JPL/Caltech (mosaico USGS con immagini Voyager 2); NASA 3D Resources",
+    "tipo": "grigi",
+    "copertura": "parziale: solo l'emisfero sud (Voyager 2, gennaio 1986, polo sud rivolto al Sole); l'emisfero nord non fu mai illuminato/ripreso e resta vuoto/nero",
+    "pixel": "1440x720 (verificato: stesso peso in byte del file Commons Oberon map JPL USGS.jpg, 1440x720)",
+    "byte": 51214,
+    "note": "Mappa cilindrica 2:1 dal database JPL 'generated planetary maps', mosaico USGS (Tammy Becker) di immagini Voyager 2, scala di grigi. Pagina NASA: 'Mosaicked with Voyager imagery'. Il TIFF nello stesso repo pesa circa 3.1 MB (RGB non compresso). Copia identica su Commons: https://commons.wikimedia.org/wiki/File:Oberon_map_JPL_USGS.jpg. Il JPL avverte che le texture 'should not be used for scientific analysis' e che hanno 'blank spots'. Il file pesa solo 51 KB perche' contiene poca superficie mappata (molto nero): l'Oberon ripreso da Voyager 2 e' soprattutto l'emisfero sud, a risoluzione bassa. Il TIFF di Oberon pesa 327 KB (diverso dagli altri: probabilmente compresso).",
+    "parte": "superficie",
+    "consigliata": true
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica visuale 0.23 (NASA GSFC Uranian Satellite Fact Sheet). Voyager 2 e' l'unica sonda: nessuna immagine dell'emisfero nord. Nessuna mappa a colori vera esiste (Voyager 2 la riprese solo a bassa risoluzione e colori quasi neutri)."
+ },
+ {
+  "id": "tritone",
+  "texture": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18668/PIA18668.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA18668",
+    "licenza": "Pubblico dominio (opera NASA; Photojournal/pagina fonte: nessuna restrizione, credito richiesto) (Commons: Public domain)",
+    "credito": "NASA/JPL-Caltech/Lunar & Planetary Institute (Paul Schenk)",
+    "tipo": "colore migliorato",
+    "copertura": "parziale: Voyager 2 (1989) ha ripreso a buona risoluzione solo circa il 40% della superficie (emisfero sud e orientale); il resto della mappa e' vuoto/nero (percentuale non verificata sul file)",
+    "pixel": "14138x7069 (da pds-rings.seti.org; 2:1; coerente con 600 m/px)",
+    "byte": 4281065,
+    "note": "Mappa globale a colori di Paul Schenk (LPI), 600 m/px, proiezione cilindrica semplice. Colori: filtri arancione/verde/blu; la didascalia dice 'colors have been enhanced ... close approximation to natural colors'. Il TIFF pesa 299881342 byte. 100 Mpx: ridimensionare. Versione PIA00317 (4500x3500, 2059595 byte, USGS/Tammy Becker): e' un'ortomosaico ORTOGRAFICO, non cilindrico: non utilizzabile come texture direttamente.",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Neptune%20-%20Triton/Neptune%20-%20Triton.jpg",
+    "pagina_fonte": "https://science.nasa.gov/3d-resources/neptune-triton",
+    "licenza": "NASA 3D Resources: 'free and without copyright' (README del repo nasa/NASA-3D-Resources), uso secondo le NASA Brand & Usage Guidelines; i file sono dichiarati dalla pagina come mosaici USGS/JPL; Commons li marca Public domain",
+    "credito": "USGS/Tammy Becker & JPL/Caltech; NASA 3D Resources",
+    "tipo": "non verificato (probabilmente colore sintetico JPL)",
+    "copertura": "parziale: 'Stitched together from limited Voyager imagery by the USGS' (dichiarato dalla pagina)",
+    "pixel": "ignota (probabile 1440x720, non verificato: nessuna copia su Commons per confronto)",
+    "byte": 242012,
+    "note": "Texture leggera ma di qualita' bassa e di natura non chiara (stesso database JPL delle lune di Urano). Da usare solo come ripiego. TIFF 3135664 byte.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica 0.72 (NASA GSFC Neptunian Satellite Fact Sheet). Calotta polare sud rosata (ghiaccio di metano), fascia equatoriale verde-azzurra, terreno 'cantaloupe'."
+ },
+ {
+  "id": "proteo",
+  "texture": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Proteus_map_%28Stooke%29.jpg",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Proteus_map_(Stooke).jpg",
+    "licenza": "Commons: Public domain (P. J. Stooke)",
+    "credito": "Stooke, P.J., 1994, 'The Surfaces of Larissa and Proteus', Earth, Moon and Planets 65, 31-54",
+    "tipo": "grigi",
+    "copertura": "parziale: rilievo ombreggiato DISEGNATO (interpretazione cartografica da immagini Voyager 2 a ~8 km/px), non fotografia; non e' 2:1",
+    "pixel": "400x640",
+    "byte": 47753,
+    "note": "Interpretazione 'as far as is feasible' secondo l'autore: ARTISTICA/interpretativa, bassa risoluzione, non cilindrica 2:1. Mappa fotografica globale di Proteo: non trovata.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/proteus/proteus.gltf (+ proteus.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 118389,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Proteo usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3125 B + .bin 115264 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/n8proteus.tab",
+    "formato": "tab (griglia lat/lon/raggio 5 gradi)",
+    "facce": null,
+    "byte": 70226,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "Philip Stooke, NASA PDS (Stooke Small Bodies Shape Models); Stooke (1994) Earth, Moon and Planets 65, 31-54",
+    "note": "Griglia 5 gradi (2.701 righe), da dati Voyager 2.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Voyager 2 (1989) ha ripreso Proteo a circa 8 km/px (NASA). Albedo geometrica 0.10 (NASA GSFC Neptunian Satellite Fact Sheet): superficie scura quasi neutra. Forma irregolare (220x208x202 km). Nessuna mappa fotografica globale.",
+  "assi_ellissoide_km": [
+   212.0,
+   195.0,
+   198.0
+  ],
+  "note_forma": "Semiassi = meta' di 424x390x396 km (Stooke 1994, via Wikipedia, fonte secondaria); altre pubblicazioni danno 440x416x404 km (Thomas e Veverka 1991). Raggio medio ~210 km."
+ },
+ {
+  "id": "nereide",
+  "texture": [],
+  "forma": [],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna mappa: Nereide e' stata ripresa solo da lontano da Voyager 2 (pochi pixel di disco; dato da conoscenza generale, non riverificato). Albedo geometrica 0.16, raggio ~170 km (NASA GSFC Neptunian Satellite Fact Sheet); colore grigio neutro.",
+  "note_forma": "Nessun modello di forma pubblico: la forma e' sconosciuta (Voyager 2 non l'ha risolta). Usare una sfera di raggio ~170 km (Kiss et al. 2016, via Wikipedia; diametro medio 335-345 km). Nessun triassiale affidabile trovato."
+ },
+ {
+  "id": "vesta",
+  "texture": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Vesta_map_for_GeoHack.png",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Vesta_map_for_GeoHack.png",
+    "licenza": "Commons: Public domain (NASA/JPL-Caltech/UCLA/MPS/DLR/IDA); fonte: USGS Planetary Nomenclature (planetarynames.wr.usgs.gov/images/vesta.pdf)",
+    "credito": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA (fotomappa Dawn FC, Roatsch et al.)",
+    "tipo": "grigi",
+    "copertura": "globale, 90N-90S, bordo sinistro a 330 gradi di longitudine (sistema Claudia/Dawn: 150 gradi di scarto rispetto al sistema IAU 'Claudia Double Prime'); a differenza della versione con nomi, e' senza etichette",
+    "pixel": "3561x1781",
+    "byte": 3210247,
+    "note": "Rasterizzazione di una mappa USGS per GeoHack; verificare a vista che non abbia griglia o scritte. L'originale USGS (HAMO 60 m, clear filter) e' un GeoTIFF di 340 MB: https://planetarymaps.usgs.gov/mosaic/Vesta_Dawn_FC_HAMO_Mosaic_Global_74ppd.tif (356659263 byte, 74 pixel/grado, stimata 26640x13320); campione 1024 px 162186 byte: https://astrogeology.usgs.gov/ckan/dataset/ec63e420-a8bd-4a90-9341-a5754b551574/resource/9306febf-0c7a-49ee-b7b0-a1f043297bf7/download/vesta_dawn_fc_hamo_mosaic_global_1024.jpg",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVFC2_2/BROWSE/HAMO_CLEM/VE_HAMO_00N_330E_CYL_CLEM.JPG",
+    "pagina_fonte": "https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVFC2_2/BROWSE/HAMO_CLEM/VE_HAMO_00N_330E_CYL_CLEM.LBL",
+    "licenza": "Dati NASA/PDS (Dawn, SBN): uso libero con credito; nessuna riga di licenza esplicita",
+    "credito": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA (PDS DAWN-A-FC2-5-MOSAIC)",
+    "tipo": "falsi colori",
+    "copertura": "globale cilindrica; 'Clementine color ratio' (composizione di rapporti di filtri, colori NON naturali); centro a 330E (sistema Dawn-Claudia)",
+    "pixel": "ignota (browse JPG)",
+    "byte": 146674,
+    "note": "Descritto dal label come 'browse plot' (potrebbe avere assi/scritte: da controllare). Versione grigia equivalente: .../BROWSE/HAMO_CLEAR/VE_HAMO_00N_330E_CYL_CLEAR.JPG (96018 byte). I dati .TIF in EXTRAS pesano 494 MB (CLEM) / 155 MB (CLEAR).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia14/pia14703/PIA14703.jpg",
+    "pagina_fonte": "https://photojournal.jpl.nasa.gov/catalog/PIA14703",
+    "licenza": "Pubblico dominio (opera NASA; Photojournal/pagina fonte: nessuna restrizione, credito richiesto)",
+    "credito": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA",
+    "tipo": "grigi",
+    "copertura": "parziale: 'Map of Vesta's Equatorial Latitudes and Southern Hemisphere' (prima mappa, 2011, orbita survey ~260 m/px): non copre il polo nord",
+    "pixel": "2137x780",
+    "byte": 183691,
+    "note": "Mappa storica da orbita di survey; sconsigliata rispetto alle altre.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Vesta_1_100.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 5073448,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Vesta, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. Pagina: https://science.nasa.gov/resource/vesta-3d-model/ (4,84 MB). Esiste anche USDZ 1,81 MB.",
+    "consigliata": true
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/4_vesta/4_vesta.gltf (+ 4_vesta.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 772288,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Vesta usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3072 B + .bin 769216 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/vesta/Vesta-256V.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 7085311,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "F. Preusker, F. Scholten, K.-D. Matz, T. Roatsch, R. Jaumann, C. A. Raymond, C. T. Russell (DLR/Dawn FC), NASA PDS DTM 'DAWN FC2 DERIVED VESTA DTM SPG V1.0'",
+    "note": "OBJ derivato dal DTM Dawn, 7,1 MB (USDZ 1.781.920 B). Facce non dichiarate. Pagina: https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html (DTM completo 2,1 GB, non utile)."
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Albedo geometrica ~0.42 (da conoscenza generale, non riverificata); superficie grigia con macchie scure e chiare, grande bacino Rheasilvia al polo sud.",
+  "assi_ellissoide_km": [
+   284.62,
+   277.24,
+   226.33
+  ],
+  "note_forma": "Semiassi = meta' di 569.24x554.48x452.66 km (Park et al. 2025, JPL SBDB)."
+ },
+ {
+  "id": "pallade",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://astro.troja.mff.cuni.cz/projects/damit/generated_files/open/AsteroidModel/4395/shape.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 139282,
+    "licenza": "DAMIT: salvo diversa indicazione, il contenuto del sito e' sotto Creative Commons Attribution 4.0 International (dal footer di astro.troja.mff.cuni.cz/projects/damit). Valutare se la CC BY copre anche i dati del singolo modello.",
+    "credito": "DAMIT (Durech, Sidorin, Kaasalainen 2010, A&A 513, A46); modello 4395 = Marsset et al. 2020, Nature Astronomy 4, 569-576",
+    "note": "Modello non convesso (flag nonconvex), da immagini VLT/SPHERE (Marsset 2020), D=513 km, spin lambda 42 beta -15 P 7.81322 h. OBJ 139 KB; le facce non sono dichiarate (non letto il file). Altri modelli DAMIT di Pallade: 101 (88.822 B, convesso 2011), 102 (34.882 B, Hanus 2017). Pagina: https://astro.troja.mff.cuni.cz/projects/damit/asteroid_models/view/4395. Dalla tabella DAMIT le assegnazioni autore-modello sono state dedotte dall'ordine delle righe, verificate solo in parte (fonte: Marsset da ordine e da D=513 km uguale a SBDB).",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna mappa: Pallade e' stata risolta solo dal VLT/SPHERE-ZIMPOL (11 serie di immagini 2017-2019, Marsset et al. 2020, Nature Astronomy): viste del disco con decine di crateri di 30-120 km, nessuna mappa globale rilasciata che io abbia trovato. Licenza delle immagini non verificata. Nessun sorvolo di sonde.",
+  "assi_ellissoide_km": [
+   284.0,
+   266.0,
+   224.0
+  ],
+  "note_forma": "Semiassi = meta' di 568x532x448 km (Marsset et al. 2020, JPL SBDB). Esiste una forma vera (DAMIT)."
+ },
+ {
+  "id": "igea",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://astro.troja.mff.cuni.cz/projects/damit/generated_files/open/AsteroidModel/4392/shape.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 139282,
+    "licenza": "DAMIT: salvo diversa indicazione, il contenuto del sito e' sotto Creative Commons Attribution 4.0 International (footer di astro.troja.mff.cuni.cz/projects/damit).",
+    "credito": "DAMIT (Durech, Sidorin, Kaasalainen 2010, A&A 513, A46); modello 4392, riferimento Vernazza et al. 2020, Nature Astronomy 4, 136-141",
+    "note": "Modello da SPHERE, D=434 km, spin lambda 307 beta -29 P 13.82559 h. OBJ 139 KB (stesso peso del modello di Pallade: stessa topologia); facce non dichiarate. Pagina: https://astro.troja.mff.cuni.cz/projects/damit/asteroid_models/view/4392. Forma quasi sferica, utilita' limitata.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna mappa vera. Solo foto del disco da VLT/SPHERE (Vernazza et al. 2019), diametro ~430 km, forma quasi sferica.",
+  "assi_ellissoide_km": [
+   225.0,
+   215.0,
+   212.0
+  ],
+  "note_forma": "Semiassi = meta' di 450x430x424 km (Vernazza et al. 2021, A&A 654, A56, via Wikipedia, fonte secondaria); SBDB riporta solo diametro 407 km da IRAS."
+ },
+ {
+  "id": "eros",
+  "texture": [
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/433eros/eros_cyl_near.jpg",
+    "pagina_fonte": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/aamapdesc.html#eros",
+    "licenza": "Pubblico dominio con credito obbligatorio (PDS: 'These maps are in the public domain but should not be used without proper credit')",
+    "credito": "Stooke, P., Stooke Small Bodies Maps V1.0, MULTI-SA-MULTI-6-STOOKEMAPS-V1.0, NASA Planetary Data System, 2011 (da immagini NEAR Shoemaker MSI)",
+    "tipo": "grigi",
+    "copertura": "completa, proiezione cilindrica semplice (40 pixel/grado), 0 longitudine ai bordi, 180 al centro; mosaico NEAR corretto da Stooke; in poche zone (poli) luce incompatibile; distorsioni vicino all'equatore per la forma irregolare",
+    "pixel": "14400x7200 (dalla guida PDS)",
+    "byte": 39082740,
+    "note": "39 MB: PESANTE, da ridimensionare. Stessa mappa anche in https://sbnarchive.psi.edu/pds4/non_mission/small_bodies.stooke.maps/miscellaneous/433eros/eros_cyl_near.jpg. Mosaico NEAR originale in PDS: NEAR-A-MSI-5-DIM-EROS/ORBIT-V1.0 (F4_16_00N000).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/433eros/erosmos.jpg",
+    "pagina_fonte": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/aamapdesc.html#eros",
+    "licenza": "Pubblico dominio con credito obbligatorio (PDS: 'These maps are in the public domain but should not be used without proper credit')",
+    "credito": "Stooke, P., Stooke Small Bodies Maps V1.0, MULTI-SA-MULTI-6-STOOKEMAPS-V1.0, NASA Planetary Data System, 2011",
+    "tipo": "grigi",
+    "copertura": "mosaico da immagini dei flyby NEAR ('probabilmente solo valore storico', Stooke): copertura e qualita' inferiori",
+    "pixel": "ignota",
+    "byte": 208318,
+    "note": "Solo come ripiego leggero: la guida PDS la indica 'of historical value only'.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Eros_1_10.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 2392188,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Eros, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. Pagina: https://science.nasa.gov/resource/eros-3d-model/ (2,28 MB)."
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/433_eros/433_eros.gltf (+ 433_eros.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 39139,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Eros usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3075 B + .bin 36064 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. Pochissimi poligoni."
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/eros/ver64q.tab.obj",
+    "formato": "obj",
+    "facce": 49152,
+    "byte": 1622603,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "R. W. Gaskell (SPC), NASA PDS Small Bodies Node, Gaskell Eros Shape Model",
+    "note": "OBJ derivato da ver64q.tab (q=64, 49.152 piastre: dal label ver64q.lbl, 74.503 record = 1 + 25.350 vertici + 49.152 piastre). Anche USDZ 423.498 B. Pagina: https://sbn.psi.edu/pds/resource/erosshape.html. TAB originale ver128q 16.897.935 B (196.608 piastre).",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Eros: forma allungata a 'patata' di 34 km; la proiezione cilindrica ha distorsioni evidenti sulle estremita'. Superficie grigia/marrone-rossastra lieve.",
+  "assi_ellissoide_km": [
+   17.2,
+   5.6,
+   5.6
+  ],
+  "note_forma": "Semiassi = meta' di 34.4x11.2x11.2 km (Veverka et al. 2000, JPL SBDB). Forma vera disponibile."
+ },
+ {
+  "id": "bennu",
+  "texture": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Bennu_global_mosaic_reduced_size.png",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Bennu_global_mosaic_reduced_size.png",
+    "licenza": "Commons: Public domain (NASA/Goddard/University of Arizona); fonte originale https://www.asteroidmission.org/bennu_global_mosaic/",
+    "credito": "NASA/Goddard/University of Arizona (OSIRIS-REx PolyCam)",
+    "tipo": "grigi",
+    "copertura": "globale ('2,155 PolyCam images'), 5 cm/px nell'originale; formato 2:1 ridotto",
+    "pixel": "2400x1200",
+    "byte": 5058737,
+    "note": "Versione ridotta del mosaico globale ufficiale. Il percorso sul sito asteroidmission.org non e' stato verificato: l'URL di Commons e' quello misurato (HEAD 200).",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005000/a005069/Bennu_global_FB34_FB56_ShapeV28_GndControl_MinnaertPhase30_PAN_8bit_print.jpg",
+    "pagina_fonte": "https://svs.gsfc.nasa.gov/5069/",
+    "licenza": "Pubblico dominio (NASA SVS, dati OSIRIS-REx)",
+    "credito": "NASA/Goddard/University of Arizona (OSIRIS-REx), NASA SVS",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica, mosaico PAN corretto in fase (Minnaert)",
+    "pixel": "1024x512",
+    "byte": 220647,
+    "note": "Anteprima ufficiale SVS 5069. Versione ALBEDO (rapporto 'ROLO'): .../Bennu_global_ShapeV20_GndControl_ROLOphase_ALBEDO_8bit_v6_print.jpg (1024x512, 119603 byte). TIFF originali SVS: PAN 31417x15709 = 493624548 byte, ALBEDO 25134x12568 = 315960161 byte (troppo grandi).",
+    "parte": "superficie"
+   },
+   {
+    "url": "https://planetarymaps.usgs.gov/mosaic/Bennu/Bennu_global_ShapeV20_GndControl_ROLOphase_ALBEDO_8bit_v6.tif",
+    "pagina_fonte": "https://astrogeology.usgs.gov/search/map/bennu_osiris_rex_ocams_global_albedo_mosaic_6_25cm",
+    "licenza": "Pubblico dominio (USGS Astrogeology / OSIRIS-REx)",
+    "credito": "NASA/Goddard/University of Arizona; Golish, Shultz, Becker et al. 2021; USGS Astrogeology Science Center",
+    "tipo": "grigi",
+    "copertura": "quasi globale (albedo 6.25 cm/px)",
+    "pixel": "25134x12568 (dalla SVS)",
+    "byte": 315960161,
+    "note": "GeoTIFF 300 MB. PAN 5 cm/px: .../Bennu_global_FB34_FB56_ShapeV28_GndControl_MinnaertPhase30_PAN_8bit.tif (493624548 byte, 471 MB).",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/b/Bennu_1_1.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 859980,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Bennu, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. Pagina: https://science.nasa.gov/resource/bennu-3d-model/ (839,82 KB). Esiste anche il glb nel repo GitHub nasa/NASA-3D-Resources, cartella '3D Models/1999 RQ36 asteroid' (.glb 329.596 B + .png 1.290.172 B)."
+   },
+   {
+    "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/1999%20RQ36%20asteroid/1999%20RQ36%20asteroid.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 329596,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA",
+    "note": "glb piu' leggero di Bennu nel repo GitHub NASA-3D-Resources (peso da gh api). Facce non note. Il modello e' quello basso-risoluzione, probabilmente basato sul modello Nolan radar (ipotesi non verificata).",
+    "consigliata": true
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/101955_bennu/Bennu.gltf (+ Bennu.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 195358,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Bennu usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 5698 B + .bin 189660 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/bennu/radar/101955bennu.tab.obj",
+    "formato": "obj",
+    "facce": 2692,
+    "byte": 165640,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "M. C. Nolan, C. Magri, E. S. Howell, L. A. M. Benner et al. (2013), Shape Model of Asteroid (101955) Bennu, NASA PDS",
+    "note": "Modello radar Nolan et al. 2013 (1.348 vertici, 2.692 facce: dal label 101955bennu.lbl, 4.040 record) - bassa risoluzione. OBJ 165 KB, USDZ 24.578 B. Non e' il modello OSIRIS-REx."
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/bennu/orex/bennu.orex.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 14868960,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "OSIRIS-REx Team (SPC), NASA/GSFC/University of Arizona, via PDS/NAIF DSK bennu_g_03170mm_spc_obj",
+    "note": "OBJ OSIRIS-REx 3,17 m/pixel; 14,9 MB. Faccce non verificate (ordine ~200k: stimato dalla taglia). USDZ 1.784.012 B."
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Bennu: asteroide nero (albedo ~0.044, da conoscenza generale), forma a trottola; mosaici in scala di grigi.",
+  "assi_ellissoide_km": [
+   0.2524,
+   0.2459,
+   0.2284
+  ],
+  "note_forma": "Semiassi = meta' di 0.5047x0.4918x0.4567 km (Daly et al. 2020, JPL SBDB). Bennu e' quasi sferico a trottola, l'ellissoide e' gia' molto vicino."
+ },
+ {
+  "id": "ryugu",
+  "texture": [
+   {
+    "url": "https://data.darts.isas.jaxa.jp/pub/hayabusa2/products/02_GlobalMap2/hyb2_onc_Global_02_l3dm_v06.jpg",
+    "pagina_fonte": "https://jlpeda.jaxa.jp/en/product/archive/detail_02/",
+    "licenza": "Politica immagini ISAS/JAXA (https://www.isas.jaxa.jp/en/imagepolicy): uso libero per ricerca, istruzione e uso personale e per istituti scolastici/no profit; uso commerciale solo con consenso; credito obbligatorio '(c) ISAS/JAXA' o 'Courtesy of ISAS/JAXA'. NON e' CC BY",
+    "credito": "(c) ISAS/JAXA, dati Hayabusa2 ONC-T",
+    "tipo": "grigi",
+    "copertura": "globale equirettangolare (0.1 gradi/px, ~0.88 m/px all'equatore) da quote di 20 km integrate con 5 km, dati gennaio-novembre 2019; distorsione alle alte latitudini; la mappa Global 1 usa dati giugno-novembre 2018",
+    "pixel": "3600x1800",
+    "byte": 2858823,
+    "note": "JPEG 8 bit per visualizzazione; GeoTIFF con valori originali (51851347 byte per Global 1). Global 1: .../01_GlobalMap1/hyb2_onc_Global_01_l3dm_v06.jpg (2505975 byte). Alta risoluzione solo ±30 gradi di latitudine: .../03_HighResolution/hyb2_onc_20181003_MSC_l3dm_v06.jpg (3600x1681, 6755136 byte). Mappa a falsi colori: .../04_Normal_albedo_RGB/JADE_Ryugu_NormAlbedoV1j_rgb_bvx.jpg (3600x1800, 4504641 byte; bande 480/549/857 nm 'not matching human vision').",
+    "parte": "superficie",
+    "consigliata": true
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ryugu_albedo_map_by_Askaniy.png",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Ryugu_albedo_map_by_Askaniy.png",
+    "licenza": "CC BY-SA 3.0",
+    "credito": "Askaniy Anpilogov, Yokota et al. (derivato da dati Hayabusa2)",
+    "tipo": "grigi",
+    "copertura": "globale, derivato di terzi",
+    "pixel": "1342x671",
+    "byte": 305390,
+    "note": "Derivato di terzi (share-alike), bassa risoluzione. Esiste anche una versione 'enhanced' (614150 byte).",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/162173_ryugu/ryugu.gltf (+ ryugu.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 403668,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Ryugu usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3472 B + .bin 400196 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://data.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/SHAPE_SFM_49k_v20180804.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 2639581,
+    "licenza": "ISAS Data Policy (JAXA): i dati aperti si possono usare gratis anche a fini commerciali, copiare, inoltrare e modificare; indicare l'origine come 'ISAS/JAXA'; se ci sono terze parti con ulteriori richieste di riconoscimento seguirle; in caso di modifica dichiararla (regole in linea con Government of Japan Standard Terms of Use v2.0). Fonte: https://www.isas.jaxa.jp/en/researchers/data-policy/. Non ho trovato una licenza CC specifica per questo archivio.",
+    "credito": "ISAS/JAXA; Watanabe et al. 2019, Science 364, 268-272 (shape model SfM)",
+    "note": "Modello SfM ridotto a '49k' poligoni (nome del file; facce non verificate, probabilmente ~49.152). OBJ 2,6 MB. Altri: 200k = 10.651.976 B; 800k = 44.364.697 B; 3M = 163.549.566 B. README: https://data.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/README.html. ATTENZIONE: l'host www.darts.isas.jaxa.jp usato nei link della pagina SBN non esiste piu' (NXDOMAIN), usare data.darts.isas.jaxa.jp. Nessun modello glTF NASA o ESA di Ryugu su science.nasa.gov (verificato).",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Ryugu: albedo molto bassa (~0.04, da conoscenza generale), forma a trottola; non esiste una mappa a colori naturali.",
+  "note_forma": "Diametro equatoriale 1.004 x 0.876 km (Watanabe 2019, SBDB); asse polare non ottenuto dalla fonte letta, quindi non fornisco un triassiale completo."
+ },
+ {
+  "id": "itokawa",
+  "texture": [
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/25143itokawa/itokawa_cyl_gaskell_topo.jpg",
+    "pagina_fonte": "https://sbnarchive.psi.edu/pds3/multi_mission/MULTI_SA_MULTI_6_STOOKEMAPS_V1_0/document/aamapdesc.html#itokawa",
+    "licenza": "Pubblico dominio con credito obbligatorio (PDS: 'These maps are in the public domain but should not be used without proper credit')",
+    "credito": "Stooke, P., Stooke Small Bodies Maps V1.0, MULTI-SA-MULTI-6-STOOKEMAPS-V1.0, NASA Planetary Data System, 2011 (da modello di forma Gaskell, PDS HAY-A-AMICA-5-ITOKAWASHAPE-V1.0, e immagini Hayabusa AMICA)",
+    "tipo": "grigi",
+    "copertura": "globale cilindrica 7200x3600 (20 px/grado, 0 lon ai bordi) ma RENDERIZZATA dal modello 3D con le immagini 'matching rendered images', non un mosaico fotografico; vicino a 30S sul meridiano zero la superficie e' 'smeared' e non interpretabile",
+    "pixel": "7200x3600",
+    "byte": 5607810,
+    "note": "Nella tabella dell'archivio e' marcata 'S' (shaded) invece di 'P' (photomosaic): e' un rendering, non una foto. Dichiarata da Stooke 'aid to visualization where a global map in conventional coordinates is required'.",
+    "parte": "superficie",
+    "consigliata": true
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/i/Itokawa_1_1.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 1687992,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Itokawa, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. Pagina: https://science.nasa.gov/resource/asteroid-itokawa-3d-model/ (1,61 MB)."
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/25143_itokawa/itokawa.gltf (+ itokawa.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 64002,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Itokawa usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3230 B + .bin 60772 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/itokawa/ver64q.tab.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 1614487,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "R. W. Gaskell (SPC), NASA PDS Small Bodies Node, Gaskell Itokawa Shape Model",
+    "note": "OBJ derivato da ver64q.tab (Gaskell, Hayabusa/AMICA), 1,6 MB, USDZ 424.049 B. Facce: per analogia con Eros dovrebbero essere 49.152 (q=64), ma NON ho letto il label di Itokawa. Pagina: https://sbn.psi.edu/pds/resource/itokawashape.html. TAB originale quad64q.tab (ICQ) 963.338 B.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": false,
+  "note_corpo": "Itokawa: forma a 'arachide' di 535 m; Hayabusa (2005) non ha coperto tutto con buona risoluzione. Mappa fotografica globale pura: non trovata.",
+  "assi_ellissoide_km": [
+   0.2675,
+   0.147,
+   0.1045
+  ],
+  "note_forma": "Semiassi = meta' di 0.535x0.294x0.209 km (Fujiwara et al. 2006, Science 312, JPL SBDB)."
+ },
+ {
+  "id": "didymos",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/65803_didymos/Didymos.gltf (+ Didymos.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 181322,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Didymos usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3646 B + .bin 177676 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://pds-smallbodies.astro.umd.edu/holdings/pds4-dart_shapemodel-v1.0/data_derived_didymos_model_v003/didymos_g_9309mm_spc_obj_0000n00000_v003.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 3616200,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "NASA/JHUAPL DART Team, Daly et al. (2023), Nature (doi 10.1038/s41586-023-05810-5); PDS bundle doi 10.26007/96fn-p578",
+    "note": "Modello globale SPC da DART (9,3 m/pixel), OBJ 3,6 MB. Facce probabilmente 49.152 (stesso peso del Dimorphos 1,94 m, topologia q=64: STIMA, non verificata). Altre risoluzioni: 4,657 m = 14.454.211 B; 2,329 m = 57.806.280 B; 1,165 m = 231.214.542 B. L'host pds-smallbodies e' lento/intermittente.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna mappa: DART (26/09/2022) ha ripreso soprattutto Dimorphos; Didymos solo da lontano e in alcune immagini. Dati DRACO su PDS (circa 259000 immagini) ma nessun mosaico globale ufficiale trovato.",
+  "assi_ellissoide_km": [
+   0.4255,
+   0.4245,
+   0.31
+  ],
+  "note_forma": "Semiassi = meta' di 851x849x620 m (Cheng 2023, via Wikipedia, fonte secondaria); SBDB riporta 0.797x0.783x0.761 km (Naidu et al. 2020, da radar, valore precedente a DART). Forma a trottola con cresta equatoriale: l'ellissoide e' un'approssimazione scarsa."
+ },
+ {
+  "id": "dimorphos",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/dimorphos/Dimorphos.gltf (+ Dimorphos.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 181116,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Dimorphos usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3660 B + .bin 177456 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://pds-smallbodies.astro.umd.edu/holdings/pds4-dart_shapemodel-v1.0/data_derived_dimorphos_model_v004/dimorphos_g_1940mm_spc_obj_0000n00000_v004.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 3616213,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "NASA/JHUAPL DART Team, Daly et al. (2023, v003) e aggiornamento v004 (PSJ, doi 10.3847/psj/ad0b07); PDS bundle doi 10.26007/96fn-p578",
+    "note": "Modello globale SPC v004 (1,94 m/pixel), OBJ 3,6 MB. Facce probabilmente 49.152 (STIMA). Altre risoluzioni v004: 0,972 m = 14.454.228 B; 0,487 m = 57.806.304 B; 0,243 m = 231.214.554 B. Esiste anche v003 (1,96 m).",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna mappa globale: DRACO ha ripreso una parte del corpo a risoluzione crescente fino all'impatto; la parte non illuminata/opposta non e' vista. Mosaico 'final 10' (LPSC marzo 2023): nessun file mappa.",
+  "assi_ellissoide_km": [
+   0.0885,
+   0.087,
+   0.058
+  ],
+  "note_forma": "Semiassi = meta' di 177x174x116 m (Daly 2023, via Wikipedia, fonte secondaria)."
+ },
+ {
+  "id": "halley",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/1682q1halley.tab",
+    "formato": "tab (griglia lat/lon/raggio 5 gradi)",
+    "facce": null,
+    "byte": 70226,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "Alain Abergel (IAS) e Philip Stooke (Univ. Western Ontario), NASA PDS; dati Giotto e Vega. Il label chiede di citare entrambi.",
+    "note": "Griglia 5 gradi (2.701 righe, label 1682q1halley.lbl). Forma MOLTO incerta (il label stesso dice incertezza assoluta 500-1000 m e che il guscio convesso e' buono quanto il modello). Nessun OBJ/glTF di Halley trovato su NASA 3D Resources ne' su Eyes.",
+    "consigliata": true
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Nessuna mappa: Giotto (13/03/1986) ha ripreso con la HMC solo un lato del nucleo (~16x8x8 km), albedo geometrica molto bassa (<4%); mosaici di 8 immagini su solarviews di terzi, non mappa cilindrica.",
+  "assi_ellissoide_km": [
+   7.45,
+   4.1,
+   4.1
+  ],
+  "note_forma": "JPL SBDB: estensione 14.9 x 8.2 km (Keller et al. 1987). Ho usato i semiassi 7.45 e 4.1 e ASSUNTO il terzo uguale al secondo: SBDB non da' tre assi (la letteratura classica parla di 15.3x7.2x7.2 km, non verificata qui)."
+ },
+ {
+  "id": "67p",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/67p_churyumov_gerasimenko/67p_churyumov_gerasimenko.gltf (+ 67p_churyumov_gerasimenko.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 48218,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per 67P usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 3226 B + .bin 44992 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/data/triplate/mspcd_lam/shap2/cg_mspcd_shap2_006k_cart.wrl",
+    "formato": "wrl",
+    "facce": 5786,
+    "byte": 713482,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "ESA/Rosetta/MPS for OSIRIS Team MPS/UPD/LAM/IAA/SSO/INTA/UPM/DASP/IDA (credito ESA; dato distribuito da NASA PDS SBN)",
+    "note": "PDS dataset ro-c-multi-5-67p-shape-v2.0, modello SHAP2 con 5.786 piastre e 2.895 vertici (da label cg_mspcd_shap2_006k_cart.lbl). Altre: 012k = 1.462.060 B; 024k = 3.009.154 B; 098k = 12.030.712 B; 001m = 161.131.312 B (WRL). Formato VRML. L'OBJ del sito SBN e' 49.412.414 B (~1M piastre), troppo grande.",
+    "consigliata": true
+   },
+   {
+    "url": "https://sci.esa.int/science-e/www/object/doc.cfm?fobjectid=54726",
+    "formato": "obj",
+    "facce": null,
+    "byte": 2241506,
+    "licenza": "ATTENZIONE: i termini di sci.esa.int dicono 'personal non-commercial use', niente ridistribuzione e niente opere derivate senza autorizzazione scritta. La licenza CC BY-SA 3.0 IGO si applica ad alcune immagini su esa.int, NON e' dichiarata per questo file.",
+    "credito": "ESA/Rosetta/MPS for OSIRIS Team MPS/UPD/LAM/IAA/SSO/INTA/UPM/DASP/IDA (riga di credito ufficiale della pagina)",
+    "note": "OBJ ufficiale ESA 'SHAP2P' (ESA_Rosetta_OSIRIS_67P_SHAP2P.obj), 2,2 MB, facce non note. Pagina: https://sci.esa.int/web/rosetta/-/54728-shape-model-of-comet-67p. NON consigliato: licenza restrittiva. Preferire PDS 006k/012k o Eyes."
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Mappa globale fotografica libera non trovata (la forma a due lobi rende la proiezione cilindrica poco adatta). Mi aspetto dati OSIRIS in ESA PSA ma non li ho verificati. Albedo molto bassa ~0.06 (da conoscenza generale).",
+  "note_forma": "Nucleo bilobato, un ellissoide non lo rappresenta (diametro ~3.4 km, Sierks 2015). Usare per forza la mesh."
+ },
+ {
+  "id": "arrokoth",
+  "texture": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Arrokoth_map_by_Askaniy.png",
+    "pagina_fonte": "https://commons.wikimedia.org/wiki/File:Arrokoth_map_by_Askaniy.png",
+    "licenza": "CC BY-SA 3.0 (Commons)",
+    "credito": "Askaniy Anpilogov, Roman Tkachenko (derivato da immagini New Horizons)",
+    "tipo": "colore migliorato",
+    "copertura": "parziale/in gran parte interpolata: New Horizons ha ripreso bene solo l'emisfero rivolto alla sonda; la parte non vista e' ricostruita o riempita (dettagli non verificati nel file)",
+    "pixel": "4096x2048",
+    "byte": 3124402,
+    "note": "Derivato di terzi (share-alike), NON ufficiale NASA; il colore e' rosso-bruno. Da usare solo se si accetta l'obbligo CC BY-SA e la natura ricostruita.",
+    "parte": "superficie"
+   }
+  ],
+  "forma": [
+   {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/a/Arrokoth.glb",
+    "formato": "glb",
+    "facce": null,
+    "byte": 302124,
+    "licenza": "NASA: i contenuti NASA, inclusi file per modelli 3D (texture e dati poligonali in qualsiasi formato), in generale non sono soggetti a copyright negli USA; uso educativo/informativo consentito senza permesso esplicito, NASA va citata come fonte, senza implicare endorsement (nasa.gov/nasa-brand-center/images-and-media)",
+    "credito": "NASA Visualization Technology Applications and Development (VTAD)",
+    "note": "NASA 3D Resources, modello glTF binario di Arrokoth, datato 2023-09. Facce NON dichiarate dalla pagina e file non letto: non determinabile senza scaricare. Pagina: https://science.nasa.gov/resource/arrokoth-3d-model/ (295,04 KB). Esiste anche MU69_1_10.usdz 156.925 B.",
+    "consigliata": true
+   },
+   {
+    "url": "https://eyes.nasa.gov/assets/static/models/486958_arrokoth/mu69.gltf (+ mu69.bin)",
+    "formato": "gltf+bin",
+    "facce": null,
+    "byte": 129327,
+    "licenza": "Software/asset NASA JPL di Eyes on the Solar System: lavoro del governo USA, ma data.gov dice 'No license information was provided' e un mirror dice 'us-pd'. Nessuna pagina di termini specifica per gli asset; si applica per analogia la regola NASA (non coperti da copyright, citare NASA). Da confermare.",
+    "credito": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "note": "Modello glTF per Arrokoth usato dall'app Eyes (URL ricavato da app.js di eyes.nasa.gov/apps/solar-system). .gltf 2815 B + .bin 126512 B (il nome del .bin e' dedotto per prova HEAD 200, non letto dal .gltf). Leggerissimo; facce non note (stimabili dal .bin ma non verificate). Il listing della cartella e' bloccato (403). I texture PNG non sono stati pesati. "
+   },
+   {
+    "url": "https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/arrokoth_porter_2024_v01.obj",
+    "formato": "obj",
+    "facce": null,
+    "byte": 3686921,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "S. Porter (2024), New Horizons Porter (2024) Arrokoth Shape Model Collection, NASA PDS; NASA/JHUAPL/SwRI",
+    "note": "OBJ Porter 2024 (LORRI), 3,7 MB, facce non note. Alternativa: mu69_merged.obj 9.066.288 B (nh-a-lorri_mvic-5-geophys-v1.0)."
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "note_corpo": "Mappa ufficiale NASA/JHUAPL/SwRI globale: non trovata (il corpo e' a due lobi e metà della superficie non e' stata vista). Colore rosso-bruno (tholins) secondo i dati New Horizons. | La sola mappa globale trovata e' un derivato di terzi (CC BY-SA) con parti ricostruite: per questo nessuna_immagine_vera=true e nessuna texture consigliata.",
+  "note_forma": "Corpo bilobato a 'pupazzo di neve appiattito': l'ellissoide non e' adatto. Dimensioni non lette da fonte primaria in questa sessione."
+ },
+ {
+  "id": "epimeteo",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj",
+    "formato": "obj",
+    "facce": 30000,
+    "byte": 1164353,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. Thomas, J. Joseph, T. Ansty, Saturn Small Moon Shape Models V1.0, NASA PDS (doi 10.26033/ewy3-jy61)",
+    "note": "OBJ derivato dal sito SBN, 30k piastre (dal nome del file, coerente con la taglia), 1164353 B. Esistono anche USDZ e DSK. Pagina: https://sbn.psi.edu/pds/resource/saturnsatshapes.html"
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   64.8,
+   58.1,
+   53.5
+  ],
+  "note_forma": "Semiassi = meta' di 129.6x116.2x107.0 km (Thomas e Helfenstein 2020), via infobox Wikipedia (fonte secondaria).",
+  "note_corpo": "Fuori dall'elenco richiesto: solo la forma (OBJ 30k piastre, PDS Saturn small moons); texture non cercata."
+ },
+ {
+  "id": "giano",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj",
+    "formato": "obj",
+    "facce": 30000,
+    "byte": 1117064,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. Thomas, J. Joseph, T. Ansty, Saturn Small Moon Shape Models V1.0, NASA PDS (doi 10.26033/ewy3-jy61)",
+    "note": "OBJ derivato dal sito SBN, 30k piastre (dal nome del file, coerente con la taglia), 1117064 B. Esistono anche USDZ e DSK. Pagina: https://sbn.psi.edu/pds/resource/saturnsatshapes.html"
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   101.7,
+   92.9,
+   74.5
+  ],
+  "note_forma": "Semiassi = meta' di 203.4x185.8x149.0 km (Thomas e Helfenstein 2020), via infobox Wikipedia (fonte secondaria).",
+  "note_corpo": "Fuori dall'elenco richiesto: solo la forma (OBJ 30k piastre, PDS Saturn small moons); texture non cercata."
+ },
+ {
+  "id": "pandora",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj",
+    "formato": "obj",
+    "facce": 30000,
+    "byte": 1133446,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. Thomas, J. Joseph, T. Ansty, Saturn Small Moon Shape Models V1.0, NASA PDS (doi 10.26033/ewy3-jy61)",
+    "note": "OBJ derivato dal sito SBN, 30k piastre (dal nome del file, coerente con la taglia), 1133446 B. Esistono anche USDZ e DSK. Pagina: https://sbn.psi.edu/pds/resource/saturnsatshapes.html"
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   51.5,
+   39.5,
+   31.5
+  ],
+  "note_forma": "Semiassi = meta' di 103.0x79.0x63.0 km (Thomas e Helfenstein 2020), via infobox Wikipedia (fonte secondaria).",
+  "note_corpo": "Fuori dall'elenco richiesto: solo la forma (OBJ 30k piastre, PDS Saturn small moons); texture non cercata."
+ },
+ {
+  "id": "prometeo",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj",
+    "formato": "obj",
+    "facce": 30000,
+    "byte": 1188210,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. Thomas, J. Joseph, T. Ansty, Saturn Small Moon Shape Models V1.0, NASA PDS (doi 10.26033/ewy3-jy61)",
+    "note": "OBJ derivato dal sito SBN, 30k piastre (dal nome del file, coerente con la taglia), 1188210 B. Esistono anche USDZ e DSK. Pagina: https://sbn.psi.edu/pds/resource/saturnsatshapes.html"
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   68.5,
+   40.5,
+   28.1
+  ],
+  "note_forma": "Semiassi = meta' di 137.0x81.0x56.2 km (Thomas e Helfenstein 2020), via infobox Wikipedia (fonte secondaria).",
+  "note_corpo": "Fuori dall'elenco richiesto: solo la forma (OBJ 30k piastre, PDS Saturn small moons); texture non cercata."
+ },
+ {
+  "id": "atlante",
+  "texture": [],
+  "forma": [
+   {
+    "url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj",
+    "formato": "obj",
+    "facce": 30000,
+    "byte": 1127404,
+    "licenza": "Dati NASA PDS (archivio pubblico, nessuna restrizione d'uso dichiarata nelle pagine lette). Si chiede di citare il data set. Non ho trovato una pagina PDS con la licenza esplicita (pds.nasa.gov/datasearch/data-licensing/ risponde 404): da confermare.",
+    "credito": "P. Thomas, J. Joseph, T. Ansty, Saturn Small Moon Shape Models V1.0, NASA PDS (doi 10.26033/ewy3-jy61)",
+    "note": "OBJ derivato dal sito SBN, 30k piastre (dal nome del file, coerente con la taglia), 1127404 B. Esistono anche USDZ e DSK. Pagina: https://sbn.psi.edu/pds/resource/saturnsatshapes.html"
+   }
+  ],
+  "nessuna_immagine_vera": true,
+  "assi_ellissoide_km": [
+   20.4,
+   17.7,
+   9.3
+  ],
+  "note_forma": "Semiassi = meta' di 40.8x35.4x18.6 km (Thomas e Helfenstein 2020), via infobox Wikipedia (fonte secondaria).",
+  "note_corpo": "Fuori dall'elenco richiesto: solo la forma (OBJ 30k piastre, PDS Saturn small moons); texture non cercata."
+ }
+]

@@ -19,3 +19,27 @@
   color: #2f7dff;
   font-weight: 700;
 }
+
+/* Il Sistema Solare in 3D senza JavaScript: niente vista immersiva (la scena
+   non puo' partire), si leggono titolo, testo, schede e domande. */
+body.ss-immersivo {
+  overflow: auto;
+}
+
+body.ss-immersivo .ss-app {
+  display: none;
+}
+
+body.ss-immersivo .site-footer,
+body.ss-immersivo .wrapper > :not(.ss-app):not(header) {
+  display: revert;
+}
+
+body.ss-immersivo .wrapper > header {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+}

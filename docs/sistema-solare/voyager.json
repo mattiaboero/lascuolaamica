@@ -1,0 +1,993 @@
+{
+ "meta": {
+  "titolo": "Il viaggio delle Voyager: dati e testi per il film del Sistema Solare 3D",
+  "lingua": "it",
+  "compilato_il": "2026-10-16",
+  "posizioni_riferite_a": "2026-10-15T00:00:00Z",
+  "unita": {
+   "ua_km": 149597870.7,
+   "nota": "1 UA (unità astronomica) = 149.597.870,7 km, la distanza media Terra-Sole."
+  },
+  "regole": "Ogni numero viene da una fonte NASA/JPL consultata; dove le fonti non concordano c'è una nota; i dati non trovati sono null con nota. Date in formato AAAA-MM-GG, orari in UTC salvo dove indicato.",
+  "disco_d_oro": {
+   "nome": "Disco d'oro (Golden Record)",
+   "materiale": "Disco di rame placcato d'oro da 30 cm (12 pollici), uno su ogni Voyager, in una custodia di alluminio con puntina e testina.",
+   "saluti_lingue": 55,
+   "saluti_nota": "Saluti in 55 lingue, dall'accadico, una lingua dell'antica Mesopotamia, al wu, un dialetto cinese moderno. Su ogni disco ci sono anche messaggi scritti del presidente USA Jimmy Carter e del segretario generale ONU Kurt Waldheim.",
+   "immagini": 115,
+   "musica_minuti": 90,
+   "brani_musicali": 27,
+   "brani_nota": "90 minuti di musica (NASA); «parti di 27 brani» (NSSDC).",
+   "suoni": 35,
+   "suoni_nota": "35 suoni (NSSDC e pagina NASA Voyager 1); la pagina NASA sui contenuti non dà un numero: elenca onde, vento, tuoni, uccelli, balene e altri animali.",
+   "velocita_lettura": "16 e 2/3 giri al minuto (pagina NASA sui contenuti). La scheda NSSDC indica 1000 giri al minuto: discordanza, non usato.",
+   "curatori": "Un comitato presieduto da Carl Sagan, della Cornell University.",
+   "fatto_bambini": "Sulla copertina del disco ci sono disegni che spiegano, senza parole, come suonarlo e dove si trova la Terra.",
+   "altri_fatti_bambini": [
+    "Fra i suoni della Terra ci sono anche i canti delle balene.",
+    "Contiene un saluto in accadico, una lingua antichissima parlata in Mesopotamia più di 4.000 anni fa."
+   ],
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/golden-record-contents/",
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
+    "https://science.nasa.gov/mission/voyager/"
+   ]
+  },
+  "pale_blue_dot": {
+   "nome": "Pale Blue Dot («pallido puntino azzurro»)",
+   "data": "1990-02-14",
+   "ora_utc": "04:48",
+   "ora_nota": "Le immagini della Terra sono delle 04:48 GMT; Voyager 1 ha spento per sempre le fotocamere 34 minuti dopo, alle 05:22 GMT.",
+   "distanza_sole_km": 6000000000,
+   "distanza_ua": 40,
+   "distanza_nota": "NASA: 3,7 miliardi di miglia (6 miliardi di km) dal Sole; la pagina NASA Voyager 1 dice 40 UA. JPL Horizons al 14/02/1990: 40,4 UA dal Sole.",
+   "chi_ha_voluto_la_foto": "Carl Sagan, membro del gruppo che curava le immagini di Voyager, che ebbe l'idea nel 1981.",
+   "ritratto_di_famiglia": "Mosaico di 60 immagini con il Sole e sei pianeti: Venere, Terra, Giove, Saturno, Urano, Nettuno. Marte era nascosto dalla luce diffusa, Mercurio troppo vicino al Sole, Plutone troppo piccolo e scuro.",
+   "ritratto_nota": "La pagina NASA Pale Blue Dot e NSSDC dicono 60 immagini; la pagina NASA Voyager 1 parla delle «ultime 64 immagini».",
+   "dimensione_terra": "circa un pixel",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/",
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
+    "https://ssd.jpl.nasa.gov/api/horizons.api"
+   ]
+  },
+  "da_ricontrollare_prima_della_pubblicazione": [
+   "Dopo il 18/11/2026 il capitolo «futuro» va aggiornato: il giorno luce sarà passato.",
+   "Controllare sul blog NASA Voyager se il «Big Bang» su Voyager 1 è stato fatto e se sono stati spenti altri strumenti.",
+   "Le posizioni sono del 15/10/2026: crescono di circa 3,5 UA all'anno (Voyager 1) e 3,2 UA all'anno (Voyager 2)."
+  ],
+  "revisione": "Rivisto il 16/10/2026 da un revisore indipendente (revisione-voyager.json): 20 correzioni applicate."
+ },
+ "sonde": [
+  {
+   "id": "voyager-1",
+   "nome": "Voyager 1",
+   "lancio": {
+    "data_ora_utc": "1977-09-05T12:56:01Z",
+    "luogo": "Cape Canaveral, Florida (USA), Launch Complex 41",
+    "razzo": "Titan IIIE-Centaur",
+    "nota": "Partita 16 giorni dopo Voyager 2 ma su una traiettoria più veloce: l'ha superata il 15/12/1977.",
+    "fonti": [
+     {
+      "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "data_fonte": "consultata 2026-10-16"
+     },
+     {
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
+      "data_fonte": "consultata 2026-10-16"
+     }
+    ]
+   },
+   "massa_kg": 721.9,
+   "massa_nota": "721,9 kg secondo NASA e NSSDC. Il catalogo PDS della NASA indica 815 kg per sonda: probabilmente un'altra definizione di massa (non chiarita dalle fonti).",
+   "antenna_parabolica_diametro_m": 3.66,
+   "antenna_nota": "3,66 m (NSSDC); il catalogo PDS arrotonda a 3,7 m.",
+   "energia": {
+    "tipo": "RTG (generatori a radioisotopi, plutonio)",
+    "numero_rtg": 3,
+    "potenza_lancio_w": 470,
+    "potenza_lancio_nota": "Circa 470 W in totale a 30 V (NSSDC); circa 158 W per ciascun RTG (NASA).",
+    "potenza_storica": {
+     "w": 335,
+     "data": "1997-01",
+     "fonte": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A"
+    },
+    "potenza_oggi_w": null,
+    "potenza_oggi_nota": "Nessuna fonte NASA/JPL consultata dà il valore attuale in watt. NASA dice che la potenza cala di circa 4 W all'anno e che i margini sono «sottilissimi» (blog NASA 04/08/2026). Articoli non NASA del 2026 stimano 220-230 W: non verificati, quindi non usati.",
+    "calo_annuo_w": 4
+   },
+   "trasmettitore_w": 23,
+   "trasmettitore_nota": "23 W dal catalogo PDS della NASA (testo di epoca della missione, non datato). Nessuna fonte NASA recente consultata.",
+   "posizione": {
+    "data_utc": "2026-10-15T00:00:00Z",
+    "distanza_sole_km": 25738851081,
+    "distanza_sole_ua": 172.054,
+    "distanza_terra_km": 25806852013,
+    "distanza_terra_ua": 172.508,
+    "tempo_luce_ore": 23.91,
+    "tempo_luce_nota": "Tempo di sola andata Sonda-Terra (1434,7 minuti). Andata e ritorno: circa 47,8 ore.",
+    "velocita_sole_km_s": 16.92,
+    "velocita_nota": "Horizons: 16,92 km/s al 15/10/2026. La pagina NASA di Voyager 1 dà 17,0 km/s al 21/08/2024.",
+    "metodo": "Effemeridi JPL Horizons interrogate il 2026-10-16 per l'istante 2026-10-15 00:00 UTC (soluzioni Voyager_1_ST+refit2022_m e Voyager_2_ST+refit2022_m). Distanza dal Sole = vettore geometrico eliocentrico; distanza dalla Terra e tempo della luce = osservatore al centro della Terra (quantità 20 e 21). Velocità = modulo del vettore velocità eliocentrico.",
+    "controllo": "Coerente con la NASA: un giorno luce (173,14 UA, 25,902 miliardi di km dalla Terra) il 18/11/2026.",
+    "fonti": [
+     {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "data_fonte": "interrogata 2026-10-16"
+     },
+     {
+      "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "data_fonte": "consultata 2026-10-16"
+     },
+     {
+      "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+      "data_fonte": "pagina aggiornata 2026-10-15"
+     }
+    ]
+   },
+   "strumenti": [
+    {
+     "sigla": "CRS",
+     "nome": "Sottosistema per i raggi cosmici (Cosmic Ray Subsystem)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2025-02-25",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "LECP",
+     "nome": "Particelle cariche a bassa energia (Low-Energy Charged Particles)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2026-04-17",
+     "motivo": "spento per risparmiare energia; resta acceso solo il motorino che fa ruotare il sensore (circa 0,5 W)"
+    },
+    {
+     "sigla": "MAG",
+     "nome": "Magnetometro (Magnetometer)",
+     "acceso_ottobre_2026": true,
+     "data_spegnimento": null,
+     "motivo": null
+    },
+    {
+     "sigla": "PWS",
+     "nome": "Onde di plasma (Plasma Wave Subsystem)",
+     "acceso_ottobre_2026": true,
+     "data_spegnimento": null,
+     "motivo": null
+    },
+    {
+     "sigla": "PLS",
+     "nome": "Scienza del plasma (Plasma Science)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2007-02-01",
+     "motivo": "spento perché funzionava male (prestazioni degradate)"
+    },
+    {
+     "sigla": "ISS",
+     "nome": "Fotocamere grandangolare e teleobiettivo (Imaging Science Subsystem)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "1990-02-14",
+     "motivo": "fotocamere spente per risparmiare energia, subito dopo il ritratto di famiglia"
+    },
+    {
+     "sigla": "IRIS",
+     "nome": "Spettrometro e radiometro a infrarossi (Infrared Interferometer Spectrometer and Radiometer)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "1998-06-03",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "PPS",
+     "nome": "Fotopolarimetro (Photopolarimeter Subsystem)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "1980-01-29",
+     "motivo": "spento perché funzionava male"
+    },
+    {
+     "sigla": "PRA",
+     "nome": "Radioastronomia planetaria (Planetary Radio Astronomy)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2008-01-15",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "UVS",
+     "nome": "Spettrometro ultravioletto (Ultraviolet Spectrometer)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2016-04-19",
+     "motivo": "spento per risparmiare energia"
+    }
+   ],
+   "strumenti_accesi_ottobre_2026": [
+    "MAG",
+    "PWS"
+   ],
+   "strumenti_nota": "Elenco e date dalla tabella NASA «Where are Voyager 1 and Voyager 2 now?» (tabella aggiornata al 17/04/2026, pagina al 15/10/2026). La NASA conta 10 strumenti scientifici per sonda; alcune pagine NASA dicono 11 perché contano anche l'esperimento di radioscienza, che usa la radio della sonda. Nessun comunicato NASA/JPL fra il 17/04/2026 e il 15/10/2026 annuncia altri spegnimenti. Discordanza: il comunicato JPL del 10/12/2018 dice che il plasma (PLS) di Voyager 1 «smise di funzionare nel 1980», la tabella NASA indica lo spegnimento il 01/02/2007.",
+   "strumenti_fonti": [
+    {
+     "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+     "data_fonte": "tabella 2026-04-17"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/news/nasa-shuts-off-instrument-on-voyager-1-to-keep-spacecraft-operating/",
+     "data_fonte": "2026-04-17"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+     "data_fonte": "2025-03-05"
+    }
+   ],
+   "pianeti": [
+    {
+     "corpo": "giove",
+     "data_ora_utc": "1979-03-05T12:05:26Z",
+     "distanza_km_dal_centro": 349136,
+     "distanza_raggi_planetari": 4.89,
+     "distanza_km_dalle_nubi": 280000,
+     "distanza_nota": "Dal centro: 4,89 raggi di Giove × 71.398 km (NSSDC). Dalle nubi: circa 280.000 km (pagina NASA Voyager 1); la fact sheet NASA dice 277.400 km.",
+     "scoperte": [
+      "Sulla luna Io ha visto vulcani attivi: è la prima volta che si vedono vulcani in attività fuori dalla Terra.",
+      "Ha scoperto un anello sottile e polveroso intorno a Giove.",
+      "Ha scoperto due piccole lune nuove, Teba (Thebe) e Metis."
+     ],
+     "fonti": [
+      "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    },
+    {
+     "corpo": "io",
+     "data_ora_utc": "1979-03-05",
+     "distanza_km_dal_centro": 20551,
+     "distanza_nota": "Calcolata con JPL Horizons (minimo della distanza sonda-centro di Io, alle 15:14 circa TDB del 5/3/1979). Nessuna pagina NASA consultata riporta questo valore.",
+     "scoperte": [
+      "Primi vulcani attivi visti su un altro mondo."
+     ],
+     "fonti": [
+      "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    },
+    {
+     "corpo": "saturno",
+     "data_ora_utc": "1980-11-12T23:46:30Z",
+     "distanza_km_dal_centro": 186420,
+     "distanza_raggi_planetari": 3.09,
+     "distanza_km_dalle_nubi": 126000,
+     "distanza_nota": "Dal centro: 3,09 raggi di Saturno × 60.330 km (NSSDC). Dalle nubi: circa 126.000 km (pagina NASA Voyager 1). La fact sheet NASA indica 64.200 km: valore discordante, non usato.",
+     "scoperte": [
+      "Ha visto che gli anelli hanno strutture complicate e piccole «lune pastore» che li tengono in ordine.",
+      "Ha scoperto nuove piccole lune e un nuovo anello.",
+      "Le Voyager hanno misurato su Saturno venti fino a circa 1.800 km/h."
+     ],
+     "fonti": [
+      "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    },
+    {
+     "corpo": "titano",
+     "data_ora_utc": "1980-11-12",
+     "distanza_km_dal_centro": 6591,
+     "distanza_nota": "Calcolata con JPL Horizons (minimo alle 05:41 TDB del 12/11/1980). Wikipedia riporta 6.490 km; nessuna pagina NASA consultata riporta il valore.",
+     "scoperte": [
+      "Titano ha un'atmosfera spessa fatta soprattutto di azoto, che nasconde la superficie.",
+      "Nell'atmosfera ci sono metano e altre sostanze complesse a base di carbonio."
+     ],
+     "fonti": [
+      "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    }
+   ],
+   "dopo_saturno": "Dopo Saturno (e il passaggio vicino a Titano) Voyager 1 è uscita dal piano in cui girano i pianeti, verso nord, a circa 3,5 UA all'anno. Non è andata verso Urano e Nettuno.",
+   "record": {
+    "oggetto_umano_piu_lontano": {
+     "dal": "1998-02-17",
+     "distanza_ua": 69.4,
+     "testo": "Il 17/02/1998 ha superato Pioneer 10 ed è diventata l'oggetto costruito dalle persone più lontano dal Sole.",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A"
+     ]
+    },
+    "shock_di_terminazione": {
+     "data": "2004-12-16",
+     "distanza_ua": 94,
+     "nota": "Data dalla pagina NASA Voyager 1; 94 UA da NASA (pagina Interstellar Mission e SVS). JPL Horizons a quella data: 94,0 UA.",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+      "https://svs.gsfc.nasa.gov/20132",
+      "https://ssd.jpl.nasa.gov/api/horizons.api"
+     ]
+    },
+    "eliopausa": {
+     "data": "2012-08-25",
+     "distanza_ua": 121.6,
+     "nota": "NASA scrive «circa 122 UA» (pagina Interstellar Mission). Valore 121,6 UA calcolato con JPL Horizons alla data. Prima sonda a uscire dall'eliosfera.",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+      "https://ssd.jpl.nasa.gov/api/horizons.api"
+     ]
+    },
+    "cento_ua": {
+     "data": "2006-08-16",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/voyager-1/"
+     ]
+    },
+    "un_giorno_luce": {
+     "data_ora_utc": "2026-11-18T10:16:07Z",
+     "ora_italiana": "18/11/2026 alle 11:16:07 (ora solare)",
+     "distanza_km": 25902000000,
+     "distanza_ua": 173.14,
+     "nota": "NASA: 18/11/2026 alle 2:16:07 PST, 16,094 miliardi di miglia (25,902 miliardi di km) dalla Terra. Sarà la prima sonda a un giorno luce. 173,14 UA è il valore di un giorno luce in UA, coerente con Horizons.",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+      "https://science.nasa.gov/mission/voyager/voyager-1/"
+     ]
+    }
+   },
+   "futuro": {
+    "fine_comunicazioni": {
+     "anni": null,
+     "testo": "La NASA non dà una data di fine. Dice che le due sonde potrebbero avere energia per tenere acceso almeno uno strumento scientifico fino agli anni 2030, ma che problemi imprevisti potrebbero accorciare questi tempi (comunicato JPL 05/03/2025). Lo spegnimento del LECP (17/04/2026) dà a Voyager 1 circa un anno di margine. Il blog NASA del 04/08/2026 annuncia per Voyager 1 lo stesso risparmio energetico fatto su Voyager 2 («Big Bang») «nei prossimi mesi»: al 15/10/2026 non risulta ancora comunicato come fatto.",
+     "fonti": [
+      {
+       "url": "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+       "data_fonte": "2025-03-05"
+      },
+      {
+       "url": "https://www.jpl.nasa.gov/news/nasa-shuts-off-instrument-on-voyager-1-to-keep-spacecraft-operating/",
+       "data_fonte": "2026-04-17"
+      },
+      {
+       "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+       "data_fonte": "2026-08-04"
+      },
+      {
+       "url": "https://science.nasa.gov/blogs/voyager/",
+       "data_fonte": "consultato 2026-10-16"
+      }
+     ]
+    },
+    "un_giorno_luce": "2026-11-18",
+    "stelle": {
+     "stella": "Gliese 445 (AC+79 3888), nella costellazione della Giraffa",
+     "fra_anni": 40000,
+     "distanza_anni_luce": 1.6,
+     "nota": "Fonti NASA discordanti: la vecchia pagina JPL «Interstellar Mission» (copia d'archivio del 25/12/2023) dice 1,6 anni luce; l'articolo NASA dell'11/09/2013 dice 1,7 anni luce. Sono stime vecchie: uno studio del 2019 con dati Gaia (Bailer-Jones e Farnocchia del JPL) ricalcola gli incontri ravvicinati di tutte le sonde fra 0,2 e 0,5 parsec nel prossimo milione di anni. Da presentare come stima, non come certezza.",
+     "fonti": [
+      {
+       "url": "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/",
+       "data_fonte": "copia d'archivio 2023-12-25"
+      },
+      {
+       "url": "https://www.nasa.gov/image-article/reaching-stars/",
+       "data_fonte": "2013-09-11"
+      },
+      {
+       "url": "https://arxiv.org/abs/1912.03503",
+       "data_fonte": "2019"
+      }
+     ]
+    },
+    "nube_di_oort": {
+     "ingresso_fra_anni": 300,
+     "nota": "Stime NASA, incerte: Voyager 1 entrerà nella nube di Oort fra circa 300 anni e ne uscirà forse fra 30.000 anni. La NASA colloca il bordo interno fra 2.000 e 5.000 UA dal Sole e quello esterno fra 10.000 e 100.000 UA; i confini non sono noti con precisione. Nota: 300 anni a circa 3,5 UA all'anno portano a circa 1.000 UA, quindi le stime NASA non sono del tutto coerenti fra loro.",
+     "fonti": [
+      {
+       "url": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+       "data_fonte": "2018-12-10"
+      }
+     ],
+     "attraversamento_fra_anni": 30000
+    }
+   },
+   "descrizione_bambini": "Voyager 1 è una sonda partita nel 1977. Ha fotografato Giove, Saturno e la luna Titano, poi è uscita dalla bolla del Sole. Dal 1998 è l'oggetto costruito dalle persone più lontano dal Sole, e nel 2026 comunica ancora con la Terra.",
+   "curiosita": [
+    "Voyager 1 è partita dopo Voyager 2, ma era più veloce e l'ha superata il 15 dicembre 1977.",
+    "Nel 1979 ha scoperto i vulcani attivi sulla luna Io di Giove: i primi visti fuori dalla Terra.",
+    "Dal 1998 è l'oggetto costruito dalle persone più lontano dal Sole.",
+    "Il 14 febbraio 1990 ha fotografato la Terra da circa 6 miliardi di km: nella foto la Terra è grande circa un pixel.",
+    "Un suo strumento (LECP) ha funzionato per quasi 49 anni, dal 1977 al 2026, prima di essere spento per risparmiare energia."
+   ],
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+    "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
+    "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+    "https://science.nasa.gov/mission/voyager/fact-sheet/",
+    "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+    "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/",
+    "https://www.jpl.nasa.gov/news/nasa-shuts-off-instrument-on-voyager-1-to-keep-spacecraft-operating/",
+    "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+    "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+    "https://pds.nasa.gov/data/vg1_vg2-s-uvs-5-brightness-n_s-maps-v1.0/vg_2102/CATALOG/VG2HOST.CAT",
+    "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/",
+    "https://www.nasa.gov/image-article/reaching-stars/"
+   ]
+  },
+  {
+   "id": "voyager-2",
+   "nome": "Voyager 2",
+   "lancio": {
+    "data_ora_utc": "1977-08-20T14:29:44Z",
+    "luogo": "Cape Canaveral, Florida (USA), Launch Complex 41",
+    "razzo": "Titan IIIE-Centaur",
+    "nota": "È partita per prima, 16 giorni prima di Voyager 1.",
+    "fonti": [
+     {
+      "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "data_fonte": "consultata 2026-10-16"
+     },
+     {
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+      "data_fonte": "consultata 2026-10-16"
+     }
+    ]
+   },
+   "massa_kg": 721.9,
+   "massa_nota": "721,9 kg secondo NASA e NSSDC; il catalogo PDS indica 815 kg (definizione diversa, non chiarita).",
+   "antenna_parabolica_diametro_m": 3.66,
+   "antenna_nota": "3,66 m (NSSDC); il catalogo PDS arrotonda a 3,7 m.",
+   "energia": {
+    "tipo": "RTG (generatori a radioisotopi, plutonio)",
+    "numero_rtg": 3,
+    "potenza_lancio_w": 470,
+    "potenza_lancio_nota": "Circa 470 W in totale a 30 V (NSSDC).",
+    "potenza_storica": {
+     "w": 335,
+     "data": "1997-01",
+     "fonte": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A"
+    },
+    "potenza_oggi_w": null,
+    "potenza_oggi_nota": "Nessuna fonte NASA/JPL consultata dà il valore attuale. Calo di circa 4 W all'anno. Ad agosto 2026 il JPL ha liberato energia con il «Big Bang» (spegnendo alcuni apparecchi e usando alternative che consumano meno), senza dare i watt.",
+    "calo_annuo_w": 4
+   },
+   "trasmettitore_w": 23,
+   "trasmettitore_nota": "23 W dal catalogo PDS della NASA (testo di epoca della missione).",
+   "posizione": {
+    "data_utc": "2026-10-15T00:00:00Z",
+    "distanza_sole_km": 21573091754,
+    "distanza_sole_ua": 144.207,
+    "distanza_terra_km": 21573675761,
+    "distanza_terra_ua": 144.211,
+    "tempo_luce_ore": 19.99,
+    "tempo_luce_nota": "Tempo di sola andata Sonda-Terra (1199,4 minuti). Andata e ritorno: circa 40 ore.",
+    "velocita_sole_km_s": 15.26,
+    "velocita_nota": "Horizons: 15,26 km/s al 15/10/2026. La pagina NASA di Voyager 2 dà circa 15,4 km/s (dato riferito al 2017).",
+    "metodo": "Effemeridi JPL Horizons interrogate il 2026-10-16 per l'istante 2026-10-15 00:00 UTC (soluzioni Voyager_1_ST+refit2022_m e Voyager_2_ST+refit2022_m). Distanza dal Sole = vettore geometrico eliocentrico; distanza dalla Terra e tempo della luce = osservatore al centro della Terra (quantità 20 e 21). Velocità = modulo del vettore velocità eliocentrico.",
+    "fonti": [
+     {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "data_fonte": "interrogata 2026-10-16"
+     },
+     {
+      "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "data_fonte": "consultata 2026-10-16"
+     }
+    ]
+   },
+   "strumenti": [
+    {
+     "sigla": "CRS",
+     "nome": "Sottosistema per i raggi cosmici (Cosmic Ray Subsystem)",
+     "acceso_ottobre_2026": true,
+     "data_spegnimento": null,
+     "motivo": null
+    },
+    {
+     "sigla": "LECP",
+     "nome": "Particelle cariche a bassa energia (Low-Energy Charged Particles)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2025-03-24",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "MAG",
+     "nome": "Magnetometro (Magnetometer)",
+     "acceso_ottobre_2026": true,
+     "data_spegnimento": null,
+     "motivo": null
+    },
+    {
+     "sigla": "PWS",
+     "nome": "Onde di plasma (Plasma Wave Subsystem)",
+     "acceso_ottobre_2026": true,
+     "data_spegnimento": null,
+     "motivo": null
+    },
+    {
+     "sigla": "PLS",
+     "nome": "Scienza del plasma (Plasma Science)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2024-09-26",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "ISS",
+     "nome": "Fotocamere grandangolare e teleobiettivo (Imaging Science Subsystem)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "1989-10-10",
+     "motivo": "grandangolare spenta il 1989-10-10, teleobiettivo il 1989-12-05, per risparmiare energia"
+    },
+    {
+     "sigla": "IRIS",
+     "nome": "Spettrometro e radiometro a infrarossi (Infrared Interferometer Spectrometer and Radiometer)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2007-02-01",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "PPS",
+     "nome": "Fotopolarimetro (Photopolarimeter Subsystem)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "1991-04-03",
+     "motivo": "spento perché funzionava male"
+    },
+    {
+     "sigla": "PRA",
+     "nome": "Radioastronomia planetaria (Planetary Radio Astronomy)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "2008-02-21",
+     "motivo": "spento per risparmiare energia"
+    },
+    {
+     "sigla": "UVS",
+     "nome": "Spettrometro ultravioletto (Ultraviolet Spectrometer)",
+     "acceso_ottobre_2026": false,
+     "data_spegnimento": "1998-11-12",
+     "motivo": "spento per risparmiare energia"
+    }
+   ],
+   "strumenti_accesi_ottobre_2026": [
+    "CRS",
+    "MAG",
+    "PWS"
+   ],
+   "strumenti_nota": "Elenco e date dalla tabella NASA «Where are Voyager 1 and Voyager 2 now?» (tabella aggiornata al 17/04/2026, pagina al 15/10/2026). La NASA conta 10 strumenti scientifici per sonda; alcune pagine NASA dicono 11 perché contano anche l'esperimento di radioscienza, che usa la radio della sonda. Nessun comunicato NASA/JPL fra il 17/04/2026 e il 15/10/2026 annuncia altri spegnimenti. Il comunicato del 05/03/2025 prevedeva di spegnere il CRS di Voyager 2 nel 2026; il blog NASA del 04/08/2026 dice che grazie al «Big Bang» i tre strumenti rimasti dovrebbero restare accesi almeno un altro anno.",
+   "strumenti_fonti": [
+    {
+     "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+     "data_fonte": "tabella 2026-04-17"
+    },
+    {
+     "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+     "data_fonte": "2026-08-04"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+     "data_fonte": "2025-03-05"
+    }
+   ],
+   "pianeti": [
+    {
+     "corpo": "giove",
+     "data_ora_utc": "1979-07-09T22:29:51Z",
+     "distanza_km_dal_centro": 721834,
+     "distanza_raggi_planetari": 10.11,
+     "distanza_km_dalle_nubi": 645000,
+     "distanza_nota": "Dal centro: 10,11 raggi di Giove (NSSDC). Dalle nubi: circa 645.000 km (pagina NASA Voyager 2); la fact sheet NASA dice 650.180 km.",
+     "scoperte": [
+      "Insieme a Voyager 1 ha fotografato da vicino le grandi lune Europa, Ganimede e Callisto.",
+      "Ha scoperto la piccola luna Adrastea.",
+      "Con le immagini delle due Voyager si è visto che la Grande Macchia Rossa è un'enorme tempesta che gira in senso antiorario."
+     ],
+     "scoperte_nota": "La fact sheet NASA elenca Adrastea, Metis e Teba fra le lune scoperte a Giove; Teba e Metis sono attribuite a Voyager 1 dalla pagina NASA di Voyager 1, quindi Adrastea resta a Voyager 2. La pagina NASA di Voyager 2 è confusa sul numero (una «14ª luna» o «quattro lune»).",
+     "fonti": [
+      "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+      "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/",
+      "https://science.nasa.gov/mission/voyager/voyager-1/"
+     ]
+    },
+    {
+     "corpo": "saturno",
+     "data_ora_utc": "1981-08-26T03:24:57Z",
+     "distanza_km_dal_centro": 161081,
+     "distanza_raggi_planetari": 2.67,
+     "distanza_km_dalle_nubi": 101000,
+     "distanza_nota": "Ora e raggi da NSSDC; la pagina NASA Voyager 2 indica le 01:21 UT e circa 101.000 km dalle nubi. La fact sheet NASA indica 41.000 km: discordante, non usato.",
+     "scoperte": [
+      "Passando nel piano degli anelli è stata colpita da migliaia di granelli di polvere.",
+      "Ha stimato che l'anello A è spesso solo circa 300 metri."
+     ],
+     "fonti": [
+      "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+      "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    },
+    {
+     "corpo": "urano",
+     "data_ora_utc": "1986-01-24T17:59:47Z",
+     "distanza_km_dal_centro": 107092,
+     "distanza_raggi_planetari": 4.19,
+     "distanza_km_dalle_nubi": 81500,
+     "scoperte": [
+      "Ha scoperto 10 lune nuove e 2 anelli nuovi.",
+      "Ha scoperto che il campo magnetico di Urano è molto inclinato e spostato rispetto al centro del pianeta.",
+      "Sulla luna Miranda ha visto canyon profondi fino a 20 km."
+     ],
+     "scoperte_nota": "Inclinazione del campo magnetico: 55° (pagina Voyager 2) o circa 60° (fact sheet). Nel testo per bambini non si dà il numero. Miranda: passaggio a circa 28.260 km (pagina NASA Voyager 2).",
+     "fonti": [
+      "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+      "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    },
+    {
+     "corpo": "nettuno",
+     "data_ora_utc": "1989-08-25T03:56:36Z",
+     "distanza_km_dal_centro": 29217,
+     "distanza_raggi_planetari": 1.18,
+     "distanza_km_dalle_nubi": 4800,
+     "distanza_nota": "Dalle nubi: circa 4.800 km (pagina NASA Voyager 2), circa 5.000 km (fact sheet). È il passaggio più vicino dei quattro.",
+     "scoperte": [
+      "Ha scoperto la Grande Macchia Scura, una tempesta grande più o meno come la Terra.",
+      "Ha misurato i venti più forti mai misurati su un pianeta, oltre 1.000 km/h.",
+      "Ha scoperto nuove lune e ha visto che Nettuno ha anelli completi ma molto tenui."
+     ],
+     "scoperte_nota": "Velocità dei venti: 1.100 km/h (pagina Voyager 2) o 2.000 km/h (fact sheet); per i bambini «oltre 1.000 km/h» è vero per entrambe. Lune nuove: sei (fact sheet) o cinque/sei (pagina Voyager 2): numero non usato nel testo.",
+     "fonti": [
+      "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+      "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/"
+     ]
+    },
+    {
+     "corpo": "tritone",
+     "data_ora_utc": "1989-08-25",
+     "distanza_km_dal_centro": 39734,
+     "distanza_nota": "Calcolata con JPL Horizons (minimo alle 09:11 TDB del 25/8/1989). Nessuna pagina NASA consultata riporta il valore.",
+     "scoperte": [
+      "Ha visto eruzioni simili a geyser che spingono materiale in alto.",
+      "Tritone è uno dei luoghi più freddi conosciuti del Sistema Solare: circa 38 kelvin, cioè circa −235 °C."
+     ],
+     "fonti": [
+      "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "https://science.nasa.gov/mission/voyager/fact-sheet/",
+      "https://science.nasa.gov/mission/voyager/voyager-2/"
+     ]
+    }
+   ],
+   "record": {
+    "unica_sonda_urano_nettuno": {
+     "testo": "Fino al 2026 è l'unica sonda che ha visitato Urano e Nettuno.",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/voyager-2/"
+     ]
+    },
+    "shock_di_terminazione": {
+     "data": "2007-08-30",
+     "distanza_ua": 84,
+     "nota": "NASA: agosto 2007 a 84 UA (pagina Interstellar Mission, SVS); data esatta dalla pagina NASA Voyager 2. JPL Horizons a quella data: 83,7 UA.",
+     "fonti": [
+      "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+      "https://svs.gsfc.nasa.gov/20132",
+      "https://ssd.jpl.nasa.gov/api/horizons.api"
+     ]
+    },
+    "eliopausa": {
+     "data": "2018-11-05",
+     "distanza_ua": 119.0,
+     "nota": "Data dal comunicato JPL del 10/12/2018 e del 04/11/2019. NASA (photojournal PIA22921) dice «circa 119 UA»; Horizons alla data: 119,0 UA. La pagina NASA Voyager 2 riporta in un elenco anche il 25/11/2018: discordanza interna, si usa il 05/11/2018.",
+     "fonti": [
+      "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+      "https://www.jpl.nasa.gov/news/voyager-2-illuminates-boundary-of-interstellar-space/",
+      "https://science.nasa.gov/photojournal/voyager-2-and-the-scale-of-the-solar-system-artists-concept",
+      "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "https://science.nasa.gov/mission/voyager/voyager-2/"
+     ]
+    }
+   },
+   "futuro": {
+    "fine_comunicazioni": {
+     "anni": null,
+     "testo": "Nessuna data di fine. Grazie al «Big Bang» di agosto 2026, i tre strumenti rimasti dovrebbero funzionare almeno un altro anno; senza, uno strumento sarebbe stato spento prima della fine del 2026. La NASA punta a tenere almeno uno strumento acceso fino agli anni 2030, senza garanzie.",
+     "fonti": [
+      {
+       "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+       "data_fonte": "2026-08-04"
+      },
+      {
+       "url": "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+       "data_fonte": "2025-03-05"
+      }
+     ]
+    },
+    "stelle": [
+     {
+      "stella": "Ross 248",
+      "fra_anni": 40000,
+      "distanza_anni_luce": 1.7,
+      "fonti": [
+       {
+        "url": "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/",
+        "data_fonte": "copia d'archivio 2023-12-25"
+       }
+      ]
+     },
+     {
+      "stella": "Sirio",
+      "fra_anni": 296000,
+      "distanza_anni_luce": 4.3,
+      "fonti": [
+       {
+        "url": "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/",
+        "data_fonte": "copia d'archivio 2023-12-25"
+       }
+      ]
+     }
+    ],
+    "stelle_nota": "Unica fonte NASA trovata: la vecchia pagina JPL «Interstellar Mission», oggi non più online (copia d'archivio). Lo studio 2019 con dati Gaia (Bailer-Jones e Farnocchia) rifà i calcoli con risultati diversi. Da presentare come stima.",
+    "nube_di_oort": {
+     "ingresso_fra_anni": 300,
+     "attraversamento_fra_anni": 30000,
+     "nota": "JPL (10/12/2018): circa 300 anni per arrivare al bordo interno della nube di Oort e forse 30.000 anni per attraversarla. La NASA colloca il bordo interno fra 2.000 e 5.000 UA dal Sole, ma non è noto con precisione. Sono stime.",
+     "fonti": [
+      {
+       "url": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+       "data_fonte": "2018-12-10"
+      }
+     ]
+    }
+   },
+   "descrizione_bambini": "Voyager 2 è partita nel 1977, 16 giorni prima della sua gemella. È l'unica sonda che è andata a trovare tutti e quattro i pianeti giganti: Giove, Saturno, Urano e Nettuno. Nel 2018 è uscita anche lei dalla bolla del Sole.",
+   "curiosita": [
+    "Fino al 2026 è l'unica sonda che ha visitato Urano (1986) e Nettuno (1989).",
+    "Quando è arrivata vicino a Urano, i suoi segnali impiegavano circa 2 ore e mezza per arrivare sulla Terra.",
+    "A Nettuno è passata a circa 4.800 km sopra le nubi: il passaggio più vicino di tutto il suo viaggio.",
+    "Su Tritone, la luna di Nettuno, ha visto eruzioni simili a geyser in un luogo freddissimo, circa −235 °C.",
+    "Il 15 ottobre 2026 i suoi segnali impiegano circa 20 ore per arrivare sulla Terra."
+   ],
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-2/",
+    "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+    "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+    "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+    "https://science.nasa.gov/mission/voyager/fact-sheet/",
+    "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+    "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+    "https://www.jpl.nasa.gov/news/voyager-2-illuminates-boundary-of-interstellar-space/",
+    "https://science.nasa.gov/photojournal/voyager-2-and-the-scale-of-the-solar-system-artists-concept",
+    "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+    "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+    "https://pds.nasa.gov/data/vg1_vg2-s-uvs-5-brightness-n_s-maps-v1.0/vg_2102/CATALOG/VG2HOST.CAT",
+    "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/"
+   ]
+  }
+ ],
+ "capitoli": [
+  {
+   "id": "lancio",
+   "data": "1977-08-20",
+   "sonda": "entrambe",
+   "titolo": "Si parte!",
+   "testo": "Il 20 agosto 1977 parte Voyager 2 da Cape Canaveral, in Florida. Il 5 settembre parte la sua gemella, Voyager 1, su una strada più veloce. A dicembre Voyager 1 è già davanti.",
+   "corpo": "terra",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://science.nasa.gov/mission/voyager/voyager-2/"
+   ]
+  },
+  {
+   "id": "giove",
+   "data": "1979-03-05",
+   "sonda": "entrambe",
+   "titolo": "Vulcani su Io",
+   "testo": "Voyager 1 passa vicino a Giove il 5 marzo 1979, Voyager 2 il 9 luglio. Sulla luna Io si vedono vulcani in eruzione: è la prima volta che li vediamo fuori dalla Terra. Giove ha anche un anello sottile e lune mai viste prima.",
+   "corpo": "io",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://science.nasa.gov/mission/voyager/voyager-2/",
+    "https://science.nasa.gov/mission/voyager/fact-sheet/",
+    "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html"
+   ]
+  },
+  {
+   "id": "saturno",
+   "data": "1980-11-12",
+   "sonda": "voyager-1",
+   "titolo": "Saturno e Titano",
+   "testo": "Il 12 novembre 1980 Voyager 1 visita Saturno e passa vicino a Titano, una luna con un'atmosfera spessa fatta soprattutto di azoto. Poi lascia il piano in cui girano i pianeti e punta verso lo spazio fra le stelle. Voyager 2 arriva a Saturno nell'agosto 1981.",
+   "corpo": "titano",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://science.nasa.gov/mission/voyager/voyager-2/",
+    "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html"
+   ]
+  },
+  {
+   "id": "urano",
+   "data": "1986-01-24",
+   "sonda": "voyager-2",
+   "titolo": "Visita a Urano",
+   "testo": "Il 24 gennaio 1986 Voyager 2 è la prima sonda a visitare Urano. Scopre 10 lune nuove e 2 anelli nuovi. La luce del Sole lì è 400 volte più debole che sulla Terra.",
+   "corpo": "urano",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-2/"
+   ]
+  },
+  {
+   "id": "nettuno",
+   "data": "1989-08-25",
+   "sonda": "voyager-2",
+   "titolo": "Nettuno e i geyser di Tritone",
+   "testo": "Il 25 agosto 1989 Voyager 2 passa a meno di 5.000 km sopra le nubi di Nettuno, dove soffiano i venti più forti mai misurati su un pianeta. Sulla luna Tritone, gelida, vede eruzioni simili a geyser. Fino al 2026 è l'unica sonda che ha visitato Urano e Nettuno.",
+   "corpo": "tritone",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-2/",
+    "https://science.nasa.gov/mission/voyager/fact-sheet/",
+    "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html"
+   ]
+  },
+  {
+   "id": "pale-blue-dot",
+   "data": "1990-02-14",
+   "sonda": "voyager-1",
+   "titolo": "Un puntino azzurro",
+   "testo": "Il 14 febbraio 1990, da circa 6 miliardi di km, Voyager 1 si gira e fotografa il Sole e sei pianeti: è il «ritratto di famiglia». Nella foto la Terra è un puntino azzurro grande circa un pixel. L'idea della foto era dello scienziato Carl Sagan.",
+   "corpo": "terra",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/",
+    "https://science.nasa.gov/mission/voyager/voyager-1/"
+   ]
+  },
+  {
+   "id": "bolla-del-sole",
+   "data": "2012-08-25",
+   "sonda": "entrambe",
+   "titolo": "Fuori dalla bolla del Sole",
+   "testo": "Il Sole soffia intorno a sé una grande bolla di particelle, l'eliosfera. Voyager 1 incontra il suo confine interno, lo shock di terminazione, nel 2004 e il 25 agosto 2012 esce dalla bolla, a circa 122 UA dal Sole. Voyager 2 la segue il 5 novembre 2018. Nel 2026 sono le uniche sonde arrivate nello spazio interstellare.",
+   "corpo": "sole",
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+    "https://science.nasa.gov/mission/voyager/"
+   ]
+  },
+  {
+   "id": "oggi",
+   "data": "2026-10-15",
+   "sonda": "entrambe",
+   "titolo": "Ancora in viaggio",
+   "testo": "Il 15 ottobre 2026 Voyager 1 è a circa 172 UA dal Sole e i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra; Voyager 2 è a circa 144 UA. L'energia delle sonde cala ogni anno, così il gruppo della missione spegne gli strumenti uno alla volta: a quella data Voyager 1 ne ha 2 accesi, Voyager 2 ne ha 3.",
+   "corpo": null,
+   "fonti": [
+    "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+    "https://www.jpl.nasa.gov/news/nasa-shuts-off-instrument-on-voyager-1-to-keep-spacecraft-operating/",
+    "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/"
+   ]
+  },
+  {
+   "id": "futuro",
+   "data": "2026-11-18",
+   "sonda": "entrambe",
+   "titolo": "E poi?",
+   "testo": "Il 18 novembre 2026 Voyager 1 si trova a un giorno luce dalla Terra: la luce impiega un giorno intero per arrivare fin lì. Nessuno sa quando le sonde smetteranno di parlarci: nel 2026 la NASA spera di tenere acceso almeno uno strumento fino agli anni 2030. Secondo le stime, fra circa 40.000 anni le due sonde passeranno vicino ad altre stelle, ma sempre a più di un anno luce di distanza. Con loro viaggiano i dischi d'oro con i saluti della Terra.",
+   "nota": "Previsto (fonte NASA): un giorno luce il 18/11/2026. Incerto: fine delle comunicazioni, date e distanze degli incontri con le stelle (stime vecchie, ricalcolate nel 2019 con dati diversi).",
+   "corpo": null,
+   "fonti": [
+    "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+    "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+    "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+    "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/",
+    "https://arxiv.org/abs/1912.03503"
+   ]
+  }
+ ],
+ "fonti_generali": [
+  {
+   "url": "https://science.nasa.gov/mission/voyager/",
+   "data_fonte": "consultata 2026-10-16",
+   "nota": "Pagina della missione NASA."
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+   "data_fonte": "aggiornata 2026-10-15",
+   "nota": "Distanza di un giorno luce, conto alla rovescia e tabella degli strumenti (17/04/2026)."
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/fact-sheet/",
+   "data_fonte": "consultata 2026-10-16",
+   "nota": "Fact sheet storica: alcune distanze dai pianeti non concordano con NSSDC."
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/interstellar-mission/",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/voyager-periapse.html",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://www.jpl.nasa.gov/news/nasa-shuts-off-instrument-on-voyager-1-to-keep-spacecraft-operating/",
+   "data_fonte": "2026-04-17"
+  },
+  {
+   "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+   "data_fonte": "2026-08-04"
+  },
+  {
+   "url": "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+   "data_fonte": "2025-03-05"
+  },
+  {
+   "url": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+   "data_fonte": "2018-12-10"
+  },
+  {
+   "url": "https://www.jpl.nasa.gov/news/voyager-2-illuminates-boundary-of-interstellar-space/",
+   "data_fonte": "2019-11-04"
+  },
+  {
+   "url": "https://science.nasa.gov/photojournal/voyager-2-and-the-scale-of-the-solar-system-artists-concept",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://svs.gsfc.nasa.gov/20132",
+   "data_fonte": "consultata 2026-10-16"
+  },
+  {
+   "url": "https://www.nasa.gov/image-article/reaching-stars/",
+   "data_fonte": "2013-09-11"
+  },
+  {
+   "url": "https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/",
+   "data_fonte": "copia d'archivio 2023-12-25",
+   "nota": "La pagina originale voyager.jpl.nasa.gov/mission/interstellar-mission/ oggi reindirizza a una pagina mancante. Anche voyager.jpl.nasa.gov/mission/status/ non è più online."
+  },
+  {
+   "url": "https://pds.nasa.gov/data/vg1_vg2-s-uvs-5-brightness-n_s-maps-v1.0/vg_2102/CATALOG/VG2HOST.CAT",
+   "data_fonte": "consultato 2026-10-16",
+   "nota": "Catalogo PDS NASA: trasmettitore 23 W, massa 815 kg."
+  },
+  {
+   "url": "https://ssd.jpl.nasa.gov/api/horizons.api",
+   "data_fonte": "interrogata 2026-10-16",
+   "nota": "JPL Horizons: posizioni al 15/10/2026 e distanze alle date storiche."
+  },
+  {
+   "url": "https://arxiv.org/abs/1912.03503",
+   "data_fonte": "2019",
+   "nota": "Bailer-Jones e Farnocchia (JPL), incontri stellari futuri con dati Gaia DR2."
+  }
+ ]
+}

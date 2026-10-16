@@ -1,0 +1,189 @@
+{
+ "revisore": "V",
+ "data": "2026-10-16",
+ "correzioni": [
+  {
+   "percorso": "capitoli.7.testo",
+   "attuale": "Oggi Voyager 1 è a circa 172 UA dal Sole e i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra; Voyager 2 è a circa 144 UA. L'energia cala ogni anno, così gli scienziati spengono gli strumenti uno alla volta. Voyager 1 ne ha ancora 2 accesi, Voyager 2 ne ha 3.",
+   "nuovo": "Il 15 ottobre 2026 Voyager 1 è a circa 172 UA dal Sole e i suoi segnali impiegano quasi 24 ore per arrivare sulla Terra; Voyager 2 è a circa 144 UA. L'energia delle sonde cala ogni anno, così il gruppo della missione spegne gli strumenti uno alla volta: a quella data Voyager 1 ne ha 2 accesi, Voyager 2 ne ha 3.",
+   "motivo": "«Oggi» e «ancora» non restano veri nel tempo: serve la data. «Gli scienziati» sostituito da una forma neutra. Numeri verificati: Horizons al 15/10/2026 dà 172,05 UA (V1) e 144,21 UA (V2), luce 1434,7 min; tabella NASA del 17/04/2026: V1 MAG e PWS, V2 CRS, MAG e PWS.",
+   "fonte": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
+  },
+  {
+   "percorso": "capitoli.8.testo",
+   "attuale": "È previsto che il 18 novembre 2026 Voyager 1 arrivi a un giorno luce dalla Terra: la luce ci metterà un giorno intero per raggiungerla. Non sappiamo invece quando le sonde smetteranno di parlarci: la NASA spera di tenere acceso almeno uno strumento fino agli anni 2030. Fra decine di migliaia di anni passeranno lontano da altre stelle, e con loro viaggiano i dischi d'oro con i saluti della Terra.",
+   "nuovo": "Il 18 novembre 2026 Voyager 1 si trova a un giorno luce dalla Terra: la luce impiega un giorno intero per arrivare fin lì. Nessuno sa quando le sonde smetteranno di parlarci: nel 2026 la NASA spera di tenere acceso almeno uno strumento fino agli anni 2030. Secondo le stime, fra circa 40.000 anni le due sonde passeranno vicino ad altre stelle, ma sempre a più di un anno luce di distanza. Con loro viaggiano i dischi d'oro con i saluti della Terra.",
+   "motivo": "«È previsto che… arrivi» diventa falso dopo il 18/11/2026: va scritto come fatto datato (indicazione del committente). Le frasi sul futuro lontano devono dire che sono stime. «Passeranno lontano da altre stelle» era ambiguo per un bambino: le stime NASA sono 1,6-1,7 anni luce fra circa 40.000 anni (Gliese 445, Ross 248). L'attesa sugli strumenti è datata al 2026.",
+   "fonte": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/ ; https://web.archive.org/web/20231225023834/https://voyager.jpl.nasa.gov/mission/interstellar-mission/ ; https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/"
+  },
+  {
+   "percorso": "capitoli.4.testo",
+   "attuale": "Il 25 agosto 1989 Voyager 2 passa a meno di 5.000 km sopra le nubi di Nettuno, dove soffiano i venti più forti mai misurati su un pianeta. Sulla luna Tritone, gelida, vede eruzioni simili a geyser. È ancora oggi l'unica sonda che ha visitato Urano e Nettuno.",
+   "nuovo": "Il 25 agosto 1989 Voyager 2 passa a meno di 5.000 km sopra le nubi di Nettuno, dove soffiano i venti più forti mai misurati su un pianeta. Sulla luna Tritone, gelida, vede eruzioni simili a geyser. Fino al 2026 è l'unica sonda che ha visitato Urano e Nettuno.",
+   "motivo": "«È ancora oggi» non resta vero nel tempo (sono allo studio nuove missioni verso Urano): serve una data. Dati verificati: 4.800 km dalle nubi (pagina NASA Voyager 2), 5.000 km (fact sheet).",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-2/"
+  },
+  {
+   "percorso": "capitoli.6.testo",
+   "attuale": "Il Sole soffia intorno a sé una grande bolla di particelle, l'eliosfera. Voyager 1 incontra il suo confine interno, lo shock di terminazione, nel 2004 e il 25 agosto 2012 esce dalla bolla, a circa 122 UA dal Sole. Voyager 2 la segue il 5 novembre 2018: sono le uniche sonde nello spazio interstellare.",
+   "nuovo": "Il Sole soffia intorno a sé una grande bolla di particelle, l'eliosfera. Voyager 1 incontra il suo confine interno, lo shock di terminazione, nel 2004 e il 25 agosto 2012 esce dalla bolla, a circa 122 UA dal Sole. Voyager 2 la segue il 5 novembre 2018. Nel 2026 sono le uniche sonde arrivate nello spazio interstellare.",
+   "motivo": "«Sono le uniche sonde» non resta vero nel tempo (New Horizons e altre sonde potranno arrivarci): serve la data. Date e distanze verificate (pagina NASA Interstellar Mission: 94 UA dic. 2004, 25/08/2012, «roughly 122 AU», 05/11/2018).",
+   "fonte": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
+  },
+  {
+   "percorso": "capitoli.2.testo",
+   "attuale": "Il 12 novembre 1980 Voyager 1 visita Saturno e passa vicino a Titano, una luna con un'atmosfera spessa fatta soprattutto di azoto. Poi lascia il piano in cui girano i pianeti e punta verso l'alto, fuori dal Sistema Solare. Voyager 2 arriva a Saturno nell'agosto 1981.",
+   "nuovo": "Il 12 novembre 1980 Voyager 1 visita Saturno e passa vicino a Titano, una luna con un'atmosfera spessa fatta soprattutto di azoto. Poi lascia il piano in cui girano i pianeti e punta verso lo spazio fra le stelle. Voyager 2 arriva a Saturno nell'agosto 1981.",
+   "motivo": "«Fuori dal Sistema Solare» è sbagliato: il JPL scrive che nessuna delle due Voyager ha lasciato il Sistema Solare, che finisce oltre la nube di Oort. «Verso l'alto» non ha senso nello spazio; la direzione è fuori dal piano dei pianeti, verso lo spazio interstellare.",
+   "fonte": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/"
+  },
+  {
+   "percorso": "sonde.0.descrizione_bambini",
+   "attuale": "Voyager 1 è una sonda partita nel 1977. Ha fotografato Giove, Saturno e la luna Titano, poi è uscita dalla bolla del Sole. Oggi è l'oggetto costruito dalle persone più lontano di tutti, e ci parla ancora.",
+   "nuovo": "Voyager 1 è una sonda partita nel 1977. Ha fotografato Giove, Saturno e la luna Titano, poi è uscita dalla bolla del Sole. Dal 1998 è l'oggetto costruito dalle persone più lontano dal Sole, e nel 2026 comunica ancora con la Terra.",
+   "motivo": "«Oggi» e «ci parla ancora» non restano veri nel tempo: servono date. Record dal 17/02/1998 (pagina NASA Voyager 1).",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-1/"
+  },
+  {
+   "percorso": "sonde.0.curiosita.2",
+   "attuale": "Dal 1998 è l'oggetto costruito dall'uomo più lontano dal Sole.",
+   "nuovo": "Dal 1998 è l'oggetto costruito dalle persone più lontano dal Sole.",
+   "motivo": "Linguaggio inclusivo: «dall'uomo» → «dalle persone» (stessa forma della descrizione_bambini).",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-1/"
+  },
+  {
+   "percorso": "sonde.0.record.oggetto_umano_piu_lontano.testo",
+   "attuale": "Il 17/02/1998 ha superato Pioneer 10 ed è diventata l'oggetto costruito dall'uomo più lontano dal Sole.",
+   "nuovo": "Il 17/02/1998 ha superato Pioneer 10 ed è diventata l'oggetto costruito dalle persone più lontano dal Sole.",
+   "motivo": "Linguaggio inclusivo: «dall'uomo» → «dalle persone». Data e 69,4 UA verificate.",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-1/"
+  },
+  {
+   "percorso": "sonde.1.curiosita.4",
+   "attuale": "Oggi i suoi segnali impiegano circa 20 ore per arrivare sulla Terra.",
+   "nuovo": "Il 15 ottobre 2026 i suoi segnali impiegano circa 20 ore per arrivare sulla Terra.",
+   "motivo": "«Oggi» non resta vero nel tempo. Horizons al 15/10/2026: 1199,4 minuti di luce (19,99 ore).",
+   "fonte": "https://ssd.jpl.nasa.gov/api/horizons.api"
+  },
+  {
+   "percorso": "sonde.1.curiosita.0",
+   "attuale": "È l'unica sonda che ha visitato Urano (1986) e Nettuno (1989).",
+   "nuovo": "Fino al 2026 è l'unica sonda che ha visitato Urano (1986) e Nettuno (1989).",
+   "motivo": "Non resta vero nel tempo senza data (possibili missioni future verso Urano).",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-2/"
+  },
+  {
+   "percorso": "sonde.1.record.unica_sonda_urano_nettuno.testo",
+   "attuale": "È l'unica sonda che ha visitato Urano e Nettuno.",
+   "nuovo": "Fino al 2026 è l'unica sonda che ha visitato Urano e Nettuno.",
+   "motivo": "Come sonde.1.curiosita.0: serve una data.",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-2/"
+  },
+  {
+   "percorso": "sonde.1.descrizione_bambini",
+   "attuale": "Voyager 2 è partita nel 1977, qualche giorno prima della sua gemella. È l'unica sonda che è andata a trovare tutti e quattro i pianeti giganti: Giove, Saturno, Urano e Nettuno. Nel 2018 è uscita anche lei dalla bolla del Sole.",
+   "nuovo": "Voyager 2 è partita nel 1977, 16 giorni prima della sua gemella. È l'unica sonda che è andata a trovare tutti e quattro i pianeti giganti: Giove, Saturno, Urano e Nettuno. Nel 2018 è uscita anche lei dalla bolla del Sole.",
+   "motivo": "«Qualche giorno» per 16 giorni è impreciso; il dato esatto è semplice (20/08 e 05/09/1977). «È l'unica sonda… quattro pianeti giganti» resta vero nel tempo (nessuna missione prevista li visita tutti), lasciato.",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-1/ ; https://science.nasa.gov/mission/voyager/voyager-2/"
+  },
+  {
+   "percorso": "sonde.0.pianeti.0.scoperte.0",
+   "attuale": "Sulla luna Io ha visto vulcani attivi: è la prima volta che si vedono vulcani in attività fuori dalla Terra (nove eruzioni).",
+   "nuovo": "Sulla luna Io ha visto vulcani attivi: è la prima volta che si vedono vulcani in attività fuori dalla Terra.",
+   "motivo": "La fact sheet NASA attribuisce le nove eruzioni alle due Voyager insieme («Together, the Voyagers observed nine erupting volcanoes»), non a Voyager 1 da sola.",
+   "fonte": "https://science.nasa.gov/mission/voyager/fact-sheet/"
+  },
+  {
+   "percorso": "sonde.0.pianeti.3.scoperte.0",
+   "attuale": "Titano ha un'atmosfera spessa fatta per circa il 90% di azoto, che nasconde la superficie.",
+   "nuovo": "Titano ha un'atmosfera spessa fatta soprattutto di azoto, che nasconde la superficie.",
+   "motivo": "«Circa il 90%» è il valore storico della pagina NASA Voyager 1; misure successive (Cassini-Huygens) danno circa il 95-98%. «Soprattutto di azoto» è vero con entrambi ed è coerente con capitoli.2.testo.",
+   "fonte": "https://science.nasa.gov/mission/voyager/voyager-1/"
+  },
+  {
+   "percorso": "meta.disco_d_oro.saluti_nota",
+   "attuale": "Saluti in 55 lingue, dall'accadico, parlato in Sumer circa 6.000 anni fa, al wu, un dialetto cinese moderno. Sul disco di Voyager 1 ci sono anche messaggi del presidente USA Jimmy Carter e del segretario generale ONU Kurt Waldheim.",
+   "nuovo": "Saluti in 55 lingue, dall'accadico, una lingua dell'antica Mesopotamia, al wu, un dialetto cinese moderno. Su ogni disco ci sono anche messaggi scritti del presidente USA Jimmy Carter e del segretario generale ONU Kurt Waldheim.",
+   "motivo": "I messaggi di Carter e Waldheim sono «printed messages» e la pagina NASA li riferisce al disco in generale: i due dischi sono copie dello stesso, non solo quello di Voyager 1. Per l'accadico «parlato in Sumer circa 6.000 anni fa» vedi meta.disco_d_oro.altri_fatti_bambini.1.",
+   "fonte": "https://science.nasa.gov/mission/voyager/golden-record-contents/"
+  },
+  {
+   "percorso": "meta.disco_d_oro.altri_fatti_bambini.1",
+   "attuale": "Contiene un saluto in accadico, una lingua parlata circa 6.000 anni fa.",
+   "nuovo": "Contiene un saluto in accadico, una lingua antichissima parlata in Mesopotamia più di 4.000 anni fa.",
+   "motivo": "La NASA scrive «spoken in Sumer about six thousand years ago», ma l'accadico è attestato per scritto dal 2600-2500 a.C. circa (circa 4.500 anni fa) e prende nome da Akkad, non da Sumer. Il testo nuovo è vero sia con la NASA sia con le fonti di linguistica.",
+   "fonte": "https://en.wikipedia.org/wiki/Akkadian_language ; https://science.nasa.gov/mission/voyager/golden-record-contents/"
+  },
+  {
+   "percorso": "sonde.0.futuro.nube_di_oort.ingresso_fra_anni",
+   "attuale": null,
+   "nuovo": 300,
+   "motivo": "La pagina NASA sui fatti della nube di Oort dà la stima anche per Voyager 1: «won't enter the Oort Cloud for about 300 years».",
+   "fonte": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
+  },
+  {
+   "percorso": "sonde.0.futuro.nube_di_oort.attraversamento_fra_anni",
+   "attuale": null,
+   "nuovo": 30000,
+   "motivo": "Campo nuovo, come per Voyager 2: NASA «it won't exit the outer edge for maybe 30,000 years» (riferito a Voyager 1).",
+   "fonte": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
+  },
+  {
+   "percorso": "sonde.0.futuro.nube_di_oort.nota",
+   "attuale": "La NASA stima che la nube di Oort cominci a circa 1.000 UA dal Sole e arrivi fino a circa 100.000 UA, ma i confini non sono noti con precisione. Il tempo di arrivo è dato dal JPL solo per Voyager 2 (circa 300 anni); per Voyager 1 non è stata trovata una stima NASA.",
+   "nuovo": "Stime NASA, incerte: Voyager 1 entrerà nella nube di Oort fra circa 300 anni e ne uscirà forse fra 30.000 anni. La NASA colloca il bordo interno fra 2.000 e 5.000 UA dal Sole e quello esterno fra 10.000 e 100.000 UA; i confini non sono noti con precisione. Nota: 300 anni a circa 3,5 UA all'anno portano a circa 1.000 UA, quindi le stime NASA non sono del tutto coerenti fra loro.",
+   "motivo": "La nota diceva che la NASA fa cominciare la nube a circa 1.000 UA e che per Voyager 1 non c'è una stima: la pagina NASA dà 2.000-5.000 UA per il bordo interno e 300/30.000 anni per Voyager 1.",
+   "fonte": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
+  },
+  {
+   "percorso": "sonde.1.futuro.nube_di_oort.nota",
+   "attuale": "JPL (10/12/2018): circa 300 anni per arrivare al bordo interno della nube di Oort e forse 30.000 anni per attraversarla. Il bordo interno è stimato a circa 1.000 UA, ma non è noto con precisione.",
+   "nuovo": "JPL (10/12/2018): circa 300 anni per arrivare al bordo interno della nube di Oort e forse 30.000 anni per attraversarla. La NASA colloca il bordo interno fra 2.000 e 5.000 UA dal Sole, ma non è noto con precisione. Sono stime.",
+   "motivo": "«Bordo interno stimato a circa 1.000 UA» non è nelle fonti NASA consultate: la pagina NASA sulla nube di Oort dice 2.000-5.000 UA.",
+   "fonte": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/ ; https://science.nasa.gov/solar-system/oort-cloud/facts/"
+  }
+ ],
+ "verificati": [
+  "Lancio V1 1977-09-05T12:56:01Z e V2 1977-08-20T14:29:44Z (pagine NASA V1 e V2); razzo Titan IIIE-Centaur (NSSDC); sorpasso il 15/12/1977 (NASA V1).",
+  "Massa 721,9 kg (NASA V1, NSSDC); antenna 3,66 m (NSSDC) e 3,7 m (PDS); trasmettitore 23 W (catalogo PDS VG2HOST.CAT).",
+  "RTG: 3 da circa 158 W ciascuno (NASA V1), circa 470 W a 30 V al lancio e circa 335 W a inizio 1997 (NSSDC V1 e V2); calo di circa 4 W all'anno (JPL 05/03/2025 e blog 04/08/2026).",
+  "Sorvoli: orari e raggi planetari di tutti e sei gli incontri coincidono con la tabella NSSDC voyager-periapse; distanze dalle nubi 280.000 km (V1 Giove), 126.000 km (V1 Saturno), 645.000 km (V2 Giove), 101.000 km (V2 Saturno), 81.500 km (Urano), 4.800 km (Nettuno) dalle pagine NASA V1/V2. Le distanze Horizons in voyager-traiettoria.json (conica raccordata) differiscono di meno dell'1-2% dai valori NSSDC, tranne Nettuno dalla superficie (4.472 km contro 4.800).",
+  "Scoperte: Teba e Metis (V1), Adrastea, anello di Giove, 10 lune e 2 anelli di Urano, canyon di Miranda fino a 20 km, campo di Urano inclinato 55°/60°, venti di Saturno 1.800 km/h, venti di Nettuno 1.100/2.000 km/h, Grande Macchia Scura grande come la Terra, 6 lune di Nettuno, anelli completi ma tenui, Tritone 38 K e geyser, Grande Macchia Rossa in senso antiorario, anello A circa 300 m, urti di granelli di polvere: tutto confermato da fact sheet NASA e pagine NASA V1/V2.",
+  "Urano: luce 400 volte più debole e segnali in circa 2,5 ore (pagina NASA Voyager 2).",
+  "Strumenti e date di spegnimento di entrambe le sonde: coincidono una per una con la tabella NASA aggiornata al 17/04/2026. LECP V1 spento il 17/04/2026, motorino da 0,5 W acceso, circa un anno di margine, quasi 49 anni di funzionamento (blog NASA 17/04/2026). CRS V1 25/02/2025, LECP V2 24/03/2025 (JPL 05/03/2025). Il blog Voyager non ha articoli dopo il 04/08/2026 (consultato il 16/10/2026): nessun nuovo spegnimento e nessun «Big Bang» su Voyager 1 comunicato.",
+  "Big Bang su Voyager 2 (blog 04/08/2026): almeno un altro anno per i tre strumenti, altrimenti uno spento prima della fine del 2026; su Voyager 1 «in the coming months».",
+  "Record V1: Pioneer 10 superata il 17/02/1998 a 69,4 UA, 100 UA il 16/08/2006, shock di terminazione 16/12/2004 a 94 UA, eliopausa 25/08/2012 a circa 122 UA (Horizons 121,6). V2: shock 30/08/2007 a 84 UA (Horizons 83,7), eliopausa 05/11/2018 (JPL), circa 119 UA.",
+  "Posizioni al 15/10/2026 ricalcolate con Horizons il 16/10/2026: V1 25.738.851.081 km (172,05 UA) dal Sole, 172,508 UA dalla Terra, 1434,71 min di luce, 16,92 km/s; V2 21.573.091.754 km (144,21 UA), 144,211 UA dalla Terra, 1199,37 min, 15,26 km/s. Tutto coincide.",
+  "Giorno luce: 18/11/2026 alle 2:16:07 PST = 10:16:07 UTC = 11:16:07 ora italiana (ora solare dal 25/10/2026); 25,902 miliardi di km = 173,14 UA (pagina NASA Where are Voyager).",
+  "Disco d'oro: 55 lingue, 115 immagini, 90 minuti di musica, 35 suoni, parti di 27 brani, 16 e 2/3 giri al minuto, 30 cm placcato d'oro, custodia di alluminio con testina e puntina, comitato presieduto da Carl Sagan (Cornell), copertina con istruzioni e posizione della Terra (pagina NASA golden-record-contents, NASA V1, NSSDC). Il valore NSSDC di 1000 giri al minuto è un errore della scheda: giusto non usarlo.",
+  "Pale Blue Dot: 14/02/1990 alle 04:48 GMT, fotocamere spente alle 05:22, 6 miliardi di km dal Sole (40 UA), 60 immagini, sei pianeti, motivi per Mercurio, Marte e Plutone, Terra grande circa un pixel, idea di Carl Sagan nel 1981 (pagina NASA Pale Blue Dot).",
+  "Stelle: Gliese 445/AC+79 3888 nella Giraffa, 1,6 anni luce fra circa 40.000 anni (copia d'archivio JPL) o 1,7 (NASA 2013); Ross 248 a 1,7 anni luce fra circa 40.000 anni; Sirio a 4,3 anni luce fra circa 296.000 anni (copia d'archivio JPL).",
+  "Testi verificati e corretti nel contenuto: capitoli 0 (lancio), 1 (Giove), 3 (Urano), 5 (Pale Blue Dot); curiosità V1 0, 1, 3, 4; curiosità V2 1, 2, 3; meta.disco_d_oro.fatto_bambini e altri_fatti_bambini.0."
+ ],
+ "dubbi": [
+  {
+   "percorso": "sonde.0.massa_nota",
+   "descrizione": "721,9 kg è quasi certamente la massa senza il propellente (idrazina) e 815 kg quella al lancio con il propellente, ma nessuna fonte NASA consultata lo dice in modo esplicito. Nei testi per bambini meglio non dare la massa, o dire «circa 800 kg»."
+  },
+  {
+   "percorso": "sonde.1.record.eliopausa.distanza_ua",
+   "descrizione": "La pagina NASA PIA22921 non è stata riaperta da questo revisore; 119,0 UA coincide con Horizons e con il valore NASA noto. La pagina NASA Voyager 2 riporta anche il 25/11/2018 in un elenco: errore di battitura della NASA, il comunicato JPL dice 5 novembre."
+  },
+  {
+   "percorso": "sonde.1.pianeti.1.distanza_nota",
+   "descrizione": "La pagina NASA Voyager 2 dà le 01:21 UT per Saturno, NSSDC le 03:24:57 e Horizons le 03:24:05: l'orario NASA sembra sbagliato. Nei testi si usa solo la data, quindi nessun effetto."
+  },
+  {
+   "percorso": "capitoli.8",
+   "descrizione": "Dopo il 18/11/2026 il testo corretto resta vero; resta però da aggiornare, prima della pubblicazione, la frase sugli strumenti se la NASA spegne altri strumenti o completa il «Big Bang» su Voyager 1 (blog NASA senza articoli dopo il 04/08/2026)."
+  },
+  {
+   "percorso": "capitoli.7.id",
+   "descrizione": "L'id «oggi» e il titolo «Ancora in viaggio» non sono testi per i bambini nel senso stretto, ma se il titolo viene mostrato o letto ad alta voce, «Ancora in viaggio» resta vero (le sonde continueranno a viaggiare anche spente). Valutare un id neutro come «ottobre-2026»."
+  },
+  {
+   "percorso": "sonde.0.pianeti.1.distanza_km_dal_centro",
+   "descrizione": "Io (20.551 km), Titano (6.591 km) e Tritone (39.734 km) sono calcolati con la conica raccordata di Horizons, che per quegli anni è approssimata. I valori di letteratura sono circa 20.600, 6.490 e 39.800 km: ordini di grandezza giusti, ma da non mostrare con cinque cifre."
+  }
+ ]
+}
