@@ -1,5 +1,17 @@
 # Changelog Repo
 
+## 4.22.1 - 2026-10-16
+
+**Sistema Solare: il film delle Voyager ha la sua voce.**
+
+### Added
+- `assets/sistema-solare/audio/film-*.mp3`: i 9 capitoli del film letti con
+  ElevenLabs (testi in `docs/sistema-solare/audio-testi.md`), mp3 a 64 kbps
+  mono, 1,4 MB in tutto. `js/sistema-solare-dati.js` li elenca: il build li
+  prende solo se il testo del capitolo è quello registrato. Con «Nel viaggio
+  guidato, leggi ad alta voce» acceso, ogni capitolo aspetta la fine del suo
+  audio; il film dura circa 4 minuti invece di 2 e mezzo.
+
 ## 4.22.0 - 2026-10-16
 
 **Nuovo: il Sistema Solare in 3D.**

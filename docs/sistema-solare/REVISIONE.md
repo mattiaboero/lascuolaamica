@@ -289,9 +289,7 @@ guidato, da solo. Dura circa 2 minuti e mezzo: 9 capitoli, dal lancio al 2049.
 - **Foto**: disegno ufficiale (PIA04495), «pallido puntino azzurro» nella
   versione 2020 (PIA23645), «ritratto di famiglia» (PIA00451), copertina del
   Disco d'oro. Tutte NASA/JPL-Caltech, crediti nella didascalia.
-- **Audio**: i testi dei capitoli sono in `audio-testi.md` (sezione film). Gli
-  mp3 non ci sono ancora: con «Nel viaggio guidato, leggi ad alta voce» acceso in Opzioni, il film
-  usa la voce del browser e aspetta che finisca prima di ripartire.
+- **Audio**: i 9 capitoli sono registrati con ElevenLabs (`assets/sistema-solare/audio/film-*.mp3`, testi in `audio-testi.md`, dalla 4.22.1). Con «Nel viaggio guidato, leggi ad alta voce» acceso in Opzioni, ogni capitolo aspetta la fine del suo audio.
 
 ## Prova con i bambini
 
