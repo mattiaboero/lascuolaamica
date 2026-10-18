@@ -2134,6 +2134,16 @@
   // shared.js, che come in ogni pagina arriva dopo questo file (defer, in
   // ordine): partire subito vorrebbe dire ignorare il movimento ridotto. A
   // DOMContentLoaded tutti gli script defer sono gia' stati eseguiti.
-  if (SA.motion || document.readyState === 'complete') avvia();
-  else document.addEventListener('DOMContentLoaded', avvia, { once: true });
+  // ss-pronta mostra l'HUD in alto (vedi sistema-solare.css), anche se avvia()
+  // si interrompe a meta': meglio un HUD fuori posto che nessun pulsante.
+  function parti() {
+    try {
+      avvia();
+    } finally {
+      $('ssScena').classList.add('ss-pronta');
+    }
+  }
+
+  if (SA.motion || document.readyState === 'complete') parti();
+  else document.addEventListener('DOMContentLoaded', parti, { once: true });
 })();

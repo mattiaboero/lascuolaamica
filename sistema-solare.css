@@ -662,6 +662,16 @@ body:not(.ss-immersivo) .ss-solo-immersivo {
   }
 }
 
+/* Missione, data, pulsanti in alto e avviso di scala li riempie e li dispone
+   avvia(): mostrati prima, al primo paint, cambiavano misura e posto subito
+   dopo (CLS 0,22 su desktop). Restano invisibili, ma al loro posto, finche'
+   la scena non e' pronta; un elemento che compare non conta come spostamento.
+   Il dock in basso resta visibile: e' il primo contenuto della pagina. */
+.ss-scena:not(.ss-pronta) .ss-hud-alto,
+.ss-scena:not(.ss-pronta) .ss-avviso-scala {
+  visibility: hidden;
+}
+
 .ss-hud-alto {
   position: absolute;
   top: 10px;
@@ -1349,6 +1359,11 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
 .ss-poster {
   flex: 0 1 auto;
   min-width: 0;
+  /* L'altezza dei pianetini (posto 60px, nome, margini) piu' il padding della
+     riga, riservata prima che avvia() la riempia: senza, il dock in basso
+     cresceva di 87px dopo il primo paint. Sotto i 700px il nome e' piu'
+     piccolo: vedi la media query piu' sotto. */
+  min-height: 91px;
   align-items: flex-end;
   gap: 4px;
 }
@@ -1565,6 +1580,10 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
 
   .ss-pianetino {
     min-width: 50px;
+  }
+
+  .ss-poster {
+    min-height: 89px;
   }
 
   .ss-pianetino-nome {

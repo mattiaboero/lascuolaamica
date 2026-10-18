@@ -1,5 +1,25 @@
 # Changelog Repo
 
+## 4.22.4 - 2026-10-18
+
+**Sistema Solare: l'HUD non salta più al caricamento.**
+
+### Fixed
+- CLS di `/sistema-solare` da 0,23 a 0,008 su desktop (da 0,039 a 0,001 in
+  mobile). Missione, data, pulsanti in alto e avviso di scala li riempie e li
+  dispone `avvia()`: se il primo paint arrivava prima degli script, cambiavano
+  misura e posto subito dopo (`.ss-hud-destra` da 106 a 428 px, missione più
+  alta di 24 px, avviso da sinistra a destra). In Lighthouse desktop valeva
+  circa 11 punti.
+  - `sistema-solare.css`: `.ss-hud-alto` e `.ss-avviso-scala` restano
+    invisibili (`visibility: hidden`, al loro posto) finché `.ss-scena` non ha
+    `.ss-pronta`. Il dock in basso resta visibile ed è ancora il primo
+    contenuto dipinto: FCP invariato.
+  - La riga dei pianeti riserva la sua altezza (`min-height` 91 px, 89 px
+    sotto i 700): vuota era alta 2 px e il dock cresceva di 87 px.
+  - `js/sistema-solare.js`: `.ss-pronta` si aggiunge in un `finally` dopo
+    `avvia()`, anche se l'avvio si interrompe.
+
 ## 4.22.3 - 2026-10-18
 
 **Sistema Solare: in pausa la scena non si ridisegna più.**
