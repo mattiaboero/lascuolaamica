@@ -602,16 +602,33 @@ void main() {
     const codaTexture = [];
     let texInArrivo = 0;         // immagini chieste e non ancora decodificate
 
+    // Con un <img> texImage2D ridecodifica la mappa sul main thread anche dopo
+    // decode(): 50 ms e piu' per le grandi, a meta' di un volo. Un ImageBitmap
+    // si decodifica in un altro thread e si carica com'e'. Dove manca
+    // createImageBitmap (o non accetta il blob) si torna all'<img>.
+    function decodificaImg(url) {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = url;
+      return (img.decode ? img.decode() : new Promise((ok, no) => { img.onload = ok; img.onerror = no; })).then(() => img);
+    }
+
+    function decodifica(url) {
+      if (typeof window.createImageBitmap !== 'function') return decodificaImg(url);
+      return fetch(url)
+        .then((r) => (r.ok ? r.blob() : Promise.reject(new Error(r.status))))
+        .then((b) => window.createImageBitmap(b))
+        .catch(() => decodificaImg(url));
+    }
+
     function caricaTexture(c, grande) {
       const k = grande ? 'texGrande' : 'texBassa';
       if (c[k] !== 'no' || !c.dati.tex) return;
       c[k] = 'carico';
       texInArrivo++;
-      const img = new Image();
-      img.decoding = 'async';
-      img.src = (opz.cartellaTexture || '') + (grande ? '' : 'basse/') + c.dati.tex;
-      (img.decode ? img.decode() : new Promise((ok, no) => { img.onload = ok; img.onerror = no; }))
-        .then(() => { texInArrivo--; codaTexture.push({ c, img, grande }); })
+      const url = (opz.cartellaTexture || '') + (grande ? '' : 'basse/') + c.dati.tex;
+      decodifica(url)
+        .then((img) => { texInArrivo--; codaTexture.push({ c, img, grande }); })
         .catch(() => {
           texInArrivo--;
           c[k] = 'errore';
@@ -624,7 +641,10 @@ void main() {
       const { c, img, grande } = codaTexture.shift();
       c[grande ? 'texGrande' : 'texBassa'] = 'pronta';
       // Una bassa arrivata dopo la grande non serve piu'.
-      if (!grande && c.texLivello === 'grande') return;
+      if (!grande && c.texLivello === 'grande') {
+        if (img.close) img.close();
+        return;
+      }
       const t = gl.createTexture();
       gl.bindTexture(gl.TEXTURE_2D, t);
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
@@ -640,6 +660,8 @@ void main() {
       // mezzo giro (uLonU) e devono richiudersi sul bordo.
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, pot(img.width) ? gl.REPEAT : gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      // L'ImageBitmap e' ormai sulla GPU: la copia in memoria si libera.
+      if (img.close) img.close();
       // La bassa resta in uso finche' la grande non e' pronta: niente buchi.
       if (c.tex) gl.deleteTexture(c.tex);
       c.tex = t;

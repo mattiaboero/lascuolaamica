@@ -1,13 +1,14 @@
 [
  {
-  "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.7",
+  "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.8",
   "items": [
    "Sistema Solare: con «Meno animazioni» scelto nel sito o nelle impostazioni del dispositivo, la scena ora parte ferma. Si fa ripartire con «Muovi».",
    "Sistema Solare: con la scena ferma il computer non lavora più per niente. Prima ridisegnava i pianeti di continuo anche in pausa, consumando batteria.",
    "Sistema Solare: all'apertura i pulsanti e la missione non saltano più di posto mentre la pagina finisce di caricarsi.",
    "Sistema Solare: sui computer senza scheda grafica la scena parte ferma e più leggera, invece di tenere occupato il processore. Si fa girare con «Muovi».",
    "Sistema Solare: alla prima visita il benvenuto compare prima, senza aspettare che la scena 3D sia pronta.",
-   "Sistema Solare: la pagina scarica prima la scena e subito dopo i testi delle schede, così si apre un po' prima."
+   "Sistema Solare: la pagina scarica prima la scena e subito dopo i testi delle schede, così si apre un po' prima.",
+   "Sistema Solare: il volo verso un pianeta è più fluido, perché le immagini dei pianeti si preparano in un altro spazio di lavoro del browser."
   ]
  },
  {

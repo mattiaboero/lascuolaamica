@@ -1,5 +1,25 @@
 # Changelog Repo
 
+## 4.22.8 - 2026-10-18
+
+**Sistema Solare: voli più fluidi, mappe decodificate fuori dal main thread.**
+
+### Changed
+- `js/sistema-solare-motore.js`: le mappe si decodificano con
+  `fetch()` + `createImageBitmap()`, in un thread a parte, e `texImage2D`
+  carica l'`ImageBitmap` com'è (poi `close()`). Con un `<img>` `texImage2D`
+  ridecodificava la mappa sul main thread anche dopo `decode()`: a CPU 4×,
+  in quattro voli (Giove, Saturno, Terra, Marte), da 317–2414 ms di
+  decodifica sul main thread a zero, e il fotogramma più lungo da 111–623 ms
+  a 33–41 ms. Dove manca `createImageBitmap`, o non accetta il blob, si torna
+  all'`<img>`. Colori e orientamento delle mappe controllati a occhio: uguali.
+
+### Removed
+- `sistema-solare.html`: il preload di `rewards.css`. `js/lazy-css.js`
+  applicava il foglio solo perché trovava il preload, ma la pagina non usa
+  nessuna sua classe (premi e mascotte non ci sono): una richiesta ad alta
+  priorità in meno in apertura. Pulizia accodata a questa release.
+
 ## 4.22.7 - 2026-10-18
 
 **Sistema Solare: i testi delle schede arrivano dopo la scena.**
