@@ -1,5 +1,27 @@
 # Changelog Repo
 
+## 4.22.13 - 2026-10-18
+
+**Pagine scoperte da Google: link interni, `/link` fuori dall'indice, 301 del Bosco.**
+
+Dal report di Search Console: `/guida-compiti` era in sitemap ma mai scansionata
+(un solo link interno, da `per-genitori.html`), `/link` non era linkata da
+nessuna pagina ed era contenuto sottile, e Googlebot aveva preso tre 404 su
+`/bosco-delle-lettere/`.
+
+### Changed
+- `faq.html`: nuova FAQ «Come posso aiutare mio figlio con i compiti?» con link
+  testuale a `/guida-compiti`, allineata nel JSON-LD `FAQPage`.
+- `per-insegnanti.html`: nuova voce in «Compiti e continuità casa-scuola» con
+  link alla guida ai compiti per i genitori.
+- `link.html`: meta robots a `noindex, follow`. Tolta da `sitemap.xml` (la
+  sorgente è `scripts/generate_sitemap.py`, che altrimenti la rigenerava), da
+  `lighthouserc.json` (ora 24 URL, come la sitemap) e da `llms.txt`. Resta in
+  precache e raggiungibile dai social.
+- `_redirects`: 301 da `/bosco-delle-lettere` e `/bosco-delle-lettere/` a `/bosco`.
+- `json/changelog.json`: voce del 18 ottobre aggiornata, due righe sul Sistema
+  Solare unite per fare spazio alla nuova.
+
 ## 4.22.12 - 2026-10-18
 
 **Dati strutturati: sistemati gli errori segnalati da Search Console.**

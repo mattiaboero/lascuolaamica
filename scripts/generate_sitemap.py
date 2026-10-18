@@ -41,7 +41,6 @@ PAGES = [
     ("/supporta", "supporta.html"),
     ("/privacy", "privacy.html"),
     ("/cookie", "cookie.html"),
-    ("/link", "link.html"),
 ]
 
 
