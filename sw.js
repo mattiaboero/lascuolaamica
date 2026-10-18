@@ -116,6 +116,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/js/breakout.js',
   '/js/bosco.js',
   '/js/sistema-solare-dati.js',
+  '/js/sistema-solare-testi.json',
   '/js/sistema-solare-motore.js',
   '/js/sistema-solare.js',
   '/js/faq-page.js',

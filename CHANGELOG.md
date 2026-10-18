@@ -1,5 +1,109 @@
 # Changelog Repo
 
+## 4.22.8 - 2026-10-18
+
+**Sistema Solare: voli più fluidi, mappe decodificate fuori dal main thread.**
+
+### Changed
+- `js/sistema-solare-motore.js`: le mappe si decodificano con
+  `fetch()` + `createImageBitmap()`, in un thread a parte, e `texImage2D`
+  carica l'`ImageBitmap` com'è (poi `close()`). Con un `<img>` `texImage2D`
+  ridecodificava la mappa sul main thread anche dopo `decode()`: a CPU 4×,
+  in quattro voli (Giove, Saturno, Terra, Marte), da 317–2414 ms di
+  decodifica sul main thread a zero, e il fotogramma più lungo da 111–623 ms
+  a 33–41 ms. Dove manca `createImageBitmap`, o non accetta il blob, si torna
+  all'`<img>`. Colori e orientamento delle mappe controllati a occhio: uguali.
+
+### Removed
+- `sistema-solare.html`: il preload di `rewards.css`. `js/lazy-css.js`
+  applicava il foglio solo perché trovava il preload, ma la pagina non usa
+  nessuna sua classe (premi e mascotte non ci sono): una richiesta ad alta
+  priorità in meno in apertura. Pulizia accodata a questa release.
+
+## 4.22.7 - 2026-10-18
+
+**Sistema Solare: i testi delle schede arrivano dopo la scena.**
+
+### Changed
+- `scripts/build_sistema_solare.py` scrive i testi delle schede dei corpi
+  (descrizione, curiosità, fonti, note, missioni, strumenti e altri campi
+  testuali, tutti letti dalla pagina con una guardia) in
+  `js/sistema-solare-testi.json`, generato come `js/sistema-solare-dati.js`.
+  `sistema-solare-dati.js` passa da 196 a 98 KB (da 39 a 18 KB con Brotli):
+  è l'ultimo script del percorso critico. La pagina statica non cambia.
+- `js/sistema-solare.js`: `caricaTesti()` scarica il file con `fetch()`
+  appena finiti gli script (la CSP permette `connect-src 'self'`; un
+  `<script>` iniettato avrebbe chiesto una policy Trusted Types nuova) e
+  rimette i testi nella scheda di ogni corpo. Il primo cartellino li aspetta,
+  per non cambiare misura dopo; una scheda aperta prima che arrivino si rifà
+  quando arrivano. Se il file non arriva le schede escono più corte e si
+  riprova alla scheda successiva.
+- `sw.js`: `js/sistema-solare-testi.json` in precache, accanto ai dati.
+- `scripts/check_sistema_solare.js` rimette i testi prima dei controlli di
+  completezza e segnala testi per un corpo che non esiste.
+- Misura in locale (mobile, CPU 4×, 150 ms di RTT, 1,6 Mbit/s, mediana di 3,
+  senza compressione): LCP da 3924 a 3464 ms, TBT da 107 a 85 ms. In
+  produzione, con Brotli, i byte risparmiati prima dell'LCP sono circa 20 KB.
+
+## 4.22.6 - 2026-10-18
+
+**Sistema Solare: il benvenuto non aspetta la scena.**
+
+### Changed
+- `js/sistema-solare.js`: l'avvio è in due tempi. `avvia()` costruisce
+  navigazione, missione e passaporto e mostra il benvenuto; dopo un
+  fotogramma (`requestAnimationFrame` + `setTimeout`) `avviaScena()` crea il
+  motore (contesto, shader, orbite), apre il corpo dell'ancora e collega il
+  resto. Il benvenuto è l'elemento LCP alla prima visita e prima aspettava
+  tutta la scena. Senza WebGL si richiude prima di mostrare l'avviso;
+  `.ss-pronta` arriva quando c'è anche la scena.
+- Misura in locale (mobile 390×844, CPU 4×, 150 ms di RTT, 1,6 Mbit/s,
+  mediana di 3): LCP da 4068 a 3924 ms, TBT da 167 a 110 ms, il long task
+  dell'avvio da 217 ms diventa due da 78 e 132.
+
+## 4.22.5 - 2026-10-18
+
+**Sistema Solare: modalità leggera senza scheda grafica.**
+
+### Added
+- `js/sistema-solare-motore.js`: senza GPU (WebGL in software: scheda grafica
+  in blocklist, macchine virtuali, runner di CI) la scena è «leggera». Il
+  motore chiede prima un contesto con `failIfMajorPerformanceCaveat`; se il
+  browser lo rifiuta, o se il renderer è software (SwiftShader, llvmpipe,
+  softpipe, Microsoft Basic Render Driver: Chrome con SwiftShader non rifiuta
+  il contesto), usa DPR 1, niente antialias e carica le mappe tutte insieme
+  con un solo ridisegno, invece di una per fotogramma; le chiede già al
+  primo disegno. Anche i punti (orbite, sonde) seguono il DPR della scena.
+  Il nome del renderer si legge e basta, non va da nessuna parte. Nuova
+  proprietà `leggero`.
+- `js/sistema-solare.js`: in modalità leggera la scena parte ferma (come con
+  «Meno animazioni») e un avviso di 9 secondi spiega che si fa ripartire con
+  «Muovi». `mostraToast` accetta una durata.
+- Lighthouse desktop con SwiftShader, come sul runner di GitHub (copia
+  locale non minificata, con le release dalla 4.22.2): prestazioni 77
+  (mediana di 3), TBT 454 ms, Speed Index 0,85 s. In produzione, prima: 48,
+  TBT 33 s, Speed Index 9,5 s. Con la GPU non cambia niente.
+
+## 4.22.4 - 2026-10-18
+
+**Sistema Solare: l'HUD non salta più al caricamento.**
+
+### Fixed
+- CLS di `/sistema-solare` da 0,23 a 0,008 su desktop (da 0,039 a 0,001 in
+  mobile). Missione, data, pulsanti in alto e avviso di scala li riempie e li
+  dispone `avvia()`: se il primo paint arrivava prima degli script, cambiavano
+  misura e posto subito dopo (`.ss-hud-destra` da 106 a 428 px, missione più
+  alta di 24 px, avviso da sinistra a destra). In Lighthouse desktop valeva
+  circa 11 punti.
+  - `sistema-solare.css`: `.ss-hud-alto` e `.ss-avviso-scala` restano
+    invisibili (`visibility: hidden`, al loro posto) finché `.ss-scena` non ha
+    `.ss-pronta`. Il dock in basso resta visibile ed è ancora il primo
+    contenuto dipinto: FCP invariato.
+  - La riga dei pianeti riserva la sua altezza (`min-height` 91 px, 89 px
+    sotto i 700): vuota era alta 2 px e il dock cresceva di 87 px.
+  - `js/sistema-solare.js`: `.ss-pronta` si aggiunge in un `finally` dopo
+    `avvia()`, anche se l'avvio si interrompe.
+
 ## 4.22.3 - 2026-10-18
 
 **Sistema Solare: in pausa la scena non si ridisegna più.**

@@ -501,11 +501,31 @@ void main() {
 
   /* ------------------------------------------------------------- motore */
 
+  function rendererSoftware(gl) {
+    const info = gl.getExtension('WEBGL_debug_renderer_info');
+    const nome = String(gl.getParameter(info ? info.UNMASKED_RENDERER_WEBGL : gl.RENDERER) || '');
+    return /swiftshader|llvmpipe|softpipe|software|basic render/i.test(nome);
+  }
+
   function crea(canvas, dati, opzioni) {
     const opz = opzioni || {};
-    const gl = canvas.getContext('webgl', { antialias: true, alpha: false, preserveDrawingBuffer: false })
-      || canvas.getContext('experimental-webgl');
+    // Senza GPU (WebGL in software: scheda grafica in blocklist, macchine
+    // virtuali, runner di CI) ogni fotogramma costa centinaia di millisecondi
+    // di CPU. Si chiede prima un contesto che in quel caso il browser puo'
+    // rifiutare; se manca si prende quello normale, senza antialias. Chrome
+    // con SwiftShader non lo rifiuta: lo dice il nome del renderer, letto qui
+    // e mai mandato da nessuna parte. Scena "leggera": DPR 1, e la pagina la
+    // fa partire ferma.
+    const attributi = { antialias: true, alpha: false, preserveDrawingBuffer: false };
+    let gl = canvas.getContext('webgl', Object.assign({ failIfMajorPerformanceCaveat: true }, attributi));
+    let leggero = !gl;
+    if (leggero) {
+      attributi.antialias = false;
+      gl = canvas.getContext('webgl', attributi) || canvas.getContext('experimental-webgl', attributi);
+    }
     if (!gl) return null;
+    if (!leggero) leggero = rendererSoftware(gl);
+    const rapportoPixel = () => (leggero ? 1 : Math.min(2, window.devicePixelRatio || 1));
 
     const progCorpo = compila(gl, VS_CORPO, FS_CORPO);
     const progAnello = compila(gl, VS_ANELLO, FS_ANELLO);
@@ -562,7 +582,9 @@ void main() {
       confronto: null,       // elenco di id in modalita' confronto
       film: null,            // { base: jd } durante il film delle Voyager
       sporco: true,
-      disegnato: false,      // dopo il primo disegno si caricano le mappe
+      // Dopo il primo disegno si caricano le mappe. Senza GPU subito: un
+      // disegno in piu' solo per chiederle costerebbe centinaia di ms.
+      disegnato: leggero,
       ultimo: 0,
       vp: mat4Identita(),
       occhio: [0, 0, 0],
@@ -578,17 +600,37 @@ void main() {
     // generateMipmap sono sincroni, quindi una sola mappa per fotogramma.
     const SOGLIA_GRANDE = 130;   // raggio in pixel CSS oltre cui serve la grande
     const codaTexture = [];
+    let texInArrivo = 0;         // immagini chieste e non ancora decodificate
+
+    // Con un <img> texImage2D ridecodifica la mappa sul main thread anche dopo
+    // decode(): 50 ms e piu' per le grandi, a meta' di un volo. Un ImageBitmap
+    // si decodifica in un altro thread e si carica com'e'. Dove manca
+    // createImageBitmap (o non accetta il blob) si torna all'<img>.
+    function decodificaImg(url) {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = url;
+      return (img.decode ? img.decode() : new Promise((ok, no) => { img.onload = ok; img.onerror = no; })).then(() => img);
+    }
+
+    function decodifica(url) {
+      if (typeof window.createImageBitmap !== 'function') return decodificaImg(url);
+      return fetch(url)
+        .then((r) => (r.ok ? r.blob() : Promise.reject(new Error(r.status))))
+        .then((b) => window.createImageBitmap(b))
+        .catch(() => decodificaImg(url));
+    }
 
     function caricaTexture(c, grande) {
       const k = grande ? 'texGrande' : 'texBassa';
       if (c[k] !== 'no' || !c.dati.tex) return;
       c[k] = 'carico';
-      const img = new Image();
-      img.decoding = 'async';
-      img.src = (opz.cartellaTexture || '') + (grande ? '' : 'basse/') + c.dati.tex;
-      (img.decode ? img.decode() : new Promise((ok, no) => { img.onload = ok; img.onerror = no; }))
-        .then(() => { codaTexture.push({ c, img, grande }); })
+      texInArrivo++;
+      const url = (opz.cartellaTexture || '') + (grande ? '' : 'basse/') + c.dati.tex;
+      decodifica(url)
+        .then((img) => { texInArrivo--; codaTexture.push({ c, img, grande }); })
         .catch(() => {
+          texInArrivo--;
           c[k] = 'errore';
           // Senza la bassa si ripiega sulla grande.
           if (!grande) caricaTexture(c, true);
@@ -599,7 +641,10 @@ void main() {
       const { c, img, grande } = codaTexture.shift();
       c[grande ? 'texGrande' : 'texBassa'] = 'pronta';
       // Una bassa arrivata dopo la grande non serve piu'.
-      if (!grande && c.texLivello === 'grande') return;
+      if (!grande && c.texLivello === 'grande') {
+        if (img.close) img.close();
+        return;
+      }
       const t = gl.createTexture();
       gl.bindTexture(gl.TEXTURE_2D, t);
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
@@ -615,6 +660,8 @@ void main() {
       // mezzo giro (uLonU) e devono richiudersi sul bordo.
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, pot(img.width) ? gl.REPEAT : gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      // L'ImageBitmap e' ormai sulla GPU: la copia in memoria si libera.
+      if (img.close) img.close();
       // La bassa resta in uso finche' la grande non e' pronta: niente buchi.
       if (c.tex) gl.deleteTexture(c.tex);
       c.tex = t;
@@ -1248,7 +1295,7 @@ void main() {
         });
         const pr = proietta(c.pos);
         if (pr && pixelRaggio(rv(c), pr.w) < 16 && stato.bersaglio !== c.dati.id) {
-          gl.uniform1f(progLinea.u.uPunto, Math.min(2, window.devicePixelRatio || 1) * 10);
+          gl.uniform1f(progLinea.u.uPunto, rapportoPixel() * 10);
           gl.uniform4fv(progLinea.u.uColore, [ROSA[0], ROSA[1], ROSA[2], 1]);
           gl.drawArrays(gl.POINTS, PASSI, 1);
         }
@@ -1304,7 +1351,7 @@ void main() {
       gl.useProgram(progLinea.p);
       gl.enableVertexAttribArray(progLinea.a.aPos);
       gl.uniformMatrix4fv(progLinea.u.uMvp, false, stato.vp);
-      gl.uniform1f(progLinea.u.uPunto, Math.min(2, window.devicePixelRatio || 1) * 1.6);
+      gl.uniform1f(progLinea.u.uPunto, rapportoPixel() * 1.6);
       gl.uniform4fv(progLinea.u.uColore, [0.45, 0.7, 1.0, 0.55]);
       gl.bindBuffer(gl.ARRAY_BUFFER, stato.eliopausa.buf.b);
       gl.vertexAttribPointer(progLinea.a.aPos, 3, gl.FLOAT, false, 0, 0);
@@ -1340,7 +1387,7 @@ void main() {
         // Puntino luminoso quando il modello e' troppo piccolo per vedersi.
         const pr = proietta(c.pos);
         if (pr && pixelRaggio(rv(c), pr.w) < 10) {
-          gl.uniform1f(progLinea.u.uPunto, Math.min(2, window.devicePixelRatio || 1) * 9);
+          gl.uniform1f(progLinea.u.uPunto, rapportoPixel() * 9);
           gl.uniform4fv(progLinea.u.uColore, [col[0], col[1], col[2], 1]);
           gl.drawArrays(gl.POINTS, 1, 1);
         }
@@ -1386,7 +1433,7 @@ void main() {
       gl.useProgram(progLinea.p);
       gl.enableVertexAttribArray(progLinea.a.aPos);
       gl.uniformMatrix4fv(progLinea.u.uMvp, false, stato.vp);
-      gl.uniform1f(progLinea.u.uPunto, Math.min(2, window.devicePixelRatio || 1) * 1.2);
+      gl.uniform1f(progLinea.u.uPunto, rapportoPixel() * 1.2);
       for (const { buf } of fasce) {
         gl.uniform4fv(progLinea.u.uColore, [0.75, 0.7, 0.62, 0.55]);
         gl.bindBuffer(gl.ARRAY_BUFFER, buf.b);
@@ -1501,7 +1548,7 @@ void main() {
     /* ------------------------------------------------------- ciclo */
 
     function ridimensiona() {
-      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const dpr = rapportoPixel();
       const w = Math.max(1, Math.round(canvas.clientWidth * dpr));
       const h = Math.max(1, Math.round(canvas.clientHeight * dpr));
       if (canvas.width !== w || canvas.height !== h) {
@@ -1539,7 +1586,12 @@ void main() {
         stato.jd = Math.min(LIMITE_JD[1], Math.max(LIMITE_JD[0], stato.jd + stato.velocita * dt));
         stato.sporco = true;
       }
-      if (codaTexture.length) caricaSullaGpu();
+      // Una mappa per fotogramma, e ogni mappa un ridisegno. Senza GPU un
+      // ridisegno costa centinaia di millisecondi: le mappe si caricano tutte
+      // insieme quando non ne arrivano altre, e si ridisegna una volta sola.
+      if (codaTexture.length && (!leggero || texInArrivo === 0)) {
+        do caricaSullaGpu(); while (leggero && codaTexture.length);
+      }
       if (stato.sporco || stato.transizione) {
         stato.sporco = false;
         aggiornaPosizioni();
@@ -1586,6 +1638,8 @@ void main() {
         corpi.forEach((c) => { if (c.dati.orbita && c.dati.orbita.tipo === 'standish') c.orbita = costruisciOrbita(c); });
         stato.sporco = true;
       },
+      // true se il WebGL non e' accelerato (vedi l'inizio di crea).
+      leggero,
       get velocita() { return stato.velocita; },
       // Solo se cambia: la pagina li richiama dopo ogni disegno, e un sporco
       // messo sempre farebbe ridisegnare la scena anche ferma.
