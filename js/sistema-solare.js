@@ -1484,14 +1484,14 @@
   // Un avviso breve in alto: timbri e missioni compiute.
   let toastTimer = 0;
   let avviato = false; // all'apertura della pagina niente avvisi
-  function mostraToast(testo) {
+  function mostraToast(testo, durata) {
     const t = $('ssToast');
     if (!t || !avviato) return;
     t.textContent = testo;
     t.hidden = false;
     t.classList.remove('ss-toast-via');
     window.clearTimeout(toastTimer);
-    toastTimer = window.setTimeout(() => { t.hidden = true; }, 3200);
+    toastTimer = window.setTimeout(() => { t.hidden = true; }, durata || 3200);
   }
 
   function aggiornaPassaporto(nuovo) {
@@ -2092,7 +2092,9 @@
       misuraBasso();
       velocitaScelta = 'auto';
       impostaModo('estetico');
-      if (movimentoRidotto()) impostaPausa(true);
+      // Senza GPU la scena parte ferma: girando, ogni fotogramma terrebbe
+      // occupato il processore (e la ventola) per niente.
+      if (movimentoRidotto() || motore.leggero) impostaPausa(true);
       // La scena si ferma quando non si vede: niente batteria sprecata.
       if ('IntersectionObserver' in window) {
         new IntersectionObserver((voci) => {
@@ -2114,6 +2116,9 @@
     // si puo' rivedere da Opzioni.
     if (motore && immersivo() && !storageGet(KEY_BENVENUTO)) mostraBenvenuto();
     avviato = true;
+    if (motore && motore.leggero && !movimentoRidotto()) {
+      mostraToast('Questo computer disegna senza scheda grafica: i pianeti partono fermi. Premi «Muovi» per farli girare.', 9000);
+    }
     // Un link interno o il tasto Indietro cambiano solo l'ancora, senza ricaricare.
     window.addEventListener('hashchange', () => {
       const k = chiaveDaHash();

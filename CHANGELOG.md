@@ -1,5 +1,28 @@
 # Changelog Repo
 
+## 4.22.5 - 2026-10-18
+
+**Sistema Solare: modalità leggera senza scheda grafica.**
+
+### Added
+- `js/sistema-solare-motore.js`: senza GPU (WebGL in software: scheda grafica
+  in blocklist, macchine virtuali, runner di CI) la scena è «leggera». Il
+  motore chiede prima un contesto con `failIfMajorPerformanceCaveat`; se il
+  browser lo rifiuta, o se il renderer è software (SwiftShader, llvmpipe,
+  softpipe, Microsoft Basic Render Driver: Chrome con SwiftShader non rifiuta
+  il contesto), usa DPR 1, niente antialias e carica le mappe tutte insieme
+  con un solo ridisegno, invece di una per fotogramma; le chiede già al
+  primo disegno. Anche i punti (orbite, sonde) seguono il DPR della scena.
+  Il nome del renderer si legge e basta, non va da nessuna parte. Nuova
+  proprietà `leggero`.
+- `js/sistema-solare.js`: in modalità leggera la scena parte ferma (come con
+  «Meno animazioni») e un avviso di 9 secondi spiega che si fa ripartire con
+  «Muovi». `mostraToast` accetta una durata.
+- Lighthouse desktop con SwiftShader, come sul runner di GitHub (copia
+  locale non minificata, con le release dalla 4.22.2): prestazioni 77
+  (mediana di 3), TBT 454 ms, Speed Index 0,85 s. In produzione, prima: 48,
+  TBT 33 s, Speed Index 9,5 s. Con la GPU non cambia niente.
+
 ## 4.22.4 - 2026-10-18
 
 **Sistema Solare: l'HUD non salta più al caricamento.**
