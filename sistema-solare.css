@@ -1483,7 +1483,8 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
   margin-bottom: 18px;
 }
 
-.ss-freccia-svg {
+.ss-freccia-svg,
+.ss-icona-schermo {
   display: block;
 }
 
@@ -2049,19 +2050,38 @@ body.ss-in-film .ss-poster-nota {
     flex-wrap: wrap;
     align-items: center;
     gap: 2px 6px;
-    padding: 4px 10px 4px 4px;
+    padding: 4px 4px 4px 10px;
+    cursor: pointer;
   }
 
+  /* Il bersaglio a sinistra e' solo un segno: a destra c'e' il pulsante. */
+  .ss-missione::before {
+    content: '🎯' / '';
+    flex: none;
+    font-size: 1.1rem;
+  }
+
+  /* Il pulsante tondo a destra, come quello del cartellino: ▾ apre, ▴ chiude
+     (non ✕: accanto c'e' gia' la ✕ di Esci, che porta fuori dalla scena).
+     Tutta la missione si apre e si chiude anche con un tocco (collegaBottoni). */
   .ss-missione-titolo {
     flex: none;
+    order: 1;
   }
 
-  /* Si vede il bersaglio con la freccia: il nome resta ai lettori di schermo. */
   .ss-missione-apri {
-    min-width: 40px;
-    min-height: 40px;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     gap: 0;
+    border: 2px solid rgba(255 255 255 / 0.65);
+    border-radius: 999px;
+    background: rgba(5 7 15 / 0.72);
+    color: #fff;
+  }
+
+  .ss-missione-apri > :first-child {
+    display: none;
   }
 
   .ss-missione-etichetta {
@@ -2073,8 +2093,14 @@ body.ss-in-film .ss-poster-nota {
     white-space: nowrap;
   }
 
-  .ss-missione-freccia::before {
-    font-size: 0.9rem;
+  .ss-missione-freccia::before,
+  .ss-missione-chiusa .ss-missione-freccia::before {
+    content: '▴';
+    font-size: 1.05rem;
+  }
+
+  .ss-missione-chiusa .ss-missione-freccia::before {
+    content: '▾';
   }
 
   .ss-missione-testo {
@@ -2085,15 +2111,16 @@ body.ss-in-film .ss-poster-nota {
   }
 
   .ss-missione-esito {
+    order: 2;
     flex-basis: 100%;
-    padding-left: 6px;
     font-size: 0.82rem;
   }
 
   .ss-missione-azioni {
+    order: 2;
     flex-basis: 100%;
     margin-top: 0;
-    padding: 0 0 4px 6px;
+    padding-bottom: 4px;
   }
 
   /* Gli avvisi (timbri, missioni) sotto la riga in alto, non sopra i suoi pulsanti. */

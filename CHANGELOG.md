@@ -17,13 +17,21 @@ sul simulatore iPhone 17 Pro, il cielo libero è circa il 60%.
   barra di schede su una riga, con icona e parola corta (`.ss-corto`, mentre il
   testo lungo resta per i lettori di schermo). La barra del viaggio sta fra Menu
   ed Esci e i toast compaiono sotto la riga in alto.
-- Missione: il titolo è un pulsante (`aria-expanded`). Chiusa mostra il testo in
-  due righe, senza «Cambiala». Si apre da sola quando la missione è compiuta,
-  per mostrare «Nuova missione». È chiusa di partenza solo sul telefono in
-  verticale. La scelta resta in `localStorage`.
+- Missione: il titolo è un pulsante (`aria-expanded`). Sul telefono è un
+  pulsante tondo a destra, come quello del cartellino: ▾ apre, ▴ chiude. Non
+  usa la ✕, perché accanto c'è già quella di Esci. Si apre e si chiude anche
+  con un tocco sul testo. Chiusa mostra il testo in due righe, senza
+  «Cambiala». Si apre da sola quando la missione è compiuta, per mostrare
+  «Nuova missione». È chiusa di partenza solo sul telefono in verticale. La
+  scelta resta in `localStorage`.
 - Cartellino: la ✕ lo riduce alla testa e ▴ lo riapre. Esc lo riduce prima di
   uscire dalla vista immersiva. La scelta resta anche cambiando corpo e nel
   viaggio, e da ridotto le curiosità non scorrono.
+- Esci e Tutto schermo: al posto di ✕ e ⛶, le icone classiche di uscita e di
+  ingresso nel tutto schermo (SVG, `.ss-icona-schermo`). Con la ✕ della vista
+  immersiva accanto alla freccia della missione e alla ✕ del cartellino, il
+  pulsante che porta fuori dalla scena si confondeva con quelli che chiudono
+  un pannello.
 - `js/sistema-solare-motore.js`: `inquadra(x, y)` sostituisce lo spostamento
   fisso di 0,32 solo in verticale e solo fuori dal Sole. `misuraBasso()` calcola
   il centro del cielo libero (sotto la riga in alto, sopra il cartellino largo

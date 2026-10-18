@@ -1498,6 +1498,12 @@
     document.querySelector('[data-ss="missione-apri"]').setAttribute('aria-expanded', aperta ? 'true' : 'false');
   }
 
+  function alternaMissione() {
+    const aperta = $('ssMissione').classList.contains('ss-missione-chiusa');
+    apriMissione(aperta);
+    storageSet(KEY_MISSIONE_CHIUSA, aperta ? '0' : '1');
+  }
+
   function aggiornaContoMissioni() {
     $('ssMissioneConto').textContent = 'Completate: ' + MISSIONI.filter((m) => missioni.fatte.has(m.id)).length + ' di ' + MISSIONI.length;
   }
@@ -2055,11 +2061,7 @@
             riduciCartellino(ridotto);
             storageSet(KEY_CARTELLINO_RIDOTTO, ridotto ? '1' : '0');
           },
-          'missione-apri': () => {
-            const aperta = $('ssMissione').classList.contains('ss-missione-chiusa');
-            apriMissione(aperta);
-            storageSet(KEY_MISSIONE_CHIUSA, aperta ? '0' : '1');
-          },
+          'missione-apri': alternaMissione,
           esci: () => impostaImmersivo(false),
           entra: () => impostaImmersivo(true),
           'schermo-intero': schermoIntero,
@@ -2083,6 +2085,13 @@
           && document.querySelector('[data-pannello-corpo="' + apre.dataset.pannelloApri + '"]').classList.contains('ss-attivo');
         if (giaAperto) chiudiCassetto(); else apriCassetto(apre.dataset.pannelloApri);
       }
+    });
+
+    // Un tocco sulla missione (non sui suoi pulsanti) la apre o la chiude: sul
+    // telefono il pulsante e' piccolo per un dito di bambino. Da tastiera c'e'
+    // il pulsante nel titolo.
+    $('ssMissione').addEventListener('click', (e) => {
+      if (!e.target.closest('button')) alternaMissione();
     });
 
     // Esc: prima chiude il benvenuto, il pannello o il cartellino, poi esce dalla vista a tutto schermo.
