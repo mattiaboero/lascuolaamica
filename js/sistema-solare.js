@@ -2095,8 +2095,13 @@
     });
 
     // Esc: prima chiude il benvenuto, il pannello o il cartellino, poi esce dalla vista a tutto schermo.
+    // Con un modale di shared.js aperto (.modal-overlay.open: chiuso resta nel
+    // DOM, senza hidden) quell'Esc chiude solo il modale, e lo fa shared.js.
+    // In cattura perche' shared.js registra il suo Esc prima di noi: in bolla
+    // troveremmo il modale gia' chiuso e usciremmo anche dalla vista.
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape' || document.fullscreenElement) return;
+      if (document.querySelector('.modal-overlay.open')) return;
       if (!$('ssBenvenuto').hidden) { chiudiBenvenuto(); return; }
       if ($('ssCassetto').classList.contains('ss-aperto')) { chiudiCassetto(); return; }
       if (immersivo() && !$('ssCartellino').hidden && !$('ssCartellino').classList.contains('ss-cart-ridotto')) {
@@ -2104,8 +2109,8 @@
         storageSet(KEY_CARTELLINO_RIDOTTO, '1');
         return;
       }
-      if (immersivo() && !document.querySelector('.ss-dialog-open, [role="dialog"]:not([hidden])')) impostaImmersivo(false);
-    });
+      if (immersivo()) impostaImmersivo(false);
+    }, true);
     document.addEventListener('fullscreenchange', () => {
       const b = document.querySelector('[data-ss="schermo-intero"]');
       b.setAttribute('aria-pressed', document.fullscreenElement ? 'true' : 'false');

@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.22.15 - 2026-10-18
+
+**Sistema Solare: Esc esce di nuovo dalla vista a tutto schermo.**
+
+### Fixed
+- `js/sistema-solare.js`: l'ultimo passo di Esc, l'uscita dalla vista
+  immersiva, non partiva mai. Il controllo cercava `[role="dialog"]:not([hidden])`,
+  ma i modali di `shared.js` (`#modalUpdates`, `#modalPromptShared`,
+  `#modalInfoHub`) restano nel DOM senza `hidden` anche da chiusi, quindi c'era
+  sempre un «dialogo aperto». Ora si guarda `.modal-overlay.open`: con un
+  modale aperto Esc lascia che sia `shared.js` a chiuderlo e non fa altro. Il
+  gestore ascolta in fase di cattura, perché `shared.js` registra il suo Esc
+  prima di questo: in bolla il modale risulterebbe già chiuso e la pagina
+  uscirebbe anche dalla vista. Provato a 1280×800 con cartellino aperto,
+  modale aperto e nessun modale.
+- `json/changelog.json`: nuova riga del 18 ottobre; le due righe sulla scena
+  che parte ferma sono state unite per restare a 7.
+
 ## 4.22.14 - 2026-10-18
 
 **Sistema Solare sul telefono in verticale: la scena torna giocabile.**
