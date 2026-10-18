@@ -1815,7 +1815,6 @@
     inPausa = p;
     const b = document.querySelector('[data-ss="pausa"]');
     b.setAttribute('aria-pressed', p ? 'true' : 'false');
-    b.replaceChildren(document.createTextNode(p ? '▶ ' : '⏸ '), el('span', { testo: p ? 'Muovi' : 'Ferma' }));
     b.setAttribute('aria-label', p ? 'Fai ripartire il movimento dei pianeti' : 'Ferma il movimento dei pianeti');
     velocitaAttuale = null;
     applicaVelocita();

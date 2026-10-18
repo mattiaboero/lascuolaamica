@@ -1297,8 +1297,32 @@ body.ss-immersivo .ss-pannello:not(.ss-attivo) {
   font-size: 1.05rem;
 }
 
+/* Vuoto solo fino al primo timbro, che arriva subito dopo il primo disegno:
+   il posto resta tenuto, se no «Passaporto» si allarga e manda a capo la
+   barra in basso (spostamento al caricamento). */
 .ss-badge:empty {
-  display: none;
+  visibility: hidden;
+}
+
+/* «⏸ Ferma» e «▶ Muovi» stanno nella stessa cella: il pulsante e' largo
+   quanto la piu' lunga e non cambia misura. Senza scheda grafica la scena
+   parte ferma subito dopo il primo disegno: due pixel in piu' bastavano a
+   mandare a capo la barra in basso. */
+.ss-alterna {
+  display: inline-grid;
+}
+
+.ss-alterna > span {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+[aria-pressed="false"] > .ss-alterna > :last-child,
+[aria-pressed="true"] > .ss-alterna > :first-child {
+  visibility: hidden;
 }
 
 .ss-badge {
