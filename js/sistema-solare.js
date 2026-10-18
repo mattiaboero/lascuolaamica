@@ -1859,12 +1859,15 @@
 
   // Quanto e' alta la barra in basso: cartellino e avvisi si mettono sopra.
   // E dove finisce la riga in alto: la missione cambia altezza con il testo e
-  // con la larghezza, il cartellino non deve salirle sopra.
+  // con la larghezza, il cartellino non deve salirle sopra. Durante il viaggio
+  // la barra del viaggio prende il posto della missione e puo' scendere piu' giu'.
   function misuraBasso() {
     const h = document.querySelector('.ss-hud-basso').offsetHeight;
     const alto = document.querySelector('.ss-hud-alto');
+    const barra = $('ssViaggioBarra');
+    const fondo = Math.max(alto.offsetTop + alto.offsetHeight, barra.hidden ? 0 : barra.offsetTop + barra.offsetHeight);
     $('ssScena').style.setProperty('--ss-basso', h + 'px');
-    $('ssScena').style.setProperty('--ss-alto', alto.offsetTop + alto.offsetHeight + 'px');
+    $('ssScena').style.setProperty('--ss-alto', fondo + 'px');
   }
 
   function schermoIntero() {
@@ -2045,10 +2048,11 @@
     });
     window.addEventListener('resize', misuraBasso);
     // Missione e dock cambiano altezza anche senza resize (testo nuovo, il
-    // contatore del passaporto che manda a capo un pulsante).
+    // contatore del passaporto che manda a capo un pulsante, la barra del
+    // viaggio che compare).
     if (window.ResizeObserver) {
       const ro = new window.ResizeObserver(misuraBasso);
-      document.querySelectorAll('.ss-hud-alto, .ss-hud-basso').forEach((n) => ro.observe(n));
+      document.querySelectorAll('.ss-hud-alto, .ss-hud-basso, .ss-viaggio-barra').forEach((n) => ro.observe(n));
     }
 
     document.querySelectorAll('[data-filtro]').forEach((i) => {

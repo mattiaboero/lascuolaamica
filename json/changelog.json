@@ -1,15 +1,13 @@
 [
  {
-  "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.10",
+  "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.11",
   "items": [
-   "Sistema Solare: nelle finestre medie e sul telefono i pulsanti in basso non saltano più all'apertura. Prima, un attimo dopo il caricamento, «Opzioni» andava a capo e spingeva in su tutta la barra.",
-   "Sistema Solare: nelle finestre medie o basse, per esempio su un portatile piccolo, la scheda del pianeta aperto non copre più «La tua missione». Se lo spazio è poco, missione e scheda si fanno più compatte e la scheda scorre.",
+   "Sistema Solare: la scheda del pianeta aperto si legge tutta e non copre più «La tua missione», anche su un portatile piccolo o con il telefono in orizzontale. Se lo spazio è poco, missione, pianeti e pulsanti si fanno più compatti e la scheda si mette a sinistra.",
+   "Sistema Solare: all'apertura i pulsanti in basso e la missione non saltano più di posto mentre la pagina finisce di caricarsi.",
    "Sistema Solare: con «Meno animazioni» scelto nel sito o nelle impostazioni del dispositivo, la scena ora parte ferma. Si fa ripartire con «Muovi».",
    "Sistema Solare: con la scena ferma il computer non lavora più per niente. Prima ridisegnava i pianeti di continuo anche in pausa, consumando batteria.",
-   "Sistema Solare: all'apertura i pulsanti e la missione non saltano più di posto mentre la pagina finisce di caricarsi.",
    "Sistema Solare: sui computer senza scheda grafica la scena parte ferma e più leggera, invece di tenere occupato il processore. Si fa girare con «Muovi».",
-   "Sistema Solare: alla prima visita il benvenuto compare prima, senza aspettare che la scena 3D sia pronta.",
-   "Sistema Solare: la pagina scarica prima la scena e subito dopo i testi delle schede, così si apre un po' prima.",
+   "Sistema Solare: la pagina si apre prima. Il benvenuto non aspetta più la scena 3D e i testi delle schede arrivano subito dopo.",
    "Sistema Solare: il volo verso un pianeta è più fluido, perché le immagini dei pianeti si preparano in un altro spazio di lavoro del browser."
   ]
  },
