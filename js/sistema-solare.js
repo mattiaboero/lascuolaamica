@@ -2053,13 +2053,30 @@
 
   /* ------------------------------------------------------- avvio */
 
-  function avvia() {
+  // Due tempi. Prima la parte di pagina che si legge (navigazione, missione,
+  // benvenuto), poi, dopo un fotogramma, la scena: crearla costa il grosso
+  // dell'avvio (contesto, shader, orbite), e il benvenuto non deve aspettarla.
+  // fatto() arriva quando c'e' anche la scena.
+  function avvia(fatto) {
     costruisciNavigazione();
     costruisciConfronti();
     collegaBottoni();
     aggiornaPassaporto();
     prossimaMissione();
+    // Prima visita: due righe di benvenuto e due scelte. Poi non torna piu',
+    // si puo' rivedere da Opzioni. Senza WebGL lo si richiude (avviaScena).
+    const benvenuto = immersivo() && !storageGet(KEY_BENVENUTO) && 'WebGLRenderingContext' in window;
+    if (benvenuto) mostraBenvenuto();
+    requestAnimationFrame(() => window.setTimeout(() => {
+      try {
+        avviaScena(benvenuto);
+      } finally {
+        fatto();
+      }
+    }, 0));
+  }
 
+  function avviaScena(benvenuto) {
     const canvas = $('ssCanvas');
     try {
       motore = SA.SistemaMotore.crea(canvas, DATI, {
@@ -2075,6 +2092,7 @@
     }
 
     if (!motore) {
+      if (benvenuto) $('ssBenvenuto').hidden = true;
       canvas.hidden = true;
       $('ssNoWebgl').hidden = false;
       $('ssAvvisoScala').hidden = true;
@@ -2112,9 +2130,6 @@
     const chiave = chiaveDaHash() || 'c:sole';
     apri(chiave, { istantaneo: true, daHash: true });
     if (motore && chiave === 'c:sole') motore.vistaSistema(true);
-    // Prima visita: due righe di benvenuto e due scelte. Poi non torna piu',
-    // si puo' rivedere da Opzioni.
-    if (motore && immersivo() && !storageGet(KEY_BENVENUTO)) mostraBenvenuto();
     avviato = true;
     if (motore && motore.leggero && !movimentoRidotto()) {
       mostraToast('Questo computer disegna senza scheda grafica: i pianeti partono fermi. Premi «Muovi» per farli girare.', 9000);
@@ -2139,13 +2154,15 @@
   // shared.js, che come in ogni pagina arriva dopo questo file (defer, in
   // ordine): partire subito vorrebbe dire ignorare il movimento ridotto. A
   // DOMContentLoaded tutti gli script defer sono gia' stati eseguiti.
-  // ss-pronta mostra l'HUD in alto (vedi sistema-solare.css), anche se avvia()
+  // ss-pronta mostra l'HUD in alto (vedi sistema-solare.css), anche se l'avvio
   // si interrompe a meta': meglio un HUD fuori posto che nessun pulsante.
   function parti() {
+    const pronta = () => $('ssScena').classList.add('ss-pronta');
     try {
-      avvia();
-    } finally {
-      $('ssScena').classList.add('ss-pronta');
+      avvia(pronta);
+    } catch (err) {
+      pronta();
+      throw err;
     }
   }
 

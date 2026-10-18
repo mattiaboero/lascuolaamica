@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.22.6 - 2026-10-18
+
+**Sistema Solare: il benvenuto non aspetta la scena.**
+
+### Changed
+- `js/sistema-solare.js`: l'avvio è in due tempi. `avvia()` costruisce
+  navigazione, missione e passaporto e mostra il benvenuto; dopo un
+  fotogramma (`requestAnimationFrame` + `setTimeout`) `avviaScena()` crea il
+  motore (contesto, shader, orbite), apre il corpo dell'ancora e collega il
+  resto. Il benvenuto è l'elemento LCP alla prima visita e prima aspettava
+  tutta la scena. Senza WebGL si richiude prima di mostrare l'avviso;
+  `.ss-pronta` arriva quando c'è anche la scena.
+- Misura in locale (mobile 390×844, CPU 4×, 150 ms di RTT, 1,6 Mbit/s,
+  mediana di 3): LCP da 4068 a 3924 ms, TBT da 167 a 110 ms, il long task
+  dell'avvio da 217 ms diventa due da 78 e 132.
+
 ## 4.22.5 - 2026-10-18
 
 **Sistema Solare: modalità leggera senza scheda grafica.**
