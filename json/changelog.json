@@ -1,5 +1,11 @@
 [
  {
+  "date": "18 ottobre 2026 · Release 4.22.2",
+  "items": [
+   "Sistema Solare: con «Meno animazioni» scelto nel sito o nelle impostazioni del dispositivo, la scena ora parte ferma. Si fa ripartire con «Muovi»."
+  ]
+ },
+ {
   "date": "16 ottobre 2026 · Release 4.22.0 – 4.22.1",
   "items": [
    "Nuovo: il Sistema Solare in 3D. Si vola dal Sole agli otto pianeti, fra lune, pianeti nani, asteroidi e comete, nelle loro posizioni vere.",

@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.22.2 - 2026-10-18
+
+**Sistema Solare: con «Meno animazioni» la scena parte ferma.**
+
+### Fixed
+- `js/sistema-solare.js`: `avvia()` girava dentro l'esecuzione dello script,
+  prima di `shared.js` (gli script `defer` vanno in ordine e `shared.js` è
+  l'ultimo, come in ogni pagina). `SA.motion` non esisteva ancora,
+  `movimentoRidotto()` dava sempre falso e `impostaPausa(true)` non scattava:
+  con «Meno animazioni» o `prefers-reduced-motion` la scena partiva in
+  movimento. Ora, se `SA.motion` manca, si parte a `DOMContentLoaded`, quando
+  tutti gli script `defer` sono stati eseguiti. Trovato nell'analisi delle
+  prestazioni (`docs/sistema-solare/report-prestazioni-2026-10.md`).
+
 ## Non rilasciato - 2026-10-16
 
 ### Fixed

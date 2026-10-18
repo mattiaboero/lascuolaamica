@@ -2114,6 +2114,10 @@
     return null;
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia, { once: true });
-  else avvia();
+  // avvia() chiede a SA.motion se fermare la scena. SA.motion nasce in
+  // shared.js, che come in ogni pagina arriva dopo questo file (defer, in
+  // ordine): partire subito vorrebbe dire ignorare il movimento ridotto. A
+  // DOMContentLoaded tutti gli script defer sono gia' stati eseguiti.
+  if (SA.motion || document.readyState === 'complete') avvia();
+  else document.addEventListener('DOMContentLoaded', avvia, { once: true });
 })();
