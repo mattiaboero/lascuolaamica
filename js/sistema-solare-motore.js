@@ -1587,7 +1587,13 @@ void main() {
         stato.sporco = true;
       },
       get velocita() { return stato.velocita; },
-      setVelocita(v) { stato.velocita = v; stato.sporco = true; },
+      // Solo se cambia: la pagina li richiama dopo ogni disegno, e un sporco
+      // messo sempre farebbe ridisegnare la scena anche ferma.
+      setVelocita(v) {
+        if (stato.velocita === v) return;
+        stato.velocita = v;
+        stato.sporco = true;
+      },
       get bersaglio() { return stato.bersaglio; },
       get larghezza() { return stato.w; },
       get altezza() { return stato.h; },
@@ -1728,7 +1734,11 @@ void main() {
         corpi.forEach((c) => { c.scartoOrbita = 0; c.scartoRotazione = 0; c.giriAncora = null; });
         stato.sporco = true;
       },
-      setFattoreEstetico(f) { stato.fattoreEstetico = f; stato.sporco = true; },
+      setFattoreEstetico(f) {
+        if (stato.fattoreEstetico === f) return;
+        stato.fattoreEstetico = f;
+        stato.sporco = true;
+      },
       // Riporta tutti i corpi alla posizione vera del giorno mostrato.
       azzeraEstetico() {
         corpi.forEach((c) => { c.scartoOrbita = 0; c.scartoRotazione = 0; });
