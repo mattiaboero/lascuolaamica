@@ -1,5 +1,39 @@
 # Changelog Repo
 
+## 4.22.10 - 2026-10-18
+
+**Sistema Solare: impaginazione per il telefono in orizzontale.**
+
+### Fixed
+- `sistema-solare.css`: con altezza fino a 540 px e larghezza da 560 px in su
+  (telefono in orizzontale, zoom al 200% su 1366×768, finestre basse) la
+  barra in basso occupava 235–257 px, circa il 60% dello schermo: il
+  cartellino diventava una striscia di 16–28 px e sotto i 701 px si
+  sovrapponeva alla missione. Ora:
+  - la missione resta nella riga in alto fra «Menu» e i pulsanti a destra,
+    con testo e «Cambiala» sulla stessa riga e l'esito sotto; il titolo resta
+    solo per i lettori di schermo;
+  - pianetini rimpiccioliti con `zoom: 0.65` sul posto (i nomi restano
+    grandi uguali), frecce da 40 px, dock su una riga con pulsanti da 40 px:
+    la barra in basso passa da ~235 a 130–132 px;
+  - il cartellino è una colonna a sinistra larga `min(300px, 44%)` fra le due
+    barre; se manca posto scorrono i dati, «Scopri» e «Ascolta» restano in
+    vista;
+  - durante il viaggio la barra del viaggio sta nella riga in alto (sotto i
+    701 px senza la barra che si riempie).
+  Cartellino: 844×390 da 28 a 184 px, 667×375 da 16 a 171, 683×384 da 16 a
+  180, 932×430 da 118 a 213, 800×500 da 138 a 213. Nessuna sovrapposizione
+  fra missione, cartellino, pianeti e dock, anche a missione risolta e
+  durante il viaggio. `min-height` del poster a 70 px (68 sotto i 701): CLS
+  al caricamento uguale o più basso della 4.22.9 (683×384 da 0,28 a 0,009).
+- `js/sistema-solare.js`: `misuraBasso()` mette in `--ss-alto` anche il fondo
+  della barra del viaggio quando è visibile, e il `ResizeObserver` la
+  osserva: durante il viaggio la barra andava su due o tre righe e copriva
+  l'inizio del cartellino (a 844×390 e sotto i 701 px).
+
+Resta stretto il 568×320 (iPhone SE in orizzontale): niente sovrapposizioni,
+ma a missione risolta il cartellino scorre per arrivare ai pulsanti.
+
 ## 4.22.9 - 2026-10-18
 
 **Sistema Solare: il cartellino non copre più la missione.**
