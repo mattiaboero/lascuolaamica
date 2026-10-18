@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.22.12 - 2026-10-18
+
+**Dati strutturati: sistemati gli errori segnalati da Search Console.**
+
+### Fixed
+- `sistema-solare.html`: nel JSON-LD, le due fonti in `isBasedOn` (NASA NSSDC
+  «Planetary Fact Sheets» e NASA JPL «Approximate Positions of the Planets»)
+  passano da `Dataset` a `CreativeWork`. Sono fonti citate, non dataset nostri:
+  Search Console le segnalava come «Set di dati» non validi (manca
+  `description`) e con avvisi su `license` e `creator`.
+- `tabelline.html`: tolto il blocco JSON-LD `ItemList` con i 7 `VideoObject`.
+  La pagina non incorpora video (solo miniature con link a YouTube), quindi
+  Search Console segnalava «video non su una pagina di visualizzazione» e
+  `uploadDate` senza fuso orario. I link `.tab-card` restano invariati.
+
 ## 4.22.11 - 2026-10-18
 
 **Sistema Solare: la barra in basso non salta più all'apertura.**
