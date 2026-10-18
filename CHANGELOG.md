@@ -1,5 +1,36 @@
 # Changelog Repo
 
+## 4.22.9 - 2026-10-18
+
+**Sistema Solare: il cartellino non copre più la missione.**
+
+### Fixed
+- `sistema-solare.css`: in vista immersiva il cartellino del corpo aperto
+  aveva un'altezza massima fissa (`100% - barra in basso - 160px`), ma la riga
+  in alto non è alta sempre uguale: fra 701 e circa 1000 px di larghezza la
+  missione sta fra «Menu» e la data e va su due o tre righe. A 900×600,
+  932×430, 800×500 e 600×600 il cartellino le saliva sopra (fino a 61 px), a
+  844×390 la copriva quasi tutta. Ora l'altezza massima parte da
+  `--ss-alto`, il fondo della riga in alto, con 6 px di margine.
+- `sistema-solare.css`: finestre basse (`min-width: 701px` e
+  `max-height: 540px`): niente data e contatore delle missioni, niente nota
+  sotto i pianeti, missione e cartellino stretti come sul telefono (senza
+  curiosità, che restano nella scheda). A 800×500 il cartellino passa da 24 a
+  138 px, a 932×430 da 63 a 118 px.
+- `sistema-solare.css`: con il cartellino aperto l'avviso «non è in scala» va
+  a destra lasciando libera la colonna dello zoom (`right: 72px`): con la
+  barra in basso misurata giusta, a 900×600 toccava il pulsante «−».
+- `js/sistema-solare.js`: `misuraBasso()` scrive anche `--ss-alto`, e gira
+  pure subito prima di `ss-pronta` e a ogni cambio d'altezza di riga in alto e
+  barra in basso (`ResizeObserver`). Prima `--ss-basso` si misurava una volta
+  sola all'avvio: quando il dock andava a capo poco dopo (700×600: 185 px
+  misurati, 235 veri), il cartellino copriva di 14 px la barra in basso.
+
+Telefono in orizzontale (≤ 400 px di altezza): la barra in basso occupa circa
+il 60% dello schermo e per il cartellino non resta spazio. A 844×390 non copre
+più la missione ma è una striscia; sotto i 701 px di larghezza (667×375) si
+sovrappone ancora. Serve un'impaginazione apposta, a parte.
+
 ## 4.22.8 - 2026-10-18
 
 **Sistema Solare: voli più fluidi, mappe decodificate fuori dal main thread.**

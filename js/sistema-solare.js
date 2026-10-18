@@ -1859,9 +1859,13 @@
   }
 
   // Quanto e' alta la barra in basso: cartellino e avvisi si mettono sopra.
+  // E dove finisce la riga in alto: la missione cambia altezza con il testo e
+  // con la larghezza, il cartellino non deve salirle sopra.
   function misuraBasso() {
     const h = document.querySelector('.ss-hud-basso').offsetHeight;
+    const alto = document.querySelector('.ss-hud-alto');
     $('ssScena').style.setProperty('--ss-basso', h + 'px');
+    $('ssScena').style.setProperty('--ss-alto', alto.offsetTop + alto.offsetHeight + 'px');
   }
 
   function schermoIntero() {
@@ -2041,6 +2045,12 @@
       misuraBasso();
     });
     window.addEventListener('resize', misuraBasso);
+    // Missione e dock cambiano altezza anche senza resize (testo nuovo, il
+    // contatore del passaporto che manda a capo un pulsante).
+    if (window.ResizeObserver) {
+      const ro = new window.ResizeObserver(misuraBasso);
+      document.querySelectorAll('.ss-hud-alto, .ss-hud-basso').forEach((n) => ro.observe(n));
+    }
 
     document.querySelectorAll('[data-filtro]').forEach((i) => {
       i.addEventListener('change', () => {
@@ -2196,8 +2206,13 @@
   // DOMContentLoaded tutti gli script defer sono gia' stati eseguiti.
   // ss-pronta mostra l'HUD in alto (vedi sistema-solare.css), anche se l'avvio
   // si interrompe a meta': meglio un HUD fuori posto che nessun pulsante.
+  // Prima si rimisura: data e missione appena scritte cambiano l'altezza della
+  // riga in alto, e il cartellino gia' aperto deve stare sotto dal primo paint.
   function parti() {
-    const pronta = () => $('ssScena').classList.add('ss-pronta');
+    const pronta = () => {
+      misuraBasso();
+      $('ssScena').classList.add('ss-pronta');
+    };
     try {
       avvia(pronta);
     } catch (err) {
