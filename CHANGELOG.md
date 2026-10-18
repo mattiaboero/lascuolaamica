@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.22.14 - 2026-10-18
+
+**Sistema Solare sul telefono in verticale: la scena torna giocabile.**
+
+Su iPhone in verticale fra missione (16% dell'altezza), cartellino (23%),
+pianetini e dock su due righe (31%) al cielo restava il 15%, e il corpo scelto
+finiva dietro il cartellino. Nel viaggio guidato la barra delle tappe
+aggiungeva tre righe e il cartellino si riapriva a ogni tappa. Ora, misurato
+sul simulatore iPhone 17 Pro, il cielo libero è circa il 60%.
+
+### Changed
+- `sistema-solare.css`: nuovo blocco `(max-width: 700px) and (min-height: 541px)`.
+  Riga in alto unica (Menu, missione, Esci). Il cartellino è una riga sopra i
+  pianetini (nome, 📖, 🔈, ▴) e, aperto, mostra i dati sotto. Il dock è una
+  barra di schede su una riga, con icona e parola corta (`.ss-corto`, mentre il
+  testo lungo resta per i lettori di schermo). La barra del viaggio sta fra Menu
+  ed Esci e i toast compaiono sotto la riga in alto.
+- Missione: il titolo è un pulsante (`aria-expanded`). Chiusa mostra il testo in
+  due righe, senza «Cambiala». Si apre da sola quando la missione è compiuta,
+  per mostrare «Nuova missione». È chiusa di partenza solo sul telefono in
+  verticale. La scelta resta in `localStorage`.
+- Cartellino: la ✕ lo riduce alla testa e ▴ lo riapre. Esc lo riduce prima di
+  uscire dalla vista immersiva. La scelta resta anche cambiando corpo e nel
+  viaggio, e da ridotto le curiosità non scorrono.
+- `js/sistema-solare-motore.js`: `inquadra(x, y)` sostituisce lo spostamento
+  fisso di 0,32 solo in verticale e solo fuori dal Sole. `misuraBasso()` calcola
+  il centro del cielo libero (sotto la riga in alto, sopra il cartellino largo
+  o a destra di quello a colonna) e il corpo scelto ci si centra, anche su
+  desktop e in orizzontale. Il `ResizeObserver` osserva anche il cartellino.
+
 ## 4.22.13 - 2026-10-18
 
 **Pagine scoperte da Google: link interni, `/link` fuori dall'indice, 301 del Bosco.**
