@@ -1617,6 +1617,7 @@
   /* ------------------------------------------------------- etichette */
 
   const etichette = new Map();
+  const posaEtichetta = new WeakMap();   // ultimo transform scritto
   let nomiAccesi = true;
 
   function costruisciEtichette() {
@@ -1667,9 +1668,17 @@
         const mezza = c.nome.length * 3.6 + 8;
         if (posate.some((p) => Math.abs(p.x - s.x) < p.mezza + mezza && Math.abs(p.y - y) < 18)) mostra = false;
         else posate.push({ x: s.x, y, mezza });
-        if (mostra) e.style.transform = 'translate(' + Math.round(s.x) + 'px,' + Math.round(y) + 'px) translateX(-50%)';
+        if (mostra) {
+          // Si riscrive solo se l'etichetta si e' spostata: aggiornaEtichette
+          // gira dopo ogni disegno, e ogni scrittura costa un ricalcolo di stile.
+          const t = 'translate(' + Math.round(s.x) + 'px,' + Math.round(y) + 'px) translateX(-50%)';
+          if (posaEtichetta.get(e) !== t) {
+            posaEtichetta.set(e, t);
+            e.style.transform = t;
+          }
+        }
       }
-      e.hidden = !mostra;
+      if (e.hidden !== !mostra) e.hidden = !mostra;
     });
   }
 
@@ -1712,7 +1721,7 @@
       motore.setVelocita(0);
       motore.setFattoreEstetico(inPausa ? 0 : 1);
       velocitaAttuale = null;
-      $('ssVelocitaNota').textContent = inPausa ? 'Il movimento è fermo.' : '';
+      scriviNota(inPausa ? 'Il movimento è fermo.' : '');
       return;
     }
     motore.setFattoreEstetico(0);
@@ -1720,8 +1729,15 @@
     if (v === velocitaAttuale) return;
     velocitaAttuale = v;
     motore.setVelocita(v);
-    $('ssVelocitaNota').textContent = inPausa ? 'Il tempo è fermo.'
-      : (velocitaScelta === 'auto' ? 'Adesso: ' + nomeVelocita(v) + '. Più veloce quando guardi tutto il sistema, più lenta vicino a un pianeta.' : '');
+    scriviNota(inPausa ? 'Il tempo è fermo.'
+      : (velocitaScelta === 'auto' ? 'Adesso: ' + nomeVelocita(v) + '. Più veloce quando guardi tutto il sistema, più lenta vicino a un pianeta.' : ''));
+  }
+
+  // applicaVelocita gira dopo ogni disegno: lo stesso testo riscritto
+  // rimpiazzerebbe il nodo e invaliderebbe lo stile a ogni fotogramma.
+  function scriviNota(testo) {
+    const nota = $('ssVelocitaNota');
+    if (nota.textContent !== testo) nota.textContent = testo;
   }
 
   function aggiornaData() {

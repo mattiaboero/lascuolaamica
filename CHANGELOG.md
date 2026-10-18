@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.22.3 - 2026-10-18
+
+**Sistema Solare: in pausa la scena non si ridisegna più.**
+
+### Fixed
+- Il ciclo di disegno non si fermava mai. `dopoDisegno` chiama
+  `applicaVelocita`, che chiamava `setVelocita(0)` e `setFattoreEstetico(...)`
+  a ogni fotogramma: entrambi rimettevano `stato.sporco = true` e ogni disegno
+  ne prenotava un altro, anche in pausa e con «Meno animazioni» (121 chiamate
+  di disegno per fotogramma a 120 fps). Ora i due setter di
+  `js/sistema-solare-motore.js` segnano la scena da ridisegnare solo se il
+  valore cambia: in pausa 0 disegni al secondo invece di circa 14.000;
+  transizioni, tastiera, trascinamento e ridimensionamento ridisegnano come
+  prima.
+- `js/sistema-solare.js`: le 60 etichette scrivono `transform` e `hidden`
+  solo se cambiano, e `#ssVelocitaNota` non riscrive più lo stesso testo a
+  ogni fotogramma: niente ricalcolo di stile a scena ferma.
+
 ## 4.22.2 - 2026-10-18
 
 **Sistema Solare: con «Meno animazioni» la scena parte ferma.**
