@@ -1,5 +1,38 @@
 # Changelog Repo
 
+## 4.22.10 - 2026-10-18
+
+**Sistema Solare: la barra in basso non salta più all'apertura.**
+
+### Fixed
+- `sistema-solare.css`: il contatore dei timbri sul pulsante «Passaporto» era
+  `display: none` finché vuoto, e si riempie subito dopo il primo disegno
+  (il primo corpo aperto è già un timbro). Il pulsante si allargava di 30 px e
+  a 700×600 e 360×740 mandava a capo «⚙️ Opzioni»: la barra in basso cresceva
+  di 50 px. Ora da vuoto è `visibility: hidden` e il posto resta tenuto.
+- `sistema-solare.html`, `sistema-solare.css`, `js/sistema-solare.js`:
+  «⏸ Ferma» e «▶ Muovi» stanno entrambi nel pulsante, nella stessa cella di
+  una griglia (`.ss-alterna`); `aria-pressed` decide quale si vede. Senza
+  scheda grafica la scena parte ferma subito dopo il primo disegno e «Muovi» è
+  2 px più largo di «Ferma»: bastava a mandare a capo la barra a 900×600 e
+  390×844. `impostaPausa()` non riscrive più il contenuto del pulsante.
+
+CLS al caricamento (Playwright + SwiftShader, 4 caricamenti per caso, sopra la
+4.22.9), sole / `#giove`:
+
+| Finestra | Prima | Dopo |
+| --- | --- | --- |
+| 1366×768 | 0,001–0,005 / 0,001–0,005 | 0,000–0,004 / 0,004 |
+| 1280×720 | 0,001–0,006 / 0,001–0,006 | 0,005 / 0,000–0,005 |
+| 900×600 | 0,186 / 0,186 | 0,001–0,011 / 0,011 |
+| 800×500 | 0,005–0,013 / 0,013 | 0,011 / 0,010 |
+| 700×600 | 0,174 / 0,174 | 0,002 / 0,000 |
+| 390×844 | 0,117–0,121 / 0,115 | 0,001 / 0,000 |
+| 360×740 | 0,037 / 0,017 | 0,001 / 0,000 |
+
+Resta, sotto 0,02, lo spostamento delle frecce del carosello quando
+`costruisciNavigazione()` riempie la fila dei pianeti dopo il primo disegno.
+
 ## 4.22.9 - 2026-10-18
 
 **Sistema Solare: il cartellino non copre più la missione.**
