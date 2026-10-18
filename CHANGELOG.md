@@ -1,5 +1,30 @@
 # Changelog Repo
 
+## 4.22.7 - 2026-10-18
+
+**Sistema Solare: i testi delle schede arrivano dopo la scena.**
+
+### Changed
+- `scripts/build_sistema_solare.py` scrive i testi delle schede dei corpi
+  (descrizione, curiosità, fonti, note, missioni, strumenti e altri campi
+  testuali, tutti letti dalla pagina con una guardia) in
+  `js/sistema-solare-testi.json`, generato come `js/sistema-solare-dati.js`.
+  `sistema-solare-dati.js` passa da 196 a 98 KB (da 39 a 18 KB con Brotli):
+  è l'ultimo script del percorso critico. La pagina statica non cambia.
+- `js/sistema-solare.js`: `caricaTesti()` scarica il file con `fetch()`
+  appena finiti gli script (la CSP permette `connect-src 'self'`; un
+  `<script>` iniettato avrebbe chiesto una policy Trusted Types nuova) e
+  rimette i testi nella scheda di ogni corpo. Il primo cartellino li aspetta,
+  per non cambiare misura dopo; una scheda aperta prima che arrivino si rifà
+  quando arrivano. Se il file non arriva le schede escono più corte e si
+  riprova alla scheda successiva.
+- `sw.js`: `js/sistema-solare-testi.json` in precache, accanto ai dati.
+- `scripts/check_sistema_solare.js` rimette i testi prima dei controlli di
+  completezza e segnala testi per un corpo che non esiste.
+- Misura in locale (mobile, CPU 4×, 150 ms di RTT, 1,6 Mbit/s, mediana di 3,
+  senza compressione): LCP da 3924 a 3464 ms, TBT da 107 a 85 ms. In
+  produzione, con Brotli, i byte risparmiati prima dell'LCP sono circa 20 KB.
+
 ## 4.22.6 - 2026-10-18
 
 **Sistema Solare: il benvenuto non aspetta la scena.**

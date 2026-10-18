@@ -785,6 +785,12 @@
 
   /* ------------------------------------------------------- apertura */
 
+  function mostraCorpo(c) {
+    mostraScheda(NOMI_TIPO[c.tipo] + (c.tipo === 'luna' ? ' ' + di(corpi.get(c.genitore)) : ''), c.nome, schedaCorpo(c));
+    aggiornaOggi();
+    mostraCartellino(c);
+  }
+
   function apri(chiave, opz) {
     const o = opz || {};
     const [tipo, id] = chiave.split(':');
@@ -813,9 +819,12 @@
         assicuraVisibile(c);
         motore.seleziona(id, istantaneo);
       }
-      mostraScheda(NOMI_TIPO[c.tipo] + (c.tipo === 'luna' ? ' ' + di(corpi.get(c.genitore)) : ''), c.nome, schedaCorpo(c));
-      aggiornaOggi();
-      mostraCartellino(c);
+      mostraCorpo(c);
+      // Aperta prima dei testi (un tocco nei primi istanti): la si rifa'
+      // quando arrivano, se e' ancora lei.
+      if (!testiPronti) {
+        caricaTesti().then((ok) => { if (ok && corrente && corrente.tipo === 'c' && corrente.id === id) mostraCorpo(c); });
+      }
       registraVisita(id);
       // Il viaggio guidato e l'apertura da un link non valgono come risposta.
       if (!o.viaggio && !o.daHash) controllaMissione(c);
@@ -1172,6 +1181,30 @@
     futuro: { viaggio: 8, sosta: 12, segui: 'voyager-1', eliopausa: true, foto: 'futuro' }
   };
   const film = { attivo: false, i: 0, pausa: false, timer: 0, raf: 0, inViaggio: null };
+  // Descrizioni, curiosita', fonti, missioni dei corpi arrivano a parte (vedi
+  // scripts/build_sistema_solare.py): servono alle schede, non alla scena, e
+  // il benvenuto non li aspetta. Una richiesta sola, che parte appena finiti
+  // gli script. Ogni campo testuale e' facoltativo: se il file non arriva le
+  // schede escono piu' corte, e si riprova alla prossima scheda aperta.
+  let testiCaricati = null;
+  let testiPronti = false;
+  function caricaTesti() {
+    if (!testiCaricati) {
+      testiCaricati = fetch('/js/sistema-solare-testi.json')
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error(r.status))))
+        .then((t) => {
+          Object.keys(t.corpi || {}).forEach((id) => {
+            const c = corpi.get(id);
+            if (c && c.scheda) Object.assign(c.scheda, t.corpi[id]);
+          });
+          testiPronti = true;
+          return true;
+        })
+        .catch(() => { testiCaricati = null; return false; });
+    }
+    return testiCaricati;
+  }
+
   let traiettorieCaricate = null;
 
   function caricaTraiettorie() {
@@ -2058,6 +2091,7 @@
   // dell'avvio (contesto, shader, orbite), e il benvenuto non deve aspettarla.
   // fatto() arriva quando c'e' anche la scena.
   function avvia(fatto) {
+    caricaTesti();
     costruisciNavigazione();
     costruisciConfronti();
     collegaBottoni();
@@ -2069,14 +2103,15 @@
     if (benvenuto) mostraBenvenuto();
     requestAnimationFrame(() => window.setTimeout(() => {
       try {
-        avviaScena(benvenuto);
-      } finally {
+        avviaScena(benvenuto, fatto);
+      } catch (err) {
         fatto();
+        throw err;
       }
     }, 0));
   }
 
-  function avviaScena(benvenuto) {
+  function avviaScena(benvenuto, fatto) {
     const canvas = $('ssCanvas');
     try {
       motore = SA.SistemaMotore.crea(canvas, DATI, {
@@ -2128,17 +2163,22 @@
     }
 
     const chiave = chiaveDaHash() || 'c:sole';
-    apri(chiave, { istantaneo: true, daHash: true });
     if (motore && chiave === 'c:sole') motore.vistaSistema(true);
-    avviato = true;
-    if (motore && motore.leggero && !movimentoRidotto()) {
-      mostraToast('Questo computer disegna senza scheda grafica: i pianeti partono fermi. Premi «Muovi» per farli girare.', 9000);
-    }
-    // Un link interno o il tasto Indietro cambiano solo l'ancora, senza ricaricare.
-    window.addEventListener('hashchange', () => {
-      const k = chiaveDaHash();
-      if (k && (!corrente || k !== corrente.tipo + ':' + corrente.id)) apri(k, { daHash: true });
-    });
+    // Il primo cartellino aspetta i testi: aperto senza, cambierebbe misura
+    // quando arrivano. Se non arrivano si apre lo stesso, piu' corto.
+    caricaTesti().then(() => {
+      apri(chiave, { istantaneo: true, daHash: true });
+      if (motore && chiave === 'c:sole') motore.vistaSistema(true);
+      avviato = true;
+      if (motore && motore.leggero && !movimentoRidotto()) {
+        mostraToast('Questo computer disegna senza scheda grafica: i pianeti partono fermi. Premi «Muovi» per farli girare.', 9000);
+      }
+      // Un link interno o il tasto Indietro cambiano solo l'ancora, senza ricaricare.
+      window.addEventListener('hashchange', () => {
+        const k = chiaveDaHash();
+        if (k && (!corrente || k !== corrente.tipo + ':' + corrente.id)) apri(k, { daHash: true });
+      });
+    }).finally(fatto);
   }
 
   function chiaveDaHash() {

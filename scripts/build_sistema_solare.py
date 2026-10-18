@@ -25,6 +25,15 @@ import sys
 RADICE = pathlib.Path(__file__).resolve().parent.parent
 DOCS = RADICE / 'docs' / 'sistema-solare'
 USCITA = RADICE / 'js' / 'sistema-solare-dati.js'
+# I testi delle schede dei corpi viaggiano a parte: la scena e il benvenuto non
+# li aspettano (circa 20 KB compressi in meno prima del primo disegno). La
+# pagina li scarica con fetch() appena arrivati gli script, e li rimette nella
+# scheda di ogni corpo. Solo campi che la pagina legge con una guardia (un
+# testo mancante non rompe niente): lancio, temperatura e i numeri restano.
+USCITA_TESTI = RADICE / 'js' / 'sistema-solare-testi.json'
+CAMPI_TESTO = ('descrizione', 'curiosita', 'fonti', 'note', 'scoperta', 'missioni', 'strumenti',
+               'strumenti_nota', 'strumenti_fonti', 'energia', 'atmosfera', 'pianeti', 'posizione',
+               'futuro', 'record', 'valori_derivati', 'lune_fonte')
 PAGINA = RADICE / 'sistema-solare.html'
 
 G = 6.67430e-11        # CODATA 2018
@@ -283,19 +292,42 @@ def main():
         'fasce': fasce,
         'film': film,
     }
+    scena, testi = dividi_testi(uscita)
     testo = ('// GENERATO da scripts/build_sistema_solare.py: non modificare a mano.\n'
              '// Fonti e note per ogni valore: docs/sistema-solare/*.json\n'
+             '// I testi delle schede dei corpi sono in js/sistema-solare-testi.json.\n'
              'window.SA = window.SA || {};\n'
-             'window.SA.sistemaSolareDati = ' + json.dumps(uscita, ensure_ascii=False, separators=(',', ':')) + ';\n')
+             'window.SA.sistemaSolareDati = ' + json.dumps(scena, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    testo_testi = json.dumps(testi, ensure_ascii=False, separators=(',', ':'))
     scrivi_traiettorie('--check' in sys.argv)
     scrivi_pagina(uscita, carica('faq.json'), '--check' in sys.argv)
     if '--check' in sys.argv:
         if not USCITA.exists() or USCITA.read_text(encoding='utf-8') != testo:
             sys.exit('[ERROR] js/sistema-solare-dati.js non e\' aggiornato: python3 scripts/build_sistema_solare.py')
-        print('[OK] js/sistema-solare-dati.js aggiornato')
+        if not USCITA_TESTI.exists() or USCITA_TESTI.read_text(encoding='utf-8') != testo_testi:
+            sys.exit('[ERROR] js/sistema-solare-testi.json non e\' aggiornato: python3 scripts/build_sistema_solare.py')
+        print('[OK] js/sistema-solare-dati.js e js/sistema-solare-testi.json aggiornati')
         return
     USCITA.write_text(testo, encoding='utf-8')
+    USCITA_TESTI.write_text(testo_testi, encoding='utf-8')
     print(f'[OK] {USCITA.relative_to(RADICE)}: {len(corpi)} corpi, {len(uscita["sciami"])} sciami, {len(uscita["schede"])} schede')
+
+
+def dividi_testi(uscita):
+    """Copia di uscita senza i testi delle schede, e i testi per id del corpo."""
+    scena = dict(uscita)
+    scena['corpi'] = []
+    testi = {}
+    for c in uscita['corpi']:
+        c2 = dict(c)
+        if c.get('scheda'):
+            scheda = dict(c['scheda'])
+            presi = {k: scheda.pop(k) for k in CAMPI_TESTO if k in scheda}
+            if presi:
+                testi[c['id']] = presi
+            c2['scheda'] = scheda
+        scena['corpi'].append(c2)
+    return scena, {'corpi': testi}
 
 
 def scrivi_traiettorie(controlla):

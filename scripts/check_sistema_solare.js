@@ -33,6 +33,13 @@ vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-dati.js'),
 vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-motore.js'), 'utf8'), sandbox);
 
 const DATI = sandbox.window.SA.sistemaSolareDati;
+// I testi delle schede arrivano a parte (js/sistema-solare-testi.json): qui si
+// rimettono al loro posto, come fa la pagina, prima dei controlli.
+const TESTI = JSON.parse(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-testi.json'), 'utf8'));
+DATI.corpi.forEach((c) => { if (TESTI.corpi[c.id]) Object.assign(c.scheda, TESTI.corpi[c.id]); });
+Object.keys(TESTI.corpi).forEach((id) => {
+  assert.ok(DATI.corpi.some((c) => c.id === id), `testi per un corpo che non esiste: ${id}`);
+});
 const K = sandbox.window.SA.SistemaMotore.calcolo;
 const RAD = Math.PI / 180;
 const G = 6.67430e-11;
