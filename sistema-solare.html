@@ -352,10 +352,10 @@
       <div class="ss-hud-alto">
         <a class="ss-hud-btn ss-c-grigio" href="/" aria-label="Torna al menu principale del sito">🏠 <span class="ss-solo-largo">Menu</span></a>
         <section class="ss-missione" id="ssMissione" aria-labelledby="ssMissioneTitolo">
-          <h2 class="ss-missione-titolo" id="ssMissioneTitolo"><span aria-hidden="true">🎯</span> La tua missione <span class="ss-missione-conto" id="ssMissioneConto"></span></h2>
+          <h2 class="ss-missione-titolo" id="ssMissioneTitolo"><button type="button" class="ss-missione-apri" data-ss="missione-apri" aria-expanded="true" aria-controls="ssMissioneAzioni"><span aria-hidden="true">🎯</span> <span class="ss-missione-etichetta">La tua missione</span> <span class="ss-missione-freccia" aria-hidden="true"></span></button> <span class="ss-missione-conto" id="ssMissioneConto"></span></h2>
           <p class="ss-missione-testo" id="ssMissioneTesto"></p>
           <p class="ss-missione-esito" id="ssMissioneEsito" role="status" aria-live="polite"></p>
-          <div class="ss-missione-azioni">
+          <div class="ss-missione-azioni" id="ssMissioneAzioni">
             <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-giallo" data-ss="missione-prossima" hidden>Nuova missione ▶</button>
             <button type="button" class="ss-hud-btn ss-hud-piccolo ss-c-grigio" data-ss="missione-salta">🔄 Cambiala</button>
           </div>
@@ -363,8 +363,8 @@
         <div class="ss-hud-destra">
           <output class="ss-hud-data" id="ssData" aria-live="off"></output>
           <button type="button" class="ss-hud-btn ss-c-grigio" data-ss="schermo-intero" aria-pressed="false" aria-label="Schermo intero" hidden>⛶</button>
-          <button type="button" class="ss-hud-btn ss-c-grigio ss-solo-immersivo" data-ss="esci" aria-label="Esci: torna alla pagina con le schede">✕ <span class="ss-solo-largo">Esci</span></button>
-          <button type="button" class="ss-hud-btn ss-c-grigio ss-solo-normale" data-ss="entra" aria-label="Torna alla vista a tutto schermo">⛶ <span class="ss-solo-largo">Tutto schermo</span></button>
+          <button type="button" class="ss-hud-btn ss-c-grigio ss-solo-immersivo" data-ss="esci" aria-label="Esci: torna alla pagina con le schede"><svg class="ss-icona-schermo" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg> <span class="ss-solo-largo">Esci</span></button>
+          <button type="button" class="ss-hud-btn ss-c-grigio ss-solo-normale" data-ss="entra" aria-label="Torna alla vista a tutto schermo"><svg class="ss-icona-schermo" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg> <span class="ss-solo-largo">Tutto schermo</span></button>
         </div>
       </div>
 
@@ -408,6 +408,7 @@
             <h2 class="ss-cart-nome" id="ssCartNome"></h2>
           </div>
         </div>
+        <button type="button" class="ss-hud-btn ss-c-grigio ss-cart-chiudi" data-ss="riduci-cartellino" aria-expanded="true" aria-label="Riduci il cartellino">✕</button>
         <ul class="ss-cart-dati" id="ssCartDati"></ul>
         <div class="ss-cart-curiosita" id="ssCartCuriosita" hidden>
           <p><strong><span aria-hidden="true">💡</span> Lo sapevi?</strong> <span id="ssCartTesto"></span></p>
@@ -418,7 +419,7 @@
         </div>
         <p class="ss-cart-scala">Distanze accorciate e corpi ingranditi: non è in scala.</p>
         <div class="ss-cart-azioni">
-          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="scopri">📖 Scopri</button>
+          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="scopri">📖 <span class="ss-btn-testo">Scopri</span></button>
           <button type="button" class="ss-hud-btn ss-c-viola" data-ss="ascolta-cartellino">🔈 Ascolta</button>
         </div>
       </aside>
@@ -431,10 +432,10 @@
         </div>
         <p class="ss-poster-nota">Grandi e piccoli, ma non in scala vera: per le grandezze vere c'è <strong>Confronta</strong> in Opzioni.</p>
         <div class="ss-dock" role="group" aria-label="Comandi">
-          <button type="button" class="ss-hud-btn ss-c-verde ss-grande" data-ss="viaggio">🚀 <span>Parti per il viaggio</span></button>
-          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="sistema">🔭 <span>Vedi tutto</span></button>
+          <button type="button" class="ss-hud-btn ss-c-verde ss-grande" data-ss="viaggio">🚀 <span class="ss-lungo">Parti per il viaggio</span><span class="ss-corto" aria-hidden="true">Viaggio</span></button>
+          <button type="button" class="ss-hud-btn ss-c-blu" data-ss="sistema">🔭 <span class="ss-lungo">Vedi tutto</span><span class="ss-corto" aria-hidden="true">Tutto</span></button>
           <button type="button" class="ss-hud-btn ss-c-grigio" data-ss="pausa" aria-pressed="false"><span class="ss-alterna"><span>⏸ <span>Ferma</span></span><span>▶ <span>Muovi</span></span></span></button>
-          <button type="button" class="ss-hud-btn ss-c-blu" data-pannello-apri="esplora">🗺️ <span>Altri posti</span></button>
+          <button type="button" class="ss-hud-btn ss-c-blu" data-pannello-apri="esplora">🗺️ <span class="ss-lungo">Altri posti</span><span class="ss-corto" aria-hidden="true">Posti</span></button>
           <button type="button" class="ss-hud-btn ss-c-arancio" data-pannello-apri="passaporto">🛂 <span>Passaporto</span> <span class="ss-badge" id="ssBadgeTimbri" aria-hidden="true"></span></button>
           <button type="button" class="ss-hud-btn ss-c-grigio" data-pannello-apri="strumenti" aria-label="Opzioni">⚙️ <span class="ss-solo-largo">Opzioni</span></button>
         </div>

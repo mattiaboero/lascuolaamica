@@ -573,6 +573,7 @@ void main() {
       jd: jdDaData(new Date()),
       velocita: 1,           // giorni simulati per secondo
       bersaglio: 'sole',
+      inquadro: null,        // centro dello spazio libero, in pixel
       camDist: 80,
       camYaw: -0.6,
       camPitch: 0.45,
@@ -1027,11 +1028,16 @@ void main() {
       const near = Math.max(0.0005, dist * 0.02);
       const far = dist + 900;
       const proj = mat4Prospettiva(45 * RAD, stato.w / stato.h, near, far);
-      // Schermo verticale (telefono): il cartellino copre la meta' bassa, quindi
-      // il corpo scelto si mostra nella meta' alta. Si sposta l'immagine, non la
+      // Pannelli e barre coprono parte della scena: il corpo scelto si mostra
+      // al centro dello spazio libero (inquadra). Si sposta l'immagine, non la
       // camera: proiezioni, etichette e tocchi restano coerenti.
-      if (stato.h > stato.w * 1.1 && stato.bersaglio !== 'sole' && !stato.confronto) {
-        for (let k = 0; k < 4; k++) proj[k * 4 + 1] += 0.32 * proj[k * 4 + 3];
+      if (stato.inquadro && !stato.confronto) {
+        const sx = 2 * stato.inquadro[0] / stato.w - 1;
+        const sy = 1 - 2 * stato.inquadro[1] / stato.h;
+        for (let k = 0; k < 4; k++) {
+          proj[k * 4] += sx * proj[k * 4 + 3];
+          proj[k * 4 + 1] += sy * proj[k * 4 + 3];
+        }
       }
       const vista = mat4Guarda(occhio, centro, [0, 1, 0]);
       stato.vp = mat4Mul(proj, vista);
@@ -1649,6 +1655,13 @@ void main() {
         stato.sporco = true;
       },
       get bersaglio() { return stato.bersaglio; },
+      // Centro dello spazio libero sulla scena, in pixel del canvas.
+      inquadra(x, y) {
+        const q = stato.inquadro;
+        if (q && Math.abs(q[0] - x) < 1 && Math.abs(q[1] - y) < 1) return;
+        stato.inquadro = [x, y];
+        stato.sporco = true;
+      },
       get larghezza() { return stato.w; },
       get altezza() { return stato.h; },
       // Vola verso un corpo.

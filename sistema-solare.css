@@ -1354,6 +1354,51 @@ body.ss-immersivo .ss-pannello:not(.ss-attivo) {
   color: #fff;
 }
 
+/* Il titolo apre e chiude la missione: chiusa resta solo il titolo. */
+.ss-missione-apri {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.ss-missione-apri:focus-visible {
+  outline: 3px solid var(--accent-3);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.ss-missione-freccia::before {
+  content: '▾';
+  font-size: 1.1rem;
+}
+
+.ss-missione-chiusa .ss-missione-freccia::before {
+  content: '▸';
+}
+
+.ss-missione-chiusa .ss-missione-conto,
+.ss-missione-chiusa .ss-missione-azioni {
+  display: none;
+}
+
+/* Chiusa resta il testo, in due righe al massimo. */
+.ss-missione-chiusa .ss-missione-testo {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
 /* ---- Avviso (timbri, missioni) ---- */
 .ss-toast {
   position: absolute;
@@ -1438,7 +1483,8 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
   margin-bottom: 18px;
 }
 
-.ss-freccia-svg {
+.ss-freccia-svg,
+.ss-icona-schermo {
   display: block;
 }
 
@@ -1574,6 +1620,20 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
   display: flex;
   align-items: center;
   gap: 12px;
+  padding-right: 48px;
+}
+
+/* ✕ riduce il cartellino alla sua testa, ▴ lo riapre. */
+.ss-cart-chiudi {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.ss-cart-ridotto > :not(.ss-cart-testa, .ss-cart-chiudi) {
+  display: none;
 }
 
 .ss-cart-tipo {
@@ -1704,8 +1764,13 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
     padding: 4px 6px 4px 12px;
   }
 
-  /* Il titolo resta per i lettori di schermo: la missione ha il bordo giallo. */
-  .ss-missione-titolo {
+  /* La scritta resta per i lettori di schermo: la missione ha il bordo giallo.
+     Si vedono il bersaglio e la freccia che la apre e la chiude. */
+  .ss-missione-titolo .ss-missione-conto {
+    display: none;
+  }
+
+  .ss-missione-etichetta {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1958,5 +2023,264 @@ body.ss-in-film .ss-poster-nota {
 
   .ss-atlante dd {
     margin-bottom: 6px;
+  }
+}
+
+/* ---- Telefono in verticale ----
+   La scena e' il gioco: i comandi stanno ai bordi, ognuno su una riga.
+   In alto Menu, la missione (chiusa: il suo testo) o la barra del viaggio, ed
+   Esci. In basso il cartellino come una riga (nome, Scopri, Ascolta, ▴ per i
+   dati), i pianetini e il dock come una barra di schede, icona e parola corta.
+   Il corpo scelto si centra nel cielo libero (misuraBasso e inquadra). */
+.ss-corto {
+  display: none;
+}
+
+@media (max-width: 700px) and (min-height: 541px) {
+  .ss-hud-alto {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .ss-missione {
+    order: 0;
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 6px;
+    padding: 4px 4px 4px 10px;
+    cursor: pointer;
+  }
+
+  /* Il bersaglio a sinistra e' solo un segno: a destra c'e' il pulsante. */
+  .ss-missione::before {
+    content: '🎯' / '';
+    flex: none;
+    font-size: 1.1rem;
+  }
+
+  /* Il pulsante tondo a destra, come quello del cartellino: ▾ apre, ▴ chiude
+     (non ✕: accanto c'e' gia' la ✕ di Esci, che porta fuori dalla scena).
+     Tutta la missione si apre e si chiude anche con un tocco (collegaBottoni). */
+  .ss-missione-titolo {
+    flex: none;
+    order: 1;
+  }
+
+  .ss-missione-apri {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    gap: 0;
+    border: 2px solid rgba(255 255 255 / 0.65);
+    border-radius: 999px;
+    background: rgba(5 7 15 / 0.72);
+    color: #fff;
+  }
+
+  .ss-missione-apri > :first-child {
+    display: none;
+  }
+
+  .ss-missione-etichetta {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .ss-missione-freccia::before,
+  .ss-missione-chiusa .ss-missione-freccia::before {
+    content: '▴';
+    font-size: 1.05rem;
+  }
+
+  .ss-missione-chiusa .ss-missione-freccia::before {
+    content: '▾';
+  }
+
+  .ss-missione-testo {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  .ss-missione-esito {
+    order: 2;
+    flex-basis: 100%;
+    font-size: 0.82rem;
+  }
+
+  .ss-missione-azioni {
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 0;
+    padding-bottom: 4px;
+  }
+
+  /* Gli avvisi (timbri, missioni) sotto la riga in alto, non sopra i suoi pulsanti. */
+  .ss-toast {
+    top: calc(var(--ss-alto, 64px) + 8px);
+  }
+
+  /* Il viaggio prende il posto della missione, fra Menu e Esci. */
+  .ss-viaggio-barra {
+    top: 10px;
+    left: 60px;
+    right: calc(var(--ss-destra, 44px) + 16px);
+    flex-wrap: wrap;
+    gap: 4px 3px;
+    padding: 4px 6px;
+    transform: none;
+  }
+
+  .ss-viaggio-tappa {
+    flex-basis: 100%;
+    overflow: hidden;
+    font-size: 0.85rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ss-viaggio-progresso {
+    flex-basis: 100%;
+    order: 0;
+  }
+
+  .ss-viaggio-barra .ss-hud-btn {
+    gap: 4px;
+    min-height: 40px;
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  /* Il cartellino e' una riga sopra i pianetini: nome, poi Scopri, Ascolta e
+     la freccia; aperto, sotto, i tre dati. */
+  .ss-cartellino {
+    left: 10px;
+    right: 10px;
+    bottom: calc(var(--ss-basso, 120px) - 18px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 4px 6px;
+    padding: 6px 6px 6px 10px;
+  }
+
+  .ss-cart-testa {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    gap: 8px;
+    padding-right: 0;
+  }
+
+  .ss-cart-testa .ss-mini-grande {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ss-cart-testa > div {
+    min-width: 0;
+  }
+
+  .ss-cart-nome {
+    overflow: hidden;
+    font-size: 1.1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ss-cart-azioni {
+    grid-column: 2;
+    grid-row: 1;
+    flex-wrap: nowrap;
+  }
+
+  .ss-cart-azioni .ss-hud-btn {
+    padding: 0;
+    font-size: 1.15rem;
+  }
+
+  .ss-cart-azioni .ss-btn-testo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .ss-cart-chiudi {
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .ss-cart-dati,
+  .ss-cart-scala {
+    grid-column: 1 / -1;
+  }
+
+  .ss-cart-ridotto > .ss-cart-azioni {
+    display: flex;
+  }
+
+  /* Il dock e' una riga di schede: icona sopra, parola corta sotto. */
+  .ss-dock {
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  .ss-dock .ss-hud-btn {
+    position: relative;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    min-height: 52px;
+    padding: 4px 4px 3px;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    line-height: 1.15;
+  }
+
+  .ss-dock .ss-hud-btn > span,
+  .ss-dock .ss-alterna > span > span,
+  .ss-dock .ss-solo-largo {
+    font-size: 0.75rem;
+  }
+
+  .ss-dock .ss-solo-largo,
+  .ss-dock .ss-corto {
+    display: inline;
+  }
+
+  .ss-dock .ss-lungo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .ss-dock .ss-alterna > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    font-size: 1.2rem;
+  }
+
+  .ss-dock .ss-badge {
+    position: absolute;
+    top: -4px;
+    right: -2px;
   }
 }

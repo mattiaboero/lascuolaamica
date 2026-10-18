@@ -241,7 +241,8 @@
     document.querySelectorAll('[data-ascolta]').forEach((b) => {
       const mio = b.dataset.ascolta === ascolto.chiave;
       const st = mio ? ascolto.stato : 'fermo';
-      b.textContent = st === 'in-corso' ? '⏸ Pausa' : (st === 'pausa' ? '▶ Riprendi' : '🔈 Ascolta');
+      const [icona, parola] = (st === 'in-corso' ? '⏸ Pausa' : (st === 'pausa' ? '▶ Riprendi' : '🔈 Ascolta')).split(' ');
+      b.replaceChildren(document.createTextNode(icona + ' '), el('span', { classe: 'ss-btn-testo', testo: parola }));
       b.setAttribute('aria-pressed', st === 'in-corso' ? 'true' : 'false');
       b.setAttribute('aria-label', st === 'in-corso' ? 'Metti in pausa la lettura' : (st === 'pausa' ? 'Riprendi la lettura' : 'Ascolta la scheda'));
     });
@@ -886,6 +887,8 @@
   // non e' disponibile, per esempio in navigazione privata su Safari).
   const KEY_PASSAPORTO = 'lascuolaamica_sistema_solare_passaporto_v1';
   const KEY_MISSIONI = 'lascuolaamica_sistema_solare_missioni_v1';
+  const KEY_MISSIONE_CHIUSA = 'lascuolaamica_sistema_solare_missione_chiusa_v1';
+  const KEY_CARTELLINO_RIDOTTO = 'lascuolaamica_sistema_solare_cartellino_ridotto_v1';
   const memoryStorage = SA.memoryStorage = SA.memoryStorage || Object.create(null);
 
   function storageGet(key) {
@@ -1016,6 +1019,17 @@
     $('ssCartTesto').textContent = curiosita.elenco[curiosita.i % curiosita.elenco.length];
   }
 
+  // Sul telefono il cartellino copre la scena: con ✕ o con Esc resta solo il
+  // nome, anche alle scelte dopo e nel viaggio, finche' non lo si riapre.
+  function riduciCartellino(ridotto) {
+    const b = document.querySelector('[data-ss="riduci-cartellino"]');
+    $('ssCartellino').classList.toggle('ss-cart-ridotto', ridotto);
+    b.textContent = ridotto ? '▴' : '✕';
+    b.setAttribute('aria-label', ridotto ? 'Apri il cartellino' : 'Riduci il cartellino');
+    b.setAttribute('aria-expanded', ridotto ? 'false' : 'true');
+    programmaCuriosita();
+  }
+
   function fermaCuriosita() {
     window.clearInterval(curiosita.timer);
     curiosita.timer = 0;
@@ -1024,7 +1038,7 @@
   // Cambiano da sole ogni 8 secondi; il pulsante ⏸ le ferma (WCAG 2.2.2).
   function programmaCuriosita() {
     fermaCuriosita();
-    if (curiosita.ferma || curiosita.elenco.length < 2) return;
+    if (curiosita.ferma || curiosita.elenco.length < 2 || $('ssCartellino').classList.contains('ss-cart-ridotto')) return;
     curiosita.timer = window.setInterval(() => {
       curiosita.i += 1;
       mostraCuriosita();
@@ -1049,7 +1063,8 @@
   function impostaPulsanteViaggio(attivo) {
     const b = document.querySelector('[data-ss="viaggio"]');
     b.setAttribute('aria-pressed', attivo ? 'true' : 'false');
-    b.replaceChildren(document.createTextNode(attivo ? '✋ ' : '🚀 '), el('span', { testo: attivo ? 'Ferma il viaggio' : 'Parti per il viaggio' }));
+    b.replaceChildren(document.createTextNode(attivo ? '✋ ' : '🚀 '), el('span', { classe: 'ss-lungo', testo: attivo ? 'Ferma il viaggio' : 'Parti per il viaggio' }),
+      el('span', { classe: 'ss-corto', 'aria-hidden': 'true', testo: 'Viaggio' }));
   }
 
   function nomeTappa(k) {
@@ -1473,6 +1488,22 @@
     aggiornaContoMissioni();
   }
 
+  // Chiusa, la missione e' il suo testo in due righe, senza pulsanti: sul
+  // telefono in verticale aperta occupava mezzo cielo. La scelta resta per la
+  // visita dopo; senza scelta e' chiusa solo sul telefono in verticale.
+  const telefonoVerticale = () => window.matchMedia('(max-width: 700px) and (min-height: 541px)').matches;
+
+  function apriMissione(aperta) {
+    $('ssMissione').classList.toggle('ss-missione-chiusa', !aperta);
+    document.querySelector('[data-ss="missione-apri"]').setAttribute('aria-expanded', aperta ? 'true' : 'false');
+  }
+
+  function alternaMissione() {
+    const aperta = $('ssMissione').classList.contains('ss-missione-chiusa');
+    apriMissione(aperta);
+    storageSet(KEY_MISSIONE_CHIUSA, aperta ? '0' : '1');
+  }
+
   function aggiornaContoMissioni() {
     $('ssMissioneConto').textContent = 'Completate: ' + MISSIONI.filter((m) => missioni.fatte.has(m.id)).length + ' di ' + MISSIONI.length;
   }
@@ -1488,6 +1519,7 @@
       esito.textContent = '🎉 Esatto! ' + c.nome + ': ' + m.mostra(c) + '.';
       mostraToast('🎉 Missione compiuta!');
       document.querySelector('[data-ss="missione-prossima"]').hidden = false;
+      apriMissione(true);
       $('ssMissione').classList.add('ss-missione-ok');
       window.setTimeout(() => $('ssMissione').classList.remove('ss-missione-ok'), 1200);
       aggiornaContoMissioni();
@@ -1866,8 +1898,23 @@
     const alto = document.querySelector('.ss-hud-alto');
     const barra = $('ssViaggioBarra');
     const fondo = Math.max(alto.offsetTop + alto.offsetHeight, barra.hidden ? 0 : barra.offsetTop + barra.offsetHeight);
-    $('ssScena').style.setProperty('--ss-basso', h + 'px');
-    $('ssScena').style.setProperty('--ss-alto', fondo + 'px');
+    const scena = $('ssScena');
+    scena.style.setProperty('--ss-basso', h + 'px');
+    scena.style.setProperty('--ss-alto', fondo + 'px');
+    scena.style.setProperty('--ss-destra', document.querySelector('.ss-hud-destra').offsetWidth + 'px');
+    if (!motore) return;
+    // Il corpo scelto va al centro del cielo che resta libero. Il cartellino
+    // largo (telefono in verticale) toglie spazio sotto, quello stretto (a
+    // colonna, finestre basse) a sinistra.
+    const cart = $('ssCartellino');
+    const W = scena.clientWidth;
+    let sotto = scena.clientHeight - h;
+    let sinistra = 0;
+    if (cart.offsetHeight) {
+      if (cart.offsetWidth > W * 0.6) sotto = Math.min(sotto, cart.offsetTop);
+      else sinistra = cart.offsetLeft + cart.offsetWidth;
+    }
+    motore.inquadra((sinistra + W) / 2, (fondo + sotto) / 2);
   }
 
   function schermoIntero() {
@@ -1968,7 +2015,7 @@
       if (b) {
         const a = b.dataset.ss;
         const senzaScena = ['prec', 'succ', 'missione-prossima', 'missione-salta', 'passaporto-azzera', 'curiosita-pausa', 'curiosita-avanti',
-          'scopri', 'chiudi-cassetto', 'esci', 'entra', 'ascolta-cartellino', 'benvenuto-chiudi', 'benvenuto-apri'];
+          'scopri', 'chiudi-cassetto', 'riduci-cartellino', 'missione-apri', 'esci', 'entra', 'ascolta-cartellino', 'benvenuto-chiudi', 'benvenuto-apri'];
         if (!motore && !senzaScena.includes(a)) return;
         const azioni = {
           prec: () => viaggia(-1),
@@ -2009,6 +2056,12 @@
           'passaporto-azzera': azzeraPassaporto,
           scopri: () => apriCassetto('scheda'),
           'chiudi-cassetto': chiudiCassetto,
+          'riduci-cartellino': () => {
+            const ridotto = !$('ssCartellino').classList.contains('ss-cart-ridotto');
+            riduciCartellino(ridotto);
+            storageSet(KEY_CARTELLINO_RIDOTTO, ridotto ? '1' : '0');
+          },
+          'missione-apri': alternaMissione,
           esci: () => impostaImmersivo(false),
           entra: () => impostaImmersivo(true),
           'schermo-intero': schermoIntero,
@@ -2034,11 +2087,23 @@
       }
     });
 
-    // Esc: prima chiude il benvenuto o il pannello, poi esce dalla vista a tutto schermo.
+    // Un tocco sulla missione (non sui suoi pulsanti) la apre o la chiude: sul
+    // telefono il pulsante e' piccolo per un dito di bambino. Da tastiera c'e'
+    // il pulsante nel titolo.
+    $('ssMissione').addEventListener('click', (e) => {
+      if (!e.target.closest('button')) alternaMissione();
+    });
+
+    // Esc: prima chiude il benvenuto, il pannello o il cartellino, poi esce dalla vista a tutto schermo.
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape' || document.fullscreenElement) return;
       if (!$('ssBenvenuto').hidden) { chiudiBenvenuto(); return; }
       if ($('ssCassetto').classList.contains('ss-aperto')) { chiudiCassetto(); return; }
+      if (immersivo() && !$('ssCartellino').hidden && !$('ssCartellino').classList.contains('ss-cart-ridotto')) {
+        riduciCartellino(true);
+        storageSet(KEY_CARTELLINO_RIDOTTO, '1');
+        return;
+      }
       if (immersivo() && !document.querySelector('.ss-dialog-open, [role="dialog"]:not([hidden])')) impostaImmersivo(false);
     });
     document.addEventListener('fullscreenchange', () => {
@@ -2052,7 +2117,7 @@
     // viaggio che compare).
     if (window.ResizeObserver) {
       const ro = new window.ResizeObserver(misuraBasso);
-      document.querySelectorAll('.ss-hud-alto, .ss-hud-basso, .ss-viaggio-barra').forEach((n) => ro.observe(n));
+      document.querySelectorAll('.ss-hud-alto, .ss-hud-basso, .ss-viaggio-barra, .ss-cartellino').forEach((n) => ro.observe(n));
     }
 
     document.querySelectorAll('[data-filtro]').forEach((i) => {
@@ -2110,6 +2175,10 @@
     collegaBottoni();
     aggiornaPassaporto();
     prossimaMissione();
+    const missioneChiusa = storageGet(KEY_MISSIONE_CHIUSA);
+    const cartRidotto = storageGet(KEY_CARTELLINO_RIDOTTO);
+    apriMissione(missioneChiusa ? missioneChiusa !== '1' : !telefonoVerticale());
+    riduciCartellino(cartRidotto ? cartRidotto === '1' : telefonoVerticale());
     // Prima visita: due righe di benvenuto e due scelte. Poi non torna piu',
     // si puo' rivedere da Opzioni. Senza WebGL lo si richiude (avviaScena).
     const benvenuto = immersivo() && !storageGet(KEY_BENVENUTO) && 'WebGLRenderingContext' in window;
