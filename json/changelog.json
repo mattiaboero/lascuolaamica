@@ -1,7 +1,8 @@
 [
  {
-  "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.9",
+  "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.10",
   "items": [
+   "Sistema Solare: con il telefono in orizzontale, o in una finestra bassa e larga, la scheda del pianeta aperto ora si legge tutta, con «Scopri» e «Ascolta» sempre in vista. La missione sta nella riga in alto, i pianeti e i pulsanti in basso occupano metà dello spazio di prima e la scheda si mette a sinistra, fra le due barre.",
    "Sistema Solare: nelle finestre medie o basse, per esempio su un portatile piccolo, la scheda del pianeta aperto non copre più «La tua missione». Se lo spazio è poco, missione e scheda si fanno più compatte e la scheda scorre.",
    "Sistema Solare: con «Meno animazioni» scelto nel sito o nelle impostazioni del dispositivo, la scena ora parte ferma. Si fa ripartire con «Muovi».",
    "Sistema Solare: con la scena ferma il computer non lavora più per niente. Prima ridisegnava i pianeti di continuo anche in pausa, consumando batteria.",

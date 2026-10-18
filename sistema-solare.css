@@ -1656,6 +1656,143 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
   }
 }
 
+/* Telefono in orizzontale e finestre basse e larghe (844x390, 667x375, zoom
+   al 200%): la barra in basso prendeva il 60% dello schermo e al cartellino
+   restava una striscia. Qui la missione torna nella riga dei pulsanti, i
+   pianetini e il dock si abbassano e il cartellino diventa una colonna a
+   sinistra fra le due barre, con Scopri e Ascolta sempre in vista: se manca
+   posto scorrono i dati. Sta dopo le regole del telefono e delle finestre
+   basse, che qui corregge. */
+@media (min-width: 560px) and (max-height: 540px) {
+  .ss-hud-alto {
+    flex-wrap: nowrap;
+  }
+
+  .ss-missione {
+    order: 0;
+    flex-basis: auto;
+    min-width: 0;
+    max-width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 8px;
+    padding: 4px 6px 4px 12px;
+  }
+
+  /* Il titolo resta per i lettori di schermo: la missione ha il bordo giallo. */
+  .ss-missione-titolo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .ss-missione-testo {
+    flex: 1 1 12em;
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  /* L'esito va sotto: testo e pulsanti restano sulla prima riga. */
+  .ss-missione-esito {
+    order: 1;
+    flex-basis: 100%;
+    font-size: 0.85rem;
+  }
+
+  .ss-missione-azioni {
+    margin-top: 0;
+  }
+
+  /* Il viaggio sta nella riga in alto, fra Menu e i pulsanti a destra, su
+     una riga sola quando ci sta: sotto, al cartellino, servono i pixel. */
+  .ss-viaggio-barra {
+    top: 10px;
+    left: 117px;
+    right: 140px;
+    transform: none;
+    max-width: none;
+  }
+
+  .ss-viaggio-tappa {
+    flex-basis: auto;
+  }
+
+  .ss-hud-basso {
+    gap: 4px;
+    padding: 12px 10px 6px;
+  }
+
+  /* zoom e non transform: si abbassa anche il posto, non solo il disegno. */
+  .ss-pianetino-posto {
+    zoom: 0.65;
+  }
+
+  /* Altezza dei pianetini dopo avvia(), come sopra: niente salto. */
+  .ss-poster {
+    min-height: 70px;
+  }
+
+  .ss-freccia {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .ss-dock {
+    flex-wrap: nowrap;
+  }
+
+  .ss-dock .ss-hud-btn {
+    min-height: 40px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
+
+  .ss-cartellino {
+    right: auto;
+    bottom: calc(var(--ss-basso, 120px) + 6px);
+    width: min(300px, 44%);
+    max-height: calc(100% - var(--ss-basso, 120px) - var(--ss-alto, 64px) - 12px);
+    padding: 8px 12px;
+    gap: 4px;
+  }
+
+  .ss-cart-dati {
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .ss-cart-testa .ss-mini-grande {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ss-cart-nome {
+    font-size: 1.1rem;
+  }
+}
+
+/* Sotto i 701 px Menu ed Esci sono solo icone: piu' posto per il viaggio,
+   ma non per la barra che si riempie. */
+@media (min-width: 560px) and (max-width: 700px) and (max-height: 540px) {
+  .ss-viaggio-barra {
+    left: 71px;
+    right: 116px;
+  }
+
+  .ss-viaggio-progresso {
+    display: none;
+  }
+
+  .ss-poster {
+    min-height: 68px;
+  }
+}
+
 /* ---- Film delle Voyager ---- */
 body.ss-in-film .ss-cartellino,
 body.ss-in-film .ss-missione,
