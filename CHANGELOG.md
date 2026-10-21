@@ -1,5 +1,33 @@
 # Changelog Repo
 
+## 4.22.18 - 2026-10-21
+
+**Hover senza salto: i pulsanti non oscillano più sotto un puntatore fermo.**
+
+Gli hover alzavano pulsanti e card con `translateY` più un piccolo `scale`, e
+nel complesso il bordo inferiore saliva di circa 1,5px. Con il puntatore fermo
+in quella striscia l'elemento usciva da sotto il mouse, perdeva l'hover,
+tornava giù e lo riprendeva, in un ciclo continuo. Misurato con Playwright,
+puntatore a 0,5, 1,2, 2,5 e 5px dal fondo: in 4.22.17 oscillavano «Inizia!», i
+pulsanti classe, le risposte e «Avanti» (a 0,5 e 1,2px). Era la causa probabile
+del timeout di `smoke` sulla PR #113.
+
+### Fixed
+- `subject-quiz-theme.css`, `index.css`, `inglese.css`: in 9 regole di hover
+  resta solo lo `scale`. Riguarda risposte, «Inizia!», classi, ambiti, bonus,
+  «Gioca ancora» e «Cambia ambito», pulsanti in alto, livelli di inglese e card
+  delle materie. Un elemento che si ingrandisce non esce mai da sotto il
+  puntatore. Dopo la correzione la stessa misura dà tutto fermo.
+- `subject-quiz-theme.css` (`.back-btn`), `faq.css`, `index.css`
+  (`.faq-mini-link`), `link.css`, `utilities.css` (`.footer-support-cta`):
+  dove l'hover aveva solo `translateY`, ora c'è `scale(1.02)`, così l'elemento
+  reagisce ancora al mouse.
+- Gli stati `.selected` di classe e ambito restano sollevati: sono stati fissi,
+  non hover, e non oscillano.
+
+### Changed
+- `json/changelog.json`: terza riga nella voce del 21 ottobre.
+
 ## 4.22.17 - 2026-10-21
 
 **Quiz: tasti 1-4 per rispondere e muto ricordato.**

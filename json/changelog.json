@@ -1,9 +1,10 @@
 [
  {
-  "date": "21 ottobre 2026 · Release 4.22.16 – 4.22.17",
+  "date": "21 ottobre 2026 · Release 4.22.16 – 4.22.18",
   "items": [
    "Quiz: dopo ogni risposta la spiegazione resta sullo schermo finché non tocchi «Avanti». Prima la domanda cambiava da sola dopo due secondi, troppo pochi per leggere. Con la tastiera basta Invio, e chi usa VoiceOver riparte dal testo della nuova domanda.",
-   "Quiz con la tastiera: i tasti 1, 2, 3 e 4 scelgono la risposta. E se spegni l’audio, il sito se lo ricorda in tutte le materie, anche quando torni."
+   "Quiz con la tastiera: i tasti 1, 2, 3 e 4 scelgono la risposta. E se spegni l’audio, il sito se lo ricorda in tutte le materie, anche quando torni.",
+   "Con il mouse i pulsanti si ingrandiscono soltanto, senza alzarsi. Prima, se il puntatore restava fermo proprio sul bordo di sotto, il pulsante poteva continuare a saltellare su e giù."
   ]
  },
  {
