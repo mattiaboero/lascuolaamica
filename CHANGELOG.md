@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.22.17 - 2026-10-21
+
+**Quiz: tasti 1-4 per rispondere e muto ricordato.**
+
+Altri due punti dal confronto con le Human Interface Guidelines di Apple:
+scorciatoie da tastiera per l'azione più frequente (Keyboards) e rispetto delle
+scelte audio di chi gioca (Playing audio, Settings).
+
+### Added
+- `subject-quiz-core.js`: `bindAnswerKeys()` fa scegliere la risposta con i
+  tasti 1-4, nell'ordine del DOM, anche nella domanda bonus. I tasti valgono
+  solo con il focus dentro la schermata di gioco, come chiede WCAG 2.1.4 per i
+  tasti a carattere singolo. Il focus ci arriva da solo con `loadQuestion()`.
+  Restano fuori le modali aperte, i tasti modificatori e le risposte già date.
+  Ogni bottone risposta ha `aria-keyshortcuts`.
+
+### Fixed
+- `subject-quiz-core.js`: il muto del quiz si perdeva a ogni caricamento,
+  mentre Breakout e Bosco lo ricordavano già. Ora sta in
+  `lascuolaamica_quiz_muted_v1`, una chiave sola per tutte le materie, e
+  `syncMuteBtn()` mostra lo stato giusto all'avvio. «Cancella dati locali» la
+  toglie grazie al prefisso `lascuolaamica_`.
+
+### Changed
+- `scripts/subject_quiz_test_harness.js`: nelle domande normali risponde con i
+  tasti 1-4 invece del clic. Il bonus resta a clic. Il modo `dialogs` verifica
+  che il muto sopravviva al ricaricamento, e che «Cancella dati locali» tolga
+  la nuova chiave.
+- `json/changelog.json`: seconda riga nella voce del 21 ottobre.
+
 ## 4.22.16 - 2026-10-21
 
 **Quiz: si passa alla domanda dopo solo con «Avanti».**
