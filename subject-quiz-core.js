@@ -204,6 +204,8 @@
   const METRICS_MAX_SESSIONS = Math.max(40, Number(cfg.metricsMaxSessions || 180));
   const METRICS_ROLLING_WINDOW = Math.max(10, Number(cfg.metricsRollingWindow || 30));
   const CLASS_PREF_KEY = cfg.classPrefKey || `${CURSOR_KEY}_class_pref_v1`;
+  // Unica per tutte le materie: chi spegne l'audio lo vuole spento ovunque.
+  const MUTED_KEY = 'lascuolaamica_quiz_muted_v1';
   const LEADERBOARD_AREA_FALLBACK = safeText(cfg.leaderboardAreaFallback || '', 64);
   // Tetto per bucket dello storico anti-ripetizione. Deve valere sia in
   // scrittura (pickQuestion) sia in lettura (loadHistoryStore): erano due
@@ -354,7 +356,7 @@
   let streak = 0;
   let history = [];
   let answered = false;
-  let muted = false;
+  let muted = storageGet(MUTED_KEY) === '1';
   let audioCtx = null;
   let baseScore = 0;
   let finalScore = 0;
@@ -2004,10 +2006,11 @@
     answers.textContent = '';
     const frag = document.createDocumentFragment();
     const options = buildAnswerOptions(q);
-    options.forEach((opt) => {
+    options.forEach((opt, i) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'answer-btn';
+      btn.setAttribute('aria-keyshortcuts', String(i + 1));
       renderAnswerButtonText(btn, opt, q.answerLang || null);
       btn.addEventListener('click', () => checkAnswer(opt, q.a, btn));
       frag.appendChild(btn);
@@ -2154,10 +2157,11 @@
     const area = $('bonusAnswers');
     area.textContent = '';
     const frag = document.createDocumentFragment();
-    buildAnswerOptions(q).forEach((opt) => {
+    buildAnswerOptions(q).forEach((opt, i) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'answer-btn';
+      btn.setAttribute('aria-keyshortcuts', String(i + 1));
       renderAnswerButtonText(btn, opt, q.answerLang || null);
       btn.addEventListener('click', () => checkBonusAnswer(opt, q.a, btn));
       frag.appendChild(btn);
@@ -2872,6 +2876,11 @@
 
   function toggleMute() {
     muted = !muted;
+    storageSet(MUTED_KEY, muted ? '1' : '0');
+    syncMuteBtn();
+  }
+
+  function syncMuteBtn() {
     const btn = $('muteBtn');
     if (!btn) return;
     btn.textContent = muted ? '🔇 Audio' : '🔊 Audio';
@@ -3000,6 +3009,25 @@
     });
   }
 
+  // Tasti 1-4 per le quattro risposte, nell'ordine del DOM. Valgono solo con il
+  // focus dentro la schermata di gioco (WCAG 2.1.4: un tasto a carattere
+  // singolo non deve scattare mentre si fa altro nella pagina) e mai con una
+  // modale aperta o con i tasti modificatori, che restano al browser.
+  function bindAnswerKeys() {
+    document.addEventListener('keydown', (e) => {
+      if (e.repeat || e.altKey || e.ctrlKey || e.metaKey) return;
+      const index = ['1', '2', '3', '4'].indexOf(e.key);
+      if (index === -1) return;
+      if (document.querySelector('.modal-overlay.open')) return;
+      const screen = document.querySelector('#screenGame.active, #screenBonusQuestion.active');
+      if (!screen || !screen.contains(document.activeElement)) return;
+      const btn = screen.querySelectorAll('.answer-btn')[index];
+      if (!btn || btn.disabled) return;
+      e.preventDefault();
+      btn.click();
+    });
+  }
+
   let _initDone = false;
   function initSubjectPage() {
     if (_initDone) return;
@@ -3015,8 +3043,10 @@
     buildSubareaGrid();
     ensureRipassaBtn();
     ensureSpeakBtns();
+    syncMuteBtn();
     if (HAS_LEVELS) buildLevelsGrid();
     bindActions();
+    bindAnswerKeys();
     spawnShapes();
     updateScoreBar();
     buildDots();

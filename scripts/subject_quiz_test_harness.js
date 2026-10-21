@@ -47,10 +47,12 @@ async function main() {
     await page.goto(buildPageUrl(options.baseUrl, options.page), { waitUntil: 'networkidle' });
 
     if (options.dialogs) {
+      const muto = await checkMutePersisted(page, options);
       const dialogs = await checkDialogFocusAndQueue(page);
       process.stdout.write(`${JSON.stringify({
         page: options.page,
         check: 'dialogs',
+        muto,
         dialogs,
         pageErrors: trackers.pageErrors,
         consoleErrors: trackers.consoleErrors
@@ -231,6 +233,20 @@ async function main() {
   }
 }
 
+// Il muto del quiz non sopravviveva al ricaricamento della pagina, mentre
+// Breakout e Bosco lo ricordavano gia'.
+async function checkMutePersisted(page, options) {
+  await waitForCfg(page);
+  await page.locator('#muteBtn').click();
+  const salvato = await page.evaluate(() => localStorage.getItem('lascuolaamica_quiz_muted_v1'));
+  if (salvato !== '1') throw new Error(`Muto non salvato: "${salvato}"`);
+  await page.goto(buildPageUrl(options.baseUrl, options.page), { waitUntil: 'networkidle' });
+  await waitForCfg(page);
+  const etichetta = await page.locator('#muteBtn').getAttribute('aria-label');
+  if (etichetta !== 'Riattiva audio') throw new Error(`Muto perso dopo il ricaricamento: "${etichetta}"`);
+  return { salvato, etichetta };
+}
+
 // Regressioni M1 e M2 di shared.js.
 // M1: il focus di ritorno era una variabile sola, quindi una modale aperta da
 // dentro un'altra perdeva il riferimento e alla chiusura il focus finiva su
@@ -302,6 +318,7 @@ async function checkClearLocalData(page) {
       lascuolaamica_breakout_highscore_v1: '4242',
       lascuolaamica_breakout_class_v1: '4',
       lascuolaamica_breakout_muted_v1: '1',
+      lascuolaamica_quiz_muted_v1: '1',
       lascuolaamica_rewards_v1: '{}',
       subject_lb_v1: '[]'
     };
@@ -633,14 +650,19 @@ async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions
   // se era l'ultima. Dopo la risposta al bonus #qText non cambia piu': la
   // partita finisce sulla schermata del risultato. Nelle domande normali si
   // avanza con "Avanti", che deve ricevere il focus e poi ridarlo al testo.
+  // Le domande normali si rispondono con i tasti 1-4, il bonus con il clic.
   const prima = normalize(await page.locator('#qText').textContent());
-  await buttons.nth(targetIndex).click();
+  if (rootSelector === '#answers') await page.keyboard.press(String(targetIndex + 1));
+  else await buttons.nth(targetIndex).click();
   if (rootSelector === '#answers') {
     const next = page.locator('#qNext');
     await next.waitFor({ state: 'visible', timeout: 5000 });
     const focused = await page.evaluate(() => document.activeElement && document.activeElement.id);
     if (focused !== 'qNext') throw new Error(`Dopo la risposta il focus e' su "${focused}", non su Avanti`);
-    await next.click();
+    // Invio e non clic: il puntatore resta dove era l'Avanti di prima, e se
+    // il nuovo compare con il bordo sotto il puntatore l'hover di .btn-replay
+    // (translateY + scale) lo fa oscillare e Playwright non lo trova mai fermo.
+    await page.keyboard.press('Enter');
     const onBonus = await page.locator('#screenBonusPick.active, #screenResult.active').count();
     const focusedAfter = await page.evaluate(() => document.activeElement && document.activeElement.id);
     if (!onBonus && focusedAfter !== 'qText') throw new Error(`Nuova domanda senza focus sul testo: "${focusedAfter}"`);
