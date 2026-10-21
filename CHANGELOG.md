@@ -25,7 +25,10 @@ scelte audio di chi gioca (Playing audio, Settings).
 
 ### Changed
 - `scripts/subject_quiz_test_harness.js`: nelle domande normali risponde con i
-  tasti 1-4 invece del clic. Il bonus resta a clic. Il modo `dialogs` verifica
+  tasti 1-4 invece del clic, e passa avanti con Invio su «Avanti». Il bonus
+  resta a clic. Il clic su «Avanti» era andato in timeout nella CI su
+  italiano («element is not stable»). Probabile causa: il puntatore restava
+  dove era l'Avanti di prima, e l'hover di `.btn-replay` lo faceva oscillare. Il modo `dialogs` verifica
   che il muto sopravviva al ricaricamento, e che «Cancella dati locali» tolga
   la nuova chiave.
 - `json/changelog.json`: seconda riga nella voce del 21 ottobre.

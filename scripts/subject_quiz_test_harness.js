@@ -659,7 +659,10 @@ async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions
     await next.waitFor({ state: 'visible', timeout: 5000 });
     const focused = await page.evaluate(() => document.activeElement && document.activeElement.id);
     if (focused !== 'qNext') throw new Error(`Dopo la risposta il focus e' su "${focused}", non su Avanti`);
-    await next.click();
+    // Invio e non clic: il puntatore resta dove era l'Avanti di prima, e se
+    // il nuovo compare con il bordo sotto il puntatore l'hover di .btn-replay
+    // (translateY + scale) lo fa oscillare e Playwright non lo trova mai fermo.
+    await page.keyboard.press('Enter');
     const onBonus = await page.locator('#screenBonusPick.active, #screenResult.active').count();
     const focusedAfter = await page.evaluate(() => document.activeElement && document.activeElement.id);
     if (!onBonus && focusedAfter !== 'qText') throw new Error(`Nuova domanda senza focus sul testo: "${focusedAfter}"`);
