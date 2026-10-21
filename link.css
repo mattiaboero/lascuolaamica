@@ -94,5 +94,5 @@ footer {
 
 @media (prefers-reduced-motion: no-preference) {
   nav a { transition: transform .12s ease; }
-  nav a:hover { transform: translateY(-1px); }
+  nav a:hover { transform: scale(1.02); }
 }

@@ -190,7 +190,7 @@ body {
 }
 
 .back-btn:hover {
-  transform: translateY(-2px);
+  transform: scale(1.02);
 }
 
 header {
@@ -259,7 +259,7 @@ header {
 }
 
 .icon-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.02);
 }
 
 .screen {
@@ -585,7 +585,7 @@ header {
 }
 
 .class-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.02);
   box-shadow: 0 8px 0 rgba(0, 0, 0, 0.14), 0 14px 20px rgba(0, 0, 0, 0.11);
 }
 
@@ -814,7 +814,7 @@ header {
 }
 
 .area-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.02);
   box-shadow: 0 8px 0 rgba(0, 0, 0, 0.14), 0 14px 20px rgba(0, 0, 0, 0.11);
 }
 
@@ -843,7 +843,7 @@ header {
 }
 
 .start-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.02);
   box-shadow: 0 9px 0 #1f6d63, 0 16px 22px rgba(0, 0, 0, 0.2);
 }
 
@@ -1268,7 +1268,7 @@ body.subject-problemi .answer-btn {
 }
 
 .answer-btn:hover:not(:disabled) {
-  transform: translateY(-2px) scale(1.01);
+  transform: scale(1.01);
 }
 
 .answer-btn:active:not(:disabled) {
@@ -1343,7 +1343,7 @@ body.subject-problemi .answer-btn {
 }
 
 .bonus-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.02);
   box-shadow: 0 7px 0 rgba(0, 0, 0, 0.18);
 }
 
@@ -1535,7 +1535,7 @@ body.subject-problemi .answer-btn {
 
 .btn-replay:hover,
 .btn-home:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.02);
 }
 
 .btn-replay:active,

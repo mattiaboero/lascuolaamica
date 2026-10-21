@@ -279,7 +279,7 @@ html[data-palette="okabe-ito"] .play-window-panel-home.is-expired {
 }
 
 .footer-support-cta:hover {
-  transform: translateY(-1px);
+  transform: scale(1.02);
   filter: brightness(1.05);
 }
 

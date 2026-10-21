@@ -108,7 +108,7 @@
 }
 
 .faq-chip-link:hover {
-  transform: translateY(-1px);
+  transform: scale(1.02);
 }
 
 .faq-note {
