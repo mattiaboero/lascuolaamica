@@ -363,18 +363,16 @@ async function checkSubareaGrid(page) {
   return { griglia: true, bottoni };
 }
 
-// Regressione A2: l'avanzamento differito di checkAnswer resta pendente per
-// 2200 ms. Chi esce dal gioco in quella finestra (qui: apre la classifica; in
-// produzione anche la scadenza della play window) veniva riportato dentro la
-// partita dal timer, fino a giocare il bonus e salvare il punteggio a limite di
-// tempo gia' scaduto.
+// Regressione A2: un tempo checkAnswer avanzava con un timer da 2200 ms, e chi
+// usciva dal gioco in quella finestra (qui: apre la classifica; in produzione
+// anche la scadenza della play window) veniva riportato dentro la partita fino
+// al bonus. Oggi si avanza solo con "Avanti": uscire dopo l'ultima risposta deve
+// lasciare l'utente dove e' andato.
 async function checkPendingTimerCleared(page) {
   const totalQ = await page.evaluate(() => Number((window.SA && window.SA.subjectConfig || {}).totalQ) || 10);
-  // il timer riporta dentro la partita solo all'ultima domanda, quando chiama
-  // openBonusPick() (prima chiama loadQuestion(), che non cambia schermata)
   for (let i = 0; i < totalQ - 1; i++) {
     await page.locator('#answers .answer-btn:not([disabled])').first().click();
-    await page.waitForTimeout(2500);
+    await page.locator('#qNext').click();
   }
   await page.locator('#answers .answer-btn:not([disabled])').first().click();
   await page.locator('[data-action="show-leaderboard"]').first().click();
@@ -405,8 +403,7 @@ async function playRipassaSession(page) {
 
   for (let i = 0; i < count; i++) {
     await page.locator('#answers .answer-btn:not([disabled])').first().click();
-    // il core avanza con un setTimeout da 2200 ms
-    await page.waitForTimeout(2500);
+    await page.locator('#qNext').click();
   }
 
   if (await page.locator('#screenBonusPick.active').count()) {
@@ -519,7 +516,7 @@ function printHelp() {
     '  --area <key>         area iniziale (default: mixed)',
     '  --level <key>        livello da selezionare se la materia usa screenLevels',
     '  --ripassa            dopo il risultato gioca la sessione "Ripassa i tuoi errori" (richiede mode mixed/worst)',
-    '  --interrupt          risponde a una domanda, esce subito dal gioco e verifica che il timer di avanzamento sia annullato',
+    '  --interrupt          risponde fino all\'ultima domanda, esce subito dal gioco e verifica di non esserne riportato dentro',
     '  --dialogs            verifica il focus di ritorno delle modali annidate e la coda dei dialoghi condivisi',
     '  --subareas           verifica che ogni sottoarea in griglia abbia domande nel pool della partita',
     '  --base-url <url>     host locale del test server',
@@ -632,13 +629,22 @@ async function clickPlannedAnswer(page, rootSelector, question, mode, domOptions
     throw new Error(`Risposta non trovata nel DOM: ${normalize(answerPlan.chosen)}`);
   }
 
-  // L'attesa fissa di 1100 ms era piu' corta dei 2200 ms del timer di
-  // avanzamento del gioco: il giro dopo rileggeva la stessa domanda e la
-  // registrava due volte. Si aspetta che la domanda cambi davvero, o che
-  // compaia la schermata bonus se era l'ultima. Dopo la risposta al bonus
-  // #qText non cambia piu': la partita finisce sulla schermata del risultato.
+  // Si aspetta che la domanda cambi davvero, o che compaia la schermata bonus
+  // se era l'ultima. Dopo la risposta al bonus #qText non cambia piu': la
+  // partita finisce sulla schermata del risultato. Nelle domande normali si
+  // avanza con "Avanti", che deve ricevere il focus e poi ridarlo al testo.
   const prima = normalize(await page.locator('#qText').textContent());
   await buttons.nth(targetIndex).click();
+  if (rootSelector === '#answers') {
+    const next = page.locator('#qNext');
+    await next.waitFor({ state: 'visible', timeout: 5000 });
+    const focused = await page.evaluate(() => document.activeElement && document.activeElement.id);
+    if (focused !== 'qNext') throw new Error(`Dopo la risposta il focus e' su "${focused}", non su Avanti`);
+    await next.click();
+    const onBonus = await page.locator('#screenBonusPick.active, #screenResult.active').count();
+    const focusedAfter = await page.evaluate(() => document.activeElement && document.activeElement.id);
+    if (!onBonus && focusedAfter !== 'qText') throw new Error(`Nuova domanda senza focus sul testo: "${focusedAfter}"`);
+  }
   await page.waitForFunction((testo) => {
     if (document.querySelector('#screenBonusPick.active, #screenResult.active')) return true;
     const el = document.getElementById('qText');

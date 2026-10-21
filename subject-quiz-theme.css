@@ -2260,6 +2260,17 @@ html:not([data-palette="okabe-ito"]) .q-explanation.ko {
   color: #7a2020;
 }
 
+/* "Avanti" dopo la risposta: lo stile viene da .btn-replay */
+.q-next-btn {
+  display: block;
+  margin: 0.9rem auto 0;
+  min-width: 10rem;
+}
+
+.q-next-btn[hidden] {
+  display: none;
+}
+
 /* ==========================================================================
    F4 — A3: Ripassa errori button
    ========================================================================== */
