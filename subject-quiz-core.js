@@ -348,7 +348,6 @@
   let selectedClass = normalizeClassKey(loadClassPref() || cfg.defaultClass || 3);
   let questions = [];
   let curQ = 0;
-  let nextStepTimer = null;
   let points = 0;
   let correct = 0;
   let wrong = 0;
@@ -1988,6 +1987,8 @@
   function loadQuestion() {
     answered = false;
     clearExplanation();
+    const nextBtn = $('qNext');
+    if (nextBtn) nextBtn.hidden = true;
     setMascot('neutral');
     const q = questions[curQ];
     const areaLabel = AREA_LABELS[q.area] || AREA_LABELS.mixed || 'Sessione';
@@ -2014,6 +2015,11 @@
     answers.appendChild(frag);
 
     updateDots();
+    // Il bottone che aveva il focus e' stato appena rimosso: senza questo
+    // tastiera e VoiceOver ripartono dall'inizio della pagina.
+    const qText = $('qText');
+    qText.setAttribute('tabindex', '-1');
+    qText.focus();
     speakScreen($('screenGame'));
   }
 
@@ -2070,11 +2076,34 @@
     curQ += 1;
     updateScoreBar();
 
-    nextStepTimer = setTimeout(() => {
-      nextStepTimer = null;
+    // Si passa alla domanda dopo solo con "Avanti": un timer toglieva la
+    // spiegazione prima che un bambino finisse di leggerla (WCAG 2.2.1).
+    const nextBtn = ensureNextBtn();
+    if (nextBtn) {
+      nextBtn.hidden = false;
+      nextBtn.focus();
+    }
+  }
+
+  function ensureNextBtn() {
+    if ($('qNext')) return $('qNext');
+    ensureExplanationEl();
+    const explanationEl = $('qExplanation');
+    if (!explanationEl) return null;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'qNext';
+    btn.className = 'btn-replay q-next-btn';
+    btn.textContent = 'Avanti';
+    btn.hidden = true;
+    btn.addEventListener('click', () => {
+      if (!answered || btn.hidden) return;
+      btn.hidden = true;
       if (curQ >= sessionLen()) openBonusPick();
       else loadQuestion();
-    }, 2200);
+    });
+    explanationEl.insertAdjacentElement('afterend', btn);
+    return btn;
   }
 
   // Stessa regola delle domande normali (getClassAwarePool): prima le righe
@@ -2393,15 +2422,6 @@
   }
 
   function showScreen(id) {
-    // L'avanzamento differito appartiene alla partita in corso: qualunque
-    // cambio di schermata lo invalida. Senza questo, uscire dal gioco entro
-    // 2200 ms da una risposta (scadenza della play window, click su
-    // "Classifica") lascia il timer pendente, che poi apre openBonusPick() e
-    // riporta l'utente dentro una partita che aveva gia' lasciato.
-    if (nextStepTimer) {
-      clearTimeout(nextStepTimer);
-      nextStepTimer = null;
-    }
     stopSpeaking();
     document.querySelectorAll('.screen').forEach((s) => s.classList.remove('active'));
     const target = $(id);

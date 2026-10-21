@@ -1,5 +1,11 @@
 [
  {
+  "date": "21 ottobre 2026 · Release 4.22.16",
+  "items": [
+   "Quiz: dopo ogni risposta la spiegazione resta sullo schermo finché non tocchi «Avanti». Prima la domanda cambiava da sola dopo due secondi, troppo pochi per leggere. Con la tastiera basta Invio, e chi usa VoiceOver riparte dal testo della nuova domanda."
+  ]
+ },
+ {
   "date": "18 ottobre 2026 · Release 4.22.2 – 4.22.15",
   "items": [
    "Sistema Solare sul telefono in verticale: missione e scheda del pianeta stanno su una riga e lasciano libero il cielo. La freccia apre la missione con «Cambiala», la ✕ riduce la scheda e la freccia la riapre con i dati. I pulsanti in basso sono una barra sola, il viaggio guidato sta nella riga in alto e il pianeta scelto si vede intero, al centro dello spazio libero.",

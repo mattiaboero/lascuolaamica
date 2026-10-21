@@ -6,7 +6,7 @@
 #   esempi: bash scripts/run_e2e.sh perfect
 #           bash scripts/run_e2e.sh perfect,mixed,worst
 #   il modo "ripassa" gioca una sessione mixed e poi "Ripassa i tuoi errori"
-#   il modo "interrupt" verifica che uscire dal gioco annulli l'avanzamento differito
+#   il modo "interrupt" verifica che uscire dal gioco dopo l'ultima risposta non riporti dentro la partita
 #   il modo "dialogs" verifica focus di ritorno delle modali e coda dei dialoghi
 #   il modo "subareas" verifica che ogni sottoarea in griglia abbia domande nel pool della partita
 #

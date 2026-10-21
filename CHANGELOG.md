@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.22.16 - 2026-10-21
+
+**Quiz: si passa alla domanda dopo solo con «Avanti».**
+
+Dopo ogni risposta la domanda cambiava da sola dopo 2200 ms, portandosi via la
+spiegazione prima che un bambino finisse di leggerla. Gli elementi che
+spariscono a tempo vanno evitati secondo le Human Interface Guidelines di Apple
+(Accessibility, Cognitive) e il criterio WCAG 2.2.1 (Timing Adjustable).
+
+### Fixed
+- `subject-quiz-core.js`: tolto il timer di `checkAnswer`. Dopo la risposta
+  compare il pulsante «Avanti» (`#qNext`, creato una volta da `ensureNextBtn()`
+  sotto la spiegazione), che prende il focus: da tastiera basta Invio. Sparisce
+  anche la pulizia del timer in `showScreen`, che non serve più.
+- `subject-quiz-core.js`: `loadQuestion()` porta il focus su `#qText`. Prima
+  restava su un bottone risposta appena rimosso, e tastiera e VoiceOver
+  ripartivano dall'inizio della pagina. Sul telefono la nuova domanda torna in
+  cima con la figura visibile.
+- Le otto pagine delle materie: `#qText` perde `aria-live`, perché il focus
+  annuncia già la domanda e VoiceOver l'avrebbe letta due volte.
+
+### Changed
+- `subject-quiz-theme.css`: `.q-next-btn` posiziona il pulsante; lo stile viene
+  da `.btn-replay`.
+- `scripts/subject_quiz_test_harness.js`: le attese fisse da 2500 ms sono
+  diventate clic su «Avanti». A ogni domanda l'harness controlla che il focus
+  vada su Avanti e poi sul testo della nuova domanda. Il modo `interrupt`
+  verifica ancora che uscire dopo l'ultima risposta non riporti nella partita.
+- `json/changelog.json`: nuova voce del 21 ottobre.
+
 ## 4.22.15 - 2026-10-18
 
 **Sistema Solare: Esc esce di nuovo dalla vista a tutto schermo.**
