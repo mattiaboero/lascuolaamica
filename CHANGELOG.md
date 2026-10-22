@@ -1,5 +1,49 @@
 # Changelog Repo
 
+## 4.22.19 - 2026-10-22
+
+**Service worker: niente più pagine HTML in precache.**
+
+Le statistiche di Cloudflare davano circa 13 visualizzazioni per visita, con
+`/accessibilita`, `/faq`, `/ai-info` e `/privacy` fra le più viste. Erano le
+richieste del service worker: all'install `OPTIONAL_PRECACHE_URLS` scaricava 25
+pagine HTML, più `/`, e lo rifaceva a ogni cambio di versione (42 bump negli
+ultimi 30 giorni). Cloudflare le contava come visualizzazioni, con Referer
+`/sw.js`, quindi non come visite.
+
+### Changed
+- `sw.js`: tolte le 25 pagine HTML da `OPTIONAL_PRECACHE_URLS`. Nella shell
+  resta solo `/`. CSS e JS delle pagine restano in precache.
+- `sw.js`: nuova `carryVisitedHtml`. Al cambio di versione copia le risposte
+  HTML delle cache vecchie nella cache nuova con `cache.match` e `cache.put`,
+  senza rete. Gira in `activate`, prima della cancellazione, e in
+  `dropOlderCachesOnce` (Safari, activate saltato), solo sulle cache annotate
+  come più vecchie.
+- `sw.js`: l'install scarica `/` solo se nessuna cache di una versione
+  precedente ce l'ha; altrimenti la porta `carryVisitedHtml`. Dopo la copia
+  `ensureHome` controlla che la cache nuova abbia `/` e, se manca, la chiede
+  alla rete. Così dopo un bump non parte nessuna richiesta HTML automatica.
+- Invariati: il network-first delle pagine, il ripiego offline su `/` e
+  `refetchOpenedJson`.
+- `scripts/check_sw_precache.js`: ora blocca una pagina della sitemap in
+  precache, tranne `/`. Continua a esigere in precache i CSS e i JS di ogni
+  pagina.
+- `scripts/check_sw_opened_json.js`: richieste di pagina automatiche
+  (install più activate) in tre casi: prima installazione 1 (`/`), bump con `/`
+  nella cache vecchia 0, bump senza `/` 1. Se `/` sparisce dalla cache vecchia
+  prima di activate, la cache nuova la chiede alla rete. Le pagine visitate
+  passano nella cache nuova senza rete; nel giro Safari si copiano solo dalle
+  cache più vecchie, mai da una più nuova in attesa. Con il `sw.js` di 4.22.18
+  il controllo fallisce.
+- `docs/wiki/Architettura.md`, `json/changelog.json`.
+
+### Note
+- Offline una pagina mai aperta ripiega sulla home. Chi ha già installato una
+  versione precedente ha in cache tutte le pagine del vecchio precache, e la
+  copia le porta nella versione nuova.
+- La copia offline di una pagina è quella dell'ultima apertura con la rete:
+  può essere di una versione precedente, con CSS e JS della corrente.
+
 ## 4.22.18 - 2026-10-21
 
 **Hover senza salto: i pulsanti non oscillano più sotto un puntatore fermo.**

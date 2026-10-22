@@ -555,7 +555,7 @@ else
 fi
 
 if node scripts/check_sw_opened_json.js; then
-  echo "[OK] sw.js: le materie gia' aperte vengono riscaricate al cambio di versione"
+  echo "[OK] sw.js: materie aperte riscaricate e pagine visitate copiate al cambio di versione"
 else
   status=1
 fi

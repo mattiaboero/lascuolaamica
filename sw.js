@@ -72,32 +72,12 @@ const CORE_PRECACHE_URLS = [
 // Restano cacheable via isSameOriginStaticAsset (estensione .json) quindi
 // vengono comunque salvati offline al primo fetch reale della materia, e
 // refetchOpenedJson li riporta nella cache nuova a ogni cambio di versione.
+// Le pagine HTML non ci sono: precachate erano 25 richieste di pagina a ogni
+// install e a ogni versione, contate da Cloudflare come visualizzazioni. Una
+// pagina entra in cache quando viene aperta (networkFirstWithFallback) e
+// carryVisitedHtml la porta nella cache nuova. Restano qui CSS e JS delle
+// pagine, perche' una pagina salvata funzioni offline.
 const OPTIONAL_PRECACHE_URLS = [
-  '/matematica',
-  '/inglese',
-  '/problemi',
-  '/civica',
-  '/geografia',
-  '/storia',
-  '/scienze',
-  '/italiano',
-  '/tabelline',
-  '/breakout',
-  '/bosco',
-  '/sistema-solare',
-  '/accessibilita',
-  '/chi-siamo',
-  '/per-insegnanti',
-  '/per-genitori',
-  '/guida-compiti',
-  '/ai-info',
-  '/supporta',
-  '/supporto-satispay',
-  '/faq',
-  '/premi',
-  '/privacy',
-  '/cookie',
-  '/link',
   '/inglese.css',
   '/breakout.css',
   '/bosco.css',
@@ -251,13 +231,53 @@ async function refetchOpenedJson() {
   );
 }
 
+// Pagine gia' visitate. Al cambio di versione si copiano dalle cache vecchie
+// (oldKeys) alla nuova, senza rete: con la rete la pagina arriva comunque
+// fresca da networkFirstWithFallback, la copia serve solo offline. Le cache
+// dalla piu' nuova: se una pagina sta in due, vince la copia recente. Non
+// sovrascrive cio' che c'e' gia' (la home appena precachata).
+async function carryVisitedHtml(oldKeys) {
+  const cache = await caches.open(CACHE_NAME);
+  for (const key of oldKeys.slice().reverse()) {
+    const oldCache = await caches.open(key);
+    for (const request of await oldCache.keys()) {
+      if (await cache.match(request)) continue;
+      const response = await oldCache.match(request);
+      if (response && (response.headers.get('content-type') || '').includes('text/html')) {
+        await cache.put(request, response);
+      }
+    }
+  }
+}
+
+// La home. Riscaricarla a ogni install era una richiesta di pagina a ogni
+// versione: se una cache vecchia ce l'ha gia', l'install la salta e la porta
+// carryVisitedHtml. La cache nuova pero' deve sempre averla, perche' e' il
+// ripiego offline: se la copia non c'e' stata, ensureHome la chiede alla rete.
+const HOME_URL = '/';
+
+async function homeInOlderCache() {
+  for (const key of await caches.keys()) {
+    if (KEEP_CACHE_NAMES.includes(key)) continue;
+    if (await (await caches.open(key)).match(HOME_URL)) return true;
+  }
+  return false;
+}
+
+async function ensureHome() {
+  const cache = await caches.open(CACHE_NAME);
+  if (!(await cache.match(HOME_URL))) await cache.add(HOME_URL);
+}
+
 // ============================================================
 // INSTALL — pre-cacha tutte le risorse essenziali
 // ============================================================
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
+    const skipHome = await homeInOlderCache().catch(() => false);
+    const coreUrls = skipHome ? CORE_PRECACHE_URLS.filter(url => url !== HOME_URL) : CORE_PRECACHE_URLS;
     await Promise.all(
-      groupUrlsByCache(CORE_PRECACHE_URLS).map(async ([name, urls]) => {
+      groupUrlsByCache(coreUrls).map(async ([name, urls]) => {
         const cache = await caches.open(name);
         await cache.addAll(urls);
       })
@@ -300,12 +320,10 @@ self.addEventListener('activate', event => {
   event.waitUntil((async () => {
     await carryOpenedJson();
 
-    const keys = await caches.keys();
-    await Promise.all(
-      keys
-        .filter(key => !KEEP_CACHE_NAMES.includes(key))
-        .map(key => caches.delete(key))
-    );
+    const oldKeys = (await caches.keys()).filter(key => !KEEP_CACHE_NAMES.includes(key));
+    await carryVisitedHtml(oldKeys).catch(() => {});
+    await ensureHome().catch(() => {});
+    await Promise.all(oldKeys.map(key => caches.delete(key)));
     // Pulizia fatta: la nota per dropOlderCachesOnce non serve piu'.
     const cache = await caches.open(CACHE_NAME);
     await cache.delete(OLDER_CACHES_KEY);
@@ -346,8 +364,12 @@ function dropOlderCachesOnce() {
       const keys = (await caches.keys()).filter(key => older.includes(key));
       if (keys.length) {
         await carryOpenedJson();
+        await carryVisitedHtml(keys).catch(() => {});
         await Promise.all(keys.map(key => caches.delete(key)));
       }
+      // Anche se le cache annotate sono gia' sparite: l'install puo' aver
+      // saltato la home contando su di loro.
+      await ensureHome().catch(() => {});
       await cache.delete(OLDER_CACHES_KEY);
     })().catch(() => {});
   }
