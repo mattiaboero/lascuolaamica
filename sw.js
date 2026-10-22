@@ -72,32 +72,12 @@ const CORE_PRECACHE_URLS = [
 // Restano cacheable via isSameOriginStaticAsset (estensione .json) quindi
 // vengono comunque salvati offline al primo fetch reale della materia, e
 // refetchOpenedJson li riporta nella cache nuova a ogni cambio di versione.
+// Le pagine HTML non ci sono: precachate erano 25 richieste di pagina a ogni
+// install e a ogni versione, contate da Cloudflare come visualizzazioni. Una
+// pagina entra in cache quando viene aperta (networkFirstWithFallback) e
+// carryVisitedHtml la porta nella cache nuova. Restano qui CSS e JS delle
+// pagine, perche' una pagina salvata funzioni offline.
 const OPTIONAL_PRECACHE_URLS = [
-  '/matematica',
-  '/inglese',
-  '/problemi',
-  '/civica',
-  '/geografia',
-  '/storia',
-  '/scienze',
-  '/italiano',
-  '/tabelline',
-  '/breakout',
-  '/bosco',
-  '/sistema-solare',
-  '/accessibilita',
-  '/chi-siamo',
-  '/per-insegnanti',
-  '/per-genitori',
-  '/guida-compiti',
-  '/ai-info',
-  '/supporta',
-  '/supporto-satispay',
-  '/faq',
-  '/premi',
-  '/privacy',
-  '/cookie',
-  '/link',
   '/inglese.css',
   '/breakout.css',
   '/bosco.css',
@@ -251,6 +231,25 @@ async function refetchOpenedJson() {
   );
 }
 
+// Pagine gia' visitate. Al cambio di versione si copiano dalle cache vecchie
+// (oldKeys) alla nuova, senza rete: con la rete la pagina arriva comunque
+// fresca da networkFirstWithFallback, la copia serve solo offline. Le cache
+// dalla piu' nuova: se una pagina sta in due, vince la copia recente. Non
+// sovrascrive cio' che c'e' gia' (la home appena precachata).
+async function carryVisitedHtml(oldKeys) {
+  const cache = await caches.open(CACHE_NAME);
+  for (const key of oldKeys.slice().reverse()) {
+    const oldCache = await caches.open(key);
+    for (const request of await oldCache.keys()) {
+      if (await cache.match(request)) continue;
+      const response = await oldCache.match(request);
+      if (response && (response.headers.get('content-type') || '').includes('text/html')) {
+        await cache.put(request, response);
+      }
+    }
+  }
+}
+
 // ============================================================
 // INSTALL — pre-cacha tutte le risorse essenziali
 // ============================================================
@@ -300,12 +299,9 @@ self.addEventListener('activate', event => {
   event.waitUntil((async () => {
     await carryOpenedJson();
 
-    const keys = await caches.keys();
-    await Promise.all(
-      keys
-        .filter(key => !KEEP_CACHE_NAMES.includes(key))
-        .map(key => caches.delete(key))
-    );
+    const oldKeys = (await caches.keys()).filter(key => !KEEP_CACHE_NAMES.includes(key));
+    await carryVisitedHtml(oldKeys).catch(() => {});
+    await Promise.all(oldKeys.map(key => caches.delete(key)));
     // Pulizia fatta: la nota per dropOlderCachesOnce non serve piu'.
     const cache = await caches.open(CACHE_NAME);
     await cache.delete(OLDER_CACHES_KEY);
@@ -346,6 +342,7 @@ function dropOlderCachesOnce() {
       const keys = (await caches.keys()).filter(key => older.includes(key));
       if (keys.length) {
         await carryOpenedJson();
+        await carryVisitedHtml(keys).catch(() => {});
         await Promise.all(keys.map(key => caches.delete(key)));
       }
       await cache.delete(OLDER_CACHES_KEY);

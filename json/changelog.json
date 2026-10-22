@@ -1,5 +1,11 @@
 [
  {
+  "date": "22 ottobre 2026 · Release 4.22.19",
+  "items": [
+   "Il sito scarica meno: all’installazione salva per l’uso senza rete solo la pagina iniziale, non più tutte le 25 pagine. Ogni pagina che apri resta disponibile anche senza connessione, e quando arriva una versione nuova le pagine già aperte restano lì, senza scaricarle di nuovo."
+  ]
+ },
+ {
   "date": "21 ottobre 2026 · Release 4.22.16 – 4.22.18",
   "items": [
    "Quiz: dopo ogni risposta la spiegazione resta sullo schermo finché non tocchi «Avanti». Prima la domanda cambiava da sola dopo due secondi, troppo pochi per leggere. Con la tastiera basta Invio, e chi usa VoiceOver riparte dal testo della nuova domanda.",

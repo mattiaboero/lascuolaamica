@@ -4,10 +4,13 @@
 // silenzioso durante l'install del service worker (per OPTIONAL_PRECACHE_URLS,
 // l'errore viene ingoiato dal try/catch e non è mai visibile in produzione).
 //
-// Verso opposto: ogni rotta di sitemap.xml deve stare nel precache, insieme ai
-// CSS e ai JS che la sua pagina carica dall'HTML. Senza, una pagina pubblica
-// aggiunta alla sitemap ma dimenticata qui resta fuori dall'offline in silenzio
-// (successo con /link e link.css).
+// Verso opposto: i CSS e i JS che ogni pagina di sitemap.xml carica dall'HTML
+// devono stare nel precache. Senza, una pagina salvata offline si apre senza
+// stile o senza script (successo con /link e link.css).
+//
+// Le pagine invece no, tranne '/': precachate erano 25 richieste di pagina a
+// ogni install e a ogni versione, contate da Cloudflare come visualizzazioni.
+// Una pagina va offline quando viene aperta (sw.js, carryVisitedHtml).
 
 const fs = require('fs');
 const path = require('path');
@@ -88,15 +91,24 @@ function main() {
   const precached = new Set(core.concat(optional));
   const notPrecached = [];
   const routes = sitemapRoutes();
+  const htmlPrecached = routes.filter((route) => route !== '/' && precached.has(route));
+  if (htmlPrecached.length > 0) {
+    console.error('[ERROR] sw.js precache: pagine HTML in precache, ognuna e\' una visualizzazione in piu\' a ogni install:');
+    for (const route of htmlPrecached) {
+      console.error(`  - '${route}'`);
+    }
+    process.exitCode = 1;
+    return;
+  }
+
   for (const route of routes) {
-    if (!precached.has(route)) notPrecached.push(`rotta '${route}'`);
     for (const resource of pageResources(resolveToFile(route))) {
       if (!precached.has(resource)) notPrecached.push(`'${resource}' (caricato da '${route}')`);
     }
   }
 
   if (notPrecached.length > 0) {
-    console.error('[ERROR] sw.js precache: pagine di sitemap.xml non disponibili offline, mancano:');
+    console.error('[ERROR] sw.js precache: pagine di sitemap.xml che offline si aprirebbero rotte, mancano:');
     for (const entry of notPrecached) {
       console.error(`  - ${entry}`);
     }
@@ -104,7 +116,7 @@ function main() {
     return;
   }
 
-  console.error(`sw.js precache: ${core.length + optional.length} path verificati, tutti presenti su disco; ${routes.length} rotte di sitemap.xml coperte con i loro CSS e JS.`);
+  console.error(`sw.js precache: ${core.length + optional.length} path verificati, tutti presenti su disco; ${routes.length} rotte di sitemap.xml con i loro CSS e JS in precache, nessuna pagina HTML oltre a '/'.`);
 }
 
 main();

@@ -3,7 +3,9 @@
 // che stavano nella cache vecchia devono finire nella nuova riscaricati dalla
 // rete, mai copiati, e un file che non arriva deve restare fuori. Verifica
 // anche che una cache vecchia rimasta non risponda al posto di quella corrente
-// e che venga tolta anche se activate non e' mai girato (Safari). sw.js gira
+// e che venga tolta anche se activate non e' mai girato (Safari). Le pagine
+// HTML: all'install si scarica solo '/', al cambio di versione quelle gia'
+// visitate si copiano dalla cache vecchia senza rete. sw.js gira
 // qui dentro con Cache Storage e fetch finti; il giro vero si prova
 // sull'anteprima Cloudflare della PR.
 
@@ -102,16 +104,23 @@ function bootWorker() {
 }
 
 const inNew = (p) => (stores.get(NEW) || new Map()).get(ORIGIN + p);
-const seed = (name, p) => openCache(name).put(p, { ok: true, body: name === OLD ? 'vecchia' : 'piu\' nuova' });
+// Pagina = path senza estensione, come le rotte pulite del sito.
+const isPage = (p) => !path.extname(p);
+const seed = (name, p) => openCache(name).put(p, {
+  ok: true,
+  body: name === OLD ? 'vecchia' : 'piu\' nuova',
+  headers: new Headers({ 'content-type': isPage(p) ? 'text/html; charset=utf-8' : 'application/octet-stream' })
+});
 const seedOld = (p) => seed(OLD, p);
 
 (async () => {
   let sw = bootWorker();
 
   // install: storia e geografia erano aperte, la rete perde geografia.
-  await Promise.all(['/json/storia.json', '/json/geografia.json', '/json/index.json', '/shared.js'].map(seedOld));
+  await Promise.all(['/json/storia.json', '/json/geografia.json', '/json/index.json', '/shared.js', '/', '/storia'].map(seedOld));
   offline = new Set(['/json/geografia.json']);
   await sw.fire('install');
+  assert.deepStrictEqual(fetched.filter(isPage), ['/'], 'all\'install l\'unica pagina scaricata e\' la home');
   assert.strictEqual(inNew('/json/storia.json').body, 'rete', 'storia va riscaricata, non copiata');
   assert.strictEqual(inNew('/json/geografia.json'), undefined, 'geografia non arrivata: niente copia vecchia');
   assert.strictEqual(fetched.filter((p) => p === '/json/index.json').length, 1, 'index.json e\' gia\' in precache: una sola richiesta');
@@ -126,7 +135,10 @@ const seedOld = (p) => seed(OLD, p);
   await sw.fire('activate');
   assert.strictEqual(inNew('/json/scienze.json').body, 'rete');
   assert.strictEqual(inNew('/json/geografia.json').body, 'rete');
-  assert.deepStrictEqual(fetched.sort(), ['/json/geografia.json', '/json/scienze.json'], 'activate chiede solo cio\' che manca');
+  assert.deepStrictEqual(fetched.sort(), ['/json/geografia.json', '/json/scienze.json'], 'activate chiede solo cio\' che manca, nessuna pagina');
+  assert.strictEqual(inNew('/storia').body, 'vecchia', 'la pagina visitata si copia dalla cache vecchia, senza rete');
+  assert.strictEqual(inNew('/').body, 'rete', 'la home appena precachata non si sovrascrive con la copia vecchia');
+  assert.strictEqual(inNew('/shared.js').body, 'rete', 'si copiano solo le pagine HTML');
   assert.ok(!stores.has(OLD), 'activate cancella la cache vecchia');
   assert.strictEqual(inNew(NOTE), undefined, 'dopo activate la nota non serve piu\'');
 
@@ -142,17 +154,20 @@ const seedOld = (p) => seed(OLD, p);
   stores.clear();
   fetched.length = 0;
   offline = new Set();
-  await Promise.all(['/json/storia.json', '/shared.js', '/'].map(seedOld));
+  await Promise.all(['/json/storia.json', '/shared.js', '/', '/faq'].map(seedOld));
   sw = bootWorker();
   await sw.fire('install');
   await seedOld('/json/scienze.json'); // aperta dopo «Più tardi»
   await seed(NEWER, '/shared.js'); // una versione ancora piu' nuova, in attesa
+  await seed(NEWER, '/premi');
   sw = bootWorker(); // riapertura: memoria nuova, niente activate
 
   const shared = await sw.request('/shared.js');
   assert.strictEqual(shared.body, 'rete', 'cacheFirst non deve servire il file della cache vecchia');
   assert.ok(!stores.has(OLD), 'la prima richiesta toglie la cache vecchia anche senza activate');
   assert.strictEqual(inNew('/json/scienze.json').body, 'rete', 'la materia aperta dopo «Più tardi» va riportata prima di cancellare');
+  assert.strictEqual(inNew('/faq').body, 'vecchia', 'anche senza activate le pagine visitate passano nella cache nuova');
+  assert.strictEqual(inNew('/premi'), undefined, 'dalla cache di una versione piu\' nuova non si copia niente');
   assert.ok(stores.has(NEWER), 'la cache di una versione piu\' nuova in attesa non si tocca');
   assert.strictEqual(inNew(NOTE), undefined, 'a pulizia fatta la nota sparisce');
 
