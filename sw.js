@@ -250,13 +250,34 @@ async function carryVisitedHtml(oldKeys) {
   }
 }
 
+// La home. Riscaricarla a ogni install era una richiesta di pagina a ogni
+// versione: se una cache vecchia ce l'ha gia', l'install la salta e la porta
+// carryVisitedHtml. La cache nuova pero' deve sempre averla, perche' e' il
+// ripiego offline: se la copia non c'e' stata, ensureHome la chiede alla rete.
+const HOME_URL = '/';
+
+async function homeInOlderCache() {
+  for (const key of await caches.keys()) {
+    if (KEEP_CACHE_NAMES.includes(key)) continue;
+    if (await (await caches.open(key)).match(HOME_URL)) return true;
+  }
+  return false;
+}
+
+async function ensureHome() {
+  const cache = await caches.open(CACHE_NAME);
+  if (!(await cache.match(HOME_URL))) await cache.add(HOME_URL);
+}
+
 // ============================================================
 // INSTALL — pre-cacha tutte le risorse essenziali
 // ============================================================
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
+    const skipHome = await homeInOlderCache().catch(() => false);
+    const coreUrls = skipHome ? CORE_PRECACHE_URLS.filter(url => url !== HOME_URL) : CORE_PRECACHE_URLS;
     await Promise.all(
-      groupUrlsByCache(CORE_PRECACHE_URLS).map(async ([name, urls]) => {
+      groupUrlsByCache(coreUrls).map(async ([name, urls]) => {
         const cache = await caches.open(name);
         await cache.addAll(urls);
       })
@@ -301,6 +322,7 @@ self.addEventListener('activate', event => {
 
     const oldKeys = (await caches.keys()).filter(key => !KEEP_CACHE_NAMES.includes(key));
     await carryVisitedHtml(oldKeys).catch(() => {});
+    await ensureHome().catch(() => {});
     await Promise.all(oldKeys.map(key => caches.delete(key)));
     // Pulizia fatta: la nota per dropOlderCachesOnce non serve piu'.
     const cache = await caches.open(CACHE_NAME);
@@ -345,6 +367,9 @@ function dropOlderCachesOnce() {
         await carryVisitedHtml(keys).catch(() => {});
         await Promise.all(keys.map(key => caches.delete(key)));
       }
+      // Anche se le cache annotate sono gia' sparite: l'install puo' aver
+      // saltato la home contando su di loro.
+      await ensureHome().catch(() => {});
       await cache.delete(OLDER_CACHES_KEY);
     })().catch(() => {});
   }

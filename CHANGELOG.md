@@ -16,18 +16,25 @@ ultimi 30 giorni). Cloudflare le contava come visualizzazioni, con Referer
   resta solo `/`. CSS e JS delle pagine restano in precache.
 - `sw.js`: nuova `carryVisitedHtml`. Al cambio di versione copia le risposte
   HTML delle cache vecchie nella cache nuova con `cache.match` e `cache.put`,
-  senza rete e senza sovrascrivere la home appena precachata. Gira in
-  `activate`, prima della cancellazione, e in `dropOlderCachesOnce` (Safari,
-  activate saltato), solo sulle cache annotate come più vecchie.
+  senza rete. Gira in `activate`, prima della cancellazione, e in
+  `dropOlderCachesOnce` (Safari, activate saltato), solo sulle cache annotate
+  come più vecchie.
+- `sw.js`: l'install scarica `/` solo se nessuna cache di una versione
+  precedente ce l'ha; altrimenti la porta `carryVisitedHtml`. Dopo la copia
+  `ensureHome` controlla che la cache nuova abbia `/` e, se manca, la chiede
+  alla rete. Così dopo un bump non parte nessuna richiesta HTML automatica.
 - Invariati: il network-first delle pagine, il ripiego offline su `/` e
   `refetchOpenedJson`.
 - `scripts/check_sw_precache.js`: ora blocca una pagina della sitemap in
   precache, tranne `/`. Continua a esigere in precache i CSS e i JS di ogni
   pagina.
-- `scripts/check_sw_opened_json.js`: all'install l'unica pagina scaricata è
-  `/`; all'activate le pagine visitate passano nella cache nuova senza rete;
-  nel giro Safari si copiano solo dalle cache più vecchie, mai da una più nuova
-  in attesa. Con il `sw.js` di 4.22.18 il controllo fallisce.
+- `scripts/check_sw_opened_json.js`: richieste di pagina automatiche
+  (install più activate) in tre casi: prima installazione 1 (`/`), bump con `/`
+  nella cache vecchia 0, bump senza `/` 1. Se `/` sparisce dalla cache vecchia
+  prima di activate, la cache nuova la chiede alla rete. Le pagine visitate
+  passano nella cache nuova senza rete; nel giro Safari si copiano solo dalle
+  cache più vecchie, mai da una più nuova in attesa. Con il `sw.js` di 4.22.18
+  il controllo fallisce.
 - `docs/wiki/Architettura.md`, `json/changelog.json`.
 
 ### Note

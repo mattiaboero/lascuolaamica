@@ -4,8 +4,9 @@
 // rete, mai copiati, e un file che non arriva deve restare fuori. Verifica
 // anche che una cache vecchia rimasta non risponda al posto di quella corrente
 // e che venga tolta anche se activate non e' mai girato (Safari). Le pagine
-// HTML: all'install si scarica solo '/', al cambio di versione quelle gia'
-// visitate si copiano dalla cache vecchia senza rete. sw.js gira
+// HTML: alla prima installazione si scarica solo '/'; al cambio di versione
+// quelle gia' visitate, home compresa, si copiano dalla cache vecchia senza
+// rete, e '/' si chiede alla rete solo se la copia manca. sw.js gira
 // qui dentro con Cache Storage e fetch finti; il giro vero si prova
 // sull'anteprima Cloudflare della PR.
 
@@ -120,7 +121,7 @@ const seedOld = (p) => seed(OLD, p);
   await Promise.all(['/json/storia.json', '/json/geografia.json', '/json/index.json', '/shared.js', '/', '/storia'].map(seedOld));
   offline = new Set(['/json/geografia.json']);
   await sw.fire('install');
-  assert.deepStrictEqual(fetched.filter(isPage), ['/'], 'all\'install l\'unica pagina scaricata e\' la home');
+  assert.deepStrictEqual(fetched.filter(isPage), [], 'bump con la home nella cache vecchia: nessuna pagina scaricata');
   assert.strictEqual(inNew('/json/storia.json').body, 'rete', 'storia va riscaricata, non copiata');
   assert.strictEqual(inNew('/json/geografia.json'), undefined, 'geografia non arrivata: niente copia vecchia');
   assert.strictEqual(fetched.filter((p) => p === '/json/index.json').length, 1, 'index.json e\' gia\' in precache: una sola richiesta');
@@ -137,7 +138,7 @@ const seedOld = (p) => seed(OLD, p);
   assert.strictEqual(inNew('/json/geografia.json').body, 'rete');
   assert.deepStrictEqual(fetched.sort(), ['/json/geografia.json', '/json/scienze.json'], 'activate chiede solo cio\' che manca, nessuna pagina');
   assert.strictEqual(inNew('/storia').body, 'vecchia', 'la pagina visitata si copia dalla cache vecchia, senza rete');
-  assert.strictEqual(inNew('/').body, 'rete', 'la home appena precachata non si sovrascrive con la copia vecchia');
+  assert.strictEqual(inNew('/').body, 'vecchia', 'la home arriva copiata dalla cache vecchia, senza rete');
   assert.strictEqual(inNew('/shared.js').body, 'rete', 'si copiano solo le pagine HTML');
   assert.ok(!stores.has(OLD), 'activate cancella la cache vecchia');
   assert.strictEqual(inNew(NOTE), undefined, 'dopo activate la nota non serve piu\'');
@@ -176,7 +177,37 @@ const seedOld = (p) => seed(OLD, p);
   await seed(NEWER, '/storia');
   offline = 'all';
   const page = await sw.request('/storia', 'navigate');
-  assert.strictEqual(page.body, 'rete', 'il ripiego offline legge solo le cache correnti');
+  assert.strictEqual(page, inNew('/'), 'il ripiego offline e\' la home della cache corrente');
+  assert.notStrictEqual(page.body, 'piu\' nuova', 'il ripiego offline legge solo le cache correnti');
+
+  // Richieste di pagina partite da sole, install piu' activate, nei tre casi.
+  const autoPages = async (oldPages, between = async () => {}) => {
+    stores.clear();
+    offline = new Set();
+    await Promise.all(oldPages.map(seedOld));
+    fetched.length = 0;
+    const worker = bootWorker();
+    await worker.fire('install');
+    await between();
+    await worker.fire('activate');
+    return fetched.filter(isPage);
+  };
+
+  assert.deepStrictEqual(await autoPages([]), ['/'], 'prima installazione: una richiesta, la home');
+  assert.strictEqual(inNew('/').body, 'rete');
+
+  assert.deepStrictEqual(await autoPages(['/', '/storia']), [], 'bump con la home nella cache vecchia: nessuna richiesta');
+  assert.strictEqual(inNew('/').body, 'vecchia');
+  assert.strictEqual(inNew('/storia').body, 'vecchia');
+
+  assert.deepStrictEqual(await autoPages(['/storia']), ['/'], 'bump senza la home nella cache vecchia: una richiesta');
+  assert.strictEqual(inNew('/').body, 'rete');
+
+  // La home c'era all'install ma sparisce prima di activate: la copia manca,
+  // la cache nuova la chiede comunque alla rete.
+  const lost = await autoPages(['/', '/storia'], () => openCache(OLD).delete('/'));
+  assert.deepStrictEqual(lost, ['/'], 'copia mancata: la home si chiede alla rete');
+  assert.strictEqual(inNew('/').body, 'rete', 'la cache nuova ha sempre la home');
 })().catch((err) => {
   console.error(`[ERROR] sw.js materie gia' aperte: ${err.message}`);
   process.exit(1);
