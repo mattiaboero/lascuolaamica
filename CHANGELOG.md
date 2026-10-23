@@ -1,5 +1,49 @@
 # Changelog Repo
 
+## 4.22.22 - 2026-10-23
+
+**GDPR: informativa completa e sintesi vocale solo con voci locali.**
+
+`js/bosco.js` e `js/sistema-solare.js` impostavano solo `lang = 'it-IT'` e
+lasciavano scegliere la voce al browser: su Chrome desktop poteva essere una
+voce di rete, che manda testo e IP a un server esterno. Il quiz usava già solo
+voci con `localService === true`, con un suo `pickLocalVoice`.
+
+### Fixed
+- `shared.js`: nuovo `SA.voice` (`available(lang)`, `speak(text, options)`),
+  unico punto del sito che chiama `speechSynthesis.speak`, solo con voci
+  `localService`. Quiz e Bosco partono prima di `shared.js`, quindi ascoltano
+  l'evento `sa:voices-change`, che parte al caricamento e a ogni
+  `voiceschanged`.
+- `subject-quiz-core.js`: tolto `pickLocalVoice`, Ascolta passa da `SA.voice`.
+- `js/bosco.js`: senza voce locale «Ascolta» resta nascosto e la nota sotto il
+  tabellone non lo cita. La lettura automatica della parola dopo un errore
+  resta, ma solo con voce locale e audio non disattivato
+  (`lascuolaamica_bosco_muted_v1`); prima partiva anche con l'audio spento.
+- `js/sistema-solare.js`: gli audio registrati restano; senza audio e senza
+  voce locale il pulsante Ascolta è nascosto.
+- `privacy.html`: informativa ex art. 13 GDPR, una voce per trattamento (log
+  Cloudflare, email, Satispay, dati di gioco, sintesi vocale) con finalità,
+  base giuridica e conservazione; diritti degli artt. 15-22, reclamo al
+  Garante. I dati che il repo non contiene sono segnati [DA CONFERMARE].
+- `cookie.html`: elenco di tutte le voci di `localStorage`, ricavate dal
+  codice e raggruppate per funzione, Cache Storage e cookie `cf_clearance`.
+  `info-pages.css`: `overflow-wrap: anywhere` sui `<code>` e, negli elenchi
+  dentro `.modal-body`, corpo e peso dei paragrafi (prima tutto in grassetto
+  800, le etichette `<strong>` non si distinguevano).
+- `per-insegnanti.html`, `bosco.html`, `llms.txt`, wiki
+  `Sicurezza-Privacy-e-Minori.md`, `docs/sistema-solare/audio-testi.md`:
+  frasi allineate alla nuova informativa e alle voci locali.
+
+### Added
+- `scripts/check_speech_local.js` (in `prepublish-check.sh`, quindi in
+  `npm run verify`; anche `npm run check:speech`): fallisce se un file del sito
+  chiama `.speak(` o costruisce una `SpeechSynthesisUtterance` fuori da
+  `speakLocal`.
+- `scripts/voci_locali_smoke.js` (`npm run test:e2e:voci`, nel job `smoke`):
+  con sole voci di rete `speak` non parte su `/matematica`, `/bosco` e
+  `/sistema-solare` e i pulsanti restano nascosti; con una voce locale sì.
+
 ## 4.22.21 - 2026-10-23
 
 **Lightbox: la X di chiusura resta ferma quando scorri il contenuto.**

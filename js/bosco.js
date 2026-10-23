@@ -1324,16 +1324,14 @@
 
   // Sentire la parola intera e' lo scaffolding del gioco, non un aiuto di
   // troppo: il compito non e' indovinare quale parola sia, ma scegliere come si
-  // scrive il gruppo che si sente.
+  // scrive il gruppo che si sente. Solo con una voce installata sul
+  // dispositivo (SA.voice in shared.js): senza, «Ascolta» resta nascosto.
+  function voceIt() {
+    return !!(SA.voice && SA.voice.available('it'));
+  }
+
   function say(text, rate) {
-    const synth = window.speechSynthesis;
-    const Utterance = window.SpeechSynthesisUtterance;
-    if (!synth || !Utterance) return;
-    synth.cancel();
-    const u = new Utterance(text);
-    u.lang = 'it-IT';
-    u.rate = rate || 0.8;
-    synth.speak(u);
+    if (SA.voice) SA.voice.speak(text, { lang: 'it', rate: rate || 0.8 });
   }
 
   function speak() {
@@ -1383,7 +1381,7 @@
     dom.owlText.textContent = testo;
     dom.owl.hidden = false;
     announce(testo);
-    say(parola, 0.65);
+    if (!muted) say(parola, 0.65);
   }
 
   function owlHush() {
@@ -1510,11 +1508,13 @@
           ? 'La radura brilla grazie a te.'
           : (state.carry
             ? 'Segui la luce dorata.'
-            : (r.tipo === 'suono'
-              ? 'Premi «Ascolta» e senti le tre parole.'
-              : (r.picture ? 'Guarda il disegno, ascolta ed esplora.' : 'Premi «Ascolta» e senti come suona.'))));
+            : (!voceIt()
+              ? (r.tipo === 'suono' ? 'Leggi le tre parole.' : (r.picture ? 'Guarda il disegno ed esplora.' : 'Leggi l’indizio ed esplora.'))
+              : (r.tipo === 'suono'
+                ? 'Premi «Ascolta» e senti le tre parole.'
+                : (r.picture ? 'Guarda il disegno, ascolta ed esplora.' : 'Premi «Ascolta» e senti come suona.')))));
     }
-    if (dom.listen) dom.listen.hidden = won || done;
+    if (dom.listen) dom.listen.hidden = won || done || !voceIt();
     if (dom.deliver) dom.deliver.hidden = !state.carry;
     if (dom.next) dom.next.hidden = !won;
     if (dom.pause) dom.pause.disabled = done || state.paused;
@@ -2539,6 +2539,8 @@
     }
 
     restart();
+    // shared.js arriva dopo questo file: SA.voice esiste solo da questo evento.
+    document.addEventListener('sa:voices-change', render);
     raf = requestAnimationFrame(frame);
   }
 

@@ -237,8 +237,15 @@
   // «⏸ Pausa», in pausa -> «▶ Riprendi».
   const ascolto = { chiave: null, stato: 'fermo', audio: null, fine: null };
 
+  // Il testo si legge con un audio registrato o con una voce installata sul
+  // dispositivo (SA.voice in shared.js, mai voci di rete). Senza nessuno dei
+  // due il pulsante resta nascosto.
+  const haAudio = (id) => !!(DATI.audio && DATI.audio[id]);
+  const voceIt = () => !!(SA.voice && SA.voice.available('it'));
+
   function aggiornaPulsantiAscolto() {
     document.querySelectorAll('[data-ascolta]').forEach((b) => {
+      b.hidden = !haAudio(b.dataset.ascolta.slice(2)) && !voceIt();
       const mio = b.dataset.ascolta === ascolto.chiave;
       const st = mio ? ascolto.stato : 'fermo';
       const [icona, parola] = (st === 'in-corso' ? '⏸ Pausa' : (st === 'pausa' ? '▶ Riprendi' : '🔈 Ascolta')).split(' ');
@@ -289,18 +296,9 @@
   }
 
   function parlaBrowser(testo) {
-    if (!('speechSynthesis' in window) || !window.SpeechSynthesisUtterance) {
-      finito();
-      return;
-    }
-    window.speechSynthesis.cancel();
-    const u = new window.SpeechSynthesisUtterance(testo);
-    u.lang = 'it-IT';
-    u.rate = 0.95;
     const chiave = ascolto.chiave;
-    u.onend = () => { if (ascolto.chiave === chiave && ascolto.stato !== 'fermo') finito(); };
-    u.onerror = u.onend;
-    window.speechSynthesis.speak(u);
+    const onend = () => { if (ascolto.chiave === chiave && ascolto.stato !== 'fermo') finito(); };
+    if (!SA.voice || !SA.voice.speak(testo, { lang: 'it', rate: 0.95, onend })) finito();
   }
 
   function pausaAscolto() {
@@ -347,7 +345,7 @@
   }
 
   function bottoneAscolta(tipo, id) {
-    if (!('speechSynthesis' in window) && !(DATI.audio && DATI.audio[id])) return null;
+    if (!('speechSynthesis' in window) && !haAudio(id)) return null;
     const b = el('button', {
       type: 'button',
       classe: 'ss-btn ss-ascolta',
@@ -2298,6 +2296,7 @@
     }
   }
 
+  document.addEventListener('sa:voices-change', aggiornaPulsantiAscolto);
   if (SA.motion || document.readyState === 'complete') parti();
   else document.addEventListener('DOMContentLoaded', parti, { once: true });
 })();

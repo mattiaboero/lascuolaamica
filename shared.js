@@ -114,6 +114,59 @@
     }
   }
 
+  // Sintesi vocale solo con voci installate sul dispositivo (localService).
+  // Una voce di rete, come quelle "Google" di Chrome desktop, manda testo e
+  // indirizzo IP a un server esterno: su un sito per bambini non si usa. Senza
+  // voce locale per la lingua speak non viene chiamato e chi usa l'helper
+  // nasconde il suo pulsante Ascolta. E' l'unico punto del sito che chiama
+  // speechSynthesis.speak: lo controlla scripts/check_speech_local.js.
+  // Quiz e Bosco partono prima di questo file (defer, in ordine), quindi non
+  // aspettano SA.voice: ascoltano VOICE_EVENT, che parte qui sotto e a ogni
+  // voiceschanged.
+  const VOICE_EVENT = 'sa:voices-change';
+  const speech = typeof window.SpeechSynthesisUtterance === 'function' && window.speechSynthesis ? window.speechSynthesis : null;
+
+  function localVoice(lang) {
+    if (!speech) return null;
+    let voices = [];
+    try {
+      voices = speech.getVoices();
+    } catch (e) {
+      debugWarn('getVoices', e);
+    }
+    const re = new RegExp(`^${lang}([-_]|$)`, 'i');
+    const local = voices.filter((v) => v && v.localService === true && re.test(v.lang || ''));
+    return local.find((v) => v.default) || local[0] || null;
+  }
+
+  // options: lang ('it' o 'en'), rate, onend (anche su errore), queue (accoda
+  // invece di interrompere la lettura in corso). Vale true se ha parlato.
+  function speakLocal(text, options) {
+    const opts = options || {};
+    const voice = localVoice(opts.lang || 'it');
+    if (!voice || !text) return false;
+    try {
+      if (!opts.queue) speech.cancel();
+      const utterance = new window.SpeechSynthesisUtterance(text);
+      utterance.voice = voice;
+      utterance.lang = voice.lang;
+      utterance.rate = opts.rate || 1;
+      if (opts.onend) {
+        utterance.onend = opts.onend;
+        utterance.onerror = opts.onend;
+      }
+      speech.speak(utterance);
+      return true;
+    } catch (e) {
+      debugWarn('speech.speak', e);
+      return false;
+    }
+  }
+
+  function dispatchVoiceChange() {
+    document.dispatchEvent(new CustomEvent(VOICE_EVENT));
+  }
+
   function parsePlayWindowRecord(rawValue) {
     if (!rawValue) return null;
     try {
@@ -1978,6 +2031,21 @@
     eventName: PLAY_WINDOW_EVENT
   };
   SA.version = APP_VERSION;
+  SA.voice = {
+    eventName: VOICE_EVENT,
+    available(lang) {
+      return !!localVoice(lang || 'it');
+    },
+    speak: speakLocal
+  };
+  if (speech) {
+    try {
+      speech.addEventListener('voiceschanged', dispatchVoiceChange);
+    } catch (e) {
+      debugWarn('voiceschanged', e);
+    }
+  }
+  dispatchVoiceChange();
 
   initPaletteMode();
   initMotionMode();

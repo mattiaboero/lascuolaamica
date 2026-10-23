@@ -508,6 +508,20 @@ body.info-page .skip-link:focus {
   color: var(--page-link-strong, var(--info-light-link-strong));
 }
 
+/* Negli elenchi di /privacy e /cookie il testo e' lungo: stesso corpo dei
+   paragrafi, in grassetto restano solo le etichette (<strong>). */
+body.info-page .modal-body .list li {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* Nomi delle voci di localStorage nella Cookie Policy: lunghi fino a 47
+   caratteri, a 375 px non stanno su una riga. */
+.modal-body code {
+  overflow-wrap: anywhere;
+}
+
 .modal-body a {
   color: var(--page-link-strong, var(--info-light-link-strong));
   font-weight: 800;

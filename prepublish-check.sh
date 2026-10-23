@@ -540,6 +540,13 @@ else
   status=1
 fi
 
+if node scripts/check_speech_local.js; then
+  echo "[OK] sintesi vocale: speak solo nell'helper a voci locali"
+else
+  echo "[ERROR] sintesi vocale: speak chiamato fuori da SA.voice (shared.js)"
+  status=1
+fi
+
 if node scripts/check_sw_precache.js; then
   echo "[OK] sw.js precache: tutti i path verificati esistono su disco"
 else

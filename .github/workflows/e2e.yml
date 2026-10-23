@@ -52,6 +52,9 @@ jobs:
       - name: E2E tabelline (pagina info, con e senza JS)
         run: npm run test:e2e:tabelline
 
+      - name: E2E sintesi vocale (solo voci installate sul dispositivo)
+        run: npm run test:e2e:voci
+
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1
 
