@@ -1,5 +1,64 @@
 # Changelog Repo
 
+## 4.24.1 - 2026-10-23
+
+**CLS delle pagine materia e contrasto della palette Okabe-Ito.**
+
+PageSpeed mobile su `/matematica` dava CLS 0,077 e 0,039: il motore è una
+funzione asincrona che aspetta il JSON della materia (2,5 MB per matematica)
+e solo allora crea etichetta e pulsanti delle classi e degli ambiti, dopo il
+primo disegno, spingendo giù «Inizia!». Con rete e CPU lente succedeva su
+matematica, italiano, storia, geografia e scienze (0,074-0,115); problemi,
+inglese e civica avevano già le classi (e civica gli ambiti) nell'HTML.
+
+### Fixed
+- `matematica.html`, `italiano.html`, `storia.html`, `geografia.html`,
+  `scienze.html`: etichetta «Scegli la classe», pulsanti delle classi e degli
+  ambiti scritti nell'HTML così come li disegna il motore per chi arriva la
+  prima volta (3ª, Sessione mista). Il motore li ricostruisce uguali dopo il
+  JSON. Chi torna con un'altra classe può vedere cambiare il numero di
+  ambiti, ma a 412x823 quella parte sta sotto la piega: CLS 0 misurato anche
+  con la 1ª in matematica e la 5ª in storia.
+- `civica.html`: l'etichetta statica non aveva `id="classSectionLabel"` e il
+  motore ne aggiungeva una seconda: «Scegli la classe» compariva due volte,
+  anche in produzione.
+- `palette-okabe.css`, misurando i colori reali dello sfondo dagli
+  screenshot (home a 768 e 1440 px, 8 materie a 375, 768 e 1440 px,
+  schermata di scelta e di gioco, 2.869 testi): da 168 testi sotto 4,5:1 (3:1
+  per il testo grande) a 0.
+  - risposte 1, 2 e 4 e «Inizia!»: gradienti delle stesse tinte, più scuri (il
+    bianco scendeva a 2,5:1 sul celeste #56B4E9, 3,3:1 sul verde #009E73);
+  - etichette di sezione in `#00588a`, link delle briciole in `#00446b` (sul
+    fondo lilla di `/matematica` il blu scendeva a 2,5:1);
+  - emoji decorative dello sfondo (`.shape`) da opacità 0,2 a 0,08;
+  - home: fascia scura dietro la descrizione delle schede grandi ed etichette
+    più scure (2,96:1 e 4,07:1 prima).
+  La palette standard non cambia.
+
+- `js/problemi-page.js`: «Più passaggi» (classe 4ª) era scritto senza
+  accento nella config: dopo il caricamento compariva «Piu passaggi». Trovato
+  dal nuovo `check:static-grids`.
+
+### CI
+- Job `smoke`: browser di Playwright in cache (`actions/cache` v6.1.0 fissato
+  per hash, `~/.cache/ms-playwright`, chiave sulla versione di playwright nel
+  `package-lock`); `playwright install --with-deps` solo senza cache. Il
+  23/10/2026 l'installazione da apt aveva preso 10 e 20 minuti (job annullato).
+
+### Tests
+- `scripts/check_static_grids.js` (`npm run check:static-grids`, in `npm run
+  verify` e nel job `smoke`): per le 8 pagine materia confronta il markup
+  statico (pagina senza JavaScript) con quello del motore a dati arrivati
+  (3ª, Sessione mista): testi, ordine, classi, id, attributi aria e `data-*`;
+  controlla anche che etichetta e griglie compaiano una volta sola. Usa un
+  server statico suo. Provato rinominando un ambito in
+  `js/geografia-page.js`: fallisce e indica il testo diverso.
+- `scripts/cls_smoke.js` (`npm run test:e2e:cls`, nel job `smoke`): a
+  412x823 con rete lenta (150 ms, 1,6 Mbit/s) e CPU rallentata 4x registra i
+  layout shift su `/matematica`, `/inglese` e `/geografia` fino a schermata
+  pronta; la somma deve stare sotto 0,01. Su `main` fallisce (matematica
+  0,074, geografia 0,090), qui dà 0 su tutte e 8 le materie.
+
 ## 4.24.0 - 2026-10-23
 
 **Home: prima le materie, nav principale, niente comparse.**

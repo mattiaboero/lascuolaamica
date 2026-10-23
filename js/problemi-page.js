@@ -32,7 +32,7 @@ __sa.subjectConfig = {
   classMeta: {
     2: { subtitle: 'Problemi base' },
     3: { subtitle: 'Addizione e sottrazione' },
-    4: { subtitle: 'Piu passaggi' },
+    4: { subtitle: 'Più passaggi' },
     5: { subtitle: 'Problemi avanzati' }
   },
   softmaxTemperature: 1.2

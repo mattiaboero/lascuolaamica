@@ -23,11 +23,30 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      # I browser di Playwright in cache, con la chiave legata alla versione
+      # del package-lock: senza cache "playwright install --with-deps" passa
+      # da apt e il 23/10/2026 ci ha messo 10 e 20 minuti (job annullato).
+      # Con la cache i pacchetti di sistema non si reinstallano: Chromium usa
+      # quelli gia' presenti nell'immagine di ubuntu-latest.
+      - name: Versione di Playwright
+        id: playwright
+        run: echo "version=$(node -p "require('./package-lock.json').packages['node_modules/playwright'].version")" >> "$GITHUB_OUTPUT"
+      - name: Cache dei browser di Playwright
+        id: playwright-cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright.outputs.version }}
+      - name: Browser e pacchetti di sistema (cache assente)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
       - name: Start local server
         run: |
           python3 -m http.server 4173 &
           sleep 2
+      - name: Markup statico di classi e ambiti uguale a quello del motore
+        run: npm run check:static-grids
+
       - name: E2E smoke (perfect, 8 subjects)
         run: npm run test:e2e:perfect
 
@@ -63,6 +82,9 @@ jobs:
 
       - name: E2E home (materie in cima, nav, nessuna comparsa)
         run: npm run test:e2e:home
+
+      - name: E2E CLS pagine materia (rete e CPU lente)
+        run: npm run test:e2e:cls
 
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1

@@ -220,7 +220,59 @@
         Ogni risposta corretta vale <strong>10 punti</strong>.<br>
         Alla fine puoi scegliere il bonus: <strong>x5 / x10 / x25</strong> oppure tenere il punteggio base.</span>
       </div>
-      <div class="area-grid" id="areaGrid" aria-label="Selezione ambito"></div>
+      <!-- Classi e ambiti come li disegna il motore per chi arriva la prima
+           volta (3ª, Sessione mista): il motore li ricostruisce dopo il
+           JSON della materia, ma lo spazio c'e' gia' al primo disegno. -->
+      <div id="classSectionLabel" class="section-label class-selector-label">Scegli la classe</div>
+      <div id="classGrid" class="class-grid" aria-label="Selezione classe">
+        <button type="button" class="class-btn" data-action="select-class" data-class="2" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">2️⃣</span>
+          <span class="a-title">Classe 2ª</span>
+          <span class="a-sub">Consolidiamo le basi</span>
+        </button>
+        <button type="button" class="class-btn selected" data-action="select-class" data-class="3" aria-pressed="true">
+          <span class="a-icon" aria-hidden="true">3️⃣</span>
+          <span class="a-title">Classe 3ª</span>
+          <span class="a-sub">Basi + primi passaggi</span>
+        </button>
+        <button type="button" class="class-btn" data-action="select-class" data-class="4" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">4️⃣</span>
+          <span class="a-title">Classe 4ª</span>
+          <span class="a-sub">Competenze intermedie</span>
+        </button>
+        <button type="button" class="class-btn" data-action="select-class" data-class="5" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">5️⃣</span>
+          <span class="a-title">Classe 5ª</span>
+          <span class="a-sub">Verso la secondaria</span>
+        </button>
+      </div>
+      <div class="area-grid" id="areaGrid" aria-label="Selezione ambito">
+        <button type="button" class="area-btn selected" data-action="select-area" data-area="mixed" aria-pressed="true">
+          <span class="a-icon" aria-hidden="true">🎯</span>
+          <span class="a-title">Sessione Mista</span>
+          <span class="a-sub">Domande da tutti gli ambiti</span>
+        </button>
+        <button type="button" class="area-btn" data-action="select-area" data-area="phys" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">🧪</span>
+          <span class="a-title">Fenomeni Fisici e Chimici</span>
+          <span class="a-sub">Materia, energia e trasformazioni</span>
+        </button>
+        <button type="button" class="area-btn" data-action="select-area" data-area="env" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">🌦️</span>
+          <span class="a-title">Ambienti e Cicli</span>
+          <span class="a-sub">Acqua, stagioni, ecosistemi</span>
+        </button>
+        <button type="button" class="area-btn" data-action="select-area" data-area="life" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">🧬</span>
+          <span class="a-title">Viventi e Corpo Umano</span>
+          <span class="a-sub">Piante, animali e salute</span>
+        </button>
+        <button type="button" class="area-btn" data-action="select-area" data-area="human" aria-pressed="false">
+          <span class="a-icon" aria-hidden="true">♻️</span>
+          <span class="a-title">Uomo, Natura e Tecnologia</span>
+          <span class="a-sub">Risorse, prevenzione, rispetto</span>
+        </button>
+      </div>
       <button type="button" class="start-btn" data-action="start-game">Inizia!</button>
     </main>
     <noscript>

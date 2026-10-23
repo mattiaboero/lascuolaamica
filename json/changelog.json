@@ -1,14 +1,14 @@
 [
  {
-  "date": "23 ottobre 2026 · Release 4.22.20 – 4.24.0",
+  "date": "23 ottobre 2026 · Release 4.22.20 – 4.24.1",
   "items": [
-   "Nelle pagine delle materie, di Cervellino Spacca-Muri, del Bosco delle Lettere e del Sistema Solare il primo riquadro per genitori e insegnanti non è più attaccato al riquadro principale: fra un riquadro e l’altro c’è sempre lo stesso spazio.",
-   "Il canale YouTube del progetto ora si chiama La Scuola Amica: tutti i collegamenti portano a youtube.com/@lascuolaamica.",
+   "Nelle pagine delle materie e dei giochi fra un riquadro e l’altro c’è sempre lo stesso spazio. Il canale YouTube del progetto ora si chiama La Scuola Amica: youtube.com/@lascuolaamica.",
    "Nelle finestre come «Ultimi aggiornamenti» e «Il Progetto Educativo» la X per chiudere resta sempre in alto, anche quando scorri il testo fino in fondo. Prima scorreva via insieme al testo e su telefono e tablet restava solo il tocco sullo sfondo scuro.",
    "Privacy Policy e Cookie Policy più complete: per ogni dato trovi a cosa serve, per quanto resta e come chiederne la cancellazione. Il sito non raccoglie più donazioni. Il pulsante Ascolta usa solo le voci installate sul dispositivo: il testo letto non esce mai dal telefono, dal tablet o dal computer.",
    "Il timer di gioco ora è facoltativo e parte spento: «Inizia!» avvia subito la partita. Chi vuole un limite lo accende dal pannello Info, alla voce «Tempo di gioco (per i genitori)»: si gioca al massimo 30 minuti, poi si aspetta un’ora.",
    "Quiz sul telefono: la barra in fondo non copre più le risposte, perché ora sta in fondo alla pagina. Dopo «Inizia!» la domanda arriva da sola sullo schermo, e durante la partita i pulsanti in alto stanno su una riga. Info resta a un tocco, con il pulsante ℹ️ in alto.",
-   "Nuova pagina iniziale: sul telefono le otto materie compaiono subito, due per riga, poi le tabelline e i giochi. In alto ci sono i collegamenti Per insegnanti, Per genitori e FAQ, e un solo pulsante: «Scegli la materia»."
+   "Nuova pagina iniziale: sul telefono le otto materie compaiono subito, due per riga, poi le tabelline e i giochi. In alto ci sono i collegamenti Per insegnanti, Per genitori e FAQ, e un solo pulsante: «Scegli la materia».",
+   "Palette accessibile più leggibile: risposte, pulsante «Inizia!», etichette e descrizioni delle schede ora hanno sempre il contrasto giusto. Nelle pagine delle materie i pulsanti non si spostano più mentre la pagina finisce di caricarsi."
   ]
  },
  {
