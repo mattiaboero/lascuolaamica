@@ -1,5 +1,37 @@
 # Changelog Repo
 
+## 4.22.20 - 2026-10-23
+
+**Spazio fra i riquadri delle pagine e canale YouTube @lascuolaamica.**
+
+Nelle pagine materia, in `/breakout`, `/bosco` e `/sistema-solare` fra il
+riquadro principale e la prima `section.seo-static` c'erano 0px: i box hanno
+`margin-bottom: 14px`, il riquadro principale no, e il `<noscript>` in mezzo
+impedisce i selettori con `+`. Il canale YouTube ha cambiato handle da
+@ceciliaeilpapamattone a @lascuolaamica e nome in «La Scuola Amica».
+
+### Fixed
+- `subject-quiz-theme.css`: `gap: 14px` su `.screen.active`, margini a 0 su
+  `.seo-static` e `.related-subjects`. In `/bosco` e `/sistema-solare` i box
+  stanno nel `.wrapper`, senza `gap`: lì `margin-top: 14px`. L'ultimo box tiene
+  i 14px sotto di sé. Gli altri `.screen` (gioco, bonus, risultato, classifica,
+  livelli) hanno un figlio solo e non cambiano.
+- Misure con `getBoundingClientRect` su 8 materie, `/breakout`, `/bosco` e
+  `/sistema-solare`, a 375, 390, 640 (zoom 200%), 1024 e 1280px, palette
+  standard e Okabe-Ito: 14px fra tutti i box, nessun'altra distanza cambiata,
+  spazio in fondo pagina invariato.
+
+### Changed
+- Canale YouTube: link a `https://www.youtube.com/@lascuolaamica` e nome «La
+  Scuola Amica» in `/ai-info`, `/tabelline` e `llms.txt`. FAQ «I video e i
+  quiz sono gratuiti?» di `/tabelline` riscritta senza ripetere il nome, uguale
+  nel JSON-LD e nel testo visibile.
+- `/chi-siamo`: tolto il canale dal `sameAs` del `Person`; resta solo
+  sull'`Organization`, come nella home.
+- `scripts/refresh_structured_data.py`: `ORG_SAME_AS` con il nuovo canale.
+- Nuovo `check:export-canale` in fondo a `npm run verify`: fallisce se
+  `ceciliaeilpapamattone` compare in `export/`.
+
 ## 4.22.19 - 2026-10-22
 
 **Service worker: niente più pagine HTML in precache.**

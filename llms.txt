@@ -2,7 +2,7 @@
 > Piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª, matematica anche 1ª).
 > Offre quiz interattivi su 8 materie, senza registrazione e senza raccolta di dati personali.
 > Funziona offline come Progressive Web App dopo il primo caricamento.
-> Versione corrente: 4.22.19.
+> Versione corrente: 4.22.20.
 
 ## Identità
 - Nome: La Scuola Amica
@@ -31,8 +31,8 @@ Le 8 materie coperte dai quiz:
 - [Il Bosco delle Lettere](https://lascuolaamica.it/bosco) — gioco di ortografia per la 2ª e la 3ª. Si esplora una radura e si porta al tabellone il cartello con il gruppo di lettere giusto, in due modi: completare la parola bucata (dal suono al segno) oppure trovare la parola che contiene un gruppo dato (dal segno al suono). Banco di 129 parole su 10 famiglie ortografiche (GN, GLI, SCE/SCI, CHE/CHI, GHE/GHI, QU, CQU, doppie, accento, vocale interna), con ripasso più frequente delle famiglie più deboli e sintesi vocale.
 
 ## Canale YouTube
-- Nome: Cecilia e il Papà Mattone
-- [Canale YouTube: Cecilia e il Papà Mattone](https://www.youtube.com/@ceciliaeilpapamattone)
+- Nome: La Scuola Amica
+- [Canale YouTube: La Scuola Amica](https://www.youtube.com/@lascuolaamica)
 - [Playlist tabelline (dalla 2 alla 10)](https://www.youtube.com/playlist?list=PLHctzIjd-9Qg)
 - Contenuto: video per imparare le tabelline alla scuola primaria, con il personaggio CalcOlettore. Ogni tabellina viene ripetuta tre volte: lenta, a tempo e da completare.
 - Relazione con il sito: i video spiegano, i quiz di [matematica](https://lascuolaamica.it/matematica) servono a esercitarsi dopo la visione.
@@ -46,7 +46,7 @@ Le 8 materie coperte dai quiz:
 - Domande totali: 9.926 (solo quelle attive, verificate a settembre 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria (matematica anche 1ª).
-- Versione corrente: 4.22.19.
+- Versione corrente: 4.22.20.
 
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.

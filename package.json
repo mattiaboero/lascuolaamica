@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.22.19",
+  "version": "4.22.20",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -21,7 +21,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:balance && npm run check:counts && npm run check:prepublish && npm run export",
+    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:balance && npm run check:counts && npm run check:prepublish && npm run export && npm run check:export-canale",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -41,6 +41,7 @@
     "check:balance": "node scripts/check_answer_balance.js",
     "check:revisione": "node scripts/revisione_domande.js check",
     "check:leggibilita": "node scripts/revisione_domande.js leggibilita",
+    "check:export-canale": "node scripts/check_export_canale.js",
     "check:materialized": "node scripts/check_files_materialized.js",
     "export": "bash scripts/export_for_cloudflare.sh",
     "check:contrast": "bash scripts/check_contrast.sh",
