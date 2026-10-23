@@ -11,7 +11,8 @@
 //
 // L'orologio e' simulato (page.clock): nessuna attesa reale di 30 minuti.
 //
-// Uso: node scripts/timer_gioco_smoke.js   (E2E_BASE_URL come run_e2e.sh)
+// Uso: node scripts/timer_gioco_smoke.js   (E2E_BASE_URL come run_e2e.sh,
+// E2E_CPU_RATE=4 per la CPU rallentata)
 
 const { chromium } = require('playwright');
 
@@ -20,10 +21,17 @@ const TIMER_KEY = 'scuolaAmica_play_timer_v1';
 const WINDOW_KEY = 'scuolaAmica_play_window_v1';
 const T0 = new Date('2026-10-23T09:00:00+02:00').getTime();
 const MIN = 60 * 1000;
+const CPU_RATE = Number(process.env.E2E_CPU_RATE) || 1;
 
 async function nuovaPagina(browser, storage) {
   const context = await browser.newContext();
   const page = await context.newPage();
+  // E2E_CPU_RATE=4 rallenta la CPU come il test del CLS: serve a riprodurre
+  // le corse di tempi che in locale non si vedono.
+  if (CPU_RATE > 1) {
+    const cdp = await context.newCDPSession(page);
+    await cdp.send('Emulation.setCPUThrottlingRate', { rate: CPU_RATE });
+  }
   await page.clock.install({ time: T0 });
   // Solo al primo caricamento: dopo, lo stato lo decide la pagina.
   await page.addInitScript((items) => {
@@ -39,6 +47,7 @@ async function nuovaPagina(browser, storage) {
 const modaleAperta = (page) => page.locator('#modalPromptShared.open').count();
 const giocoAttivo = (page) => page.locator('#screenGame.active').count();
 const leggi = (page, key) => page.evaluate((k) => localStorage.getItem(k), key);
+const focusSu = (page, sel) => page.waitForFunction((s) => document.activeElement && document.activeElement.matches(s), sel, { timeout: 5000 });
 
 async function nessunTimerVisibile(page, errors, dove) {
   const elementi = await page.locator('[data-play-window-panel], .play-window-panel, [data-play-window-pill]').count();
@@ -135,6 +144,10 @@ async function spentoInPausa(browser) {
     await page.locator('#sharedPromptConfirm').click();
 
     await page.locator('.site-footer [data-open-modal="modalInfoHub"]').click();
+    // openModal porta il focus sul pulsante di chiusura con un setTimeout:
+    // se il test sposta il focus prima, quel setTimeout glielo ruba e la barra
+    // spaziatrice preme «Chiudi» invece dell'interruttore (E2E su main, 4.24.3).
+    await focusSu(page, '#modalInfoHub .modal-close');
     const sw = page.locator('#playTimerSwitch');
     if ((await sw.getAttribute('role')) !== 'switch') errors.push('l\'interruttore non ha role="switch"');
     const nome = await sw.evaluate((el) => el.labels && el.labels[0] && el.labels[0].textContent.trim());
