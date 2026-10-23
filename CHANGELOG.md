@@ -1,5 +1,53 @@
 # Changelog Repo
 
+## 4.23.0 - 2026-10-23
+
+**Timer di gioco facoltativo, spento di default.**
+
+Il timer di 30 minuti (poi 60 di pausa) era obbligatorio: senza attivarlo
+«Inizia!» apriva una modale e la partita non partiva, nelle otto materie, nel
+Bosco e in Spacca-Muri. Il blocco era per dispositivo, quindi su una LIM
+fermava una classe intera. Ora si gioca subito; chi vuole un limite lo accende
+dal pannello Info.
+
+### Changed
+- `shared.js`: nuova chiave `scuolaAmica_play_timer_v1` (`1` acceso, `0` o
+  assente spento). A timer spento `SA.playWindow.ensureActive()` risponde
+  sempre `true` e `scuolaAmica_play_window_v1` viene ignorata e cancellata al
+  caricamento: un record rimasto da quando il timer era obbligatorio non
+  blocca nessuno. Il formato del record non cambia.
+- Timer acceso: la sessione di 30 minuti parte da sola alla prima partita,
+  senza conferma. Durante la pausa `ensureActive()` mostra quanto manca e come
+  spegnere il timer dal pannello Info, con il focus sul testo del messaggio.
+- Lo stato ha il campo `enabled`; quiz, Bosco e Spacca-Muri chiudono la
+  partita solo su `detail.expired` (prima su `!detail.active`, che a timer
+  spento avrebbe chiuso ogni partita).
+- Pannello Info: sezione «Tempo di gioco (per i genitori)», checkbox nativa
+  con `role="switch"` ed etichetta, descritta dalla nota. Spegnerla toglie
+  subito anche una pausa in corso.
+- `openModal(id, focusEl)` e `promptAlert(..., { focusMessage })`: il focus può
+  andare sul testo dell'avviso. La modale condivisa ha `aria-describedby` sul
+  messaggio.
+
+### Removed
+- Il pannello «Tempo di gioco» con «Attiva 30 minuti» e 30:00 dalla hero
+  della home, dalle otto pagine materia e da `/breakout`, la pillola con il
+  conto alla rovescia nella barra dei contatori, la modale di attivazione e le
+  regole `.play-window-*` in `utilities.css`, `subject-quiz-theme.css` e negli
+  stili iniettati da `shared.js`.
+
+### Docs
+- FAQ sul timer (testo visibile e FAQPage), `per-genitori.html`, sezione
+  «Timer di gioco» di `cookie.html`, wiki `Architettura.md`.
+
+### Tests
+- `scripts/timer_gioco_smoke.js` (`npm run test:e2e:timer`, nel job `smoke`),
+  con orologio simulato (`page.clock`): timer spento su `/matematica`,
+  `/bosco` e `/breakout`; timer acceso 30 + 60 minuti; spegnimento durante la
+  pausa; record vecchio con pausa attiva.
+- `scripts/subject_quiz_test_harness.js` e `scripts/voci_locali_smoke.js` non
+  scrivono più un record finto di sessione.
+
 ## 4.22.22 - 2026-10-23
 
 **GDPR: informativa completa, sintesi vocale solo con voci locali, niente più donazioni.**

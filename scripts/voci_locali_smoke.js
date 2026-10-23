@@ -14,8 +14,6 @@
 const { chromium } = require('playwright');
 
 const BASE = (process.env.E2E_BASE_URL || 'http://127.0.0.1:4173').replace(/\/+$/, '');
-const now = Date.now();
-const PLAY_WINDOW = JSON.stringify({ startedAt: now, expiresAt: now + 30 * 60 * 1000, cooldownUntil: now + 90 * 60 * 1000 });
 
 const VOCI = {
   remote: [
@@ -56,7 +54,7 @@ async function nuovaPagina(browser, voci, storage) {
 const parlato = (page) => page.evaluate(() => window.__parlato.length);
 
 async function quiz(browser, tipo) {
-  const { context, page, errors } = await nuovaPagina(browser, VOCI[tipo], { scuolaAmica_play_window_v1: PLAY_WINDOW });
+  const { context, page, errors } = await nuovaPagina(browser, VOCI[tipo], {});
   try {
     await page.goto(`${BASE}/matematica.html`, { waitUntil: 'networkidle' });
     await page.locator('[data-action="start-game"]').click();
@@ -80,7 +78,7 @@ async function quiz(browser, tipo) {
 // Errore al tabellone: il gufo legge la parola da solo, se c'e' una voce
 // locale e l'audio non e' disattivato.
 async function bosco(browser, tipo, muto) {
-  const storage = { scuolaAmica_play_window_v1: PLAY_WINDOW };
+  const storage = {};
   if (muto) storage.lascuolaamica_bosco_muted_v1 = '1';
   const { context, page, errors } = await nuovaPagina(browser, VOCI[tipo], storage);
   try {

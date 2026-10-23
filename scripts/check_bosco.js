@@ -536,10 +536,10 @@ function checkCacciaAlSuono(game) {
 // Ogni lettera disegnata sul tabellone e sulle tessere passa dal font 5x7
 // interno: una lettera senza glifo verrebbe disegnata come "?" senza errori.
 /*
-  Il cancello dei 30 minuti, come nei quiz e in Spacca-Muri: senza finestra
-  attiva il bosco resta fermo sotto «Entra nel bosco», e alla scadenza la
-  partita si chiude e torna li'. Qui SA.playWindow e' finto: conta solo cosa
-  risponde ensureActive().
+  Il timer di gioco facoltativo, come nei quiz e in Spacca-Muri: se
+  ensureActive() dice no (timer acceso e pausa in corso) il bosco resta fermo
+  sotto «Entra nel bosco», e alla scadenza la partita si chiude e torna li'.
+  Qui SA.playWindow e' finto: conta solo cosa risponde ensureActive().
 */
 async function checkCancelloTempo(game) {
   const s = game.state;
@@ -552,12 +552,12 @@ async function checkCancelloTempo(game) {
   assert.equal(s.paused, true, 'fuori dal cancello la partita deve restare ferma');
 
   await game.entra();
-  assert.equal(s.inGioco, false, 'rifiutati i 30 minuti non si entra');
+  assert.equal(s.inGioco, false, 'in pausa non si entra');
   assert.equal(s.paused, true);
 
   risposta = true;
   await game.entra();
-  assert.equal(s.inGioco, true, 'attivati i 30 minuti si entra');
+  assert.equal(s.inGioco, true, 'fuori dalla pausa si entra');
   assert.equal(s.paused, false, 'entrati si gioca, non si resta in pausa');
 
   s.solved = 2;

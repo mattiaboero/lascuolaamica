@@ -32,18 +32,8 @@ async function main() {
       if (msg.type() === 'error') trackers.consoleErrors.push(msg.text());
     });
 
-    await page.addInitScript(({ playWindowKey, playWindowValue }) => {
-      window.SA = window.SA || {};
-      window.SA.memoryStorage = window.SA.memoryStorage || Object.create(null);
-      window.SA.memoryStorage[playWindowKey] = playWindowValue;
-      try {
-        window.localStorage.setItem(playWindowKey, playWindowValue);
-      } catch (_) {}
-    }, {
-      playWindowKey: 'scuolaAmica_play_window_v1',
-      playWindowValue: buildPlayWindowValue()
-    });
-
+    // Il timer di gioco e' spento di default (scuolaAmica_play_timer_v1 assente):
+    // «Inizia!» parte senza modale. Il timer acceso lo prova timer_gioco_smoke.js.
     await page.goto(buildPageUrl(options.baseUrl, options.page), { waitUntil: 'networkidle' });
 
     if (options.dialogs) {
@@ -544,13 +534,6 @@ function printHelp() {
 
 function buildPageUrl(baseUrl, page) {
   return `${String(baseUrl).replace(/\/+$/, '')}/${String(page).replace(/^\//, '')}.html`;
-}
-
-function buildPlayWindowValue() {
-  const startedAt = Date.now();
-  const expiresAt = startedAt + (30 * 60 * 1000);
-  const cooldownUntil = expiresAt + (60 * 60 * 1000);
-  return JSON.stringify({ startedAt, expiresAt, cooldownUntil });
 }
 
 async function waitForCfg(page) {

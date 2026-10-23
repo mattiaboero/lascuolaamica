@@ -11,6 +11,11 @@
   let promptFinalize = null;
   const promptQueue = [];
   const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+  // Timer di gioco facoltativo, spento di default: lo accende un adulto dal
+  // pannello Info. Acceso, la sessione di 30 minuti parte da sola alla prima
+  // partita, poi 60 minuti di pausa. Spento, il record della sessione non
+  // conta e viene cancellato (anche quelli rimasti da quando era obbligatorio).
+  const PLAY_TIMER_KEY = 'scuolaAmica_play_timer_v1';
   const PLAY_WINDOW_KEY = 'scuolaAmica_play_window_v1';
   const PLAY_WINDOW_DURATION_MS = 30 * 60 * 1000;
   const PLAY_WINDOW_COOLDOWN_MS = 60 * 60 * 1000;
@@ -55,8 +60,6 @@
   let cachedFooter = null;
   let playWindowTicker = null;
   let lastPlayWindowBroadcastKey = '';
-  let playWindowEnsurePromise = null;
-  const playWindowSubscribers = new Set();
   let updateLogCache = null;
 
   async function loadUpdateLog() {
@@ -182,10 +185,18 @@
     }
   }
 
+  function isPlayTimerOn() {
+    return storageGet(PLAY_TIMER_KEY) === '1';
+  }
+
+  // expired vale solo a timer acceso: e' il segnale con cui quiz, Bosco e
+  // Spacca-Muri chiudono la partita in corso.
   function getPlayWindowState() {
-    const record = parsePlayWindowRecord(storageGet(PLAY_WINDOW_KEY));
+    const enabled = isPlayTimerOn();
+    const record = enabled ? parsePlayWindowRecord(storageGet(PLAY_WINDOW_KEY)) : null;
     if (!record) {
       return {
+        enabled,
         active: false,
         expired: false,
         coolingDown: false,
@@ -202,6 +213,7 @@
     const remainingMs = Math.max(0, record.expiresAt - Date.now());
     const cooldownRemainingMs = Math.max(0, record.cooldownUntil - Date.now());
     return {
+      enabled,
       active: remainingMs > 0,
       expired: remainingMs <= 0,
       coolingDown: remainingMs <= 0 && cooldownRemainingMs > 0,
@@ -217,6 +229,7 @@
 
   function getPlayWindowStateKey(state) {
     return [
+      state && state.enabled ? '1' : '0',
       state && state.active ? '1' : '0',
       state && state.coolingDown ? '1' : '0',
       safeInt(state?.startedAt, 0),
@@ -225,33 +238,17 @@
     ].join('|');
   }
 
-  function formatPlayWindowClock(ms) {
-    const totalSeconds = Math.max(0, Math.ceil((Number(ms) || 0) / 1000));
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  }
-
-  function notifyPlayWindowSubscribers(state) {
-    playWindowSubscribers.forEach((renderFn) => {
-      try {
-        renderFn(state);
-      } catch (e) {
-        debugWarn('notifyPlayWindowSubscribers', e);
-      }
-    });
+  function formatPlayWindowWait(ms) {
+    const minutes = Math.max(1, Math.ceil((Number(ms) || 0) / 60000));
+    return minutes === 1 ? '1 minuto' : `${minutes} minuti`;
   }
 
   function dispatchPlayWindowChange(state, force) {
     const snapshot = state || getPlayWindowState();
     syncPlayWindowTicker(snapshot);
     const stateKey = getPlayWindowStateKey(snapshot);
-    if (!force && stateKey === lastPlayWindowBroadcastKey) {
-      notifyPlayWindowSubscribers(snapshot);
-      return snapshot;
-    }
+    if (!force && stateKey === lastPlayWindowBroadcastKey) return snapshot;
     lastPlayWindowBroadcastKey = stateKey;
-    notifyPlayWindowSubscribers(snapshot);
     document.dispatchEvent(new CustomEvent(PLAY_WINDOW_EVENT, { detail: snapshot }));
     return snapshot;
   }
@@ -281,72 +278,43 @@
     const expiresAt = startedAt + PLAY_WINDOW_DURATION_MS;
     const cooldownUntil = expiresAt + PLAY_WINDOW_COOLDOWN_MS;
     storageSet(PLAY_WINDOW_KEY, JSON.stringify({ startedAt, expiresAt, cooldownUntil }));
-    return dispatchPlayWindowChange({
-      active: true,
-      expired: false,
-      coolingDown: false,
-      startedAt,
-      expiresAt,
-      cooldownUntil,
-      durationMs: PLAY_WINDOW_DURATION_MS,
-      cooldownMs: PLAY_WINDOW_COOLDOWN_MS,
-      remainingMs: PLAY_WINDOW_DURATION_MS,
-      cooldownRemainingMs: PLAY_WINDOW_COOLDOWN_MS
-    }, true);
+    return dispatchPlayWindowChange(getPlayWindowState(), true);
   }
 
   function clearPlayWindow() {
     storageRemove(PLAY_WINDOW_KEY);
-    return dispatchPlayWindowChange({
-      active: false,
-      expired: false,
-      coolingDown: false,
-      startedAt: null,
-      expiresAt: null,
-      cooldownUntil: null,
-      durationMs: PLAY_WINDOW_DURATION_MS,
-      cooldownMs: PLAY_WINDOW_COOLDOWN_MS,
-      remainingMs: 0,
-      cooldownRemainingMs: 0
-    }, true);
+    return dispatchPlayWindowChange(getPlayWindowState(), true);
   }
 
-  async function ensurePlayWindowActive(options) {
+  // Accendere o spegnere riparte da zero: spento, una pausa in corso sparisce
+  // subito; acceso, la sessione parte alla prossima partita.
+  function setPlayTimer(on) {
+    storageSet(PLAY_TIMER_KEY, on ? '1' : '0');
+    updatePlayTimerSwitch();
+    return clearPlayWindow();
+  }
+
+  function updatePlayTimerSwitch() {
+    const input = document.getElementById('playTimerSwitch');
+    if (input) input.checked = isPlayTimerOn();
+  }
+
+  // Nessuna conferma: con il timer acceso la prima partita fa partire la
+  // sessione. Durante la pausa si dice quanto manca e come spegnerlo.
+  async function ensurePlayWindowActive() {
     const current = getPlayWindowState();
-    if (current.active) return true;
+    if (!current.enabled || current.active) return true;
     if (current.coolingDown) {
       await promptAlert(
-        `I 30 minuti di gioco sono finiti. Prima di tornare a giocare bisogna aspettare 60 minuti. Potrai riattivare il timer tra ${formatPlayWindowClock(current.cooldownRemainingMs)}.`,
-        {
-          title: 'Pausa tra una sessione e l’altra',
-          okLabel: 'Va bene'
-        }
+        `I 30 minuti di gioco sono finiti. Si può tornare a giocare tra ${formatPlayWindowWait(current.cooldownRemainingMs)}. Per spegnere il timer, un adulto apre il pannello Info e toglie «Tempo di gioco (per i genitori)».`,
+        { title: 'Pausa dal gioco', okLabel: 'Va bene', focusMessage: true }
       );
       return false;
     }
-    if (playWindowEnsurePromise) return playWindowEnsurePromise;
-
-    const config = options || {};
-    playWindowEnsurePromise = (async () => {
-      const accepted = await promptConfirm(
-        config.message || 'Per iniziare devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Il timer non usa cookie, non richiede login e funziona anche offline.',
-        {
-          title: config.title || 'Attiva 30 minuti di gioco',
-          confirmLabel: config.confirmLabel || 'Attiva 30 minuti',
-          cancelLabel: config.cancelLabel || 'Non ora'
-        }
-      );
-      if (!accepted) return false;
-      startPlayWindow();
-      return true;
-    })();
-
-    try {
-      return await playWindowEnsurePromise;
-    } finally {
-      playWindowEnsurePromise = null;
-    }
+    startPlayWindow();
+    return true;
   }
+
 
   function isProjectStorageKey(key) {
     const value = String(key || '');
@@ -582,7 +550,8 @@
     return scroll;
   }
 
-  function openModal(id) {
+  // focusEl: dove portare il focus, se non sulla X (es. il testo di un avviso).
+  function openModal(id, focusEl) {
     const overlay = document.getElementById(id);
     if (!overlay) return;
 
@@ -595,8 +564,8 @@
       document.body.classList.add('modal-open');
     }
 
-    const closeBtn = overlay.querySelector('.modal-close');
-    if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+    const target = focusEl || overlay.querySelector('.modal-close');
+    if (target) setTimeout(() => target.focus(), 50);
 
     trapFocus(overlay);
   }
@@ -632,6 +601,7 @@
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
     overlay.setAttribute('aria-labelledby', 'sharedPromptTitle');
+    overlay.setAttribute('aria-describedby', 'sharedPromptMessage');
     overlay.setAttribute('aria-hidden', 'true');
 
     const box = document.createElement('div');
@@ -654,6 +624,7 @@
 
     const message = document.createElement('p');
     message.id = 'sharedPromptMessage';
+    message.tabIndex = -1;
     body.appendChild(message);
 
     const actions = document.createElement('div');
@@ -781,7 +752,7 @@
       closeBtn.addEventListener('click', onCancel);
       overlay.addEventListener('click', onOverlayClick);
       document.addEventListener('keydown', onEscCapture, true);
-      openModal(PROMPT_MODAL_ID);
+      openModal(PROMPT_MODAL_ID, options && options.focusMessage ? messageEl : null);
     });
   }
 
@@ -800,212 +771,16 @@
       mode: 'alert',
       message,
       title: options && options.title,
-      confirmLabel: options && options.okLabel
+      confirmLabel: options && options.okLabel,
+      focusMessage: options && options.focusMessage
     }).then(() => {});
-  }
-
-  function insertNodeAfter(target, node) {
-    if (!target || !target.parentNode || !node) return;
-    if (target.nextSibling) {
-      target.parentNode.insertBefore(node, target.nextSibling);
-      return;
-    }
-    target.parentNode.appendChild(node);
-  }
-
-  function ensurePlayWindowPanel(panel, options) {
-    const target = panel || document.createElement('section');
-    target.classList.add('play-window-panel');
-    target.setAttribute('data-play-window-panel', '1');
-    if (options?.context) target.dataset.context = options.context;
-
-    let srAnnounce = target.querySelector('.play-window-sr-announce');
-    if (!srAnnounce) {
-      srAnnounce = document.createElement('p');
-      srAnnounce.className = 'play-window-sr-announce sr-only';
-      srAnnounce.setAttribute('aria-live', 'polite');
-      srAnnounce.setAttribute('aria-atomic', 'true');
-      target.appendChild(srAnnounce);
-    }
-
-    let kicker = target.querySelector('.play-window-kicker');
-    if (!kicker) {
-      kicker = document.createElement('div');
-      kicker.className = 'play-window-kicker';
-      target.appendChild(kicker);
-    }
-    kicker.textContent = 'Tempo di gioco';
-
-    let status = target.querySelector('.play-window-status');
-    if (!status) {
-      status = document.createElement('p');
-      status.className = 'play-window-status';
-      target.appendChild(status);
-    }
-
-    let actions = target.querySelector('.play-window-actions');
-    if (!actions) {
-      actions = document.createElement('div');
-      actions.className = 'play-window-actions';
-      target.appendChild(actions);
-    }
-
-    let timer = actions.querySelector('.play-window-timer');
-    if (!timer) {
-      timer = document.createElement('strong');
-      timer.className = 'play-window-timer';
-      actions.appendChild(timer);
-    }
-    timer.textContent = '30:00';
-
-    let button = actions.querySelector('.play-window-btn');
-    if (!button) {
-      button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'play-window-btn';
-      actions.appendChild(button);
-    }
-    if (!button.hasAttribute('type')) button.type = 'button';
-    button.textContent = 'Attiva 30 minuti';
-
-    let note = target.querySelector('.play-window-note');
-    if (!note) {
-      note = document.createElement('p');
-      note.className = 'play-window-note';
-      target.appendChild(note);
-    }
-    note.textContent = 'Solo sul dispositivo, nessun login, nessun cookie, funziona anche offline.';
-
-    if (button.dataset.playWindowBound !== '1') {
-      button.addEventListener('click', () => {
-        const state = getPlayWindowState();
-        if (state.active) return;
-        startPlayWindow();
-      });
-      button.dataset.playWindowBound = '1';
-    }
-
-    const announcePhase = (phase) => {
-      if (target.dataset.playWindowPhase === phase) return;
-      target.dataset.playWindowPhase = phase;
-      srAnnounce.textContent = status.textContent;
-    };
-
-    const render = (state) => {
-      const snapshot = state || getPlayWindowState();
-      target.classList.toggle('is-active', snapshot.active);
-      target.classList.toggle('is-expired', !snapshot.active && snapshot.expired);
-      target.classList.toggle('is-cooldown', snapshot.coolingDown);
-
-      if (snapshot.active) {
-        status.textContent = 'Timer attivo: puoi giocare liberamente su tutte le materie per 30 minuti. Quando il tempo finisce, bisogna aspettare 60 minuti prima di poter tornare a giocare.';
-        timer.textContent = formatPlayWindowClock(snapshot.remainingMs);
-        button.textContent = 'Timer attivo';
-        button.disabled = true;
-        button.setAttribute('aria-disabled', 'true');
-        announcePhase('active');
-        return;
-      }
-
-      timer.textContent = '30:00';
-      button.disabled = false;
-      button.setAttribute('aria-disabled', 'false');
-      if (snapshot.coolingDown) {
-        status.textContent = 'I 30 minuti sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.';
-        timer.textContent = formatPlayWindowClock(snapshot.cooldownRemainingMs);
-        button.textContent = 'Disponibile tra';
-        button.disabled = true;
-        button.setAttribute('aria-disabled', 'true');
-        announcePhase('cooldown');
-        return;
-      }
-      if (snapshot.expired) {
-        status.textContent = 'I 30 minuti sono terminati. Per continuare a giocare bisogna prima aspettare 60 minuti.';
-        button.textContent = 'Riattiva 30 minuti';
-        announcePhase('expired');
-      } else {
-        status.textContent = 'Per iniziare a giocare attiva 30 minuti di gioco su questo dispositivo. Dopo i 30 minuti bisogna aspettare 60 minuti prima di poter tornare a giocare.';
-        button.textContent = 'Attiva 30 minuti';
-        announcePhase('idle');
-      }
-    };
-
-    if (target.dataset.playWindowReady !== '1') {
-      playWindowSubscribers.add(render);
-      target.dataset.playWindowReady = '1';
-    }
-    render(getPlayWindowState());
-    return target;
-  }
-
-  function ensurePlayWindowPanelUi() {
-    const homeFacts = document.querySelector('.main-facts');
-    let homePanel = document.querySelector('[data-play-window-panel][data-context="home"]');
-    if (homeFacts && !homePanel) {
-      homePanel = ensurePlayWindowPanel(null, { context: 'home' });
-      homePanel.classList.add('play-window-panel-home');
-      insertNodeAfter(homeFacts, homePanel);
-    } else if (homePanel) {
-      homePanel.classList.add('play-window-panel-home');
-      ensurePlayWindowPanel(homePanel, { context: 'home' });
-    }
-
-    const startBtn = document.querySelector('#screenStart .start-btn');
-    let subjectPanel = document.querySelector('[data-play-window-panel][data-context="subject-start"]');
-    if (subjectPanel) {
-      subjectPanel.classList.add('play-window-panel-start');
-      ensurePlayWindowPanel(subjectPanel, { context: 'subject-start' });
-    } else if (startBtn) {
-      subjectPanel = ensurePlayWindowPanel(null, { context: 'subject-start' });
-      subjectPanel.classList.add('play-window-panel-start');
-      startBtn.parentNode.insertBefore(subjectPanel, startBtn);
-    }
-
-  }
-
-  function ensurePlayWindowScorePill() {
-    const scoreBar = document.getElementById('scoreBar');
-    if (!scoreBar || scoreBar.querySelector('[data-play-window-pill="1"]')) return;
-
-    const pill = document.createElement('div');
-    pill.className = 'score-pill timer play-window-score-pill';
-    pill.setAttribute('data-play-window-pill', '1');
-
-    const icon = document.createElement('span');
-    icon.setAttribute('aria-hidden', 'true');
-    icon.textContent = '⏳';
-
-    const value = document.createElement('span');
-    value.setAttribute('data-play-window-pill-value', '');
-    value.textContent = '30:00';
-
-    const srText = document.createElement('span');
-    srText.className = 'sr-only';
-    srText.textContent = ' tempo di gioco rimasto';
-
-    pill.appendChild(icon);
-    pill.appendChild(document.createTextNode(' '));
-    pill.appendChild(value);
-    pill.appendChild(srText);
-    scoreBar.appendChild(pill);
-
-    const valueEl = pill.querySelector('[data-play-window-pill-value]');
-    const render = (state) => {
-      const snapshot = state || getPlayWindowState();
-      const active = snapshot.active;
-      valueEl.textContent = active ? formatPlayWindowClock(snapshot.remainingMs) : '00:00';
-      pill.hidden = !active;
-      pill.setAttribute('aria-hidden', active ? 'false' : 'true');
-    };
-
-    playWindowSubscribers.add(render);
-    render(getPlayWindowState());
   }
 
   function bindPlayWindowStorageSync() {
     if (SA_FLAGS.playWindowStorageSyncBound) return;
     window.addEventListener('storage', (event) => {
-      if (event.key && event.key !== PLAY_WINDOW_KEY) return;
+      if (event.key && event.key !== PLAY_WINDOW_KEY && event.key !== PLAY_TIMER_KEY) return;
+      updatePlayTimerSwitch();
       dispatchPlayWindowChange(getPlayWindowState(), true);
     });
     SA_FLAGS.playWindowStorageSyncBound = true;
@@ -1376,7 +1151,7 @@
 
     const intro = document.createElement('p');
     intro.className = 'info-hub-intro';
-    intro.textContent = 'Raccolta rapida di informazioni legali, aggiornamenti e preferenze colore.';
+    intro.textContent = 'Raccolta rapida di informazioni legali, aggiornamenti, preferenze colore e tempo di gioco.';
 
     const actions = document.createElement('div');
     actions.className = 'info-hub-actions';
@@ -1455,6 +1230,7 @@
       applyPaletteMode(PALETTE_MODE.LEGACY);
       applyMotionMode(MOTION_MODE.AUTO);
       clearPlayWindow();
+      updatePlayTimerSwitch();
       updatePaletteToggleState();
       updateMotionToggleState();
       closeModal(INFO_HUB_MODAL_ID);
@@ -1546,10 +1322,38 @@
     motionRow.appendChild(motionAutoBtn);
     motionRow.appendChild(motionReduceBtn);
 
+    // Checkbox nativa con role="switch": lo screen reader dice "attivato" o
+    // "disattivato", la barra spaziatrice la cambia.
+    const timerRow = document.createElement('div');
+    timerRow.className = 'info-hub-timer';
+
+    const timerLabel = document.createElement('label');
+    timerLabel.className = 'timer-toggle';
+
+    const timerInput = document.createElement('input');
+    timerInput.type = 'checkbox';
+    timerInput.id = 'playTimerSwitch';
+    timerInput.setAttribute('role', 'switch');
+    timerInput.setAttribute('aria-describedby', 'playTimerNote');
+    timerInput.checked = isPlayTimerOn();
+    timerInput.addEventListener('change', () => setPlayTimer(timerInput.checked));
+
+    const timerText = document.createElement('span');
+    timerText.textContent = 'Tempo di gioco (per i genitori)';
+
+    const timerNote = document.createElement('p');
+    timerNote.id = 'playTimerNote';
+    timerNote.className = 'timer-toggle-note';
+    timerNote.textContent = 'Con il timer acceso si gioca al massimo 30 minuti, poi si aspetta un’ora prima di ricominciare. Vale per questo dispositivo.';
+
+    timerLabel.append(timerInput, timerText);
+    timerRow.append(timerLabel, timerNote);
+
     body.appendChild(intro);
     body.appendChild(actions);
     body.appendChild(paletteRow);
     body.appendChild(motionRow);
+    body.appendChild(timerRow);
 
     box.append(closeBtn, modalScroll(title, body));
     overlay.appendChild(box);
@@ -1793,170 +1597,31 @@
       .info-hub-motion{
         justify-content:center;
       }
-      .play-window-panel{
-        width:100%;
-        margin:14px 0 0;
-        padding:14px 16px;
-        border-radius:18px;
-        border:2px solid rgba(45,108,223,.18);
-        background:linear-gradient(135deg,#ffffff,#f4f8ff);
-        box-shadow:0 10px 24px rgba(45,108,223,.10);
+      .info-hub-timer{
+        text-align:center;
       }
-      .play-window-panel-home{
-        max-width:620px;
-        margin:14px auto 0;
-        padding:6px 0 6px;
-        border:0;
-        background:transparent;
-        box-shadow:none;
-      }
-      .play-window-panel-home .play-window-kicker,
-      .play-window-panel-home .play-window-status,
-      .play-window-panel-home .play-window-note{
-        display:none;
-      }
-      .play-window-panel-home .play-window-actions{
+      .timer-toggle{
+        display:inline-flex;
         align-items:center;
-        justify-content:center;
         gap:10px;
-      }
-      .play-window-panel-home .play-window-timer{
-        min-width:78px;
-        padding:8px 10px;
-        font-size:1rem;
-      }
-      .play-window-panel-home .play-window-btn{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
         min-height:44px;
-        padding:0 16px;
-        line-height:1;
         font-size:.9rem;
-      }
-      .play-window-panel-home.is-active,
-      .play-window-panel-home.is-expired{
-        border:0;
-        background:transparent;
-        box-shadow:none;
-      }
-      .play-window-kicker{
-        margin:0 0 6px;
-        font-size:.82rem;
         font-weight:900;
-        letter-spacing:.06em;
-        text-transform:uppercase;
-        color:#2d6cdf;
-      }
-      .play-window-status{
-        margin:0 0 10px;
-        color:#42586d;
-        font-size:.96rem;
-        font-weight:800;
-        line-height:1.45;
-      }
-      .play-window-actions{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        gap:12px;
-        flex-wrap:wrap;
-      }
-      .play-window-timer{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        min-width:88px;
-        padding:8px 12px;
-        border-radius:999px;
-        background:#eef4ff;
-        color:#1f3f73;
-        font-size:1.2rem;
-        line-height:1;
-        font-weight:900;
-      }
-      .play-window-btn{
-        border:0;
-        border-radius:999px;
-        min-height:46px;
-        padding:12px 18px;
-        background:linear-gradient(135deg,#2d6cdf,#4d8dff);
-        color:#fff;
-        font-size:.96rem;
-        line-height:1.2;
-        font-weight:900;
+        color:#55687a;
         cursor:pointer;
-        box-shadow:0 6px 16px rgba(45,108,223,.24);
       }
-      .play-window-btn:hover{
-        filter:brightness(1.04);
+      .timer-toggle input{
+        width:24px;
+        height:24px;
+        margin:0;
+        accent-color:#0072B2;
+        cursor:pointer;
       }
-      .play-window-btn[disabled]{
-        cursor:default;
-        background:linear-gradient(135deg,#2f9d62,#49bf7c);
-        box-shadow:none;
-      }
-      .play-window-note{
-        margin:10px 0 0;
-        color:#5d7082;
-        font-size:.82rem;
-        font-weight:700;
+      .timer-toggle-note{
+        margin:0;
+        font-size:.84rem;
         line-height:1.45;
-      }
-      .play-window-panel.is-active{
-        border-color:rgba(47,157,98,.28);
-        background:linear-gradient(135deg,#ffffff,#f2fff7);
-        box-shadow:0 10px 24px rgba(47,157,98,.12);
-      }
-      .play-window-panel.is-active .play-window-kicker{
-        color:#2f9d62;
-      }
-      .play-window-panel.is-expired{
-        border-color:rgba(214,40,40,.24);
-        background:linear-gradient(135deg,#ffffff,#fff5f5);
-        box-shadow:0 10px 24px rgba(214,40,40,.10);
-      }
-      .play-window-panel.is-expired .play-window-kicker{
-        color:#b43a3a;
-      }
-      .play-window-score-pill{
-        margin-left:auto;
-      }
-      .play-window-score-pill[hidden]{
-        display:none !important;
-      }
-      html[data-palette="okabe-ito"] .play-window-panel{
-        border-color:rgba(0,114,178,.22);
-        background:linear-gradient(135deg,#ffffff,#eef8ff);
-        box-shadow:0 10px 24px rgba(0,114,178,.12);
-      }
-      html[data-palette="okabe-ito"] .play-window-kicker{
-        color:#0072B2;
-      }
-      html[data-palette="okabe-ito"] .play-window-status{
-        color:#1f2d3d;
-      }
-      html[data-palette="okabe-ito"] .play-window-timer{
-        background:#e6f4fc;
-        color:#0b3a53;
-      }
-      html[data-palette="okabe-ito"] .play-window-btn{
-        background:linear-gradient(135deg,#0072B2,#009ad6);
-        box-shadow:0 6px 16px rgba(0,114,178,.22);
-      }
-      html[data-palette="okabe-ito"] .play-window-btn[disabled]{
-        background:linear-gradient(135deg,#2c7b5b,#3b9d74);
-        box-shadow:none;
-      }
-      html[data-palette="okabe-ito"] .play-window-note{
-        color:#405466;
-      }
-      html[data-palette="okabe-ito"] .play-window-panel-home,
-      html[data-palette="okabe-ito"] .play-window-panel-home.is-active,
-      html[data-palette="okabe-ito"] .play-window-panel-home.is-expired{
-        border:0;
-        background:transparent;
-        box-shadow:none;
+        color:#55687a;
       }
       @media (max-width:620px){
         .palette-toggle{
@@ -1970,17 +1635,6 @@
         .info-hub-actions{
           grid-template-columns:1fr;
         }
-        .play-window-actions{
-          align-items:stretch;
-        }
-        .play-window-timer,
-        .play-window-btn{
-          width:100%;
-        }
-        .play-window-panel-home .play-window-timer,
-        .play-window-panel-home .play-window-btn{
-          width:auto;
-        }
       }
     `;
     document.head.appendChild(style);
@@ -1993,8 +1647,6 @@
     ensurePromptModal();
     ensureFooterInfoHub();
     ensureSupportFooterLink();
-    ensurePlayWindowPanelUi();
-    ensurePlayWindowScorePill();
     ensurePlayWindowTicker();
     bindPlayWindowStorageSync();
     bindModalEvents();
@@ -2025,6 +1677,9 @@
     isActive() {
       return getPlayWindowState().active;
     },
+    timerKey: PLAY_TIMER_KEY,
+    isEnabled: isPlayTimerOn,
+    setEnabled: setPlayTimer,
     start: startPlayWindow,
     clear: clearPlayWindow,
     ensureActive: ensurePlayWindowActive,
@@ -2056,6 +1711,7 @@
     initSharedUi();
   }
 
+  if (!isPlayTimerOn()) storageRemove(PLAY_WINDOW_KEY);
   dispatchPlayWindowChange(getPlayWindowState(), true);
   registerServiceWorker();
 })();

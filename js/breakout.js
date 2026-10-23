@@ -1246,16 +1246,12 @@
 
   /* --------------------------------------------------------------- partita */
 
-  // Stesso cancello dei quiz materia: senza finestra di gioco attiva non si parte.
+  // Stesso controllo dei quiz materia: con il timer di gioco acceso (pannello
+  // Info) durante la pausa non si parte.
   function ensurePlayWindow() {
     const api = SA.playWindow;
     if (!api || typeof api.ensureActive !== 'function') return Promise.resolve(true);
-    return api.ensureActive({
-      title: 'Attiva 30 minuti di gioco',
-      message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
-      confirmLabel: 'Attiva 30 minuti',
-      cancelLabel: 'Non ora'
-    });
+    return api.ensureActive();
   }
 
   function onPlayWindowExpired() {
@@ -1477,7 +1473,7 @@
 
     const playWindowEvent = (SA.playWindow && SA.playWindow.eventName) || 'sa:play-window-change';
     document.addEventListener(playWindowEvent, function (event) {
-      if (event && event.detail && event.detail.active) return;
+      if (!event || !event.detail || !event.detail.expired) return;
       onPlayWindowExpired();
     });
 
