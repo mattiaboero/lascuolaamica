@@ -44,7 +44,6 @@ Il trattamento dati è limitato a (dettagli, basi giuridiche e conservazione in 
 
 - **Log tecnici dell’infrastruttura di hosting e protezione**: necessari al funzionamento e alla sicurezza del servizio
 - **Email a supporto@ e ciao@**: solo per rispondere a chi scrive
-- **Donazioni Satispay**: Satispay è titolare autonomo del pagamento
 - **Memoria locale del browser**: dati che restano sul dispositivo dell'utente, mai trasmessi. L'elenco delle chiavi è in `cookie.html`
 
 La sintesi vocale usa solo voci installate sul dispositivo (`SA.voice` in `shared.js`): una voce di rete manderebbe testo e IP a un server esterno. `scripts/check_speech_local.js`, dentro `prepublish-check.sh`, blocca ogni chiamata a `speechSynthesis.speak` fuori dall'helper.

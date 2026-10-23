@@ -2,7 +2,7 @@
 
 ## 4.22.22 - 2026-10-23
 
-**GDPR: informativa completa e sintesi vocale solo con voci locali.**
+**GDPR: informativa completa, sintesi vocale solo con voci locali, niente più donazioni.**
 
 `js/bosco.js` e `js/sistema-solare.js` impostavano solo `lang = 'it-IT'` e
 lasciavano scegliere la voce al browser: su Chrome desktop poteva essere una
@@ -23,9 +23,8 @@ voci con `localService === true`, con un suo `pickLocalVoice`.
 - `js/sistema-solare.js`: gli audio registrati restano; senza audio e senza
   voce locale il pulsante Ascolta è nascosto.
 - `privacy.html`: informativa ex art. 13 GDPR, una voce per trattamento (log
-  Cloudflare, email, Satispay, dati di gioco, sintesi vocale) con finalità,
-  base giuridica e conservazione; diritti degli artt. 15-22, reclamo al
-  Garante. I dati che il repo non contiene sono segnati [DA CONFERMARE].
+  Cloudflare, email, dati di gioco, sintesi vocale) con finalità, base
+  giuridica e conservazione; diritti degli artt. 15-22, reclamo al Garante.
 - `cookie.html`: elenco di tutte le voci di `localStorage`, ricavate dal
   codice e raggruppate per funzione, Cache Storage e cookie `cf_clearance`.
   `info-pages.css`: `overflow-wrap: anywhere` sui `<code>` e, negli elenchi
@@ -34,6 +33,21 @@ voci con `localService === true`, con un suo `pickLocalVoice`.
 - `per-insegnanti.html`, `bosco.html`, `llms.txt`, wiki
   `Sicurezza-Privacy-e-Minori.md`, `docs/sistema-solare/audio-testi.md`:
   frasi allineate alla nuova informativa e alle voci locali.
+
+### Removed
+- Donazioni: il sito non le accetta più. Tolti `supporto-satispay.html` e
+  `assets/donazione/qrcode-donazione.jpeg` (anche dal precache di `sw.js`), il
+  paragrafo con il link al QR in `supporta.html`, le regole
+  `body.page-supporto-satispay` e `.qr-*` in `info-pages.css` e
+  `palette-okabe.css`, la pagina dalle liste di `prepublish-check.sh` e
+  `scripts/check_contrast.sh`, dal perimetro dei controlli in
+  `accessibilita.html` e dalla wiki. `_redirects`: `/supporto-satispay`,
+  `/supporto-satispay/` e `/supporto-satispay.html` vanno in 301 dritti su
+  `/supporta`.
+- `privacy.html`: tolta la voce sulle donazioni; segnaposto di conservazione
+  dei log Cloudflare e delle email (12 mesi dall'ultimo messaggio) e fornitore
+  di posta (Aruba) compilati. Nessun `[DA CONFERMARE]` resta in `privacy.html`
+  e `cookie.html`.
 
 ### Added
 - `scripts/check_speech_local.js` (in `prepublish-check.sh`, quindi in
