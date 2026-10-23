@@ -169,6 +169,16 @@ html[data-palette="okabe-ito"] .footer-support-cta .support-tag {
   }
 }
 
+/* Sotto i 768px il footer sta in fondo alla pagina, non e' piu' una barra
+   fissa: lo spazio riservato qui sopra non serve. */
+@media (max-width: 767px) {
+  body.info-page:not(.page-tabelline)::after,
+  body.page-faq::after,
+  body.info-page.page-chi-siamo::after {
+    content: none;
+  }
+}
+
 /* /chi-siamo ha in piu' il contatore «N domande disponibili»: la barra va su 4
    righe fino a ~400px (misurato), e l'ultima riga di testo finiva sotto di
    31px gia' prima dei social. Una riga in piu' fino a 480px, con margine per

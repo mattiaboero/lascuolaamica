@@ -1,5 +1,58 @@
 # Changelog Repo
 
+## 4.23.1 - 2026-10-23
+
+**Quiz su smartphone: niente più barra fissa sopra le risposte.**
+
+Sotto i 768px il footer era una barra fissa alta fino a 169px che copriva le
+risposte; dopo «Inizia!» la domanda restava sotto, fuori schermo. Misure su
+`main` (4.23.0) con Playwright, `isMobile`: a 375x667 su `/matematica` la
+quarta risposta finiva 6px sotto la barra; a 390x844 la quarta risposta
+usciva dalla finestra su `/matematica` e `/inglese`, a 375x667 su `/inglese`
+ne uscivano tre.
+
+### Fixed
+- `subject-quiz-theme.css`, `index.css`, `info-pages.css`, `404.css`: sotto i
+  768px il footer torna nel flusso, in fondo alla pagina (come da 900px in
+  su). Fra 768 e 899px resta fisso. `utilities.css`: sotto i 768px niente
+  spazio riservato alla barra.
+- Pagine materia, `/bosco`, `/breakout`: pulsante «ℹ️ Info» in alto
+  (`.header-info-btn`), solo sotto i 768px, per avere il pannello Info (e
+  l'interruttore del timer) a un tocco senza scendere fino al footer.
+- In partita sotto i 768px (`html[data-screen="screenGame"]` e
+  `screenBonusQuestion`): briciole, Audio, Classifica e Info su una riga, con
+  i pulsanti a sola icona (il nome resta in `aria-label`); contatori su una
+  riga. Il sottotitolo si nasconde, come già per la 1ª. Fuori dalla partita
+  niente cambia.
+- `subject-quiz-core.js`: dopo «Inizia!» la scheda della domanda va in cima
+  alla finestra (`bringQuestionIntoView`, solo sotto i 768px), senza
+  animazione con «Meno animazioni» o `prefers-reduced-motion`. «Avanti» ha
+  16px di `scroll-margin-bottom`. `syncMuteBtn` scrive icona e parola in
+  span separati.
+- Sottotitoli dei pulsanti classe e ambito: 15px e opacità 1 sotto i 768px
+  (prima 13px e 0,7).
+
+Decisione: senza figura la domanda sta tutta nello schermo; con figura
+(orologio, goniometro, geometria), sui telefoni bassi la scheda supera lo
+schermo (circa 800px a 375x667) e si scorre. Figure e risposte restano della
+misura di prima.
+
+### Tests
+- `scripts/quiz_viewport_smoke.js` (`npm run test:e2e:viewport`, nel job
+  `smoke`), con domande fissate per id: il test intercetta
+  `json/<materia>.json` e lascia una sola domanda (più le bonus). A 375x667 e
+  390x844:
+  - 6 domande senza figura (3 di Aritmetica, 3 di inglese che rientrano in un
+    livello): dopo «Inizia!» le quattro risposte e poi «Avanti» stanno nella
+    finestra, e `elementFromPoint` al centro e al bordo basso restituisce
+    l'elemento stesso;
+  - 3 domande con figura: dopo «Inizia!» la scheda è in cima (bordo entro
+    24px), testo e parte alta della figura visibili; portate in vista, figura,
+    risposte e «Avanti» non sono coperte, e «Avanti» toccato fa andare avanti.
+  Su `main` fallisce in 18 casi su 18, qui passa in 18 su 18 per 5 giri di
+  fila. La prima versione estraeva domande a caso e passava o falliva secondo
+  la domanda.
+
 ## 4.23.0 - 2026-10-23
 
 **Timer di gioco facoltativo, spento di default.**

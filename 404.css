@@ -159,6 +159,17 @@ p {
   }
 }
 
+/* Sotto i 768px (telefoni) la barra fissa in fondo era alta fino a 169px, un
+   quinto dello schermo, e copriva le risposte. Il footer torna nel flusso,
+   in fondo alla pagina; Info resta a un tocco anche dal pulsante in alto
+   nelle pagine di gioco. Fra 768 e 899px resta fissa come prima. */
+@media (max-width: 767px) {
+  .site-footer {
+    position: static;
+    margin-top: auto;
+  }
+}
+
 /* Gruppo «Per genitori e insegnanti» del footer (stesse regole di
    utilities.css, che la 404 non carica): solo col footer in fondo alla
    pagina, non nella barra fissa. */
