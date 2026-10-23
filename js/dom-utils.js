@@ -1,17 +1,27 @@
 (function (global) {
   'use strict';
 
-  // Restano solo le due funzioni con call site reali: lockScroll (shared.js,
-  // con fallback inline) e randomVariant (subject-quiz-core.js, index-page.js,
-  // faq-page.js). show/hide/toggleClass/restartAnimation non erano chiamate da
-  // nessuna parte, e nemmeno la classe .is-hidden che le prime due gestivano
-  // veniva mai applicata da JS.
+  // Restano solo le funzioni con call site reali: lockScroll (shared.js,
+  // con fallback inline), randomVariant (subject-quiz-core.js, index-page.js,
+  // faq-page.js) ed el (js/tabelline-calcolatore.js).
+  // show/hide/toggleClass/restartAnimation non erano chiamate da nessuna
+  // parte, e nemmeno la classe .is-hidden che le prime due gestivano veniva
+  // mai applicata da JS.
   const api = global.SADom = global.SADom || {};
 
   api.lockScroll = function (lock) {
     if (document && document.body) {
       document.body.classList.toggle('modal-open', !!lock);
     }
+  };
+
+  // Elemento con il suo testo, senza innerHTML (CSP con Trusted Types).
+  // Lo usa il calcolatore di /tabelline.
+  api.el = function (tag, text, className) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
   };
 
   api.randomVariant = function (prefix, count) {
