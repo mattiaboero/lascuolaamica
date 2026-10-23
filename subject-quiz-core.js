@@ -607,12 +607,7 @@
   async function ensurePlayWindowForGame() {
     const api = getPlayWindowApi();
     if (!api || typeof api.ensureActive !== 'function') return true;
-    return api.ensureActive({
-      title: 'Attiva 30 minuti di gioco',
-      message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
-      confirmLabel: 'Attiva 30 minuti',
-      cancelLabel: 'Non ora'
-    });
+    return api.ensureActive();
   }
 
   async function handlePlayWindowExpired() {
@@ -3036,7 +3031,7 @@
       bonusMeta.setAttribute('aria-atomic', 'true');
     }
     document.addEventListener((window.SA && window.SA.playWindow && window.SA.playWindow.eventName) || 'sa:play-window-change', (event) => {
-      if (event && event.detail && event.detail.active) return;
+      if (!event || !event.detail || !event.detail.expired) return;
       handlePlayWindowExpired();
     });
   }

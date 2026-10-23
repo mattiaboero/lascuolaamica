@@ -1256,7 +1256,7 @@
     winTime: 0,
     paused: false,
     helpOpen: false,
-    // Falso finche' non si attraversa il cancello dei 30 minuti (entra()).
+    // Falso finche' non si preme «Entra nel bosco» (entra()).
     inGioco: false,
     player: { x: 410, y: 378, phase: 0, dir: 'up' },
     keys: new Set(),
@@ -1597,20 +1597,16 @@
   /* ------------------------------------------------------------------ gioco */
 
   /*
-    Stesso cancello dei quiz materia e di Spacca-Muri: senza finestra di gioco
-    attiva non si entra. Il bosco si apre in pausa, con il pulsante «Entra nel
-    bosco»: e' il gesto che serve alla conferma dei 30 minuti e, gia' che c'e',
-    quello che il browser vuole prima di lasciar suonare l'audio.
+    Stesso controllo dei quiz materia e di Spacca-Muri: con il timer di gioco
+    acceso (pannello Info) durante la pausa non si entra. Il bosco si apre in
+    pausa, con il pulsante «Entra nel bosco»: e' il gesto che fa partire la
+    sessione del timer e quello che il browser vuole prima di lasciar suonare
+    l'audio.
   */
   function ensurePlayWindow() {
     const api = SA.playWindow;
     if (!api || typeof api.ensureActive !== 'function') return Promise.resolve(true);
-    return api.ensureActive({
-      title: 'Attiva 30 minuti di gioco',
-      message: 'Per iniziare questa partita devi attivare 30 minuti di gioco su questo dispositivo. Quando i 30 minuti finiscono, bisogna aspettare 60 minuti prima di poter tornare a giocare. Nessun dato lascia il browser e il timer funziona anche offline.',
-      confirmLabel: 'Attiva 30 minuti',
-      cancelLabel: 'Non ora'
-    });
+    return api.ensureActive();
   }
 
   async function entra() {
@@ -2446,7 +2442,7 @@
     // nome dell'evento e' quello che shared.js usera'.
     const playWindowEvent = (SA.playWindow && SA.playWindow.eventName) || 'sa:play-window-change';
     document.addEventListener(playWindowEvent, function (event) {
-      if (event && event.detail && event.detail.active) return;
+      if (!event || !event.detail || !event.detail.expired) return;
       onPlayWindowExpired();
     });
 

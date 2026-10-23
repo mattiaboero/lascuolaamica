@@ -681,76 +681,6 @@ header {
   text-align: center;
 }
 
-.play-window-panel {
-  width: 100%;
-  margin: 14px 0 0;
-  padding: 14px 16px;
-  border-radius: 18px;
-  border: 2px solid rgba(var(--info-blue-rgb) / 0.18);
-  background: linear-gradient(135deg, #fff, #f4f8ff);
-  box-shadow: 0 10px 24px rgba(var(--info-blue-rgb) / 0.1);
-}
-
-.play-window-kicker {
-  margin: 0 0 6px;
-  font-size: 0.82rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--info-blue);
-}
-
-.play-window-status {
-  margin: 0 0 10px;
-  color: #42586d;
-  font-size: 0.96rem;
-  font-weight: 800;
-  line-height: 1.45;
-}
-
-.play-window-actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.play-window-timer {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 88px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #eef4ff;
-  color: #1f3f73;
-  font-size: 1.2rem;
-  line-height: 1;
-  font-weight: 900;
-}
-
-.play-window-btn {
-  border: 0;
-  border-radius: 999px;
-  min-height: 46px;
-  padding: 12px 18px;
-  background: linear-gradient(135deg, var(--info-blue), #4d8dff);
-  color: #fff;
-  font-size: 0.96rem;
-  line-height: 1.2;
-  font-weight: 900;
-  box-shadow: 0 6px 16px rgba(var(--info-blue-rgb) / 0.24);
-}
-
-.play-window-note {
-  margin: 10px 0 0;
-  color: #5d7082;
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
 .area-more-btn {
   border: 2px dashed rgba(46, 78, 112, 0.45);
   background: #f8fcff;
@@ -1477,7 +1407,6 @@ body.subject-problemi .answer-btn {
   margin-bottom: 18px;
 }
 
-
 .score-final {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1929,15 +1858,6 @@ body.subject-problemi .answer-btn {
   .class-grid,
   .area-grid {
     grid-template-columns: 1fr;
-  }
-
-  .play-window-actions {
-    align-items: stretch;
-  }
-
-  .play-window-timer,
-  .play-window-btn {
-    width: 100%;
   }
 
   body.subject-problemi .intro-list {
