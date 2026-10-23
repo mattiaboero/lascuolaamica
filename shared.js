@@ -895,10 +895,15 @@
   // si riapriva a ogni pagina finche' non si accettava, e intercettava i
   // clic). Con un worker in attesa la versione nuova si attiva:
   // - al clic su un link interno: skipWaiting, si aspetta il controllerchange
-  //   (al massimo 3 s) e solo poi si naviga, cosi' la pagina dopo e' gia' nuova;
-  // - quando la scheda torna visibile e non c'e' una partita in corso:
-  //   skipWaiting e ricaricamento.
+  //   al massimo 1 s e poi si naviga comunque. Senza rete il clic non si
+  //   trattiene: il link funziona come prima;
+  // - quando la scheda torna visibile dopo almeno 30 minuti nascosta e non
+  //   c'e' una partita in corso: skipWaiting e ricaricamento. Sotto i 30
+  //   minuti si aspetta la navigazione successiva. Nel Sistema Solare mai:
+  //   si perderebbe il punto dell'esplorazione.
   // Mai un ricaricamento durante una partita.
+  const UPDATE_LINK_TIMEOUT_MS = 1000;
+  const UPDATE_HIDDEN_MIN_MS = 30 * 60 * 1000;
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
 
@@ -934,22 +939,31 @@
           const url = new URL(link.href, window.location.href);
           if (url.origin !== window.location.origin) return;
           if (url.pathname === window.location.pathname && url.search === window.location.search) return;
-          if (!activate()) return;
+          if (navigator.onLine === false || !activate()) return;
           event.preventDefault();
-          const go = () => window.location.assign(url.href);
+          let gone = false;
+          const go = () => {
+            if (gone) return;
+            gone = true;
+            window.location.assign(url.href);
+          };
           if (changed) {
             go();
             return;
           }
-          const timer = window.setTimeout(go, 3000);
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
-            window.clearTimeout(timer);
-            go();
-          }, { once: true });
+          window.setTimeout(go, UPDATE_LINK_TIMEOUT_MS);
+          navigator.serviceWorker.addEventListener('controllerchange', go, { once: true });
         });
 
+        let hiddenSince = document.visibilityState === 'hidden' ? Date.now() : null;
         document.addEventListener('visibilitychange', () => {
-          if (document.visibilityState !== 'visible' || !waiting || isPlaying()) return;
+          if (document.visibilityState === 'hidden') {
+            hiddenSince = Date.now();
+            return;
+          }
+          const away = hiddenSince === null ? 0 : Date.now() - hiddenSince;
+          hiddenSince = null;
+          if (!waiting || away < UPDATE_HIDDEN_MIN_MS || isPlaying() || SA.sistemaSolare) return;
           reloadOnChange = activate();
         });
 

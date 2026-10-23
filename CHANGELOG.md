@@ -15,9 +15,12 @@ Info del footer.
 ### Changed
 - `shared.js`: tolto il modale di aggiornamento. Il worker in attesa si
   attiva in silenzio: al clic su un link interno (skipWaiting, attesa del
-  `controllerchange` fino a 3 s, poi la navigazione, quindi la pagina dopo è
-  già nuova) oppure quando la scheda torna visibile e non c'è una partita in
-  corso (skipWaiting e ricaricamento). `isPlaying()` copre quiz (domande,
+  `controllerchange` al massimo 1 s, poi la navigazione parte comunque;
+  senza rete il clic non si trattiene e il link funziona come prima) oppure
+  quando la scheda torna visibile dopo almeno 30 minuti nascosta e non c'è
+  una partita in corso (skipWaiting e ricaricamento; sotto i 30 minuti si
+  aspetta la navigazione successiva). Nel Sistema Solare mai un
+  ricaricamento al ritorno sulla scheda, nemmeno fuori da viaggio e film. `isPlaying()` copre quiz (domande,
   scelta e domanda bonus), Bosco dentro la radura, Spacca-Muri con la
   pallina in gioco, Sistema Solare durante viaggio guidato o film
   (`SA.sistemaSolare.inCorso()`, nuovo in `js/sistema-solare.js`). Nessun
@@ -37,8 +40,12 @@ Info del footer.
   «variante» a un messaggio. Con un worker in attesa, durante una partita di
   quiz, nel Bosco e in Spacca-Muri: niente modale, niente ricaricamento,
   versione vecchia attiva; al clic su «Menu» la home è già controllata dalla
-  versione nuova; senza partita, quando la scheda torna visibile, la pagina
-  si ricarica con la versione nuova. Su `main` fallisce al primo scenario.
+  versione nuova. Con orologio simulato e visibilità comandata dal test:
+  ritorno dopo 5 minuti senza ricaricamento, ritorno dopo 31 minuti con
+  ricaricamento, Sistema Solare senza ricaricamento; poi tempo massimo
+  superato (variante di `sw.js` che ignora skipWaiting: navigazione dopo
+  circa 1,1 s) e link interno senza rete (aperto dalla cache, worker nuovo
+  ancora in attesa). 8 casi. Su `main` fallisce al primo scenario.
 - `scripts/modal_focus_smoke.js` (`npm run test:e2e:focus`, nel job
   `smoke`): 12 casi (Info dal footer, in alto e in home, Versione, Il
   Progetto, conferma di cancellazione, avvisi di pausa del timer nei quiz e
