@@ -57,7 +57,7 @@ Per inglese il dataset include anche metadata opzionali usati dal core:
 
 **Distrattori.** Plausibili (errori comuni, misconcezioni tipiche), ma chiaramente sbagliati a riflessione. Non trabocchetti inutilmente sottili.
 
-**Coerenza con le Indicazioni Nazionali.** I contenuti devono corrispondere al curricolo italiano della scuola primaria per la classe indicata.
+**Coerenza con le Indicazioni Nazionali.** I contenuti devono corrispondere al curricolo italiano della scuola primaria per la classe indicata. Dall’a.s. 2026/27 valgono le nuove Indicazioni ([DM 9 dicembre 2025, n. 221](https://www.normattiva.it/eli/id/2026/01/27//26G00021/CONSOLIDATED)); le domande esistenti sono costruite su quelle del 2012 (D.M. 254/2012) e la revisione è in corso. Il confronto per materia e classe parte da `reports/indicazioni-2025/temi-per-materia-classe.csv`.
 
 **Qualità linguistica.** Controllare sempre:
 

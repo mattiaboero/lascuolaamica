@@ -75,7 +75,7 @@ I progressi vengono salvati localmente nel browser. Non c'è nessun server che l
 - **PWA con supporto offline** — funziona dopo il primo caricamento, anche su URL pulite come `/storia` o `/faq`
 - **Accessibilità WCAG 2.1 AA** — validata manualmente con tastiera, VoiceOver, zoom 200% e riduzione movimento
 - **Privacy-first** — nessuna registrazione, nessun cookie di terze parti, dati di gioco salvati solo nella memoria locale del browser
-- **9.926 domande** su 8 materie, coerenti con le Indicazioni Nazionali per la scuola primaria
+- **9.926 domande** su 8 materie, costruite sulle Indicazioni Nazionali del 2012 per la scuola primaria; revisione sulle nuove Indicazioni (DM 221/2025) in corso
 - **Font self-hosted** — nessuna richiesta esterna a Google Fonts o CDN
 - **Politiche di sicurezza restrittive** — contenuti pubblici e aree tecniche separati con controlli dedicati
 

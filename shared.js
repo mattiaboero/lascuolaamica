@@ -1081,7 +1081,7 @@
     methodTitle.textContent = 'Programma e Metodo Didattico';
 
     const methodText1 = document.createElement('p');
-    methodText1.textContent = 'Tutti i test, i giochi e i quiz interattivi proposti (Matematica, Italiano, Inglese, Problemi, Geografia, Storia, Scienze, Educazione Civica) sono allineati al programma ministeriale (Indicazioni Nazionali per il curricolo della scuola primaria).';
+    methodText1.textContent = 'Tutti i test, i giochi e i quiz interattivi proposti (Matematica, Italiano, Inglese, Problemi, Geografia, Storia, Scienze, Educazione Civica) sono costruiti sulle Indicazioni Nazionali del 2012 per la scuola primaria. Le nuove Indicazioni (DM 221/2025) valgono dall’a.s. 2026/27: la revisione delle domande è in corso.';
 
     const methodText2 = document.createElement('p');
     methodText2.textContent = "L'approccio prevede una progressione graduale, feedback positivi e classifiche locali prive di vincoli frustranti, finalizzati a consolidare il sapere senza generare ansia. Il sistema disincentiva la ripetizione cieca introducendo variabilità nelle sessioni (anti-ripetizione guidata dalle AI).";
