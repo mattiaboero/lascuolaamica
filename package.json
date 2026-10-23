@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.24.3",
+  "version": "4.25.0",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -12,7 +12,7 @@
     "check:grammar-rules": "node scripts/check_grammar_rules.js",
     "check:update-log": "node scripts/check_update_log.js",
     "audit:csp": "python3 scripts/sync_csp_hashes.py --check",
-    "freshness": "python3 scripts/sync_question_counts.py && python3 scripts/refresh_structured_data.py && python3 scripts/generate_sitemap.py && python3 scripts/sync_csp_hashes.py",
+    "freshness": "python3 scripts/build_tabelline.py && python3 scripts/sync_question_counts.py && python3 scripts/refresh_structured_data.py && python3 scripts/generate_sitemap.py && python3 scripts/sync_csp_hashes.py",
     "lint:content": "node scripts/lint_content.js",
     "ingest": "python3 scripts/ingest_generated.py",
     "ingest:dry": "python3 scripts/ingest_generated.py --dry-run",

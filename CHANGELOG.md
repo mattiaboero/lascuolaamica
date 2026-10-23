@@ -1,5 +1,50 @@
 # Changelog Repo
 
+## 4.25.0 - 2026-10-23
+
+**Tabelline fino al 100 e calcolatore per qualsiasi numero.**
+
+### Added
+- `/tabelline`: sezione «Tabelline da 11 a 100», testo statico generato da
+  `scripts/build_tabelline.py` (dentro `npm run freshness`) fra i marcatori
+  `TABELLINE-11-100`. Un blocco per decina con il suo h3, indice delle decine
+  in cima, una riga per numero con ancora (`#tabellina-11` ...
+  `#tabellina-100`): «Tabellina del 27: 27, 54, ..., 270». Niente tabella da
+  900 celle: con lo screen reader si ascolta una tabellina alla volta.
+- Articoli: «dell'» per 1, 8, 11, 80-89 e 800-899, «del» per gli altri (18
+  compreso, «diciotto»). Stessa regola nel calcolatore.
+- Calcolatore «Tabellina di qualsiasi numero» (`js/tabelline-calcolatore.js`,
+  in precache): numero da 1 a 1000, risultati da × 1 a × 10 in un elenco
+  costruito con `SADom.el` (nuovo in `js/dom-utils.js`, niente innerHTML),
+  annunciati con `aria-live="polite"`. 0, numeri oltre 1000, virgole e
+  lettere danno il messaggio «Scrivi un numero intero da 1 a 1000...», con
+  `aria-invalid` e `aria-describedby` sul campo. Senza JavaScript la sezione
+  resta nascosta.
+- Tre domande frequenti nuove, testo visibile e FAQPage identici: «Qual è la
+  tabellina del 27?», «Come si calcola una tabellina oltre il 10?», «Fino a
+  quale tabellina si studia alla primaria?».
+- Sotto le schede dei video, link separato «Ripasso: tutte le tabelline dal 2
+  all'8 cantate (28:52)» (`JCwz8k_wbvE`). Le schede del 9 e del 10 restano
+  «video in arrivo».
+
+### Changed
+- `/tabelline`: titolo «Tabelline da 1 a 100: tabella, calcolatore e quiz»
+  (49 caratteri), descrizione di 152 caratteri, h1 «Tabelline da 1 a 100»,
+  introduzione che indica le tabelline dal 2 al 10 come parte principale per
+  la primaria. «Un video per tabellina, dalla 2 in avanti» diventa «Per ora ci
+  sono i video dalla tabellina del 2 a quella dell'8: il 9 e il 10 sono in
+  arrivo».
+- `/matematica` (sezione tabelline): link a `/tabelline#tabellina-11`.
+- Home e `llms.txt`: citano le tabelline fino al 100 e il calcolatore.
+
+### Tests
+- `scripts/tabelline_smoke.js`: con e senza JS, 90 righe dall'11 al 100 con
+  i dieci multipli giusti e l'articolo giusto, indice delle decine che porta
+  alle ancore, calcolatore visibile solo con JS. Calcolatore usato solo da
+  tastiera (Tab dall'inizio della pagina, Invio, Tab su «Calcola» e barra
+  spaziatrice): 27, 1 e 1000 giusti; 0, «abc», «2,5», «1001» e campo vuoto
+  rifiutati con il messaggio, nessun risultato, focus sul campo.
+
 ## 4.24.3 - 2026-10-23
 
 **Nuove Indicazioni Nazionali (DM 221/2025): riferimenti aggiornati, con
