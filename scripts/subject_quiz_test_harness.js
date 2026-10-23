@@ -277,6 +277,9 @@ async function checkDialogFocusAndQueue(page) {
   await page.waitForSelector('#modalInfoHub.open', { timeout: 5000 });
   await page.locator('#modalInfoHub .info-hub-btn', { hasText: 'Versione' }).click();
   await page.waitForSelector('#modalUpdates.open', { timeout: 5000 });
+  // openModal sposta il focus nel modale con un setTimeout: Esc va premuto
+  // dopo, altrimenti quel setTimeout arriva a modale gia' chiuso.
+  await page.waitForFunction(() => document.querySelector('#modalUpdates.open').contains(document.activeElement), null, { timeout: 5000 });
   await page.keyboard.press('Escape');
   await page.waitForTimeout(400);
   const afterEscNested = await page.evaluate(() => ({

@@ -17,6 +17,14 @@ const descrivi = () => {
   return `${a.tagName.toLowerCase()}${a.id ? '#' + a.id : ''} «${(a.textContent || '').trim().slice(0, 30)}»`;
 };
 
+// openModal sposta il focus nel modale con un setTimeout: focus e tasti vanno
+// dati dopo, altrimenti quel setTimeout li scavalca (E2E su main, 4.24.3).
+const focusDentro = (page, sel) => page.waitForFunction(
+  (s) => { const m = document.querySelector(s); return !!(m && m.contains(document.activeElement)); },
+  sel,
+  { timeout: 5000 }
+);
+
 // Apre con la tastiera (focus + Invio), chiude con Esc, controlla il focus.
 async function caso(browser, { nome, url, width = 1280, prepara, opener, prima, apertoSu, atteso }) {
   const mobile = width < 768;
@@ -33,7 +41,7 @@ async function caso(browser, { nome, url, width = 1280, prepara, opener, prima, 
     await btn.evaluate((e) => e.setAttribute('data-test-opener', '1'));
     await page.keyboard.press('Enter');
     await page.waitForSelector(apertoSu, { timeout: 5000 });
-    await page.waitForTimeout(300);
+    await focusDentro(page, apertoSu);
     await page.keyboard.press('Escape');
     await page.waitForTimeout(400);
     const esito = await page.evaluate((sel) => {
@@ -61,7 +69,7 @@ async function caso(browser, { nome, url, width = 1280, prepara, opener, prima, 
 const apriInfo = async (page) => {
   await page.locator('.site-footer [data-open-modal="modalInfoHub"], footer [data-open-modal="modalInfoHub"]').first().click();
   await page.waitForSelector('#modalInfoHub.open');
-  await page.waitForTimeout(200);
+  await focusDentro(page, '#modalInfoHub.open');
 };
 
 const pausa = () => {
@@ -104,7 +112,7 @@ async function main() {
         prima: async (page) => {
           await page.evaluate(() => {
             const btn = document.querySelector('.header-info-btn');
-            btn.addEventListener('click', () => setTimeout(() => btn.remove(), 100), { once: true });
+            btn.addEventListener('click', () => setTimeout(() => btn.remove(), 0), { once: true });
           });
         }
       }
@@ -117,9 +125,9 @@ async function main() {
     const page = await context.newPage();
     await page.goto(`${BASE}/bosco.html`, { waitUntil: 'networkidle' });
     await page.locator('[data-action="toggle-help"]').click();
-    await page.waitForTimeout(300);
+    await page.waitForFunction(() => window.SA.bosco.state.helpOpen, null, { timeout: 5000 });
     await page.keyboard.press('Escape');
-    await page.waitForTimeout(300);
+    await page.waitForFunction(() => !window.SA.bosco.state.helpOpen, null, { timeout: 5000 });
     const cancello = await page.evaluate(() => ({ titolo: document.getElementById('boscoOverlayTitle').textContent, focus: document.activeElement && document.activeElement.id }));
     const ok = cancello.titolo === 'Il Bosco delle Lettere' && cancello.focus === 'boscoOverlayBtn';
     process.stdout.write(`${ok ? '[OK]' : '[FAIL]'} Bosco: Esc su «Come si gioca» prima di entrare riporta al cancello\n`);
