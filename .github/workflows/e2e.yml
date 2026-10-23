@@ -86,6 +86,12 @@ jobs:
       - name: E2E CLS pagine materia (rete e CPU lente)
         run: npm run test:e2e:cls
 
+      - name: E2E aggiornamento silenzioso (niente modale, niente ricarica in partita)
+        run: npm run test:e2e:sw
+
+      - name: E2E focus alla chiusura dei modali con Esc
+        run: npm run test:e2e:focus
+
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1
 

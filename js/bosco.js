@@ -1537,8 +1537,16 @@
 
   /* --------------------------------------------------------------- overlay */
 
+  // Chi aveva il focus prima che la finestra si aprisse: alla chiusura il
+  // focus torna li' (prima restava sul pulsante nascosto della finestra e il
+  // Tab ripartiva da inizio pagina). Se non c'e' piu', va al titolo.
+  let overlayOpener = null;
+
   function openOverlay(title, lines, buttonLabel) {
     if (!dom.overlay) return;
+    if (!dom.overlay.classList.contains('open') && !dom.overlay.contains(document.activeElement)) {
+      overlayOpener = document.activeElement;
+    }
     dom.overlayTitle.textContent = title;
     dom.overlayBody.textContent = '';
     lines.forEach(function (line) {
@@ -1554,7 +1562,22 @@
   }
 
   function closeOverlay() {
-    if (dom.overlay) dom.overlay.classList.remove('open');
+    if (!dom.overlay) return;
+    const wasOpen = dom.overlay.classList.contains('open');
+    dom.overlay.classList.remove('open');
+    if (!wasOpen) return;
+    const active = document.activeElement;
+    if (active && active !== document.body && !dom.overlay.contains(active)) return;
+    const opener = overlayOpener;
+    overlayOpener = null;
+    if (opener && opener !== document.body && opener.isConnected && opener.getClientRects().length && typeof opener.focus === 'function') {
+      opener.focus({ preventScroll: true });
+      return;
+    }
+    const heading = document.querySelector('main h1, h1');
+    if (!heading) return;
+    if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+    heading.focus({ preventScroll: true });
   }
 
   const HELP_LINES = [
@@ -2409,6 +2432,12 @@
 
       if (key === 'Escape') {
         event.preventDefault();
+        // Prima di entrare Esc chiude solo «Come si gioca» e riporta al
+        // cancello; il cancello resta finche' non si entra.
+        if (!state.inGioco && state.helpOpen) {
+          toggleHelp();
+          return;
+        }
         if (state.mode === 'complete' || !state.inGioco) return;
         state.helpOpen = false;
         setPaused(!state.paused);

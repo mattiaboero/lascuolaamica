@@ -1,5 +1,59 @@
 # Changelog Repo
 
+## 4.24.2 - 2026-10-23
+
+**Aggiornamenti silenziosi e focus alla chiusura dei modali.**
+
+Con un service worker in attesa `shared.js` apriva «Nuova versione
+disponibile» a ogni caricamento di pagina finché non si accettava, anche
+durante una partita, e il modale intercettava i clic sulle risposte
+(misurato: il clic sulla prima risposta finiva su `.sa-prompt-actions`).
+Chiudendo con Esc la finestra del Bosco il focus finiva su `<body>`, e i
+modali aperti da Info («Versione», «Il Progetto») riportavano al pulsante
+Info del footer.
+
+### Changed
+- `shared.js`: tolto il modale di aggiornamento. Il worker in attesa si
+  attiva in silenzio: al clic su un link interno (skipWaiting, attesa del
+  `controllerchange` al massimo 1 s, poi la navigazione parte comunque;
+  senza rete il clic non si trattiene e il link funziona come prima) oppure
+  quando la scheda torna visibile dopo almeno 30 minuti nascosta e non c'è
+  una partita in corso (skipWaiting e ricaricamento; sotto i 30 minuti si
+  aspetta la navigazione successiva). Nel Sistema Solare mai un
+  ricaricamento al ritorno sulla scheda, nemmeno fuori da viaggio e film. `isPlaying()` copre quiz (domande,
+  scelta e domanda bonus), Bosco dentro la radura, Spacca-Muri con la
+  pallina in gioco, Sistema Solare durante viaggio guidato o film
+  (`SA.sistemaSolare.inCorso()`, nuovo in `js/sistema-solare.js`). Nessun
+  avviso: non serve.
+- Modali di `shared.js`: pila dei modali aperti, Esc chiude solo l'ultimo; il
+  focus torna all'elemento che aveva aperto il modale e, se non c'è più o è
+  nascosto, al titolo principale (`h1`, con `tabindex="-1"`), mai a `<body>`.
+  Un modale aperto da dentro Info, chiuso, riapre Info sul pulsante che
+  l'aveva aperto.
+- `js/bosco.js`: la finestra ricorda chi l'ha aperta e alla chiusura gli
+  restituisce il focus (prima restava sul pulsante nascosto). Prima di
+  entrare nel bosco Esc chiude «Come si gioca» e riporta al cancello.
+
+### Tests
+- `scripts/sw_update_smoke.js` (`npm run test:e2e:sw`, nel job `smoke`): un
+  server statico suo serve a comando una variante di `sw.js` che risponde
+  «variante» a un messaggio. Con un worker in attesa, durante una partita di
+  quiz, nel Bosco e in Spacca-Muri: niente modale, niente ricaricamento,
+  versione vecchia attiva; al clic su «Menu» la home è già controllata dalla
+  versione nuova. Con orologio simulato e visibilità comandata dal test:
+  ritorno dopo 5 minuti senza ricaricamento, ritorno dopo 31 minuti con
+  ricaricamento, Sistema Solare senza ricaricamento; poi tempo massimo
+  superato (variante di `sw.js` che ignora skipWaiting: navigazione dopo
+  circa 1,1 s) e link interno senza rete (aperto dalla cache, worker nuovo
+  ancora in attesa). 8 casi. Su `main` fallisce al primo scenario.
+- `scripts/modal_focus_smoke.js` (`npm run test:e2e:focus`, nel job
+  `smoke`): 12 casi (Info dal footer, in alto e in home, Versione, Il
+  Progetto, conferma di cancellazione, avvisi di pausa del timer nei quiz e
+  nel Bosco, «Come si gioca» del Bosco, elemento di apertura sparito). Su
+  `main` 5 falliscono, qui 12 su 12.
+- Modo `dialogs` del harness: aggiunto il caso Info → Versione chiuso con
+  Esc (si torna su «Versione» con Info aperto, poi su «Info»).
+
 ## 4.24.1 - 2026-10-23
 
 **CLS delle pagine materia e contrasto della palette Okabe-Ito.**

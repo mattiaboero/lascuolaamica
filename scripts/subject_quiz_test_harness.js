@@ -270,6 +270,29 @@ async function checkDialogFocusAndQueue(page) {
     throw new Error(`Focus perso alla chiusura della modale esterna: atteso "Info", trovato "${afterOuter}"`);
   }
 
+  // Modale aperto da dentro Info (Versione -> Ultimi aggiornamenti), chiuso
+  // con Esc: si torna dentro Info, sul pulsante «Versione»; un secondo Esc
+  // chiude Info e torna a «Info». Prima il focus saltava al footer.
+  await infoBtn.click();
+  await page.waitForSelector('#modalInfoHub.open', { timeout: 5000 });
+  await page.locator('#modalInfoHub .info-hub-btn', { hasText: 'Versione' }).click();
+  await page.waitForSelector('#modalUpdates.open', { timeout: 5000 });
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(400);
+  const afterEscNested = await page.evaluate(() => ({
+    text: (document.activeElement.textContent || '').trim().slice(0, 40),
+    hubOpen: !!document.querySelector('#modalInfoHub.open')
+  }));
+  if (!afterEscNested.hubOpen || !afterEscNested.text.startsWith('Versione')) {
+    throw new Error(`Esc sul modale annidato: atteso Info aperto e focus su "Versione", trovato "${afterEscNested.text}" (Info aperto: ${afterEscNested.hubOpen})`);
+  }
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(400);
+  const afterEscOuter = await page.evaluate(() => (document.activeElement.textContent || '').trim().slice(0, 40));
+  if (afterEscOuter !== 'Info') {
+    throw new Error(`Secondo Esc: atteso focus su "Info", trovato "${afterEscOuter}"`);
+  }
+
   // due dialoghi in rapida successione: il primo non deve essere annullato
   await page.evaluate(() => {
     window.__saQueue = [];
@@ -299,7 +322,7 @@ async function checkDialogFocusAndQueue(page) {
   // restava sul dispositivo mentre l'alert dichiarava di averlo rimosso.
   const chiaviRimaste = await checkClearLocalData(page);
 
-  return { focusDopoAnnidata: afterNested.text, focusDopoEsterna: afterOuter, coda: resolved, chiaviRimaste };
+  return { focusDopoAnnidata: afterNested.text, focusDopoEsterna: afterOuter, focusDopoEscAnnidata: afterEscNested.text, focusDopoEscEsterna: afterEscOuter, coda: resolved, chiaviRimaste };
 }
 
 async function checkClearLocalData(page) {

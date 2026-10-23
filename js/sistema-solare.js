@@ -2296,6 +2296,8 @@
     }
   }
 
+  // shared.js non aggiorna il sito (service worker) durante viaggio o film.
+  SA.sistemaSolare = { inCorso: () => viaggio.attivo || film.attivo };
   document.addEventListener('sa:voices-change', aggiornaPulsantiAscolto);
   if (SA.motion || document.readyState === 'complete') parti();
   else document.addEventListener('DOMContentLoaded', parti, { once: true });
