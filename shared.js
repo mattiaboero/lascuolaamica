@@ -521,6 +521,14 @@
     }
   }
 
+  // Scorre solo il contenuto: la X resta ferma in alto anche a fine testo.
+  function modalScroll(...children) {
+    const scroll = document.createElement('div');
+    scroll.className = 'modal-scroll';
+    scroll.append(...children);
+    return scroll;
+  }
+
   function openModal(id) {
     const overlay = document.getElementById(id);
     if (!overlay) return;
@@ -612,9 +620,7 @@
     actions.appendChild(cancelBtn);
     body.appendChild(actions);
 
-    box.appendChild(closeBtn);
-    box.appendChild(title);
-    box.appendChild(body);
+    box.append(closeBtn, modalScroll(title, body));
     overlay.appendChild(box);
     document.body.appendChild(overlay);
   }
@@ -1110,9 +1116,7 @@
     body.className = 'modal-body';
     body.id = 'modalUpdatesBody';
 
-    box.appendChild(closeBtn);
-    box.appendChild(title);
-    box.appendChild(body);
+    box.append(closeBtn, modalScroll(title, body));
     overlay.appendChild(box);
 
     document.body.appendChild(overlay);
@@ -1188,9 +1192,7 @@
     body.appendChild(privacyTitle);
     body.appendChild(privacyText);
 
-    box.appendChild(closeBtn);
-    box.appendChild(title);
-    box.appendChild(body);
+    box.append(closeBtn, modalScroll(title, body));
     overlay.appendChild(box);
 
     document.body.appendChild(overlay);
@@ -1496,9 +1498,7 @@
     body.appendChild(paletteRow);
     body.appendChild(motionRow);
 
-    box.appendChild(closeBtn);
-    box.appendChild(title);
-    box.appendChild(body);
+    box.append(closeBtn, modalScroll(title, body));
     overlay.appendChild(box);
     document.body.appendChild(overlay);
 
