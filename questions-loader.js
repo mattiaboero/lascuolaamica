@@ -196,6 +196,15 @@
     const bonusOnly = toBool(options.bonusOnly, false);
     const includeBonusRows = bonusOnly || toBool(options.includeBonusRows, false);
     const sourcePath = options.path || DEFAULT_INDEX_PATH;
+    const classes = Array.isArray(options.classes) && options.classes.length ? options.classes : ALL_CLASSES;
+    const names = bonusOnly ? [] : classes.map((c) => `c${Number(c)}`);
+    if (includeBonusRows) names.push('bonus');
+    // I file per classe hanno il nome della materia: si chiedono subito, in
+    // parallelo a index.json, invece di aspettarlo (un giro di rete in meno,
+    // ~300 ms con il 4G lento). Se l'indice dice un altro percorso, valgono
+    // quelli dell'indice; un tentativo andato male non lascia tracce (load).
+    const guessed = resolveRelativePath(sourcePath, `${normalizeKey(subject)}.json`);
+    names.forEach((name) => { load(splitPath(guessed, name)).catch(() => {}); });
     const data = await load(sourcePath);
 
     let rows = [];
@@ -213,9 +222,6 @@
       : (subjectRef && typeof subjectRef.path === 'string' ? subjectRef.path : '');
     const subjectPath = resolveRelativePath(sourcePath, relPath);
     if (!subjectPath) return [];
-    const classes = Array.isArray(options.classes) && options.classes.length ? options.classes : ALL_CLASSES;
-    const names = bonusOnly ? [] : classes.map((c) => `c${Number(c)}`);
-    if (includeBonusRows) names.push('bonus');
     const parts = await Promise.all(names.map((name) => load(splitPath(subjectPath, name))));
     rows = parts.flatMap(extractRowsFromSubjectData);
 

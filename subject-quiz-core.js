@@ -373,17 +373,14 @@
   }
 
   let classDataReady = ensureClassData(selectedClass);
+  // Le bonus in parallelo alle classi, non dopo.
+  const bonusReady = loadsQuestions
+    ? hydrateBonusQuestionsFromSource(questionsLoader, typeof cfg.questionsSource === 'string'
+      ? { subject: cfg.questionsSource }
+      : cfg.questionsSource).catch((e) => debugWarn('QuestionsLoader.bonus', e))
+    : null;
   await classDataReady;
-  if (loadsQuestions) {
-    try {
-      const source = typeof cfg.questionsSource === 'string'
-        ? { subject: cfg.questionsSource }
-        : cfg.questionsSource;
-      await hydrateBonusQuestionsFromSource(questionsLoader, source);
-    } catch (e) {
-      debugWarn('QuestionsLoader.bonus', e);
-    }
-  }
+  await bonusReady;
   let questions = [];
   let curQ = 0;
   let points = 0;

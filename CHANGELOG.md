@@ -34,6 +34,12 @@ Misure prima e dopo (PageSpeed mobile, 3 giri per pagina; Playwright su
 - Pagine materia: CSS critico inline (`scripts/build_css_critico.js`,
   `npm run css:critico`, `check:css-critico` in verify), fogli completi con
   `media="print"` accesi da `js/lazy-css.js`, e in `<noscript>`.
+- `questions-loader.js` chiede i file per classe subito, in parallelo a
+  `json/index.json` (il percorso ha il nome della materia), e il motore chiede
+  le bonus in parallelo alle classi: senza il preload di `index.json` erano
+  due giri di rete in serie prima di «Inizia!».
+- Pagine materia: i preload dei font vengono prima del CSS critico; dietro 35
+  KB di stili inline partivano un giro dopo.
 - Tolti i preload di `rewards.css` (21 pagine; Cloudflare li trasformava in
   header Link) e di `/json/index.json` (9 pagine). `js/lazy-css.js` applica
   `rewards.css` dove c'è `js/rewards.js`.
