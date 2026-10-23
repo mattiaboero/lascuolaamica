@@ -86,6 +86,17 @@ jobs:
       - name: E2E CLS pagine materia (rete e CPU lente)
         run: npm run test:e2e:cls
 
+      # Dettaglio degli spostamenti (pagina, valore, sorgenti, istante) anche
+      # quando il test fallisce: serve a capire un CLS intermittente.
+      - name: Report del CLS
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cls-report
+          path: test-results/cls/
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: E2E aggiornamento silenzioso (niente modale, niente ricarica in partita)
         run: npm run test:e2e:sw
 

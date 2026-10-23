@@ -30,6 +30,14 @@ Nazionali senza data e linkava il PDF del DM 254/2012.
   i traguardi del DM 221/2025.
 - Nessun JSON-LD citava le Indicazioni Nazionali; le domande non cambiano.
 
+### Tests
+- `scripts/cls_smoke.js`: quando fallisce (anche se si interrompe) stampa
+  pagina, CLS totale e per ogni spostamento valore, istante e selettore dei
+  sorgenti con posizione prima e dopo; scrive tutto in
+  `test-results/cls/cls.json`, caricato in CI come artifact `cls-report`
+  (`actions/upload-artifact` v7.0.2 fissato per hash). Soglia invariata
+  (0,01). `test-results/` in `.gitignore`.
+
 ### Added
 - `scripts/temi_per_materia_classe.js` e
   `reports/indicazioni-2025/temi-per-materia-classe.csv`: ambiti, sottoaree
