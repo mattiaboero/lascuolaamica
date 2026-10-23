@@ -1,5 +1,46 @@
 # Changelog Repo
 
+## 4.24.0 - 2026-10-23
+
+**Home: prima le materie, nav principale, niente comparse.**
+
+A 375px Matematica arrivava a 2.371px su una home di 7.594px, dopo tre
+giochi e Tabelline. FAQ, Per insegnanti e Per genitori si raggiungevano solo
+dal pannello Info o dai link in fondo; non c'era un landmark `nav`.
+L'etichetta «Piattaforma Educativa» sembrava un pulsante. Header e prime
+schede partivano da opacità .35 e 0.
+
+### Changed
+- `index.html`: in testa all'header `<nav aria-label="Principale">` con Per
+  insegnanti, Per genitori e FAQ: subito dopo il link di salto nell'ordine di
+  Tab. La hero tiene solo l'etichetta, il titolo e un invito, «Scegli la
+  materia», che porta a `#materie`. Tolti dalla hero FAQ (ora nel nav), Premi
+  (resta il riquadro della bacheca), il sottotitolo e la riga dei vantaggi,
+  spostata nella sezione per genitori e insegnanti.
+- Ordine delle schede: le 8 materie, Tabelline, Sistema Solare, Spacca-Muri,
+  Bosco. Sotto i 768px due colonne con schede compatte (icona, nome, una riga
+  di descrizione in `.card-short`, su una fascia scura); sopra, la griglia di
+  prima con il nuovo ordine. Il JSON-LD aveva già questo ordine (ItemList
+  delle materie, `hasPart` dei giochi): invariato.
+- «Piattaforma Educativa» è un'etichetta di testo, senza fondo, bordo, ombra
+  o padding.
+- Nessuna animazione di comparsa: tolte `bounceIn` dall'header (anche nel CSS
+  critico in linea) e `cardIn` dalle schede; la mascotte entra solo con il
+  movimento, senza opacità.
+- Link a `/guida-compiti` dalla home e da `/tabelline`, con un testo che dice
+  cosa c'è nella pagina. `/per-insegnanti` lo aveva già.
+- Contrasto, misurato sui pixel veri dello sfondo: nella palette standard i
+  link del nav hanno una fascia scura (il bianco sul gradiente arrivava a
+  4,05:1); l'etichetta è testo grande (1,2rem in grassetto).
+
+### Tests
+- `scripts/home_smoke.js` (`npm run test:e2e:home`, nel job `smoke`), a
+  375x667, 768x1024 e 1440x900: le 8 materie entro i primi 1.500px (a
+  375x667), `nav[aria-label="Principale"]` primo landmark dopo l'header,
+  ordine di Tab skip → nav → invito, nessun elemento sopra la piega con
+  opacità sotto 1 già al DOMContentLoaded. Su `main` fallisce in tutti e tre
+  i formati.
+
 ## 4.23.1 - 2026-10-23
 
 **Quiz su smartphone: niente più barra fissa sopra le risposte.**

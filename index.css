@@ -84,15 +84,9 @@ body{
 }
 
 /* HEADER */
-header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(.36,.07,.19,.97);}
-/* Il 0% parte visibile di proposito: un elemento a opacity 0 non e' un
-   candidato LCP, quindi l'header che contiene il titolo faceva slittare la
-   metrica di tutta la durata dell'animazione (FCP 528 ms + 900 ms = 1428 ms,
-   contro i 1440 ms misurati da PageSpeed). Misurato in produzione: partendo da
-   scale(.85)/opacity .35 l'LCP scende a 444 ms, quanto si otterrebbe togliendo
-   del tutto l'animazione (440 ms), che invece resta identica per durata e
-   rimbalzo. */
-@keyframes bounceIn{0%{transform:scale(.85) rotate(-6deg);opacity:.35}60%{transform:scale(1.08) rotate(2deg);opacity:1}80%{transform:scale(.97)}100%{transform:scale(1);opacity:1}}
+/* Niente animazione di comparsa: sopra la piega tutto parte a opacita' 1
+   (prima l'header partiva da .35 con bounceIn, le prime schede da 0). */
+header{text-align:center;margin-bottom:48px;}
 
 /* ===== MASCOTTE HOMEPAGE ===== */
 .mascot-home{
@@ -140,7 +134,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   );
 }
 @keyframes mascotHomeIn{
-  0%{transform:translateY(24px) scale(.7);opacity:0}
+  0%{transform:translateY(24px) scale(.7)}
   60%{transform:translateY(-6px) scale(1.05);opacity:1}
   80%{transform:translateY(2px) scale(.98)}
   100%{transform:translateY(0) scale(1);opacity:1}
@@ -153,52 +147,10 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
 .mascot-home.idle{animation:mascotHomeIdle 3s ease-in-out infinite;}
 
 .badge{
-  display:inline-block;
-  background:white;border-radius:50px;
-  padding:6px 20px;
-  font-size:.85rem;font-weight:800;color:#7a3fc5;
-  box-shadow:0 3px 12px rgba(0,0,0,.12);
-  margin-bottom:12px;letter-spacing:1px;
+  display:block;
+  font-size:1.2rem;font-weight:800;color:#7a3fc5;
+  margin-bottom:8px;letter-spacing:1px;
 }
-.badge-row{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-.faq-mini-link{
-  min-height:44px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  background:#fff;
-  border-radius:50px;
-  padding:6px 14px;
-  font-size:.85rem;
-  font-weight:900;
-  color:var(--info-blue);
-  border:2px solid rgba(var(--info-blue-rgb) / .2);
-  box-shadow:0 3px 12px rgba(0,0,0,.12);
-  margin-bottom:12px;
-}
-.faq-mini-link:hover{transform:scale(1.02);}
-/* Geometria di .reward-link-pill (rewards.css, caricato lazy): qui bloccante per evitare CLS */
-.reward-link-pill{
-  min-height:44px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:12px;
-  border-width:2px;
-  border-style:solid;
-  padding:6px 14px;
-  font-size:.85rem;
-  font-weight:900;
-  line-height:normal;
-}
-
 .main-title{
   display:grid;
   grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
@@ -222,25 +174,6 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   justify-self:end;
   align-self:center;
 }
-.main-sub{
-  margin-top:0;
-  font-size:1.1rem;font-weight:700;
-  color:rgba(255,255,255,.85);
-  text-shadow:1px 1px 4px rgba(0,0,0,.2);
-}
-.main-facts{
-  margin-top:10px;
-  display:inline-block;
-  background:rgba(0,0,0,.18);
-  border:1px solid rgba(255,255,255,.3);
-  border-radius:999px;
-  padding:8px 14px;
-  font-size:.88rem;
-  font-weight:900;
-  color:rgba(255,255,255,.98);
-  line-height:1.35;
-}
-
 #contenuto-principale{
   width:100%;
   display:flex;
@@ -273,7 +206,6 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   .main-title-text{
     max-width:100%;
   }
-  .cards-row{grid-template-columns:1fr;max-width:420px;}
 }
 
 .subject-card{
@@ -290,13 +222,7 @@ header{text-align:center;margin-bottom:48px;animation:bounceIn .9s cubic-bezier(
   align-items:center;
   height:100%;
   min-height:440px;
-  animation:cardIn .6s cubic-bezier(.36,.07,.19,.97) both;
 }
-.subject-card:nth-child(1){animation-delay:.1s;}
-.subject-card:nth-child(2){animation-delay:.25s;}
-.subject-card:nth-child(3){animation-delay:.4s;}
-.subject-card:nth-child(4){animation-delay:.55s;}
-@keyframes cardIn{from{transform:translateY(60px) scale(.9);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
 .subject-card:hover{transform:scale(1.03);}
 .subject-card:active{transform:scale(.97);}
 
@@ -574,7 +500,6 @@ footer{
 @media (hover:none){
   .subject-card:hover{transform:none;}
   .card-btn:hover{transform:none;}
-  .faq-mini-link:hover{transform:none;}
 }
 /* =========================================================================
    FASE 1 — Restyle Wada Sanzo. SOLO modalita standard, SOLO home.
@@ -750,4 +675,69 @@ html:not([data-palette="okabe-ito"]) .modal-body a{color:var(--subj-math-a);}
   .wrapper {
     padding-bottom: 32px;
   }
+}
+
+/* ---- Nav principale e invito della hero (fase 4) ----
+   Base per la palette Okabe-Ito (hero chiara, testo scuro); nella standard la
+   hero e' un pannello verde-azzurro e i colori passano al bianco. */
+.home-nav ul{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:4px 16px;
+  margin:0 0 10px;
+  padding:0;
+  list-style:none;
+}
+.home-nav a{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  padding:6px 8px;
+  font-size:.95rem;
+  font-weight:900;
+  color:var(--text-main);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.hero-cta{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:16px;
+  padding:12px 30px;
+  border-radius:50px;
+  background:#0072B2;
+  color:#fff;
+  font-family:'Fredoka One','Fredoka One Fallback',cursive;
+  font-size:1.3rem;
+  text-decoration:none;
+  box-shadow:0 4px 0 rgba(0,0,0,.15);
+}
+.hero-cta:hover{transform:scale(1.03);}
+.card-short{display:none;}
+/* Sul pannello verde-azzurro il bianco nel punto piu' chiaro del gradiente
+   arriva a 4,05:1: i link hanno una fascia scura dietro, l'etichetta e' testo
+   grande (1,2rem in grassetto, soglia 3:1) senza fondo ne' ombra da pulsante. */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .home-nav a{color:#fff;background:rgba(0,0,0,.2);border-radius:999px;padding:6px 14px;}
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .badge{color:#fff;}
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .hero-cta{background:#fff;color:var(--subj-math-a);}
+
+/* Telefono (sotto i 768px): prima le materie, in due colonne, schede compatte
+   con icona, nome e una riga di descrizione. Sopra i 768px resta la griglia
+   di prima, con lo stesso ordine. */
+@media (max-width:767px){
+  .wrapper{padding-top:20px;}
+  header{margin-bottom:20px;}
+  .cards-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px;}
+  .subject-card{min-height:0;padding:16px 10px 14px;border-radius:20px;}
+  .subject-card::before,.subject-card::after{display:none;}
+  .card-icon{font-size:2.2rem;margin-bottom:6px;}
+  .card-title{font-size:1.15rem;min-height:0;margin-bottom:4px;}
+  .card-desc,.card-tags,.card-btn{display:none;}
+  /* Fascia scura come le .tag delle schede grandi: sui gradienti chiari della
+     palette Okabe-Ito il bianco da solo scendeva fino a 2,9:1. */
+  .card-short{display:block;padding:3px 10px;border-radius:999px;background:rgba(0,0,0,.3);font-size:.85rem;font-weight:800;line-height:1.3;color:#fff;}
+  .card-spazio .card-short{background:rgba(0,0,0,.55);}
 }
