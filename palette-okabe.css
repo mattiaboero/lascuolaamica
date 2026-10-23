@@ -137,8 +137,10 @@ html[data-palette="okabe-ito"] .level-card:nth-child(3) {
   color: #5a3550;
 }
 
+/* Contrasto (4.24.1, misurato sui pixel): il bianco sul verde #009E73 del
+   gradiente arrivava a 3,7:1. Si chiude sul verde scuro #007A59. */
 html[data-palette="okabe-ito"] .start-btn {
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent-1), #007A59);
   box-shadow: 0 7px 0 #00588a, 0 12px 18px rgba(0, 0, 0, 0.18);
 }
 
@@ -170,14 +172,16 @@ html[data-palette="okabe-ito"] .dot.ko {
   border-color: #A24700;
 }
 
+/* Risposte: il bianco scendeva a 2,5:1 sul celeste #56B4E9, 3,3:1 sul verde
+   #009E73 e 3:1 sul rosa #CC79A7. Stesse tinte, piu' scure, sopra 4,5:1. */
 html[data-palette="okabe-ito"] .answer-btn:nth-child(1) {
-  background: linear-gradient(135deg, #0072B2, #56B4E9);
+  background: linear-gradient(135deg, #00588a, #0072B2);
   box-shadow: 0 6px 0 #00588a;
   color: #ffffff;
 }
 
 html[data-palette="okabe-ito"] .answer-btn:nth-child(2) {
-  background: linear-gradient(135deg, #007A59, #009E73);
+  background: linear-gradient(135deg, #005b43, #007A59);
   box-shadow: 0 6px 0 #005b43;
   color: #ffffff;
 }
@@ -189,7 +193,7 @@ html[data-palette="okabe-ito"] .answer-btn:nth-child(3) {
 }
 
 html[data-palette="okabe-ito"] .answer-btn:nth-child(4) {
-  background: linear-gradient(135deg, #CC79A7, #D55E00);
+  background: linear-gradient(135deg, #8f5375, #A24700);
   box-shadow: 0 6px 0 #8f5375;
   color: #ffffff;
 }
@@ -253,8 +257,20 @@ html[data-palette="okabe-ito"] .breadcrumbs {
   text-shadow: none;
 }
 
+/* Sul fondo lilla di /matematica anche #00588a restava a 3,7:1. */
 html[data-palette="okabe-ito"] .breadcrumbs a {
-  color: var(--accent-1);
+  color: #00446b;
+}
+
+/* Le emoji che scorrono sullo sfondo (.shape, opacita' 0,2) passando dietro
+   briciole ed etichette le portavano a 2,5:1. Piu' leggere qui, e testi blu
+   piu' scuri (#00588a, il blu delle ombre di questa palette). */
+html[data-palette="okabe-ito"] .shape {
+  opacity: 0.08;
+}
+
+html[data-palette="okabe-ito"] .section-label {
+  color: #00588a;
 }
 
 html[data-palette="okabe-ito"] .breadcrumbs [aria-current="page"] {
@@ -273,4 +289,17 @@ html[data-palette="okabe-ito"] body.page-supporta .breadcrumbs a,
 html[data-palette="okabe-ito"] body.page-accessibilita .breadcrumbs [aria-current="page"],
 html[data-palette="okabe-ito"] body.page-supporta .breadcrumbs [aria-current="page"] {
   color: #fff;
+}
+
+/* Home, schede grandi: descrizione ed etichette in bianco sui gradienti
+   chiari scendevano a 2,96:1 (Matematica) e 4,07:1. Fascia scura dietro la
+   descrizione, come per la riga corta sotto i 768px; etichette piu' scure. */
+html[data-palette="okabe-ito"] .card-desc {
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html[data-palette="okabe-ito"] .tag {
+  background: rgba(0, 0, 0, 0.32);
 }

@@ -64,6 +64,9 @@ jobs:
       - name: E2E home (materie in cima, nav, nessuna comparsa)
         run: npm run test:e2e:home
 
+      - name: E2E CLS pagine materia (rete e CPU lente)
+        run: npm run test:e2e:cls
+
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1
 
