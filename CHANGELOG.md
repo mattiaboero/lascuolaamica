@@ -1,5 +1,30 @@
 # Changelog Repo
 
+## 4.22.21 - 2026-10-23
+
+**Lightbox: la X di chiusura resta ferma quando scorri il contenuto.**
+
+`.modal-box` era il contenitore che scorreva e `.modal-close` era
+`position: absolute` al suo interno, quindi scorreva via con il testo. Con la
+tastiera restava ESC; su telefono e tablet solo il tocco sullo sfondo.
+
+### Fixed
+- `shared.js`: in `#modalUpdates`, `#modalProject`, `#modalInfoHub` e
+  `#modalPromptShared` titolo e corpo stanno in un nuovo `div.modal-scroll`
+  (helper `modalScroll`); `.modal-close` resta primo figlio di `.modal-box`,
+  quindi focus e ordine di Tab non cambiano. Il contenitore non si chiama
+  `.modal-body` perché quella classe c'era già: è il corpo testo, usato anche
+  fuori dai modali in `/privacy` e `/cookie`.
+- `index.css`, `info-pages.css`, `subject-quiz-theme.css`: `.modal-box` con
+  `overflow: hidden`, flex in colonna e `padding: 0`; lo scroll passa a
+  `.modal-scroll` (`overflow-y: auto`, `min-height: 0`, `padding: 28px 24px`,
+  `overscroll-behavior: contain`). `.modal-close` con `z-index: 2`.
+- Provato su home, `/matematica` e `/privacy` a 1280×800, 375×812 e 640×400
+  (zoom 200%), palette standard e Okabe-Ito: X nella stessa posizione prima e
+  dopo lo scroll fino in fondo e cliccabile, nessuno scroll su `.modal-box`,
+  barra dentro gli angoli arrotondati, titoli mai sotto la X, ESC e tocco sullo
+  sfondo chiudono, pagina sotto bloccata.
+
 ## 4.22.20 - 2026-10-23
 
 **Spazio fra i riquadri delle pagine e canale YouTube @lascuolaamica.**
