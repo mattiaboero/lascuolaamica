@@ -8,6 +8,11 @@
   // ormai aria-hidden e il browser lo scaricava su <body>: chi naviga da
   // tastiera o con screen reader tornava in cima al documento.
   const focusReturn = new Map();
+  // Modali aperti, dal piu' vecchio al piu' recente: Esc chiude solo l'ultimo.
+  const modalStack = [];
+  // Modale aperto da dentro un altro (Info -> Versione): chiudendolo si torna
+  // nel primo, sul pulsante che l'aveva aperto.
+  const nestedParent = new Map();
   let promptFinalize = null;
   const promptQueue = [];
   const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
@@ -556,6 +561,9 @@
     if (!overlay) return;
 
     focusReturn.set(id, document.activeElement);
+    const at = modalStack.indexOf(id);
+    if (at !== -1) modalStack.splice(at, 1);
+    modalStack.push(id);
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     if (window.SADom && typeof window.SADom.lockScroll === 'function') {
@@ -570,9 +578,27 @@
     trapFocus(overlay);
   }
 
-  function closeModal(id) {
+  // Il focus torna all'elemento che aveva aperto il modale. Se non c'e' piu'
+  // (o e' nascosto), va al titolo principale della pagina, non a <body>: il
+  // Tab successivo ripartirebbe da inizio pagina.
+  function restoreFocus(el) {
+    const usable = el && el.isConnected && typeof el.focus === 'function'
+      && el.getClientRects().length > 0 && !el.closest('[aria-hidden="true"], [hidden], .modal-overlay:not(.open)');
+    if (usable) {
+      el.focus();
+      return;
+    }
+    const heading = document.querySelector('main h1, h1');
+    if (!heading) return;
+    if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+    heading.focus();
+  }
+
+  function closeModal(id, options) {
     const overlay = document.getElementById(id);
     if (!overlay) return;
+    const at = modalStack.indexOf(id);
+    if (at !== -1) modalStack.splice(at, 1);
 
     releaseFocus(overlay);
     overlay.classList.remove('open');
@@ -588,7 +614,15 @@
 
     const back = focusReturn.get(id);
     focusReturn.delete(id);
-    if (back && typeof back.focus === 'function') back.focus();
+    const parent = nestedParent.get(id);
+    nestedParent.delete(id);
+    if (parent) {
+      openModal(parent.fromId, parent.opener);
+      focusReturn.set(parent.fromId, parent.back);
+      return;
+    }
+    if (options && options.restoreFocus === false) return;
+    restoreFocus(back);
   }
 
   function ensurePromptModal() {
@@ -815,7 +849,9 @@
     if (!SA_FLAGS.sharedEscHandlerBound) {
       document.addEventListener('keydown', (e) => {
         if (e.key !== 'Escape') return;
-        document.querySelectorAll('.modal-overlay.open').forEach((modal) => closeModal(modal.id));
+        const top = modalStack[modalStack.length - 1];
+        if (top) closeModal(top);
+        else document.querySelectorAll('.modal-overlay.open').forEach((modal) => closeModal(modal.id));
       });
       SA_FLAGS.sharedEscHandlerBound = true;
     }
@@ -839,52 +875,97 @@
     }
   }
 
+  // Una partita in corso: il sito non si ricarica mai mentre si gioca. Quiz
+  // (domande, scelta e domanda bonus), Bosco (dentro la radura), Spacca-Muri
+  // (pallina in gioco), Sistema Solare (viaggio guidato o film).
+  function isPlaying() {
+    const screen = document.documentElement.dataset.screen;
+    if (['screenGame', 'screenBonusPick', 'screenBonusQuestion'].includes(screen)) return true;
+    try {
+      if (SA.bosco && SA.bosco.state && SA.bosco.state.inGioco && SA.bosco.state.mode !== 'complete') return true;
+      if (SA.breakout && SA.breakout.state && SA.breakout.state.running) return true;
+      if (SA.sistemaSolare && typeof SA.sistemaSolare.inCorso === 'function' && SA.sistemaSolare.inCorso()) return true;
+    } catch (e) {
+      debugWarn('isPlaying', e);
+    }
+    return false;
+  }
+
+  // Aggiornamento silenzioso, senza modale (prima "Nuova versione disponibile"
+  // si riapriva a ogni pagina finche' non si accettava, e intercettava i
+  // clic). Con un worker in attesa la versione nuova si attiva:
+  // - al clic su un link interno: skipWaiting, si aspetta il controllerchange
+  //   (al massimo 3 s) e solo poi si naviga, cosi' la pagina dopo e' gia' nuova;
+  // - quando la scheda torna visibile e non c'e' una partita in corso:
+  //   skipWaiting e ricaricamento.
+  // Mai un ricaricamento durante una partita.
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
 
     window.addEventListener(
       'load',
       async () => {
-        let refreshing = false;
-        let shouldRefresh = false;
+        let waiting = null;
+        let reloadOnChange = false;
+        let changed = false;
 
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (!shouldRefresh || refreshing) return;
-          refreshing = true;
-          window.location.reload();
+          changed = true;
+          waiting = null;
+          if (reloadOnChange && !isPlaying()) window.location.reload();
         });
 
-        const askToUpdate = async (worker) => {
-          if (!worker || !navigator.serviceWorker.controller) return;
-          let shouldUpdate = false;
-          if (SA.ui && typeof SA.ui.confirm === 'function') {
-            shouldUpdate = await SA.ui.confirm('È disponibile una nuova versione. Vuoi aggiornare ora?', {
-              title: 'Nuova versione disponibile',
-              confirmLabel: 'Aggiorna ora',
-              cancelLabel: 'Più tardi'
-            });
-          } else {
-            shouldUpdate = confirm('È disponibile una nuova versione. Aggiornare ora?');
-          }
-          if (shouldUpdate) {
-            shouldRefresh = true;
-            worker.postMessage('skipWaiting');
-          }
+        const activate = () => {
+          if (!waiting || !navigator.serviceWorker.controller) return false;
+          waiting.postMessage('skipWaiting');
+          return true;
         };
+
+        const onWaiting = (worker) => {
+          if (!worker || !navigator.serviceWorker.controller) return;
+          waiting = worker;
+        };
+
+        document.addEventListener('click', (event) => {
+          if (!waiting || event.defaultPrevented || event.button !== 0) return;
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          const link = event.target.closest && event.target.closest('a[href]');
+          if (!link || (link.target && link.target !== '_self') || link.hasAttribute('download')) return;
+          const url = new URL(link.href, window.location.href);
+          if (url.origin !== window.location.origin) return;
+          if (url.pathname === window.location.pathname && url.search === window.location.search) return;
+          if (!activate()) return;
+          event.preventDefault();
+          const go = () => window.location.assign(url.href);
+          if (changed) {
+            go();
+            return;
+          }
+          const timer = window.setTimeout(go, 3000);
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
+            window.clearTimeout(timer);
+            go();
+          }, { once: true });
+        });
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState !== 'visible' || !waiting || isPlaying()) return;
+          reloadOnChange = activate();
+        });
 
         try {
           const reg = await navigator.serviceWorker.register(trustedScriptUrl('/sw.js'), {
             updateViaCache: 'none'
           });
 
-          if (reg.waiting) askToUpdate(reg.waiting);
+          if (reg.waiting) onWaiting(reg.waiting);
 
           reg.addEventListener('updatefound', () => {
             const newWorker = reg.installing;
             if (!newWorker) return;
 
             newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed') askToUpdate(newWorker);
+              if (newWorker.state === 'installed') onWaiting(newWorker);
             });
           });
         } catch (err) {
@@ -1116,8 +1197,11 @@
 
   function openNestedModal(fromId, toId) {
     if (!toId) return;
-    closeModal(fromId);
+    const opener = document.activeElement;
+    const back = focusReturn.get(fromId);
+    closeModal(fromId, { restoreFocus: false });
     openModal(toId);
+    nestedParent.set(toId, { fromId, opener, back });
   }
 
   function ensureInfoHubModal(ids) {

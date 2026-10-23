@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.24.1",
+  "version": "4.24.2",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -37,6 +37,8 @@
     "test:e2e:viewport": "node scripts/quiz_viewport_smoke.js",
     "test:e2e:home": "node scripts/home_smoke.js",
     "test:e2e:cls": "node scripts/cls_smoke.js",
+    "test:e2e:sw": "node scripts/sw_update_smoke.js",
+    "test:e2e:focus": "node scripts/modal_focus_smoke.js",
     "test:e2e:classe1": "node scripts/subject_quiz_test_harness.js --page matematica --class 1 --mode perfect --bonus easy",
     "test:e2e:install": "playwright install --with-deps chromium",
     "check:math": "node scripts/check_math_explanations.js",
