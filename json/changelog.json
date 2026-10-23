@@ -1,14 +1,14 @@
 [
  {
-  "date": "23 ottobre 2026 · Release 4.22.20 – 4.24.2",
+  "date": "23 ottobre 2026 · Release 4.22.20 – 4.24.3",
   "items": [
    "Più ordine nelle pagine: fra un riquadro e l’altro c’è sempre lo stesso spazio, e nelle finestre come «Ultimi aggiornamenti» la X per chiudere resta in alto anche quando scorri. Il canale YouTube ora si chiama La Scuola Amica: youtube.com/@lascuolaamica.",
    "Privacy Policy e Cookie Policy più complete: per ogni dato trovi a cosa serve, per quanto resta e come chiederne la cancellazione. Il sito non raccoglie più donazioni. Il pulsante Ascolta usa solo le voci installate sul dispositivo: il testo letto non esce mai dal telefono, dal tablet o dal computer.",
    "Il timer di gioco ora è facoltativo e parte spento: «Inizia!» avvia subito la partita. Chi vuole un limite lo accende dal pannello Info, alla voce «Tempo di gioco (per i genitori)»: si gioca al massimo 30 minuti, poi si aspetta un’ora.",
-   "Quiz sul telefono: la barra in fondo non copre più le risposte, perché ora sta in fondo alla pagina. Dopo «Inizia!» la domanda arriva da sola sullo schermo, e durante la partita i pulsanti in alto stanno su una riga. Info resta a un tocco, con il pulsante ℹ️ in alto.",
-   "Nuova pagina iniziale: sul telefono le otto materie compaiono subito, due per riga, poi le tabelline e i giochi. In alto ci sono i collegamenti Per insegnanti, Per genitori e FAQ, e un solo pulsante: «Scegli la materia».",
+   "Sul telefono la pagina iniziale mostra subito le otto materie, due per riga, con in alto Per insegnanti, Per genitori e FAQ. Nei quiz la barra in fondo non copre più le risposte e dopo «Inizia!» la domanda arriva da sola sullo schermo.",
    "Palette accessibile più leggibile: risposte, pulsante «Inizia!», etichette e descrizioni delle schede ora hanno sempre il contrasto giusto. Nelle pagine delle materie i pulsanti non si spostano più mentre la pagina finisce di caricarsi.",
-   "Niente più finestra «Nuova versione disponibile»: il sito si aggiorna da solo quando cambi pagina o torni sulla scheda, mai durante una partita. Chiudendo una finestra con Esc si torna al pulsante da cui era partita."
+   "Niente più finestra «Nuova versione disponibile»: il sito si aggiorna da solo quando cambi pagina o torni sulla scheda, mai durante una partita. Chiudendo una finestra con Esc si torna al pulsante da cui era partita.",
+   "Indicazioni Nazionali: le domande sono costruite su quelle del 2012. Le nuove Indicazioni del 2025 valgono dall’anno scolastico 2026/27: la revisione è in corso e nella pagina Per insegnanti trovi a che punto siamo."
   ]
  },
  {

@@ -1,5 +1,50 @@
 # Changelog Repo
 
+## 4.24.3 - 2026-10-23
+
+**Nuove Indicazioni Nazionali (DM 221/2025): riferimenti aggiornati, con
+onestà sull'allineamento.**
+
+Il DM 9 dicembre 2025, n. 221 (Gazzetta Ufficiale n. 21 del 27 gennaio 2026,
+in vigore dall'11 febbraio 2026, applicato dall'a.s. 2026/27 con avvio
+graduale) ha sostituito le Indicazioni Nazionali del 2012 (D.M. 254/2012).
+Il sito dichiarava le materie «in linea» o «allineate» alle Indicazioni
+Nazionali senza data e linkava il PDF del DM 254/2012.
+
+### Changed
+- 8 pagine materia: «in linea con le Indicazioni Nazionali» diventa «Le
+  domande sono costruite sulle Indicazioni Nazionali del 2012; la revisione
+  sulle nuove Indicazioni (DM 221/2025) è in corso», con il link al testo su
+  Normattiva (`/eli/id/2026/01/27//26G00021/CONSOLIDATED`, verificato: HTTP
+  200, «DECRETO 9 dicembre 2025, n. 221»).
+- `ai-info.html`: tolto il link al PDF del DM 254/2012; date e stato della
+  revisione, link a Normattiva e alla nuova sezione di `/per-insegnanti`.
+- `per-insegnanti.html`: «Otto materie allineate» diventa «costruite sulle
+  Indicazioni Nazionali del 2012»; nuova sezione «Indicazioni Nazionali
+  2025» (`#indicazioni-2025`): cosa è cambiato, nessuna materia e nessuna
+  classe ancora confrontata, come segnalare differenze a supporto@.
+- `shared.js` («Il Progetto»): non dice più «allineati al programma
+  ministeriale».
+- `llms.txt`, `README.md`, `CONTRIBUTING.md`, wiki `Home.md` e
+  `Contenuti-e-Domande.md`: stessa formulazione; per le domande nuove valgono
+  i traguardi del DM 221/2025.
+- Nessun JSON-LD citava le Indicazioni Nazionali; le domande non cambiano.
+
+### Tests
+- `scripts/cls_smoke.js`: quando fallisce (anche se si interrompe) stampa
+  pagina, CLS totale e per ogni spostamento valore, istante e selettore dei
+  sorgenti con posizione prima e dopo; scrive tutto in
+  `test-results/cls/cls.json`, caricato in CI come artifact `cls-report`
+  (`actions/upload-artifact` v7.0.2 fissato per hash). Soglia invariata
+  (0,01). `test-results/` in `.gitignore`.
+
+### Added
+- `scripts/temi_per_materia_classe.js` e
+  `reports/indicazioni-2025/temi-per-materia-classe.csv`: ambiti, sottoaree
+  e domande attive (bonus escluse) per materia e classe, 692 righe, 33
+  combinazioni materia-classe, 9.800 domande. Base per il confronto con i
+  nuovi traguardi.
+
 ## 4.24.2 - 2026-10-23
 
 **Aggiornamenti silenziosi e focus alla chiusura dei modali.**

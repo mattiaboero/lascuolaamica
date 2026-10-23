@@ -82,7 +82,7 @@ Per dettagli architetturali: [docs/wiki/Architettura.md](docs/wiki/Architettura.
 - Linguaggio semplice, inclusivo, adatto all'età.
 - Una sola risposta corretta, univoca — se ci sono casi limite, riformula.
 - Distrattori plausibili ma chiaramente sbagliati. Evita trappole troppo sottili.
-- Coerenza con le Indicazioni Nazionali per il curricolo della scuola primaria.
+- Coerenza con le Indicazioni Nazionali per il curricolo della scuola primaria: per le domande nuove i traguardi del DM 221/2025 (https://www.normattiva.it/eli/id/2026/01/27//26G00021/CONSOLIDATED), in vigore dall’a.s. 2026/27; le domande esistenti sono costruite su quelle del 2012.
 - Attenzione a: accenti (`è`, `perché`, `qual è`, `cos'è`), apostrofi (`l'`, `dell'`), niente refusi.
 - Niente stereotipi di genere o linguaggio escludente.
 
