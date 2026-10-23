@@ -1,12 +1,13 @@
 {
   "name": "lascuolaamica",
-  "version": "4.22.21",
+  "version": "4.22.22",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
     "audit:json": "node scripts/audit_questions_json.js",
     "check:sw-precache": "node scripts/check_sw_precache.js",
     "check:storage-helpers": "node scripts/check_storage_helpers.js",
+    "check:speech": "node scripts/check_speech_local.js",
     "check:grammar-rules": "node scripts/check_grammar_rules.js",
     "check:update-log": "node scripts/check_update_log.js",
     "audit:csp": "python3 scripts/sync_csp_hashes.py --check",
@@ -30,6 +31,7 @@
     "test:e2e:dialogs": "bash scripts/run_e2e.sh dialogs",
     "test:e2e:subareas": "bash scripts/run_e2e.sh subareas",
     "test:e2e:tabelline": "node scripts/tabelline_smoke.js",
+    "test:e2e:voci": "node scripts/voci_locali_smoke.js",
     "test:e2e:classe1": "node scripts/subject_quiz_test_harness.js --page matematica --class 1 --mode perfect --bonus easy",
     "test:e2e:install": "playwright install --with-deps chromium",
     "check:math": "node scripts/check_math_explanations.js",

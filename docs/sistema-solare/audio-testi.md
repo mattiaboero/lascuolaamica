@@ -1,9 +1,9 @@
 # Audio del Sistema Solare in 3D (testi per ElevenLabs)
 
-22 audio: il Sole, i pianeti, la Luna, la Stazione Spaziale, le due fasce e i capitoli del film delle Voyager (file film-...). Gli altri corpi usano la voce del browser.
+22 audio: il Sole, i pianeti, la Luna, la Stazione Spaziale, le due fasce e i capitoli del film delle Voyager (file film-...). Gli altri corpi usano una voce installata sul dispositivo, se c'è (mai voci in rete); senza, il pulsante Ascolta non compare.
 Per ognuno: copia il blocco in ElevenLabs (modello Eleven v3, voce italiana),
 scarica l'mp3 e salvalo con il nome indicato in `assets/sistema-solare/audio/`.
-Poi lancia `python3 scripts/build_sistema_solare.py`: la pagina userà i file al posto della voce del browser.
+Poi lancia `python3 scripts/build_sistema_solare.py`: la pagina userà i file al posto della sintesi vocale.
 
 - I tag fra parentesi quadre (`[excited]`, `[curious]`) sono indicazioni di espressione di Eleven v3:
   si possono cambiare o togliere. Non vengono letti.

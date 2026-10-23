@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Cookie Policy | La Scuola Amica</title>
-<meta name="description" content="Cookie Policy di La Scuola Amica: nessun cookie di profilazione, uso di localStorage e istruzioni per cancellare i dati locali.">
+<meta name="description" content="Cookie Policy di La Scuola Amica: nessun cookie di profilazione, elenco completo delle voci di localStorage e istruzioni per cancellare i dati locali.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://lascuolaamica.it/cookie">
 <meta property="og:url" content="https://lascuolaamica.it/cookie">
@@ -45,7 +45,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-05-23",
-  "dateModified": "2026-09-30"
+  "dateModified": "2026-10-23"
 }
 </script>
 <script type="application/ld+json">
@@ -101,11 +101,53 @@
         <p>Il sito non usa cookie di profilazione, di tracciamento o pubblicitari, e non installa cookie di terze parti. Per questo non è previsto alcun banner cookie.</p>
         <h2>Memoria locale (localStorage)</h2>
         <p>Per salvare punteggi e progressi il sito usa <strong>localStorage</strong>, una memoria tecnica del browser che resta sul dispositivo e non invia dati a server esterni. Essendo strettamente necessaria a fornire il servizio richiesto dall'utente (salvare i progressi di gioco), non richiede consenso.</p>
+        <p>Qui sotto trovi tutte le voci che il sito può scrivere, raggruppate per funzione. Nessuna contiene nome, email o altri dati che identificano chi gioca.</p>
+        <h3>Progressi dei quiz</h3>
+        <p>Ogni materia ha un nome base, il «cursore»: <code>matematica_programma_cursor_v3</code>, <code>problemiMatematica_cursor_v1</code>, <code>italiano_cursor_v3</code>, <code>englishAdventure_cursor_v1</code> (inglese), <code>educazioneCivica_cursor_v1</code>, <code>storia_cursor_v3</code>, <code>geografia_cursor_v3</code>, <code>scienze_cursor_v3</code>. Per ogni materia il sito salva:</p>
+        <ul class="list">
+          <li><code>&lt;cursore&gt;</code>: il punto del giro di domande e il livello scelto;</li>
+          <li><code>&lt;cursore&gt;_history_v2</code> e <code>&lt;cursore&gt;_history_sig_v1</code>: le domande già viste, per non ripeterle subito. Per problemi, inglese e civica la prima si chiama <code>problemiMatematica_history_v2</code>, <code>englishAdventure_history_v2</code> e <code>educazioneCivica_history_v2</code>;</li>
+          <li><code>&lt;cursore&gt;_adapt_v1</code>: la difficoltà adatta a chi gioca;</li>
+          <li><code>&lt;cursore&gt;_wrong_q_v1</code>: le domande sbagliate, per «Ripassa i tuoi errori»;</li>
+          <li><code>&lt;cursore&gt;_stats_v1</code> e <code>&lt;cursore&gt;_quality_v1</code>: le statistiche del pannello Progressi. Per problemi, inglese e civica la seconda si chiama <code>problemiMatematica_quality_v1</code>, <code>englishAdventure_quality_v1</code> e <code>educazioneCivica_quality_v1</code>.</li>
+        </ul>
+        <p>Nel Bosco delle Lettere: <code>lascuolaamica_bosco_abilita_v1</code>, le famiglie di parole che vanno ripassate più spesso.</p>
+        <h3>Classifica locale</h3>
+        <ul class="list">
+          <li><code>matematica_programma_lb_v3</code>, <code>problemiMatematica_lb_v1</code>, <code>italiano_lb_v3</code>, <code>englishAdventure_lb_v2</code>, <code>educazioneCivica_lb_v1</code>, <code>storia_lb_v3</code>, <code>geografia_lb_v3</code>, <code>scienze_lb_v3</code>: i 15 migliori punteggi di ogni materia, con classe, argomento e data. Restano solo su questo dispositivo;</li>
+          <li><code>lascuolaamica_breakout_highscore_v1</code>: il record di Spacca-Muri.</li>
+        </ul>
+        <h3>Premi</h3>
+        <ul class="list">
+          <li><code>lascuolaamica_rewards_v1</code>: badge, coccarde, coppe e trofei della bacheca premi.</li>
+        </ul>
+        <h3>Timer di gioco</h3>
+        <ul class="list">
+          <li><code>scuolaAmica_play_window_v1</code>: inizio e fine del tempo di gioco e della pausa.</li>
+        </ul>
+        <h3>Preferenze</h3>
+        <ul class="list">
+          <li><code>scuolaAmica_palette_v2</code>: la palette dei colori (standard o accessibile Okabe-Ito);</li>
+          <li><code>scuolaAmica_motion_v1</code>: le animazioni ridotte;</li>
+          <li><code>lascuolaamica_quiz_muted_v1</code>, <code>lascuolaamica_breakout_muted_v1</code>, <code>lascuolaamica_bosco_muted_v1</code>: l'audio spento nei quiz, in Spacca-Muri e nel Bosco;</li>
+          <li><code>&lt;cursore&gt;_speak_c&lt;classe&gt;_v1</code>: la lettura ad alta voce accesa, per materia e classe;</li>
+          <li><code>&lt;cursore&gt;_class_pref_v1</code>: l'ultima classe scelta in una materia. Per problemi, inglese e civica si chiama <code>problemiMatematica_class_pref_v1</code>, <code>englishAdventure_class_pref_v1</code> e <code>educazioneCivica_class_pref_v1</code>;</li>
+          <li><code>lascuolaamica_breakout_class_v1</code>, <code>lascuolaamica_bosco_classe_v1</code>, <code>lascuolaamica_bosco_modalita_v1</code>: classe e modo di gioco scelti in Spacca-Muri e nel Bosco.</li>
+        </ul>
+        <h3>Sistema Solare</h3>
+        <ul class="list">
+          <li><code>lascuolaamica_sistema_solare_passaporto_v1</code>: i corpi celesti già visitati;</li>
+          <li><code>lascuolaamica_sistema_solare_missioni_v1</code>: le missioni completate;</li>
+          <li><code>lascuolaamica_sistema_solare_missione_chiusa_v1</code>, <code>lascuolaamica_sistema_solare_cartellino_ridotto_v1</code>: pannello delle missioni e cartellino chiusi o ridotti;</li>
+          <li><code>lascuolaamica_sistema_solare_benvenuto_v1</code>: il messaggio di benvenuto già visto.</li>
+        </ul>
+        <h2>Copia offline del sito</h2>
+        <p>Per funzionare senza connessione, il sito salva una copia delle sue pagine e dei suoi file nella cache del browser (Cache Storage). Contiene solo file del sito, nessun dato su chi gioca.</p>
         <h2>Dati tecnici del provider</h2>
-        <p>Il sito è distribuito tramite Cloudflare, che può trattare dati tecnici come l'indirizzo IP nei log del server per sicurezza ed erogazione del servizio. Maggiori dettagli nella <a href="/privacy">Privacy Policy</a>.</p>
+        <p>Il sito è distribuito tramite Cloudflare, che può trattare dati tecnici come l'indirizzo IP nei log del server per sicurezza ed erogazione del servizio. Se Cloudflare mostra una verifica anti-bot, può impostare il cookie tecnico <code>cf_clearance</code>, che ricorda che la verifica è stata superata. È un cookie tecnico di sicurezza, non serve a tracciare. Maggiori dettagli nella <a href="/privacy">Privacy Policy</a>.</p>
         <h2>Come cancellare i dati</h2>
         <p>Puoi usare il pulsante "Cancella dati locali" dal pannello Info oppure eliminare i dati di navigazione dal browser per rimuovere i progressi salvati.</p>
-        <p class="updated-note"><em>Ultimo aggiornamento: 6 luglio 2026.</em></p>
+        <p class="updated-note"><em>Ultimo aggiornamento: 23 ottobre 2026.</em></p>
       </div>
     </section>
   </main>

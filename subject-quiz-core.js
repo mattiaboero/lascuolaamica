@@ -2888,11 +2888,12 @@
   }
 
   // ---- Ascolta: lettura ad alta voce (docs/classe-prima.md) ----
-  // Solo voci locali (localService): quelle remote mandano il testo a un
-  // server, e questo e' un sito per bambini. Senza voce italiana locale il
-  // bottone resta nascosto. Si parla solo dopo un tocco esplicito sul bottone.
+  // Solo voci locali, tramite SA.voice di shared.js: quelle remote mandano il
+  // testo a un server, e questo e' un sito per bambini. Senza voce italiana
+  // locale il bottone resta nascosto. Si parla solo dopo un tocco esplicito
+  // sul bottone.
   const speech = typeof window.SpeechSynthesisUtterance === 'function' && window.speechSynthesis ? window.speechSynthesis : null;
-  let speakVoices = {};
+  let speakIt = false;
   let speakOn = false;
 
   const SPOKEN_OPS = { '+': 'più', '-': 'meno', '−': 'meno', '–': 'meno', '×': 'per', '÷': 'diviso', '>': 'maggiore di', '<': 'minore di', '=': 'uguale a', ':': 'diviso', x: 'per' };
@@ -2912,29 +2913,17 @@
     return `${CURSOR_KEY}_speak_c${selectedClass}_v1`;
   }
 
-  function pickLocalVoice(voices, prefix) {
-    const re = new RegExp(`^${prefix}([-_]|$)`, 'i');
-    const local = voices.filter((v) => v && v.localService === true && re.test(v.lang || ''));
-    return local.find((v) => v.default) || local[0] || null;
-  }
-
   function syncSpeakBtns() {
-    speakOn = !!speakVoices.it && storageGet(speakKey()) === '1';
+    speakOn = speakIt && storageGet(speakKey()) === '1';
     document.querySelectorAll('.speak-btn').forEach((btn) => {
-      btn.hidden = !speakVoices.it;
+      btn.hidden = !speakIt;
       btn.setAttribute('aria-pressed', String(speakOn));
     });
   }
 
   function refreshSpeakVoices() {
-    let voices = [];
-    try {
-      voices = speech ? speech.getVoices() : [];
-    } catch (e) {
-      debugWarn('getVoices', e);
-    }
-    speakVoices = { it: pickLocalVoice(voices, 'it'), en: pickLocalVoice(voices, 'en') };
-    if (!speakVoices.it) stopSpeaking();
+    speakIt = !!(SA.voice && SA.voice.available('it'));
+    if (!speakIt) stopSpeaking();
     syncSpeakBtns();
   }
 
@@ -2949,7 +2938,7 @@
   // Domanda e poi le risposte, nell'ordine dei bottoni. Le parti marcate
   // lang="en" (inglese) usano una voce inglese locale, altrimenti si saltano.
   function speakScreen(screen) {
-    if (!speakOn || !speech || !speakVoices.it || !screen || !screen.classList.contains('active')) return;
+    if (!speakOn || !speakIt || !screen || !screen.classList.contains('active')) return;
     const bonus = screen.id === 'screenBonusQuestion';
     const textEl = $(bonus ? 'bonusText' : 'qText');
     const answersEl = $(bonus ? 'bonusAnswers' : 'answers');
@@ -2959,18 +2948,7 @@
     answersEl.querySelectorAll('.answer-btn').forEach((btn) => parts.push([btn.textContent, btn.lang]));
     stopSpeaking();
     parts.forEach(([text, lang]) => {
-      const spoken = toSpokenText(text).trim();
-      const voice = speakVoices[lang === 'en' ? 'en' : 'it'];
-      if (!spoken || !voice) return;
-      try {
-        const utterance = new window.SpeechSynthesisUtterance(spoken);
-        utterance.voice = voice;
-        utterance.lang = voice.lang;
-        utterance.rate = 0.9;
-        speech.speak(utterance);
-      } catch (e) {
-        debugWarn('speech.speak', e);
-      }
+      SA.voice.speak(toSpokenText(text).trim(), { lang: lang === 'en' ? 'en' : 'it', rate: 0.9, queue: true });
     });
   }
 
@@ -2997,12 +2975,9 @@
       btn.hidden = true;
       textEl.insertAdjacentElement('beforebegin', btn);
     });
+    // shared.js arriva dopo questo file: l'evento parte quando SA.voice esiste.
+    document.addEventListener('sa:voices-change', refreshSpeakVoices);
     refreshSpeakVoices();
-    try {
-      speech.addEventListener('voiceschanged', refreshSpeakVoices);
-    } catch (e) {
-      debugWarn('voiceschanged', e);
-    }
     window.addEventListener('pagehide', stopSpeaking);
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) stopSpeaking();

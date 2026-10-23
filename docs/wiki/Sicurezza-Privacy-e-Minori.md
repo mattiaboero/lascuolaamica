@@ -38,12 +38,15 @@ Il sito usa HTTPS e una configurazione conservativa del trasporto cifrato per pr
 
 ## Conformità GDPR
 
-Il sito non raccoglie dati personali. Non ci sono form di contatto con dati identificativi, non ci sono cookie persistenti di terze parti, non c'è profilazione.
+Il sito non chiede dati personali per essere usato. Non ci sono form di contatto con dati identificativi, non ci sono cookie persistenti di terze parti, non c'è profilazione.
 
-Il trattamento dati è limitato a:
+Il trattamento dati è limitato a (dettagli, basi giuridiche e conservazione in `privacy.html`):
 
-- **Log tecnici dell’infrastruttura di hosting e protezione** — necessari al funzionamento e alla sicurezza del servizio
-- **Memoria locale del browser** — dati che restano sul dispositivo dell'utente, mai trasmessi
+- **Log tecnici dell’infrastruttura di hosting e protezione**: necessari al funzionamento e alla sicurezza del servizio
+- **Email a supporto@ e ciao@**: solo per rispondere a chi scrive
+- **Memoria locale del browser**: dati che restano sul dispositivo dell'utente, mai trasmessi. L'elenco delle chiavi è in `cookie.html`
+
+La sintesi vocale usa solo voci installate sul dispositivo (`SA.voice` in `shared.js`): una voce di rete manderebbe testo e IP a un server esterno. `scripts/check_speech_local.js`, dentro `prepublish-check.sh`, blocca ogni chiamata a `speechSynthesis.speak` fuori dall'helper.
 
 Non è richiesto il consenso esplicito ai cookie perché non ci sono cookie di profilazione. La Cookie Policy e la Privacy Policy sono accessibili dal sito.
 

@@ -111,35 +111,6 @@ body.page-supporta {
   --page-footer-border: rgba(255, 255, 255, 0.18);
 }
 
-body.page-supporto-satispay {
-  --page-bg: #ff3d00;
-  --page-text: #3d1706;
-  --page-muted: rgba(255, 255, 255, 0.97);
-  --page-link: #ffffff;
-  --page-link-strong: #3d1706;
-  --page-top-button-text: #c43000; /* #ff3d00 su bianco e' 3,55:1, sotto AA */
-  --page-button-border: rgba(255, 255, 255, 0.95);
-  --page-button-bg: #ffffff;
-  --page-button-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
-  --page-chip-bg: #6a2209;
-  --page-chip-text: #ffffff;
-  --page-card-bg: rgba(255, 243, 238, 0.97);
-  --page-card-border: rgba(248, 208, 193, 0.9);
-  --page-card-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
-  --page-secondary-bg: rgba(255, 240, 232, 0.97);
-  --page-secondary-text: #3d1706;
-  --page-title-color: #3d1706;
-  --page-section-color: #3d1706;
-  --page-section-border: rgba(225, 153, 126, 0.72);
-  --page-breadcrumb-bg: #6a2209;
-  --page-breadcrumb-border: rgba(255, 255, 255, 0.18);
-  --page-breadcrumb-padding: 8px 12px;
-  --page-shell-max: 760px;
-  --page-card-padding: 22px 18px 24px;
-  --page-footer-bg: rgba(203, 52, 0, 0.88);
-  --page-footer-border: rgba(255, 255, 255, 0.18);
-}
-
 body.info-page .wrapper {
   min-height: 100vh;
   width: 100%;
@@ -327,37 +298,6 @@ body.info-page .mono {
   font-size: 0.92em;
 }
 
-body.info-page .qr-wrap {
-  margin: 20px auto 0;
-  width: min(74vw, 360px);
-  max-width: 100%;
-}
-
-body.info-page .qr-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  background: #fff;
-  border-radius: 20px;
-  border: 4px solid #fff;
-  box-shadow: inset 0 0 0 2px #d9d9d9, 0 8px 18px rgba(0, 0, 0, 0.22);
-}
-
-body.info-page .qr-note {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: var(--page-muted);
-}
-
-/* La nota del QR sta dentro la card chiara, non sul fondo della pagina:
-   su /supporto-satispay --page-muted e' bianco (pensato per il rosso) e la
-   frase spariva. Stesso colore del testo della card. */
-body.page-supporto-satispay .qr-note {
-  color: var(--page-text);
-}
-
 body.info-page .skip-link {
   position: absolute;
   top: -100px;
@@ -508,6 +448,20 @@ body.info-page .skip-link:focus {
   color: var(--page-link-strong, var(--info-light-link-strong));
 }
 
+/* Negli elenchi di /privacy e /cookie il testo e' lungo: stesso corpo dei
+   paragrafi, in grassetto restano solo le etichette (<strong>). */
+body.info-page .modal-body .list li {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* Nomi delle voci di localStorage nella Cookie Policy: lunghi fino a 47
+   caratteri, a 375 px non stanno su una riga. */
+.modal-body code {
+  overflow-wrap: anywhere;
+}
+
 .modal-body a {
   color: var(--page-link-strong, var(--info-light-link-strong));
   font-weight: 800;
@@ -525,10 +479,6 @@ body.info-page .skip-link:focus {
 @media (max-width: 460px) {
   body.info-page .card {
     padding: 18px 14px 20px;
-  }
-
-  body.page-supporto-satispay .qr-wrap {
-    width: min(82vw, 340px);
   }
 }
 

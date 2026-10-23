@@ -11,7 +11,7 @@ PORT="${1:-4173}"
 BASE="http://127.0.0.1:${PORT}"
 PAGES=(index matematica italiano problemi civica geografia storia scienze inglese
        tabelline premi faq bosco breakout link 404 chi-siamo ai-info privacy cookie
-       per-genitori per-insegnanti accessibilita supporta supporto-satispay guida-compiti
+       per-genitori per-insegnanti accessibilita supporta guida-compiti
        sistema-solare)
 fails=0
 for p in "${PAGES[@]}"; do
