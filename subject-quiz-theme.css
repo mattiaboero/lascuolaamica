@@ -2482,12 +2482,13 @@ html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
   }
 }
 
-/* Telefono, partita in corso: briciole, sottotitolo, Audio, Classifica e Info
-   su una riga sola, contatori su una riga. Il titolo resta sopra. header
-   diventa «contents» per far entrare il sottotitolo nella riga; «order» sposta
-   solo il titolo e il Menu, l'ordine di tastiera (briciole, pulsanti) resta
-   quello del DOM. I pulsanti mostrano solo l'icona: il nome per lo screen
-   reader arriva da aria-label. Fuori dalla partita la pagina non cambia. */
+/* Telefono, partita in corso: briciole, Audio, Classifica e Info su una riga
+   sola, contatori su una riga. Il titolo resta sopra; il sottotitolo si
+   nasconde, come per la 1ª (a 375px restava solo «La S…»). header diventa
+   «contents» per portare il titolo fuori dalla riga; «order» sposta solo il
+   titolo e il Menu, l'ordine di tastiera (briciole, pulsanti) resta quello
+   del DOM. I pulsanti mostrano solo l'icona: il nome per lo screen reader
+   arriva da aria-label. Fuori dalla partita la pagina non cambia. */
 @media (max-width: 767px) {
   html[data-screen="screenGame"] .wrapper,
   html[data-screen="screenBonusQuestion"] .wrapper {
@@ -2528,15 +2529,9 @@ html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
     font-size: 0.85rem;
   }
 
-  html[data-screen="screenGame"] .wrapper > header > .subtitle,
-  html[data-screen="screenBonusQuestion"] .wrapper > header > .subtitle {
-    flex: 1 1 0;
-    min-width: 0;
-    margin: 0;
-    overflow: hidden;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  html[data-screen="screenGame"] .subtitle,
+  html[data-screen="screenBonusQuestion"] .subtitle {
+    display: none;
   }
 
   html[data-screen="screenGame"] .header-row,

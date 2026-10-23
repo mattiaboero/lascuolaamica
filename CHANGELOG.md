@@ -20,9 +20,10 @@ ne uscivano tre.
   (`.header-info-btn`), solo sotto i 768px, per avere il pannello Info (e
   l'interruttore del timer) a un tocco senza scendere fino al footer.
 - In partita sotto i 768px (`html[data-screen="screenGame"]` e
-  `screenBonusQuestion`): briciole, sottotitolo (troncato), Audio, Classifica
-  e Info su una riga, con i pulsanti a sola icona (il nome resta in
-  `aria-label`); contatori su una riga. Fuori dalla partita niente cambia.
+  `screenBonusQuestion`): briciole, Audio, Classifica e Info su una riga, con
+  i pulsanti a sola icona (il nome resta in `aria-label`); contatori su una
+  riga. Il sottotitolo si nasconde, come già per la 1ª. Fuori dalla partita
+  niente cambia.
 - `subject-quiz-core.js`: dopo «Inizia!» la scheda della domanda va in cima
   alla finestra (`bringQuestionIntoView`, solo sotto i 768px), senza
   animazione con «Meno animazioni» o `prefers-reduced-motion`. «Avanti» ha
@@ -31,12 +32,26 @@ ne uscivano tre.
 - Sottotitoli dei pulsanti classe e ambito: 15px e opacità 1 sotto i 768px
   (prima 13px e 0,7).
 
+Decisione: senza figura la domanda sta tutta nello schermo; con figura
+(orologio, goniometro, geometria), sui telefoni bassi la scheda supera lo
+schermo (circa 800px a 375x667) e si scorre. Figure e risposte restano della
+misura di prima.
+
 ### Tests
 - `scripts/quiz_viewport_smoke.js` (`npm run test:e2e:viewport`, nel job
-  `smoke`): a 375x667 e 390x844, su `/matematica` e `/inglese`, le quattro
-  risposte e «Avanti» stanno nella finestra e `elementFromPoint` al centro e
-  al bordo basso restituisce l'elemento stesso. Su `main` fallisce in tutti e
-  quattro i casi, sul nuovo codice passa.
+  `smoke`), con domande fissate per id: il test intercetta
+  `json/<materia>.json` e lascia una sola domanda (più le bonus). A 375x667 e
+  390x844:
+  - 6 domande senza figura (3 di Aritmetica, 3 di inglese che rientrano in un
+    livello): dopo «Inizia!» le quattro risposte e poi «Avanti» stanno nella
+    finestra, e `elementFromPoint` al centro e al bordo basso restituisce
+    l'elemento stesso;
+  - 3 domande con figura: dopo «Inizia!» la scheda è in cima (bordo entro
+    24px), testo e parte alta della figura visibili; portate in vista, figura,
+    risposte e «Avanti» non sono coperte, e «Avanti» toccato fa andare avanti.
+  Su `main` fallisce in 18 casi su 18, qui passa in 18 su 18 per 5 giri di
+  fila. La prima versione estraeva domande a caso e passava o falliva secondo
+  la domanda.
 
 ## 4.23.0 - 2026-10-23
 
