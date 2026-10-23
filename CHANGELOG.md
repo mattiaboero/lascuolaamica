@@ -35,7 +35,24 @@ inglese e civica avevano già le classi (e civica gli ambiti) nell'HTML.
     più scure (2,96:1 e 4,07:1 prima).
   La palette standard non cambia.
 
+- `js/problemi-page.js`: «Più passaggi» (classe 4ª) era scritto senza
+  accento nella config: dopo il caricamento compariva «Piu passaggi». Trovato
+  dal nuovo `check:static-grids`.
+
+### CI
+- Job `smoke`: browser di Playwright in cache (`actions/cache` v6.1.0 fissato
+  per hash, `~/.cache/ms-playwright`, chiave sulla versione di playwright nel
+  `package-lock`); `playwright install --with-deps` solo senza cache. Il
+  23/10/2026 l'installazione da apt aveva preso 10 e 20 minuti (job annullato).
+
 ### Tests
+- `scripts/check_static_grids.js` (`npm run check:static-grids`, in `npm run
+  verify` e nel job `smoke`): per le 8 pagine materia confronta il markup
+  statico (pagina senza JavaScript) con quello del motore a dati arrivati
+  (3ª, Sessione mista): testi, ordine, classi, id, attributi aria e `data-*`;
+  controlla anche che etichetta e griglie compaiano una volta sola. Usa un
+  server statico suo. Provato rinominando un ambito in
+  `js/geografia-page.js`: fallisce e indica il testo diverso.
 - `scripts/cls_smoke.js` (`npm run test:e2e:cls`, nel job `smoke`): a
   412x823 con rete lenta (150 ms, 1,6 Mbit/s) e CPU rallentata 4x registra i
   layout shift su `/matematica`, `/inglese` e `/geografia` fino a schermata
