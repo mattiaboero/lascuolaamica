@@ -44,4 +44,6 @@
   });
 
   form.closest('section').hidden = false;
+  // Il link «Calcolatore» sotto l'introduzione compare solo con il calcolatore.
+  document.querySelectorAll('[data-calc-link]').forEach((link) => { link.hidden = false; });
 })();

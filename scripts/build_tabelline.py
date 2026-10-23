@@ -42,7 +42,7 @@ def a(n: int) -> str:
 def blocco() -> str:
     righe = []
     decine = [(d, d + 9) for d in range(11, 101, 10)]
-    righe.append('<nav class="tab-decine" aria-label="Decine delle tabelline dall\'11 al 100">')
+    righe.append('<nav class="tab-decine" id="indice-decine" aria-label="Decine delle tabelline dall\'11 al 100">')
     righe.append('  <ul>')
     for inizio, fine in decine:
         righe.append(f'    <li><a href="#tabelline-{inizio}-{fine}">{da(inizio).capitalize()} {a(fine)}</a></li>')

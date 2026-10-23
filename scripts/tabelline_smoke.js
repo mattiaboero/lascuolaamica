@@ -47,6 +47,11 @@ async function check(browser, javaScriptEnabled) {
       if (!(await page.locator(href).count())) errors.push(`indice: ${href} non porta a niente`);
     }
     if (decine.length !== 9) errors.push(`indice delle decine: ${decine.length} link invece di 9`);
+    // Riga sotto l'introduzione: indice delle decine sempre, calcolatore solo con JS.
+    if (!(await main.locator('.tab-salti a[href="#indice-decine"]').isVisible())) errors.push('manca il link «Tabelline da 11 a 100» sotto l\'introduzione');
+    if (!(await page.locator('#indice-decine').count())) errors.push('#indice-decine non esiste');
+    const linkCalc = await main.locator('.tab-salti a[href="#calcolatore"]').isVisible();
+    if (linkCalc !== javaScriptEnabled) errors.push(`link «Calcolatore» ${linkCalc ? 'visibile' : 'nascosto'} con JS=${javaScriptEnabled ? 'on' : 'off'}`);
     const calcolatore = await page.locator('#calcolatore').isVisible();
     if (calcolatore !== javaScriptEnabled) errors.push(`calcolatore ${calcolatore ? 'visibile' : 'nascosto'} con JS=${javaScriptEnabled ? 'on' : 'off'}`);
 

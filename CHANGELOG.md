@@ -34,6 +34,9 @@
   la primaria. «Un video per tabellina, dalla 2 in avanti» diventa «Per ora ci
   sono i video dalla tabellina del 2 a quella dell'8: il 9 e il 10 sono in
   arrivo».
+- Sotto l'introduzione di `/tabelline`, la riga «Cerchi una tabellina oltre il
+  10?» con i link «Tabelline da 11 a 100» (`#indice-decine`) e «Calcolatore»
+  (`#calcolatore`, visibile solo con JavaScript, come il calcolatore).
 - `/matematica` (sezione tabelline): link a `/tabelline#tabellina-11`.
 - Home e `llms.txt`: citano le tabelline fino al 100 e il calcolatore.
 
