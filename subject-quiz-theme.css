@@ -2432,6 +2432,21 @@ html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
   }
 }
 
+/* Sotto i 768px (telefoni) la barra fissa in fondo era alta fino a 169px, un
+   quinto dello schermo, e copriva le risposte. Il footer torna nel flusso,
+   in fondo alla pagina; Info resta a un tocco anche dal pulsante in alto
+   nelle pagine di gioco. Fra 768 e 899px resta fissa come prima. */
+@media (max-width: 767px) {
+  .site-footer {
+    position: static;
+    margin-top: auto;
+  }
+
+  .wrapper {
+    padding-bottom: 24px;
+  }
+}
+
 /* Voce 15 dell'audit: su un telefono la scelta della classe finiva sotto la
    piega (a 375x812 i bottoni partivano oltre gli 812px), dopo sei righe di
    istruzioni. Le tre righe sulle regole della partita - numero di domande,
@@ -2440,5 +2455,118 @@ html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
 @media (max-width: 599px) {
   .intro-rules {
     display: none;
+  }
+}
+
+/* Info in alto nelle pagine di gioco serve solo dove il footer non e' piu'
+   una barra fissa (sotto i 768px): da 768px in su Info sta nel footer come
+   prima. */
+@media (min-width: 768px) {
+  .header-info-btn {
+    display: none;
+  }
+}
+
+/* Telefono: i sottotitoli di classe e ambito erano a 13px con opacita' 0,7.
+   Almeno 15px, colore pieno. inglese.css ha la sua regola: «html» davanti
+   basta a superarla. Sopra i 767px restano come prima. */
+@media (max-width: 767px) {
+  html .class-btn .a-sub,
+  html .area-btn .a-sub {
+    font-size: 0.9375rem;
+  }
+
+  html:not([data-palette="okabe-ito"]) .area-btn .a-sub,
+  html:not([data-palette="okabe-ito"]) .class-btn .a-sub {
+    opacity: 1;
+  }
+}
+
+/* Telefono, partita in corso: briciole, sottotitolo, Audio, Classifica e Info
+   su una riga sola, contatori su una riga. Il titolo resta sopra. header
+   diventa «contents» per far entrare il sottotitolo nella riga; «order» sposta
+   solo il titolo e il Menu, l'ordine di tastiera (briciole, pulsanti) resta
+   quello del DOM. I pulsanti mostrano solo l'icona: il nome per lo screen
+   reader arriva da aria-label. Fuori dalla partita la pagina non cambia. */
+@media (max-width: 767px) {
+  html[data-screen="screenGame"] .wrapper,
+  html[data-screen="screenBonusQuestion"] .wrapper {
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 8px;
+  }
+
+  html[data-screen="screenGame"] .wrapper > *,
+  html[data-screen="screenBonusQuestion"] .wrapper > * {
+    flex: 0 0 100%;
+  }
+
+  html[data-screen="screenGame"] .wrapper > header,
+  html[data-screen="screenBonusQuestion"] .wrapper > header {
+    display: contents;
+  }
+
+  html[data-screen="screenGame"] .top-nav,
+  html[data-screen="screenBonusQuestion"] .top-nav {
+    order: -2;
+    margin-bottom: 6px;
+  }
+
+  html[data-screen="screenGame"] .wrapper > header > .title,
+  html[data-screen="screenBonusQuestion"] .wrapper > header > .title {
+    flex: 0 0 100%;
+    order: -1;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  html[data-screen="screenGame"] .breadcrumbs,
+  html[data-screen="screenBonusQuestion"] .breadcrumbs {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  html[data-screen="screenGame"] .wrapper > header > .subtitle,
+  html[data-screen="screenBonusQuestion"] .wrapper > header > .subtitle {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  html[data-screen="screenGame"] .header-row,
+  html[data-screen="screenBonusQuestion"] .header-row {
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin: 0;
+  }
+
+  html[data-screen="screenGame"] .header-row .icon-btn,
+  html[data-screen="screenBonusQuestion"] .header-row .icon-btn {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  html[data-screen="screenGame"] .icon-btn-label,
+  html[data-screen="screenBonusQuestion"] .icon-btn-label {
+    display: none;
+  }
+
+  html[data-screen="screenGame"] .score-bar,
+  html[data-screen="screenBonusQuestion"] .score-bar {
+    flex-wrap: nowrap;
+    margin: 8px 0 10px;
+  }
+  /* «Avanti» prende il focus: il browser lo porta in vista fino al bordo
+     esatto della finestra. 16px di aria sotto. */
+  .q-next-btn {
+    scroll-margin-bottom: 16px;
   }
 }

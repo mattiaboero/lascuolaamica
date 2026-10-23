@@ -134,7 +134,7 @@ async function spentoInPausa(browser) {
     if (!(await modaleAperta(page))) errors.push('in pausa non compare il messaggio');
     await page.locator('#sharedPromptConfirm').click();
 
-    await page.locator('[data-open-modal="modalInfoHub"]').first().click();
+    await page.locator('.site-footer [data-open-modal="modalInfoHub"]').click();
     const sw = page.locator('#playTimerSwitch');
     if ((await sw.getAttribute('role')) !== 'switch') errors.push('l\'interruttore non ha role="switch"');
     const nome = await sw.evaluate((el) => el.labels && el.labels[0] && el.labels[0].textContent.trim());

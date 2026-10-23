@@ -58,6 +58,9 @@ jobs:
       - name: E2E timer di gioco (facoltativo, orologio simulato)
         run: npm run test:e2e:timer
 
+      - name: E2E quiz su smartphone (risposte e Avanti nella finestra)
+        run: npm run test:e2e:viewport
+
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1
 

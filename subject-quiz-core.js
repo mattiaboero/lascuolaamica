@@ -2436,6 +2436,26 @@
       const first = target.querySelector('button,a,[tabindex]:not([tabindex="-1"])');
       if (first) first.focus();
     }
+    if (id === 'screenGame' || id === 'screenBonusQuestion') {
+      requestAnimationFrame(() => bringQuestionIntoView(target));
+    }
+  }
+
+  // Sul telefono, dopo «Inizia!», la domanda partiva oltre i 400px. Al frame
+  // dopo (loadQuestion ha gia' riempito la scheda) la scheda va in cima alla
+  // finestra: domanda, risposte e «Avanti» ci stanno anche a 375x667. Si parte
+  // dalla scheda e non dai contatori perche' la scheda cresce ancora dopo il
+  // primo frame e le risposte lunghe vanno su piu' righe. Sopra i 767px non
+  // cambia niente.
+  function bringQuestionIntoView(screen) {
+    try {
+      if (!window.matchMedia('(max-width: 767px)').matches || !screen.classList.contains('active')) return;
+    } catch (e) {
+      debugWarn('bringQuestionIntoView', e);
+      return;
+    }
+    const card = screen.querySelector('.q-card');
+    if (card) card.scrollIntoView({ block: 'start', behavior: isMotionReduced() ? 'auto' : 'smooth' });
   }
 
   function showFeedback(ok, custom, holdMs) {
@@ -2878,7 +2898,15 @@
   function syncMuteBtn() {
     const btn = $('muteBtn');
     if (!btn) return;
-    btn.textContent = muted ? '🔇 Audio' : '🔊 Audio';
+    // Parola in uno span a parte: in partita, sul telefono, resta solo
+    // l'icona. Tutto dentro un solo span, come il testo semplice di prima: fra
+    // due figli di un pulsante flex lo spazio non si vedrebbe.
+    const inner = document.createElement('span');
+    const label = document.createElement('span');
+    label.className = 'icon-btn-label';
+    label.textContent = 'Audio';
+    inner.append(`${muted ? '🔇' : '🔊'} `, label);
+    btn.replaceChildren(inner);
     btn.setAttribute('aria-label', muted ? 'Riattiva audio' : 'Disattiva audio');
   }
 

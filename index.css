@@ -736,3 +736,18 @@ html:not([data-palette="okabe-ito"]) .modal-body a{color:var(--subj-math-a);}
     padding-bottom: 32px;
   }
 }
+
+/* Sotto i 768px (telefoni) la barra fissa in fondo era alta fino a 169px, un
+   quinto dello schermo, e copriva le risposte. Il footer torna nel flusso,
+   in fondo alla pagina; Info resta a un tocco anche dal pulsante in alto
+   nelle pagine di gioco. Fra 768 e 899px resta fissa come prima. */
+@media (max-width: 767px) {
+  footer {
+    position: static;
+    margin-top: auto;
+  }
+
+  .wrapper {
+    padding-bottom: 32px;
+  }
+}
