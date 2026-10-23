@@ -1,5 +1,12 @@
 [
  {
+  "date": "23 ottobre 2026 · Release 4.22.20",
+  "items": [
+   "Nelle pagine delle materie, di Cervellino Spacca-Muri, del Bosco delle Lettere e del Sistema Solare il primo riquadro per genitori e insegnanti non è più attaccato al riquadro principale: fra un riquadro e l’altro c’è sempre lo stesso spazio.",
+   "Il canale YouTube del progetto ora si chiama La Scuola Amica: tutti i collegamenti portano a youtube.com/@lascuolaamica."
+  ]
+ },
+ {
   "date": "22 ottobre 2026 · Release 4.22.19",
   "items": [
    "Il sito scarica meno: all’installazione salva per l’uso senza rete solo la pagina iniziale, non più tutte le 25 pagine. Ogni pagina che apri resta disponibile anche senza connessione, e quando arriva una versione nuova le pagine già aperte restano lì, senza scaricarle di nuovo."

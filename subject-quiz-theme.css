@@ -271,7 +271,7 @@ header {
 .screen.active {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  gap: 14px;
 }
 
 #contenuto-principale {
@@ -374,13 +374,24 @@ header {
 
 .seo-static {
   width: 100%;
-  margin: 0 0 14px;
+  margin: 0;
   padding: 14px 16px;
   border-radius: 16px;
   border: 2px solid rgba(var(--info-blue-rgb) / 0.2);
   background: linear-gradient(140deg, #ffffff, #f5fbff);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
   position: relative;
+}
+
+/* Bosco e Sistema Solare: i box stanno nel .wrapper, che non ha gap */
+.wrapper > .seo-static {
+  margin-top: 14px;
+}
+
+/* 14px fra l'ultimo box e il fondo della pagina */
+.seo-static:last-child,
+.related-subjects:last-child {
+  margin-bottom: 14px;
 }
 
 .seo-static::before {
@@ -489,7 +500,7 @@ header {
 
 .related-subjects {
   width: 100%;
-  margin: 0 0 14px;
+  margin: 0;
   padding: 14px 16px;
   border-radius: 16px;
   border: 2px solid rgba(var(--info-blue-rgb) / 0.18);

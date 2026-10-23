@@ -30,7 +30,7 @@ ORG_URL = "https://lascuolaamica.it/"
 ORG_LOGO = "https://lascuolaamica.it/icons/icon-512.png"
 ORG_SAME_AS = [
     "https://github.com/mattiaboero/lascuolaamica",
-    "https://www.youtube.com/@ceciliaeilpapamattone",
+    "https://www.youtube.com/@lascuolaamica",
 ]
 
 DATE_TYPES = {
