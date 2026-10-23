@@ -66,14 +66,17 @@ async function main() {
       return;
     }
 
-    const maps = await getConfigMaps(page);
-
     if (options.classKey) {
       const classButton = page.locator(`[data-action="select-class"][data-class="${options.classKey}"]`).first();
       if (await classButton.count()) {
         await classButton.click();
+        await page.waitForSelector('html[data-domande="pronte"]');
       }
     }
+
+    // Dopo la scelta della classe: le domande arrivano per classe, e quelle
+    // della classe nuova entrano nei banchi solo ora.
+    const maps = await getConfigMaps(page);
 
     if (options.area) {
       const areaButton = page.locator(`[data-action="select-area"][data-area="${options.area}"]`).first();
@@ -368,6 +371,8 @@ async function checkSubareaGrid(page) {
   let bottoni = 0;
   for (const cls of classes) {
     await page.locator(`[data-action="select-class"][data-class="${cls}"]`).click();
+    // Le domande arrivano per classe: la griglia si ricostruisce quando ci sono.
+    await page.waitForSelector('html[data-domande="pronte"]');
     if (await page.locator('#areaMoreBtn').count()) await page.locator('#areaMoreBtn').click();
     const areas = await page.locator('[data-action="select-area"]').evaluateAll((els) => els.map((el) => el.dataset.area));
     for (const area of areas.filter((key) => key !== 'mixed')) {

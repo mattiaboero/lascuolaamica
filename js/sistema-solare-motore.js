@@ -945,11 +945,23 @@ void main() {
       return bufferLinea(gl, punti);
     }
 
+    // Orbite e fasce a pezzi: fra un pezzo e l'altro cedi() restituisce il
+    // thread alla pagina. Finche' non ci sono, la scena si disegna senza.
     let fasce = [];
-    function preparaGeometria() {
-      aggiornaPosizioni();
-      corpi.forEach((c) => { c.orbita = costruisciOrbita(c); });
-      fasce = (dati.fasce || []).map((f, k) => ({ f, buf: costruisciFascia(f, 7 + k, f.punti || 1500) }));
+    async function preparaGeometria(cedi) {
+      const pausa = typeof cedi === 'function' ? cedi : () => Promise.resolve();
+      const lista = Array.from(corpi.values());
+      for (let k = 0; k < lista.length; k++) {
+        lista[k].orbita = costruisciOrbita(lista[k]);
+        if (k % 10 === 9) await pausa();
+      }
+      const pronte = [];
+      for (const [k, f] of (dati.fasce || []).entries()) {
+        await pausa();
+        pronte.push({ f, buf: costruisciFascia(f, 7 + k, f.punti || 1500) });
+      }
+      fasce = pronte;
+      stato.sporco = true;
     }
 
     /* ---------------------------------------------------- camera */
@@ -1616,7 +1628,7 @@ void main() {
     // Gli elementi di Standish valgono fra il 1800 e il 2050.
     const LIMITE_JD = [jdDaData(new Date(Date.UTC(1800, 0, 1))), jdDaData(new Date(Date.UTC(2050, 11, 31)))];
 
-    preparaGeometria();
+    aggiornaPosizioni();
     ridimensiona();
     aggiornaCamera();
 
@@ -1633,6 +1645,7 @@ void main() {
       dataDaJd,
       limiti: LIMITE_JD,
       avvia,
+      preparaGeometria,
       ferma() {
         fermo = true;
         if (rafId) cancelAnimationFrame(rafId);

@@ -68,8 +68,9 @@ const CORE_PRECACHE_URLS = [
 
 // Risorse aggiuntive: se una manca, il SW resta installabile.
 // Questo evita failure atomiche di cache.addAll su un singolo 404.
-// Nota: i json/<materia>.json NON sono precachati qui (erano ~7.9MB totali
-// scaricati all'install per ogni utente, anche per le 7 materie mai aperte).
+// Nota: le domande (json/<materia>/c<N>.json) NON sono precachate qui (erano
+// ~7.9MB totali scaricati all'install per ogni utente, anche per le 7 materie
+// mai aperte).
 // Restano cacheable via isSameOriginStaticAsset (estensione .json) quindi
 // vengono comunque salvati offline al primo fetch reale della materia, e
 // refetchOpenedJson li riporta nella cache nuova a ogni cambio di versione.
@@ -96,7 +97,7 @@ const OPTIONAL_PRECACHE_URLS = [
   '/js/italiano-page.js',
   '/js/breakout.js',
   '/js/bosco.js',
-  '/js/sistema-solare-dati.js',
+  '/js/sistema-solare-dati.json',
   '/js/sistema-solare-testi.json',
   '/js/sistema-solare-motore.js',
   '/js/sistema-solare.js',
@@ -206,7 +207,21 @@ function canCacheResponse(response) {
 // rivalida sempre e un file non cambiato costa un 304. Se un file non arriva
 // (rete caduta, materia tolta) non si tiene la copia vecchia: resta fuori
 // dall'offline finche' la materia non viene riaperta con la rete, come prima.
-const OPENED_JSON_RE = /^\/json\/[^/]+\.json$/;
+//
+// Dalla 4.26.0 una materia arriva per classe: json/<materia>/c<N>.json e
+// bonus.json, e in cache finiscono solo le classi aperte. Chi aveva in cache
+// il file intero di prima (json/<materia>.json, tutte le classi) ritrova
+// offline tutte le classi di quella materia, nel formato nuovo.
+const OPENED_JSON_RE = /^\/json\/(?:[^/]+\/)?[^/]+\.json$/;
+const WHOLE_SUBJECT_JSON_RE = /^\/json\/([a-z]+)\.json$/;
+const NOT_A_SUBJECT = new Set(['index', 'changelog']);
+const SUBJECT_JSON_PARTS = ['c1', 'c2', 'c3', 'c4', 'c5', 'bonus'];
+
+function openedJsonPaths(pathname) {
+  const whole = pathname.match(WHOLE_SUBJECT_JSON_RE);
+  if (!whole || NOT_A_SUBJECT.has(whole[1])) return [pathname];
+  return SUBJECT_JSON_PARTS.map((part) => `/json/${whole[1]}/${part}.json`);
+}
 
 async function refetchOpenedJson() {
   const paths = new Set();
@@ -215,7 +230,7 @@ async function refetchOpenedJson() {
     const oldCache = await caches.open(key);
     for (const request of await oldCache.keys()) {
       const { pathname } = new URL(request.url);
-      if (OPENED_JSON_RE.test(pathname)) paths.add(pathname);
+      if (OPENED_JSON_RE.test(pathname)) openedJsonPaths(pathname).forEach((p) => paths.add(p));
     }
   }
 

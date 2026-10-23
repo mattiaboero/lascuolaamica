@@ -54,6 +54,7 @@ INCLUDI=(
   '^(_headers|_redirects|manifest\.json|robots\.txt|sitemap\.xml|llms\.txt|favicon\.svg|favicon\.ico|[0-9a-f]{32}\.txt)$'
   '^js/'
   '^json/[^/]+\.json$'
+  '^json/[^/]+/(c[1-5]|bonus)\.json$'
   '^assets/'
   '^icons/'
   '^screenshots/'

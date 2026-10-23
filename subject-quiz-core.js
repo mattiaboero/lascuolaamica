@@ -121,7 +121,7 @@
     const rows = await loader.getSubjectRows(source.subject, {
       path: source.path || 'json/index.json',
       includeInactive: source.includeInactive,
-      includeBonusRows: true
+      bonusOnly: true
     });
     if (!Array.isArray(rows) || !rows.length) return;
 
@@ -159,17 +159,7 @@
   }
 
   const questionsLoader = getQuestionsLoader();
-  if (cfg.questionsSource && questionsLoader && typeof questionsLoader.applySubjectConfig === 'function') {
-    try {
-      await questionsLoader.applySubjectConfig(cfg);
-      const source = typeof cfg.questionsSource === 'string'
-        ? { subject: cfg.questionsSource }
-        : cfg.questionsSource;
-      await hydrateBonusQuestionsFromSource(questionsLoader, source);
-    } catch (e) {
-      debugWarn('QuestionsLoader.applySubjectConfig', e);
-    }
-  }
+  const loadsQuestions = !!(cfg.questionsSource && questionsLoader && typeof questionsLoader.applySubjectConfig === 'function');
 
   const TOTAL_Q = Number(cfg.totalQ || 10);
   const POINTS_PER_Q = Number(cfg.pointsPerQ || 10);
@@ -330,7 +320,7 @@
   });
 
   const AREA_KEYS = getAreaKeys();
-  const BANKS = buildNormalizedBanks();
+  let BANKS = buildNormalizedBanks();
 
   // Deep link ?area=<key>: apre la pagina con l'ambito gia selezionato.
   // Chiave sconosciuta o non disponibile per la classe: buildAreaGrid()
@@ -348,6 +338,52 @@
 
   let selectedArea = areaFromQuery() || cfg.defaultArea || 'mixed';
   let selectedClass = normalizeClassKey(loadClassPref() || cfg.defaultClass || 3);
+
+  // Le domande arrivano per classe (questions-loader.js): si scaricano solo le
+  // classi che una partita della classe scelta puo' usare, le altre al cambio
+  // classe. Le bonus arrivano tutte (bonus.json, poche righe).
+  const loadedGrades = new Set();
+
+  // Le stesse classi che getClassAwarePool e getAvailableLevelsForClass
+  // possono pescare: distanza MAX_GRADE_DISTANCE (MAX_LEVEL_DISTANCE con i
+  // livelli) e la regola della 1ª. Per la 3ª: 2ª, 3ª e 4ª.
+  function gradesForClass(classKey) {
+    const classNum = classToNum(classKey);
+    const limit = HAS_LEVELS ? Math.max(MAX_GRADE_DISTANCE, MAX_LEVEL_DISTANCE) : MAX_GRADE_DISTANCE;
+    const out = [];
+    for (let g = 1; g <= 5; g++) {
+      if (Math.abs(g - classNum) <= limit && fitsClassOneRule({ _grade: g }, classNum)) out.push(g);
+    }
+    return out;
+  }
+
+  async function ensureClassData(classKey) {
+    if (!loadsQuestions) return true;
+    const missing = gradesForClass(classKey).filter((g) => !loadedGrades.has(g));
+    if (!missing.length) return true;
+    try {
+      await questionsLoader.applySubjectConfig(cfg, { classes: [...loadedGrades, ...missing].sort() });
+    } catch (e) {
+      debugWarn('QuestionsLoader.applySubjectConfig', e);
+      return false;
+    }
+    missing.forEach((g) => loadedGrades.add(g));
+    BANKS = buildNormalizedBanks();
+    return true;
+  }
+
+  let classDataReady = ensureClassData(selectedClass);
+  await classDataReady;
+  if (loadsQuestions) {
+    try {
+      const source = typeof cfg.questionsSource === 'string'
+        ? { subject: cfg.questionsSource }
+        : cfg.questionsSource;
+      await hydrateBonusQuestionsFromSource(questionsLoader, source);
+    } catch (e) {
+      debugWarn('QuestionsLoader.bonus', e);
+    }
+  }
   let questions = [];
   let curQ = 0;
   let points = 0;
@@ -730,7 +766,8 @@
       out[area] = raw.map((q, idx) => ({
         ...q,
         area,
-        _id: `${area}:${idx}:${hashText(String(q.q || '') + '|' + String(q.a || ''))}`,
+        // sourceId e non l'indice: le banche crescono con le classi caricate.
+        _id: `${area}:${q.sourceId || idx}:${hashText(String(q.q || '') + '|' + String(q.a || ''))}`,
         _sig: buildQuestionSignature(q),
         _grade: inferGrade(q, idx, raw.length)
       }));
@@ -1385,7 +1422,9 @@
     });
   }
 
-  function selectClass(cls, btn) {
+  let selectClassToken = 0;
+
+  async function selectClass(cls, btn) {
     const key = normalizeClassKey(cls);
     selectedClass = key;
     saveClassPref(key);
@@ -1402,6 +1441,20 @@
       btn.setAttribute('aria-pressed', 'true');
     }
 
+    // Le classi nuove si scaricano qui (se sono gia' arrivate, niente attesa:
+    // tutto come prima); una seconda scelta durante l'attesa vince sulla
+    // prima. Senza rete e mai aperta: il messaggio di sempre.
+    // data-domande="in-arrivo" finche' la classe nuova non e' pronta (anche
+    // per i test, che aspettano questo invece di un tempo fisso).
+    const token = ++selectClassToken;
+    if (gradesForClass(key).some((g) => !loadedGrades.has(g))) {
+      document.documentElement.dataset.domande = 'in-arrivo';
+      classDataReady = ensureClassData(key);
+      const ok = await classDataReady;
+      if (token !== selectClassToken) return;
+      if (!ok) notifyLoadError();
+    }
+
     showAllAreas = false;
     selectedSubarea = null;
     buildAreaGrid();
@@ -1413,6 +1466,7 @@
       }
       buildLevelsGrid();
     }
+    document.documentElement.dataset.domande = 'pronte';
   }
 
   function selectArea(area, btn) {
@@ -1452,10 +1506,13 @@
     bg.appendChild(frag);
   }
 
+  // Con le domande caricate per classe le banche arrivano dopo e crescono:
+  // gli ambiti sono quelli della config, e quali offrire lo decide
+  // getAvailableAreaKeysForClass classe per classe.
   function getAreaKeys() {
     return (cfg.areas || [])
       .map((a) => a.key)
-      .filter((k) => k !== 'mixed' && cfg.banks && Array.isArray(cfg.banks[k]) && cfg.banks[k].length > 0);
+      .filter((k) => k !== 'mixed' && (loadsQuestions || (cfg.banks && Array.isArray(cfg.banks[k]) && cfg.banks[k].length > 0)));
   }
 
   function getAreaWeakness(stats, area) {
@@ -1882,6 +1939,7 @@
   }
 
   async function startGame(levelKey) {
+    await classDataReady;
     if (!(await ensurePlayWindowForGame())) return;
 
     if (HAS_LEVELS) {
@@ -3036,6 +3094,7 @@
     }
     // Aggancio per il CSS e le funzioni legate alla classe (per la 1ª: maiuscolo).
     document.documentElement.dataset.classe = selectedClass;
+    document.documentElement.dataset.domande = 'pronte';
     ensureClassSelector();
     buildAreaGrid();
     buildSubareaGrid();

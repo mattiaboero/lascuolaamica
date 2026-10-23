@@ -29,10 +29,9 @@ const ROOT = path.resolve(__dirname, '..');
 const sandbox = { window: {}, console };
 sandbox.window.window = sandbox.window;
 vm.createContext(sandbox);
-vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-dati.js'), 'utf8'), sandbox);
 vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-motore.js'), 'utf8'), sandbox);
 
-const DATI = sandbox.window.SA.sistemaSolareDati;
+const DATI = JSON.parse(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-dati.json'), 'utf8'));
 // I testi delle schede arrivano a parte (js/sistema-solare-testi.json): qui si
 // rimettono al loro posto, come fa la pagina, prima dei controlli.
 const TESTI = JSON.parse(fs.readFileSync(path.join(ROOT, 'js', 'sistema-solare-testi.json'), 'utf8'));

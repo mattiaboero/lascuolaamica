@@ -1,12 +1,13 @@
-(function () {
+(async function () {
   'use strict';
 
   /*
     Il Sistema Solare in 3D — interfaccia.
 
     Il disegno sta in js/sistema-solare-motore.js, i dati in
-    js/sistema-solare-dati.js (generato da scripts/build_sistema_solare.py a
-    partire da docs/sistema-solare/*.json, dove ogni numero ha la sua fonte).
+    js/sistema-solare-dati.json (generato da scripts/build_sistema_solare.py a
+    partire da docs/sistema-solare/*.json, dove ogni numero ha la sua fonte),
+    scaricato qui sotto con fetch.
 
     Regole di questo file:
     - Nessun numero scritto qui: ogni valore mostrato viene dai dati o e' un
@@ -21,8 +22,41 @@
   */
 
   const SA = window.SA = window.SA || {};
-  const DATI = SA.sistemaSolareDati;
-  if (!DATI) return;
+
+  // Il benvenuto della prima visita e' testo statico nell'HTML ed e' la cosa
+  // piu' grande del primo schermo: si mostra subito, senza aspettare i dati.
+  // Il focus arriva dopo il primo disegno (avvia): chiederlo qui forzerebbe
+  // il layout di tutta la pagina dentro questo script.
+  const KEY_BENVENUTO = 'lascuolaamica_sistema_solare_benvenuto_v1';
+  const benvenutoSubito = (() => {
+    if (!document.body.classList.contains('ss-immersivo') || !('WebGLRenderingContext' in window)) return false;
+    try { return !localStorage.getItem(KEY_BENVENUTO); } catch (_) { return true; }
+  })();
+  if (benvenutoSubito) document.getElementById('ssBenvenuto').hidden = false;
+
+  // I dati della scena (90 KB) arrivano come JSON: nessuno script da eseguire
+  // in apertura. Senza dati (offline, mai aperta) restano le schede statiche.
+  const DATI = await fetch('/js/sistema-solare-dati.json')
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null);
+  if (!DATI) {
+    if (benvenutoSubito) document.getElementById('ssBenvenuto').hidden = true;
+    return;
+  }
+
+  // Cede il thread principale fra un passo e l'altro dell'avvio: un tocco del
+  // bambino non aspetta la fine di tutto. scheduler.yield dove c'e', che
+  // riprende prima degli altri compiti; altrimenti requestIdleCallback.
+  function cedi() {
+    if (window.scheduler && typeof window.scheduler.yield === 'function') return window.scheduler.yield();
+    return new Promise((fatto) => {
+      if (window.requestIdleCallback) window.requestIdleCallback(() => fatto(), { timeout: 100 });
+      else window.setTimeout(fatto, 0);
+    });
+  }
+
+  // Dopo il primo disegno della pagina: due fotogrammi.
+  const dopoIlDisegno = () => new Promise((fatto) => requestAnimationFrame(() => window.setTimeout(fatto, 0)));
 
   const UA_KM = 149597870.7;           // unita' astronomica, valore esatto IAU 2012
   const LUCE_KMS = 299792.458;         // velocita' della luce, valore esatto
@@ -2149,8 +2183,6 @@
 
   /* ------------------------------------------------------- benvenuto */
 
-  const KEY_BENVENUTO = 'lascuolaamica_sistema_solare_benvenuto_v1';
-
   function mostraBenvenuto() {
     chiudiCassetto();
     const b = $('ssBenvenuto');
@@ -2167,15 +2199,18 @@
 
   /* ------------------------------------------------------- avvio */
 
-  // Due tempi. Prima la parte di pagina che si legge (navigazione, missione,
-  // benvenuto), poi, dopo un fotogramma, la scena: crearla costa il grosso
-  // dell'avvio (contesto, shader, orbite), e il benvenuto non deve aspettarla.
-  // fatto() arriva quando c'e' anche la scena.
-  function avvia(fatto) {
+  // A passi, cedendo il thread fra l'uno e l'altro (cedi). Prima la parte di
+  // pagina che si legge (navigazione, missione, benvenuto), poi, dopo il
+  // primo disegno, la scena: crearla costa il grosso dell'avvio (contesto,
+  // shader, orbite), e il benvenuto non deve aspettarla. fatto() arriva quando
+  // c'e' anche la scena.
+  async function avvia(fatto) {
     caricaTesti();
     costruisciNavigazione();
+    await cedi();
     costruisciConfronti();
     collegaBottoni();
+    await cedi();
     aggiornaPassaporto();
     prossimaMissione();
     const missioneChiusa = storageGet(KEY_MISSIONE_CHIUSA);
@@ -2184,19 +2219,21 @@
     riduciCartellino(cartRidotto ? cartRidotto === '1' : telefonoVerticale());
     // Prima visita: due righe di benvenuto e due scelte. Poi non torna piu',
     // si puo' rivedere da Opzioni. Senza WebGL lo si richiude (avviaScena).
-    const benvenuto = immersivo() && !storageGet(KEY_BENVENUTO) && 'WebGLRenderingContext' in window;
+    // Gia' visibile da prima dei dati (benvenutoSubito): qui solo il focus,
+    // dopo il primo disegno.
+    const benvenuto = benvenutoSubito && !storageGet(KEY_BENVENUTO);
+    await dopoIlDisegno();
     if (benvenuto) mostraBenvenuto();
-    requestAnimationFrame(() => window.setTimeout(() => {
-      try {
-        avviaScena(benvenuto, fatto);
-      } catch (err) {
-        fatto();
-        throw err;
-      }
-    }, 0));
+    await cedi();
+    try {
+      await avviaScena(benvenuto, fatto);
+    } catch (err) {
+      fatto();
+      throw err;
+    }
   }
 
-  function avviaScena(benvenuto, fatto) {
+  async function avviaScena(benvenuto, fatto) {
     const canvas = $('ssCanvas');
     try {
       motore = SA.SistemaMotore.crea(canvas, DATI, {
@@ -2220,6 +2257,9 @@
       // Senza scena la vista a tutto schermo non serve: si mostrano le schede.
       impostaImmersivo(false);
     } else {
+      // Le orbite e le fasce a pezzi, cedendo il thread fra un pezzo e
+      // l'altro: tutte insieme erano un'attivita' da 50-70 ms a CPU 4x.
+      await motore.preparaGeometria(cedi);
       costruisciEtichette();
       collegaInput(canvas);
       motore.perdita(() => {
@@ -2234,16 +2274,33 @@
       // occupato il processore (e la ventola) per niente.
       if (movimentoRidotto() || motore.leggero) impostaPausa(true);
       // La scena si ferma quando non si vede: niente batteria sprecata.
+      // Senza GPU il primo disegno costa centinaia di millisecondi (gli shader
+      // si compilano in software) e la scena parte comunque ferma: si disegna
+      // al primo gesto (tocco, tasto, mouse, rotella), non prima. Fino ad
+      // allora la pagina risponde subito.
+      let scenaVisibile = !('IntersectionObserver' in window);
+      let disegnoPermesso = !motore.leggero;
+      const muovi = () => {
+        if (disegnoPermesso && scenaVisibile && !document.hidden) motore.avvia();
+        else motore.ferma();
+      };
+      if (!disegnoPermesso) {
+        const GESTI = ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart'];
+        const permetti = () => {
+          GESTI.forEach((g) => window.removeEventListener(g, permetti, true));
+          disegnoPermesso = true;
+          muovi();
+        };
+        GESTI.forEach((g) => window.addEventListener(g, permetti, { capture: true, passive: true }));
+      }
       if ('IntersectionObserver' in window) {
         new IntersectionObserver((voci) => {
-          voci.forEach((v) => { if (v.isIntersecting) motore.avvia(); else motore.ferma(); });
+          voci.forEach((v) => { scenaVisibile = v.isIntersecting; });
+          muovi();
         }).observe(canvas);
-      } else {
-        motore.avvia();
       }
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) motore.ferma(); else motore.avvia();
-      });
+      muovi();
+      document.addEventListener('visibilitychange', muovi);
       window.setInterval(aggiornaOggi, 1000);
     }
 

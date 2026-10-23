@@ -45,20 +45,20 @@ async function apri(browser, w, h, pagina, id, classe) {
   const context = await browser.newContext({ viewport: { width: w, height: h }, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
   await context.addInitScript(([key, value]) => localStorage.setItem(key, value), [CLASS_PREF[pagina], String(classe)]);
   let attesa = '';
-  await context.route(`**/json/${pagina}.json`, async (route) => {
+  // Le domande arrivano per classe (json/<materia>/c<N>.json): in ogni file
+  // resta solo la domanda fissata, se c'e'. Le bonus (bonus.json) restano.
+  await context.route(new RegExp(`/json/${pagina}/c[1-5]\\.json$`), async (route) => {
     const response = await route.fetch();
     const data = await response.json();
-    const prima = data.questions.length;
-    data.questions = data.questions.filter((q) => q.bonus || q.id === id);
-    const scelta = data.questions.find((q) => q.id === id);
-    if (data.questions.length === prima || !scelta) throw new Error(`domanda ${id} non trovata`);
-    attesa = scelta.question;
+    data.questions = data.questions.filter((q) => q.id === id);
+    if (data.questions.length) attesa = data.questions[0].question;
     await route.fulfill({ response, json: data });
   });
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
   await page.goto(`${BASE}/${pagina}.html`, { waitUntil: 'networkidle' });
+  if (!attesa) throw new Error(`domanda ${id} non trovata`);
   await page.locator('#screenStart [data-action="start-game"]').click();
   if (await page.locator('#screenLevels.active').count()) {
     await page.locator('#screenLevels [data-action="start-level"]:not([disabled])').first().click();
