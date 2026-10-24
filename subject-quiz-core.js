@@ -2049,6 +2049,7 @@
     $('qMeta').textContent = levelMeta
       ? `Domanda ${curQ + 1} di ${sessionLen()} · ${levelMeta.label} · ${areaLabel} · ${classLabel}`
       : `Domanda ${curQ + 1} di ${sessionLen()} · ${areaLabel} · ${classLabel}`;
+    annuncia('quizStato', $('qMeta').textContent);
     renderPrompt($('qText'), q);
     renderFigure(q);
 
@@ -2202,6 +2203,7 @@
 
     $('bonusMeta').textContent = `Bonus ${BONUS_LABELS[type] || type} · Moltiplicatore x${bonusFactor}`;
     renderPrompt($('bonusText'), q);
+    annuncia('quizStato', `${$('bonusMeta').textContent}. ${$('bonusText').textContent}`);
     setMascot('neutral');
 
     const area = $('bonusAnswers');
@@ -2513,10 +2515,48 @@
     if (card) card.scrollIntoView({ block: 'start', behavior: isMotionReduced() ? 'auto' : 'smooth' });
   }
 
+  // Annunci per i lettori di schermo: due regioni sole, nell'HTML delle
+  // pagine materia. #quizStato: domanda nuova, bonus, trofei. #quizFeedback:
+  // esito della risposta con la spiegazione, in un annuncio solo. Gli elementi
+  // a schermo (feedback grande, meta della domanda, spiegazione, classifica)
+  // non sono regioni live: erano 7, e «Esatto!» e la spiegazione si
+  // accavallavano. La classifica non annuncia niente.
+  // Ogni messaggio svuota la regione e la riscrive 50 ms dopo: due messaggi
+  // uguali di fila (due «Esatto!») vengono letti entrambi. Due messaggi nella
+  // stessa regione entro i 50 ms: resta l'ultimo (esito, poi esito +
+  // spiegazione).
+  const annuncioTimer = {};
+  let ultimoEsitoAt = 0;
+  let ultimoEsito = '';
+
+  function annuncia(id, testo) {
+    const el = $(id);
+    if (!el || !testo) return;
+    clearTimeout(annuncioTimer[id]);
+    el.textContent = '';
+    annuncioTimer[id] = setTimeout(() => {
+      el.textContent = testo;
+      if (id === 'quizFeedback') ultimoEsitoAt = Date.now();
+    }, 50);
+  }
+
+  // Il trofeo arriva dopo l'esito della risposta, mai insieme: si aspetta
+  // che l'esito in coda sia scritto (60 ms) e poi un secondo e mezzo per
+  // leggerlo.
+  function annunciaTrofeo(testo) {
+    setTimeout(() => {
+      setTimeout(() => annuncia('quizStato', testo), Math.max(0, ultimoEsitoAt + 1500 - Date.now()));
+    }, 60);
+  }
+  window.SA = window.SA || {};
+  window.SA.annunciaTrofeo = annunciaTrofeo;
+
   function showFeedback(ok, custom, holdMs) {
     const el = $('feedback');
     if (!el) return;
     el.textContent = custom || (ok ? FEEDBACK_OK[Math.floor(Math.random() * FEEDBACK_OK.length)] : FEEDBACK_KO[Math.floor(Math.random() * FEEDBACK_KO.length)]);
+    ultimoEsito = el.textContent;
+    annuncia('quizFeedback', ultimoEsito);
     el.className = 'feedback ' + (ok ? 'ok' : 'ko');
     el.classList.add('show');
     const timeoutMs = Number.isFinite(Number(holdMs)) ? Math.max(900, Number(holdMs)) : 850;
@@ -2534,9 +2574,8 @@
     const el = document.createElement('div');
     el.id = 'qExplanation';
     el.className = 'q-explanation';
-    el.setAttribute('role', 'status');
-    el.setAttribute('aria-live', 'polite');
-    el.setAttribute('aria-atomic', 'true');
+    // Non e' una regione live: la spiegazione si annuncia con l'esito
+    // (showExplanation, #quizFeedback).
     answersEl.insertAdjacentElement('afterend', el);
   }
 
@@ -2553,6 +2592,7 @@
     if (!el || !text) return;
     el.textContent = text;
     el.className = `q-explanation show ${isOk ? 'ok' : 'ko'}`;
+    annuncia('quizFeedback', `${ultimoEsito} ${text}`.trim());
   }
 
   // ---- F6: figura facoltativa della domanda (docs/figure-nel-quiz.md) ----
@@ -3104,16 +3144,6 @@
     spawnShapes();
     updateScoreBar();
     buildDots();
-    const qMeta = $('qMeta');
-    if (qMeta) {
-      qMeta.setAttribute('aria-live', 'polite');
-      qMeta.setAttribute('aria-atomic', 'true');
-    }
-    const bonusMeta = $('bonusMeta');
-    if (bonusMeta) {
-      bonusMeta.setAttribute('aria-live', 'polite');
-      bonusMeta.setAttribute('aria-atomic', 'true');
-    }
     document.addEventListener((window.SA && window.SA.playWindow && window.SA.playWindow.eventName) || 'sa:play-window-change', (event) => {
       if (!event || !event.detail || !event.detail.expired) return;
       handlePlayWindowExpired();

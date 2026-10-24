@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Accessibilità WCAG 2.1 | La Scuola Amica</title>
-<meta name="description" content="Dichiarazione di accessibilità di La Scuola Amica: stato WCAG 2.1 A/AA, metodologia di test, perimetro e canale di segnalazione.">
+<title>Accessibilità WCAG 2.2 | La Scuola Amica</title>
+<meta name="description" content="Dichiarazione di accessibilità di La Scuola Amica: riferimento WCAG 2.2 AA, cosa è verificato e cosa no, limiti noti e canale di segnalazione.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://lascuolaamica.it/accessibilita">
 <meta property="og:url" content="https://lascuolaamica.it/accessibilita">
@@ -18,10 +18,10 @@
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="La Scuola Amica">
 <meta property="og:title" content="Accessibilità | La Scuola Amica">
-<meta property="og:description" content="Stato di conformità WCAG 2.1 A/AA, metodologia di verifica e istruzioni per inviare segnalazioni di accessibilità.">
+<meta property="og:description" content="Riferimento WCAG 2.2 AA, verifiche fatte e da fare, limiti noti e come segnalare un problema di accessibilità.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Accessibilità | La Scuola Amica">
-<meta name="twitter:description" content="Dichiarazione di accessibilità con test automatici e manuali, perimetro e contatto supporto@lascuolaamica.it.">
+<meta name="twitter:description" content="Riferimento WCAG 2.2 AA, verifiche fatte e da fare, limiti noti e contatto supporto@lascuolaamica.it.">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -47,7 +47,7 @@
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-04-27",
-  "dateModified": "2026-10-23"
+  "dateModified": "2026-10-24"
 }
 </script>
 <script type="application/ld+json">
@@ -96,35 +96,38 @@
     <main class="card" id="contenuto-principale" aria-labelledby="accessTitle">
       <h1 class="title" id="accessTitle">Dichiarazione di accessibilità</h1>
 
-      <p class="text">La Scuola Amica adotta come riferimento WCAG 2.1 livelli A e AA per garantire un'esperienza utilizzabile da tutte e tutti, incluse bambine e bambini che usano tecnologie assistive.</p>
-      <p class="text">Stato attuale: in base alle verifiche effettuate, il portale risulta allineato al perimetro WCAG 2.1 A/AA testato (vedi metodologia sotto).</p>
+      <p class="text">Il riferimento è WCAG 2.2, livelli A e AA. Lo scopo è che il sito si usi bene anche con la tastiera, con uno screen reader, con lo zoom e con meno animazioni, anche da bambine e bambini che usano tecnologie assistive.</p>
+      <p class="text">Stato al 24 ottobre 2026: i controlli automatici elencati sotto non trovano violazioni. Il test con uno screen reader reale non è ancora stato fatto: per questo non dichiariamo la piena conformità.</p>
 
-      <h2 class="section-title">Metodologia di verifica: controlli automatici</h2>
+      <h2 class="section-title">Cosa è verificato in automatico</h2>
+      <p class="text">Controlli che girano a ogni modifica del sito, ultima verifica il 24 ottobre 2026:</p>
       <ul class="ul">
-        <li>Audit di accessibilità con Lighthouse (regole axe per WCAG 2.1 A/AA) su ogni pagina, così come si presenta all'apertura, con entrambe le palette: Standard e Accessibile.</li>
-        <li>Contrasto del testo misurato sulla pagina vera, con entrambe le palette.</li>
-        <li>Finestre di dialogo delle otto materie: ritorno del focus alla chiusura.</li>
+        <li>Regole axe per WCAG 2.2 A e AA su home, pagina di una materia (scelta e partita), Tabelline, Bosco delle Lettere, Sistema Solare e Privacy, in tema chiaro e scuro: nessuna violazione.</li>
+        <li>Contrasto del testo misurato sulla pagina vera in entrambe le palette, Standard e Accessibile (Okabe-Ito), anche sulle risposte durante la partita.</li>
+        <li>Finestre di dialogo: con Esc si chiudono e il focus torna al pulsante da cui erano partite.</li>
+        <li>Partita su telefono: domanda, risposte e pulsante Avanti restano nella finestra visibile, senza essere coperti.</li>
+        <li>Nessuno spostamento del contenuto durante il caricamento delle pagine delle materie (CLS).</li>
+        <li>Annunci per gli screen reader nelle materie: due sole regioni, una per lo stato del quiz e una per l'esito della risposta con la spiegazione, senza sovrapposizioni.</li>
+        <li>Titoli principali senza emoji nel nome letto dallo screen reader.</li>
+        <li>Tabelline: indice delle decine e calcolatore usabili solo con la tastiera.</li>
       </ul>
 
-      <h2 class="section-title">Metodologia di verifica: controlli manuali</h2>
+      <h2 class="section-title">Cosa non è ancora verificato</h2>
       <ul class="ul">
-        <li>Test da tastiera: Tab, Shift+Tab, Enter, Esc.</li>
-        <li>Verifica modali: apertura, focus trap, chiusura e ritorno focus.</li>
-        <li>Verifica zoom e reflow a 200% e 400%, inclusa viewport 320px.</li>
-        <li>Verifica con screen reader (VoiceOver su Safari).</li>
-        <li>Verifica riduzione animazioni con preferenza di sistema attiva.</li>
+        <li>Test con screen reader reale: VoiceOver (macOS e iOS) e NVDA (Windows).</li>
+        <li>Lettura ad alta voce (pulsante Ascolta) su un telefono Android vero.</li>
       </ul>
-      <p class="text">È disponibile anche un controllo rapido nel pannello <strong>Info</strong> del footer: <strong>Animazioni → Meno animazioni</strong>.</p>
+      <p class="text">Tastiera, zoom al 200% e preferenza di sistema per meno animazioni sono stati provati a mano durante lo sviluppo. Anche dal pannello <strong>Info</strong> del footer si possono ridurre le animazioni: <strong>Animazioni → Meno animazioni</strong>.</p>
 
-      <h2 class="section-title">Perimetro coperto</h2>
+      <h2 class="section-title">Limiti noti</h2>
       <ul class="ul">
-        <li><strong>Controlli automatici:</strong> home, le otto materie, Tabelline, Premi e i due giochi (Il Bosco delle Lettere e Cervellino Spacca-Muri); le pagine informative Chi siamo, Per genitori, Per insegnanti, Guida ai compiti, FAQ, Informazioni AI, Supporta il progetto, Privacy, Cookie, Accessibilità, la pagina dei link e la pagina di errore 404.</li>
-        <li><strong>Controlli manuali:</strong> home e pagine materia (matematica, inglese, problemi, civica, geografia, storia, scienze, italiano), FAQ, Supporta il progetto e questa pagina Accessibilità.</li>
+        <li><strong>Sistema Solare 3D.</strong> La scena è un'immagine descritta: tutto quello che mostra c'è anche nelle schede di testo, raggiungibili con la tastiera e lette dallo screen reader. La scena si comanda con la tastiera (frecce, + e −) e con pulsanti alternativi (avvicinati, allontanati, gira, guarda da sopra o da sotto, pianeta prima e dopo); senza scheda grafica parte ferma.</li>
+        <li><strong>Giochi.</strong> Il Bosco delle Lettere e Cervellino Spacca-Muri chiedono movimenti rapidi: hanno comandi da tastiera e si mettono in pausa, ma non sono pensati per uno screen reader.</li>
       </ul>
 
       <h2 class="section-title">Segnalazioni</h2>
       <p class="text contact-mail">Se incontri barriere di accessibilità, scrivi a <a href="mailto:supporto@lascuolaamica.it">supporto@lascuolaamica.it</a> indicando pagina, dispositivo/browser e passaggi per riprodurre il problema.</p>
-      <p class="text">Ultima verifica automatica: 6 ottobre 2026. Ultima verifica manuale (tastiera, zoom, VoiceOver): 6 ottobre 2026. Versione portale: <span data-app-version></span>.</p>
+      <p class="text">Ultima verifica automatica: 24 ottobre 2026. Versione del sito: <span data-app-version></span>.</p>
 
       <div class="actions" aria-label="Azioni rapide">
         <a class="action-btn" href="/">Vai alle materie</a>

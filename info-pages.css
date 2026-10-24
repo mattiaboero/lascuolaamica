@@ -645,6 +645,20 @@ body.page-tabelline .tab-oltre li {
   line-height: 1.5;
 }
 
+/* La tabella 2-10 scorre in orizzontale sui telefoni: l'area si raggiunge con
+   Tab (tabindex="0") e si vede quando ha il focus. */
+body.page-tabelline .tab-table-wrap:focus-visible,
+body.page-tabelline .tab-oltre li:focus-visible {
+  outline: 3px solid var(--page-link-strong);
+  outline-offset: 2px;
+}
+
+body.page-tabelline [id^="tabelline-"]:focus {
+  outline: 3px solid var(--page-link-strong);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
 body.page-tabelline .tab-oltre li:target {
   background: var(--page-secondary-bg);
 }

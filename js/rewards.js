@@ -514,13 +514,20 @@
   function showRewardToast(id, extraCount) {
     const reward = rewardById.get(id);
     if (!reward || document.hidden) return;
+    // Nelle pagine materia gli annunci passano dal quiz (SA.annunciaTrofeo,
+    // dopo l'esito della risposta): il toast resta solo da vedere.
+    const annunciaQuiz = window.SA && typeof window.SA.annunciaTrofeo === 'function' ? window.SA.annunciaTrofeo : null;
     let toast = document.querySelector('[data-reward-toast]');
     if (!toast) {
       toast = document.createElement('div');
       toast.className = 'reward-toast';
       toast.setAttribute('data-reward-toast', '1');
-      toast.setAttribute('role', 'status');
-      toast.setAttribute('aria-live', 'polite');
+      if (annunciaQuiz) {
+        toast.setAttribute('aria-hidden', 'true');
+      } else {
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+      }
       document.body.appendChild(toast);
     }
     toast.textContent = '';
@@ -539,6 +546,7 @@
     span.textContent = extraCount > 1 ? `Hai sbloccato ${extraCount} premi. Li trovi nella bacheca.` : reward.description;
     text.append(strong, span);
     toast.append(img, text);
+    if (annunciaQuiz) annunciaQuiz(`${strong.textContent}. ${span.textContent}`);
     toast.classList.add('is-visible');
     window.setTimeout(() => toast.classList.remove('is-visible'), 5200);
   }
