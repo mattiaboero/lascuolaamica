@@ -29,8 +29,9 @@ avvio manuale del wiki, prova VoiceOver nella pagina Accessibilità.**
   `docs/wiki/Sicurezza-Privacy-e-Minori.md` allineata.
 - `accessibilita.html`: prova a mano con VoiceOver del 24 ottobre 2026
   (iPhone 17 Pro Max, iOS 27, Google Chrome; /matematica in partita e
-  /tabelline), superata. VoiceOver tolto da «non ancora verificato»; restano
-  NVDA e Ascolta su Android.
+  /tabelline), superata. In «non ancora verificato» restano VoiceOver su Mac e
+  con Safari su iPhone, VoiceOver sulle altre pagine materia, sul Sistema
+  Solare e sui giochi, NVDA e Ascolta su Android.
 - `.github/workflows/sync-wiki.yml`: anche `workflow_dispatch`, per provare
   `WIKI_SYNC_TOKEN` senza modificare il wiki. Il trigger su push resta.
 - `scripts/generate_sitemap.py`: `<lastmod>` è la data più recente fra l'HTML
