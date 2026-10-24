@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'docs/wiki/**'
+  # Avvio a mano da Actions: serve a provare WIKI_SYNC_TOKEN senza toccare il wiki.
+  workflow_dispatch:
 
 # Niente permessi di default: ogni job dichiara i suoi.
 permissions: {}

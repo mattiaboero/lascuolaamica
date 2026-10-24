@@ -97,7 +97,7 @@
       <h1 class="title" id="accessTitle">Dichiarazione di accessibilità</h1>
 
       <p class="text">Il riferimento è WCAG 2.2, livelli A e AA. Lo scopo è che il sito si usi bene anche con la tastiera, con uno screen reader, con lo zoom e con meno animazioni, anche da bambine e bambini che usano tecnologie assistive.</p>
-      <p class="text">Stato al 24 ottobre 2026: i controlli automatici elencati sotto non trovano violazioni. Il test con uno screen reader reale non è ancora stato fatto: per questo non dichiariamo la piena conformità.</p>
+      <p class="text">Stato al 24 ottobre 2026: i controlli automatici elencati sotto non trovano violazioni, e una prima prova a mano con uno screen reader è superata. Altre prove restano da fare (vedi sotto): per questo non dichiariamo la piena conformità.</p>
 
       <h2 class="section-title">Cosa è verificato in automatico</h2>
       <p class="text">Controlli che girano a ogni modifica del sito, ultima verifica il 24 ottobre 2026:</p>
@@ -112,9 +112,19 @@
         <li>Tabelline: indice delle decine e calcolatore usabili solo con la tastiera.</li>
       </ul>
 
+      <h2 class="section-title">Prova a mano con VoiceOver</h2>
+      <ul class="ul">
+        <li><strong>Data:</strong> 24 ottobre 2026, versione 4.27.0.</li>
+        <li><strong>Dispositivo:</strong> iPhone 17 Pro Max, iOS 27, Google Chrome, con VoiceOver.</li>
+        <li><strong>Pagine provate:</strong> /matematica durante la partita e /tabelline.</li>
+        <li><strong>Esito: superata.</strong> L'esito della risposta con la spiegazione, la domanda nuova e il trofeo vengono letti nell'ordine giusto e senza sovrapporsi, anche premendo «Avanti» subito dopo la risposta; due risposte giuste di fila danno due annunci e la classifica non parte da sola. Su /tabelline l'indice porta sul titolo della decina e la tabella dal 2 al 10 si raggiunge.</li>
+      </ul>
+
       <h2 class="section-title">Cosa non è ancora verificato</h2>
       <ul class="ul">
-        <li>Test con screen reader reale: VoiceOver (macOS e iOS) e NVDA (Windows).</li>
+        <li>VoiceOver su Mac (macOS) e con Safari su iPhone: la prova sopra è stata fatta solo con Google Chrome su iPhone.</li>
+        <li>VoiceOver sulle altre pagine delle materie, sul Sistema Solare e sui giochi: la prova sopra riguarda solo /matematica e /tabelline.</li>
+        <li>Test con lo screen reader NVDA (Windows).</li>
         <li>Lettura ad alta voce (pulsante Ascolta) su un telefono Android vero.</li>
       </ul>
       <p class="text">Tastiera, zoom al 200% e preferenza di sistema per meno animazioni sono stati provati a mano durante lo sviluppo. Anche dal pannello <strong>Info</strong> del footer si possono ridurre le animazioni: <strong>Animazioni → Meno animazioni</strong>.</p>

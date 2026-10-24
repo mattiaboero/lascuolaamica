@@ -1,9 +1,10 @@
 [
  {
-  "date": "24 ottobre 2026 · Release 4.26.1 – 4.27.0",
+  "date": "24 ottobre 2026 · Release 4.26.1 – 4.27.1",
   "items": [
    "Più sicurezza dietro le quinte: il sito accetta di avviare solo i propri script di aggiornamento e le sue pagine non si lasciano più leggere da altri siti. Per chi usa il sito non cambia niente.",
-   "Più accessibile: chi usa uno screen reader sente la domanda nuova e l’esito della risposta con la spiegazione, senza annunci che si accavallano. Nella palette accessibile la quarta risposta ha un colore solo. Nelle Tabelline l’indice delle decine porta dritto al titolo della decina anche con la tastiera."
+   "Più accessibile: chi usa uno screen reader sente la domanda nuova e l’esito della risposta con la spiegazione, senza annunci che si accavallano. Nella palette accessibile la quarta risposta ha un colore solo. Nelle Tabelline l’indice delle decine porta dritto al titolo della decina anche con la tastiera.",
+   "Privacy Policy più chiara: in cima c’è un riquadro «Per i bambini», il diritto di opporsi ha un paragrafo tutto suo e trovi come Cloudflare protegge i dati quando li tratta fuori dall’Europa. La pagina Accessibilità riporta la prova con VoiceOver su iPhone."
   ]
  },
  {

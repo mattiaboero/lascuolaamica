@@ -45,5 +45,8 @@ jobs:
       - name: Run prepublish-check
         run: bash prepublish-check.sh
 
+      - name: IndexNow (filtro per data, --all, zero URL; senza rete)
+        run: npm run check:indexnow
+
       - name: Audit questions JSON
         run: node scripts/audit_questions_json.js

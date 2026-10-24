@@ -512,6 +512,34 @@ html:not([data-palette="okabe-ito"]) {
   --info-light-button-border: var(--ws-cinnamon-border);
 }
 
+/* Privacy: box «Per i bambini» in cima e diritto di opposizione ben visibile
+   (art. 21, par. 4 GDPR). Solo token della pagina: segue anche Okabe-Ito. */
+body.info-page .kids-box {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border: 2px solid var(--page-card-border);
+  border-radius: 16px;
+  background: var(--page-secondary-bg);
+  color: var(--page-text);
+}
+
+body.info-page .kids-box h2 {
+  margin-top: 0;
+}
+
+body.info-page .kids-box p {
+  margin: 6px 0 0;
+  font-size: 1.05rem;
+}
+
+body.info-page .rights-note {
+  padding: 12px 14px;
+  border-left: 5px solid var(--page-link-strong);
+  border-radius: 8px;
+  background: var(--page-secondary-bg);
+  color: var(--page-text);
+}
+
 /* =========================================================================
    Pagina /tabelline: griglia video del canale YouTube e tabella 2-10.
    Usa solo i token --page-*, quindi segue anche la palette Okabe-Ito.

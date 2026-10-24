@@ -42,13 +42,15 @@ Il sito non chiede dati personali per essere usato. Non ci sono form di contatto
 
 Il trattamento dati è limitato a (dettagli, basi giuridiche e conservazione in `privacy.html`):
 
-- **Log tecnici dell’infrastruttura di hosting e protezione**: necessari al funzionamento e alla sicurezza del servizio
+- **Log tecnici dell’infrastruttura di hosting e protezione**: necessari al funzionamento e alla sicurezza del servizio. Cloudflare li tratta per conto del titolare secondo il suo accordo sul trattamento dei dati (<https://www.cloudflare.com/cloudflare-customer-dpa/>): restano per il tempo necessario a distribuire e proteggere il sito e vengono cancellati alla fine del servizio. Per i trasferimenti negli Stati Uniti vale la certificazione di Cloudflare al Data Privacy Framework UE-USA (decisione di adeguatezza del 10 luglio 2023); se venisse meno, le Clausole Contrattuali Standard
 - **Email a supporto@ e ciao@**: solo per rispondere a chi scrive
 - **Memoria locale del browser**: dati che restano sul dispositivo dell'utente, mai trasmessi. L'elenco delle chiavi è in `cookie.html`
 
 La sintesi vocale usa solo voci installate sul dispositivo (`SA.voice` in `shared.js`): una voce di rete manderebbe testo e IP a un server esterno. `scripts/check_speech_local.js`, dentro `prepublish-check.sh`, blocca ogni chiamata a `speechSynthesis.speak` fuori dall'helper.
 
-Non è richiesto il consenso esplicito ai cookie perché non ci sono cookie di profilazione. La Cookie Policy e la Privacy Policy sono accessibili dal sito.
+Non è richiesto il consenso esplicito ai cookie perché non ci sono cookie di profilazione. Cloudflare può impostare cookie tecnici di sicurezza quando controlla se il traffico è automatico (per esempio `__cf_bm` e `cf_clearance`): restano tecnici, quindi niente banner. La Cookie Policy e la Privacy Policy sono accessibili dal sito.
+
+In `privacy.html` il diritto di opposizione (art. 21) ha un paragrafo suo, separato dall'elenco degli altri diritti, come chiede l'art. 21, par. 4. In cima alla pagina un box «Per i bambini» spiega in tre frasi che non chiediamo dati e che punti e premi restano sul dispositivo.
 
 ---
 
