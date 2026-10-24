@@ -281,7 +281,7 @@ Da fare dopo fisico e bambini, su un albero che contenga **solo** il Sistema Sol
 10. `npm run freshness`, controllare il diff (nessun hash nuovo in `_headers`); `npm run verify`; `npm run check:contrast` con server sulla porta 4173.
 11. `CHANGELOG.md`, `docs/wiki/Architettura.md`, `project_history.md`.
 12. PR, prova del precache sull'anteprima `*.pages.dev`, merge.
-13. Dopo il deploy: produzione contro `export/`, 301 da `.html`, immagine OG a 200, compressione dei `.bin` su Cloudflare (non verificata), `npm run indexnow`, controllo URL in Search Console, tag della release.
+13. Dopo il deploy: produzione contro `export/`, 301 da `.html`, immagine OG a 200, compressione dei `.bin` su Cloudflare (non verificata), `npm run indexnow -- --since <primo giorno della release>` (solo le pagine cambiate, vedi Runbook-Release), controllo URL in Search Console, tag della release.
 
 **Attenzione:** l'export pubblica ogni `*.html` tracciato. Un merge su `main` prima
 delle revisioni metterebbe online la pagina, anche se `noindex`.

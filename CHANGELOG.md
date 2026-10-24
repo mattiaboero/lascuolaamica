@@ -1,5 +1,55 @@
 # Changelog Repo
 
+## 4.27.1 - 2026-10-24
+
+**Privacy e Cookie Policy precisate, IndexNow solo per le pagine cambiate,
+avvio manuale del wiki, prova VoiceOver nella pagina Accessibilità.**
+
+### Changed
+- `privacy.html`, trattamento 1 (Cloudflare):
+  - trasferimento fuori dall'UE: certificazione di Cloudflare al Data Privacy
+    Framework UE-USA (decisione di adeguatezza del 10 luglio 2023), Clausole
+    Contrattuali Standard se la certificazione venisse meno, link
+    all'accordo sul trattamento dei dati
+    (<https://www.cloudflare.com/cloudflare-customer-dpa/>);
+  - conservazione: tolto il rimando all'informativa di Cloudflare (riguarda i
+    dati che Cloudflare tratta per sé); criterio dell'accordo: per il tempo
+    necessario a distribuire e proteggere il sito, cancellazione alla fine
+    del servizio. Restano i circa 31 giorni di dati aggregati nel pannello e
+    il fatto che il titolare non scarica né conserva i log.
+- `privacy.html`, «I tuoi diritti»: opposizione (art. 21) in un paragrafo
+  separato ed evidenziato, fuori dall'elenco (art. 21, par. 4); portabilità
+  «dove applicabile».
+- `privacy.html`: box «Per i bambini» in cima (h2, tre frasi semplici), stile
+  in `info-pages.css` con i soli token della pagina.
+- `cookie.html`, «Dati tecnici del provider»: `__cf_bm` e `cf_clearance` come
+  esempi di cookie tecnici di sicurezza che Cloudflare può impostare quando
+  controlla se il traffico è automatico; restano tecnici, niente banner.
+- «Ultimo aggiornamento» al 24 ottobre 2026 in entrambe le pagine;
+  `docs/wiki/Sicurezza-Privacy-e-Minori.md` allineata.
+- `accessibilita.html`: prova a mano con VoiceOver del 24 ottobre 2026
+  (iPhone 17 Pro Max, iOS 27, Google Chrome; /matematica in partita e
+  /tabelline), superata. VoiceOver tolto da «non ancora verificato»; restano
+  NVDA e Ascolta su Android.
+- `.github/workflows/sync-wiki.yml`: anche `workflow_dispatch`, per provare
+  `WIKI_SYNC_TOKEN` senza modificare il wiki. Il trigger su push resta.
+- `scripts/generate_sitemap.py`: `<lastmod>` è la data più recente fra l'HTML
+  della pagina e le sue dipendenze proprie (JS e CSS caricati solo da quella
+  pagina, `json/<pagina>.json` e `json/<pagina>/`, `js/<pagina>-*.json`). Prima
+  contava solo l'HTML: una modifica alle sole domande non cambiava la data.
+  Le pagine non toccate mantengono la loro data (verificato: nessuna data
+  cambiata oltre a privacy e cookie).
+- `scripts/indexnow.js`: di default invia solo le pagine con `<lastmod>` da
+  oggi (ora italiana); `--since AAAA-MM-GG` per un'altra data, `--all` per
+  tutta la sitemap, `--dry` per stampare; zero URL: esce con 0 e lo dice.
+  `docs/wiki/Runbook-Release.md` spiega quando usare `--since` e `--all`.
+
+### Tests
+- `scripts/check_indexnow.js` (`check:indexnow`, in `verify` e nel job
+  prepublish): con una sitemap di prova filtro per data (estremo compreso),
+  `--all`, zero URL, data sbagliata rifiutata, «oggi» in ora italiana, CLI
+  con `--dry` e con zero URL, senza rete.
+
 ## 4.27.0 - 2026-10-24
 
 **Accessibilità e AEO: due regioni di annuncio, Okabe-Ito a una tinta,

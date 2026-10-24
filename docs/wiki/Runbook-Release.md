@@ -73,6 +73,11 @@ Questi controlli servono a bloccare regressioni architetturali prima del merge.
    - Pagina supporto
    - Funzionamento offline (dopo primo caricamento, disconnetti e ricarica)
 6. Se necessario, verifica anche header, asset principali e comportamenti di sicurezza con gli strumenti del team.
+7. Se sono cambiate o nate pagine, segnalale a IndexNow (Bing e motori collegati). Lo script manda solo le pagine con `<lastmod>` nella sitemap dalla data indicata in poi; il `<lastmod>` è la data più recente fra l'HTML della pagina e le sue dipendenze proprie (JS, CSS e domande della pagina), e si aggiorna con `npm run freshness`:
+   - `npm run indexnow -- --dry --since AAAA-MM-GG` per vedere l'elenco senza inviare;
+   - `npm run indexnow -- --since AAAA-MM-GG` con il **primo giorno di lavoro della release**: il `<lastmod>` è la data in cui la pagina è cambiata nel branch, non quella del merge. Senza `--since` vale oggi (ora italiana), giusto solo se la release è nata e uscita oggi;
+   - `npm run indexnow -- --all` solo in casi eccezionali (migrazione, cambio di dominio, sitemap ricostruita): manda tutti gli URL.
+   Se non c'è niente da segnalare lo script lo dice ed esce senza errori. Il protocollo chiede di segnalare solo URL aggiunti, cambiati o tolti: mandare ogni volta tutta la sitemap aveva fatto registrare a Bing 460 URL in tre settimane.
 
 ---
 
