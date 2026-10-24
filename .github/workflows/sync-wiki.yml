@@ -6,6 +6,9 @@ on:
     paths:
       - 'docs/wiki/**'
 
+# Niente permessi di default: ogni job dichiara i suoi.
+permissions: {}
+
 jobs:
   sync:
     runs-on: ubuntu-latest

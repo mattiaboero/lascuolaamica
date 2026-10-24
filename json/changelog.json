@@ -1,5 +1,11 @@
 [
  {
+  "date": "24 ottobre 2026 · Release 4.26.1",
+  "items": [
+   "Più sicurezza dietro le quinte: il sito accetta di avviare solo i propri script di aggiornamento e le sue pagine non si lasciano più leggere da altri siti. Per chi usa il sito non cambia niente."
+  ]
+ },
+ {
   "date": "23 ottobre 2026 · Release 4.22.20 – 4.26.0",
   "items": [
    "Più ordine e più leggibilità: fra un riquadro e l’altro c’è sempre lo stesso spazio, la X di «Ultimi aggiornamenti» resta in alto quando scorri, la palette accessibile ha sempre il contrasto giusto e nelle pagine delle materie i pulsanti non si spostano più mentre la pagina carica. Il canale YouTube ora si chiama La Scuola Amica: youtube.com/@lascuolaamica.",

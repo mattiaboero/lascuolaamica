@@ -859,14 +859,19 @@
 
   // La CSP ha require-trusted-types-for 'script': service worker registration e'
   // uno "script URL sink", quindi navigator.serviceWorker.register() rifiuta una
-  // stringa semplice e richiede un TrustedScriptURL. L'URL e' un letterale fisso
-  // ('/sw.js'), nessun input esterno: createScriptURL identita' e' sicura qui.
+  // stringa semplice e richiede un TrustedScriptURL. La policy accetta solo gli
+  // URL dell'elenco (gli stessi della policy sa-sw-import di sw.js) e rifiuta
+  // tutto il resto: chi riuscisse a chiamarla non registra uno script suo.
+  const TRUSTED_SCRIPT_URLS = ['/sw.js', '/app-version.js'];
   function trustedScriptUrl(url) {
     if (!window.trustedTypes || typeof window.trustedTypes.createPolicy !== 'function') return url;
     try {
       if (!SA._swUrlPolicy) {
         SA._swUrlPolicy = window.trustedTypes.createPolicy('sa-sw-url', {
-          createScriptURL: (u) => u
+          createScriptURL: (u) => {
+            if (TRUSTED_SCRIPT_URLS.includes(u)) return u;
+            throw new TypeError(`sa-sw-url: URL non ammesso: ${u}`);
+          }
         });
       }
       return SA._swUrlPolicy.createScriptURL(url);

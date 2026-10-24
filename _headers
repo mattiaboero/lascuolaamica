@@ -17,7 +17,13 @@
 # l'interruttore, l'API si' (bot_management della zona, campo enable_js a false).
 # Spegnere Bot Fight Mode non basta.
 
+# Cloudflare Pages aggiunge Access-Control-Allow-Origin: * a ogni risposta
+# (c'e' anche su lascuolaamica.pages.dev). Il sito non chiede niente da altre
+# origini a se stesso, e nessuna pagina deve essere leggibile via CORS da un
+# altro sito: "! Access-Control-Allow-Origin" lo toglie ovunque. Se un file
+# dovesse servire a un'altra origine, lo si riaggiunge solo su quel percorso.
 /*
+  ! Access-Control-Allow-Origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin

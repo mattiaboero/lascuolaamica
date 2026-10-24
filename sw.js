@@ -6,12 +6,21 @@
 
 // Stesso vincolo Trusted Types di shared.js (la CSP con require-trusted-types-for
 // 'script' si applica anche alla risposta di questo file): importScripts() e' uno
-// script URL sink e rifiuta una stringa semplice. URL fisso, nessun input esterno.
+// script URL sink e rifiuta una stringa semplice. URL fisso, nessun input esterno,
+// e la policy accetta solo quello.
 (function importAppVersion() {
   let url = '/app-version.js';
   if (self.trustedTypes && typeof self.trustedTypes.createPolicy === 'function') {
     try {
-      const policy = self.trustedTypes.createPolicy('sa-sw-import', { createScriptURL: (u) => u });
+      // Solo gli URL dell'elenco (gli stessi della policy sa-sw-url di
+      // shared.js): qualsiasi altra stringa viene rifiutata.
+      const ammessi = ['/sw.js', '/app-version.js'];
+      const policy = self.trustedTypes.createPolicy('sa-sw-import', {
+        createScriptURL: (u) => {
+          if (ammessi.includes(u)) return u;
+          throw new TypeError(`sa-sw-import: URL non ammesso: ${u}`);
+        }
+      });
       url = policy.createScriptURL('/app-version.js');
     } catch (e) {
       // policy non creabile: tenta comunque con la stringa semplice
