@@ -19,6 +19,10 @@ permessi dei workflow.**
   `@lhci/cli` 0.15.1 (ultima versione), che fissa `lighthouse` 12.6.1,
   `tmp` ^0.1 e `inquirer` ^6: vedi la PR. stylelint e
   stylelint-config-standard sono gia' all'ultima versione e senza avvisi.
+- Rischio accettato per la catena di `@lhci/cli` documentato in
+  `.github/SECURITY.md` (pacchetti, perche' non arrivano al sito, perche'
+  non sono sfruttabili nel nostro uso, quando rivederlo). Nel job
+  `prepublish`: `npm audit --omit=dev --audit-level=high`.
 - Workflow: `permissions: {}` in testa a ogni file, permessi espliciti per
   ogni job (`contents: read`; Lighthouse anche `statuses: write`). Tutte le
   azioni restano fissate per hash, `actions/cache` e

@@ -33,6 +33,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Dipendenze di produzione: oggi nessuna. Se ne entra una con una falla
+      # alta o critica, la PR non passa. Le devDependencies hanno un rischio
+      # accettato e documentato in .github/SECURITY.md.
+      - name: Vulnerabilita' nelle dipendenze di produzione
+        run: npm audit --omit=dev --audit-level=high
+
       - name: Lint (eslint + stylelint)
         run: npm run lint
 
