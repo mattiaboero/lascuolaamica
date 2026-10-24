@@ -130,6 +130,20 @@ fs.readdirSync(path.join(DST, 'json')).filter((f) => f.endsWith('.json')).forEac
     errori.push(`json/${f}: pubblicate ${pubblicato.questions.length} domande, nel repo le attive sono ${attiveNelRepo}`);
   }
   domande += pubblicato.questions.length;
+  // Il sito scarica i file per classe (scripts/build_json_classi.py): tutti e
+  // sei devono esserci e contenere tutte le domande pubblicate, ne' piu' ne' meno.
+  const cartella = f.replace(/\.json$/, '');
+  const divise = ['c1', 'c2', 'c3', 'c4', 'c5', 'bonus'].reduce((n, nome) => {
+    const rel = `json/${cartella}/${nome}.json`;
+    if (!esiste(rel)) {
+      errori.push(`${rel} manca: la materia non si apre`);
+      return n;
+    }
+    return n + JSON.parse(fs.readFileSync(path.join(DST, rel), 'utf8')).questions.length;
+  }, 0);
+  if (divise !== pubblicato.questions.length) {
+    errori.push(`json/${cartella}/: ${divise} domande nei file per classe, ${pubblicato.questions.length} in json/${f}`);
+  }
   // F6: l'export copia solo i file tracciati da git; un SVG mai aggiunto
   // lascerebbe la domanda senza figura in produzione.
   pubblicato.questions.forEach((q) => {

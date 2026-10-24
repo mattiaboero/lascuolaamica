@@ -1,5 +1,64 @@
 # Changelog Repo
 
+## 4.26.0 - 2026-10-23
+
+**Prestazioni: domande per classe, Sistema Solare senza attività lunghe,
+CSS critico inline nelle pagine materia.**
+
+Misure prima e dopo (PageSpeed mobile, 3 giri per pagina; Playwright su
+/matematica con rete 4G lenta e CPU 4×) nella PR.
+
+### Changed
+- Domande per classe. `json/<materia>.json` resta la fonte; il sito
+  scarica `json/<materia>/c<N>.json` e `json/<materia>/bonus.json`, scritti da
+  `scripts/build_json_classi.py` (in `npm run freshness`; `check:json-classi`
+  in `npm run verify`): solo domande attive, senza bonus, solo i campi letti
+  dal sito. La pagina di una materia scarica le classi che una partita della
+  classe scelta può usare (`gradesForClass`: per la 3ª 2ª, 3ª e 4ª; con i
+  livelli di inglese distanza 2), le altre al cambio classe; le bonus tutte.
+  `/breakout` scarica solo la classe scelta di ogni materia.
+- `subject-quiz-core.js`: banche ricostruite a ogni classe nuova, ambiti dalla
+  config (quali offrire lo decide la classe), `_id` delle domande dal loro
+  id e non dalla posizione nella banca (lo storico anti-ripetizione per id
+  riparte una volta, quello per firma resta), `data-domande` sull'`html`
+  mentre una classe arriva, «Inizia!» aspetta la classe.
+- `sw.js`: `refetchOpenedJson` porta nella cache nuova anche i file per
+  classe; chi aveva offline il file intero di una materia (fino alla 4.25.0)
+  riceve tutte le sue classi.
+- Sistema Solare: dati della scena in `js/sistema-solare-dati.json` (generato,
+  scaricato con fetch) invece di uno script da 98 KB; benvenuto mostrato
+  prima dei dati, focus dopo il primo disegno; avvio a passi con
+  `scheduler.yield()` (ripiego `requestIdleCallback`); orbite e fasce
+  costruite a pezzi; senza GPU (WebGL software) il primo disegno aspetta il
+  primo gesto: compilare gli shader in software costava 400+ ms.
+- Pagine materia: CSS critico inline (`scripts/build_css_critico.js`,
+  `npm run css:critico`, `check:css-critico` in verify), fogli completi con
+  `media="print"` accesi da `js/lazy-css.js`, e in `<noscript>`.
+- `questions-loader.js` chiede i file per classe subito, in parallelo a
+  `json/index.json` (il percorso ha il nome della materia), e il motore chiede
+  le bonus in parallelo alle classi: senza il preload di `index.json` erano
+  due giri di rete in serie prima di «Inizia!».
+- Pagine materia: i preload dei font vengono prima del CSS critico; dietro 35
+  KB di stili inline partivano un giro dopo.
+- Tolti i preload di `rewards.css` (21 pagine; Cloudflare li trasformava in
+  header Link) e di `/json/index.json` (9 pagine). `js/lazy-css.js` applica
+  `rewards.css` dove c'è `js/rewards.js`.
+
+### Tests
+- `scripts/json_classi_smoke.js` (`test:e2e:json-classi`, in CI): con rete
+  lenta /matematica in 4ª scarica solo c3, c4, c5 e bonus; il passaggio alla
+  1ª scarica solo c1 e si gioca; offline la classe usata si gioca, una mai
+  aperta dà «Non riesco a caricare le domande».
+- `scripts/css_critico_smoke.js` (`test:e2e:css-critico`, in CI): 8 pagine,
+  375 e 1280 px, chiaro e scuro, pagina intera col solo CSS critico identica
+  al pixel a quella coi fogli completi.
+- Aggiornati per i file per classe: `quiz_viewport_smoke.js`,
+  `subject_quiz_test_harness.js` (banchi letti dopo la scelta della classe,
+  attesa di `data-domande="pronte"`), `check_sw_opened_json.js` (migrazione
+  dal file intero), `check_sistema_solare.js` (dati JSON),
+  `scripts/check_export.js` (file per classe presenti e con le domande
+  pubblicate).
+
 ## 4.25.0 - 2026-10-23
 
 **Tabelline fino al 100 e calcolatore per qualsiasi numero.**

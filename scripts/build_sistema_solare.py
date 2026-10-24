@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera js/sistema-solare-dati.js per la pagina /sistema-solare e, nella
+"""Genera js/sistema-solare-dati.json per la pagina /sistema-solare e, nella
 pagina, le parti di testo statico che leggono i motori di ricerca e chi non ha
 JavaScript (schede, domande frequenti, crediti: vedi scrivi_pagina).
 
@@ -24,7 +24,7 @@ import sys
 
 RADICE = pathlib.Path(__file__).resolve().parent.parent
 DOCS = RADICE / 'docs' / 'sistema-solare'
-USCITA = RADICE / 'js' / 'sistema-solare-dati.js'
+USCITA = RADICE / 'js' / 'sistema-solare-dati.json'
 # I testi delle schede dei corpi viaggiano a parte: la scena e il benvenuto non
 # li aspettano (circa 20 KB compressi in meno prima del primo disegno). La
 # pagina li scarica con fetch() appena arrivati gli script, e li rimette nella
@@ -293,20 +293,19 @@ def main():
         'film': film,
     }
     scena, testi = dividi_testi(uscita)
-    testo = ('// GENERATO da scripts/build_sistema_solare.py: non modificare a mano.\n'
-             '// Fonti e note per ogni valore: docs/sistema-solare/*.json\n'
-             '// I testi delle schede dei corpi sono in js/sistema-solare-testi.json.\n'
-             'window.SA = window.SA || {};\n'
-             'window.SA.sistemaSolareDati = ' + json.dumps(scena, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    # JSON e non uno script: la pagina lo scarica con fetch quando parte
+    # (js/sistema-solare.js) e JSON.parse costa meno che eseguire 90 KB di JS.
+    # Generato: non modificare a mano. Fonti: docs/sistema-solare/*.json.
+    testo = json.dumps(scena, ensure_ascii=False, separators=(',', ':'))
     testo_testi = json.dumps(testi, ensure_ascii=False, separators=(',', ':'))
     scrivi_traiettorie('--check' in sys.argv)
     scrivi_pagina(uscita, carica('faq.json'), '--check' in sys.argv)
     if '--check' in sys.argv:
         if not USCITA.exists() or USCITA.read_text(encoding='utf-8') != testo:
-            sys.exit('[ERROR] js/sistema-solare-dati.js non e\' aggiornato: python3 scripts/build_sistema_solare.py')
+            sys.exit('[ERROR] js/sistema-solare-dati.json non e\' aggiornato: python3 scripts/build_sistema_solare.py')
         if not USCITA_TESTI.exists() or USCITA_TESTI.read_text(encoding='utf-8') != testo_testi:
             sys.exit('[ERROR] js/sistema-solare-testi.json non e\' aggiornato: python3 scripts/build_sistema_solare.py')
-        print('[OK] js/sistema-solare-dati.js e js/sistema-solare-testi.json aggiornati')
+        print('[OK] js/sistema-solare-dati.json e js/sistema-solare-testi.json aggiornati')
         return
     USCITA.write_text(testo, encoding='utf-8')
     USCITA_TESTI.write_text(testo_testi, encoding='utf-8')
@@ -373,7 +372,7 @@ def scrivi_traiettorie(controlla):
 # Qui si scrivono in sistema-solare.html, fra due coppie di marcatori, le
 # schede di tutti i corpi, le domande frequenti (testo visibile e FAQPage
 # identici) e i crediti delle immagini. Nessun numero nuovo: tutto viene da
-# `uscita` (lo stesso contenuto di js/sistema-solare-dati.js) e da faq.json.
+# `uscita` (lo stesso contenuto di js/sistema-solare-dati.json) e da faq.json.
 
 MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio',
         'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']

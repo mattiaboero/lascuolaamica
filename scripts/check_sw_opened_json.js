@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Verifica refetchOpenedJson (sw.js): al cambio di versione i json/<materia>.json
+// Verifica refetchOpenedJson (sw.js): al cambio di versione i json/<materia>/c<N>.json
 // che stavano nella cache vecchia devono finire nella nuova riscaricati dalla
 // rete, mai copiati, e un file che non arriva deve restare fuori. Verifica
 // anche che una cache vecchia rimasta non risponda al posto di quella corrente
@@ -118,36 +118,46 @@ const seedOld = (p) => seed(OLD, p);
   let sw = bootWorker();
 
   // install: storia e geografia erano aperte, la rete perde geografia.
-  await Promise.all(['/json/storia.json', '/json/geografia.json', '/json/index.json', '/shared.js', '/', '/storia'].map(seedOld));
-  offline = new Set(['/json/geografia.json']);
+  await Promise.all(['/json/storia/c3.json', '/json/geografia/c3.json', '/json/index.json', '/shared.js', '/', '/storia'].map(seedOld));
+  offline = new Set(['/json/geografia/c3.json']);
   await sw.fire('install');
   assert.deepStrictEqual(fetched.filter(isPage), [], 'bump con la home nella cache vecchia: nessuna pagina scaricata');
-  assert.strictEqual(inNew('/json/storia.json').body, 'rete', 'storia va riscaricata, non copiata');
-  assert.strictEqual(inNew('/json/geografia.json'), undefined, 'geografia non arrivata: niente copia vecchia');
+  assert.strictEqual(inNew('/json/storia/c3.json').body, 'rete', 'storia va riscaricata, non copiata');
+  assert.strictEqual(inNew('/json/geografia/c3.json'), undefined, 'geografia non arrivata: niente copia vecchia');
   assert.strictEqual(fetched.filter((p) => p === '/json/index.json').length, 1, 'index.json e\' gia\' in precache: una sola richiesta');
-  assert.ok(!fetched.includes('/json/scienze.json'), 'le materie mai aperte non si scaricano');
+  assert.ok(!fetched.includes('/json/scienze/c2.json'), 'le materie mai aperte non si scaricano');
   assert.ok(stores.has(OLD), 'install non tocca la cache vecchia');
   assert.deepStrictEqual(await inNew(NOTE).json(), [OLD], 'install annota le cache che c\'erano gia\'');
 
   // activate: scienze aperta dopo l'install, geografia ritenta e stavolta arriva.
-  await seedOld('/json/scienze.json');
+  await seedOld('/json/scienze/c2.json');
   offline = new Set();
   fetched.length = 0;
   await sw.fire('activate');
-  assert.strictEqual(inNew('/json/scienze.json').body, 'rete');
-  assert.strictEqual(inNew('/json/geografia.json').body, 'rete');
-  assert.deepStrictEqual(fetched.sort(), ['/json/geografia.json', '/json/scienze.json'], 'activate chiede solo cio\' che manca, nessuna pagina');
+  assert.strictEqual(inNew('/json/scienze/c2.json').body, 'rete');
+  assert.strictEqual(inNew('/json/geografia/c3.json').body, 'rete');
+  assert.deepStrictEqual(fetched.sort(), ['/json/geografia/c3.json', '/json/scienze/c2.json'], 'activate chiede solo cio\' che manca, nessuna pagina');
   assert.strictEqual(inNew('/storia').body, 'vecchia', 'la pagina visitata si copia dalla cache vecchia, senza rete');
   assert.strictEqual(inNew('/').body, 'vecchia', 'la home arriva copiata dalla cache vecchia, senza rete');
   assert.strictEqual(inNew('/shared.js').body, 'rete', 'si copiano solo le pagine HTML');
   assert.ok(!stores.has(OLD), 'activate cancella la cache vecchia');
   assert.strictEqual(inNew(NOTE), undefined, 'dopo activate la nota non serve piu\'');
 
+  // Formato di prima (fino alla 4.25.0): la materia intera in un file solo.
+  // Nella cache nuova arrivano tutte le sue classi e il bonus, non il file intero.
+  await seedOld('/json/italiano.json');
+  fetched.length = 0;
+  await sw.fire('activate');
+  const parti = ['c1', 'c2', 'c3', 'c4', 'c5', 'bonus'].map((n) => `/json/italiano/${n}.json`);
+  parti.forEach((p) => assert.strictEqual(inNew(p) && inNew(p).body, 'rete', `${p} dopo il file intero di prima`));
+  assert.strictEqual(inNew('/json/italiano.json'), undefined, 'il file intero non serve piu\'');
+  assert.deepStrictEqual(fetched.slice().sort(), parti.slice().sort(), 'solo le parti della materia');
+
   // activate senza rete: niente copia, e l'attivazione va comunque in fondo.
-  await seedOld('/json/civica.json');
+  await seedOld('/json/civica/c4.json');
   offline = 'all';
   await sw.fire('activate');
-  assert.strictEqual(inNew('/json/civica.json'), undefined);
+  assert.strictEqual(inNew('/json/civica/c4.json'), undefined);
   assert.ok(!stores.has(OLD));
 
   // Safari: l'app viene chiusa con l'aggiornamento in attesa e alla riapertura
@@ -155,10 +165,10 @@ const seedOld = (p) => seed(OLD, p);
   stores.clear();
   fetched.length = 0;
   offline = new Set();
-  await Promise.all(['/json/storia.json', '/shared.js', '/', '/faq'].map(seedOld));
+  await Promise.all(['/json/storia/c3.json', '/shared.js', '/', '/faq'].map(seedOld));
   sw = bootWorker();
   await sw.fire('install');
-  await seedOld('/json/scienze.json'); // aperta dopo «Più tardi»
+  await seedOld('/json/scienze/c2.json'); // aperta dopo «Più tardi»
   await seed(NEWER, '/shared.js'); // una versione ancora piu' nuova, in attesa
   await seed(NEWER, '/premi');
   sw = bootWorker(); // riapertura: memoria nuova, niente activate
@@ -166,7 +176,7 @@ const seedOld = (p) => seed(OLD, p);
   const shared = await sw.request('/shared.js');
   assert.strictEqual(shared.body, 'rete', 'cacheFirst non deve servire il file della cache vecchia');
   assert.ok(!stores.has(OLD), 'la prima richiesta toglie la cache vecchia anche senza activate');
-  assert.strictEqual(inNew('/json/scienze.json').body, 'rete', 'la materia aperta dopo «Più tardi» va riportata prima di cancellare');
+  assert.strictEqual(inNew('/json/scienze/c2.json').body, 'rete', 'la materia aperta dopo «Più tardi» va riportata prima di cancellare');
   assert.strictEqual(inNew('/faq').body, 'vecchia', 'anche senza activate le pagine visitate passano nella cache nuova');
   assert.strictEqual(inNew('/premi'), undefined, 'dalla cache di una versione piu\' nuova non si copia niente');
   assert.ok(stores.has(NEWER), 'la cache di una versione piu\' nuova in attesa non si tocca');

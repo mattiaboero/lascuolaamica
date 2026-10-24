@@ -1,15 +1,20 @@
 (function () {
   'use strict';
-  // rewards.css serve solo alle pagine che caricano js/rewards.js, e quelle
-  // dichiarano gia' il preload nell'head: quello e' il segnale, invece di
-  // iniettare il foglio ovunque. Su /404 e /tabelline erano ~15 KB di CSS
-  // scaricati e parsati senza un solo selettore corrispondente nel markup.
-  var files = ['rewards.css'];
-  files.forEach(function (href) {
-    if (!document.querySelector('link[rel="preload"][href="' + href + '"]')) return;
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = href;
-    document.head.appendChild(link);
+  // Pagine materia: il CSS che serve al primo disegno e' inline (blocco
+  // CSS-CRITICO, scripts/build_css_critico.js), i fogli completi arrivano con
+  // media="print" per non bloccare. Qui si accendono.
+  document.querySelectorAll('link[data-css-completo]').forEach(function (link) {
+    link.media = 'all';
   });
+
+  // rewards.css serve solo alle pagine che caricano js/rewards.js. Il segnale
+  // era un <link rel="preload"> nell'head, che Cloudflare trasformava anche in
+  // un header Link: rewards.css scaricato in apertura senza servire prima del
+  // load. Ora il segnale e' lo script stesso.
+  if (!document.querySelector('script[src$="js/rewards.js"]')) return;
+  if (document.querySelector('link[rel="stylesheet"][href="rewards.css"]')) return;
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'rewards.css';
+  document.head.appendChild(link);
 })();

@@ -103,6 +103,12 @@ jobs:
       - name: E2E focus alla chiusura dei modali con Esc
         run: npm run test:e2e:focus
 
+      - name: E2E domande per classe (rete lenta, cambio classe, offline)
+        run: npm run test:e2e:json-classi
+
+      - name: E2E CSS critico delle pagine materia (uguale ai fogli completi)
+        run: npm run test:e2e:css-critico
+
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1
 

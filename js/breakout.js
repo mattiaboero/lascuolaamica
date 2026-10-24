@@ -273,8 +273,8 @@
 
   /* -------------------------------------------------------------- domande */
 
-  // Carica il pool di domande delle 8 materie per la classe scelta, filtrando su
-  // json/index.json (stesso dataset dei giochi materia). Messo in cache per classe:
+  // Carica il pool di domande delle 8 materie per la classe scelta: un file per
+  // materia, solo quella classe (stesso dataset dei giochi materia). In cache per classe:
   // partite successive con la stessa classe riusano il pool gia' pescato.
   async function loadQuestionPool(schoolClass) {
     if (!SA.questionsLoader) return;
@@ -282,7 +282,8 @@
 
     const grade = Number(schoolClass);
     const lists = await Promise.all(SUBJECTS.map(function (subject) {
-      return SA.questionsLoader.getSubjectRows(subject, { path: 'json/index.json' }).catch(function () {
+      // Solo la classe scelta: json/<materia>/c<N>.json (questions-loader.js).
+      return SA.questionsLoader.getSubjectRows(subject, { path: 'json/index.json', classes: [grade] }).catch(function () {
         return [];
       });
     }));

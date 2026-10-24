@@ -178,11 +178,33 @@
     };
   }
 
+  // json/<materia>.json resta la fonte, ma il sito scarica i file scritti da
+  // scripts/build_json_classi.py: json/<materia>/c<N>.json (domande attive
+  // di una classe, senza bonus) e json/<materia>/bonus.json (tutte le bonus).
+  // Matematica intera pesava ~2 MB: una partita ne usa al massimo tre classi.
+  const ALL_CLASSES = [1, 2, 3, 4, 5];
+
+  function splitPath(subjectPath, name) {
+    return subjectPath.replace(/\.json$/, `/${name}.json`);
+  }
+
+  // opts.classes: le classi da scaricare (senza, tutte e cinque).
+  // opts.bonusOnly: solo bonus.json.
   async function getSubjectRows(subject, opts) {
     const options = opts || {};
     const includeInactive = toBool(options.includeInactive, false);
-    const includeBonusRows = toBool(options.includeBonusRows, false);
+    const bonusOnly = toBool(options.bonusOnly, false);
+    const includeBonusRows = bonusOnly || toBool(options.includeBonusRows, false);
     const sourcePath = options.path || DEFAULT_INDEX_PATH;
+    const classes = Array.isArray(options.classes) && options.classes.length ? options.classes : ALL_CLASSES;
+    const names = bonusOnly ? [] : classes.map((c) => `c${Number(c)}`);
+    if (includeBonusRows) names.push('bonus');
+    // I file per classe hanno il nome della materia: si chiedono subito, in
+    // parallelo a index.json, invece di aspettarlo (un giro di rete in meno,
+    // ~300 ms con il 4G lento). Se l'indice dice un altro percorso, valgono
+    // quelli dell'indice; un tentativo andato male non lascia tracce (load).
+    const guessed = resolveRelativePath(sourcePath, `${normalizeKey(subject)}.json`);
+    names.forEach((name) => { load(splitPath(guessed, name)).catch(() => {}); });
     const data = await load(sourcePath);
 
     let rows = [];
@@ -200,8 +222,8 @@
       : (subjectRef && typeof subjectRef.path === 'string' ? subjectRef.path : '');
     const subjectPath = resolveRelativePath(sourcePath, relPath);
     if (!subjectPath) return [];
-    const subjectData = await load(subjectPath);
-    rows = extractRowsFromSubjectData(subjectData);
+    const parts = await Promise.all(names.map((name) => load(splitPath(subjectPath, name))));
+    rows = parts.flatMap(extractRowsFromSubjectData);
 
     return rows.filter((row) => {
       if (!includeInactive && row.active === false) return false;
@@ -262,8 +284,13 @@
     return out;
   }
 
-  async function applySubjectConfig(cfg) {
+  // opts.classes: vedi getSubjectRows. Con le classi le banche contengono solo
+  // quelle classi, quindi gli ambiti di cfg.areas non si filtrano qui: un
+  // ambito vuoto in queste classi puo' avere domande in un'altra. Lo filtra il
+  // motore classe per classe (getAvailableAreaKeysForClass).
+  async function applySubjectConfig(cfg, opts) {
     if (!cfg || !cfg.questionsSource) return cfg;
+    const classes = opts && Array.isArray(opts.classes) && opts.classes.length ? opts.classes : null;
 
     const source = typeof cfg.questionsSource === 'string'
       ? { subject: cfg.questionsSource }
@@ -274,8 +301,13 @@
       areaMap: source.areaMap || null,
       areaField: source.areaField || 'area',
       includeInactive: source.includeInactive,
-      includeBonusRows: source.includeBonusRows
+      classes
     });
+
+    if (classes) {
+      cfg.banks = banks;
+      return cfg;
+    }
 
     const hasAny = Object.values(banks).some((arr) => Array.isArray(arr) && arr.length > 0);
     if (!hasAny) return cfg;

@@ -1,14 +1,14 @@
 [
  {
-  "date": "23 ottobre 2026 · Release 4.22.20 – 4.25.0",
+  "date": "23 ottobre 2026 · Release 4.22.20 – 4.26.0",
   "items": [
    "Più ordine e più leggibilità: fra un riquadro e l’altro c’è sempre lo stesso spazio, la X di «Ultimi aggiornamenti» resta in alto quando scorri, la palette accessibile ha sempre il contrasto giusto e nelle pagine delle materie i pulsanti non si spostano più mentre la pagina carica. Il canale YouTube ora si chiama La Scuola Amica: youtube.com/@lascuolaamica.",
    "Privacy Policy e Cookie Policy più complete: per ogni dato trovi a cosa serve, per quanto resta e come chiederne la cancellazione. Il sito non raccoglie più donazioni. Il pulsante Ascolta usa solo le voci installate sul dispositivo: il testo letto non esce mai dal telefono, dal tablet o dal computer.",
    "Il timer di gioco ora è facoltativo e parte spento: «Inizia!» avvia subito la partita. Chi vuole un limite lo accende dal pannello Info, alla voce «Tempo di gioco (per i genitori)»: si gioca al massimo 30 minuti, poi si aspetta un’ora.",
    "Sul telefono la pagina iniziale mostra subito le otto materie, due per riga, con in alto Per insegnanti, Per genitori e FAQ. Nei quiz la barra in fondo non copre più le risposte e dopo «Inizia!» la domanda arriva da sola sullo schermo.",
-   "Niente più finestra «Nuova versione disponibile»: il sito si aggiorna da solo quando cambi pagina o torni sulla scheda, mai durante una partita. Chiudendo una finestra con Esc si torna al pulsante da cui era partita.",
    "Indicazioni Nazionali: le domande sono costruite su quelle del 2012. Le nuove Indicazioni del 2025 valgono dall’anno scolastico 2026/27: la revisione è in corso e nella pagina Per insegnanti trovi a che punto siamo.",
-   "Pagina Tabelline più ricca: oltre alle tabelline dal 2 al 10 con video e quiz, ci sono quelle dall’11 al 100, una riga per numero, e un calcolatore per la tabellina di qualsiasi numero da 1 a 1000. Sotto i video trovi anche il ripasso con le tabelline dal 2 all’8 cantate."
+   "Pagina Tabelline più ricca: oltre alle tabelline dal 2 al 10 con video e quiz, ci sono quelle dall’11 al 100, una riga per numero, e un calcolatore per la tabellina di qualsiasi numero da 1 a 1000. Sotto i video trovi anche il ripasso con le tabelline dal 2 all’8 cantate.",
+   "Pagine più leggere: ogni materia scarica solo le domande della classe scelta e si apre prima anche con una connessione lenta; il Sistema Solare risponde subito al primo tocco. Senza rete restano disponibili le classi già usate. Il sito si aggiorna da solo quando cambi pagina o torni sulla scheda, mai durante una partita, e con Esc torni al pulsante da cui era partita la finestra."
   ]
  },
  {
