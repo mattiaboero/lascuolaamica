@@ -19,7 +19,8 @@ automazioni. Qui c'è solo cosa è stato fatto, senza valori segreti.
 
 - [x] **DMARC** (24 ottobre 2026). Verificata la firma DKIM di Aruba, il
   provider di posta; il record `_dmarc` è passato da `p=none` a
-  `p=quarantine`.
+  `p=quarantine`. I report aggregati arrivano a supporto@lascuolaamica.it
+  (verificato nel DNS pubblico il 24 ottobre 2026).
 - [x] **CAA** (24 ottobre 2026). Record CAA per `letsencrypt.org` e `pki.goog`,
   più quelli aggiunti da Cloudflare per le autorità che usa: nessun'altra
   autorità può emettere certificati per il dominio.
