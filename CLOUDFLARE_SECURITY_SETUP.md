@@ -12,22 +12,25 @@ La configurazione operativa dettagliata dell’infrastruttura, delle regole di p
 - controlli anti-abuso e anti-automazione calibrati per non compromettere SEO, AEO e accessibilità;
 - verifiche post-release su pagine pubbliche, asset principali e uso offline.
 
-## Passi manuali ancora da fare
+## Passi manuali
 
-Restano al responsabile del progetto, fuori dalla repository e fuori dalle
-automazioni. Qui c'è solo cosa fare, senza valori.
+Fatti dal responsabile del progetto, fuori dalla repository e fuori dalle
+automazioni. Qui c'è solo cosa è stato fatto, senza valori segreti.
 
-- [ ] **DMARC.** Verificare che la firma DKIM del provider di posta sia attiva
-  e passi. Poi portare il record `_dmarc` da `p=none` a `p=quarantine`, con un
-  indirizzo `rua` per ricevere i rapporti.
-- [ ] **CAA.** Aggiungere i record CAA per le autorità di certificazione usate
-  da Cloudflare per i certificati del dominio, così nessun'altra autorità può
-  emetterne.
-- [ ] **WIKI_SYNC_TOKEN.** Se oggi è un token classico, sostituirlo con un
-  token fine-grained limitato al solo repository del wiki, con il permesso
-  minimo per scriverci.
-- [ ] **Satispay.** Disattivare nell'app Satispay il QR delle donazioni: il
-  sito non raccoglie più donazioni.
+- [x] **DMARC** (24 ottobre 2026). Verificata la firma DKIM di Aruba, il
+  provider di posta; il record `_dmarc` è passato da `p=none` a
+  `p=quarantine`.
+- [x] **CAA** (24 ottobre 2026). Record CAA per `letsencrypt.org` e `pki.goog`,
+  più quelli aggiunti da Cloudflare per le autorità che usa: nessun'altra
+  autorità può emettere certificati per il dominio.
+- [x] **WIKI_SYNC_TOKEN** (24 ottobre 2026). Token fine-grained limitato a
+  questo repository, permesso Contents in lettura e scrittura, scadenza 24
+  ottobre 2027. Provato al merge della PR #134: il workflow Sync Wiki ha
+  clonato e aggiornato il wiki; lanciato anche a mano, riuscito. Va rinnovato
+  prima della scadenza.
+- [x] **Satispay** (24 ottobre 2026). QR tolto dal sito. Era il profilo
+  personale, non un conto per le donazioni: nessuna donazione ricevuta e
+  niente da disattivare nell'app.
 
 ## Per chi contribuisce al progetto
 
