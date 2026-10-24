@@ -28,6 +28,9 @@ ORG_ID = "https://lascuolaamica.it/#organization"
 WEBSITE_ID = "https://lascuolaamica.it/#website"
 ORG_URL = "https://lascuolaamica.it/"
 ORG_LOGO = "https://lascuolaamica.it/icons/icon-512.png"
+ORG_DISAMBIGUA = (
+    "La Scuola Amica (lascuolaamica.it) è un progetto indipendente e non è collegata al Progetto Scuola Amica di UNICEF Italia e del Ministero dell'Istruzione."
+)
 ORG_SAME_AS = [
     "https://github.com/mattiaboero/lascuolaamica",
     "https://www.youtube.com/@lascuolaamica",
@@ -82,6 +85,10 @@ def _upgrade_organization(node: dict[str, Any]) -> None:
         "height": 512,
     }
     node.setdefault("sameAs", ORG_SAME_AS)
+    # Non e' il Progetto Scuola Amica di UNICEF Italia e del Ministero: lo dice
+    # anche ai motori di ricerca e di risposta (stessa frase di home, Chi siamo,
+    # ai-info e llms.txt).
+    node["disambiguatingDescription"] = ORG_DISAMBIGUA
     node.setdefault("email", "mailto:supporto@lascuolaamica.it")
     node.setdefault(
         "contactPoint",

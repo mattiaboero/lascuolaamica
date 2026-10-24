@@ -1,5 +1,62 @@
 # Changelog Repo
 
+## 4.27.0 - 2026-10-24
+
+**Accessibilità e AEO: due regioni di annuncio, Okabe-Ito a una tinta,
+dichiarazione WCAG 2.2, marchio disambiguato.**
+
+### Changed
+- Pagine materia: gli annunci per gli screen reader passano da 5-7 regioni
+  live a due, nell'HTML di ogni pagina: `#quizStato` (domanda nuova, bonus,
+  trofei) e `#quizFeedback` (esito della risposta con la spiegazione, in un
+  annuncio solo). `annuncia()` in `subject-quiz-core.js` svuota la regione e la
+  riscrive dopo 50 ms, così due messaggi uguali di fila vengono letti entrambi.
+  Fra due regioni diverse passano almeno 300 ms: con il thread occupato
+  l'esito e la domanda nuova (clic su «Avanti» subito dopo la risposta)
+  potevano essere scritti insieme.
+  `#feedback`, `#qMeta`, `#bonusMeta`, `#bonusText`, `#qExplanation` e
+  `#lbContent` non sono più live; la classifica non annuncia niente. Il toast
+  dei trofei, nelle pagine materia, si annuncia in `#quizStato` almeno 1,5 s
+  dopo l'esito (`SA.annunciaTrofeo`), altrove resta com'era.
+- Okabe-Ito: la quarta risposta va da `#8f5375` a `#7a4564` (una tinta, il
+  viola rossastro scurito) invece che dal viola all'arancio `#A24700`; ombra
+  `#6a3a56`. Chiude #124.
+- `/tabelline`: titoli delle decine con `tabindex="-1"` (l'indice porta lì il
+  focus, non solo lo scorrimento); l'area della tabella 2-10, che sui telefoni
+  scorre in orizzontale, si raggiunge con Tab (`tabindex="0"`, `role="region"`,
+  nome dal titolo) e ha il focus visibile.
+- `accessibilita.html`: riferimento WCAG 2.2 AA; data della verifica (24
+  ottobre 2026); cosa è controllato in automatico e cosa non ancora (screen
+  reader reali VoiceOver e NVDA, Ascolta su Android); limiti noti (Sistema
+  Solare 3D come immagine descritta con comandi da tastiera e pulsanti, giochi
+  con movimenti rapidi). Tolta l'affermazione di una verifica con VoiceOver
+  che non risulta fatta.
+- Marchio: home (sezione per genitori e insegnanti), Chi siamo, ai-info e
+  `llms.txt` dicono che La Scuola Amica non è collegata al Progetto Scuola
+  Amica di UNICEF Italia e del Ministero dell'Istruzione; stessa frase in
+  `disambiguatingDescription` del nodo `EducationalOrganization`
+  (`scripts/refresh_structured_data.py`).
+- `llms.txt` e ai-info allineati: tabelline fino al 100 e calcolatore, tempo
+  di gioco facoltativo spento di default, nessuna donazione, playlist dal 2
+  all'8 con il ripasso cantato, accessibilità WCAG 2.2.
+- Gli H1 avevano già le emoji in `<span aria-hidden="true">`: ora un test lo
+  controlla su tutte le pagine.
+
+### Tests
+- `scripts/annunci_smoke.js` (`test:e2e:annunci`, in CI): al massimo 2 regioni
+  live in ognuna delle 8 pagine materia, all'avvio e in partita; due risposte
+  giuste di fila danno due annunci, ciascuno preceduto dal vuoto; esito con la
+  spiegazione; almeno 300 ms fra una regione e l'altra, anche con «Avanti» 20
+  ms dopo la risposta; trofeo almeno 1,5 s dopo l'esito;
+  classifica muta. Sul codice di prima fallisce (4-6 regioni per pagina).
+- `scripts/a11y_smoke.js` (`test:e2e:a11y`, in CI): axe-core (WCAG 2.2 A e
+  AA) su home, /matematica (scelta e partita), /tabelline, /bosco,
+  /sistema-solare e /privacy, tema chiaro e scuro, zero violazioni; nessun H1
+  con emoji nel nome accessibile su tutte le pagine. `axe-core` 4.11.4 fra le
+  devDependencies (era già nel lockfile, dentro lighthouse).
+- `scripts/tabelline_smoke.js`: indice delle decine da tastiera, il focus
+  arriva sul titolo della decina.
+
 ## 4.26.1 - 2026-10-24
 
 **Sicurezza: policy Trusted Types con elenco, niente CORS aperto, dipendenze,

@@ -290,11 +290,12 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
 }
 [hidden] { display: none !important; }
 .float-v4 { left: 26vw; font-size: 1.55rem; animation-duration: 19s; animation-delay: 1s; }
-.float-v8 { left: 52vw; font-size: 1.9rem; animation-duration: 28s; animation-delay: 5s; }
+.float-v5 { left: 32vw; font-size: 1.2rem; animation-duration: 24s; animation-delay: 6s; }
+.float-v7 { left: 45vw; font-size: 1.45rem; animation-duration: 21s; animation-delay: 8s; }
+.float-v9 { left: 58vw; font-size: 1.1rem; animation-duration: 23s; animation-delay: 7s; }
 .float-v12 { left: 76vw; font-size: 1.65rem; animation-duration: 27s; animation-delay: 10s; }
-.float-v14 { left: 88vw; font-size: 1.85rem; animation-duration: 24.5s; animation-delay: 11s; }
-.float-v16 { left: 24vw; font-size: 1.6rem; animation-duration: 20.5s; animation-delay: 6.5s; }
-.float-v17 { left: 37vw; font-size: 2.35rem; animation-duration: 30s; animation-delay: 13s; }
+.float-v18 { left: 54vw; font-size: 1.25rem; animation-duration: 17.5s; animation-delay: 2.5s; }
+.float-v20 { left: 91vw; font-size: 1.5rem; animation-duration: 26.5s; animation-delay: 9.5s; }
 .footer-support-cta { flex: 0 0 auto; width: auto; max-width: calc(100% - 8px); margin: 0px; border-radius: 999px; padding: 6px 10px; gap: 6px; display: inline-flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; font-size: 0.95rem; font-weight: 900; text-decoration: none; background: rgb(255, 255, 255); color: rgb(95, 107, 122); border: 1px solid rgba(95, 107, 122, 0.26); box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 10px; transition: transform 0.15s, filter 0.15s; }
 .footer-support-cta:hover { transform: scale(1.02); filter: brightness(1.05); }
 @media (hover: none) {
@@ -368,7 +369,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
     "url": "https://lascuolaamica.it/"
   },
   "datePublished": "2026-04-27",
-  "dateModified": "2026-10-23",
+  "dateModified": "2026-10-24",
   "publisher": {
     "@id": "https://lascuolaamica.it/#organization"
   }
@@ -457,14 +458,17 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
     }
   ],
   "datePublished": "2026-06-28",
-  "dateModified": "2026-10-23"
+  "dateModified": "2026-10-24"
 }
 </script>
 </head>
 <body class="subject-storia">
 <a class="skip-link" href="#contenuto-principale">Vai al contenuto principale</a>
 <div class="bg-shapes" id="bgShapes" aria-hidden="true"></div>
-<div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="feedback" id="feedback" aria-hidden="true"></div>
+<!-- Annunci per i lettori di schermo: solo queste due regioni (subject-quiz-core.js, annuncia). -->
+<div class="sr-only" id="quizStato" aria-live="polite" aria-atomic="true"></div>
+<div class="sr-only" id="quizFeedback" aria-live="polite" aria-atomic="true"></div>
 
 <div class="wrapper">
   <div class="top-nav">
@@ -694,7 +698,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
     <div class="full-width">
       <div class="q-card">
         <div class="q-meta" id="bonusMeta">Bonus</div>
-        <div class="q-text" id="bonusText" aria-live="polite" aria-atomic="true"></div>
+        <div class="q-text" id="bonusText"></div>
         <div class="answers-grid" id="bonusAnswers" aria-label="Risposte bonus"></div>
       </div>
     </div>
@@ -727,7 +731,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
     <div class="lb-card">
       <h2 class="lb-title">Classifica</h2>
       <p class="lb-sub">Top 15 punteggi finali</p>
-      <div id="lbContent" aria-live="polite"></div>
+      <div id="lbContent"></div>
       <button type="button" class="btn-clear" data-action="clear-leaderboard">Cancella classifica</button>
       <div class="result-btns result-btns-spaced">
         <button type="button" class="btn-home" data-action="go-start">Torna al gioco</button>

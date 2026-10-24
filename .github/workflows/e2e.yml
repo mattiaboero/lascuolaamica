@@ -114,6 +114,12 @@ jobs:
       - name: Trusted Types (policy che accettano solo /sw.js e /app-version.js)
         run: npm run test:e2e:trusted-types
 
+      - name: Annunci per screen reader (2 regioni, esito con spiegazione, trofeo dopo)
+        run: npm run test:e2e:annunci
+
+      - name: Accessibilita' (axe WCAG 2.2 AA, due temi; H1 senza emoji)
+        run: npm run test:e2e:a11y
+
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
         run: npm run test:e2e:classe1
 

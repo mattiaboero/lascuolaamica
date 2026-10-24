@@ -192,9 +192,12 @@ html[data-palette="okabe-ito"] .answer-btn:nth-child(3) {
   color: #3a2f00;
 }
 
+/* Quarta risposta: una tinta sola, il viola rossastro di Okabe-Ito (#CC79A7)
+   scurito. Prima la sfumatura andava dal viola #8f5375 all'arancio #A24700:
+   due tinte in un bottone (issue #124). */
 html[data-palette="okabe-ito"] .answer-btn:nth-child(4) {
-  background: linear-gradient(135deg, #8f5375, #A24700);
-  box-shadow: 0 6px 0 #8f5375;
+  background: linear-gradient(135deg, #8f5375, #7a4564);
+  box-shadow: 0 6px 0 #6a3a56;
   color: #ffffff;
 }
 

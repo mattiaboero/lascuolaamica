@@ -2,13 +2,14 @@
 > Piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª, matematica anche 1ª).
 > Offre quiz interattivi su 8 materie, senza registrazione e senza raccolta di dati personali.
 > Funziona offline come Progressive Web App dopo il primo caricamento.
-> Versione corrente: 4.26.1.
+> Versione corrente: 4.27.0.
 
 ## Identità
 - Nome: La Scuola Amica
 - [Home del sito](https://lascuolaamica.it)
 - Lingua: italiano (it-IT)
 - Target: bambine e bambini della scuola primaria, insegnanti, genitori
+- La Scuola Amica (lascuolaamica.it) è un progetto indipendente e non è collegata al Progetto Scuola Amica di UNICEF Italia e del Ministero dell'Istruzione.
 
 ## Materie
 Le 8 materie coperte dai quiz:
@@ -33,7 +34,7 @@ Le 8 materie coperte dai quiz:
 ## Canale YouTube
 - Nome: La Scuola Amica
 - [Canale YouTube: La Scuola Amica](https://www.youtube.com/@lascuolaamica)
-- [Playlist tabelline (dalla 2 alla 10)](https://www.youtube.com/playlist?list=PLHctzIjd-9Qg)
+- [Playlist tabelline (dalla 2 all'8, più un ripasso cantato; il 9 e il 10 in arrivo)](https://www.youtube.com/playlist?list=PLHctzIjd-9Qg)
 - Contenuto: video per imparare le tabelline alla scuola primaria, con il personaggio CalcOlettore. Ogni tabellina viene ripetuta tre volte: lenta, a tempo e da completare.
 - Relazione con il sito: i video spiegano, i quiz di [matematica](https://lascuolaamica.it/matematica) servono a esercitarsi dopo la visione.
 
@@ -46,7 +47,7 @@ Le 8 materie coperte dai quiz:
 - Domande totali: 9.926 (solo quelle attive, verificate a settembre 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria (matematica anche 1ª).
-- Versione corrente: 4.26.1.
+- Versione corrente: 4.27.0.
 
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.
@@ -54,6 +55,8 @@ Le 8 materie coperte dai quiz:
 - Privacy-first: nessun tracciamento di terze parti, dati di gioco salvati localmente.
 - Modalità offline disponibile dopo il primo accesso.
 - Bacheca premi locale con badge, coppe e trofei salvati nel browser.
+- Tempo di gioco facoltativo, spento di default: se un genitore lo accende dal pannello Info, si gioca al massimo 30 minuti e poi si aspetta un'ora.
+- Nessuna raccolta di donazioni.
 - Domande costruite sulle Indicazioni Nazionali del 2012 (D.M. 254/2012). Le nuove Indicazioni Nazionali (DM 9 dicembre 2025, n. 221, https://www.normattiva.it/eli/id/2026/01/27//26G00021/CONSOLIDATED) valgono dall’a.s. 2026/27 con avvio graduale: la revisione delle domande sui nuovi traguardi è in corso; nessuna materia è ancora stata confrontata.
 
 ## Fondazione
@@ -70,7 +73,7 @@ Il sito è liberamente accessibile ai crawler. I contenuti informativi principal
 - [Informazioni per AI](https://lascuolaamica.it/ai-info): sintesi dichiarativa del progetto per modelli linguistici e crawler semantici
 
 ## Optional
-- [Accessibilità](https://lascuolaamica.it/accessibilita): stato di conformità WCAG 2.1 A/AA e come segnalare problemi
+- [Accessibilità](https://lascuolaamica.it/accessibilita): riferimento WCAG 2.2 AA, cosa è verificato e cosa no, limiti noti e come segnalare problemi
 - [Supporta il progetto](https://lascuolaamica.it/supporta): come aiutare testando la piattaforma e segnalando bug
 - [Privacy Policy](https://lascuolaamica.it/privacy): informativa GDPR con trattamenti, basi giuridiche, conservazione dei dati e diritti
 - [Cookie Policy](https://lascuolaamica.it/cookie): uso dei cookie e della memoria locale

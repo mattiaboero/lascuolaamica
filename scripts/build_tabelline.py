@@ -49,7 +49,9 @@ def blocco() -> str:
     righe.append('  </ul>')
     righe.append('</nav>')
     for inizio, fine in decine:
-        righe.append(f'<h3 class="section-title" id="tabelline-{inizio}-{fine}">Tabelline {da(inizio)} {a(fine)}</h3>')
+        # tabindex="-1": il link dell'indice porta qui anche il focus, non solo
+        # lo scorrimento, e il Tab successivo riparte dalla decina.
+        righe.append(f'<h3 class="section-title" id="tabelline-{inizio}-{fine}" tabindex="-1">Tabelline {da(inizio)} {a(fine)}</h3>')
         righe.append('<ul class="tab-oltre" role="list">')
         for n in range(inizio, fine + 1):
             multipli = ', '.join(str(n * k) for k in range(1, 11))

@@ -123,6 +123,39 @@ async function calcolatore(browser) {
   return errors;
 }
 
+// Indice delle decine da tastiera: Tab fino a «Dal 51 al 60», Invio, e il
+// focus arriva sul titolo della decina (non solo lo scorrimento).
+async function indiceDaTastiera(browser) {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  const errors = [];
+  try {
+    await page.goto(`${BASE}/tabelline.html`, { waitUntil: 'load' });
+    let passi = 0;
+    while (!(await page.evaluate(() => document.activeElement && document.activeElement.getAttribute('href') === '#tabelline-51-60'))) {
+      await page.keyboard.press('Tab');
+      passi += 1;
+      if (passi > 150) throw new Error('il link «Dal 51 al 60» non si raggiunge con Tab');
+    }
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(300);
+    const focus = await page.evaluate(() => document.activeElement && document.activeElement.id);
+    if (focus !== 'tabelline-51-60') errors.push(`dopo Invio il focus e' su «${focus}», non sul titolo della decina`);
+    await page.keyboard.press('Tab');
+    const dopo = await page.evaluate(() => {
+      const a = document.activeElement;
+      const t = document.getElementById('tabelline-51-60');
+      return !!(a && t && (t.compareDocumentPosition(a) & Node.DOCUMENT_POSITION_FOLLOWING));
+    });
+    if (!dopo) errors.push('il Tab dopo la decina non riparte da li\'');
+  } catch (err) {
+    errors.push(err.message.split('\n')[0]);
+  } finally {
+    await context.close();
+  }
+  return errors;
+}
+
 async function main() {
   const browser = await chromium.launch();
   let fail = 0;
@@ -133,6 +166,10 @@ async function main() {
       errors.forEach((e) => process.stdout.write(`  - ${e}\n`));
       fail += errors.length;
     }
+    const indice = await indiceDaTastiera(browser);
+    process.stdout.write(`${indice.length ? '[FAIL]' : '[OK]'} indice delle decine da tastiera: focus sul titolo della decina\n`);
+    indice.forEach((e) => process.stdout.write(`  - ${e}\n`));
+    fail += indice.length;
     const errors = await calcolatore(browser);
     process.stdout.write(`${errors.length ? '[FAIL]' : '[OK]'} calcolatore solo da tastiera (27, 1, 1000; 0 e testo rifiutati)\n`);
     errors.forEach((e) => process.stdout.write(`  - ${e}\n`));
