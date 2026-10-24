@@ -4,13 +4,27 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    open-pull-requests-limit: 5
     groups:
       # stylelint e la sua config hanno peer dependency incrociate:
       # aggiornati in PR separate, npm ci fallisce con ERESOLVE.
+      # Il primo gruppo che corrisponde vince: questo resta prima.
       stylelint:
         patterns:
           - "stylelint*"
+      # Tutte le altre devDependencies (lint, test, export) in una PR sola.
+      sviluppo:
+        dependency-type: development
+        patterns:
+          - "*"
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    open-pull-requests-limit: 5
+    # Le azioni nei workflow sono fissate per hash con la versione in
+    # commento: Dependabot aggiorna hash e commento insieme.
+    groups:
+      azioni:
+        patterns:
+          - "*"

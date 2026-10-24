@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 6 * * *'
 
+# Niente permessi di default: ogni job dichiara i suoi.
+permissions: {}
+
 jobs:
   lighthouse:
     runs-on: ubuntu-latest

@@ -1,5 +1,44 @@
 # Changelog Repo
 
+## 4.26.1 - 2026-10-24
+
+**Sicurezza: policy Trusted Types con elenco, niente CORS aperto, dipendenze,
+permessi dei workflow.**
+
+### Security
+- Policy Trusted Types `sa-sw-url` (`shared.js`) e `sa-sw-import` (`sw.js`):
+  non piu' identita' (`u => u`), accettano solo `/sw.js` e `/app-version.js`
+  e lanciano un `TypeError` per ogni altra stringa.
+- `_headers`: `! Access-Control-Allow-Origin` su `/*`. L'header
+  `Access-Control-Allow-Origin: *` lo aggiungeva Cloudflare Pages a ogni
+  risposta (anche su `lascuolaamica.pages.dev`, assente da `_headers`).
+  Nessun file del sito serve ad altre origini: tolto ovunque, pagine HTML
+  comprese.
+- `npm audit fix` (senza `--force`): risolte body-parser, fast-uri,
+  ip-address. Restano 13 alte, 1 moderata e 2 basse, tutte nella catena di
+  `@lhci/cli` 0.15.1 (ultima versione), che fissa `lighthouse` 12.6.1,
+  `tmp` ^0.1 e `inquirer` ^6: vedi la PR. stylelint e
+  stylelint-config-standard sono gia' all'ultima versione e senza avvisi.
+- Rischio accettato per la catena di `@lhci/cli` documentato in
+  `.github/SECURITY.md` (pacchetti, perche' non arrivano al sito, perche'
+  non sono sfruttabili nel nostro uso, quando rivederlo). Nel job
+  `prepublish`: `npm audit --omit=dev --audit-level=high`.
+- Workflow: `permissions: {}` in testa a ogni file, permessi espliciti per
+  ogni job (`contents: read`; Lighthouse anche `statuses: write`). Tutte le
+  azioni restano fissate per hash, `actions/cache` e
+  `actions/upload-artifact` comprese.
+- `.github/dependabot.yml`: npm e github-actions settimanali, raggruppati
+  (stylelint a parte per le peer dependency, poi tutte le devDependencies;
+  tutte le azioni insieme), al massimo 5 PR aperte per ecosistema.
+- `CLOUDFLARE_SECURITY_SETUP.md`: elenco dei passi manuali che restano
+  (DMARC, CAA, WIKI_SYNC_TOKEN fine-grained, QR Satispay), senza valori.
+
+### Tests
+- `scripts/trusted_types_smoke.js` (`test:e2e:trusted-types`, in CI): le due
+  policy accettano solo i due URL e rifiutano `/evil.js`, un URL di un altro
+  sito, `/sw.js?x=1`, `/js/../sw.js`, `sw.js` e la stringa vuota. Sul codice
+  di prima fallisce.
+
 ## 4.26.0 - 2026-10-23
 
 **Prestazioni: domande per classe, Sistema Solare senza attività lunghe,
