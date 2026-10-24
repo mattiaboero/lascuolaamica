@@ -7,7 +7,7 @@
 // - Ogni annuncio svuota la regione e la riscrive: due risposte giuste di fila
 //   danno due annunci in #quizFeedback, ciascuno preceduto dal vuoto.
 // - La domanda nuova si annuncia in #quizStato, l'esito con la spiegazione in
-//   #quizFeedback, mai nello stesso istante.
+//   #quizFeedback, con almeno 300 ms fra una regione e l'altra.
 // - La classifica non annuncia niente.
 // - Il trofeo di fine partita si annuncia in #quizStato almeno 1,5 s dopo
 //   l'ultimo esito.
@@ -78,44 +78,45 @@ async function partitaMatematica(browser, errors) {
     await page.locator('#screenStart [data-action="start-game"]').click();
     await page.waitForSelector('#screenGame.active');
 
+    // Per ogni risposta: registro letto subito prima del clic, poi si aspetta
+    // l'esito scritto. Una volta su tre «Avanti» arriva subito dopo (20 ms): e'
+    // il caso che accavallava esito e domanda nuova.
+    const esitiDa = (n) => page.evaluate((k) => window.__annunci.filter(([id]) => id === 'quizFeedback').slice(k), n);
     let giusteDiFila = 0;
-    let feedbackPrima = 0;
+    let giusteContate = 0;
     for (let i = 0; i < 10 && !(await page.locator('#screenBonusPick.active').count()); i++) {
+      const prima = (await esitiDa(0)).length;
       const a = await rispostaGiusta(page);
       const bottoni = page.locator('#answers .answer-btn');
       const testi = (await bottoni.allInnerTexts()).map((t) => t.replace(/\s+/g, ' ').trim());
       const k = a === null ? -1 : testi.indexOf(a);
       await bottoni.nth(k >= 0 ? k : 0).click();
-      await page.waitForTimeout(250);
-      if (k >= 0) {
-        giusteDiFila += 1;
-        if (giusteDiFila === 2) {
-          const esiti = await page.evaluate(() => window.__annunci.filter(([id]) => id === 'quizFeedback'));
-          const nuovi = esiti.slice(feedbackPrima);
-          const pieni = nuovi.filter(([, t]) => t);
-          if (pieni.length < 1) errors.push('seconda risposta giusta: nessun annuncio in #quizFeedback');
-          const tutti = esiti.filter(([, t]) => t);
-          if (tutti.length < 2) errors.push(`due risposte giuste di fila: ${tutti.length} annunci in #quizFeedback`);
-          if (!nuovi.length || nuovi[0][1] !== '') errors.push('la regione non viene svuotata prima del nuovo annuncio');
-        }
-      } else {
-        giusteDiFila = 0;
-        feedbackPrima = (await page.evaluate(() => window.__annunci.filter(([id]) => id === 'quizFeedback').length));
-      }
-      if (giusteDiFila === 1) feedbackPrima = (await page.evaluate(() => window.__annunci.filter(([id]) => id === 'quizFeedback').length));
+      await page.waitForTimeout(i % 3 === 2 ? 20 : 250);
       const next = page.locator('#qNext');
       if (await next.isVisible()) await next.click();
+      await page.waitForFunction((n) => window.__annunci.filter(([id, t]) => id === 'quizFeedback' && t).length > 0
+        && window.__annunci.filter(([id]) => id === 'quizFeedback').slice(n).some(([, t]) => t), prima, { timeout: 5000 });
+      const nuovi = await esitiDa(prima);
+      // Alla prima risposta la regione e' gia' vuota: svuotarla non cambia niente.
+      if (prima > 0 && (!nuovi.length || nuovi[0][1] !== '')) errors.push(`risposta ${i + 1}: la regione non viene svuotata prima dell'annuncio`);
+      giusteDiFila = k >= 0 ? giusteDiFila + 1 : 0;
+      if (giusteDiFila === 2 && !giusteContate) {
+        giusteContate = nuovi.filter(([, t]) => t).length;
+        if (giusteContate < 1) errors.push('seconda risposta giusta di fila: nessun annuncio');
+      }
     }
+    if (!giusteContate) errors.push('nessuna coppia di risposte giuste di fila: il controllo degli annunci ripetuti non e\' partito');
 
     const annunci = await page.evaluate(() => window.__annunci);
     const stati = annunci.filter(([id, t]) => id === 'quizStato' && /^Domanda \d+ di \d+/.test(t));
     if (stati.length < 2) errors.push(`domande nuove annunciate in #quizStato: ${stati.length}`);
     const esitiConSpiegazione = annunci.filter(([id, t]) => id === 'quizFeedback' && t && t.split(' ').length > 3);
     if (!esitiConSpiegazione.length) errors.push('l\'esito non porta la spiegazione');
-    // Mai due regioni scritte nello stesso istante (entro 30 ms).
+    // Fra due regioni diverse almeno 300 ms (STACCO_REGIONI_MS), anche con il
+    // clic su «Avanti» subito dopo la risposta.
     const pieni = annunci.filter(([, t]) => t);
     for (let i = 1; i < pieni.length; i++) {
-      if (pieni[i][0] !== pieni[i - 1][0] && pieni[i][2] - pieni[i - 1][2] < 30) {
+      if (pieni[i][0] !== pieni[i - 1][0] && pieni[i][2] - pieni[i - 1][2] < 290) {
         errors.push(`annunci sovrapposti: «${pieni[i - 1][1]}» e «${pieni[i][1]}»`);
         break;
       }

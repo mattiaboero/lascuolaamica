@@ -2525,19 +2525,34 @@
   // uguali di fila (due «Esatto!») vengono letti entrambi. Due messaggi nella
   // stessa regione entro i 50 ms: resta l'ultimo (esito, poi esito +
   // spiegazione).
+  // Fra due regioni diverse passano almeno 300 ms: con il thread occupato i
+  // due timer da 50 ms (esito, poi domanda nuova dopo «Avanti») potevano
+  // scattare insieme e i due annunci si accavallavano.
   const annuncioTimer = {};
+  const STACCO_REGIONI_MS = 300;
+  let ultimaScrittura = { id: '', at: 0 };
   let ultimoEsitoAt = 0;
   let ultimoEsito = '';
+
+  function scriviAnnuncio(id, el, testo) {
+    const attesa = ultimaScrittura.id && ultimaScrittura.id !== id
+      ? ultimaScrittura.at + STACCO_REGIONI_MS - Date.now()
+      : 0;
+    if (attesa > 0) {
+      annuncioTimer[id] = setTimeout(() => scriviAnnuncio(id, el, testo), attesa);
+      return;
+    }
+    el.textContent = testo;
+    ultimaScrittura = { id, at: Date.now() };
+    if (id === 'quizFeedback') ultimoEsitoAt = ultimaScrittura.at;
+  }
 
   function annuncia(id, testo) {
     const el = $(id);
     if (!el || !testo) return;
     clearTimeout(annuncioTimer[id]);
     el.textContent = '';
-    annuncioTimer[id] = setTimeout(() => {
-      el.textContent = testo;
-      if (id === 'quizFeedback') ultimoEsitoAt = Date.now();
-    }, 50);
+    annuncioTimer[id] = setTimeout(() => scriviAnnuncio(id, el, testo), 50);
   }
 
   // Il trofeo arriva dopo l'esito della risposta, mai insieme: si aspetta

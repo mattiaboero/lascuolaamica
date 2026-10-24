@@ -11,6 +11,9 @@ dichiarazione WCAG 2.2, marchio disambiguato.**
   trofei) e `#quizFeedback` (esito della risposta con la spiegazione, in un
   annuncio solo). `annuncia()` in `subject-quiz-core.js` svuota la regione e la
   riscrive dopo 50 ms, così due messaggi uguali di fila vengono letti entrambi.
+  Fra due regioni diverse passano almeno 300 ms: con il thread occupato
+  l'esito e la domanda nuova (clic su «Avanti» subito dopo la risposta)
+  potevano essere scritti insieme.
   `#feedback`, `#qMeta`, `#bonusMeta`, `#bonusText`, `#qExplanation` e
   `#lbContent` non sono più live; la classifica non annuncia niente. Il toast
   dei trofei, nelle pagine materia, si annuncia in `#quizStato` almeno 1,5 s
@@ -43,7 +46,8 @@ dichiarazione WCAG 2.2, marchio disambiguato.**
 - `scripts/annunci_smoke.js` (`test:e2e:annunci`, in CI): al massimo 2 regioni
   live in ognuna delle 8 pagine materia, all'avvio e in partita; due risposte
   giuste di fila danno due annunci, ciascuno preceduto dal vuoto; esito con la
-  spiegazione; regioni mai scritte insieme; trofeo almeno 1,5 s dopo l'esito;
+  spiegazione; almeno 300 ms fra una regione e l'altra, anche con «Avanti» 20
+  ms dopo la risposta; trofeo almeno 1,5 s dopo l'esito;
   classifica muta. Sul codice di prima fallisce (4-6 regioni per pagina).
 - `scripts/a11y_smoke.js` (`test:e2e:a11y`, in CI): axe-core (WCAG 2.2 A e
   AA) su home, /matematica (scelta e partita), /tabelline, /bosco,
