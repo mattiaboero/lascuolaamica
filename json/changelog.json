@@ -1,9 +1,10 @@
 [
  {
-  "date": "25 ottobre 2026 · Release 4.27.2 – 4.27.4",
+  "date": "25 ottobre 2026 · Release 4.27.2 – 4.27.5",
   "items": [
    "Aggiornamenti più sicuri: quando il sito cambia versione, ogni pagina usa i suoi file della stessa versione, anche se la riapri senza passare dalla home. Così il quiz non si inceppa dopo un aggiornamento.",
-   "Colori più leggibili: in home la bacheca premi e le schede delle materie si leggono meglio, anche nella palette accessibile. Nei quiz il pulsante Ascolta, il link Home e “Menu” hanno colori più scuri. Nella bacheca premi si leggono meglio anche i premi da sbloccare."
+   "Colori più leggibili: in home la bacheca premi e le schede delle materie si leggono meglio, anche nella palette accessibile. Nei quiz il pulsante Ascolta, il link Home e “Menu” hanno colori più scuri. Nella bacheca premi si leggono meglio anche i premi da sbloccare.",
+   "Bacheca premi nella palette per daltonici: in alto c’è lo stesso riquadro colorato della palette standard, con il titolo in bianco."
   ]
  },
  {

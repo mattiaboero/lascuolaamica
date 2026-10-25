@@ -313,3 +313,36 @@ html[data-palette="okabe-ito"] .card-desc {
 html[data-palette="okabe-ito"] .tag {
   background: rgba(0, 0, 0, 0.32);
 }
+
+/* /premi, hero come pannello colorato: stessa struttura della palette
+   standard (rewards.css), solo il gradiente con i blu della palette. */
+html[data-palette="okabe-ito"] body.rewards-page header.rewards-hero {
+  background: linear-gradient(135deg, #00466E, #005687);
+  border-radius: var(--radius-lg);
+  padding: 22px 26px 26px;
+  box-shadow: var(--shadow-card), inset 0 0 0 3px rgba(255,255,255,.18);
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html[data-palette="okabe-ito"] body.rewards-page .rewards-title {
+  color: #fff;
+  text-shadow: 3px 3px 0 rgba(0,0,0,.18), 8px 8px 24px rgba(0,0,0,.12);
+}
+html[data-palette="okabe-ito"] body.rewards-page .rewards-subtitle {
+  color: rgba(255,255,255,.92);
+  text-shadow: 1px 1px 5px rgba(0,0,0,.2);
+}
+html[data-palette="okabe-ito"] body.rewards-page .rewards-kicker {
+  background: rgba(255,255,255,.22);
+  color: #fff;
+  box-shadow: none;
+}
+
+@media (max-width: 720px) {
+  html[data-palette="okabe-ito"] body.rewards-page header.rewards-hero {
+    padding: 18px 16px 20px;
+    border-radius: var(--radius-md);
+  }
+}

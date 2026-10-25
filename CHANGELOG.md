@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.27.5 - 2026-10-25
+
+**Bacheca premi: in Okabe-Ito l'hero è un pannello colorato.**
+
+### Fixed
+- `/premi` in Okabe-Ito: l'hero ha la stessa struttura della palette
+  standard (pannello con gradiente, titolo, sottotitolo ed etichetta in
+  bianco, stessi padding, raggi e ombre). Il gradiente è
+  `#00466E -> #005687`, il blu Okabe-Ito `#0072B2` scurito: con
+  `#005A8C -> #0072B2` l'etichetta «Premi locali» arrivava a 3,50:1. Le
+  regole sono in `palette-okabe.css`; prima valevano quelle base di
+  `rewards.css`, con il titolo `#585858` senza pannello.
+
+### Added
+- `npm run test:e2e:contrasti` controlla anche la struttura dell'hero di
+  `/premi`: gradiente in entrambe le palette, padding, raggio e larghezza
+  uguali, titolo bianco. Alla prima differenza stampa `ERRORE struttura`.
+
 ## 4.27.4 - 2026-10-25
 
 **Contrasto AA per ogni testo, anche sui gradienti.**
