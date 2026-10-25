@@ -241,7 +241,7 @@ header{text-align:center;margin-bottom:48px;}
 
 /* Math card */
 .card-math{
-  background:linear-gradient(145deg,#9B5DE5,#c77dff);
+  background:linear-gradient(145deg,#9351e3,#a733ff);
   box-shadow:0 12px 40px rgba(155,93,229,.5),0 0 0 4px rgba(255,255,255,.3);
 }
 /* English card */
