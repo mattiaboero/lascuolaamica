@@ -21,6 +21,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const http = require('http');
 const path = require('path');
+const { fileServito } = require('./lib/percorso_sicuro.js');
 
 const ROOT = path.join(__dirname, '..');
 const PAGINE = ['matematica', 'problemi', 'italiano', 'inglese', 'civica', 'storia', 'geografia', 'scienze'];
@@ -68,13 +69,13 @@ const TIPI = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
 
 function serve() {
   const server = http.createServer((req, res) => {
-    const rel = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
-    const file = path.join(ROOT, rel);
-    if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
+    const trovato = fileServito(ROOT, req.url);
+    if (!trovato) {
       res.writeHead(404);
       res.end();
       return;
     }
+    const { file } = trovato;
     let corpo = fs.readFileSync(file);
     // Per misurare, la pagina com'era: niente blocco, fogli completi accesi.
     if (path.extname(file) === '.html') corpo = String(corpo).replace(BLOCCO, '').replace(/ media="print" data-css-completo>/g, '>');

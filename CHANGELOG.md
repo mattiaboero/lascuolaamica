@@ -43,6 +43,20 @@
   Un sesto caso rinomina `corpi` in `sistema-solare-dati.json` e nel JS di
   N+1: la pagina deve ricevere il JSON di N+1 e partire.
 
+### Security
+- Avviso CodeQL #4 (js/path-injection): i server statici di
+  `sw_versioni_smoke.js`, `sw_update_smoke.js`, `check_static_grids.js` e
+  `build_css_critico.js` controllavano `file.startsWith(ROOT)`, che lascia
+  passare `GET /../<cartella-vicina-con-stesso-prefisso>/file`. Ora usano
+  `scripts/lib/percorso_sicuro.js` (`fileServito`): `path.resolve`, poi il
+  percorso relativo non deve essere vuoto, cominciare con `..` o essere
+  assoluto; URL non decodificabili e byte nulli danno 404. Solo script di test
+  e build: niente in produzione, versione invariata.
+- `npm run check:percorso-sicuro` (in `npm run verify`): richieste HTTP vere
+  contro una cartella temporanea con accanto `<nome>-backup`; richiesta
+  normale 200, `/../`, `%2e%2e`, `..%2f` e `%00` rifiutati. Con il vecchio
+  `startsWith` quattro casi passano.
+
 ## 4.27.1 - 2026-10-24
 
 **Privacy e Cookie Policy precisate, IndexNow solo per le pagine cambiate,

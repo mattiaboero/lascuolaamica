@@ -21,6 +21,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { fileServito } = require('./lib/percorso_sicuro.js');
 const { chromium } = require('playwright');
 
 const ROOT = path.join(__dirname, '..');
@@ -29,13 +30,13 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '
 
 function serve() {
   const server = http.createServer((req, res) => {
-    const rel = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
-    const file = path.join(ROOT, rel);
-    if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
+    const trovato = fileServito(ROOT, req.url);
+    if (!trovato) {
       res.writeHead(404);
       res.end();
       return;
     }
+    const { file } = trovato;
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
     fs.createReadStream(file).pipe(res);
   });

@@ -23,6 +23,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { fileServito } = require('./lib/percorso_sicuro.js');
 const { chromium } = require('playwright');
 const { versiona, leggiVersione } = require('./versiona_asset.js');
 
@@ -36,8 +37,8 @@ const CHI_SEI = "\nself.addEventListener('message', (e) => { if (e.data === 'ver
 // Rilascio servito ora: versione, e se l'HTML porta ?v=.
 const rilascio = { versione: N, conV: true };
 
-function contenuto(rel) {
-  let testo = fs.readFileSync(path.join(ROOT, rel), 'utf8');
+function contenuto(file, rel) {
+  let testo = fs.readFileSync(file, 'utf8');
   const nuovo = rilascio.versione === N1;
   if (rel === 'app-version.js') return testo.replace(/APP_VERSION = '[^']+'/, `APP_VERSION = '${rilascio.versione}'`);
   if (rel === 'sw.js') return testo + CHI_SEI + `// ${rilascio.versione}\n`;
@@ -58,16 +59,16 @@ function contenuto(rel) {
 
 function serve() {
   const server = http.createServer((req, res) => {
-    const rel = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
-    const file = path.join(ROOT, rel);
-    if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
+    const trovato = fileServito(ROOT, req.url);
+    if (!trovato) {
       res.writeHead(404);
       res.end();
       return;
     }
+    const { file, rel } = trovato;
     const tipo = TYPES[path.extname(file)] || 'application/octet-stream';
     res.writeHead(200, { 'Content-Type': tipo, 'Cache-Control': 'no-cache' });
-    if (/\.(html|js)$/.test(rel) || rel === 'js/sistema-solare-dati.json') res.end(contenuto(rel));
+    if (/\.(html|js)$/.test(rel) || rel === 'js/sistema-solare-dati.json') res.end(contenuto(file, rel));
     else fs.createReadStream(file).pipe(res);
   });
   return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(server)));
