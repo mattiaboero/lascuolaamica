@@ -41,7 +41,9 @@
   const SA_FLAGS = SA.flags = SA.flags || {};
   const PALETTE_KEY = 'scuolaAmica_palette_v2';
   const PALETTE_LINK_ID = 'scuolaAmicaPaletteStyles';
-  const PALETTE_STYLESHEET = 'palette-okabe.css';
+  // Con la ?v= di shared.js (scripts/versiona_asset.js): il foglio e' della
+  // stessa versione della pagina.
+  const PALETTE_STYLESHEET = 'palette-okabe.css' + (document.currentScript ? new URL(document.currentScript.src).search : '');
   const PALETTE_MODE = {
     LEGACY: 'legacy',
     OKABE: 'okabe-ito'

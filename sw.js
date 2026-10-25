@@ -167,6 +167,17 @@ const OPTIONAL_PRECACHE_URLS = [
 ];
 
 const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
+
+// CSS e JS vanno in precache con la versione nell'URL, come li chiedono le
+// pagine esportate (scripts/versiona_asset.js): la cache si cerca per URL
+// intero, query compresa. Cosi' un worker resta fuori dalle pagine di
+// un'altra versione, che vanno in rete e non mescolano HTML e script.
+const APP_VERSION = (self.SA && self.SA.version) || '';
+const VERSIONED_RE = /\.(css|js)$/i;
+
+function precacheUrl(url) {
+  return APP_VERSION && VERSIONED_RE.test(url) ? `${url}?v=${encodeURIComponent(APP_VERSION)}` : url;
+}
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 // bin: i modelli 3D del Sistema Solare (assets/sistema-solare/*.bin), salvati
 // offline la prima volta che servono. Mappe e modelli non sono in precache.
@@ -301,7 +312,7 @@ self.addEventListener('install', event => {
     const skipHome = await homeInOlderCache().catch(() => false);
     const coreUrls = skipHome ? CORE_PRECACHE_URLS.filter(url => url !== HOME_URL) : CORE_PRECACHE_URLS;
     await Promise.all(
-      groupUrlsByCache(coreUrls).map(async ([name, urls]) => {
+      groupUrlsByCache(coreUrls.map(precacheUrl)).map(async ([name, urls]) => {
         const cache = await caches.open(name);
         await cache.addAll(urls);
       })
@@ -311,7 +322,7 @@ self.addEventListener('install', event => {
         try {
           const name = cacheNameForPath(new URL(url, self.location.origin).pathname);
           const cache = await caches.open(name);
-          await cache.add(url);
+          await cache.add(precacheUrl(url));
         } catch {
           // Non bloccare install per risorse non critiche mancanti.
         }
@@ -474,7 +485,12 @@ async function cacheFirst(request, cacheName = CACHE_NAME) {
     }
     return response;
   } catch {
-    // Nessuna risposta disponibile — ritorna undefined (gestito dal browser)
+    // Senza rete, un CSS o un JS con un'altra ?v= (pagina salvata prima
+    // dell'aggiornamento, o sorgenti senza versione) prende il file con lo
+    // stesso percorso da questa cache: offline funziona come prima di ?v=.
+    // Con la rete non si arriva qui.
+    const samePath = await caches.match(request, { cacheName, ignoreSearch: true });
+    if (samePath) return samePath;
     return new Response('Risorsa non disponibile offline.', {
       status: 503,
       headers: { 'Content-Type': 'text/plain; charset=utf-8' }

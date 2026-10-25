@@ -1,5 +1,37 @@
 # Changelog Repo
 
+## 4.27.2 - 2026-10-25
+
+**Niente versioni miste fra HTML e JS dopo un rilascio.**
+
+### Fixed
+- Chi aveva già il sito installato riceveva l'HTML nuovo dalla rete e CSS e
+  JS vecchi dalla cache del service worker (Cache First), finché non cliccava
+  un link interno. Il 25 ottobre 2026 /matematica caricava HTML 4.27.1 con
+  `subject-quiz-core.js` 4.26.1, che rimetteva `aria-live` su `#qMeta` e
+  `#bonusMeta`. Con un id rinominato il quiz si sarebbe rotto.
+- `scripts/versiona_asset.js`, chiamato da `scripts/export_for_cloudflare.sh`:
+  in `export/` i CSS e i JS locali di `<script src>` e `<link href>` prendono
+  `?v=<APP_VERSION>`. I sorgenti non cambiano. Il worker vecchio cerca per URL
+  intero, non trova la voce e va in rete. Font e immagini restano senza
+  versione (cache stabili, preload dei font uguali all'`url()` di `fonts.css`).
+- `sw.js`: CSS e JS in precache con la stessa `?v=` (`precacheUrl`). Senza
+  rete, un CSS o un JS con un'altra `?v=` o senza (pagina salvata prima
+  dell'aggiornamento) prende il file con lo stesso percorso dalla cache: offline
+  funziona come prima. `matchCurrent` non usa `ignoreSearch`.
+- `js/lazy-css.js` e `shared.js`: `rewards.css` e `palette-okabe.css`, caricati
+  da JS, prendono la `?v=` dello script che li carica. I selettori di
+  `lazy-css.js` guardano il percorso, non l'URL intero.
+- `scripts/check_export.js`: fallisce se una pagina esportata carica un CSS o
+  un JS senza `?v=<APP_VERSION>`.
+
+### Added
+- `npm run test:e2e:versioni` (`scripts/sw_versioni_smoke.js`, anche in CI):
+  installa la versione N, pubblica la N+1 con `qText` rinominato nell'HTML e
+  nel motore, ricarica senza clic e verifica che `SA.version` sia quella
+  dell'HTML e che il quiz parta. Un caso di controllo senza `?v=` deve
+  mostrare il difetto; altri due provano la precache con `?v=` e l'offline.
+
 ## 4.27.1 - 2026-10-24
 
 **Privacy e Cookie Policy precisate, IndexNow solo per le pagine cambiate,
