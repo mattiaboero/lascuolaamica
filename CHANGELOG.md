@@ -1,5 +1,32 @@
 # Changelog Repo
 
+## 4.27.4 - 2026-10-25
+
+**Contrasto AA per ogni testo, anche sui gradienti.**
+
+### Added
+- `npm run test:e2e:contrasti` (`scripts/check_contrasti.js`): con Playwright
+  apre `/`, `/premi` e le otto materie con la prima domanda a video, nella
+  palette standard e in Okabe-Ito, a 1280x800 e 375x667. Per ogni testo
+  visibile misura il contrasto WCAG 2.2 AA su ogni colore dello sfondo,
+  gradienti compresi, con l'opacità degli antenati. Una voce italiana finta
+  fa comparire il pulsante Ascolta anche in CI. I puntini decorativi dei
+  radial-gradient fino a 3 px (le stelline della scheda Sistema Solare) sono
+  esclusi dal calcolo, con i colori invariati. Gira nel job `smoke`, che ora
+  ha 30 minuti di tempo.
+
+### Fixed
+- Home: «Nuova bacheca premi» (2,28:1 -> 4,62:1), il pulsante della bacheca
+  (3,53 e 2,49:1 -> 4,6:1), le descrizioni delle schede materia (4,2:1 -> 4,6:1)
+  e i titoli delle schede in Okabe-Ito (fino a 2,69:1 -> 4,6:1).
+- Quiz: «Ascolta», «Audio», «Classifica», «← Menu», il link «Home» e la riga
+  «Domanda 1 di 10» arrivano ad almeno 4,6:1. I token `--subj-*-a` e
+  `--subj-*-b` di `tokens.css` sono un po' più scuri, con la tinta ferma
+  (spostamento massimo 0,5 gradi).
+- Bacheca premi: hero, pulsanti e premi da sbloccare (tolta l'opacità .78 di
+  `.reward-card.is-locked`); in Okabe-Ito titolo e sottotitolo in grigio
+  scuro sul cielo chiaro (erano bianchi, 1,13:1).
+
 ## 4.27.3 - 2026-10-25
 
 **Verifica della produzione e IndexNow per commit.**

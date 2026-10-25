@@ -1,5 +1,5 @@
 :root {
-  --reward-blue: #2878d8;
+  --reward-blue: #2570cb;
   --reward-ink: #20344d;
   --reward-mint: #dff8ee;
   --reward-cream: #fff8e7;
@@ -48,14 +48,14 @@
   margin: 0;
   font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: clamp(2.4rem, 7vw, 4rem);
-  color: #fff;
+  color: #585858;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, .18), 8px 8px 24px rgba(0, 0, 0, .14);
 }
 
 .rewards-subtitle {
   margin: 0 auto;
   max-width: 760px;
-  color: rgba(255, 255, 255, .96);
+  color: rgba(88, 88, 88, .96);
   font-weight: 900;
   line-height: 1.55;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, .22);
@@ -93,12 +93,12 @@
 }
 
 .reward-action.primary {
-  background: linear-gradient(135deg, var(--reward-blue), #55a8ff);
+  background: linear-gradient(135deg, var(--reward-blue), #0071e8);
   color: #fff;
 }
 
 .reward-action.danger {
-  background: linear-gradient(135deg, #e45454, #ff8a70);
+  background: linear-gradient(135deg, #de2f2f, #e22900);
   color: #fff;
 }
 
@@ -178,7 +178,7 @@
   min-height: 48px;
   padding: 13px 20px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--reward-blue), #55a8ff);
+  background: linear-gradient(135deg, var(--reward-blue), #0071e8);
   color: #fff;
   font-weight: 900;
   text-decoration: none;
@@ -260,7 +260,6 @@
 
 .reward-card.is-locked {
   filter: grayscale(.28);
-  opacity: .78;
 }
 
 .reward-img-wrap {
@@ -308,7 +307,7 @@
 
 .reward-card.is-locked .reward-status {
   background: #eef2f7;
-  color: #687586;
+  color: #626e7f;
 }
 
 .reward-toast {
@@ -459,7 +458,7 @@ html:not([data-palette="okabe-ito"]) body.rewards-page .cloud::after {
 
 /* --- Hero come pannello colorato (coerente con home) --- */
 html:not([data-palette="okabe-ito"]) body.rewards-page header.rewards-hero {
-  background: linear-gradient(135deg, var(--ws-verdigris), var(--ws-hortense-blue));
+  background: linear-gradient(135deg, #1d5853, #2d5276);
   border-radius: var(--radius-lg);
   padding: 22px 26px 26px;
   box-shadow: var(--shadow-card), inset 0 0 0 3px rgba(255,255,255,.18);
@@ -489,11 +488,11 @@ html:not([data-palette="okabe-ito"]) body.rewards-page .reward-action {
   box-shadow: 0 6px 0 rgba(44,42,40,.14), 0 12px 20px rgba(44,42,40,.1);
 }
 html:not([data-palette="okabe-ito"]) body.rewards-page .reward-action.primary {
-  background: linear-gradient(135deg, var(--ws-terracotta), var(--ws-terracotta-ink));
+  background: linear-gradient(135deg, #cf4626, #c45038);
   color: #fff;
 }
 html:not([data-palette="okabe-ito"]) body.rewards-page .reward-action.danger {
-  background: linear-gradient(135deg, var(--ws-jasper-red), #d9673e);
+  background: linear-gradient(135deg, var(--ws-jasper-red), #c45027);
   color: #fff;
 }
 
@@ -507,14 +506,14 @@ html:not([data-palette="okabe-ito"]) .reward-guide {
   box-shadow: var(--shadow-card);
 }
 html:not([data-palette="okabe-ito"]) .home-reward-kicker {
-  color: var(--ws-yellow-ocher);
+  color: #845a11;
 }
 html:not([data-palette="okabe-ito"]) .home-reward-teaser h2,
 html:not([data-palette="okabe-ito"]) .reward-guide h2 {
   color: var(--ws-hortense-blue);
 }
 html:not([data-palette="okabe-ito"]) .home-reward-btn {
-  background: linear-gradient(135deg, var(--ws-terracotta), var(--ws-terracotta-ink));
+  background: linear-gradient(135deg, #cf4626, #c45038);
   box-shadow: 0 7px 0 rgba(44,42,40,.22), 0 14px 24px rgba(196,69,47,.2);
 }
 
