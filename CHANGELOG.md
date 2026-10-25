@@ -1,5 +1,32 @@
 # Changelog Repo
 
+## 4.27.6 - 2026-10-25
+
+**«Inizia!» sempre in vista sulle pagine materia.**
+
+### Fixed
+- Pagine materia, schermata iniziale: «Inizia!» resta agganciato in fondo
+  alla finestra mentre si scorrono classi e ambiti (`position: sticky`,
+  `bottom: 12px`; 77px fra 768 e 899px, sopra il footer fisso di 65px), con
+  un'ombra di stacco su `::before`. Su /matematica a 375x667 il pulsante
+  partiva a 1.872px e la prima classe a 608px.
+- Le istruzioni della partita (`.intro-note`; in /problemi `.bonus-base-note`
+  e `.intro-list`) stanno sotto «Inizia!»: a 375x667 e 390x844 la prima riga
+  di classi si vede subito.
+- La card della schermata iniziale passa da `overflow: hidden` a
+  `overflow: clip`, che non blocca lo sticky.
+- Focus e `scrollIntoView` si fermano sopra il pulsante (WCAG 2.2, 2.4.11):
+  `scroll-padding-bottom` 79px (55px di pulsante + 24px), 144px fra 768 e
+  899px (+ 65px di footer).
+
+### Added
+- `npm run test:e2e:inizia` (`scripts/inizia_smoke.js`, anche nel job
+  `smoke`): otto materie e /matematica?area=tables a 375x667, 390x844,
+  768x1024 e 1440x900. «Inizia!» dentro la finestra e non coperto al
+  caricamento e dopo la scelta della classe, prima classe sopra il pulsante,
+  ultimo pulsante della griglia e ogni elemento con il focus non coperti,
+  `?area=tables` preselezionato.
+
 ## 4.27.5 - 2026-10-25
 
 **Bacheca premi: in Okabe-Ito l'hero è un pannello colorato.**

@@ -290,6 +290,14 @@ header {
   overflow: hidden;
 }
 
+/* Schermata iniziale: overflow: clip taglia come hidden ma non fa della card
+   un contenitore di scorrimento, cosi' «Inizia!» sticky si aggancia alla
+   finestra. hidden prima, per i browser senza clip. */
+#screenStart > .card {
+  overflow: hidden;
+  overflow: clip;
+}
+
 .levels-wrap {
   width: 100%;
   background: linear-gradient(165deg, #fffefb 0%, var(--card-bg) 100%);
@@ -791,6 +799,47 @@ header {
 .start-btn:active {
   transform: translateY(3px);
   box-shadow: 0 3px 0 #1f6d63;
+}
+
+/* «Inizia!» resta in vista mentre si scorrono classi e ambiti: a 375x667
+   partiva a 1.872px. L'ombra di stacco sta su ::before, dietro il pulsante,
+   cosi' le ombre del pulsante (tematizzate, hover, active) restano quelle. */
+#screenStart [data-action="start-game"] {
+  position: sticky;
+  bottom: 12px;
+  z-index: 20;
+}
+
+/* Focus e scrollIntoView si fermano sopra «Inizia!» (WCAG 2.2, 2.4.11).
+   79px = altezza reale del pulsante a 375x667 (55px, getBoundingClientRect
+   sulle otto pagine materia: 14px + 14px di padding e la riga di Fredoka One
+   a 1.42rem) + 24px (i 12px di bottom e 12px di margine). */
+html:has(#screenStart.active) {
+  scroll-padding-bottom: 79px;
+}
+
+#screenStart [data-action="start-game"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow: 0 6px 24px 6px rgba(44, 42, 40, 0.3);
+  pointer-events: none;
+}
+
+/* Fra 768 e 899px .site-footer e' fisso in fondo: 65px (getBoundingClientRect
+   a 768x1024 e 899x1024, uguale sulle otto pagine materia). bottom: 77px =
+   65px del footer + 12px; scroll-padding-bottom: 144px = 55px del pulsante +
+   24px + 65px del footer. */
+@media (min-width: 768px) and (max-width: 899px) {
+  #screenStart [data-action="start-game"] {
+    bottom: 77px;
+  }
+
+  html:has(#screenStart.active) {
+    scroll-padding-bottom: 144px;
+  }
 }
 
 .score-bar {

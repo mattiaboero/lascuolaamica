@@ -129,6 +129,9 @@ jobs:
       - name: Contrasto WCAG 2.2 AA di ogni testo (due palette, due larghezze)
         run: npm run test:e2e:contrasti
 
+      - name: Inizia! sempre in vista e mai sopra il focus (pagine materia)
+        run: npm run test:e2e:inizia
+
   full:
     # Daily schedule: perfect + mixed + worst
     if: github.event_name == 'schedule'
