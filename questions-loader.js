@@ -2,6 +2,11 @@
   'use strict';
 
   const DEFAULT_INDEX_PATH = 'json/index.json';
+  // app-version.js arriva dopo questo script: la versione e' la ?v= con cui la
+  // pagina lo carica (scripts/versiona_asset.js), come in lazy-css.js. Le
+  // domande si scaricano con la stessa ?v=, cosi' un worker di un'altra
+  // versione non le serve dalla sua cache.
+  const QUERY_VERSIONE = document.currentScript ? new URL(document.currentScript.src).search : '';
   const dataPromiseByPath = new Map();
   const normalizeCache = new Map();
   const normalizedAreaMapCache = new WeakMap();
@@ -47,7 +52,7 @@
       return existing;
     }
 
-    const nextPromise = fetch(sourcePath)
+    const nextPromise = fetch(sourcePath + QUERY_VERSIONE)
       .then((res) => {
         if (!res.ok) throw new Error(`Impossibile caricare ${sourcePath}`);
         return res.json();

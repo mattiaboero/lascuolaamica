@@ -22,6 +22,10 @@
   */
 
   const SA = window.SA = window.SA || {};
+  // app-version.js e shared.js arrivano dopo: i dati si scaricano con la ?v=
+  // di questo script (scripts/versiona_asset.js), come in lazy-css.js, cosi' un
+  // worker di un'altra versione non li serve dalla sua cache.
+  const QUERY_VERSIONE = document.currentScript ? new URL(document.currentScript.src).search : '';
 
   // Il benvenuto della prima visita e' testo statico nell'HTML ed e' la cosa
   // piu' grande del primo schermo: si mostra subito, senza aspettare i dati.
@@ -36,7 +40,7 @@
 
   // I dati della scena (90 KB) arrivano come JSON: nessuno script da eseguire
   // in apertura. Senza dati (offline, mai aperta) restano le schede statiche.
-  const DATI = await fetch('/js/sistema-solare-dati.json')
+  const DATI = await fetch('/js/sistema-solare-dati.json' + QUERY_VERSIONE)
     .then((r) => (r.ok ? r.json() : null))
     .catch(() => null);
   if (!DATI) {
@@ -1237,7 +1241,7 @@
   let testiPronti = false;
   function caricaTesti() {
     if (!testiCaricati) {
-      testiCaricati = fetch('/js/sistema-solare-testi.json')
+      testiCaricati = fetch('/js/sistema-solare-testi.json' + QUERY_VERSIONE)
         .then((r) => (r.ok ? r.json() : Promise.reject(new Error(r.status))))
         .then((t) => {
           Object.keys(t.corpi || {}).forEach((id) => {

@@ -102,6 +102,9 @@ jobs:
       - name: E2E aggiornamento silenzioso (niente modale, niente ricarica in partita)
         run: npm run test:e2e:sw
 
+      - name: E2E versioni allineate fra HTML e JS dopo un rilascio
+        run: npm run test:e2e:versioni
+
       - name: E2E focus alla chiusura dei modali con Esc
         run: npm run test:e2e:focus
 

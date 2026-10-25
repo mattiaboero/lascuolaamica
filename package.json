@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.27.1",
+  "version": "4.27.2",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -8,6 +8,7 @@
     "check:sw-precache": "node scripts/check_sw_precache.js",
     "check:storage-helpers": "node scripts/check_storage_helpers.js",
     "check:static-grids": "node scripts/check_static_grids.js",
+    "check:percorso-sicuro": "node scripts/check_percorso_sicuro.js",
     "check:speech": "node scripts/check_speech_local.js",
     "check:grammar-rules": "node scripts/check_grammar_rules.js",
     "check:update-log": "node scripts/check_update_log.js",
@@ -23,7 +24,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:balance && npm run check:counts && npm run check:json-classi && npm run check:css-critico && npm run check:indexnow && npm run check:static-grids && npm run check:prepublish && npm run export && npm run check:export-canale",
+    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:balance && npm run check:counts && npm run check:json-classi && npm run check:css-critico && npm run check:indexnow && npm run check:static-grids && npm run check:percorso-sicuro && npm run check:prepublish && npm run export && npm run check:export-canale",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -38,6 +39,7 @@
     "test:e2e:home": "node scripts/home_smoke.js",
     "test:e2e:cls": "node scripts/cls_smoke.js",
     "test:e2e:sw": "node scripts/sw_update_smoke.js",
+    "test:e2e:versioni": "node scripts/sw_versioni_smoke.js",
     "test:e2e:focus": "node scripts/modal_focus_smoke.js",
     "test:e2e:json-classi": "node scripts/json_classi_smoke.js",
     "test:e2e:css-critico": "node scripts/css_critico_smoke.js",

@@ -1,5 +1,62 @@
 # Changelog Repo
 
+## 4.27.2 - 2026-10-25
+
+**Niente versioni miste fra HTML e JS dopo un rilascio.**
+
+### Fixed
+- Chi aveva già il sito installato riceveva l'HTML nuovo dalla rete e CSS e
+  JS vecchi dalla cache del service worker (Cache First), finché non cliccava
+  un link interno. Il 25 ottobre 2026 /matematica caricava HTML 4.27.1 con
+  `subject-quiz-core.js` 4.26.1, che rimetteva `aria-live` su `#qMeta` e
+  `#bonusMeta`. Con un id rinominato il quiz si sarebbe rotto.
+- `scripts/versiona_asset.js`, chiamato da `scripts/export_for_cloudflare.sh`:
+  in `export/` i CSS e i JS locali di `<script src>` e `<link href>` prendono
+  `?v=<APP_VERSION>`. I sorgenti non cambiano. Il worker vecchio cerca per URL
+  intero, non trova la voce e va in rete. Font e immagini restano senza
+  versione (cache stabili, preload dei font uguali all'`url()` di `fonts.css`).
+- `sw.js`: CSS e JS in precache con la stessa `?v=` (`precacheUrl`). Senza
+  rete, un CSS o un JS con un'altra `?v=` o senza (pagina salvata prima
+  dell'aggiornamento) prende il file con lo stesso percorso dalla cache: offline
+  funziona come prima. `matchCurrent` non usa `ignoreSearch`.
+- `js/lazy-css.js` e `shared.js`: `rewards.css` e `palette-okabe.css`, caricati
+  da JS, prendono la `?v=` dello script che li carica. I selettori di
+  `lazy-css.js` guardano il percorso, non l'URL intero.
+- I JSON scaricati con `fetch` restavano senza versione: dopo un rilascio il
+  JS nuovo leggeva dati vecchi dalla cache del worker. Ora prendono la stessa
+  `?v=`: `shared.js` con `SA.urlVersione` (`/json/index.json`,
+  `/json/changelog.json`); `questions-loader.js` (file delle domande) e
+  `js/sistema-solare.js` (`sistema-solare-dati.json` e `-testi.json`), che
+  girano prima di `app-version.js`, con la `?v=` del proprio script.
+  `sw.js` mette in precache i JSON di `/json/` e `/js/` con la stessa `?v=` e
+  `refetchOpenedJson` riporta le materie aperte con la `?v=` nuova.
+  `manifest.json` resta senza (lo chiede il browser).
+- `scripts/check_export.js`: fallisce se una pagina esportata carica un CSS o
+  un JS senza `?v=<APP_VERSION>`.
+
+### Added
+- `npm run test:e2e:versioni` (`scripts/sw_versioni_smoke.js`, anche in CI):
+  installa la versione N, pubblica la N+1 con `qText` rinominato nell'HTML e
+  nel motore, ricarica senza clic e verifica che `SA.version` sia quella
+  dell'HTML e che il quiz parta. Un caso di controllo senza `?v=` deve
+  mostrare il difetto; altri due provano la precache con `?v=` e l'offline.
+  Un sesto caso rinomina `corpi` in `sistema-solare-dati.json` e nel JS di
+  N+1: la pagina deve ricevere il JSON di N+1 e partire.
+
+### Security
+- Avviso CodeQL #4 (js/path-injection): i server statici di
+  `sw_versioni_smoke.js`, `sw_update_smoke.js`, `check_static_grids.js` e
+  `build_css_critico.js` controllavano `file.startsWith(ROOT)`, che lascia
+  passare `GET /../<cartella-vicina-con-stesso-prefisso>/file`. Ora usano
+  `scripts/lib/percorso_sicuro.js` (`fileServito`): `path.resolve`, poi il
+  percorso relativo non deve essere vuoto, cominciare con `..` o essere
+  assoluto; URL non decodificabili e byte nulli danno 404. Solo script di test
+  e build: niente in produzione, versione invariata.
+- `npm run check:percorso-sicuro` (in `npm run verify`): richieste HTTP vere
+  contro una cartella temporanea con accanto `<nome>-backup`; richiesta
+  normale 200, `/../`, `%2e%2e`, `..%2f` e `%00` rifiutati. Con il vecchio
+  `startsWith` quattro casi passano.
+
 ## 4.27.1 - 2026-10-24
 
 **Privacy e Cookie Policy precisate, IndexNow solo per le pagine cambiate,

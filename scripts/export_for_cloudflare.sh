@@ -29,9 +29,10 @@
 #    dopo il Brotli di Cloudflare, -27%. Se esbuild manca la build si ferma: una
 #    minificazione saltata in silenzio e' lo stesso difetto di un controllo muto.
 #
-# L'unica trasformazione e' sui dataset: le domande disattivate (active: false)
+# Due trasformazioni. I dataset: le domande disattivate (active: false)
 # restano nel repo come archivio ma non vengono spedite, perche' nessuna pagina
 # le mostra. Il loader le scarta comunque; qui semplicemente non viaggiano.
+# Le pagine: CSS e JS locali prendono ?v=<APP_VERSION> (scripts/versiona_asset.js).
 #
 # Dopo la copia, scripts/check_export.js verifica che export/ sia completo e
 # pulito: se manca un file che il sito usa, o se c'e' qualcosa di interno,
@@ -106,6 +107,10 @@ trap 'rm -f "$elenco"; rm -rf "$minificati"' EXIT
     | xargs -0 "$ESBUILD" --minify --legal-comments=none --target=es2020 \
         --outbase=. --outdir="$minificati" --log-level=warning )
 ( cd "$minificati" && tar -cf - . ) | tar -xf - -C "$DST"
+
+# CSS e JS con la versione nell'URL: un worker vecchio non li trova in cache e
+# va in rete, cosi' una pagina non mescola HTML nuovo e script vecchi.
+node "$BASE_DIR/scripts/versiona_asset.js" "$DST"
 
 node "$BASE_DIR/scripts/check_export.js" "$DST"
 

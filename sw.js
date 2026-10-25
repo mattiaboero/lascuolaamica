@@ -167,6 +167,20 @@ const OPTIONAL_PRECACHE_URLS = [
 ];
 
 const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
+
+// CSS e JS vanno in precache con la versione nell'URL, come li chiedono le
+// pagine esportate (scripts/versiona_asset.js): la cache si cerca per URL
+// intero, query compresa. Cosi' un worker resta fuori dalle pagine di
+// un'altra versione, che vanno in rete e non mescolano HTML e script.
+// Lo stesso per i JSON che il JS scarica con fetch (shared.js urlVersione,
+// questions-loader.js, js/sistema-solare.js). manifest.json resta fuori: lo
+// chiede il browser, senza versione.
+const APP_VERSION = (self.SA && self.SA.version) || '';
+const VERSIONED_RE = /\.(css|js)$|^\/(?:json|js)\/.+\.json$/i;
+
+function precacheUrl(url) {
+  return APP_VERSION && VERSIONED_RE.test(url) ? `${url}?v=${encodeURIComponent(APP_VERSION)}` : url;
+}
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 // bin: i modelli 3D del Sistema Solare (assets/sistema-solare/*.bin), salvati
 // offline la prima volta che servono. Mappe e modelli non sono in precache.
@@ -216,6 +230,7 @@ function canCacheResponse(response) {
 // rivalida sempre e un file non cambiato costa un 304. Se un file non arriva
 // (rete caduta, materia tolta) non si tiene la copia vecchia: resta fuori
 // dall'offline finche' la materia non viene riaperta con la rete, come prima.
+// Si salvano con la ?v= di questa versione, l'URL che le pagine chiederanno.
 //
 // Dalla 4.26.0 una materia arriva per classe: json/<materia>/c<N>.json e
 // bonus.json, e in cache finiscono solo le classi aperte. Chi aveva in cache
@@ -247,7 +262,8 @@ async function refetchOpenedJson() {
   await Promise.all(
     Array.from(paths, async (pathname) => {
       try {
-        if (!(await cache.match(pathname))) await cache.add(pathname);
+        const url = precacheUrl(pathname);
+        if (!(await cache.match(url))) await cache.add(url);
       } catch {
         // Vedi sopra: niente copia vecchia.
       }
@@ -301,7 +317,7 @@ self.addEventListener('install', event => {
     const skipHome = await homeInOlderCache().catch(() => false);
     const coreUrls = skipHome ? CORE_PRECACHE_URLS.filter(url => url !== HOME_URL) : CORE_PRECACHE_URLS;
     await Promise.all(
-      groupUrlsByCache(coreUrls).map(async ([name, urls]) => {
+      groupUrlsByCache(coreUrls.map(precacheUrl)).map(async ([name, urls]) => {
         const cache = await caches.open(name);
         await cache.addAll(urls);
       })
@@ -311,7 +327,7 @@ self.addEventListener('install', event => {
         try {
           const name = cacheNameForPath(new URL(url, self.location.origin).pathname);
           const cache = await caches.open(name);
-          await cache.add(url);
+          await cache.add(precacheUrl(url));
         } catch {
           // Non bloccare install per risorse non critiche mancanti.
         }
@@ -474,7 +490,12 @@ async function cacheFirst(request, cacheName = CACHE_NAME) {
     }
     return response;
   } catch {
-    // Nessuna risposta disponibile — ritorna undefined (gestito dal browser)
+    // Senza rete, un CSS o un JS con un'altra ?v= (pagina salvata prima
+    // dell'aggiornamento, o sorgenti senza versione) prende il file con lo
+    // stesso percorso da questa cache: offline funziona come prima di ?v=.
+    // Con la rete non si arriva qui.
+    const samePath = await caches.match(request, { cacheName, ignoreSearch: true });
+    if (samePath) return samePath;
     return new Response('Risorsa non disponibile offline.', {
       status: 503,
       headers: { 'Content-Type': 'text/plain; charset=utf-8' }

@@ -84,6 +84,9 @@ for (const m of sitemap.matchAll(/<loc>https:\/\/lascuolaamica\.it([^<]*)<\/loc>
 
 // ------------------------------------------------------------ 5. riferimenti nelle pagine
 let riferimenti = 0;
+// CSS e JS locali devono portare la versione dell'export (versiona_asset.js):
+// senza, un worker vecchio li servirebbe dalla sua cache a un HTML nuovo.
+const versione = require('./versiona_asset.js').leggiVersione(ROOT);
 fs.readdirSync(DST).filter((f) => f.endsWith('.html')).forEach((pagina) => {
   const html = fs.readFileSync(path.join(DST, pagina), 'utf8');
   for (const m of html.matchAll(/\s(?:src|href)="([^"]+)"/g)) {
@@ -95,6 +98,7 @@ fs.readdirSync(DST).filter((f) => f.endsWith('.html')).forEach((pagina) => {
     riferimenti++;
     const assoluto = u.startsWith('/') ? u : '/' + u;
     if (!risolve(assoluto)) errori.push(`${pagina} punta a ${u}, che nell'export non c'e'`);
+    if (/\.(css|js)(\?|$)/.test(u) && !u.endsWith(`?v=${versione}`)) errori.push(`${pagina} carica ${u} senza ?v=${versione}`);
   }
 });
 
