@@ -1,6 +1,6 @@
 [
  {
-  "date": "25 ottobre 2026 · Release 4.27.2",
+  "date": "25 ottobre 2026 · Release 4.27.2 – 4.27.3",
   "items": [
    "Aggiornamenti più sicuri: quando il sito cambia versione, ogni pagina usa i suoi file della stessa versione, anche se la riapri senza passare dalla home. Così il quiz non si inceppa dopo un aggiornamento."
   ]

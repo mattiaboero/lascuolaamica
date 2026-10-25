@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.27.3 - 2026-10-25
+
+**Verifica della produzione e IndexNow per commit.**
+
+### Added
+- `npm run verifica:produzione` (`scripts/verifica_produzione.js`): dopo il
+  deploy controlla che la produzione serva la versione di `app-version.js`,
+  che CSS e JS locali di `/`, `/matematica` e `/sistema-solare` abbiano
+  `?v=<versione>`, gli header di sicurezza di `/` e almeno 24 `<loc>` nella
+  sitemap. Alla prima differenza stampa l'errore ed esce con 1.
+- `npm run indexnow -- --da-commit <sha>`: segnala solo gli URL il cui
+  `<lastmod>` in `sitemap.xml` differisce fra `<sha>` e `HEAD`. Con zero URL
+  stampa `IndexNow: 0 URL`. `check:indexnow` lo prova senza rete (nessun URL,
+  uno, tutti).
+
 ## 4.27.2 - 2026-10-25
 
 **Niente versioni miste fra HTML e JS dopo un rilascio.**

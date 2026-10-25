@@ -13,7 +13,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
-const { daSegnalare, oggiRoma } = require('./indexnow');
+const { daSegnalare, cambiati, oggiRoma } = require('./indexnow');
 
 const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -62,4 +62,12 @@ assert.doesNotMatch(dry, /matematica/);
 assert.match(cli('--dry', '--all'), /\[DRY\] 3 URL \(tutta la sitemap\)/);
 fs.rmSync(dir, { recursive: true, force: true });
 
-console.log('[OK] indexnow: filtro per data, --all, zero URL, --dry, oggi in ora italiana');
+// --da-commit: gli URL il cui lastmod differisce fra due sitemap.
+const conDate = (d) => SITEMAP.replace('2026-09-30', d[0]).replace('2026-10-23', d[1]).replace('2026-10-24', d[2]);
+assert.deepStrictEqual(cambiati(SITEMAP, SITEMAP), []);
+assert.deepStrictEqual(cambiati(SITEMAP, conDate(['2026-09-30', '2026-10-25', '2026-10-24'])), ['https://lascuolaamica.it/matematica']);
+assert.deepStrictEqual(cambiati(SITEMAP, conDate(['2026-10-25', '2026-10-25', '2026-10-25'])), tutti);
+// CLI: HEAD contro HEAD non cambia niente, nessuna richiesta parte.
+assert.strictEqual(execFileSync(process.execPath, [path.join(__dirname, 'indexnow.js'), '--da-commit', 'HEAD'], { encoding: 'utf8' }), 'IndexNow: 0 URL\n');
+
+console.log('[OK] indexnow: filtro per data, --all, zero URL, --dry, oggi in ora italiana, --da-commit');
