@@ -22,6 +22,15 @@
 - `js/lazy-css.js` e `shared.js`: `rewards.css` e `palette-okabe.css`, caricati
   da JS, prendono la `?v=` dello script che li carica. I selettori di
   `lazy-css.js` guardano il percorso, non l'URL intero.
+- I JSON scaricati con `fetch` restavano senza versione: dopo un rilascio il
+  JS nuovo leggeva dati vecchi dalla cache del worker. Ora prendono la stessa
+  `?v=`: `shared.js` con `SA.urlVersione` (`/json/index.json`,
+  `/json/changelog.json`); `questions-loader.js` (file delle domande) e
+  `js/sistema-solare.js` (`sistema-solare-dati.json` e `-testi.json`), che
+  girano prima di `app-version.js`, con la `?v=` del proprio script.
+  `sw.js` mette in precache i JSON di `/json/` e `/js/` con la stessa `?v=` e
+  `refetchOpenedJson` riporta le materie aperte con la `?v=` nuova.
+  `manifest.json` resta senza (lo chiede il browser).
 - `scripts/check_export.js`: fallisce se una pagina esportata carica un CSS o
   un JS senza `?v=<APP_VERSION>`.
 
@@ -31,6 +40,8 @@
   nel motore, ricarica senza clic e verifica che `SA.version` sia quella
   dell'HTML e che il quiz parta. Un caso di controllo senza `?v=` deve
   mostrare il difetto; altri due provano la precache con `?v=` e l'offline.
+  Un sesto caso rinomina `corpi` in `sistema-solare-dati.json` e nel JS di
+  N+1: la pagina deve ricevere il JSON di N+1 e partire.
 
 ## 4.27.1 - 2026-10-24
 

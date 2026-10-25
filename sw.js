@@ -172,8 +172,11 @@ const PRECACHE_URLS = CORE_PRECACHE_URLS.concat(OPTIONAL_PRECACHE_URLS);
 // pagine esportate (scripts/versiona_asset.js): la cache si cerca per URL
 // intero, query compresa. Cosi' un worker resta fuori dalle pagine di
 // un'altra versione, che vanno in rete e non mescolano HTML e script.
+// Lo stesso per i JSON che il JS scarica con fetch (shared.js urlVersione,
+// questions-loader.js, js/sistema-solare.js). manifest.json resta fuori: lo
+// chiede il browser, senza versione.
 const APP_VERSION = (self.SA && self.SA.version) || '';
-const VERSIONED_RE = /\.(css|js)$/i;
+const VERSIONED_RE = /\.(css|js)$|^\/(?:json|js)\/.+\.json$/i;
 
 function precacheUrl(url) {
   return APP_VERSION && VERSIONED_RE.test(url) ? `${url}?v=${encodeURIComponent(APP_VERSION)}` : url;
@@ -227,6 +230,7 @@ function canCacheResponse(response) {
 // rivalida sempre e un file non cambiato costa un 304. Se un file non arriva
 // (rete caduta, materia tolta) non si tiene la copia vecchia: resta fuori
 // dall'offline finche' la materia non viene riaperta con la rete, come prima.
+// Si salvano con la ?v= di questa versione, l'URL che le pagine chiederanno.
 //
 // Dalla 4.26.0 una materia arriva per classe: json/<materia>/c<N>.json e
 // bonus.json, e in cache finiscono solo le classi aperte. Chi aveva in cache
@@ -258,7 +262,8 @@ async function refetchOpenedJson() {
   await Promise.all(
     Array.from(paths, async (pathname) => {
       try {
-        if (!(await cache.match(pathname))) await cache.add(pathname);
+        const url = precacheUrl(pathname);
+        if (!(await cache.match(url))) await cache.add(url);
       } catch {
         // Vedi sopra: niente copia vecchia.
       }

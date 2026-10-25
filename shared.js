@@ -69,10 +69,18 @@
   let lastPlayWindowBroadcastKey = '';
   let updateLogCache = null;
 
+  // ?v=<versione> sugli URL locali scaricati con fetch, come CSS e JS delle
+  // pagine (scripts/versiona_asset.js): un worker di un'altra versione non li
+  // trova in cache e va in rete, e il JS nuovo non legge dati vecchi.
+  function urlVersione(path) {
+    if (!APP_VERSION) return path;
+    return `${path}${path.includes('?') ? '&' : '?'}v=${encodeURIComponent(APP_VERSION)}`;
+  }
+
   async function loadUpdateLog() {
     if (updateLogCache) return updateLogCache;
     try {
-      const res = await fetch('/json/changelog.json');
+      const res = await fetch(urlVersione('/json/changelog.json'));
       updateLogCache = await res.json();
     } catch (e) {
       updateLogCache = [];
@@ -1144,7 +1152,7 @@
   }
 
   async function fetchQuestionsIndex() {
-    const response = await fetch('/json/index.json', { credentials: 'same-origin' });
+    const response = await fetch(urlVersione('/json/index.json'), { credentials: 'same-origin' });
     if (!response.ok) {
       throw new Error(`index fetch failed: ${response.status}`);
     }
@@ -1791,6 +1799,7 @@
     eventName: PLAY_WINDOW_EVENT
   };
   SA.version = APP_VERSION;
+  SA.urlVersione = urlVersione;
   SA.voice = {
     eventName: VOICE_EVENT,
     available(lang) {

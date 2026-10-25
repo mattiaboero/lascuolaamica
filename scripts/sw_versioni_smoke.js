@@ -11,7 +11,9 @@
 // nel motore: con il JS vecchio il quiz non mostrerebbe la domanda. Si installa
 // N, si pubblica N+1 e si ricarica la pagina senza cliccare link: il worker
 // attivo e' ancora quello di N, ma SA.version deve essere quella dell'HTML e il
-// quiz deve partire.
+// quiz deve partire. Lo stesso per i JSON che il JS scarica con fetch: in
+// N+1 il campo «corpi» di js/sistema-solare-dati.json diventa «corpiCelesti»,
+// nel file e in js/sistema-solare.js.
 //
 // Il caso di controllo, senza ?v=, deve mostrare il difetto: se non lo
 // mostra, il test non proverebbe niente.
@@ -40,6 +42,13 @@ function contenuto(rel) {
   if (rel === 'app-version.js') return testo.replace(/APP_VERSION = '[^']+'/, `APP_VERSION = '${rilascio.versione}'`);
   if (rel === 'sw.js') return testo + CHI_SEI + `// ${rilascio.versione}\n`;
   if (nuovo && rel === 'subject-quiz-core.js') testo = testo.split("$('qText')").join("$('qTesto')");
+  if (nuovo && rel === 'js/sistema-solare.js') testo = testo.split('DATI.corpi').join('DATI.corpiCelesti');
+  if (nuovo && rel === 'js/sistema-solare-dati.json') {
+    const dati = JSON.parse(testo);
+    dati.corpiCelesti = dati.corpi;
+    delete dati.corpi;
+    return JSON.stringify(dati);
+  }
   if (rel.endsWith('.html')) {
     if (nuovo) testo = testo.replace('id="qText"', 'id="qTesto"');
     if (rilascio.conV) testo = versiona(testo, rilascio.versione);
@@ -58,7 +67,7 @@ function serve() {
     }
     const tipo = TYPES[path.extname(file)] || 'application/octet-stream';
     res.writeHead(200, { 'Content-Type': tipo, 'Cache-Control': 'no-cache' });
-    if (/\.(html|js)$/.test(rel)) res.end(contenuto(rel));
+    if (/\.(html|js)$/.test(rel) || rel === 'js/sistema-solare-dati.json') res.end(contenuto(rel));
     else fs.createReadStream(file).pipe(res);
   });
   return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(server)));
@@ -169,6 +178,22 @@ async function main() {
         .map((u) => fetch(u).then((r) => `${u} ${r.status}`, () => `${u} errore`))));
       stati.filter((st) => !st.endsWith(' 200')).forEach((st) => errors.push(`senza rete ${st}`));
       report('precache con ?v= dalla home; senza rete altre ?v= servite dallo stesso percorso', errors.concat(pageErrors));
+      await context.close();
+    }
+    // 6. JSON scaricato con fetch: N installata sul Sistema Solare, N+1
+    //    pubblicata con «corpi» rinominato, ricarica senza clic. La pagina deve
+    //    ricevere il JSON di N+1 e partire.
+    {
+      const { context, page, errors, pageErrors } = await installaN(browser, base, true, '/sistema-solare.html');
+      Object.assign(rilascio, { versione: N1, conV: true });
+      const risposta = page.waitForResponse((r) => new URL(r.url()).pathname === '/js/sistema-solare-dati.json');
+      await page.reload({ waitUntil: 'networkidle' });
+      if ((await workerAttivo(page)) !== N) errors.push('il worker di N non controlla piu\' la pagina: il caso non prova niente');
+      const dati = await (await risposta).json();
+      if (!dati.corpiCelesti) errors.push(`la pagina ha letto sistema-solare-dati.json di ${N}`);
+      await page.waitForFunction(() => !!(window.SA && window.SA.sistemaSolare), null, { timeout: 20000 })
+        .catch(() => errors.push('il Sistema Solare non parte'));
+      report(`Sistema Solare: HTML ${N1} legge sistema-solare-dati.json di ${N1} col worker di ${N}`, errors.concat(pageErrors));
       await context.close();
     }
   } finally {
