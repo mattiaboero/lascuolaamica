@@ -15,6 +15,10 @@
 // Vale il contrasto peggiore. I colori passano da un canvas 1x1, cosi'
 // rgb(), color(srgb ...) e oklch() arrivano tutti in sRGB a 8 bit.
 //
+// Su /premi controlla anche che l'hero abbia la stessa struttura nelle due
+// palette: pannello con gradiente, stessi padding, raggio e larghezza, titolo
+// bianco.
+//
 // Uso: node scripts/check_contrasti.js
 
 const http = require('http');
@@ -208,7 +212,18 @@ async function giro(browser, base, pagina, palette, viewport) {
     await page.waitForFunction(() => document.getAnimations().every((a) => a.playState !== 'running'
       || a.effect.getComputedTiming().iterations === Infinity), null, { timeout: 5000 }).catch(() => {});
     await page.waitForTimeout(300);
-    return await page.evaluate(misuraTesti);
+    const misure = await page.evaluate(misuraTesti);
+    const struttura = pagina === '/premi' ? await page.evaluate(() => {
+      const hero = window.getComputedStyle(document.querySelector('header.rewards-hero'));
+      return {
+        'background-image': hero.backgroundImage,
+        'padding-top': hero.paddingTop,
+        'border-top-left-radius': hero.borderTopLeftRadius,
+        'max-width': hero.maxWidth,
+        'h1#mainTitle color': window.getComputedStyle(document.getElementById('mainTitle')).color,
+      };
+    }) : null;
+    return { misure, struttura };
   } finally {
     await context.close();
   }
@@ -221,13 +236,15 @@ async function main() {
   const errori = [];
   let testi = 0;
   let giri = 0;
+  const strutture = {};
   try {
     for (const pagina of PAGINE) {
       for (const palette of PALETTE) {
         for (const viewport of LARGHEZZE) {
           giri += 1;
           try {
-            const misure = await giro(browser, base, pagina, palette, viewport);
+            const { misure, struttura } = await giro(browser, base, pagina, palette, viewport);
+            if (struttura) strutture[`${viewport.width} ${palette}`] = struttura;
             testi += misure.length;
             // Una riga per selettore: il caso peggiore e quante volte si ripete.
             const casi = new Map();
@@ -248,6 +265,21 @@ async function main() {
   } finally {
     await browser.close();
     server.close();
+  }
+  // /premi: hero uguale nelle due palette, a ogni larghezza.
+  for (const { width } of LARGHEZZE) {
+    const std = strutture[`${width} standard`];
+    const oka = strutture[`${width} okabe-ito`];
+    if (!std || !oka) continue;
+    for (const prop of Object.keys(std)) {
+      const ok = prop === 'background-image' ? std[prop] !== 'none' && oka[prop] !== 'none'
+        : prop === 'h1#mainTitle color' ? std[prop] === 'rgb(255, 255, 255)' && oka[prop] === 'rgb(255, 255, 255)'
+          : std[prop] === oka[prop];
+      if (!ok) {
+        process.stdout.write(`ERRORE struttura: /premi ${prop}: standard ${std[prop]}, okabe-ito ${oka[prop]}\n`);
+        process.exit(1);
+      }
+    }
   }
   if (errori.length) {
     errori.forEach((e) => process.stdout.write(`${e}\n`));
