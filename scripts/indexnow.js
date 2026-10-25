@@ -14,6 +14,8 @@
 //   npm run indexnow -- --all                 tutta la sitemap (casi eccezionali:
 //                                             migrazione, cambio di dominio)
 //   npm run indexnow -- --dry                 stampa soltanto, non invia
+//   npm run indexnow -- --da-commit <sha>     pagine il cui lastmod in sitemap.xml
+//                                             differisce fra <sha> e HEAD
 //
 // Dopo il deploy: --since con il primo giorno di lavoro della release (il
 // lastmod e' la data in cui la pagina e' cambiata nel branch, non quella del
@@ -24,6 +26,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const HOST = 'lascuolaamica.it';
@@ -61,12 +64,24 @@ function daSegnalare(xml, { since, all }) {
   return elenco.filter((v) => v.lastmod.slice(0, 10) >= since).map((v) => v.loc);
 }
 
+// Gli URL di dopo il cui lastmod differisce da prima (pagine nuove comprese).
+function cambiati(prima, dopo) {
+  const vecchi = new Map(voci(prima).map((v) => [v.loc, v.lastmod]));
+  return voci(dopo).filter((v) => vecchi.get(v.loc) !== v.lastmod).map((v) => v.loc);
+}
+
+function sitemapAlCommit(rev) {
+  return execFileSync('git', ['show', `${rev}:sitemap.xml`], { cwd: ROOT, encoding: 'utf8' });
+}
+
 function opzioni(argv) {
   const i = argv.indexOf('--since');
   const s = argv.indexOf('--sitemap');
+  const c = argv.indexOf('--da-commit');
   return {
     dry: argv.includes('--dry'),
     all: argv.includes('--all'),
+    daCommit: c >= 0 ? argv[c + 1] || '' : null,
     since: i >= 0 ? argv[i + 1] || '' : oggiRoma(),
     sitemap: s >= 0 ? argv[s + 1] : path.join(ROOT, 'sitemap.xml')
   };
@@ -74,15 +89,28 @@ function opzioni(argv) {
 
 async function main(argv = process.argv.slice(2)) {
   const opz = opzioni(argv);
+  if (opz.daCommit !== null) {
+    if (!opz.daCommit) throw new Error('--da-commit vuole uno sha.');
+    const urlList = cambiati(sitemapAlCommit(opz.daCommit), sitemapAlCommit('HEAD'));
+    if (urlList.length === 0) {
+      console.log('IndexNow: 0 URL');
+      return 0;
+    }
+    return invia(urlList, `lastmod cambiato da ${opz.daCommit}`, opz.dry, true);
+  }
   const urlList = daSegnalare(fs.readFileSync(opz.sitemap, 'utf8'), opz);
   const criterio = opz.all ? 'tutta la sitemap' : `lastmod dal ${opz.since}`;
   if (urlList.length === 0) {
     console.log(`[OK] Niente da segnalare: nessuna pagina con ${criterio}.`);
     return 0;
   }
+  return invia(urlList, criterio, opz.dry, false);
+}
 
+// perUrl: una riga per URL con lo stato HTTP (la richiesta resta una sola).
+async function invia(urlList, criterio, dry, perUrl) {
   const key = findKey();
-  if (opz.dry) {
+  if (dry) {
     console.log(`[DRY] ${urlList.length} URL (${criterio}), chiave ${key}`);
     urlList.forEach((u) => console.log('  ' + u));
     return 0;
@@ -100,11 +128,12 @@ async function main(argv = process.argv.slice(2)) {
     console.error(await res.text());
     return 1;
   }
+  if (perUrl) urlList.forEach((u) => console.log(`${u} HTTP ${res.status}`));
   console.log(`[OK] IndexNow: ${urlList.length} URL segnalati, ${criterio} (HTTP ${res.status}).`);
   return 0;
 }
 
-module.exports = { daSegnalare, oggiRoma, voci, opzioni, main };
+module.exports = { daSegnalare, cambiati, oggiRoma, voci, opzioni, main };
 
 if (require.main === module) {
   main().then((code) => process.exit(code)).catch((err) => {
