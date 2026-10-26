@@ -89,6 +89,10 @@ function serve() {
 function regoleUsate(fogli) {
   const PSEUDO = /::?(?:hover|focus-visible|focus-within|focus|active|visited|link|checked|disabled|enabled|placeholder-shown|placeholder|before|after|marker|selection|first-letter|first-line|backdrop|-webkit-[a-z-]+|-moz-[a-z-]+)(?:\([^)]*\))?/g;
   const usata = (sel) => {
+    // Le decorazioni .float-v1...20 sono scelte a caso a ogni caricamento
+    // (SADom.randomVariant): tutte nel critico, cosi' il blocco non cambia da
+    // un giro all'altro e ogni variante ha gia' posizione e misura.
+    if (/^\.float-v\d+$/.test(sel.trim())) return true;
     const base = sel.replace(PSEUDO, '').replace(/(^|,)\s*(?=,|$)/g, '$1*');
     try { return !!document.querySelector(base || '*'); } catch (_) { return true; }
   };
