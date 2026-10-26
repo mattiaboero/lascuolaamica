@@ -1,5 +1,11 @@
 [
  {
+  "date": "26 ottobre 2026 · Release 4.27.7",
+  "items": [
+   "Il Bosco delle Lettere ha un titolo più corto nei risultati di ricerca, che ora si legge tutto: «Bosco delle Lettere: gioco di ortografia». Nel sito non cambia niente."
+  ]
+ },
+ {
   "date": "25 ottobre 2026 · Release 4.27.2 – 4.27.6",
   "items": [
    "Aggiornamenti più sicuri: quando il sito cambia versione, ogni pagina usa i suoi file della stessa versione, anche se la riapri senza passare dalla home. Così il quiz non si inceppa dopo un aggiornamento.",

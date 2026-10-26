@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.27.7 - 2026-10-26
+
+**Titolo del Bosco sotto i 60 caratteri e controllo dei titoli.**
+
+### Fixed
+- `bosco.html`: `<title>`, `og:title` e `twitter:title` passano da «Il Bosco
+  delle Lettere - Gioco di Ortografia per Bambini | La Scuola Amica» (74
+  caratteri, tagliato nei risultati di ricerca) a «Bosco delle Lettere: gioco
+  di ortografia | La Scuola Amica» (58).
+
+### Added
+- `npm run check:titoli` (`scripts/check_titoli.js`, anche in `verify`):
+  senza rete e senza browser, per ogni pagina della sitemap controlla titolo
+  da 30 a 60 caratteri, description da 110 a 160, titolo e description unici
+  ed esattamente un `<h1`. Conta i caratteri dopo aver decodificato le
+  entità HTML.
+
 ## 4.27.6 - 2026-10-25
 
 **«Inizia!» sempre in vista sulle pagine materia.**
