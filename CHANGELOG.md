@@ -1,5 +1,28 @@
 # Changelog Repo
 
+## 4.27.8 - 2026-10-26
+
+**Su telefono la classe scelta è sempre sopra «Inizia!».**
+
+### Fixed
+- Pagine materia, schermata iniziale, sotto i 600px: classi su due colonne
+  invece di una. Applicati i gradini 1 (icone delle classi nascoste) e 2
+  (padding dei pulsanti di classe 8px e spazio fra le classi 8px). A
+  375x667 e 390x844 la classe selezionata, la 3ª al primo accesso oppure
+  quella salvata, finisce sopra «Inizia!». Prima su /matematica a 375x667
+  la prima classe andava da 381 a 477px, «Inizia!» da 600 a 655px e la 3ª
+  era coperta a metà.
+- L'etichetta «Scegli l'ambito della sessione» sta sopra gli ambiti, non
+  sopra le classi (matematica, italiano, storia, geografia, scienze,
+  civica).
+
+### Added
+- `npm run test:e2e:inizia`: due controlli nuovi a 375x667 e 390x844.
+  `classe-selezionata-libera`: al primo accesso la classe selezionata è
+  sopra «Inizia!». `classe-salvata-libera`: per ogni classe, clic e
+  ricarica, la classe torna selezionata ed è sopra «Inizia!» (altrimenti
+  `classe-salvata-non-ripristinata`).
+
 ## 4.27.7 - 2026-10-26
 
 **Titolo del Bosco sotto i 60 caratteri e controllo dei titoli.**

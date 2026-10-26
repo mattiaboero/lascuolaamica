@@ -808,6 +808,7 @@ header {
   position: sticky;
   bottom: 12px;
   z-index: 20;
+  will-change: transform;
 }
 
 /* Focus e scrollIntoView si fermano sopra «Inizia!» (WCAG 2.2, 2.4.11).
@@ -1911,6 +1912,21 @@ body.subject-problemi .answer-btn {
 
   body.subject-problemi .intro-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #screenStart .class-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  #screenStart .class-btn .a-icon {
+    display: none;
+  }
+
+  #screenStart .class-btn {
+    padding: 8px 8px;
   }
 }
 
