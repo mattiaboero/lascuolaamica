@@ -37,7 +37,7 @@
 <link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-900.woff2" as="font" type="font/woff2" crossorigin>
-<!-- CSS-CRITICO:INIZIO sorgenti=2e5dd9d52002cc0c -->
+<!-- CSS-CRITICO:INIZIO sorgenti=a8d24dee00033188 -->
 <style>:root { --ws-cartridge-buff: #fbf4e6; --ws-olive-buff: #f1e6cf; --ws-ivory: #fffdf7; --ws-cinnamon-border: #e7d8be; --ws-slate-black: #2c2a28; --ws-hays-russet: #6e6357; --ws-verdigris: #2f8e86; --ws-hortense-blue: #3c6e9f; --ws-terracotta: #dd6347; --ws-terracotta-ink: #c8553d; --ws-cossack-green: #2e8455; --ws-jasper-red: #c4452f; --ws-yellow-ocher: #c8881a; --ws-maize: #f2c14e; --info-blue: #2d6cdf; --info-blue-rgb: 45 108 223; --subj-math-a: #6e57a6; --subj-math-b: #7a61b8; --subj-math-dec: #f2c14e; --subj-ita-a: #b33c4d; --subj-ita-b: #ca374a; --subj-ita-dec: #e0a526; --subj-geo-a: #327249; --subj-geo-b: #417b56; --subj-geo-dec: #3c6e9f; --subj-sto-a: #885d3b; --subj-sto-b: #8f6841; --subj-sto-dec: #c4452f; --subj-sci-a: #23716c; --subj-sci-b: #377a73; --subj-sci-dec: #f2c14e; --subj-eng-a: #2c6a9f; --subj-eng-b: #3774a5; --subj-eng-dec: #dd6347; --subj-prob-a: #a34d20; --subj-prob-b: #b05615; --subj-prob-dec: #2c8c86; --subj-civ-a: #1d7359; --subj-civ-b: #317c63; --subj-civ-dec: #c8881a; --subj-breakout-a: #993377; --subj-breakout-b: #b03b89; --subj-breakout-dec: #2f8e86; --subj-tabelline-a: #96631a; --subj-tabelline-b: #96661a; --subj-tabelline-dec: #2e6fa6; --subj-tabelline-text: #96631a; --subj-bosco-a: #55742f; --subj-bosco-b: #5c7a2e; --subj-bosco-dec: #dd6347; --subj-bosco-text: #55742f; --subj-breakout-text: #993377; --radius-md: 18px; --radius-lg: 28px; --shadow-card: 0 14px 34px rgba(44 42 40 / 0.16); }
 *, ::before, ::after { margin: 0px; padding: 0px; box-sizing: border-box; }
 @media (prefers-reduced-motion: reduce) {
@@ -132,7 +132,7 @@ header { text-align: center; margin-bottom: 14px; animation: 0.7s cubic-bezier(0
 .start-btn { display: block; margin: 18px auto 0px; background: linear-gradient(135deg, color-mix(in srgb, var(--accent-1) 78%, #000 22%), color-mix(in srgb, var(--accent-2) 78%, #000 22%)); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 50px; padding: 14px 44px; font-family: "Fredoka One", "Fredoka One Fallback", cursive; font-size: 1.42rem; letter-spacing: 0.4px; cursor: pointer; box-shadow: rgb(31, 109, 99) 0px 7px 0px, rgba(0, 0, 0, 0.18) 0px 12px 18px; transition: transform 0.15s, box-shadow 0.15s; }
 .start-btn:hover { transform: scale(1.02); box-shadow: rgb(31, 109, 99) 0px 9px 0px, rgba(0, 0, 0, 0.2) 0px 16px 22px; }
 .start-btn:active { transform: translateY(3px); box-shadow: rgb(31, 109, 99) 0px 3px 0px; }
-#screenStart [data-action="start-game"] { position: sticky; bottom: 12px; z-index: 20; }
+#screenStart [data-action="start-game"] { position: sticky; bottom: 12px; z-index: 20; will-change: transform; }
 html:has(#screenStart.active) { scroll-padding-bottom: 79px; }
 #screenStart [data-action="start-game"]::before { content: ""; position: absolute; inset: 0px; z-index: -1; border-radius: inherit; box-shadow: rgba(44, 42, 40, 0.3) 0px 6px 24px 6px; pointer-events: none; }
 @media (min-width: 768px) and (max-width: 899px) {
@@ -302,12 +302,14 @@ html .class-btn .a-sub, html .area-btn .a-sub { font-size: 0.9375rem; }
 html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="okabe-ito"]) .class-btn .a-sub { opacity: 1; }
 }
 [hidden] { display: none !important; }
-.float-v7 { left: 45vw; font-size: 1.45rem; animation-duration: 21s; animation-delay: 8s; }
+.float-v1 { left: 6vw; font-size: 1rem; animation-duration: 18s; animation-delay: 0s; }
+.float-v4 { left: 26vw; font-size: 1.55rem; animation-duration: 19s; animation-delay: 1s; }
+.float-v5 { left: 32vw; font-size: 1.2rem; animation-duration: 24s; animation-delay: 6s; }
+.float-v6 { left: 39vw; font-size: 1.75rem; animation-duration: 26s; animation-delay: 3s; }
 .float-v8 { left: 52vw; font-size: 1.9rem; animation-duration: 28s; animation-delay: 5s; }
-.float-v10 { left: 64vw; font-size: 2rem; animation-duration: 25s; animation-delay: 9s; }
-.float-v12 { left: 76vw; font-size: 1.65rem; animation-duration: 27s; animation-delay: 10s; }
-.float-v17 { left: 37vw; font-size: 2.35rem; animation-duration: 30s; animation-delay: 13s; }
-.float-v18 { left: 54vw; font-size: 1.25rem; animation-duration: 17.5s; animation-delay: 2.5s; }
+.float-v9 { left: 58vw; font-size: 1.1rem; animation-duration: 23s; animation-delay: 7s; }
+.float-v11 { left: 70vw; font-size: 1.3rem; animation-duration: 18.5s; animation-delay: 1.5s; }
+.float-v19 { left: 68vw; font-size: 2.55rem; animation-duration: 31s; animation-delay: 14s; }
 .footer-support-cta { flex: 0 0 auto; width: auto; max-width: calc(100% - 8px); margin: 0px; border-radius: 999px; padding: 6px 10px; gap: 6px; display: inline-flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; font-size: 0.95rem; font-weight: 900; text-decoration: none; background: rgb(255, 255, 255); color: rgb(95, 107, 122); border: 1px solid rgba(95, 107, 122, 0.26); box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 10px; transition: transform 0.15s, filter 0.15s; }
 .footer-support-cta:hover { transform: scale(1.02); filter: brightness(1.05); }
 @media (hover: none) {
