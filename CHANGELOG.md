@@ -1,5 +1,29 @@
 # Changelog Repo
 
+## 4.27.10 - 2026-10-26
+
+**Contrasto AA anche nelle pagine non materia.**
+
+### Fixed
+- Pagine informative: link delle briciole e degli altri testi che usano
+  `--info-light-link` da #3c6e9f a #396896 (4,7:1 sul crema, era 4,3:1).
+- FAQ e Breakout, palette standard: "Home", "← Menu", titolo della FAQ ed
+  etichetta "Scegli la classe" da #2f8e86 a #256f69 (era 3,2-3,9:1).
+  Breakout: la nota piccola senza opacity 0.8 (era 4,3:1).
+- FAQ, Okabe-Ito: link a chip da #009e73 a #00825f (era 3,4:1).
+- Bosco: tappa corrente su #cb4526 (era bianco su #dd6347, 3,5:1); in
+  Okabe-Ito numero scuro #1f2d3d su arancio (era bianco, 2,3:1). "Home"
+  delle briciole da #55742f a #506d2c (era 4,3:1).
+- Pagina 404: pulsante "Torna alla home" su verde #298353-#238252 (era
+  2,3:1).
+
+### Changed
+- `npm run test:e2e:contrasti` misura anche faq, per-genitori,
+  per-insegnanti, privacy, cookie, accessibilita, supporta, chi-siamo,
+  ai-info, guida-compiti, tabelline, bosco, breakout, sistema-solare, link
+  e 404 (al caricamento; solo palette standard per link e 404): 100 giri.
+  Esclusi i controlli disattivati, come prevede WCAG 1.4.3.
+
 ## 4.27.9 - 2026-10-26
 
 **Strumenti: verify affidabile in locale e CSS critico stabile.**

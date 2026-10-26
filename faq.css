@@ -171,3 +171,15 @@ html:not([data-palette="okabe-ito"]) .faq-chip-link {
 html:not([data-palette="okabe-ito"]) .faq-note {
   color: var(--ws-hays-russet);
 }
+
+/* Contrasto AA: il verdigris #2f8e86 come testo sul crema era 3,2-3,9:1. */
+html:not([data-palette="okabe-ito"]) body.page-faq .breadcrumbs a,
+html:not([data-palette="okabe-ito"]) body.page-faq .top-nav .back-btn,
+html:not([data-palette="okabe-ito"]) body.page-faq #faqTitle {
+  color: #256f69;
+}
+
+/* Okabe-Ito: verde #009e73 su bianco era 3,4:1. */
+html[data-palette="okabe-ito"] .faq-chip-link {
+  color: #00825f;
+}

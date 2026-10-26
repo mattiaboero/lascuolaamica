@@ -505,7 +505,7 @@ html:not([data-palette="okabe-ito"]) {
   --info-light-bg: linear-gradient(180deg, var(--ws-cartridge-buff) 0%, var(--ws-olive-buff) 100%);
   --info-light-text: var(--ws-slate-black);
   --info-light-muted: var(--ws-hays-russet);
-  --info-light-link: var(--ws-hortense-blue);
+  --info-light-link: #396896; /* hortense-blue scurito: 4,7:1 sul crema (era 4,3:1) */
   --info-light-link-strong: #2a5a8a;
   --info-light-soft: var(--ws-olive-buff);
   --info-light-border: var(--ws-cinnamon-border);

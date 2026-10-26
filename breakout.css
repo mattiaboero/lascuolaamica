@@ -391,3 +391,15 @@ body.subject-breakout.is-playing .score-bar {
     padding: 18px;
   }
 }
+
+/* Contrasto AA: il verdigris #2f8e86 come testo sul crema era 3,2-3,9:1. */
+html:not([data-palette="okabe-ito"]) body.subject-breakout .breadcrumbs a,
+html:not([data-palette="okabe-ito"]) body.subject-breakout .top-nav .back-btn,
+html:not([data-palette="okabe-ito"]) body.subject-breakout .section-label {
+  color: #256f69;
+}
+
+/* Con opacity 0.8 la nota era 4,3:1. */
+body.subject-breakout .intro-note-small {
+  opacity: 1;
+}

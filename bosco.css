@@ -446,3 +446,19 @@ html:not([data-palette="okabe-ito"]) body.subject-bosco {
     height: 72px;
   }
 }
+
+/* Contrasto AA del numero della tappa corrente: bianco su #dd6347 era
+   3,5:1, bianco su #e69f00 (Okabe-Ito) 2,3:1. */
+html:not([data-palette="okabe-ito"]) .bosco-step.current {
+  background: #cb4526;
+  border-color: #cb4526;
+}
+
+html[data-palette="okabe-ito"] .bosco-step.current {
+  color: #1f2d3d;
+}
+
+/* Link Home delle briciole: #55742f sul fondo verde chiaro era 4,3:1. */
+html:not([data-palette="okabe-ito"]) body.subject-bosco .breadcrumbs a {
+  color: #506d2c;
+}
