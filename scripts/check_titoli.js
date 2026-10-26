@@ -31,7 +31,12 @@ const testo = (s) => decodifica(s).replace(/\s+/g, ' ').trim();
 const lunghezza = (s) => [...s].length;
 
 function leggi(file) {
-  const html = fs.readFileSync(path.join(ROOT, file), 'utf8').replace(/<!--[\s\S]*?-->/g, '');
+  // Commenti tolti ripetendo finche' non cambia piu', e un commento rimasto aperto vale fino alla fine del file come nel browser (CodeQL js/incomplete-multi-character-sanitization).
+  let html = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  let prima;
+  do { prima = html; html = html.replace(/<!--[\s\S]*?-->/g, ''); } while (html !== prima);
+  const aperto = html.indexOf('<!--');
+  if (aperto !== -1) html = html.slice(0, aperto);
   const titolo = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   const meta = (html.match(/<meta\b[^>]*>/gi) || []).find((m) => /\bname\s*=\s*["']description["']/i.test(m));
   const content = meta && meta.match(/\bcontent\s*=\s*(?:"([^"]*)"|'([^']*)')/i);
