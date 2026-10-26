@@ -16,6 +16,11 @@
 //                            60): ogni elemento con il focus non e' coperto
 //                            (WCAG 2.2, 2.4.11)
 //   area-da-url              ?area=tables preseleziona le Tabelline
+//   classe-selezionata-libera  sotto i 768: al primo accesso la classe
+//                            selezionata finisce sopra «Inizia!», con scrollY 0
+//   classe-salvata-libera    sotto i 768, otto materie: per ogni classe, clic e
+//                            ricarica; la classe salvata torna selezionata e
+//                            finisce sopra «Inizia!», con scrollY 0
 //
 // Uso: node scripts/inizia_smoke.js
 
@@ -31,6 +36,15 @@ const MATERIE = ['matematica', 'italiano', 'inglese', 'storia', 'geografia', 'sc
 const PAGINE = [...MATERIE.map((m) => `/${m}`), '/matematica?area=tables'];
 const LARGHEZZE = [{ width: 375, height: 667 }, { width: 390, height: 844 }, { width: 768, height: 1024 }, { width: 1440, height: 900 }];
 const START = '#screenStart [data-action="start-game"]';
+
+// Gira nella pagina: data-class della classe selezionata e se finisce sopra
+// «Inizia!», con scrollY 0.
+function classeSelezionata(sel) {
+  window.scrollTo(0, 0);
+  const btn = document.querySelector('#screenStart .class-btn.selected');
+  if (!btn) return { classe: null, libera: false };
+  return { classe: btn.dataset.class, libera: btn.getBoundingClientRect().bottom <= document.querySelector(sel).getBoundingClientRect().top };
+}
 
 // URL puliti come su Cloudflare: /premi -> premi.html.
 function serve() {
@@ -85,6 +99,10 @@ async function giro(browser, base, pagina, viewport, esito) {
           <= document.querySelector(sel).getBoundingClientRect().top;
       }, START));
     }
+    if (viewport.width < 768) {
+      const { classe, libera } = await page.evaluate(classeSelezionata, START);
+      esito(`classe-selezionata-libera ${classe}`, libera);
+    }
     if (pagina === '/matematica?area=tables') {
       esito('area-da-url', await page.evaluate(() => document.querySelector('[data-area="tables"]')?.getAttribute('aria-pressed') === 'true'));
     }
@@ -132,6 +150,18 @@ async function giro(browser, base, pagina, viewport, esito) {
     await page.locator('#screenStart .class-btn').nth(1).click();
     await page.waitForLoadState('networkidle');
     esito('dopo-clic-classe', (await visibile(page)) && (await nonCoperto(page)));
+
+    if (viewport.width < 768 && !pagina.includes('?')) {
+      const classi = await page.locator('#screenStart .class-btn').evaluateAll((bs) => bs.map((b) => b.dataset.class));
+      for (const dc of classi) {
+        await page.locator(`#screenStart .class-btn[data-class="${dc}"]`).click();
+        await page.reload({ waitUntil: 'networkidle', timeout: 60000 });
+        await page.evaluate(() => document.fonts.ready);
+        const { classe, libera } = await page.evaluate(classeSelezionata, START);
+        if (classe !== dc) esito(`classe-salvata-non-ripristinata ${dc}`, false);
+        else esito(`classe-salvata-libera ${dc}`, libera);
+      }
+    }
   } finally {
     await context.close();
   }
