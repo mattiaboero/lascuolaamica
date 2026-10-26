@@ -2,9 +2,11 @@
 'use strict';
 
 // Contrasto WCAG 2.2 AA di ogni testo visibile: 4,5:1, oppure 3:1 per testo
-// da 24 px, o da 18,66 px con peso 700 o piu'. Pagine: /, /premi e le otto
-// materie con la prima domanda a video, ognuna con la palette standard e con
-// ?palette=okabe-ito, a 1280x800 e a 375x667, ogni giro in un contesto nuovo.
+// da 24 px, o da 18,66 px con peso 700 o piu'. Pagine: /, /premi, le otto
+// materie con la prima domanda a video e le altre pagine del sito (ALTRE) al
+// caricamento, ognuna con la palette standard e con ?palette=okabe-ito (solo
+// standard per /link e /404), a 1280x800 e a 375x667, ogni giro in un
+// contesto nuovo. Esclusi i controlli disattivati (WCAG 1.4.3).
 //
 // Per ogni elemento con testo proprio (nodi di testo figli diretti), anche
 // sotto aria-hidden="true" se si vede, esclusi: testo senza lettere ne' cifre,
@@ -30,7 +32,11 @@ const { chromium } = require('playwright');
 const ROOT = path.join(__dirname, '..');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const MATERIE = ['matematica', 'italiano', 'inglese', 'storia', 'geografia', 'scienze', 'civica', 'problemi'];
-const PAGINE = ['/', '/premi', ...MATERIE.map((m) => `/${m}`)];
+const ALTRE = ['/faq', '/per-genitori', '/per-insegnanti', '/privacy', '/cookie', '/accessibilita', '/supporta', '/chi-siamo',
+  '/ai-info', '/guida-compiti', '/tabelline', '/bosco', '/breakout', '/sistema-solare', '/link', '/404'];
+const PAGINE = ['/', '/premi', ...MATERIE.map((m) => `/${m}`), ...ALTRE];
+// /link e /404 non caricano palette-okabe.css: solo palette standard.
+const SOLO_STANDARD = ['/link', '/404'];
 const PALETTE = ['standard', 'okabe-ito'];
 const LARGHEZZE = [{ width: 1280, height: 800 }, { width: 375, height: 667 }];
 
@@ -168,6 +174,8 @@ function misuraTesti() {
     // ℹ e simili sono lettere per Unicode ma qui emoji: via i pittogrammi.
     if (!LETTERE.test(proprio.replace(/\p{Extended_Pictographic}/gu, ''))) return;
     if (!el.checkVisibility({ checkVisibilityCSS: true }) || nascosto(el)) return;
+    // WCAG 1.4.3: i controlli disattivati sono esclusi (Bosco prima di iniziare).
+    if (el.closest(':disabled, [aria-disabled="true"]')) return;
     let opacita = 1;
     for (let n = el; n; n = n.parentElement) opacita *= parseFloat(window.getComputedStyle(n).opacity);
     if (opacita < 0.1) return;
@@ -198,7 +206,7 @@ async function giro(browser, base, pagina, palette, viewport) {
       await page.waitForFunction(() => document.documentElement.dataset.palette === 'okabe-ito'
         && [...document.styleSheets].some((s) => s.href && s.href.includes('palette-okabe.css')), null, { timeout: 10000 });
     }
-    if (pagina !== '/' && pagina !== '/premi') {
+    if (MATERIE.includes(pagina.slice(1))) {
       await page.locator('#screenStart [data-action="start-game"]').click({ timeout: 30000 });
       if (await page.locator('#screenLevels.active').count()) {
         await page.locator('#levelsRoot button:not([disabled])').first().click({ timeout: 30000 });
@@ -239,7 +247,7 @@ async function main() {
   const strutture = {};
   try {
     for (const pagina of PAGINE) {
-      for (const palette of PALETTE) {
+      for (const palette of SOLO_STANDARD.includes(pagina) ? ['standard'] : PALETTE) {
         for (const viewport of LARGHEZZE) {
           giri += 1;
           try {
