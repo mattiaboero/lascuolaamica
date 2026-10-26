@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.27.9 - 2026-10-26
+
+**Strumenti: verify affidabile in locale e CSS critico stabile.**
+
+### Fixed
+- `prepublish-check.sh`: in locale, su un branch con commit propri, il
+  controllo del bump di versione confronta con il punto da cui il branch
+  parte da origin/main, modifiche non committate comprese. Prima
+  confrontava solo con HEAD o HEAD^..HEAD e dava errore su ogni commit
+  successivo al bump. In CI (variabile CI impostata) non cambia.
+- `build_css_critico.js`: tutte le decorazioni `.float-v1`...`.float-v20`
+  entrano nel CSS critico. Prima solo quelle estratte a caso durante la
+  generazione, quindi ogni `npm run css:critico` cambiava righe e hash
+  CSP, e al caricamento le altre varianti restavano senza posizione fino
+  ai fogli completi.
+
 ## 4.27.8 - 2026-10-26
 
 **Su telefono la classe scelta è sempre sopra «Inizia!».**

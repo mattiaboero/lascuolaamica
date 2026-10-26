@@ -321,6 +321,33 @@ check_pwa_version_bump_for_precache_changes() {
     return 1
   }
 
+  # In locale, su un branch con commit propri: confronto con il punto da cui il
+  # branch parte da origin/main, modifiche non committate comprese. Cosi' un
+  # commit successivo al bump non da' errore. In CI (CI impostata) resta il
+  # confronto qui sotto: sulla PR il commit di merge ha HEAD^ = main.
+  if [[ -z "${CI:-}" ]] && git rev-parse --verify -q origin/main >/dev/null 2>&1; then
+    local branch_base=""
+    branch_base=$(git merge-base origin/main HEAD 2>/dev/null || true)
+    if [[ -n "$branch_base" && "$branch_base" != "$(git rev-parse HEAD)" ]]; then
+      changed_relevant=$(git diff --name-only "$branch_base" -- "${relevant_paths[@]}" || true)
+      if [[ -n "$changed_relevant" ]]; then
+        local branch_core_diff=""
+        branch_core_diff=$(git diff --unified=0 --no-color "$branch_base" -- subject-quiz-core.js || true)
+        if exempt_comment_only_subject_quiz_core "$changed_relevant" "$branch_core_diff"; then
+          changed_relevant=""
+        fi
+      fi
+      if [[ -n "$changed_relevant" ]] && git diff --quiet "$branch_base" -- app-version.js; then
+        echo "[ERROR] PWA: asset precache/cache-first changes detected without APP_VERSION bump (since origin/main)"
+        echo "$changed_relevant"
+        status=1
+        return
+      fi
+      echo "[OK] PWA: APP_VERSION bump check passed (since origin/main)"
+      return
+    fi
+  fi
+
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     changed_relevant=$(git diff --name-only -- "${relevant_paths[@]}" || true)
 
