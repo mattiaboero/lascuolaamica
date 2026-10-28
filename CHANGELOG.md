@@ -1,5 +1,27 @@
 # Changelog Repo
 
+## 4.27.11 - 2026-10-28
+
+**Nome accessibile uguale al testo visibile (WCAG 2.5.3).**
+
+### Fixed
+- Home: le 12 schede di materie e giochi non hanno più un `aria-label`
+  scritto a mano, diverso da quello che si vede. Il nome viene dal testo
+  della scheda; icone ed emoji dei tag restano nascoste agli screen reader.
+  "Let's go" ha `lang="en"`.
+- Pagine materia: il pulsante Info non ha più `aria-label="Info"`, l'emoji è
+  in `aria-hidden` e il nome viene dalla parola "Info". In partita, sul
+  telefono, la parola è nascosta solo alla vista (come `.sr-only`), non più
+  con `display: none`, che lasciava i pulsanti senza nome.
+- Sistema Solare: in pausa il pulsante si chiama "Muovi i pianeti" (era
+  "Fai ripartire il movimento dei pianeti", senza la parola "Muovi" che si
+  vede).
+
+### Note
+- axe-core 4.14 (PR Dependabot #145) controlla la regola
+  `label-content-name-mismatch`: prima di questa versione `test:e2e:a11y`
+  falliva con la nuova versione. Verificato con 4.11.4 e 4.14.0.
+
 ## 4.27.10 - 2026-10-26
 
 **Contrasto AA anche nelle pagine non materia.**
