@@ -1883,7 +1883,7 @@
     inPausa = p;
     const b = document.querySelector('[data-ss="pausa"]');
     b.setAttribute('aria-pressed', p ? 'true' : 'false');
-    b.setAttribute('aria-label', p ? 'Fai ripartire il movimento dei pianeti' : 'Ferma il movimento dei pianeti');
+    b.setAttribute('aria-label', p ? 'Muovi i pianeti' : 'Ferma il movimento dei pianeti');
     velocitaAttuale = null;
     applicaVelocita();
   }
