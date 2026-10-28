@@ -73,6 +73,8 @@ check_html_integrity() {
   for exempt in "${NOSCRIPT_EXEMPT[@]}"; do
     [[ "$file" == "$exempt" ]] && ns_exempt=1
   done
+  # Le pagine /tabellina-del-<N> (scripts/build_tabelline_pagine.py): statiche.
+  [[ "$file" == tabellina-del-*.html ]] && ns_exempt=1
   if [[ "$ns_exempt" -eq 1 ]]; then
     echo "[SKIP] $file: noscript non richiesto (pagina statica)"
   elif grep -qi '<noscript>' "$file"; then

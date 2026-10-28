@@ -64,6 +64,49 @@ async function check(browser, javaScriptEnabled) {
   return errors;
 }
 
+// Dalla 4.27.11: una pagina per 25 tabelline (scripts/build_tabelline_pagine.py).
+// Da /tabelline ogni riga di quei numeri porta alla sua pagina; la pagina del
+// 27 ha la risposta sotto il titolo e le due tabelle giuste, con e senza JS.
+// I numeri si leggono dalla sitemap: l'elenco vero sta in build_tabelline.py.
+
+async function paginaSingola(browser, javaScriptEnabled) {
+  const context = await browser.newContext({ javaScriptEnabled });
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', (e) => errors.push(String(e)));
+  try {
+    const sitemap = await (await page.request.get(`${BASE}/sitemap.xml`)).text();
+    const numeri = [...sitemap.matchAll(/\/tabellina-del-(\d+)</g)].map((m) => Number(m[1]));
+    if (numeri.length !== 25) errors.push(`sitemap: ${numeri.length} pagine /tabellina-del-N invece di 25`);
+    await page.goto(`${BASE}/tabelline.html`, { waitUntil: 'load' });
+    const link = await page.locator('li[id^="tabellina-"] a').evaluateAll((a) => a.map((e) => [e.closest('li').id, e.getAttribute('href')]));
+    const attesi = numeri.map((n) => [`tabellina-${n}`, `/tabellina-del-${n}`]);
+    if (JSON.stringify(link) !== JSON.stringify(attesi)) errors.push(`link da /tabelline: ${JSON.stringify(link)}`);
+
+    const res = await page.goto(`${BASE}/tabellina-del-27.html`, { waitUntil: 'load' });
+    if (!res || !res.ok()) errors.push(`/tabellina-del-27: HTTP ${res ? res.status() : 'nessuna risposta'}`);
+    const main = page.locator('main#contenuto-principale');
+    if ((await main.locator('h1').innerText()).trim() !== 'Tabellina del 27') errors.push('h1 diverso da «Tabellina del 27»');
+    const risposta = (await main.locator('p strong').first().innerText()).trim();
+    if (risposta !== 'La tabellina del 27 è: 27, 54, 81, 108, 135, 162, 189, 216, 243, 270.') errors.push(`risposta: «${risposta}»`);
+    const righe = await main.locator('.tab-table tbody tr').evaluateAll((tr) => tr.map((r) => [r.cells[0].textContent, r.cells[1].textContent]));
+    const attese = Array.from({ length: 20 }, (_, k) => [`27 × ${k + 1}`, String(27 * (k + 1))]);
+    if (JSON.stringify(righe) !== JSON.stringify(attese)) errors.push(`tabelle: ${JSON.stringify(righe)}`);
+    if (/<noscript/i.test(await page.content())) errors.push('<noscript> presente');
+    const vicine = await main.locator('#altreTitle + ul a').evaluateAll((a) => a.map((e) => e.getAttribute('href')));
+    if (vicine[0] !== '/tabellina-del-26' || vicine[1] !== '/tabellina-del-28') errors.push(`pagine vicine: ${JSON.stringify(vicine.slice(0, 2))}`);
+    // Sul telefono la tabella sta nella pagina senza scorrere di lato.
+    await page.setViewportSize({ width: 375, height: 667 });
+    const largo = await page.evaluate(() => [...document.querySelectorAll('.tab-table-wrap')].some((w) => w.scrollWidth > w.clientWidth));
+    if (largo) errors.push('a 375 px la tabella scorre di lato');
+  } catch (err) {
+    errors.push(err.message.split('\n')[0]);
+  } finally {
+    await context.close();
+  }
+  return errors;
+}
+
 // Calcolatore solo da tastiera: Tab dall'inizio della pagina fino al campo,
 // numero, Invio (o Tab su «Calcola» e barra spaziatrice).
 async function calcolatore(browser) {
@@ -163,6 +206,12 @@ async function main() {
     for (const js of [true, false]) {
       const errors = await check(browser, js);
       process.stdout.write(`${errors.length ? '[FAIL]' : '[OK]'} tabelline JS=${js ? 'on' : 'off'}\n`);
+      errors.forEach((e) => process.stdout.write(`  - ${e}\n`));
+      fail += errors.length;
+    }
+    for (const js of [true, false]) {
+      const errors = await paginaSingola(browser, js);
+      process.stdout.write(`${errors.length ? '[FAIL]' : '[OK]'} pagina della tabellina del 27 e link da /tabelline JS=${js ? 'on' : 'off'}\n`);
       errors.forEach((e) => process.stdout.write(`  - ${e}\n`));
       fail += errors.length;
     }
