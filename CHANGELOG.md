@@ -1,5 +1,28 @@
 # Changelog Repo
 
+## 4.27.12 - 2026-10-28
+
+**Una pagina per ciascuna delle 25 tabelline più cercate.**
+
+### Added
+- 25 pagine /tabellina-del-N (14, 16, 17, 20, 22, 23, 24, 26, 27, 28, 29, 32,
+  34, 35, 36, 42, 43, 45, 48, 52, 54, 56, 60, 64, 72): risposta sotto il
+  titolo, tabella da × 1 a × 20 e tre o quattro trucchi per farla a mente,
+  con esempi calcolati dal numero. Le scrive
+  `scripts/build_tabelline_pagine.py` dentro `npm run freshness`.
+  `npm run check:tabelline-pagine`, in verify, controlla che pagine e riga di
+  llms.txt siano uguali all'uscita del generatore.
+- /tabelline: nell'elenco dall'11 al 100 queste 25 tabelline portano alla
+  loro pagina. Title, description e ancore non cambiano.
+- Sitemap e llms.txt con le 25 pagine. L'elenco dei numeri sta solo in
+  `PAGINE_SINGOLE` (`scripts/build_tabelline.py`).
+
+### Changed
+- `npm run test:e2e:tabelline` controlla anche /tabellina-del-27 e i 25 link
+  da /tabelline, con e senza JavaScript.
+- `npm run test:e2e:contrasti` misura anche /tabellina-del-27: 104 giri.
+- `npm run test:e2e:a11y` controlla anche /tabellina-del-27: 8 viste.
+
 ## 4.27.11 - 2026-10-28
 
 **Nome accessibile uguale al testo visibile (WCAG 2.5.3).**

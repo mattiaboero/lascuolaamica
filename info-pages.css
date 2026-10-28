@@ -641,6 +641,13 @@ body.page-tabelline .tab-table tbody th {
   color: var(--page-secondary-text);
 }
 
+/* Pagine /tabellina-del-<N> (scripts/build_tabelline_pagine.py): la tabella ha
+   due colonne e sta nel telefono senza scorrere. */
+body.page-tabellina .tab-table {
+  min-width: 0;
+  max-width: 420px;
+}
+
 /* Tabelline dall'11 al 100: una riga di testo per numero, generata da
    scripts/build_tabelline.py. Indice delle decine in cima. */
 body.page-tabelline .tab-decine ul {

@@ -2,8 +2,9 @@
 'use strict';
 
 // Accessibilita' automatica (WCAG 2.2 AA con axe-core) e titoli senza emoji.
-// - axe su home, /matematica (scelta e partita), /tabelline, /bosco,
-//   /sistema-solare, /privacy, in tema chiaro e scuro: zero violazioni.
+// - axe su home, /matematica (scelta e partita), /tabelline,
+//   /tabellina-del-27, /bosco, /sistema-solare, /privacy, in tema chiaro e
+//   scuro: zero violazioni.
 // - Su tutte le pagine pubbliche nessun H1 ha emoji nel nome accessibile
 //   (le emoji stanno in <span aria-hidden="true">).
 // axe non vede tutto (il contrasto sui gradienti lo misura
@@ -34,6 +35,7 @@ const PROVE = [
     }
   },
   { nome: '/tabelline', url: '/tabelline.html' },
+  { nome: '/tabellina-del-27', url: '/tabellina-del-27.html' },
   { nome: '/bosco', url: '/bosco.html' },
   { nome: '/sistema-solare', url: '/sistema-solare.html' },
   { nome: '/privacy', url: '/privacy.html' }

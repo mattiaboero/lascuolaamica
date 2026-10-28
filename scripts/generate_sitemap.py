@@ -25,10 +25,15 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+# Le pagine /tabellina-del-<N>: l'elenco sta in un solo punto.
+from build_tabelline import PAGINE_SINGOLE  # noqa: E402
+
 PAGES = [
     ("/", "index.html"),
     ("/matematica", "matematica.html"),
     ("/tabelline", "tabelline.html"),
+    *[(f"/tabellina-del-{n}", f"tabellina-del-{n}.html") for n in PAGINE_SINGOLE],
     ("/inglese", "inglese.html"),
     ("/problemi", "problemi.html"),
     ("/civica", "civica.html"),

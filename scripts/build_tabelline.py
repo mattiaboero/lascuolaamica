@@ -8,6 +8,11 @@ reader si ascolta una tabellina alla volta.
 
 Scrive fra i marcatori <!-- TABELLINE-11-100:INIZIO --> e
 <!-- TABELLINE-11-100:FINE -->. Gira dentro `npm run freshness`.
+
+PAGINE_SINGOLE: le tabelline che hanno anche una pagina propria
+(/tabellina-del-27, scritta da build_tabelline_pagine.py). Qui la riga
+porta alla pagina; l'elenco lo leggono anche il generatore delle pagine e
+generate_sitemap.py. Per aggiungere una pagina basta un numero qui.
 """
 
 from __future__ import annotations
@@ -19,6 +24,11 @@ from pathlib import Path
 PAGINA = Path(__file__).resolve().parents[1] / 'tabelline.html'
 MARCATORI = re.compile(r'(<!-- TABELLINE-11-100:INIZIO[^>]*-->\n)(.*?)( *<!-- TABELLINE-11-100:FINE -->)', re.S)
 RIENTRO = '      '
+
+# Prima tornata (28/10/2026): le tabelline con almeno 30 impressioni in Search
+# Console dal 29/9 al 26/10. In ordine crescente.
+PAGINE_SINGOLE = (14, 16, 17, 20, 22, 23, 24, 26, 27, 28, 29, 32, 34, 35, 36,
+                  42, 43, 45, 48, 52, 54, 56, 60, 64, 72)
 
 
 def vocale(n: int) -> bool:
@@ -55,7 +65,10 @@ def blocco() -> str:
         righe.append('<ul class="tab-oltre" role="list">')
         for n in range(inizio, fine + 1):
             multipli = ', '.join(str(n * k) for k in range(1, 11))
-            righe.append(f'  <li id="tabellina-{n}"><strong>Tabellina {di(n)}:</strong> {multipli}</li>')
+            nome = f'Tabellina {di(n)}'
+            if n in PAGINE_SINGOLE:
+                nome = f'<a href="/tabellina-del-{n}">{nome}</a>'
+            righe.append(f'  <li id="tabellina-{n}"><strong>{nome}:</strong> {multipli}</li>')
         righe.append('</ul>')
     return '\n'.join(RIENTRO + r for r in righe)
 
