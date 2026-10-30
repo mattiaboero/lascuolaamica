@@ -1,0 +1,1261 @@
+/* Gioco delle tabelline "Nina e le isole del vento" (/gioco-tabelline).
+   Tutte le regole del gioco stanno sotto .nina-game: la pagina usa anche
+   tokens.css, subject-quiz-theme.css e utilities.css del sito, e i due mondi
+   non devono toccarsi. L'interfaccia del gioco e' disegnata a 960x540 e
+   scalata da resize() in js/gioco-tabelline.js: le coordinate sono fisse. */
+
+@font-face {
+  font-family: NinaPixel;
+  src: url('/assets/gioco-tabelline/fonts/PixelifySans.ttf') format('truetype');
+  font-display: swap;
+}
+
+.nina-game * {
+  box-sizing: border-box;
+}
+
+.nina-game button,
+.nina-game input {
+  font: inherit;
+}
+
+.nina-game button:hover {
+  background: #ffdfa2;
+}
+
+.nina-game button:active {
+  transform: translate(2px,2px);
+  box-shadow: none;
+}
+
+.nina-game button:focus-visible,
+.nina-game input:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.nina-game button.primary,
+.nina-game button.selected {
+  background: var(--teal);
+  color: var(--cream);
+}
+
+.nina-game button.primary:hover,
+.nina-game button.selected:hover {
+  background: #388e89;
+}
+
+.nina-game button:disabled {
+  cursor: default;
+  opacity: .46;
+  transform: none;
+}
+
+.nina-game .game-shell {
+  width: min(1280px,calc((100dvh - 110px)*16/9),100%);
+}
+
+.nina-game .separator {
+  color: #e3a662;
+  margin: 0 12px;
+}
+
+.nina-game .topbar button {
+  background: transparent;
+  color: #e6e4cd;
+  border: 0;
+  font-size: 15px;
+  min-height: 30px;
+  padding: 4px 0 4px 15px;
+  box-shadow: none;
+}
+
+.nina-game #stage {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  background: #8bc6c6;
+  box-shadow: 0 12px 42px #0005;
+  border: 1px solid #f6e7c330;
+}
+
+.nina-game #game {
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+  touch-action: none;
+}
+
+.nina-game #interface {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 960px;
+  height: 540px;
+  transform-origin: top left;
+  pointer-events: none;
+  color: var(--ink);
+}
+
+.nina-game #screen>* {
+  pointer-events: auto;
+}
+
+.nina-game .panel {
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 #15373b25;
+}
+
+.nina-game .health-panel {
+  position: absolute;
+  left: 22px;
+  top: 18px;
+  width: 223px;
+  height: 65px;
+  padding: 6px 12px;
+  font-size: 21px;
+}
+
+.nina-game #hearts {
+  position: absolute;
+  left: 12px;
+  top: 32px;
+  display: flex;
+  gap: 5px;
+}
+
+.nina-game .heart {
+  width: 23px;
+  height: 22px;
+}
+
+.nina-game .heart.empty {
+  opacity: .25;
+  filter: grayscale(1);
+}
+
+.nina-game .asset-icon {
+  display: inline-block;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.nina-game .coin-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.nina-game #pause-button {
+  position: absolute;
+  left: 802px;
+  top: 18px;
+  width: 136px;
+  height: 43px;
+  pointer-events: auto;
+  padding: 4px;
+  font-size: 21px;
+}
+
+.nina-game #toast[hidden],
+.nina-game #hud[hidden] {
+  display: none;
+}
+
+.nina-game .title-screen {
+  position: absolute;
+  inset: 0;
+}
+
+.nina-game .title-screen .start {
+  position: absolute;
+  left: 66px;
+  top: 342px;
+  width: 338px;
+  height: 52px;
+}
+
+.nina-game .title-screen .map-button {
+  position: absolute;
+  left: 66px;
+  top: 410px;
+  width: 160px;
+  height: 46px;
+}
+
+.nina-game .title-screen .options-button {
+  position: absolute;
+  left: 242px;
+  top: 410px;
+  width: 162px;
+  height: 46px;
+}
+
+.nina-game .sprite-canvas {
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.nina-game .title-hero {
+  position: absolute;
+  left: 648px;
+  top: 212px;
+  width: 160px;
+  height: 211px;
+}
+
+.nina-game .title-island {
+  position: absolute;
+  left: 578px;
+  top: 412px;
+  width: 307px;
+  height: 128px;
+}
+
+.nina-game .title-star {
+  position: absolute;
+  left: 811px;
+  top: 248px;
+  width: 46px;
+  height: 46px;
+}
+
+.nina-game .save-warning {
+  position: absolute;
+  left: 444px;
+  right: 24px;
+  top: 20px;
+  font-size: 17px;
+  color: #923a28;
+  background: var(--cream);
+  padding: 7px 12px;
+  border: 2px solid var(--ink);
+  max-width: 490px;
+}
+
+.nina-game .shade {
+  position: absolute;
+  inset: 0;
+  background: #0d293399;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nina-game .dialog {
+  position: relative;
+  width: 600px;
+  padding: 22px 28px 25px;
+  text-align: center;
+  max-height: 496px;
+}
+
+.nina-game .dialog .island-subtitle {
+  font-size: 20px;
+  color: var(--teal);
+  margin: 8px 0;
+}
+
+.nina-game .dialog .actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nina-game .dialog .actions>* {
+  flex: 1;
+}
+
+.nina-game .dialog .stack {
+  display: grid;
+  gap: 14px;
+  max-width: 340px;
+  margin: 25px auto 0;
+}
+
+.nina-game .dialog .fine {
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 16px 0 0;
+}
+
+.nina-game .dialog .portrait {
+  width: 115px;
+  height: 145px;
+  float: left;
+  margin: 8px 18px 10px 0;
+}
+
+.nina-game .dialog .readable {
+  text-align: left;
+  margin-left: 135px;
+  font-size: 21px;
+}
+
+.nina-game .modal-wide {
+  width: 690px;
+}
+
+.nina-game .settings-grid {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 10px;
+  margin: 18px 0 20px;
+}
+
+.nina-game .settings-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.nina-game .settings-row>* {
+  flex: 1;
+}
+
+.nina-game .settings-bottom {
+  margin-top: 16px;
+}
+
+.nina-game .math-dialog {
+  width: 580px;
+  min-height: 432px;
+}
+
+.nina-game .math-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 20px 4px 15px;
+}
+
+.nina-game .gate-picture {
+  width: 107px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.nina-game .equation {
+  font-size: 48px;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.nina-game #answer {
+  width: 124px;
+  height: 61px;
+  min-width: 0;
+  background: #fffdf1;
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  font-size: 36px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.nina-game #answer::placeholder {
+  color: #71847b;
+}
+
+.nina-game .feedback {
+  min-height: 68px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+  white-space: pre-line;
+  margin: 0 5px;
+}
+
+.nina-game .math-submit {
+  width: 302px;
+  margin: 14px auto 0;
+}
+
+.nina-game .math-dialog .actions {
+  margin-top: 20px;
+}
+
+.nina-game .math-dialog .actions button {
+  font-size: 19px;
+  padding: 6px 8px;
+}
+
+.nina-game .award-stars {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.nina-game .award-stars canvas {
+  width: 61px;
+  height: 61px;
+}
+
+.nina-game .award-stars .empty {
+  opacity: .25;
+  filter: grayscale(1);
+}
+
+.nina-game .success-title {
+  font-size: 25px!important;
+  color: var(--teal);
+}
+
+.nina-game .complete-dialog .success-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nina-game .complete-dialog .success-content>canvas {
+  width: 130px;
+  height: 165px;
+}
+
+.nina-game .complete-dialog .summary {
+  flex: 1;
+}
+
+.nina-game .loading[hidden] {
+  display: none;
+}
+
+.nina-game .loading h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.nina-game .loading p {
+  font-size: 22px;
+}
+
+.nina-game .loading-star {
+  font-size: 70px;
+  color: #d69842;
+  animation: nina-pulse 1.2s steps(3) infinite;
+}
+
+.nina-game .loading progress {
+  width: 320px;
+  height: 16px;
+  justify-self: center;
+  accent-color: var(--teal);
+}
+
+@keyframes nina-pulse {
+  50%{transform:translateY(-8px)}
+}
+
+.nina-game #touch-controls {
+  display: none;
+  justify-content: space-between;
+  padding-top: 10px;
+  gap: 15px;
+}
+
+.nina-game #touch-controls>div {
+  display: flex;
+  gap: 8px;
+}
+
+.nina-game #touch-controls button {
+  font-size: 26px;
+  min-width: 54px;
+  min-height: 44px;
+  touch-action: none;
+}
+
+.nina-game .game-shell:fullscreen {
+  width: 100vw;
+  height: 100dvh;
+  padding: 12px;
+  background: #15373b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nina-game .game-shell:fullscreen #stage {
+  width: min(100%,calc((100dvh - 84px)*16/9));
+  flex-shrink: 0;
+}
+
+.nina-game .game-shell:fullscreen .topbar {
+  width: min(100%,calc((100dvh - 84px)*16/9));
+  flex-shrink: 0;
+}
+
+.nina-game .game-shell:fullscreen footer {
+  display: none;
+}
+
+.nina-game .game-shell:fullscreen #touch-controls {
+  width: min(100%,calc((100dvh - 150px)*16/9));
+  flex-shrink: 0;
+}
+
+@media(pointer:coarse) {
+  .nina-game #touch-controls {
+    display: flex;
+  }
+
+  .nina-game .game-shell {
+    width: min(1280px,calc((100dvh - 170px)*16/9),100%);
+  }
+
+}
+
+@media(max-width:700px) {
+  .nina-game {
+    padding: 8px;
+    margin: 0 auto 28px;
+    border-radius: 18px;
+  }
+
+  .nina-game .topbar {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+
+  .nina-game .topbar button span {
+    display: none;
+  }
+
+  .nina-game .topbar button {
+    font-size: 25px;
+  }
+
+  .nina-game .separator {
+    margin: 0 5px;
+  }
+
+  .nina-game .nina-footer {
+    font-size: 10px;
+    margin-top: 11px;
+  }
+
+  .nina-game .nina-footer>span:first-child {
+    display: none;
+  }
+
+  .nina-game .game-shell {
+    width: 100%;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .nina-game .loading-star {
+    animation: none;
+  }
+
+  .nina-game button:active {
+    transform: none;
+  }
+
+}
+
+@media(pointer:coarse) {
+  .nina-game .game-shell:fullscreen #stage,
+  .nina-game .game-shell:fullscreen .topbar {
+    width: min(100%,calc((100dvh - 150px)*16/9));
+  }
+
+}
+
+.nina-game #touch-controls.inactive {
+  visibility: hidden;
+}
+
+.nina-game .star-icon {
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+}
+
+.nina-game .ammo-icon {
+  width: 28px;
+  height: 28px;
+  margin-left: 12px;
+}
+
+.nina-game .score-panel {
+  position: absolute;
+  left: 583px;
+  top: 18px;
+  width: 196px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+}
+
+.nina-game .score-panel strong {
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.nina-game .world-math {
+  position: absolute;
+  top: 150px;
+  width: 400px;
+  height: 225px;
+  background: #fff5d8ed;
+  text-align: center;
+  pointer-events: auto;
+  box-shadow: 5px 5px 0 #183d4325;
+  border-color: #ad7d3b;
+}
+
+.nina-game .world-math[hidden] {
+  display: none;
+}
+
+.nina-game .answer-block:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.nina-game .answer-block.correct {
+  background: #a3d07c;
+  transform: translateY(-8px);
+}
+
+.nina-game .answer-block.incorrect {
+  background: #e5a592;
+}
+
+.nina-game .wrong-equation {
+  font-size: 42px!important;
+}
+
+.nina-game .complete-dialog>button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 13px;
+}
+
+.nina-game .complete-dialog .actions {
+  margin-top: 12px;
+}
+
+.nina-game {
+  --ink: #183d43;
+  --cream: #fff5d8;
+  --teal: #2a7775;
+  --coral: #c75e47;
+  --gold: #eda957;
+  background: #15373b;
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  font-family: 'Trebuchet MS',Arial,sans-serif;
+  margin: 0 auto 28px;
+  border-radius: 18px;
+}
+
+.nina-game button {
+  cursor: pointer;
+  color: var(--ink);
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #15373b30;
+  min-height: 42px;
+  padding: 7px 16px;
+  touch-action: manipulation;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nina-game .title-screen .game-logo {
+  position: absolute;
+  left: 59px;
+  top: 82px;
+  font-size: 100px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.1;
+  font-family: NinaPixel,monospace;
+}
+
+.nina-game .title-screen h2 {
+  position: absolute;
+  left: 62px;
+  top: 198px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.nina-game .title-screen .description {
+  position: absolute;
+  left: 65px;
+  top: 260px;
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.nina-game .eyebrow {
+  position: absolute;
+  left: 62px;
+  top: 49px;
+  /* Era var(--teal): sul cielo del titolo dava 2,75:1. L'inchiostro supera 4,5:1. */
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.nina-game .title-screen .chapter-note {
+  position: absolute;
+  left: 550px;
+  top: 98px;
+  width: 365px;
+  text-align: center;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nina-game .title-screen .help-button {
+  position: absolute;
+  left: 65px;
+  top: 483px;
+  width: 216px;
+  height: 34px;
+  min-height: 34px;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.nina-game .dialog h2 {
+  margin: 0 0 16px;
+  line-height: 1.15;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.nina-game .dialog p {
+  line-height: 1.4;
+  font-size: 19px;
+}
+
+.nina-game .dialog .readable p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 12px 0;
+}
+
+.nina-game .settings-mode {
+  width: 100%;
+  font-size: 18px;
+}
+
+.nina-game .settings-grid button {
+  padding: 4px;
+  min-height: 39px;
+  font-family: Arial,sans-serif;
+  font-size: 22px;
+}
+
+.nina-game .binding-row {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.nina-game .binding-row button {
+  min-height: 34px;
+  height: 36px;
+  padding: 2px;
+  font-size: 18px;
+}
+
+.nina-game .binding-status {
+  color: var(--teal);
+  min-height: 48px;
+  margin: 10px 0 2px!important;
+  font-size: 16px!important;
+}
+
+.nina-game .question-line,
+.nina-game .answer-block,
+.nina-game #coin-counter,
+.nina-game #star-counter,
+.nina-game #ammo-counter,
+.nina-game #score-counter,
+.nina-game .wrong-equation {
+  font-family: Arial,sans-serif;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-weight: 700;
+  font-synthesis: none;
+  letter-spacing: .2px;
+}
+
+.nina-game .question-line {
+  margin: 18px 0 0;
+  line-height: 1;
+  font-size: 42px;
+}
+
+.nina-game .answer-block {
+  position: absolute;
+  top: 130px;
+  width: 54px;
+  height: 46px;
+  min-height: 46px;
+  padding: 0;
+  background: #f4ce6a;
+  border: 3px solid #805c2d;
+  box-shadow: 3px 3px 0 #805c2d55;
+  font-size: 30px;
+}
+
+.nina-game .world-math h3 {
+  margin: 12px 8px 0;
+  font-family: Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nina-game .math-note {
+  position: absolute;
+  left: 5px;
+  width: 384px;
+  line-height: 1.15;
+  margin: 0;
+  font-size: 16px;
+  top: 179px;
+}
+
+.nina-game .math-mode {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: var(--ink);
+  top: 203px;
+  font-size: 11px;
+  line-height: 14px;
+  text-shadow: none;
+  letter-spacing: 0;
+}
+
+.nina-game #level-counter {
+  position: absolute;
+  left: 105px;
+  top: 36px;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nina-game .rewards {
+  position: absolute;
+  left: 265px;
+  top: 18px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  width: 300px;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.nina-game #context-hint {
+  position: absolute;
+  left: 22px;
+  top: 498px;
+  width: 916px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background: #f4edda;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nina-game #toast {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  text-align: center;
+  left: 180px;
+  top: 88px;
+  width: 600px;
+  min-height: 40px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.nina-game .island-card p {
+  color: var(--teal);
+  margin: 0 0 12px;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.nina-game .topbar {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: .6px;
+  font-size: 13px;
+}
+
+.nina-game .nina-footer {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: .8px;
+  margin-top: 16px;
+  color: #a9c3bb;
+  font-size: 11px;
+}
+
+.nina-game .complete-dialog .summary p {
+  font-size: 20px;
+}
+
+.nina-game .complete-dialog .success-title {
+  font-size: 21px!important;
+}
+
+.nina-game .score-panel span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nina-game .complete-dialog .fine {
+  font-size: 16px;
+}
+
+.nina-game #player-overlay {
+  position: absolute;
+  inset: 0;
+  width: 960px;
+  height: 540px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.nina-game #hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.nina-game #math-station {
+  z-index: 10;
+}
+
+.nina-game #screen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+}
+
+.nina-game .loading {
+  position: absolute;
+  inset: 0;
+  background: var(--cream);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  pointer-events: auto;
+  z-index: 50;
+}
+
+.nina-game #qa-panel {
+  font: 12px Arial,sans-serif;
+  color: #fff5d8;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.nina-game #qa-panel button {
+  font-size: 12px;
+  padding: 3px 8px;
+  min-height: 26px;
+  border-width: 1px;
+}
+
+.nina-game #qa-panel select {
+  font: 14px Arial,sans-serif;
+}
+
+.nina-game #qa-panel p {
+  font-size: 11px;
+  margin: 0;
+  flex-basis: 100%;
+}
+
+.nina-game .map-screen {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding: 18px 40px;
+}
+
+.nina-game .map-screen h2 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 34px;
+  margin: 0 0 4px;
+}
+
+.nina-game .map-screen>p {
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0 0 12px;
+}
+
+.nina-game .map-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.nina-game .island-card {
+  text-align: left;
+  height: 118px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nina-game .island-card h3 {
+  font-family: Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  min-height: 0;
+  margin: 0;
+}
+
+.nina-game .island-card .island-name {
+  font-size: 13px;
+  line-height: 16px;
+  margin: 2px 0;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nina-game .island-card .island-progress {
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.nina-game .island-card button {
+  width: 100%;
+  height: 28px;
+  min-height: 28px;
+  font-size: 13px;
+  padding: 1px;
+  margin-top: auto;
+}
+
+.nina-game .map-back {
+  width: 260px;
+  height: 36px;
+  min-height: 36px;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.nina-game .course-explainer {
+  margin: 8px 0 24px;
+}
+
+.nina-game .course-explainer p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.nina-game .health-panel strong {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Pulsante "PRONTA, NINA!" della guida: prima era uno style in linea. */
+.nina-game .understood {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Telefono in verticale: il gioco a 16:9 sarebbe largo 360 px. Si chiede di
+   girarlo; js/gioco-tabelline.js mette in pausa se lo si gira a partita
+   iniziata. Tablet e computer non vedono mai questo riquadro. */
+.nina-game .ruota-telefono {
+  display: none;
+}
+
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 600px) {
+  .nina-game {
+    position: relative;
+    min-height: 260px;
+  }
+
+  .nina-game .ruota-telefono {
+    position: absolute;
+    inset: 0;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #15373b;
+    color: var(--cream);
+    text-align: center;
+  }
+
+  .nina-game .ruota-telefono p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .nina-game .ruota-icona {
+    font-size: 56px;
+    line-height: 1;
+    animation: nina-ruota 2.4s ease-in-out infinite;
+  }
+}
+
+/* Scena panoramica (telefono in orizzontale): js/gioco-tabelline.js allarga
+   la scena oltre i 960 punti e scrive l'eccedenza in --nina-extra. Gli
+   elementi di destra dell'HUD si spostano a destra di tutta l'eccedenza, quelli
+   centrali di meta', titolo e mappa restano larghi 960 al centro. Con
+   --nina-extra a 0 (computer e tablet) queste regole non cambiano niente. */
+.nina-game #interface #pause-button {
+  left: calc(802px + var(--nina-extra, 0px));
+}
+
+.nina-game #interface .score-panel {
+  left: calc(583px + var(--nina-extra, 0px));
+}
+
+.nina-game #interface #toast {
+  left: calc(180px + var(--nina-extra, 0px) / 2);
+}
+
+.nina-game #interface #context-hint {
+  width: calc(916px + var(--nina-extra, 0px));
+}
+
+.nina-game #screen .title-screen,
+.nina-game #screen .map-screen {
+  right: auto;
+  left: calc(var(--nina-extra, 0px) / 2);
+  width: 960px;
+}
+
+/* Telefono in orizzontale: come nei giochi per telefono, la scena occupa
+   tutto lo schermo e i comandi touch stanno sopra, negli angoli in basso,
+   semitrasparenti. Niente barra NINA e niente piede: la pausa e' nell'HUD.
+   Su un iPhone 13 la scena e' 750x342 invece di 427x240: Nina e' piu' grande
+   del 42% e si vede piu' isola ai lati. */
+@media (pointer: coarse) and (orientation: landscape) and (max-height: 500px) {
+  .nina-game {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .nina-game .game-shell {
+    position: relative;
+    width: 100%;
+  }
+
+  .nina-game .topbar,
+  .nina-game .nina-footer,
+  .nina-game #context-hint {
+    display: none;
+  }
+
+  .nina-game #stage {
+    aspect-ratio: auto;
+    height: 100dvh;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .nina-game #game {
+    object-fit: contain;
+  }
+
+  .nina-game #touch-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    padding: 0 12px 10px;
+    pointer-events: none;
+  }
+
+  .nina-game #touch-controls > div {
+    pointer-events: auto;
+  }
+
+  .nina-game #touch-controls button {
+    min-width: 54px;
+    min-height: 50px;
+    background: #fff5d8a6;
+    border-color: #183d43b3;
+    box-shadow: none;
+  }
+
+  .nina-game #touch-controls button.primary {
+    background: #2a7775c7;
+  }
+
+  /* Fra 768 e 899 px di larghezza subject-quiz-theme.css fissa il piede del
+     sito in fondo allo schermo: qui coprirebbe i comandi. Questo file si
+     carica solo su /gioco-tabelline. */
+  .site-footer {
+    position: static;
+  }
+}
+
+@keyframes nina-ruota {
+  0%, 30% { transform: rotate(0deg); }
+  60%, 100% { transform: rotate(-90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nina-game .ruota-icona {
+    animation: none;
+  }
+}

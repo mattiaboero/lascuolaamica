@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lascuolaamica.it/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://lascuolaamica.it/matematica</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://lascuolaamica.it/tabelline</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://lascuolaamica.it/tabellina-del-14</loc>
@@ -153,12 +153,16 @@
     <lastmod>2026-10-28</lastmod>
   </url>
   <url>
+    <loc>https://lascuolaamica.it/gioco-tabelline</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://lascuolaamica.it/chi-siamo</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://lascuolaamica.it/per-insegnanti</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://lascuolaamica.it/per-genitori</loc>
@@ -194,6 +198,6 @@
   </url>
   <url>
     <loc>https://lascuolaamica.it/cookie</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>

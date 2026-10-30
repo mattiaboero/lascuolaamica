@@ -1,5 +1,37 @@
 # Changelog Repo
 
+## 4.27.13 - 2026-10-30
+
+**Nuovo gioco delle tabelline: Nina e le isole del vento.**
+
+### Added
+- /gioco-tabelline: platform in Canvas 2D per le tabelline dal 2 al 9. Nove
+  isole, una tabellina per isola e un ripasso misto nell'ultima; davanti a
+  ogni porta due moltiplicazioni a cui si risponde saltando sotto il numero
+  giusto. Modalità Avventura e Allenamento, comandi da tastiera e touch,
+  progressi nel browser (`nina.isole.v1`, in Cookie Policy).
+- Il gioco rispetta il timer facoltativo del sito: con la pausa in corso non
+  parte, alla fine dei 30 minuti torna al titolo con l'avviso.
+- Telefono: in verticale un riquadro chiede di girarlo e, se succede a
+  partita iniziata, la mette in pausa. In orizzontale la scena diventa
+  panoramica (fino a 1500 punti di larghezza invece di 960) e occupa tutto lo
+  schermo, con i comandi touch semitrasparenti negli angoli. Su iPhone il
+  pulsante Schermo intero non compare: Safari lo permette solo ai video.
+- Asset in `assets/gioco-tabelline/`: 13 immagini WebP e 3 musiche AAC (4,9 MB
+  in tutto). CSS e JS del gioco nel precache facoltativo del service worker,
+  immagini e audio solo quando la pagina si apre.
+- Link al gioco dalla home (riquadro e guida), da /tabelline, /matematica e
+  /per-insegnanti. Sitemap, llms.txt, JSON-LD della home e Lighthouse con la
+  nuova pagina.
+
+### Changed
+- `npm run check:gioco-tabelline`, in verify: 37 test su regole, livelli e
+  ingombri del gioco.
+- `npm run test:e2e:gioco-tabelline`, nel job smoke: caricamento, menu,
+  partita, timer e touch.
+- `npm run test:e2e:a11y` controlla anche /gioco-tabelline: 9 viste.
+- `npm run test:e2e:contrasti` misura anche /gioco-tabelline: 108 giri.
+
 ## 4.27.12 - 2026-10-28
 
 **Una pagina per ciascuna delle 25 tabelline più cercate.**
