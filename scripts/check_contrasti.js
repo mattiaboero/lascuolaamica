@@ -33,7 +33,7 @@ const ROOT = path.join(__dirname, '..');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const MATERIE = ['matematica', 'italiano', 'inglese', 'storia', 'geografia', 'scienze', 'civica', 'problemi'];
 const ALTRE = ['/faq', '/per-genitori', '/per-insegnanti', '/privacy', '/cookie', '/accessibilita', '/supporta', '/chi-siamo',
-  '/ai-info', '/guida-compiti', '/tabelline', '/tabellina-del-27', '/bosco', '/breakout', '/sistema-solare', '/link', '/404'];
+  '/ai-info', '/guida-compiti', '/tabelline', '/tabellina-del-27', '/bosco', '/breakout', '/sistema-solare', '/gioco-tabelline', '/link', '/404'];
 const PAGINE = ['/', '/premi', ...MATERIE.map((m) => `/${m}`), ...ALTRE];
 // /link e /404 non caricano palette-okabe.css: solo palette standard.
 const SOLO_STANDARD = ['/link', '/404'];

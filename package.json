@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.27.12",
+  "version": "4.27.13",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -24,7 +24,7 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:balance && npm run check:counts && npm run check:json-classi && npm run check:css-critico && npm run check:indexnow && npm run check:tabelline-pagine && npm run check:titoli && npm run check:static-grids && npm run check:percorso-sicuro && npm run check:prepublish && npm run export && npm run check:export-canale",
+    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:gioco-tabelline && npm run check:balance && npm run check:counts && npm run check:json-classi && npm run check:css-critico && npm run check:indexnow && npm run check:tabelline-pagine && npm run check:titoli && npm run check:static-grids && npm run check:percorso-sicuro && npm run check:prepublish && npm run export && npm run check:export-canale",
     "lighthouse": "lhci autorun",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
@@ -35,6 +35,7 @@
     "test:e2e:tabelline": "node scripts/tabelline_smoke.js",
     "test:e2e:voci": "node scripts/voci_locali_smoke.js",
     "test:e2e:timer": "node scripts/timer_gioco_smoke.js",
+    "test:e2e:gioco-tabelline": "node scripts/gioco_tabelline_smoke.js",
     "test:e2e:viewport": "node scripts/quiz_viewport_smoke.js",
     "test:e2e:home": "node scripts/home_smoke.js",
     "test:e2e:cls": "node scripts/cls_smoke.js",
@@ -54,6 +55,7 @@
     "check:plausibility": "node scripts/check_plausibility.js",
     "check:bosco": "node scripts/check_bosco.js",
     "check:sistema-solare": "python3 scripts/build_sistema_solare.py --check && node scripts/check_sistema_solare.js",
+    "check:gioco-tabelline": "node --test --test-reporter=tap scripts/gioco-tabelline/core.test.cjs scripts/gioco-tabelline/layout.test.cjs",
     "sync:counts": "python3 scripts/sync_question_counts.py",
     "check:counts": "python3 scripts/sync_question_counts.py --check",
     "check:json-classi": "python3 scripts/build_json_classi.py --check",

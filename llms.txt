@@ -2,7 +2,7 @@
 > Piattaforma educativa gratuita per la scuola primaria italiana (classi 2ª-5ª, matematica anche 1ª).
 > Offre quiz interattivi su 8 materie, senza registrazione e senza raccolta di dati personali.
 > Funziona offline come Progressive Web App dopo il primo caricamento.
-> Versione corrente: 4.27.12.
+> Versione corrente: 4.27.13.
 
 ## Identità
 - Nome: La Scuola Amica
@@ -31,6 +31,7 @@ Le 8 materie coperte dai quiz:
 ## Giochi arcade
 - [Cervellino Spacca-Muri](https://lascuolaamica.it/breakout) — gioco arcade ispirato a Breakout/Arkanoid. Rispondere correttamente alle domande (pescate dal pool delle 8 materie) attiva bonus di gioco o salva la pallina persa. Include trofei dedicati nella bacheca premi.
 - [Il Bosco delle Lettere](https://lascuolaamica.it/bosco) — gioco di ortografia per la 2ª e la 3ª. Si esplora una radura e si porta al tabellone il cartello con il gruppo di lettere giusto, in due modi: completare la parola bucata (dal suono al segno) oppure trovare la parola che contiene un gruppo dato (dal segno al suono). Banco di 129 parole su 10 famiglie ortografiche (GN, GLI, SCE/SCI, CHE/CHI, GHE/GHI, QU, CQU, doppie, accento, vocale interna), con ripasso più frequente delle famiglie più deboli e sintesi vocale.
+- [Nina e le isole del vento](https://lascuolaamica.it/gioco-tabelline) — gioco platform per allenare le tabelline dal 2 al 9. Nove isole, una tabellina per isola e un ripasso misto nell'ultima; davanti a ogni porta due moltiplicazioni a cui si risponde saltando sotto il numero giusto. Modalità Avventura (un errore fa ricominciare l'isola) e Allenamento (si riprova). Progressi solo nel browser.
 
 ## Canale YouTube
 - Nome: La Scuola Amica
@@ -48,7 +49,7 @@ Le 8 materie coperte dai quiz:
 - Domande totali: 9.926 (solo quelle attive, verificate a settembre 2026).
 - Materie: 8.
 - Classi coperte: 2ª-5ª scuola primaria (matematica anche 1ª).
-- Versione corrente: 4.27.12.
+- Versione corrente: 4.27.13.
 
 ## Caratteristiche principali
 - Gratuito, senza abbonamenti e senza pubblicità invasiva.
