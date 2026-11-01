@@ -10,7 +10,8 @@
 //   pausa, la partita non parte e compare "Pausa dal gioco"; acceso e in
 //   scadenza, alla fine dei 30 minuti si torna al titolo con "Tempo di gioco
 //   terminato".
-// - iPhone in verticale: compare l'invito a girare il telefono. iPhone in
+// - iPhone in verticale: compare l'invito a girare il telefono e nessuna
+//   immagine si carica; girato in orizzontale, arrivano tutte e 13. iPhone in
 //   orizzontale e iPad: niente invito, la partita parte al tocco e i comandi
 //   touch si vedono. Su iPhone in orizzontale la scena e' panoramica (piu'
 //   larga di 960 punti), su iPad resta 960.
@@ -23,7 +24,7 @@ const BASE = (process.env.E2E_BASE_URL || 'http://127.0.0.1:4173').replace(/\/+$
 const URL_PAGINA = `${BASE}/gioco-tabelline.html`;
 const problemi = [];
 
-async function apri(browser, opzioni, prima) {
+async function apri(browser, opzioni, prima, attendi = true) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, serviceWorkers: 'block', ...opzioni });
   const page = await context.newPage();
   page.on('pageerror', (e) => problemi.push(`errore JS: ${e.message}`));
@@ -31,7 +32,7 @@ async function apri(browser, opzioni, prima) {
   page.on('response', (r) => { if (r.status() >= 400) problemi.push(`HTTP ${r.status()}: ${r.url()}`); });
   if (prima) await page.addInitScript(prima);
   await page.goto(URL_PAGINA, { waitUntil: 'networkidle' });
-  await page.waitForSelector('#loading[hidden]', { state: 'attached', timeout: 20000 });
+  if (attendi) await page.waitForSelector('#loading[hidden]', { state: 'attached', timeout: 20000 });
   return { context, page };
 }
 const inGioco = (page) => page.evaluate(() => !document.getElementById('hud').hidden);
@@ -89,8 +90,16 @@ async function main() {
     if (!(await page.getByText('Tempo di gioco terminato').isVisible())) problemi.push('timer scaduto: manca l\'avviso');
     await context.close();
 
-    ({ context, page } = await apri(browser, { ...devices['iPhone 13'] }));
+    ({ context, page } = await apri(browser, { ...devices['iPhone 13'] }, null, false));
     if (!(await page.getByText('Gira il telefono in orizzontale').isVisible())) problemi.push('iPhone verticale: manca l\'invito a girare il telefono');
+    const contaImmagini = () => page.evaluate(() => performance.getEntriesByType('resource')
+      .filter((r) => /\/assets\/gioco-tabelline\/art\/.+\.webp$/.test(r.name)).length);
+    const inVerticale = await contaImmagini();
+    if (inVerticale !== 0) problemi.push(`iPhone verticale: ${inVerticale} immagini caricate invece di 0`);
+    await page.setViewportSize({ width: 844, height: 390 });
+    await page.waitForSelector('#loading[hidden]', { state: 'attached', timeout: 20000 });
+    const girato = await contaImmagini();
+    if (girato !== 13) problemi.push(`iPhone girato: ${girato} immagini caricate invece di 13`);
     await context.close();
 
     for (const [nome, dev] of [['iPhone orizzontale', devices['iPhone 13 landscape']], ['iPad', devices['iPad (gen 7) landscape']]]) {

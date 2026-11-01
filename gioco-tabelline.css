@@ -427,7 +427,7 @@
   display: none;
 }
 
-.nina-game .loading h2 {
+.nina-game .loading .loading-titolo {
   font-size: 32px;
   font-weight: 500;
 }
