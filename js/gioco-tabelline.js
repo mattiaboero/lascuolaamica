@@ -129,10 +129,11 @@
   // lo si gira in verticale durante la partita, la partita va in pausa.
   const verticale=window.matchMedia('(pointer: coarse) and (orientation: portrait) and (max-width: 600px)');
   verticale.addEventListener('change',e=>{if(e.matches){clearInput();if(mode==='play')pause();}});
-  // Sul touch la pagina ha sopra intestazione e briciole: all'inizio di
-  // un'isola il gioco viene portato in cima allo schermo.
+  // La pagina ha sopra intestazione e briciole: all'inizio di un'isola il gioco
+  // viene portato in cima allo schermo. Sul touch sempre; su desktop quando la
+  // scena esce dalla finestra.
   const touch=window.matchMedia('(pointer: coarse)');
-  function startLevel(index){if(touch.matches)document.querySelector('.nina-game').scrollIntoView({block:'start'});world=new C.World(index,{practice:progress.practice});world.viewWidth=VW;particles=[];hudCache='';mathCache='';setMode('play');playMusic(world.level.biome);canvas.focus();toast(index===0?'Tabellina del 2 · ↑ salta, premi ancora ↑ per il doppio salto':`${index+1}. ${world.level.name} · ${world.level.lesson}`,3.5);updateHUD();}
+  function startLevel(index){if(touch.matches||stage.getBoundingClientRect().bottom>window.innerHeight)document.querySelector('.nina-game').scrollIntoView({block:'start'});world=new C.World(index,{practice:progress.practice});world.viewWidth=VW;particles=[];hudCache='';mathCache='';setMode('play');playMusic(world.level.biome);canvas.focus();toast(index===0?'Tabellina del 2 · ↑ salta, premi ancora ↑ per il doppio salto':`${index+1}. ${world.level.name} · ${world.level.lesson}`,3.5);updateHUD();}
   function resume(){setMode('play');canvas.focus();}
   function pause(){
     if(!world||mode!=='play')return;setMode('pause');
@@ -332,7 +333,7 @@
   async function boot(){
     const names=[...new Set(['nina','enemies','props','turbine-v3','rewards-v3','chest-empty','icon',...C.COURSE.map(level=>level.background)])];$('load-progress').max=names.length;
     try{await Promise.all(names.map(name=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[name]=im;$('load-progress').value++;resolve();};im.onerror=()=>reject(new Error(name));im.src=`/assets/gioco-tabelline/art/${name}.webp`;})));
-      await document.fonts.ready;$('loading').hidden=true;document.querySelector('.coin-icon').append(icon('props',6,26,26));document.querySelector('.star-icon').append(icon('props',9,28,28));document.querySelector('.ammo-icon').append(icon('rewards-v3',2,28,28));resize();title();requestAnimationFrame(frame);
+      await document.fonts.ready;$('loading').hidden=true;document.querySelector('.coin-icon').append(icon('props',6,26,26));document.querySelector('.star-icon').append(icon('props',9,28,28));document.querySelector('.ammo-icon').append(icon('rewards-v3',2,28,28));resize();title();if(!touch.matches&&!location.hash&&window.scrollY===0&&stage.getBoundingClientRect().bottom>window.innerHeight)document.querySelector('.nina-game').scrollIntoView({block:'start'});requestAnimationFrame(frame);
     }catch(e){$('loading').replaceChildren(el('p',{class:'loading-titolo'},'Manca un pezzetto dell’isola'),el('p',{},'Ricarica la pagina.'));}
   }
   // In verticale la pagina chiede solo di girare il telefono: le 13 immagini

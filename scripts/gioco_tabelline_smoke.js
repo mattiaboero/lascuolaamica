@@ -10,6 +10,8 @@
 //   pausa, la partita non parte e compare "Pausa dal gioco"; acceso e in
 //   scadenza, alla fine dei 30 minuti si torna al titolo con "Tempo di gioco
 //   terminato".
+// - Desktop 1440x900 e 1280x720: all'apertura e all'avvio di un'isola la
+//   scena sta nella finestra.
 // - iPhone in verticale: compare l'invito a girare il telefono e nessuna
 //   immagine si carica; girato in orizzontale, arrivano tutte e 13. iPhone in
 //   orizzontale e iPad: niente invito, la partita parte al tocco e i comandi
@@ -89,6 +91,17 @@ async function main() {
     if ((await inGioco(page)) || !(await alTitolo(page))) problemi.push('timer scaduto: il gioco non torna al titolo');
     if (!(await page.getByText('Tempo di gioco terminato').isVisible())) problemi.push('timer scaduto: manca l\'avviso');
     await context.close();
+
+    for (const [w, h] of [[1440, 900], [1280, 720]]) {
+      ({ context, page } = await apri(browser, { viewport: { width: w, height: h } }));
+      const apertura = await page.evaluate(() => Math.round(document.getElementById('stage').getBoundingClientRect().bottom));
+      if (apertura > h) problemi.push(`${w}x${h}: all'apertura la scena finisce a ${apertura} px, fuori dalla finestra`);
+      await page.click('#start');
+      await page.waitForTimeout(600);
+      const fondo = await page.evaluate(() => Math.round(document.getElementById('stage').getBoundingClientRect().bottom));
+      if (fondo > h) problemi.push(`${w}x${h}: la scena finisce a ${fondo} px, fuori dalla finestra`);
+      await context.close();
+    }
 
     ({ context, page } = await apri(browser, { ...devices['iPhone 13'] }, null, false));
     if (!(await page.getByText('Gira il telefono in orizzontale').isVisible())) problemi.push('iPhone verticale: manca l\'invito a girare il telefono');
