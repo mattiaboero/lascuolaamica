@@ -1,5 +1,19 @@
 # Changelog Repo
 
+## 4.27.15 - 2026-11-01
+
+**Il gioco delle tabelline non scarica le immagini col telefono in verticale.**
+
+### Changed
+- /gioco-tabelline: con il telefono in verticale la pagina chiede solo di
+  girarlo, e le 13 immagini (2,4 MB) partono quando lo si gira. Prima
+  arrivavano subito: la pagina passa da circa 2,8 MB a 340 KB finché il
+  telefono resta in verticale.
+- La scritta di caricamento ("Il vento si sta svegliando…" e l'avviso di
+  errore) è un paragrafo con la classe `loading-titolo`, non più un H2.
+- `npm run test:e2e:gioco-tabelline`: su iPhone in verticale controlla che
+  non arrivi nessuna immagine e che, girato il telefono, arrivino tutte e 13.
+
 ## 4.27.14 - 2026-11-01
 
 **Numeri delle domande giusti e piccole correzioni dall'audit SEO del 31/10.**

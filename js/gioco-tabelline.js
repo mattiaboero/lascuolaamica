@@ -333,7 +333,10 @@
     const names=[...new Set(['nina','enemies','props','turbine-v3','rewards-v3','chest-empty','icon',...C.COURSE.map(level=>level.background)])];$('load-progress').max=names.length;
     try{await Promise.all(names.map(name=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[name]=im;$('load-progress').value++;resolve();};im.onerror=()=>reject(new Error(name));im.src=`/assets/gioco-tabelline/art/${name}.webp`;})));
       await document.fonts.ready;$('loading').hidden=true;document.querySelector('.coin-icon').append(icon('props',6,26,26));document.querySelector('.star-icon').append(icon('props',9,28,28));document.querySelector('.ammo-icon').append(icon('rewards-v3',2,28,28));resize();title();requestAnimationFrame(frame);
-    }catch(e){$('loading').replaceChildren(el('h2',{},'Manca un pezzetto dell’isola'),el('p',{},'Ricarica la pagina.'));}
+    }catch(e){$('loading').replaceChildren(el('p',{class:'loading-titolo'},'Manca un pezzetto dell’isola'),el('p',{},'Ricarica la pagina.'));}
   }
-  boot();
+  // In verticale la pagina chiede solo di girare il telefono: le 13 immagini
+  // (2,4 MB) partono quando lo si gira, non prima.
+  if(verticale.matches){const avvia=e=>{if(e.matches)return;verticale.removeEventListener('change',avvia);boot();};verticale.addEventListener('change',avvia);}
+  else boot();
 })();
