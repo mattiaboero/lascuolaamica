@@ -27,6 +27,13 @@ ROOT = Path(__file__).resolve().parents[1]
 JSON_DIR = ROOT / 'json'
 ESCLUSI = {'index.json', 'changelog.json'}
 CLASSI_PREDEFINITE = {2, 3, 4, 5}  # come subject-quiz-core.js senza cfg.classes
+ETICHETTE_PER_INSEGNANTI = {
+    'matematica': 'Matematica', 'problemi': 'Problemi di matematica', 'italiano': 'Italiano',
+    'inglese': 'Inglese', 'civica': 'Educazione civica', 'geografia': 'Geografia',
+    'storia': 'Storia', 'scienze': 'Scienze',
+}
+DESCRIPTION_OLTRE = ('matematica', 'italiano', 'scienze', 'geografia')
+OLTRE_RE = re.compile(r'[Oo]ltre (\d[\d.]*) domande')
 
 
 def classi_visibili(materia: str) -> set[int]:
@@ -81,11 +88,19 @@ def sostituzioni(attive: dict[str, int]) -> list[tuple[Path, str, str]]:
     # Conteggi scritti a mano nelle pagine.
     lavori.append((ROOT / 'index.html', r'✓ [\d.]+\+ domande', f'✓ {_arrotonda(totale)} domande'))
     lavori.append((ROOT / 'faq.html', r'oltre [\d.]+ domande', f'oltre {_arrotonda(totale)[:-1]} domande'))
-    for materia, etichetta in (('inglese', 'Inglese'), ('civica', 'Educazione civica'),
-                               ('scienze', 'Scienze')):
+    for materia, etichetta in ETICHETTE_PER_INSEGNANTI.items():
         lavori.append((ROOT / 'per-insegnanti.html',
                        rf'(<strong><a href="/{materia}">{etichetta}</a></strong> \()[\d.]+( domande\))',
                        rf'\g<1>{_it(attive[materia])}\g<2>'))
+
+    # Meta description delle materie che dicono "Oltre N domande": N alle centinaia
+    # per difetto. /inglese resta fuori: "Oltre 100 domande in inglese per
+    # bambini" e' vero ed e' la frase che la pagina intercetta in ricerca (posizione
+    # 1,9 a ottobre 2026); la protegge il controllo di verita' in main().
+    for materia in DESCRIPTION_OLTRE:
+        lavori.append((ROOT / f'{materia}.html',
+                       r'(<meta name="description" content="Oltre )\d+( domande)',
+                       rf'\g<1>{attive[materia] // 100 * 100}\g<2>'))
 
     # Documentazione e schede per gli assistenti AI.
     lavori.append((ROOT / 'llms.txt', r'Domande totali: [\d.]+ \([^)]*verificate[^)]*\)',
@@ -133,6 +148,14 @@ def main() -> int:
             else:
                 path.write_text(nuovo, encoding='utf-8')
                 print(f'[OK] {path.relative_to(ROOT)}: {n} conteggio/i allineati')
+
+    for materia, n in attive.items():
+        pagina = ROOT / f'{materia}.html'
+        if not pagina.exists():
+            continue
+        for promessa in OLTRE_RE.findall(pagina.read_text(encoding='utf-8')):
+            if int(promessa.replace('.', '')) > n:
+                disallineati.append(f'{materia}.html: "oltre {promessa} domande" ma le attive sono {_it(n)}')
 
     if disallineati:
         for riga in disallineati:

@@ -42,6 +42,7 @@ DATE_TYPES = {
     "AboutPage",
     "CollectionPage",
     "FAQPage",
+    "Article",
     "EducationalApplication",
     "LearningResource",
 }

@@ -1406,6 +1406,7 @@ body.ss-immersivo .ss-pannello:not(.ss-attivo) {
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
+  width: max-content;
   max-width: calc(100% - 20px);
   padding: 10px 18px;
   border: 2px solid var(--ss-giallo);
