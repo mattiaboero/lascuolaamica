@@ -69,6 +69,9 @@
 /404.html
   X-Robots-Tag: noindex, nofollow
 
+/404
+  X-Robots-Tag: noindex, nofollow
+
 /sw.js
   Cache-Control: no-cache
 

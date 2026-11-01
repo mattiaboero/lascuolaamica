@@ -1,5 +1,35 @@
 # Changelog Repo
 
+## 4.27.14 - 2026-11-01
+
+**Numeri delle domande giusti e piccole correzioni dall'audit SEO del 31/10.**
+
+### Fixed
+- /per-insegnanti: i conteggi di tutte e 8 le materie vengono dalle domande
+  attive. Prima 5 erano vecchi, per esempio matematica 1.934 invece di
+  3.076.
+- Meta description: /matematica "Oltre 3000", /italiano e /scienze "Oltre
+  900" (dicevano "Oltre 1000" con 932 e 981 domande). /inglese resta
+  "Oltre 100 domande in inglese per bambini": è vero ed è la frase che la
+  pagina intercetta in ricerca.
+- /guida-compiti: il `dateModified` dell'Article era fermo al 24/09. Ora
+  `Article` è fra i tipi datati di `refresh_structured_data.py`.
+- /matematica: `typicalAgeRange` "6-11", con la 1ª accesa.
+- /404: `X-Robots-Tag: noindex, nofollow` anche sulla rotta `/404`, che
+  risponde 200. La regola su `/404.html` non si applicava mai: fa 308.
+- /sistema-solare: su telefono l'avviso di timbri e missioni è largo quanto
+  il testo. Prima restava a metà scena, 188 px su 375.
+
+### Changed
+- `sync_question_counts.py` aggiorna tutte le materie di /per-insegnanti e
+  le description "Oltre N", alle centinaia per difetto. Con `--check`,
+  dentro verify, fallisce se una pagina materia promette più domande di
+  quelle attive.
+
+### Removed
+- `assets/reward/bacheca-trofei-bg.png` (1,39 MB) e `.webp`: nessuna pagina
+  li usa.
+
 ## 4.27.13 - 2026-10-30
 
 **Nuovo gioco delle tabelline: Nina e le isole del vento.**
