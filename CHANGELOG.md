@@ -1,5 +1,24 @@
 # Changelog Repo
 
+## 4.27.16 - 2026-11-01
+
+**Gioco delle tabelline inquadrato su computer e data della cookie policy.**
+
+### Fixed
+- /gioco-tabelline su computer: se la scena esce dalla finestra, all'apertura
+  la pagina scorre fino al gioco, solo se non si è già scorso e senza ancora
+  nell'indirizzo. A 1280x720 il pulsante PARTI era sotto il bordo. Lo stesso
+  all'avvio di ogni isola.
+- Cookie policy: diceva "Ultimo aggiornamento: 24 ottobre 2026" anche dopo la
+  modifica del 30 ottobre. Ora la data la scrive `refresh_structured_data.py`,
+  uguale al `dateModified`, per privacy e cookie policy.
+
+### Added
+- /gioco-tabelline: una frase indica il quiz sulle tabelline come alternativa
+  per chi usa solo la tastiera o uno screen reader.
+- `npm run test:e2e:gioco-tabelline`: a 1440x900 e 1280x720 la scena sta nella
+  finestra all'apertura e all'avvio.
+
 ## 4.27.15 - 2026-11-01
 
 **Il gioco delle tabelline non scarica le immagini col telefono in verticale.**

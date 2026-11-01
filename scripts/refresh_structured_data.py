@@ -47,6 +47,18 @@ DATE_TYPES = {
     "LearningResource",
 }
 
+# privacy.html e cookie.html: «Ultimo aggiornamento: 24 ottobre 2026.» segue il
+# dateModified. La 4.27.13 aveva cambiato la cookie policy lasciando il 24/10.
+NOTA_RE = re.compile(r'(<p class="updated-note"><em>Ultimo aggiornamento: )\d{1,2} [a-z]+ \d{4}(\.</em></p>)')
+MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio',
+        'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']
+
+
+def _data_estesa(date_iso: str) -> str:
+    anno, mese, giorno = (int(x) for x in date_iso.split('-'))
+    return f'{giorno} {MESI[mese - 1]} {anno}'
+
+
 SCRIPT_RE = re.compile(
     r'(<script type="application/ld\+json">\s*)(\{.*?\})(\s*</script>)',
     re.S,
@@ -171,7 +183,8 @@ def main() -> int:
         date_value = last_modified_date(rel, ROOT, dirty)
         html = path.read_text(encoding="utf-8")
         new_html, touched = _replace_ldjson_blocks(html, date_value)
-        if touched and new_html != html:
+        new_html = NOTA_RE.sub(lambda m: m.group(1) + _data_estesa(date_value) + m.group(2), new_html)
+        if new_html != html:
             path.write_text(new_html, encoding="utf-8")
             print(f"[OK] {rel}: aggiornati {touched} blocchi JSON-LD")
         else:
