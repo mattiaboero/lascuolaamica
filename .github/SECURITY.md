@@ -22,29 +22,26 @@ Il sito non ha account e non raccoglie dati personali: i progressi restano nel b
 ## Dipendenze di sviluppo: rischio accettato
 
 Valutazione del 24 ottobre 2026 (versione 4.26.1), aggiornata il 1 novembre
-2026 (versione 4.27.15).
+2026 (versione 4.27.15) e dopo il passaggio a `@lhci/cli` 0.16.0.
 
 Il sito non ha dipendenze di produzione: nel browser arrivano solo HTML, CSS e
 JavaScript del repository. Il job `prepublish` lancia `npm audit --omit=dev
 --audit-level=high` a ogni PR e a ogni push su `main`, quindi una dipendenza di
 produzione vulnerabile, se un giorno entrasse, blocca il merge.
 
-`npm audit` sulle devDependencies segnala 23 avvisi: 13 alti, 8 moderati, 2
-bassi, nessuno critico. Diciannove vengono da `@lhci/cli` 0.15.1, l'ultima
-versione, che fissa `lighthouse` 12.6.1, `chrome-launcher` 0.13, `tmp` ^0.1 e
-`inquirer` ^6. I pacchetti coinvolti sono `@lhci/cli`, `@lhci/utils`,
-`lighthouse`, `puppeteer-core`, `@puppeteer/browsers`, `chromium-bidi`, `zod`,
-`extract-zip`, `proxy-agent`, `pac-proxy-agent`, `get-uri`, `basic-ftp`,
-`chrome-launcher`, `rimraf`, `glob`, `inquirer`, `external-editor`, `tmp` e
-`uuid`. L'unica correzione proposta da npm è tornare a `@lhci/cli` 0.1.0
-(`--force`); `npx` al posto della devDependency e gli `overrides` sono stati
-scartati.
+`npm audit` sulle devDependencies segnala 12 avvisi: 9 alti, 3 moderati,
+nessuno critico. Nove vengono da `@lhci/cli` 0.16.0, l'ultima versione, che
+usa `lighthouse` 13.6.0. La radice è `basic-ftp` 5.3.1 (lentezza con risposte
+FTP costruite apposta), che risale la catena `get-uri`, `pac-proxy-agent`,
+`proxy-agent`, `@puppeteer/browsers`, `puppeteer-core`, `lighthouse`,
+`@lhci/utils` e `@lhci/cli`. L'unica correzione proposta da npm è tornare a
+`@lhci/cli` 0.13.0 (`--force`), che riporterebbe `lighthouse` 11: non è una
+correzione.
 
-Gli altri quattro vengono da `eslint` 10.14.0, l'ultima versione, che usa
-`minimatch` 10.2: `eslint`, `@eslint/config-array`,
-`@eslint-community/eslint-utils` e `minimatch`. Il difetto di `minimatch`,
+Gli altri tre vengono da `eslint` 10.14.0, l'ultima versione, che usa
+`minimatch` 10.2: `eslint`, `@eslint/config-array` e `minimatch`. Il difetto di `minimatch`,
 corretto dalla 11.0.1, è una lentezza con pattern costruiti apposta. La
-correzione proposta da npm, tornare a `eslint` 4.0.0, non è una correzione.
+correzione proposta da npm, tornare a `eslint` 9, non è una correzione.
 `qs`, segnalato il 1 novembre, si è risolto con `npm audit fix` senza
 `--force`.
 
@@ -58,23 +55,16 @@ Perché le falle non sono sfruttabili nell'uso che ne facciamo:
 - `@lhci/cli` gira solo nel workflow Lighthouse giornaliero e, a mano, sul
   computer di chi sviluppa, sempre contro le pagine del sito: nessun input
   arriva da terzi;
-- `extract-zip`, `tmp`: estrazione di archivi e nomi di file temporanei
-  scelti da chi li chiama; qui nessun archivio o nome viene dall'esterno;
 - `proxy-agent`, `pac-proxy-agent`, `get-uri`, `basic-ftp`: proxy PAC e URL
   FTP, che non configuriamo;
-- `zod`, `chromium-bidi`, `puppeteer-core`: dati che arrivano dal browser
+- `puppeteer-core`, `@puppeteer/browsers`: dati che arrivano dal browser
   avviato dallo strumento stesso, sulle nostre pagine;
-- `inquirer`, `external-editor`: solo nella procedura guidata interattiva
-  (`lhci wizard`), che non usiamo;
-- `minimatch`, `glob`, `rimraf`, `chrome-launcher`: confrontano nomi di file
-  con pattern scritti da noi (configurazione di ESLint, cartelle temporanee di
-  Chrome); nessun pattern arriva da fuori;
-- `uuid`: il difetto riguarda le versioni v3, v5 e v6 con buffer passati da
-  chi chiama, non l'uso interno dello strumento.
+- `minimatch`: confronta nomi di file con pattern scritti da noi
+  (configurazione di ESLint); nessun pattern arriva da fuori.
 
-Quando rivederla: appena esce una versione di `@lhci/cli` con `lighthouse` 13
-(Dependabot la propone nel gruppo `sviluppo`), appena `eslint` passa a
-`minimatch` 11, oppure se `@lhci/cli` o `eslint` dovessero leggere URL, file o
+Quando rivederla: appena esce una versione di `@lhci/cli` o di `lighthouse`
+che porta una versione di `basic-ftp` senza questo avviso (Dependabot la
+propone nel gruppo `sviluppo`), appena `eslint` passa a `minimatch` 11, oppure se `@lhci/cli` o `eslint` dovessero leggere URL, file o
 pattern forniti da terzi.
 
 Le scelte di progetto sono descritte in [Sicurezza, privacy e minori](../docs/wiki/Sicurezza-Privacy-e-Minori.md).
