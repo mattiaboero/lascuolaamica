@@ -648,7 +648,7 @@ else
   if grep -qE '^https://www\.lascuolaamica\.it/\* https://lascuolaamica\.it/:splat 301$' _redirects; then
     echo "[OK] _redirects: www -> non-www redirect found"
   else
-    echo "[WARN] _redirects: www -> non-www redirect not found (expected via Cloudflare Rules)"
+    echo "[INFO] _redirects: nessun redirect www -> non-www nel file (lo fa Cloudflare a livello di zona)"
   fi
   if grep -qE '^/index\.html / 301$' _redirects; then
     echo "[OK] _redirects: index.html -> / redirect found"
