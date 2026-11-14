@@ -39,7 +39,7 @@
   }
   async function play(index){if(await ensurePlayWindow())startLevel(index);}
   function clearInput(){held.clear();pressed.clear();released.clear();physical.clear();}
-  function setMode(next){mode=next;clearInput();accumulator=0;pendingBind=null;screen.replaceChildren();$('math-station').hidden=next!=='play';$('hud').hidden=!world||next==='title'||next==='map';$('touch-controls').classList.toggle('inactive',next!=='play');musicVolume();}
+  function setMode(next){mode=next;clearInput();accumulator=0;pendingBind=null;screen.replaceChildren();$('math-station').hidden=next!=='play';$('hud').hidden=!world||next==='title'||next==='map';$('touch-controls').classList.toggle('inactive',next!=='play');document.documentElement.classList.toggle('nina-in-gioco',next==='play'&&window.matchMedia('(pointer: coarse)').matches);musicVolume();}
   function persist(){store.save(progress);updateFooter();}
   function updateFooter(){$('footer-status').textContent=store.warning|| (testMode?'Anteprima di collaudo · Progressi temporanei':'Tastiera, mouse o touch · Progressi sul tuo browser');}
   function toast(message,seconds=3){$('toast').textContent=message;$('toast').hidden=false;toastTime=seconds;}
@@ -317,7 +317,21 @@
   document.addEventListener('keyup',e=>{physical.delete(e.code);for(const a of Object.keys(labels))if(keys(a).includes(e.code))actionUp(a);});
   canvas.addEventListener('pointerdown',e=>{if(mode==='play'){e.preventDefault();canvas.focus();unlockAudio();actionDown('shoot');canvas.setPointerCapture(e.pointerId);}});
   canvas.addEventListener('pointerup',()=>actionUp('shoot'));canvas.addEventListener('pointercancel',()=>actionUp('shoot'));
-  document.querySelectorAll('[data-action]').forEach(b=>{b.addEventListener('pointerdown',e=>{e.preventDefault();unlockAudio();b.setPointerCapture(e.pointerId);actionDown(b.dataset.action);});b.addEventListener('pointerup',()=>actionUp(b.dataset.action));b.addEventListener('pointercancel',()=>actionUp(b.dataset.action));});
+  // Comandi touch: ogni dito tiene un'azione. Il dito puo' scivolare da un
+  // pulsante all'altro (da freccia a freccia) senza alzarsi; se esce dai
+  // pulsanti l'azione resta quella dell'ultimo pulsante toccato. Il tocco nello
+  // spazio fra i pulsanti non fa niente e non sposta la pagina.
+  const controls=$('touch-controls'), fingers=new Map();
+  function fingerUp(id){const old=fingers.get(id);fingers.delete(id);if(old&&![...fingers.values()].includes(old))actionUp(old);}
+  function fingerOn(id,action){const old=fingers.get(id);if(old===action)return;fingerUp(id);fingers.set(id,action);actionDown(action);}
+  controls.addEventListener('pointerdown',e=>{e.preventDefault();unlockAudio();const b=e.target.closest('[data-action]');if(!b)return;controls.setPointerCapture(e.pointerId);fingerOn(e.pointerId,b.dataset.action);});
+  controls.addEventListener('pointermove',e=>{if(!fingers.has(e.pointerId))return;const t=document.elementFromPoint(e.clientX,e.clientY),b=t&&t.closest('[data-action]');if(b&&controls.contains(b))fingerOn(e.pointerId,b.dataset.action);});
+  for(const type of ['pointerup','pointercancel','lostpointercapture'])controls.addEventListener(type,e=>fingerUp(e.pointerId));
+  controls.addEventListener('contextmenu',e=>e.preventDefault());
+  // Durante la partita la pagina non scorre e non si ingrandisce: su iPhone e
+  // iPad touch-action da solo non basta quando il dito parte fuori da un pulsante.
+  document.addEventListener('touchmove',e=>{if(mode==='play'&&e.cancelable)e.preventDefault();},{passive:false});
+  document.addEventListener('gesturestart',e=>{if(mode==='play')e.preventDefault();});
   bind('pause-button',pause);
   window.addEventListener('blur',()=>{clearInput();if(mode==='play')pause();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();if(mode==='play')pause();if(music)music.pause();}else if(audioUnlocked)playMusic(world?world.level.biome:0);});

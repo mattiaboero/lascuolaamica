@@ -16,7 +16,9 @@
 //   immagine si carica; girato in orizzontale, arrivano tutte e 13. iPhone in
 //   orizzontale e iPad: niente invito, la partita parte al tocco e i comandi
 //   touch si vedono. Su iPhone in orizzontale la scena e' panoramica (piu'
-//   larga di 960 punti), su iPad resta 960.
+//   larga di 960 punti), su iPad resta 960. Durante la partita un dito che
+//   scorre in verticale sui comandi touch, anche fra un pulsante e l'altro,
+//   non sposta la pagina; in pausa la pagina torna a scorrere.
 //
 // Uso: node scripts/gioco_tabelline_smoke.js   (E2E_BASE_URL come run_e2e.sh)
 
@@ -126,6 +128,29 @@ async function main() {
       const larghezza = await page.evaluate(() => document.getElementById('game').width);
       if (nome === 'iPhone orizzontale' && larghezza <= 960) problemi.push(`iPhone orizzontale: scena non panoramica (${larghezza} punti)`);
       if (nome === 'iPad' && larghezza !== 960) problemi.push(`iPad: scena di ${larghezza} punti invece di 960`);
+      if (!(await page.evaluate(() => document.documentElement.classList.contains('nina-in-gioco')))) problemi.push(`${nome}: in partita manca la classe nina-in-gioco`);
+      const cdp = await context.newCDPSession(page);
+      const scorri = async (x, y, dy) => {
+        const tocco = (type, punti) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints: punti });
+        await tocco('touchStart', [{ x, y }]);
+        for (let k = 1; k <= 8; k += 1) await tocco('touchMove', [{ x, y: y + (dy * k) / 8 }]);
+        await tocco('touchEnd', []);
+        await page.waitForTimeout(400);
+      };
+      const punti = await page.evaluate(() => {
+        const r = (s) => document.querySelector(s).getBoundingClientRect();
+        const sx = r('[data-action=left]'), barra = r('#touch-controls');
+        return [['freccia sinistra', sx.x + sx.width / 2, sx.y + sx.height / 2], ['fra le frecce', sx.right + 4, sx.y + sx.height / 2], ['centro della barra', barra.x + barra.width / 2, sx.y + sx.height / 2]];
+      });
+      for (const [dove, x, y] of punti) {
+        const prima = await page.evaluate(() => window.scrollY);
+        await scorri(x, y, -150);
+        const dopo = await page.evaluate(() => window.scrollY);
+        if (dopo !== prima) problemi.push(`${nome}: in partita uno scorrimento su "${dove}" sposta la pagina da ${prima} a ${dopo}`);
+      }
+      await page.evaluate(() => document.getElementById('pause-button').click());
+      await page.waitForTimeout(400);
+      if (await page.evaluate(() => document.documentElement.classList.contains('nina-in-gioco'))) problemi.push(`${nome}: in pausa resta la classe nina-in-gioco`);
       await context.close();
     }
   } finally {
