@@ -7,11 +7,21 @@
 // cambierebbe aspetto o si sposterebbe: npm run css:critico.
 // Otto pagine, telefono e computer, tema chiaro e scuro, pagina intera.
 //
-// La pagina intera si fotografa una schermata alla volta, scorrendo: lo scatto
-// unico `fullPage` disegna fuori dal viewport e non e' ripetibile (due scatti
-// di fila della stessa pagina, senza toccare il CSS, possono uscire diversi).
-// Se il confronto fallisce, lo script dice in quale schermata, quanti pixel,
-// di quanto e sopra quale elemento.
+// Il confronto e' esatto, senza soglie: uno scarto di un solo livello di
+// colore e' gia' un FAIL. Perche' regga, le due fotografie devono avere la
+// stessa storia (misurato con Chromium 158, Playwright 1.65):
+// - due caricamenti freschi, uno col solo CSS critico e uno coi fogli
+//   completi accesi fin dall'HTML. Accendere i fogli su una pagina gia'
+//   disegnata la fa ridisegnare, e i pulsanti `.selected` (scale + filter)
+//   escono con un pixel diverso anche se il CSS e' lo stesso;
+// - una schermata alla volta, scorrendo. Lo scatto unico `fullPage` disegna
+//   fuori dal viewport e non e' ripetibile: due scatti di fila della stessa
+//   pagina, senza toccare niente, escono diversi;
+// - scorrimento solo su posizioni intere. In fondo alla pagina (alta, per
+//   esempio, 4330,73 px) lo scorrimento massimo e' frazionario e il testo del
+//   footer cade un pixel piu' su o piu' giu'.
+// Su FAIL lo script dice in quale schermata, quanti pixel, di quanto e sopra
+// quale elemento.
 //
 // Uso: node scripts/css_critico_smoke.js   (E2E_BASE_URL come run_e2e.sh)
 
@@ -20,32 +30,49 @@ const { chromium } = require('playwright');
 const BASE = (process.env.E2E_BASE_URL || 'http://127.0.0.1:4173').replace(/\/+$/, '');
 const PAGINE = ['matematica', 'problemi', 'italiano', 'inglese', 'civica', 'storia', 'geografia', 'scienze'];
 
-async function apri(b, p, vp, scheme) {
+// La pagina col solo CSS critico, oppure coi fogli completi accesi dall'HTML.
+async function apri(b, p, vp, scheme, completi) {
   const ctx = await b.newContext({ viewport: vp, colorScheme: scheme, serviceWorkers: 'block', reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   // lazy-css.js senza l'accensione dei fogli completi
   await page.route('**/js/lazy-css.js', (r) => r.fulfill({ body: '', contentType: 'text/javascript' }));
+  if (completi) {
+    await page.route(`**/${p}.html*`, async (r) => {
+      const risposta = await r.fetch();
+      const html = (await risposta.text()).replace(/media="print"( data-css-completo)/g, 'media="all"$1');
+      await r.fulfill({ response: risposta, body: html });
+    });
+  }
   await page.goto(`${BASE}/${p}.html?x=${Date.now()}`, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(300);
+  // Il confronto vale solo se i fogli sono davvero spenti da una parte e accesi dall'altra.
+  const media = await page.evaluate(() => [...document.querySelectorAll('link[data-css-completo]')].map((l) => l.media));
+  if (!media.length || media.some((m) => m !== (completi ? 'all' : 'print'))) {
+    throw new Error(`${p}: fogli completi con media [${media}] (attesi tutti ${completi ? 'all' : 'print'})`);
+  }
   return { ctx, page };
 }
 
-async function accendiFogli(page) {
-  await page.evaluate(() => document.querySelectorAll('link[data-css-completo]').forEach((l) => { l.media = 'all'; }));
-  await page.waitForTimeout(500);
-}
-
-// Una fotografia per schermata, dall'alto in fondo.
+// Una fotografia per schermata, dall'alto in fondo, su posizioni intere.
 async function fotografa(page) {
   const alto = await page.evaluate(() => document.documentElement.scrollHeight);
   const passo = page.viewportSize().height;
+  const fine = Math.max(0, alto - passo - 1);
   const foto = [];
-  for (let y = 0; y < alto; y += passo) {
-    await page.evaluate((v) => window.scrollTo({ top: v, behavior: 'instant' }), y);
-    foto.push(await page.screenshot());
+  for (let y = 0; ; y += passo) {
+    const top = Math.min(y, fine);
+    await page.evaluate((v) => window.scrollTo({ top: v, behavior: 'instant' }), top);
+    foto.push({ top, png: await page.screenshot() });
+    if (top === fine) break;
   }
   return foto;
+}
+
+async function pagina(b, p, vp, scheme, completi) {
+  const { ctx, page } = await apri(b, p, vp, scheme, completi);
+  await fotografa(page); // giro a vuoto: il primo scatto di una schermata puo' differire dai successivi
+  return { ctx, page, foto: await fotografa(page) };
 }
 
 // Dove e quanto differiscono due fotografie: pixel diversi, scarto massimo per
@@ -81,61 +108,36 @@ function descrivi(d) {
   return d.n ? `${d.n} pixel, scarto massimo ${d.max}/255, riquadro ${d.x0},${d.y0}-${d.x1},${d.y1}` : 'nessun pixel diverso';
 }
 
-// Gli elementi sotto il centro del riquadro. Il riquadro e' in coordinate della
-// schermata fotografata a `scrollY`, o dell'intera pagina se `inPagina`.
-function sotto(page, d, scrollY, inPagina) {
-  return page.evaluate(([x, y, sy, pagina]) => {
+// Gli elementi sotto il centro del riquadro, nella schermata fotografata a `scrollY`.
+function sotto(page, d, scrollY) {
+  return page.evaluate(([x, y, sy]) => {
     window.scrollTo({ top: sy, behavior: 'instant' });
-    return document.elementsFromPoint(x, pagina ? y - window.scrollY : y).slice(0, 3)
+    return document.elementsFromPoint(x, y).slice(0, 3)
       .map((e) => e.tagName.toLowerCase() + (e.id ? `#${e.id}` : '') + [...e.classList].map((c) => `.${c}`).join('')).join(' < ');
-  }, [(d.x0 + d.x1) / 2, (d.y0 + d.y1) / 2, scrollY, Boolean(inPagina)]);
-}
-
-// DIAGNOSI TEMPORANEA: il vecchio confronto con lo scatto unico fullPage, solo
-// per leggere in CI che cosa cambia. Non decide l'esito.
-async function vecchioConfronto(b, p, vp, scheme) {
-  const { ctx, page } = await apri(b, p, vp, scheme);
-  const prima = await page.screenshot({ fullPage: true });
-  const prima2 = await page.screenshot({ fullPage: true });
-  await accendiFogli(page);
-  const dopo = await page.screenshot({ fullPage: true });
-  const dopo2 = await page.screenshot({ fullPage: true });
-  const d = await differenze(ctx, prima, dopo);
-  console.log(`       [fullPage] prima/dopo: ${descrivi(d)}${d.n ? ` (${await sotto(page, d, Math.max(0, d.y0 - 100), true)})` : ''}`);
-  console.log(`       [fullPage] prima/prima: ${descrivi(await differenze(ctx, prima, prima2))}; dopo/dopo: ${descrivi(await differenze(ctx, dopo, dopo2))}`);
-  await ctx.close();
+  }, [(d.x0 + d.x1) / 2, (d.y0 + d.y1) / 2, scrollY]);
 }
 
 (async () => {
   const b = await chromium.launch();
-  console.log(`Chromium ${b.version()}`);
   let ko = 0;
   for (const p of PAGINE) {
     for (const vp of [{ width: 375, height: 667 }, { width: 1280, height: 800 }]) {
       for (const scheme of ['light', 'dark']) {
-        const { ctx, page } = await apri(b, p, vp, scheme);
-        await fotografa(page); // giro a vuoto: il primo scatto di una schermata puo' differire dai successivi
-        const prima = await fotografa(page);
-        await accendiFogli(page);
-        const dopo = await fotografa(page);
-        const diverse = prima.length === dopo.length ? prima.flatMap((f, i) => (f.equals(dopo[i]) ? [] : [i])) : null;
+        const critico = await pagina(b, p, vp, scheme, false);
+        const completo = await pagina(b, p, vp, scheme, true);
+        const prima = critico.foto; const dopo = completo.foto;
+        const diverse = prima.length === dopo.length ? prima.flatMap((f, i) => (f.png.equals(dopo[i].png) ? [] : [i])) : null;
         const uguale = diverse !== null && !diverse.length;
         if (!uguale) ko += 1;
         console.log(`${uguale ? '[OK]' : '[FAIL]'} ${p} ${vp.width} ${scheme}${uguale ? '' : ': col solo CSS critico la pagina e\' diversa'}`);
         if (diverse === null) console.log(`       schermate: ${prima.length} col CSS critico, ${dopo.length} coi fogli completi`);
-        if (diverse && diverse.length) {
-          const ancora = await fotografa(page);
-          for (const i of diverse) {
-            const d = await differenze(ctx, prima[i], dopo[i]);
-            console.log(`       schermata ${i + 1} di ${prima.length}: ${descrivi(d)}`);
-            if (d.n) console.log(`         sotto il centro del riquadro: ${await sotto(page, d, i * vp.height)}`);
-            // La stessa schermata fotografata di nuovo, senza toccare niente:
-            // se differisce anche lei, e' lo scatto a non essere ripetibile.
-            console.log(`         stessa schermata, scatto ripetuto: ${descrivi(await differenze(ctx, dopo[i], ancora[i]))}`);
-          }
+        for (const i of diverse || []) {
+          const d = await differenze(critico.ctx, prima[i].png, dopo[i].png);
+          console.log(`       schermata ${i + 1} di ${prima.length}: ${descrivi(d)}`);
+          if (d.n) console.log(`         sotto il centro del riquadro: ${await sotto(critico.page, d, prima[i].top)}`);
         }
-        await ctx.close();
-        if (vp.width === 375) await vecchioConfronto(b, p, vp, scheme);
+        await critico.ctx.close();
+        await completo.ctx.close();
       }
     }
   }
