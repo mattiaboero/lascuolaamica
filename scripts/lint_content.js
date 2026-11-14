@@ -25,7 +25,8 @@ const COMMON_MISTAKES = {
   ],
   spacing: [
     { pattern: /\s{2,}/g, message: 'double or multiple spaces' },
-    { pattern: /\s+[,;:.!?]/g, message: 'space before punctuation' },
+    // I tre puntini che segnano un vuoto ("più ... di") vogliono lo spazio prima.
+    { pattern: /\s+(?:[,;:!?]|\.(?!\.\.))/g, message: 'space before punctuation' },
   ],
 };
 
