@@ -1259,3 +1259,26 @@
     animation: none;
   }
 }
+
+/* Touch (14/11/2026): nella scena e nei comandi il browser non seleziona
+   testo, non apre il menu del tocco lungo e non usa i gesti di scorrimento o
+   zoom. Prima un dito tenuto su una freccia apriva la selezione su iPhone e
+   iPad, e un tocco fra i pulsanti faceva scorrere la pagina. Durante la
+   partita, sui dispositivi touch, js/gioco-tabelline.js mette la classe
+   nina-in-gioco su html e la pagina resta ferma. */
+.nina-game #stage,
+.nina-game #touch-controls,
+.nina-game #touch-controls > div {
+  touch-action: none;
+  /* stylelint-disable-next-line property-no-vendor-prefix -- Safari su iPhone e iPad lo vuole con il prefisso */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.nina-in-gioco,
+html.nina-in-gioco body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}

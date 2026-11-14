@@ -1,8 +1,9 @@
 [
  {
-  "date": "14 novembre 2026 · Release 4.27.17",
+  "date": "14 novembre 2026 · Release 4.27.17 – 4.27.18",
   "items": [
-   "La pagina delle tabelline non chiama più «cantato» il video di ripasso: è CalcOlettore che recita tutte le tabelline dal 2 all’8, senza canzone."
+   "La pagina delle tabelline non chiama più «cantato» il video di ripasso: è CalcOlettore che recita tutte le tabelline dal 2 all’8, senza canzone.",
+   "Il gioco delle tabelline su telefono e tablet: durante la partita la pagina non scorre più quando il dito tocca i comandi, e il dito può passare da una freccia all’altra senza alzarsi."
   ]
  },
  {

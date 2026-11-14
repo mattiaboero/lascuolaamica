@@ -1,5 +1,22 @@
 # Changelog Repo
 
+## 4.27.18 - 2026-11-14
+
+**Il gioco delle tabelline si gioca col touch senza spostare la pagina.**
+
+### Fixed
+- /gioco-tabelline su telefono e tablet: un tocco fra i pulsanti faceva
+  scorrere la pagina e il dito tenuto su una freccia poteva aprire la
+  selezione del testo. Ora durante la partita la pagina resta ferma
+  (classe `nina-in-gioco` su html, `touchmove` bloccato), il gioco non
+  seleziona testo e i comandi hanno `touch-action: none` anche negli spazi.
+- Il dito può scivolare da un pulsante all'altro senza alzarsi; uscendo dai
+  pulsanti resta l'azione dell'ultimo toccato.
+
+### Added
+- `npm run test:e2e:gioco-tabelline`: su iPhone in orizzontale e iPad uno
+  scorrimento sui comandi non sposta la pagina; in pausa la classe se ne va.
+
 ## 4.27.17 - 2026-11-14
 
 **Il video di ripasso delle tabelline non è più descritto come cantato.**
