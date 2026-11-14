@@ -1,5 +1,14 @@
 # Changelog Repo
 
+## 4.27.17 - 2026-11-14
+
+**Il video di ripasso delle tabelline non è più descritto come cantato.**
+
+### Fixed
+- /tabelline, llms.txt, /ai-info e novità del 24 ottobre in json/changelog.json:
+  il ripasso `JCwz8k_wbvE` era descritto come "cantato". Il video è
+  CalcOlettore che recita le tabelline dal 2 all'8, senza canzone.
+
 ## 4.27.16 - 2026-11-01
 
 **Gioco delle tabelline inquadrato su computer e data della cookie policy.**
