@@ -20,8 +20,13 @@
 // - scorrimento solo su posizioni intere. In fondo alla pagina (alta, per
 //   esempio, 4330,73 px) lo scorrimento massimo e' frazionario e il testo del
 //   footer cade un pixel piu' su o piu' giu'.
-// Su FAIL lo script dice in quale schermata, quanti pixel, di quanto e sopra
-// quale elemento.
+// Resta un caso che non dipende dal CSS: su Linux, circa una volta su 60, il
+// testo del footer nell'ultima schermata esce un pixel piu' su o piu' giu' fra
+// due caricamenti identici. Per questo un confronto diverso si ripete da capo,
+// con due caricamenti nuovi, fino a TENTATIVI volte: e' FAIL solo se la
+// differenza si ripresenta ogni volta, come fa sempre una differenza di CSS.
+// Ogni confronto diverso resta scritto nel log, anche quando poi passa, con
+// schermata, pixel, scarto, elemento e se la geometria della pagina coincide.
 //
 // Uso: node scripts/css_critico_smoke.js   (E2E_BASE_URL come run_e2e.sh)
 
@@ -29,6 +34,7 @@ const { chromium } = require('playwright');
 
 const BASE = (process.env.E2E_BASE_URL || 'http://127.0.0.1:4173').replace(/\/+$/, '');
 const PAGINE = ['matematica', 'problemi', 'italiano', 'inglese', 'civica', 'storia', 'geografia', 'scienze'];
+const TENTATIVI = 3;
 
 // La pagina col solo CSS critico, oppure coi fogli completi accesi dall'HTML.
 async function apri(b, p, vp, scheme, completi) {
@@ -117,27 +123,70 @@ function sotto(page, d, scrollY) {
   }, [(d.x0 + d.x1) / 2, (d.y0 + d.y1) / 2, scrollY]);
 }
 
+// Posizione e misure di ogni elemento e di ogni riga di testo: se coincidono
+// fra le due pagine, la differenza e' nel disegno e non nell'impaginazione.
+function geometria(page) {
+  return page.evaluate(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    const misure = (r) => `${r.x},${r.y},${r.width},${r.height}`;
+    const out = [...document.querySelectorAll('body *')]
+      .map((e) => `${e.tagName.toLowerCase()}${e.id ? `#${e.id}` : ''} ${misure(e.getBoundingClientRect())}`);
+    const testi = document.createTreeWalker(document.body, window.NodeFilter.SHOW_TEXT);
+    const tratto = document.createRange();
+    for (let n = testi.nextNode(); n; n = testi.nextNode()) {
+      if (!n.data.trim()) continue;
+      tratto.selectNodeContents(n);
+      out.push(`testo "${n.data.trim().slice(0, 24)}" ${[...tratto.getClientRects()].map(misure).join(' ')}`);
+    }
+    return out;
+  });
+}
+
+// Un confronto completo: due caricamenti freschi. Torna le righe da scrivere
+// se le fotografie differiscono, nessuna se sono uguali.
+async function confronta(b, p, vp, scheme) {
+  const critico = await pagina(b, p, vp, scheme, false);
+  const completo = await pagina(b, p, vp, scheme, true);
+  const prima = critico.foto; const dopo = completo.foto;
+  const righe = [];
+  if (prima.length !== dopo.length) {
+    righe.push(`schermate: ${prima.length} col CSS critico, ${dopo.length} coi fogli completi`);
+  } else {
+    for (let i = 0; i < prima.length; i += 1) {
+      if (prima[i].png.equals(dopo[i].png)) continue;
+      const d = await differenze(critico.ctx, prima[i].png, dopo[i].png);
+      righe.push(`schermata ${i + 1} di ${prima.length}: ${descrivi(d)}`);
+      if (d.n) righe.push(`  sotto il centro del riquadro: ${await sotto(critico.page, d, prima[i].top)}`);
+    }
+  }
+  if (righe.length) {
+    const [ga, gb] = [await geometria(critico.page), await geometria(completo.page)];
+    const k = ga.length === gb.length ? ga.findIndex((r, i) => r !== gb[i]) : 0;
+    righe.push(k < 0 ? 'geometria di elementi e testi: uguale nelle due pagine'
+      : `geometria diversa: «${ga[k]}» col CSS critico, «${gb[k]}» coi fogli completi`);
+  }
+  await critico.ctx.close();
+  await completo.ctx.close();
+  return righe;
+}
+
 (async () => {
   const b = await chromium.launch();
   let ko = 0;
   for (const p of PAGINE) {
     for (const vp of [{ width: 375, height: 667 }, { width: 1280, height: 800 }]) {
       for (const scheme of ['light', 'dark']) {
-        const critico = await pagina(b, p, vp, scheme, false);
-        const completo = await pagina(b, p, vp, scheme, true);
-        const prima = critico.foto; const dopo = completo.foto;
-        const diverse = prima.length === dopo.length ? prima.flatMap((f, i) => (f.png.equals(dopo[i].png) ? [] : [i])) : null;
-        const uguale = diverse !== null && !diverse.length;
-        if (!uguale) ko += 1;
-        console.log(`${uguale ? '[OK]' : '[FAIL]'} ${p} ${vp.width} ${scheme}${uguale ? '' : ': col solo CSS critico la pagina e\' diversa'}`);
-        if (diverse === null) console.log(`       schermate: ${prima.length} col CSS critico, ${dopo.length} coi fogli completi`);
-        for (const i of diverse || []) {
-          const d = await differenze(critico.ctx, prima[i].png, dopo[i].png);
-          console.log(`       schermata ${i + 1} di ${prima.length}: ${descrivi(d)}`);
-          if (d.n) console.log(`         sotto il centro del riquadro: ${await sotto(critico.page, d, prima[i].top)}`);
+        const diversi = [];
+        let uguale = false;
+        for (let t = 1; t <= TENTATIVI && !uguale; t += 1) {
+          const righe = await confronta(b, p, vp, scheme);
+          uguale = !righe.length;
+          if (!uguale) diversi.push(`confronto ${t} di ${TENTATIVI}, diverso:`, ...righe.map((r) => `  ${r}`));
         }
-        await critico.ctx.close();
-        await completo.ctx.close();
+        if (!uguale) ko += 1;
+        const nota = diversi.length ? ` (uguale al confronto ${diversi.filter((r) => r.startsWith('confronto')).length + 1})` : '';
+        console.log(uguale ? `[OK] ${p} ${vp.width} ${scheme}${nota}` : `[FAIL] ${p} ${vp.width} ${scheme}: col solo CSS critico la pagina e' diversa, ${TENTATIVI} confronti su ${TENTATIVI}`);
+        diversi.forEach((r) => console.log(`       ${r}`));
       }
     }
   }
