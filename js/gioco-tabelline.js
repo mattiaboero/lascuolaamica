@@ -322,8 +322,9 @@
   // pulsanti l'azione resta quella dell'ultimo pulsante toccato. Il tocco nello
   // spazio fra i pulsanti non fa niente e non sposta la pagina.
   const controls=$('touch-controls'), fingers=new Map();
-  function fingerUp(id){const old=fingers.get(id);fingers.delete(id);if(old&&![...fingers.values()].includes(old))actionUp(old);}
-  function fingerOn(id,action){const old=fingers.get(id);if(old===action)return;fingerUp(id);fingers.set(id,action);actionDown(action);}
+  function markPressed(){const on=[...fingers.values()];controls.querySelectorAll('[data-action]').forEach(b=>b.classList.toggle('premuto',on.includes(b.dataset.action)));}
+  function fingerUp(id){const old=fingers.get(id);fingers.delete(id);if(old&&![...fingers.values()].includes(old))actionUp(old);markPressed();}
+  function fingerOn(id,action){const old=fingers.get(id);if(old===action)return;fingerUp(id);fingers.set(id,action);actionDown(action);markPressed();}
   controls.addEventListener('pointerdown',e=>{e.preventDefault();unlockAudio();const b=e.target.closest('[data-action]');if(!b)return;controls.setPointerCapture(e.pointerId);fingerOn(e.pointerId,b.dataset.action);});
   controls.addEventListener('pointermove',e=>{if(!fingers.has(e.pointerId))return;const t=document.elementFromPoint(e.clientX,e.clientY),b=t&&t.closest('[data-action]');if(b&&controls.contains(b))fingerOn(e.pointerId,b.dataset.action);});
   for(const type of ['pointerup','pointercancel','lostpointercapture'])controls.addEventListener(type,e=>fingerUp(e.pointerId));

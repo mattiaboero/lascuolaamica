@@ -19,8 +19,26 @@
   font: inherit;
 }
 
-.nina-game button:hover {
+/* Hover solo con un puntatore vero: su touch resterebbe attaccato all'ultimo
+   pulsante toccato. I comandi touch usano la classe premuto, messa da
+   js/gioco-tabelline.js finché un dito tiene il pulsante. */
+@media (hover: hover) {
+  .nina-game button:hover {
+    background: #ffdfa2;
+  }
+
+  .nina-game button.primary:hover,
+  .nina-game button.selected:hover {
+    background: #388e89;
+  }
+}
+
+.nina-game #touch-controls button.premuto {
   background: #ffdfa2;
+}
+
+.nina-game #touch-controls button.primary.premuto {
+  background: #388e89;
 }
 
 .nina-game button:active {
@@ -38,11 +56,6 @@
 .nina-game button.selected {
   background: var(--teal);
   color: var(--cream);
-}
-
-.nina-game button.primary:hover,
-.nina-game button.selected:hover {
-  background: #388e89;
 }
 
 .nina-game button:disabled {
