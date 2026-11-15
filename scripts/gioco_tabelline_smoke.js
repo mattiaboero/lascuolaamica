@@ -19,6 +19,10 @@
 //   larga di 960 punti), su iPad resta 960. Durante la partita un dito che
 //   scorre in verticale sui comandi touch, anche fra un pulsante e l'altro,
 //   non sposta la pagina; in pausa la pagina torna a scorrere.
+//   Il pulsante toccato ha la classe premuto solo finche' il dito lo tiene
+//   (anche scivolando da una freccia all'altra) e le regole :hover del gioco
+//   stanno dentro @media (hover: hover), perche' su iPhone e iPad l'hover
+//   resta attaccato all'ultimo pulsante toccato.
 //
 // Uso: node scripts/gioco_tabelline_smoke.js   (E2E_BASE_URL come run_e2e.sh)
 
@@ -130,6 +134,38 @@ async function main() {
       if (nome === 'iPad' && larghezza !== 960) problemi.push(`iPad: scena di ${larghezza} punti invece di 960`);
       if (!(await page.evaluate(() => document.documentElement.classList.contains('nina-in-gioco')))) problemi.push(`${nome}: in partita manca la classe nina-in-gioco`);
       const cdp = await context.newCDPSession(page);
+      const premuti = () => page.evaluate(() => [...document.querySelectorAll('#touch-controls .premuto')].map((b) => b.dataset.action).join(','));
+      const sfondo = (a) => page.evaluate((x) => window.getComputedStyle(document.querySelector(`[data-action=${x}]`)).backgroundColor, a);
+      const frecce = await page.evaluate(() => ['left', 'right'].map((a) => {
+        const r = document.querySelector(`[data-action=${a}]`).getBoundingClientRect();
+        return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
+      }));
+      const dito = (type, punti) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints: punti });
+      await dito('touchStart', [frecce[0]]);
+      await page.waitForTimeout(150);
+      if ((await premuti()) !== 'left') problemi.push(`${nome}: col dito sulla freccia sinistra i pulsanti premuti sono "${await premuti()}"`);
+      await dito('touchMove', [frecce[1]]);
+      await page.waitForTimeout(150);
+      if ((await premuti()) !== 'right') problemi.push(`${nome}: dopo lo scivolamento sulla freccia destra i pulsanti premuti sono "${await premuti()}"`);
+      await dito('touchEnd', []);
+      await page.waitForTimeout(300);
+      if ((await premuti()) !== '') problemi.push(`${nome}: dopo il rilascio restano premuti "${await premuti()}"`);
+      const hoverScoperti = await page.evaluate(() => {
+        const fuori = [];
+        const giro = (regole, inHover) => {
+          for (const r of regole) {
+            if (r.cssRules && r.media) giro(r.cssRules, inHover || /hover:\s*hover/.test(r.media.mediaText));
+            else if (r.selectorText && /\.nina-game[^,]*:hover/.test(r.selectorText) && !inHover) fuori.push(r.selectorText);
+          }
+        };
+        for (const f of document.styleSheets) if (/gioco-tabelline\.css/.test(f.href || '')) giro(f.cssRules, false);
+        return fuori;
+      });
+      if (hoverScoperti.length) problemi.push(`${nome}: regole :hover fuori da @media (hover: hover): ${hoverScoperti.join(' | ')}`);
+      for (const a of ['left', 'right']) {
+        const colore = await sfondo(a);
+        if (colore === 'rgb(255, 223, 162)') problemi.push(`${nome}: dopo il rilascio il pulsante ${a} resta evidenziato (${colore})`);
+      }
       const scorri = async (x, y, dy) => {
         const tocco = (type, punti) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints: punti });
         await tocco('touchStart', [{ x, y }]);

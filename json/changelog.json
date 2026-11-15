@@ -1,5 +1,11 @@
 [
  {
+  "date": "15 novembre 2026 · Release 4.27.19",
+  "items": [
+   "Nel gioco delle tabelline su telefono e tablet la freccia appena toccata non resta più colorata: si colora solo finché il dito la tiene."
+  ]
+ },
+ {
   "date": "14 novembre 2026 · Release 4.27.17 – 4.27.18",
   "items": [
    "La pagina delle tabelline non chiama più «cantato» il video di ripasso: è CalcOlettore che recita tutte le tabelline dal 2 all’8, senza canzone.",

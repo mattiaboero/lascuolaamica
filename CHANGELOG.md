@@ -1,5 +1,21 @@
 # Changelog Repo
 
+## 4.27.19 - 2026-11-15
+
+**Nel gioco delle tabelline la freccia toccata non resta più colorata.**
+
+### Fixed
+- /gioco-tabelline su iPhone e iPad: dopo il tocco l'ultimo pulsante
+  restava colorato, perché Safari tiene lo stato `:hover` sull'ultimo
+  elemento toccato. Le regole `:hover` del gioco ora valgono solo dentro
+  `@media (hover: hover)`; i comandi touch hanno la classe `premuto`
+  finché un dito li tiene, con gli stessi colori di prima.
+
+### Added
+- `npm run test:e2e:gioco-tabelline`: su iPhone in orizzontale e iPad il
+  pulsante premuto segue il dito e torna normale al rilascio; nessuna regola
+  `:hover` del gioco fuori da `@media (hover: hover)`.
+
 ## 4.27.18 - 2026-11-14
 
 **Il gioco delle tabelline si gioca col touch senza spostare la pagina.**
