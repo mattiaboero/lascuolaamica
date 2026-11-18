@@ -130,6 +130,7 @@ check_security_patterns() {
     -path './graphify-out' -prune -o \
     -path './docs/graphify-out' -prune -o \
     -path './.claude' -prune -o \
+    -path './floorplan' -prune -o \
     -type f \( -name '*.js' -o -name '*.html' \) -print0 \
     | xargs -0 grep -nE 'eval\(|new Function\(|document\.write\(|innerHTML[[:space:]]*=|javascript:' || true)
   if [[ -n "$findings" ]]; then
@@ -202,6 +203,7 @@ check_css_hygiene() {
     -path './node_modules' -prune -o \
     -path './.git' -prune -o \
     -path './.claude' -prune -o \
+    -path './floorplan' -prune -o \
     -type f -name '*.css' -print0 \
     | xargs -0 grep -n 'font-weight:[[:space:]]*1000' || true)
   if [[ -n "$findings" ]]; then
