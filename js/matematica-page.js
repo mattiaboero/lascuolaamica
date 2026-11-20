@@ -19,7 +19,7 @@ __sa.subjectConfig = {
   },
   bgIcons: ['🔢', '📐', '📏', '🧮', '➗', '➕', '✖️'],
   feedbackOk: ['Esatto!', 'Wow!', 'Ottimo!', 'Continua così!'],
-  feedbackKo: ['Riprova!', 'Quasi!', 'Non mollare!', 'Dai, ancora un tentativo!'],
+  feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
     { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'tables', label: 'Tabelline', icon: '✖️', title: 'Tabelline', subtitle: 'Moltiplicazioni veloci' },

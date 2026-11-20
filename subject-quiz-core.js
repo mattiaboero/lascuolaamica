@@ -166,7 +166,7 @@
   const BONUS_FACTORS = cfg.bonusFactors || { easy: 5, medium: 10, hard: 25 };
   const BONUS_LABELS = cfg.bonusLabels || { easy: 'Facile', medium: 'Media', hard: 'Difficile' };
   const FEEDBACK_OK = cfg.feedbackOk || ['Esatto!', 'Ottimo!', 'Complimenti!', 'Continua così!'];
-  const FEEDBACK_KO = cfg.feedbackKo || ['Riprova!', 'Quasi!', 'Non mollare!'];
+  const FEEDBACK_KO = cfg.feedbackKo || ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'];
   // B1: streak-aware feedback — milestone thresholds show a special message + celebrate mascot
   // instead of the plain random one. Ordered from highest to lowest so the first match wins.
   const STREAK_MILESTONES = cfg.streakMilestones || [
@@ -2137,6 +2137,20 @@
       nextBtn.hidden = false;
       nextBtn.focus();
     }
+    placeFeedback();
+  }
+
+  // Il focus su "Avanti" fa scorrere la pagina: una posizione fissa finirebbe
+  // sopra le risposte appena colorate. La scritta va sul bordo alto della
+  // spiegazione (o di "Avanti" se manca), che per meno di un secondo puo'
+  // restare coperta.
+  function placeFeedback() {
+    const el = $('feedback');
+    const expl = $('qExplanation');
+    const anchor = expl && expl.classList.contains('show') ? expl : $('qNext');
+    if (!el || !anchor || anchor.hidden) return;
+    const top = anchor.getBoundingClientRect().top + 4;
+    el.style.top = `${Math.round(Math.min(Math.max(8, top), window.innerHeight - el.offsetHeight - 8))}px`;
   }
 
   function ensureNextBtn() {
@@ -2566,16 +2580,22 @@
   window.SA = window.SA || {};
   window.SA.annunciaTrofeo = annunciaTrofeo;
 
+  let feedbackTimer = 0;
   function showFeedback(ok, custom, holdMs) {
     const el = $('feedback');
     if (!el) return;
     el.textContent = custom || (ok ? FEEDBACK_OK[Math.floor(Math.random() * FEEDBACK_OK.length)] : FEEDBACK_KO[Math.floor(Math.random() * FEEDBACK_KO.length)]);
     ultimoEsito = el.textContent;
     annuncia('quizFeedback', ultimoEsito);
+    // Un timer rimasto dalla risposta precedente spegnerebbe in anticipo
+    // la scritta nuova; il reflow fa ripartire l'animazione da capo.
+    clearTimeout(feedbackTimer);
+    el.style.top = '';
     el.className = 'feedback ' + (ok ? 'ok' : 'ko');
+    void el.offsetWidth;
     el.classList.add('show');
     const timeoutMs = Number.isFinite(Number(holdMs)) ? Math.max(900, Number(holdMs)) : 850;
-    setTimeout(() => {
+    feedbackTimer = setTimeout(() => {
       el.className = 'feedback';
     }, timeoutMs);
   }

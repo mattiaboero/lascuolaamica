@@ -23,7 +23,7 @@ __sa.subjectConfig = {
   },
   bgIcons: ['🏛️', '📜', '🌍', '♻️', '💻', '🤝', '🚸', '🇮🇹', '💡'],
   feedbackOk: ['Esatto! 🎉', 'Ottimo! ⭐', 'Wow! 🌟', 'Giusto! ✅', 'Continua così! 🚀'],
-  feedbackKo: ['Riprova! 💪', 'Quasi! ✨', 'Non mollare! 🌈'],
+  feedbackKo: ['Non è questa 🙂', 'Ecco la giusta ✨', 'Guarda qui sotto 👇'],
   areas: [
     {
       key: 'mixed',

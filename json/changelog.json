@@ -1,5 +1,13 @@
 [
  {
+  "date": "20 novembre 2026 · Release 4.27.20",
+  "items": [
+   "Nei quiz, dopo la risposta, la giusta diventa verde e quella sbagliata rossa con una ✕: si capisce anche senza leggere. Le altre due si attenuano.",
+   "La scritta grande che arriva dopo la risposta non copre più i pulsanti, non esce dallo schermo del telefono e compare anche con «riduci animazioni». Le frasi per l’errore dicono cosa succede: «Non è questa», «Ecco la giusta».",
+   "La spiegazione dopo un errore ha un tono neutro con una lampadina, non più rosso, e non viene mai tagliata."
+  ]
+ },
+ {
   "date": "15 novembre 2026 · Release 4.27.19",
   "items": [
    "Nel gioco delle tabelline su telefono e tablet la freccia appena toccata non resta più colorata: si colora solo finché il dito la tiene."
