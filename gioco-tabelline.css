@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: NinaPixel;
-  src: url('/assets/gioco-tabelline/fonts/PixelifySans.ttf') format('truetype');
+  src: url('/assets/gioco-tabelline/fonts/PixelifySans.woff2') format('woff2');
   font-display: swap;
 }
 

@@ -220,7 +220,6 @@ header {
 .title {
   font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: clamp(2rem, 6vw, 3.2rem);
-  letter-spacing: 1.2px;
   color: #fff;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2), 8px 8px 24px rgba(0, 0, 0, 0.13);
 }
@@ -1864,7 +1863,7 @@ html[data-motion="reduce"] .feedback.show {
   justify-content: center;
   gap: 6px;
   white-space: nowrap;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 800;
   color: #5f6b7a;
   border: none;

@@ -74,6 +74,15 @@
   box-sizing: border-box;
 }
 
+/* Bottoni e campi non ereditano il font: senza questa riga «Ascolta» e «Info»
+   uscivano in Arial (Roboto su Android) invece che in Nunito. */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 /* Riduzione del movimento, in un posto solo. Il blocco @media era in index.css,
    inglese.css e subject-quiz-theme.css ma NON in faq.css e info-pages.css:
    /faq e le 10 pagine info ignoravano la preferenza di sistema, e qualunque
