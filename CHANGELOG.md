@@ -1,5 +1,18 @@
 # Changelog Repo
 
+## 4.27.28 - 2026-11-21
+
+**Font di riserva anche su Linux.**
+
+### Fixed
+- `fonts.css`: le facce di riserva tarate su Arial (`Nunito Fallback`,
+  `Fredoka One Fallback`) ora provano anche Liberation Sans, che ha le stesse
+  metriche. Su Linux, dove Arial manca, la faccia restava vuota e il testo
+  usciva nel font generico: al caricamento del webfont la home a 412px
+  saltava di 0,15 (job `perf-locale` della PR #171; in locale 0,17 nascondendo
+  Arial al browser). macOS, Windows e iOS non cambiano. I dati reali CrUX
+  davano gia' CLS 0,00 al 75° percentile.
+
 ## 4.27.27 - 2026-11-21
 
 **Revisione completa: CSS di tutte le pagine in 9 modi, stati del quiz, testi, e controlli di pubblicazione rifatti.**
