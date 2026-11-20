@@ -30,7 +30,7 @@ __sa.subjectConfig = {
   },
   bgIcons: ['📜', '🏺', '⏳', '🕰️', '📚', '🏛️'],
   feedbackOk: ['Esatto!', 'Ottimo!', 'Ben fatto!', 'Continua così!'],
-  feedbackKo: ['Riprova!', 'Quasi!', 'Ci sei quasi!', 'Ritenta!'],
+  feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
     { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'chrono', label: 'Cronologia', icon: '⏳', title: 'Cronologia', subtitle: 'Prima, dopo, linee del tempo' },

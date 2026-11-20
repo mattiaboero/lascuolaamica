@@ -18,7 +18,7 @@ __sa.subjectConfig = {
   },
   bgIcons: ['📖', '✍️', '📝', '🔤', '💬', '📚'],
   feedbackOk: ['Esatto!', 'Ottimo!', 'Complimenti!', 'Continua così!'],
-  feedbackKo: ['Riprova!', 'Quasi!', 'Ci siamo quasi!', 'Un altro tentativo!'],
+  feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
     { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'oral', label: 'Ascolto e parlato', icon: '💬', title: 'Ascolto e Parlato', subtitle: 'Comunicazione orale' },

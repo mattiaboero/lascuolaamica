@@ -24,7 +24,7 @@ __sa.subjectConfig = {
   },
   bgIcons: ['🔬', '🧪', '🌱', '🧠', '🌧️', '☀️'],
   feedbackOk: ['Esatto!', 'Ottimo!', 'Benissimo!', 'Continua così!'],
-  feedbackKo: ['Riprova!', 'Quasi!', 'Ci siamo quasi!', 'Un altro tentativo!'],
+  feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
     { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'phys', label: 'Fenomeni fisici', icon: '🧪', title: 'Fenomeni Fisici e Chimici', subtitle: 'Materia, energia e trasformazioni' },

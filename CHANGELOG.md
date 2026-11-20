@@ -1,5 +1,31 @@
 # Changelog Repo
 
+## 4.27.20 - 2026-11-20
+
+**Nei quiz il colore dice se la risposta è giusta.**
+
+### Fixed
+- Dopo la risposta la giusta ha lo sfondo verde pieno con ✓ e quella
+  sbagliata scelta lo sfondo rosso pieno con ✕ (prima diventava grigia e
+  opaca, cioè «spenta»); le altre due si attenuano. Le tinte di posizione
+  della 2ª e della 4ª risposta passano da verde e rosso a viola e verde
+  acqua, così prima della risposta nessun colore suggerisce un esito.
+  Contrasto misurato con axe su ogni estremo dei gradienti: 5,1-6,8:1.
+- Scritta di feedback (`.feedback`): con la riduzione del movimento non
+  compariva mai, perché la regola globale portava `fbPop` all'ultimo
+  fotogramma a opacità 0; ora resta ferma e visibile. L'animazione durava
+  1,2 s ma il JS la toglieva a 850 ms e la scritta spariva di colpo: ora
+  dura 800 ms, parte da `scale(0.9)` e non da `scale(0)`. Su telefono non
+  esce più dallo schermo (`clamp` e `max-width`). Non copre più le
+  risposte: si posiziona sul bordo alto della spiegazione dopo lo
+  scorrimento verso «Avanti». Il timer della risposta precedente viene
+  azzerato.
+- Le frasi per l'errore dicevano «Riprova!» con la domanda già chiusa e
+  «Quasi!» anche per risposte lontane: ora «Non è questa», «Ecco la
+  giusta», «Guarda qui sotto 👇», in tutte le materie.
+- La spiegazione dopo un errore ha un riquadro neutro con 💡 al posto del
+  rosso, e non ha più il tetto di 260 px che poteva tagliarla con lo zoom.
+
 ## 4.27.19 - 2026-11-15
 
 **Nel gioco delle tabelline la freccia toccata non resta più colorata.**

@@ -30,7 +30,7 @@ __sa.subjectConfig = {
   },
   bgIcons: ['🔤', '📚', '✏️', '📝', '🌍', '🗣️', '🎯'],
   feedbackOk: ['Esatto! 🎉', 'Complimenti! ⭐', 'Wow! 🌟', 'Yes! 🎊', 'Super! 💪', 'Continua così! 🚀', 'Top! 🔥'],
-  feedbackKo: ['Quasi! 😅', 'Try again! 💪', 'Non mollare! 🌈', 'Keep going! ✨'],
+  feedbackKo: ['Non è questa 🙂', 'Ecco la giusta ✨', 'Guarda qui sotto 👇'],
   classMeta: {
     2: { subtitle: 'Prime parole' },
     3: { subtitle: 'Lessico e frasi' },
