@@ -1,5 +1,27 @@
 # Changelog Repo
 
+## 4.27.21 - 2026-11-20
+
+**La fine del quiz dice com'è andata e propone il ripasso.**
+
+### Fixed
+- Il messaggio finale dipendeva dal punteggio, che il bonus moltiplica:
+  con 1 giusta su 10 diceva «Ottimo lavoro». Ora segue le risposte
+  giuste su quelle date («2 giuste su 10») con quattro livelli onesti,
+  e la mascotte del risultato segue lo stesso criterio.
+- «Ripassa i tuoi errori» compariva solo accanto a «Inizia!»: ora è il
+  pulsante principale del risultato quando ci sono errori da ripassare, e
+  «Gioca ancora» diventa secondario.
+- Il toast «Nuovo premio» copriva i punteggi mentre comparivano: nel
+  risultato del quiz il premio sta in un riquadro della scheda, con il
+  link alla bacheca. Il timer del toast, dove resta (giochi), viene
+  azzerato: un secondo premio non sparisce più col timer del primo.
+- Il risultato erano sei schede uguali e su telefono «Gioca ancora»
+  finiva sotto la piega. Ora sotto il messaggio c'è una riga di pallini,
+  uno per risposta (verde con ✓, rosso con ✕), poi le azioni, poi i
+  dettagli dei punti, su righe da tre anche su telefono.
+  Contrasto misurato con axe: pallini 6,1-8,1:1 nelle due palette.
+
 ## 4.27.20 - 2026-11-20
 
 **Nei quiz il colore dice se la risposta è giusta.**

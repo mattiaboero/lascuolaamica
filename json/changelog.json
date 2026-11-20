@@ -1,10 +1,12 @@
 [
  {
-  "date": "20 novembre 2026 · Release 4.27.20",
+  "date": "20 novembre 2026 · Release 4.27.20 – 4.27.21",
   "items": [
    "Nei quiz, dopo la risposta, la giusta diventa verde e quella sbagliata rossa con una ✕: si capisce anche senza leggere. Le altre due si attenuano.",
    "La scritta grande che arriva dopo la risposta non copre più i pulsanti, non esce dallo schermo del telefono e compare anche con «riduci animazioni». Le frasi per l’errore dicono cosa succede: «Non è questa», «Ecco la giusta».",
-   "La spiegazione dopo un errore ha un tono neutro con una lampadina, non più rosso, e non viene mai tagliata."
+   "La spiegazione dopo un errore ha un tono neutro con una lampadina, non più rosso, e non viene mai tagliata.",
+   "A fine quiz il messaggio dice quante risposte sono giuste, con una riga di pallini verdi e rossi, e propone subito «Ripassa i tuoi errori».",
+   "Il premio appena vinto compare dentro la scheda del risultato, con il link alla bacheca, e non copre più i punteggi."
   ]
  },
  {
