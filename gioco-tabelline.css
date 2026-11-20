@@ -672,7 +672,7 @@
   display: grid;
   place-items: center;
   padding: 14px;
-  font-family: 'Trebuchet MS',Arial,sans-serif;
+  font-family: 'Nunito','Nunito Fallback',sans-serif;
   margin: 0 auto 28px;
   border-radius: 18px;
 }
@@ -779,7 +779,7 @@
 .nina-game .settings-grid button {
   padding: 4px;
   min-height: 39px;
-  font-family: Arial,sans-serif;
+  font-family: 'Nunito','Nunito Fallback',sans-serif;
   font-size: 22px;
 }
 
@@ -814,7 +814,7 @@
 .nina-game #ammo-counter,
 .nina-game #score-counter,
 .nina-game .wrong-equation {
-  font-family: Arial,sans-serif;
+  font-family: 'Nunito','Nunito Fallback',sans-serif;
   font-variant-numeric: tabular-nums lining-nums;
   font-weight: 700;
   font-synthesis: none;
@@ -842,7 +842,7 @@
 
 .nina-game .world-math h3 {
   margin: 12px 8px 0;
-  font-family: Arial,sans-serif;
+  font-family: 'Nunito','Nunito Fallback',sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -873,7 +873,7 @@
   position: absolute;
   left: 105px;
   top: 36px;
-  font-family: Arial,sans-serif;
+  font-family: 'Nunito','Nunito Fallback',sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
@@ -1063,7 +1063,7 @@
 }
 
 .nina-game .island-card h3 {
-  font-family: Arial,sans-serif;
+  font-family: 'Nunito','Nunito Fallback',sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -1158,6 +1158,16 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1.35;
+  }
+
+  .nina-game .ruota-telefono a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--cream);
+    text-underline-offset: 3px;
   }
 
   .nina-game .ruota-icona {

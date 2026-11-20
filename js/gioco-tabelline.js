@@ -105,7 +105,7 @@
       el('button',{id:'start',class:'primary start'},progress.unlocked?'CONTINUA IL VIAGGIO →':'PARTI PER L’AVVENTURA →'),
       el('button',{id:'map',class:'map-button'},'LE ISOLE'),
       el('button',{id:'options',class:'options-button'},'OPZIONI'),
-      el('button',{id:'help',class:'help-button'},'COME SI GIOCA ?'),
+      el('button',{id:'help',class:'help-button'},'COME SI GIOCA?'),
       el('span',{class:'chapter-note'},'9 ISOLE · TABELLINE DAL 2 AL 9'),
       el('div',{id:'hero-art'}),el('div',{id:'island-art'}),el('div',{id:'star-art'})));
     addIcon('#hero-art','nina',0,160,211,'title-hero');addIcon('#island-art','props',0,307,128,'title-island');addIcon('#star-art','props',9,46,46,'title-star');
