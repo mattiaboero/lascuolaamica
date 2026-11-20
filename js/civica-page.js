@@ -64,8 +64,8 @@ __sa.subjectConfig = {
   classMeta: {
     2: { subtitle: 'Prime regole' },
     3: { subtitle: 'Regole e ambiente' },
-    4: { subtitle: 'Scelte consapevoli' },
-    5: { subtitle: 'Cittadinanza attiva' }
+    4: { subtitle: 'Scelte giuste' },
+    5: { subtitle: 'Cittadini in azione' }
   },
   classProfiles: {
     2: { 2: 1 },

@@ -224,10 +224,10 @@
 
   const CLASS_DEFAULTS = {
     1: { label: 'Classe 1ª', icon: '1️⃣', subtitle: 'Primi numeri' },
-    2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Consolidiamo le basi' },
-    3: { label: 'Classe 3ª', icon: '3️⃣', subtitle: 'Basi + primi passaggi' },
-    4: { label: 'Classe 4ª', icon: '4️⃣', subtitle: 'Competenze intermedie' },
-    5: { label: 'Classe 5ª', icon: '5️⃣', subtitle: 'Verso la secondaria' }
+    2: { label: 'Classe 2ª', icon: '2️⃣', subtitle: 'Le basi' },
+    3: { label: 'Classe 3ª', icon: '3️⃣', subtitle: 'Un passo avanti' },
+    4: { label: 'Classe 4ª', icon: '4️⃣', subtitle: 'Più difficile' },
+    5: { label: 'Classe 5ª', icon: '5️⃣', subtitle: 'La sfida più grande' }
   };
   const CLASS_PROFILES = cfg.classProfiles || {
     1: { 1: 1 },
@@ -2046,10 +2046,14 @@
     const areaLabel = AREA_LABELS[q.area] || AREA_LABELS.mixed || 'Sessione';
     const classLabel = CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`;
     const levelMeta = getCurrentLevelMeta();
-    $('qMeta').textContent = levelMeta
+    // A vista solo "Domanda 1 di 10": classe e ambito il bambino li ha appena
+    // scelti, e in maiuscolo occupavano due o tre righe. Lo screen reader
+    // sente comunque tutto.
+    const metaFull = levelMeta
       ? `Domanda ${curQ + 1} di ${sessionLen()} · ${levelMeta.label} · ${areaLabel} · ${classLabel}`
       : `Domanda ${curQ + 1} di ${sessionLen()} · ${areaLabel} · ${classLabel}`;
-    annuncia('quizStato', $('qMeta').textContent);
+    $('qMeta').textContent = `Domanda ${curQ + 1} di ${sessionLen()}`;
+    annuncia('quizStato', metaFull);
     renderPrompt($('qText'), q);
     renderFigure(q);
 
@@ -2126,6 +2130,7 @@
     }
 
     showExplanation(q && q.explanation || '', isOk);
+    speakAfterAnswer(isOk, buttons.find((b) => b.classList.contains('correct')), q && q.explanation);
     history.push(isOk);
     curQ += 1;
     updateScoreBar();
@@ -3179,6 +3184,25 @@
     stopSpeaking();
     parts.forEach(([text, lang]) => {
       SA.voice.speak(toSpokenText(text).trim(), { lang: lang === 'en' ? 'en' : 'it', rate: 0.9, queue: true });
+    });
+  }
+
+  // Con Ascolta acceso, dopo la risposta si sente anche l'esito, la risposta
+  // giusta (se era sbagliata) e la spiegazione: chi legge poco resta a meta'.
+  function speakAfterAnswer(isOk, correctBtn, explanation) {
+    const screen = $('screenGame');
+    if (!speakOn || !speakIt || !screen || !screen.classList.contains('active')) return;
+    const noEmoji = (t) => String(t || '').replace(/\p{Extended_Pictographic}|\uFE0F/gu, '').trim();
+    const parts = [[noEmoji(ultimoEsito), 'it']];
+    if (!isOk && correctBtn) {
+      parts.push(['La risposta giusta è', 'it']);
+      parts.push([correctBtn.textContent, correctBtn.lang]);
+    }
+    if (explanation) parts.push([explanation, 'it']);
+    stopSpeaking();
+    parts.forEach(([text, lang]) => {
+      const spoken = toSpokenText(text).trim();
+      if (spoken) SA.voice.speak(spoken, { lang: lang === 'en' ? 'en' : 'it', rate: 0.9, queue: true });
     });
   }
 

@@ -1,5 +1,23 @@
 # Changelog Repo
 
+## 4.27.22 - 2026-11-20
+
+**Il quiz si legge meglio su telefono e Ascolta legge anche la spiegazione.**
+
+### Fixed
+- Su telefono (sotto i 600 px) la mascotte del quiz è piccola accanto ad
+  «Ascolta» per tutte le classi, come già in 1ª: con la colonna da 88 px
+  le risposte restavano larghe 215 px su 375, ora 297.
+- Il meta della domanda mostra solo «Domanda 1 di 10»: ambito e classe, in
+  maiuscolo, occupavano due o tre righe. Lo screen reader li sente ancora.
+- Con Ascolta acceso, dopo la risposta si sentono anche l'esito, la
+  risposta giusta (se era sbagliata) e la spiegazione: prima si sentivano
+  solo domanda e risposte.
+- Le etichette delle classi parlano ai bambini: «Le basi», «Un passo
+  avanti», «Più difficile», «La sfida più grande» al posto di
+  «Consolidiamo le basi», «Competenze intermedie» e simili (anche in
+  civica, inglese e problemi). La classe scelta ha una ✓ oltre al bordo.
+
 ## 4.27.21 - 2026-11-20
 
 **La fine del quiz dice com'è andata e propone il ripasso.**
