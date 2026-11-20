@@ -212,6 +212,18 @@ body.info-page .text + .text {
   margin-top: 12px;
 }
 
+/* Testo lungo (privacy, cookie, per genitori, guida ai compiti, tabelline):
+   i paragrafi hanno margine 0, quindi un titolo dopo un paragrafo o un
+   elenco, e un paragrafo dopo un elenco, si attaccavano a quello sopra. */
+body.info-page :is(p, ul, ol, .text, .list, .ul, .tab-oltre) + :is(h2, h3) {
+  margin-top: 20px;
+}
+
+body.info-page :is(ul, ol, .list, .ul, .cta-list) + :is(p, .text),
+body.info-page .modal-body p + p {
+  margin-top: 12px;
+}
+
 body.info-page .section {
   margin-top: 18px;
   padding-top: 16px;

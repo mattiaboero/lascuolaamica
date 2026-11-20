@@ -135,6 +135,9 @@ jobs:
       - name: Inizia! sempre in vista e mai sopra il focus (pagine materia)
         run: npm run test:e2e:inizia
 
+      - name: Tutte le pagine su telefono (scroll orizzontale, riquadri vuoti, testo attaccato)
+        run: npm run test:e2e:telefono
+
   full:
     # Daily schedule: perfect + mixed + worst
     if: github.event_name == 'schedule'

@@ -1,5 +1,36 @@
 # Changelog Repo
 
+## 4.27.26 - 2026-11-20
+
+**Controllo su telefono di tutte le pagine: titoli, tabelle e spazi.**
+
+### Fixed
+- Pagine materia (matematica, italiano, storia, geografia, scienze): i
+  sottotitoli `h3` e le tabelle dei riquadri per genitori e insegnanti non
+  avevano nessuno stile. Gli `h3` uscivano nel font di sistema, in nero e
+  attaccati al paragrafo sopra; a 390 px la tabella delle tabelline aveva i
+  numeri attaccati (`10121416...`) e quella dei periodi storici colonne
+  strette senza bordi. Ora `h3` in Fredoka con 16px sopra, tabelle con bordi e
+  intestazione; la tabella delle tabelline sta intera nei 322 px del riquadro.
+- Pagine per adulti (`info-pages.css`): i paragrafi hanno margine 0, quindi i
+  titoli dopo un paragrafo o un elenco e i paragrafi dopo un elenco si
+  attaccavano a quello sopra (/privacy, /cookie, /per-genitori,
+  /guida-compiti, /accessibilita, /tabelline e le 26 pagine tabellina-del).
+  Ora 20px sopra i titoli e 12px fra elenco e paragrafo.
+- /problemi su telefono: sotto i 600px le altre materie nascondono le regole
+  della partita dalla 4.23.1, /problemi no (markup diverso) e le ripeteva con
+  quattro tessere. Ora vale la stessa scelta.
+- /sistema-solare su telefoni bassi (375x667, 360x740): il pannello di
+  benvenuto scendeva sul cartellino del corpo (Sole, Scopri, Ascolta), che si
+  intravedeva dietro i pulsanti. Finché il benvenuto è aperto il cartellino
+  non si vede e non prende il focus.
+
+### Added
+- `npm run test:e2e:telefono` (`scripts/telefono_smoke.js`), anche nel job
+  smoke: le 52 pagine a 360x740 e 390x844 senza scroll orizzontale, senza
+  riquadri vuoti e senza testo attaccato. Sul codice della 4.27.25 dà 304
+  errori.
+
 ## 4.27.25 - 2026-11-20
 
 **«Inizia!» non si appoggia più sulle istruzioni e su telefono non restano riquadri vuoti.**

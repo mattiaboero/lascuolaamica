@@ -1665,6 +1665,16 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
   display: none;
 }
 
+/* Telefoni bassi (375x667, 360x740): il benvenuto, centrato, scende sul
+   cartellino del corpo (Sole, Scopri, Ascolta), che si intravedeva dietro i
+   pulsanti. Finche' il benvenuto e' aperto il cartellino non si vede e non
+   prende il focus. */
+@media (max-height: 800px) {
+  .ss-scena:has(> .ss-benvenuto:not([hidden])) .ss-cartellino {
+    visibility: hidden;
+  }
+}
+
 .ss-benvenuto h2 {
   font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
   font-size: clamp(1.4rem, 4vw, 1.8rem);

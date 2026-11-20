@@ -449,6 +449,65 @@ header {
   margin-top: 4px;
 }
 
+/* Sottotitoli e tabelle dei blocchi per adulti (matematica, italiano, storia,
+   geografia, scienze): fino alla 4.27.25 non avevano nessuno stile. Gli h3
+   uscivano nel font di sistema, in nero, attaccati al paragrafo sopra; la
+   tabella delle tabelline a 390 px aveva i numeri attaccati (10121416...). */
+.seo-static h3 {
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: var(--accent-2);
+  margin: 16px 0 6px;
+}
+
+.seo-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 10px;
+}
+
+.seo-static table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 10px;
+  color: #35506b;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.seo-table-wrap table {
+  margin: 0;
+}
+
+.seo-static caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 6px;
+}
+
+.seo-static th,
+.seo-static td {
+  border: 1px solid rgba(var(--info-blue-rgb) / 0.22);
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.seo-static th {
+  background: rgba(var(--info-blue-rgb) / 0.08);
+  font-weight: 900;
+}
+
+/* Tabella delle tabelline: 11 colonne di numeri, centrate e strette per
+   stare nei 300 px del riquadro su telefono. */
+.seo-calcolo th,
+.seo-calcolo td {
+  padding: 5px 2px;
+  text-align: center;
+}
+
 .seo-faq::before {
   content: 'Domande frequenti';
 }
@@ -2237,6 +2296,7 @@ html:not([data-palette="okabe-ito"]) body.subject-civica {
    --text-main (gia' verificato >13:1). Decorativo (bordi/ombre) invariato. */
 html[data-palette="okabe-ito"] .icon-btn,
 html[data-palette="okabe-ito"] .seo-static h2,
+html[data-palette="okabe-ito"] .seo-static h3,
 html[data-palette="okabe-ito"] .seo-faq-item summary,
 html[data-palette="okabe-ito"] .seo-example-item summary,
 html[data-palette="okabe-ito"] .related-subjects h2,
@@ -2692,6 +2752,14 @@ html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
      bianca in fondo. scripts/inizia_smoke.js lo controlla (riquadri-pieni). */
   .intro-note:has(> .intro-rules:only-child),
   .intro-note > br:has(+ .intro-rules) {
+    display: none;
+  }
+
+  /* /problemi ha le stesse regole in .bonus-base-note, ripetute dalle
+     quattro tessere di .intro-list: su telefono valeva la stessa scelta
+     delle altre materie, ma il markup diverso la saltava. */
+  #screenStart .bonus-base-note,
+  #screenStart .intro-list {
     display: none;
   }
 }
