@@ -37,7 +37,7 @@
 <link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-900.woff2" as="font" type="font/woff2" crossorigin>
-<!-- CSS-CRITICO:INIZIO sorgenti=3c971e36a9ceb7ed -->
+<!-- CSS-CRITICO:INIZIO sorgenti=715f28afa0c400e3 -->
 <style>:root { --ws-cartridge-buff: #fbf4e6; --ws-olive-buff: #f1e6cf; --ws-ivory: #fffdf7; --ws-cinnamon-border: #e7d8be; --ws-slate-black: #2c2a28; --ws-hays-russet: #6e6357; --ws-verdigris: #2f8e86; --ws-hortense-blue: #3c6e9f; --ws-terracotta: #dd6347; --ws-terracotta-ink: #c8553d; --ws-cossack-green: #2e8455; --ws-jasper-red: #c4452f; --ws-yellow-ocher: #c8881a; --ws-maize: #f2c14e; --info-blue: #2d6cdf; --info-blue-rgb: 45 108 223; --subj-math-a: #6e57a6; --subj-math-b: #7a61b8; --subj-math-dec: #f2c14e; --subj-ita-a: #b33c4d; --subj-ita-b: #ca374a; --subj-ita-dec: #e0a526; --subj-geo-a: #327249; --subj-geo-b: #417b56; --subj-geo-dec: #3c6e9f; --subj-sto-a: #885d3b; --subj-sto-b: #8f6841; --subj-sto-dec: #c4452f; --subj-sci-a: #23716c; --subj-sci-b: #377a73; --subj-sci-dec: #f2c14e; --subj-eng-a: #2c6a9f; --subj-eng-b: #3774a5; --subj-eng-dec: #dd6347; --subj-prob-a: #a34d20; --subj-prob-b: #b05615; --subj-prob-dec: #2c8c86; --subj-civ-a: #1d7359; --subj-civ-b: #317c63; --subj-civ-dec: #c8881a; --subj-breakout-a: #993377; --subj-breakout-b: #b03b89; --subj-breakout-dec: #2f8e86; --subj-tabelline-a: #96631a; --subj-tabelline-b: #96661a; --subj-tabelline-dec: #2e6fa6; --subj-tabelline-text: #96631a; --subj-bosco-a: #55742f; --subj-bosco-b: #5c7a2e; --subj-bosco-dec: #dd6347; --subj-bosco-text: #55742f; --subj-breakout-text: #993377; --radius-md: 18px; --radius-lg: 28px; --shadow-card: 0 14px 34px rgba(44 42 40 / 0.16); }
 *, ::before, ::after { margin: 0px; padding: 0px; box-sizing: border-box; }
 @media (prefers-reduced-motion: reduce) {
@@ -107,7 +107,8 @@ header { text-align: center; margin-bottom: 14px; animation: 0.7s cubic-bezier(0
 .related-subjects a:hover, .related-subjects a:focus { background: rgba(var(--info-blue-rgb) / 0.2); text-decoration: underline; }
 .class-selector-label { margin-top: 4px; }
 .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 10px; margin: 12px 0px 16px; }
-.class-btn { background: linear-gradient(145deg, rgb(255, 255, 255), rgb(244, 251, 255)); border: 3px solid rgba(255, 255, 255, 0.92); border-radius: 16px; padding: 12px 10px; font-weight: 900; color: rgb(70, 88, 106); text-align: center; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.14) 0px 6px 0px, rgba(0, 0, 0, 0.1) 0px 12px 18px; transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; min-height: 44px; }
+.class-btn { background: linear-gradient(145deg, rgb(255, 255, 255), rgb(244, 251, 255)); border: 3px solid rgba(255, 255, 255, 0.92); border-radius: 16px; padding: 12px 10px; font-weight: 900; color: rgb(70, 88, 106); text-align: center; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.14) 0px 6px 0px, rgba(0, 0, 0, 0.1) 0px 12px 18px; transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; min-height: 44px; position: relative; }
+.class-btn.selected::after { content: "✓" / ""; position: absolute; top: 4px; right: 8px; font-size: 1.1rem; font-weight: 900; line-height: 1; }
 .class-btn:nth-child(1) { background: linear-gradient(145deg, rgb(223, 244, 255), rgb(184, 229, 255)); color: rgb(23, 73, 106); }
 .class-btn:nth-child(2) { background: linear-gradient(145deg, rgb(227, 255, 233), rgb(191, 245, 206)); color: rgb(33, 90, 52); }
 .class-btn:nth-child(3) { background: linear-gradient(145deg, rgb(242, 232, 255), rgb(221, 198, 255)); color: rgb(75, 44, 120); }
@@ -153,6 +154,11 @@ html:has(#screenStart.active) { scroll-padding-bottom: 144px; }
 .q-meta { font-size: 0.85rem; font-weight: 900; color: var(--accent-1); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; padding-left: 0px; }
 .q-text { font-size: 1.14rem; font-weight: 800; line-height: 1.45; color: rgb(63, 75, 83); margin-bottom: 16px; }
 .speak-btn { margin: 0px 0px 10px; }
+@media (max-width: 599px) {
+.q-card-main { display: block; padding-top: 10px; }
+.q-card-main .mascot-q, html[data-classe="1"] .q-card-main .mascot-q { float: left; width: 40px; height: 58px; margin-right: 12px; }
+.q-card-main .q-text { clear: left; }
+}
 .answers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .answer-btn:hover:not(:disabled) { transform: scale(1.01); }
 .answer-btn:active:not(:disabled) { transform: translateY(2px); box-shadow: rgba(0, 0, 0, 0.22) 0px 3px 0px; }
@@ -247,10 +253,6 @@ html:has(#screenStart.active) { scroll-padding-bottom: 144px; }
 #screenStart .class-grid { grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 8px; }
 #screenStart .class-btn .a-icon { display: none; }
 #screenStart .class-btn { padding: 8px; }
-}
-@media (max-width: 380px) {
-.q-card-main { gap: 10px; }
-.q-card-main .mascot-q { width: 72px; height: 104px; }
 }
 @media (max-width: 640px) {
 .mascot-result { width: 108px; height: 156px; }
@@ -610,7 +612,7 @@ html:not([data-palette="okabe-ito"]) body.subject-inglese .seo-faq-item summary 
         <button type="button" class="class-btn" data-action="select-class" data-class="5" aria-pressed="false">
           <span class="a-icon" aria-hidden="true">5️⃣</span>
           <span class="a-title">Classe 5ª</span>
-          <span class="a-sub">Comprensione avanzata</span>
+          <span class="a-sub">Leggere e capire</span>
         </button>
       </div>
       <button type="button" class="start-btn" data-action="start-game">Scegli il livello</button>

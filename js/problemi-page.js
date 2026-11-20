@@ -33,7 +33,7 @@ __sa.subjectConfig = {
     2: { subtitle: 'Problemi base' },
     3: { subtitle: 'Addizione e sottrazione' },
     4: { subtitle: 'Più passaggi' },
-    5: { subtitle: 'Problemi avanzati' }
+    5: { subtitle: 'I più difficili' }
   },
   softmaxTemperature: 1.2
 };

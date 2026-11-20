@@ -577,6 +577,20 @@ header {
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.14), 0 12px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
   min-height: 44px;
+  position: relative;
+}
+
+/* La classe scelta si riconosce anche dal segno, non solo dal bordo.
+   Gli screen reader hanno gia' aria-pressed. */
+.class-btn.selected::after {
+  content: '✓';
+  content: '✓' / '';
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .class-btn:nth-child(1) { background: linear-gradient(145deg, #dff4ff, #b8e5ff); color: #17496a; }
@@ -1108,15 +1122,17 @@ html[data-classe="1"][data-screen="screenGame"] .progress-dots {
   margin-bottom: 8px;
 }
 
-/* Sul telefono la mascotte, piccola, sta accanto ad Ascolta; testo e figura
-   prendono tutta la larghezza della card (niente colonna stretta accanto alla
-   mascotte). Dai 600px c'e' spazio: resta l'impaginazione normale. */
+/* Sul telefono la mascotte, piccola, sta accanto ad Ascolta; testo, risposte
+   e figura prendono tutta la larghezza della card (niente colonna stretta
+   accanto alla mascotte: con 88px le risposte restavano a 215px su 375).
+   Vale per tutte le classi. Dai 600px c'e' spazio: impaginazione normale. */
 @media (max-width: 599px) {
-  html[data-classe="1"] .q-card-main {
+  .q-card-main {
     display: block;
     padding-top: 10px;
   }
 
+  .q-card-main .mascot-q,
   html[data-classe="1"] .q-card-main .mascot-q {
     float: left;
     width: 40px;
@@ -1124,11 +1140,11 @@ html[data-classe="1"][data-screen="screenGame"] .progress-dots {
     margin-right: 12px;
   }
 
-  html[data-classe="1"] .q-card-main .q-text {
+  .q-card-main .q-text {
     clear: left;
   }
 
-  html[data-classe="1"] .q-card-main .q-figure {
+  .q-card-main .q-figure {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -2061,34 +2077,11 @@ html[data-motion="reduce"] .feedback.show {
   }
 }
 
-@media (max-width: 380px) {
-  .q-card-main {
-    gap: 10px;
-  }
-
-  .q-card-main .mascot-q {
-    width: 72px;
-    height: 104px;
-  }
-
-  /* F6: la figura sfonda la colonna del testo (accanto alla mascotte, 72px + gap 10px)
-     e usa tutta la larghezza interna della card. Solo dimensioni, nessun colore. */
+/* F6: sotto i 600px la mascotte e' piccola e flottante (vedi sopra): la
+   figura sta gia' a tutta larghezza della card, niente margini negativi. */
+@media (max-width: 599px) {
   .q-figure {
     max-width: none;
-    width: calc(100% + 82px);
-    margin-left: -82px;
-    margin-right: 0;
-  }
-}
-
-/* F6: tra 381 e 599px la mascotte e' larga 88px con gap 14px (vedi .mascot-q e
-   .q-card-main): stessa idea della regola sotto i 380px, qui con 102px. */
-@media (min-width: 381px) and (max-width: 599px) {
-  .q-figure {
-    max-width: none;
-    width: calc(100% + 102px);
-    margin-left: -102px;
-    margin-right: 0;
   }
 }
 

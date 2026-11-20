@@ -35,7 +35,7 @@ __sa.subjectConfig = {
     2: { subtitle: 'Prime parole' },
     3: { subtitle: 'Lessico e frasi' },
     4: { subtitle: 'Costruzione frasi' },
-    5: { subtitle: 'Comprensione avanzata' }
+    5: { subtitle: 'Leggere e capire' }
   },
   classProfiles: {
     2: { 2: 1 },
