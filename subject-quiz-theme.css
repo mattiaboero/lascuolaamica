@@ -1497,6 +1497,92 @@ body.subject-problemi .answer-btn {
   flex-wrap: wrap;
 }
 
+.result-dots + .result-btns {
+  margin-bottom: 18px;
+}
+
+/* Pallini del risultato: uno per risposta, verde con ✓ o rosso con ✕. */
+.result-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 18px;
+}
+
+.result-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+}
+
+html:not([data-palette="okabe-ito"]) .result-dot {
+  background: #1e6e3e;
+}
+
+html:not([data-palette="okabe-ito"]) .result-dot.ko {
+  background: #a8321f;
+}
+
+html[data-palette="okabe-ito"] .result-dot {
+  background: #005b43;
+}
+
+html[data-palette="okabe-ito"] .result-dot.ko {
+  background: #a24700;
+}
+
+/* Premio appena sbloccato, dentro la scheda del risultato. */
+.result-reward {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 18px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #fffdf7;
+  border: 2px solid #e7d8be;
+  text-align: left;
+}
+
+.result-reward[hidden] {
+  display: none;
+}
+
+.result-reward img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.result-reward strong {
+  display: block;
+  color: #2c2a28;
+}
+
+.result-reward span {
+  display: block;
+  margin-top: 2px;
+  color: #5c5249;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.result-reward a {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 0;
+  color: #2c5f8f;
+  font-weight: 800;
+}
+
 .btn-replay {
   background: linear-gradient(135deg, var(--accent-2), #2f68d8);
   color: #fff;
@@ -1926,11 +2012,33 @@ html[data-motion="reduce"] .feedback.show {
 
   .answers-grid,
   .bonus-grid,
-  .score-final,
-  .score-extra,
   .class-grid,
   .area-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Il risultato resta su righe da tre, piu' piccole: in colonna erano sei
+     schede uguali e "Gioca ancora" finiva sotto la piega. */
+  .score-final,
+  .score-extra {
+    gap: 6px;
+  }
+
+  .score-item {
+    padding: 8px 4px;
+  }
+
+  .score-item .num {
+    font-size: 1.3rem;
+  }
+
+  #rArea {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .score-item .lbl {
+    font-size: 0.75rem;
   }
 
   body.subject-problemi .intro-list {

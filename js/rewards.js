@@ -511,12 +511,21 @@
     if (gamesEl) gamesEl.textContent = String(safeInt(state.games, 0));
   }
 
+  let toastTimer = 0;
   function showRewardToast(id, extraCount) {
     const reward = rewardById.get(id);
     if (!reward || document.hidden) return;
     // Nelle pagine materia gli annunci passano dal quiz (SA.annunciaTrofeo,
     // dopo l'esito della risposta): il toast resta solo da vedere.
     const annunciaQuiz = window.SA && typeof window.SA.annunciaTrofeo === 'function' ? window.SA.annunciaTrofeo : null;
+    // Nel risultato del quiz il premio va in un riquadro della scheda: il
+    // toast in basso copriva i punteggi mentre comparivano.
+    const inline = document.querySelector('[data-reward-inline]');
+    if (inline) {
+      renderInlineReward(inline, reward, extraCount);
+      if (annunciaQuiz) annunciaQuiz(inline.textContent.trim());
+      return;
+    }
     let toast = document.querySelector('[data-reward-toast]');
     if (!toast) {
       toast = document.createElement('div');
@@ -548,14 +557,41 @@
     toast.append(img, text);
     if (annunciaQuiz) annunciaQuiz(`${strong.textContent}. ${span.textContent}`);
     toast.classList.add('is-visible');
-    window.setTimeout(() => toast.classList.remove('is-visible'), 5200);
+    // Un secondo premio entro 5 s non deve sparire col timer del primo.
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 5200);
+  }
+
+  function premiHref() {
+    const host = window.location && window.location.hostname ? window.location.hostname : '';
+    return host === 'localhost' || host === '127.0.0.1' ? '/premi.html' : '/premi';
+  }
+
+  function renderInlineReward(box, reward, extraCount) {
+    box.textContent = '';
+    const img = document.createElement('img');
+    img.src = ASSET_BASE + reward.file;
+    img.alt = '';
+    img.width = 64;
+    img.height = 64;
+    img.decoding = 'async';
+    const text = document.createElement('div');
+    const strong = document.createElement('strong');
+    strong.textContent = `Nuovo premio: ${reward.name}`;
+    const span = document.createElement('span');
+    span.textContent = extraCount > 1 ? `Hai sbloccato ${extraCount} premi.` : reward.description;
+    const link = document.createElement('a');
+    link.href = premiHref();
+    link.textContent = 'Vai alla bacheca';
+    text.append(strong, span, link);
+    box.append(img, text);
+    box.hidden = false;
   }
 
   function injectRewardsLink() {
     if (document.querySelector('[data-rewards-link]')) return;
     const link = document.createElement('a');
-    const host = window.location && window.location.hostname ? window.location.hostname : '';
-    link.href = host === 'localhost' || host === '127.0.0.1' ? '/premi.html' : '/premi';
+    link.href = premiHref();
     link.className = 'reward-link-pill';
     link.setAttribute('data-rewards-link', '1');
     link.textContent = 'Premi';

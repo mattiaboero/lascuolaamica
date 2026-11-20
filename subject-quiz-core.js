@@ -2279,26 +2279,30 @@
       finalScore = baseScore;
     }
 
-    let emoji = '🏁';
-    let title = 'Sessione completata!';
-    let msg = 'Ottimo lavoro.';
-    if (finalScore >= 750) {
+    // Il messaggio segue le risposte giuste, non il punteggio: il bonus lo
+    // moltiplica e un 1 su 10 riceveva "Ottimo lavoro".
+    const answeredCount = history.length;
+    const ratio = correct / Math.max(1, answeredCount);
+    const giuste = `${correct} ${correct === 1 ? 'giusta' : 'giuste'} su ${answeredCount}.`;
+    let emoji = '🌱';
+    let title = 'Hai finito!';
+    let msg = `${giuste} Ogni errore insegna qualcosa: ripassiamoli insieme.`;
+    if (answeredCount && correct === answeredCount) {
       emoji = '🏆';
-      title = 'Fantastico!';
-      msg = 'Punteggio altissimo!';
-    } else if (finalScore >= 350) {
+      title = 'Tutte giuste!';
+      msg = `${giuste} Non ne hai sbagliata nessuna.`;
+    } else if (ratio >= 0.8) {
       emoji = '🌟';
       title = 'Complimenti!';
-      msg = 'Risultato eccellente, continua così!';
-    } else if (finalScore >= 150) {
+      msg = `${giuste} Quasi tutte giuste.`;
+    } else if (ratio >= 0.5) {
       emoji = '😊';
-      title = 'Benissimo!';
-      msg = 'Buona padronanza degli argomenti.';
+      title = 'Bel lavoro!';
+      msg = `${giuste} Ripassa gli errori per fare ancora meglio.`;
     }
-    const mascotState = finalScore >= 350 ? 'celebrate' : finalScore >= 150 ? 'happy' : 'neutral';
+    const mascotState = ratio >= 0.8 ? 'celebrate' : ratio >= 0.5 ? 'happy' : 'neutral';
     setMascot(mascotState);
     setMascotResult(mascotState);
-
 
     const wasRipassa = isRipassaSession;
     updateStatsFromSession();
@@ -2324,11 +2328,84 @@
     const areaText = getSessionAreaLabel();
     setText('rArea', `${areaText} · ${CLASS_LABELS[selectedClass] || `Classe ${selectedClass}ª`}`);
 
+    renderResultDots();
+    ensureResultRipassaBtn();
+    prepareResultReward();
     recordRewards();
     saveScore();
     ensureProgressBtn();
     showScreen('screenResult');
     $('scoreBar')?.classList.remove('is-visible');
+  }
+
+  // Una riga di pallini, uno per risposta: il risultato si legge senza numeri.
+  function renderResultDots() {
+    const msgEl = $('resultMsg');
+    if (!msgEl) return;
+    let dots = $('resultDots');
+    if (!dots) {
+      dots = document.createElement('div');
+      dots.id = 'resultDots';
+      dots.className = 'result-dots';
+      dots.setAttribute('role', 'img');
+      msgEl.insertAdjacentElement('afterend', dots);
+    }
+    dots.textContent = '';
+    dots.setAttribute('aria-label', `${correct} ${correct === 1 ? 'risposta giusta' : 'risposte giuste'} su ${history.length}`);
+    history.forEach((ok) => {
+      const dot = document.createElement('span');
+      dot.className = `result-dot ${ok ? 'ok' : 'ko'}`;
+      dot.textContent = ok ? '✓' : '✕';
+      dots.appendChild(dot);
+    });
+    // Le azioni subito sotto l'esito, i dettagli dei punti dopo: su telefono
+    // "Gioca ancora" finiva sotto la piega.
+    const btns = document.querySelector('#screenResult .result-btns');
+    if (btns && dots.nextElementSibling !== btns) dots.insertAdjacentElement('afterend', btns);
+  }
+
+  // Con degli errori da ripassare, il ripasso e' la prima azione del risultato.
+  function ensureResultRipassaBtn() {
+    const btns = document.querySelector('#screenResult .result-btns');
+    if (!btns) return;
+    const count = loadWrongQ().length;
+    // Un solo pulsante principale: con il ripasso, "Gioca ancora" diventa secondario.
+    const restart = btns.querySelector('[data-action="restart-game"]');
+    if (restart) {
+      restart.classList.toggle('btn-replay', !count);
+      restart.classList.toggle('btn-home', !!count);
+    }
+    let btn = $('resultRipassaBtn');
+    if (!count) {
+      if (btn) btn.remove();
+      return;
+    }
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = 'resultRipassaBtn';
+      btn.className = 'btn-replay btn-ripassa-result';
+      btn.dataset.action = 'start-ripassa';
+      btns.insertAdjacentElement('afterbegin', btn);
+    }
+    btn.textContent = `Ripassa i tuoi errori (${count})`;
+  }
+
+  // rewards.js mette il premio nuovo in questo riquadro invece che nel toast,
+  // che copriva i punteggi proprio mentre comparivano.
+  function prepareResultReward() {
+    const btns = document.querySelector('#screenResult .result-btns');
+    if (!btns) return;
+    let box = $('resultReward');
+    if (!box) {
+      box = document.createElement('div');
+      box.id = 'resultReward';
+      box.className = 'result-reward';
+      box.setAttribute('data-reward-inline', '1');
+      btns.insertAdjacentElement('afterend', box);
+    }
+    box.textContent = '';
+    box.hidden = true;
   }
 
   function recordRewards() {
