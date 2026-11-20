@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.27.23 - 2026-11-20
+
+**La mascotte saluta anche su telefono e il gioco delle tabelline in verticale porta al quiz.**
+
+### Fixed
+- Home: sotto i 640 px la mascotte non è più nascosta. Sta accanto al titolo,
+  in due colonne strette al centro. Il nav per insegnanti, genitori e FAQ resta
+  in cima, come dalla 4.24.0.
+- Gioco delle tabelline con il telefono in verticale: sotto l'invito a girarlo
+  c'è il link «Oppure allenati con il quiz delle tabelline» verso `/tabelline`.
+  L'icona che ruota resta ferma con la riduzione del movimento, come prima.
+- Gioco delle tabelline: contatori, titoli delle isole, impostazioni e cornice
+  usano Nunito al posto di Arial e Trebuchet MS.
+- Refuso: «COME SI GIOCA ?» diventa «COME SI GIOCA?».
+
 ## 4.27.22 - 2026-11-20
 
 **Il quiz si legge meglio su telefono e Ascolta legge anche la spiegazione.**
