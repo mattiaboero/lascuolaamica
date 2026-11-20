@@ -161,7 +161,7 @@ header{text-align:center;margin-bottom:48px;}
   font-size:clamp(2.8rem,8vw,4.5rem);
   color:white;
   text-shadow:3px 3px 0 rgba(0,0,0,.18),6px 6px 20px rgba(0,0,0,.12);
-  line-height:1.1;letter-spacing:2px;
+  line-height:1.1;
 }
 .main-title-text{
   grid-column:2;
@@ -434,7 +434,7 @@ footer{
   flex-wrap:wrap;align-items:center;row-gap:8px;
   z-index:200;
 }
-.footer-link{min-width:44px;min-height:44px;padding:8px 4px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;font-size:.8rem;font-weight:800;color:#5f6b7a;cursor:pointer;transition:color .2s;text-decoration:none;border:none;background:none;}
+.footer-link{min-width:44px;min-height:44px;padding:8px 4px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;font-size:.875rem;font-weight:800;color:#5f6b7a;cursor:pointer;transition:color .2s;text-decoration:none;border:none;background:none;}
 .footer-link:hover{color:var(--math-a);}
 .footer-version{cursor:default;color:inherit;opacity:.95;}
 /* Titolo del gruppo social: #5f6b7a sul verde delle colline dava 4,33:1, sotto

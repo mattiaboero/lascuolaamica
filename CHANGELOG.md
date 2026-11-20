@@ -1,5 +1,27 @@
 # Changelog Repo
 
+## 4.27.24 - 2026-11-20
+
+**Testi per adulti più leggeri, footer più grande, premi e font del gioco più leggeri.**
+
+### Fixed
+- Bottoni e campi ereditano il font della pagina (`tokens.css`): «Ascolta» e
+  «Info» del footer escono in Nunito invece che in Arial (Roboto su Android).
+- Pagine per adulti (`info-pages.css`): paragrafi e liste a peso 400 invece di
+  700/800 e righe al massimo di 68 caratteri (a 1280 px da 818 a 751 px). Le
+  pagine delle tabelline, lette dai bambini, restano in grassetto.
+- Footer a 0,875rem (era 0,8rem; 0,86rem nella 404) e scritta «Supporta il
+  progetto» da 0,72rem a 0,875rem. Misurato da 320 a 1280 px: altezza e righe
+  invariate, tranne /per-insegnanti a 320 px, dove sotto i 768 px il footer
+  sta in fondo alla pagina e prende una riga in più. Nessuno scroll orizzontale.
+- Titolo della home e delle pagine materia senza `letter-spacing`.
+
+### Changed
+- Immagini dei premi in WebP a 256 px al posto dei PNG a 512 px: da 2,7 MB a
+  656 kB per 61 file. Erano mostrate al massimo a 116 px.
+- Font pixel del gioco delle tabelline in woff2: da 79 kB a 23 kB (OFL senza
+  Reserved Font Name).
+
 ## 4.27.23 - 2026-11-20
 
 **La mascotte saluta anche su telefono e il gioco delle tabelline in verticale porta al quiz.**
