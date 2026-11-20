@@ -101,6 +101,11 @@
   touch-action: none;
 }
 
+.nina-game #game:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+}
+
 .nina-game #interface {
   position: absolute;
   left: 0;
@@ -443,6 +448,7 @@
 .nina-game .loading .loading-titolo {
   font-size: 32px;
   font-weight: 500;
+  margin-bottom: 18px;
 }
 
 .nina-game .loading p {

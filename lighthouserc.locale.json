@@ -1,0 +1,118 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./export",
+      "url": [
+        "http://localhost/index.html",
+        "http://localhost/matematica.html",
+        "http://localhost/inglese.html",
+        "http://localhost/problemi.html",
+        "http://localhost/tabelline.html",
+        "http://localhost/tabellina-del-14.html",
+        "http://localhost/bosco.html",
+        "http://localhost/breakout.html",
+        "http://localhost/sistema-solare.html",
+        "http://localhost/premi.html",
+        "http://localhost/faq.html",
+        "http://localhost/privacy.html"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "onlyCategories": [
+          "performance"
+        ],
+        "skipAudits": [
+          "uses-http2",
+          "uses-long-cache-ttl"
+        ],
+        "chromeFlags": "--headless=new --no-sandbox"
+      }
+    },
+    "assert": {
+      "assertMatrix": [
+        {
+          "matchingUrlPattern": ".*",
+          "assertions": {
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.05
+              }
+            ],
+            "resource-summary:script:size": [
+              "warn",
+              {
+                "maxNumericValue": 160000
+              }
+            ],
+            "resource-summary:total:size": [
+              "warn",
+              {
+                "maxNumericValue": 420000
+              }
+            ],
+            "resource-summary:third-party:count": [
+              "error",
+              {
+                "maxNumericValue": 0
+              }
+            ]
+          },
+          "aggregationMethod": "median-run"
+        },
+        {
+          "matchingUrlPattern": "^(?!.*sistema-solare).*$",
+          "assertions": {
+            "categories:performance": [
+              "error",
+              {
+                "minScore": 0.9
+              }
+            ],
+            "largest-contentful-paint": [
+              "error",
+              {
+                "maxNumericValue": 2500
+              }
+            ],
+            "total-blocking-time": [
+              "error",
+              {
+                "maxNumericValue": 200
+              }
+            ]
+          },
+          "aggregationMethod": "median-run"
+        },
+        {
+          "matchingUrlPattern": "sistema-solare",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.85
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 200
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 2500
+              }
+            ]
+          },
+          "aggregationMethod": "median-run"
+        }
+      ]
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci-locale"
+    }
+  }
+}

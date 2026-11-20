@@ -423,18 +423,20 @@ def righe_scheda(c, nomi):
     s = c['scheda']
     r = []
     if s.get('raggio_medio_km'):
-        r.append(('Diametro', f'{num(2 * s["raggio_medio_km"])} km'))
+        dm = 2 * s['raggio_medio_km']
+        r.append(('Diametro', f'{num(dm, 1 if dm < 10 else 0)} km'))
     d = s.get('distanza_media') or {}
     if d.get('unita') == 'UA':
         r.append(('Distanza media dal Sole', f'{num(d["valore"], 2)} UA, circa {num(d["valore"] * 149.6)} milioni di km'))
     elif d.get('unita') == 'km':
-        r.append((f'Distanza media da {nomi.get(c.get("genitore"), "")}'.strip(), f'{num(d["valore"])} km'))
+        dove = 'dalla Terra' if c.get('genitore') == 'terra' else f'da {nomi.get(c.get("genitore"), "")}'
+        r.append((f'Distanza media {dove}'.strip(), f'{num(d["valore"])} km'))
     if s.get('giorno_solare_ore'):
         r.append(("Un giorno, da un'alba all'altra", durata(abs(s['giorno_solare_ore']))))
     elif s.get('rotazione_siderale_ore'):
         r.append(('Un giro su se stesso', durata(abs(s['rotazione_siderale_ore']))))
     if s.get('periodo_orbitale_giorni'):
-        attorno = 'al Sole' if c.get('genitore') in (None, 'sole') else 'a ' + nomi.get(c['genitore'], '')
+        attorno = 'al Sole' if c.get('genitore') in (None, 'sole') else ('alla Terra' if c['genitore'] == 'terra' else 'a ' + nomi.get(c['genitore'], ''))
         g = s['periodo_orbitale_giorni']
         r.append((f'Un giro attorno {attorno}', f'{num(g, 2)} giorni terrestri' if g < 730 else f'{num(g / 365.25, 1)} anni terrestri'))
     t = s.get('temperatura_c') or {}
@@ -445,7 +447,9 @@ def righe_scheda(c, nomi):
     if s.get('gravita_superficie_ms2'):
         g = s['gravita_superficie_ms2']
         # Sul Sole non si sta in piedi, e sulla Terra il confronto non serve: solo il valore.
-        bilancia = f': una bilancia segnerebbe il {num(100 * g / G_TERRA)}% di quanto segna sulla Terra' if c['id'] not in ('sole', 'terra') else ''
+        pc = num(100 * g / G_TERRA)
+        art = "l'" if pc in ('1', '11') or pc.startswith('8') else 'il '  # «l'8%», «l'11%», «l'80%»
+        bilancia = f': una bilancia segnerebbe {art}{pc}% di quanto segna sulla Terra' if c['id'] not in ('sole', 'terra') else ''
         r.append(('Gravità', f'{num(g, 2)} m/s²{bilancia}'))
     if s.get('lune_conosciute') is not None:
         quando = f' (conteggio di {data_it(s["lune_conteggio_data"])})' if s.get('lune_conteggio_data') else ''
@@ -477,7 +481,8 @@ def voce(c, nomi):
     s = c['scheda']
     dove = {'luna': 'luna di ' + nomi.get(c.get('genitore'), ''), 'asteroide': 'asteroide', 'cometa': 'cometa',
             'oggetto-kuiper': 'oggetto della fascia di Kuiper', 'stazione': 'stazione spaziale', 'sonda': 'sonda spaziale'}.get(c['tipo'], '')
-    misura = f', diametro {num(2 * s["raggio_medio_km"])} km' if s.get('raggio_medio_km') and c['tipo'] not in ('stazione', 'sonda') else ''
+    dm = 2 * s['raggio_medio_km'] if s.get('raggio_medio_km') else 0
+    misura = f', diametro {num(dm, 1 if dm < 10 else 0)} km' if dm and c['tipo'] not in ('stazione', 'sonda') else ''
     testo = s.get('descrizione_bambini') or s.get('descrizione') or ''
     return f'      <li id="{ea(c["id"])}"><strong>{e(c["nome"])}</strong> ({e(dove)}{misura}). {e(testo)}</li>\n'
 
@@ -505,7 +510,8 @@ def scrivi_pagina(uscita, faq, controlla):
     if uscita.get('sciami'):
         b.append('    <h3>Le stelle cadenti</h3>\n    <ul class="ss-atlante-elenco">\n')
         for sc in uscita['sciami']:
-            da = f', dalla {sc["progenitore_nome"]}' if (sc.get('progenitore_nome') or '').startswith('cometa') else (f', da {sc["progenitore_nome"]}' if sc.get('progenitore_nome') else '')
+            pn = sc.get('progenitore_nome') or ''
+            da = f', dalla {pn}' if pn.startswith('cometa') else (f", dall'{pn}" if pn.startswith('asteroide') else (f', da {pn}' if pn else ''))
             b.append(f'      <li id="{ea(sc["id"])}"><strong>{e(sc["nome"])}</strong> (picco il {e(sc["picco"])}{e(da)}). {e(sc["descrizione"])}</li>\n')
         b.append('    </ul>\n')
     for k in uscita.get('schede', []):

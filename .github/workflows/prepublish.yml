@@ -39,14 +39,16 @@ jobs:
       - name: Vulnerabilita' nelle dipendenze di produzione
         run: npm audit --omit=dev --audit-level=high
 
-      - name: Lint (eslint + stylelint)
-        run: npm run lint
+      # Gli stessi controlli di `npm run verify` in locale. Fino alla 4.27.26 la
+      # CI ne faceva solo una parte (lint, prepublish-check, IndexNow, audit):
+      # revisione delle domande, leggibilita', conteggi, CSS critico, pagine
+      # delle tabelline, titoli ed export non bloccavano il merge.
+      # check:static-grids vuole Chromium: gira nel job smoke.
+      - name: Controlli di dati, testi e codice (verify:dati)
+        run: npm run verify:dati
 
       - name: Run prepublish-check
         run: bash prepublish-check.sh
 
-      - name: IndexNow (filtro per data, --all, zero URL; senza rete)
-        run: npm run check:indexnow
-
-      - name: Audit questions JSON
-        run: node scripts/audit_questions_json.js
+      - name: Export per Cloudflare e canale
+        run: npm run export && npm run check:export-canale

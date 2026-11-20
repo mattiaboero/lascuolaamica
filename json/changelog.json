@@ -1,5 +1,15 @@
 [
  {
+  "date": "21 novembre 2026 · Release 4.27.27",
+  "items": [
+   "Tornando alla scelta della classe, per esempio con «Cambia ambito», la pagina riparte dall’inizio e non salta più al testo per i grandi.",
+   "La finestra «Progressi» si chiude con Esc e si usa tutta da tastiera. Su telefono la tabella delle ultime partite e la classifica stanno nello schermo.",
+   "Su telefono il pannello Info e il titolo «Ultimi aggiornamenti» non toccano più il bordo, e nel Cervellino Spacca-Muri le scritte sul campo di gioco si leggono.",
+   "Nel Bosco delle Lettere, quando il cancello è aperto, il tasto Tab resta sul cancello.",
+   "Titoli senza una parola o un’emoji da sola a capo, e pagine per genitori più ordinate: privacy, cookie, pagina non trovata, riquadri delle materie."
+  ]
+ },
+ {
   "date": "20 novembre 2026 · Release 4.27.20 – 4.27.26",
   "items": [
    "Nei quiz, dopo la risposta, la giusta diventa verde e quella sbagliata rossa con una ✕: si capisce anche senza leggere. Le altre due si attenuano.",

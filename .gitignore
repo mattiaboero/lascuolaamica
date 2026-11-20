@@ -56,3 +56,4 @@ reports/revisione-lotti/
 
 # Report dei test E2E (test:e2e:cls): artifact in CI, non in git
 test-results/
+.lighthouseci-locale/

@@ -2581,14 +2581,21 @@
     target.classList.add('active');
     // Aggancio per il CSS (impaginazione compatta della 1ª in gioco).
     document.documentElement.dataset.screen = id;
-    const heading = target.querySelector('h1,h2');
+    // Il titolo della schermata, mai quello del testo per adulti in fondo
+    // (.seo-static): fino alla 4.27.26 «Cambia ambito» e «Inizio» portavano
+    // il focus, e la pagina, su «Per genitori e insegnanti». Sulla schermata
+    // iniziale si torna in cima e il focus va su «Scegli la classe».
+    const heading = Array.from(target.querySelectorAll('h1,h2')).find((h) => !h.closest('.seo-static'))
+      || target.querySelector('.section-label');
+    const isStart = id === 'screenStart';
     if (heading) {
       heading.setAttribute('tabindex', '-1');
-      heading.focus();
+      heading.focus({ preventScroll: isStart });
     } else {
       const first = target.querySelector('button,a,[tabindex]:not([tabindex="-1"])');
-      if (first) first.focus();
+      if (first) first.focus({ preventScroll: isStart });
     }
+    if (isStart) window.scrollTo(0, 0);
     if (id === 'screenGame' || id === 'screenBonusQuestion') {
       requestAnimationFrame(() => bringQuestionIntoView(target));
     }
@@ -2937,14 +2944,22 @@
       || (cfg.questionsSource && (typeof cfg.questionsSource === 'string' ? cfg.questionsSource : cfg.questionsSource.subject))
       || 'Materia';
 
+    $('progressOverlay')?.remove();
+    const opener = document.activeElement;
     const overlay = document.createElement('div');
     overlay.id = 'progressOverlay';
     overlay.className = 'progress-overlay';
 
+    // Finestra di dialogo vera: fino alla 4.27.26 il Tab usciva dietro il
+    // velo, Esc non chiudeva e il focus finiva su BODY.
     const inner = document.createElement('div');
     inner.className = 'progress-modal-inner';
+    inner.setAttribute('role', 'dialog');
+    inner.setAttribute('aria-modal', 'true');
+    inner.setAttribute('aria-labelledby', 'progressTitle');
 
     const h2 = document.createElement('h2');
+    h2.id = 'progressTitle';
     h2.textContent = `Riepilogo progressi — ${safeText(subjectLabel, 32)}`;
     inner.appendChild(h2);
 
@@ -2992,9 +3007,23 @@
       const table = document.createElement('table');
       const thead = document.createElement('thead');
       const headerRow = document.createElement('tr');
-      ['Data', 'Ambito', 'Classe', 'Punti', 'Esatte', 'Errate'].forEach((col) => {
+      // Su telefono «Esatte» ed «Errate» diventano ✓ e ✕ (la parola resta
+      // per i lettori di schermo): con le parole la tabella non entrava a 360px.
+      [['Data'], ['Ambito'], ['Classe'], ['Punti'], ['Esatte', '✓'], ['Errate', '✕']].forEach(([col, corto]) => {
         const th = document.createElement('th');
-        th.textContent = col;
+        th.scope = 'col';
+        if (corto) {
+          const lungo = document.createElement('span');
+          lungo.className = 'th-lungo';
+          lungo.textContent = col;
+          const breve = document.createElement('span');
+          breve.className = 'th-corto';
+          breve.setAttribute('aria-hidden', 'true');
+          breve.textContent = corto;
+          th.append(lungo, breve);
+        } else {
+          th.textContent = col;
+        }
         headerRow.appendChild(th);
       });
       thead.appendChild(headerRow);
@@ -3002,7 +3031,7 @@
       const tbody = document.createElement('tbody');
       lb.slice(0, 10).forEach((e) => {
         const tr = document.createElement('tr');
-        [safeText(e.date, 16), safeText(e.area, 32), safeText(e.cls, 12), e.final, e.correct, e.wrong].forEach((val) => {
+        [safeText(e.date, 16), safeText(e.area, 32), safeText(String(e.cls || '').replace(/^Classe\s+/i, ''), 12), e.final, e.correct, e.wrong].forEach((val) => {
           const td = document.createElement('td');
           td.textContent = val;
           tr.appendChild(td);
@@ -3010,7 +3039,14 @@
         tbody.appendChild(tr);
       });
       table.appendChild(tbody);
-      inner.appendChild(table);
+      // Su telefono sei colonne non entrano: la tabella scorre nel riquadro.
+      const tableWrap = document.createElement('div');
+      tableWrap.className = 'progress-table-wrap';
+      tableWrap.tabIndex = 0;
+      tableWrap.setAttribute('role', 'region');
+      tableWrap.setAttribute('aria-label', 'Ultime partite');
+      tableWrap.appendChild(table);
+      inner.appendChild(tableWrap);
     }
 
     if (!classKeys.length && !areaEntries.length && !lb.length) {
@@ -3036,10 +3072,33 @@
     inner.appendChild(actions);
 
     overlay.appendChild(inner);
+    const close = () => {
+      overlay.remove();
+      if (opener && opener.isConnected) opener.focus();
+    };
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay || e.target.id === 'progressCloseBtn') overlay.remove();
+      if (e.target === overlay || e.target.id === 'progressCloseBtn') close();
+    });
+    overlay.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        close();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const items = Array.from(inner.querySelectorAll('button,[href],[tabindex]:not([tabindex="-1"])'));
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     });
     document.body.appendChild(overlay);
+    closeBtn.focus();
   }
 
   function ensureProgressBtn() {

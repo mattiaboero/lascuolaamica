@@ -1475,7 +1475,7 @@
       const button = document.createElement('button');
       button.type = 'button';
       button.textContent = letter;
-      button.setAttribute('aria-label', 'Scegli la lettera ' + letter);
+      button.setAttribute('aria-label', 'Scegli ' + letter);
       button.disabled = state.paused;
       button.addEventListener('click', function () {
         choose(index);
@@ -1556,15 +1556,27 @@
     });
     dom.overlayBtn.textContent = buttonLabel;
     dom.overlay.classList.add('open');
+    setBehindInert(true);
     // Il cancello si apre gia' al caricamento: senza preventScroll la pagina
     // salterebbe giu' fino al bosco prima che si sia letto il titolo.
     dom.overlayBtn.focus({ preventScroll: true });
+  }
+
+  // Sotto il velo (scena, Pausa, Ricomincia, Ascolta) niente Tab: fino alla
+  // 4.27.26 il focus finiva su controlli coperti dal cancello.
+  function setBehindInert(on) {
+    const parent = dom.overlay.parentElement;
+    if (!parent) return;
+    Array.from(parent.children).forEach(function (el) {
+      if (el !== dom.overlay) el.inert = on;
+    });
   }
 
   function closeOverlay() {
     if (!dom.overlay) return;
     const wasOpen = dom.overlay.classList.contains('open');
     dom.overlay.classList.remove('open');
+    setBehindInert(false);
     if (!wasOpen) return;
     const active = document.activeElement;
     if (active && active !== document.body && !dom.overlay.contains(active)) return;
@@ -1582,8 +1594,8 @@
 
   const HELP_LINES = [
     '1. Muoviti con le frecce o WASD. Puoi anche toccare un punto nella radura.',
-    '2. Guarda il disegno e scegli la lettera che completa la parola.',
-    '3. Porta la lettera al tabellone. E guarda le pozze incresparsi vicino a te!'
+    '2. Guarda il disegno e scegli il gruppo di lettere che completa la parola.',
+    '3. Porta il cartello al tabellone. E guarda le pozze incresparsi vicino a te!'
   ];
 
   function showPauseOverlay() {

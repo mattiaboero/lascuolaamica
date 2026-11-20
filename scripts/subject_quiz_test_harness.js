@@ -221,6 +221,15 @@ async function main() {
     };
     process.stdout.write(`${JSON.stringify(payload, null, 2)}\n`);
     await context.close();
+    // Fino alla 4.27.26 errori e punteggio finivano solo nel JSON stampato:
+    // nessuno li guardava e la partita passava comunque.
+    const problemi = [];
+    if (trackers.pageErrors.length) problemi.push(`errori JavaScript: ${trackers.pageErrors.join(' | ')}`);
+    if (trackers.consoleErrors.length) problemi.push(`errori in console: ${trackers.consoleErrors.join(' | ')}`);
+    const giocate = questions.length;
+    if (options.mode === 'perfect' && (result.correct !== String(giocate) || result.wrong !== '0')) problemi.push(`perfect con risultato ${result.correct} giuste e ${result.wrong} sbagliate su ${giocate}`);
+    if (options.mode === 'worst' && (result.correct !== '0' || result.wrong !== String(giocate))) problemi.push(`worst con risultato ${result.correct} giuste e ${result.wrong} sbagliate su ${giocate}`);
+    if (problemi.length) throw new Error(problemi.join('; '));
   } finally {
     await browser.close();
   }
@@ -717,7 +726,9 @@ async function readPromptMeta(page, selector) {
   const target = page.locator(selector).first();
   return {
     text: normalize(await target.textContent()),
-    html: normalize(await target.evaluate((node) => node.innerHTML)),
+    // Lettura per il test (Playwright locator.innerHTML), nessuna scrittura nel DOM.
+    // eslint-disable-next-line no-restricted-properties
+    html: normalize(await target.innerHTML()),
     lang: normalize(await target.getAttribute('lang'))
   };
 }

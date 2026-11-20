@@ -729,13 +729,13 @@
       wide.active = false;
       SA.breakout.paddleBonusFactor = 1;
       applyPaddleWidth();
-      announce('Il bonus barra larga e\' terminato.');
+      announce('Il bonus barra larga è terminato.');
     }
     const sticky = state.bonuses.sticky;
     if (sticky.active && now >= sticky.until) {
       sticky.active = false;
       SA.breakout.stickyActive = false;
-      announce('Il bonus palla appiccicosa e\' terminato.');
+      announce('Il bonus palla appiccicosa è terminato.');
     }
   }
 
@@ -813,7 +813,7 @@
     state.paddleHalved = true;
     applyPaddleWidth();
     pop('Barra dimezzata!', 'ko');
-    announce('Hai sfondato il muro: la barra si e\' dimezzata.');
+    announce('Hai sfondato il muro: la barra si è dimezzata.');
     beep(200, 0.2, 'sawtooth', 0.05);
   }
 
@@ -956,7 +956,7 @@
           return;
         }
         pop('💔', 'ko');
-        announce('Pallina persa. Ti restano ' + state.lives + ' palline.');
+        announce(state.lives === 1 ? 'Pallina persa. Ti resta una pallina.' : 'Pallina persa. Ti restano ' + state.lives + ' palline.');
         resetBall();
       });
   }
@@ -1161,14 +1161,15 @@
     drawCapsule();
     drawBonusTimers();
 
+    const touch = window.matchMedia('(pointer: coarse)').matches;
     if (state.ball.stuck && !state.paused) {
-      drawBanner('Premi spazio o tocca lo schermo per lanciare', paint.ink, 20);
+      drawBanner(touch ? 'Tocca lo schermo per lanciare' : 'Premi spazio o tocca lo schermo per lanciare', paint.ink, 20);
     }
     if (state.paused) {
       ctx.fillStyle = 'rgba(31, 45, 61, 0.55)';
       ctx.fillRect(0, 0, VIEW.w, VIEW.h);
       drawBanner('Pausa', '#ffffff', 46, 0);
-      drawBanner('Premi spazio per riprendere', '#ffffff', 20, 48);
+      drawBanner(touch ? 'Tocca «Riprendi» per continuare' : 'Premi spazio per riprendere', '#ffffff', 20, 52);
     }
   }
 
@@ -1194,12 +1195,17 @@
     });
   }
 
+  // Le scritte sono in coordinate di gioco (VIEW.w): su un telefono il canvas
+  // e' largo ~340px e 20px diventavano 7-8px. Mai sotto i 15px a schermo, e
+  // mai piu' larghe della scena.
   function drawBanner(text, color, size, offsetY) {
+    const shown = canvas.clientWidth || VIEW.w;
+    const px = Math.max(size, 15 * VIEW.w / shown);
     ctx.fillStyle = color;
-    ctx.font = '800 ' + size + 'px "Nunito", "Nunito Fallback", sans-serif';
+    ctx.font = '800 ' + Math.round(px) + 'px "Nunito", "Nunito Fallback", sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(text, VIEW.w / 2, VIEW.h / 2 + (typeof offsetY === 'number' ? offsetY : 120));
+    ctx.fillText(text, VIEW.w / 2, VIEW.h / 2 + (typeof offsetY === 'number' ? offsetY : 120), VIEW.w - 40);
   }
 
   function frame(timestamp) {
