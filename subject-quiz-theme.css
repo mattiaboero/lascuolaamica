@@ -822,6 +822,11 @@ header {
   bottom: 12px;
   z-index: 20;
   will-change: transform;
+  /* Dalla 4.27.6 le istruzioni stanno sotto il pulsante, che aveva margine
+     inferiore 0: lo spessore di 7px (box-shadow 0 7px 0) e l'ombra di stacco
+     di ::before (fino a 36px sotto il bordo) finivano sopra il riquadro.
+     32px tengono libero il testo; scripts/inizia_smoke.js lo controlla. */
+  margin-bottom: 32px;
 }
 
 /* Focus e scrollIntoView si fermano sopra «Inizia!» (WCAG 2.2, 2.4.11).
@@ -2444,7 +2449,8 @@ html:not([data-palette="okabe-ito"]) .q-explanation.ko {
 .ripassa-btn {
   display: block;
   width: 100%;
-  margin: 0.65rem 0 0;
+  /* Sopra c'e' il margine di «Inizia!»; sotto, stacco dal riquadro regole. */
+  margin: 0 0 14px;
   padding: 0.6rem 1rem;
   background: #fffbe6;
   border: 2px solid #d97706;
@@ -2678,6 +2684,14 @@ html:not([data-palette="okabe-ito"]) body.subject-problemi .title {
    stanno davanti al gioco. */
 @media (max-width: 599px) {
   .intro-rules {
+    display: none;
+  }
+
+  /* Senza le regole il riquadro di /civica e /inglese restava una cornice
+     vuota, e nelle altre materie il <br> prima delle regole lasciava una riga
+     bianca in fondo. scripts/inizia_smoke.js lo controlla (riquadri-pieni). */
+  .intro-note:has(> .intro-rules:only-child),
+  .intro-note > br:has(+ .intro-rules) {
     display: none;
   }
 }
