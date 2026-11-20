@@ -1656,7 +1656,10 @@ body.ss-immersivo .ss-cassetto.ss-aperto ~ .ss-zoom,
   padding: 22px 24px;
   border: 3px solid var(--ss-giallo);
   border-radius: 24px;
-  background: rgba(5 7 15 / 0.94);
+  /* Fondo pieno: semitrasparente lasciava intravedere il cartellino del corpo
+     dietro i pulsanti sui telefoni bassi. Il cartellino resta attivo (si arriva
+     anche da /sistema-solare#terra con il benvenuto aperto). */
+  background: rgb(5 7 15);
   color: #fff;
   box-shadow: 0 20px 50px rgba(0 0 0 / 0.6);
 }

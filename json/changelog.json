@@ -1,6 +1,6 @@
 [
  {
-  "date": "20 novembre 2026 · Release 4.27.20 – 4.27.25",
+  "date": "20 novembre 2026 · Release 4.27.20 – 4.27.26",
   "items": [
    "Nei quiz, dopo la risposta, la giusta diventa verde e quella sbagliata rossa con una ✕: si capisce anche senza leggere. Le altre due si attenuano.",
    "La scritta grande che arriva dopo la risposta non copre più i pulsanti, non esce dallo schermo del telefono e compare anche con «riduci animazioni». Le frasi per l’errore dicono cosa succede: «Non è questa», «Ecco la giusta».",
@@ -8,7 +8,7 @@
    "A fine quiz il messaggio dice quante risposte sono giuste, con una riga di pallini verdi e rossi, e propone «Ripassa i tuoi errori». Il premio appena vinto compare dentro la scheda del risultato.",
    "Su telefono le risposte del quiz occupano tutta la larghezza, con la mascotte piccola accanto ad «Ascolta», e in home la mascotte saluta. Nel gioco delle tabelline in verticale c’è il link al quiz delle tabelline.",
    "Con «Ascolta» acceso, dopo la risposta si sente anche la spiegazione. Le classi hanno nomi più semplici e quella scelta ha una ✓. Il pulsante «Inizia!» non si appoggia più sulle istruzioni e su telefono non restano riquadri vuoti.",
-   "Le pagine per genitori e insegnanti hanno un testo più leggero e righe più corte, le scritte in fondo alla pagina sono più grandi e le immagini dei premi si caricano più in fretta."
+   "Le pagine per genitori e insegnanti hanno un testo più leggero e righe più corte, le scritte in fondo alla pagina sono più grandi e le immagini dei premi si caricano più in fretta. Su telefono titoli e paragrafi non si attaccano più, e le tabelle nelle pagine delle materie si leggono."
   ]
  },
  {
