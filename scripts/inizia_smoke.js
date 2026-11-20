@@ -21,6 +21,14 @@
 //   classe-salvata-libera    sotto i 768, otto materie: per ogni classe, clic e
 //                            ricarica; la classe salvata torna selezionata e
 //                            finisce sopra «Inizia!», con scrollY 0
+//   spazio-sotto             a riposo (non agganciato) fra il bordo inferiore
+//                            di «Inizia!» e il primo elemento visibile dopo ci
+//                            sono almeno 24px: lo spessore di 7px e l'ombra di
+//                            stacco non finiscono sul testo (4.27.6-4.27.24
+//                            avevano 0px e il controllo non c'era)
+//   riquadri-pieni           ogni riquadro visibile di istruzioni in
+//                            #screenStart ha testo e non finisce con una riga
+//                            vuota (sotto i 600px le regole sono nascoste)
 //
 // Uso: node scripts/inizia_smoke.js
 
@@ -90,6 +98,18 @@ async function giro(browser, base, pagina, viewport, esito) {
     await page.goto(`${base}${pagina}`, { waitUntil: 'networkidle', timeout: 60000 });
     await page.evaluate(() => document.fonts.ready);
 
+    esito('spazio-sotto', await page.evaluate((sel) => {
+      const btn = document.querySelector(sel);
+      btn.style.position = 'static';
+      let dopo = btn.nextElementSibling;
+      while (dopo && !dopo.getClientRects().length) dopo = dopo.nextElementSibling;
+      const spazio = dopo ? dopo.getBoundingClientRect().top - btn.getBoundingClientRect().bottom : Infinity;
+      btn.style.position = '';
+      return spazio >= 24;
+    }, START));
+    esito('riquadri-pieni', await page.evaluate(() => [...document.querySelectorAll('#screenStart .intro-note, #screenStart .bonus-base-note')]
+      .filter((el) => el.checkVisibility())
+      .every((el) => el.innerText.trim() !== '' && !/\n\s*$/.test(el.innerText))));
     esito('visibile-al-caricamento', await visibile(page));
     esito('non-coperto', await nonCoperto(page));
     if (viewport.width < 1440) {

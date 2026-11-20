@@ -1,5 +1,26 @@
 # Changelog Repo
 
+## 4.27.25 - 2026-11-20
+
+**«Inizia!» non si appoggia più sulle istruzioni e su telefono non restano riquadri vuoti.**
+
+### Fixed
+- Pagine materia e Breakout: dalla 4.27.6 le istruzioni della partita stanno
+  sotto «Inizia!», che aveva margine inferiore 0. Lo spessore di 7px del
+  pulsante e la sua ombra di stacco finivano sopra il riquadro delle regole
+  (in /problemi sopra il testo). Ora sotto il pulsante ci sono 32px
+  (`subject-quiz-theme.css`). «Ripassa i tuoi errori» ha 14px di stacco dal
+  riquadro sotto, prima 0.
+- `npm run test:e2e:inizia`: nuovo controllo `spazio-sotto` (almeno 24px fra
+  «Inizia!» a riposo e l'elemento che segue), sulle nove pagine e quattro
+  larghezze. Sul codice della 4.27.24 fallisce ovunque.
+- Sotto i 600px, dalla 4.23.1, le righe sulle regole della partita sono
+  nascoste: in /civica e /inglese il riquadro conteneva solo quelle e restava
+  una cornice vuota. Ora il riquadro sparisce; nelle altre materie si nasconde
+  anche il `<br>` prima delle regole. Nuovo controllo `riquadri-pieni` in
+  `npm run test:e2e:inizia`: ogni riquadro visibile ha testo e non finisce con
+  una riga vuota.
+
 ## 4.27.24 - 2026-11-20
 
 **Testi per adulti più leggeri, footer più grande, premi e font del gioco più leggeri.**
