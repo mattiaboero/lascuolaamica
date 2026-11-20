@@ -1260,7 +1260,7 @@
      "tipo": "orbita"
     }
    ],
-   "descrizione": "Phobos è la luna più grande di Marte, ma è piccola e ha una forma irregolare, come una patata. Gira attorno a Marte tre volte al giorno. Si sta avvicinando lentamente al pianeta.",
+   "descrizione": "Fobos è la luna più grande di Marte, ma è piccola e ha una forma irregolare, come una patata. Gira attorno a Marte tre volte al giorno. Si sta avvicinando lentamente al pianeta.",
    "curiosita": [
     "Il cratere più grande, Stickney, è largo circa 9,7 km.",
     "Si avvicina a Marte di circa 1,8 metri ogni cento anni.",
@@ -1330,10 +1330,10 @@
      "tipo": "orbita"
     }
    ],
-   "descrizione": "Deimos è la luna più piccola di Marte. Ha una forma irregolare ed è coperta da uno strato spesso di polvere. Per questo sembra più liscia di Phobos.",
+   "descrizione": "Deimos è la luna più piccola di Marte. Ha una forma irregolare ed è coperta da uno strato spesso di polvere. Per questo sembra più liscia di Fobos.",
    "curiosita": [
     "Fa un giro attorno a Marte in circa 30 ore.",
-    "È circa la metà di Phobos e gira due volte e mezzo più lontano da Marte.",
+    "È circa la metà di Fobos e gira due volte e mezzo più lontano da Marte.",
     "Lo strato di polvere sulla superficie potrebbe essere profondo fino a 100 metri.",
     "Il suo nome in greco significa terrore."
    ],

@@ -83,6 +83,20 @@ textarea {
   font-family: inherit;
 }
 
+/* Titoli a righe bilanciate: mai una parola o un'emoji da sola sull'ultima
+   riga (fino alla 4.27.26 «🔤» di /bosco e «🌱» di /civica andavano a capo da
+   soli su telefono). Controllato da scripts/qa_pagine.js, regola a-capo-orfano. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Paragrafi: niente parola sola sull'ultima riga, dove il browser lo sa fare. */
+p {
+  text-wrap: pretty;
+}
+
 /* Riduzione del movimento, in un posto solo. Il blocco @media era in index.css,
    inglese.css e subject-quiz-theme.css ma NON in faq.css e info-pages.css:
    /faq e le 10 pagine info ignoravano la preferenza di sistema, e qualunque

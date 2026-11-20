@@ -12,8 +12,8 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 20px;
   padding-bottom: 96px;
   font-family: 'Nunito', 'Nunito Fallback', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -43,6 +43,7 @@ body {
 
 .card {
   width: min(720px, 100%);
+  margin-block: auto;
   background: var(--card);
   border-radius: 24px;
   padding: 28px 24px;
@@ -153,9 +154,18 @@ p {
    su il footer torna nel flusso e lo spazio riservato sparisce. Sotto i 900px
    resta fissa, dove la reperibilita' conta di piu'. */
 @media (min-width: 900px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  /* Nel flusso: in colonna sotto la card, da bordo a bordo (il body ha 20px
+     di padding). Fino alla 4.27.26 il body era un flex in riga e il footer
+     finiva accanto alla card. */
   .site-footer {
     position: static;
-    margin-top: auto;
+    align-self: stretch;
+    width: auto;
+    margin: 24px -20px 0;
   }
 }
 
@@ -164,9 +174,15 @@ p {
    in fondo alla pagina; Info resta a un tocco anche dal pulsante in alto
    nelle pagine di gioco. Fra 768 e 899px resta fissa come prima. */
 @media (max-width: 767px) {
+  body {
+    padding-bottom: 0;
+  }
+
   .site-footer {
     position: static;
-    margin-top: auto;
+    align-self: stretch;
+    width: auto;
+    margin: 24px -20px 0;
   }
 }
 

@@ -395,6 +395,27 @@ header {
   margin-top: 14px;
 }
 
+/* Nel gioco di Nina e nel Bosco i riquadri stanno in <main> o nel .wrapper,
+   senza limite
+   di larghezza: a 1440 erano larghi 1408px con righe da 224 caratteri, e nel
+   gioco di Nina si toccavano. */
+.wrapper > .seo-static,
+main > .seo-static,
+body > .seo-static {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+main > .seo-static + .seo-static,
+body > .seo-static + .seo-static {
+  margin-top: 14px;
+}
+
+/* Righe da leggere, non da inseguire: fino a 147 caratteri a 1440. */
+.seo-static :is(p, li) {
+  max-width: 75ch;
+}
+
 /* 14px fra l'ultimo box e il fondo della pagina */
 .seo-static:last-child,
 .related-subjects:last-child {
@@ -442,7 +463,6 @@ header {
   color: #35506b;
   font-size: 0.88rem;
   line-height: 1.4;
-  font-weight: 700;
 }
 
 .seo-static li + li {
@@ -459,6 +479,15 @@ header {
   line-height: 1.25;
   color: var(--accent-2);
   margin: 16px 0 6px;
+}
+
+/* Link nei testi per adulti e nelle risposte delle FAQ: fino alla 4.27.26
+   avevano il blu e il viola di sistema del browser. */
+.seo-static a,
+.faq-answer a {
+  color: var(--accent-2);
+  font-weight: 800;
+  text-underline-offset: 2px;
 }
 
 .seo-table-wrap {
@@ -539,11 +568,18 @@ header {
 .seo-faq-item,
 .seo-example-item {
   border-top: 1px solid rgba(var(--info-blue-rgb) / 0.16);
-  padding: 8px 0;
+  padding: 0;
 }
 
+.seo-faq-item[open],
+.seo-example-item[open] {
+  padding-bottom: 8px;
+}
+
+/* Tutta la riga si tocca: era alta 19px (WCAG 2.5.8 e dita dei bambini). */
 .seo-faq-item summary,
 .seo-example-item summary {
+  padding: 12px 0;
   cursor: pointer;
   font-weight: 800;
   font-size: 0.9rem;
@@ -595,8 +631,10 @@ header {
 }
 
 .related-subjects a {
-  display: inline-block;
-  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 14px;
   border-radius: 999px;
   background: rgba(var(--info-blue-rgb) / 0.1);
   color: var(--accent-2);
@@ -618,7 +656,7 @@ header {
 
 .class-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   margin: 12px 0 16px;
 }
@@ -902,7 +940,11 @@ html:has(#screenStart.active) {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  box-shadow: 0 6px 24px 6px rgba(44, 42, 40, 0.3);
+  /* Anello del colore della scheda: quando galleggia sopra una scheda
+     colorata (desktop bassi, 1366x768) il pulsante si stacca netto invece di
+     sembrare appoggiato sul testo; a riposo, sul fondo della scheda, non si
+     vede. */
+  box-shadow: 0 0 0 8px var(--card-bg, #fff), 0 8px 26px 10px rgba(44, 42, 40, 0.3);
   pointer-events: none;
 }
 
@@ -1716,7 +1758,7 @@ html[data-palette="okabe-ito"] .result-dot.ko {
 
 .lb-sub {
   text-align: center;
-  color: #888;
+  color: #5f6b7a;
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 16px;
@@ -1764,7 +1806,7 @@ html[data-palette="okabe-ito"] .result-dot.ko {
   padding: 8px 20px;
   font-size: 0.85rem;
   font-weight: 800;
-  color: #6b7684;
+  color: #56606c;
   cursor: pointer;
   margin: 16px auto 0;
   display: block;
@@ -2025,6 +2067,12 @@ html[data-motion="reduce"] .feedback.show {
   font-size: 1.08rem;
   margin: 14px 0 6px;
   color: var(--accent-1);
+}
+
+/* Paragrafi delle finestre (Il Progetto, Privacy): fino alla 4.27.26 a 0px
+   l'uno dall'altro. */
+.modal-body :is(p, ul, ol) + :is(p, ul, ol) {
+  margin-top: 10px;
 }
 
 .modal-body a {
@@ -2297,6 +2345,8 @@ html:not([data-palette="okabe-ito"]) body.subject-civica {
 html[data-palette="okabe-ito"] .icon-btn,
 html[data-palette="okabe-ito"] .seo-static h2,
 html[data-palette="okabe-ito"] .seo-static h3,
+html[data-palette="okabe-ito"] .seo-static a,
+html[data-palette="okabe-ito"] .faq-answer a,
 html[data-palette="okabe-ito"] .seo-faq-item summary,
 html[data-palette="okabe-ito"] .seo-example-item summary,
 html[data-palette="okabe-ito"] .related-subjects h2,
@@ -2544,6 +2594,7 @@ html:not([data-palette="okabe-ito"]) .ripassa-btn {
 }
 
 .subarea-btn {
+  min-height: 40px;
   padding: 0.35rem 0.8rem;
   border-radius: 1rem;
   border: 2px solid #bbb;
@@ -2579,7 +2630,7 @@ html:not([data-palette="okabe-ito"]) .subarea-btn.selected {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
-  z-index: 200;
+  z-index: 500;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -2609,9 +2660,9 @@ html:not([data-palette="okabe-ito"]) .subarea-btn.selected {
 }
 
 .progress-date {
-  color: #777;
+  color: #5f6b7a;
   font-size: 0.85rem;
-  margin-top: -0.25rem;
+  margin-top: 4px; /* era -0.25rem: la data saliva sul titolo */
 }
 
 .progress-modal-inner ul {
@@ -2640,6 +2691,51 @@ html:not([data-palette="okabe-ito"]) .subarea-btn.selected {
   font-weight: 600;
 }
 
+.progress-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.progress-modal-inner .th-corto {
+  display: none;
+}
+
+/* Telefono: a 360-390px la tabella «Ultime partite» usciva dal riquadro
+   (colonna «Errate» tagliata) e la data della Classifica restava a «20/11/2». */
+@media (max-width: 599px) {
+  .progress-modal-inner {
+    padding: 1.25rem 1rem;
+  }
+  .progress-modal-inner table {
+    font-size: 0.76rem;
+  }
+  .progress-modal-inner th,
+  .progress-modal-inner td {
+    padding: 0.25rem 0.3rem;
+  }
+  .progress-modal-inner .th-corto {
+    display: inline;
+  }
+  .progress-modal-inner .th-lungo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  body .lb-card {
+    padding: 22px 12px;
+  }
+  .lb-table th,
+  .lb-table td {
+    padding-inline: 5px;
+  }
+  .lb-table td:last-child {
+    white-space: nowrap;
+  }
+}
+
 .progress-actions {
   margin-top: 1.25rem;
   display: flex;
@@ -2649,6 +2745,7 @@ html:not([data-palette="okabe-ito"]) .subarea-btn.selected {
 
 .progress-print-btn,
 .progress-close-btn {
+  min-height: 44px;
   padding: 0.5rem 1.1rem;
   border-radius: 0.5rem;
   border: 2px solid #ccc;
@@ -2664,16 +2761,15 @@ html:not([data-palette="okabe-ito"]) .subarea-btn.selected {
 }
 
 .btn-progress {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: 12px 28px;
   background: #f0f4ff;
-  border: 2px solid #4361ee;
-  border-radius: 0.75rem;
+  border: 3px solid #4361ee;
+  border-radius: 50px;
   color: #2c44cc;
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: 'Fredoka One', 'Fredoka One Fallback', cursive;
+  font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.13);
   transition: background 0.15s;
 }
 

@@ -327,6 +327,7 @@ header{text-align:center;margin-bottom:48px;}
 .card-title{
   font-family:'Fredoka One','Fredoka One Fallback',cursive;
   font-size:2rem;color:white;
+  text-wrap:balance;
   text-shadow:2px 2px 0 rgba(0,0,0,.15);
   margin-bottom:6px;
   min-height:2.4em;
@@ -335,6 +336,7 @@ header{text-align:center;margin-bottom:48px;}
   justify-content:center;
 }
 .card-desc{
+  text-wrap:balance; /* niente <br> fissi: lasciavano parole sole a riga */
   font-size:.9rem;font-weight:700;
   color:rgba(255,255,255,.94);
   margin-bottom:14px;line-height:1.4;
@@ -449,7 +451,8 @@ footer{
 @keyframes modalIn{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
 .modal-close{position:absolute;top:12px;right:12px;z-index:2;background:#f5f5f5;border:none;border-radius:50%;width:48px;height:48px;font-size:1.2rem;cursor:pointer;font-weight:800;color:#777;}
 .modal-close:hover{background:#eee;color:#e74c3c;}
-.modal-title{font-family:'Fredoka One','Fredoka One Fallback',cursive;font-size:1.7rem;color:#2d2d2d;margin-bottom:4px;}
+/* padding-right: il titolo non passa sotto la ✕ (48px a 12px dal bordo) */
+.modal-title{font-family:'Fredoka One','Fredoka One Fallback',cursive;font-size:1.7rem;color:#2d2d2d;margin-bottom:4px;padding-right:44px;}
 .modal-body{color:#555;font-size:.93rem;line-height:1.7;}
 .modal-body h3{font-family:'Fredoka One','Fredoka One Fallback',cursive;font-size:1.1rem;color:var(--math-a);margin:16px 0 6px;}
 .modal-body p{margin-bottom:10px;}
@@ -485,6 +488,10 @@ footer{
   outline:4px solid #fff;
   outline-offset:4px;
   box-shadow:none;
+}
+/* Sul fondo crema della modalita' standard l'anello bianco non si vedeva. */
+html:not([data-palette="okabe-ito"]) body:not(.rewards-page) .subject-card:focus-visible{
+  outline-color:var(--ws-slate-black);
 }
 @media(max-width:640px){
   .subject-card{min-height:auto;}

@@ -1,5 +1,94 @@
 # Changelog Repo
 
+## 4.27.27 - 2026-11-21
+
+**Revisione completa: CSS di tutte le pagine in 9 modi, stati del quiz, testi, e controlli di pubblicazione rifatti.**
+
+### Fixed
+- Quiz, tutte le materie: «Cambia ambito», «Inizio» e la fine del tempo di
+  gioco portavano la pagina, e il focus, sul testo «Per genitori e
+  insegnanti» in fondo (`showScreen` cercava il primo `h2` della schermata,
+  che era quello di `.seo-static`). Ora la pagina torna in cima e il focus va
+  su «Scegli la classe».
+- Finestra «Progressi»: e' un dialogo vero (`role="dialog"`, `aria-modal`,
+  titolo collegato). Il focus entra su «Chiudi», Tab resta dentro, Esc chiude
+  e il focus torna al pulsante. La data non sale piu' sul titolo (margine
+  negativo). Su telefono la tabella «Ultime partite» sta nel riquadro:
+  intestazioni ✓ e ✕ al posto di «Esatte» ed «Errate» (la parola resta per i
+  lettori di schermo), classe come «3ª», contenitore scorrevole.
+- Classifica a 360-390px: la data restava a «20/11/2» in /inglese e
+  /problemi (`inglese.css` rimetteva 28px di padding). Ora entra intera.
+- Pannello Info a 360px: il contenuto arrivava al bordo destro (griglia senza
+  colonna esplicita, righe Palette e Animazioni senza a capo).
+- Home e /premi a 360px: il titolo «Ultimi aggiornamenti» finiva sotto la ✕.
+- /bosco: con il cancello o la pausa aperti il Tab arrivava ai controlli
+  coperti dal velo. Ora scena, pulsanti e scelte sono `inert` finche' il
+  cancello e' aperto. Su telefono e a 768px la scheda iniziale usciva dalla
+  scena.
+- /breakout su telefono: «Premi spazio...» nel canvas era alto 7-8px. Ora
+  almeno 15px a schermo, e su touch dice «Tocca lo schermo per lanciare» e
+  «Tocca «Riprendi» per continuare». Immagine del riquadro per adulti
+  ritagliata dalla scena di gioco (18 KB).
+- Titoli a righe bilanciate e paragrafi senza parola sola in fondo
+  (`text-wrap`): a 360-390px emoji e parole andavano a capo da sole in
+  /bosco, /civica, /scienze, /breakout, /guida-compiti, /per-genitori.
+- Pagine materia: link nei riquadri per adulti sottolineati e in colore
+  della materia, righe al massimo 75 caratteri, riquadri centrati a 940px,
+  domande frequenti con spazi regolari, collegamenti alle altre materie alti
+  44px, pulsante «Progressi» uguale a «Inizio», contrasto di date e
+  sottotitoli della Classifica, alone di «Inizia!» che non lascia vedere il
+  testo sotto.
+- /privacy e /cookie: testo piu' grande, righe piu' corte, titoli staccati.
+- /404: footer sotto la scheda (era accanto) a tutte le larghezze.
+- Gioco delle tabelline: titolo del caricamento staccato, focus visibile
+  sulla scena. Finestra «Il Progetto»: paragrafi staccati.
+- Home: descrizioni delle schede senza a capo forzati, focus visibile sulle
+  schede delle materie.
+- /inglese: tolte regole duplicate del footer e dei paragrafi (43 righe).
+
+### Changed
+- Testi rivisti con fatti controllati: storia (4ª e 5ª), italiano (nove
+  parti del discorso), geografia (mari), Sistema Solare (Fobos, asteroidi,
+  distanze), tabelline (video «dal 2 all'8»), offline, nome «La Scuola Amica»
+  nel footer di tutte le pagine, finestra «Il Progetto», `llms.txt`.
+
+### Added
+- `npm run test:e2e:qa`, nel job smoke al posto di `test:e2e:telefono`:
+  - `scripts/qa_regole_autotest.js`: una pagina con un difetto per regola;
+    se una regola diventa cieca il controllo fallisce.
+  - `scripts/qa_pagine.js`: tutte le pagine in 9 modi (telefono 360 e 390,
+    tablet 768 e 1024, desktop 1280 e 1440, Okabe-Ito 360 e 1280, zoom 200%),
+    con i `<details>` aperti e in fondo alla pagina. Regole: scroll
+    orizzontale, riquadri vuoti, testo attaccato, titoli e tabelle senza
+    stile, sovrapposizioni, elementi coperti, testo tagliato, bersagli sotto
+    24px, font estranei, a capo orfani, errori JavaScript, richieste esterne,
+    risorse mancanti.
+  - `scripts/qa_stati.js`: le 8 materie in 5 modi, con finestre (Info,
+    Privacy, Cookie, Versione, Il Progetto, Progressi, Classifica, vuote e
+    piene), partita completa, risposta giusta e sbagliata, bonus, risultato,
+    ripasso, ritorno alla schermata iniziale e tastiera nei Progressi; piu'
+    le finestre di home e /premi.
+- Job `perf-locale` (non richiesto): Lighthouse sulle prestazioni di
+  `export/` del branch, senza upload (`npm run perf:locale`,
+  `lighthouserc.locale.json`).
+
+### CI
+- Job `prepublish`: esegue `npm run verify:dati` (gli stessi controlli di
+  `verify`, senza la griglia statica che gira in smoke) ed export con
+  controllo del canale. Prima mancavano revisione delle domande, leggibilita',
+  conteggi, file per classe, CSS critico, pagine delle tabelline, titoli ed
+  export.
+- Job `smoke`: un passo fallito non ferma piu' i successivi
+  (`if: !cancelled()`), si vedono tutti gli errori in un giro.
+- Harness E2E: fallisce su errori JavaScript o di console e su punteggi
+  sbagliati (prima li stampava soltanto).
+- ESLint: la regola contro `innerHTML` non scattava mai (`object: 'Element'`);
+  ora vale per ogni oggetto, con `outerHTML`, `insertAdjacentHTML`,
+  `no-eval`, `no-implied-eval`, `no-new-func`.
+- `prepublish-check.sh`: la versione deve coincidere in `app-version.js`,
+  `package.json`, `package-lock.json` (due punti), `llms.txt` (due righe),
+  `CHANGELOG.md`, `json/changelog.json` e /accessibilita.
+
 ## 4.27.26 - 2026-11-20
 
 **Controllo su telefono di tutte le pagine: titoli, tabelle e spazi.**

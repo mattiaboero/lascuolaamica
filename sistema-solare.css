@@ -682,6 +682,11 @@ body:not(.ss-immersivo) .ss-solo-immersivo {
   gap: 10px;
 }
 
+/* A 768 il pulsante tondo si schiacciava a 48px e «Menu» usciva dal bordo. */
+.ss-hud-alto > .ss-hud-btn {
+  flex-shrink: 0;
+}
+
 .ss-hud-destra {
   display: flex;
   gap: 8px;

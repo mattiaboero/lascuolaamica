@@ -86,7 +86,7 @@ __sa.subjectConfig = {
     { key: 'animali', label: 'Animali', icon: '🐾', title: 'Animali', subtitle: 'Lessico e comprensione' },
     { key: 'casa', label: 'Casa', icon: '🏠', title: 'Casa', subtitle: 'Stanze e oggetti' },
     { key: 'cibo', label: 'Cibo', icon: '🍎', title: 'Cibo', subtitle: 'Parole di ogni giorno' },
-    { key: 'colori', label: 'Colori', icon: '🎨', title: 'Colori', subtitle: 'Vocabulary base' },
+    { key: 'colori', label: 'Colori', icon: '🎨', title: 'Colori', subtitle: 'Lessico di base' },
     { key: 'corpo_umano', label: 'Corpo umano', icon: '🧍', title: 'Corpo umano', subtitle: 'Parti del corpo' },
     { key: 'domande', label: 'Domande', icon: '❓', title: 'Domande', subtitle: 'Question forms' },
     { key: 'famiglia', label: 'Famiglia', icon: '👨‍👩‍👧', title: 'Famiglia', subtitle: 'Parenti e relazioni' },

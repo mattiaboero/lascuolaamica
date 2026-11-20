@@ -1,6 +1,6 @@
 {
   "name": "lascuolaamica",
-  "version": "4.27.26",
+  "version": "4.27.27",
   "private": true,
   "description": "Piattaforma quiz primaria italiana",
   "scripts": {
@@ -24,8 +24,10 @@
     "lint:js": "eslint *.js js/ scripts/",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "verify": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:gioco-tabelline && npm run check:balance && npm run check:counts && npm run check:json-classi && npm run check:css-critico && npm run check:indexnow && npm run check:tabelline-pagine && npm run check:titoli && npm run check:static-grids && npm run check:percorso-sicuro && npm run check:prepublish && npm run export && npm run check:export-canale",
+    "verify": "npm run verify:dati && npm run check:static-grids && npm run check:prepublish && npm run export && npm run check:export-canale",
+    "verify:dati": "npm run check:materialized && npm run lint && npm run audit:json && npm run lint:content && npm run check:math && npm run check:plausibility && npm run check:revisione && npm run check:leggibilita && npm run check:bosco && npm run check:sistema-solare && npm run check:gioco-tabelline && npm run check:balance && npm run check:counts && npm run check:json-classi && npm run check:css-critico && npm run check:indexnow && npm run check:tabelline-pagine && npm run check:titoli && npm run check:percorso-sicuro",
     "lighthouse": "lhci autorun",
+    "perf:locale": "lhci collect --config=lighthouserc.locale.json && lhci assert --config=lighthouserc.locale.json",
     "test:e2e:perfect": "bash scripts/run_e2e.sh perfect",
     "test:e2e:full": "bash scripts/run_e2e.sh perfect,mixed,worst",
     "test:e2e:ripassa": "bash scripts/run_e2e.sh ripassa",
@@ -43,7 +45,7 @@
     "test:e2e:versioni": "node scripts/sw_versioni_smoke.js",
     "test:e2e:contrasti": "node scripts/check_contrasti.js",
     "test:e2e:inizia": "node scripts/inizia_smoke.js",
-    "test:e2e:telefono": "node scripts/telefono_smoke.js",
+    "test:e2e:qa": "node scripts/qa_regole_autotest.js && node scripts/qa_pagine.js && node scripts/qa_stati.js",
     "test:e2e:focus": "node scripts/modal_focus_smoke.js",
     "test:e2e:json-classi": "node scripts/json_classi_smoke.js",
     "test:e2e:css-critico": "node scripts/css_critico_smoke.js",

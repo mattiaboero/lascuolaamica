@@ -37,10 +37,12 @@
 <link rel="preload" href="assets/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/nunito-v32-latin-900.woff2" as="font" type="font/woff2" crossorigin>
-<!-- CSS-CRITICO:INIZIO sorgenti=23a18e1d8801eb01 -->
+<!-- CSS-CRITICO:INIZIO sorgenti=5ed42594652a046b -->
 <style>:root { --ws-cartridge-buff: #fbf4e6; --ws-olive-buff: #f1e6cf; --ws-ivory: #fffdf7; --ws-cinnamon-border: #e7d8be; --ws-slate-black: #2c2a28; --ws-hays-russet: #6e6357; --ws-verdigris: #2f8e86; --ws-hortense-blue: #3c6e9f; --ws-terracotta: #dd6347; --ws-terracotta-ink: #c8553d; --ws-cossack-green: #2e8455; --ws-jasper-red: #c4452f; --ws-yellow-ocher: #c8881a; --ws-maize: #f2c14e; --info-blue: #2d6cdf; --info-blue-rgb: 45 108 223; --subj-math-a: #6e57a6; --subj-math-b: #7a61b8; --subj-math-dec: #f2c14e; --subj-ita-a: #b33c4d; --subj-ita-b: #ca374a; --subj-ita-dec: #e0a526; --subj-geo-a: #327249; --subj-geo-b: #417b56; --subj-geo-dec: #3c6e9f; --subj-sto-a: #885d3b; --subj-sto-b: #8f6841; --subj-sto-dec: #c4452f; --subj-sci-a: #23716c; --subj-sci-b: #377a73; --subj-sci-dec: #f2c14e; --subj-eng-a: #2c6a9f; --subj-eng-b: #3774a5; --subj-eng-dec: #dd6347; --subj-prob-a: #a34d20; --subj-prob-b: #b05615; --subj-prob-dec: #2c8c86; --subj-civ-a: #1d7359; --subj-civ-b: #317c63; --subj-civ-dec: #c8881a; --subj-breakout-a: #993377; --subj-breakout-b: #b03b89; --subj-breakout-dec: #2f8e86; --subj-tabelline-a: #96631a; --subj-tabelline-b: #96661a; --subj-tabelline-dec: #2e6fa6; --subj-tabelline-text: #96631a; --subj-bosco-a: #55742f; --subj-bosco-b: #5c7a2e; --subj-bosco-dec: #dd6347; --subj-bosco-text: #55742f; --subj-breakout-text: #993377; --radius-md: 18px; --radius-lg: 28px; --shadow-card: 0 14px 34px rgba(44 42 40 / 0.16); }
 *, ::before, ::after { margin: 0px; padding: 0px; box-sizing: border-box; }
 button, input, select, textarea { font-family: inherit; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
 @media (prefers-reduced-motion: reduce) {
 *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
@@ -88,13 +90,15 @@ header { text-align: center; margin-bottom: 14px; animation: 0.7s cubic-bezier(0
 .class-selector-label, .levels-title { font-family: "Fredoka One", "Fredoka One Fallback", cursive; color: var(--accent-2); font-size: 1rem; margin: 4px 0px 12px; text-align: center; }
 .intro-note { background: linear-gradient(135deg, rgb(255, 255, 255), rgb(238, 246, 255)); border: 2px dashed rgba(42, 157, 143, 0.45); border-radius: 16px; padding: 12px 14px; color: rgb(60, 86, 111); font-weight: 800; line-height: 1.5; margin: 0px 0px 14px; font-size: 0.92rem; text-align: center; box-shadow: rgba(0, 0, 0, 0.06) 0px 6px 14px; }
 .seo-static { width: 100%; margin: 0px; padding: 14px 16px; border-radius: 16px; border: 2px solid rgba(var(--info-blue-rgb) / 0.2); background: linear-gradient(140deg, rgb(255, 255, 255), rgb(245, 251, 255)); box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 12px; position: relative; }
+.seo-static :is(p, li) { max-width: 75ch; }
 .seo-static:last-child, .related-subjects:last-child { margin-bottom: 14px; }
 .seo-static::before { content: "Per genitori e insegnanti"; display: inline-block; margin-bottom: 6px; padding: 3px 10px; border-radius: 999px; background: rgba(var(--info-blue-rgb) / 0.12); color: var(--info-blue); font-weight: 900; font-size: 0.82rem; letter-spacing: 0.2px; }
 .seo-static h2 { font-family: "Fredoka One", "Fredoka One Fallback", cursive; font-size: 1rem; line-height: 1.25; color: var(--accent-2); margin-bottom: 8px; }
 .seo-static p { font-size: 0.9rem; line-height: 1.45; color: rgb(53, 80, 107); margin: 0px 0px 8px; }
-.seo-static ul { margin: 0px 0px 8px 18px; color: rgb(53, 80, 107); font-size: 0.88rem; line-height: 1.4; font-weight: 700; }
+.seo-static ul { margin: 0px 0px 8px 18px; color: rgb(53, 80, 107); font-size: 0.88rem; line-height: 1.4; }
 .seo-static li + li { margin-top: 4px; }
 .seo-static h3 { font-family: "Fredoka One", "Fredoka One Fallback", cursive; font-size: 0.95rem; line-height: 1.25; color: var(--accent-2); margin: 16px 0px 6px; }
+.seo-static a, .faq-answer a { color: var(--accent-2); font-weight: 800; text-underline-offset: 2px; }
 .seo-table-wrap { overflow-x: auto; margin: 0px 0px 10px; }
 .seo-static table { width: 100%; border-collapse: collapse; margin: 0px 0px 10px; color: rgb(53, 80, 107); font-size: 0.85rem; line-height: 1.35; font-variant-numeric: tabular-nums; }
 .seo-table-wrap table { margin: 0px; }
@@ -103,18 +107,18 @@ header { text-align: center; margin-bottom: 14px; animation: 0.7s cubic-bezier(0
 .seo-static th { background: rgba(var(--info-blue-rgb) / 0.08); font-weight: 900; }
 .seo-faq::before { content: "Domande frequenti"; }
 .seo-periodi::before { content: "Periodi storici"; }
-.seo-faq-item, .seo-example-item { border-top: 1px solid rgba(var(--info-blue-rgb) / 0.16); padding: 8px 0px; }
-.seo-faq-item summary, .seo-example-item summary { cursor: pointer; font-weight: 800; font-size: 0.9rem; color: var(--accent-2); line-height: 1.3; }
+.seo-faq-item, .seo-example-item { border-top: 1px solid rgba(var(--info-blue-rgb) / 0.16); padding: 0px; }
+.seo-faq-item summary, .seo-example-item summary { padding: 12px 0px; cursor: pointer; font-weight: 800; font-size: 0.9rem; color: var(--accent-2); line-height: 1.3; }
 .seo-faq-item summary:hover, .seo-example-item summary:hover { text-decoration: underline; }
 .seo-faq-item p, .seo-example-item p { margin: 6px 0px 0px; font-size: 0.88rem; line-height: 1.45; color: rgb(53, 80, 107); }
 .related-subjects { width: 100%; margin: 0px; padding: 14px 16px; border-radius: 16px; border: 2px solid rgba(var(--info-blue-rgb) / 0.18); background: linear-gradient(140deg, rgb(255, 255, 255), rgb(247, 251, 255)); box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 12px; }
 .related-subjects h2 { font-family: "Fredoka One", "Fredoka One Fallback", cursive; font-size: 1rem; color: var(--accent-2); margin: 0px 0px 8px; }
 .related-subjects ul { list-style: none; margin: 0px; padding: 0px; display: flex; flex-wrap: wrap; gap: 8px; }
 .related-subjects li { margin: 0px; }
-.related-subjects a { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(var(--info-blue-rgb) / 0.1); color: var(--accent-2); font-size: 0.88rem; font-weight: 800; text-decoration: none; transition: background 0.15s; }
+.related-subjects a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 14px; border-radius: 999px; background: rgba(var(--info-blue-rgb) / 0.1); color: var(--accent-2); font-size: 0.88rem; font-weight: 800; text-decoration: none; transition: background 0.15s; }
 .related-subjects a:hover, .related-subjects a:focus { background: rgba(var(--info-blue-rgb) / 0.2); text-decoration: underline; }
 .class-selector-label { margin-top: 4px; }
-.class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 10px; margin: 12px 0px 16px; }
+.class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin: 12px 0px 16px; }
 .class-btn { background: linear-gradient(145deg, rgb(255, 255, 255), rgb(244, 251, 255)); border: 3px solid rgba(255, 255, 255, 0.92); border-radius: 16px; padding: 12px 10px; font-weight: 900; color: rgb(70, 88, 106); text-align: center; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.14) 0px 6px 0px, rgba(0, 0, 0, 0.1) 0px 12px 18px; transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; min-height: 44px; position: relative; }
 .class-btn.selected::after { content: "✓" / ""; position: absolute; top: 4px; right: 8px; font-size: 1.1rem; font-weight: 900; line-height: 1; }
 .class-btn:nth-child(1) { background: linear-gradient(145deg, rgb(223, 244, 255), rgb(184, 229, 255)); color: rgb(23, 73, 106); }
@@ -143,7 +147,7 @@ header { text-align: center; margin-bottom: 14px; animation: 0.7s cubic-bezier(0
 .start-btn:active { transform: translateY(3px); box-shadow: rgb(31, 109, 99) 0px 3px 0px; }
 #screenStart [data-action="start-game"] { position: sticky; bottom: 12px; z-index: 20; will-change: transform; margin-bottom: 32px; }
 html:has(#screenStart.active) { scroll-padding-bottom: 79px; }
-#screenStart [data-action="start-game"]::before { content: ""; position: absolute; inset: 0px; z-index: -1; border-radius: inherit; box-shadow: rgba(44, 42, 40, 0.3) 0px 6px 24px 6px; pointer-events: none; }
+#screenStart [data-action="start-game"]::before { content: ""; position: absolute; inset: 0px; z-index: -1; border-radius: inherit; box-shadow: 0 0 0 8px var(--card-bg, #fff), 0 8px 26px 10px rgba(44, 42, 40, 0.3); pointer-events: none; }
 @media (min-width: 768px) and (max-width: 899px) {
 #screenStart [data-action="start-game"] { bottom: 77px; }
 html:has(#screenStart.active) { scroll-padding-bottom: 144px; }
@@ -205,8 +209,8 @@ html:has(#screenStart.active) { scroll-padding-bottom: 144px; }
 .btn-replay:active, .btn-home:active { transform: translateY(2px); box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 0px; }
 .lb-card { background: var(--card-bg); border-radius: 28px; padding: 26px; box-shadow: rgba(0, 0, 0, 0.14) 0px 9px 26px; width: 100%; }
 .lb-title { font-family: "Fredoka One", "Fredoka One Fallback", cursive; font-size: 2rem; text-align: center; margin-bottom: 6px; }
-.lb-sub { text-align: center; color: rgb(136, 136, 136); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; }
-.btn-clear { background: none; border: 2px solid rgb(238, 238, 238); border-radius: 50px; padding: 8px 20px; font-size: 0.85rem; font-weight: 800; color: rgb(107, 118, 132); cursor: pointer; margin: 16px auto 0px; display: block; }
+.lb-sub { text-align: center; color: rgb(95, 107, 122); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; }
+.btn-clear { background: none; border: 2px solid rgb(238, 238, 238); border-radius: 50px; padding: 8px 20px; font-size: 0.85rem; font-weight: 800; color: rgb(86, 96, 108); cursor: pointer; margin: 16px auto 0px; display: block; }
 .btn-clear:hover { color: rgb(230, 57, 70); border-color: rgb(230, 57, 70); }
 .feedback { position: fixed; top: 16vh; left: 50%; transform: translate(-50%, 0px) scale(0.9); opacity: 0; font-family: "Fredoka One", "Fredoka One Fallback", cursive; font-size: clamp(2rem, 9vw, 3.5rem); line-height: 1.15; z-index: 100; pointer-events: none; text-align: center; width: max-content; max-width: calc(-32px + 100vw); }
 @keyframes fbPop {
@@ -298,6 +302,9 @@ html:not([data-palette="okabe-ito"]) .start-btn:active { box-shadow: 0 3px 0 col
 html:not([data-palette="okabe-ito"]) .btn-replay { box-shadow: 0 5px 0 color-mix(in srgb, var(--accent-2) 65%, #000); }
 .ripassa-btn:hover:not(:disabled) { background: rgb(254, 243, 199); }
 .subarea-btn:hover:not(:disabled) { border-color: rgb(136, 136, 136); }
+@media (max-width: 599px) {
+body .lb-card { padding: 22px 12px; }
+}
 @media (min-width: 900px) {
 .site-footer { position: static; margin-top: auto; }
 .wrapper { padding-bottom: 24px; }
@@ -352,6 +359,9 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0px; }
 @media (max-width: 899px) {
 .footer-social { display: none; }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+html { scroll-padding-bottom: 180px; }
 }
 @font-face { font-family: "Fredoka One"; src: url("assets/fonts/fredoka-v17-latin-700.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: Nunito; src: url("assets/fonts/nunito-v32-latin-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -463,7 +473,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
       "name": "Quali argomenti di storia si possono ripassare?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Linea del tempo, fonti storiche, preistoria, età antica, medioevo, età moderna e contemporanea, e relazioni tra passato e presente."
+        "text": "Linea del tempo, fonti storiche, preistoria, civiltà antiche fino ai Romani e relazioni tra passato e presente."
       }
     },
     {
@@ -479,7 +489,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
       "name": "Quali periodi storici si studiano in 4ª e 5ª?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In classe 4ª si studiano preistoria, Mesopotamia, Egizi, Greci e Romani. In classe 5ª si affrontano Medioevo, Età moderna (scoperte geografiche, stampa) e Età contemporanea (Rivoluzione industriale, Novecento)."
+        "text": "In classe 4ª si studiano le civiltà dei fiumi e del mare, come Mesopotamia, Egizi, Fenici ed Ebrei. In classe 5ª si studiano Greci, Etruschi e Romani, fino alla fine dell'Impero romano d'Occidente."
       }
     },
     {
@@ -621,7 +631,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
               <ul>
                 <li>Linea del tempo, successione e contemporaneità.</li>
                 <li>Fonti storiche: scritte, orali, materiali e confronto tra fonti.</li>
-                <li>Periodizzazione: preistoria, età antica, medioevo, età moderna e contemporanea.</li>
+                <li>Periodizzazione: preistoria, civiltà dei fiumi e del mare, Greci, Etruschi e Romani.</li>
                 <li>Relazioni tra passato e presente nella vita quotidiana.</li>
               </ul>
               <p>I quiz di storia scuola primaria ruotano tra le sessioni: ogni partita propone 10 domande con 4 risposte possibili per allenare comprensione, linguaggio specifico e ragionamento storico.</p>
@@ -639,7 +649,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
       </details>
       <details class="seo-faq-item">
         <summary>Quali argomenti di storia si possono ripassare?</summary>
-        <p>Linea del tempo, fonti storiche, preistoria, età antica, medioevo, età moderna e contemporanea, e relazioni tra passato e presente.</p>
+        <p>Linea del tempo, fonti storiche, preistoria, civiltà antiche fino ai Romani e relazioni tra passato e presente.</p>
       </details>
       <details class="seo-faq-item">
         <summary>Il quiz di storia è gratis?</summary>
@@ -647,7 +657,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
       </details>
       <details class="seo-faq-item">
         <summary>Quali periodi storici si studiano in 4ª e 5ª?</summary>
-        <p>In classe 4ª si studiano preistoria, Mesopotamia, Egizi, Greci e Romani. In classe 5ª si affrontano Medioevo, Età moderna (scoperte geografiche, stampa) e Età contemporanea (Rivoluzione industriale, Novecento).</p>
+        <p>In classe 4ª si studiano le civiltà dei fiumi e del mare, come Mesopotamia, Egizi, Fenici ed Ebrei. In classe 5ª si studiano Greci, Etruschi e Romani, fino alla fine dell'Impero romano d'Occidente.</p>
       </details>
       <details class="seo-faq-item">
         <summary>Cosa sono le fonti storiche?</summary>
@@ -661,7 +671,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
 
     <section class="seo-static seo-periodi" aria-label="Periodi storici e fonti per la scuola primaria">
       <h2>Periodi storici per la scuola primaria</h2>
-      <p>I quiz di storia coprono tutti i principali <strong>periodi storici della scuola primaria</strong>, dalla preistoria all'età contemporanea, con domande su civiltà, fonti e metodo storico. La difficoltà cresce dalla classe 2ª alla 5ª.</p>
+      <p>I quiz di storia coprono tutti i principali <strong>periodi storici della scuola primaria</strong>, dalla preistoria alla fine dell'Impero romano, con domande su civiltà, fonti e metodo storico. La difficoltà cresce dalla classe 2ª alla 5ª.</p>
       <div class="seo-table-wrap">
         <table>
           <caption>Principali periodi storici studiati alla scuola primaria</caption>
@@ -674,12 +684,10 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
             </tr>
           </thead>
           <tbody>
-            <tr><td>Preistoria</td><td>3 milioni a.C.</td><td>3000 a.C.</td><td>Strumenti di pietra, agricoltura, scrittura cuneiforme</td></tr>
+            <tr><td>Preistoria</td><td>3 milioni a.C.</td><td>3000 a.C.</td><td>Strumenti di pietra, fuoco, agricoltura e allevamento</td></tr>
             <tr><td>Egizi</td><td>3000 a.C.</td><td>30 a.C.</td><td>Piramidi, faraoni, scrittura geroglifica, Nilo</td></tr>
             <tr><td>Greci</td><td>2000 a.C.</td><td>146 a.C.</td><td>Polis, filosofia, democrazia, Olimpiadi</td></tr>
             <tr><td>Romani</td><td>753 a.C.</td><td>476 d.C.</td><td>Impero, diritto, latino, ingegneria</td></tr>
-            <tr><td>Medioevo</td><td>476 d.C.</td><td>1492</td><td>Feudalesimo, cavalieri, castelli, Chiese</td></tr>
-            <tr><td>Età moderna</td><td>1492</td><td>1815</td><td>Scoperte geografiche, stampa, Rinascimento</td></tr>
           </tbody>
         </table>
       </div>
@@ -731,7 +739,7 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
         <button type="button" class="bonus-btn medium" data-action="bonus-pick" data-bonus="medium">Media · x10</button>
         <button type="button" class="bonus-btn hard" data-action="bonus-pick" data-bonus="hard">Difficile · x25</button>
       </div>
-      <button type="button" class="skip-btn" data-action="skip-bonus">Tieni il punteggio e salta bonus</button>
+      <button type="button" class="skip-btn" data-action="skip-bonus">Tieni il punteggio e salta il bonus</button>
       <p class="bonus-note">Se sbagli il bonus, il punteggio resta invariato.</p>
     </div>
   </div>
@@ -792,8 +800,8 @@ html:not([data-palette="okabe-ito"]) .area-btn .a-sub, html:not([data-palette="o
   <div class="footer-social">
     <h2 class="footer-link footer-social-title" id="footerSocialTitle">Per genitori e insegnanti</h2>
     <ul class="footer-social-list" aria-labelledby="footerSocialTitle">
-      <li><a class="footer-link footer-social-link" href="https://www.instagram.com/lascuolaamica/" target="_blank" rel="noopener noreferrer me"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span class="sr-only">La scuola amica su Instagram (si apre in una nuova scheda)</span></a></li>
-      <li><a class="footer-link footer-social-link" href="https://www.facebook.com/lascuolaamica/" target="_blank" rel="noopener noreferrer me"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg><span class="sr-only">La scuola amica su Facebook (si apre in una nuova scheda)</span></a></li>
+      <li><a class="footer-link footer-social-link" href="https://www.instagram.com/lascuolaamica/" target="_blank" rel="noopener noreferrer me"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span class="sr-only">La Scuola Amica su Instagram (si apre in una nuova scheda)</span></a></li>
+      <li><a class="footer-link footer-social-link" href="https://www.facebook.com/lascuolaamica/" target="_blank" rel="noopener noreferrer me"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg><span class="sr-only">La Scuola Amica su Facebook (si apre in una nuova scheda)</span></a></li>
     </ul>
   </div>
 </footer>

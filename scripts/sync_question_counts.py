@@ -103,8 +103,9 @@ def sostituzioni(attive: dict[str, int]) -> list[tuple[Path, str, str]]:
                        rf'\g<1>{attive[materia] // 100 * 100}\g<2>'))
 
     # Documentazione e schede per gli assistenti AI.
-    lavori.append((ROOT / 'llms.txt', r'Domande totali: [\d.]+ \([^)]*verificate[^)]*\)',
-                   f'Domande totali: {_it(totale)} (solo quelle attive, verificate a settembre 2026)'))
+    lavori.append((ROOT / 'llms.txt', r'Domande totali: [\d.]+ \([^)]*revisori[^)]*\)',
+                   f'Domande totali: {_it(totale)} (solo quelle attive, ognuna riletta da due revisori indipendenti; '
+                   'revisione di tutte le materie chiusa il 9 ottobre 2026)'))
     lavori.append((ROOT / 'README.md', r'badge/domande-[\d.]+-orange', f'badge/domande-{_it(totale)}-orange'))
     lavori.append((ROOT / 'README.md', r'[\d.]+ domande, più due giochi', f'{_it(totale)} domande, più due giochi'))
     lavori.append((ROOT / 'README.md', r'\*\*[\d.]+ domande\*\* su 8 materie', f'**{_it(totale)} domande** su 8 materie'))

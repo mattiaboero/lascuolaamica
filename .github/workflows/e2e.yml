@@ -12,6 +12,27 @@ on:
 permissions: {}
 
 jobs:
+  # Prestazioni del branch, misurate su export/ in locale e senza upload
+  # (npm run lighthouse misura la produzione e carica i report). Non e' un
+  # check richiesto: il runner condiviso ha tempi variabili e WebGL software.
+  # Un rosso qui va guardato prima del merge.
+  perf-locale:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Export per Cloudflare
+        run: npm run export
+      - name: Lighthouse su export/ (prestazioni, nessun upload)
+        run: npm run perf:locale
+
   smoke:
     # PR + push: solo mode perfect (smoke veloce)
     if: github.event_name != 'schedule'
@@ -46,49 +67,64 @@ jobs:
         run: |
           python3 -m http.server 4173 &
           sleep 2
+      # Ogni controllo gira anche se uno prima e' fallito (!cancelled()): un
+      # difetto non ne nasconde altri, e il job resta rosso.
       - name: Markup statico di classi e ambiti uguale a quello del motore
+        if: ${{ !cancelled() }}
         run: npm run check:static-grids
 
       - name: E2E smoke (perfect, 8 subjects)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:perfect
 
       - name: E2E ripasso (mixed + sessione di ripasso)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:ripassa
         env:
           E2E_SUBJECTS: matematica inglese
 
       - name: E2E uscita dal gioco (timer di avanzamento annullato)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:interrupt
         env:
           E2E_SUBJECTS: matematica inglese
 
       - name: E2E dialoghi (focus di ritorno e coda)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:dialogs
         env:
           E2E_SUBJECTS: matematica inglese
 
       - name: E2E sottoaree (nessun bottone senza domande nel pool)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:subareas
 
       - name: E2E tabelline (pagina info, con e senza JS)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:tabelline
 
       - name: E2E sintesi vocale (solo voci installate sul dispositivo)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:voci
 
       - name: E2E timer di gioco (facoltativo, orologio simulato)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:timer
 
       - name: E2E gioco delle tabelline (menu, partita, timer, touch)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:gioco-tabelline
 
       - name: E2E quiz su smartphone (risposte e Avanti nella finestra)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:viewport
 
       - name: E2E home (materie in cima, nav, nessuna comparsa)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:home
 
       - name: E2E CLS pagine materia (rete e CPU lente)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:cls
 
       # Dettaglio degli spostamenti (pagina, valore, sorgenti, istante) anche
@@ -103,40 +139,52 @@ jobs:
           retention-days: 14
 
       - name: E2E aggiornamento silenzioso (niente modale, niente ricarica in partita)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:sw
 
       - name: E2E versioni allineate fra HTML e JS dopo un rilascio
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:versioni
 
       - name: E2E focus alla chiusura dei modali con Esc
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:focus
 
       - name: E2E domande per classe (rete lenta, cambio classe, offline)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:json-classi
 
       - name: E2E CSS critico delle pagine materia (uguale ai fogli completi)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:css-critico
 
       - name: Trusted Types (policy che accettano solo /sw.js e /app-version.js)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:trusted-types
 
       - name: Annunci per screen reader (2 regioni, esito con spiegazione, trofeo dopo)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:annunci
 
       - name: Accessibilita' (axe WCAG 2.2 AA, due temi; H1 senza emoji)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:a11y
 
       - name: E2E classe 1ª (matematica, domande e bonus solo di 1ª)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:classe1
 
       - name: Contrasto WCAG 2.2 AA di ogni testo (due palette, due larghezze)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:contrasti
 
       - name: Inizia! sempre in vista e mai sopra il focus (pagine materia)
+        if: ${{ !cancelled() }}
         run: npm run test:e2e:inizia
 
-      - name: Tutte le pagine su telefono (scroll orizzontale, riquadri vuoti, testo attaccato)
-        run: npm run test:e2e:telefono
+      - name: Layout di tutte le pagine e degli stati del quiz (9 modi, regole con autotest)
+        if: ${{ !cancelled() }}
+        run: npm run test:e2e:qa
 
   full:
     # Daily schedule: perfect + mixed + worst

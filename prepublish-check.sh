@@ -90,33 +90,44 @@ for file in "${HTML_FILES[@]}"; do
 done
 
 check_version_alignment() {
-  if [[ ! -f "app-version.js" || ! -f "llms.txt" ]]; then
-    echo "[ERROR] missing app-version.js and/or llms.txt"
-    status=1
-    return
-  fi
-
-  local app_version llms_version
-  app_version=$(sed -nE "s/.*APP_VERSION = '([^']+)'.*/\\1/p" app-version.js | head -n1)
-  llms_version=$(sed -nE "s/^- Versione corrente: ([0-9]+(\\.[0-9]+)*)\\.?$/\\1/p" llms.txt | head -n1)
-
+  # Ogni posto in cui compare la versione. Fino alla 4.27.26 si confrontavano
+  # solo app-version.js e una riga di llms.txt: package.json, package-lock.json,
+  # changelog e la pagina accessibilita' potevano restare indietro.
+  local app_version
+  app_version=$(sed -nE "s/.*APP_VERSION = '([^']+)'.*/\\1/p" app-version.js 2>/dev/null | head -n1)
   if [[ -z "$app_version" ]]; then
     echo "[ERROR] app-version.js: unable to parse APP_VERSION"
     status=1
     return
   fi
 
-  if [[ -z "$llms_version" ]]; then
-    echo "[ERROR] llms.txt: unable to parse 'Versione corrente'"
-    status=1
-    return
+  local mismatch=0 file found
+  local -a checks=(
+    "package.json|$(node -p "require('./package.json').version" 2>/dev/null)"
+    "package-lock.json (version)|$(node -p "require('./package-lock.json').version" 2>/dev/null)"
+    "package-lock.json (packages[''])|$(node -p "require('./package-lock.json').packages[''].version" 2>/dev/null)"
+    "llms.txt (- Versione corrente)|$(sed -nE "s/^- Versione corrente: ([0-9]+(\\.[0-9]+)*)\\.?$/\\1/p" llms.txt | head -n1)"
+    "llms.txt (> Versione corrente)|$(sed -nE "s/^> Versione corrente: ([0-9]+(\\.[0-9]+)*)\\.?$/\\1/p" llms.txt | head -n1)"
+    "CHANGELOG.md (prima sezione)|$(sed -nE "s/^## ([0-9]+\\.[0-9]+\\.[0-9]+).*/\\1/p" CHANGELOG.md | head -n1)"
+    "accessibilita.html (data-app-version)|$(sed -nE "s/.*<span data-app-version>([^<]+)<.*/\\1/p" accessibilita.html | head -n1)"
+  )
+  for entry in "${checks[@]}"; do
+    file="${entry%%|*}"
+    found="${entry#*|}"
+    if [[ "$found" != "$app_version" ]]; then
+      echo "[ERROR] Version mismatch: app-version.js=$app_version $file=${found:-<assente>}"
+      mismatch=1
+    fi
+  done
+  # La prima voce del popup «Ultimi aggiornamenti» cita la versione corrente.
+  if ! node -e "const c=require('./json/changelog.json');process.exit(String(c[0]&&c[0].date).includes(process.argv[1])?0:1)" "$app_version"; then
+    echo "[ERROR] Version mismatch: json/changelog.json, la prima voce non cita $app_version"
+    mismatch=1
   fi
-
-  if [[ "$app_version" != "$llms_version" ]]; then
-    echo "[ERROR] Version mismatch: app-version.js=$app_version llms.txt=$llms_version"
+  if (( mismatch )); then
     status=1
   else
-    echo "[OK] Version alignment: app-version.js and llms.txt are both $app_version"
+    echo "[OK] Version alignment: $app_version in app-version.js, package.json, package-lock.json, llms.txt, CHANGELOG.md, json/changelog.json, accessibilita.html"
   fi
 }
 

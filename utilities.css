@@ -169,6 +169,15 @@ html[data-palette="okabe-ito"] .footer-support-cta .support-tag {
   }
 }
 
+/* Fra 768 e 899px il footer e' una barra fissa alta fino a ~170px: il focus
+   portato in vista con Tab finiva sotto (WCAG 2.4.11, fino a 14 elementi per
+   pagina). Lo scorrimento lascia quello spazio. */
+@media (min-width: 768px) and (max-width: 899px) {
+  html {
+    scroll-padding-bottom: 180px;
+  }
+}
+
 /* Sotto i 768px il footer sta in fondo alla pagina, non e' piu' una barra
    fissa: lo spazio riservato qui sopra non serve. */
 @media (max-width: 767px) {

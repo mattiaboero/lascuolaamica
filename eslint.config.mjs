@@ -67,14 +67,21 @@ const sharedRules = {
   'no-undef': 'error',
   semi: ['error', 'always'],
   'no-console': ['warn', { allow: ['warn', 'error'] }],
+  'no-eval': 'error',
+  'no-implied-eval': 'error',
+  'no-new-func': 'error',
   'no-restricted-properties': ['error',
+    // Senza «object»: con object 'Element' la regola non scattava mai, perche'
+    // nel codice nessuno scrive Element.innerHTML ma el.innerHTML.
     {
-      object: 'Element',
       property: 'innerHTML',
       message: 'Use textContent or createElement/appendChild instead of innerHTML to prevent XSS'
     },
     {
-      object: 'Element',
+      property: 'outerHTML',
+      message: 'Use textContent or createElement/appendChild instead of outerHTML to prevent XSS'
+    },
+    {
       property: 'insertAdjacentHTML',
       message: 'Use textContent or createElement/appendChild instead of insertAdjacentHTML to prevent XSS'
     }

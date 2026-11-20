@@ -1078,31 +1078,31 @@
     closeBtn.type = 'button';
     closeBtn.className = 'modal-close';
     closeBtn.setAttribute('data-close-modal', PROJECT_MODAL_ID);
-    closeBtn.setAttribute('aria-label', 'Chiudi la pagina Il Progetto');
+    closeBtn.setAttribute('aria-label', 'Chiudi la pagina Il progetto educativo');
     closeBtn.textContent = '✕';
 
     const title = document.createElement('h2');
     title.className = 'modal-title';
     title.id = 'titleProject';
-    title.textContent = 'Il Progetto Educativo';
+    title.textContent = 'Il progetto educativo';
 
     const body = document.createElement('div');
     body.className = 'modal-body';
 
     const intro = document.createElement('p');
-    intro.textContent = 'La Scuola Amica è un progetto educativo digitale e inclusivo progettato su misura per bambine e bambini della scuola primaria italiana.';
+    intro.textContent = 'La Scuola Amica è un progetto educativo gratuito per bambine e bambini della scuola primaria italiana.';
 
     const methodTitle = document.createElement('h3');
-    methodTitle.textContent = 'Programma e Metodo Didattico';
+    methodTitle.textContent = 'Metodo didattico';
 
     const methodText1 = document.createElement('p');
     methodText1.textContent = 'Tutti i test, i giochi e i quiz interattivi proposti (Matematica, Italiano, Inglese, Problemi, Geografia, Storia, Scienze, Educazione Civica) sono costruiti sulle Indicazioni Nazionali del 2012 per la scuola primaria. Le nuove Indicazioni (DM 221/2025) valgono dall’a.s. 2026/27: la revisione delle domande è in corso.';
 
     const methodText2 = document.createElement('p');
-    methodText2.textContent = "L'approccio prevede una progressione graduale, feedback positivi e classifiche locali prive di vincoli frustranti, finalizzati a consolidare il sapere senza generare ansia. Il sistema disincentiva la ripetizione cieca introducendo variabilità nelle sessioni (anti-ripetizione guidata dalle AI).";
+    methodText2.textContent = 'Le domande diventano più difficili con la classe e, partita dopo partita, si adattano alle risposte date. Il sito evita di riproporre subito le domande già viste. La classifica resta su questo dispositivo.';
 
     const inclusionTitle = document.createElement('h3');
-    inclusionTitle.textContent = 'Inclusività e Accessibilità';
+    inclusionTitle.textContent = 'Accessibilità';
 
     const inclusionText = document.createElement('p');
     inclusionText.append('La piattaforma integra una palette cromatica ');
@@ -1113,13 +1113,13 @@
     okabeItoLink.textContent = 'Okabe-Ito';
     okabeItoLink.setAttribute('aria-label', 'Apri la palette Okabe-Ito (si apre in una nuova scheda)');
     inclusionText.appendChild(okabeItoLink);
-    inclusionText.append(" per l'eccellente visibilità anche in caso di daltonismo, adotta un design responsivo testato su smartphone, tablet (LIM comprese) e supporta la navigazione full-keyboard. Supporta pienamente il prefers-reduced-motion (riduzione animazioni) dei sistemi operativi.");
+    inclusionText.append(", pensata per chi distingue male i colori. Il sito si usa da telefono, tablet, computer e LIM, anche solo con la tastiera, e rispetta l'impostazione del sistema per ridurre le animazioni.");
 
     const privacyTitle = document.createElement('h3');
-    privacyTitle.textContent = 'Privacy First by Design';
+    privacyTitle.textContent = 'Privacy';
 
     const privacyText = document.createElement('p');
-    privacyText.textContent = 'Non viene raccolto nessun dato personale. Non occorre registrazione. Non ci sono tracker comportamentali e gli interi punteggi vengono stoccati unicamente in locale allineandosi perfettamente allo spirito protettivo essenziale per i software rivolti ai minori.';
+    privacyText.textContent = 'Il sito non raccoglie dati personali, non chiede registrazione e non usa tracker. Punteggi e progressi restano solo nel browser di questo dispositivo.';
 
     body.appendChild(intro);
     body.appendChild(methodTitle);
@@ -1370,7 +1370,7 @@
     projectBtn.type = 'button';
     projectBtn.className = 'info-hub-btn';
     projectBtn.textContent = 'Il Progetto';
-    projectBtn.setAttribute('aria-label', 'Apri la pagina Il Progetto Educativo');
+    projectBtn.setAttribute('aria-label', 'Apri la pagina Il progetto educativo');
     projectBtn.addEventListener('click', () => {
       ensureProjectModal();
       openNestedModal(INFO_HUB_MODAL_ID, PROJECT_MODAL_ID);
@@ -1537,6 +1537,7 @@
     style.textContent = `
       .palette-toggle{
         display:inline-flex;
+        flex-wrap:wrap;
         align-items:center;
         gap:6px;
       }
@@ -1569,6 +1570,7 @@
       }
       .motion-toggle{
         display:inline-flex;
+        flex-wrap:wrap;
         align-items:center;
         gap:6px;
       }
@@ -1666,6 +1668,7 @@
       }
       .info-hub-body{
         display:grid;
+        grid-template-columns:minmax(0,1fr);
         gap:12px;
       }
       .info-hub-intro{
