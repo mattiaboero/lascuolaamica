@@ -22,8 +22,8 @@
   quattro tessere. Ora vale la stessa scelta.
 - /sistema-solare su telefoni bassi (375x667, 360x740): il pannello di
   benvenuto scendeva sul cartellino del corpo (Sole, Scopri, Ascolta), che si
-  intravedeva dietro i pulsanti. Finché il benvenuto è aperto il cartellino
-  non si vede e non prende il focus.
+  intravedeva dietro i pulsanti. Ora il benvenuto ha il fondo pieno; il
+  cartellino resta attivo.
 
 ### Added
 - `npm run test:e2e:telefono` (`scripts/telefono_smoke.js`), anche nel job
