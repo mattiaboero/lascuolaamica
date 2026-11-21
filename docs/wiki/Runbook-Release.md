@@ -11,7 +11,7 @@ Checklist da seguire ad ogni release. L'ordine conta.
 3. Aggiorna `json/changelog.json`, che alimenta il popup "Ultimi aggiornamenti" del sito (non più `shared.js`, che si limita a leggerlo). Convenzione: **una voce per giornata**, massimo 7 righe, e l'etichetta `date` deve citare la versione corrente — `check_update_log` lo verifica.
 4. Esegui `npm run freshness`: riallinea da solo i conteggi di domande in ogni pagina, i dati strutturati, la sitemap e gli hash CSP. Non serve più aggiornare a mano FAQ e `llms.txt`.
 5. Esegui `npm run verify` — deve passare senza errori. Include `prepublish-check.sh` come ultimo anello. L'export prende solo i file tracciati da git: un asset nuovo va aggiunto con `git add` prima.
-   Poi, con `python3 -m http.server 4173` in un altro terminale, tutti i passi del job `smoke` di `.github/workflows/e2e.yml`, compreso `npm run test:e2e:qa` (layout di tutte le pagine in 9 modi e degli stati del quiz).
+   Poi, con `python3 -m http.server 4173` in un altro terminale, tutti i passi del job `smoke` di `.github/workflows/e2e.yml`, compreso `npm run test:e2e:qa` (layout di tutte le pagine in 9 modi e degli stati del quiz). Gli stessi controlli nel motore di Safari: `npm run test:e2e:qa:webkit` (la prima volta `npx playwright install webkit`; con lo schermo del Mac bloccato WebKit sbaglia i clic e fallisce tutto: va lanciato a schermo sbloccato).
 6. `export/` si costruisce da sola come ultimo passo di `npm run verify`, e Cloudflare la ricostruisce allo stesso modo al deploy
 7. Aggiorna `CHANGELOG.md` con le voci della release
 
@@ -60,7 +60,7 @@ Questi controlli servono a bloccare regressioni architetturali prima del merge.
 
 ## Merge e deploy
 
-`main` è protetto: una PR si fonde solo con i check `prepublish` e `smoke` (E2E) verdi e con il branch aggiornato con `main`. `prepublish` esegue `npm run verify:dati`, `prepublish-check.sh` ed export; `smoke` gli E2E e `test:e2e:qa`. Lighthouse non è un gate: gira ogni giorno sulla produzione, e sulle PR il job `perf-locale` (non richiesto) misura `export/` del branch senza upload.
+`main` è protetto: una PR si fonde solo con i check `prepublish` e `smoke` (E2E) verdi e con il branch aggiornato con `main`. `prepublish` esegue `npm run verify:dati`, `prepublish-check.sh` ed export; `smoke` gli E2E e `test:e2e:qa`. Lighthouse non è un gate: gira ogni giorno sulla produzione, e sulle PR il job `perf-locale` (non richiesto) misura `export/` del branch senza upload. Il job `webkit` (macOS, non ancora richiesto) ripete `test:e2e:qa` nel motore di Safari: un rosso qui va guardato prima del merge.
 
 1. Merge su `main`
 2. La piattaforma di hosting avvia il deploy automatico

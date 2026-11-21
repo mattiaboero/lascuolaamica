@@ -651,7 +651,7 @@
     playWindowExpiryLock = true;
     if (HAS_LEVELS) showLevelsScreen();
     else goStart();
-    await askAlert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
+    await askAlert(SA.playWindow.pauseMessage(), {
       title: 'Tempo di gioco terminato',
       okLabel: 'Va bene'
     });

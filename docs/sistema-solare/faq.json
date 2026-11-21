@@ -12,7 +12,7 @@
   },
   {
    "domanda": "Qual è il pianeta più grande del Sistema Solare?",
-   "risposta": "Giove: il suo volume è più di 1300 volte quello della Terra. È un gigante di gas e non ha una superficie solida.",
+   "risposta": "Giove: il suo volume è più di 1.300 volte quello della Terra. È un gigante di gas e non ha una superficie solida.",
    "fonti": [
     "https://science.nasa.gov/jupiter/facts/",
     "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"
@@ -89,7 +89,7 @@
   },
   {
    "domanda": "Ci sono buchi neri nel Sistema Solare?",
-   "risposta": "No. Il buco nero enorme al centro della nostra galassia, Sagittarius A*, è a circa 27 000 anni luce; il più vicino che conosciamo, Gaia BH1, a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero.",
+   "risposta": "No. Il buco nero enorme al centro della nostra galassia, Sagittarius A*, è a circa 27.000 anni luce; il più vicino che conosciamo, Gaia BH1, a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero.",
    "fonti": [
     "https://www.eso.org/public/news/eso2208-eht-mw/",
     "https://noirlab.edu/public/news/noirlab2227/",

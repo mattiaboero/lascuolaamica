@@ -24,7 +24,10 @@ const fs = require('fs');
 const path = require('path');
 const { fileServito } = require('./lib/percorso_sicuro.js');
 const { controlla } = require('./lib/qa_regole.js');
-const { chromium } = require('playwright');
+// QA_BROWSER=webkit fa girare gli stessi controlli nel motore di Safari.
+const playwright = require('playwright');
+const MOTORE = process.env.QA_BROWSER || 'chromium';
+if (!['chromium', 'webkit'].includes(MOTORE)) throw new Error(`QA_BROWSER sconosciuto: ${MOTORE}`);
 
 const ROOT = path.join(__dirname, '..');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.bin': 'application/octet-stream', '.mp3': 'audio/mpeg', '.txt': 'text/plain' };
@@ -113,7 +116,7 @@ async function giro(browser, base, pagina, modo) {
 async function main() {
   const server = await serve();
   const base = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch();
+  const browser = await playwright[MOTORE].launch();
   const coda = [];
   for (const pagina of PAGINE) for (const modo of MODI) coda.push([pagina, modo]);
   const tutti = [];

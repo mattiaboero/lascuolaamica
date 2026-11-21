@@ -41,7 +41,7 @@
   function clearInput(){held.clear();pressed.clear();released.clear();physical.clear();}
   function setMode(next){mode=next;clearInput();accumulator=0;pendingBind=null;screen.replaceChildren();$('math-station').hidden=next!=='play';$('hud').hidden=!world||next==='title'||next==='map';$('touch-controls').classList.toggle('inactive',next!=='play');document.documentElement.classList.toggle('nina-in-gioco',next==='play'&&window.matchMedia('(pointer: coarse)').matches);musicVolume();}
   function persist(){store.save(progress);updateFooter();}
-  function updateFooter(){$('footer-status').textContent=store.warning|| (testMode?'Anteprima di collaudo · Progressi temporanei':'Tastiera, mouse o touch · Progressi sul tuo browser');}
+  function updateFooter(){$('footer-status').textContent=store.warning|| (testMode?'Anteprima di collaudo · Progressi temporanei':'Tastiera, mouse o touch · Progressi salvati nel browser');}
   function toast(message,seconds=3){$('toast').textContent=message;$('toast').hidden=false;toastTime=seconds;}
   // Larghezza della scena in punti di gioco. L'altezza e' sempre 540. Su
   // computer e tablet la scena e' 960x540 (16:9); sul telefono in orizzontale
@@ -342,7 +342,7 @@
   document.addEventListener((window.SA&&window.SA.playWindow&&window.SA.playWindow.eventName)||'sa:play-window-change',event=>{
     if(!event||!event.detail||!event.detail.expired||!world)return;
     title();
-    const msg='I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.';
+    const msg=window.SA.playWindow.pauseMessage();
     if(window.SA&&window.SA.ui&&typeof window.SA.ui.alert==='function')window.SA.ui.alert(msg,{title:'Tempo di gioco terminato',okLabel:'Va bene'});else toast(msg,6);
   });
   async function boot(){

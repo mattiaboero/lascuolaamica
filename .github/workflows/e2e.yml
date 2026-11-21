@@ -33,6 +33,27 @@ jobs:
       - name: Lighthouse su export/ (prestazioni, nessun upload)
         run: npm run perf:locale
 
+  # Gli stessi controlli di layout e delle partite nel motore di Safari, quello
+  # di iPhone e iPad. Su macOS WebKit parte senza pacchetti di sistema (su
+  # ubuntu servirebbe apt, che il 23/10/2026 ha bloccato la CI per 10-20 minuti).
+  # Il 21/11/2026 ha trovato il focus perso alla chiusura delle finestre.
+  webkit:
+    if: github.event_name != 'schedule'
+    runs-on: macos-latest
+    permissions:
+      contents: read
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: WebKit di Playwright
+        run: npx playwright install webkit
+      - name: Layout di tutte le pagine e degli stati del quiz in WebKit (9 modi, regole con autotest)
+        run: npm run test:e2e:qa:webkit
+
   smoke:
     # PR + push: solo mode perfect (smoke veloce)
     if: github.event_name != 'schedule'

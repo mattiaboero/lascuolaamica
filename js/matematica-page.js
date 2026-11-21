@@ -21,11 +21,11 @@ __sa.subjectConfig = {
   feedbackOk: ['Esatto!', 'Wow!', 'Ottimo!', 'Continua così!'],
   feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
-    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
+    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'tables', label: 'Tabelline', icon: '✖️', title: 'Tabelline', subtitle: 'Moltiplicazioni veloci' },
     { key: 'arith', label: 'Aritmetica', icon: '🧮', title: 'Aritmetica', subtitle: 'Numeri e calcolo' },
     { key: 'problems', label: 'Problemi', icon: '🧠', title: 'Problemi', subtitle: 'Testo e operazioni' },
-    { key: 'geo', label: 'Geometria e misura', icon: '📐', title: 'Geometria e Misura', subtitle: 'Figure, perimetri, unità' },
-    { key: 'logic', label: 'Logica e dati', icon: '📊', title: 'Logica e Dati', subtitle: 'Sequenze e probabilità' }
+    { key: 'geo', label: 'Geometria e misura', icon: '📐', title: 'Geometria e misura', subtitle: 'Figure, perimetri, unità' },
+    { key: 'logic', label: 'Logica e dati', icon: '📊', title: 'Logica e dati', subtitle: 'Sequenze e probabilità' }
   ]
 };

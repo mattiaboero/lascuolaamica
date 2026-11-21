@@ -111,8 +111,8 @@
     ['bosco-radura-illuminata', 'Radura Illuminata', 'reward-bosco-radura-illuminata.webp', 'Completa tutte e tre le parole di una partita nel Bosco delle Lettere.'],
     ['bosco-orecchio-fino', 'Orecchio Fino', 'reward-bosco-orecchio-fino.webp', 'Completa una partita alla Caccia al suono.'],
     ['bosco-esploratore-suoni', 'Esploratore di Suoni', 'reward-bosco-esploratore-suoni.webp', 'Incontra tutti i gruppi del Bosco: GN, GLI, SCE, CHI, GHE, QU, CQU, doppie e accento.'],
-    ['bosco-gruppo-domato', 'Gruppo Domato', 'reward-bosco-gruppo-domato.webp', 'Indovina cinque volte di fila lo stesso gruppo di lettere.'],
-    ['bosco-ci-riprovo', 'Ci Riprovo', 'reward-bosco-ci-riprovo.webp', 'Torna a indovinare un gruppo che prima avevi sbagliato.'],
+    ['bosco-gruppo-domato', 'Gruppo Domato', 'reward-bosco-gruppo-domato.webp', 'Scegli giusto cinque volte di fila lo stesso gruppo di lettere.'],
+    ['bosco-ci-riprovo', 'Ci Riprovo', 'reward-bosco-ci-riprovo.webp', 'Scegli giusto un gruppo che prima avevi sbagliato.'],
     ['bacheca-piena', 'Bacheca Piena', 'reward-bacheca-piena.webp', 'Sblocca tutti gli altri premi.']
   ].map((row) => ({ id: row[0], name: row[1], file: row[2], description: row[3] }));
 

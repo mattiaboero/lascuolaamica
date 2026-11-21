@@ -1660,7 +1660,7 @@
     restart();
     announce('I 30 minuti di gioco sono terminati.');
     if (SA.ui && typeof SA.ui.alert === 'function') {
-      SA.ui.alert('I 30 minuti di gioco sono terminati. Adesso bisogna aspettare 60 minuti prima di poter tornare a giocare.', {
+      SA.ui.alert(SA.playWindow.pauseMessage(), {
         title: 'Tempo di gioco terminato',
         okLabel: 'Va bene'
       });

@@ -8,7 +8,10 @@
 //
 // Uso: node scripts/qa_regole_autotest.js
 
-const { chromium } = require('playwright');
+// QA_BROWSER=webkit fa girare gli stessi controlli nel motore di Safari.
+const playwright = require('playwright');
+const MOTORE = process.env.QA_BROWSER || 'chromium';
+if (!['chromium', 'webkit'].includes(MOTORE)) throw new Error(`QA_BROWSER sconosciuto: ${MOTORE}`);
 const { controlla } = require('./lib/qa_regole.js');
 
 const BASE = `
@@ -51,7 +54,7 @@ const PULITA = `
 </div>`;
 
 async function main() {
-  const browser = await chromium.launch();
+  const browser = await playwright[MOTORE].launch();
   const page = await browser.newPage({ viewport: { width: 400, height: 700 } });
   const errori = [];
   try {

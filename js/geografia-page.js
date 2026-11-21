@@ -19,9 +19,9 @@ __sa.subjectConfig = {
   feedbackOk: ['Esatto!', 'Ottimo!', 'Benissimo!', 'Continua così!'],
   feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
-    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
+    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'orient', label: 'Orientamento', icon: '🧭', title: 'Orientamento', subtitle: 'Punti cardinali e percorsi' },
-    { key: 'maps', label: 'Carte e mappe', icon: '🗺️', title: 'Carte e Mappe', subtitle: 'Legende, simboli e scale' },
+    { key: 'maps', label: 'Carte e mappe', icon: '🗺️', title: 'Carte e mappe', subtitle: 'Legende, simboli e scale' },
     { key: 'land', label: 'Paesaggi', icon: '🏞️', title: 'Paesaggi', subtitle: 'Elementi fisici e antropici' },
     { key: 'it', label: 'Italia e Europa', icon: '🇮🇹', title: 'Italia e Europa', subtitle: 'Territorio e relazioni' }
   ]

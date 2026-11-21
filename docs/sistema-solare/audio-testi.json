@@ -41,13 +41,13 @@
  },
  "giove": {
   "file": "giove.mp3",
-  "testo": "Giove. Giove è il pianeta più grande del Sistema Solare. È un gigante fatto soprattutto di gas: non ha una superficie solida. Le sue strisce colorate sono nubi spinte da venti fortissimi. Ha il giorno più corto di tutti i pianeti: circa 10 ore. La Grande Macchia Rossa è una tempesta più grande della Terra: gli astronomi la seguono senza interruzioni dal 1831. Il suo volume è più di 1300 volte quello della Terra. Ha anelli sottili e scuri, scoperti nel 1979 dalla sonda Voyager 1.",
-  "sha1": "2c5b6e013c06e7e63642d960f5451aa5099134fa"
+  "testo": "Giove. Giove è il pianeta più grande del Sistema Solare. È un gigante fatto soprattutto di gas: non ha una superficie solida. Le sue strisce colorate sono nubi spinte da venti fortissimi. Ha il giorno più corto di tutti i pianeti: circa 10 ore. La Grande Macchia Rossa è una tempesta più grande della Terra: gli astronomi la seguono senza interruzioni dal 1831. Il suo volume è più di 1.300 volte quello della Terra. Ha anelli sottili e scuri, scoperti nel 1979 dalla sonda Voyager 1.",
+  "sha1": "3a5fae0868b296d271226ee0ae68079d22d9c0a7"
  },
  "saturno": {
   "file": "saturno.mp3",
-  "testo": "Saturno. Saturno è il secondo pianeta più grande ed è famoso per i suoi anelli. Gli anelli sono fatti di miliardi di pezzi di ghiaccio e roccia. Anche Saturno è un gigante di gas. La sua densità media è più bassa di quella dell'acqua. Gli anelli principali sono larghissimi ma spessi in genere solo circa 10 metri. Al polo nord c'è una corrente d'aria a forma di esagono, larga circa 30 000 km. Ha più lune confermate di qualsiasi altro pianeta.",
-  "sha1": "d97859c35388bc35853bc4b141d2170d62249f63"
+  "testo": "Saturno. Saturno è il secondo pianeta più grande ed è famoso per i suoi anelli. Gli anelli sono fatti di miliardi di pezzi di ghiaccio e roccia. Anche Saturno è un gigante di gas. La sua densità media è più bassa di quella dell'acqua. Gli anelli principali sono larghissimi ma spessi in genere solo circa 10 metri. Al polo nord c'è una corrente d'aria a forma di esagono, larga circa 30.000 km. Ha più lune confermate di qualsiasi altro pianeta.",
+  "sha1": "9a6e0ddc3d5d349a2ea2300bb29b8c18f80f1c17"
  },
  "urano": {
   "file": "urano.mp3",

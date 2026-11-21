@@ -1,5 +1,40 @@
 # Changelog Repo
 
+## 4.27.31 - 2026-11-21
+
+**Focus delle finestre anche in Safari, controlli nel motore di Safari, testi rivisti.**
+
+### Fixed
+- Safari, tastiera e VoiceOver (`shared.js`): Safari non dà il focus ai
+  pulsanti cliccati col mouse, quindi le finestre aperte con un clic
+  («Progressi», pannello Info, Privacy, Cookie, Versione, Il Progetto) alla
+  chiusura restituivano il focus al body e il Tab ripartiva da inizio pagina.
+  Un ascoltatore in cattura dà il focus al pulsante cliccato prima dei
+  gestori, come fanno Chrome e Firefox. Trovato facendo girare `qa_stati` in
+  WebKit: 190 errori senza la correzione, 0 con.
+- Timer di gioco: quiz, Spacca-Muri, Bosco e Nina mostrano lo stesso avviso
+  di `shared.js` (`SA.playWindow.pauseMessage`), con il tempo che manca e il
+  modo per spegnere il timer.
+- Testi (revisione del 20/11, voci rimaste): /ai-info, /supporta (dati
+  strutturati), home (scheda Civica e description con le otto materie), /faq
+  (domanda con il verbo, niente promessa sul futuro, virgolette « »),
+  /per-genitori (riga doppia tolta), /per-insegnanti, /chi-siamo (10 punti
+  per risposta giusta), /404, /premi (titolo «Bacheca dei premi»), Bosco
+  (niente lineette, aforisma e frasi a staccato), premi del Bosco senza
+  «indovina», Nina («Progressi salvati nel browser»), inviti finali di
+  matematica, italiano, storia e geografia con i nomi veri degli ambiti,
+  nomi degli ambiti con la sola iniziale maiuscola, titolo «Classifica»
+  uguale nelle otto materie, cookie e privacy con « ».
+- Migliaia con il punto: «Oltre 3.000 domande» (`sync_question_counts.py`
+  scrive il punto) e i testi del Sistema Solare (1.300 volte, 27.000 anni
+  luce). Gli audio di Giove e Saturno restano collegati: lo sha1 è
+  aggiornato solo dove il testo letto era già quello registrato.
+
+### Added
+- `QA_BROWSER=webkit` per `qa_regole_autotest`, `qa_pagine` e `qa_stati`,
+  `npm run test:e2e:qa:webkit` e il job `webkit` di `e2e.yml` su macOS.
+  In locale: 468 giri delle pagine e 50 partite, 0 problemi.
+
 ## 4.27.30 - 2026-11-21
 
 **Annunci del quiz in ordine: la domanda nuova non si perde più.**

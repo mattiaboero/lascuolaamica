@@ -20,10 +20,10 @@ __sa.subjectConfig = {
   feedbackOk: ['Esatto!', 'Ottimo!', 'Complimenti!', 'Continua così!'],
   feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
-    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
-    { key: 'oral', label: 'Ascolto e parlato', icon: '💬', title: 'Ascolto e Parlato', subtitle: 'Comunicazione orale' },
+    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione mista', subtitle: 'Domande da tutti gli ambiti' },
+    { key: 'oral', label: 'Ascolto e parlato', icon: '💬', title: 'Ascolto e parlato', subtitle: 'Comunicazione orale' },
     { key: 'read', label: 'Lettura', icon: '📖', title: 'Lettura', subtitle: 'Comprensione del testo' },
     { key: 'write', label: 'Scrittura', icon: '✍️', title: 'Scrittura', subtitle: 'Produzione di testi' },
-    { key: 'gram', label: 'Lessico e grammatica', icon: '🔤', title: 'Lessico e Grammatica', subtitle: 'Riflessione linguistica' }
+    { key: 'gram', label: 'Lessico e grammatica', icon: '🔤', title: 'Lessico e grammatica', subtitle: 'Riflessione linguistica' }
   ]
 };
