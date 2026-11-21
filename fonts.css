@@ -40,10 +40,13 @@
 
 /* Fallback locali con metriche allineate ai webfont, per ridurre il CLS dovuto allo swap.
    size-adjust = larghezza del testo reale della home nel webfont / larghezza in Arial (Bold per i pesi 700+),
-   misurata in Chromium; ascent/descent-override = metrica del webfont / size-adjust. */
+   misurata in Chromium; ascent/descent-override = metrica del webfont / size-adjust.
+   Liberation Sans ha le stesse metriche di Arial: su Linux, dove Arial manca,
+   senza di lei la faccia di riserva restava vuota e la home a 412px saltava
+   di 0,15-0,17 al caricamento del webfont (Lighthouse locale in CI, 4.27.27). */
 @font-face {
   font-family: 'Fredoka One Fallback';
-  src: local('Arial Bold'), local('Arial-BoldMT');
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'), local('LiberationSans-Bold');
   font-weight: 400;
   ascent-override: 104.64%;
   descent-override: 25.35%;
@@ -53,7 +56,7 @@
 
 @font-face {
   font-family: 'Nunito Fallback';
-  src: local('Arial'), local('ArialMT');
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans'), local('LiberationSans');
   font-weight: 400;
   ascent-override: 100.80%;
   descent-override: 35.19%;
@@ -63,7 +66,7 @@
 
 @font-face {
   font-family: 'Nunito Fallback';
-  src: local('Arial Bold'), local('Arial-BoldMT');
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'), local('LiberationSans-Bold');
   font-weight: 700;
   ascent-override: 103.97%;
   descent-override: 36.30%;
@@ -73,7 +76,7 @@
 
 @font-face {
   font-family: 'Nunito Fallback';
-  src: local('Arial Bold'), local('Arial-BoldMT');
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'), local('LiberationSans-Bold');
   font-weight: 800;
   ascent-override: 101.10%;
   descent-override: 35.30%;
@@ -83,7 +86,7 @@
 
 @font-face {
   font-family: 'Nunito Fallback';
-  src: local('Arial Bold'), local('Arial-BoldMT');
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'), local('LiberationSans-Bold');
   font-weight: 900;
   ascent-override: 99.37%;
   descent-override: 34.70%;
