@@ -2631,31 +2631,43 @@
   // Fra due regioni diverse passano almeno 300 ms: con il thread occupato i
   // due timer da 50 ms (esito, poi domanda nuova dopo «Avanti») potevano
   // scattare insieme e i due annunci si accavallavano.
-  const annuncioTimer = {};
+  // Gli annunci escono in una coda sola, nell'ordine in cui sono chiesti: con
+  // un timer per regione l'esito di una risposta data entro 300 ms da
+  // «Avanti» passava davanti alla domanda nuova ancora in attesa, e con
+  // risposte svelte di fila «Domanda N di M» non veniva letta mai.
   const STACCO_REGIONI_MS = 300;
+  let codaAnnunci = [];
+  let codaTimer = 0;
   let ultimaScrittura = { id: '', at: 0 };
   let ultimoEsitoAt = 0;
   let ultimoEsito = '';
 
-  function scriviAnnuncio(id, el, testo) {
-    const attesa = ultimaScrittura.id && ultimaScrittura.id !== id
-      ? ultimaScrittura.at + STACCO_REGIONI_MS - Date.now()
+  function scriviAnnunci() {
+    clearTimeout(codaTimer);
+    const voce = codaAnnunci[0];
+    if (!voce) return;
+    const stacco = ultimaScrittura.id && ultimaScrittura.id !== voce.id
+      ? ultimaScrittura.at + STACCO_REGIONI_MS
       : 0;
+    const attesa = Math.max(voce.at + 50, stacco) - Date.now();
     if (attesa > 0) {
-      annuncioTimer[id] = setTimeout(() => scriviAnnuncio(id, el, testo), attesa);
+      codaTimer = setTimeout(scriviAnnunci, attesa);
       return;
     }
-    el.textContent = testo;
-    ultimaScrittura = { id, at: Date.now() };
-    if (id === 'quizFeedback') ultimoEsitoAt = ultimaScrittura.at;
+    codaAnnunci.shift();
+    voce.el.textContent = voce.testo;
+    ultimaScrittura = { id: voce.id, at: Date.now() };
+    if (voce.id === 'quizFeedback') ultimoEsitoAt = ultimaScrittura.at;
+    scriviAnnunci();
   }
 
   function annuncia(id, testo) {
     const el = $(id);
     if (!el || !testo) return;
-    clearTimeout(annuncioTimer[id]);
     el.textContent = '';
-    annuncioTimer[id] = setTimeout(() => scriviAnnuncio(id, el, testo), 50);
+    codaAnnunci = codaAnnunci.filter((v) => v.id !== id);
+    codaAnnunci.push({ id, el, testo, at: Date.now() });
+    scriviAnnunci();
   }
 
   // Il trofeo arriva dopo l'esito della risposta, mai insieme: si aspetta
