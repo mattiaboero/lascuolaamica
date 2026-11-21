@@ -82,7 +82,7 @@ __sa.subjectConfig = {
     }
   ],
   areas: [
-    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutte le aree del livello' },
+    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione mista', subtitle: 'Domande da tutte le aree del livello' },
     { key: 'animali', label: 'Animali', icon: '🐾', title: 'Animali', subtitle: 'Lessico e comprensione' },
     { key: 'casa', label: 'Casa', icon: '🏠', title: 'Casa', subtitle: 'Stanze e oggetti' },
     { key: 'cibo', label: 'Cibo', icon: '🍎', title: 'Cibo', subtitle: 'Parole di ogni giorno' },

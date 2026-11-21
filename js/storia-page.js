@@ -32,10 +32,10 @@ __sa.subjectConfig = {
   feedbackOk: ['Esatto!', 'Ottimo!', 'Ben fatto!', 'Continua così!'],
   feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
-    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
+    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione mista', subtitle: 'Domande da tutti gli ambiti' },
     { key: 'chrono', label: 'Cronologia', icon: '⏳', title: 'Cronologia', subtitle: 'Prima, dopo, linee del tempo' },
-    { key: 'sources', label: 'Fonti storiche', icon: '📜', title: 'Fonti Storiche', subtitle: 'Documenti, tracce e testimonianze' },
+    { key: 'sources', label: 'Fonti storiche', icon: '📜', title: 'Fonti storiche', subtitle: 'Documenti, tracce e testimonianze' },
     { key: 'periods', label: 'Periodizzazione', icon: '🕰️', title: 'Periodizzazione', subtitle: 'Epoche e civiltà' },
-    { key: 'links', label: 'Passato e presente', icon: '🔎', title: 'Passato e Presente', subtitle: 'Cambiamenti nel tempo' }
+    { key: 'links', label: 'Passato e presente', icon: '🔎', title: 'Passato e presente', subtitle: 'Cambiamenti nel tempo' }
   ]
 };

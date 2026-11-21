@@ -22,7 +22,10 @@ const fs = require('fs');
 const path = require('path');
 const { fileServito } = require('./lib/percorso_sicuro.js');
 const { controlla } = require('./lib/qa_regole.js');
-const { chromium } = require('playwright');
+// QA_BROWSER=webkit fa girare gli stessi controlli nel motore di Safari.
+const playwright = require('playwright');
+const MOTORE = process.env.QA_BROWSER || 'chromium';
+if (!['chromium', 'webkit'].includes(MOTORE)) throw new Error(`QA_BROWSER sconosciuto: ${MOTORE}`);
 
 const ROOT = path.join(__dirname, '..');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.mp3': 'audio/mpeg' };
@@ -122,11 +125,19 @@ async function giro(browser, base, materia, modo, seme) {
           await guarda(`finestra-info-${testo.split(' ')[0].toLowerCase()}`);
           await page.keyboard.press('Escape');
           await page.waitForTimeout(150);
+          // Il focus torna al pulsante del pannello che l'ha aperta. Safari
+          // non dà il focus ai pulsanti cliccati: senza shared.js finirebbe sul body.
+          if (!(await interno.evaluate((el) => el === document.activeElement))) {
+            trovati.push({ stato, regola: 'focus', dove: `.info-hub-btn ${testo}`, dettaglio: 'chiusa con Esc, il focus non torna al pulsante' });
+          }
         }
       }
       await page.keyboard.press('Escape');
       await page.waitForTimeout(150);
       if (await attivo('.modal-overlay.open')) await page.keyboard.press('Escape');
+      if (nomeFinestra !== 'classifica' && !(await btn.evaluate((el) => el === document.activeElement))) {
+        trovati.push({ stato, regola: 'focus', dove: sel, dettaglio: 'chiusa con Esc, il focus non torna al pulsante' });
+      }
     }
 
     if (SOLO_FINESTRE.includes(materia)) return finale();
@@ -222,7 +233,7 @@ async function giro(browser, base, materia, modo, seme) {
 async function main() {
   const server = await serve();
   const base = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch();
+  const browser = await playwright[MOTORE].launch();
   const coda = [];
   MATERIE.forEach((materia, i) => MODI.forEach((modo, j) => coda.push([materia, modo, 1000 + i * 10 + j])));
   const tutti = [];

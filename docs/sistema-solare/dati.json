@@ -400,7 +400,7 @@
    "curiosita": [
     "Ha il giorno più corto di tutti i pianeti: circa 10 ore.",
     "La Grande Macchia Rossa è una tempesta più grande della Terra: gli astronomi la seguono senza interruzioni dal 1831.",
-    "Il suo volume è più di 1300 volte quello della Terra.",
+    "Il suo volume è più di 1.300 volte quello della Terra.",
     "Ha anelli sottili e scuri, scoperti nel 1979 dalla sonda Voyager 1."
    ],
    "superficie_nota": "completa",
@@ -502,7 +502,7 @@
    "curiosita": [
     "La sua densità media è più bassa di quella dell'acqua.",
     "Gli anelli principali sono larghissimi ma spessi in genere solo circa 10 metri.",
-    "Al polo nord c'è una corrente d'aria a forma di esagono, larga circa 30 000 km.",
+    "Al polo nord c'è una corrente d'aria a forma di esagono, larga circa 30.000 km.",
     "Ha più lune confermate di qualsiasi altro pianeta."
    ],
    "superficie_nota": "completa",
@@ -767,7 +767,7 @@
      "nome": "Galle",
      "interno_km": 41000,
      "esterno_km": 43000,
-     "nota": "Raggio medio 42 000 km, larghezza 2000 km (PDS): bordi calcolati."
+     "nota": "Raggio medio 42.000 km, larghezza 2000 km (PDS): bordi calcolati."
     },
     {
      "nome": "Le Verrier",
@@ -779,7 +779,7 @@
      "nome": "Lassell",
      "interno_km": 53200,
      "esterno_km": 57200,
-     "nota": "Raggio medio 55 200 km, larghezza 4000 km (PDS): bordi calcolati."
+     "nota": "Raggio medio 55.200 km, larghezza 4000 km (PDS): bordi calcolati."
     },
     {
      "nome": "Arago",
@@ -1161,7 +1161,7 @@
     "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A"
    ],
    "rotazione_sincrona": true,
-   "note": "Inclinazione dell'orbita riferita all'eclittica; inclinazione dell'asse riferita all'orbita (NSSDC). La distanza Terra-Luna varia da circa 357 000 a 407 000 km."
+   "note": "Inclinazione dell'orbita riferita all'eclittica; inclinazione dell'asse riferita all'orbita (NSSDC). La distanza Terra-Luna varia da circa 357.000 a 407.000 km."
   },
   {
    "id": "iss",
@@ -2913,7 +2913,7 @@
     "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&sat=1",
     "https://science.nasa.gov/dwarf-planets/eris/"
    ],
-   "note": "Raggio 350 ± 57,5 km, albedo circa 0,04 (Brown & Butler 2018, ALMA). Orbita: Holler et al. 2021 (semiasse 37 273 ± 64 km). Massa sconosciuta: solo limiti (rapporto di massa con Eris < 0,0085, Brown & Butler 2023). Inclinazione: 45,49° rispetto all'equatore celeste J2000 e 78,29° rispetto all'orbita di Eris, quindi lasciata null."
+   "note": "Raggio 350 ± 57,5 km, albedo circa 0,04 (Brown & Butler 2018, ALMA). Orbita: Holler et al. 2021 (semiasse 37.273 ± 64 km). Massa sconosciuta: solo limiti (rapporto di massa con Eris < 0,0085, Brown & Butler 2023). Inclinazione: 45,49° rispetto all'equatore celeste J2000 e 78,29° rispetto all'orbita di Eris, quindi lasciata null."
   },
   {
    "id": "vesta",
@@ -3814,7 +3814,7 @@
     "https://science.nasa.gov/solar-system/comets/c-1995-o1-hale-bopp/"
    ],
    "periodo_orbitale_anni": 2534,
-   "note": "Raggio = metà del diametro 60 ± 20 km (Fernández 2002, via JPL SBDB; NASA). Periodo: circa 2534 anni secondo la NASA; l'orbita osculante JPL SBDB (epoca 2022) dà circa 2364 anni (863 280 giorni): per questo periodo_orbitale_giorni è null. Semiasse ed eccentricità: orbita osculante JPL SBDB."
+   "note": "Raggio = metà del diametro 60 ± 20 km (Fernández 2002, via JPL SBDB; NASA). Periodo: circa 2534 anni secondo la NASA; l'orbita osculante JPL SBDB (epoca 2022) dà circa 2364 anni (863.280 giorni): per questo periodo_orbitale_giorni è null. Semiasse ed eccentricità: orbita osculante JPL SBDB."
   },
   {
    "id": "arrokoth",
@@ -4078,8 +4078,8 @@
     "osservata_direttamente": false,
     "proposta_da": "Jan Oort, nel 1950",
     "bordo_interno_UA": "tra 2000 e 5000 (stima NASA)",
-    "bordo_esterno_UA": "tra 10 000 e 100 000 (stima NASA)",
-    "voyager_1": "entrerà nella zona della nube di Oort fra circa 300 anni e ne uscirà forse fra 30 000 anni (NASA)"
+    "bordo_esterno_UA": "tra 10.000 e 100.000 (stima NASA)",
+    "voyager_1": "entrerà nella zona della nube di Oort fra circa 300 anni e ne uscirà forse fra 30.000 anni (NASA)"
    },
    "fonti": [
     "https://science.nasa.gov/solar-system/oort-cloud/",
@@ -4107,12 +4107,12 @@
   {
    "id": "buco-nero",
    "titolo": "Ci sono buchi neri nel Sistema Solare?",
-   "testo": "No: nel Sistema Solare non ci sono buchi neri. Un buco nero è un oggetto con una gravità così forte che niente, nemmeno la luce, può sfuggirgli. Al centro della nostra galassia c'è un buco nero enorme, Sagittarius A*, a circa 27 000 anni luce da noi. Il buco nero più vicino che conosciamo, Gaia BH1, è a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero. Fra circa 5 miliardi di anni diventerà una gigante rossa e poi una nana bianca.",
+   "testo": "No: nel Sistema Solare non ci sono buchi neri. Un buco nero è un oggetto con una gravità così forte che niente, nemmeno la luce, può sfuggirgli. Al centro della nostra galassia c'è un buco nero enorme, Sagittarius A*, a circa 27.000 anni luce da noi. Il buco nero più vicino che conosciamo, Gaia BH1, è a circa 1600 anni luce. Il Sole non diventerà mai un buco nero: è troppo leggero. Fra circa 5 miliardi di anni diventerà una gigante rossa e poi una nana bianca.",
    "dati": {
     "buchi_neri_nel_sistema_solare": 0,
     "sagittarius_a_star": {
      "massa_masse_solari": "circa 4 milioni",
-     "distanza_anni_luce": "circa 27 000",
+     "distanza_anni_luce": "circa 27.000",
      "prima_immagine": "presentata dall'Event Horizon Telescope il 12 maggio 2022, da osservazioni del 2017 con 8 radiotelescopi",
      "massa_masse_solari_valore": 4000000.0,
      "nota_valore": "Valore numerico di 'circa 4 milioni' usato solo per calcolare il raggio dell'orizzonte nel confronto (r = 2GM/c²)."

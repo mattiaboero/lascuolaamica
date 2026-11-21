@@ -26,10 +26,10 @@ __sa.subjectConfig = {
   feedbackOk: ['Esatto!', 'Ottimo!', 'Benissimo!', 'Continua così!'],
   feedbackKo: ['Non è questa', 'Ecco la giusta', 'Guarda qui sotto 👇'],
   areas: [
-    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione Mista', subtitle: 'Domande da tutti gli ambiti' },
-    { key: 'phys', label: 'Fenomeni fisici', icon: '🧪', title: 'Fenomeni Fisici e Chimici', subtitle: 'Materia, energia e trasformazioni' },
-    { key: 'env', label: 'Ambienti e cicli', icon: '🌦️', title: 'Ambienti e Cicli', subtitle: 'Acqua, stagioni, ecosistemi' },
-    { key: 'life', label: 'Viventi e corpo', icon: '🧬', title: 'Viventi e Corpo Umano', subtitle: 'Piante, animali e salute' },
-    { key: 'human', label: 'Uomo e natura', icon: '♻️', title: 'Uomo, Natura e Tecnologia', subtitle: 'Risorse, prevenzione, rispetto' }
+    { key: 'mixed', label: 'Sessione mista', icon: '🎯', title: 'Sessione mista', subtitle: 'Domande da tutti gli ambiti' },
+    { key: 'phys', label: 'Fenomeni fisici', icon: '🧪', title: 'Fenomeni fisici e chimici', subtitle: 'Materia, energia e trasformazioni' },
+    { key: 'env', label: 'Ambienti e cicli', icon: '🌦️', title: 'Ambienti e cicli', subtitle: 'Acqua, stagioni, ecosistemi' },
+    { key: 'life', label: 'Viventi e corpo', icon: '🧬', title: 'Viventi e corpo umano', subtitle: 'Piante, animali e salute' },
+    { key: 'human', label: 'Uomo e natura', icon: '♻️', title: 'Uomo, natura e tecnologia', subtitle: 'Risorse, prevenzione, rispetto' }
   ]
 };

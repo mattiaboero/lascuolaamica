@@ -258,6 +258,12 @@
     return minutes === 1 ? '1 minuto' : `${minutes} minuti`;
   }
 
+  // Un testo solo per la pausa, nel quiz e nei giochi: dice quanto manca.
+  function playWindowPauseMessage(state) {
+    const s = state || getPlayWindowState();
+    return `I 30 minuti di gioco sono finiti. Si può tornare a giocare tra ${formatPlayWindowWait(s.cooldownRemainingMs)}. Per spegnere il timer, un adulto apre il pannello Info e toglie «Tempo di gioco (per i genitori)».`;
+  }
+
   function dispatchPlayWindowChange(state, force) {
     const snapshot = state || getPlayWindowState();
     syncPlayWindowTicker(snapshot);
@@ -321,7 +327,7 @@
     if (!current.enabled || current.active) return true;
     if (current.coolingDown) {
       await promptAlert(
-        `I 30 minuti di gioco sono finiti. Si può tornare a giocare tra ${formatPlayWindowWait(current.cooldownRemainingMs)}. Per spegnere il timer, un adulto apre il pannello Info e toglie «Tempo di gioco (per i genitori)».`,
+        playWindowPauseMessage(current),
         { title: 'Pausa dal gioco', okLabel: 'Va bene', focusMessage: true }
       );
       return false;
@@ -564,6 +570,17 @@
     scroll.append(...children);
     return scroll;
   }
+
+  // Safari non dà il focus ai pulsanti cliccati col mouse: una finestra aperta
+  // con un clic non saprebbe a chi restituirlo e il focus finirebbe sul body.
+  // Lo diamo noi, prima dei gestori dei clic, come fanno Chrome e Firefox.
+  // Solo per i clic veri (detail > 0): Invio in un modulo simula un clic sul
+  // pulsante di invio, e lì il focus deve restare nel campo.
+  document.addEventListener('click', (e) => {
+    if (!e.detail) return;
+    const el = e.target instanceof Element ? e.target.closest('button, [role="button"]') : null;
+    if (el && !el.disabled && document.activeElement !== el) el.focus({ preventScroll: true });
+  }, true);
 
   // focusEl: dove portare il focus, se non sulla X (es. il testo di un avviso).
   function openModal(id, focusEl) {
@@ -1799,6 +1816,7 @@
     start: startPlayWindow,
     clear: clearPlayWindow,
     ensureActive: ensurePlayWindowActive,
+    pauseMessage: playWindowPauseMessage,
     eventName: PLAY_WINDOW_EVENT
   };
   SA.version = APP_VERSION;

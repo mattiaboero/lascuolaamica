@@ -29,14 +29,14 @@ __sa.subjectConfig = {
       key: 'mixed',
       label: 'Sessione mista',
       icon: '🎯',
-      title: 'Sessione Mista',
+      title: 'Sessione mista',
       subtitle: 'Domande da tutti gli ambiti'
     },
     {
       key: 'rules',
-      label: 'Costituzione e Regole',
+      label: 'Costituzione e regole',
       icon: '📜',
-      title: 'Costituzione e Regole',
+      title: 'Costituzione e regole',
       subtitle: 'Vivere insieme'
     },
     {
@@ -48,16 +48,16 @@ __sa.subjectConfig = {
     },
     {
       key: 'digital',
-      label: 'Cittadinanza Digitale',
+      label: 'Cittadinanza digitale',
       icon: '💻',
-      title: 'Cittadinanza Digitale',
+      title: 'Cittadinanza digitale',
       subtitle: 'Comportamento online'
     },
     {
       key: 'road',
-      label: 'Strada e Gentilezza',
+      label: 'Strada e gentilezza',
       icon: '🚸',
-      title: 'Strada e Gentilezza',
+      title: 'Strada e gentilezza',
       subtitle: 'Sicurezza e rispetto'
     }
   ],
