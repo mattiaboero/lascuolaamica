@@ -121,25 +121,6 @@ const OPTIONAL_PRECACHE_URLS = [
   '/sitemap.xml',
   '/screenshots/home-390x844.webp',
   '/screenshots/home-1280x720.webp',
-  '/screenshots/og-home-1200x630.jpg',
-  '/screenshots/og-matematica-1200x630.jpg',
-  '/screenshots/og-tabelline-1200x630.jpg',
-  '/screenshots/og-inglese-1200x630.jpg',
-  '/screenshots/og-problemi-1200x630.jpg',
-  '/screenshots/og-civica-1200x630.jpg',
-  '/screenshots/og-geografia-1200x630.jpg',
-  '/screenshots/og-storia-1200x630.jpg',
-  '/screenshots/og-scienze-1200x630.jpg',
-  '/screenshots/og-italiano-1200x630.jpg',
-  '/screenshots/og-bosco-1200x630.jpg',
-  '/screenshots/og-sistema-solare-1200x630.jpg',
-  '/screenshots/og-chi-siamo-1200x630.jpg',
-  '/screenshots/og-faq-1200x630.jpg',
-  '/screenshots/og-supporta-1200x630.jpg',
-  '/screenshots/og-accessibilita-1200x630.jpg',
-  '/screenshots/og-per-insegnanti-1200x630.jpg',
-  '/screenshots/og-per-genitori-1200x630.jpg',
-  '/screenshots/og-ai-info-1200x630.jpg',
   '/favicon.svg',
   '/favicon.ico',
   '/icons/favicon-16x16.png',
@@ -369,12 +350,25 @@ self.addEventListener('activate', event => {
     await carryVisitedHtml(oldKeys).catch(() => {});
     await ensureHome().catch(() => {});
     await Promise.all(oldKeys.map(key => caches.delete(key)));
+    await dropSocialPreviews().catch(() => {});
     // Pulizia fatta: la nota per dropOlderCachesOnce non serve piu'.
     const cache = await caches.open(CACHE_NAME);
     await cache.delete(OLDER_CACHES_KEY);
     await self.clients.claim();
   })());
 });
+
+// Le immagini per le anteprime sui social (/screenshots/og-*.jpg, 1200x630)
+// erano in precache fino alla 4.27.28: circa 1,5 MB scaricati da ogni
+// visitatore per file che leggono solo i social. La cache degli asset non
+// cambia nome, quindi chi le aveva le perde qui.
+async function dropSocialPreviews() {
+  const cache = await caches.open(ASSETS_CACHE_NAME);
+  const keys = await cache.keys();
+  await Promise.all(keys
+    .filter(req => /^\/screenshots\/og-/.test(new URL(req.url).pathname))
+    .map(req => cache.delete(req)));
+}
 
 // ============================================================
 // PULIZIA FUORI DA ACTIVATE

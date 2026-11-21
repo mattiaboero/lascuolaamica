@@ -3,7 +3,8 @@
 
 // Contrasto WCAG 2.2 AA di ogni testo visibile: 4,5:1, oppure 3:1 per testo
 // da 24 px, o da 18,66 px con peso 700 o piu'. Pagine: /, /premi, le otto
-// materie con la prima domanda a video e le altre pagine del sito (ALTRE) al
+// materie con la prima domanda a video e dopo la risposta (fino a una
+// sbagliata), e le altre pagine del sito (ALTRE) al
 // caricamento, ognuna con la palette standard e con ?palette=okabe-ito (solo
 // standard per /link e /404), a 1280x800 e a 375x667, ogni giro in un
 // contesto nuovo. Esclusi i controlli disattivati (WCAG 1.4.3).
@@ -175,7 +176,9 @@ function misuraTesti() {
     if (!LETTERE.test(proprio.replace(/\p{Extended_Pictographic}/gu, ''))) return;
     if (!el.checkVisibility({ checkVisibilityCSS: true }) || nascosto(el)) return;
     // WCAG 1.4.3: i controlli disattivati sono esclusi (Bosco prima di iniziare).
-    if (el.closest(':disabled, [aria-disabled="true"]')) return;
+    // Disattivati esclusi (WCAG 1.4.3), tranne le risposte giusta e sbagliata
+    // dopo la scelta: sono disattivate ma portano l'esito e vanno lette.
+    if (el.closest(':disabled, [aria-disabled="true"]') && !el.closest('.answer-btn.correct, .answer-btn.wrong')) return;
     let opacita = 1;
     for (let n = el; n; n = n.parentElement) opacita *= parseFloat(window.getComputedStyle(n).opacity);
     if (opacita < 0.1) return;
@@ -221,6 +224,20 @@ async function giro(browser, base, pagina, palette, viewport) {
       || a.effect.getComputedTiming().iterations === Infinity), null, { timeout: 5000 }).catch(() => {});
     await page.waitForTimeout(300);
     const misure = await page.evaluate(misuraTesti);
+    // Pagine materia: anche dopo la risposta (giusta e sbagliata colorate,
+    // spiegazione). Fino alla 4.27.28 si misurava solo la domanda: l'esito in
+    // Okabe-Ito, con testo bianco su grigio, non lo vedeva nessuno.
+    if (MATERIE.includes(pagina.slice(1))) {
+      for (let i = 0; i < 6; i += 1) {
+        await page.locator('#answers .answer-btn').first().click();
+        await page.locator('#qNext').waitFor({ state: 'visible', timeout: 5000 });
+        await page.waitForTimeout(400);
+        misure.push(...await page.evaluate(misuraTesti));
+        if (await page.locator('#answers .answer-btn.wrong').count()) break;
+        await page.locator('#qNext').click();
+        await page.waitForFunction(() => !document.querySelector('#answers .answer-btn:disabled'), null, { timeout: 5000 }).catch(() => {});
+      }
+    }
     const struttura = pagina === '/premi' ? await page.evaluate(() => {
       const hero = window.getComputedStyle(document.querySelector('header.rewards-hero'));
       return {

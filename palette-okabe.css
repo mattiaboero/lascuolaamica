@@ -208,18 +208,50 @@ html[data-palette="okabe-ito"] .answer-btn:nth-child(4) {
   color: #ffffff;
 }
 
-html[data-palette="okabe-ito"] .answer-btn.correct {
-  outline-color: #009E73;
+/* Dopo la risposta il colore dice l'esito, come nella modalita' standard:
+   giusta verde-azzurro Okabe pieno con ✓ bianca, sbagliata scelta vermiglione
+   pieno con ✕ bianca, le altre attenuate. Fino alla 4.27.28 qui restavano le
+   tinte di posizione: la giusta aveva solo un contorno e una ✓ verde scuro
+   (invisibili se era la 1ª o la 2ª), la sbagliata diventava grigia con testo
+   bianco poco leggibile, e la 2ª non scelta, verde, sembrava la giusta. */
+html[data-palette="okabe-ito"] .answer-btn:disabled:not(.correct):not(.wrong) {
+  opacity: 0.55;
 }
 
+html[data-palette="okabe-ito"] .answer-btn.correct {
+  background: linear-gradient(135deg, #00664a, #007A59);
+  box-shadow: 0 0 0 4px #009E73, 0 6px 0 #004d38;
+  outline: none;
+  color: #ffffff;
+}
+
+html[data-palette="okabe-ito"] .answer-btn.wrong {
+  background: linear-gradient(135deg, #8f3e00, #A24700);
+  box-shadow: 0 6px 0 #6e3000;
+  filter: none;
+  opacity: 1;
+  color: #ffffff;
+}
+
+html[data-palette="okabe-ito"] .answer-btn.correct::after,
+html[data-palette="okabe-ito"] .answer-btn.wrong::after {
+  top: 4px;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* Scritta grande dell'esito: stesse tinte, piu' scure (erano #009E73 e
+   #D55E00, circa 2:1 sullo sfondo chiaro, sotto il 3:1 del testo grande;
+   il vermiglione e' scuro come quello della risposta sbagliata). */
 html[data-palette="okabe-ito"] .feedback.ok {
-  color: #009E73;
-  text-shadow: 3px 3px 0 #006d50;
+  color: #007A59;
+  text-shadow: 3px 3px 0 #004d38;
 }
 
 html[data-palette="okabe-ito"] .feedback.ko {
-  color: #D55E00;
-  text-shadow: 3px 3px 0 #a24700;
+  color: #8f3e00;
+  text-shadow: 3px 3px 0 #5e2900;
 }
 
 html[data-palette="okabe-ito"] .bonus-btn.easy {

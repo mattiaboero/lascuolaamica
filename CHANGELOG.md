@@ -1,5 +1,42 @@
 # Changelog Repo
 
+## 4.27.29 - 2026-11-21
+
+**Esito delle risposte nella palette accessibile, conteggio di /inglese, precache piu' leggero, come si controllano le domande.**
+
+### Added
+- /chi-siamo: sezione «Come nascono e si controllano le domande». Dice che
+  le domande sono scritte e controllate con i modelli Claude (risolutore
+  alla cieca Sonnet, revisore Opus, chi riscrive non approva), che i calcoli
+  sono verificati prima di ogni pubblicazione e che Mattia e sua figlia
+  segnalano gli errori trovati giocando.
+
+### Fixed
+- Palette accessibile (Okabe-Ito), tutte le materie: dopo la risposta le
+  regole dell'esito valevano solo nella palette standard. Restavano le tinte
+  di posizione: la giusta aveva solo un contorno e una ✓ verde scuro
+  (invisibili se era la 1ª o la 2ª), la sbagliata diventava grigia con testo
+  bianco a 2,86:1, e la 2ª non scelta, verde, sembrava la giusta. Ora giusta
+  verde-azzurro Okabe pieno con ✓ bianca, sbagliata vermiglione scuro con ✕
+  bianca, le altre attenuate (`palette-okabe.css`). La scritta grande
+  dell'esito era a circa 2:1 (#009E73, #D55E00): ora #007A59 e #8f3e00.
+- /inglese: description, og, twitter, JSON-LD, FAQ e testo dicevano «oltre
+  100 domande» con 1.017 domande attive. Ora «oltre 1000», aggiornato da
+  `npm run freshness` (`sync_question_counts.py`) come le altre materie. La
+  frase di ricerca «100 domande in inglese per bambini» resta nel titolo
+  della sezione e nella domanda della FAQ.
+
+### Changed
+- Service worker: le 19 immagini per le anteprime sui social
+  (`/screenshots/og-*.jpg`, circa 1,5 MB) non sono piu' in precache, e
+  all'attivazione si tolgono dalla cache degli asset di chi le aveva.
+
+### CI
+- `test:e2e:contrasti` misura anche lo stato dopo la risposta (fino a una
+  risposta sbagliata), con le risposte giusta e sbagliata anche se
+  disattivate. Sul codice della 4.27.28 fallisce in palette accessibile
+  (risposta sbagliata a 2,86:1, scritta dell'esito a circa 2:1).
+
 ## 4.27.28 - 2026-11-21
 
 **Font di riserva anche su Linux.**

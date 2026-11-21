@@ -94,13 +94,17 @@ def sostituzioni(attive: dict[str, int]) -> list[tuple[Path, str, str]]:
                        rf'\g<1>{_it(attive[materia])}\g<2>'))
 
     # Meta description delle materie che dicono "Oltre N domande": N alle centinaia
-    # per difetto. /inglese resta fuori: "Oltre 100 domande in inglese per
-    # bambini" e' vero ed e' la frase che la pagina intercetta in ricerca (posizione
-    # 1,9 a ottobre 2026); la protegge il controllo di verita' in main().
+    # per difetto.
     for materia in DESCRIPTION_OLTRE:
         lavori.append((ROOT / f'{materia}.html',
                        r'(<meta name="description" content="Oltre )\d+( domande)',
                        rf'\g<1>{attive[materia] // 100 * 100}\g<2>'))
+
+    # /inglese: ogni "oltre N domande" della pagina (description, og, twitter,
+    # JSON-LD, FAQ, testo). Fino alla 4.27.28 diceva "oltre 100" con 1.017
+    # domande. La frase di ricerca "100 domande in inglese per bambini" resta
+    # nel titolo della sezione e nella domanda della FAQ.
+    lavori.append((ROOT / 'inglese.html', r'([Oo]ltre )\d+( domande)', rf'\g<1>{attive["inglese"] // 100 * 100}\g<2>'))
 
     # Documentazione e schede per gli assistenti AI.
     lavori.append((ROOT / 'llms.txt', r'Domande totali: [\d.]+ \([^)]*revisori[^)]*\)',
