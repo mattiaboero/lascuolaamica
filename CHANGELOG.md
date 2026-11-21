@@ -1,5 +1,20 @@
 # Changelog Repo
 
+## 4.27.30 - 2026-11-21
+
+**Annunci del quiz in ordine: la domanda nuova non si perde più.**
+
+### Fixed
+- Pagine materia, lettori di schermo (`subject-quiz-core.js`, `annuncia`):
+  ogni regione live aveva il suo timer, e l'esito di una risposta data entro
+  300 ms da «Avanti» passava davanti a «Domanda N di M» ancora in attesa
+  dello stacco fra regioni. Con risposte svelte di fila la domanda nuova non
+  veniva letta mai, e `npm run test:e2e:annunci` falliva circa 1 volta su 10
+  («domande nuove annunciate in #quizStato: 1»). Ora gli annunci escono da
+  una coda sola, nell'ordine in cui sono chiesti, sempre con 50 ms dopo lo
+  svuotamento e 300 ms fra regioni diverse; un annuncio nuovo della stessa
+  regione sostituisce quello ancora in coda.
+
 ## 4.27.29 - 2026-11-21
 
 **Esito delle risposte nella palette accessibile, conteggio di /inglese, precache piu' leggero, come si controllano le domande.**
