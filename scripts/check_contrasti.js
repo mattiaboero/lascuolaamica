@@ -14,7 +14,8 @@
 // elementi nascosti visivamente (clip o clip-path sotto 2x2 px, .sr-only,
 // .visually-hidden) e opacita' effettiva sotto 0,1. Colore del testo con l'opacita' di tutti gli
 // antenati; sfondo = primo antenato con sfondo opaco (gli strati
-// semitrasparenti sopra si fondono), e se e' un gradiente ogni suo colore.
+// semitrasparenti sopra si fondono), e se e' un gradiente ogni suo colore;
+// per un elemento fixed senza sfondo, gli sfondi di cio' che ha sotto.
 // Vale il contrasto peggiore. I colori passano da un canvas 1x1, cosi'
 // rgb(), color(srgb ...) e oklch() arrivano tutti in sRGB a 8 bit.
 //
@@ -156,6 +157,25 @@ function misuraTesti() {
     return grad.flatMap((g) => base.map((b) => fondi(g, b)));
   };
 
+  // Un elemento fixed senza sfondo proprio (la scritta grande dell'esito) non
+  // sta sopra il suo antenato nel DOM ma sopra cio' che c'e' sotto a schermo:
+  // si guarda una griglia di 5x3 punti del suo riquadro e vale il peggiore.
+  const sottoFisso = (el) => {
+    const r = el.getBoundingClientRect();
+    const colori = [];
+    for (let i = 0; i < 5; i += 1) {
+      for (let j = 0; j < 3; j += 1) {
+        const x = r.left + 1 + ((r.width - 2) * i) / 4;
+        const y = r.top + 1 + ((r.height - 2) * j) / 2;
+        if (x < 0 || y < 0 || x >= window.innerWidth || y >= window.innerHeight) continue;
+        const n = document.elementsFromPoint(x, y).find((m) => m !== el && !el.contains(m));
+        // Fuori da body si vede lo sfondo di body, propagato alla pagina.
+        colori.push(...sfondo(n === document.documentElement ? document.body : n || null));
+      }
+    }
+    return colori.length ? colori : sfondo(el);
+  };
+
   const passo = (n) => {
     if (n.id) return `${n.tagName.toLowerCase()}#${n.id}`;
     return n.tagName.toLowerCase() + [...n.classList].slice(0, 2).map((c) => `.${c}`).join('');
@@ -187,7 +207,8 @@ function misuraTesti() {
     colore[3] *= opacita;
     const fs = parseFloat(cs.fontSize);
     const grande = fs >= 24 || (fs >= 18.66 && parseInt(cs.fontWeight, 10) >= 700);
-    const peggiore = Math.min(...sfondo(el).map((bg) => rapporto(fondi(colore, bg), bg)));
+    const fisso = cs.position === 'fixed' && rgba(cs.backgroundColor)[3] === 0 && cs.backgroundImage === 'none';
+    const peggiore = Math.min(...(fisso ? sottoFisso(el) : sfondo(el)).map((bg) => rapporto(fondi(colore, bg), bg)));
     testi.push({ selettore: selettore(el), testo: proprio.slice(0, 30), rapporto: peggiore, soglia: grande ? 3 : 4.5 });
   });
   return testi;
