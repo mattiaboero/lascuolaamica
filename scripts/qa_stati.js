@@ -21,7 +21,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { fileServito } = require('./lib/percorso_sicuro.js');
-const { controlla } = require('./lib/qa_regole.js');
+const { controlla, attendiRender } = require('./lib/qa_regole.js');
 // QA_BROWSER=webkit fa girare gli stessi controlli nel motore di Safari.
 const playwright = require('playwright');
 const MOTORE = process.env.QA_BROWSER || 'chromium';
@@ -90,6 +90,7 @@ async function giro(browser, base, materia, modo, seme) {
     if (visti.has(nuovo)) return;
     visti.add(nuovo);
     await page.waitForTimeout(120);
+    await attendiRender(page);
     for (const inFondo of [false, true]) {
       if (inFondo) await page.evaluate(() => { const m = document.querySelector('.modal-overlay.open .modal-body, [aria-modal="true"] .modal-body'); if (m) m.scrollTop = m.scrollHeight; window.scrollTo(0, document.documentElement.scrollHeight); });
       else await page.evaluate(() => window.scrollTo(0, 0));

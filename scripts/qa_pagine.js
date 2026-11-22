@@ -23,7 +23,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { fileServito } = require('./lib/percorso_sicuro.js');
-const { controlla } = require('./lib/qa_regole.js');
+const { controlla, attendiRender } = require('./lib/qa_regole.js');
 // QA_BROWSER=webkit fa girare gli stessi controlli nel motore di Safari.
 const playwright = require('playwright');
 const MOTORE = process.env.QA_BROWSER || 'chromium';
@@ -91,6 +91,7 @@ async function giro(browser, base, pagina, modo) {
     await page.goto(`${base}/${pagina}${query || ''}`, { waitUntil: 'networkidle', timeout: 60000 });
     await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(150);
+    await attendiRender(page);
     trovati.push(...await page.evaluate(controlla, { escludi: ESCLUDI }));
     // le domande frequenti aperte: il testo chiuso nei <details> va visto
     const chiavi = new Set(trovati.map((t) => `${t.regola}|${t.dove}`));
