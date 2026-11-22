@@ -255,4 +255,20 @@ function controlla(opzioni) {
   });
 }
 
-module.exports = { controlla };
+// Prima di misurare: animazioni finite e due fotogrammi disegnati. Nel job
+// webkit della CI (runner macOS, 4.27.31) la misura arrivava prima del primo
+// fotogramma: l'header di /civica era ancora al primo keyframe di popIn
+// (scale(0.72) rotate(-6deg), titolo «a capo» e sottotitolo coperto) e
+// #interface del gioco di Nina non era ancora scalato dal ResizeObserver
+// (960x540 in 327x183). Tetto di 3 s: oltre, si misura comunque.
+async function attendiRender(page) {
+  await page.evaluate(() => Promise.race([
+    Promise.all(document.getAnimations()
+      .filter((a) => a.effect && a.effect.getComputedTiming().endTime !== Infinity)
+      .map((a) => a.finished.catch(() => {})))
+      .then(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)))),
+    new Promise((r) => setTimeout(r, 3000))
+  ]));
+}
+
+module.exports = { controlla, attendiRender };
